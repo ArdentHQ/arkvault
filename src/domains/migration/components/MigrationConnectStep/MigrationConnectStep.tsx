@@ -187,7 +187,7 @@ export const MigrationConnectStep = () => {
 						</div>
 					</div>
 					{polygonFieldIsDisabled && (
-						<div className="bg-theme-secondary-100/70 dark:bg-black/70 absolute inset-0 flex items-center justify-center px-4 py-3 backdrop-blur-[3px]">
+						<div className="bg-theme-secondary-100/70 absolute inset-0 flex items-center justify-center px-4 py-3 backdrop-blur-[3px] dark:bg-black/70">
 							<div className="flex max-w-[24rem] flex-col items-center space-y-4 text-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 								<div className="text-sm">
 									<PolygonFieldMessage needsMetamask={needsMetamask} />
