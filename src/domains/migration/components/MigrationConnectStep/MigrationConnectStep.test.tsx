@@ -25,9 +25,22 @@ const renderComponent = (profileId = profile.id()) => {
 	);
 };
 
+// 88,99,107,115-117,125,134,255
 describe("MigrationConnectStep", () => {
-	beforeAll(() => {
+	let arkMainnetWallet: Contracts.IReadWriteWallet;
+	let arkMainnetWalletSpy: any;
+
+	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		const { wallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+
+		arkMainnetWallet = wallet;
+
+		profile.wallets().push(arkMainnetWallet);
 	});
 
 	it("should render ", () => {
@@ -44,5 +57,34 @@ describe("MigrationConnectStep", () => {
 		).toBeInTheDocument();
 	});
 
-	// @TODO: handle cases where needs to connect metamask and select polygon network once implemented
+	describe("with valid wallets", () => {
+		beforeAll(() => {
+			arkMainnetWalletSpy = vi.spyOn(arkMainnetWallet, "balance").mockReturnValue(0.1);
+		});
+		afterAll(() => {
+			arkMainnetWalletSpy.mockRestore();
+		});
+
+		it("should include mainnet wallets with enough balance", () => {
+			renderComponent();
+
+			expect(screen.getByTestId("SelectAddress__input")).not.toBeDisabled();
+		});
+	});
+
+	describe("with invalid wallets", () => {
+		beforeAll(() => {
+			arkMainnetWalletSpy = vi.spyOn(arkMainnetWallet, "balance").mockReturnValue(0.03);
+		});
+
+		afterAll(() => {
+			arkMainnetWalletSpy.mockRestore();
+		});
+
+		it("should not include wallets without balance", () => {
+			renderComponent();
+
+			expect(screen.getByTestId("SelectAddress__input")).toBeDisabled();
+		});
+	});
 });
