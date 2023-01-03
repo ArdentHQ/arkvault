@@ -72,6 +72,7 @@ describe("MigrationConnectStep", () => {
 			connecting: false,
 			isOnPolygonNetwork: false,
 			needsMetaMask: false,
+			supportsMetaMask: true,
 		});
 
 		renderComponent();
@@ -90,6 +91,7 @@ describe("MigrationConnectStep", () => {
 			connecting: false,
 			isOnPolygonNetwork: true,
 			needsMetaMask: true,
+			supportsMetaMask: true,
 		});
 
 		renderComponent();
@@ -121,6 +123,7 @@ describe("MigrationConnectStep", () => {
 				connecting: false,
 				isOnPolygonNetwork: true,
 				needsMetaMask: false,
+				supportsMetaMask: true,
 			});
 
 			renderComponent();
@@ -130,13 +133,14 @@ describe("MigrationConnectStep", () => {
 			useMetaMaskMock.mockRestore();
 		});
 
-		it("should disable polygon field if has metamask, but is not on polygon network", async () => {
+		it("should disable polygon field if does not has metamask", async () => {
 			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
 				account: "0x0000000000000000000000000000000000000000",
 				connectWallet: vi.fn(),
 				connecting: false,
 				isOnPolygonNetwork: false,
-				needsMetaMask: false,
+				needsMetaMask: true,
+				supportsMetaMask: true,
 			});
 
 			renderComponent();
@@ -146,13 +150,31 @@ describe("MigrationConnectStep", () => {
 			useMetaMaskMock.mockRestore();
 		});
 
-		it("should disable polygon field if does not has metamask", async () => {
+		it("should disable polygon field if metamask is not supported", async () => {
 			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
 				account: "0x0000000000000000000000000000000000000000",
 				connectWallet: vi.fn(),
 				connecting: false,
-				isOnPolygonNetwork: true,
+				isOnPolygonNetwork: false,
 				needsMetaMask: true,
+				supportsMetaMask: false,
+			});
+
+			renderComponent();
+
+			await expect(screen.findByTestId("MigrationStep__polygon-disabled")).resolves.toBeVisible();
+
+			useMetaMaskMock.mockRestore();
+		});
+
+		it("should disable polygon if has metamask, is in the correct network but no account is selected", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: null,
+				connectWallet: vi.fn(),
+				connecting: false,
+				isOnPolygonNetwork: true,
+				needsMetaMask: false,
+				supportsMetaMask: true,
 			});
 
 			renderComponent();
@@ -169,6 +191,7 @@ describe("MigrationConnectStep", () => {
 				connecting: true,
 				isOnPolygonNetwork: true,
 				needsMetaMask: true,
+				supportsMetaMask: true,
 			});
 
 			renderComponent();
@@ -205,6 +228,7 @@ describe("MigrationConnectStep", () => {
 				connecting: false,
 				isOnPolygonNetwork: true,
 				needsMetaMask: false,
+				supportsMetaMask: true,
 			});
 
 			renderComponent();
