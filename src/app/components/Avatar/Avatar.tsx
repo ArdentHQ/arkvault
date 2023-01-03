@@ -1,3 +1,4 @@
+import blockie from "ethereum-blockies-base64";
 import { Helpers } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React from "react";
@@ -6,6 +7,7 @@ import tw, { styled } from "twin.macro";
 import { Size } from "@/types";
 
 interface Properties {
+	variant?: "default" | "ethereum";
 	address?: string;
 	className?: string;
 	shadowClassName?: string;
@@ -44,7 +46,10 @@ const AvatarWrapper = styled.div<Properties>`
 	}}
 `;
 
+export const EthereumAvatar: React.FC<Properties> = (properties) => <Avatar {...properties} variant="ethereum" />;
+
 export const Avatar = ({
+	variant,
 	address = "",
 	className,
 	highlight,
@@ -53,11 +58,21 @@ export const Avatar = ({
 	size,
 	children,
 }: Properties) => {
-	const svg = React.useMemo(() => (address ? Helpers.Avatar.make(address) : undefined), [address]);
+	const image = React.useMemo(() => {
+		if (!address) {
+			return;
+		}
+
+		if (variant === "ethereum") {
+			return blockie(address);
+		}
+
+		return `data:image/svg+xml;utf8,${Helpers.Avatar.make(address)}`;
+	}, [address]);
 
 	return (
 		<AvatarWrapper
-			data-testid="Avatar"
+			data-testid={variant === "ethereum" ? "EthereumAvatar" : "Avatar"}
 			size={size}
 			noShadow={!!noShadow}
 			className={cn(className, shadowClassName, "shrink-0")}
@@ -69,7 +84,7 @@ export const Avatar = ({
 					{ "ring-2 ring-theme-primary-600": highlight },
 				)}
 			>
-				{svg && <img alt={address} title={address} src={`data:image/svg+xml;utf8,${svg}`} />}
+				{image && <img alt={address} title={address} src={image} />}
 				{children}
 			</div>
 		</AvatarWrapper>
