@@ -2,9 +2,10 @@ import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
 import { MigrationConnectStep } from "./MigrationConnectStep";
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
-import { render, screen, env, getDefaultProfileId } from "@/utils/testing-library";
+import { render, screen, env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -25,7 +26,7 @@ const renderComponent = (profileId = profile.id()) => {
 	);
 };
 
-// 88,99,107,115-117,125,134,255
+// 99,107,115-117,125,134,255
 describe("MigrationConnectStep", () => {
 	let arkMainnetWallet: Contracts.IReadWriteWallet;
 	let arkMainnetWalletSpy: any;
@@ -61,6 +62,7 @@ describe("MigrationConnectStep", () => {
 		beforeAll(() => {
 			arkMainnetWalletSpy = vi.spyOn(arkMainnetWallet, "balance").mockReturnValue(0.1);
 		});
+
 		afterAll(() => {
 			arkMainnetWalletSpy.mockRestore();
 		});
@@ -69,6 +71,20 @@ describe("MigrationConnectStep", () => {
 			renderComponent();
 
 			expect(screen.getByTestId("SelectAddress__input")).not.toBeDisabled();
+		});
+
+		it("selects a wallet address", async () => {
+			renderComponent();
+
+			userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+			await expect(screen.findByTestId("SearchWalletListItem__select-0")).resolves.toBeVisible();
+
+			userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
+
+			await waitFor(() =>
+				expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkMainnetWallet.address()),
+			);
 		});
 	});
 
