@@ -532,7 +532,6 @@ describe("Welcome with deeplink", () => {
 });
 describe("Welcome with page deeplink", () => {
 	const history = createHashHistory();
-	const mainnetDeepLink = "/?page=migration";
 
 	let resetProfileNetworksMock: () => void;
 	let profile: Contracts.IProfile;
