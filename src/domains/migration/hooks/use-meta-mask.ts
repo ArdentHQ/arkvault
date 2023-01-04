@@ -107,14 +107,6 @@ export const useMetaMask = () => {
 
 		initProvider();
 
-		setInterval(async () => {
-			setChainIdDebug(window.ethereum.chainId);
-
-			ethereumProvider?.getNetwork().then((network) => {
-				setChainId2Debug(network);
-			});
-		}, 3000);
-
 		return () => {
 			ethereum.removeListener("accountsChanged", accountChangedListener);
 			ethereum.removeListener("chainChanged", chainChangedListener);
@@ -122,6 +114,21 @@ export const useMetaMask = () => {
 			ethereum.removeListener("disconnect", disconnectListener);
 		};
 	}, []);
+
+	useEffect(() => {
+		if (!ethereumProvider) {
+			return;
+		}
+
+		setInterval(async () => {
+			setChainIdDebug(window.ethereum.chainId);
+
+			ethereumProvider.getNetwork().then((network) => {
+				console.log(network);
+				setChainId2Debug(network.chainId);
+			});
+		}, 3000);
+	}, [ethereumProvider]);
 
 	const requestChainAndAccount = useCallback(async () => {
 		try {
