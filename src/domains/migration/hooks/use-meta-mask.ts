@@ -80,11 +80,12 @@ export const useMetaMask = () => {
 
 			setInitialized(true);
 
-			// The MetaMask app contains some invalid networks, which, when changing
-			// from a valid network to them (for example, changing from "Polygon
-			// Network" to "Kovan Test Network"), simply do not trigger events such
-			// as `chainChanged`. To prevent issues regarding this, I added the
-			// following timeout that checks and updates the selected network at regular intervals.
+			// The MetaMask app contains some invalid (deprecated) networks,
+			// which, when changing from a valid network to them (for example,
+			// changing from "Polygon Network" to "Kovan Test Network"), simply
+			// do not trigger the `chainChanged` event. To prevent issues
+			// regarding this, I added the following timeout that checks and
+			// updates the selected network in case is outdated.
 			verifyNetworkInterval = setInterval(async () => {
 				const { chainId } = await provider.getNetwork();
 
