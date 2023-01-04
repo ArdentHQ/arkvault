@@ -32,6 +32,12 @@ export const translations = {
 			},
 			TITLE: "Migration",
 		},
+		STEP_REVIEW: {
+			TITLE: "Review Migration Transaction",
+			DESCRIPTION: "Review the migration transaction details below.",
+			AMOUNT_SEND: "Amount You Send",
+			AMOUNT_MIGRATED: "Amount Migrated",
+		},
 	},
 	PAGE_MIGRATION: {
 		NEW_MIGRATION: "New Migration",
