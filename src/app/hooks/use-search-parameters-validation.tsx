@@ -51,6 +51,10 @@ enum SearchParametersError {
 	InvalidAddress = "INVALID_ADDRESS_OR_NETWORK_MISMATCH",
 }
 
+enum Pages {
+	Migration = "migration",
+}
+
 const defaultNetworks = {
 	"ark.devnet": {
 		displayName: "ARK Devnet",
@@ -173,6 +177,8 @@ const validateSign = async ({ parameters, profile, network }: ValidateParameters
 	}
 };
 
+const validatePage = (page: Pages) => Object.values(Pages).includes(page);
+
 /* istanbul ignore next -- @preserve */
 const WrapperQR = ({ children }) => {
 	const { t } = useTranslation();
@@ -235,6 +241,15 @@ export const useSearchParametersValidation = () => {
 		},
 	};
 
+	const pages = {
+		migration: {
+			path: ({ profile, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.Migration, {
+					profileId: profile.id(),
+				})}?${searchParameters.toString()}`,
+		},
+	};
+
 	const validateSearchParameters = async (
 		profile: Contracts.IProfile,
 		env: Environment,
@@ -244,6 +259,12 @@ export const useSearchParametersValidation = () => {
 		assertProfile(profile);
 
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
+
+		const page = parameters.get("page")?.toLowerCase() as Pages | undefined;
+
+		if (page !== undefined && validatePage(page)) {
+			return true;
+		}
 
 		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
 		const method = parameters.get("method")?.toLowerCase() as string;
@@ -477,5 +498,5 @@ export const useSearchParametersValidation = () => {
 		return <WrapperURI />;
 	};
 
-	return { buildSearchParametersError, methods, validateSearchParameters };
+	return { buildSearchParametersError, methods, pages, validateSearchParameters };
 };
