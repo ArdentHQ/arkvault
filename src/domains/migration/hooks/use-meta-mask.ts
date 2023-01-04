@@ -84,16 +84,31 @@ export const useMetaMask = () => {
 			// Chain ID came in as a hex string, so we need to convert it to decimal
 			setChainId(Number.parseInt(chainId, 16));
 		};
+		const connectListener = ({ chainId }: { chainId: string }) => {
+			chainChangedListener(chainId);
+		};
+
+		const disconnectListener = () => {
+			setChainId(undefined);
+		};
 
 		ethereum.on("accountsChanged", accountChangedListener);
 
 		ethereum.on("chainChanged", chainChangedListener);
+
+		ethereum.on("disconnect", disconnectListener);
+
+		// Connect event is fired when the user is disconnected because an error
+		// (e.g. the network is invalid) and then switches to a valid network
+		ethereum.on("connect", connectListener);
 
 		initProvider();
 
 		return () => {
 			ethereum.removeListener("accountsChanged", accountChangedListener);
 			ethereum.removeListener("chainChanged", chainChangedListener);
+			ethereum.removeListener("connect", connectListener);
+			ethereum.removeListener("disconnect", disconnectListener);
 		};
 	}, []);
 
