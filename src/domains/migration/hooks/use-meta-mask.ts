@@ -65,6 +65,8 @@ export const useMetaMask = () => {
 
 		const ethereum = (window as WindowWithEthereum).ethereum as Ethereum;
 
+		let verifyNetworkInterval: ReturnType<typeof setInterval>;
+
 		async function initProvider() {
 			const provider = new ethers.providers.Web3Provider(ethereum, "any");
 
@@ -77,7 +79,20 @@ export const useMetaMask = () => {
 			setEthereumProvider(provider);
 
 			setInitialized(true);
+
+			// The MetaMask app contains some invalid networks, which, when changing
+			// from a valid network to them (for example, changing from "Polygon
+			// Network" to "Kovan Test Network"), simply do not trigger events such
+			// as `chainChanged`. To prevent issues regarding this, I added the
+			// following timeout that checks and updates the selected network at regular intervals.
+			verifyNetworkInterval = setInterval(async () => {
+				const { chainId } = await provider.getNetwork();
+
+				setChainId(chainId);
+			}, 1000);
 		}
+
+		initProvider();
 
 		const accountChangedListener = (accounts: string[]) => {
 			setAccount(accounts.length > 0 ? accounts[0] : null);
@@ -105,37 +120,15 @@ export const useMetaMask = () => {
 		// (e.g. the network is invalid) and then switches to a valid network
 		ethereum.on("connect", connectListener);
 
-		initProvider();
-
 		return () => {
 			ethereum.removeListener("accountsChanged", accountChangedListener);
 			ethereum.removeListener("chainChanged", chainChangedListener);
 			ethereum.removeListener("connect", connectListener);
 			ethereum.removeListener("disconnect", disconnectListener);
+
+			clearInterval(verifyNetworkInterval);
 		};
 	}, []);
-
-	useEffect(() => {
-		if (!ethereumProvider) {
-			return;
-		}
-
-		setInterval(async () => {
-			const ethereum = (window as WindowWithEthereum).ethereum as Ethereum;
-
-			setChainIdDebug(ethereum.chainId);
-
-			ethereumProvider
-				.getNetwork()
-				.then((network: any) => {
-					setChainId2Debug(network.chainId);
-					return network;
-				})
-				.catch(() => {
-					setChainId2Debug(undefined);
-				});
-		}, 3000);
-	}, [ethereumProvider]);
 
 	const requestChainAndAccount = useCallback(async () => {
 		try {
@@ -170,8 +163,6 @@ export const useMetaMask = () => {
 	return {
 		account,
 		chainId,
-		chainId2Debug,
-		chainIdDebug,
 		connectWallet,
 		connecting,
 		initialized,

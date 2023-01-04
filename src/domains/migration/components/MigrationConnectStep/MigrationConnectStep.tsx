@@ -93,17 +93,7 @@ const PolygonFieldMessage = ({
 };
 
 export const MigrationConnectStep = () => {
-	const {
-		needsMetaMask,
-		isOnPolygonNetwork,
-		account,
-		chainId,
-		chainId2Debug,
-		chainIdDebug,
-		connectWallet,
-		connecting,
-		supportsMetaMask,
-	} = useMetaMask();
+	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet, connecting, supportsMetaMask } = useMetaMask();
 	const history = useHistory();
 	const { openExternal } = useLink();
 
@@ -184,11 +174,6 @@ export const MigrationConnectStep = () => {
 			onContinue={() => {}}
 			isValid={stepIsValid}
 		>
-			<ul>
-				<li>chain id: {chainId}</li>
-				<li>chain id from window.ethereum: {chainIdDebug}</li>
-				<li>chain id from provider: {chainId2Debug}</li>
-			</ul>
 			<div className="space-y-3">
 				<div className="rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
 					<FormField name="address">
