@@ -93,7 +93,8 @@ const PolygonFieldMessage = ({
 };
 
 export const MigrationConnectStep = () => {
-	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet, connecting, supportsMetaMask } = useMetaMask();
+	const { needsMetaMask, isOnPolygonNetwork, account, chainId, connectWallet, connecting, supportsMetaMask } =
+		useMetaMask();
 	const history = useHistory();
 	const { openExternal } = useLink();
 
@@ -175,6 +176,10 @@ export const MigrationConnectStep = () => {
 			isValid={stepIsValid}
 		>
 			<div className="space-y-3">
+				<ul>
+					<li>Chain: {chainId}</li>
+					<li>Account: {account}</li>
+				</ul>
 				<div className="rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
 					<FormField name="address">
 						<FormLabel label={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.ARK_ADDRESS")} />
