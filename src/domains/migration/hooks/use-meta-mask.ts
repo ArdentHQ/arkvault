@@ -104,6 +104,10 @@ export const useMetaMask = () => {
 
 		initProvider();
 
+		setInterval(() => {
+			alert(window.ethereum.chainId);
+		}, 3000);
+
 		return () => {
 			ethereum.removeListener("accountsChanged", accountChangedListener);
 			ethereum.removeListener("chainChanged", chainChangedListener);
