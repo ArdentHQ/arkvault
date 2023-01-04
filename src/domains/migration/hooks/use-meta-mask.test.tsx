@@ -251,6 +251,28 @@ describe("useMetaMask", () => {
 				);
 			});
 
+			it("should handle disconnect and connect", async () => {
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__account")).resolves.toBeVisible();
+
+				expect(screen.getByTestId("TestComponent__account")).toHaveTextContent(
+					"0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
+				);
+
+				// mockManager is private so we need to cast it to any
+				(testingUtils as any).mockManager.emit("disconnect");
+
+				await expect(screen.findByTestId("TestComponent__notinpolygon")).resolves.toBeVisible();
+
+				// mockManager is private so we need to cast it to any
+				(testingUtils as any).mockManager.emit("connect", {
+					chainId: 137,
+				});
+
+				await expect(screen.findByTestId("TestComponent__account")).resolves.toBeVisible();
+			});
+
 			it("should handle account change when no accounts", async () => {
 				render(<TestComponent />);
 
