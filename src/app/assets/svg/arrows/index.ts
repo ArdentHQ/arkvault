@@ -16,6 +16,7 @@ import { ReactComponent as ChevronRight } from "./chevron-right.svg";
 import { ReactComponent as ChevronRightSmall } from "./chevron-right-small.svg";
 import { ReactComponent as ChevronUpSmall } from "./chevron-up-small.svg";
 import { ReactComponent as DoubleArrowRight } from "./double-arrow-right.svg";
+import { ReactComponent as DoubleArrowDown } from "./double-arrow-down.svg";
 import { ReactComponent as DoubleChevronLeft } from "./double-chevron-left.svg";
 import { ReactComponent as DoubleChevronLeftSmall } from "./double-chevron-left-small.svg";
 import { ReactComponent as DoubleChevronRight } from "./double-chevron-right.svg";
@@ -40,6 +41,7 @@ export const ArrowIcons: any = {
 	ChevronRightSmall,
 	ChevronUpSmall,
 	DoubleArrowRight,
+	DoubleArrowDown,
 	DoubleChevronLeft,
 	DoubleChevronLeftSmall,
 	DoubleChevronRight,
