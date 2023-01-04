@@ -223,6 +223,34 @@ describe("useMetaMask", () => {
 				await expect(screen.findByTestId("TestComponent__isonpolygon")).resolves.toBeVisible();
 			});
 
+			it("should update the chain id in case was not updated trough the events", async () => {
+				let intervalCallback: any;
+
+				const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
+					if (callback.name === "updateChainId") {
+						intervalCallback = callback;
+					}
+
+					return 1;
+				});
+
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__isonpolygon")).resolves.toBeVisible();
+
+				testingUtils.clearAllMocks();
+
+				testingUtils.mockConnectedWallet(["0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf"], {
+					chainId: 1,
+				});
+
+				await intervalCallback();
+
+				await expect(screen.findByTestId("TestComponent__notinpolygon")).resolves.toBeVisible();
+
+				setIntervalSpy.mockRestore();
+			});
+
 			it("should detect the account", async () => {
 				render(<TestComponent />);
 

@@ -86,11 +86,13 @@ export const useMetaMask = () => {
 			// do not trigger the `chainChanged` event. To prevent issues
 			// regarding this, I added the following timeout that checks and
 			// updates the selected network in case is outdated.
-			verifyNetworkInterval = setInterval(async () => {
+			const updateChainId = async () => {
 				const { chainId } = await provider.getNetwork();
 
 				setChainId(chainId);
-			}, 1000);
+			};
+
+			verifyNetworkInterval = setInterval(updateChainId, 1000);
 		}
 
 		initProvider();
