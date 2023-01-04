@@ -10,11 +10,20 @@ interface Properties {
 	amount: number | string;
 	fee: number | string;
 	ticker: string;
+	amountLabel?: string;
+	totalAmountLabel?: string;
+	shouldSubtract?: boolean;
 }
 
 const AmountLabel = tw.span`text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700`;
 
-export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
+export const TotalAmountBox = ({
+	ticker,
+	amountLabel,
+	totalAmountLabel,
+	shouldSubtract,
+	...properties
+}: Properties) => {
 	const { t } = useTranslation();
 
 	const amount = +properties.amount;
@@ -23,7 +32,7 @@ export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 	assertNumber(amount);
 	assertNumber(fee);
 
-	const total = amount + fee;
+	const total = shouldSubtract ? amount - fee : amount + fee;
 
 	return (
 		<div className="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
@@ -35,20 +44,20 @@ export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 					</div>
 
 					<div className="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right">
-						<AmountLabel>{t("TRANSACTION.TRANSACTION_FEE")}</AmountLabel>
+						<AmountLabel>{amountLabel || t("TRANSACTION.TRANSACTION_FEE")}</AmountLabel>
 						<Amount ticker={ticker} value={fee} className="text-md mt-1 font-semibold" />
 					</div>
 				</div>
 
 				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform">
 					<div className="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600">
-						<Icon name="Plus" />
+						<Icon name={shouldSubtract ? "Minus" : "Plus"} />
 					</div>
 				</div>
 			</div>
 
 			<div className="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800">
-				<AmountLabel>{t("TRANSACTION.TOTAL_AMOUNT")}</AmountLabel>
+				<AmountLabel>{totalAmountLabel || t("TRANSACTION.TOTAL_AMOUNT")}</AmountLabel>
 				<Amount ticker={ticker} value={total} className="text-md font-bold sm:text-lg" />
 			</div>
 		</div>
