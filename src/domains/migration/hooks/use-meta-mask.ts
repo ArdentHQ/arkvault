@@ -121,12 +121,19 @@ export const useMetaMask = () => {
 		}
 
 		setInterval(async () => {
-			setChainIdDebug(window.ethereum.chainId);
+			const ethereum = (window as WindowWithEthereum).ethereum as Ethereum;
 
-			ethereumProvider.getNetwork().then((network) => {
-				console.log(network);
-				setChainId2Debug(network.chainId);
-			});
+			setChainIdDebug(ethereum.chainId);
+
+			ethereumProvider
+				.getNetwork()
+				.then((network: any) => {
+					setChainId2Debug(network.chainId);
+					return network;
+				})
+				.catch(() => {
+					setChainId2Debug(undefined);
+				});
 		}, 3000);
 	}, [ethereumProvider]);
 
