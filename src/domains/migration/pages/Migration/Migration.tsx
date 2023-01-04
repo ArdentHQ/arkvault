@@ -4,7 +4,10 @@ import { MigrationHeader, MigrationNewMigrationMobileButton } from "./Migration.
 import { Page, Section } from "@/app/components/Layout";
 import { MigrationDisclaimer } from "@/domains/migration/components/MigrationDisclaimer";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
-import { MigrationTransactionsTable } from "@/domains/migration/components/MigrationTransactionsTable";
+import {
+	MigrationTransactionsTable,
+	MigrationTransactionStatus,
+} from "@/domains/migration/components/MigrationTransactionsTable";
 import { generatePath, useHistory } from "react-router-dom";
 import { ProfilePaths } from "@/router/paths";
 
@@ -16,7 +19,17 @@ export const Migration = () => {
 	const history = useHistory();
 	const profile = useActiveProfile();
 
-	const migrations = [1];
+	// @TBD
+	const migrations = [
+		{
+			id: "id",
+			timestamp: Date.now() / 1000,
+			amount: 123,
+			address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
+			migrationAddress: "0x0000000000000000000000000000000000000000",
+			status: MigrationTransactionStatus.Confirmed,
+		},
+	];
 
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 

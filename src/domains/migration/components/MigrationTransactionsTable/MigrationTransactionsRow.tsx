@@ -11,18 +11,37 @@ import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { Button } from "@/app/components/Button";
 import { Address } from "@/app/components/Address";
 import { EthereumAvatar } from "@/app/components/Avatar";
+import { useTranslation } from "react-i18next";
 
-interface MigrationTransactionsRowStatusProperties {
-	status: any;
-}
+import {
+	MigrationTransactionsRowStatusProperties,
+	MigrationTransactionStatus,
+} from "./MigrationTransactionsTable.contracts";
+import { Link } from "@/app/components/Link";
 
-const MigrationTransactionsRowStatus: React.FC<{ status: any }> = ({
-	status,
-}: MigrationTransactionsRowStatusProperties) => {
+const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusProperties> = ({ status }) => {
+	const { t } = useTranslation();
+
+	const getIcon = (status: MigrationTransactionStatus) => {
+		if (status === MigrationTransactionStatus.Confirmed) {
+			return {
+				color: "text-theme-success-600",
+				name: "CircleCheckMark",
+			};
+		}
+
+		return {
+			color: "text-theme-secondary-500 dark:text-theme-secondary-700",
+			name: "Clock",
+		};
+	};
+
+	const { name, color } = getIcon(status);
+
 	return (
-		<Tooltip content="confirmed">
+		<Tooltip content={t(`MIGRATION.STATUS.${status.toUpperCase()}`)}>
 			<span>
-				<Icon name="CircleCheckMark" size="lg" className="text-theme-success-600" />
+				<Icon name={name} size="lg" className={color} />
 			</span>
 		</Tooltip>
 	);
@@ -40,21 +59,35 @@ export const MigrationTransactionsRow = ({
 	onClick,
 }: MigrationTransactionsRowProperties) => {
 	const timeFormat = useTimeFormat();
+	const { t } = useTranslation();
 
 	return (
 		<TableRow>
 			<TableCell variant="start" isCompact={isCompact}>
-				<Tooltip content="id" className="no-ligatures">
+				<Tooltip content={migrationTransaction.id} className="no-ligatures">
 					<span className="flex items-center">
-						<button type="button" className="link" onClick={() => console.log("glass click")}>
-							<Icon name="MagnifyingGlassId" />
-						</button>
+						{migrationTransaction.status === MigrationTransactionStatus.Confirmed ? (
+							<Link
+								to={`https://polygonscan.com/tx/${migrationTransaction.id}`}
+								tooltip={migrationTransaction.id}
+								showExternalIcon={false}
+								isExternal
+							>
+								<Icon name="MagnifyingGlassId" />
+							</Link>
+						) : (
+							<span className="text-theme-secondary-700 dark:text-theme-secondary-200">
+								<Icon name="MagnifyingGlassId" />
+							</span>
+						)}
 					</span>
 				</Tooltip>
 			</TableCell>
 
 			<TableCell className="hidden lg:table-cell" isCompact={isCompact}>
-				{DateTime.fromUnix(Date.now() / 1000).format(timeFormat)}
+				<span data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
+					{DateTime.fromUnix(migrationTransaction.timestamp).format(timeFormat)}
+				</span>
 			</TableCell>
 
 			<TableCell innerClassName="gap-3" isCompact={isCompact}>
@@ -76,23 +109,23 @@ export const MigrationTransactionsRow = ({
 				)}
 
 				<div className="w-0 flex-1">
-					<Address address="address" />
+					<Address address={migrationTransaction.address} />
 				</div>
 			</TableCell>
 
 			<TableCell innerClassName="gap-3" isCompact={isCompact}>
-				<EthereumAvatar address="address" size={isCompact ? "xs" : "lg"} />
+				<EthereumAvatar address={migrationTransaction.migrationAddress} size={isCompact ? "xs" : "lg"} />
 				<div className="w-0 flex-1">
-					<Address address="address" />
+					<Address address={migrationTransaction.migrationAddress} />
 				</div>
 			</TableCell>
 
 			<TableCell innerClassName="justify-center" isCompact={isCompact}>
-				<MigrationTransactionsRowStatus status={undefined} />
+				<MigrationTransactionsRowStatus status={migrationTransaction.status} />
 			</TableCell>
 
 			<TableCell isCompact={isCompact}>
-				<AmountLabel value={1} ticker="ARK" isCompact={isCompact} isNegative />
+				<AmountLabel value={migrationTransaction.amount} ticker="ARK" isCompact={isCompact} isNegative />
 			</TableCell>
 
 			<TableCell variant="end" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>
@@ -106,7 +139,7 @@ export const MigrationTransactionsRow = ({
 					})}
 					onClick={onClick}
 				>
-					View Details
+					{t("MIGRATION.PAGE_MIGRATION.VIEW_DETAILS")}
 				</Button>
 			</TableCell>
 		</TableRow>

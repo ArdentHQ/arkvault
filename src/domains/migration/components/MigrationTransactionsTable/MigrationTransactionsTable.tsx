@@ -46,9 +46,11 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 			},
 			{
 				Header: t("COMMON.SENDER"),
+				cellWidth: "w-96",
 			},
 			{
 				Header: t("COMMON.MIGRATION_ADDRESS"),
+				cellWidth: "w-96",
 			},
 			{
 				Header: t("COMMON.STATUS"),
@@ -68,7 +70,7 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 		[t],
 	);
 
-	const tableData = useMemo(() => migrationTransactions, [migrationTransactions]);
+	const data = useMemo(() => migrationTransactions, [migrationTransactions]);
 
 	const renderTableRow = useCallback(
 		(migrationTransaction: any) => {
@@ -87,7 +89,7 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 		[isCompact, onClick, useResponsive],
 	);
 
-	if (tableData.length === 0) {
+	if (data.length === 0) {
 		return (
 			<EmptyBlock data-testid="MigrationTransactionsTable__empty-message">
 				{t("MIGRATION.PAGE_MIGRATION.NO_MIGRATIONS")}
@@ -97,7 +99,7 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 
 	return (
 		<div data-testid="MigrationTransactionsTable">
-			<Table columns={columns} data={tableData} initialState={initialState} hideHeader={useResponsive}>
+			<Table columns={columns} data={data} initialState={initialState} hideHeader={useResponsive}>
 				{renderTableRow}
 			</Table>
 		</div>
