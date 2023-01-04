@@ -28,6 +28,10 @@ interface PathProperties {
 	network: Networks.Network;
 	searchParameters: URLSearchParams;
 }
+interface PagePathProperties {
+	profile: Contracts.IProfile;
+	searchParameters: URLSearchParams;
+}
 
 enum SearchParametersError {
 	AmbiguousDelegate = "AMBIGUOUS_DELEGATE",
@@ -244,7 +248,7 @@ export const useSearchParametersValidation = () => {
 
 	const pages = {
 		migration: {
-			path: ({ profile, searchParameters }: PathProperties) =>
+			path: ({ profile, searchParameters }: PagePathProperties) =>
 				`${generatePath(ProfilePaths.Migration, {
 					profileId: profile.id(),
 				})}?${searchParameters.toString()}`,
