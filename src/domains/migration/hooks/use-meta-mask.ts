@@ -77,22 +77,18 @@ export const useMetaMask = () => {
 		}
 
 		const accountChangedListener = (accounts: string[]) => {
-			alert("account changed" + JSON.stringify(accounts));
 			setAccount(accounts.length > 0 ? accounts[0] : null);
 		};
 
 		const chainChangedListener = (chainId: string) => {
-			alert("chain changed" + chainId);
 			// Chain ID came in as a hex string, so we need to convert it to decimal
 			setChainId(Number.parseInt(chainId, 16));
 		};
-		const connectListener = ({ chainId, ...rest }: { chainId: string }) => {
-			alert("connected" + chainId + JSON.stringify(rest));
+		const connectListener = ({ chainId }: { chainId: string }) => {
 			chainChangedListener(chainId);
 		};
 
-		const disconnectListener = (...rest) => {
-			alert("disconnected" + JSON.stringify(rest));
+		const disconnectListener = () => {
 			setChainId(undefined);
 		};
 
