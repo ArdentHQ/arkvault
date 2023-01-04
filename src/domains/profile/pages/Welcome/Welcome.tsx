@@ -5,6 +5,7 @@ import { matchPath, useHistory } from "react-router-dom";
 
 import { LocationState } from "router/router.types";
 import cn from "classnames";
+import { Id } from "react-toastify";
 import { Card } from "@/app/components/Card";
 import { Circle } from "@/app/components/Circle";
 import { DropdownOption } from "@/app/components/Dropdown";
@@ -18,7 +19,6 @@ import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/Delete
 import { ProfileCard } from "@/domains/profile/components/ProfileCard";
 import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
 import { toasts } from "@/app/services";
-import { Id } from "react-toastify";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();
