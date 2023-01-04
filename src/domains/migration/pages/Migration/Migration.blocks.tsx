@@ -8,8 +8,6 @@ import {
 import { Button } from "@/app/components/Button";
 import { PageHeader } from "@/app/components/Header";
 import { FormButtons } from "@/app/components/Form";
-import { Section } from "@/app/components/Layout";
-import { EmptyBlock } from "@/app/components/EmptyBlock";
 
 const MigrationHeader: React.FC<MigrationHeaderProperties> = ({ onNewMigration }) => {
 	const { t } = useTranslation();

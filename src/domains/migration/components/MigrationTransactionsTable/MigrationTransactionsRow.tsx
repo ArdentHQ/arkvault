@@ -2,39 +2,23 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import cn from "classnames";
 import React from "react";
 
+import { useTranslation } from "react-i18next";
+import { MigrationTransactionsRowStatusProperties } from "./MigrationTransactionsTable.contracts";
 import { AmountLabel } from "@/app/components/Amount";
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
+import { Link } from "@/app/components/Link";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { Button } from "@/app/components/Button";
 import { Address } from "@/app/components/Address";
 import { EthereumAvatar } from "@/app/components/Avatar";
-import { useTranslation } from "react-i18next";
-
-import {
-	MigrationTransactionsRowStatusProperties,
-	MigrationTransactionStatus,
-} from "./MigrationTransactionsTable.contracts";
-import { Link } from "@/app/components/Link";
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { getIcon } from "@/domains/migration/utils";
 
 const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusProperties> = ({ status }) => {
 	const { t } = useTranslation();
-
-	const getIcon = (status: MigrationTransactionStatus) => {
-		if (status === MigrationTransactionStatus.Confirmed) {
-			return {
-				color: "text-theme-success-600",
-				name: "CircleCheckMark",
-			};
-		}
-
-		return {
-			color: "text-theme-secondary-500 dark:text-theme-secondary-700",
-			name: "Clock",
-		};
-	};
 
 	const { name, color } = getIcon(status);
 

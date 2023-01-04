@@ -1,3 +1,5 @@
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+
 export interface MigrationTransactionsTableProperties {
 	migrationTransactions: any[];
 	isCompact: boolean;
@@ -6,9 +8,4 @@ export interface MigrationTransactionsTableProperties {
 
 export interface MigrationTransactionsRowStatusProperties {
 	status: MigrationTransactionStatus;
-}
-
-export enum MigrationTransactionStatus {
-	Waiting = "waiting",
-	Confirmed = "confirmed",
 }

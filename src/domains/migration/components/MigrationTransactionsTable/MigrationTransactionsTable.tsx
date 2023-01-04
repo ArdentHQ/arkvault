@@ -2,12 +2,12 @@ import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column, TableState } from "react-table";
 
+import { MigrationTransactionsRow } from "./MigrationTransactionsRow";
+import { MigrationTransactionsTableProperties } from "./MigrationTransactionsTable.contracts";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Table } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
 
-import { MigrationTransactionsRow } from "./MigrationTransactionsRow";
-import { MigrationTransactionsTableProperties } from "./MigrationTransactionsTable.contracts";
 import { MigrationTransactionsRowMobile } from "@/domains/migration/components/MigrationTransactionsTable/MigrationTransactionsRowMobile";
 
 export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties> = ({
