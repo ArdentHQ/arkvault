@@ -90,7 +90,9 @@ export const Welcome = () => {
 				profile.status().reset();
 
 				if (error) {
-					if (!isPageDeeplink()) {
+					if (isPageDeeplink()) {
+						toasts.error(error);
+					} else {
 						toasts.update(validatingToastId!, "error", error);
 					}
 

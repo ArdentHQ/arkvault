@@ -49,6 +49,7 @@ enum SearchParametersError {
 	NetworkNoWallets = "NETWORK_NO_WALLETS",
 	MessageMissing = "MESSAGE_MISSING",
 	InvalidAddress = "INVALID_ADDRESS_OR_NETWORK_MISMATCH",
+	InvalidPage = "INVALID_PAGE",
 }
 
 enum Pages {
@@ -262,7 +263,11 @@ export const useSearchParametersValidation = () => {
 
 		const page = parameters.get("page")?.toLowerCase() as Pages | undefined;
 
-		if (page !== undefined && validatePage(page)) {
+		if (page !== undefined) {
+			if (!validatePage(page)) {
+				return { error: { type: SearchParametersError.InvalidPage, value: page } };
+			}
+
 			return true;
 		}
 
@@ -370,6 +375,10 @@ export const useSearchParametersValidation = () => {
 		qr = false,
 	) => {
 		const ErrorWrapper = qr ? WrapperQR : WrapperURI;
+
+		if (type === SearchParametersError.InvalidPage) {
+			return <Trans parent={ErrorWrapper} i18nKey="PROFILE.VALIDATION.INVALID_PAGE" values={{ page: value }} />;
+		}
 
 		if (type === SearchParametersError.AmbiguousDelegate) {
 			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY" />;
