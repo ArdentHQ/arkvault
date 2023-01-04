@@ -18,6 +18,7 @@ import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/Delete
 import { ProfileCard } from "@/domains/profile/components/ProfileCard";
 import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
 import { toasts } from "@/app/services";
+import { Id } from "react-toastify";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();
@@ -26,7 +27,7 @@ export const Welcome = () => {
 	const isProfileCardClickedOnce = useRef(false);
 
 	const { t } = useTranslation();
-	const { handleDeepLink, isDeeplink, validateDeeplink } = useDeeplink();
+	const { handleDeepLink, isDeeplink, isPageDeeplink, validateDeeplink } = useDeeplink();
 
 	const profileCardActions = useMemo(
 		() => [
@@ -73,7 +74,11 @@ export const Welcome = () => {
 			if (isDeeplink()) {
 				toasts.dismiss();
 
-				const validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
+				let validatingToastId: Id;
+
+				if (!isPageDeeplink()) {
+					validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
+				}
 
 				const password = profile.usesPassword() ? profile.password().get() : undefined;
 
@@ -85,7 +90,10 @@ export const Welcome = () => {
 				profile.status().reset();
 
 				if (error) {
-					toasts.update(validatingToastId, "error", error);
+					if (!isPageDeeplink()) {
+						toasts.update(validatingToastId!, "error", error);
+					}
+
 					isProfileCardClickedOnce.current = false;
 
 					history.push("/");

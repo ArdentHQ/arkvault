@@ -18,6 +18,8 @@ export const useDeeplink = () => {
 		[queryParameters],
 	);
 
+	const isPageDeeplink = useCallback(() => queryParameters.has("page"), [queryParameters]);
+
 	const handleDeepLink = (profile: Contracts.IProfile) => {
 		if (queryParameters.has("page")) {
 			const page = pages[queryParameters.get("page") as string];
@@ -39,6 +41,7 @@ export const useDeeplink = () => {
 	return {
 		handleDeepLink,
 		isDeeplink,
+		isPageDeeplink,
 		validateDeeplink,
 	};
 };
