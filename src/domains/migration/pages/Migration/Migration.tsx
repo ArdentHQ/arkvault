@@ -1,34 +1,33 @@
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MigrationHeader, MigrationNewMigrationMobileButton } from "./Migration.blocks";
 import { Page, Section } from "@/app/components/Layout";
 import { MigrationDisclaimer } from "@/domains/migration/components/MigrationDisclaimer";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { MigrationTransactionsTable } from "@/domains/migration/components/MigrationTransactionsTable";
-
-const confirmHandler = () => {
-	// @TODO: Start migration
-};
-
-// @TBD
-const migrations = [1];
+import { generatePath, useHistory } from "react-router-dom";
+import { ProfilePaths } from "@/router/paths";
 
 export const Migration = () => {
 	const { t } = useTranslation();
 	const { isMd } = useBreakpoint();
 
-	const activeProfile = useActiveProfile();
-
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
+	const history = useHistory();
+	const profile = useActiveProfile();
 
-	const isCompact = useMemo(
-		() => !activeProfile.appearance().get("useExpandedTables") || isMd,
-		[activeProfile, isMd],
-	);
+	const migrations = [1];
+
+	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
 	const onNewMigrationHandler = () => {
 		setIsDisclaimerOpen(true);
 	};
+
+	const confirmHandler = useCallback(() => {
+		const path = generatePath(ProfilePaths.MigrationAdd, { profileId: profile.id() });
+		history.push(path);
+	}, [history, profile]);
 
 	return (
 		<>

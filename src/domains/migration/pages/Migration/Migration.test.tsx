@@ -36,7 +36,7 @@ describe("Migration", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should open the disclaimer modal when user calls the add migration button", () => {
+	it("should redirect user to migration add page after accepted disclaimer", () => {
 		renderComponent();
 
 		userEvent.click(screen.getByTestId("Migrations__add-migration-btn"));
@@ -48,5 +48,7 @@ describe("Migration", () => {
 		expect(screen.getByTestId("MigrationDisclaimer__submit-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("MigrationDisclaimer__submit-button"));
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/migration/add`);
 	});
 });

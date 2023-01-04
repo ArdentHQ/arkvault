@@ -1,7 +1,6 @@
 import { DateTime } from "@ardenthq/sdk-intl";
 import cn from "classnames";
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 import { AmountLabel } from "@/app/components/Amount";
 import { Circle } from "@/app/components/Circle";
@@ -11,6 +10,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { Button } from "@/app/components/Button";
 import { Address } from "@/app/components/Address";
+import { EthereumAvatar } from "@/app/components/Avatar";
 
 interface MigrationTransactionsRowStatusProperties {
 	status: any;
@@ -46,11 +46,7 @@ export const MigrationTransactionsRow = ({
 			<TableCell variant="start" isCompact={isCompact}>
 				<Tooltip content="id" className="no-ligatures">
 					<span className="flex items-center">
-						<button
-							type="button"
-							className="link"
-							onClick={() => console.log("glass click")}
-						>
+						<button type="button" className="link" onClick={() => console.log("glass click")}>
 							<Icon name="MagnifyingGlassId" />
 						</button>
 					</span>
@@ -63,14 +59,17 @@ export const MigrationTransactionsRow = ({
 
 			<TableCell innerClassName="gap-3" isCompact={isCompact}>
 				{isCompact && (
-					<span className="hidden h-5 w-5 items-center lg:flex border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400">
+					<span className="hidden h-5 w-5 items-center border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 lg:flex">
 						<Icon name="Sent" size="lg" />
 					</span>
 				)}
 
 				{!isCompact && (
 					<div className="hidden lg:flex">
-						<Circle size="lg" className="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400">
+						<Circle
+							size="lg"
+							className="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+						>
 							<Icon name="Sent" size="lg" />
 						</Circle>
 					</div>
@@ -82,10 +81,7 @@ export const MigrationTransactionsRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="gap-3" isCompact={isCompact}>
-				{/* <EthereumAvatar
-					address={address}
-					size={isCompact ? "xs" : "lg"}
-				/> */}
+				<EthereumAvatar address="address" size={isCompact ? "xs" : "lg"} />
 				<div className="w-0 flex-1">
 					<Address address="address" />
 				</div>
@@ -96,12 +92,7 @@ export const MigrationTransactionsRow = ({
 			</TableCell>
 
 			<TableCell isCompact={isCompact}>
-				<AmountLabel
-					value={1}
-					ticker="ARK"
-					isCompact={isCompact}
-					isNegative
-				/>
+				<AmountLabel value={1} ticker="ARK" isCompact={isCompact} isNegative />
 			</TableCell>
 
 			<TableCell variant="end" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>

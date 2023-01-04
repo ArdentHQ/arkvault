@@ -7126,7 +7126,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
               />
               <div
-                class="relative flex h-full flex-1 invisible"
+                class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
@@ -7939,7 +7939,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
               />
               <div
-                class="relative flex h-full flex-1 invisible"
+                class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
@@ -10435,7 +10435,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                 class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
               />
               <div
-                class="relative flex h-full flex-1 invisible"
+                class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
@@ -11186,7 +11186,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                 class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
               />
               <div
-                class="relative flex h-full flex-1 invisible"
+                class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"

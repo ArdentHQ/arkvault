@@ -27,6 +27,7 @@ import { ReactComponent as WelcomeBannerLight } from "./welcome-banner-light.svg
 import { ReactComponent as PolygonMigrationBannerLightNavy } from "./polygon-migration-banner-light-navy.svg";
 import { ReactComponent as PolygonMigrationBannerLightGreen } from "./polygon-migration-banner-light-green.svg";
 import { ReactComponent as PolygonMigrationBannerDark } from "./polygon-migration-banner-dark.svg";
+import { ReactComponent as MetamaskLogo } from "./metamask-logo.svg";
 import {
 	ReactComponent as IOsInstructionsStep1DarkBlue,
 	ReactComponent as IOsInstructionsStep1DarkGreen,
@@ -100,6 +101,7 @@ export const images = {
 		InfoLight,
 		InfoLightGreen: InfoLight,
 		InfoLightNavy: InfoLight,
+		MetamaskLogo,
 		NoResultsDarkGreen,
 		NoResultsDarkNavy,
 		NoResultsLightGreen,

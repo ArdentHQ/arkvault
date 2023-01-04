@@ -73,12 +73,7 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 	const renderTableRow = useCallback(
 		(migrationTransaction: any) => {
 			if (useResponsive) {
-				return (
-					<MigrationTransactionsRowMobile
-						migrationTransaction={migrationTransaction}
-						onClick={onClick}
-					/>
-				);
+				return <MigrationTransactionsRowMobile migrationTransaction={migrationTransaction} onClick={onClick} />;
 			}
 
 			return (

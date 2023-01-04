@@ -8,11 +8,9 @@ import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { RowWrapper, RowLabel, ResponsiveAddressWrapper } from "@/app/components/Table/Mobile/Row";
 import { Address } from "@/app/components/Address";
 import { AmountLabel } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
+import { Avatar, EthereumAvatar } from "@/app/components/Avatar";
 
-const MigrationTransactionsRowStatus: React.FC<{ status: any }> = ({
-	status,
-}) => {
+const MigrationTransactionsRowStatus: React.FC<{ status: any }> = ({ status }) => {
 	return (
 		<span className="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200">
 			<span>confirmed</span>
@@ -52,10 +50,7 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 
 					<ResponsiveAddressWrapper innerClassName="gap-2">
 						<div className="w-0 flex-1">
-							<Address
-								address="address"
-								alignment="right"
-							/>
+							<Address address="address" alignment="right" />
 						</div>
 
 						<Avatar size="xs" address="address" noShadow />
@@ -67,16 +62,10 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 
 					<ResponsiveAddressWrapper innerClassName="gap-2">
 						<div className="w-0 flex-1">
-							<Address
-								address="address"
-								alignment="right"
-							/>
+							<Address address="address" alignment="right" />
 						</div>
 
-						{/* <EthereumAvatar
-							address={address}
-							size={isCompact ? "xs" : "lg"}
-						/> */}
+						<EthereumAvatar address="address" size="xs" />
 					</ResponsiveAddressWrapper>
 				</RowWrapper>
 
@@ -89,12 +78,7 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 				<RowWrapper>
 					<RowLabel>{t("COMMON.AMOUNT")}</RowLabel>
 
-					<AmountLabel
-						value={1}
-						ticker="ARK"
-						isCompact
-						isNegative
-					/>
+					<AmountLabel value={1} ticker="ARK" isCompact isNegative />
 				</RowWrapper>
 			</td>
 		</TableRow>

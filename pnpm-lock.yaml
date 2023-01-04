@@ -62,6 +62,7 @@ specifiers:
   eslint-plugin-testing-library: ^5.9.1
   eslint-plugin-unicorn: ^45.0.1
   eslint-plugin-unused-imports: ^2.0.0
+  ethereum-blockies-base64: ^1.0.2
   focus-visible: ^5.2.0
   framer-motion: ^7.6.19
   gherkin-testcafe: 5.5.1
@@ -143,6 +144,7 @@ dependencies:
   browser-fs-access: 0.31.1
   classnames: 2.3.2
   downshift: 6.1.12_react@18.2.0
+  ethereum-blockies-base64: 1.0.2
   focus-visible: 5.2.0
   framer-motion: 7.6.19_biqbaboplfbrettd7655fr4n2y
   i18next: 22.1.4
@@ -5494,6 +5496,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /ethereum-blockies-base64/1.0.2:
+    resolution: {integrity: sha512-Vg2HTm7slcWNKaRhCUl/L3b4KrB8ohQXdd5Pu3OI897EcR6tVRvUqdTwAyx+dnmoDzj8e2bwBLDQ50ByFmcz6w==}
+    dependencies:
+      pnglib: 0.0.1
+    dev: false
+
   /eventemitter3/4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
     dev: false
@@ -7958,6 +7966,10 @@ packages:
   /pngjs/5.0.0:
     resolution: {integrity: sha512-40QW5YalBNfQo5yRYmiw7Yz6TKKVr3h6970B2YE+3fQpsWcrbj1PzJgxeJ19DRQjhMbKPIuMY8rFaXc8moolVw==}
     engines: {node: '>=10.13.0'}
+    dev: false
+
+  /pnglib/0.0.1:
+    resolution: {integrity: sha512-95ChzOoYLOPIyVmL+Y6X+abKGXUJlvOVLkB1QQkyXl7Uczc6FElUy/x01NS7r2GX6GRezloO/ecCX9h4U9KadA==}
     dev: false
 
   /postcss-import/14.1.0_postcss@8.4.19:

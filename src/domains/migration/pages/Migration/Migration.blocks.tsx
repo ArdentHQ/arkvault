@@ -59,16 +59,4 @@ const MigrationNewMigrationMobileButton: React.FC<MigrationNewMigrationMobileBut
 	);
 };
 
-const MigrationEmpty = () => {
-	const { t } = useTranslation();
-
-	return (
-		<Section className="mt-4">
-			<EmptyBlock data-testid="Migrations--empty-results">
-				{t("MIGRATION.PAGE_MIGRATION.NO_MIGRATIONS")}
-			</EmptyBlock>
-		</Section>
-	);
-};
-
-export { MigrationHeader, MigrationHeaderExtra, MigrationNewMigrationMobileButton, MigrationEmpty };
+export { MigrationHeader, MigrationHeaderExtra, MigrationNewMigrationMobileButton };
