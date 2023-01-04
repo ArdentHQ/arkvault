@@ -14,6 +14,7 @@ import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Link } from "@/app/components/Link";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { getIcon } from "@/domains/migration/utils";
+import { Button } from "@/app/components/Button";
 
 const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusProperties> = ({ status }) => {
 	const { t } = useTranslation();
@@ -92,15 +93,21 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 				</RowWrapper>
 
 				<RowWrapper>
+					<RowLabel>{t("COMMON.AMOUNT")}</RowLabel>
+
+					<AmountLabel value={migrationTransaction.amount} ticker="ARK" isCompact isNegative />
+				</RowWrapper>
+
+				<RowWrapper>
 					<RowLabel>{t("COMMON.STATUS")}</RowLabel>
 
 					<MigrationTransactionsRowStatus status={migrationTransaction.status} />
 				</RowWrapper>
 
 				<RowWrapper>
-					<RowLabel>{t("COMMON.AMOUNT")}</RowLabel>
-
-					<AmountLabel value={migrationTransaction.amount} ticker="ARK" isCompact isNegative />
+					<Button className="w-full sm:ml-auto sm:w-auto" variant="secondary" onClick={onClick}>
+						{t("MIGRATION.PAGE_MIGRATION.VIEW_DETAILS")}
+					</Button>
 				</RowWrapper>
 			</td>
 		</TableRow>
