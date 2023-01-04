@@ -50,9 +50,6 @@ export const useMetaMask = () => {
 	const [connecting, setConnecting] = useState<boolean>(false);
 	const isOnPolygonNetwork = useMemo(() => chainId === POLYGON_NETWORK_ID, [chainId]);
 
-	const [chainIdDebug, setChainIdDebug] = useState<any>();
-	const [chainId2Debug, setChainId2Debug] = useState<any>();
-
 	const supportsMetaMask = isMetaMaskSupportedBrowser();
 	const needsMetaMask = !hasMetaMask() || !supportsMetaMask;
 
