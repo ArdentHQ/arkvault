@@ -76,7 +76,7 @@ export const MigrationTransactionsRow = ({
 								<Icon name="MagnifyingGlassId" />
 							</Link>
 						) : (
-							<span className="text-theme-secondary-700 dark:text-theme-secondary-200">
+							<span className="text-theme-secondary-300 dark:text-theme-secondary-800">
 								<Icon name="MagnifyingGlassId" />
 							</span>
 						)}

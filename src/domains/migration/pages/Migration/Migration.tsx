@@ -29,6 +29,13 @@ export const Migration = () => {
 			migrationAddress: "0x0000000000000000000000000000000000000000",
 			status: MigrationTransactionStatus.Confirmed,
 		},
+		{
+			timestamp: Date.now() / 1000,
+			amount: 123,
+			address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
+			migrationAddress: "0x0000000000000000000000000000000000000000",
+			status: MigrationTransactionStatus.Waiting,
+		},
 	];
 
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
