@@ -50,6 +50,9 @@ export const useMetaMask = () => {
 	const [connecting, setConnecting] = useState<boolean>(false);
 	const isOnPolygonNetwork = useMemo(() => chainId === POLYGON_NETWORK_ID, [chainId]);
 
+	const [chainIdDebug, setChainIdDebug] = useState<any>();
+	const [chainId2Debug, setChainId2Debug] = useState<any>();
+
 	const supportsMetaMask = isMetaMaskSupportedBrowser();
 	const needsMetaMask = !hasMetaMask() || !supportsMetaMask;
 
@@ -104,8 +107,12 @@ export const useMetaMask = () => {
 
 		initProvider();
 
-		setInterval(() => {
-			alert(window.ethereum.chainId);
+		setInterval(async () => {
+			setChainIdDebug(window.ethereum.chainId);
+
+			ethereumProvider?.getNetwork().then((network) => {
+				setChainId2Debug(network);
+			});
 		}, 3000);
 
 		return () => {
@@ -149,6 +156,8 @@ export const useMetaMask = () => {
 	return {
 		account,
 		chainId,
+		chainId2Debug,
+		chainIdDebug,
 		connectWallet,
 		connecting,
 		initialized,
