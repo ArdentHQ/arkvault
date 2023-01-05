@@ -49,12 +49,7 @@ export const MigrationSuccessStep: React.FC = () => {
 				/>
 
 				<div className="mx-auto my-6 max-w-2xl">
-					<Image
-						name="MigrationSuccessBanner"
-						domain="migration"
-						className="w-full"
-						useAccentColor={false}
-					/>
+					<Image name="MigrationSuccessBanner" domain="migration" className="w-full" useAccentColor={false} />
 				</div>
 
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
