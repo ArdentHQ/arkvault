@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { EthereumAvatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
@@ -14,11 +15,15 @@ import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
 
-interface MigrationSuccessStepProperties {
-	migrationTransaction: any;
-}
+const migrationTransaction: any = {
+	address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
+	amount: 123,
+	id: "id",
+	migrationAddress: "0x0000000000000000000000000000000000000000",
+	timestamp: Date.now() / 1000,
+};
 
-export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({ migrationTransaction }) => {
+export const MigrationSuccessStep: React.FC = () => {
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
 
@@ -43,12 +48,14 @@ export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 					headerClassName="text-lg sm:text-2xl"
 				/>
 
-				<Image
-					name="MigrationSuccessBanner"
-					domain="migration"
-					className="my-6 mx-auto"
-					useAccentColor={false}
-				/>
+				<div className="mx-auto my-6 max-w-2xl">
+					<Image
+						name="MigrationSuccessBanner"
+						domain="migration"
+						className="w-full"
+						useAccentColor={false}
+					/>
+				</div>
 
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 					<div className="flex flex-col py-5 px-6">
@@ -57,10 +64,7 @@ export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 						</span>
 						<div className="flex items-center gap-x-2">
 							<EthereumAvatar address={migrationTransaction.migrationAddress} size="xs" />
-							<TruncateMiddleDynamic
-								value={migrationTransaction.migrationAddress}
-								className="no-ligatures text-base font-semibold"
-							/>
+							<Address address={migrationTransaction.migrationAddress} />
 						</div>
 					</div>
 
