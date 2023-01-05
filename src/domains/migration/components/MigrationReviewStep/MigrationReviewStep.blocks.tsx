@@ -1,3 +1,4 @@
+import React from "react";
 import { Icon } from "@/app/components/Icon";
 
 export const MigrationPolygonIcon = () => {
