@@ -10,14 +10,14 @@ jobs:
         runs-on: ubuntu-latest
 
         strategy:
-                matrix:
-                    node-version: [16.17.1]
+            matrix:
+                node-version: [16.17.1]
 
         steps:
             - uses: actions/checkout@v2
-                with:
-                    ref: ${{ github.head_ref }}
-                    token: ${{ secrets.GH_TOKEN }}
+              with:
+                  ref: ${{ github.head_ref }}
+                  token: ${{ secrets.GH_TOKEN }}
 
             - uses: pnpm/action-setup@v2
               with:
@@ -29,10 +29,10 @@ jobs:
                   cache: pnpm
 
             - name: Update JS dependencies
-                run: npx npm-check-updates --configFilePath ./
+              run: npx npm-check-updates --configFilePath ./
 
             - name: Install Updated JS dependencies
-                run: pnpm install
+              run: pnpm install
 
             - name: Rebuild Assets
               run: ZENDESK_WIDGET_KEY=${{ secrets.ZENDESK_WIDGET_KEY }} pnpm run build
