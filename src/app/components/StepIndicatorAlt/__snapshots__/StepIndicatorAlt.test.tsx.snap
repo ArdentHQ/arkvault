@@ -23,11 +23,11 @@ exports[`StepIndicatorAlt > should render 1`] = `
       />
     </div>
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-secondary-300 dark:border-theme-secondary-800 bg-white"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-secondary-300 bg-white dark:border-theme-secondary-800"
       data-testid="StepIndicatorAlt__step"
     />
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-secondary-300 dark:border-theme-secondary-800 bg-white"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-secondary-300 bg-white dark:border-theme-secondary-800"
       data-testid="StepIndicatorAlt__step"
     />
   </div>
@@ -190,7 +190,7 @@ exports[`StepIndicatorAlt > should render with active index 1`] = `
       />
     </div>
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-secondary-300 dark:border-theme-secondary-800 bg-white"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-secondary-300 bg-white dark:border-theme-secondary-800"
       data-testid="StepIndicatorAlt__step"
     />
   </div>
