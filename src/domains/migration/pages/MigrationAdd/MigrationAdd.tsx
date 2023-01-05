@@ -21,6 +21,8 @@ enum Step {
 
 const TOTAL_STEPS = 5;
 
+const submitHandler = () => {};
+
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
 	const [activeTab, setActiveTab] = useState(Step.Review);
@@ -39,8 +41,6 @@ export const MigrationAdd = () => {
 	useEffect(() => {
 		form.register("fee");
 	}, []);
-
-	const submitHandler = () => {};
 
 	// TODO: remove hardcoded wallet.
 	const wallet = activeProfile.wallets().first();
