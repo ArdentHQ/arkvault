@@ -40,13 +40,8 @@ export const MigrationPendingStep: React.FC = () => {
 			isValid={false}
 		>
 			<div className="my-5 flex flex-col">
-        <div className="mx-auto w-full mb-6 sm:px-6">
-					<Image
-						name="MigrationPendingBanner"
-						domain="migration"
-						className="w-full"
-						useAccentColor={false}
-					/>
+				<div className="mx-auto mb-6 w-full sm:px-6">
+					<Image name="MigrationPendingBanner" domain="migration" className="w-full" useAccentColor={false} />
 				</div>
 
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
