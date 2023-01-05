@@ -36,7 +36,7 @@ export const StepIndicatorAlt: React.FC<Properties> = ({
 						"relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900",
 						{
 							"border-theme-primary-600 bg-theme-navy-100": index < activeIndex,
-							"border-theme-secondary-300 dark:border-theme-secondary-800 bg-white": index >= activeIndex,
+							"border-theme-secondary-300 bg-white dark:border-theme-secondary-800": index >= activeIndex,
 						},
 					)}
 				>
