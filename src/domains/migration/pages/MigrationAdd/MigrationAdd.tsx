@@ -6,7 +6,7 @@ import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
-import { MigrationReviewStep } from "../../components/MigrationReviewStep/MigrationReviewStep";
+import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
 import { useActiveProfile } from "@/app/hooks";
 
 const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
