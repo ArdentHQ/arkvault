@@ -32,6 +32,14 @@ export const translations = {
 			},
 			TITLE: "Migration",
 		},
+		STEP_PENDING: {
+			DESCRIPTION: "Migration is processing, you will be notified once the process is complete.",
+			FROM_ADDRESS: "From ARK Address",
+			MIGRATION_INFO:
+				"Migration time <strong>≈ 24 hours</strong>.\nUpon completion you will receive a notification.",
+			TITLE: "Migration Pending",
+			TO_ADDRESS: "To Polygon Address",
+		},
 	},
 	PAGE_MIGRATION: {
 		NEW_MIGRATION: "New Migration",
@@ -39,4 +47,6 @@ export const translations = {
 		SUBTITLE: 'ARK is moving to Polygon. Click "New Migration" to get started.',
 		TITLE: "Migrate to Polygon",
 	},
+
+	TRANSACTION_ID: "Transaction ID",
 };
