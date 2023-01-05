@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { useFormContext } from "react-hook-form";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { FormButtons } from "@/app/components/Form";
 import { Button } from "@/app/components/Button";
-import { useFormContext } from "react-hook-form";
 
 export const MigrationAuthenticationStep = ({
 	wallet,
