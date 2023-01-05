@@ -142,4 +142,50 @@ describe("useDeeplink hook", () => {
 
 		historySpy.mockRestore();
 	});
+
+	it("should handle url with a page", () => {
+		history.push("/?page=migration");
+
+		const historySpy = vi.spyOn(history, "push");
+
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		expect(screen.getByTestId("DeeplinkHandle")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("DeeplinkHandle"));
+
+		expect(historySpy).toHaveBeenCalledWith(
+			"/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration?page=migration",
+		);
+
+		historySpy.mockRestore();
+	});
+
+	it("should validate url with a page with errors", async () => {
+		history.push("/?page=random");
+
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		expect(screen.getByTestId("DeeplinkValidate")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("DeeplinkValidate"));
+
+		await expect(screen.findByTestId("DeeplinkFailed")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("DeeplinkFailed")).toHaveTextContent("Invalid URI: page random is not valid.");
+	});
 });
