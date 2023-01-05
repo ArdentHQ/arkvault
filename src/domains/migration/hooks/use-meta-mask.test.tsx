@@ -6,11 +6,23 @@ import { useMetaMask } from "./use-meta-mask";
 import { render, screen, waitFor } from "@/utils/testing-library";
 
 const TestComponent: React.FC = () => {
-	const { initialized, connecting, account, chainId, connectWallet, isOnPolygonNetwork, needsMetaMask } =
-		useMetaMask();
+	const {
+		initialized,
+		connecting,
+		account,
+		chainId,
+		connectWallet,
+		isOnPolygonNetwork,
+		needsMetaMask,
+		supportsMetaMask,
+	} = useMetaMask();
 
 	if (!initialized) {
 		return null;
+	}
+
+	if (!supportsMetaMask) {
+		return <div data-testid="TestComponent__notcompatible" />;
 	}
 
 	if (connecting) {
@@ -46,25 +58,103 @@ const testingUtils = generateTestingUtils({ providerType: "MetaMask" });
 
 describe("useMetaMask", () => {
 	describe("without metamask", () => {
-		it("should require metamask", async () => {
-			render(<TestComponent />);
+		describe("with compatible browser", () => {
+			let userAgentSpy: any;
 
-			await expect(screen.findByTestId("TestComponent__requiremetamask")).resolves.toBeVisible();
+			beforeAll(() => {
+				// Compatible browser since is based on chrome
+				userAgentSpy = vi
+					.spyOn(window.navigator, "userAgent", "get")
+					.mockReturnValue(
+						"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54",
+					);
+			});
+
+			afterAll(() => {
+				userAgentSpy.mockRestore();
+			});
+
+			it("should require metamask", async () => {
+				const userAgentSpy = vi
+					.spyOn(window.navigator, "userAgent", "get")
+					.mockReturnValue(
+						"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54",
+					);
+
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__requiremetamask")).resolves.toBeVisible();
+
+				userAgentSpy.mockRestore();
+			});
+		});
+
+		describe("with not compatible browser", () => {
+			it("should detect when browser is not compatible", async () => {
+				const userAgentSpy = vi
+					.spyOn(window.navigator, "userAgent", "get")
+					.mockReturnValue(
+						"ozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15",
+					);
+
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__notcompatible")).resolves.toBeVisible();
+
+				userAgentSpy.mockRestore();
+			});
+
+			it("should detect when browser is not compatible for ios user agent", async () => {
+				const userAgentSpy = vi
+					.spyOn(window.navigator, "userAgent", "get")
+					.mockReturnValue(
+						"Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1",
+					);
+
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__notcompatible")).resolves.toBeVisible();
+
+				userAgentSpy.mockRestore();
+			});
+
+			it("should detect when browser is not compatible for android user agent", async () => {
+				const userAgentSpy = vi
+					.spyOn(window.navigator, "userAgent", "get")
+					.mockReturnValue(
+						"Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36",
+					);
+
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__notcompatible")).resolves.toBeVisible();
+
+				userAgentSpy.mockRestore();
+			});
 		});
 	});
 
 	describe("with metamask", () => {
+		let userAgentSpy: any;
+
 		beforeAll(() => {
-			// Manually inject the mocked provider in the window as MetaMask does
 			global.window.ethereum = testingUtils.getProvider();
+
+			// Compatible browser since is based on chrome
+			userAgentSpy = vi
+				.spyOn(window.navigator, "userAgent", "get")
+				.mockReturnValue(
+					"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54",
+				);
 		});
 
 		afterAll(() => {
 			delete global.window.ethereum;
+
+			userAgentSpy.mockRestore();
 		});
 
 		afterEach(() => {
-			// Clear all mocks between tests
 			testingUtils.clearAllMocks();
 		});
 
@@ -133,6 +223,34 @@ describe("useMetaMask", () => {
 				await expect(screen.findByTestId("TestComponent__isonpolygon")).resolves.toBeVisible();
 			});
 
+			it("should update the chain id in case was not updated trough the events", async () => {
+				let intervalCallback: any;
+
+				const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
+					if (callback.name === "updateChainId") {
+						intervalCallback = callback;
+					}
+
+					return 1;
+				});
+
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__isonpolygon")).resolves.toBeVisible();
+
+				testingUtils.clearAllMocks();
+
+				testingUtils.mockConnectedWallet(["0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf"], {
+					chainId: 1,
+				});
+
+				await intervalCallback();
+
+				await expect(screen.findByTestId("TestComponent__notinpolygon")).resolves.toBeVisible();
+
+				setIntervalSpy.mockRestore();
+			});
+
 			it("should detect the account", async () => {
 				render(<TestComponent />);
 
@@ -159,6 +277,28 @@ describe("useMetaMask", () => {
 				expect(screen.getByTestId("TestComponent__account")).toHaveTextContent(
 					"0x1234567890123456789012345678901234567890",
 				);
+			});
+
+			it("should handle disconnect and connect", async () => {
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__account")).resolves.toBeVisible();
+
+				expect(screen.getByTestId("TestComponent__account")).toHaveTextContent(
+					"0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
+				);
+
+				// mockManager is private so we need to cast it to any
+				(testingUtils as any).mockManager.emit("disconnect");
+
+				await expect(screen.findByTestId("TestComponent__notinpolygon")).resolves.toBeVisible();
+
+				// mockManager is private so we need to cast it to any
+				(testingUtils as any).mockManager.emit("connect", {
+					chainId: 137,
+				});
+
+				await expect(screen.findByTestId("TestComponent__account")).resolves.toBeVisible();
 			});
 
 			it("should handle account change when no accounts", async () => {

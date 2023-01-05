@@ -53,7 +53,24 @@ const MetaMaskButton = ({
 	</button>
 );
 
-const PolygonFieldMessage = ({ needsMetaMask }: { needsMetaMask: boolean }) => {
+const PolygonFieldMessage = ({
+	needsMetaMask,
+	supportsMetaMask,
+}: {
+	needsMetaMask: boolean;
+	supportsMetaMask: boolean;
+}) => {
+	if (!supportsMetaMask) {
+		return (
+			<Trans
+				i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_METAMASK_BROWSER"
+				components={{
+					linkMigrationGuide: <Link to={MIGRATION_GUIDE_URL} isExternal />,
+				}}
+			/>
+		);
+	}
+
 	if (needsMetaMask) {
 		return (
 			<Trans
@@ -76,7 +93,7 @@ const PolygonFieldMessage = ({ needsMetaMask }: { needsMetaMask: boolean }) => {
 };
 
 export const MigrationConnectStep = () => {
-	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet, connecting } = useMetaMask();
+	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet, connecting, supportsMetaMask } = useMetaMask();
 	const history = useHistory();
 	const { openExternal } = useLink();
 
@@ -123,12 +140,12 @@ export const MigrationConnectStep = () => {
 	}, [selectedWallet]);
 
 	const accountIsInWrongNetwork = useMemo(() => {
-		if (!account) {
+		if (!account || needsMetaMask) {
 			return false;
 		}
 
 		return !isOnPolygonNetwork;
-	}, [account, isOnPolygonNetwork]);
+	}, [account, isOnPolygonNetwork, needsMetaMask]);
 
 	const polygonFieldIsDisabled = useMemo(
 		() => needsMetaMask || !account || !isOnPolygonNetwork,
@@ -252,7 +269,10 @@ export const MigrationConnectStep = () => {
 						<div className="bg-theme-secondary-100/70 dark:bg-theme-secondary-900/70 absolute inset-0 flex items-center justify-center px-4 py-3 backdrop-blur-[3px]">
 							<div className="flex max-w-[24rem] flex-col items-center space-y-4 text-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 								<div className="text-sm">
-									<PolygonFieldMessage needsMetaMask={needsMetaMask} />
+									<PolygonFieldMessage
+										needsMetaMask={needsMetaMask}
+										supportsMetaMask={supportsMetaMask}
+									/>
 								</div>
 
 								{connecting ? (
@@ -273,9 +293,13 @@ export const MigrationConnectStep = () => {
 												className="w-full sm:w-auto"
 												onClick={() => openExternal("https://metamask.io/download/")}
 											>
-												{t(
-													"MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.INSTALL_METAMASK",
-												)}
+												{supportsMetaMask
+													? t(
+															"MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.INSTALL_METAMASK",
+													  )
+													: t(
+															"MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.DOWNLOAD_METAMASK",
+													  )}
 											</MetaMaskButton>
 										) : (
 											<MetaMaskButton className="w-full sm:w-auto" onClick={connectWallet}>
