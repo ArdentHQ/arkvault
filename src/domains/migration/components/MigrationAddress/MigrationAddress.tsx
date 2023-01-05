@@ -13,17 +13,13 @@ export const MigrationAddress = ({
 	label?: string;
 	address: string;
 	className?: string;
-}) => {
-	return (
-		<div className={cn("p-4", className, "flex flex-col space-y-2")}>
-			<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-				{label}
-			</span>
+}) => (
+	<div className={cn("p-4", className, "flex flex-col space-y-2")}>
+		<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">{label}</span>
 
-			<div className="flex space-x-2">
-				{isEthereum ? <EthereumAvatar size="xs" address={address} /> : <Avatar address={address} size="xs" />}
-				<Address address={address} />
-			</div>
+		<div className="flex space-x-2">
+			{isEthereum ? <EthereumAvatar size="xs" address={address} /> : <Avatar address={address} size="xs" />}
+			<Address address={address} />
 		</div>
-	);
-};
+	</div>
+);

@@ -1,11 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import MigrationStep from "@/domains/migration/components/MigrationStep";
-import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useFormContext } from "react-hook-form";
-import { MigrationAddress } from "@/domains/migration/components/MigrationAddress";
 import { MigrationPolygonIcon } from "./MigrationReviewStep.blocks";
+import MigrationStep from "@/domains/migration/components/MigrationStep";
+import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
+import { MigrationAddress } from "@/domains/migration/components/MigrationAddress";
 
 export const MigrationReviewStep = ({
 	wallet,
