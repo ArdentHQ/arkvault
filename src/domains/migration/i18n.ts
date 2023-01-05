@@ -37,6 +37,8 @@ export const translations = {
 			DESCRIPTION: "Review the migration transaction details below.",
 			AMOUNT_SEND: "Amount You Send",
 			AMOUNT_MIGRATED: "Amount Migrated",
+			FROM_ARK_ADDRESS: "From ARK Address",
+			TO_POLYGON_ADDRESS: "To Polygon Address",
 		},
 	},
 	PAGE_MIGRATION: {

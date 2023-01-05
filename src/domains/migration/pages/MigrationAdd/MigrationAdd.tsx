@@ -55,6 +55,7 @@ export const MigrationAdd = () => {
 						<TabPanel tabId={Step.Connect}>
 							<MigrationConnectStep />
 						</TabPanel>
+
 						<TabPanel tabId={Step.Review}>
 							<MigrationReviewStep
 								wallet={wallet}

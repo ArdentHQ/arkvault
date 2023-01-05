@@ -75,6 +75,7 @@ import { ReactComponent as UnderlineSun } from "./underline-sun.svg";
 import { ReactComponent as User } from "./user.svg";
 import { ReactComponent as UserCheckMark } from "./user-check-mark.svg";
 import { ReactComponent as Dashboard } from "./dashboard.svg";
+import { ReactComponent as Polygon } from "./polygon.svg";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -134,6 +135,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Pencil,
 	PencilRuler,
 	Plus,
+	Polygon,
 	Minus,
 	QRCode,
 	QuestionMarkSmall,

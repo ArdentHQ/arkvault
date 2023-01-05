@@ -5,6 +5,7 @@ import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox"
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useFormContext } from "react-hook-form";
 import { MigrationAddress } from "@/domains/migration/components/MigrationAddress";
+import { MigrationPolygonIcon } from "./MigrationReviewStep.blocks";
 
 export const MigrationReviewStep = ({
 	wallet,
@@ -16,7 +17,7 @@ export const MigrationReviewStep = ({
 	onCancel: () => void;
 }) => {
 	const { t } = useTranslation();
-	const form = useFormContext();
+	const { getValues } = useFormContext();
 
 	return (
 		<MigrationStep
@@ -27,19 +28,23 @@ export const MigrationReviewStep = ({
 			isValid
 		>
 			<div className="space-y-3">
-				<div className="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
-					<MigrationAddress address={wallet.address()} label="From ARK Address" />
+				<div className="relative rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
+					<MigrationAddress
+						address={wallet.address()}
+						label={t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.FROM_ARK_ADDRESS")}
+					/>
 					<MigrationAddress
 						className="border-t border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
-						address={form.getValues("receiverAddress")}
+						address={getValues("receiverAddress")}
 						isEthereum
-						label="To Polygon Address"
+						label={t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.TO_POLYGON_ADDRESS")}
 					/>
+					<MigrationPolygonIcon />
 				</div>
 
 				<TotalAmountBox
 					amount={wallet.balance()}
-					fee={form.getValues("fee")}
+					fee={getValues("fee")}
 					ticker={wallet.currency()}
 					amountLabel={t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.AMOUNT_SEND")}
 					totalAmountLabel={t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.AMOUNT_MIGRATED")}
