@@ -6,8 +6,8 @@ import { FormButtons } from "@/app/components/Form";
 import { Button } from "@/app/components/Button";
 
 interface Properties {
-	title: string;
-	description: string;
+	title?: string;
+	description?: string;
 	isValid: boolean;
 	children: React.ReactNode;
 	onCancel: () => void;
@@ -20,12 +20,14 @@ export const MigrationStep = ({ title, description, children, isValid, onCancel,
 	return (
 		<div>
 			<div data-testid="MigrationStep__header">
-				<Header
-					title={title}
-					subtitle={description}
-					className="sm:px-6 md:px-0"
-					headerClassName="text-lg sm:text-2xl"
-				/>
+				{title && (
+					<Header
+						title={title}
+						subtitle={description}
+						className="sm:px-6 md:px-0"
+						headerClassName="text-lg sm:text-2xl"
+					/>
+				)}
 			</div>
 
 			<div className="-mx-4 mt-6 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-5 md:-mx-10">
