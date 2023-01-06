@@ -30,6 +30,7 @@ export const translations = {
 	AWAITING_SIGNATURE: "Awaiting Signature",
 	BACK: "Back",
 	BACKGROUND: "Background",
+	BACK_TO_DASHBOARD: "Back to Dashboard",
 	BACK_TO_WALLET: "Back to Wallet",
 	BALANCE: "Balance",
 	BEST: "Best",

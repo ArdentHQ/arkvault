@@ -32,6 +32,11 @@ export const translations = {
 			},
 			TITLE: "Migration",
 		},
+		STEP_SUCCESS: {
+			DESCRIPTION: "Your migration was successful.\nWelcome to Polygon!",
+			TITLE: "Successfully Migrated",
+		},
+
 		STEP_REVIEW: {
 			AMOUNT_MIGRATED: "Amount Migrated",
 			AMOUNT_SEND: "Amount You Send",
@@ -47,4 +52,7 @@ export const translations = {
 		SUBTITLE: 'ARK is moving to Polygon. Click "New Migration" to get started.',
 		TITLE: "Migrate to Polygon",
 	},
+
+	POLYGON_ADDRESS: "Polygon Address",
+	TRANSACTION_ID: "Transaction ID",
 };

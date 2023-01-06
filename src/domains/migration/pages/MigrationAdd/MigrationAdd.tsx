@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
@@ -6,6 +6,7 @@ import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
+import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
 import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
 import { useActiveProfile } from "@/app/hooks";
 
@@ -26,6 +27,7 @@ const submitHandler = () => {};
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
 	const [activeTab, setActiveTab] = useState(Step.Review);
+
 	const activeProfile = useActiveProfile();
 
 	const form = useForm<any>({
@@ -42,7 +44,6 @@ export const MigrationAdd = () => {
 		form.register("fee");
 	}, []);
 
-	// TODO: remove hardcoded wallet.
 	const wallet = activeProfile.wallets().first();
 
 	return (
@@ -62,6 +63,10 @@ export const MigrationAdd = () => {
 								onContinue={() => setActiveTab(Step.Authenticate)}
 								onCancel={() => setActiveTab(Step.Connect)}
 							/>
+						</TabPanel>
+
+						<TabPanel tabId={Step.Finished}>
+							<MigrationSuccessStep />
 						</TabPanel>
 					</Tabs>
 				</Form>
