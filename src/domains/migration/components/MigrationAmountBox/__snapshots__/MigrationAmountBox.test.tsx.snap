@@ -1,0 +1,369 @@
+// Vitest Snapshot v1
+
+exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.01 1`] = `
+<DocumentFragment>
+  <div
+    class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+  >
+    <div
+      class="relative p-4"
+    >
+      <div
+        class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+      >
+        <div
+          class="mb-4 flex flex-col justify-center space-y-3 py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+        >
+          <span
+            class="css-1j6ndo3"
+          >
+            Transaction Amount
+          </span>
+          <span
+            class="whitespace-nowrap text-md font-semibold"
+            data-testid="Amount"
+          >
+            0.1 ARK
+          </span>
+        </div>
+        <div
+          class="flex flex-col justify-center space-y-3 p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
+        >
+          <span
+            class="css-1j6ndo3"
+          >
+            Amount You Send
+          </span>
+          <span
+            class="whitespace-nowrap text-md mt-1 font-semibold"
+            data-testid="Amount"
+          >
+            0.01 ARK
+          </span>
+        </div>
+      </div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+      >
+        <div
+          class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-200"
+        >
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg
+              viewBox="0 0 20 21"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M1.2 10.6h17.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="justfiy-center flex flex-col items-center space-y-3 rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-black"
+    >
+      <span
+        class="css-1j6ndo3"
+      >
+        Amount Migrated
+      </span>
+      <span
+        class="whitespace-nowrap text-md font-bold sm:text-lg"
+        data-testid="Amount"
+      >
+        0.09 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.01 2`] = `
+<DocumentFragment>
+  <div
+    class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+  >
+    <div
+      class="relative p-4"
+    >
+      <div
+        class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+      >
+        <div
+          class="mb-4 flex flex-col justify-center space-y-3 py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+        >
+          <span
+            class="css-1j6ndo3"
+          >
+            Transaction Amount
+          </span>
+          <span
+            class="whitespace-nowrap text-md font-semibold"
+            data-testid="Amount"
+          >
+            0.1 ARK
+          </span>
+        </div>
+        <div
+          class="flex flex-col justify-center space-y-3 p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
+        >
+          <span
+            class="css-1j6ndo3"
+          >
+            Amount You Send
+          </span>
+          <span
+            class="whitespace-nowrap text-md mt-1 font-semibold"
+            data-testid="Amount"
+          >
+            0.01 ARK
+          </span>
+        </div>
+      </div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+      >
+        <div
+          class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-200"
+        >
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg
+              viewBox="0 0 20 21"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M1.2 10.6h17.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="justfiy-center flex flex-col items-center space-y-3 rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-black"
+    >
+      <span
+        class="css-1j6ndo3"
+      >
+        Amount Migrated
+      </span>
+      <span
+        class="whitespace-nowrap text-md font-bold sm:text-lg"
+        data-testid="Amount"
+      >
+        0.09 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.01 3`] = `
+<DocumentFragment>
+  <div
+    class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+  >
+    <div
+      class="relative p-4"
+    >
+      <div
+        class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+      >
+        <div
+          class="mb-4 flex flex-col justify-center space-y-3 py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+        >
+          <span
+            class="css-1j6ndo3"
+          >
+            Transaction Amount
+          </span>
+          <span
+            class="whitespace-nowrap text-md font-semibold"
+            data-testid="Amount"
+          >
+            0.1 ARK
+          </span>
+        </div>
+        <div
+          class="flex flex-col justify-center space-y-3 p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
+        >
+          <span
+            class="css-1j6ndo3"
+          >
+            Amount You Send
+          </span>
+          <span
+            class="whitespace-nowrap text-md mt-1 font-semibold"
+            data-testid="Amount"
+          >
+            0.01 ARK
+          </span>
+        </div>
+      </div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+      >
+        <div
+          class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-200"
+        >
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg
+              viewBox="0 0 20 21"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M1.2 10.6h17.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="justfiy-center flex flex-col items-center space-y-3 rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-black"
+    >
+      <span
+        class="css-1j6ndo3"
+      >
+        Amount Migrated
+      </span>
+      <span
+        class="whitespace-nowrap text-md font-bold sm:text-lg"
+        data-testid="Amount"
+      >
+        0.09 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.01 4`] = `
+<DocumentFragment>
+  <div
+    class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+  >
+    <div
+      class="relative p-4"
+    >
+      <div
+        class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+      >
+        <div
+          class="mb-4 flex flex-col justify-center space-y-3 py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+        >
+          <span
+            class="css-1j6ndo3"
+          >
+            Transaction Amount
+          </span>
+          <span
+            class="whitespace-nowrap text-md font-semibold"
+            data-testid="Amount"
+          >
+            0.1 ARK
+          </span>
+        </div>
+        <div
+          class="flex flex-col justify-center space-y-3 p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
+        >
+          <span
+            class="css-1j6ndo3"
+          >
+            Amount You Send
+          </span>
+          <span
+            class="whitespace-nowrap text-md mt-1 font-semibold"
+            data-testid="Amount"
+          >
+            0.01 ARK
+          </span>
+        </div>
+      </div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+      >
+        <div
+          class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-200"
+        >
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg
+              viewBox="0 0 20 21"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M1.2 10.6h17.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="justfiy-center flex flex-col items-center space-y-3 rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-black"
+    >
+      <span
+        class="css-1j6ndo3"
+      >
+        Amount Migrated
+      </span>
+      <span
+        class="whitespace-nowrap text-md font-bold sm:text-lg"
+        data-testid="Amount"
+      >
+        0.09 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

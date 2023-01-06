@@ -11,10 +11,11 @@ interface Properties {
 	isValid?: boolean;
 	children: React.ReactNode;
 	onCancel?: () => void;
+	onBack?: () => void;
 	onContinue?: () => void;
 }
 
-export const MigrationStep = ({ title, description, children, isValid, onCancel, onContinue }: Properties) => {
+export const MigrationStep = ({ title, description, children, isValid, onCancel, onBack, onContinue }: Properties) => {
 	const { t } = useTranslation();
 
 	const hasButtons = onCancel || onContinue;
@@ -32,12 +33,18 @@ export const MigrationStep = ({ title, description, children, isValid, onCancel,
 				</div>
 			)}
 
-			<div className="-mx-4 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-5 md:-mx-10">
+			<div className="-mx-4 mt-6 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-8 md:-mx-10">
 				<div>{children}</div>
 
 				{hasButtons && (
 					<div className="px-5 pb-5">
 						<FormButtons>
+							{!!onBack && (
+								<Button data-testid="MigrationAdd__cancel-btn" variant="secondary" onClick={onCancel}>
+									{t("COMMON.BACK")}
+								</Button>
+							)}
+
 							{!!onCancel && (
 								<Button data-testid="MigrationAdd__cancel-btn" variant="secondary" onClick={onCancel}>
 									{t("COMMON.CANCEL")}
