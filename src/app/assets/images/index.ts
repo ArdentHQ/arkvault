@@ -59,6 +59,8 @@ import { ReactComponent as InfoDark } from "./info-dark.svg";
 import { ReactComponent as WarningLight } from "./warning-light.svg";
 import { ReactComponent as WarningDark } from "./warning-dark.svg";
 import { ReactComponent as WorldMap } from "./world-map.svg";
+import { ReactComponent as HexagonLight } from "./hexagon-light.svg";
+import { ReactComponent as HexagonDark } from "./hexagon-dark.svg";
 import { wallet } from "@/domains/wallet/images";
 import { transaction } from "@/domains/transaction/images";
 import { profile } from "@/domains/profile/images";
@@ -117,6 +119,8 @@ export const images = {
 		TrashLight,
 		WarningDark,
 		WarningLight,
+		HexagonLight,
+		HexagonDark,
 		WelcomeBannerDark,
 		WelcomeBannerLight,
 		WorldMap,

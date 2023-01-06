@@ -30,11 +30,14 @@ export const MigrationReviewStep = ({
 			<div className="space-y-3">
 				<div className="relative rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
 					<MigrationAddress
+						className="w-5/6"
 						address={wallet.address()}
 						label={t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.FROM_ARK_ADDRESS")}
 					/>
+
+					<div className="border-t border-theme-secondary-300 dark:border-theme-secondary-800" />
+
 					<MigrationAddress
-						className="border-t border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
 						address={getValues("receiverAddress")}
 						isEthereum
 						label={t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.TO_POLYGON_ADDRESS")}

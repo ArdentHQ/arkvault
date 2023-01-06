@@ -1,14 +1,17 @@
 import React from "react";
 import { Icon } from "@/app/components/Icon";
+import { Image } from "@/app/components/Image";
 
-export const MigrationPolygonIcon = () => (
-	<>
-		<div className="absolute top-0 right-8 bottom-0 flex w-8 items-center justify-center bg-white text-white text-theme-secondary-300 dark:bg-theme-secondary-900 dark:text-theme-secondary-800">
-			<Icon name="Polygon" size="xl" />
-		</div>
+export const MigrationPolygonIcon = () => {
+	return (
+		<>
+			<div className="justify-center-white absolute top-0 right-8 bottom-0 flex w-8 items-center">
+				<Image name="Hexagon" width={44} height={44} useAccentColor={false} />
+			</div>
 
-		<div className="text-purple-50 absolute top-0 right-8 bottom-0 flex w-8 items-center justify-center">
-			<Icon name="DoubleArrowDown" size="lg" />
-		</div>
-	</>
-);
+			<div className="absolute top-0 right-8 bottom-0 flex w-8 items-center justify-center text-theme-hint-600">
+				<Icon name="Received" size="md" />
+			</div>
+		</>
+	);
+};
