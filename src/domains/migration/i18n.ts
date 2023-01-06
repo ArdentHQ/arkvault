@@ -17,12 +17,17 @@ export const translations = {
 				ARK_ADDRESS: "ARK Address",
 				METAMASK: {
 					CONNECT_WALLET: "Connect Wallet",
+					DOWNLOAD_METAMASK: "Download MetaMask",
 					INSTALL_METAMASK: "Install MetaMask",
 					MESSAGES: {
+						NEEDS_CONNECTED_WALLET:
+							"To migrate, you need to have a Polygon network address and the <linkMetamask>MetaMask</linkMetamask> plugin.",
 						NEEDS_METAMASK:
 							"In order to complete the Migration, you must first install MetaMask. Learn more in our <linkMigrationGuide>Migration Guide</linkMigrationGuide>.",
+						NEEDS_METAMASK_BROWSER:
+							"In order to complete the Migration, you must first install the MetaMask mobile app or use a Web3-compatible browser. Learn more in our <linkMigrationGuide>Migration Guide</linkMigrationGuide>.",
 						NEEDS_POLYGON:
-							"To migrate, you need to have a Polygon network address and the <linkMetamask>MetaMask</linkMetamask> plugin.",
+							"Please select a Polygon address in MetaMask. Other networks are not supported. Learn more in our <linkMigrationGuide>Migration Guide</linkMigrationGuide>.",
 					},
 				},
 				POLYGON_MIGRATION_ADDRESS: "Polygon Migration Address",

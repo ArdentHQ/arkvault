@@ -17,8 +17,6 @@ enum Step {
 
 const TOTAL_STEPS = 5;
 
-const submitHandler = () => {};
-
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
 
@@ -32,7 +30,7 @@ export const MigrationAdd = () => {
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
 			<Section className="flex-1">
-				<Form className="mx-auto max-w-xl" context={form} onSubmit={submitHandler}>
+				<Form className="mx-auto max-w-xl" context={form}>
 					<StepIndicatorAlt length={TOTAL_STEPS} activeIndex={activeTab} className="mb-8 sm:mx-6 md:mx-0" />
 
 					<Tabs activeId={activeTab}>
