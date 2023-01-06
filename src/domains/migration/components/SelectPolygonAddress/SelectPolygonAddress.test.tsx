@@ -8,7 +8,7 @@ describe("SelectPolygonAddress", () => {
 
 		expect(screen.getByTestId("SelectPolygonAddress__input")).toBeInTheDocument();
 
-		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("EthereumAvatar")).not.toBeInTheDocument();
 	});
 
 	it("should render disabled", () => {
@@ -32,6 +32,6 @@ describe("SelectPolygonAddress", () => {
 
 		expect(screen.getByTestId("SelectPolygonAddress__input")).toBeInTheDocument();
 
-		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
+		expect(screen.getByTestId("EthereumAvatar")).toBeInTheDocument();
 	});
 });
