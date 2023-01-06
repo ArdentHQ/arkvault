@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Input } from "@/app/components/Input";
-import { Avatar } from "@/app/components/Avatar";
+import { EthereumAvatar } from "@/app/components/Avatar";
 import { Circle } from "@/app/components/Circle";
 import { Address } from "@/app/components/Address";
 
@@ -15,7 +15,7 @@ const AddressAvatar = ({ address }: any) => {
 		);
 	}
 
-	return <Avatar address={address} size="sm" noShadow />;
+	return <EthereumAvatar address={address} size="sm" noShadow />;
 };
 
 interface SelectPolygonAddressroperties {
