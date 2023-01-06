@@ -76,7 +76,7 @@ export const MigrationTransactionsRow = ({
 
 			<TableCell innerClassName="gap-3" isCompact={isCompact}>
 				{isCompact && (
-					<span className="hidden h-5 w-5 items-center border-theme-navy-100 text-theme-navy-600 dark:border-theme-navy-600 lg:flex">
+					<span className="hidden h-5 w-5 items-center text-theme-navy-600 lg:flex">
 						<Icon name="Sent" size="lg" />
 					</span>
 				)}
