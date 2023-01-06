@@ -6,6 +6,7 @@ import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
+import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
 
 enum Step {
 	Connect = 1,
@@ -27,7 +28,7 @@ export const MigrationAdd = () => {
 		mode: "onChange",
 	});
 
-	const activeTab = useMemo(() => Step.Connect, []);
+	const activeTab = useMemo(() => Step.Finished, []);
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
@@ -38,6 +39,10 @@ export const MigrationAdd = () => {
 					<Tabs activeId={activeTab}>
 						<TabPanel tabId={Step.Connect}>
 							<MigrationConnectStep />
+						</TabPanel>
+
+						<TabPanel tabId={Step.Finished}>
+							<MigrationSuccessStep />
 						</TabPanel>
 					</Tabs>
 				</Form>
