@@ -1,12 +1,13 @@
 import { styled } from "twin.macro";
 
-import { getStyles } from "./Spinner.styles";
-import { Color, Size, Theme } from "@/types";
+import { getStyles, SpinnerTheme } from "./Spinner.styles";
+import { Color, Size } from "@/types";
 
 interface SpinnerType {
 	color?: Color;
 	size?: Size;
-	theme?: Theme;
+	theme?: SpinnerTheme;
+	width?: number;
 }
 
 export const Spinner = styled.div<SpinnerType>(getStyles);

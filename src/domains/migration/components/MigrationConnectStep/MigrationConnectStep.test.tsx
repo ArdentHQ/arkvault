@@ -2,10 +2,11 @@ import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
 import { MigrationConnectStep } from "./MigrationConnectStep";
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
-import { render, screen, env, getDefaultProfileId } from "@/utils/testing-library";
-
+import { render, screen, env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
+import * as useMetaMask from "@/domains/migration/hooks/use-meta-mask";
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
@@ -26,8 +27,20 @@ const renderComponent = (profileId = profile.id()) => {
 };
 
 describe("MigrationConnectStep", () => {
-	beforeAll(() => {
+	let arkMainnetWallet: Contracts.IReadWriteWallet;
+	let arkMainnetWalletSpy: any;
+
+	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		const { wallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+
+		arkMainnetWallet = wallet;
+
+		profile.wallets().push(arkMainnetWallet);
 	});
 
 	it("should render ", () => {
@@ -44,5 +57,224 @@ describe("MigrationConnectStep", () => {
 		).toBeInTheDocument();
 	});
 
-	// @TODO: handle cases where needs to connect metamask and select polygon network once implemented
+	it("should redirect user to migration page if press cancel button", () => {
+		renderComponent();
+
+		userEvent.click(screen.getByTestId("MigrationAdd__cancel-btn"));
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/migration`);
+	});
+
+	it("should show a message when account is not on polygon network", async () => {
+		const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+			account: "0x0000000000000000000000000000000000000000",
+			connectWallet: vi.fn(),
+			connecting: false,
+			isOnPolygonNetwork: false,
+			needsMetaMask: false,
+			supportsMetaMask: true,
+		});
+
+		renderComponent();
+
+		await expect(screen.findByTestId("MigrationStep__wrongnetwork")).resolves.toBeVisible();
+
+		useMetaMaskMock.mockRestore();
+	});
+
+	it("install metamask button opens the download page", async () => {
+		const windowOpenSpy = vi.spyOn(window, "open").mockImplementation(() => null);
+
+		const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+			account: "0x0000000000000000000000000000000000000000",
+			connectWallet: vi.fn(),
+			connecting: false,
+			isOnPolygonNetwork: true,
+			needsMetaMask: true,
+			supportsMetaMask: true,
+		});
+
+		renderComponent();
+
+		await expect(screen.findByTestId("MigrationConnectStep__metamask-button")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("MigrationConnectStep__metamask-button"));
+
+		expect(windowOpenSpy).toHaveBeenCalledWith("https://metamask.io/download/", "_blank");
+
+		windowOpenSpy.mockRestore();
+
+		useMetaMaskMock.mockRestore();
+	});
+
+	describe("with valid wallets", () => {
+		beforeAll(() => {
+			arkMainnetWalletSpy = vi.spyOn(arkMainnetWallet, "balance").mockReturnValue(0.1);
+		});
+
+		afterAll(() => {
+			arkMainnetWalletSpy.mockRestore();
+		});
+
+		it("should enable polygon field if has metamask, is in polygon network and has an account", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: "0x0000000000000000000000000000000000000000",
+				connectWallet: vi.fn(),
+				connecting: false,
+				isOnPolygonNetwork: true,
+				needsMetaMask: false,
+				supportsMetaMask: true,
+			});
+
+			renderComponent();
+
+			await expect(screen.findByTestId("SelectPolygonAddress")).resolves.toBeVisible();
+
+			useMetaMaskMock.mockRestore();
+		});
+
+		it("should disable polygon field if does not has metamask", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: "0x0000000000000000000000000000000000000000",
+				connectWallet: vi.fn(),
+				connecting: false,
+				isOnPolygonNetwork: false,
+				needsMetaMask: true,
+				supportsMetaMask: true,
+			});
+
+			renderComponent();
+
+			await expect(screen.findByTestId("MigrationStep__polygon-disabled")).resolves.toBeVisible();
+
+			useMetaMaskMock.mockRestore();
+		});
+
+		it("should disable polygon field if metamask is not supported", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: "0x0000000000000000000000000000000000000000",
+				connectWallet: vi.fn(),
+				connecting: false,
+				isOnPolygonNetwork: false,
+				needsMetaMask: true,
+				supportsMetaMask: false,
+			});
+
+			renderComponent();
+
+			await expect(screen.findByTestId("MigrationStep__polygon-disabled")).resolves.toBeVisible();
+
+			useMetaMaskMock.mockRestore();
+		});
+
+		it("should disable polygon if has metamask, is in the correct network but no account is selected", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: null,
+				connectWallet: vi.fn(),
+				connecting: false,
+				isOnPolygonNetwork: true,
+				needsMetaMask: false,
+				supportsMetaMask: true,
+			});
+
+			renderComponent();
+
+			await expect(screen.findByTestId("MigrationStep__polygon-disabled")).resolves.toBeVisible();
+
+			useMetaMaskMock.mockRestore();
+		});
+
+		it("should show spinner while connecting", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: "0x0000000000000000000000000000000000000000",
+				connectWallet: vi.fn(),
+				connecting: true,
+				isOnPolygonNetwork: true,
+				needsMetaMask: true,
+				supportsMetaMask: true,
+			});
+
+			renderComponent();
+
+			await expect(screen.findByTestId("MigrationStep__connecting")).resolves.toBeVisible();
+
+			useMetaMaskMock.mockRestore();
+		});
+
+		it("should include mainnet wallets with enough balance", () => {
+			renderComponent();
+
+			expect(screen.getByTestId("SelectAddress__input")).not.toBeDisabled();
+		});
+
+		it("selects a wallet address", async () => {
+			renderComponent();
+
+			userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+			await expect(screen.findByTestId("SearchWalletListItem__select-0")).resolves.toBeVisible();
+
+			userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
+
+			await waitFor(() =>
+				expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkMainnetWallet.address()),
+			);
+		});
+
+		it("should enable the continue button if has address and selected account", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: "0x0000000000000000000000000000000000000000",
+				connectWallet: vi.fn(),
+				connecting: false,
+				isOnPolygonNetwork: true,
+				needsMetaMask: false,
+				supportsMetaMask: true,
+			});
+
+			renderComponent();
+
+			expect(screen.getByTestId("MigrationAdd__cancel__continue-btn")).toBeDisabled();
+
+			userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+			await expect(screen.findByTestId("SearchWalletListItem__select-0")).resolves.toBeVisible();
+
+			userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
+
+			await waitFor(() =>
+				expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkMainnetWallet.address()),
+			);
+
+			expect(screen.getByTestId("MigrationAdd__cancel__continue-btn")).toBeEnabled();
+
+			// @TODO: test the continue button behaviour (currently does nothing)
+			userEvent.click(screen.getByTestId("MigrationAdd__cancel__continue-btn"));
+
+			useMetaMaskMock.mockRestore();
+		});
+	});
+
+	describe("with invalid wallets", () => {
+		beforeAll(() => {
+			arkMainnetWalletSpy = vi.spyOn(arkMainnetWallet, "balance").mockReturnValue(0.03);
+		});
+
+		afterAll(() => {
+			arkMainnetWalletSpy.mockRestore();
+		});
+
+		it("should not include wallets without balance", () => {
+			renderComponent();
+
+			expect(screen.getByTestId("SelectAddress__input")).toBeDisabled();
+		});
+
+		it("should validate the wallet if using a different transaction fee from the env", () => {
+			process.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE = "0.01";
+
+			renderComponent();
+
+			expect(screen.getByTestId("SelectAddress__input")).toBeDisabled();
+		});
+	});
 });

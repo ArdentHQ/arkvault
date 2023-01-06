@@ -96,6 +96,7 @@ module.exports = {
 			"theme-warning-900": "var(--theme-color-warning-900)",
 
 			"theme-danger-50": "var(--theme-color-danger-50)",
+			"theme-danger-50/80": "rgba(255, 245, 242, 0.8)",
 			"theme-danger-100": "var(--theme-color-danger-100)",
 			"theme-danger-200": "var(--theme-color-danger-200)",
 			"theme-danger-300": "var(--theme-color-danger-300)",
