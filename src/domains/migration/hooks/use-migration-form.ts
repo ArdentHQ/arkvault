@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 export interface MigrationForm {
 	fee: number;
 	amount: number;
-	receiverAddress: string;
+	migrationAddress: string;
 	mnemonic: string;
 	secondMnemonic: string;
 	memo: string;
@@ -22,7 +22,7 @@ export const useMigrationForm = () => {
 		defaultValues: {
 			fee: TRANSACTION_FEE,
 			// TODO: remove hardcoded address.
-			receiverAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
+			migrationAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
 		},
 		mode: "onChange",
 		shouldUnregister: false,

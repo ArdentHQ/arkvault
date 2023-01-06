@@ -35,15 +35,15 @@ export const MigrationReviewStep = ({
 					/>
 
 					<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
-						<div className="absolute top-1/2 right-6 h-11 w-11 -translate-y-1/2 flex items-center justify-center">
-              <MigrationPolygonIcon />
+						<div className="absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center">
+							<MigrationPolygonIcon />
 						</div>
 					</div>
 
 					<MigrationAddress
-						address={getValues("receiverAddress")}
-						isEthereum
+						address={getValues("migrationAddress")}
 						label={t("MIGRATION.MIGRATION_ADD.TO_POLYGON_ADDRESS")}
+						isEthereum
 					/>
 				</div>
 

@@ -27,7 +27,7 @@ const submitHandler = () => {};
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
-	const [activeTab, setActiveTab] = useState(Step.Review);
+	const [activeTab, setActiveTab] = useState(Step.PendingTransaction);
 
 	const activeProfile = useActiveProfile();
 
@@ -35,7 +35,7 @@ export const MigrationAdd = () => {
 		defaultValues: {
 			fee: TRANSACTION_FEE,
 			// TODO: remove hardcoded address.
-			receiverAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
+			migrationAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
 		},
 		mode: "onChange",
 		shouldUnregister: false,
