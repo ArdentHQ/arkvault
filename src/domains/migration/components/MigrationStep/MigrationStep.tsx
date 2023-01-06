@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { Header } from "@/app/components/Header";
 import { FormButtons } from "@/app/components/Form";
 import { Button } from "@/app/components/Button";
-import { Step } from "@/domains/migration/pages/MigrationAdd/MigrationAdd";
 
 interface Properties {
 	title?: string;
@@ -12,20 +11,12 @@ interface Properties {
 	isValid?: boolean;
 	children: React.ReactNode;
 	onCancel?: () => void;
+	onBack?: () => void;
 	onContinue?: () => void;
 }
 
-export const MigrationStep = ({
-	title,
-	description,
-	children,
-	isValid,
-	onCancel,
-	onContinue,
-	activeStep,
-}: Properties) => {
+export const MigrationStep = ({ title, description, children, isValid, onCancel, onBack, onContinue }: Properties) => {
 	const { t } = useTranslation();
-	const cancelButtonLabel = activeStep === Step.Connect ? t("COMMON.CANCEL") : t("COMMON.BACK");
 
 	const hasButtons = onCancel || onContinue;
 
@@ -48,6 +39,12 @@ export const MigrationStep = ({
 				{hasButtons && (
 					<div className="px-5 pb-5">
 						<FormButtons>
+							{!!onBack && (
+								<Button data-testid="MigrationAdd__cancel-btn" variant="secondary" onClick={onCancel}>
+									{t("COMMON.BACK")}
+								</Button>
+							)}
+
 							{!!onCancel && (
 								<Button data-testid="MigrationAdd__cancel-btn" variant="secondary" onClick={onCancel}>
 									{t("COMMON.CANCEL")}

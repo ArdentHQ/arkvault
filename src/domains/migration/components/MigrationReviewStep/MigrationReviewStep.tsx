@@ -10,11 +10,11 @@ import { MigrationAddress } from "@/domains/migration/components/MigrationAddres
 export const MigrationReviewStep = ({
 	wallet,
 	onContinue,
-	onCancel,
+	onBack,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	onContinue: () => void;
-	onCancel: () => void;
+	onBack: () => void;
 }) => {
 	const { t } = useTranslation();
 	const { getValues } = useFormContext();
@@ -23,7 +23,7 @@ export const MigrationReviewStep = ({
 		<MigrationStep
 			title={t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.TITLE")}
 			description={t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.DESCRIPTION")}
-			onCancel={onCancel}
+			onBack={onBack}
 			onContinue={onContinue}
 			isValid
 		>

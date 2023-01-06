@@ -61,7 +61,7 @@ export const MigrationAdd = () => {
 							<MigrationReviewStep
 								wallet={wallet}
 								onContinue={() => setActiveTab(Step.Authenticate)}
-								onCancel={() => setActiveTab(Step.Connect)}
+								onBack={() => setActiveTab(Step.Connect)}
 							/>
 						</TabPanel>
 
