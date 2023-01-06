@@ -38,6 +38,10 @@ export const translations = {
 			},
 			TITLE: "Migration",
 		},
+		STEP_SUCCESS: {
+			DESCRIPTION: "Your migration was successful.\nWelcome to Polygon!",
+			TITLE: "Successfully Migrated",
+		},
 	},
 
 	PAGE_MIGRATION: {
@@ -52,4 +56,7 @@ export const translations = {
 		CONFIRMED: "Confirmed",
 		WAITING: "Waiting",
 	},
+
+	POLYGON_ADDRESS: "Polygon Address",
+	TRANSACTION_ID: "Transaction ID",
 };
