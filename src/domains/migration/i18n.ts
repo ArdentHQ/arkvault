@@ -8,6 +8,7 @@ export const translations = {
 		WARNING:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus, mollitia natus est, voluptas eligendi nihil dolorum illum accusamus obcaecati itaque corrupti tenetur, accusantium perferendis officiis hic modi neque aspernatur!",
 	},
+
 	MIGRATION_ADD: {
 		STEP_CONNECT: {
 			DESCRIPTION: "Fill in address details below to start the migration process.",
@@ -32,6 +33,7 @@ export const translations = {
 			},
 			TITLE: "Migration",
 		},
+
 		STEP_PENDING: {
 			DESCRIPTION: "Migration is processing, you will be notified once the process is complete.",
 			FROM_ADDRESS: "From ARK Address",
@@ -40,7 +42,22 @@ export const translations = {
 			TITLE: "Migration Pending",
 			TO_ADDRESS: "To Polygon Address",
 		},
+
+		STEP_REVIEW: {
+			AMOUNT_MIGRATED: "Amount Migrated",
+			AMOUNT_SEND: "Amount You Send",
+			DESCRIPTION: "Review the migration transaction details below.",
+			FROM_ARK_ADDRESS: "From ARK Address",
+			TITLE: "Review Migration Transaction",
+			TO_POLYGON_ADDRESS: "To Polygon Address",
+		},
+
+		STEP_SUCCESS: {
+			DESCRIPTION: "Your migration was successful.\nWelcome to Polygon!",
+			TITLE: "Successfully Migrated",
+		},
 	},
+
 	PAGE_MIGRATION: {
 		NEW_MIGRATION: "New Migration",
 		NO_MIGRATIONS: "You don't have any migration transactions yet.",
@@ -48,5 +65,6 @@ export const translations = {
 		TITLE: "Migrate to Polygon",
 	},
 
+	POLYGON_ADDRESS: "Polygon Address",
 	TRANSACTION_ID: "Transaction ID",
 };
