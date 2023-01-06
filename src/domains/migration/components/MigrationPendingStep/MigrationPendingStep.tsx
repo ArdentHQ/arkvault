@@ -46,7 +46,9 @@ export const MigrationPendingStep: React.FC = () => {
 						<div
 							className={cn(
 								"w-1/2 animate-move-bg-fast bg-gradient-to-r bg-500",
-								isDarkMode ? "from-theme-hint-400 via-theme-secondary-800 to-theme-hint-400" : "from-theme-hint-600 via-theme-secondary-300 to-theme-hint-600",
+								isDarkMode
+									? "from-theme-hint-400 via-theme-secondary-800 to-theme-hint-400"
+									: "from-theme-hint-600 via-theme-secondary-300 to-theme-hint-600",
 							)}
 							style={{ clipPath: "url(#arrowsClipPath)" }}
 						>
