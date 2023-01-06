@@ -32,3 +32,9 @@ export interface NotificationsProperties {
 	onNotificationAction?: (id: string) => void;
 	onTransactionClick?: (item?: DTO.ExtendedConfirmedTransactionData) => void;
 }
+
+export interface NotificationsMigrationProperties {
+	profile: Contracts.IProfile;
+	// @TODO: assign a proper type for this
+	transactions: any[];
+}
