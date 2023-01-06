@@ -49,7 +49,7 @@ export const MigrationPendingStep: React.FC = () => {
 					</MigrationDetail>
 
 					<MigrationAddress
-						address={migrationTransaction.migrationAddress}
+						address={migrationTransaction.address}
 						className="px-5 pb-6"
 						label={t("MIGRATION.MIGRATION_ADD.FROM_ARK_ADDRESS")}
 					/>
