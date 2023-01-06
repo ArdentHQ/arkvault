@@ -60,7 +60,7 @@ export const useMetaMask = () => {
 			return;
 		}
 
-		const ethereum = (window as WindowWithEthereum).ethereum as Ethereum;
+		const ethereum = (window as WindowWithEthereum).ethereum;
 
 		let verifyNetworkInterval: ReturnType<typeof setInterval>;
 
@@ -133,8 +133,8 @@ export const useMetaMask = () => {
 	const requestChainAndAccount = useCallback(async () => {
 		try {
 			const [accounts, chainIdAsHex] = await Promise.all([
-				ethereumProvider!.send("eth_requestAccounts", []),
-				ethereumProvider!.send("eth_chainId", []),
+				ethereumProvider.send("eth_requestAccounts", []),
+				ethereumProvider.send("eth_chainId", []),
 			]);
 
 			const chainId = Number.parseInt(chainIdAsHex, 16);
