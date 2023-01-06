@@ -64,10 +64,12 @@ export const MigrationAdd = () => {
 								onContinue={() => setActiveTab(Step.Authenticate)}
 								onBack={() => setActiveTab(Step.Connect)}
 							/>
+							<span onClick={() => setActiveTab(Step.PendingTransaction)}>next</span>
 						</TabPanel>
 
 						<TabPanel tabId={Step.PendingTransaction}>
 							<MigrationPendingStep />
+							<span onClick={() => setActiveTab(Step.Review)}>back</span>
 						</TabPanel>
 
 						<TabPanel tabId={Step.Finished}>
