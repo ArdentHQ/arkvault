@@ -85,7 +85,7 @@ export const MigrationTransactionsRow = ({
 					<div className="hidden lg:flex">
 						<Circle
 							size="lg"
-							className="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+							className="border-theme-danger-100 text-theme-navy-600 dark:border-theme-navy-600"
 						>
 							<Icon name="Sent" size="lg" />
 						</Circle>
