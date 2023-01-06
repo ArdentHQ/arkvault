@@ -62,7 +62,7 @@ export const MigrationPendingStep: React.FC = () => {
 
 					<MigrationAddress
 						address={migrationTransaction.migrationAddress}
-            className="px-5 pt-6 pb-5"
+						className="px-5 pt-6 pb-5"
 						label={t("MIGRATION.MIGRATION_ADD.TO_POLYGON_ADDRESS")}
 						isEthereum
 					/>

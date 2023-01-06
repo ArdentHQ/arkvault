@@ -123,7 +123,7 @@ export const MigrationConnectStep = () => {
 			onContinue={() => {}}
 			isValid={false}
 		>
-			<div className="-mx-4 sm:mx-0 space-y-3">
+			<div className="-mx-4 space-y-3 sm:mx-0">
 				<div className="rounded-xl bg-theme-secondary-100 px-4 py-5 dark:bg-black sm:px-5">
 					<FormField name="address">
 						<FormLabel label={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.ARK_ADDRESS")} />

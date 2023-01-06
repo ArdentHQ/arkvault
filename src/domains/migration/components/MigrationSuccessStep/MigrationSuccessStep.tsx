@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { EthereumAvatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
 import { FormButtons } from "@/app/components/Form";
@@ -54,7 +52,10 @@ export const MigrationSuccessStep: React.FC = () => {
 				</div>
 
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-					<MigrationAddress label={t("MIGRATION.POLYGON_ADDRESS")} address={migrationTransaction.migrationAddress} />
+					<MigrationAddress
+						label={t("MIGRATION.POLYGON_ADDRESS")}
+						address={migrationTransaction.migrationAddress}
+					/>
 
 					<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
 						<div className="absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800">
