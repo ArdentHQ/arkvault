@@ -11,7 +11,7 @@ import { useActiveProfile } from "@/app/hooks";
 
 const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
 
-enum Step {
+export enum Step {
 	Connect = 1,
 	Review = 2,
 	Authenticate = 3,

@@ -4,7 +4,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { useFormContext } from "react-hook-form";
 import { MigrationPolygonIcon } from "./MigrationReviewStep.blocks";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
-import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
+import { MigrationAmountBox } from "@/domains/migration/components/MigrationAmountBox";
 import { MigrationAddress } from "@/domains/migration/components/MigrationAddress";
 
 export const MigrationReviewStep = ({
@@ -42,14 +42,7 @@ export const MigrationReviewStep = ({
 					<MigrationPolygonIcon />
 				</div>
 
-				<TotalAmountBox
-					amount={wallet.balance()}
-					fee={getValues("fee")}
-					ticker={wallet.currency()}
-					amountLabel={t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.AMOUNT_SEND")}
-					totalAmountLabel={t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.AMOUNT_MIGRATED")}
-					shouldSubtract
-				/>
+				<MigrationAmountBox amount={wallet.balance()} fee={getValues("fee")} ticker={wallet.currency()} />
 			</div>
 		</MigrationStep>
 	);
