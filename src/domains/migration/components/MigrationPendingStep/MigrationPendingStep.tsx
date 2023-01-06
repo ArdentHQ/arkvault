@@ -35,17 +35,14 @@ export const MigrationPendingStep: React.FC = () => {
 		<MigrationStep
 			title={t("MIGRATION.MIGRATION_ADD.STEP_PENDING.TITLE")}
 			description={t("MIGRATION.MIGRATION_ADD.STEP_PENDING.DESCRIPTION")}
-			onCancel={() => {}}
-			onContinue={() => {}}
-			isValid={false}
 		>
 			<div className="my-5 flex flex-col">
-				<div className="mx-auto mb-6 w-full sm:px-6">
+				<div className="mx-auto mb-6 w-full sm:px-5">
 					<Image name="MigrationPendingBanner" domain="migration" className="w-full" useAccentColor={false} />
 				</div>
 
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-					<MigrationDetail label={t("COMMON.DATE")}>
+					<MigrationDetail label={t("COMMON.DATE")} className="px-5 pt-6 pb-5">
 						<span className="font-semibold">
 							{DateTime.fromUnix(migrationTransaction.timestamp).format(timeFormat)}
 						</span>
@@ -53,7 +50,7 @@ export const MigrationPendingStep: React.FC = () => {
 
 					<MigrationAddress
 						address={migrationTransaction.migrationAddress}
-						className="px-6 pb-5"
+						className="px-5 pb-6"
 						label={t("MIGRATION.MIGRATION_ADD.FROM_ARK_ADDRESS")}
 					/>
 
@@ -65,11 +62,12 @@ export const MigrationPendingStep: React.FC = () => {
 
 					<MigrationAddress
 						address={migrationTransaction.migrationAddress}
+            className="px-5 pt-6 pb-5"
 						label={t("MIGRATION.MIGRATION_ADD.TO_POLYGON_ADDRESS")}
 						isEthereum
 					/>
 
-					<MigrationDetail label={t("COMMON.AMOUNT")} className="px-6 pb-5">
+					<MigrationDetail label={t("COMMON.AMOUNT")} className="px-5 pb-6">
 						<Amount value={migrationTransaction.amount} ticker="ARK" className="text-lg font-semibold" />
 					</MigrationDetail>
 				</div>

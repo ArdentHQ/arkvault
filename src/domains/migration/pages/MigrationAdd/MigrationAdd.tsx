@@ -27,7 +27,7 @@ const submitHandler = () => {};
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
-	const [activeTab, setActiveTab] = useState(Step.PendingTransaction);
+	const [activeTab, setActiveTab] = useState(Step.Connect);
 
 	const activeProfile = useActiveProfile();
 

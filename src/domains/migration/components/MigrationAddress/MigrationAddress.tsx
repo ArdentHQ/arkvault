@@ -24,7 +24,7 @@ export const MigrationAddress = ({
 
 export const MigrationDetail = ({
 	label,
-	className = "py-5 px-6",
+	className = "py-6 px-5",
 	children,
 }: {
 	label?: string;
