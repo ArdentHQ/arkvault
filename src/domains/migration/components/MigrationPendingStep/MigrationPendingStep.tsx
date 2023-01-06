@@ -1,3 +1,4 @@
+import cn from "classnames";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -6,7 +7,7 @@ import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
 import { Image } from "@/app/components/Image";
-import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useTheme } from "@/app/hooks";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { MigrationPolygonIcon } from "@/domains/migration/components/MigrationPolygonIcon";
@@ -25,6 +26,7 @@ export const MigrationPendingStep: React.FC = () => {
 
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
+	const { isDarkMode } = useTheme();
 
 	const activeProfile = useActiveProfile();
 	const history = useHistory();
@@ -37,8 +39,20 @@ export const MigrationPendingStep: React.FC = () => {
 			description={t("MIGRATION.MIGRATION_ADD.STEP_PENDING.DESCRIPTION")}
 		>
 			<div className="my-5 flex flex-col">
-				<div className="mx-auto mb-6 w-full sm:px-5">
-					<Image name="MigrationPendingBanner" domain="migration" className="w-full" useAccentColor={false} />
+				<div className="relative mx-auto mb-6 flex w-full items-center justify-between gap-x-5 sm:px-5">
+					<Image name="MigrationPendingBanner" domain="migration" useAccentColor={false} className="w-full" />
+
+					<div className="absolute inset-0 ml-[8%] mr-[5%] flex items-center justify-center">
+						<div
+							className={cn(
+								"w-1/2 animate-move-bg-fast bg-gradient-to-r bg-500",
+								isDarkMode ? "from-theme-hint-400 via-theme-secondary-800 to-theme-hint-400" : "from-theme-hint-600 via-theme-secondary-300 to-theme-hint-600",
+							)}
+							style={{ clipPath: "url(#arrowsClipPath)" }}
+						>
+							<Image name="MigrationPendingBannerArrows" domain="migration" useAccentColor={false} />
+						</div>
+					</div>
 				</div>
 
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
