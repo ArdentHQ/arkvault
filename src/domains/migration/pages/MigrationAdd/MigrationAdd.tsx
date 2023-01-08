@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
@@ -6,8 +6,13 @@ import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
+import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
+import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
+import { useActiveProfile } from "@/app/hooks";
 
-enum Step {
+const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
+
+export enum Step {
 	Connect = 1,
 	Review = 2,
 	Authenticate = 3,
@@ -21,13 +26,25 @@ const submitHandler = () => {};
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
+	const [activeTab, setActiveTab] = useState(Step.Review);
+
+	const activeProfile = useActiveProfile();
 
 	const form = useForm<any>({
-		defaultValues: {},
+		defaultValues: {
+			fee: TRANSACTION_FEE,
+			// TODO: remove hardcoded address.
+			receiverAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
+		},
 		mode: "onChange",
+		shouldUnregister: false,
 	});
 
-	const activeTab = useMemo(() => Step.Connect, []);
+	useEffect(() => {
+		form.register("fee");
+	}, []);
+
+	const wallet = activeProfile.wallets().first();
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
@@ -38,6 +55,18 @@ export const MigrationAdd = () => {
 					<Tabs activeId={activeTab}>
 						<TabPanel tabId={Step.Connect}>
 							<MigrationConnectStep />
+						</TabPanel>
+
+						<TabPanel tabId={Step.Review}>
+							<MigrationReviewStep
+								wallet={wallet}
+								onContinue={() => setActiveTab(Step.Authenticate)}
+								onBack={() => setActiveTab(Step.Connect)}
+							/>
+						</TabPanel>
+
+						<TabPanel tabId={Step.Finished}>
+							<MigrationSuccessStep />
 						</TabPanel>
 					</Tabs>
 				</Form>
