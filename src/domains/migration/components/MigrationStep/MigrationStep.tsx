@@ -18,7 +18,7 @@ interface Properties {
 export const MigrationStep = ({ title, description, children, isValid, onCancel, onBack, onContinue }: Properties) => {
 	const { t } = useTranslation();
 
-	const hasButtons = onCancel || onContinue;
+	const hasButtons = onCancel || onContinue || onBack;
 
 	return (
 		<div>
