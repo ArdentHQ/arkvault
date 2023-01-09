@@ -34,7 +34,7 @@ export const MigrationTransactionItem = ({ transaction, profile, onClick }: Noti
 
 		return getWalletAlias({
 			address: wallet.address(),
-			network: wallet ? wallet.network() : undefined,
+			network: wallet.network(),
 			profile,
 		});
 	}, [profile, transaction, wallet]);
