@@ -10,6 +10,8 @@ export const translations = {
 	},
 
 	MIGRATION_ADD: {
+		FROM_ARK_ADDRESS: "From ARK Address",
+
 		STEP_CONNECT: {
 			DESCRIPTION: "Fill in address details below to start the migration process.",
 			FORM: {
@@ -38,19 +40,27 @@ export const translations = {
 			},
 			TITLE: "Migration",
 		},
+
+		STEP_PENDING: {
+			DESCRIPTION: "Migration is processing, you will be notified once the process is complete.",
+			MIGRATION_INFO:
+				"Migration time <strong>≈ 24 hours</strong>.\nUpon completion you will receive a notification.",
+			TITLE: "Migration Pending",
+		},
+
 		STEP_REVIEW: {
 			AMOUNT_MIGRATED: "Amount Migrated",
 			AMOUNT_SEND: "Amount You Send",
 			DESCRIPTION: "Review the migration transaction details below.",
-			FROM_ARK_ADDRESS: "From ARK Address",
 			TITLE: "Review Migration Transaction",
-			TO_POLYGON_ADDRESS: "To Polygon Address",
 		},
 
 		STEP_SUCCESS: {
 			DESCRIPTION: "Your migration was successful.\nWelcome to Polygon!",
 			TITLE: "Successfully Migrated",
 		},
+
+		TO_POLYGON_ADDRESS: "To Polygon Address",
 	},
 
 	PAGE_MIGRATION: {
