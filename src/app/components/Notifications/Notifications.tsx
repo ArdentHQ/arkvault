@@ -28,7 +28,7 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 
 	if (transactions.length === 0 && releases.length === 0 && migrationTransactions.length === 0) {
 		return (
-			<NotificationsWrapper>
+			<NotificationsWrapper data-testid="Notifications__empty">
 				<EmptyBlock>
 					<span className="whitespace-nowrap">{t("COMMON.NOTIFICATIONS.EMPTY")}</span>
 				</EmptyBlock>

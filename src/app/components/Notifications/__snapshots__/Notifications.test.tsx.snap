@@ -329,6 +329,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       >
                         <button
                           class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                          data-testid="MigrationTransactionItem__button"
                           type="button"
                         >
                           <span
@@ -445,6 +446,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       >
                         <button
                           class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                          data-testid="MigrationTransactionItem__button"
                           type="button"
                         >
                           <span
@@ -1076,6 +1078,7 @@ exports[`Notifications > should render with empty notifications 1`] = `
                       >
                         <button
                           class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                          data-testid="MigrationTransactionItem__button"
                           type="button"
                         >
                           <span
@@ -1192,6 +1195,7 @@ exports[`Notifications > should render with empty notifications 1`] = `
                       >
                         <button
                           class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                          data-testid="MigrationTransactionItem__button"
                           type="button"
                         >
                           <span
@@ -1571,6 +1575,7 @@ exports[`Notifications > should render with plugins 1`] = `
                       >
                         <button
                           class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                          data-testid="MigrationTransactionItem__button"
                           type="button"
                         >
                           <span
@@ -1687,6 +1692,7 @@ exports[`Notifications > should render with plugins 1`] = `
                       >
                         <button
                           class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                          data-testid="MigrationTransactionItem__button"
                           type="button"
                         >
                           <span
@@ -2408,6 +2414,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       >
                         <button
                           class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                          data-testid="MigrationTransactionItem__button"
                           type="button"
                         >
                           <span
@@ -2524,6 +2531,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       >
                         <button
                           class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                          data-testid="MigrationTransactionItem__button"
                           type="button"
                         >
                           <span
