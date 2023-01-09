@@ -25,8 +25,19 @@ describe("useQRCode hook", () => {
 		);
 	});
 
-	it("should generate description for a wallet that is imported by using address only", async () => {
+	it("should generate description for a wallet that is imported by address", async () => {
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithAddress").mockReturnValue(true);
+
+		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
+
+		expect(result.current.description).toMatchInlineSnapshot(
+			'"Enter your mnemonic passphrase to authenticate the transaction."',
+		);
+	});
+
+	it("should generate description for a wallet that is imported by public key", async () => {
+		vi.spyOn(wallet, "actsWithPublicKey").mockReturnValue(true);
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
