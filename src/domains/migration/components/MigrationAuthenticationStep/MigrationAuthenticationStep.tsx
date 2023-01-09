@@ -25,7 +25,9 @@ export const MigrationAuthenticationStep = ({
 				onContinue={onContinue}
 				isValid={formState.isValid}
 			>
-				<AuthenticationStep wallet={wallet} noHeading />
+				<div className="px-4 pt-4">
+					<AuthenticationStep wallet={wallet} noHeading />
+				</div>
 			</MigrationStep>
 		</div>
 	);
