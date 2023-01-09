@@ -40,7 +40,7 @@ export const MigrationStep = ({ title, description, children, isValid, onCancel,
 					<div className="px-5 pb-5">
 						<FormButtons>
 							{!!onBack && (
-								<Button data-testid="MigrationAdd__cancel-btn" variant="secondary" onClick={onCancel}>
+								<Button data-testid="MigrationAdd__cancel-btn" variant="secondary" onClick={onBack}>
 									{t("COMMON.BACK")}
 								</Button>
 							)}
