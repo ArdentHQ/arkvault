@@ -56,6 +56,15 @@ export const translations = {
 		},
 
 		TO_POLYGON_ADDRESS: "To Polygon Address",
+
+		STEP_AUTHENTICATION: {
+			DESCRIPTION_WIF: "Enter your WIF to authenticate the migration transaction.",
+			DESCRIPTION_ENCRYPTION_PASSWORD:
+				"Enter your encryption password to authenticate the migration transaction.",
+			DESCRIPTION_MNEMONIC: "Enter your mnemonic passphrase to authenticate the migration transaction.",
+			DESCRIPTION_PRIVATE_KEY: "Enter your private key to authenticate the migration transaction.",
+			DESCRIPTION_SECRET: "Enter your secret to authenticate the migration transaction.",
+		},
 	},
 
 	PAGE_MIGRATION: {

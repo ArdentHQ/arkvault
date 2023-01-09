@@ -14,23 +14,23 @@ export const useAuthenticationHeading = ({ wallet }: { wallet: Contracts.IReadWr
 			wallet.actsWithSecretWithEncryption();
 
 		if (wallet.actsWithWif()) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF");
+			return t("MIGRATION.MIGRATION_ADD.STEP_AUTHENTICATION.DESCRIPTION_WIF");
 		}
 
 		if (wallet.actsWithPrivateKey()) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_PRIVATE_KEY");
+			return t("MIGRATION.MIGRATION_ADD.STEP_AUTHENTICATION.DESCRIPTION_PRIVATE_KEY");
 		}
 
 		if (wallet.actsWithSecret()) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+			return t("MIGRATION.MIGRATION_ADD.STEP_AUTHENTICATION.DESCRIPTION_SECRET");
 		}
 
 		if (requiresEncryptionPassword) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD");
+			return t("MIGRATION.MIGRATION_ADD.STEP_AUTHENTICATION.DESCRIPTION_ENCRYPTION_PASSWORD");
 		}
 
 		if (requiresMnemonic) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC");
+			return t("MIGRATION.MIGRATION_ADD.STEP_AUTHENTICATION.DESCRIPTION_MNEMONIC");
 		}
 	}, [wallet]);
 

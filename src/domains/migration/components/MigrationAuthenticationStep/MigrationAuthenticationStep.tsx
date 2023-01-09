@@ -1,8 +1,9 @@
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useFormContext } from "react-hook-form";
-import { AuthenticationStep, useAuthenticationHeading } from "@/domains/transaction/components/AuthenticationStep";
+import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
+import { useAuthenticationHeading } from "@/domains/migration/hooks/use-authentication-heading";
 
 export const MigrationAuthenticationStep = ({
 	wallet,
