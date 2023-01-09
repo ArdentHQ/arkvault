@@ -1,13 +1,12 @@
 import React, { useMemo } from "react";
-import cn from "classnames";
 import { useTranslation } from "react-i18next";
+import tw, { css } from "twin.macro";
 import { NotificationsMigrationItemProperties } from "./Notifications.contracts";
+import { MigrationTransactionItemMobile } from "./MigrationTransactionItemMobile";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useWalletAlias, useBreakpoint } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Address } from "@/app/components/Address";
-import tw, { css } from "twin.macro";
-import { MigrationTransactionItemMobile } from "./MigrationTransactionItemMobile";
 import { Avatar } from "@/app/components/Avatar";
 
 const rowStyles = [
