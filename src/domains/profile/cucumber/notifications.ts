@@ -111,7 +111,7 @@ cucumber(
 			await t.click(notifications);
 		},
 		"Then the notifications are marked as read": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).eql(3);
+			await t.expect(Selector("[data-testid=NotificationTransactionsTable] [data-testid=TableRow]").count).eql(3);
 		},
 		"And the red dot is hidden": async (t: TestController) => {
 			await t.hover(Selector("[data-testid=NotificationItem]"));
