@@ -9,6 +9,7 @@ import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
 import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
 import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
 import { useActiveProfile } from "@/app/hooks";
+import { MigrationAuthenticationStep } from "../../components/MigrationAuthenticationStep";
 
 const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
 
@@ -26,7 +27,7 @@ const submitHandler = () => {};
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
-	const [activeTab, setActiveTab] = useState(Step.Review);
+	const [activeTab, setActiveTab] = useState(Step.Authenticate);
 
 	const activeProfile = useActiveProfile();
 
@@ -59,6 +60,13 @@ export const MigrationAdd = () => {
 
 						<TabPanel tabId={Step.Review}>
 							<MigrationReviewStep
+								wallet={wallet}
+								onContinue={() => setActiveTab(Step.Authenticate)}
+								onBack={() => setActiveTab(Step.Connect)}
+							/>
+						</TabPanel>
+						<TabPanel tabId={Step.Authenticate}>
+							<MigrationAuthenticationStep
 								wallet={wallet}
 								onContinue={() => setActiveTab(Step.Authenticate)}
 								onBack={() => setActiveTab(Step.Connect)}
