@@ -38,14 +38,14 @@ jobs:
               run: ZENDESK_WIDGET_KEY=${{ secrets.ZENDESK_WIDGET_KEY }} pnpm run build
 
             - name: Create Pull Request
-                id: cpr
-                uses: peter-evans/create-pull-request@v3
-                with:
-                    token: ${{ secrets.GH_TOKEN }}
-                    commit-message: "chore: update JavaScript dependencies"
-                    committer: GitHub <noreply@github.com>
-                    author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-                    branch: chore/update-javascript-dependencies
-                    delete-branch: true
-                    title: "chore: update JavaScript dependencies"
-                    draft: false
+              id: cpr
+              uses: peter-evans/create-pull-request@v3
+              with:
+                  token: ${{ secrets.GH_TOKEN }}
+                  commit-message: "chore: update JavaScript dependencies"
+                  committer: GitHub <noreply@github.com>
+                  author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+                  branch: chore/update-javascript-dependencies
+                  delete-branch: true
+                  title: "chore: update JavaScript dependencies"
+                  draft: false
