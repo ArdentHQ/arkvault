@@ -55,6 +55,7 @@ export const translations = {
 		DESCRIPTION: "Are you sure you wish to navigate away from this page without saving?",
 		TITLE: "Confirmation",
 	},
+	CONNECTING: "Connecting …",
 	CONTACT: "Contact",
 	CONTACTS: "Contacts",
 	CONTACT_US: "Contact Us",
