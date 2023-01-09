@@ -37,6 +37,8 @@ describe("useQRCode hook", () => {
 	});
 
 	it("should generate description for a wallet that is imported by public key", async () => {
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithAddress").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithPublicKey").mockReturnValue(true);
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
