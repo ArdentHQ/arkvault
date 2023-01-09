@@ -44,7 +44,7 @@ export const MigrationTransactionItem = ({ transaction, profile, onClick }: Noti
 	}
 
 	return (
-		<TableRow className="group" styles={rowStyles} onClick={() => onClick?.(transaction)}>
+		<TableRow data-testid="" className="group" styles={rowStyles} onClick={() => onClick?.(transaction)}>
 			<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
 				<div className="flex flex-1 items-center space-x-3 overflow-auto">
 					<Icon name="CircleCheckMark" size="lg" className="text-theme-hint-600" />
@@ -63,6 +63,7 @@ export const MigrationTransactionItem = ({ transaction, profile, onClick }: Noti
 
 			<TableCell variant="end" innerClassName="justify-end" isCompact>
 				<button
+					data-testid="MigrationTransactionItem__button"
 					type="button"
 					className="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
 				>
