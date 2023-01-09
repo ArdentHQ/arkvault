@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks";
-import { useAuthenticationHeading } from "./use-authentication-heading";
 import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
+import { useAuthenticationHeading } from "./use-authentication-heading";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 let wallet: IReadWriteWallet;

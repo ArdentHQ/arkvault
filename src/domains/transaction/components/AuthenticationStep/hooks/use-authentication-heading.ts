@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 
@@ -35,7 +35,7 @@ export const useAuthenticationHeading = ({ wallet }: { wallet: Contracts.IReadWr
 	}, [wallet]);
 
 	return {
-		title,
 		description,
+		title,
 	};
 };
