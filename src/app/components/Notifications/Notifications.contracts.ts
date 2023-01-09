@@ -24,7 +24,6 @@ export interface NotificationTransactionItemProperties {
 	containmentRef?: any;
 	onVisibilityChange?: (isVisible: boolean) => void;
 	onTransactionClick?: (item?: DTO.ExtendedConfirmedTransactionData) => void;
-	isCompact: boolean;
 }
 
 export interface NotificationsProperties {
@@ -33,8 +32,16 @@ export interface NotificationsProperties {
 	onTransactionClick?: (item?: DTO.ExtendedConfirmedTransactionData) => void;
 }
 
+export interface NotificationsMigrationItemProperties {
+	// @TODO: assign a proper type for this once defined
+	transaction: any;
+	profile: Contracts.IProfile;
+	// @TBD (also @TODO set transaction type)
+	onClick?: (transaction: any) => void;
+}
+
 export interface NotificationsMigrationProperties {
 	profile: Contracts.IProfile;
-	// @TODO: assign a proper type for this
+	// @TODO: assign a proper type for this once defined
 	transactions: any[];
 }

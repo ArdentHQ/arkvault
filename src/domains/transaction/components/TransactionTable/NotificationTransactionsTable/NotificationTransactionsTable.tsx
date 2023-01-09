@@ -17,10 +17,8 @@ export const NotificationTransactionsTable = ({
 	isLoading = true,
 	onVisibilityChange,
 }: NotificationTransactionsProperties) => {
-	const isCompact = !profile.appearance().get("useExpandedTables");
-
 	if (isLoading) {
-		return <NotificationTransactionsSkeleton isCompact={isCompact} />;
+		return <NotificationTransactionsSkeleton />;
 	}
 
 	return (
@@ -37,7 +35,6 @@ export const NotificationTransactionsTable = ({
 						profile={profile}
 						containmentRef={containmentRef}
 						onTransactionClick={onClick}
-						isCompact={isCompact}
 					/>
 				)}
 			</Table>
