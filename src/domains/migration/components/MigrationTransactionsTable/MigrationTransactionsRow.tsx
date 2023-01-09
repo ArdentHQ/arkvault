@@ -116,7 +116,6 @@ export const MigrationTransactionsRow = ({
 				<Button
 					variant={isCompact ? "transparent" : "secondary"}
 					size={isCompact ? "icon" : undefined}
-					disabled={true}
 					className={cn("whitespace-nowrap", {
 						"my-auto": !isCompact,
 						"text-theme-primary-600 hover:text-theme-primary-700": isCompact,
