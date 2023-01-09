@@ -28,7 +28,12 @@ export const NotificationTransactionsTable = ({
 			delayedCall
 			containment={containmentRef?.current}
 		>
-			<Table hideHeader columns={[{ Header: "-", className: "hidden" }]} data={transactions}>
+			<Table
+				data-testid="NotificationTransactionsTable"
+				hideHeader
+				columns={[{ Header: "-", className: "hidden" }]}
+				data={transactions}
+			>
 				{(transaction: DTO.ExtendedConfirmedTransactionData) => (
 					<NotificationTransactionItem
 						transaction={transaction}

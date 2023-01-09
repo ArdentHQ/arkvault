@@ -155,15 +155,400 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-base font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+                  >
+                    <div
+                      class="hidden justify-center md:flex"
+                    >
+                      <svg
+                        fill="none"
+                        height="96"
+                        viewBox="0 0 217 96"
+                        width="217"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M104.039 6.686a8.769 8.769 0 0 1 8.769 0l29.203 16.86a8.77 8.77 0 0 1 4.384 7.594v33.72a8.77 8.77 0 0 1-4.384 7.595l-29.203 16.86a8.769 8.769 0 0 1-8.769 0l-29.203-16.86a8.77 8.77 0 0 1-4.385-7.594V31.14a8.77 8.77 0 0 1 4.385-7.595l29.203-16.86z"
+                          fill="#F5F5FF"
+                          stroke="#5452CE"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M108.477 38.694l-24.9 26.203 24.9-40.282 24.719 40.282-24.719-26.203zm-11.22 17.793l3.98-4.205h14.41l3.98 4.205h-22.37zm6.814-7.131l4.402-4.51 4.34 4.51h-8.742z"
+                          fill="#D6D5FF"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M108.477 38.694l.531-.502a.73.73 0 0 0-1.061-.002l.53.504zm-24.9 26.203l-.622-.384a.73.73 0 0 0 1.15.888l-.529-.504zm24.9-40.282l.622-.382a.728.728 0 0 0-1.244-.002l.622.384zm24.719 40.282l-.532.502a.731.731 0 0 0 1.155-.884l-.623.382zm-35.939-8.41l-.53-.502a.73.73 0 0 0 .53 1.233v-.73zm3.98-4.205v-.73a.731.731 0 0 0-.531.228l.531.502zm14.41 0l.531-.502a.731.731 0 0 0-.531-.228v.73zm3.98 4.205v.731a.732.732 0 0 0 .53-1.233l-.53.502zm-15.556-7.131l-.523-.51a.73.73 0 0 0 .523 1.24v-.73zm4.402-4.51l.526-.506a.73.73 0 0 0-1.049-.004l.523.51zm4.34 4.51v.73a.732.732 0 0 0 .527-1.237l-.527.507zm-4.866-11.166l-24.9 26.204 1.059 1.007 24.9-26.204-1.059-1.007zm-23.75 27.091L109.099 25l-1.243-.768-24.9 40.282 1.243.768zm23.657-40.284l24.719 40.282 1.246-.764-24.72-40.282-1.245.764zm25.873 39.399l-24.719-26.204-1.063 1.003L132.664 65.4l1.063-1.003zM97.788 56.99l3.98-4.205-1.062-1.005-3.98 4.205 1.062 1.005zm3.449-3.977h14.41v-1.461h-14.41v1.461zm13.879-.228l3.98 4.205 1.061-1.005-3.979-4.205-1.062 1.005zm4.511 2.972h-22.37v1.461h22.37v-1.462zm-15.034-5.89l4.402-4.51-1.045-1.021-4.402 4.51 1.045 1.02zm3.353-4.514l4.341 4.51 1.053-1.014-4.341-4.51-1.053 1.014zm4.867 3.272h-8.742v1.462h8.742v-1.462z"
+                          fill="#5452CE"
+                        />
+                        <path
+                          d="M103.307 3.453a10.231 10.231 0 0 1 10.231 0l30.906 17.844a10.231 10.231 0 0 1 5.115 8.86v35.686a10.23 10.23 0 0 1-5.115 8.86l-30.906 17.844a10.231 10.231 0 0 1-10.231 0L72.402 74.703a10.23 10.23 0 0 1-5.115-8.86V30.157a10.23 10.23 0 0 1 5.115-8.86l30.905-17.844z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M105.5 9.495a5.846 5.846 0 0 1 5.846 0l28.961 16.721a5.846 5.846 0 0 1 2.923 5.063v33.442a5.846 5.846 0 0 1-2.923 5.063l-28.961 16.72a5.846 5.846 0 0 1-5.846 0l-28.962-16.72a5.846 5.846 0 0 1-2.923-5.063V31.279a5.846 5.846 0 0 1 2.923-5.063L105.5 9.496z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M155.923 81.5c.16-4.7 3.718-14.41 16.67-15.636m-9.778-4.752c1.656-2.76 3.43-9.412-2.725-13.95m47.605-41.547c14.272 11.957 8.977 27.913-9.459 19.315-18.436-8.598-4.485-18.088 9.781-.153m2.564 4.599c2.084 5.978-3.526 15.943-19.235 10.117-15.708-5.825-4.648-21.154 11.221-.46m1.923 4.14c3.205 7.204-.481 15.942-17.792 11.19-17.311-4.752-6.892-23.148 9.297-1.38m2.725 4.446c1.656 5.059.833 14.501-15.709 11.804"
+                          stroke="#5452CE"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 186.54 79.2)"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 171.254 49.97)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 181.523 88.557)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 209.028 62.98)"
+                        />
+                        <ellipse
+                          rx="3.056"
+                          ry="2.923"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 168.147 81.615)"
+                        />
+                        <path
+                          d="M60.923 81.5c-.16-4.7-3.72-14.41-16.672-15.636m9.779-4.752c-1.657-2.76-3.431-9.412 2.725-13.95M9.152 5.615C-5.122 17.572.174 33.528 18.612 24.93c18.437-8.598 4.485-18.088-9.782-.153m-2.565 4.599c-2.084 5.978 3.527 15.943 19.236 10.117 15.71-5.825 4.65-21.154-11.22-.46m-1.925 4.14c-3.204 7.204.481 15.942 17.794 11.19 17.313-4.752 6.893-23.148-9.297-1.38m-2.726 4.446c-1.656 5.059-.833 14.501 15.71 11.804"
+                          stroke="#DE5846"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="30.315"
+                          cy="79.201"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="45.599"
+                          cy="49.97"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="35.328"
+                          cy="88.557"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="7.819"
+                          cy="62.98"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="48.706"
+                          cy="81.615"
+                          rx="3.057"
+                          ry="2.923"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="px-5"
+                    >
+                      <div
+                        class=" css-1m6rt2i"
+                        role="table"
+                      >
+                        <table
+                          cellpadding="0"
+                          class="table-auto"
+                        >
+                          <tbody
+                            role="rowgroup"
+                          >
+                            <tr
+                              class="group css-1vhoczi"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="w-3/5"
+                              >
+                                <div
+                                  class="flex space-x-3 css-mx19qq"
+                                >
+                                  <div
+                                    class="flex flex-1 items-center space-x-3 overflow-auto"
+                                  >
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+                                          title="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="w-20 flex-1"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="justify-end css-br23tb"
+                                >
+                                  <button
+                                    class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    type="button"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap font-semibold"
+                                    >
+                                      Migration Successful
+                                    </span>
+                                    <div
+                                      class="css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="chevron-right-small"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr
+                              class="group css-1vhoczi"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="w-3/5"
+                              >
+                                <div
+                                  class="flex space-x-3 css-mx19qq"
+                                >
+                                  <div
+                                    class="flex flex-1 items-center space-x-3 overflow-auto"
+                                  >
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(156, 39, 176)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                          title="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="w-20 flex-1"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="justify-end css-br23tb"
+                                >
+                                  <button
+                                    class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    type="button"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap font-semibold"
+                                    >
+                                      Migration Successful
+                                    </span>
+                                    <div
+                                      class="css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="chevron-right-small"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -174,7 +559,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -285,7 +670,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -393,7 +778,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1188,15 +1573,400 @@ exports[`Notifications > should render with transactions in lg 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-base font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+                  >
+                    <div
+                      class="hidden justify-center md:flex"
+                    >
+                      <svg
+                        fill="none"
+                        height="96"
+                        viewBox="0 0 217 96"
+                        width="217"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M104.039 6.686a8.769 8.769 0 0 1 8.769 0l29.203 16.86a8.77 8.77 0 0 1 4.384 7.594v33.72a8.77 8.77 0 0 1-4.384 7.595l-29.203 16.86a8.769 8.769 0 0 1-8.769 0l-29.203-16.86a8.77 8.77 0 0 1-4.385-7.594V31.14a8.77 8.77 0 0 1 4.385-7.595l29.203-16.86z"
+                          fill="#F5F5FF"
+                          stroke="#5452CE"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M108.477 38.694l-24.9 26.203 24.9-40.282 24.719 40.282-24.719-26.203zm-11.22 17.793l3.98-4.205h14.41l3.98 4.205h-22.37zm6.814-7.131l4.402-4.51 4.34 4.51h-8.742z"
+                          fill="#D6D5FF"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M108.477 38.694l.531-.502a.73.73 0 0 0-1.061-.002l.53.504zm-24.9 26.203l-.622-.384a.73.73 0 0 0 1.15.888l-.529-.504zm24.9-40.282l.622-.382a.728.728 0 0 0-1.244-.002l.622.384zm24.719 40.282l-.532.502a.731.731 0 0 0 1.155-.884l-.623.382zm-35.939-8.41l-.53-.502a.73.73 0 0 0 .53 1.233v-.73zm3.98-4.205v-.73a.731.731 0 0 0-.531.228l.531.502zm14.41 0l.531-.502a.731.731 0 0 0-.531-.228v.73zm3.98 4.205v.731a.732.732 0 0 0 .53-1.233l-.53.502zm-15.556-7.131l-.523-.51a.73.73 0 0 0 .523 1.24v-.73zm4.402-4.51l.526-.506a.73.73 0 0 0-1.049-.004l.523.51zm4.34 4.51v.73a.732.732 0 0 0 .527-1.237l-.527.507zm-4.866-11.166l-24.9 26.204 1.059 1.007 24.9-26.204-1.059-1.007zm-23.75 27.091L109.099 25l-1.243-.768-24.9 40.282 1.243.768zm23.657-40.284l24.719 40.282 1.246-.764-24.72-40.282-1.245.764zm25.873 39.399l-24.719-26.204-1.063 1.003L132.664 65.4l1.063-1.003zM97.788 56.99l3.98-4.205-1.062-1.005-3.98 4.205 1.062 1.005zm3.449-3.977h14.41v-1.461h-14.41v1.461zm13.879-.228l3.98 4.205 1.061-1.005-3.979-4.205-1.062 1.005zm4.511 2.972h-22.37v1.461h22.37v-1.462zm-15.034-5.89l4.402-4.51-1.045-1.021-4.402 4.51 1.045 1.02zm3.353-4.514l4.341 4.51 1.053-1.014-4.341-4.51-1.053 1.014zm4.867 3.272h-8.742v1.462h8.742v-1.462z"
+                          fill="#5452CE"
+                        />
+                        <path
+                          d="M103.307 3.453a10.231 10.231 0 0 1 10.231 0l30.906 17.844a10.231 10.231 0 0 1 5.115 8.86v35.686a10.23 10.23 0 0 1-5.115 8.86l-30.906 17.844a10.231 10.231 0 0 1-10.231 0L72.402 74.703a10.23 10.23 0 0 1-5.115-8.86V30.157a10.23 10.23 0 0 1 5.115-8.86l30.905-17.844z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M105.5 9.495a5.846 5.846 0 0 1 5.846 0l28.961 16.721a5.846 5.846 0 0 1 2.923 5.063v33.442a5.846 5.846 0 0 1-2.923 5.063l-28.961 16.72a5.846 5.846 0 0 1-5.846 0l-28.962-16.72a5.846 5.846 0 0 1-2.923-5.063V31.279a5.846 5.846 0 0 1 2.923-5.063L105.5 9.496z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M155.923 81.5c.16-4.7 3.718-14.41 16.67-15.636m-9.778-4.752c1.656-2.76 3.43-9.412-2.725-13.95m47.605-41.547c14.272 11.957 8.977 27.913-9.459 19.315-18.436-8.598-4.485-18.088 9.781-.153m2.564 4.599c2.084 5.978-3.526 15.943-19.235 10.117-15.708-5.825-4.648-21.154 11.221-.46m1.923 4.14c3.205 7.204-.481 15.942-17.792 11.19-17.311-4.752-6.892-23.148 9.297-1.38m2.725 4.446c1.656 5.059.833 14.501-15.709 11.804"
+                          stroke="#5452CE"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 186.54 79.2)"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 171.254 49.97)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 181.523 88.557)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 209.028 62.98)"
+                        />
+                        <ellipse
+                          rx="3.056"
+                          ry="2.923"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 168.147 81.615)"
+                        />
+                        <path
+                          d="M60.923 81.5c-.16-4.7-3.72-14.41-16.672-15.636m9.779-4.752c-1.657-2.76-3.431-9.412 2.725-13.95M9.152 5.615C-5.122 17.572.174 33.528 18.612 24.93c18.437-8.598 4.485-18.088-9.782-.153m-2.565 4.599c-2.084 5.978 3.527 15.943 19.236 10.117 15.71-5.825 4.65-21.154-11.22-.46m-1.925 4.14c-3.204 7.204.481 15.942 17.794 11.19 17.313-4.752 6.893-23.148-9.297-1.38m-2.726 4.446c-1.656 5.059-.833 14.501 15.71 11.804"
+                          stroke="#DE5846"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="30.315"
+                          cy="79.201"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="45.599"
+                          cy="49.97"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="35.328"
+                          cy="88.557"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="7.819"
+                          cy="62.98"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="48.706"
+                          cy="81.615"
+                          rx="3.057"
+                          ry="2.923"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="px-5"
+                    >
+                      <div
+                        class=" css-1m6rt2i"
+                        role="table"
+                      >
+                        <table
+                          cellpadding="0"
+                          class="table-auto"
+                        >
+                          <tbody
+                            role="rowgroup"
+                          >
+                            <tr
+                              class="group css-1vhoczi"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="w-3/5"
+                              >
+                                <div
+                                  class="flex space-x-3 css-mx19qq"
+                                >
+                                  <div
+                                    class="flex flex-1 items-center space-x-3 overflow-auto"
+                                  >
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+                                          title="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="w-20 flex-1"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="justify-end css-br23tb"
+                                >
+                                  <button
+                                    class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    type="button"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap font-semibold"
+                                    >
+                                      Migration Successful
+                                    </span>
+                                    <div
+                                      class="css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="chevron-right-small"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr
+                              class="group css-1vhoczi"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="w-3/5"
+                              >
+                                <div
+                                  class="flex space-x-3 css-mx19qq"
+                                >
+                                  <div
+                                    class="flex flex-1 items-center space-x-3 overflow-auto"
+                                  >
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(156, 39, 176)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                          title="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="w-20 flex-1"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="justify-end css-br23tb"
+                                >
+                                  <button
+                                    class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    type="button"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap font-semibold"
+                                    >
+                                      Migration Successful
+                                    </span>
+                                    <div
+                                      class="css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="chevron-right-small"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -1207,7 +1977,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1318,7 +2088,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1426,7 +2196,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1702,15 +2472,400 @@ exports[`Notifications > should render with transactions in md 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-base font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+                  >
+                    <div
+                      class="hidden justify-center md:flex"
+                    >
+                      <svg
+                        fill="none"
+                        height="96"
+                        viewBox="0 0 217 96"
+                        width="217"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M104.039 6.686a8.769 8.769 0 0 1 8.769 0l29.203 16.86a8.77 8.77 0 0 1 4.384 7.594v33.72a8.77 8.77 0 0 1-4.384 7.595l-29.203 16.86a8.769 8.769 0 0 1-8.769 0l-29.203-16.86a8.77 8.77 0 0 1-4.385-7.594V31.14a8.77 8.77 0 0 1 4.385-7.595l29.203-16.86z"
+                          fill="#F5F5FF"
+                          stroke="#5452CE"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M108.477 38.694l-24.9 26.203 24.9-40.282 24.719 40.282-24.719-26.203zm-11.22 17.793l3.98-4.205h14.41l3.98 4.205h-22.37zm6.814-7.131l4.402-4.51 4.34 4.51h-8.742z"
+                          fill="#D6D5FF"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M108.477 38.694l.531-.502a.73.73 0 0 0-1.061-.002l.53.504zm-24.9 26.203l-.622-.384a.73.73 0 0 0 1.15.888l-.529-.504zm24.9-40.282l.622-.382a.728.728 0 0 0-1.244-.002l.622.384zm24.719 40.282l-.532.502a.731.731 0 0 0 1.155-.884l-.623.382zm-35.939-8.41l-.53-.502a.73.73 0 0 0 .53 1.233v-.73zm3.98-4.205v-.73a.731.731 0 0 0-.531.228l.531.502zm14.41 0l.531-.502a.731.731 0 0 0-.531-.228v.73zm3.98 4.205v.731a.732.732 0 0 0 .53-1.233l-.53.502zm-15.556-7.131l-.523-.51a.73.73 0 0 0 .523 1.24v-.73zm4.402-4.51l.526-.506a.73.73 0 0 0-1.049-.004l.523.51zm4.34 4.51v.73a.732.732 0 0 0 .527-1.237l-.527.507zm-4.866-11.166l-24.9 26.204 1.059 1.007 24.9-26.204-1.059-1.007zm-23.75 27.091L109.099 25l-1.243-.768-24.9 40.282 1.243.768zm23.657-40.284l24.719 40.282 1.246-.764-24.72-40.282-1.245.764zm25.873 39.399l-24.719-26.204-1.063 1.003L132.664 65.4l1.063-1.003zM97.788 56.99l3.98-4.205-1.062-1.005-3.98 4.205 1.062 1.005zm3.449-3.977h14.41v-1.461h-14.41v1.461zm13.879-.228l3.98 4.205 1.061-1.005-3.979-4.205-1.062 1.005zm4.511 2.972h-22.37v1.461h22.37v-1.462zm-15.034-5.89l4.402-4.51-1.045-1.021-4.402 4.51 1.045 1.02zm3.353-4.514l4.341 4.51 1.053-1.014-4.341-4.51-1.053 1.014zm4.867 3.272h-8.742v1.462h8.742v-1.462z"
+                          fill="#5452CE"
+                        />
+                        <path
+                          d="M103.307 3.453a10.231 10.231 0 0 1 10.231 0l30.906 17.844a10.231 10.231 0 0 1 5.115 8.86v35.686a10.23 10.23 0 0 1-5.115 8.86l-30.906 17.844a10.231 10.231 0 0 1-10.231 0L72.402 74.703a10.23 10.23 0 0 1-5.115-8.86V30.157a10.23 10.23 0 0 1 5.115-8.86l30.905-17.844z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M105.5 9.495a5.846 5.846 0 0 1 5.846 0l28.961 16.721a5.846 5.846 0 0 1 2.923 5.063v33.442a5.846 5.846 0 0 1-2.923 5.063l-28.961 16.72a5.846 5.846 0 0 1-5.846 0l-28.962-16.72a5.846 5.846 0 0 1-2.923-5.063V31.279a5.846 5.846 0 0 1 2.923-5.063L105.5 9.496z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M155.923 81.5c.16-4.7 3.718-14.41 16.67-15.636m-9.778-4.752c1.656-2.76 3.43-9.412-2.725-13.95m47.605-41.547c14.272 11.957 8.977 27.913-9.459 19.315-18.436-8.598-4.485-18.088 9.781-.153m2.564 4.599c2.084 5.978-3.526 15.943-19.235 10.117-15.708-5.825-4.648-21.154 11.221-.46m1.923 4.14c3.205 7.204-.481 15.942-17.792 11.19-17.311-4.752-6.892-23.148 9.297-1.38m2.725 4.446c1.656 5.059.833 14.501-15.709 11.804"
+                          stroke="#5452CE"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 186.54 79.2)"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 171.254 49.97)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 181.523 88.557)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 209.028 62.98)"
+                        />
+                        <ellipse
+                          rx="3.056"
+                          ry="2.923"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 168.147 81.615)"
+                        />
+                        <path
+                          d="M60.923 81.5c-.16-4.7-3.72-14.41-16.672-15.636m9.779-4.752c-1.657-2.76-3.431-9.412 2.725-13.95M9.152 5.615C-5.122 17.572.174 33.528 18.612 24.93c18.437-8.598 4.485-18.088-9.782-.153m-2.565 4.599c-2.084 5.978 3.527 15.943 19.236 10.117 15.71-5.825 4.65-21.154-11.22-.46m-1.925 4.14c-3.204 7.204.481 15.942 17.794 11.19 17.313-4.752 6.893-23.148-9.297-1.38m-2.726 4.446c-1.656 5.059-.833 14.501 15.71 11.804"
+                          stroke="#DE5846"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="30.315"
+                          cy="79.201"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="45.599"
+                          cy="49.97"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="35.328"
+                          cy="88.557"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="7.819"
+                          cy="62.98"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="48.706"
+                          cy="81.615"
+                          rx="3.057"
+                          ry="2.923"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="px-5"
+                    >
+                      <div
+                        class=" css-1m6rt2i"
+                        role="table"
+                      >
+                        <table
+                          cellpadding="0"
+                          class="table-auto"
+                        >
+                          <tbody
+                            role="rowgroup"
+                          >
+                            <tr
+                              class="group css-1vhoczi"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="w-3/5"
+                              >
+                                <div
+                                  class="flex space-x-3 css-mx19qq"
+                                >
+                                  <div
+                                    class="flex flex-1 items-center space-x-3 overflow-auto"
+                                  >
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+                                          title="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="w-20 flex-1"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="justify-end css-br23tb"
+                                >
+                                  <button
+                                    class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    type="button"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap font-semibold"
+                                    >
+                                      Migration Successful
+                                    </span>
+                                    <div
+                                      class="css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="chevron-right-small"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr
+                              class="group css-1vhoczi"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="w-3/5"
+                              >
+                                <div
+                                  class="flex space-x-3 css-mx19qq"
+                                >
+                                  <div
+                                    class="flex flex-1 items-center space-x-3 overflow-auto"
+                                  >
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(156, 39, 176)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                          title="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="w-20 flex-1"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="justify-end css-br23tb"
+                                >
+                                  <button
+                                    class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    type="button"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap font-semibold"
+                                    >
+                                      Migration Successful
+                                    </span>
+                                    <div
+                                      class="css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="chevron-right-small"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -1721,7 +2876,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1832,7 +2987,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1940,7 +3095,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -2216,15 +3371,424 @@ exports[`Notifications > should render with transactions in sm 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-base font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+                  >
+                    <div
+                      class="hidden justify-center md:flex"
+                    >
+                      <svg
+                        fill="none"
+                        height="96"
+                        viewBox="0 0 217 96"
+                        width="217"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M104.039 6.686a8.769 8.769 0 0 1 8.769 0l29.203 16.86a8.77 8.77 0 0 1 4.384 7.594v33.72a8.77 8.77 0 0 1-4.384 7.595l-29.203 16.86a8.769 8.769 0 0 1-8.769 0l-29.203-16.86a8.77 8.77 0 0 1-4.385-7.594V31.14a8.77 8.77 0 0 1 4.385-7.595l29.203-16.86z"
+                          fill="#F5F5FF"
+                          stroke="#5452CE"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M108.477 38.694l-24.9 26.203 24.9-40.282 24.719 40.282-24.719-26.203zm-11.22 17.793l3.98-4.205h14.41l3.98 4.205h-22.37zm6.814-7.131l4.402-4.51 4.34 4.51h-8.742z"
+                          fill="#D6D5FF"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M108.477 38.694l.531-.502a.73.73 0 0 0-1.061-.002l.53.504zm-24.9 26.203l-.622-.384a.73.73 0 0 0 1.15.888l-.529-.504zm24.9-40.282l.622-.382a.728.728 0 0 0-1.244-.002l.622.384zm24.719 40.282l-.532.502a.731.731 0 0 0 1.155-.884l-.623.382zm-35.939-8.41l-.53-.502a.73.73 0 0 0 .53 1.233v-.73zm3.98-4.205v-.73a.731.731 0 0 0-.531.228l.531.502zm14.41 0l.531-.502a.731.731 0 0 0-.531-.228v.73zm3.98 4.205v.731a.732.732 0 0 0 .53-1.233l-.53.502zm-15.556-7.131l-.523-.51a.73.73 0 0 0 .523 1.24v-.73zm4.402-4.51l.526-.506a.73.73 0 0 0-1.049-.004l.523.51zm4.34 4.51v.73a.732.732 0 0 0 .527-1.237l-.527.507zm-4.866-11.166l-24.9 26.204 1.059 1.007 24.9-26.204-1.059-1.007zm-23.75 27.091L109.099 25l-1.243-.768-24.9 40.282 1.243.768zm23.657-40.284l24.719 40.282 1.246-.764-24.72-40.282-1.245.764zm25.873 39.399l-24.719-26.204-1.063 1.003L132.664 65.4l1.063-1.003zM97.788 56.99l3.98-4.205-1.062-1.005-3.98 4.205 1.062 1.005zm3.449-3.977h14.41v-1.461h-14.41v1.461zm13.879-.228l3.98 4.205 1.061-1.005-3.979-4.205-1.062 1.005zm4.511 2.972h-22.37v1.461h22.37v-1.462zm-15.034-5.89l4.402-4.51-1.045-1.021-4.402 4.51 1.045 1.02zm3.353-4.514l4.341 4.51 1.053-1.014-4.341-4.51-1.053 1.014zm4.867 3.272h-8.742v1.462h8.742v-1.462z"
+                          fill="#5452CE"
+                        />
+                        <path
+                          d="M103.307 3.453a10.231 10.231 0 0 1 10.231 0l30.906 17.844a10.231 10.231 0 0 1 5.115 8.86v35.686a10.23 10.23 0 0 1-5.115 8.86l-30.906 17.844a10.231 10.231 0 0 1-10.231 0L72.402 74.703a10.23 10.23 0 0 1-5.115-8.86V30.157a10.23 10.23 0 0 1 5.115-8.86l30.905-17.844z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M105.5 9.495a5.846 5.846 0 0 1 5.846 0l28.961 16.721a5.846 5.846 0 0 1 2.923 5.063v33.442a5.846 5.846 0 0 1-2.923 5.063l-28.961 16.72a5.846 5.846 0 0 1-5.846 0l-28.962-16.72a5.846 5.846 0 0 1-2.923-5.063V31.279a5.846 5.846 0 0 1 2.923-5.063L105.5 9.496z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M155.923 81.5c.16-4.7 3.718-14.41 16.67-15.636m-9.778-4.752c1.656-2.76 3.43-9.412-2.725-13.95m47.605-41.547c14.272 11.957 8.977 27.913-9.459 19.315-18.436-8.598-4.485-18.088 9.781-.153m2.564 4.599c2.084 5.978-3.526 15.943-19.235 10.117-15.708-5.825-4.648-21.154 11.221-.46m1.923 4.14c3.205 7.204-.481 15.942-17.792 11.19-17.311-4.752-6.892-23.148 9.297-1.38m2.725 4.446c1.656 5.059.833 14.501-15.709 11.804"
+                          stroke="#5452CE"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 186.54 79.2)"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 171.254 49.97)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 181.523 88.557)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 209.028 62.98)"
+                        />
+                        <ellipse
+                          rx="3.056"
+                          ry="2.923"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 168.147 81.615)"
+                        />
+                        <path
+                          d="M60.923 81.5c-.16-4.7-3.72-14.41-16.672-15.636m9.779-4.752c-1.657-2.76-3.431-9.412 2.725-13.95M9.152 5.615C-5.122 17.572.174 33.528 18.612 24.93c18.437-8.598 4.485-18.088-9.782-.153m-2.565 4.599c-2.084 5.978 3.527 15.943 19.236 10.117 15.71-5.825 4.65-21.154-11.22-.46m-1.925 4.14c-3.204 7.204.481 15.942 17.794 11.19 17.313-4.752 6.893-23.148-9.297-1.38m-2.726 4.446c-1.656 5.059-.833 14.501 15.71 11.804"
+                          stroke="#DE5846"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="30.315"
+                          cy="79.201"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="45.599"
+                          cy="49.97"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="35.328"
+                          cy="88.557"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="7.819"
+                          cy="62.98"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="48.706"
+                          cy="81.615"
+                          rx="3.057"
+                          ry="2.923"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="px-5"
+                    >
+                      <div
+                        class=" css-1m6rt2i"
+                        role="table"
+                      >
+                        <table
+                          cellpadding="0"
+                          class="table-auto"
+                        >
+                          <tbody
+                            role="rowgroup"
+                          >
+                            <tr
+                              class="group css-1src4hy"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="flex-col space-y-4 py-4 text-sm"
+                              >
+                                <div
+                                  class="flex items-center justify-between space-x-4"
+                                >
+                                  <div
+                                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                                  >
+                                    Sender
+                                  </div>
+                                  <div
+                                    class="flex w-full items-center space-x-0 text-right"
+                                  >
+                                    <div
+                                      class="w-0 flex-1 pr-2"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-sm"
+                                          data-testid="Address__address"
+                                        >
+                                          AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+                                          title="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="flex items-center justify-between space-x-4"
+                                >
+                                  <div
+                                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                                  >
+                                    Type
+                                  </div>
+                                  <div
+                                    class="flex items-center space-x-3"
+                                  >
+                                    <button
+                                      class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                      type="button"
+                                    >
+                                      <span
+                                        class="whitespace-nowrap font-semibold"
+                                      >
+                                        Migration Successful
+                                      </span>
+                                      <div
+                                        class="css-15txs7d"
+                                        height="10"
+                                        width="10"
+                                      >
+                                        <svg
+                                          id="chevron-right-small"
+                                          viewBox="0 0 10 10"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <path
+                                            d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          />
+                                        </svg>
+                                      </div>
+                                    </button>
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr
+                              class="group css-1src4hy"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="flex-col space-y-4 py-4 text-sm"
+                              >
+                                <div
+                                  class="flex items-center justify-between space-x-4"
+                                >
+                                  <div
+                                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                                  >
+                                    Sender
+                                  </div>
+                                  <div
+                                    class="flex w-full items-center space-x-0 text-right"
+                                  >
+                                    <div
+                                      class="w-0 flex-1 pr-2"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-sm"
+                                          data-testid="Address__address"
+                                        >
+                                          AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(156, 39, 176)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                          title="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="flex items-center justify-between space-x-4"
+                                >
+                                  <div
+                                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                                  >
+                                    Type
+                                  </div>
+                                  <div
+                                    class="flex items-center space-x-3"
+                                  >
+                                    <button
+                                      class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                      type="button"
+                                    >
+                                      <span
+                                        class="whitespace-nowrap font-semibold"
+                                      >
+                                        Migration Successful
+                                      </span>
+                                      <div
+                                        class="css-15txs7d"
+                                        height="10"
+                                        width="10"
+                                      >
+                                        <svg
+                                          id="chevron-right-small"
+                                          viewBox="0 0 10 10"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <path
+                                            d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          />
+                                        </svg>
+                                      </div>
+                                    </button>
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -2235,11 +3799,11 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -2259,7 +3823,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="font-semibold text-base text-theme-text"
+                                      class="font-semibold text-sm text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span
@@ -2270,7 +3834,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                       </span>
                                     </span>
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2320,11 +3884,11 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -2344,7 +3908,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -2394,11 +3958,11 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -2418,7 +3982,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -2636,15 +4200,400 @@ exports[`Notifications > should render with transactions in xl 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-base font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+                  >
+                    <div
+                      class="hidden justify-center md:flex"
+                    >
+                      <svg
+                        fill="none"
+                        height="96"
+                        viewBox="0 0 217 96"
+                        width="217"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M104.039 6.686a8.769 8.769 0 0 1 8.769 0l29.203 16.86a8.77 8.77 0 0 1 4.384 7.594v33.72a8.77 8.77 0 0 1-4.384 7.595l-29.203 16.86a8.769 8.769 0 0 1-8.769 0l-29.203-16.86a8.77 8.77 0 0 1-4.385-7.594V31.14a8.77 8.77 0 0 1 4.385-7.595l29.203-16.86z"
+                          fill="#F5F5FF"
+                          stroke="#5452CE"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M108.477 38.694l-24.9 26.203 24.9-40.282 24.719 40.282-24.719-26.203zm-11.22 17.793l3.98-4.205h14.41l3.98 4.205h-22.37zm6.814-7.131l4.402-4.51 4.34 4.51h-8.742z"
+                          fill="#D6D5FF"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M108.477 38.694l.531-.502a.73.73 0 0 0-1.061-.002l.53.504zm-24.9 26.203l-.622-.384a.73.73 0 0 0 1.15.888l-.529-.504zm24.9-40.282l.622-.382a.728.728 0 0 0-1.244-.002l.622.384zm24.719 40.282l-.532.502a.731.731 0 0 0 1.155-.884l-.623.382zm-35.939-8.41l-.53-.502a.73.73 0 0 0 .53 1.233v-.73zm3.98-4.205v-.73a.731.731 0 0 0-.531.228l.531.502zm14.41 0l.531-.502a.731.731 0 0 0-.531-.228v.73zm3.98 4.205v.731a.732.732 0 0 0 .53-1.233l-.53.502zm-15.556-7.131l-.523-.51a.73.73 0 0 0 .523 1.24v-.73zm4.402-4.51l.526-.506a.73.73 0 0 0-1.049-.004l.523.51zm4.34 4.51v.73a.732.732 0 0 0 .527-1.237l-.527.507zm-4.866-11.166l-24.9 26.204 1.059 1.007 24.9-26.204-1.059-1.007zm-23.75 27.091L109.099 25l-1.243-.768-24.9 40.282 1.243.768zm23.657-40.284l24.719 40.282 1.246-.764-24.72-40.282-1.245.764zm25.873 39.399l-24.719-26.204-1.063 1.003L132.664 65.4l1.063-1.003zM97.788 56.99l3.98-4.205-1.062-1.005-3.98 4.205 1.062 1.005zm3.449-3.977h14.41v-1.461h-14.41v1.461zm13.879-.228l3.98 4.205 1.061-1.005-3.979-4.205-1.062 1.005zm4.511 2.972h-22.37v1.461h22.37v-1.462zm-15.034-5.89l4.402-4.51-1.045-1.021-4.402 4.51 1.045 1.02zm3.353-4.514l4.341 4.51 1.053-1.014-4.341-4.51-1.053 1.014zm4.867 3.272h-8.742v1.462h8.742v-1.462z"
+                          fill="#5452CE"
+                        />
+                        <path
+                          d="M103.307 3.453a10.231 10.231 0 0 1 10.231 0l30.906 17.844a10.231 10.231 0 0 1 5.115 8.86v35.686a10.23 10.23 0 0 1-5.115 8.86l-30.906 17.844a10.231 10.231 0 0 1-10.231 0L72.402 74.703a10.23 10.23 0 0 1-5.115-8.86V30.157a10.23 10.23 0 0 1 5.115-8.86l30.905-17.844z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M105.5 9.495a5.846 5.846 0 0 1 5.846 0l28.961 16.721a5.846 5.846 0 0 1 2.923 5.063v33.442a5.846 5.846 0 0 1-2.923 5.063l-28.961 16.72a5.846 5.846 0 0 1-5.846 0l-28.962-16.72a5.846 5.846 0 0 1-2.923-5.063V31.279a5.846 5.846 0 0 1 2.923-5.063L105.5 9.496z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M155.923 81.5c.16-4.7 3.718-14.41 16.67-15.636m-9.778-4.752c1.656-2.76 3.43-9.412-2.725-13.95m47.605-41.547c14.272 11.957 8.977 27.913-9.459 19.315-18.436-8.598-4.485-18.088 9.781-.153m2.564 4.599c2.084 5.978-3.526 15.943-19.235 10.117-15.708-5.825-4.648-21.154 11.221-.46m1.923 4.14c3.205 7.204-.481 15.942-17.792 11.19-17.311-4.752-6.892-23.148 9.297-1.38m2.725 4.446c1.656 5.059.833 14.501-15.709 11.804"
+                          stroke="#5452CE"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 186.54 79.2)"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 171.254 49.97)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 181.523 88.557)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 209.028 62.98)"
+                        />
+                        <ellipse
+                          rx="3.056"
+                          ry="2.923"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 168.147 81.615)"
+                        />
+                        <path
+                          d="M60.923 81.5c-.16-4.7-3.72-14.41-16.672-15.636m9.779-4.752c-1.657-2.76-3.431-9.412 2.725-13.95M9.152 5.615C-5.122 17.572.174 33.528 18.612 24.93c18.437-8.598 4.485-18.088-9.782-.153m-2.565 4.599c-2.084 5.978 3.527 15.943 19.236 10.117 15.71-5.825 4.65-21.154-11.22-.46m-1.925 4.14c-3.204 7.204.481 15.942 17.794 11.19 17.313-4.752 6.893-23.148-9.297-1.38m-2.726 4.446c-1.656 5.059-.833 14.501 15.71 11.804"
+                          stroke="#DE5846"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="30.315"
+                          cy="79.201"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="45.599"
+                          cy="49.97"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="35.328"
+                          cy="88.557"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="7.819"
+                          cy="62.98"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="48.706"
+                          cy="81.615"
+                          rx="3.057"
+                          ry="2.923"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="px-5"
+                    >
+                      <div
+                        class=" css-1m6rt2i"
+                        role="table"
+                      >
+                        <table
+                          cellpadding="0"
+                          class="table-auto"
+                        >
+                          <tbody
+                            role="rowgroup"
+                          >
+                            <tr
+                              class="group css-1vhoczi"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="w-3/5"
+                              >
+                                <div
+                                  class="flex space-x-3 css-mx19qq"
+                                >
+                                  <div
+                                    class="flex flex-1 items-center space-x-3 overflow-auto"
+                                  >
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+                                          title="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="w-20 flex-1"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="justify-end css-br23tb"
+                                >
+                                  <button
+                                    class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    type="button"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap font-semibold"
+                                    >
+                                      Migration Successful
+                                    </span>
+                                    <div
+                                      class="css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="chevron-right-small"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr
+                              class="group css-1vhoczi"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="w-3/5"
+                              >
+                                <div
+                                  class="flex space-x-3 css-mx19qq"
+                                >
+                                  <div
+                                    class="flex flex-1 items-center space-x-3 overflow-auto"
+                                  >
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(156, 39, 176)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                          title="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="w-20 flex-1"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div
+                                  class="justify-end css-br23tb"
+                                >
+                                  <button
+                                    class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    type="button"
+                                  >
+                                    <span
+                                      class="whitespace-nowrap font-semibold"
+                                    >
+                                      Migration Successful
+                                    </span>
+                                    <div
+                                      class="css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="chevron-right-small"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -2655,7 +4604,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -2766,7 +4715,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -2874,7 +4823,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -3157,15 +5106,424 @@ exports[`Notifications > should render with transactions in xs 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-base font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+                  >
+                    <div
+                      class="hidden justify-center md:flex"
+                    >
+                      <svg
+                        fill="none"
+                        height="96"
+                        viewBox="0 0 217 96"
+                        width="217"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M104.039 6.686a8.769 8.769 0 0 1 8.769 0l29.203 16.86a8.77 8.77 0 0 1 4.384 7.594v33.72a8.77 8.77 0 0 1-4.384 7.595l-29.203 16.86a8.769 8.769 0 0 1-8.769 0l-29.203-16.86a8.77 8.77 0 0 1-4.385-7.594V31.14a8.77 8.77 0 0 1 4.385-7.595l29.203-16.86z"
+                          fill="#F5F5FF"
+                          stroke="#5452CE"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M108.477 38.694l-24.9 26.203 24.9-40.282 24.719 40.282-24.719-26.203zm-11.22 17.793l3.98-4.205h14.41l3.98 4.205h-22.37zm6.814-7.131l4.402-4.51 4.34 4.51h-8.742z"
+                          fill="#D6D5FF"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M108.477 38.694l.531-.502a.73.73 0 0 0-1.061-.002l.53.504zm-24.9 26.203l-.622-.384a.73.73 0 0 0 1.15.888l-.529-.504zm24.9-40.282l.622-.382a.728.728 0 0 0-1.244-.002l.622.384zm24.719 40.282l-.532.502a.731.731 0 0 0 1.155-.884l-.623.382zm-35.939-8.41l-.53-.502a.73.73 0 0 0 .53 1.233v-.73zm3.98-4.205v-.73a.731.731 0 0 0-.531.228l.531.502zm14.41 0l.531-.502a.731.731 0 0 0-.531-.228v.73zm3.98 4.205v.731a.732.732 0 0 0 .53-1.233l-.53.502zm-15.556-7.131l-.523-.51a.73.73 0 0 0 .523 1.24v-.73zm4.402-4.51l.526-.506a.73.73 0 0 0-1.049-.004l.523.51zm4.34 4.51v.73a.732.732 0 0 0 .527-1.237l-.527.507zm-4.866-11.166l-24.9 26.204 1.059 1.007 24.9-26.204-1.059-1.007zm-23.75 27.091L109.099 25l-1.243-.768-24.9 40.282 1.243.768zm23.657-40.284l24.719 40.282 1.246-.764-24.72-40.282-1.245.764zm25.873 39.399l-24.719-26.204-1.063 1.003L132.664 65.4l1.063-1.003zM97.788 56.99l3.98-4.205-1.062-1.005-3.98 4.205 1.062 1.005zm3.449-3.977h14.41v-1.461h-14.41v1.461zm13.879-.228l3.98 4.205 1.061-1.005-3.979-4.205-1.062 1.005zm4.511 2.972h-22.37v1.461h22.37v-1.462zm-15.034-5.89l4.402-4.51-1.045-1.021-4.402 4.51 1.045 1.02zm3.353-4.514l4.341 4.51 1.053-1.014-4.341-4.51-1.053 1.014zm4.867 3.272h-8.742v1.462h8.742v-1.462z"
+                          fill="#5452CE"
+                        />
+                        <path
+                          d="M103.307 3.453a10.231 10.231 0 0 1 10.231 0l30.906 17.844a10.231 10.231 0 0 1 5.115 8.86v35.686a10.23 10.23 0 0 1-5.115 8.86l-30.906 17.844a10.231 10.231 0 0 1-10.231 0L72.402 74.703a10.23 10.23 0 0 1-5.115-8.86V30.157a10.23 10.23 0 0 1 5.115-8.86l30.905-17.844z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M105.5 9.495a5.846 5.846 0 0 1 5.846 0l28.961 16.721a5.846 5.846 0 0 1 2.923 5.063v33.442a5.846 5.846 0 0 1-2.923 5.063l-28.961 16.72a5.846 5.846 0 0 1-5.846 0l-28.962-16.72a5.846 5.846 0 0 1-2.923-5.063V31.279a5.846 5.846 0 0 1 2.923-5.063L105.5 9.496z"
+                          stroke="#D6D5FF"
+                          stroke-width="1.028"
+                        />
+                        <path
+                          d="M155.923 81.5c.16-4.7 3.718-14.41 16.67-15.636m-9.778-4.752c1.656-2.76 3.43-9.412-2.725-13.95m47.605-41.547c14.272 11.957 8.977 27.913-9.459 19.315-18.436-8.598-4.485-18.088 9.781-.153m2.564 4.599c2.084 5.978-3.526 15.943-19.235 10.117-15.708-5.825-4.648-21.154 11.221-.46m1.923 4.14c3.205 7.204-.481 15.942-17.792 11.19-17.311-4.752-6.892-23.148 9.297-1.38m2.725 4.446c1.656 5.059.833 14.501-15.709 11.804"
+                          stroke="#5452CE"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 186.54 79.2)"
+                        />
+                        <ellipse
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 171.254 49.97)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#6E6CEF"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 181.523 88.557)"
+                        />
+                        <ellipse
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 209.028 62.98)"
+                        />
+                        <ellipse
+                          rx="3.056"
+                          ry="2.923"
+                          stroke="#DE5846"
+                          stroke-width="1.462"
+                          transform="matrix(-1 0 0 1 168.147 81.615)"
+                        />
+                        <path
+                          d="M60.923 81.5c-.16-4.7-3.72-14.41-16.672-15.636m9.779-4.752c-1.657-2.76-3.431-9.412 2.725-13.95M9.152 5.615C-5.122 17.572.174 33.528 18.612 24.93c18.437-8.598 4.485-18.088-9.782-.153m-2.565 4.599c-2.084 5.978 3.527 15.943 19.236 10.117 15.71-5.825 4.65-21.154-11.22-.46m-1.925 4.14c-3.204 7.204.481 15.942 17.794 11.19 17.313-4.752 6.893-23.148-9.297-1.38m-2.726 4.446c-1.656 5.059-.833 14.501 15.71 11.804"
+                          stroke="#DE5846"
+                          stroke-linecap="round"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="30.315"
+                          cy="79.201"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="45.599"
+                          cy="49.97"
+                          rx="2.244"
+                          ry="2.146"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="35.328"
+                          cy="88.557"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#FEB8AE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="7.819"
+                          cy="62.98"
+                          rx="1.91"
+                          ry="1.827"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                        <ellipse
+                          cx="48.706"
+                          cy="81.615"
+                          rx="3.057"
+                          ry="2.923"
+                          stroke="#5452CE"
+                          stroke-width="1.462"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="px-5"
+                    >
+                      <div
+                        class=" css-1m6rt2i"
+                        role="table"
+                      >
+                        <table
+                          cellpadding="0"
+                          class="table-auto"
+                        >
+                          <tbody
+                            role="rowgroup"
+                          >
+                            <tr
+                              class="group css-1src4hy"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="flex-col space-y-4 py-4 text-sm"
+                              >
+                                <div
+                                  class="flex items-center justify-between space-x-4"
+                                >
+                                  <div
+                                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                                  >
+                                    Sender
+                                  </div>
+                                  <div
+                                    class="flex w-full items-center space-x-0 text-right"
+                                  >
+                                    <div
+                                      class="w-0 flex-1 pr-2"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-sm"
+                                          data-testid="Address__address"
+                                        >
+                                          AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+                                          title="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="flex items-center justify-between space-x-4"
+                                >
+                                  <div
+                                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                                  >
+                                    Type
+                                  </div>
+                                  <div
+                                    class="flex items-center space-x-3"
+                                  >
+                                    <button
+                                      class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                      type="button"
+                                    >
+                                      <span
+                                        class="whitespace-nowrap font-semibold"
+                                      >
+                                        Migration Successful
+                                      </span>
+                                      <div
+                                        class="css-15txs7d"
+                                        height="10"
+                                        width="10"
+                                      >
+                                        <svg
+                                          id="chevron-right-small"
+                                          viewBox="0 0 10 10"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <path
+                                            d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          />
+                                        </svg>
+                                      </div>
+                                    </button>
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr
+                              class="group css-1src4hy"
+                              data-testid="TableRow"
+                            >
+                              <td
+                                class="flex-col space-y-4 py-4 text-sm"
+                              >
+                                <div
+                                  class="flex items-center justify-between space-x-4"
+                                >
+                                  <div
+                                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                                  >
+                                    Sender
+                                  </div>
+                                  <div
+                                    class="flex w-full items-center space-x-0 text-right"
+                                  >
+                                    <div
+                                      class="w-0 flex-1 pr-2"
+                                    >
+                                      <div
+                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                      >
+                                        <span
+                                          class="min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-sm"
+                                          data-testid="Address__address"
+                                        >
+                                          AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="shrink-0 css-jxpwdn"
+                                      data-testid="Avatar"
+                                    >
+                                      <div
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      >
+                                        <img
+                                          alt="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(156, 39, 176)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                          title="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="flex items-center justify-between space-x-4"
+                                >
+                                  <div
+                                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                                  >
+                                    Type
+                                  </div>
+                                  <div
+                                    class="flex items-center space-x-3"
+                                  >
+                                    <button
+                                      class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                      type="button"
+                                    >
+                                      <span
+                                        class="whitespace-nowrap font-semibold"
+                                      >
+                                        Migration Successful
+                                      </span>
+                                      <div
+                                        class="css-15txs7d"
+                                        height="10"
+                                        width="10"
+                                      >
+                                        <svg
+                                          id="chevron-right-small"
+                                          viewBox="0 0 10 10"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <path
+                                            d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          />
+                                        </svg>
+                                      </div>
+                                    </button>
+                                    <div
+                                      class="text-theme-hint-600 css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="circle-check-mark"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="9"
+                                            stroke-miterlimit="10"
+                                          />
+                                          <path
+                                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -3176,11 +5534,11 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -3200,7 +5558,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="font-semibold text-base text-theme-text"
+                                      class="font-semibold text-sm text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span
@@ -3211,7 +5569,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                       </span>
                                     </span>
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3261,11 +5619,11 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -3285,7 +5643,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -3335,11 +5693,11 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -3359,7 +5717,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
