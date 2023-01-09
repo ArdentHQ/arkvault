@@ -18,6 +18,7 @@ export enum Step {
 	Authenticate = 3,
 	PendingTransaction = 4,
 	Finished = 5,
+	Error = 6,
 }
 
 const TOTAL_STEPS = 5;
@@ -26,7 +27,7 @@ const submitHandler = () => {};
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
-	const [activeTab, setActiveTab] = useState(Step.Authenticate);
+	const [activeStep, setActiveStep] = useState(Step.Authenticate);
 
 	const form = useMigrationForm();
 
@@ -38,9 +39,9 @@ export const MigrationAdd = () => {
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={submitHandler}>
-					<StepIndicatorAlt length={TOTAL_STEPS} activeIndex={activeTab} className="mb-8 sm:mx-6 md:mx-0" />
+					<StepIndicatorAlt length={TOTAL_STEPS} activeIndex={activeStep} className="mb-8 sm:mx-6 md:mx-0" />
 
-					<Tabs activeId={activeTab}>
+					<Tabs activeId={activeStep}>
 						<TabPanel tabId={Step.Connect}>
 							<MigrationConnectStep />
 						</TabPanel>
@@ -48,15 +49,16 @@ export const MigrationAdd = () => {
 						<TabPanel tabId={Step.Review}>
 							<MigrationReviewStep
 								wallet={wallet}
-								onContinue={() => setActiveTab(Step.Authenticate)}
-								onBack={() => setActiveTab(Step.Connect)}
+								onContinue={() => setActiveStep(Step.Authenticate)}
+								onBack={() => setActiveStep(Step.Connect)}
 							/>
 						</TabPanel>
 						<TabPanel tabId={Step.Authenticate}>
 							<MigrationAuthenticationStep
 								wallet={wallet}
-								onContinue={() => setActiveTab(Step.Authenticate)}
-								onBack={() => setActiveTab(Step.Connect)}
+								onContinue={() => setActiveStep(Step.PendingTransaction)}
+								onBack={() => setActiveStep(Step.Connect)}
+								onError={() => setActiveStep(Step.Error)}
 							/>
 						</TabPanel>
 

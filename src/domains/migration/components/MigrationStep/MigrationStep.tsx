@@ -13,9 +13,19 @@ interface Properties {
 	onCancel?: () => void;
 	onBack?: () => void;
 	onContinue?: () => void;
+	isLoading?: boolean;
 }
 
-export const MigrationStep = ({ title, description, children, isValid, onCancel, onBack, onContinue }: Properties) => {
+export const MigrationStep = ({
+	title,
+	description,
+	children,
+	isValid,
+	onCancel,
+	onBack,
+	onContinue,
+	isLoading,
+}: Properties) => {
 	const { t } = useTranslation();
 
 	const hasButtons = onCancel || onContinue || onBack;
@@ -58,6 +68,7 @@ export const MigrationStep = ({ title, description, children, isValid, onCancel,
 									variant="primary"
 									disabled={!isValid}
 									onClick={onContinue}
+									isLoading={isLoading}
 								>
 									{t("COMMON.CONTINUE")}
 								</Button>

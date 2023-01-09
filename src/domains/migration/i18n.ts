@@ -64,6 +64,7 @@ export const translations = {
 			DESCRIPTION_MNEMONIC: "Enter your mnemonic passphrase to authenticate the migration transaction.",
 			DESCRIPTION_PRIVATE_KEY: "Enter your private key to authenticate the migration transaction.",
 			DESCRIPTION_SECRET: "Enter your secret to authenticate the migration transaction.",
+			CONFIRM_TRANSACTION: "Confirm Your Migration Transaction",
 		},
 	},
 
