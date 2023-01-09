@@ -13,9 +13,6 @@ export const useAuthenticationHeading = ({ wallet }: { wallet: Contracts.IReadWr
 			wallet.actsWithWifWithEncryption() ||
 			wallet.actsWithSecretWithEncryption();
 
-		const requiresSecondMnemonic = wallet.isSecondSignature() && requiresMnemonic;
-		const requiresSecondSecret = wallet.isSecondSignature() && wallet.actsWithSecret();
-
 		if (wallet.actsWithWif()) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF");
 		}
@@ -34,14 +31,6 @@ export const useAuthenticationHeading = ({ wallet }: { wallet: Contracts.IReadWr
 
 		if (requiresMnemonic) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC");
-		}
-
-		if (requiresSecondMnemonic) {
-			return t("TRANSACTION.SECOND_MNEMONIC");
-		}
-
-		if (requiresSecondSecret) {
-			return t("TRANSACTION.SECOND_SECRET");
 		}
 	}, [wallet]);
 
