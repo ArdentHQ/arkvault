@@ -145,6 +145,7 @@ module.exports = {
 			},
 			animation: {
 				"move-bg": "move-bg 15s infinite linear",
+				"move-bg-fast": "move-bg 2.5s infinite linear",
 				"move-bg-start-right": "move-bg-start-right 15s infinite linear",
 			},
 			keyframes: {

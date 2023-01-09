@@ -33,7 +33,7 @@ export const MigrationStep = ({ title, description, children, isValid, onCancel,
 				</div>
 			)}
 
-			<div className="-mx-4 mt-6 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-8 md:-mx-10">
+			<div className="mt-6 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-5 md:-mx-10">
 				<div>{children}</div>
 
 				{hasButtons && (
