@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useForm } from "react-hook-form";
 import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
@@ -10,9 +9,8 @@ import { MigrationPendingStep } from "@/domains/migration/components/MigrationPe
 import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
 import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
 import { useActiveProfile } from "@/app/hooks";
-import { MigrationAuthenticationStep } from "../../components/MigrationAuthenticationStep";
-
-const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
+import { MigrationAuthenticationStep } from "@/domains/migration/components/MigrationAuthenticationStep";
+import { useMigrationForm } from "@/domains/migration/hooks";
 
 export enum Step {
 	Connect = 1,
@@ -32,20 +30,9 @@ export const MigrationAdd = () => {
 
 	const activeProfile = useActiveProfile();
 
-	const form = useForm<any>({
-		defaultValues: {
-			fee: TRANSACTION_FEE,
-			// TODO: remove hardcoded address.
-			migrationAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
-		},
-		mode: "onChange",
-		shouldUnregister: false,
-	});
+	const form = useMigrationForm();
 
-	useEffect(() => {
-		form.register("fee");
-	}, []);
-
+	//TODO: remove hardcoded wallet.
 	const wallet = activeProfile.wallets().first();
 
 	return (

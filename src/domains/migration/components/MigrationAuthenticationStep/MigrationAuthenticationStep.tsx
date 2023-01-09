@@ -1,9 +1,8 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useFormContext } from "react-hook-form";
 import { AuthenticationStep, useAuthenticationHeading } from "@/domains/transaction/components/AuthenticationStep";
-import MigrationStep from "../MigrationStep";
+import MigrationStep from "@/domains/migration/components/MigrationStep";
 
 export const MigrationAuthenticationStep = ({
 	wallet,
