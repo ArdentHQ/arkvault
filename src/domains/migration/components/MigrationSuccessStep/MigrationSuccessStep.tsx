@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { EthereumAvatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
 import { FormButtons } from "@/app/components/Form";
@@ -14,6 +12,7 @@ import { Link } from "@/app/components/Link";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
+import { MigrationAddress, MigrationDetail } from "@/domains/migration/components/MigrationAddress";
 
 const migrationTransaction: any = {
 	address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
@@ -53,15 +52,10 @@ export const MigrationSuccessStep: React.FC = () => {
 				</div>
 
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-					<div className="flex flex-col py-5 px-6">
-						<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-							{t("MIGRATION.POLYGON_ADDRESS")}
-						</span>
-						<div className="flex items-center gap-x-2">
-							<EthereumAvatar address={migrationTransaction.migrationAddress} size="xs" />
-							<Address address={migrationTransaction.migrationAddress} />
-						</div>
-					</div>
+					<MigrationAddress
+						label={t("MIGRATION.POLYGON_ADDRESS")}
+						address={migrationTransaction.migrationAddress}
+					/>
 
 					<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
 						<div className="absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800">
@@ -71,12 +65,9 @@ export const MigrationSuccessStep: React.FC = () => {
 						</div>
 					</div>
 
-					<div className="flex flex-col py-5 px-6">
-						<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-							{t("COMMON.AMOUNT")}
-						</span>
+					<MigrationDetail label={t("COMMON.AMOUNT")}>
 						<Amount value={migrationTransaction.amount} ticker="ARK" className="text-lg font-semibold" />
-					</div>
+					</MigrationDetail>
 				</div>
 
 				<div className="mt-3 flex overflow-hidden rounded-xl">
