@@ -40,6 +40,14 @@ export interface NotificationsMigrationItemProperties {
 	onClick?: (transaction: any) => void;
 }
 
+export interface NotificationsMigrationItemPropertiesMobile {
+	// @TODO: assign a proper type for this once defined
+	transaction: any;
+	// @TBD (also @TODO set transaction type)
+	onClick?: (transaction: any) => void;
+	alias?: string;
+}
+
 export interface NotificationsMigrationProperties {
 	profile: Contracts.IProfile;
 	// @TODO: assign a proper type for this once defined

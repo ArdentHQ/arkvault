@@ -1,8 +1,8 @@
 import cn from "classnames";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useMemo } from "react";
-
 import { TransactionRowMode } from "./TransactionRowMode";
+import { Size } from "@/types";
 import { Address } from "@/app/components/Address";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 
@@ -12,6 +12,7 @@ interface Properties {
 	isCompact: boolean;
 	labelClass?: string;
 	showTransactionMode?: boolean;
+	addressSize?: Size | undefined;
 }
 
 export const TransactionRowSender = ({
@@ -19,6 +20,7 @@ export const TransactionRowSender = ({
 	profile,
 	isCompact,
 	labelClass,
+	addressSize,
 	showTransactionMode = true,
 }: Properties) => {
 	const { isXs, isSm } = useBreakpoint();
@@ -41,6 +43,7 @@ export const TransactionRowSender = ({
 			)}
 			<div className={cn("w-0 flex-1", labelClass)}>
 				<Address
+					size={addressSize}
 					walletName={alias}
 					address={transaction.sender()}
 					alignment={isXs || isSm ? "right" : undefined}

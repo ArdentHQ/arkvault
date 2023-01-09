@@ -6,10 +6,12 @@ export interface BaseTransactionRowModeProperties extends React.HTMLAttributes<H
 	isSent: boolean;
 	isReturn?: boolean;
 	address: string;
+	isCompact: boolean;
 }
 
 export interface TransactionRowModeProperties extends React.HTMLAttributes<HTMLDivElement> {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	transactionType?: string;
 	address?: string;
+	isCompact: boolean;
 }
