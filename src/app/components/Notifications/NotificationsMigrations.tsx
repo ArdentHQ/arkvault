@@ -5,7 +5,10 @@ import { Image } from "@/app/components/Image";
 import { Table } from "@/app/components/Table";
 
 export const NotificationsMigrations = ({ profile, transactions }: NotificationsMigrationProperties) => (
-	<div className="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t">
+	<div
+		data-testid="NotificationsMigrations"
+		className="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+	>
 		<div className="hidden justify-center md:flex">
 			<Image name="MigrationNotificationHeader" useAccentColor={false} />
 		</div>
