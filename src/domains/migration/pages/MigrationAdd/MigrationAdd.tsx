@@ -6,6 +6,7 @@ import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
+import { MigrationPendingStep } from "@/domains/migration/components/MigrationPendingStep";
 import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
 import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
 import { useActiveProfile } from "@/app/hooks";
@@ -26,7 +27,7 @@ const submitHandler = () => {};
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
-	const [activeTab, setActiveTab] = useState(Step.Review);
+	const [activeTab, setActiveTab] = useState(Step.PendingTransaction);
 
 	const activeProfile = useActiveProfile();
 
@@ -34,7 +35,7 @@ export const MigrationAdd = () => {
 		defaultValues: {
 			fee: TRANSACTION_FEE,
 			// TODO: remove hardcoded address.
-			receiverAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
+			migrationAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
 		},
 		mode: "onChange",
 		shouldUnregister: false,
@@ -63,6 +64,10 @@ export const MigrationAdd = () => {
 								onContinue={() => setActiveTab(Step.Authenticate)}
 								onBack={() => setActiveTab(Step.Connect)}
 							/>
+						</TabPanel>
+
+						<TabPanel tabId={Step.PendingTransaction}>
+							<MigrationPendingStep />
 						</TabPanel>
 
 						<TabPanel tabId={Step.Finished}>
