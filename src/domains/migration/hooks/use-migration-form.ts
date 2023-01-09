@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useForm, useFormContext } from "react-hook-form";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
 
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
@@ -21,8 +21,6 @@ export interface MigrationForm {
 const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
 
 export const useMigrationForm = () => {
-	const [isSending, setIsSending] = useState(false);
-
 	const form = useForm<MigrationForm>({
 		defaultValues: {
 			fee: TRANSACTION_FEE,
@@ -30,7 +28,7 @@ export const useMigrationForm = () => {
 			migrationAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
 			recipients: [
 				{
-					amount: 10,
+					amount: 1,
 					address: "DNBURNBURNBURNBRNBURNBURNBURKz8StY",
 				},
 			],
