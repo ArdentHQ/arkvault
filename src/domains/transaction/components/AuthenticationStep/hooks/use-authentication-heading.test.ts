@@ -15,7 +15,7 @@ describe("useQRCode hook", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should generate description for a wallet that uses mnemonic", async () => {
+	it("should generate description for a wallet that uses mnemonic", () => {
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
@@ -25,7 +25,7 @@ describe("useQRCode hook", () => {
 		);
 	});
 
-	it("should generate description for a wallet that is imported by address", async () => {
+	it("should generate description for a wallet that is imported by address", () => {
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithAddress").mockReturnValue(true);
 
@@ -36,7 +36,7 @@ describe("useQRCode hook", () => {
 		);
 	});
 
-	it("should generate description for a wallet that is imported by public key", async () => {
+	it("should generate description for a wallet that is imported by public key", () => {
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithAddress").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithPublicKey").mockReturnValue(true);
@@ -48,7 +48,7 @@ describe("useQRCode hook", () => {
 		);
 	});
 
-	it("should generate description for a wallet that uses wif", async () => {
+	it("should generate description for a wallet that uses wif", () => {
 		vi.spyOn(wallet, "actsWithWif").mockReturnValue(true);
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
@@ -56,7 +56,7 @@ describe("useQRCode hook", () => {
 		expect(result.current.description).toMatchInlineSnapshot('"Enter your WIF to authenticate the transaction."');
 	});
 
-	it("should generate description for a wallet that uses private key", async () => {
+	it("should generate description for a wallet that uses private key", () => {
 		vi.spyOn(wallet, "actsWithPrivateKey").mockReturnValue(true);
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
@@ -66,7 +66,7 @@ describe("useQRCode hook", () => {
 		);
 	});
 
-	it("should generate description for a wallet that uses secret", async () => {
+	it("should generate description for a wallet that uses secret", () => {
 		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
@@ -76,7 +76,7 @@ describe("useQRCode hook", () => {
 		);
 	});
 
-	it("should generate description for a wallet that uses mnemonic with encryption", async () => {
+	it("should generate description for a wallet that uses mnemonic with encryption", () => {
 		vi.spyOn(wallet, "actsWithMnemonicWithEncryption").mockReturnValue(true);
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
@@ -86,7 +86,7 @@ describe("useQRCode hook", () => {
 		);
 	});
 
-	it("should generate description for a wallet that uses wif with encryption", async () => {
+	it("should generate description for a wallet that uses wif with encryption", () => {
 		vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
@@ -96,7 +96,7 @@ describe("useQRCode hook", () => {
 		);
 	});
 
-	it("should generate description for a wallet that uses secret with encryption", async () => {
+	it("should generate description for a wallet that uses secret with encryption", () => {
 		vi.spyOn(wallet, "actsWithSecretWithEncryption").mockReturnValue(true);
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));

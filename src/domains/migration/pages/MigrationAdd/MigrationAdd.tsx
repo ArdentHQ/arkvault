@@ -28,10 +28,9 @@ export const MigrationAdd = () => {
 	const { t } = useTranslation();
 	const [activeTab, setActiveTab] = useState(Step.Authenticate);
 
-	const activeProfile = useActiveProfile();
-
 	const form = useMigrationForm();
 
+	const activeProfile = useActiveProfile();
 	//TODO: remove hardcoded wallet.
 	const wallet = activeProfile.wallets().first();
 
