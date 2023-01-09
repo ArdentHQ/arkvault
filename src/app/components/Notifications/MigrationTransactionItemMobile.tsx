@@ -34,6 +34,7 @@ export const MigrationTransactionItemMobile = ({
 
 				<RowWrapper>
 					<RowLabel>{t("COMMON.TYPE")}</RowLabel>
+
 					<div className="flex items-center space-x-3">
 						<button
 							type="button"
