@@ -20,11 +20,11 @@ cucumber(
 			await t.click(notifications);
 		},
 		"Then the notification list is displayed": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=NotificationsWrapper]").exists).ok();
+			await t.expect(Selector("[data-testid=NotificationTransactionsTable]").exists).ok();
 			await t.expect(Selector("[data-testid=NotificationItem]").count).eql(1);
 			await t.expect(Selector("[data-testid=TransactionTable]").exists).ok();
 			await t.hover(Selector("[data-testid=TransactionTable]"));
-			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).gt(0);
+			await t.expect(Selector("[data-testid=NotificationTransactionsTable] [data-testid=TableRow]").count).gt(0);
 		},
 	},
 	[
@@ -49,8 +49,8 @@ cucumber(
 		"And selects a transaction": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=TransactionTable]").exists).ok();
 			await t.hover(Selector("[data-testid=TransactionTable]"));
-			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).gt(0);
-			await t.click(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]:first-child"));
+			await t.expect(Selector("[data-testid=NotificationTransactionsTable] [data-testid=TableRow]").count).gt(0);
+			await t.click(Selector("[data-testid=NotificationTransactionsTable] [data-testid=TableRow]:first-child"));
 		},
 		"Then the transaction details modal is displayed": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=Modal__inner]").exists).ok();
