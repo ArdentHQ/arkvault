@@ -386,6 +386,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 >
                                   <button
                                     class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    data-testid="MigrationTransactionItem__button"
                                     type="button"
                                   >
                                     <span
@@ -502,6 +503,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 >
                                   <button
                                     class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    data-testid="MigrationTransactionItem__button"
                                     type="button"
                                   >
                                     <span
@@ -1804,6 +1806,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                 >
                                   <button
                                     class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    data-testid="MigrationTransactionItem__button"
                                     type="button"
                                   >
                                     <span
@@ -1920,6 +1923,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                 >
                                   <button
                                     class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    data-testid="MigrationTransactionItem__button"
                                     type="button"
                                   >
                                     <span
@@ -2703,6 +2707,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                 >
                                   <button
                                     class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    data-testid="MigrationTransactionItem__button"
                                     type="button"
                                   >
                                     <span
@@ -2819,6 +2824,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                 >
                                   <button
                                     class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    data-testid="MigrationTransactionItem__button"
                                     type="button"
                                   >
                                     <span
@@ -4431,6 +4437,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                 >
                                   <button
                                     class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    data-testid="MigrationTransactionItem__button"
                                     type="button"
                                   >
                                     <span
@@ -4547,6 +4554,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                 >
                                   <button
                                     class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                                    data-testid="MigrationTransactionItem__button"
                                     type="button"
                                   >
                                     <span
