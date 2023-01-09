@@ -54,7 +54,7 @@ describe("Notifications", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render empty", async () => {
+	it("should render empty", () => {
 		const useNotificationsSpy = vi.spyOn(useNotifications, "useNotifications").mockReturnValue({
 			markAllTransactionsAsRead: () => {},
 			migrationTransactions: [],
