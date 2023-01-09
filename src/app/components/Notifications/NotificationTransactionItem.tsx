@@ -43,7 +43,7 @@ export const NotificationTransactionItem = ({
 	return (
 		<VisibilitySensor onChange={onVisibilityChange} scrollCheck delayedCall containment={containmentRef?.current}>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
-				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3">
+				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
 					<TransactionRowMode transaction={transaction} address={transaction.recipient()} isCompact />
 
 					<div className="w-20 flex-1">
