@@ -14,10 +14,10 @@ const fakeMigrations: any[] = [
 		timestamp: Date.now() / 1000,
 	},
 	{
-		address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
+		address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
 		amount: 123,
 		migrationAddress: "0x0000000000000000000000000000000000000000",
-		status: MigrationTransactionStatus.Waiting,
+		status: MigrationTransactionStatus.Confirmed,
 		timestamp: Date.now() / 1000,
 	},
 ];

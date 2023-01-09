@@ -1,18 +1,22 @@
 import React from "react";
-
 import { NotificationsMigrationProperties } from "./Notifications.contracts";
+import { MigrationTransactionItem } from "./MigrationTransactionItem";
 import { Image } from "@/app/components/Image";
+import { Table } from "@/app/components/Table";
+
 export const NotificationsMigrations = ({ profile, transactions }: NotificationsMigrationProperties) => (
-	// @TODO: since the purple used on the backgroud is more likely added on other steps of the migration feature
-	// is possible that we need to add a new set of colors, in that case update the bg class <here></here>
-	<div className="-mx-10  flex flex-col items-center border-t border-white bg-[#F5F5FF] px-5 py-6 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200">
-		<div>
+	<div className="-mx-10 items-center space-y-3 border-t border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200">
+		<div className="flex justify-center">
 			<Image name="MigrationNotificationHeader" useAccentColor={false} />
 		</div>
-		<div>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium necessitatibus, earum odit tempora
-			officia saepe officiis quidem accusamus fuga quas, dolorum praesentium nisi eveniet, quod iure dignissimos
-			voluptate soluta hic.
+
+		<div className="px-5">
+			<Table className="w-full" hideHeader columns={[{ Header: "-", className: "hidden" }]} data={transactions}>
+				{/* @TODO: assign a better type for the transaction once defined */}
+				{(transaction: any) => (
+					<MigrationTransactionItem transaction={transaction} profile={profile} onClick={() => {}} />
+				)}
+			</Table>
 		</div>
 	</div>
 );

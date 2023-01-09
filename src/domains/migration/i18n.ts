@@ -38,6 +38,9 @@ export const translations = {
 			TITLE: "Migration",
 		},
 	},
+	NOTIFICATIONS: {
+		MIGRATION_SUCCESSFUL: "Migration Successful",
+	},
 	PAGE_MIGRATION: {
 		NEW_MIGRATION: "New Migration",
 		NO_MIGRATIONS: "You don't have any migration transactions yet.",
