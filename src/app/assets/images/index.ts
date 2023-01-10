@@ -59,11 +59,12 @@ import { ReactComponent as InfoDark } from "./info-dark.svg";
 import { ReactComponent as WarningLight } from "./warning-light.svg";
 import { ReactComponent as WarningDark } from "./warning-dark.svg";
 import { ReactComponent as WorldMap } from "./world-map.svg";
-import { wallet } from "@/domains/wallet/images";
-import { transaction } from "@/domains/transaction/images";
-import { profile } from "@/domains/profile/images";
-import { exchange } from "@/domains/exchange/images";
 import { error } from "@/domains/error/images";
+import { exchange } from "@/domains/exchange/images";
+import { migration } from "@/domains/migration/images";
+import { profile } from "@/domains/profile/images";
+import { transaction } from "@/domains/transaction/images";
+import { wallet } from "@/domains/wallet/images";
 
 export const images = {
 	common: {
@@ -123,6 +124,7 @@ export const images = {
 	},
 	error,
 	exchange,
+	migration,
 	profile,
 	transaction,
 	wallet,
