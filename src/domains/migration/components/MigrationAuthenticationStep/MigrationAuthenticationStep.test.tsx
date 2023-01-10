@@ -22,16 +22,12 @@ let migrationUrl: string;
 
 const history = createHashHistory();
 
-vi.mock("@/domains/migration/hooks/use-migration-transaction", () => {
-	return {
-		useMigrationTransaction: () => {
-			return {
-				sendTransaction: vi.fn(),
-				abortTransaction: vi.fn(),
-			};
-		},
-	};
-});
+vi.mock("@/domains/migration/hooks/use-migration-transaction", () => ({
+	useMigrationTransaction: () => ({
+		abortTransaction: vi.fn(),
+		sendTransaction: vi.fn(),
+	}),
+}));
 
 const AuthenticationStepWrapper = ({
 	wallet,
