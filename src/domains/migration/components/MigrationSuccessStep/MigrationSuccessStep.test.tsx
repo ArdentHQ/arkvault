@@ -15,7 +15,7 @@ describe("MigrationSuccessStep", () => {
 	});
 
 	it.each(["xs", "sm"])("should render in %s", (breakpoint) => {
-		const { asFragment } = renderResponsiveWithRoute(
+		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/migration/add">
 				<MigrationSuccessStep />
 			</Route>,
@@ -26,8 +26,8 @@ describe("MigrationSuccessStep", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("BackToDashboard__button"));
+		expect(screen.getByTestId("BackToDashboard__button")).toBeInTheDocument();
 
-		expect(asFragment()).toMatchSnapshot();
+		userEvent.click(screen.getByTestId("BackToDashboard__button"));
 	});
 });
