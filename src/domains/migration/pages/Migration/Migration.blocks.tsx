@@ -8,8 +8,6 @@ import {
 import { Button } from "@/app/components/Button";
 import { PageHeader } from "@/app/components/Header";
 import { FormButtons } from "@/app/components/Form";
-import { Section } from "@/app/components/Layout";
-import { EmptyBlock } from "@/app/components/EmptyBlock";
 
 const MigrationHeader: React.FC<MigrationHeaderProperties> = ({ onNewMigration }) => {
 	const { t } = useTranslation();
@@ -59,16 +57,4 @@ const MigrationNewMigrationMobileButton: React.FC<MigrationNewMigrationMobileBut
 	);
 };
 
-const MigrationEmpty = () => {
-	const { t } = useTranslation();
-
-	return (
-		<Section className="mt-4">
-			<EmptyBlock data-testid="Migrations--empty-results">
-				{t("MIGRATION.PAGE_MIGRATION.NO_MIGRATIONS")}
-			</EmptyBlock>
-		</Section>
-	);
-};
-
-export { MigrationHeader, MigrationHeaderExtra, MigrationNewMigrationMobileButton, MigrationEmpty };
+export { MigrationHeader, MigrationHeaderExtra, MigrationNewMigrationMobileButton };

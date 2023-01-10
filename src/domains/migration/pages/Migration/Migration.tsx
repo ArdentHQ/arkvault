@@ -1,29 +1,45 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
-import { generatePath } from "react-router";
-import { MigrationEmpty, MigrationHeader, MigrationNewMigrationMobileButton } from "./Migration.blocks";
-import { Page } from "@/app/components/Layout";
+import { generatePath, useHistory } from "react-router-dom";
+import { MigrationHeader, MigrationNewMigrationMobileButton } from "./Migration.blocks";
+import { Page, Section } from "@/app/components/Layout";
 import { MigrationDisclaimer } from "@/domains/migration/components/MigrationDisclaimer";
+import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { MigrationTransactionsTable } from "@/domains/migration/components/MigrationTransactionsTable";
 import { ProfilePaths } from "@/router/paths";
-import { useActiveProfile } from "@/app/hooks";
 
 export const Migration = () => {
 	const { t } = useTranslation();
+	const { isMd } = useBreakpoint();
+
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 	const history = useHistory();
 	const profile = useActiveProfile();
-	const migrations = [];
+
+	// @TBD
+	const migrations = [
+		{
+			address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
+			amount: 123,
+			id: "id",
+			migrationAddress: "0x0000000000000000000000000000000000000000",
+			status: MigrationTransactionStatus.Confirmed,
+			timestamp: Date.now() / 1000,
+		},
+		{
+			address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
+			amount: 123,
+			migrationAddress: "0x0000000000000000000000000000000000000000",
+			status: MigrationTransactionStatus.Waiting,
+			timestamp: Date.now() / 1000,
+		},
+	];
+
+	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
 	const onNewMigrationHandler = () => {
 		setIsDisclaimerOpen(true);
-	};
-
-	const renderMigrations = () => {
-		/* istanbul ignore else -- @preserve */
-		if (migrations.length === 0) {
-			return <MigrationEmpty />;
-		}
 	};
 
 	const confirmHandler = useCallback(() => {
@@ -36,7 +52,13 @@ export const Migration = () => {
 			<Page pageTitle={t("MIGRATION.PAGE_MIGRATION.TITLE")} isBackDisabled={true} data-testid="Migration">
 				<MigrationHeader onNewMigration={onNewMigrationHandler} />
 
-				{renderMigrations()}
+				<Section className="mt-4">
+					<MigrationTransactionsTable
+						migrationTransactions={migrations}
+						isCompact={isCompact}
+						onClick={() => console.log("row click")}
+					/>
+				</Section>
 
 				<MigrationNewMigrationMobileButton onNewMigration={onNewMigrationHandler} />
 

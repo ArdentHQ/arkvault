@@ -1,26 +1,5 @@
 // Vitest Snapshot v1
 
-exports[`MigrationEmpty > should render 1`] = `
-<DocumentFragment>
-  <div
-    class="mt-4 css-ycib48"
-  >
-    <div
-      class="mx-auto px-8 md:px-10 lg:container"
-    >
-      <div
-        class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
-        data-testid="Migrations--empty-results"
-      >
-        <div>
-          You don't have any migration transactions yet.
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`MigrationHeader > should render 1`] = `
 <DocumentFragment>
   <div
