@@ -1,17 +1,14 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import { MigrationAdd } from "./MigrationAdd";
-import { render, env, getDefaultProfileId, screen } from "@/utils/testing-library";
+import { render, getDefaultProfileId, screen } from "@/utils/testing-library";
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
-
-let profile: Contracts.IProfile;
 
 const history = createHashHistory();
 
-const renderComponent = (profileId = profile.id()) => {
-	const migrationUrl = `/profiles/${profileId}/migration/add`;
+const renderComponent = () => {
+	const migrationUrl = `/profiles/${getDefaultProfileId()}/migration/add`;
 	history.push(migrationUrl);
 
 	return render(
@@ -26,10 +23,6 @@ const renderComponent = (profileId = profile.id()) => {
 };
 
 describe("MigrationAdd", () => {
-	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
-	});
-
 	it("should render", () => {
 		renderComponent();
 

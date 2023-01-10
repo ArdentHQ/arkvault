@@ -95,7 +95,11 @@ export const MigrationSuccessStep: React.FC = () => {
 				</div>
 
 				<ButtonWrapper>
-					<Button variant="primary" onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}>
+					<Button
+						variant="primary"
+						onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+						data-testid="BackToDashboard__button"
+					>
 						{t("COMMON.BACK_TO_DASHBOARD")}
 					</Button>
 				</ButtonWrapper>

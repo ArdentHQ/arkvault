@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useForm } from "react-hook-form";
 import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
@@ -10,8 +9,8 @@ import { MigrationPendingStep } from "@/domains/migration/components/MigrationPe
 import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
 import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
 import { useActiveProfile } from "@/app/hooks";
-
-const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
+import { MigrationAuthenticationStep } from "@/domains/migration/components/MigrationAuthenticationStep";
+import { useMigrationForm } from "@/domains/migration/hooks";
 
 export enum Step {
 	Connect = 1,
@@ -19,49 +18,38 @@ export enum Step {
 	Authenticate = 3,
 	PendingTransaction = 4,
 	Finished = 5,
+	Error = 6,
 }
 
 const TOTAL_STEPS = 5;
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
-	const [activeTab, setActiveTab] = useState(Step.PendingTransaction);
+	const [activeStep] = useState(Step.Connect);
+
+	const form = useMigrationForm();
 
 	const activeProfile = useActiveProfile();
-
-	const form = useForm<any>({
-		defaultValues: {
-			fee: TRANSACTION_FEE,
-			// TODO: remove hardcoded address.
-			migrationAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
-		},
-		mode: "onChange",
-		shouldUnregister: false,
-	});
-
-	useEffect(() => {
-		form.register("fee");
-	}, []);
-
+	//TODO: remove hardcoded wallet.
 	const wallet = activeProfile.wallets().first();
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form}>
-					<StepIndicatorAlt length={TOTAL_STEPS} activeIndex={activeTab} className="mb-8 sm:mx-6 md:mx-0" />
+					<StepIndicatorAlt length={TOTAL_STEPS} activeIndex={activeStep} className="mb-8 sm:mx-6 md:mx-0" />
 
-					<Tabs activeId={activeTab}>
+					<Tabs activeId={activeStep}>
 						<TabPanel tabId={Step.Connect}>
 							<MigrationConnectStep />
 						</TabPanel>
 
 						<TabPanel tabId={Step.Review}>
-							<MigrationReviewStep
-								wallet={wallet}
-								onContinue={() => setActiveTab(Step.Authenticate)}
-								onBack={() => setActiveTab(Step.Connect)}
-							/>
+							<MigrationReviewStep wallet={wallet} />
+						</TabPanel>
+
+						<TabPanel tabId={Step.Authenticate}>
+							<MigrationAuthenticationStep wallet={wallet} />
 						</TabPanel>
 
 						<TabPanel tabId={Step.PendingTransaction}>
