@@ -23,9 +23,9 @@ export enum Step {
 
 const TOTAL_STEPS = 5;
 
-export const MigrationAdd = ({ initialActiveStep }: { initialActiveStep?: Step }) => {
+export const MigrationAdd = () => {
 	const { t } = useTranslation();
-	const [activeStep] = useState(initialActiveStep || Step.Connect);
+	const [activeStep] = useState(Step.Connect);
 
 	const form = useMigrationForm();
 
