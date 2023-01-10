@@ -25,7 +25,7 @@ const TOTAL_STEPS = 5;
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
-	const [activeStep, setActiveStep] = useState(Step.Authenticate);
+	const [activeStep, setActiveStep] = useState(Step.Connect);
 
 	const form = useMigrationForm();
 
