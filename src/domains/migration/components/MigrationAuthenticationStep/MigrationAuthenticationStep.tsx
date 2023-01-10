@@ -4,7 +4,7 @@ import { useFormContext } from "react-hook-form";
 
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
-import { MigrationReview } from "../MigrationReviewStep";
+import { MigrationReview } from "@/domains/migration/components/MigrationReviewStep";
 import { useActiveProfile } from "@/app/hooks";
 import { useLedgerContext } from "@/app/contexts";
 import { useMigrationTransaction, useAuthenticationHeading } from "@/domains/migration/hooks";

@@ -46,7 +46,6 @@ export const MigrationReviewStep = ({
 	onBack?: () => void;
 }) => {
 	const { t } = useTranslation();
-	const { getValues } = useFormContext();
 
 	return (
 		<MigrationStep
