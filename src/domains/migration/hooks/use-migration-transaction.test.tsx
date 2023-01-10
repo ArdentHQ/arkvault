@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import userEvent from "@testing-library/user-event";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { useMigrationTransaction } from "./use-migration-transaction";
+import { useMigrationForm } from "./use-migration-form";
 import {
 	env,
 	getDefaultProfileId,
@@ -10,8 +12,6 @@ import {
 	mockNanoXTransport,
 	waitFor,
 } from "@/utils/testing-library";
-import { useMigrationTransaction } from "./use-migration-transaction";
-import { useMigrationForm } from "./use-migration-form";
 import { Form } from "@/app/components/Form";
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -39,7 +39,7 @@ const WrapperForm = ({ children }: { children: React.ReactElement }) => {
 };
 
 const MigrationForm = ({ wallet, profile }: { wallet: Contracts.IReadWriteWallet; profile: Contracts.IProfile }) => {
-	const { sendTransaction, abortTransaction } = useMigrationTransaction({ wallet, profile });
+	const { sendTransaction, abortTransaction } = useMigrationTransaction({ profile, wallet });
 	const [signedTransaction, setSignedTransaction] = useState(undefined);
 
 	const handlSendTransaction = async () => {
@@ -49,20 +49,18 @@ const MigrationForm = ({ wallet, profile }: { wallet: Contracts.IReadWriteWallet
 
 	return (
 		<>
-			<div data-testid="SendMigrationTransaction" onClick={handlSendTransaction}></div>
-			<div data-testid="AbortTransaction" onClick={abortTransaction}></div>
+			<div data-testid="SendMigrationTransaction" onClick={handlSendTransaction} />
+			<div data-testid="AbortTransaction" onClick={abortTransaction} />
 			{signedTransaction && <div data-testid="SignedTransaction" />}
 		</>
 	);
 };
 
-const MigrationFormContent = () => {
-	return (
-		<WrapperForm>
-			<MigrationForm profile={profile} wallet={wallet} />
-		</WrapperForm>
-	);
-};
+const MigrationFormContent = () => (
+	<WrapperForm>
+		<MigrationForm profile={profile} wallet={wallet} />
+	</WrapperForm>
+);
 
 describe("useMigrationTransaction hook", () => {
 	beforeAll(async () => {

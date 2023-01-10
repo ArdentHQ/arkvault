@@ -2,7 +2,7 @@ import React from "react";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import { MigrationSuccessStep } from "./MigrationSuccessStep";
-import { renderResponsiveWithRoute, env, getDefaultProfileId } from "@/utils/testing-library";
+import { renderResponsiveWithRoute, getDefaultProfileId } from "@/utils/testing-library";
 
 const history = createHashHistory();
 let migrationUrl: string;
