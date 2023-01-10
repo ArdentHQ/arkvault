@@ -7,7 +7,7 @@ describe("MigrationReviewStep", () => {
 		const wallet = env.profiles().findById(getDefaultProfileId()).wallets().first();
 		const { asFragment } = render(() => (
 			<form>
-				<MigrationReviewStep onContinue={() => null} onCancel={() => null} wallet={wallet} />
+				<MigrationReviewStep onContinue={() => null} wallet={wallet} />
 			</form>
 		));
 

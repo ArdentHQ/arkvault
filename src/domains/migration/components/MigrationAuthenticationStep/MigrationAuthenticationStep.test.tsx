@@ -23,13 +23,11 @@ let migrationUrl: string;
 const history = createHashHistory();
 
 const AuthenticationStepWrapper = ({
-	profile,
 	wallet,
 	onContinue,
 	onError,
 	onBack,
 }: {
-	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
 	onContinue: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	onBack: () => void;
@@ -52,7 +50,7 @@ const AuthenticationStepWrapper = ({
 };
 
 describe("MigrationAuthenticationStep", () => {
-	beforeAll(async () => {
+	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
@@ -63,13 +61,7 @@ describe("MigrationAuthenticationStep", () => {
 
 	it("should render authentication step", async () => {
 		const { asFragment } = render(
-			<AuthenticationStepWrapper
-				wallet={wallet}
-				profile={profile}
-				onContinue={vi.fn()}
-				onBack={vi.fn()}
-				onError={vi.fn()}
-			/>,
+			<AuthenticationStepWrapper wallet={wallet} onContinue={vi.fn()} onBack={vi.fn()} onError={vi.fn()} />,
 
 			{
 				history,
@@ -88,13 +80,7 @@ describe("MigrationAuthenticationStep", () => {
 		const onError = vi.fn();
 
 		render(
-			<AuthenticationStepWrapper
-				wallet={wallet}
-				profile={profile}
-				onContinue={vi.fn()}
-				onBack={vi.fn()}
-				onError={onError}
-			/>,
+			<AuthenticationStepWrapper wallet={wallet} onContinue={vi.fn()} onBack={vi.fn()} onError={onError} />,
 
 			{
 				history,
@@ -124,13 +110,7 @@ describe("MigrationAuthenticationStep", () => {
 		vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
 
 		const { asFragment } = render(
-			<AuthenticationStepWrapper
-				wallet={wallet}
-				profile={profile}
-				onContinue={vi.fn()}
-				onBack={vi.fn()}
-				onError={vi.fn()}
-			/>,
+			<AuthenticationStepWrapper wallet={wallet} onContinue={vi.fn()} onBack={vi.fn()} onError={vi.fn()} />,
 
 			{
 				history,
