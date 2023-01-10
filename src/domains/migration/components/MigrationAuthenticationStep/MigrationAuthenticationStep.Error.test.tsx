@@ -3,7 +3,7 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import { MigrationAuthenticationStep } from "./MigrationAuthenticationStep";
-import { render, env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
+import { render, env, getDefaultProfileId, waitFor, mockNanoXTransport } from "@/utils/testing-library";
 import { Form } from "@/app/components/Form";
 import { useMigrationForm } from "@/domains/migration/hooks/use-migration-form";
 import { server, requestMock } from "@/tests/mocks/server";
@@ -13,6 +13,15 @@ let wallet: Contracts.IReadWriteWallet;
 let migrationUrl: string;
 
 const history = createHashHistory();
+
+vi.mock("@/domains/migration/hooks/use-migration-transaction", () => ({
+	useMigrationTransaction: () => ({
+		abortTransaction: vi.fn(),
+		sendTransaction: () => {
+			throw new Error("error");
+		},
+	}),
+}));
 
 const AuthenticationStepWrapper = ({
 	wallet,
@@ -52,6 +61,8 @@ describe("MigrationAuthenticationStep Error", () => {
 	});
 
 	it("should error in authentication step with a ledger wallet", async () => {
+		mockNanoXTransport();
+
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 		const onError = vi.fn();
 
