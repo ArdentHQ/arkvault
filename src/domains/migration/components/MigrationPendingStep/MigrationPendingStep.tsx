@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React from "react";
+import React, { useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { DateTime } from "@ardenthq/sdk-intl";
@@ -15,11 +15,43 @@ import { MigrationAddress, MigrationDetail } from "@/domains/migration/component
 
 const migrationTransaction: any = {
 	address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
-	amount: 123,
+	amount: 2,
 	id: "id",
-	migrationAddress: "0x0000000000000000000000000000000000000000",
+	migrationAddress: "0x11f3f6b4ebdf0379b7b4ba6fe132863fddf7d63b",
 	timestamp: Date.now() / 1000,
 };
+
+const POLYGON_API_URL = import.meta.env.VITE_POLYGON_API_URL || "https://api-testnet.polygonscan.com/api";
+const POLYGON_CONTRACT_ADDRESS =
+	import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS || "0x965100B9e75e76d421a497255756DEbD4c68a143";
+const POLYGON_START_BLOCK = Number.parseInt(import.meta.env.VITE_POLYGON_START_BLOCK);
+
+interface PolygonTransferEvent {
+	blockNumber: string;
+	timeStamp: string;
+	hash: string;
+	nonce: string;
+	blockHash: string;
+	from: string;
+	contractAddress: string;
+	to: string;
+	value: string;
+	tokenName: string;
+	tokenSymbol: string;
+	tokenDecimal: string;
+	transactionIndex: string;
+	gas: string;
+	gasPrice: string;
+	gasUsed: string;
+	cumulativeGasUsed: string;
+	input: string;
+	confirmations: string;
+}
+interface PolygonResponse {
+	status: string;
+	message: string;
+	result: PolygonTransferEvent[];
+}
 
 export const MigrationPendingStep: React.FC = () => {
 	const timeFormat = useTimeFormat();
@@ -32,6 +64,43 @@ export const MigrationPendingStep: React.FC = () => {
 	const history = useHistory();
 
 	const ButtonWrapper = isXs ? FormButtons : React.Fragment;
+
+	const fetchTransaction = async () => {
+		try {
+			const response = await fetch(
+				`${POLYGON_API_URL}?module=account&action=tokentx&page=1&sort=asc&startblock=${POLYGON_START_BLOCK}&contractaddress=${POLYGON_CONTRACT_ADDRESS}&address=${migrationTransaction.migrationAddress}`,
+			);
+
+			const { result }: PolygonResponse = await response.json();
+
+			const transaction = result.find((transaction) => {
+				const value =
+					Number.parseInt(transaction.value) / (10 ** Number.parseInt(transaction.tokenDecimal) - 1);
+
+				return value === migrationTransaction.amount;
+			});
+
+			// If transaction with the same amount is not found and more than
+			// one transaction found try again in 5 seconds
+			if (transaction === undefined && result.length > 1) {
+				setTimeout(() => {
+					fetchTransaction();
+				}, 5000);
+			} else {
+				alert("Transaction found, go to next step?. See console for details.");
+
+				console.log({ transaction });
+			}
+		} catch (error) {
+			// @TODO: remove this and properly handle error
+			// (send to error page?)
+			console.error(error);
+		}
+	};
+
+	useEffect(() => {
+		fetchTransaction();
+	}, []);
 
 	return (
 		<MigrationStep

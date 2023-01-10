@@ -27,7 +27,7 @@ const submitHandler = () => {};
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
-	const [activeStep, setActiveStep] = useState(Step.Authenticate);
+	const [activeStep, setActiveStep] = useState(Step.PendingTransaction);
 
 	const form = useMigrationForm();
 
