@@ -1,11 +1,6 @@
 import React from "react";
 import userEvent from "@testing-library/user-event";
-import {
-	MigrationHeader,
-	MigrationHeaderExtra,
-	MigrationNewMigrationMobileButton,
-	MigrationEmpty,
-} from "./Migration.blocks";
+import { MigrationHeader, MigrationHeaderExtra, MigrationNewMigrationMobileButton } from "./Migration.blocks";
 import { render, screen } from "@/utils/testing-library";
 
 describe("MigrationHeader", () => {
@@ -45,16 +40,6 @@ describe("MigrationNewMigrationMobileButton", () => {
 		userEvent.click(screen.getByTestId("Migrations__add-migration-btn-mobile"));
 
 		expect(onNewMigrationHandler).toHaveBeenCalled();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
-
-describe("MigrationEmpty", () => {
-	it("should render", () => {
-		const { asFragment } = render(<MigrationEmpty />);
-
-		expect(screen.getByTestId("Migrations--empty-results")).toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

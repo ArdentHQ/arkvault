@@ -8,6 +8,7 @@ export const translations = {
 		WARNING:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus, mollitia natus est, voluptas eligendi nihil dolorum illum accusamus obcaecati itaque corrupti tenetur, accusantium perferendis officiis hic modi neque aspernatur!",
 	},
+
 	MIGRATION_ADD: {
 		STEP_CONNECT: {
 			DESCRIPTION: "Fill in address details below to start the migration process.",
@@ -46,5 +47,11 @@ export const translations = {
 		NO_MIGRATIONS: "You don't have any migration transactions yet.",
 		SUBTITLE: 'ARK is moving to Polygon. Click "New Migration" to get started.',
 		TITLE: "Migrate to Polygon",
+		VIEW_DETAILS: "View Details",
+	},
+
+	STATUS: {
+		CONFIRMED: "Confirmed",
+		WAITING: "Waiting",
 	},
 };
