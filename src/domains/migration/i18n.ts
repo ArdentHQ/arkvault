@@ -81,11 +81,11 @@ export const translations = {
 		VIEW_DETAILS: "View Details",
 	},
 
+	POLYGON_ADDRESS: "Polygon Address",
+
 	STATUS: {
 		CONFIRMED: "Confirmed",
 		WAITING: "Waiting",
 	},
-
-	POLYGON_ADDRESS: "Polygon Address",
 	TRANSACTION_ID: "Transaction ID",
 };
