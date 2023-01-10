@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import { Migration } from "./Migration";
-import { render, screen, env, getDefaultProfileId } from "@/utils/testing-library";
+import { render, screen, env, getDefaultProfileId, waitFor, within } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -36,6 +36,16 @@ describe("Migration", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render compact", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
+
+		const { asFragment } = renderComponent();
+
+		expect(asFragment()).toMatchSnapshot();
+
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
+	});
+
 	it("should redirect user to migration add page after accepted disclaimer", () => {
 		renderComponent();
 
@@ -50,5 +60,37 @@ describe("Migration", () => {
 		userEvent.click(screen.getByTestId("MigrationDisclaimer__submit-button"));
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/migration/add`);
+	});
+
+	it("handles the cancel button on the disclaimer", async () => {
+		renderComponent();
+
+		userEvent.click(screen.getByTestId("Migrations__add-migration-btn"));
+
+		expect(screen.getByTestId("MigrationDisclaimer__cancel-button")).toBeVisible();
+
+		userEvent.click(screen.getByTestId("MigrationDisclaimer__cancel-button"));
+
+		await waitFor(() => expect(screen.queryByTestId("MigrationDisclaimer__cancel-button")).not.toBeInTheDocument());
+	});
+
+	it("handles the close button on the disclaimer", async () => {
+		renderComponent();
+
+		userEvent.click(screen.getByTestId("Migrations__add-migration-btn"));
+
+		expect(screen.getByTestId("Modal__close-button")).toBeVisible();
+
+		userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		await waitFor(() => expect(screen.queryByTestId("Modal__close-button")).not.toBeInTheDocument());
+	});
+
+	it("should display details of migration transaction", () => {
+		renderComponent();
+
+		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
+
+		// @TBD
 	});
 });
