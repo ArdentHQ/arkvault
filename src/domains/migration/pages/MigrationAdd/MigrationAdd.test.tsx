@@ -1,7 +1,7 @@
 import React from "react";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
-import { MigrationAdd, Step } from "./MigrationAdd";
+import { MigrationAdd } from "./MigrationAdd";
 import { render, getDefaultProfileId, screen } from "@/utils/testing-library";
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
 
