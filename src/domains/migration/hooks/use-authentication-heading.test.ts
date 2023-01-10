@@ -5,7 +5,7 @@ import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 let wallet: IReadWriteWallet;
 
-describe("useQRCode hook", () => {
+describe("useAuthenticationHeading hook", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
