@@ -13,12 +13,22 @@ interface Properties {
 	onCancel?: () => void;
 	onBack?: () => void;
 	onContinue?: () => void;
+	isLoading?: boolean;
 }
 
-export const MigrationStep = ({ title, description, children, isValid, onCancel, onBack, onContinue }: Properties) => {
+export const MigrationStep = ({
+	title,
+	description,
+	children,
+	isValid,
+	onCancel,
+	onBack,
+	onContinue,
+	isLoading,
+}: Properties) => {
 	const { t } = useTranslation();
 
-	const hasButtons = onCancel || onContinue;
+	const hasButtons = onCancel || onContinue || onBack;
 
 	return (
 		<div>
@@ -40,7 +50,7 @@ export const MigrationStep = ({ title, description, children, isValid, onCancel,
 					<div className="px-5 pb-5">
 						<FormButtons>
 							{!!onBack && (
-								<Button data-testid="MigrationAdd__cancel-btn" variant="secondary" onClick={onCancel}>
+								<Button data-testid="MigrationAdd__cancel-btn" variant="secondary" onClick={onBack}>
 									{t("COMMON.BACK")}
 								</Button>
 							)}
@@ -58,6 +68,7 @@ export const MigrationStep = ({ title, description, children, isValid, onCancel,
 									variant="primary"
 									disabled={!isValid}
 									onClick={onContinue}
+									isLoading={isLoading}
 								>
 									{t("COMMON.CONTINUE")}
 								</Button>

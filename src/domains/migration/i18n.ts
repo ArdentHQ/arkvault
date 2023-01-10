@@ -12,6 +12,16 @@ export const translations = {
 	MIGRATION_ADD: {
 		FROM_ARK_ADDRESS: "From ARK Address",
 
+		STEP_AUTHENTICATION: {
+			CONFIRM_TRANSACTION: "Confirm Your Migration Transaction",
+			DESCRIPTION_ENCRYPTION_PASSWORD:
+				"Enter your encryption password to authenticate the migration transaction.",
+			DESCRIPTION_MNEMONIC: "Enter your mnemonic passphrase to authenticate the migration transaction.",
+			DESCRIPTION_PRIVATE_KEY: "Enter your private key to authenticate the migration transaction.",
+			DESCRIPTION_SECRET: "Enter your secret to authenticate the migration transaction.",
+			DESCRIPTION_WIF: "Enter your WIF to authenticate the migration transaction.",
+		},
+
 		STEP_CONNECT: {
 			DESCRIPTION: "Fill in address details below to start the migration process.",
 			FORM: {
