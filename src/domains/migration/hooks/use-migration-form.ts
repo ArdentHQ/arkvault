@@ -28,8 +28,8 @@ export const useMigrationForm = () => {
 			migrationAddress: "0x080de88aE69Bc02eB8csr34E863B7F428699bb20",
 			recipients: [
 				{
-					amount: 1,
 					address: "DNBURNBURNBURNBRNBURNBURNBURKz8StY",
+					amount: 1,
 				},
 			],
 		},

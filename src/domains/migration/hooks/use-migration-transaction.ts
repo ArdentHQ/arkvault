@@ -51,7 +51,7 @@ export const useMigrationTransaction = ({
 			abortSignal: abortReference.current.signal,
 		});
 
-		return { uuid, transaction };
+		return { transaction, uuid };
 	};
 
 	const sendTransaction = async () => {
@@ -70,5 +70,5 @@ export const useMigrationTransaction = ({
 		return transaction;
 	};
 
-	return { isSending, abortTransaction: () => abortReference.current.abort(), sendTransaction };
+	return { abortTransaction: () => abortReference.current.abort(), isSending, sendTransaction };
 };

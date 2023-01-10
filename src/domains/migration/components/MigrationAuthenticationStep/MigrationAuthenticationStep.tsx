@@ -24,7 +24,7 @@ export const MigrationAuthenticationStep = ({
 
 	const { formState } = useFormContext();
 	const { title, description } = useAuthenticationHeading({ wallet });
-	const { sendTransaction, isSending, abortTransaction } = useMigrationTransaction({ wallet, profile });
+	const { sendTransaction, isSending, abortTransaction } = useMigrationTransaction({ profile, wallet });
 	const { hasDeviceAvailable, isConnected, ledgerDevice } = useLedgerContext();
 
 	useEffect(() => {
