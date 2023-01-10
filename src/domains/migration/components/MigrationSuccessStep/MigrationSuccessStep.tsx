@@ -24,22 +24,15 @@ const migrationTransaction: any = {
 
 export const MigrationSuccessStep: React.FC = () => {
 	const { t } = useTranslation();
-	const { isXs } = useBreakpoint();
 
 	const activeProfile = useActiveProfile();
 	const history = useHistory();
 
 	const reference = useRef(null);
 
-	const ButtonWrapper = isXs
-		? FormButtons
-		: ({ children }: { children: React.ReactNode }) => (
-				<div className="mt-8 flex items-center justify-center">{children}</div>
-		  );
-
 	return (
-		<MigrationStep>
-			<div className="my-5 flex flex-col">
+		<>
+			<div className="flex flex-col">
 				<Header
 					title={t("MIGRATION.MIGRATION_ADD.STEP_SUCCESS.TITLE")}
 					subtitle={t("MIGRATION.MIGRATION_ADD.STEP_SUCCESS.DESCRIPTION")}
@@ -50,7 +43,9 @@ export const MigrationSuccessStep: React.FC = () => {
 				<div className="mx-auto my-6 max-w-2xl">
 					<Image name="MigrationSuccessBanner" domain="migration" className="w-full" useAccentColor={false} />
 				</div>
+			</div>
 
+			<div className="-mx-5">
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 					<MigrationAddress
 						label={t("MIGRATION.POLYGON_ADDRESS")}
@@ -93,13 +88,7 @@ export const MigrationSuccessStep: React.FC = () => {
 						</Clipboard>
 					</div>
 				</div>
-
-				<ButtonWrapper>
-					<Button variant="primary" onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}>
-						{t("COMMON.BACK_TO_DASHBOARD")}
-					</Button>
-				</ButtonWrapper>
 			</div>
-		</MigrationStep>
+		</>
 	);
 };

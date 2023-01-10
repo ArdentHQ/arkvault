@@ -2,13 +2,13 @@ import React, { useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import cn from "classnames";
 import SelectPolygonAddress from "@/domains/migration/components/SelectPolygonAddress";
-import MigrationStep from "@/domains/migration/components/MigrationStep";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveProfile } from "@/app/hooks";
 import { Amount } from "@/app/components/Amount";
 import { Link } from "@/app/components/Link";
 import { images } from "@/app/assets/images";
+import { Header } from "@/app/components/Header";
 const { MetamaskLogo } = images.common;
 
 const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
@@ -116,15 +116,16 @@ export const MigrationConnectStep = () => {
 	};
 
 	return (
-		<MigrationStep
-			title={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}
-			description={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.DESCRIPTION")}
-			onCancel={() => {}}
-			onContinue={() => {}}
-			isValid={false}
-		>
-			<div className="-mx-4 space-y-3 sm:mx-0">
-				<div className="rounded-xl bg-theme-secondary-100 px-4 py-5 dark:bg-black sm:px-5">
+		<>
+			<Header
+				title={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}
+				subtitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.DESCRIPTION")}
+				className="mb-6"
+				headerClassName="text-lg sm:text-2xl"
+			/>
+
+			<div className="-mx-5 space-y-3">
+				<div className="rounded-xl bg-theme-secondary-100 p-5 dark:bg-black sm:px-5">
 					<FormField name="address">
 						<FormLabel label={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.ARK_ADDRESS")} />
 
@@ -147,14 +148,17 @@ export const MigrationConnectStep = () => {
 							<div className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 								{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.AMOUNT_YOU_SEND")}
 							</div>
+
 							<div className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 								<Amount ticker="ARK" value={walletBalance} />
 							</div>
 						</div>
+
 						<div className="space-y-2 text-right">
 							<div className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 								{t("TRANSACTION.TRANSACTION_FEE")}
 							</div>
+
 							<div className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 								<Amount ticker="ARK" value={TRANSACTION_FEE * -1} showSign isNegative />
 							</div>
@@ -162,14 +166,15 @@ export const MigrationConnectStep = () => {
 					</div>
 				</div>
 
-				<div className="relative overflow-hidden rounded-xl bg-theme-secondary-100 px-4 py-5 dark:bg-black sm:px-5">
+				<div className="relative overflow-hidden rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
 					<div className="relative">
 						<FormField name="polygonAddress">
 							<FormLabel
 								label={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.POLYGON_MIGRATION_ADDRESS")}
 							/>
+
 							{polygonFieldIsDisabled ? (
-								<div className="flex h-14 w-full items-center rounded border border-theme-secondary-400 px-4 dark:border-theme-secondary-700">
+								<div className="flex h-14 w-full items-center rounded border border-theme-secondary-400 px-5 dark:border-theme-secondary-700">
 									<div className="h-8 w-8 rounded-full border border-theme-secondary-400 ring-theme-background dark:border-theme-secondary-700" />
 								</div>
 							) : (
@@ -181,13 +186,15 @@ export const MigrationConnectStep = () => {
 							<div className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 								{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.AMOUNT_YOU_GET")}
 							</div>
+
 							<div className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 								<Amount ticker="ARK" value={amountYouGet} />
 							</div>
 						</div>
 					</div>
+
 					{polygonFieldIsDisabled && (
-						<div className="bg-theme-secondary-100/70 absolute inset-0 flex items-center justify-center px-4 py-3 backdrop-blur-[3px] dark:bg-black/70">
+						<div className="bg-theme-secondary-100/70 absolute inset-0 flex items-center justify-center px-5 py-3 backdrop-blur-[3px] dark:bg-black/70">
 							<div className="flex max-w-[24rem] flex-col items-center space-y-4 text-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 								<div className="text-sm">
 									<PolygonFieldMessage needsMetamask={needsMetamask} />
@@ -207,6 +214,6 @@ export const MigrationConnectStep = () => {
 					)}
 				</div>
 			</div>
-		</MigrationStep>
+		</>
 	);
 };
