@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { MigrationReviewStep } from "./MigrationReviewStep";
 import { render, env, getDefaultProfileId } from "@/utils/testing-library";
 import { Form } from "@/app/components/Form";

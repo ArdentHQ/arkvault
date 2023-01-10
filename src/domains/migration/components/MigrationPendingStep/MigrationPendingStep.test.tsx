@@ -3,7 +3,7 @@ import { createHashHistory } from "history";
 import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationPendingStep } from "./MigrationPendingStep";
-import { renderResponsiveWithRoute, env, getDefaultProfileId, screen } from "@/utils/testing-library";
+import { renderResponsiveWithRoute, getDefaultProfileId, screen } from "@/utils/testing-library";
 import { useTheme } from "@/app/hooks/use-theme";
 
 const history = createHashHistory();
