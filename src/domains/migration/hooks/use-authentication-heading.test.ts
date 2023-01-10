@@ -53,7 +53,9 @@ describe("useQRCode hook", () => {
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
-		expect(result.current.description).toMatchInlineSnapshot('"Enter your WIF to authenticate the migration transaction."');
+		expect(result.current.description).toMatchInlineSnapshot(
+			'"Enter your WIF to authenticate the migration transaction."',
+		);
 	});
 
 	it("should generate description for a wallet that uses private key", () => {
