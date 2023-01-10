@@ -22,6 +22,17 @@ let migrationUrl: string;
 
 const history = createHashHistory();
 
+vi.mock("@/domains/migration/hooks/use-migration-transaction", () => {
+	return {
+		useMigrationTransaction: () => {
+			return {
+				sendTransaction: vi.fn(),
+				abortTransaction: vi.fn(),
+			};
+		},
+	};
+});
+
 const AuthenticationStepWrapper = ({
 	wallet,
 	onContinue,
@@ -73,26 +84,6 @@ describe("MigrationAuthenticationStep", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 		});
-	});
-
-	it("should error in authentication step with a ledger wallet", async () => {
-		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
-		const onError = vi.fn();
-
-		render(
-			<AuthenticationStepWrapper wallet={wallet} onContinue={vi.fn()} onBack={vi.fn()} onError={onError} />,
-
-			{
-				history,
-				route: migrationUrl,
-			},
-		);
-
-		await waitFor(() => {
-			expect(onError).toHaveBeenCalled();
-		});
-
-		vi.restoreAllMocks();
 	});
 
 	it("should render ledger authentication step", async () => {

@@ -23,9 +23,9 @@ export enum Step {
 
 const TOTAL_STEPS = 5;
 
-export const MigrationAdd = () => {
+export const MigrationAdd = ({ initialActiveStep }: { initialActiveStep?: Step }) => {
 	const { t } = useTranslation();
-	const [activeStep, setActiveStep] = useState(Step.Connect);
+	const [activeStep] = useState(initialActiveStep || Step.Connect);
 
 	const form = useMigrationForm();
 
@@ -45,19 +45,11 @@ export const MigrationAdd = () => {
 						</TabPanel>
 
 						<TabPanel tabId={Step.Review}>
-							<MigrationReviewStep
-								wallet={wallet}
-								onContinue={() => setActiveStep(Step.Authenticate)}
-								onBack={() => setActiveStep(Step.Connect)}
-							/>
+							<MigrationReviewStep wallet={wallet} />
 						</TabPanel>
+
 						<TabPanel tabId={Step.Authenticate}>
-							<MigrationAuthenticationStep
-								wallet={wallet}
-								onContinue={() => setActiveStep(Step.PendingTransaction)}
-								onBack={() => setActiveStep(Step.Connect)}
-								onError={() => setActiveStep(Step.Error)}
-							/>
+							<MigrationAuthenticationStep wallet={wallet} />
 						</TabPanel>
 
 						<TabPanel tabId={Step.PendingTransaction}>

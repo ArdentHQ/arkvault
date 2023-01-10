@@ -16,8 +16,8 @@ export const MigrationAuthenticationStep = ({
 	onError,
 }: {
 	wallet: Contracts.IReadWriteWallet;
-	onContinue: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	onBack: () => void;
+	onContinue?: (transaction: DTO.ExtendedSignedTransactionData) => void;
+	onBack?: () => void;
 	onError?: (error: Error) => void;
 }) => {
 	const profile = useActiveProfile();
@@ -40,7 +40,7 @@ export const MigrationAuthenticationStep = ({
 	const handleSendTransaction = async () => {
 		try {
 			const transaction = await sendTransaction();
-			onContinue(transaction);
+			onContinue?.(transaction);
 		} catch (error) {
 			onError?.(error);
 		}

@@ -1,8 +1,9 @@
 import React from "react";
 import { createHashHistory } from "history";
+import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationSuccessStep } from "./MigrationSuccessStep";
-import { renderResponsiveWithRoute, env, getDefaultProfileId } from "@/utils/testing-library";
+import { renderResponsiveWithRoute, getDefaultProfileId, screen } from "@/utils/testing-library";
 
 const history = createHashHistory();
 let migrationUrl: string;
@@ -24,6 +25,8 @@ describe("MigrationSuccessStep", () => {
 				route: migrationUrl,
 			},
 		);
+
+		userEvent.click(screen.getByTestId("BackToDashboard__button"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});

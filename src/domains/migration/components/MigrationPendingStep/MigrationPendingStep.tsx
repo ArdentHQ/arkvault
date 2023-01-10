@@ -98,6 +98,7 @@ export const MigrationPendingStep: React.FC = () => {
 							variant="primary"
 							onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 							className="my-auto whitespace-nowrap"
+							data-testid="BackToDashboard__button"
 						>
 							{t("COMMON.BACK_TO_DASHBOARD")}
 						</Button>
