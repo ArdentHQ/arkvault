@@ -16,8 +16,7 @@ export const MigrationReview = ({ wallet, className }: { wallet: Contracts.IRead
 	return (
 		<div className={cn("-mx-5 space-y-3", className)}>
 			<div className="relative rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
-				<MigrationAddress address={wallet.address()} label={t("MIGRATION.MIGRATION_ADD.FROM_ARK_ADDRESS")}
-				/>
+				<MigrationAddress address={wallet.address()} label={t("MIGRATION.MIGRATION_ADD.FROM_ARK_ADDRESS")} />
 
 				<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
 					<div className="absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center">
@@ -37,7 +36,7 @@ export const MigrationReview = ({ wallet, className }: { wallet: Contracts.IRead
 	);
 };
 
-export const MigrationReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet; }) => {
+export const MigrationReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();
 
 	return (

@@ -1,17 +1,12 @@
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
 import { Amount } from "@/app/components/Amount";
-import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
-import { FormButtons } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-import { useActiveProfile, useBreakpoint } from "@/app/hooks";
-import MigrationStep from "@/domains/migration/components/MigrationStep";
 import { MigrationAddress, MigrationDetail } from "@/domains/migration/components/MigrationAddress";
 
 const migrationTransaction: any = {
@@ -24,9 +19,6 @@ const migrationTransaction: any = {
 
 export const MigrationSuccessStep: React.FC = () => {
 	const { t } = useTranslation();
-
-	const activeProfile = useActiveProfile();
-	const history = useHistory();
 
 	const reference = useRef(null);
 

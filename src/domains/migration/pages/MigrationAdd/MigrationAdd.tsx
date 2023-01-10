@@ -1,5 +1,6 @@
-import React, { PropsWithChildren, useEffect, useState } from "react";
+import React, { PropsWithChildren, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
@@ -13,7 +14,6 @@ import { MigrationAuthenticationStep } from "@/domains/migration/components/Migr
 import { useMigrationForm } from "@/domains/migration/hooks";
 import { Button } from "@/app/components/Button";
 import { assertWallet } from "@/utils/assertions";
-import { useHistory } from "react-router-dom";
 
 export enum Step {
 	Connect = 1,
@@ -28,14 +28,18 @@ const TOTAL_STEPS = 5;
 
 const submitHandler = () => {};
 
-const MigrationTabsWrapper: React.FC<PropsWithChildren> = ({ children }) => {
-  return <div className="mt-6 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-10 md:-mx-10">{children}</div>
-};
+const MigrationTabsWrapper: React.FC<PropsWithChildren> = ({ children }) => (
+	<div className="mt-6 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-10 md:-mx-10">
+		{children}
+	</div>
+);
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
 
 	const [activeStep, setActiveStep] = useState(Step.Review);
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const history = useHistory();
 	const { isXs } = useBreakpoint();
@@ -69,7 +73,7 @@ export const MigrationAdd = () => {
 		// if (newIndex === ...) {}
 
 		setActiveStep(newIndex);
-	}
+	};
 
 	const SuccessButtonWrapper = isXs
 		? FormButtons
@@ -143,10 +147,7 @@ export const MigrationAdd = () => {
 
 							{activeStep === Step.Finished && (
 								<SuccessButtonWrapper>
-									<Button
-										data-testid="MigrationAdd__back-to-dashboard-button"
-										onClick={handleBack}
-									>
+									<Button data-testid="MigrationAdd__back-to-dashboard-button" onClick={handleBack}>
 										{t("COMMON.BACK_TO_DASHBOARD")}
 									</Button>
 								</SuccessButtonWrapper>

@@ -87,7 +87,11 @@ export const MigrationPendingStep: React.FC = () => {
 						/>
 
 						<MigrationDetail label={t("COMMON.AMOUNT")} className="px-5 pb-6">
-							<Amount value={migrationTransaction.amount} ticker="ARK" className="text-lg font-semibold" />
+							<Amount
+								value={migrationTransaction.amount}
+								ticker="ARK"
+								className="text-lg font-semibold"
+							/>
 						</MigrationDetail>
 					</div>
 

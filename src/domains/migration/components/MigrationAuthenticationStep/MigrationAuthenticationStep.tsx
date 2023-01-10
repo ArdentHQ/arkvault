@@ -46,7 +46,7 @@ export const MigrationAuthenticationStep = ({
 		<>
 			<Header title={title} subtitle={description} />
 
-			<div className="space-y-8 mt-6">
+			<div className="mt-6 space-y-8">
 				<AuthenticationStep
 					wallet={wallet}
 					noHeading
