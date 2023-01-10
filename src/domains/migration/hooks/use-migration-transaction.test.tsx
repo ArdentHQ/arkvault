@@ -125,7 +125,7 @@ describe("useMigrationTransaction hook", () => {
 		});
 	});
 
-	it("should abortTransaction", async () => {
+	it("should abortTransaction", () => {
 		render(<MigrationFormContent />);
 
 		expect(screen.getByTestId("AbortTransaction")).toBeInTheDocument();
