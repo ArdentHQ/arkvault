@@ -1,6 +1,7 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 
 import { Button } from "@/app/components/Button";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
@@ -12,6 +13,7 @@ import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-
 import { Dropdown } from "@/app/components/Dropdown";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { Icon } from "@/app/components/Icon";
+import { useTransaction } from "../../hooks";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -53,6 +55,9 @@ export const Transactions = memo(function Transactions({
 		hasEmptyResults,
 		hasMore,
 	} = useProfileTransactions({ profile, wallets });
+
+	const history = useHistory();
+	const { isMigrationTransaction } = useTransaction();
 
 	useEffect(() => {
 		if (isLoading) {
@@ -223,7 +228,13 @@ export const Transactions = memo(function Transactions({
 						hideHeader={hasEmptyResults}
 						isLoading={isLoadingTransactions}
 						skeletonRowsLimit={8}
-						onRowClick={setTransactionModalItem}
+						onRowClick={(transaction) => {
+							if (isMigrationTransaction(transaction)) {
+								history.push(`/profiles/${profile.id()}/migration/add`);
+								return;
+							}
+							setTransactionModalItem(transaction);
+						}}
 						profile={profile}
 					/>
 
