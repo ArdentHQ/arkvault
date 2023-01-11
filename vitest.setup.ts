@@ -74,8 +74,6 @@ vi.mock("p-retry", async () => {
 
 vi.mock("browser-fs-access");
 
-// vi.mock("ethers")
-
 const originalTippyRender = Tippy.render;
 let tippyMock;
 
