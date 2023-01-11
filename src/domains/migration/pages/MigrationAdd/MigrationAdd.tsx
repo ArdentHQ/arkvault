@@ -15,6 +15,7 @@ import { useMigrationForm, useMigrationTransaction } from "@/domains/migration/h
 import { Button } from "@/app/components/Button";
 import { ProfilePaths } from "@/router/paths";
 import { MigrationErrorStep } from "@/domains/migration/components/MigrationErrorStep";
+import { DTO } from "@ardenthq/sdk-profiles";
 
 export enum Step {
 	Connect = 1,
@@ -38,6 +39,7 @@ export const MigrationAdd = () => {
 
 	const [activeStep, setActiveStep] = useState(Step.Connect);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const history = useHistory();
 	const { isXs } = useBreakpoint();
@@ -94,7 +96,9 @@ export const MigrationAdd = () => {
 
 	const handleSubmit = async () => {
 		try {
-			await sendTransaction();
+			const transaction = await sendTransaction();
+
+			setTransaction(transaction);
 
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {
@@ -136,7 +140,7 @@ export const MigrationAdd = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.PendingTransaction}>
-								<MigrationPendingStep />
+								<MigrationPendingStep migrationTransaction={transaction!} />
 								<span onClick={() => setActiveStep(Step.Finished)}>go to success</span>
 							</TabPanel>
 
@@ -155,6 +159,7 @@ export const MigrationAdd = () => {
 										data-testid="MigrationAdd__back-button"
 										variant="secondary"
 										onClick={handleBack}
+										disabled={isSubmitting}
 									>
 										{activeStep === Step.Connect ? t("COMMON.CANCEL") : t("COMMON.BACK")}
 									</Button>
@@ -175,6 +180,7 @@ export const MigrationAdd = () => {
 											type="submit"
 											disabled={isSubmitting || !isValid}
 											data-testid="MigrationAdd__send-button"
+											isLoading={isSubmitting}
 											icon="DoubleArrowRight"
 											iconPosition="right"
 										>
