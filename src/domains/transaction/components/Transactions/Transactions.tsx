@@ -13,7 +13,7 @@ import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-
 import { Dropdown } from "@/app/components/Dropdown";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { Icon } from "@/app/components/Icon";
-import { useTransaction } from "../../hooks";
+import { useTransaction } from "@/domains/transaction/hooks";
 
 interface TransactionsProperties {
 	emptyText?: string;
