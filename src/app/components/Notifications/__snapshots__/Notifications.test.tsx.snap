@@ -101,7 +101,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
         class="md:space-y-2 "
       >
         <div
-          class="hidden text-base font-semibold text-theme-secondary-500 md:block"
+          class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
         >
           Transactions
         </div>
@@ -851,7 +851,7 @@ exports[`Notifications > should render with empty notifications 1`] = `
         class="md:space-y-2 "
       >
         <div
-          class="hidden text-base font-semibold text-theme-secondary-500 md:block"
+          class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
         >
           Transactions
         </div>
@@ -1349,7 +1349,7 @@ exports[`Notifications > should render with plugins 1`] = `
         class="md:space-y-2 "
       >
         <div
-          class="hidden text-base font-semibold text-theme-secondary-500 md:block"
+          class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
         >
           Transactions
         </div>
@@ -2189,7 +2189,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
         class="md:space-y-2 "
       >
         <div
-          class="hidden text-base font-semibold text-theme-secondary-500 md:block"
+          class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
         >
           Transactions
         </div>
