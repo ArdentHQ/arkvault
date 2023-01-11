@@ -26,8 +26,6 @@ export enum Step {
 
 const TOTAL_STEPS = 5;
 
-const submitHandler = () => {};
-
 const MigrationTabsWrapper: React.FC<PropsWithChildren> = ({ children }) => (
 	<div className="mt-6 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-10 md:-mx-10">
 		{children}
@@ -75,6 +73,10 @@ export const MigrationAdd = () => {
 		setActiveStep(newIndex);
 	};
 
+	const handleSubmit = () => {
+		setActiveStep(Step.PendingTransaction);
+	};
+
 	const SuccessButtonWrapper = isXs
 		? FormButtons
 		: ({ children }: { children: React.ReactNode }) => (
@@ -84,7 +86,7 @@ export const MigrationAdd = () => {
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
 			<Section className="flex-1">
-				<Form className="mx-auto max-w-xl" context={form} onSubmit={submitHandler}>
+				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
 					<StepIndicatorAlt length={TOTAL_STEPS} activeIndex={activeStep} className="mb-8 sm:mx-6 md:mx-0" />
 
 					<MigrationTabsWrapper>
@@ -122,7 +124,6 @@ export const MigrationAdd = () => {
 									{activeStep < Step.Authenticate && (
 										<Button
 											data-testid="MigrationAdd__continue-button"
-											type="submit"
 											variant="primary"
 											disabled={!isValid}
 											onClick={handleNext}
