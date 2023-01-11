@@ -4,6 +4,7 @@ import { Contract } from "ethers";
 import { MigrationProvider, useMigrations } from "./Migration";
 import { render, screen, waitFor } from "@/utils/testing-library";
 import * as contexts from "@/app/contexts";
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 
 describe("Migration Context", () => {
 	let environmentMock;
@@ -108,6 +109,27 @@ describe("Migration Context", () => {
 	it("should not reload the migrations no pending migrations", async () => {
 		const reloadMigration = vi.fn();
 
+		environmentMock.mockRestore();
+
+		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
+			...environmentMockData,
+			env: {
+				data: () => ({
+					get: () => [
+						{
+							address: "AdDreSs",
+							amount: 123,
+							id: "0x123",
+							migrationAddress: "0x456",
+							status: MigrationTransactionStatus.Confirmed,
+							timestamp: Date.now() / 1000,
+						},
+					],
+					set: () => {},
+				}),
+			},
+		});
+
 		const setTimeoutSpy = vi.spyOn(window, "setTimeout").mockImplementation((callback) => {
 			if (callback.name === "reloadMigrations") {
 				reloadMigration();
@@ -169,6 +191,27 @@ describe("Migration Context", () => {
 
 	it("should reload the migrations if at least one migration is pending", async () => {
 		const reloadMigration = vi.fn();
+
+		environmentMock.mockRestore();
+
+		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
+			...environmentMockData,
+			env: {
+				data: () => ({
+					get: () => [
+						{
+							address: "AdDreSs",
+							amount: 123,
+							id: "0x123",
+							migrationAddress: "0x456",
+							status: MigrationTransactionStatus.Confirmed,
+							timestamp: Date.now() / 1000,
+						},
+					],
+					set: () => {},
+				}),
+			},
+		});
 
 		const setTimeoutSpy = vi.spyOn(window, "setTimeout").mockImplementation((callback) => {
 			if (callback.name === "reloadMigrations") {
