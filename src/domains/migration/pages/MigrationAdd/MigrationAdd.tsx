@@ -24,7 +24,7 @@ export enum Step {
 	Error,
 }
 
-const TOTAL_STEPS = 5;
+const TOTAL_STEPS = Object.keys(Step).length - 1;
 
 const MigrationTabsWrapper: React.FC<PropsWithChildren> = ({ children }) => (
 	<div className="mt-6 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-10 md:-mx-10">
@@ -87,7 +87,7 @@ export const MigrationAdd = () => {
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
-					<StepIndicatorAlt length={TOTAL_STEPS} activeIndex={activeStep} className="mb-8 sm:mx-6 md:mx-0" />
+					<StepIndicatorAlt length={TOTAL_STEPS} activeIndex={activeStep === Step.Error ? Step.Authenticate : activeStep} className="mb-8 sm:mx-6 md:mx-0" />
 
 					<MigrationTabsWrapper>
 						<Tabs activeId={activeStep}>
