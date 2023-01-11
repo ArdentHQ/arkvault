@@ -1,55 +1,17 @@
-import React, { useEffect } from "react";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-
+import React from "react";
+import { useFormContext } from "react-hook-form";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { MigrationReview } from "@/domains/migration/components/MigrationReviewStep";
-import { useActiveProfile } from "@/app/hooks";
 import { useLedgerContext } from "@/app/contexts";
-import { useMigrationTransaction, useAuthenticationHeading } from "@/domains/migration/hooks";
+import { useAuthenticationHeading } from "@/domains/migration/hooks";
 import { Header } from "@/app/components/Header";
 
-export const MigrationAuthenticationStep = ({
-	wallet,
-	onContinue,
-	onError,
-}: {
-	wallet: Contracts.IReadWriteWallet;
-	onContinue?: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	onError?: (error: Error) => void;
-}) => {
-	const profile = useActiveProfile();
+export const MigrationAuthenticationStep = () => {
+	const { getValues } = useFormContext();
+	const { fee, migrationAddress, wallet } = getValues(["fee", "migrationAddress", "wallet"]);
 
 	const { title, description } = useAuthenticationHeading({ wallet });
-	const { sendTransaction, abortTransaction } = useMigrationTransaction({ profile, wallet });
 	const { hasDeviceAvailable, isConnected, ledgerDevice } = useLedgerContext();
-
-	useEffect(() => {
-		if (wallet.isLedger()) {
-			handleSendTransaction();
-		}
-
-		return () => {
-			abortTransaction();
-		};
-	}, []);
-
-	const handleSendTransaction = async () => {
-		try {
-			const transaction = await sendTransaction();
-			onContinue?.(transaction);
-		} catch (error) {
-			onError?.(error);
-		}
-	};
-
-	// <MigrationStep
-	// 	title={title}
-	// 	description={description}
-	// 	onBack={wallet.isLedger() ? undefined : onBack}
-	// 	onContinue={wallet.isLedger() ? undefined : handleSendTransaction}
-	// 	isValid={formState.isValid}
-	// 	isLoading={isSending}
-	// >
 
 	return (
 		<>
@@ -58,13 +20,13 @@ export const MigrationAuthenticationStep = ({
 			<div className="mt-6 space-y-8">
 				<AuthenticationStep
 					wallet={wallet}
-					noHeading
 					ledgerIsAwaitingApp={!isConnected}
 					ledgerIsAwaitingDevice={!hasDeviceAvailable}
 					ledgerConnectedModel={ledgerDevice?.id}
+					noHeading
 				/>
 
-				{wallet.isLedger() && <MigrationReview wallet={wallet} />}
+				{wallet.isLedger() && <MigrationReview fee={fee} migrationAddress={migrationAddress} wallet={wallet} />}
 			</div>
 		</>
 	);

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export interface MigrationForm {
@@ -16,6 +17,7 @@ export interface MigrationForm {
 	secret: string;
 	secondSecret: string;
 	recipients: RecipientItem[];
+	wallet: Contracts.IReadWriteWallet;
 }
 
 const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
@@ -37,9 +39,13 @@ export const useMigrationForm = () => {
 		shouldUnregister: false,
 	});
 
+	const { register } = form;
+
 	useEffect(() => {
-		form.register("fee");
-	}, []);
+		register("fee");
+		register("migrationAddress", { required: true });
+		register("wallet", { required: true });
+	}, [register]);
 
 	return form;
 };

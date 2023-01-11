@@ -1,6 +1,6 @@
-import React, { PropsWithChildren, useState } from "react";
+import React, { PropsWithChildren, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { generatePath, useHistory } from "react-router-dom";
 import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
@@ -11,9 +11,9 @@ import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSu
 import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { MigrationAuthenticationStep } from "@/domains/migration/components/MigrationAuthenticationStep";
-import { useMigrationForm } from "@/domains/migration/hooks";
+import { useMigrationForm, useMigrationTransaction } from "@/domains/migration/hooks";
 import { Button } from "@/app/components/Button";
-import { assertWallet } from "@/utils/assertions";
+import { ProfilePaths } from "@/router/paths";
 
 export enum Step {
 	Connect = 1,
@@ -43,38 +43,56 @@ export const MigrationAdd = () => {
 	const { isXs } = useBreakpoint();
 
 	const activeProfile = useActiveProfile();
-	// TODO: remove hardcoded wallet.
-	const wallet = activeProfile.wallets().first();
 
 	const form = useMigrationForm();
 
-	const { formState } = form;
+	const { formState, watch } = form;
 	const { isSubmitting, isValid } = formState;
+
+	const wallet = watch("wallet");
+
+	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
+
+	useEffect(
+		() => () => {
+			abortTransaction();
+		},
+		[],
+	);
 
 	const handleBack = () => {
 		if (activeStep === Step.Connect) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			const migrationsPath = generatePath(ProfilePaths.Migration, { profileId: activeProfile.id() });
+			return history.push(migrationsPath);
 		}
 
 		if (activeStep === Step.Review || activeStep === Step.Authenticate) {
 			return setActiveStep((activeStep) => activeStep - 1);
 		}
 
-		assertWallet(wallet);
-
-		return history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
+		const dashboardPath = generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() });
+		return history.push(dashboardPath);
 	};
 
 	const handleNext = () => {
-		let newIndex = activeStep + 1;
+		const newStep = activeStep + 1;
 
-		// if (newIndex === ...) {}
+		if (newStep === Step.Authenticate && wallet?.isLedger()) {
+			handleSubmit();
+		}
 
-		setActiveStep(newIndex);
+		setActiveStep((index) => index + 1);
 	};
 
-	const handleSubmit = () => {
-		setActiveStep(Step.PendingTransaction);
+	const handleSubmit = async () => {
+		try {
+			await sendTransaction();
+
+			setActiveStep(Step.PendingTransaction);
+		} catch (error) {
+			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+			setActiveStep(Step.Error);
+		}
 	};
 
 	const SuccessButtonWrapper = isXs
@@ -100,11 +118,11 @@ export const MigrationAdd = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.Review}>
-								<MigrationReviewStep wallet={wallet} />
+								<MigrationReviewStep />
 							</TabPanel>
 
 							<TabPanel tabId={Step.Authenticate}>
-								<MigrationAuthenticationStep wallet={wallet} />
+								<MigrationAuthenticationStep />
 							</TabPanel>
 
 							<TabPanel tabId={Step.PendingTransaction}>

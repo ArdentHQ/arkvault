@@ -9,9 +9,18 @@ import { MigrationAddress } from "@/domains/migration/components/MigrationAddres
 import { MigrationPolygonIcon } from "@/domains/migration/components/MigrationPolygonIcon";
 import { Header } from "@/app/components/Header";
 
-export const MigrationReview = ({ wallet, className }: { wallet: Contracts.IReadWriteWallet; className?: string }) => {
+export const MigrationReview = ({
+	fee,
+	wallet,
+	migrationAddress,
+	className,
+}: {
+	fee: number;
+	wallet: Contracts.IReadWriteWallet;
+	migrationAddress: string;
+	className?: string;
+}) => {
 	const { t } = useTranslation();
-	const { getValues } = useFormContext();
 
 	return (
 		<div className={cn("space-y-3 sm:-mx-5", className)}>
@@ -25,19 +34,22 @@ export const MigrationReview = ({ wallet, className }: { wallet: Contracts.IRead
 				</div>
 
 				<MigrationAddress
-					address={getValues("migrationAddress")}
+					address={migrationAddress}
 					label={t("MIGRATION.MIGRATION_ADD.TO_POLYGON_ADDRESS")}
 					isEthereum
 				/>
 			</div>
 
-			<MigrationAmountBox amount={wallet.balance()} fee={getValues("fee")} ticker={wallet.currency()} />
+			<MigrationAmountBox amount={wallet.balance()} fee={fee} ticker={wallet.currency()} />
 		</div>
 	);
 };
 
-export const MigrationReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
+export const MigrationReviewStep = () => {
 	const { t } = useTranslation();
+
+	const { getValues } = useFormContext();
+	const { fee, migrationAddress, wallet } = getValues(["fee", "migrationAddress", "wallet"]);
 
 	return (
 		<>
@@ -48,7 +60,7 @@ export const MigrationReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWa
 				headerClassName="text-lg sm:text-2xl"
 			/>
 
-			<MigrationReview wallet={wallet} />
+			<MigrationReview fee={fee} migrationAddress={migrationAddress} wallet={wallet} />
 		</>
 	);
 };

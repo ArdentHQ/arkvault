@@ -1,8 +1,8 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useEffect, useMemo } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import cn from "classnames";
-import { generatePath } from "react-router";
-import { useHistory } from "react-router-dom";
+import { useFormContext } from "react-hook-form";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMetaMask } from "@/domains/migration/hooks/use-meta-mask";
 import SelectPolygonAddress from "@/domains/migration/components/SelectPolygonAddress";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -15,7 +15,6 @@ import { Header } from "@/app/components/Header";
 import { useLink } from "@/app/hooks/use-link";
 import { Icon } from "@/app/components/Icon";
 import { Spinner } from "@/app/components/Spinner";
-import { ProfilePaths } from "@/router/paths";
 const { MetamaskLogo } = images.common;
 
 /* istanbul ignore next -- @preserve */
@@ -94,8 +93,12 @@ const PolygonFieldMessage = ({
 
 export const MigrationConnectStep = () => {
 	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet, connecting, supportsMetaMask } = useMetaMask();
-	const history = useHistory();
 	const { openExternal } = useLink();
+
+	const form = useFormContext();
+	const { setValue, watch } = form;
+
+	const wallet = watch("wallet");
 
 	const { t } = useTranslation();
 
@@ -105,39 +108,29 @@ export const MigrationConnectStep = () => {
 		() =>
 			profile
 				.wallets()
-				.findByCoinWithNetwork("ARK", "ark.mainnet")
+				.findByCoinWithNetwork("ARK", "ark.devnet")
 				// Only wallets with a balance greater than the transaction fee +0.05 ARK
 				.filter((wallet) => wallet.balance() >= TRANSACTION_FEE + 0.05),
 		[profile],
 	);
 
-	const [selectedAddress, setSelectedAddress] = useState<string>();
-
-	const selectedWallet = useMemo(() => {
-		if (!selectedAddress) {
-			return;
-		}
-
-		return profile.wallets().findByAddressWithNetwork(selectedAddress, "ark.mainnet");
-	}, [selectedAddress, profile]);
-
 	const walletBalance = useMemo(() => {
-		if (!selectedWallet) {
+		if (!wallet) {
 			return 0;
 		}
 
-		return Math.round(selectedWallet.balance() * 100) / 100;
-	}, [selectedWallet]);
+		return Math.round(wallet.balance() * 100) / 100;
+	}, [wallet]);
 
 	const amountYouGet = useMemo(() => {
-		if (!selectedWallet) {
+		if (!wallet) {
 			return 0;
 		}
 
-		const amount = selectedWallet.balance() - TRANSACTION_FEE;
+		const amount = wallet.balance() - TRANSACTION_FEE;
 
 		return Math.round(amount * 100) / 100;
-	}, [selectedWallet]);
+	}, [wallet]);
 
 	const accountIsInWrongNetwork = useMemo(() => {
 		if (!account || needsMetaMask) {
@@ -152,19 +145,25 @@ export const MigrationConnectStep = () => {
 		[needsMetaMask, account, isOnPolygonNetwork],
 	);
 
-	const addressSelectedHandler = (address: string) => {
-		setSelectedAddress(address);
+	const handleSelectAddress = (selectedAddress: string) => {
+		let wallet: Contracts.IReadWriteWallet | undefined;
+
+		if (selectedAddress) {
+			wallet = profile.wallets().findByAddressWithNetwork(selectedAddress, "ark.devnet");
+		}
+
+		setValue("wallet", wallet, { shouldDirty: true, shouldValidate: true });
 	};
 
-	const stepIsValid = useMemo(
-		() => !!account && !accountIsInWrongNetwork && !!selectedWallet,
-		[account, accountIsInWrongNetwork, selectedWallet],
-	);
+	useEffect(() => {
+		let migrationAddress: string | undefined;
 
-	const cancelHandler = useCallback(() => {
-		const path = generatePath(ProfilePaths.Migration, { profileId: profile.id() });
-		history.push(path);
-	}, [profile, history]);
+		if (!!account && !accountIsInWrongNetwork) {
+			migrationAddress = account;
+		}
+
+		setValue("migrationAddress", migrationAddress, { shouldDirty: true, shouldValidate: true });
+	}, [account, accountIsInWrongNetwork, setValue]);
 
 	return (
 		<>
@@ -181,6 +180,10 @@ export const MigrationConnectStep = () => {
 						<FormLabel label={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.ARK_ADDRESS")} />
 
 						<SelectAddress
+							wallet={{
+								address: wallet?.address(),
+								network: wallet?.network(),
+							}}
 							wallets={wallets}
 							profile={profile}
 							disabled={wallets.length === 0}
@@ -190,7 +193,7 @@ export const MigrationConnectStep = () => {
 							description={t(
 								"MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.SELECT_WALLET_TO_MIGRATE_DESCRIPTION",
 							)}
-							onChange={addressSelectedHandler}
+							onChange={handleSelectAddress}
 						/>
 					</FormField>
 

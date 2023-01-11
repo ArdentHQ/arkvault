@@ -33,7 +33,7 @@ export const StepIndicatorAlt: React.FC<Properties> = ({
 					data-testid="StepIndicatorAlt__step"
 					key={index}
 					className={classNames(
-						"relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900",
+						"relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900",
 						{
 							"bg-theme-navy-100": index < activeIndex - 1,
 							"border-theme-primary-600": index < activeIndex,
