@@ -105,10 +105,12 @@ export const MigrationAdd = () => {
 
 							<TabPanel tabId={Step.PendingTransaction}>
 								<MigrationPendingStep />
+								<span onClick={() => setActiveStep(Step.Finished)}>go to success</span>
 							</TabPanel>
 
 							<TabPanel tabId={Step.Finished}>
 								<MigrationSuccessStep />
+								<span onClick={() => setActiveStep(Step.PendingTransaction)}>go to pending</span>
 							</TabPanel>
 
 							{activeStep <= Step.Authenticate && (
