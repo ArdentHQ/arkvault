@@ -9,6 +9,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 
 /* istanbul ignore next -- @preserve */
 const contractAddress = import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
+const providerUrl = import.meta.env.VITE_POLYGON_RPC_URL;
 
 const contractABI = [
 	{
@@ -88,9 +89,6 @@ export const useMigrations = () => {
 	const { env } = useEnvironmentContext();
 
 	const [migrations, setMigrations] = useState<Migration[]>(env.data().get(ARK_MIGRATIONS_STORAGE_KEY, []) || []);
-
-	// @TODO: make this url and the contract address dynamic depending on the network
-	const providerUrl = "https://rpc-mumbai.maticvigil.com/";
 
 	const loadMigrations = useCallback(async () => {
 		const transactions = [
