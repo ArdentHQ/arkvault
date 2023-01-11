@@ -5,6 +5,7 @@ import { useNotifications } from "./hooks/use-notifications";
 import { NotificationItem } from "./NotificationItem";
 import { NotificationItemProperties, NotificationsProperties } from "./Notifications.contracts";
 import { NotificationsWrapper } from "./styles";
+import { NotificationsMigrations } from "./NotificationsMigrations";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Image } from "@/app/components/Image";
 import { Table } from "@/app/components/Table";
@@ -17,7 +18,7 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 	const { persist } = useEnvironmentContext();
 	const { isXs, isSm } = useBreakpoint();
 
-	const { releases, transactions, markAllTransactionsAsRead } = useNotifications({ profile });
+	const { releases, transactions, markAllTransactionsAsRead, migrationTransactions } = useNotifications({ profile });
 	const wrapperReference = useRef();
 
 	useEffect(() => {
@@ -25,9 +26,9 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 		persist();
 	}, []);
 
-	if (transactions.length === 0 && releases.length === 0) {
+	if (transactions.length === 0 && releases.length === 0 && migrationTransactions.length === 0) {
 		return (
-			<NotificationsWrapper>
+			<NotificationsWrapper data-testid="Notifications__empty">
 				<EmptyBlock>
 					<span className="whitespace-nowrap">{t("COMMON.NOTIFICATIONS.EMPTY")}</span>
 				</EmptyBlock>
@@ -59,13 +60,33 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 				</div>
 			)}
 
-			{transactions.length > 0 && (
-				<NotificationTransactionsTable
-					profile={profile}
-					isLoading={profile.notifications().transactions().isSyncing() || transactions.length === 0}
-					transactions={transactions}
-					onClick={onTransactionClick}
-				/>
+			{(transactions.length > 0 || migrationTransactions.length > 0) && (
+				<div>
+					<div className="md:space-y-2 ">
+						<div className="hidden text-lg font-semibold text-theme-secondary-500 md:block">
+							{t("COMMON.NOTIFICATIONS.TRANSACTIONS_TITLE")}
+						</div>
+
+						{migrationTransactions.length > 0 && (
+							<NotificationsMigrations transactions={migrationTransactions} profile={profile} />
+						)}
+
+						<div className="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden">
+							{t("COMMON.NOTIFICATIONS.TRANSACTIONS_TITLE")}
+						</div>
+
+						{transactions.length > 0 && (
+							<NotificationTransactionsTable
+								profile={profile}
+								isLoading={
+									profile.notifications().transactions().isSyncing() || transactions.length === 0
+								}
+								transactions={transactions}
+								onClick={onTransactionClick}
+							/>
+						)}
+					</div>
+				</div>
 			)}
 		</NotificationsWrapper>
 	);

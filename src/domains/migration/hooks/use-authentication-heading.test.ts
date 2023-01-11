@@ -5,7 +5,7 @@ import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 let wallet: IReadWriteWallet;
 
-describe("useQRCode hook", () => {
+describe("useAuthenticationHeading hook", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
@@ -21,7 +21,7 @@ describe("useQRCode hook", () => {
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
 		expect(result.current.description).toMatchInlineSnapshot(
-			'"Enter your mnemonic passphrase to authenticate the transaction."',
+			'"Enter your mnemonic passphrase to authenticate the migration transaction."',
 		);
 	});
 
@@ -32,7 +32,7 @@ describe("useQRCode hook", () => {
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
 		expect(result.current.description).toMatchInlineSnapshot(
-			'"Enter your mnemonic passphrase to authenticate the transaction."',
+			'"Enter your mnemonic passphrase to authenticate the migration transaction."',
 		);
 	});
 
@@ -44,7 +44,7 @@ describe("useQRCode hook", () => {
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
 		expect(result.current.description).toMatchInlineSnapshot(
-			'"Enter your mnemonic passphrase to authenticate the transaction."',
+			'"Enter your mnemonic passphrase to authenticate the migration transaction."',
 		);
 	});
 
@@ -53,7 +53,9 @@ describe("useQRCode hook", () => {
 
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
-		expect(result.current.description).toMatchInlineSnapshot('"Enter your WIF to authenticate the transaction."');
+		expect(result.current.description).toMatchInlineSnapshot(
+			'"Enter your WIF to authenticate the migration transaction."',
+		);
 	});
 
 	it("should generate description for a wallet that uses private key", () => {
@@ -62,7 +64,7 @@ describe("useQRCode hook", () => {
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
 		expect(result.current.description).toMatchInlineSnapshot(
-			'"Enter your private key to authenticate the transaction."',
+			'"Enter your private key to authenticate the migration transaction."',
 		);
 	});
 
@@ -72,7 +74,7 @@ describe("useQRCode hook", () => {
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
 		expect(result.current.description).toMatchInlineSnapshot(
-			'"Enter your secret to authenticate the transaction."',
+			'"Enter your secret to authenticate the migration transaction."',
 		);
 	});
 
@@ -82,7 +84,7 @@ describe("useQRCode hook", () => {
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
 		expect(result.current.description).toMatchInlineSnapshot(
-			'"Enter your encryption password to authenticate the transaction."',
+			'"Enter your encryption password to authenticate the migration transaction."',
 		);
 	});
 
@@ -92,7 +94,7 @@ describe("useQRCode hook", () => {
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
 		expect(result.current.description).toMatchInlineSnapshot(
-			'"Enter your encryption password to authenticate the transaction."',
+			'"Enter your encryption password to authenticate the migration transaction."',
 		);
 	});
 
@@ -102,7 +104,7 @@ describe("useQRCode hook", () => {
 		const { result } = renderHook(() => useAuthenticationHeading({ wallet }));
 
 		expect(result.current.description).toMatchInlineSnapshot(
-			'"Enter your encryption password to authenticate the transaction."',
+			'"Enter your encryption password to authenticate the migration transaction."',
 		);
 	});
 });

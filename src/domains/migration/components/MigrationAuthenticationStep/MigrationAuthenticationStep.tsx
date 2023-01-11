@@ -42,6 +42,15 @@ export const MigrationAuthenticationStep = ({
 		}
 	};
 
+	// <MigrationStep
+	// 	title={title}
+	// 	description={description}
+	// 	onBack={wallet.isLedger() ? undefined : onBack}
+	// 	onContinue={wallet.isLedger() ? undefined : handleSendTransaction}
+	// 	isValid={formState.isValid}
+	// 	isLoading={isSending}
+	// >
+
 	return (
 		<>
 			<Header title={title} subtitle={description} />
