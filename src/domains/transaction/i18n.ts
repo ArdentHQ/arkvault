@@ -28,6 +28,7 @@ export const translations = {
 	DELEGATE_NAME: "Delegate Name",
 	DELEGATE_PUBLICKEY: "Delegate PublicKey",
 	DESCRIPTION: "Description",
+	DETAILS: "Details",
 	DISPLAY_NAME: "Display Name",
 	ENCRYPTION_PASSWORD: "Encryption Password",
 	ERROR: {
@@ -128,6 +129,8 @@ export const translations = {
 	},
 	MAGISTRATE: "Magistrate",
 	MEMO: "Memo",
+	MIGRATION: "Migration",
+	MIGRATION_TO_POLYGON: "Migration to Polygon Network",
 	MNEMONIC: "Mnemonic",
 	MODAL_CONFIRM_REMOVE_PENDING_TRANSACTION: {
 		DESCRIPTION:

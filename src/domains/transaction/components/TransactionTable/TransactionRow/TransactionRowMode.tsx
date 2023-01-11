@@ -7,20 +7,31 @@ import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+import { useTransaction } from "@/domains/transaction/hooks";
 
-export const BaseTransactionRowMode: VFC<BaseTransactionRowModeProperties> = ({
+export const BaseTransactionRowMode = ({
 	type,
 	isSent,
 	isReturn,
 	address,
 	isCompact,
+	isMigration,
 	...properties
-}) => {
+}: BaseTransactionRowModeProperties) => {
 	const { t } = useTranslation();
 
 	const iconSize = isCompact ? "xs" : "lg";
 
 	const { modeIconName, tooltipContent, modeCircleStyle } = useMemo(() => {
+		if (isMigration) {
+			return {
+				modeCircleStyle:
+					"border-theme-hint-100 bg-theme-hint-50 dark:bg-transparent text-theme-hint-600 dark:border-theme-hint-300 dark:bg-theme-secondary-900 dark:text-theme-hint-300",
+				modeIconName: "Sent",
+				tooltipContent: t("TRANSACTION.MIGRATION"),
+			};
+		}
+
 		if (isReturn && (type === "transfer" || type === "multiPayment")) {
 			return {
 				modeCircleStyle: "border-theme-success-200 text-theme-success-600 dark:border-theme-success-600",
@@ -70,19 +81,24 @@ export const BaseTransactionRowMode: VFC<BaseTransactionRowModeProperties> = ({
 	);
 };
 
-export const TransactionRowMode: VFC<TransactionRowModeProperties> = ({
+export const TransactionRowMode = ({
 	transaction,
 	transactionType,
 	address,
 	isCompact,
 	...properties
-}) => (
-	<BaseTransactionRowMode
-		isCompact={isCompact}
-		isSent={transaction.isSent()}
-		isReturn={transaction.sender() === transaction.wallet().address() && transaction.isReturn()}
-		type={transactionType || transaction.type()}
-		address={address || transaction.sender()}
-		{...properties}
-	/>
-);
+}: TransactionRowModeProperties) => {
+	const { isMigrationTransaction } = useTransaction();
+
+	return (
+		<BaseTransactionRowMode
+			isCompact={isCompact}
+			isSent={transaction.isSent()}
+			isReturn={transaction.sender() === transaction.wallet().address() && transaction.isReturn()}
+			type={transactionType || transaction.type()}
+			address={address || transaction.sender()}
+			isMigration={isMigrationTransaction(transaction)}
+			{...properties}
+		/>
+	);
+};

@@ -1,5 +1,8 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useCallback, useMemo } from "react";
+
+// TODO: remove hardcoded value.
+const migrationAddress = () => "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
 
 export const useTransaction = () => {
 	const fetchWalletUnconfirmedTransactions = useCallback(async (wallet: Contracts.IReadWriteWallet) => {
@@ -17,9 +20,14 @@ export const useTransaction = () => {
 		}
 	}, []);
 
+	const isMigrationTransaction = (transaction: DTO.ExtendedConfirmedTransactionData) => {
+		return transaction.recipient() === migrationAddress();
+	};
+
 	return useMemo(
 		() => ({
 			fetchWalletUnconfirmedTransactions,
+			isMigrationTransaction,
 		}),
 		[fetchWalletUnconfirmedTransactions],
 	);
