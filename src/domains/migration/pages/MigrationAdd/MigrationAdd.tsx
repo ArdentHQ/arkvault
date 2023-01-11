@@ -101,6 +101,8 @@ export const MigrationAdd = () => {
 				<div className="mt-8 flex items-center justify-center">{children}</div>
 		  );
 
+	const hideFormButtons = activeStep > Step.Authenticate || (activeStep === Step.Authenticate && wallet?.isLedger());
+
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
 			<Section className="flex-1">
@@ -135,7 +137,7 @@ export const MigrationAdd = () => {
 								<span onClick={() => setActiveStep(Step.PendingTransaction)}>go to pending</span>
 							</TabPanel>
 
-							{activeStep <= Step.Authenticate && (
+							{!hideFormButtons && (
 								<FormButtons>
 									<Button
 										data-testid="MigrationAdd__back-button"
