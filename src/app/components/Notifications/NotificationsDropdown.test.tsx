@@ -5,7 +5,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { NotificationsDropdown } from "./NotificationsDropdown";
-import { env, getDefaultProfileId, renderResponsive, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, renderResponsive, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -14,6 +14,8 @@ import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
+
+const getTable = () => within(screen.getByTestId("NotificationTransactionsTable"));
 
 describe("Notifications", () => {
 	beforeEach(async () => {
@@ -49,7 +51,8 @@ describe("Notifications", () => {
 		userEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+
+		await waitFor(() => expect(getTable().queryAllByTestId("TableRow")).toHaveLength(3));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -70,9 +73,10 @@ describe("Notifications", () => {
 		userEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
 
-		userEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
+		await waitFor(() => expect(getTable().queryAllByTestId("TransactionRowMode")).toHaveLength(3));
+
+		userEvent.click(getTable().getAllByTestId("TransactionRowMode")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 

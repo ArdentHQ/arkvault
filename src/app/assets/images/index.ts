@@ -24,6 +24,8 @@ import { ReactComponent as NoResultsLightGreen } from "./no-results-light-green.
 import { ReactComponent as NoResultsLightNavy } from "./no-results-light-navy.svg";
 import { ReactComponent as WelcomeBannerDark } from "./welcome-banner-dark.svg";
 import { ReactComponent as WelcomeBannerLight } from "./welcome-banner-light.svg";
+import { ReactComponent as MigrationNotificationHeaderLight } from "./migration-notification-header-light.svg";
+import { ReactComponent as MigrationNotificationHeaderDark } from "./migration-notification-header-dark.svg";
 import { ReactComponent as PolygonMigrationBannerLightNavy } from "./polygon-migration-banner-light-navy.svg";
 import { ReactComponent as PolygonMigrationBannerLightGreen } from "./polygon-migration-banner-light-green.svg";
 import { ReactComponent as PolygonMigrationBannerDark } from "./polygon-migration-banner-dark.svg";
@@ -111,6 +113,8 @@ export const images = {
 		InfoLightGreen: InfoLight,
 		InfoLightNavy: InfoLight,
 		MetamaskLogo,
+		MigrationNotificationHeaderDark,
+		MigrationNotificationHeaderLight,
 		NoResultsDarkGreen,
 		NoResultsDarkNavy,
 		NoResultsLightGreen,
