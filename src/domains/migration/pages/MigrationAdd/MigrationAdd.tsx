@@ -90,7 +90,7 @@ export const MigrationAdd = () => {
 					<StepIndicatorAlt
 						length={TOTAL_STEPS}
 						activeIndex={activeStep === Step.Error ? Step.Authenticate : activeStep}
-						className="mb-8 sm:mx-6 md:mx-0"
+						className="mb-8 sm:mx-10 md:mx-0"
 					/>
 
 					<MigrationTabsWrapper>

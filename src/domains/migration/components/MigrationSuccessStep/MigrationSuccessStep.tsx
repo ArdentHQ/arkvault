@@ -37,7 +37,7 @@ export const MigrationSuccessStep: React.FC = () => {
 				</div>
 			</div>
 
-			<div className="-mx-5">
+			<div className="sm:-mx-5">
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 					<MigrationAddress
 						label={t("MIGRATION.POLYGON_ADDRESS")}
