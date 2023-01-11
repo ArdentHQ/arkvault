@@ -100,8 +100,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrations, setMigrations] = useState<Migration[]>();
 
 	const storeMigrationTransactions = useCallback(async () => {
-		console.log({ migrations });
-
 		env.data().set(ARK_MIGRATIONS_STORAGE_KEY, migrations!);
 
 		await persist();
