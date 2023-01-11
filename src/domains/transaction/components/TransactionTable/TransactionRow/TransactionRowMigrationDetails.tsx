@@ -12,7 +12,6 @@ import { Divider } from "@/app/components/Divider";
 interface Properties {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	isCompact: boolean;
-	labelClass?: string;
 }
 
 export const TransactionMigrationLink = ({
@@ -32,7 +31,7 @@ export const TransactionMigrationLink = ({
 	);
 };
 
-export const TransactionRowMigrationDetails = ({ transaction, isCompact, labelClass }: Properties) => {
+export const TransactionRowMigrationDetails = ({ transaction, isCompact }: Properties) => {
 	const { t } = useTranslation();
 
 	return (
