@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { ethers, Contract } from "ethers";
 import {
 	ARKMigrationViewStructOutput,
@@ -7,9 +7,9 @@ import {
 } from "@/domains/migration/migration.contracts";
 import { useEnvironmentContext } from "@/app/contexts";
 
-/* istanbul ignore next -- @preserve */
-const contractAddress = import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
-const providerUrl = import.meta.env.VITE_POLYGON_RPC_URL;
+const ARK_MIGRATIONS_STORAGE_KEY = "ark-migration";
+const CONTRACT_ADDRESS = import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
+const POLYGON_RPC_URL = import.meta.env.VITE_POLYGON_RPC_URL;
 
 const contractABI = [
 	{
@@ -83,14 +83,32 @@ const transactionMapper = (migration: ARKMigrationViewStructOutput): Migration =
 	};
 };
 
-const ARK_MIGRATIONS_STORAGE_KEY = "ark-migration";
+interface MigrationContextType {
+	migrations: Migration[];
+}
 
-export const useMigrations = () => {
-	const { env } = useEnvironmentContext();
+interface Properties {
+	children: React.ReactNode;
+	defaultConfiguration?: any;
+}
 
-	const [migrations, setMigrations] = useState<Migration[]>(env.data().get(ARK_MIGRATIONS_STORAGE_KEY, []) || []);
+const MigrationContext = React.createContext<any>(undefined);
+
+export const MigrationProvider = ({ children }: Properties) => {
+	const { env, isEnvironmentBooted, persist } = useEnvironmentContext();
+
+	const [migrations, setMigrations] = useState<Migration[]>();
+
+	const storeMigrationTransactions = useCallback(async () => {
+		env.data().set(ARK_MIGRATIONS_STORAGE_KEY, migrations);
+
+		await persist();
+	}, [migrations]);
 
 	const loadMigrations = useCallback(async () => {
+		const migrations = env.data().get(ARK_MIGRATIONS_STORAGE_KEY, []) as Migration[];
+
+		// const transactions = migrations.map((tx: Migration) => tx.id);
 		const transactions = [
 			...migrations.map((tx: Migration) => tx.id),
 			// Add some initial transaction ids
@@ -102,9 +120,9 @@ export const useMigrations = () => {
 			// @TODO: not needed once we remove the fake ones
 			.filter((id, index, original) => original.indexOf(id) === index);
 
-		const provider = new ethers.providers.JsonRpcProvider(providerUrl);
+		const provider = new ethers.providers.JsonRpcProvider(POLYGON_RPC_URL);
 
-		const contract = new Contract(contractAddress, contractABI, provider);
+		const contract = new Contract(CONTRACT_ADDRESS, contractABI, provider);
 
 		const contractMigrations: ARKMigrationViewStructOutput[] = await contract.getMigrationsByArkTxHash(
 			transactions,
@@ -113,23 +131,33 @@ export const useMigrations = () => {
 		const formattedMigrations = contractMigrations.map(transactionMapper);
 
 		setMigrations(formattedMigrations);
-	}, [migrations]);
 
-	const storeMigrationTransactions = useCallback(async () => {
-		env.data().set(ARK_MIGRATIONS_STORAGE_KEY, migrations);
-
-		await env.persist();
-	}, [migrations]);
-
-	useEffect(() => {
 		storeMigrationTransactions();
-	}, [storeMigrationTransactions]);
+	}, [env]);
 
 	useEffect(() => {
-		loadMigrations();
-	}, []);
+		if (!isEnvironmentBooted) {
+			return;
+		}
 
-	return {
-		migrations,
-	};
+		loadMigrations();
+	}, [isEnvironmentBooted]);
+
+	return (
+		<MigrationContext.Provider value={{ migrations: migrations } as MigrationContextType}>
+			{children}
+		</MigrationContext.Provider>
+	);
+};
+
+export const useMigrations = (): {
+	migrations: Migration[] | undefined;
+} => {
+	const value = React.useContext(MigrationContext);
+
+	if (value === undefined) {
+		throw new Error("[useMigrations] Component not wrapped within a Provider");
+	}
+
+	return value;
 };

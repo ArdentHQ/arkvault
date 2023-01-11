@@ -7,7 +7,7 @@ import { MigrationDisclaimer } from "@/domains/migration/components/MigrationDis
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { MigrationTransactionsTable } from "@/domains/migration/components/MigrationTransactionsTable";
 import { ProfilePaths } from "@/router/paths";
-import { useMigrations } from "@/domains/migration/hooks/use-migrations";
+import { useMigrations } from "@/app/contexts";
 
 export const Migration = () => {
 	const { t } = useTranslation();
@@ -35,11 +35,16 @@ export const Migration = () => {
 				<MigrationHeader onNewMigration={onNewMigrationHandler} />
 
 				<Section className="mt-4">
-					<MigrationTransactionsTable
-						migrationTransactions={migrations}
-						isCompact={isCompact}
-						onClick={() => console.log("row click")}
-					/>
+					{migrations === undefined ? (
+						// @TODO: add skeleton
+						<></>
+					) : (
+						<MigrationTransactionsTable
+							migrationTransactions={migrations}
+							isCompact={isCompact}
+							onClick={() => console.log("row click")}
+						/>
+					)}
 				</Section>
 
 				<MigrationNewMigrationMobileButton onNewMigration={onNewMigrationHandler} />
