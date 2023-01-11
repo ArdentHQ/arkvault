@@ -110,9 +110,11 @@ export const MigrationProvider = ({ children }: Properties) => {
 		);
 
 		if (hasAnyPendingMigration) {
-			setTimeout(() => {
+			const reloadMigrations = () => {
 				loadMigrations();
-			}, 1000);
+			};
+
+			setTimeout(reloadMigrations, 1000);
 		}
 	}, [migrations, env]);
 

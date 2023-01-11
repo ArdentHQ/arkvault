@@ -105,6 +105,130 @@ describe("Migration Context", () => {
 		ethersMock.mockRestore();
 	});
 
+	it("should not reload the migrations no pending migrations", async () => {
+		const reloadMigration = vi.fn();
+
+		const setTimeoutSpy = vi.spyOn(window, "setTimeout").mockImplementation((callback) => {
+			if (callback.name === "reloadMigrations") {
+				reloadMigration();
+			}
+
+			return 1;
+		});
+
+		const { BigNumber } = await vi.importActual("ethers");
+
+		const ethersMock = Contract.mockImplementation(() => ({
+			getMigrationsByArkTxHash: () => [
+				{
+					amount: BigNumber.from(124),
+					arkTxHash: "0x456",
+					recipient: "0x123",
+				},
+				// Address zero is the pending migration
+				{
+					amount: BigNumber.from(450),
+					arkTxHash: "0x012",
+					recipient: "0x123",
+				},
+			],
+		}));
+
+		const Test = () => {
+			const { migrations } = useMigrations();
+
+			if (migrations === undefined) {
+				return <></>;
+			}
+
+			return (
+				<ul data-testid="Migrations">
+					{migrations.map((migration) => (
+						<li data-testid="MigrationItem" key={migration.id}>
+							{migration.address}
+						</li>
+					))}
+				</ul>
+			);
+		};
+
+		render(<Test />);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
+
+		expect(reloadMigration).not.toHaveBeenCalled();
+
+		ethersMock.mockRestore();
+
+		setTimeoutSpy.mockRestore();
+	});
+
+	it("should reload the migrations if at least one migration is pending", async () => {
+		const reloadMigration = vi.fn();
+
+		const setTimeoutSpy = vi.spyOn(window, "setTimeout").mockImplementation((callback) => {
+			if (callback.name === "reloadMigrations") {
+				reloadMigration();
+			}
+
+			return 1;
+		});
+
+		const { BigNumber, constants } = await vi.importActual("ethers");
+
+		const ethersMock = Contract.mockImplementation(() => ({
+			getMigrationsByArkTxHash: () => [
+				{
+					amount: BigNumber.from(124),
+					arkTxHash: "0x456",
+					recipient: "0x123",
+				},
+				// Address zero is the pending migration
+				{
+					amount: BigNumber.from(450),
+					arkTxHash: "0x012",
+					recipient: constants.AddressZero,
+				},
+			],
+		}));
+
+		const Test = () => {
+			const { migrations } = useMigrations();
+
+			if (migrations === undefined) {
+				return <></>;
+			}
+
+			return (
+				<ul data-testid="Migrations">
+					{migrations.map((migration) => (
+						<li data-testid="MigrationItem" key={migration.id}>
+							{migration.address}
+						</li>
+					))}
+				</ul>
+			);
+		};
+
+		render(<Test />);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
+
+		expect(reloadMigration).toHaveBeenCalled();
+
+		ethersMock.mockRestore();
+
+		setTimeoutSpy.mockRestore();
+	});
+
 	it("should throw without provider", () => {
 		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
