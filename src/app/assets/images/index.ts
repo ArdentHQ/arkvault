@@ -60,7 +60,9 @@ import { ReactComponent as WarningLight } from "./warning-light.svg";
 import { ReactComponent as WarningDark } from "./warning-dark.svg";
 import { ReactComponent as WorldMap } from "./world-map.svg";
 import { ReactComponent as HexagonLight } from "./hexagon-light.svg";
+import { ReactComponent as HexagonBoldLight } from "./hexagon-bold-light.svg";
 import { ReactComponent as HexagonDark } from "./hexagon-dark.svg";
+import { ReactComponent as HexagonBoldDark } from "./hexagon-bold-dark.svg";
 import { error } from "@/domains/error/images";
 import { exchange } from "@/domains/exchange/images";
 import { migration } from "@/domains/migration/images";
@@ -88,6 +90,8 @@ export const images = {
 		GenericWarningLightNavy,
 		HexagonDark,
 		HexagonLight,
+		HexagonBoldLight,
+		HexagonBoldDark,
 		IOsInstructionsStep1DarkBlue,
 		IOsInstructionsStep1DarkGreen,
 		IOsInstructionsStep1LightBlue,
