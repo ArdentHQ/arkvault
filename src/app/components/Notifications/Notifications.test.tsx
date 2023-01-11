@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { Notifications } from "./Notifications";
+import * as useNotifications from "./hooks/use-notifications";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { server, requestMock } from "@/tests/mocks/server";
@@ -51,6 +52,21 @@ describe("Notifications", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it("should render empty", () => {
+		const useNotificationsSpy = vi.spyOn(useNotifications, "useNotifications").mockReturnValue({
+			markAllTransactionsAsRead: () => {},
+			migrationTransactions: [],
+			releases: [],
+			transactions: [],
+		} as any);
+
+		render(<Notifications profile={profile} />);
+
+		expect(screen.getByTestId("Notifications__empty")).toBeInTheDocument();
+
+		useNotificationsSpy.mockRestore();
 	});
 
 	it("should emit onNotificationAction event", async () => {
