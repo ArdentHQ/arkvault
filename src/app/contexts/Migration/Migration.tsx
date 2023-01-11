@@ -100,9 +100,21 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrations, setMigrations] = useState<Migration[]>();
 
 	const storeMigrationTransactions = useCallback(async () => {
-		env.data().set(ARK_MIGRATIONS_STORAGE_KEY, migrations);
+		console.log({ migrations });
+
+		env.data().set(ARK_MIGRATIONS_STORAGE_KEY, migrations!);
 
 		await persist();
+
+		const hasAnyPendingMigration = migrations!.some(
+			(migration) => migration.status === MigrationTransactionStatus.Waiting,
+		);
+
+		if (hasAnyPendingMigration) {
+			setTimeout(() => {
+				loadMigrations();
+			}, 1000);
+		}
 	}, [migrations]);
 
 	const loadMigrations = useCallback(async () => {
@@ -131,9 +143,15 @@ export const MigrationProvider = ({ children }: Properties) => {
 		const formattedMigrations = contractMigrations.map(transactionMapper);
 
 		setMigrations(formattedMigrations);
+	}, [env, storeMigrationTransactions]);
+
+	useEffect(() => {
+		if (migrations === undefined) {
+			return;
+		}
 
 		storeMigrationTransactions();
-	}, [env]);
+	}, [migrations, storeMigrationTransactions]);
 
 	useEffect(() => {
 		if (!isEnvironmentBooted) {
