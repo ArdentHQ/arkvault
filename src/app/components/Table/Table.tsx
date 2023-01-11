@@ -21,6 +21,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	initialState,
 	rowsPerPage,
 	currentPage = 1,
+	...properties
 }: TableProperties<RowDataType>) => {
 	const tableData = useMemo(() => data, [data]);
 	const tableColumns = useMemo(() => columns, [columns]);
@@ -105,7 +106,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	const renderHeader = <thead>{headerGroups.map(renderHeaderGroup)}</thead>;
 
 	return (
-		<TableWrapper {...getTableProps({ className })} className={cn({ "-mt-3": !hideHeader })}>
+		<TableWrapper {...properties} {...getTableProps({ className })} className={cn({ "-mt-3": !hideHeader })}>
 			<table cellPadding={0} className="table-auto">
 				{!hideHeader && renderHeader}
 

@@ -5,11 +5,11 @@ exports[`Notifications > should render in xs 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-1src4hy"
         data-testid="TableRow"
       >
         <td
-          class="flex-col space-y-4 py-4"
+          class="flex-col space-y-4 py-4 text-sm"
         >
           <div
             class="flex items-center justify-between space-x-4"
@@ -29,7 +29,7 @@ exports[`Notifications > should render in xs 1`] = `
                   class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                     data-testid="Address__address"
                   >
                     DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -88,11 +88,11 @@ exports[`Notifications > should render in xs 2`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-1src4hy"
         data-testid="TableRow"
       >
         <td
-          class="flex-col space-y-4 py-4"
+          class="flex-col space-y-4 py-4 text-sm"
         >
           <div
             class="flex items-center justify-between space-x-4"
@@ -112,7 +112,7 @@ exports[`Notifications > should render in xs 2`] = `
                   class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                     data-testid="Address__address"
                   >
                     DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -171,21 +171,21 @@ exports[`Notifications > should render in xs 3`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-1src4hy"
         data-testid="TableRow"
       >
         <td
           class="w-3/5"
         >
           <div
-            class="flex space-x-3 css-14huxtf"
+            class="flex space-x-3 css-mx19qq"
           >
             <div
-              class="flex items-center -space-x-1"
+              class="flex items-center space-x-2"
               data-testid="TransactionRowMode"
             >
-              <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+              <span
+                class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
               >
                 <div
                   class="css-1i4b0eq"
@@ -213,9 +213,9 @@ exports[`Notifications > should render in xs 3`] = `
                     </g>
                   </svg>
                 </div>
-              </div>
+              </span>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
                 data-testid="Avatar"
               >
                 <div
@@ -258,7 +258,7 @@ exports[`Notifications > should render in xs 3`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-br23tb"
           >
             <div
               class="css-1vb1527"
@@ -288,21 +288,21 @@ exports[`Notifications > should render in xs 4`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-1src4hy"
         data-testid="TableRow"
       >
         <td
           class="w-3/5"
         >
           <div
-            class="flex space-x-3 css-14huxtf"
+            class="flex space-x-3 css-mx19qq"
           >
             <div
-              class="flex items-center -space-x-1"
+              class="flex items-center space-x-2"
               data-testid="TransactionRowMode"
             >
-              <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+              <span
+                class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
               >
                 <div
                   class="css-1i4b0eq"
@@ -330,9 +330,9 @@ exports[`Notifications > should render in xs 4`] = `
                     </g>
                   </svg>
                 </div>
-              </div>
+              </span>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
                 data-testid="Avatar"
               >
                 <div
@@ -375,7 +375,7 @@ exports[`Notifications > should render in xs 4`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-br23tb"
           >
             <div
               class="css-1vb1527"
@@ -405,21 +405,21 @@ exports[`Notifications > should render in xs 5`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-1src4hy"
         data-testid="TableRow"
       >
         <td
           class="w-3/5"
         >
           <div
-            class="flex space-x-3 css-14huxtf"
+            class="flex space-x-3 css-mx19qq"
           >
             <div
-              class="flex items-center -space-x-1"
+              class="flex items-center space-x-2"
               data-testid="TransactionRowMode"
             >
-              <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+              <span
+                class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
               >
                 <div
                   class="css-1i4b0eq"
@@ -447,9 +447,9 @@ exports[`Notifications > should render in xs 5`] = `
                     </g>
                   </svg>
                 </div>
-              </div>
+              </span>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
                 data-testid="Avatar"
               >
                 <div
@@ -492,7 +492,7 @@ exports[`Notifications > should render in xs 5`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-br23tb"
           >
             <div
               class="css-1vb1527"
@@ -522,21 +522,21 @@ exports[`Notifications > should render notification item 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-1src4hy"
         data-testid="TableRow"
       >
         <td
           class="w-3/5"
         >
           <div
-            class="flex space-x-3 css-14huxtf"
+            class="flex space-x-3 css-mx19qq"
           >
             <div
-              class="flex items-center -space-x-1"
+              class="flex items-center space-x-2"
               data-testid="TransactionRowMode"
             >
-              <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+              <span
+                class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
               >
                 <div
                   class="css-1i4b0eq"
@@ -564,9 +564,9 @@ exports[`Notifications > should render notification item 1`] = `
                     </g>
                   </svg>
                 </div>
-              </div>
+              </span>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
                 data-testid="Avatar"
               >
                 <div
@@ -609,7 +609,7 @@ exports[`Notifications > should render notification item 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-br23tb"
           >
             <div
               class="css-1vb1527"

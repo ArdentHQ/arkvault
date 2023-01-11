@@ -1336,7 +1336,7 @@ exports[`MigrationTransactionsTable > should render mobile 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td
@@ -1547,7 +1547,7 @@ exports[`MigrationTransactionsTable > should render mobile 1`] = `
             </td>
           </tr>
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td
@@ -1793,7 +1793,7 @@ exports[`MigrationTransactionsTable > should render mobile 2`] = `
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td
@@ -2004,7 +2004,7 @@ exports[`MigrationTransactionsTable > should render mobile 2`] = `
             </td>
           </tr>
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td
