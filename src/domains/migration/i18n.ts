@@ -51,6 +51,10 @@ export const translations = {
 			TITLE: "Migration",
 		},
 
+		STEP_ERROR: {
+			TITLE: "Transaction Error",
+		},
+
 		STEP_PENDING: {
 			DESCRIPTION: "Migration is processing, you will be notified once the process is complete.",
 			MIGRATION_INFO:

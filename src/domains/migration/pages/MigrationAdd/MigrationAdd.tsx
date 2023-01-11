@@ -14,6 +14,7 @@ import { MigrationAuthenticationStep } from "@/domains/migration/components/Migr
 import { useMigrationForm, useMigrationTransaction } from "@/domains/migration/hooks";
 import { Button } from "@/app/components/Button";
 import { ProfilePaths } from "@/router/paths";
+import { MigrationErrorStep } from "@/domains/migration/components/MigrationErrorStep";
 
 export enum Step {
 	Connect = 1,
@@ -36,7 +37,6 @@ export const MigrationAdd = () => {
 	const { t } = useTranslation();
 
 	const [activeStep, setActiveStep] = useState(Step.Connect);
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const history = useHistory();
@@ -68,6 +68,14 @@ export const MigrationAdd = () => {
 
 		if (activeStep === Step.Review || activeStep === Step.Authenticate) {
 			return setActiveStep((activeStep) => activeStep - 1);
+		}
+
+		if (activeStep === Step.Error) {
+			const walletPath = generatePath(ProfilePaths.WalletDetails, {
+				profileId: activeProfile.id(),
+				walletId: wallet.id(),
+			});
+			return history.push(walletPath);
 		}
 
 		const dashboardPath = generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() });
@@ -135,6 +143,10 @@ export const MigrationAdd = () => {
 							<TabPanel tabId={Step.Finished}>
 								<MigrationSuccessStep />
 								<span onClick={() => setActiveStep(Step.PendingTransaction)}>go to pending</span>
+							</TabPanel>
+
+							<TabPanel tabId={Step.Error}>
+								<MigrationErrorStep errorMessage={errorMessage} onBack={handleBack} />
 							</TabPanel>
 
 							{!hideFormButtons && (
