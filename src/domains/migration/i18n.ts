@@ -10,6 +10,18 @@ export const translations = {
 	},
 
 	MIGRATION_ADD: {
+		FROM_ARK_ADDRESS: "From ARK Address",
+
+		STEP_AUTHENTICATION: {
+			CONFIRM_TRANSACTION: "Confirm Your Migration Transaction",
+			DESCRIPTION_ENCRYPTION_PASSWORD:
+				"Enter your encryption password to authenticate the migration transaction.",
+			DESCRIPTION_MNEMONIC: "Enter your mnemonic passphrase to authenticate the migration transaction.",
+			DESCRIPTION_PRIVATE_KEY: "Enter your private key to authenticate the migration transaction.",
+			DESCRIPTION_SECRET: "Enter your secret to authenticate the migration transaction.",
+			DESCRIPTION_WIF: "Enter your WIF to authenticate the migration transaction.",
+		},
+
 		STEP_CONNECT: {
 			DESCRIPTION: "Fill in address details below to start the migration process.",
 			FORM: {
@@ -38,6 +50,27 @@ export const translations = {
 			},
 			TITLE: "Migration",
 		},
+
+		STEP_PENDING: {
+			DESCRIPTION: "Migration is processing, you will be notified once the process is complete.",
+			MIGRATION_INFO:
+				"Migration time <strong>≈ 24 hours</strong>.\nUpon completion you will receive a notification.",
+			TITLE: "Migration Pending",
+		},
+
+		STEP_REVIEW: {
+			AMOUNT_MIGRATED: "Amount Migrated",
+			AMOUNT_SEND: "Amount You Send",
+			DESCRIPTION: "Review the migration transaction details below.",
+			TITLE: "Review Migration Transaction",
+		},
+
+		STEP_SUCCESS: {
+			DESCRIPTION: "Your migration was successful.\nWelcome to Polygon!",
+			TITLE: "Successfully Migrated",
+		},
+
+		TO_POLYGON_ADDRESS: "To Polygon Address",
 	},
 	NOTIFICATIONS: {
 		MIGRATION_SUCCESSFUL: "Migration Successful",
@@ -50,8 +83,11 @@ export const translations = {
 		VIEW_DETAILS: "View Details",
 	},
 
+	POLYGON_ADDRESS: "Polygon Address",
+
 	STATUS: {
 		CONFIRMED: "Confirmed",
 		WAITING: "Waiting",
 	},
+	TRANSACTION_ID: "Transaction ID",
 };

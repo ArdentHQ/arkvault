@@ -56,6 +56,7 @@ import { ReactComponent as ServerMultisign } from "./server-multisign.svg";
 import { ReactComponent as ServerPeer } from "./server-peer.svg";
 import { ReactComponent as Forbidden } from "./forbidden.svg";
 import { ReactComponent as Plus } from "./plus.svg";
+import { ReactComponent as Minus } from "./minus.svg";
 import { ReactComponent as QRCode } from "./qr-code.svg";
 import { ReactComponent as QuestionMarkSmall } from "./question-mark-small.svg";
 import { ReactComponent as ShieldCheckMark } from "./shield-check-mark.svg";
@@ -74,6 +75,7 @@ import { ReactComponent as UnderlineSun } from "./underline-sun.svg";
 import { ReactComponent as User } from "./user.svg";
 import { ReactComponent as UserCheckMark } from "./user-check-mark.svg";
 import { ReactComponent as Dashboard } from "./dashboard.svg";
+import { ReactComponent as Polygon } from "./polygon.svg";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -129,10 +131,12 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MagnifyingGlassId,
 	Menu,
 	MenuOpen,
+	Minus,
 	MoneyCoinSwap,
 	Pencil,
 	PencilRuler,
 	Plus,
+	Polygon,
 	QRCode,
 	QuestionMarkSmall,
 	Server,
