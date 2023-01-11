@@ -35,7 +35,7 @@ const MigrationTabsWrapper: React.FC<PropsWithChildren> = ({ children }) => (
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
 
-	const [activeStep, setActiveStep] = useState(Step.Review);
+	const [activeStep, setActiveStep] = useState(Step.Connect);
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
