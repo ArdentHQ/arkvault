@@ -5,7 +5,7 @@ import { Size } from "@/types";
 
 const baseStyle = tw`inline-block font-semibold overflow-hidden`;
 
-export type ColorType = "primary" | "success" | "danger" | "warning" | "neutral";
+export type ColorType = "primary" | "success" | "danger" | "warning" | "neutral" | "purple";
 
 const getColor = (color?: ColorType, variant?: string) => {
 	if (variant === "solid") {
@@ -14,6 +14,7 @@ const getColor = (color?: ColorType, variant?: string) => {
 			default: () => tw`text-theme-warning-700 border-theme-warning-100 bg-theme-warning-100`,
 			primary: () => tw`text-theme-primary-500 border-theme-primary-100 bg-theme-primary-100`,
 			success: () => tw`text-theme-success-600 border-theme-success-200 bg-theme-success-200`,
+			purple: () => tw`text-theme-success-600 border-theme-hint-100 bg-theme-hint-100`,
 		};
 
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
@@ -27,6 +28,7 @@ const getColor = (color?: ColorType, variant?: string) => {
 			tw`text-theme-secondary-900 border-theme-secondary-200 dark:text-theme-secondary-600 dark:border-theme-secondary-600`,
 		primary: () => tw`text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500`,
 		success: () => tw`text-theme-success-600 border-theme-success-200 dark:border-theme-success-600`,
+		purple: () => tw`text-theme-hint-600 border-theme-hint-100 dark:border-theme-hint-600`,
 	};
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition

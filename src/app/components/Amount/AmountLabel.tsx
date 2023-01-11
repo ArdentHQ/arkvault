@@ -30,12 +30,13 @@ const AmountLabelHint: React.VFC<AmountLabelHintProperties> = ({ className, isCo
 interface AmountLabelProperties {
 	isCompact?: boolean;
 	isNegative: boolean;
+	isMigration?: boolean;
 	value: number;
 	ticker: string;
 	hint?: string;
 }
 
-export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, isCompact, isNegative, hint }) => {
+export const AmountLabel = ({ value, ticker, isCompact, isNegative, hint, isMigration }: AmountLabelProperties) => {
 	let labelColor = "success";
 	let hintClassName = "bg-theme-success-200 dark:bg-theme-success-600";
 
@@ -47,6 +48,11 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, i
 	if (value === 0) {
 		labelColor = "neutral";
 		hintClassName = "";
+	}
+
+	if (isMigration) {
+		labelColor = "purple";
+		hintClassName = "bg-theme-hint-100 dark:bg-theme-hint-600";
 	}
 
 	return (
