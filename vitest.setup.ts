@@ -11,8 +11,6 @@ import { Contract } from "ethers";
 import * as matchers from "jest-extended";
 expect.extend(matchers);
 
-vi.mock("ethers");
-
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
 }));
@@ -82,6 +80,8 @@ let localstorageSpy;
 let ethersLibraryContractSpy;
 
 beforeAll(async () => {
+	vi.mock("ethers");
+
 	server.listen({ onUnhandledRequest: "error" });
 
 	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
@@ -126,6 +126,8 @@ afterEach(() => {
 });
 
 afterAll(() => {
+	vi.unmock("ethers");
+
 	server.close();
 
 	if (global.gc) {
