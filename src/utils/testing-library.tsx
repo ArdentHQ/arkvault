@@ -8,7 +8,13 @@ import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { I18nextProvider } from "react-i18next";
 import { Router } from "react-router-dom";
 import { Context as ResponsiveContext } from "react-responsive";
-import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
+import {
+	ConfigurationProvider,
+	EnvironmentProvider,
+	LedgerProvider,
+	NavigationProvider,
+	MigrationProvider,
+} from "@/app/contexts";
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
 import { i18n } from "@/app/i18n";
 import { httpClient } from "@/app/services";
@@ -45,7 +51,9 @@ export const WithProviders = ({ children }: { children?: React.ReactNode }) => (
 		<EnvironmentProvider env={env}>
 			<LedgerProvider>
 				<ConfigurationProvider>
-					<NavigationProvider>{children}</NavigationProvider>
+					<MigrationProvider>
+						<NavigationProvider>{children}</NavigationProvider>
+					</MigrationProvider>
 				</ConfigurationProvider>
 			</LedgerProvider>
 		</EnvironmentProvider>
