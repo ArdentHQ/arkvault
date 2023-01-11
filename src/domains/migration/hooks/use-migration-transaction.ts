@@ -54,9 +54,10 @@ export const useMigrationTransaction = ({
 			data: await buildTransferData({
 				coin: wallet.coin(),
 				isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
-				recipients,
 				// memo: migrationAddress,
 				memo: "0x0000000000000000000000000000000000000000",
+
+				recipients,
 			}),
 			fee: +fee,
 			signatory,

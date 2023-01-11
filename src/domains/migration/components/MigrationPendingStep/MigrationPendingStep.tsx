@@ -2,6 +2,7 @@ import cn from "classnames";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import { DTO } from "@ardenthq/sdk-profiles";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
@@ -11,11 +12,10 @@ import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { MigrationPolygonIcon } from "@/domains/migration/components/MigrationPolygonIcon";
 import { MigrationAddress, MigrationDetail } from "@/domains/migration/components/MigrationAddress";
 import { Header } from "@/app/components/Header";
-import { DTO } from "@ardenthq/sdk-profiles";
 
 interface MigrationPendingStepProperties {
 	migrationTransaction: DTO.ExtendedSignedTransactionData;
-};
+}
 
 export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({ migrationTransaction }) => {
 	const timeFormat = useTimeFormat();
@@ -58,9 +58,7 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 				<div className="space-y-3 sm:-mx-5">
 					<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 						<MigrationDetail label={t("COMMON.DATE")} className="px-5 pt-6 pb-5">
-							<span className="font-semibold">
-								{migrationTransaction.timestamp().format(timeFormat)}
-							</span>
+							<span className="font-semibold">{migrationTransaction.timestamp().format(timeFormat)}</span>
 						</MigrationDetail>
 
 						<MigrationAddress

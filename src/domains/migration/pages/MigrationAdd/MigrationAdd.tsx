@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { generatePath, useHistory } from "react-router-dom";
+import { DTO } from "@ardenthq/sdk-profiles";
 import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
@@ -15,7 +16,6 @@ import { useMigrationForm, useMigrationTransaction } from "@/domains/migration/h
 import { Button } from "@/app/components/Button";
 import { ProfilePaths } from "@/router/paths";
 import { MigrationErrorStep } from "@/domains/migration/components/MigrationErrorStep";
-import { DTO } from "@ardenthq/sdk-profiles";
 
 export enum Step {
 	Connect = 1,
