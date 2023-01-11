@@ -6,6 +6,24 @@ import { render, screen, waitFor } from "@/utils/testing-library";
 import * as contexts from "@/app/contexts";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 
+const Test = () => {
+	const { migrations } = useMigrations();
+
+	if (migrations === undefined) {
+		return <span data-testid="Migration__loading">Loading...</span>;
+	}
+
+	return (
+		<ul data-testid="Migrations">
+			{migrations.map((migration) => (
+				<li data-testid="MigrationItem" key={migration.id}>
+					{migration.address}
+				</li>
+			))}
+		</ul>
+	);
+};
+
 describe("Migration Context", () => {
 	let environmentMock;
 	let configurationMock;
@@ -44,12 +62,6 @@ describe("Migration Context", () => {
 	});
 
 	it("should load the migrations", async () => {
-		const Test = () => {
-			const { migrations } = useMigrations();
-
-			return <div>{migrations === undefined && <span data-testid="Migration__loading">Loading...</span>}</div>;
-		};
-
 		render(<Test />);
 
 		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
@@ -76,24 +88,6 @@ describe("Migration Context", () => {
 				},
 			],
 		}));
-
-		const Test = () => {
-			const { migrations } = useMigrations();
-
-			if (migrations === undefined) {
-				return <></>;
-			}
-
-			return (
-				<ul data-testid="Migrations">
-					{migrations.map((migration) => (
-						<li data-testid="MigrationItem" key={migration.id}>
-							{migration.address}
-						</li>
-					))}
-				</ul>
-			);
-		};
 
 		render(<Test />);
 
@@ -155,24 +149,6 @@ describe("Migration Context", () => {
 				},
 			],
 		}));
-
-		const Test = () => {
-			const { migrations } = useMigrations();
-
-			if (migrations === undefined) {
-				return <></>;
-			}
-
-			return (
-				<ul data-testid="Migrations">
-					{migrations.map((migration) => (
-						<li data-testid="MigrationItem" key={migration.id}>
-							{migration.address}
-						</li>
-					))}
-				</ul>
-			);
-		};
 
 		render(<Test />);
 
@@ -238,24 +214,6 @@ describe("Migration Context", () => {
 				},
 			],
 		}));
-
-		const Test = () => {
-			const { migrations } = useMigrations();
-
-			if (migrations === undefined) {
-				return <></>;
-			}
-
-			return (
-				<ul data-testid="Migrations">
-					{migrations.map((migration) => (
-						<li data-testid="MigrationItem" key={migration.id}>
-							{migration.address}
-						</li>
-					))}
-				</ul>
-			);
-		};
 
 		render(<Test />);
 
