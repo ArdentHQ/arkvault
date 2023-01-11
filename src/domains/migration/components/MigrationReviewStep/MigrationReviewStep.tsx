@@ -14,7 +14,7 @@ export const MigrationReview = ({ wallet, className }: { wallet: Contracts.IRead
 	const { getValues } = useFormContext();
 
 	return (
-		<div className={cn("-mx-5 space-y-3", className)}>
+		<div className={cn("space-y-3 sm:-mx-5", className)}>
 			<div className="relative rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
 				<MigrationAddress address={wallet.address()} label={t("MIGRATION.MIGRATION_ADD.FROM_ARK_ADDRESS")} />
 

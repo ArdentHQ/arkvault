@@ -59,7 +59,7 @@ export const MigrationPendingStep: React.FC = () => {
 					</div>
 				</div>
 
-				<div className="-mx-5 space-y-3">
+				<div className="space-y-3 sm:-mx-5">
 					<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 						<MigrationDetail label={t("COMMON.DATE")} className="px-5 pt-6 pb-5">
 							<span className="font-semibold">
