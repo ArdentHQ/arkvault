@@ -8,8 +8,7 @@ import {
 import { useEnvironmentContext } from "@/app/contexts";
 
 /* istanbul ignore next -- @preserve */
-const POLYGON_MUMBAI_CONTRACT_ADDRESS = import.meta.env.VITE_POLYGON_MUMBAI_CONTRACT_ADDRESS;
-// const POLYGON_MAIN_CONTRACT_ADDRESS = import.meta.env.VITE_POLYGON_MAIN_CONTRACT_ADDRESS;
+const contractAddress = import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
 
 const contractABI = [
 	{
@@ -92,7 +91,6 @@ export const useMigrations = () => {
 
 	// @TODO: make this url and the contract address dynamic depending on the network
 	const providerUrl = "https://rpc-mumbai.maticvigil.com/";
-	const contractAddress = POLYGON_MUMBAI_CONTRACT_ADDRESS;
 
 	const loadMigrations = useCallback(async () => {
 		const transactions = [
