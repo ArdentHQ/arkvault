@@ -4,9 +4,8 @@ import { useCallback, useMemo } from "react";
 // TODO: remove hardcoded value.
 const migrationAddress = () => "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
 
-const isMigrationTransaction = (transaction: DTO.ExtendedConfirmedTransactionData) => {
-	return transaction.recipient() === migrationAddress();
-};
+const isMigrationTransaction = (transaction: DTO.ExtendedConfirmedTransactionData) =>
+	transaction.recipient() === migrationAddress();
 
 export const useTransaction = () => {
 	const fetchWalletUnconfirmedTransactions = useCallback(async (wallet: Contracts.IReadWriteWallet) => {
