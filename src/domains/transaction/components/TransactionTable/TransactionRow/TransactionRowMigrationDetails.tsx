@@ -20,16 +20,14 @@ export const TransactionMigrationLink = ({
 }: {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	children: React.ReactElement;
-}) => {
-	return (
-		<Link to={transaction.explorerLink()} tooltip={transaction.id()} showExternalIcon={false} isExternal>
-			<span className="flex items-center space-x-2">
-				<span>{children}</span>
-				<Icon name="ChevronRight" size="md" />
-			</span>
-		</Link>
-	);
-};
+}) => (
+	<Link to={transaction.explorerLink()} tooltip={transaction.id()} showExternalIcon={false} isExternal>
+		<span className="flex items-center space-x-2">
+			<span>{children}</span>
+			<Icon name="ChevronRight" size="md" />
+		</span>
+	</Link>
+);
 
 export const TransactionRowMigrationDetails = ({ transaction, isCompact }: Properties) => {
 	const { t } = useTranslation();
@@ -44,7 +42,7 @@ export const TransactionRowMigrationDetails = ({ transaction, isCompact }: Prope
 					network={transaction.wallet().network()}
 					size="lg"
 					className={`border-transparent text-theme-hint-600 ${
-						!isCompact ? "absolute top-0 h-full w-full" : ""
+						isCompact ? "" : "absolute top-0 h-full w-full"
 					}`}
 					noShadow
 					tooltipDarkTheme

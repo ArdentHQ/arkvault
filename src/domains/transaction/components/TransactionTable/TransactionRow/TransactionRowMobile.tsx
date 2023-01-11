@@ -7,6 +7,7 @@ import { TransactionRowRecipient } from "./TransactionRowRecipient";
 import { TransactionRowSender } from "./TransactionRowSender";
 import { TransactionRowMobileSkeleton } from "./TransactionRowMobileSkeleton";
 import { TransactionRowProperties } from "./TransactionRow.contracts";
+import { TransactionMigrationLink } from "./TransactionRowMigrationDetails";
 import { Avatar } from "@/app/components/Avatar";
 import { Link } from "@/app/components/Link";
 import { TableRow } from "@/app/components/Table";
@@ -14,7 +15,6 @@ import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { RowWrapper, RowLabel, ResponsiveAddressWrapper } from "@/app/components/Table/Mobile/Row";
 import { useTransaction } from "@/domains/transaction/hooks";
-import { TransactionMigrationLink } from "./TransactionRowMigrationDetails";
 
 export const TransactionRowMobile = memo(
 	({

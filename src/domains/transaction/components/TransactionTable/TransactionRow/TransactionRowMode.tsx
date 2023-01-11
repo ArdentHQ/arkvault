@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useMemo, VFC } from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { BaseTransactionRowModeProperties, TransactionRowModeProperties } from "./TransactionRowMode.contracts";

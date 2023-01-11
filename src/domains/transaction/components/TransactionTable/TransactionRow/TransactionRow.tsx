@@ -8,13 +8,13 @@ import { TransactionRowSender } from "./TransactionRowSender";
 import { TransactionRowSkeleton } from "./TransactionRowSkeleton";
 import { TransactionRowProperties } from "./TransactionRow.contracts";
 import { TransactionRowMobile } from "./TransactionRowMobile";
+import { TransactionRowMigrationDetails } from "./TransactionRowMigrationDetails";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { useBreakpoint } from "@/app/hooks";
 import { useTransaction } from "@/domains/transaction/hooks";
-import { TransactionRowMigrationDetails } from "./TransactionRowMigrationDetails";
 
 export const TransactionRow = memo(
 	({
