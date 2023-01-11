@@ -100,7 +100,7 @@ describe("Migration Context", () => {
 		ethersMock.mockRestore();
 	});
 
-	it("should not reload the migrations no pending migrations", async () => {
+	it("should not reload the migrations if no pending migrations", async () => {
 		const reloadMigration = vi.fn();
 
 		environmentMock.mockRestore();
@@ -166,7 +166,16 @@ describe("Migration Context", () => {
 	});
 
 	it("should reload the migrations if at least one migration is pending", async () => {
-		const reloadMigration = vi.fn();
+		const getMigrationMock = vi.fn().mockImplementation(() => [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		]);
 
 		environmentMock.mockRestore();
 
@@ -174,24 +183,17 @@ describe("Migration Context", () => {
 			...environmentMockData,
 			env: {
 				data: () => ({
-					get: () => [
-						{
-							address: "AdDreSs",
-							amount: 123,
-							id: "0x123",
-							migrationAddress: "0x456",
-							status: MigrationTransactionStatus.Confirmed,
-							timestamp: Date.now() / 1000,
-						},
-					],
+					get: getMigrationMock,
 					set: () => {},
 				}),
 			},
 		});
 
+		let reloadMigrationCallback: any;
+
 		const setTimeoutSpy = vi.spyOn(window, "setTimeout").mockImplementation((callback) => {
 			if (callback.name === "reloadMigrations") {
-				reloadMigration();
+				reloadMigrationCallback = callback;
 			}
 
 			return 1;
@@ -223,7 +225,9 @@ describe("Migration Context", () => {
 
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
 
-		expect(reloadMigration).toHaveBeenCalled();
+		reloadMigrationCallback();
+
+		expect(getMigrationMock).toHaveBeenCalledTimes(2);
 
 		ethersMock.mockRestore();
 
