@@ -7,13 +7,11 @@ import Tippy from "@tippyjs/react";
 import crypto from "crypto";
 
 import { server } from "./src/tests/mocks/server";
-import { Contract }  from "ethers";
+import { Contract } from "ethers";
 import * as matchers from "jest-extended";
 expect.extend(matchers);
 
-vi.mock("ethers", () => {
-	const ethers = vi.
-});
+vi.mock("ethers");
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
@@ -112,11 +110,9 @@ beforeEach(() => {
 		return originalTippyRender(context);
 	});
 
-	Contract.mockImplementation((address, abi, provider) => {
-	console.log(ethersLibrary.Contract);
-	const result = vi.spyOn(ethersLibrary, "Contract");
-
-	console.log({ result });
+	ethersLibraryContractSpy = Contract.mockImplementation(() => ({
+		getMigrationsByArkTxHash: () => [],
+	}));
 });
 
 afterEach(() => {
@@ -128,7 +124,7 @@ afterEach(() => {
 
 	localstorageSpy.mockRestore();
 
-	// ethersLibraryContractSpy.mockRestore();
+	ethersLibraryContractSpy.mockRestore();
 });
 
 afterAll(() => {
