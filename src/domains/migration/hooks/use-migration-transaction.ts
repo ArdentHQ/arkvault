@@ -56,7 +56,6 @@ export const useMigrationTransaction = ({
 				isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
 				// memo: migrationAddress,
 				memo: "0x0000000000000000000000000000000000000000",
-
 				recipients,
 			}),
 			fee: +fee,

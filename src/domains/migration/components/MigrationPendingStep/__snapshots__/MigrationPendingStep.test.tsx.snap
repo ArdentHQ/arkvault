@@ -1,9 +1,0 @@
-// Vitest Snapshot v1
-
-exports[`MigrationPendingStep > should render in sm 1`] = `<DocumentFragment />`;
-
-exports[`MigrationPendingStep > should render in sm in dark mode 1`] = `<DocumentFragment />`;
-
-exports[`MigrationPendingStep > should render in xs 1`] = `<DocumentFragment />`;
-
-exports[`MigrationPendingStep > should render in xs in dark mode 1`] = `<DocumentFragment />`;
