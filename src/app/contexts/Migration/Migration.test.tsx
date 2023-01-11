@@ -7,6 +7,7 @@ import * as contexts from "@/app/contexts";
 
 describe("Migration Context", () => {
 	let environmentMock;
+	let configurationMock;
 	const environmentMockData = {
 		env: {
 			data: () => ({
@@ -14,16 +15,19 @@ describe("Migration Context", () => {
 				set: () => {},
 			}),
 		},
-		isEnvironmentBooted: true,
 		persist: vi.fn(),
 	};
 
 	beforeEach(() => {
 		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue(environmentMockData);
+		configurationMock = vi.spyOn(contexts, "useConfiguration").mockReturnValue({
+			profileHasSyncedOnce: true,
+		});
 	});
 
 	afterEach(() => {
 		environmentMock.mockRestore();
+		configurationMock.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {

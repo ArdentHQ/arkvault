@@ -5,7 +5,7 @@ import {
 	Migration,
 	MigrationTransactionStatus,
 } from "@/domains/migration/migration.contracts";
-import { useEnvironmentContext } from "@/app/contexts";
+import { useEnvironmentContext, useConfiguration } from "@/app/contexts";
 
 const ARK_MIGRATIONS_STORAGE_KEY = "ark-migration";
 const CONTRACT_ADDRESS = import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
@@ -95,7 +95,8 @@ interface Properties {
 const MigrationContext = React.createContext<any>(undefined);
 
 export const MigrationProvider = ({ children }: Properties) => {
-	const { env, isEnvironmentBooted, persist } = useEnvironmentContext();
+	const { env, persist } = useEnvironmentContext();
+	const { profileHasSyncedOnce } = useConfiguration();
 
 	const [migrations, setMigrations] = useState<Migration[]>();
 
@@ -113,7 +114,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				loadMigrations();
 			}, 1000);
 		}
-	}, [migrations]);
+	}, [migrations, env]);
 
 	const loadMigrations = useCallback(async () => {
 		const migrations = env.data().get(ARK_MIGRATIONS_STORAGE_KEY, []) as Migration[];
@@ -152,12 +153,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, [migrations, storeMigrationTransactions]);
 
 	useEffect(() => {
-		if (!isEnvironmentBooted) {
+		if (!profileHasSyncedOnce) {
 			return;
 		}
 
 		loadMigrations();
-	}, [isEnvironmentBooted]);
+	}, [profileHasSyncedOnce]);
 
 	return (
 		<MigrationContext.Provider value={{ migrations: migrations } as MigrationContextType}>
