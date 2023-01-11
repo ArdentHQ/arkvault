@@ -13,6 +13,8 @@ import { TableRow } from "@/app/components/Table";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { RowWrapper, RowLabel, ResponsiveAddressWrapper } from "@/app/components/Table/Mobile/Row";
+import { useTransaction } from "@/domains/transaction/hooks";
+import { TransactionMigrationLink } from "./TransactionRowMigrationDetails";
 
 export const TransactionRowMobile = memo(
 	({
@@ -26,6 +28,7 @@ export const TransactionRowMobile = memo(
 	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
 		const timeFormat = useTimeFormat();
+		const { isMigrationTransaction } = useTransaction();
 
 		if (isLoading) {
 			return <TransactionRowMobileSkeleton />;
@@ -72,9 +75,18 @@ export const TransactionRowMobile = memo(
 
 					<RowWrapper>
 						<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
-						<ResponsiveAddressWrapper innerClassName="flex-row-reverse gap-2">
-							<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={true} />
-						</ResponsiveAddressWrapper>
+
+						{isMigrationTransaction(transaction) && (
+							<TransactionMigrationLink transaction={transaction}>
+								<span>{t("TRANSACTION.MIGRATION")}</span>
+							</TransactionMigrationLink>
+						)}
+
+						{!isMigrationTransaction(transaction) && (
+							<ResponsiveAddressWrapper innerClassName="flex-row-reverse gap-2">
+								<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={true} />
+							</ResponsiveAddressWrapper>
+						)}
 					</RowWrapper>
 
 					<RowWrapper>

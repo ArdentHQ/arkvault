@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Tooltip } from "@/app/components/Tooltip";
+import { useTransaction } from "@/domains/transaction/hooks";
 
 interface ExchangeTooltipProperties {
 	value: number;
@@ -46,10 +47,11 @@ interface TransactionRowProperties {
 	exchangeCurrency?: string;
 	exchangeTooltip?: boolean;
 	isCompact?: boolean;
+	isMigration?: boolean;
 	isTestNetwork?: boolean;
 }
 
-const BaseTransactionRowAmount: React.FC<TransactionRowProperties> = ({
+const BaseTransactionRowAmount = ({
 	isSent,
 	wallet,
 	total,
@@ -58,10 +60,20 @@ const BaseTransactionRowAmount: React.FC<TransactionRowProperties> = ({
 	exchangeTooltip,
 	isCompact,
 	isTestNetwork,
+	isMigration,
 }: TransactionRowProperties) => {
 	const isNegative = total !== 0 && isSent;
+	const { t } = useTranslation();
+
 	const TransactionAmount = (
-		<AmountLabel isNegative={isNegative} value={total} ticker={wallet.currency()} isCompact={isCompact} />
+		<AmountLabel
+			isNegative={isNegative}
+			value={total}
+			ticker={wallet.currency()}
+			isCompact={isCompact}
+			isMigration={isMigration}
+			hint={isMigration ? t("TRANSACTION.MIGRATION_TO_POLYGON") : undefined}
+		/>
 	);
 
 	if (!exchangeCurrency || isNil(convertedTotal)) {
@@ -89,17 +101,22 @@ const TransactionRowAmount = ({
 	exchangeCurrency?: string;
 	exchangeTooltip?: boolean;
 	isCompact?: boolean;
-}): JSX.Element => (
-	<BaseTransactionRowAmount
-		isSent={transaction.isSent()}
-		wallet={transaction.wallet()}
-		total={transaction.total()}
-		convertedTotal={transaction.convertedTotal()}
-		exchangeCurrency={exchangeCurrency}
-		exchangeTooltip={exchangeTooltip}
-		isCompact={isCompact}
-		isTestNetwork={transaction.wallet().network().isTest()}
-	/>
-);
+}): JSX.Element => {
+	const { isMigrationTransaction } = useTransaction();
+
+	return (
+		<BaseTransactionRowAmount
+			isSent={transaction.isSent()}
+			wallet={transaction.wallet()}
+			total={transaction.total()}
+			convertedTotal={transaction.convertedTotal()}
+			exchangeCurrency={exchangeCurrency}
+			exchangeTooltip={exchangeTooltip}
+			isCompact={isCompact}
+			isTestNetwork={transaction.wallet().network().isTest()}
+			isMigration={isMigrationTransaction(transaction)}
+		/>
+	);
+};
 
 export { BaseTransactionRowAmount, TransactionRowAmount };
