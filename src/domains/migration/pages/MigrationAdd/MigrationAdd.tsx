@@ -87,7 +87,11 @@ export const MigrationAdd = () => {
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
-					<StepIndicatorAlt length={TOTAL_STEPS} activeIndex={activeStep === Step.Error ? Step.Authenticate : activeStep} className="mb-8 sm:mx-6 md:mx-0" />
+					<StepIndicatorAlt
+						length={TOTAL_STEPS}
+						activeIndex={activeStep === Step.Error ? Step.Authenticate : activeStep}
+						className="mb-8 sm:mx-6 md:mx-0"
+					/>
 
 					<MigrationTabsWrapper>
 						<Tabs activeId={activeStep}>
