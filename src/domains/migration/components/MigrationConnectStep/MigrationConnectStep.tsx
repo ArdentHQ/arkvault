@@ -3,6 +3,7 @@ import { Trans, useTranslation } from "react-i18next";
 import cn from "classnames";
 import { generatePath } from "react-router";
 import { useHistory } from "react-router-dom";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMetaMask } from "@/domains/migration/hooks/use-meta-mask";
 import SelectPolygonAddress from "@/domains/migration/components/SelectPolygonAddress";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
@@ -16,15 +17,16 @@ import { useLink } from "@/app/hooks/use-link";
 import { Icon } from "@/app/components/Icon";
 import { Spinner } from "@/app/components/Spinner";
 import { ProfilePaths } from "@/router/paths";
+import {
+	metamaskUrl,
+	migrationGuideUrl,
+	migrationNetwork,
+	migrationTransactionFee,
+	migrationWalletAddress,
+} from "@/utils/polygon-migration";
+import { useFormContext } from "react-hook-form";
+import { assertWallet } from "@/utils/assertions";
 const { MetamaskLogo } = images.common;
-
-/* istanbul ignore next -- @preserve */
-const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
-
-// @TBD
-const MIGRATION_GUIDE_URL = "https://arkvault.io/docs";
-// @TBD
-const METAMASK_URL = "https://metamask.io/";
 
 const MetaMaskButton = ({
 	children,
@@ -65,7 +67,7 @@ const PolygonFieldMessage = ({
 			<Trans
 				i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_METAMASK_BROWSER"
 				components={{
-					linkMigrationGuide: <Link to={MIGRATION_GUIDE_URL} isExternal />,
+					linkMigrationGuide: <Link to={migrationGuideUrl()} isExternal />,
 				}}
 			/>
 		);
@@ -76,7 +78,7 @@ const PolygonFieldMessage = ({
 			<Trans
 				i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_METAMASK"
 				components={{
-					linkMigrationGuide: <Link to={MIGRATION_GUIDE_URL} isExternal />,
+					linkMigrationGuide: <Link to={migrationGuideUrl()} isExternal />,
 				}}
 			/>
 		);
@@ -86,16 +88,18 @@ const PolygonFieldMessage = ({
 		<Trans
 			i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_CONNECTED_WALLET"
 			components={{
-				linkMetamask: <Link to={METAMASK_URL} isExternal />,
+				linkMetamask: <Link to={metamaskUrl()} isExternal />,
 			}}
 		/>
 	);
 };
 
-export const MigrationConnectStep = () => {
+export const MigrationConnectStep = ({ onContinue }: { onContinue?: (wallet: Contracts.IReadWriteWallet) => void }) => {
 	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet, connecting, supportsMetaMask } = useMetaMask();
 	const history = useHistory();
 	const { openExternal } = useLink();
+	const { setValue, watch } = useFormContext();
+	const { senderAddress, fee } = watch();
 
 	const { t } = useTranslation();
 
@@ -105,21 +109,19 @@ export const MigrationConnectStep = () => {
 		() =>
 			profile
 				.wallets()
-				.findByCoinWithNetwork("ARK", "ark.mainnet")
+				.findByCoinWithNetwork("ARK", migrationNetwork())
 				// Only wallets with a balance greater than the transaction fee +0.05 ARK
-				.filter((wallet) => wallet.balance() >= TRANSACTION_FEE + 0.05),
+				.filter((wallet) => wallet.balance() >= fee + 0.05),
 		[profile],
 	);
 
-	const [selectedAddress, setSelectedAddress] = useState<string>();
-
 	const selectedWallet = useMemo(() => {
-		if (!selectedAddress) {
+		if (!senderAddress) {
 			return;
 		}
 
-		return profile.wallets().findByAddressWithNetwork(selectedAddress, "ark.mainnet");
-	}, [selectedAddress, profile]);
+		return profile.wallets().findByAddressWithNetwork(senderAddress, migrationNetwork());
+	}, [senderAddress, profile]);
 
 	const walletBalance = useMemo(() => {
 		if (!selectedWallet) {
@@ -134,7 +136,7 @@ export const MigrationConnectStep = () => {
 			return 0;
 		}
 
-		const amount = selectedWallet.balance() - TRANSACTION_FEE;
+		const amount = selectedWallet.balance() - migrationTransactionFee();
 
 		return Math.round(amount * 100) / 100;
 	}, [selectedWallet]);
@@ -152,10 +154,6 @@ export const MigrationConnectStep = () => {
 		[needsMetaMask, account, isOnPolygonNetwork],
 	);
 
-	const addressSelectedHandler = (address: string) => {
-		setSelectedAddress(address);
-	};
-
 	const stepIsValid = useMemo(
 		() => !!account && !accountIsInWrongNetwork && !!selectedWallet,
 		[account, accountIsInWrongNetwork, selectedWallet],
@@ -171,7 +169,20 @@ export const MigrationConnectStep = () => {
 			title={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}
 			description={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.DESCRIPTION")}
 			onCancel={cancelHandler}
-			onContinue={() => {}}
+			onContinue={() => {
+				assertWallet(selectedWallet);
+
+				setValue("polygonAddress", account);
+				setValue("senderAddress", selectedWallet.address());
+				setValue("recipients", [
+					{
+						address: migrationWalletAddress(),
+						amount: amountYouGet,
+					},
+				]);
+
+				onContinue?.(selectedWallet);
+			}}
 			isValid={stepIsValid}
 		>
 			<div className="space-y-3">
@@ -180,6 +191,14 @@ export const MigrationConnectStep = () => {
 						<FormLabel label={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.ARK_ADDRESS")} />
 
 						<SelectAddress
+							wallet={
+								selectedWallet
+									? {
+											address: selectedWallet.address(),
+											network: selectedWallet.network(),
+									  }
+									: undefined
+							}
 							wallets={wallets}
 							profile={profile}
 							disabled={wallets.length === 0}
@@ -189,7 +208,7 @@ export const MigrationConnectStep = () => {
 							description={t(
 								"MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.SELECT_WALLET_TO_MIGRATE_DESCRIPTION",
 							)}
-							onChange={addressSelectedHandler}
+							onChange={(address) => setValue("senderAddress", address)}
 						/>
 					</FormField>
 
@@ -207,7 +226,7 @@ export const MigrationConnectStep = () => {
 								{t("TRANSACTION.TRANSACTION_FEE")}
 							</div>
 							<div className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-								<Amount ticker="ARK" value={TRANSACTION_FEE * -1} showSign isNegative />
+								<Amount ticker="ARK" value={migrationTransactionFee() * -1} showSign isNegative />
 							</div>
 						</div>
 					</div>
@@ -258,7 +277,7 @@ export const MigrationConnectStep = () => {
 								<Trans
 									i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_POLYGON"
 									components={{
-										linkMigrationGuide: <Link to={MIGRATION_GUIDE_URL} isExternal />,
+										linkMigrationGuide: <Link to={migrationGuideUrl()} isExternal />,
 									}}
 								/>
 							</div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
@@ -8,7 +9,6 @@ import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
 import { MigrationPendingStep } from "@/domains/migration/components/MigrationPendingStep";
 import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
 import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
-import { useActiveProfile } from "@/app/hooks";
 import { MigrationAuthenticationStep } from "@/domains/migration/components/MigrationAuthenticationStep";
 import { useMigrationForm } from "@/domains/migration/hooks";
 
@@ -25,13 +25,11 @@ const TOTAL_STEPS = 5;
 
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
-	const [activeStep] = useState(Step.Connect);
+	const [activeStep, setActiveStep] = useState(Step.Connect);
+	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet>();
+	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData>();
 
 	const form = useMigrationForm();
-
-	const activeProfile = useActiveProfile();
-	//TODO: remove hardcoded wallet.
-	const wallet = activeProfile.wallets().first();
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
@@ -41,19 +39,40 @@ export const MigrationAdd = () => {
 
 					<Tabs activeId={activeStep}>
 						<TabPanel tabId={Step.Connect}>
-							<MigrationConnectStep />
+							<MigrationConnectStep
+								onContinue={(selectedWallet) => {
+									setWallet(selectedWallet);
+									setActiveStep(Step.Review);
+								}}
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={Step.Review}>
-							<MigrationReviewStep wallet={wallet} />
+							<MigrationReviewStep
+								wallet={wallet}
+								onBack={() => setActiveStep(Step.Connect)}
+								onContinue={() => {
+									setTransaction(transaction);
+									setActiveStep(Step.Authenticate);
+								}}
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={Step.Authenticate}>
-							<MigrationAuthenticationStep wallet={wallet} />
+							<MigrationAuthenticationStep
+								wallet={wallet}
+								onBack={() => {
+									setActiveStep(Step.Review);
+								}}
+								onContinue={(broadcastedTransaction) => {
+									setTransaction(broadcastedTransaction);
+									setActiveStep(Step.PendingTransaction);
+								}}
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={Step.PendingTransaction}>
-							<MigrationPendingStep />
+							<MigrationPendingStep transaction={transaction} />
 						</TabPanel>
 
 						<TabPanel tabId={Step.Finished}>

@@ -8,6 +8,7 @@ import { MigrationReview } from "@/domains/migration/components/MigrationReviewS
 import { useActiveProfile } from "@/app/hooks";
 import { useLedgerContext } from "@/app/contexts";
 import { useMigrationTransaction, useAuthenticationHeading } from "@/domains/migration/hooks";
+import { assertWallet } from "@/utils/assertions";
 
 export const MigrationAuthenticationStep = ({
 	wallet,
@@ -15,12 +16,14 @@ export const MigrationAuthenticationStep = ({
 	onBack,
 	onError,
 }: {
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	onContinue?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	onBack?: () => void;
 	onError?: (error: Error) => void;
 }) => {
 	const profile = useActiveProfile();
+
+	assertWallet(wallet);
 
 	const { formState } = useFormContext();
 	const { title, description } = useAuthenticationHeading({ wallet });
@@ -42,6 +45,7 @@ export const MigrationAuthenticationStep = ({
 			const transaction = await sendTransaction();
 			onContinue?.(transaction);
 		} catch (error) {
+			console.log({ error });
 			onError?.(error);
 		}
 	};
@@ -53,7 +57,7 @@ export const MigrationAuthenticationStep = ({
 				description={description}
 				onBack={wallet.isLedger() ? undefined : onBack}
 				onContinue={wallet.isLedger() ? undefined : handleSendTransaction}
-				isValid={formState.isValid}
+				isValid={formState.isValid && !isSending}
 				isLoading={isSending}
 			>
 				<div className="space-y-8 px-5 pt-6">

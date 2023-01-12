@@ -63,7 +63,7 @@ export const MigrationStep = ({
 
 							{!!onContinue && (
 								<Button
-									data-testid="MigrationAdd__cancel__continue-btn"
+									data-testid="MigrationAdd__continue-btn"
 									type="submit"
 									variant="primary"
 									disabled={!isValid}

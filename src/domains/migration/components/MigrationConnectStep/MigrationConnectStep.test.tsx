@@ -3,7 +3,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
+import { Form } from "@/app/components/Form";
 import { MigrationConnectStep } from "./MigrationConnectStep";
+import { useMigrationForm } from "@/domains/migration/hooks";
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
 import { render, screen, env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
 import * as useMetaMask from "@/domains/migration/hooks/use-meta-mask";
@@ -11,13 +13,25 @@ let profile: Contracts.IProfile;
 
 const history = createHashHistory();
 
+const WrapperForm = ({ children }: { children: React.ReactElement }) => {
+	const form = useMigrationForm();
+
+	return (
+		<Form className="mx-auto max-w-xl" context={form}>
+			{children}
+		</Form>
+	);
+};
+
 const renderComponent = (profileId = profile.id()) => {
 	const migrationUrl = `/profiles/${profileId}/migration/add`;
 	history.push(migrationUrl);
 
 	return render(
 		<Route path="/profiles/:profileId/migration/add">
-			<MigrationConnectStep />
+			<WrapperForm>
+				<MigrationConnectStep />
+			</WrapperForm>
 		</Route>,
 		{
 			history,

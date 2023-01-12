@@ -8,13 +8,14 @@ import MigrationStep from "@/domains/migration/components/MigrationStep";
 import { MigrationAmountBox } from "@/domains/migration/components/MigrationAmountBox";
 import { MigrationAddress } from "@/domains/migration/components/MigrationAddress";
 import { MigrationPolygonIcon } from "@/domains/migration/components/MigrationPolygonIcon";
+import { assertWallet } from "@/utils/assertions";
 
 export const MigrationReview = ({ wallet, className }: { wallet: Contracts.IReadWriteWallet; className?: string }) => {
 	const { t } = useTranslation();
 	const { getValues } = useFormContext();
 
 	return (
-		<div className={cn("space-y-3", className)}>
+		<div className={cn("space-y-3", className)} data-testid="MigrationReview">
 			<div className="relative rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
 				<MigrationAddress address={wallet.address()} label={t("MIGRATION.MIGRATION_ADD.FROM_ARK_ADDRESS")} />
 
@@ -25,7 +26,7 @@ export const MigrationReview = ({ wallet, className }: { wallet: Contracts.IRead
 				</div>
 
 				<MigrationAddress
-					address={getValues("migrationAddress")}
+					address={getValues("polygonAddress")}
 					label={t("MIGRATION.MIGRATION_ADD.TO_POLYGON_ADDRESS")}
 					isEthereum
 				/>
@@ -41,11 +42,13 @@ export const MigrationReviewStep = ({
 	onContinue,
 	onBack,
 }: {
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	onContinue?: () => void;
 	onBack?: () => void;
 }) => {
 	const { t } = useTranslation();
+
+	assertWallet(wallet);
 
 	return (
 		<MigrationStep

@@ -23,8 +23,18 @@ export const useMigrationTransaction = ({
 	const transactionBuilder = useTransactionBuilder();
 	const { connect } = useLedgerContext();
 
-	const { fee, encryptionPassword, mnemonic, privateKey, secondMnemonic, secondSecret, secret, wif, recipients } =
-		watch();
+	const {
+		fee,
+		encryptionPassword,
+		mnemonic,
+		privateKey,
+		secondMnemonic,
+		secondSecret,
+		secret,
+		wif,
+		recipients,
+		polygonAddress,
+	} = watch();
 
 	const signTransaction = async () => {
 		const signatory = await wallet.signatoryFactory().make({
@@ -42,6 +52,7 @@ export const useMigrationTransaction = ({
 				coin: wallet.coin(),
 				isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
 				recipients,
+				memo: polygonAddress,
 			}),
 			fee: +fee,
 			signatory,

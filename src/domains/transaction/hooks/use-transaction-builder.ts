@@ -39,13 +39,17 @@ export const useTransactionBuilder = () => {
 			abortSignal?: AbortSignal;
 		},
 	): Promise<{ uuid: string; transaction: DTO.ExtendedSignedTransactionData }> => {
+		console.log("case 1");
 		await wallet.transaction().sync();
 
+		console.log("case 2");
 		const service = wallet.transaction();
 
+		console.log("case 3");
 		// @ts-ignore
 		const signFunction = (service[`sign${upperFirst(type)}`] as SignFunction).bind(service);
 		let data = { ...input };
+		console.log("case 4");
 
 		if (wallet.isMultiSignature()) {
 			data = await prepareMultiSignature(data, wallet);
@@ -55,7 +59,9 @@ export const useTransactionBuilder = () => {
 			data = await withAbortPromise(options?.abortSignal, abortConnectionRetry)(prepareLedger(data, wallet));
 		}
 
+		console.log("case 6");
 		const uuid = await signFunction(data);
+		console.log("case 7");
 
 		return {
 			transaction: wallet.transaction().transaction(uuid),
