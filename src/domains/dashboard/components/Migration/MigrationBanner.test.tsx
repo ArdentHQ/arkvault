@@ -2,7 +2,7 @@ import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import * as reactRouterDom from "react-router-dom";
-import { MigrationBanner } from "./MigrationBanner";
+import { MigrationBanner } from "./MigrationBanner";´
 import { render, screen, getDefaultProfileId, env } from "@/utils/testing-library";
 import * as hooks from "@/app/hooks";
 const fixtureProfileId = getDefaultProfileId();
@@ -15,7 +15,7 @@ vi.mock("react-router-dom", async () => ({
 }));
 
 describe("MigrationBanner", () => {
-	beforeAll(async () => {
+	beforeAll(() => {
 		profile = env.profiles().findById(fixtureProfileId);
 
 		useActiveProfileSpy = vi.spyOn(hooks, "useActiveProfile").mockReturnValue(profile);
