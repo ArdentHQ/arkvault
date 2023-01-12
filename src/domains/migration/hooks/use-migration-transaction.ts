@@ -28,6 +28,7 @@ export const useMigrationTransaction = ({
 	const {
 		fee,
 		encryptionPassword,
+		migrationAddress,
 		mnemonic,
 		privateKey,
 		secondMnemonic,
@@ -36,7 +37,6 @@ export const useMigrationTransaction = ({
 		wif,
 		recipients,
 		wallet,
-		// migrationAddress,
 	} = watch();
 
 	const signTransaction = async () => {
@@ -54,8 +54,7 @@ export const useMigrationTransaction = ({
 			data: await buildTransferData({
 				coin: wallet.coin(),
 				isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
-				// memo: migrationAddress,
-				memo: "0x0000000000000000000000000000000000000000",
+				memo: migrationAddress,
 				recipients,
 			}),
 			fee: +fee,
