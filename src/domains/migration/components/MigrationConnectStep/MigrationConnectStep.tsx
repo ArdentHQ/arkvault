@@ -216,7 +216,7 @@ export const MigrationConnectStep = () => {
 							</div>
 
 							<div className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-								<Amount ticker="ARK" value={migrationTransactionFee * -1} showSign isNegative />
+								<Amount ticker="ARK" value={migrationTransactionFee() * -1} showSign isNegative />
 							</div>
 						</div>
 					</div>
