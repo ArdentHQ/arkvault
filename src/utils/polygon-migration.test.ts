@@ -24,6 +24,7 @@ describe("Url validation", () => {
 	});
 
 	it("migrationWalletAddress", () => {
+		process.env.MIGRATION_MAINNET_ADDRESS = "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
 		expect(migrationWalletAddress()).toBe("DNBURNBURNBURNBRNBURNBURNBURKz8StY");
 	});
 });
