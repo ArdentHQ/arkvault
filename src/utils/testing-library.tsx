@@ -51,9 +51,9 @@ export const WithProviders = ({ children }: { children?: React.ReactNode }) => (
 		<EnvironmentProvider env={env}>
 			<LedgerProvider>
 				<ConfigurationProvider>
-					<MigrationProvider>
-						<NavigationProvider>{children}</NavigationProvider>
-					</MigrationProvider>
+					<NavigationProvider>
+						<MigrationProvider>{children}</MigrationProvider>
+					</NavigationProvider>
 				</ConfigurationProvider>
 			</LedgerProvider>
 		</EnvironmentProvider>
