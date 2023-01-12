@@ -54,7 +54,7 @@ describe("Notifications", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render with empty list of migrations", async () => {
+	it("should render with empty list of migrations", () => {
 		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations: [] }));
 
 		render(<Notifications profile={profile} />);
@@ -64,7 +64,7 @@ describe("Notifications", () => {
 		useMigrationsSpy.mockRestore();
 	});
 
-	it("should render with migrations", async () => {
+	it("should render with migrations", () => {
 		const migrations: MigrationType[] = [
 			{
 				address: "AdDreSs",
@@ -83,6 +83,34 @@ describe("Notifications", () => {
 		expect(screen.getByTestId("NotificationsMigrations")).toBeInTheDocument();
 
 		useMigrationsSpy.mockRestore();
+	});
+
+	it("should render with migrations but not transactions", () => {
+		const migrations: MigrationType[] = [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		];
+
+		const useNotificationsSpy = vi.spyOn(useNotifications, "useNotifications").mockReturnValue({
+			markAllTransactionsAsRead: () => {},
+			migrationTransactions: migrations,
+			releases: [],
+			transactions: [],
+		} as any);
+
+		const { container } = render(<Notifications profile={profile} />);
+
+		expect(screen.getByTestId("NotificationsMigrations")).toBeInTheDocument();
+
+		expect(container).toMatchSnapshot();
+
+		useNotificationsSpy.mockRestore();
 	});
 
 	it("should render empty", () => {
