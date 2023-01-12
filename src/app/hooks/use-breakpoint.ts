@@ -17,9 +17,9 @@ export const useBreakpoint = () => {
 		isLgAndAbove,
 		isMd,
 		isMdAndAbove,
+		isMobileNavigation,
 		isSm,
 		isXl,
 		isXs,
-		isMobileNavigation,
 	};
 };
