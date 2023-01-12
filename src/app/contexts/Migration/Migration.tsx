@@ -5,8 +5,9 @@ import {
 	Migration,
 	MigrationTransactionStatus,
 } from "@/domains/migration/migration.contracts";
-import { useEnvironmentContext, useConfiguration } from "@/app/contexts";
-
+import { useEnvironmentContext } from "@/app/contexts";
+import { useProfileWatcher } from "@/app/hooks";
+import { MigrationRepository } from "@/domains/profile/repositories/migration.repository";
 const ARK_MIGRATIONS_STORAGE_KEY = "ark-migration";
 const CONTRACT_ADDRESS = import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
 const POLYGON_RPC_URL = import.meta.env.VITE_POLYGON_RPC_URL;
@@ -95,13 +96,19 @@ interface Properties {
 const MigrationContext = React.createContext<any>(undefined);
 
 export const MigrationProvider = ({ children }: Properties) => {
+	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
-	const { profileHasSyncedOnce } = useConfiguration();
-
+	const profile = useProfileWatcher();
 	const [migrations, setMigrations] = useState<Migration[]>();
+	const [expiredMigrations, setExpiredMigrations] = useState(false);
+	const [reloadMigrationsTimeout, setReloadMigrationsTimeout] = useState<ReturnType<typeof setTimeout>>();
 
 	const storeMigrationTransactions = useCallback(async () => {
-		env.data().set(ARK_MIGRATIONS_STORAGE_KEY, migrations!);
+		if (repository === undefined) {
+			return;
+		}
+
+		repository.set(migrations!);
 
 		await persist();
 
@@ -114,15 +121,14 @@ export const MigrationProvider = ({ children }: Properties) => {
 				loadMigrations();
 			};
 
-			setTimeout(reloadMigrations, 1000);
+			setReloadMigrationsTimeout(setTimeout(reloadMigrations, 1000));
 		}
-	}, [migrations, env]);
+	}, [migrations, repository]);
 
 	const loadMigrations = useCallback(async () => {
-		const migrations = env.data().get(ARK_MIGRATIONS_STORAGE_KEY, []) as Migration[];
+		const migrations = repository!.all();
 
-		// const transactions = migrations.map((tx: Migration) => tx.id);
-		const transactions = [
+		const transactionsIds = [
 			...migrations.map((tx: Migration) => tx.id),
 			// Add some initial transaction ids
 			// @TODO: Potentially remove this in favour of storing the transactions
@@ -132,19 +138,22 @@ export const MigrationProvider = ({ children }: Properties) => {
 			// Remove duplicated transactions ids
 			// @TODO: not needed once we remove the fake ones
 			.filter((id, index, original) => original.indexOf(id) === index);
+		// @TODO: potential code to replace the one above once the fake
+		// transactions are removed
+		// const transactionsIds = migrations.map((tx: Migration) => tx.id);
 
 		const provider = new ethers.providers.JsonRpcProvider(POLYGON_RPC_URL);
 
 		const contract = new Contract(CONTRACT_ADDRESS, contractABI, provider);
 
 		const contractMigrations: ARKMigrationViewStructOutput[] = await contract.getMigrationsByArkTxHash(
-			transactions,
+			transactionsIds,
 		);
 
 		const formattedMigrations = contractMigrations.map(transactionMapper);
 
 		setMigrations(formattedMigrations);
-	}, [env, storeMigrationTransactions]);
+	}, [storeMigrationTransactions, repository]);
 
 	useEffect(() => {
 		if (migrations === undefined) {
@@ -155,12 +164,30 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, [migrations, storeMigrationTransactions]);
 
 	useEffect(() => {
-		if (!profileHasSyncedOnce) {
+		if (profile) {
+			setRepository(new MigrationRepository(profile, env.data()));
+		} else {
+			setRepository(undefined);
+		}
+
+		setExpiredMigrations(true);
+	}, [profile]);
+
+	useEffect(() => {
+		if (!expiredMigrations) {
 			return;
 		}
 
-		loadMigrations();
-	}, [profileHasSyncedOnce]);
+		clearTimeout(reloadMigrationsTimeout);
+
+		if (repository === undefined) {
+			setMigrations(undefined);
+		} else {
+			loadMigrations();
+		}
+
+		setExpiredMigrations(false);
+	}, [expiredMigrations, loadMigrations, repository, reloadMigrationsTimeout]);
 
 	return (
 		<MigrationContext.Provider value={{ migrations: migrations } as MigrationContextType}>

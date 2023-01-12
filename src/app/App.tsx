@@ -40,12 +40,12 @@ export const App: React.VFC = () => {
 								<ErrorBoundary FallbackComponent={ApplicationError}>
 									<LedgerProvider>
 										<CacheProvider value={emotionCache}>
-											<MigrationProvider>
-												<AppRouter>
+											<AppRouter>
+												<MigrationProvider>
 													<GlobalStyles />
 													<Main />
-												</AppRouter>
-											</MigrationProvider>
+												</MigrationProvider>
+											</AppRouter>
 										</CacheProvider>
 									</LedgerProvider>
 								</ErrorBoundary>

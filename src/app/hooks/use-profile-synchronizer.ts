@@ -25,7 +25,7 @@ enum Intervals {
 	VeryLong = 7_200_000,
 }
 
-const useProfileWatcher = () => {
+export const useProfileWatcher = () => {
 	const location = useLocation();
 
 	const { env } = useEnvironmentContext();
