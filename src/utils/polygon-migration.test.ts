@@ -7,23 +7,23 @@ import {
 } from "./polygon-migration";
 
 describe("Url validation", () => {
-	it("#migrationTransactionFee", async () => {
+	it("#migrationTransactionFee", () => {
 		expect(migrationTransactionFee()).toBe(0.05);
 	});
 
-	it("migrationGuideUrl", async () => {
+	it("migrationGuideUrl", () => {
 		expect(migrationGuideUrl()).toBe("https://arkvault.io/docs");
 	});
 
-	it("metamaskUrl", async () => {
+	it("metamaskUrl", () => {
 		expect(metamaskUrl()).toBe("https://metamask.io/");
 	});
 
-	it("migrationNetwork", async () => {
+	it("migrationNetwork", () => {
 		expect(migrationNetwork()).toBe("ark.mainnet");
 	});
 
-	it("migrationWalletAddress", async () => {
+	it("migrationWalletAddress", () => {
 		expect(migrationWalletAddress()).toBe("DNBURNBURNBURNBRNBURNBURNBURKz8StY");
 	});
 });
