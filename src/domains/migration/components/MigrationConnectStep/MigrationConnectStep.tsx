@@ -15,16 +15,8 @@ import { Header } from "@/app/components/Header";
 import { useLink } from "@/app/hooks/use-link";
 import { Icon } from "@/app/components/Icon";
 import { Spinner } from "@/app/components/Spinner";
-import { migrationNetwork } from "@/utils/polygon-migration";
+import { metamaskUrl, migrationGuideUrl, migrationNetwork, migrationTransactionFee, migrationWalletAddress } from "@/utils/polygon-migration";
 const { MetamaskLogo } = images.common;
-
-/* istanbul ignore next -- @preserve */
-const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
-
-// @TBD
-const MIGRATION_GUIDE_URL = "https://arkvault.io/docs";
-// @TBD
-const METAMASK_URL = "https://metamask.io/";
 
 const MetaMaskButton = ({
 	children,
@@ -65,7 +57,7 @@ const PolygonFieldMessage = ({
 			<Trans
 				i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_METAMASK_BROWSER"
 				components={{
-					linkMigrationGuide: <Link to={MIGRATION_GUIDE_URL} isExternal />,
+					linkMigrationGuide: <Link to={migrationGuideUrl()} isExternal />,
 				}}
 			/>
 		);
@@ -76,7 +68,7 @@ const PolygonFieldMessage = ({
 			<Trans
 				i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_METAMASK"
 				components={{
-					linkMigrationGuide: <Link to={MIGRATION_GUIDE_URL} isExternal />,
+					linkMigrationGuide: <Link to={migrationGuideUrl()} isExternal />,
 				}}
 			/>
 		);
@@ -86,7 +78,7 @@ const PolygonFieldMessage = ({
 		<Trans
 			i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_CONNECTED_WALLET"
 			components={{
-				linkMetamask: <Link to={METAMASK_URL} isExternal />,
+				linkMetamask: <Link to={metamaskUrl()} isExternal />,
 			}}
 		/>
 	);
@@ -99,7 +91,7 @@ export const MigrationConnectStep = () => {
 	const form = useFormContext();
 	const { setValue, watch } = form;
 
-	const wallet = watch("wallet");
+	const { fee, wallet } = watch();
 
 	const { t } = useTranslation();
 
@@ -111,7 +103,7 @@ export const MigrationConnectStep = () => {
 				.wallets()
 				.findByCoinWithNetwork("ARK", migrationNetwork())
 				// Only wallets with a balance greater than the transaction fee +0.05 ARK
-				.filter((wallet) => wallet.balance() >= TRANSACTION_FEE + 0.05),
+				.filter((wallet) => wallet.balance() >= fee + 0.05),
 		[profile],
 	);
 
@@ -128,7 +120,7 @@ export const MigrationConnectStep = () => {
 			return 0;
 		}
 
-		const amount = wallet.balance() - TRANSACTION_FEE;
+		const amount = wallet.balance() - migrationTransactionFee();
 
 		return Math.round(amount * 100) / 100;
 	}, [wallet]);
@@ -155,6 +147,15 @@ export const MigrationConnectStep = () => {
 
 		setValue("wallet", wallet, { shouldDirty: true, shouldValidate: true });
 	};
+
+	useEffect(() => {
+		setValue("recipients", [
+			{
+				address: migrationWalletAddress(),
+				amount: amountYouGet,
+			},
+		]);
+	}, [amountYouGet, setValue]);
 
 	useEffect(() => {
 		let migrationAddress: string | undefined;
@@ -215,7 +216,7 @@ export const MigrationConnectStep = () => {
 							</div>
 
 							<div className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-								<Amount ticker="ARK" value={TRANSACTION_FEE * -1} showSign isNegative />
+								<Amount ticker="ARK" value={migrationTransactionFee * -1} showSign isNegative />
 							</div>
 						</div>
 					</div>
@@ -268,7 +269,7 @@ export const MigrationConnectStep = () => {
 								<Trans
 									i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_POLYGON"
 									components={{
-										linkMigrationGuide: <Link to={MIGRATION_GUIDE_URL} isExternal />,
+										linkMigrationGuide: <Link to={migrationGuideUrl()} isExternal />,
 									}}
 								/>
 							</div>
