@@ -15,6 +15,7 @@ import { Header } from "@/app/components/Header";
 import { useLink } from "@/app/hooks/use-link";
 import { Icon } from "@/app/components/Icon";
 import { Spinner } from "@/app/components/Spinner";
+import { migrationNetwork } from "@/utils/polygon-migration";
 const { MetamaskLogo } = images.common;
 
 /* istanbul ignore next -- @preserve */
@@ -108,7 +109,7 @@ export const MigrationConnectStep = () => {
 		() =>
 			profile
 				.wallets()
-				.findByCoinWithNetwork("ARK", "ark.devnet")
+				.findByCoinWithNetwork("ARK", migrationNetwork())
 				// Only wallets with a balance greater than the transaction fee +0.05 ARK
 				.filter((wallet) => wallet.balance() >= TRANSACTION_FEE + 0.05),
 		[profile],
@@ -149,7 +150,7 @@ export const MigrationConnectStep = () => {
 		let wallet: Contracts.IReadWriteWallet | undefined;
 
 		if (selectedAddress) {
-			wallet = profile.wallets().findByAddressWithNetwork(selectedAddress, "ark.devnet");
+			wallet = profile.wallets().findByAddressWithNetwork(selectedAddress, migrationNetwork());
 		}
 
 		setValue("wallet", wallet, { shouldDirty: true, shouldValidate: true });
