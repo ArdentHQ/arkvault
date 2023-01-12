@@ -5,11 +5,11 @@ export const migrationTransactionFee = () => {
 };
 
 export const migrationGuideUrl = () => {
-	return process.env.MIGRATION_GUIDE_URL || "https://arkvault.io/docs";
+	return import.meta.env.MIGRATION_GUIDE_URL || "https://arkvault.io/docs";
 };
 
 export const metamaskUrl = () => {
-	return process.env.METAMASK_URL || "https://metamask.io/";
+	return import.meta.env.METAMASK_URL || "https://metamask.io/";
 };
 
 export const migrationNetwork = () => {
