@@ -45,6 +45,8 @@ jobs:
               run: pnpm install --frozen-lockfile
 
             - name: Build
+              env:
+                  NODE_OPTIONS: "--max_old_space_size=8192"
               run: pnpm build:e2e
 
             - name: Upload Build Artifacts
