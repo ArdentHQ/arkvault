@@ -55,6 +55,7 @@ describe("Migration Context", () => {
 		vi.unmock("ethers");
 
 		vi.mock("@/app/contexts/Migration/Migration", () => ({
+			MigrationProvider: ({ children }) => React.createElement("div", {}, children),
 			useMigrations: () => ({ migrations: undefined }),
 		}));
 	});
