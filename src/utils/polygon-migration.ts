@@ -1,25 +1,11 @@
-import { isPreview } from "./test-helpers";
-
 export const migrationTransactionFee = () =>
 	Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
 
-export const migrationGuideUrl = () => import.meta.env.MIGRATION_GUIDE_URL || "https://arkvault.io/docs";
+export const migrationGuideUrl = () => import.meta.env.VITE_MIGRATION_GUIDE_URL || "https://arkvault.io/docs";
 
-export const metamaskUrl = () => import.meta.env.METAMASK_URL || "https://metamask.io/";
+export const metamaskUrl = () => "https://metamask.io/";
 
-export const migrationNetwork = () => {
-	if (isPreview()) {
-		return import.meta.env.MIGRATION_DEVNET_NETWORK || "ark.devnet";
-	}
+export const migrationNetwork = () => import.meta.env.VITE_MIGRATION_NETWORK || "ark.devnet";
 
-	return import.meta.env.MIGRATION_MAINNET_NETWORK || "ark.mainnet";
-};
-
-export const migrationWalletAddress = () => {
-	if (isPreview()) {
-		return import.meta.env.MIGRATION_DEVNET_ADDRESS || "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
-	}
-
-	// @TBD
-	return import.meta.env.MIGRATION_MAINNET_ADDRESS;
-};
+export const migrationWalletAddress = () =>
+	import.meta.env.VITE_MIGRATION_ADDRESS || "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
