@@ -6,25 +6,24 @@ import {
 	migrationWalletAddress,
 } from "./polygon-migration";
 
-describe("Url validation", () => {
+describe("Polygon Migration Utility Functions", () => {
 	it("#migrationTransactionFee", () => {
 		expect(migrationTransactionFee()).toBe(0.05);
 	});
 
-	it("migrationGuideUrl", () => {
+	it("#migrationGuideUrl", () => {
 		expect(migrationGuideUrl()).toBe("https://arkvault.io/docs");
 	});
 
-	it("metamaskUrl", () => {
+	it("#metamaskUrl", () => {
 		expect(metamaskUrl()).toBe("https://metamask.io/");
 	});
 
-	it("migrationNetwork", () => {
-		expect(migrationNetwork()).toBe("ark.mainnet");
+	it("#migrationNetwork", () => {
+		expect(migrationNetwork()).toBe("ark.devnet");
 	});
 
-	it("migrationWalletAddress", () => {
-		process.env.MIGRATION_MAINNET_ADDRESS = "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
+	it("#migrationWalletAddress", () => {
 		expect(migrationWalletAddress()).toBe("DNBURNBURNBURNBRNBURNBURNBURKz8StY");
 	});
 });
