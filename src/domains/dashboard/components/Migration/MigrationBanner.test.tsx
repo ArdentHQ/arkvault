@@ -23,6 +23,8 @@ describe("MigrationBanner", () => {
 
 	afterAll(() => {
 		useActiveProfileSpy.mockRestore();
+
+		vi.unmock("react-router-dom");
 	});
 
 	it("should render", () => {
