@@ -246,4 +246,30 @@ describe("Migration Context", () => {
 
 		consoleSpy.mockRestore();
 	});
+
+	it("should not load migrations if profile is undefined", async () => {
+		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(undefined);
+
+		const getMigrationMock = vi.fn().mockImplementation(() => []);
+
+		environmentMock.mockRestore();
+
+		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
+			...environmentMockData,
+			env: {
+				data: () => ({
+					get: getMigrationMock,
+					set: () => {},
+				}),
+			},
+		});
+
+		render(<Test />);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+		});
+
+		expect(getMigrationMock).not.toHaveBeenCalled();
+	});
 });
