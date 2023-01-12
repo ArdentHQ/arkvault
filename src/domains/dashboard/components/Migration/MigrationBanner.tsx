@@ -16,7 +16,7 @@ export const MigrationBanner = () => {
 	const profile = useActiveProfile();
 
 	const migrateButtonHandler = useCallback(() => {
-		const path = generatePath(ProfilePaths.Migration, { profileId: profile!.id() });
+		const path = generatePath(ProfilePaths.Migration, { profileId: profile.id() });
 
 		history.push(path);
 	}, [history, profile]);
