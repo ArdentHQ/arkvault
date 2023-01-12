@@ -117,7 +117,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				loadMigrations();
 			};
 
-			setReloadMigrationsTimeout(setTimeout(reloadMigrations, 1000));
+			setReloadMigrationsTimeout(setTimeout(reloadMigrations, 3000));
 		}
 	}, [migrations, repository]);
 
@@ -170,11 +170,15 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, [profile]);
 
 	useEffect(() => {
+		if (repository === undefined) {
+			clearTimeout(reloadMigrationsTimeout);
+		}
+	}, [repository, reloadMigrationsTimeout]);
+
+	useEffect(() => {
 		if (!expiredMigrations) {
 			return;
 		}
-
-		clearTimeout(reloadMigrationsTimeout);
 
 		if (repository === undefined) {
 			setMigrations(undefined);
@@ -183,7 +187,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		setExpiredMigrations(false);
-	}, [expiredMigrations, loadMigrations, repository, reloadMigrationsTimeout]);
+	}, [expiredMigrations, loadMigrations, repository]);
 
 	return (
 		<MigrationContext.Provider value={{ migrations: migrations } as MigrationContextType}>
