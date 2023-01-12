@@ -15,7 +15,13 @@ import { Header } from "@/app/components/Header";
 import { useLink } from "@/app/hooks/use-link";
 import { Icon } from "@/app/components/Icon";
 import { Spinner } from "@/app/components/Spinner";
-import { metamaskUrl, migrationGuideUrl, migrationNetwork, migrationTransactionFee, migrationWalletAddress } from "@/utils/polygon-migration";
+import {
+	metamaskUrl,
+	migrationGuideUrl,
+	migrationNetwork,
+	migrationTransactionFee,
+	migrationWalletAddress,
+} from "@/utils/polygon-migration";
 const { MetamaskLogo } = images.common;
 
 const MetaMaskButton = ({
