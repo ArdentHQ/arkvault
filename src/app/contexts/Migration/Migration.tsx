@@ -6,9 +6,9 @@ import {
 	MigrationTransactionStatus,
 } from "@/domains/migration/migration.contracts";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useProfileWatcher } from "@/app/hooks";
-import { MigrationRepository } from "@/domains/profile/repositories/migration.repository";
-const ARK_MIGRATIONS_STORAGE_KEY = "ark-migration";
+import { MigrationRepository } from "@/repositories/migration.repository";
+import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
+
 const CONTRACT_ADDRESS = import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
 const POLYGON_RPC_URL = import.meta.env.VITE_POLYGON_RPC_URL;
 
@@ -98,10 +98,10 @@ const MigrationContext = React.createContext<any>(undefined);
 export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
-	const profile = useProfileWatcher();
 	const [migrations, setMigrations] = useState<Migration[]>();
 	const [expiredMigrations, setExpiredMigrations] = useState(false);
 	const [reloadMigrationsTimeout, setReloadMigrationsTimeout] = useState<ReturnType<typeof setTimeout>>();
+	const profile = useProfileWatcher();
 
 	const storeMigrationTransactions = useCallback(async () => {
 		if (repository === undefined) {
@@ -126,7 +126,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, [migrations, repository]);
 
 	const loadMigrations = useCallback(async () => {
-		const migrations = repository!.all();
+		const migrations = repository.all();
 
 		const transactionsIds = [
 			...migrations.map((tx: Migration) => tx.id),
