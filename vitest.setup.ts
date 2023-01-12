@@ -6,8 +6,8 @@ import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
 import { server } from "./src/tests/mocks/server";
-import { Contract } from "ethers";
 import * as matchers from "jest-extended";
+import React from "react";
 expect.extend(matchers);
 
 vi.mock("@/utils/debounce", () => ({
@@ -47,6 +47,9 @@ vi.mock("@/app/hooks/use-synchronizer", async () => {
 
 vi.mock("@/app/contexts/Migration/Migration", () => {
 	return {
+		MigrationProvider: ({ children }) => {
+			return React.createElement("div", {}, children);
+		},
 		useMigrations: () => {
 			return { migrations: undefined };
 		},
