@@ -74,11 +74,7 @@ describe("Migration Context", () => {
 	});
 
 	it("should load the migrations", async () => {
-		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
-		);
+		render(<Test />);
 
 		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 
@@ -105,11 +101,7 @@ describe("Migration Context", () => {
 			],
 		}));
 
-		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
-		);
+		render(<Test />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
@@ -170,11 +162,7 @@ describe("Migration Context", () => {
 			],
 		}));
 
-		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
-		);
+		render(<Test />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
@@ -231,11 +219,7 @@ describe("Migration Context", () => {
 			],
 		}));
 
-		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
-		);
+		render(<Test />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Migrations")).toBeInTheDocument();

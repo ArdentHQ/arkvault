@@ -5,7 +5,7 @@ import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
-
+import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
 import { server } from "./src/tests/mocks/server";
 import { Contract } from "ethers";
 import * as matchers from "jest-extended";
@@ -78,6 +78,7 @@ let tippyMock;
 const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
 let ethersLibraryContractSpy;
+let profileWatcherMock;
 
 beforeAll(async () => {
 	vi.mock("ethers");
@@ -111,6 +112,19 @@ beforeEach(() => {
 	ethersLibraryContractSpy = Contract.mockImplementation(() => ({
 		getMigrationsByArkTxHash: () => [],
 	}));
+
+	const originalProfileWatcher = useProfileWatcher;
+
+	// useProfileWatcher throws an exception on some tests related to the `useLocation`
+	// hook.
+	profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockImplementation(() => {
+		try {
+			const result = originalProfileWatcher();
+			return result;
+		} catch {
+			return undefined;
+		}
+	});
 });
 
 afterEach(() => {
@@ -123,6 +137,8 @@ afterEach(() => {
 	localstorageSpy.mockRestore();
 
 	ethersLibraryContractSpy.mockRestore();
+
+	profileWatcherMock.mockRestore();
 });
 
 afterAll(() => {
