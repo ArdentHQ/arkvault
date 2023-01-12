@@ -98,7 +98,7 @@ exports[`AmountLabel > should render migration 1`] = `
 <DocumentFragment>
   <div
     class="css-18dmbiz"
-    color="purple"
+    color="hint"
   >
     <div
       class="flex space-x-1 items-center"

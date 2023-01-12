@@ -51,7 +51,7 @@ export const AmountLabel = ({ value, ticker, isCompact, isNegative, hint, isMigr
 	}
 
 	if (isMigration) {
-		labelColor = "purple";
+		labelColor = "hint";
 		hintClassName = "bg-theme-hint-100 dark:bg-theme-hint-600";
 	}
 
