@@ -14,17 +14,17 @@ export const metamaskUrl = () => {
 
 export const migrationNetwork = () => {
 	if (isPreview()) {
-		return "ark.devnet";
+		return import.meta.env.MIGRATION_DEVNET_NETWORK || "ark.devnet";
 	}
 
-	return "ark.mainnet";
+	return import.meta.env.MIGRATION_MAINNET_NETWORK || "ark.mainnet";
 };
 
 export const migrationWalletAddress = () => {
 	if (isPreview()) {
-		return "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
+		return import.meta.env.MIGRATION_DEVNET_ADDRESS || "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
 	}
 
 	// @TBD
-	return "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
+	return import.meta.env.MIGRATION_MAINNET_ADDRESS;
 };
