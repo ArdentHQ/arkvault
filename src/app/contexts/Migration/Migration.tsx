@@ -104,11 +104,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const profile = useProfileWatcher();
 
 	const storeMigrationTransactions = useCallback(async () => {
-		if (repository === undefined) {
-			return;
-		}
-
-		repository.set(migrations!);
+		repository!.set(migrations!);
 
 		await persist();
 
@@ -127,7 +123,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const loadMigrations = useCallback(async () => {
 		const migrations = repository!.all();
-
 		const transactionsIds = [
 			...migrations.map((tx: Migration) => tx.id),
 			// Add some initial transaction ids
@@ -168,6 +163,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			setRepository(new MigrationRepository(profile, env.data()));
 		} else {
 			setRepository(undefined);
+			setMigrations(undefined);
 		}
 
 		setExpiredMigrations(true);

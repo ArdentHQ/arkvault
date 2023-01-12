@@ -35,7 +35,7 @@ describe("Migration Context", () => {
 	const environmentMockData = {
 		env: {
 			data: () => ({
-				get: () => [],
+				get: () => ({}),
 				set: () => {},
 			}),
 		},
@@ -115,22 +115,23 @@ describe("Migration Context", () => {
 	it("should not reload the migrations if no pending migrations", async () => {
 		const reloadMigration = vi.fn();
 
-		environmentMock.mockRestore();
+		const migrations = {};
+		migrations[profile.id()] = [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		];
 
 		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
 			...environmentMockData,
 			env: {
 				data: () => ({
-					get: () => [
-						{
-							address: "AdDreSs",
-							amount: 123,
-							id: "0x123",
-							migrationAddress: "0x456",
-							status: MigrationTransactionStatus.Confirmed,
-							timestamp: Date.now() / 1000,
-						},
-					],
+					get: () => migrations,
 					set: () => {},
 				}),
 			},
@@ -178,7 +179,8 @@ describe("Migration Context", () => {
 	});
 
 	it("should reload the migrations if at least one migration is pending", async () => {
-		const getMigrationMock = vi.fn().mockImplementation(() => [
+		const migrations = {};
+		migrations[profile.id()] = [
 			{
 				address: "AdDreSs",
 				amount: 123,
@@ -187,9 +189,21 @@ describe("Migration Context", () => {
 				status: MigrationTransactionStatus.Confirmed,
 				timestamp: Date.now() / 1000,
 			},
-		]);
+		];
+
+		const getMigrationMock = vi.fn().mockImplementation(() => migrations);
 
 		environmentMock.mockRestore();
+
+		let reloadMigrationCallback: any;
+
+		const setTimeoutSpy = vi.spyOn(window, "setTimeout").mockImplementation((callback) => {
+			if (callback.name === "reloadMigrations") {
+				reloadMigrationCallback = callback;
+			}
+
+			return 1;
+		});
 
 		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
 			...environmentMockData,
@@ -225,11 +239,15 @@ describe("Migration Context", () => {
 			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
 		});
 
+		reloadMigrationCallback();
+
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
 
-		expect(getMigrationMock).toHaveBeenCalledTimes(2);
+		expect(getMigrationMock).toHaveBeenCalledTimes(3);
 
 		ethersMock.mockRestore();
+
+		setTimeoutSpy.mockRestore();
 	});
 
 	it("should throw without provider", () => {
