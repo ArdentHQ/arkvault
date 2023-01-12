@@ -5,9 +5,9 @@ import React from "react";
 import { Notifications } from "./Notifications";
 import * as useNotifications from "./hooks/use-notifications";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
+import * as context from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
-
+import { MigrationTransactionStatus, Migration as MigrationType } from "@/domains/migration/migration.contracts";
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
 import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
@@ -52,6 +52,37 @@ describe("Notifications", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it("should render with empty list of migrations", async () => {
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations: [] }));
+
+		render(<Notifications profile={profile} />);
+
+		expect(screen.queryByTestId("NotificationsMigrations")).not.toBeInTheDocument();
+
+		useMigrationsSpy.mockRestore();
+	});
+
+	it("should render with migrations", async () => {
+		const migrations: MigrationType[] = [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		];
+
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations }));
+
+		render(<Notifications profile={profile} />);
+
+		expect(screen.getByTestId("NotificationsMigrations")).toBeInTheDocument();
+
+		useMigrationsSpy.mockRestore();
 	});
 
 	it("should render empty", () => {

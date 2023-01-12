@@ -99,11 +99,13 @@ describe("Migration", () => {
 			},
 		];
 
-		vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations }));
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations }));
 
 		renderComponent();
 
 		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
+
+		useMigrationsSpy.mockRestore();
 
 		// @TBD
 	});
