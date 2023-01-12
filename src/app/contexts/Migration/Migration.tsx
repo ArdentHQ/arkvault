@@ -100,11 +100,15 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const { env, persist } = useEnvironmentContext();
 	const [migrations, setMigrations] = useState<Migration[]>();
 	const [expiredMigrations, setExpiredMigrations] = useState(false);
-	const [reloadMigrationsTimeout, setReloadMigrationsTimeout] = useState<ReturnType<typeof setTimeout>>();
 	const profile = useProfileWatcher();
 
 	const storeMigrationTransactions = useCallback(async () => {
-		repository!.set(migrations!);
+		/* istanbul ignore next -- @preserve */
+		if (repository === undefined) {
+			return;
+		}
+
+		repository.set(migrations!);
 
 		await persist();
 
@@ -117,7 +121,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				loadMigrations();
 			};
 
-			setReloadMigrationsTimeout(setTimeout(reloadMigrations, 3000));
+			setTimeout(reloadMigrations, 1000);
 		}
 	}, [migrations, repository]);
 
@@ -168,12 +172,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		setExpiredMigrations(true);
 	}, [profile]);
-
-	useEffect(() => {
-		if (repository === undefined) {
-			clearTimeout(reloadMigrationsTimeout);
-		}
-	}, [repository, reloadMigrationsTimeout]);
 
 	useEffect(() => {
 		if (!expiredMigrations) {
