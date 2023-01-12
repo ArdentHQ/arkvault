@@ -23,6 +23,12 @@ describe("AmountLabel", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render migration", () => {
+		const { asFragment } = render(<AmountLabel isNegative={false} isCompact value={10} ticker="ARK" isMigration />);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render zero", () => {
 		const { asFragment } = render(<AmountLabel isNegative={false} value={0} ticker="ARK" />);
 
