@@ -57,14 +57,6 @@ const TestComponent: React.FC = () => {
 const testingUtils = generateTestingUtils({ providerType: "MetaMask" });
 
 describe("useMetaMask", () => {
-	beforeAll(() => {
-		vi.unmock("ethers");
-	});
-
-	afterAll(() => {
-		vi.mock("ethers");
-	});
-
 	describe("without metamask", () => {
 		describe("with compatible browser", () => {
 			let userAgentSpy: any;

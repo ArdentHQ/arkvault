@@ -31,6 +31,7 @@ describe("Migration Context", () => {
 	let environmentMock;
 	let configurationMock;
 	let profileWatcherMock;
+	let ethersLibraryContractSpy;
 
 	const environmentMockData = {
 		env: {
@@ -44,6 +45,18 @@ describe("Migration Context", () => {
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		vi.mock("ethers");
+
+		vi.unmock("@/app/contexts/Migration/Migration");
+	});
+
+	afterAll(() => {
+		vi.unmock("ethers");
+
+		vi.mock("@/app/contexts/Migration/Migration", () => ({
+			useMigrations: () => ({ migrations: undefined }),
+		}));
 	});
 
 	beforeEach(() => {
@@ -53,12 +66,17 @@ describe("Migration Context", () => {
 		});
 
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
+
+		ethersLibraryContractSpy = Contract.mockImplementation(() => ({
+			getMigrationsByArkTxHash: () => [],
+		}));
 	});
 
 	afterEach(() => {
 		environmentMock.mockRestore();
 		configurationMock.mockRestore();
 		profileWatcherMock.mockRestore();
+		ethersLibraryContractSpy.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {
@@ -74,7 +92,11 @@ describe("Migration Context", () => {
 	});
 
 	it("should load the migrations", async () => {
-		render(<Test />);
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
 
 		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 
@@ -101,7 +123,11 @@ describe("Migration Context", () => {
 			],
 		}));
 
-		render(<Test />);
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
@@ -163,7 +189,11 @@ describe("Migration Context", () => {
 			],
 		}));
 
-		render(<Test />);
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
@@ -233,7 +263,11 @@ describe("Migration Context", () => {
 			],
 		}));
 
-		render(<Test />);
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
@@ -282,7 +316,11 @@ describe("Migration Context", () => {
 			},
 		});
 
-		render(<Test />);
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();

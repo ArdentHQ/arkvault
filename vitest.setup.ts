@@ -5,7 +5,6 @@ import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
-import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
 import { server } from "./src/tests/mocks/server";
 import { Contract } from "ethers";
 import * as matchers from "jest-extended";
@@ -46,6 +45,14 @@ vi.mock("@/app/hooks/use-synchronizer", async () => {
 	};
 });
 
+vi.mock("@/app/contexts/Migration/Migration", () => {
+	return {
+		useMigrations: () => {
+			return { migrations: undefined };
+		},
+	};
+});
+
 vi.mock("react-idle-timer", () => {
 	return {
 		useIdleTimer: (options) => {
@@ -77,12 +84,8 @@ let tippyMock;
 
 const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
-let ethersLibraryContractSpy;
-let profileWatcherMock;
 
 beforeAll(async () => {
-	vi.mock("ethers");
-
 	server.listen({ onUnhandledRequest: "error" });
 
 	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
@@ -108,23 +111,6 @@ beforeEach(() => {
 
 		return originalTippyRender(context);
 	});
-
-	ethersLibraryContractSpy = Contract.mockImplementation(() => ({
-		getMigrationsByArkTxHash: () => [],
-	}));
-
-	const originalProfileWatcher = useProfileWatcher;
-
-	// useProfileWatcher throws an exception on some tests related to the `useLocation`
-	// hook.
-	profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockImplementation(() => {
-		try {
-			const result = originalProfileWatcher();
-			return result;
-		} catch {
-			return undefined;
-		}
-	});
 });
 
 afterEach(() => {
@@ -135,15 +121,9 @@ afterEach(() => {
 	tippyMock.mockRestore();
 
 	localstorageSpy.mockRestore();
-
-	ethersLibraryContractSpy.mockRestore();
-
-	profileWatcherMock.mockRestore();
 });
 
 afterAll(() => {
-	vi.unmock("ethers");
-
 	server.close();
 
 	if (global.gc) {

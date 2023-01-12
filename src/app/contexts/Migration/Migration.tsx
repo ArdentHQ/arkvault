@@ -85,7 +85,7 @@ const transactionMapper = (migration: ARKMigrationViewStructOutput): Migration =
 };
 
 interface MigrationContextType {
-	migrations: Migration[];
+	migrations?: Migration[];
 }
 
 interface Properties {
