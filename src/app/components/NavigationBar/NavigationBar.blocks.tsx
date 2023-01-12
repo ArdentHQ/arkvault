@@ -232,7 +232,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const { t } = useTranslation();
 	const scroll = useScroll();
 	const { openExternal } = useLink();
-	const { isLg, isMd } = useBreakpoint();
+	const { isLg, isMd, isMobileNavigation } = useBreakpoint();
 	const { showSupportChat } = useZendesk();
 
 	const enabledNetworkIds = profileAllEnabledNetworkIds(profile);
@@ -274,55 +274,56 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const renderNavigationMenu = () => (
 		<>
-			<ul className="mr-auto ml-4 hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
-				{navigationMenu.map((menuItem, index) => {
-					if (menuItem.hasGradient) {
-						return <GradientMenuItem key={index} menuItem={menuItem} profileId={profile.id()} />;
-					}
+			{!isMobileNavigation && (
+				<ul className="mr-auto ml-4 flex h-21 space-x-8" data-testid="NavigationBar__menu">
+					{navigationMenu.map((menuItem, index) => {
+						if (menuItem.hasGradient) {
+							return <GradientMenuItem key={index} menuItem={menuItem} profileId={profile.id()} />;
+						}
 
-					return (
-						<li key={index} className="flex">
-							<NavLink
-								to={menuItem.mountPath(profile.id())}
-								title={menuItem.title}
-								className={(isActive) =>
-									cn(
-										"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
-										isActive
-											? "border-b-theme-primary-600 text-theme-text"
-											: "border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text",
-									)
-								}
-								data-ring-focus-margin="-mx-2"
+						return (
+							<li key={index} className="flex">
+								<NavLink
+									to={menuItem.mountPath(profile.id())}
+									title={menuItem.title}
+									className={(isActive) =>
+										cn(
+											"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
+											isActive
+												? "border-b-theme-primary-600 text-theme-text"
+												: "border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text",
+										)
+									}
+									data-ring-focus-margin="-mx-2"
+								>
+									{menuItem.title}
+								</NavLink>
+							</li>
+						);
+					})}
+				</ul>
+			)}
+
+			{isMobileNavigation && (
+				<div data-testid="NavigationBar__menu-toggle" className="mr-auto ml-2 flex content-center items-center">
+					<Dropdown
+						dropdownClass="w-full sm:w-auto mt-6 sm:mt-10 mx-0 rounded-none sm:rounded-xl"
+						toggleContent={(isOpen) => (
+							<button
+								type="button"
+								className="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
 							>
-								{menuItem.title}
-							</NavLink>
-						</li>
-					);
-				})}
-			</ul>
-
-			<div
-				data-testid="NavigationBar__menu-toggle"
-				className="mr-auto ml-2 flex content-center items-center lg:hidden"
-			>
-				<Dropdown
-					dropdownClass="w-full sm:w-auto mt-6 sm:mt-10 mx-0 rounded-none sm:rounded-xl"
-					toggleContent={(isOpen) => (
-						<button
-							type="button"
-							className="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-						>
-							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
-						</button>
-					)}
-					onSelect={handleSelectMenuItem}
-					options={navigationMenu.map((menuItem) => ({
-						label: menuItem.title,
-						value: menuItem.mountPath(profile.id()),
-					}))}
-				/>
-			</div>
+								<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
+							</button>
+						)}
+						onSelect={handleSelectMenuItem}
+						options={navigationMenu.map((menuItem) => ({
+							label: menuItem.title,
+							value: menuItem.mountPath(profile.id()),
+						}))}
+					/>
+				</div>
+			)}
 		</>
 	);
 
