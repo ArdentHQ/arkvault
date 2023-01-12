@@ -1,8 +1,9 @@
 import React from "react";
-
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { Contract } from "ethers";
 import { MigrationProvider, useMigrations } from "./Migration";
-import { render, screen, waitFor } from "@/utils/testing-library";
+import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
+import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testing-library";
 import * as contexts from "@/app/contexts";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 
@@ -24,9 +25,13 @@ const Test = () => {
 	);
 };
 
+let profile: Contracts.IProfile;
+
 describe("Migration Context", () => {
 	let environmentMock;
 	let configurationMock;
+	let profileWatcherMock;
+
 	const environmentMockData = {
 		env: {
 			data: () => ({
@@ -37,16 +42,23 @@ describe("Migration Context", () => {
 		persist: vi.fn(),
 	};
 
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
+
 	beforeEach(() => {
 		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue(environmentMockData);
 		configurationMock = vi.spyOn(contexts, "useConfiguration").mockReturnValue({
 			profileHasSyncedOnce: true,
 		});
+
+		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
 	});
 
 	afterEach(() => {
 		environmentMock.mockRestore();
 		configurationMock.mockRestore();
+		profileWatcherMock.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {
@@ -189,16 +201,6 @@ describe("Migration Context", () => {
 			},
 		});
 
-		let reloadMigrationCallback: any;
-
-		const setTimeoutSpy = vi.spyOn(window, "setTimeout").mockImplementation((callback) => {
-			if (callback.name === "reloadMigrations") {
-				reloadMigrationCallback = callback;
-			}
-
-			return 1;
-		});
-
 		const { BigNumber, constants } = await vi.importActual("ethers");
 
 		const ethersMock = Contract.mockImplementation(() => ({
@@ -225,13 +227,9 @@ describe("Migration Context", () => {
 
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
 
-		reloadMigrationCallback();
-
 		expect(getMigrationMock).toHaveBeenCalledTimes(2);
 
 		ethersMock.mockRestore();
-
-		setTimeoutSpy.mockRestore();
 	});
 
 	it("should throw without provider", () => {

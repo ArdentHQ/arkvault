@@ -126,7 +126,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, [migrations, repository]);
 
 	const loadMigrations = useCallback(async () => {
-		const migrations = repository.all();
+		const migrations = repository!.all();
 
 		const transactionsIds = [
 			...migrations.map((tx: Migration) => tx.id),
