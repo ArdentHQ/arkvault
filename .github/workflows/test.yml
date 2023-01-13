@@ -28,7 +28,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -124,7 +124,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -160,7 +160,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -196,7 +196,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -232,7 +232,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -268,7 +268,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -304,7 +304,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -340,7 +340,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -376,7 +376,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -413,7 +413,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -535,7 +535,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -571,7 +571,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -607,7 +607,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -647,7 +647,7 @@ jobs:
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
