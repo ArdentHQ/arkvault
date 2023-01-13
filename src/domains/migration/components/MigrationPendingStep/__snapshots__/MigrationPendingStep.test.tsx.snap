@@ -270,6 +270,7 @@ Upon completion you will receive a notification.
         </span>
         <button
           class="my-auto whitespace-nowrap css-1bx0hyc"
+          data-testid="MigrationAdd_back"
           type="button"
         >
           <div
@@ -554,6 +555,7 @@ Upon completion you will receive a notification.
         </span>
         <button
           class="my-auto whitespace-nowrap css-1bx0hyc"
+          data-testid="MigrationAdd_back"
           type="button"
         >
           <div
@@ -841,6 +843,7 @@ Upon completion you will receive a notification.
         >
           <button
             class="my-auto whitespace-nowrap css-1bx0hyc"
+            data-testid="MigrationAdd_back"
             type="button"
           >
             <div
@@ -1129,6 +1132,7 @@ Upon completion you will receive a notification.
         >
           <button
             class="my-auto whitespace-nowrap css-1bx0hyc"
+            data-testid="MigrationAdd_back"
             type="button"
           >
             <div

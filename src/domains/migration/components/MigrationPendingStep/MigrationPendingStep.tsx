@@ -96,6 +96,7 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 
 						<ButtonWrapper>
 							<Button
+								data-testid="MigrationAdd_back"
 								variant="primary"
 								onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 								className="my-auto whitespace-nowrap"

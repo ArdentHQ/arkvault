@@ -1,9 +1,10 @@
 import React from "react";
 import { createHashHistory } from "history";
 import { DTO } from "@ardenthq/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationPendingStep } from "./MigrationPendingStep";
-import { renderResponsiveWithRoute, getDefaultProfileId, screen, env } from "@/utils/testing-library";
+import { renderResponsiveWithRoute, render, getDefaultProfileId, screen, env } from "@/utils/testing-library";
 import { useTheme } from "@/app/hooks/use-theme";
 
 const history = createHashHistory();
@@ -71,5 +72,22 @@ describe("MigrationPendingStep", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should redirect to dashboard when clicking back-to-dashboard button", () => {
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/migration/add">
+				<MigrationPendingStep migrationTransaction={transactionFixture} />
+			</Route>,
+			{
+				history,
+				route: migrationUrl,
+			},
+		);
+
+		userEvent.click(screen.getByTestId("MigrationAdd_back"));
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 	});
 });
