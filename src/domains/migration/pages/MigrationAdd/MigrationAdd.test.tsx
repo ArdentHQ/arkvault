@@ -67,6 +67,8 @@ describe("MigrationAdd", () => {
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 
 		profile.wallets().push(wallet);
+
+		await profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0].synchroniser().identity();
 	});
 
 	it("should render", () => {
@@ -115,8 +117,6 @@ describe("MigrationAdd", () => {
 	it("should got to review step and go back", async () => {
 		renderComponent();
 
-		await profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0].synchroniser().identity();
-
 		const signatory = await profile
 			.wallets()
 			.findByCoinWithNetwork("ARK", "ark.devnet")[0]
@@ -155,8 +155,6 @@ describe("MigrationAdd", () => {
 
 	it("should complete migration steps", async () => {
 		renderComponent();
-
-		await profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0].synchroniser().identity();
 
 		const signatory = await profile
 			.wallets()
@@ -199,8 +197,6 @@ describe("MigrationAdd", () => {
 
 	it("should complete migration steps", async () => {
 		renderComponent();
-
-		await profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0].synchroniser().identity();
 
 		const signatory = await profile
 			.wallets()
@@ -268,8 +264,6 @@ describe("MigrationAdd", () => {
 	it("should authenticate with a ledger wallet", async () => {
 		mockNanoXTransport();
 		renderComponent();
-
-		await profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0].synchroniser().identity();
 
 		const signatory = await profile
 			.wallets()

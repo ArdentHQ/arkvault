@@ -76,7 +76,8 @@ describe("MigrationPendingStep", () => {
 
 	it("should redirect to dashboard when clicking back-to-dashboard button", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const { asFragment } = render(
+
+		render(
 			<Route path="/profiles/:profileId/migration/add">
 				<MigrationPendingStep migrationTransaction={transactionFixture} />
 			</Route>,
