@@ -6,10 +6,23 @@ import userEvent from "@testing-library/user-event";
 import { MigrationConnectStep } from "./MigrationConnectStep";
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
 import { render, screen, env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
+import { Form } from "@/app/components/Form";
 import * as useMetaMask from "@/domains/migration/hooks/use-meta-mask";
+import { useMigrationForm } from "@/domains/migration/hooks";
+
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
+
+const WrapperForm = ({ children }: { children: React.ReactElement }) => {
+	const form = useMigrationForm();
+
+	return (
+		<Form className="mx-auto max-w-xl" context={form}>
+			{children}
+		</Form>
+	);
+};
 
 const renderComponent = (profileId = profile.id()) => {
 	const migrationUrl = `/profiles/${profileId}/migration/add`;
@@ -17,7 +30,9 @@ const renderComponent = (profileId = profile.id()) => {
 
 	return render(
 		<Route path="/profiles/:profileId/migration/add">
-			<MigrationConnectStep />
+			<WrapperForm>
+				<MigrationConnectStep />
+			</WrapperForm>
 		</Route>,
 		{
 			history,
@@ -27,20 +42,13 @@ const renderComponent = (profileId = profile.id()) => {
 };
 
 describe("MigrationConnectStep", () => {
-	let arkMainnetWallet: Contracts.IReadWriteWallet;
+	let wallet: Contracts.IReadWriteWallet;
 	let arkMainnetWalletSpy: any;
 
-	beforeAll(async () => {
+	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		const { wallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: "ark.mainnet",
-		});
-
-		arkMainnetWallet = wallet;
-
-		profile.wallets().push(arkMainnetWallet);
+		wallet = profile.wallets().first();
 	});
 
 	it("should render ", () => {
@@ -55,14 +63,6 @@ describe("MigrationConnectStep", () => {
 		expect(
 			screen.getByText(migrationTranslations.MIGRATION_ADD.STEP_CONNECT.FORM.AMOUNT_YOU_GET),
 		).toBeInTheDocument();
-	});
-
-	it("should redirect user to migration page if press cancel button", () => {
-		renderComponent();
-
-		userEvent.click(screen.getByTestId("MigrationAdd__cancel-btn"));
-
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/migration`);
 	});
 
 	it("should show a message when account is not on polygon network", async () => {
@@ -109,7 +109,7 @@ describe("MigrationConnectStep", () => {
 
 	describe("with valid wallets", () => {
 		beforeAll(() => {
-			arkMainnetWalletSpy = vi.spyOn(arkMainnetWallet, "balance").mockReturnValue(0.1);
+			arkMainnetWalletSpy = vi.spyOn(wallet, "balance").mockReturnValue(0.1);
 		});
 
 		afterAll(() => {
@@ -216,47 +216,14 @@ describe("MigrationConnectStep", () => {
 
 			userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
 
-			await waitFor(() =>
-				expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkMainnetWallet.address()),
-			);
-		});
-
-		it("should enable the continue button if has address and selected account", async () => {
-			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
-				account: "0x0000000000000000000000000000000000000000",
-				connectWallet: vi.fn(),
-				connecting: false,
-				isOnPolygonNetwork: true,
-				needsMetaMask: false,
-				supportsMetaMask: true,
-			});
-
-			renderComponent();
-
-			expect(screen.getByTestId("MigrationAdd__cancel__continue-btn")).toBeDisabled();
-
-			userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
-
-			await expect(screen.findByTestId("SearchWalletListItem__select-0")).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
-
-			await waitFor(() =>
-				expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkMainnetWallet.address()),
-			);
-
-			expect(screen.getByTestId("MigrationAdd__cancel__continue-btn")).toBeEnabled();
-
-			// @TODO: test the continue button behaviour (currently does nothing)
-			userEvent.click(screen.getByTestId("MigrationAdd__cancel__continue-btn"));
-
-			useMetaMaskMock.mockRestore();
+			await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 		});
 	});
 
 	describe("with invalid wallets", () => {
 		beforeAll(() => {
-			arkMainnetWalletSpy = vi.spyOn(arkMainnetWallet, "balance").mockReturnValue(0.03);
+			arkMainnetWalletSpy = vi.spyOn(wallet, "balance").mockReturnValue(0.003);
+			vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet]);
 		});
 
 		afterAll(() => {

@@ -34,7 +34,7 @@ export const MigrationDisclaimer = ({ onClose, onCancel, onConfirm, isOpen }: Mi
 	return (
 		<Modal
 			title={t("MIGRATION.DISCLAIMER_MODAL.TITLE")}
-			image={<Image name="Warning" useAccentColor={false} className="my-8 mx-auto max-w-52" />}
+			image={<Image name="Warning" useAccentColor={false} className="mx-auto mt-4 mb-8 max-w-52" />}
 			size="2xl"
 			isOpen={isOpen}
 			onClose={onClose}
@@ -50,7 +50,8 @@ export const MigrationDisclaimer = ({ onClose, onCancel, onConfirm, isOpen }: Mi
 							name="agree"
 							onChange={agreeCheckboxHandler}
 						/>
-						<span className="whitespace-pre-line text-sm text-theme-secondary-700 dark:text-theme-secondary-600">
+
+						<span className="whitespace-pre-line text-sm leading-6 text-theme-secondary-700 dark:text-theme-secondary-600">
 							<Trans
 								i18nKey="MIGRATION.DISCLAIMER_MODAL.DISCLAIMER"
 								components={{

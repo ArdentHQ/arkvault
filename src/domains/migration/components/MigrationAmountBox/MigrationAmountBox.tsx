@@ -31,12 +31,12 @@ export const MigrationAmountBox = ({ ticker, ...properties }: Properties) => {
 			<div className="relative p-4">
 				<div className="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x">
 					<div className="mb-4 flex flex-col justify-center space-y-3 py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left">
-						<AmountLabel>{t("TRANSACTION.TRANSACTION_AMOUNT")}</AmountLabel>
+						<AmountLabel>{t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.AMOUNT_SEND")}</AmountLabel>
 						<Amount className="text-md font-semibold" ticker={ticker} value={amount} />
 					</div>
 
 					<div className="flex flex-col justify-center space-y-3 p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right">
-						<AmountLabel>{t("MIGRATION.MIGRATION_ADD.STEP_REVIEW.AMOUNT_SEND")}</AmountLabel>
+						<AmountLabel>{t("TRANSACTION.TRANSACTION_FEE")}</AmountLabel>
 						<Amount ticker={ticker} value={fee} className="text-md mt-1 font-semibold" />
 					</div>
 				</div>

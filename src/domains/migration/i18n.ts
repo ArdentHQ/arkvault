@@ -51,6 +51,10 @@ export const translations = {
 			TITLE: "Migration",
 		},
 
+		STEP_ERROR: {
+			TITLE: "Transaction Error",
+		},
+
 		STEP_PENDING: {
 			DESCRIPTION: "Migration is processing, you will be notified once the process is complete.",
 			MIGRATION_INFO:
@@ -75,6 +79,7 @@ export const translations = {
 	NOTIFICATIONS: {
 		MIGRATION_SUCCESSFUL: "Migration Successful",
 	},
+
 	PAGE_MIGRATION: {
 		NEW_MIGRATION: "New Migration",
 		NO_MIGRATIONS: "You don't have any migration transactions yet.",
@@ -89,5 +94,6 @@ export const translations = {
 		CONFIRMED: "Confirmed",
 		WAITING: "Waiting",
 	},
+
 	TRANSACTION_ID: "Transaction ID",
 };

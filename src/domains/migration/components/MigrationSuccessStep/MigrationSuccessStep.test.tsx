@@ -1,12 +1,23 @@
 import React from "react";
 import { createHashHistory } from "history";
-import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationSuccessStep } from "./MigrationSuccessStep";
-import { renderResponsiveWithRoute, getDefaultProfileId, screen } from "@/utils/testing-library";
+import { renderResponsiveWithRoute, getDefaultProfileId } from "@/utils/testing-library";
+import { useMigrationForm } from "@/domains/migration/hooks";
+import { Form } from "@/app/components/Form";
 
 const history = createHashHistory();
 let migrationUrl: string;
+
+const WrapperForm = ({ children }: { children: React.ReactElement }) => {
+	const form = useMigrationForm();
+
+	return (
+		<Form className="mx-auto max-w-xl" context={form}>
+			{children}
+		</Form>
+	);
+};
 
 describe("MigrationSuccessStep", () => {
 	beforeAll(() => {
@@ -15,9 +26,11 @@ describe("MigrationSuccessStep", () => {
 	});
 
 	it.each(["xs", "sm"])("should render in %s", (breakpoint) => {
-		renderResponsiveWithRoute(
+		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/migration/add">
-				<MigrationSuccessStep />
+				<WrapperForm>
+					<MigrationSuccessStep />
+				</WrapperForm>
 			</Route>,
 			breakpoint,
 			{
@@ -26,8 +39,6 @@ describe("MigrationSuccessStep", () => {
 			},
 		);
 
-		expect(screen.getByTestId("BackToDashboard__button")).toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("BackToDashboard__button"));
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

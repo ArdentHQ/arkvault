@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useFormContext } from "react-hook-form";
+import { UseFormMethods } from "react-hook-form";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Services } from "@ardenthq/sdk";
@@ -8,23 +8,36 @@ import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/Send
 import { useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { useLedgerContext } from "@/app/contexts";
+import { MigrationForm } from "@/domains/migration/hooks/use-migration-form";
 
 export const useMigrationTransaction = ({
-	wallet,
+	context,
 	profile,
 }: {
-	wallet: Contracts.IReadWriteWallet;
+	context: UseFormMethods<MigrationForm>;
 	profile: Contracts.IProfile;
 }) => {
 	const [isSending, setIsSending] = useState(false);
 	const abortReference = useRef(new AbortController());
 
-	const { watch } = useFormContext();
+	const { watch } = context;
+
 	const transactionBuilder = useTransactionBuilder();
 	const { connect } = useLedgerContext();
 
-	const { fee, encryptionPassword, mnemonic, privateKey, secondMnemonic, secondSecret, secret, wif, recipients } =
-		watch();
+	const {
+		fee,
+		encryptionPassword,
+		migrationAddress,
+		mnemonic,
+		privateKey,
+		secondMnemonic,
+		secondSecret,
+		secret,
+		wif,
+		recipients,
+		wallet,
+	} = watch();
 
 	const signTransaction = async () => {
 		const signatory = await wallet.signatoryFactory().make({
@@ -41,6 +54,7 @@ export const useMigrationTransaction = ({
 			data: await buildTransferData({
 				coin: wallet.coin(),
 				isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
+				memo: migrationAddress,
 				recipients,
 			}),
 			fee: +fee,
