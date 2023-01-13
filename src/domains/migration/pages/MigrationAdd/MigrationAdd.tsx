@@ -52,7 +52,6 @@ export const MigrationAdd = () => {
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const history = useHistory();
-	const { isXs } = useBreakpoint();
 
 	const activeProfile = useActiveProfile();
 

@@ -79,6 +79,18 @@ describe("MigrationAdd", () => {
 		);
 	});
 
+	it("should render connect step and go back", () => {
+		renderComponent();
+
+		expect(screen.getByTestId("header__title")).toHaveTextContent(
+			migrationTranslations.MIGRATION_ADD.STEP_CONNECT.TITLE,
+		);
+
+		userEvent.click(screen.getByTestId("MigrationAdd__back-button"));
+
+		expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/migration`);
+	});
+
 	it.each(["xs", "sm", "md"])("should render form button wrapper in %s", (breakpoint) => {
 		const { asFragment } = renderResponsive(<SuccessButtonWrapper>test</SuccessButtonWrapper>, breakpoint);
 
@@ -98,6 +110,91 @@ describe("MigrationAdd", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should got to review step and go back", async () => {
+		renderComponent();
+
+		await profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0].synchroniser().identity();
+
+		const signatory = await profile
+			.wallets()
+			.findByCoinWithNetwork("ARK", "ark.devnet")[0]
+			.signatoryFactory()
+			.make({
+				secret,
+			});
+
+		vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+
+		expect(screen.getByTestId("header__title")).toBeInTheDocument();
+
+		expect(screen.getByTestId("header__title")).toHaveTextContent(
+			migrationTranslations.MIGRATION_ADD.STEP_CONNECT.TITLE,
+		);
+
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+		await expect(screen.findByTestId("SearchWalletListItem__select-2")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("SearchWalletListItem__select-2"));
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
+
+		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+
+		await expect(screen.findByTestId("MigrationReview")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("MigrationAdd__back-button"));
+
+		expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/migration/add`);
+	});
+
+	it("should complete migration steps", async () => {
+		renderComponent();
+
+		await profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0].synchroniser().identity();
+
+		const signatory = await profile
+			.wallets()
+			.findByCoinWithNetwork("ARK", "ark.devnet")[0]
+			.signatoryFactory()
+			.make({
+				secret,
+			});
+
+		vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+
+		expect(screen.getByTestId("header__title")).toBeInTheDocument();
+
+		expect(screen.getByTestId("header__title")).toHaveTextContent(
+			migrationTranslations.MIGRATION_ADD.STEP_CONNECT.TITLE,
+		);
+
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+		await expect(screen.findByTestId("SearchWalletListItem__select-2")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("SearchWalletListItem__select-2"));
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
+
+		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+
+		await expect(screen.findByTestId("MigrationReview")).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
+		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/migration/add`);
 	});
 
 	it("should complete migration steps", async () => {

@@ -45,7 +45,7 @@ describe("MigrationConnectStep", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let arkMainnetWalletSpy: any;
 
-	beforeAll(async () => {
+	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		wallet = profile.wallets().first();
