@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable sonarjs/cognitive-complexity */
 import React from "react";
 import { generateTestingUtils } from "eth-testing";
 import userEvent from "@testing-library/user-event";
