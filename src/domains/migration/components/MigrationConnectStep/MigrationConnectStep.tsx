@@ -288,6 +288,7 @@ export const MigrationConnectStep = () => {
 											type="button"
 											onClick={switchToPolygonNetwork}
 											className="link flex items-center space-x-2"
+											data-testid="MigrationStep__switchtopolygon"
 										>
 											<Icon name="Polygon" />
 

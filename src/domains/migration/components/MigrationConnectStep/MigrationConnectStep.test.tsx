@@ -79,6 +79,28 @@ describe("MigrationConnectStep", () => {
 
 		await expect(screen.findByTestId("MigrationStep__wrongnetwork")).resolves.toBeVisible();
 
+		expect(screen.getByTestId("MigrationStep__switchtopolygon")).toBeVisible();
+
+		useMetaMaskMock.mockRestore();
+	});
+
+	it("should show a switching message", async () => {
+		const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+			account: "0x0000000000000000000000000000000000000000",
+			connectWallet: vi.fn(),
+			connecting: false,
+			isOnPolygonNetwork: false,
+			needsMetaMask: false,
+			supportsMetaMask: true,
+			switching: true,
+		});
+
+		renderComponent();
+
+		await expect(screen.findByTestId("MigrationStep__wrongnetwork")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("MigrationStep__switching")).toBeVisible();
+
 		useMetaMaskMock.mockRestore();
 	});
 

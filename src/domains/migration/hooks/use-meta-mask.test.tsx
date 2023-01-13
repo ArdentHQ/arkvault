@@ -8,6 +8,8 @@ import { render, screen, waitFor } from "@/utils/testing-library";
 const TestComponent: React.FC = () => {
 	const {
 		initialized,
+		switching,
+		switchToPolygonNetwork,
 		connecting,
 		account,
 		chainId,
@@ -29,6 +31,10 @@ const TestComponent: React.FC = () => {
 		return <div data-testid="TestComponent__connecting">Connecting</div>;
 	}
 
+	if (switching) {
+		return <div data-testid="TestComponent__switching">Switching</div>;
+	}
+
 	if (needsMetaMask) {
 		return <div data-testid="TestComponent__requiremetamask">Metamask is required</div>;
 	}
@@ -48,6 +54,9 @@ const TestComponent: React.FC = () => {
 					) : (
 						<div data-testid="TestComponent__notinpolygon" />
 					)}
+				</li>
+				<li>
+					<button data-testid="TestComponent__switchnetwork" onClick={switchToPolygonNetwork} />
 				</li>
 			</ul>
 		</div>
@@ -327,6 +336,112 @@ describe("useMetaMask", () => {
 				await expect(screen.findByTestId("TestComponent__chain")).resolves.toBeVisible();
 
 				expect(screen.getByTestId("TestComponent__chain")).toHaveTextContent("1");
+			});
+
+			it("should switch to polygon network", async () => {
+				render(<TestComponent />);
+
+				const ethereumRequestSpy = vi
+					.spyOn(global.window.ethereum, "request")
+					// eth_chainId
+					.mockImplementationOnce((parameters) => {
+						if (parameters.method !== "eth_chainId") {
+							throw new Error("Is not eth_chainId");
+						}
+						return Promise.resolve("0x1");
+					})
+					// wallet_switchEthereumChain
+					.mockImplementationOnce((parameters) => {
+						if (parameters.method !== "wallet_switchEthereumChain") {
+							throw new Error("Is not wallet_switchEthereumChain");
+						}
+
+						testingUtils.mockChainChanged("0x89");
+
+						return Promise.resolve(true);
+					});
+
+				await expect(screen.findByTestId("TestComponent__switchnetwork")).resolves.toBeVisible();
+
+				userEvent.click(screen.getByTestId("TestComponent__switchnetwork"));
+
+				await expect(screen.findByTestId("TestComponent__switching")).resolves.toBeVisible();
+
+				await expect(screen.findByTestId("TestComponent__isonpolygon")).resolves.toBeVisible();
+
+				ethereumRequestSpy.mockRestore();
+			});
+
+			it("should switch add polygon network if network not added", async () => {
+				render(<TestComponent />);
+
+				const ethereumRequestSpy = vi
+					.spyOn(global.window.ethereum, "request")
+					// eth_chainId
+					.mockImplementationOnce((parameters) => {
+						if (parameters.method !== "eth_chainId") {
+							throw new Error("Is not eth_chainId");
+						}
+						return Promise.resolve("0x1");
+					})
+					// wallet_switchEthereumChain
+					.mockImplementationOnce((parameters) => {
+						if (parameters.method !== "wallet_switchEthereumChain") {
+							throw new Error("Is not wallet_switchEthereumChain");
+						}
+
+						throw {
+							code: 4902,
+						};
+					})
+					.mockImplementationOnce((parameters) => {
+						if (parameters.method !== "wallet_addEthereumChain") {
+							throw new Error("Is not wallet_addEthereumChain");
+						}
+
+						testingUtils.mockChainChanged("0x89");
+						return Promise.resolve(true);
+					});
+
+				await expect(screen.findByTestId("TestComponent__switchnetwork")).resolves.toBeVisible();
+
+				userEvent.click(screen.getByTestId("TestComponent__switchnetwork"));
+
+				await expect(screen.findByTestId("TestComponent__switching")).resolves.toBeVisible();
+
+				await expect(screen.findByTestId("TestComponent__isonpolygon")).resolves.toBeVisible();
+
+				ethereumRequestSpy.mockRestore();
+			});
+
+			it("should remove switching state on error", async () => {
+				render(<TestComponent />);
+
+				const ethereumRequestSpy = vi
+					.spyOn(global.window.ethereum, "request")
+					// eth_chainId
+					.mockImplementationOnce((parameters) => {
+						if (parameters.method !== "eth_chainId") {
+							throw new Error("Is not eth_chainId");
+						}
+						return Promise.resolve("0x1");
+					})
+					// wallet_switchEthereumChain
+					.mockImplementationOnce((parameters) => {
+						if (parameters.method !== "wallet_switchEthereumChain") {
+							throw new Error("Is not wallet_switchEthereumChain");
+						}
+
+						throw new Error("Random error");
+					});
+
+				await expect(screen.findByTestId("TestComponent__switchnetwork")).resolves.toBeVisible();
+
+				userEvent.click(screen.getByTestId("TestComponent__switchnetwork"));
+
+				expect(screen.queryByTestId("TestComponent__switching")).not.toBeInTheDocument();
+
+				ethereumRequestSpy.mockRestore();
 			});
 
 			it("should handle chain change", async () => {
