@@ -23,7 +23,7 @@ export const MigrationReview = ({
 	const { t } = useTranslation();
 
 	return (
-		<div className={cn("space-y-3 sm:-mx-5", className)}>
+		<div className={cn("space-y-3 sm:-mx-5", className)} data-testid="MigrationReview">
 			<div className="relative rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
 				<MigrationAddress address={wallet.address()} label={t("MIGRATION.MIGRATION_ADD.FROM_ARK_ADDRESS")} />
 

@@ -40,6 +40,7 @@ export const useMigrationTransaction = ({
 	} = watch();
 
 	const signTransaction = async () => {
+		console.log("case 1");
 		const signatory = await wallet.signatoryFactory().make({
 			encryptionPassword,
 			mnemonic,
@@ -50,6 +51,7 @@ export const useMigrationTransaction = ({
 			wif,
 		});
 
+		console.log("case 2");
 		const transactionInput: Services.TransactionInputs = {
 			data: await buildTransferData({
 				coin: wallet.coin(),
@@ -69,6 +71,7 @@ export const useMigrationTransaction = ({
 	};
 
 	const sendTransaction = async () => {
+		console.log("sending transaction-----------------------------");
 		setIsSending(true);
 
 		if (wallet.isLedger()) {

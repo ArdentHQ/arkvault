@@ -28,6 +28,7 @@ exports[`MigrationReviewStep > should render 1`] = `
     </div>
     <div
       class="space-y-3 sm:-mx-5"
+      data-testid="MigrationReview"
     >
       <div
         class="relative rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"

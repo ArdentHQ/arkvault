@@ -36,7 +36,7 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 				subtitle={t("MIGRATION.MIGRATION_ADD.STEP_PENDING.DESCRIPTION")}
 			/>
 
-			<div className="my-5 flex flex-col">
+			<div className="my-5 flex flex-col" data-testid="MigrationPendingStep">
 				<div className="relative mx-auto mb-6 flex w-full items-center justify-between gap-x-5">
 					<Image name="MigrationPendingBanner" domain="migration" useAccentColor={false} className="w-full" />
 

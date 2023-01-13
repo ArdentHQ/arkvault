@@ -24,6 +24,7 @@ exports[`MigrationPendingStep > should render in sm 1`] = `
   </div>
   <div
     class="my-5 flex flex-col"
+    data-testid="MigrationPendingStep"
   >
     <div
       class="relative mx-auto mb-6 flex w-full items-center justify-between gap-x-5"
@@ -309,6 +310,7 @@ exports[`MigrationPendingStep > should render in sm in dark mode 1`] = `
   </div>
   <div
     class="my-5 flex flex-col"
+    data-testid="MigrationPendingStep"
   >
     <div
       class="relative mx-auto mb-6 flex w-full items-center justify-between gap-x-5"
@@ -594,6 +596,7 @@ exports[`MigrationPendingStep > should render in xs 1`] = `
   </div>
   <div
     class="my-5 flex flex-col"
+    data-testid="MigrationPendingStep"
   >
     <div
       class="relative mx-auto mb-6 flex w-full items-center justify-between gap-x-5"
@@ -883,6 +886,7 @@ exports[`MigrationPendingStep > should render in xs in dark mode 1`] = `
   </div>
   <div
     class="my-5 flex flex-col"
+    data-testid="MigrationPendingStep"
   >
     <div
       class="relative mx-auto mb-6 flex w-full items-center justify-between gap-x-5"

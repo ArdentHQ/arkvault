@@ -300,6 +300,7 @@ exports[`MigrationAuthenticationStep > should render ledger authentication step 
       </section>
       <div
         class="space-y-3 sm:-mx-5"
+        data-testid="MigrationReview"
       >
         <div
           class="relative rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
