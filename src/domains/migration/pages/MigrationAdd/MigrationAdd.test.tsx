@@ -1,6 +1,6 @@
 import React from "react";
 import { createHashHistory } from "history";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationAdd, SuccessButtonWrapper } from "./MigrationAdd";

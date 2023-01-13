@@ -2,7 +2,7 @@ import React from "react";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import { MigrationSuccessStep } from "./MigrationSuccessStep";
-import { renderResponsiveWithRoute, getDefaultProfileId, screen } from "@/utils/testing-library";
+import { renderResponsiveWithRoute, getDefaultProfileId } from "@/utils/testing-library";
 import { useMigrationForm } from "@/domains/migration/hooks";
 import { Form } from "@/app/components/Form";
 

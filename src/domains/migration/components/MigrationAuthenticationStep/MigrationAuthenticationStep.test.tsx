@@ -1,5 +1,5 @@
 import React from "react";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import { MigrationAuthenticationStep } from "./MigrationAuthenticationStep";

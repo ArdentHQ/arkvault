@@ -32,7 +32,7 @@ const MigrationForm = ({ wallet, profile }: { wallet: Contracts.IReadWriteWallet
 		context.setValue("wallet", wallet);
 	}, []);
 
-	const { sendTransaction, abortTransaction } = useMigrationTransaction({ profile, context });
+	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context, profile });
 	const [signedTransaction, setSignedTransaction] = useState(undefined);
 
 	const handlSendTransaction = async () => {

@@ -1,10 +1,10 @@
 import React from "react";
 import { createHashHistory } from "history";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationAdd } from "./MigrationAdd";
-import { render, getDefaultProfileId, screen, renderResponsiveWithRoute, waitFor, env } from "@/utils/testing-library";
+import { render, getDefaultProfileId, screen, waitFor, env } from "@/utils/testing-library";
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
 import * as useMetaMask from "@/domains/migration/hooks/use-meta-mask";
 import { migrationNetwork } from "@/utils/polygon-migration";
