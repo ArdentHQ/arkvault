@@ -1,7 +1,6 @@
 import React from "react";
 import { createHashHistory } from "history";
 import { DTO } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationPendingStep } from "./MigrationPendingStep";
 import { renderResponsiveWithRoute, getDefaultProfileId, screen, env } from "@/utils/testing-library";
@@ -9,7 +8,7 @@ import { useTheme } from "@/app/hooks/use-theme";
 
 const history = createHashHistory();
 let migrationUrl: string;
-let transactionFixture;
+let transactionFixture: DTO.ExtendedSignedTransactionData;
 
 describe("MigrationPendingStep", () => {
 	beforeAll(async () => {
