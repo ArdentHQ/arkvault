@@ -93,7 +93,16 @@ const PolygonFieldMessage = ({
 };
 
 export const MigrationConnectStep = () => {
-	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet, connecting, supportsMetaMask } = useMetaMask();
+	const {
+		needsMetaMask,
+		isOnPolygonNetwork,
+		account,
+		connectWallet,
+		connecting,
+		switching,
+		supportsMetaMask,
+		switchToPolygonNetwork,
+	} = useMetaMask();
 	const history = useHistory();
 	const { openExternal } = useLink();
 
@@ -261,6 +270,31 @@ export const MigrationConnectStep = () => {
 										linkMigrationGuide: <Link to={MIGRATION_GUIDE_URL} isExternal />,
 									}}
 								/>
+
+								<div className="mt-3 flex justify-center border-t border-theme-secondary-300 p-3 dark:border-theme-secondary-800">
+									{switching ? (
+										<div
+											data-testid="MigrationStep__switching"
+											className="flex items-center space-x-2"
+										>
+											<Spinner size="sm" theme="system" width={3} />
+
+											<span className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+												{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.SWITCHING_NETWORK")}
+											</span>
+										</div>
+									) : (
+										<button
+											type="button"
+											onClick={switchToPolygonNetwork}
+											className="link flex items-center space-x-2"
+										>
+											<Icon name="Polygon" />
+
+											<span>{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.SWITCH_TO_POLYGON")}</span>
+										</button>
+									)}
+								</div>
 							</div>
 						</div>
 					)}

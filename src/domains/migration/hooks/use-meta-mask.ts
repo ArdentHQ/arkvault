@@ -48,6 +48,7 @@ export const useMetaMask = () => {
 	const [account, setAccount] = useState<string | null>();
 	const [ethereumProvider, setEthereumProvider] = useState<ethers.providers.Web3Provider>();
 	const [connecting, setConnecting] = useState<boolean>(false);
+	const [switching, setSwitching] = useState<boolean>(false);
 	const isOnPolygonNetwork = useMemo(() => chainId === POLYGON_NETWORK_ID, [chainId]);
 
 	const supportsMetaMask = isMetaMaskSupportedBrowser();
@@ -161,6 +162,23 @@ export const useMetaMask = () => {
 		setConnecting(false);
 	}, [requestChainAndAccount]);
 
+	const switchToPolygonNetwork = useCallback(async () => {
+		setSwitching(true);
+
+		const ethereum = (window as WindowWithEthereum).ethereum!;
+
+		try {
+			await ethereum.request({
+				method: "wallet_switchEthereumChain",
+				params: [{ chainId: ethers.utils.hexlify(POLYGON_NETWORK_ID) }],
+			});
+		} catch (error) {
+			console.error(error);
+		}
+
+		setSwitching(false);
+	}, []);
+
 	return {
 		account,
 		chainId,
@@ -170,5 +188,7 @@ export const useMetaMask = () => {
 		isOnPolygonNetwork,
 		needsMetaMask,
 		supportsMetaMask,
+		switchToPolygonNetwork,
+		switching,
 	};
 };
