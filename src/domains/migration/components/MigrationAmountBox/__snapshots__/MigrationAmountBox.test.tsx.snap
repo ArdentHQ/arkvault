@@ -17,7 +17,7 @@ exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.
           <span
             class="css-1j6ndo3"
           >
-            Transaction Amount
+            Amount You Send
           </span>
           <span
             class="whitespace-nowrap text-md font-semibold"
@@ -32,7 +32,7 @@ exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.
           <span
             class="css-1j6ndo3"
           >
-            Amount You Send
+            Transaction Fee
           </span>
           <span
             class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -109,7 +109,7 @@ exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.
           <span
             class="css-1j6ndo3"
           >
-            Transaction Amount
+            Amount You Send
           </span>
           <span
             class="whitespace-nowrap text-md font-semibold"
@@ -124,7 +124,7 @@ exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.
           <span
             class="css-1j6ndo3"
           >
-            Amount You Send
+            Transaction Fee
           </span>
           <span
             class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -201,7 +201,7 @@ exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.
           <span
             class="css-1j6ndo3"
           >
-            Transaction Amount
+            Amount You Send
           </span>
           <span
             class="whitespace-nowrap text-md font-semibold"
@@ -216,7 +216,7 @@ exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.
           <span
             class="css-1j6ndo3"
           >
-            Amount You Send
+            Transaction Fee
           </span>
           <span
             class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -293,7 +293,7 @@ exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.
           <span
             class="css-1j6ndo3"
           >
-            Transaction Amount
+            Amount You Send
           </span>
           <span
             class="whitespace-nowrap text-md font-semibold"
@@ -308,7 +308,7 @@ exports[`MigrationAmountBox > should render and subtract amount of 0.1 fee of 0.
           <span
             class="css-1j6ndo3"
           >
-            Amount You Send
+            Transaction Fee
           </span>
           <span
             class="whitespace-nowrap text-md mt-1 font-semibold"

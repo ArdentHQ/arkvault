@@ -1,5 +1,5 @@
 import React from "react";
-import { MigrationReviewStep } from "./MigrationReviewStep";
+import { MigrationErrorStep } from "./MigrationErrorStep";
 import { render, env, getDefaultProfileId } from "@/utils/testing-library";
 import { Form } from "@/app/components/Form";
 import { useMigrationForm } from "@/domains/migration/hooks";
@@ -16,11 +16,11 @@ const WrapperForm = ({ children }: { children: React.ReactElement }) => {
 	);
 };
 
-describe("MigrationReviewStep", () => {
+describe("MigrationErrorStep", () => {
 	it("should render", () => {
 		const { asFragment } = render(
 			<WrapperForm>
-				<MigrationReviewStep />
+				<MigrationErrorStep />
 			</WrapperForm>,
 		);
 

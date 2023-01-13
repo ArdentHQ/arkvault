@@ -7648,7 +7648,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
                       <p
                         class="hidden text-theme-secondary-text md:block"
                       >
-                        An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+                        An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
                       </p>
                       <div
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
@@ -7695,7 +7695,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
                         <div
                           class="css-6o9bco"
                         >
-                          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+                          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
                         </div>
                       </div>
                       <div

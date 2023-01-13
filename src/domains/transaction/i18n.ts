@@ -33,7 +33,7 @@ export const translations = {
 	ENCRYPTION_PASSWORD: "Encryption Password",
 	ERROR: {
 		DESCRIPTION:
-			"An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet",
+			"An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.",
 		TITLE: "Transaction Error",
 	},
 	EXPIRATION: {
