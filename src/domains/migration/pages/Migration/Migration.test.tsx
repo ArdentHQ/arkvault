@@ -5,7 +5,8 @@ import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import { Migration } from "./Migration";
 import { render, screen, env, getDefaultProfileId, waitFor, within } from "@/utils/testing-library";
-
+import { MigrationTransactionStatus, Migration as MigrationType } from "@/domains/migration/migration.contracts";
+import * as context from "@/app/contexts";
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
@@ -87,9 +88,24 @@ describe("Migration", () => {
 	});
 
 	it("should display details of migration transaction", () => {
+		const migrations: MigrationType[] = [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		];
+
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations }));
+
 		renderComponent();
 
 		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
+
+		useMigrationsSpy.mockRestore();
 
 		// @TBD
 	});
