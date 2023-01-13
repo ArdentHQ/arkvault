@@ -13,6 +13,7 @@ import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
 import { MigrationAddress, MigrationDetail } from "@/domains/migration/components/MigrationAddress";
+import { polygonTransactionLink } from "@/utils/polygon-migration";
 
 const migrationTransaction: any = {
 	address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
@@ -77,7 +78,7 @@ export const MigrationSuccessStep: React.FC = () => {
 						</span>
 						<span ref={reference} className="overflow-hidden">
 							<Link
-								to={`https://polygonscan.com/tx/${migrationTransaction.id}`}
+								to={polygonTransactionLink(migrationTransaction.id)}
 								tooltip={migrationTransaction.id}
 								showExternalIcon={false}
 								isExternal

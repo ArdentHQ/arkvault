@@ -8,9 +8,7 @@ import {
 import { useEnvironmentContext } from "@/app/contexts";
 import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
-
-const CONTRACT_ADDRESS = import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
-const POLYGON_RPC_URL = import.meta.env.VITE_POLYGON_RPC_URL;
+import { polygonContractAddress, polygonRpcUrl } from "@/utils/polygon-migration";
 
 const contractABI = [
 	{
@@ -141,9 +139,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 		// transactions are removed
 		// const transactionsIds = migrations.map((tx: Migration) => tx.id);
 
-		const provider = new ethers.providers.JsonRpcProvider(POLYGON_RPC_URL);
+		const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
 
-		const contract = new Contract(CONTRACT_ADDRESS, contractABI, provider);
+		const contract = new Contract(polygonContractAddress(), contractABI, provider);
 
 		const contractMigrations: ARKMigrationViewStructOutput[] = await contract.getMigrationsByArkTxHash(
 			transactionsIds,

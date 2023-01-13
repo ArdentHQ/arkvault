@@ -7,5 +7,13 @@ export const metamaskUrl = () => "https://metamask.io/";
 
 export const migrationNetwork = () => import.meta.env.VITE_MIGRATION_NETWORK || "ark.devnet";
 
+export const polygonExplorerLink = () => import.meta.env.VITE_POLYGON_EXPLORER_URL || "https://mumbai.polygonscan.com";
+
+export const polygonTransactionLink = (transactionId: string) => `${polygonExplorerLink()}/tx/${transactionId}`;
+
+export const polygonContractAddress = () => import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
+
+export const polygonRpcUrl = () => import.meta.env.VITE_POLYGON_RPC_URL || "https://rpc-mumbai.maticvigil.com/";
+
 export const migrationWalletAddress = () =>
 	import.meta.env.VITE_MIGRATION_ADDRESS || "DNBURNBURNBURNBRNBURNBURNBURKz8StY";

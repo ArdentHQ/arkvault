@@ -16,6 +16,7 @@ import { Address } from "@/app/components/Address";
 import { EthereumAvatar } from "@/app/components/Avatar";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { getIcon } from "@/domains/migration/utils";
+import { polygonTransactionLink } from "@/utils/polygon-migration";
 
 const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusProperties> = ({ status }) => {
 	const { t } = useTranslation();
@@ -52,7 +53,7 @@ export const MigrationTransactionsRow = ({
 					<span className="flex items-center">
 						{migrationTransaction.status === MigrationTransactionStatus.Confirmed ? (
 							<Link
-								to={`https://polygonscan.com/tx/${migrationTransaction.id}`}
+								to={polygonTransactionLink(migrationTransaction.id)}
 								tooltip={migrationTransaction.id}
 								showExternalIcon={false}
 								isExternal
