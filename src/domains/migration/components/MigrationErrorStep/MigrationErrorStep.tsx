@@ -14,7 +14,7 @@ interface MigrationErrorStepProperties {
 export const MigrationErrorStep: React.FC<MigrationErrorStepProperties> = ({
 	onBack,
 	onRepeat,
-	errorMessage = "test error message",
+	errorMessage,
 	isRepeatDisabled,
 }) => {
 	const { t } = useTranslation();
