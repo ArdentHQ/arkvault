@@ -419,7 +419,7 @@ exports[`MigrationTransactionsTable > should render 1`] = `
                     class="ring-focus group inline-block css-15tcy38"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
-                    href="https://polygonscan.com/tx/id"
+                    href="https://mumbai.polygonscan.com/tx/id"
                     rel="noopener noreferrer"
                   >
                     <span
@@ -1072,7 +1072,7 @@ exports[`MigrationTransactionsTable > should render compact 1`] = `
                     class="ring-focus group inline-block css-15tcy38"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
-                    href="https://polygonscan.com/tx/id"
+                    href="https://mumbai.polygonscan.com/tx/id"
                     rel="noopener noreferrer"
                   >
                     <span
@@ -1566,7 +1566,7 @@ exports[`MigrationTransactionsTable > should render mobile 1`] = `
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://polygonscan.com/tx/id"
+                  href="https://mumbai.polygonscan.com/tx/id"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -2023,7 +2023,7 @@ exports[`MigrationTransactionsTable > should render mobile 2`] = `
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://polygonscan.com/tx/id"
+                  href="https://mumbai.polygonscan.com/tx/id"
                   rel="noopener noreferrer"
                 >
                   <span
