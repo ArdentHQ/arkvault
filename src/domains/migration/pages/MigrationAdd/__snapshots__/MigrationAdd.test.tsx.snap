@@ -1,5 +1,35 @@
 // Vitest Snapshot v1
 
+exports[`MigrationAdd > should render form button wrapper in md 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-8 flex items-center justify-center"
+  >
+    test
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MigrationAdd > should render form button wrapper in sm 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-8 flex items-center justify-center"
+  >
+    test
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MigrationAdd > should render form button wrapper in xs 1`] = `
+<DocumentFragment>
+  <div
+    class="css-2wyvkd"
+  >
+    test
+  </div>
+</DocumentFragment>
+`;
+
 exports[`MigrationAdd > should render in sm 1`] = `
 <DocumentFragment>
   <div

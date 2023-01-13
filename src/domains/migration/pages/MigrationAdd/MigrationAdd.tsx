@@ -34,6 +34,16 @@ const MigrationTabsWrapper: React.FC<PropsWithChildren> = ({ children }) => (
 	</div>
 );
 
+export const SuccessButtonWrapper = ({ children }: { children: React.ReactNode }) => {
+	const { isXs } = useBreakpoint();
+
+	if (isXs) {
+		return <FormButtons>{children}</FormButtons>;
+	}
+
+	return <div className="mt-8 flex items-center justify-center">{children}</div>;
+};
+
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
 
@@ -106,12 +116,6 @@ export const MigrationAdd = () => {
 			setActiveStep(Step.Error);
 		}
 	};
-
-	const SuccessButtonWrapper = isXs
-		? FormButtons
-		: ({ children }: { children: React.ReactNode }) => (
-				<div className="mt-8 flex items-center justify-center">{children}</div>
-		  );
 
 	const hideFormButtons = activeStep > Step.Authenticate || (activeStep === Step.Authenticate && wallet?.isLedger());
 
