@@ -7,5 +7,7 @@ export const metamaskUrl = () => "https://metamask.io/";
 
 export const migrationNetwork = () => import.meta.env.VITE_MIGRATION_NETWORK || "ark.devnet";
 
+export const polygonExplorerLink = () => import.meta.env.VITE_POLYGON_EXPLORER_URL || "https://mumbai.polygonscan.com";
+
 export const migrationWalletAddress = () =>
 	import.meta.env.VITE_MIGRATION_ADDRESS || "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
