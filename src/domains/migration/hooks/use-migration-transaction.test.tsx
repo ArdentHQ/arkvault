@@ -12,34 +12,27 @@ import {
 	mockNanoXTransport,
 	waitFor,
 } from "@/utils/testing-library";
-import { Form } from "@/app/components/Form";
 import { server, requestMock } from "@/tests/mocks/server";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
 let signatory: any;
 
-const WrapperForm = ({ children }: { children: React.ReactElement }) => {
-	const form = useMigrationForm();
+const MigrationForm = ({ wallet, profile }: { wallet: Contracts.IReadWriteWallet; profile: Contracts.IProfile }) => {
+	const context = useMigrationForm();
+
 	useEffect(() => {
-		form.setValue("mnemonic", MNEMONICS[0]);
-		form.setValue("recipients", [
+		context.setValue("mnemonic", MNEMONICS[0]);
+		context.setValue("recipients", [
 			{
 				address: "DNBURNBURNBURNBRNBURNBURNBURKz8StY",
 				amount: 1,
 			},
 		]);
+		context.setValue("wallet", wallet);
 	}, []);
 
-	return (
-		<Form className="mx-auto max-w-xl" context={form}>
-			{children}
-		</Form>
-	);
-};
-
-const MigrationForm = ({ wallet, profile }: { wallet: Contracts.IReadWriteWallet; profile: Contracts.IProfile }) => {
-	const { sendTransaction, abortTransaction } = useMigrationTransaction({ profile, wallet });
+	const { sendTransaction, abortTransaction } = useMigrationTransaction({ profile, context });
 	const [signedTransaction, setSignedTransaction] = useState(undefined);
 
 	const handlSendTransaction = async () => {
@@ -55,12 +48,6 @@ const MigrationForm = ({ wallet, profile }: { wallet: Contracts.IReadWriteWallet
 		</>
 	);
 };
-
-const MigrationFormContent = () => (
-	<WrapperForm>
-		<MigrationForm profile={profile} wallet={wallet} />
-	</WrapperForm>
-);
 
 describe("useMigrationTransaction hook", () => {
 	beforeAll(async () => {
@@ -82,7 +69,7 @@ describe("useMigrationTransaction hook", () => {
 	});
 
 	it("should send transaction", async () => {
-		render(<MigrationFormContent />);
+		render(<MigrationForm profile={profile} wallet={wallet} />);
 
 		expect(screen.getByTestId("SendMigrationTransaction")).toBeInTheDocument();
 
@@ -96,7 +83,7 @@ describe("useMigrationTransaction hook", () => {
 		vi.spyOn(signatory, "actsWithMultiSignature").mockReturnValue(true);
 		vi.spyOn(signatory, "hasMultiSignature").mockReturnValue(true);
 
-		render(<MigrationFormContent />);
+		render(<MigrationForm profile={profile} wallet={wallet} />);
 
 		expect(screen.getByTestId("SendMigrationTransaction")).toBeInTheDocument();
 
@@ -111,7 +98,7 @@ describe("useMigrationTransaction hook", () => {
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 		const ledgerListenSpy = mockNanoXTransport({ type: "unknown" });
 
-		render(<MigrationFormContent />);
+		render(<MigrationForm profile={profile} wallet={wallet} />);
 
 		expect(screen.getByTestId("SendMigrationTransaction")).toBeInTheDocument();
 
@@ -124,7 +111,7 @@ describe("useMigrationTransaction hook", () => {
 	});
 
 	it("should abortTransaction", () => {
-		render(<MigrationFormContent />);
+		render(<MigrationForm profile={profile} wallet={wallet} />);
 
 		expect(screen.getByTestId("AbortTransaction")).toBeInTheDocument();
 

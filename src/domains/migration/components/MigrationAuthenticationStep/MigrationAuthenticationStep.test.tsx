@@ -29,28 +29,14 @@ vi.mock("@/domains/migration/hooks/use-migration-transaction", () => ({
 	}),
 }));
 
-const AuthenticationStepWrapper = ({
-	wallet,
-	onContinue,
-	onError,
-	onBack,
-}: {
-	wallet: Contracts.IReadWriteWallet;
-	onContinue: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	onBack: () => void;
-	onError?: (error: Error) => void;
-}) => {
+const AuthenticationStepWrapper = () => {
 	const form = useMigrationForm();
+	form.setValue("wallet", wallet);
 
 	return (
 		<Route path="/profiles/:profileId/migration/add">
 			<Form context={form}>
-				<MigrationAuthenticationStep
-					wallet={wallet}
-					onContinue={onContinue}
-					onBack={onBack}
-					onError={onError}
-				/>
+				<MigrationAuthenticationStep />
 			</Form>
 		</Route>
 	);
@@ -68,7 +54,7 @@ describe("MigrationAuthenticationStep", () => {
 
 	it("should render authentication step", async () => {
 		const { asFragment } = render(
-			<AuthenticationStepWrapper wallet={wallet} onContinue={vi.fn()} onBack={vi.fn()} onError={vi.fn()} />,
+			<AuthenticationStepWrapper />,
 
 			{
 				history,
@@ -97,7 +83,7 @@ describe("MigrationAuthenticationStep", () => {
 		vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
 
 		const { asFragment } = render(
-			<AuthenticationStepWrapper wallet={wallet} onContinue={vi.fn()} onBack={vi.fn()} onError={vi.fn()} />,
+			<AuthenticationStepWrapper />,
 
 			{
 				history,
