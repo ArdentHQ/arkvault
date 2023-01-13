@@ -22,7 +22,9 @@ export enum METAMASK_ERROR_CODES {
 	CHAIN_NOT_ADDED_YET = 4902,
 }
 
-export type WindowWithEthereum = Window & { ethereum?: Ethereum };
+export type WindowWithMaybeEthereum = Window & { ethereum?: Ethereum };
+
+export type WindowWithEthereum = Window & { ethereum: Ethereum };
 
 export interface AddEthereumChainParameter {
 	chainId: string; // A 0x-prefixed hexadecimal string

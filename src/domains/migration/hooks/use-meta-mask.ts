@@ -5,6 +5,7 @@ import {
 	Ethereum,
 	METAMASK_ERROR_CODES,
 	WindowWithEthereum,
+	WindowWithMaybeEthereum,
 } from "./use-meta-mask.contracts";
 
 // @TODO: Potentially make this dynamic if we want to support testnet on dev
@@ -22,7 +23,11 @@ const polygonNetworkData: AddEthereumChainParameter = {
 };
 
 function hasMetaMask() {
-	return !!(window as WindowWithEthereum).ethereum;
+	return !!(window as WindowWithMaybeEthereum).ethereum;
+}
+
+function getEtherum(): Ethereum {
+	return (window as unknown as WindowWithEthereum).ethereum;
 }
 
 // Metamask supports Chrome, Firefox, Brave, Edge, and Opera, since Edge and
@@ -59,7 +64,7 @@ export const useMetaMask = () => {
 			return;
 		}
 
-		const ethereum = (window as WindowWithEthereum).ethereum;
+		const ethereum = getEtherum();
 
 		let verifyNetworkInterval: ReturnType<typeof setInterval>;
 
@@ -176,7 +181,7 @@ export const useMetaMask = () => {
 	const switchToPolygonNetwork = useCallback(async () => {
 		setSwitching(true);
 
-		const ethereum = (window as WindowWithEthereum).ethereum;
+		const ethereum = getEtherum();
 
 		try {
 			await ethereum.request({
