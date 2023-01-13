@@ -15,6 +15,7 @@ import { Link } from "@/app/components/Link";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { getIcon } from "@/domains/migration/utils";
 import { Button } from "@/app/components/Button";
+import { polygonTransactionLink } from "@/utils/polygon-migration";
 
 const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusProperties> = ({ status }) => {
 	const { t } = useTranslation();
@@ -50,7 +51,7 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 
 					{migrationTransaction.status === MigrationTransactionStatus.Confirmed ? (
 						<Link
-							to={`https://polygonscan.com/tx/${migrationTransaction.id}`}
+							to={polygonTransactionLink(migrationTransaction.id)}
 							tooltip={migrationTransaction.id}
 							showExternalIcon={false}
 							isExternal
