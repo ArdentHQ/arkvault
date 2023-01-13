@@ -25,6 +25,7 @@ const migrationUrl = `/profiles/${getDefaultProfileId()}/migration/add`;
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secret = "123";
+const continueButton = "MigrationAdd__continue-button";
 
 const renderComponent = () => {
 	history.push(migrationUrl);
@@ -99,14 +100,14 @@ describe("Migration Error Handling", () => {
 		userEvent.click(screen.getByTestId("SearchWalletListItem__select-2"));
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("MigrationReview")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -167,14 +168,14 @@ describe("Migration Error Handling", () => {
 		userEvent.click(screen.getByTestId("SearchWalletListItem__select-2"));
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("MigrationReview")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 

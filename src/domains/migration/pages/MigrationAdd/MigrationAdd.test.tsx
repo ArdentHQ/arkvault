@@ -26,6 +26,11 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secret = "123";
 
+const arkDevnetNetwork = "ark.devnet";
+const arkCoin = "ARK";
+const walletListItem = "SearchWalletListItem__select-2";
+const continueButton = "MigrationAdd__continue-button";
+
 const renderComponent = () => {
 	history.push(migrationUrl);
 
@@ -55,7 +60,7 @@ describe("MigrationAdd", () => {
 		await env.profiles().restore(profile);
 
 		wallet = await profile.walletFactory().fromSecret({
-			coin: "ARK",
+			coin: arkCoin,
 			network: migrationNetwork(),
 			secret,
 		});
@@ -68,7 +73,7 @@ describe("MigrationAdd", () => {
 
 		profile.wallets().push(wallet);
 
-		await profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0].synchroniser().identity();
+		await profile.wallets().findByCoinWithNetwork(arkCoin, arkDevnetNetwork)[0].synchroniser().identity();
 	});
 
 	it("should render", () => {
@@ -119,7 +124,7 @@ describe("MigrationAdd", () => {
 
 		const signatory = await profile
 			.wallets()
-			.findByCoinWithNetwork("ARK", "ark.devnet")[0]
+			.findByCoinWithNetwork(arkCoin, arkDevnetNetwork)[0]
 			.signatoryFactory()
 			.make({
 				secret,
@@ -137,14 +142,14 @@ describe("MigrationAdd", () => {
 
 		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
-		await expect(screen.findByTestId("SearchWalletListItem__select-2")).resolves.toBeVisible();
+		await expect(screen.findByTestId(walletListItem)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__select-2"));
+		userEvent.click(screen.getByTestId(walletListItem));
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("MigrationReview")).resolves.toBeVisible();
 
@@ -158,7 +163,7 @@ describe("MigrationAdd", () => {
 
 		const signatory = await profile
 			.wallets()
-			.findByCoinWithNetwork("ARK", "ark.devnet")[0]
+			.findByCoinWithNetwork(arkCoin, arkDevnetNetwork)[0]
 			.signatoryFactory()
 			.make({
 				secret,
@@ -176,19 +181,19 @@ describe("MigrationAdd", () => {
 
 		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
-		await expect(screen.findByTestId("SearchWalletListItem__select-2")).resolves.toBeVisible();
+		await expect(screen.findByTestId(walletListItem)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__select-2"));
+		userEvent.click(screen.getByTestId(walletListItem));
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("MigrationReview")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -200,7 +205,7 @@ describe("MigrationAdd", () => {
 
 		const signatory = await profile
 			.wallets()
-			.findByCoinWithNetwork("ARK", "ark.devnet")[0]
+			.findByCoinWithNetwork(arkCoin, arkDevnetNetwork)[0]
 			.signatoryFactory()
 			.make({
 				secret,
@@ -218,19 +223,19 @@ describe("MigrationAdd", () => {
 
 		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
-		await expect(screen.findByTestId("SearchWalletListItem__select-2")).resolves.toBeVisible();
+		await expect(screen.findByTestId(walletListItem)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__select-2"));
+		userEvent.click(screen.getByTestId(walletListItem));
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("MigrationReview")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -267,7 +272,7 @@ describe("MigrationAdd", () => {
 
 		const signatory = await profile
 			.wallets()
-			.findByCoinWithNetwork("ARK", "ark.devnet")[0]
+			.findByCoinWithNetwork(arkCoin, arkDevnetNetwork)[0]
 			.signatoryFactory()
 			.make({
 				secret,
@@ -285,14 +290,14 @@ describe("MigrationAdd", () => {
 
 		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
-		await expect(screen.findByTestId("SearchWalletListItem__select-2")).resolves.toBeVisible();
+		await expect(screen.findByTestId(walletListItem)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__select-2"));
+		userEvent.click(screen.getByTestId(walletListItem));
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("MigrationReview")).resolves.toBeVisible();
 
@@ -309,8 +314,8 @@ describe("MigrationAdd", () => {
 
 		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(TransactionFixture);
 
-		await waitFor(() => expect(screen.getByTestId("MigrationAdd__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("MigrationAdd__continue-button"));
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
+		userEvent.click(screen.getByTestId(continueButton));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
