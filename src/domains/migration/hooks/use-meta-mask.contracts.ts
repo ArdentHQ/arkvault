@@ -1,3 +1,4 @@
+import { ethers } from "ethers";
 import { MetaMaskInpageProvider } from "@metamask/providers";
 
 interface EthereumEvent {
