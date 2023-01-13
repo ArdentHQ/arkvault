@@ -665,6 +665,7 @@ exports[`Dashboard > should render 1`] = `
             >
               <button
                 class="css-1bx0hyc"
+                data-testid="MigrationBanner--migrate"
                 type="button"
               >
                 <div

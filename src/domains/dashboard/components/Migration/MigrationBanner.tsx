@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "@/app/hooks";
+import { generatePath, useHistory } from "react-router-dom";
+import { useActiveProfile, useTheme } from "@/app/hooks";
 import { Button } from "@/app/components/Button";
 import { Link } from "@/app/components/Link";
 import { Image } from "@/app/components/Image";
 import { useLink } from "@/app/hooks/use-link";
+import { ProfilePaths } from "@/router/paths";
 
 export const MigrationBanner = () => {
 	const { t } = useTranslation();
 	const { openExternal } = useLink();
 	const { isDarkMode } = useTheme();
+	const history = useHistory();
+	const profile = useActiveProfile();
+
+	const migrateButtonHandler = useCallback(() => {
+		const path = generatePath(ProfilePaths.Migration, { profileId: profile.id() });
+
+		history.push(path);
+	}, [history, profile]);
 
 	return (
 		<div
@@ -31,7 +41,9 @@ export const MigrationBanner = () => {
 					</div>
 
 					<div className="mt-8 flex space-x-3 ">
-						<Button variant="primary">{t("DASHBOARD.MIGRATION_BANNER.MIGRATE_TOKENS")}</Button>
+						<Button variant="primary" onClick={migrateButtonHandler} data-testid="MigrationBanner--migrate">
+							{t("DASHBOARD.MIGRATION_BANNER.MIGRATE_TOKENS")}
+						</Button>
 						<Button
 							data-testid="MigrationBanner--learnmore"
 							variant="secondary-alt"
