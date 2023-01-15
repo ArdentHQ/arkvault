@@ -15,7 +15,7 @@ jobs:
                   ref: ${{ github.head_ref }}
                   token: ${{ secrets.GH_TOKEN }}
 
-            - uses: ericcornelissen/svgo-action@v1
+            - uses: ericcornelissen/svgo-action@v3
               with:
                   conventional-commits: true
                   ignore: dist/**
