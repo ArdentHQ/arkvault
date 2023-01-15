@@ -18,7 +18,7 @@ const data = [
 	},
 ];
 
-const columns: Column<typeof data[number]>[] = [
+const columns: Column<(typeof data)[number]>[] = [
 	{
 		Header: "Header 1",
 		accessor: "col1",
