@@ -1,30 +1,33 @@
 import { ethers } from "ethers";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { MetaMaskInpageProvider } from "@metamask/providers";
+import {
+	AddEthereumChainParameter,
+	Ethereum,
+	METAMASK_ERROR_CODES,
+	WindowWithEthereum,
+	WindowWithMaybeEthereum,
+} from "./use-meta-mask.contracts";
 
-interface EthereumEvent {
-	connect: any;
-	disconnect: any;
-	message: any;
-	chainChanged: string;
-	accountsChanged: Array<string>;
-}
-
-type EventKeys = keyof EthereumEvent;
-
-type EventHandler<K extends EventKeys> = (event: EthereumEvent[K]) => void;
-
-type Ethereum = ethers.providers.ExternalProvider &
-	MetaMaskInpageProvider & {
-		on<K extends EventKeys>(event: K, eventHandler: EventHandler<K>): void;
-	};
-
-const POLYGON_NETWORK_ID = 137;
-
-type WindowWithEthereum = Window & { ethereum?: Ethereum };
+// @TODO: Potentially make this dynamic if we want to support testnet on dev
+// environments
+const polygonNetworkData: AddEthereumChainParameter = {
+	blockExplorerUrls: ["https://polygonscan.com/"],
+	chainId: "0x89",
+	chainName: "Polygon Mainnet",
+	nativeCurrency: {
+		decimals: 18,
+		name: "MATIC",
+		symbol: "MATIC",
+	},
+	rpcUrls: ["https://polygon-rpc.com/"],
+};
 
 function hasMetaMask() {
-	return !!(window as WindowWithEthereum).ethereum;
+	return !!(window as WindowWithMaybeEthereum).ethereum;
+}
+
+function getEtherum(): Ethereum {
+	return (window as unknown as WindowWithEthereum).ethereum;
 }
 
 // Metamask supports Chrome, Firefox, Brave, Edge, and Opera, since Edge and
@@ -48,7 +51,8 @@ export const useMetaMask = () => {
 	const [account, setAccount] = useState<string | null>();
 	const [ethereumProvider, setEthereumProvider] = useState<ethers.providers.Web3Provider>();
 	const [connecting, setConnecting] = useState<boolean>(false);
-	const isOnPolygonNetwork = useMemo(() => chainId === POLYGON_NETWORK_ID, [chainId]);
+	const [switching, setSwitching] = useState<boolean>(false);
+	const isOnPolygonNetwork = useMemo(() => chainId === Number.parseInt(polygonNetworkData.chainId), [chainId]);
 
 	const supportsMetaMask = isMetaMaskSupportedBrowser();
 	const needsMetaMask = !hasMetaMask() || !supportsMetaMask;
@@ -60,7 +64,7 @@ export const useMetaMask = () => {
 			return;
 		}
 
-		const ethereum = (window as WindowWithEthereum).ethereum!;
+		const ethereum = getEtherum();
 
 		let verifyNetworkInterval: ReturnType<typeof setInterval>;
 
@@ -161,6 +165,41 @@ export const useMetaMask = () => {
 		setConnecting(false);
 	}, [requestChainAndAccount]);
 
+	const addPolygonNetwork = useCallback(async (ethereum: Ethereum) => {
+		try {
+			await ethereum.request({
+				method: "wallet_addEthereumChain",
+				params: [polygonNetworkData],
+			});
+		} catch {
+			// Nothing to do here, likely the user rejected the request
+		}
+
+		setSwitching(false);
+	}, []);
+
+	const switchToPolygonNetwork = useCallback(async () => {
+		setSwitching(true);
+
+		const ethereum = getEtherum();
+
+		try {
+			await ethereum.request({
+				method: "wallet_switchEthereumChain",
+				params: [{ chainId: polygonNetworkData.chainId }],
+			});
+
+			setSwitching(false);
+		} catch (error) {
+			if (error.code === METAMASK_ERROR_CODES.CHAIN_NOT_ADDED_YET) {
+				addPolygonNetwork(ethereum);
+				return;
+			}
+
+			setSwitching(false);
+		}
+	}, [addPolygonNetwork]);
+
 	return {
 		account,
 		chainId,
@@ -170,5 +209,7 @@ export const useMetaMask = () => {
 		isOnPolygonNetwork,
 		needsMetaMask,
 		supportsMetaMask,
+		switchToPolygonNetwork,
+		switching,
 	};
 };

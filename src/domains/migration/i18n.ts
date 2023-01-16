@@ -48,6 +48,8 @@ export const translations = {
 				SELECT_WALLET_TO_MIGRATE_DESCRIPTION:
 					"Select a wallet for which you want to migrate the balance to the new token.",
 			},
+			SWITCHING_NETWORK: "Switching …",
+			SWITCH_TO_POLYGON: "Switch to Polygon",
 			TITLE: "Migration",
 		},
 
