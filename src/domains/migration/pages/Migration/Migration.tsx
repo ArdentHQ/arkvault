@@ -18,6 +18,8 @@ export const Migration = () => {
 	const profile = useActiveProfile();
 	const { migrations } = useMigrations();
 
+	console.log({ migrations });
+
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
 	const onNewMigrationHandler = () => {
@@ -35,16 +37,12 @@ export const Migration = () => {
 				<MigrationHeader onNewMigration={onNewMigrationHandler} />
 
 				<Section className="mt-4">
-					{migrations === undefined ? (
-						// @TODO: add skeleton
-						<></>
-					) : (
-						<MigrationTransactionsTable
-							migrationTransactions={migrations}
-							isCompact={isCompact}
-							onClick={() => console.log("row click")}
-						/>
-					)}
+					<MigrationTransactionsTable
+						migrationTransactions={migrations}
+						isCompact={isCompact}
+						isLoading={migrations === undefined}
+						onClick={() => console.log("row click")}
+					/>
 				</Section>
 
 				<MigrationNewMigrationMobileButton onNewMigration={onNewMigrationHandler} />

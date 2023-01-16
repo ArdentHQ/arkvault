@@ -16,6 +16,7 @@ import { MigrationTransactionStatus } from "@/domains/migration/migration.contra
 import { getIcon } from "@/domains/migration/utils";
 import { Button } from "@/app/components/Button";
 import { polygonTransactionLink } from "@/utils/polygon-migration";
+import { MigrationTransactionsRowMobileSkeleton } from "@/domains/migration/components/MigrationTransactionsTable/MigrationTransactionsRowMobileSkeleton";
 
 const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusProperties> = ({ status }) => {
 	const { t } = useTranslation();
@@ -32,16 +33,21 @@ const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusPro
 
 interface MigrationTransactionsRowMobileProperties {
 	migrationTransaction: any;
+	isLoading: boolean;
 	onClick: () => void;
 }
 
 export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMobileProperties> = ({
 	migrationTransaction,
+	isLoading,
 	onClick,
 }) => {
 	const timeFormat = useTimeFormat();
-
 	const { t } = useTranslation();
+
+	if (isLoading) {
+		return <MigrationTransactionsRowMobileSkeleton />;
+	}
 
 	return (
 		<TableRow onClick={onClick}>
