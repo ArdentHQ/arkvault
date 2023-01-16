@@ -54,7 +54,7 @@ export const MigrationTransactionsRow = ({
 	}
 
 	return (
-		<TableRow>
+		<TableRow data-testid="MigrationTransactionsRow">
 			<TableCell variant="start" isCompact={isCompact}>
 				<Tooltip content={migrationTransaction.id} className="no-ligatures">
 					<span className="flex items-center">

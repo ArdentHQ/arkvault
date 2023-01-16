@@ -50,8 +50,8 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 	}
 
 	return (
-		<TableRow onClick={onClick}>
-			<td data-testid="TableRow__mobile" className="flex-col space-y-4 py-4">
+		<TableRow data-testid="MigrationTransactionsRowMobile" onClick={onClick}>
+			<td className="flex-col space-y-4 py-4">
 				<RowWrapper>
 					<RowLabel>{t("COMMON.ID")}</RowLabel>
 

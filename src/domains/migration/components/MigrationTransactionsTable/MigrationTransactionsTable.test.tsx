@@ -29,7 +29,7 @@ describe("MigrationTransactionsTable", () => {
 			<MigrationTransactionsTable migrationTransactions={migrationTransactions} onClick={vi.fn()} />,
 		);
 
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(migrationTransactions.length);
+		expect(screen.getAllByTestId("MigrationTransactionsRow")).toHaveLength(migrationTransactions.length);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -38,7 +38,7 @@ describe("MigrationTransactionsTable", () => {
 		const { container } = render(<MigrationTransactionsTable migrationTransactions={[]} onClick={vi.fn()} />);
 
 		expect(screen.getByTestId("MigrationTransactionsTable__empty-message")).toBeInTheDocument();
-		expect(screen.queryAllByTestId("TableRow")).toHaveLength(0);
+		expect(screen.queryAllByTestId("MigrationTransactionsRow")).toHaveLength(0);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -49,7 +49,7 @@ describe("MigrationTransactionsTable", () => {
 			breakpoint,
 		);
 
-		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(migrationTransactions.length);
+		expect(screen.getAllByTestId("MigrationTransactionsRowMobile")).toHaveLength(migrationTransactions.length);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -58,9 +58,30 @@ describe("MigrationTransactionsTable", () => {
 			<MigrationTransactionsTable migrationTransactions={migrationTransactions} onClick={vi.fn()} isCompact />,
 		);
 
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(migrationTransactions.length);
+		expect(screen.getAllByTestId("MigrationTransactionsRow")).toHaveLength(migrationTransactions.length);
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it("should render skeletons", () => {
+		const { container } = render(
+			<MigrationTransactionsTable migrationTransactions={migrationTransactions} onClick={vi.fn()} isLoading />,
+		);
+
+		expect(screen.getAllByTestId("MigrationTransactionsRowSkeleton")).toHaveLength(5);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it.each(["xs", "sm"])("should render skeleton on mobile", (breakpoint) => {
+		const { asFragment } = renderResponsive(
+			<MigrationTransactionsTable migrationTransactions={migrationTransactions} onClick={vi.fn()} isLoading />,
+			breakpoint,
+		);
+
+		expect(screen.getAllByTestId("MigrationTransactionsRowMobileSkeleton")).toHaveLength(5);
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should execute onClick callback", () => {
@@ -68,9 +89,9 @@ describe("MigrationTransactionsTable", () => {
 
 		render(<MigrationTransactionsTable migrationTransactions={migrationTransactions} onClick={onClick} />);
 
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(migrationTransactions.length);
+		expect(screen.getAllByTestId("MigrationTransactionsRow")).toHaveLength(migrationTransactions.length);
 
-		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
+		userEvent.click(within(screen.getAllByTestId("MigrationTransactionsRow")[0]).getAllByRole("button")[0]);
 
 		expect(onClick).toHaveBeenCalled();
 	});

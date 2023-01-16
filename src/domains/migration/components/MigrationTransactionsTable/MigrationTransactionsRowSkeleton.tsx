@@ -15,7 +15,7 @@ export const MigrationTransactionsRowSkeleton = ({ isCompact }: Properties) => {
 	const currencyWidth = Math.floor(amountWidth * 0.75);
 
 	return (
-		<TableRow>
+		<TableRow data-testid="MigrationTransactionsRowSkeleton">
 			<TableCell variant="start" isCompact={isCompact}>
 				<Skeleton width={16} height={16} />
 			</TableCell>

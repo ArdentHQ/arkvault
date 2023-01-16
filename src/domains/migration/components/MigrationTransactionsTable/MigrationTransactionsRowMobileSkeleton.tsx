@@ -13,7 +13,7 @@ export const MigrationTransactionsRowMobileSkeleton = () => {
 	const { t } = useTranslation();
 
 	return (
-		<TableRow className="group">
+		<TableRow data-testid="MigrationTransactionsRowMobileSkeleton" className="group">
 			<td className="flex-col space-y-4 py-4">
 				<RowWrapper>
 					<RowLabel>{t("COMMON.ID")}</RowLabel>

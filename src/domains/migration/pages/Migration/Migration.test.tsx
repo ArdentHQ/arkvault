@@ -103,7 +103,7 @@ describe("Migration", () => {
 
 		renderComponent();
 
-		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
+		userEvent.click(within(screen.getAllByTestId("MigrationTransactionsRow")[0]).getAllByRole("button")[0]);
 
 		useMigrationsSpy.mockRestore();
 

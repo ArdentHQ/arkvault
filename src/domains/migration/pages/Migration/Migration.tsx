@@ -18,8 +18,6 @@ export const Migration = () => {
 	const profile = useActiveProfile();
 	const { migrations } = useMigrations();
 
-	console.log({ migrations });
-
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
 	const onNewMigrationHandler = () => {
