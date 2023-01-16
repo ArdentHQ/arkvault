@@ -27,4 +27,12 @@ export class MigrationRepository {
 
 		this.#data.set(STORAGE_KEY, all);
 	}
+
+	public add(item: Migration): void {
+		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
+
+		all[this.#profile.id()] = [...(all[this.#profile.id()] || []), item];
+
+		this.#data.set(STORAGE_KEY, all);
+	}
 }

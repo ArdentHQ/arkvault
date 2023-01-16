@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
 import {
 	ARKMigrationViewStructOutput,
@@ -49,41 +50,9 @@ const contractABI = [
 	},
 ];
 
-// @TODO: make this transactions dynamic, an option is to store/get using the
-// env storage, e.g. env.storage().get("ark-migration-transactions")
-const fakeTransactionsIds = [
-	// Invalid one
-	"0x74a1e612846da4c3da618a77e82e6f8468fd88459662738babce5b6014b023f4",
-	// Valid ones
-	"0x2c00cb87957dd47ee9e6a03210bf2ca46ba7a11156391d3b5960760846de226a",
-	"0x5e4f8256caffe7d7276da0611bcf8a8bff8aea1219853ea07d9575355efff704",
-];
-
-const transactionMapper = (migration: ARKMigrationViewStructOutput): Migration => {
-	const amount = Number.parseFloat(ethers.utils.formatEther(migration.amount.toString()));
-
-	const status =
-		migration.recipient === ethers.constants.AddressZero
-			? MigrationTransactionStatus.Waiting
-			: MigrationTransactionStatus.Confirmed;
-
-	return {
-		// @TODO: get the address and timestamp
-		// Not sure yet how that will work but maybe we can use the profile to get the address
-		// and then the transactions or maybe we can save those values in the env storage
-		// when adding a new migration
-		address: "PeNdInGPeNdInGPeNdInGPeNdInG",
-		amount,
-		id: migration.arkTxHash,
-		migrationAddress: migration.recipient,
-		status,
-		// @TODO: read above
-		timestamp: Date.now() / 1000,
-	};
-};
-
 interface MigrationContextType {
 	migrations?: Migration[];
+	addTransaction: (transaction: DTO.ExtendedSignedTransactionData) => void;
 }
 
 interface Properties {
@@ -125,19 +94,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const loadMigrations = useCallback(async () => {
 		const migrations = repository!.all();
-		const transactionsIds = [
-			...migrations.map((tx: Migration) => tx.id),
-			// Add some initial transaction ids
-			// @TODO: Potentially remove this in favour of storing the transactions
-			// when a new migration is added
-			...fakeTransactionsIds,
-		]
-			// Remove duplicated transactions ids
-			// @TODO: not needed once we remove the fake ones
-			.filter((id, index, original) => original.indexOf(id) === index);
-		// @TODO: potential code to replace the one above once the fake
-		// transactions are removed
-		// const transactionsIds = migrations.map((tx: Migration) => tx.id);
+
+		const transactionsIds = migrations.map((migration: Migration) => `0x${migration.id}`);
 
 		const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
 
@@ -147,9 +105,24 @@ export const MigrationProvider = ({ children }: Properties) => {
 			transactionsIds,
 		);
 
-		const formattedMigrations = contractMigrations.map(transactionMapper);
+		const updatedMigrations = migrations.map((migration: Migration): Migration => {
+			const contractMigration = contractMigrations.find(
+				(contractMigration: ARKMigrationViewStructOutput) =>
+					contractMigration.arkTxHash === `0x${migration.id}`,
+			)!;
 
-		setMigrations(formattedMigrations);
+			const status =
+				contractMigration.recipient === ethers.constants.AddressZero
+					? MigrationTransactionStatus.Waiting
+					: MigrationTransactionStatus.Confirmed;
+
+			return {
+				...migration,
+				status,
+			};
+		});
+
+		setMigrations(updatedMigrations);
 	}, [storeMigrationTransactions, repository]);
 
 	useEffect(() => {
@@ -185,8 +158,24 @@ export const MigrationProvider = ({ children }: Properties) => {
 		setExpiredMigrations(false);
 	}, [expiredMigrations, loadMigrations, repository]);
 
+	const addTransaction = useCallback(
+		(transaction: DTO.ExtendedSignedTransactionData) => {
+			const migration: Migration = {
+				address: transaction.sender(),
+				amount: transaction.amount(),
+				id: transaction.id(),
+				migrationAddress: transaction.recipient(),
+				status: MigrationTransactionStatus.Waiting,
+				timestamp: Date.now() / 1000,
+			};
+
+			repository!.add(migration);
+		},
+		[repository],
+	);
+
 	return (
-		<MigrationContext.Provider value={{ migrations: migrations } as MigrationContextType}>
+		<MigrationContext.Provider value={{ addTransaction, migrations } as MigrationContextType}>
 			{children}
 		</MigrationContext.Provider>
 	);
@@ -194,6 +183,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 export const useMigrations = (): {
 	migrations: Migration[] | undefined;
+	addTransaction: (transaction: DTO.ExtendedSignedTransactionData) => void;
 } => {
 	const value = React.useContext(MigrationContext);
 

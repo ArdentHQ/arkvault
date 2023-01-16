@@ -16,6 +16,7 @@ import { useMigrationForm, useMigrationTransaction } from "@/domains/migration/h
 import { Button } from "@/app/components/Button";
 import { ProfilePaths } from "@/router/paths";
 import { MigrationErrorStep } from "@/domains/migration/components/MigrationErrorStep";
+import { useMigrations } from "@/app/contexts";
 
 export enum Step {
 	Connect = 1,
@@ -62,6 +63,7 @@ export const MigrationAdd = () => {
 
 	const wallet = watch("wallet");
 
+	const { addTransaction } = useMigrations();
 	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
 
 	useEffect(
@@ -108,6 +110,8 @@ export const MigrationAdd = () => {
 			const transaction = await sendTransaction();
 
 			setTransaction(transaction);
+
+			addTransaction(transaction);
 
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {
