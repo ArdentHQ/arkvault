@@ -123,8 +123,6 @@ export const MigrationAdd = () => {
 
 			setTransaction(transaction);
 
-			console.log({ id: transaction.id(), transaction });
-
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
