@@ -125,7 +125,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const loadMigrations = useCallback(async () => {
 		const migrations = repository!.all();
-		 const transactionIds = [
+		const transactionIds = [
 			...migrations.map((tx: Migration) => tx.id),
 			// Add some initial transaction ids
 			// @TODO: Potentially remove this in favour of storing the transactions
@@ -146,9 +146,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		let contractMigrations: ARKMigrationViewStructOutput[] = [];
 
 		try {
-			contractMigrations = await contract.getMigrationsByArkTxHash(
-				transactionIds,
-			);
+			contractMigrations = await contract.getMigrationsByArkTxHash(transactionIds);
 		} catch {
 			//
 		}
