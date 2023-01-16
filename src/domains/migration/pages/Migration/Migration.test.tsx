@@ -36,7 +36,7 @@ describe("Migration", () => {
 
 	afterAll(() => {
 		useMigrationsSpy.mockRestore();
-	})
+	});
 
 	it("should render", () => {
 		const { asFragment } = renderComponent();
