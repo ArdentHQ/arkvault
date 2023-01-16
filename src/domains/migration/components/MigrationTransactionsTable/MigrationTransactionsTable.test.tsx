@@ -1,6 +1,7 @@
 import React from "react";
 
 import userEvent from "@testing-library/user-event";
+import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { render, screen, within, renderResponsive } from "@/utils/testing-library";
 import { MigrationTransactionsTable } from "@/domains/migration/components/MigrationTransactionsTable";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
@@ -23,7 +24,17 @@ const migrationTransactions = [
 	},
 ];
 
+let useRandomNumberSpy: vi.SpyInstance;
+
 describe("MigrationTransactionsTable", () => {
+	beforeAll(() => {
+		useRandomNumberSpy = vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+	});
+
+	afterAll(() => {
+		useRandomNumberSpy.mockRestore();
+	});
+
 	it("should render", () => {
 		const { container } = render(
 			<MigrationTransactionsTable migrationTransactions={migrationTransactions} onClick={vi.fn()} />,

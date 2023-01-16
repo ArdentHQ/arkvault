@@ -896,7 +896,7 @@ exports[`Migration > should render 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 136px; height: 16px;"
+                            style="width: 133px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -932,7 +932,7 @@ exports[`Migration > should render 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 128px; height: 16px;"
+                            style="width: 125px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -973,7 +973,7 @@ exports[`Migration > should render 1`] = `
                           >
                             <span
                               class="react-loading-skeleton"
-                              style="width: 79px; height: 16px;"
+                              style="width: 84px; height: 16px;"
                             >
                               ‌
                             </span>
@@ -1087,7 +1087,7 @@ exports[`Migration > should render 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 133px; height: 16px;"
+                            style="width: 137px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -1123,7 +1123,7 @@ exports[`Migration > should render 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 133px; height: 16px;"
+                            style="width: 142px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -1164,7 +1164,7 @@ exports[`Migration > should render 1`] = `
                           >
                             <span
                               class="react-loading-skeleton"
-                              style="width: 82px; height: 16px;"
+                              style="width: 81px; height: 16px;"
                             >
                               ‌
                             </span>
@@ -1278,7 +1278,7 @@ exports[`Migration > should render 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 144px; height: 16px;"
+                            style="width: 150px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -1355,7 +1355,7 @@ exports[`Migration > should render 1`] = `
                           >
                             <span
                               class="react-loading-skeleton"
-                              style="width: 90px; height: 16px;"
+                              style="width: 85px; height: 16px;"
                             >
                               ‌
                             </span>
@@ -1469,7 +1469,7 @@ exports[`Migration > should render 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 140px; height: 16px;"
+                            style="width: 137px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -1483,6 +1483,161 @@ exports[`Migration > should render 1`] = `
                       >
                         <div
                           class="mr-4"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 20px; height: 20px; border-radius: 50%;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 134px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-center css-1rods8x"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 20px; height: 20px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-1rods8x"
+                      >
+                        <span
+                          class="flex items-center space-x-1"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 75px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 35px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-center css-br23tb"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 140px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class=" css-1li86da"
+                    data-testid="MigrationTransactionsRowSkeleton"
+                  >
+                    <td>
+                      <div
+                        class="css-mx19qq"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 16px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="table-cell md:hidden lg:table-cell"
+                    >
+                      <div
+                        class="css-1rods8x"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 150px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="css-1rods8x"
+                      >
+                        <div
+                          class="mr-4 flex items-center"
                         >
                           <span
                             aria-busy="true"
@@ -1515,161 +1670,6 @@ exports[`Migration > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-center css-1rods8x"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 20px; height: 20px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="justify-end css-1rods8x"
-                      >
-                        <span
-                          class="flex items-center space-x-1"
-                        >
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 91px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 35px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="justify-center css-br23tb"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 140px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class=" css-1li86da"
-                    data-testid="MigrationTransactionsRowSkeleton"
-                  >
-                    <td>
-                      <div
-                        class="css-mx19qq"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 16px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="table-cell md:hidden lg:table-cell"
-                    >
-                      <div
-                        class="css-1rods8x"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 150px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="css-1rods8x"
-                      >
-                        <div
-                          class="mr-4 flex items-center"
-                        >
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 20px; height: 20px; border-radius: 50%;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                        </div>
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 129px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
                         class="css-1rods8x"
                       >
                         <div
@@ -1696,7 +1696,7 @@ exports[`Migration > should render 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 145px; height: 16px;"
+                            style="width: 143px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -1737,7 +1737,7 @@ exports[`Migration > should render 1`] = `
                           >
                             <span
                               class="react-loading-skeleton"
-                              style="width: 89px; height: 16px;"
+                              style="width: 93px; height: 16px;"
                             >
                               ‌
                             </span>
@@ -2705,7 +2705,7 @@ exports[`Migration > should render compact 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 122px; height: 16px;"
+                            style="width: 150px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -2741,389 +2741,7 @@ exports[`Migration > should render compact 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 138px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="justify-center css-1d4ra48"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 20px; height: 20px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="justify-end css-1d4ra48"
-                      >
-                        <span
-                          class="flex items-center space-x-1"
-                        >
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 83px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 35px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="justify-center css-1hhowo0"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 140px; height: 44px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class=" css-1li86da"
-                    data-testid="MigrationTransactionsRowSkeleton"
-                  >
-                    <td>
-                      <div
-                        class="css-14huxtf"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 16px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="table-cell md:hidden lg:table-cell"
-                    >
-                      <div
-                        class="css-1d4ra48"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 150px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="css-1d4ra48"
-                      >
-                        <div
-                          class="mr-4 flex items-center"
-                        >
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 44px; height: 44px; border-radius: 50%;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                        </div>
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 133px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="css-1d4ra48"
-                      >
-                        <div
-                          class="mr-4"
-                        >
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 44px; height: 44px; border-radius: 50%;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                        </div>
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 147px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="justify-center css-1d4ra48"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 20px; height: 20px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="justify-end css-1d4ra48"
-                      >
-                        <span
-                          class="flex items-center space-x-1"
-                        >
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 97px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 35px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="justify-center css-1hhowo0"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 140px; height: 44px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class=" css-1li86da"
-                    data-testid="MigrationTransactionsRowSkeleton"
-                  >
-                    <td>
-                      <div
-                        class="css-14huxtf"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 16px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="table-cell md:hidden lg:table-cell"
-                    >
-                      <div
-                        class="css-1d4ra48"
-                      >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 150px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="css-1d4ra48"
-                      >
-                        <div
-                          class="mr-4 flex items-center"
-                        >
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 44px; height: 44px; border-radius: 50%;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                        </div>
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 137px; height: 16px;"
-                          >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="css-1d4ra48"
-                      >
-                        <div
-                          class="mr-4"
-                        >
-                          <span
-                            aria-busy="true"
-                            aria-live="polite"
-                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton"
-                              style="width: 44px; height: 44px; border-radius: 50%;"
-                            >
-                              ‌
-                            </span>
-                            <br />
-                          </span>
-                        </div>
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                        >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 150px; height: 16px;"
+                            style="width: 146px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -3278,7 +2896,7 @@ exports[`Migration > should render compact 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 132px; height: 16px;"
+                            style="width: 139px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -3314,7 +2932,7 @@ exports[`Migration > should render compact 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 126px; height: 16px;"
+                            style="width: 132px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -3355,7 +2973,7 @@ exports[`Migration > should render compact 1`] = `
                           >
                             <span
                               class="react-loading-skeleton"
-                              style="width: 83px; height: 16px;"
+                              style="width: 91px; height: 16px;"
                             >
                               ‌
                             </span>
@@ -3469,7 +3087,7 @@ exports[`Migration > should render compact 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 146px; height: 16px;"
+                            style="width: 121px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -3505,7 +3123,198 @@ exports[`Migration > should render compact 1`] = `
                         >
                           <span
                             class="react-loading-skeleton"
-                            style="width: 136px; height: 16px;"
+                            style="width: 138px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-center css-1d4ra48"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 20px; height: 20px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-1d4ra48"
+                      >
+                        <span
+                          class="flex items-center space-x-1"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 90px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 35px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-center css-1hhowo0"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 140px; height: 44px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class=" css-1li86da"
+                    data-testid="MigrationTransactionsRowSkeleton"
+                  >
+                    <td>
+                      <div
+                        class="css-14huxtf"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 16px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="table-cell md:hidden lg:table-cell"
+                    >
+                      <div
+                        class="css-1d4ra48"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 150px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="css-1d4ra48"
+                      >
+                        <div
+                          class="mr-4 flex items-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 44px; height: 44px; border-radius: 50%;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 145px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="css-1d4ra48"
+                      >
+                        <div
+                          class="mr-4"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 44px; height: 44px; border-radius: 50%;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 141px; height: 16px;"
                           >
                             ‌
                           </span>
@@ -3547,6 +3356,197 @@ exports[`Migration > should render compact 1`] = `
                             <span
                               class="react-loading-skeleton"
                               style="width: 81px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 35px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-center css-1hhowo0"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 140px; height: 44px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class=" css-1li86da"
+                    data-testid="MigrationTransactionsRowSkeleton"
+                  >
+                    <td>
+                      <div
+                        class="css-14huxtf"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 16px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="table-cell md:hidden lg:table-cell"
+                    >
+                      <div
+                        class="css-1d4ra48"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 150px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="css-1d4ra48"
+                      >
+                        <div
+                          class="mr-4 flex items-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 44px; height: 44px; border-radius: 50%;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 132px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="css-1d4ra48"
+                      >
+                        <div
+                          class="mr-4"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 44px; height: 44px; border-radius: 50%;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 132px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-center css-1d4ra48"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton"
+                            style="width: 20px; height: 20px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-1d4ra48"
+                      >
+                        <span
+                          class="flex items-center space-x-1"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 76px; height: 16px;"
                             >
                               ‌
                             </span>

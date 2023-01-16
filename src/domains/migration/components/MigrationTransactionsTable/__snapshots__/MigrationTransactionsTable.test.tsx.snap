@@ -2314,7 +2314,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -2353,7 +2353,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 145px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -2392,7 +2392,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 116px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -2565,7 +2565,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -2604,7 +2604,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 140px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -2643,7 +2643,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 109px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -2816,7 +2816,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -2855,7 +2855,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 145px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -2894,7 +2894,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 117px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3067,7 +3067,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3106,7 +3106,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 134px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3145,7 +3145,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 126px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3318,7 +3318,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3357,7 +3357,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 144px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3396,7 +3396,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 128px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3592,7 +3592,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3631,7 +3631,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 146px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3670,7 +3670,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 111px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3843,7 +3843,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3882,7 +3882,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 144px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -3921,7 +3921,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 109px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -4094,7 +4094,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -4133,7 +4133,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 142px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -4172,7 +4172,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 104px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -4345,7 +4345,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -4384,7 +4384,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 137px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -4423,7 +4423,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 128px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -4596,7 +4596,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -4635,7 +4635,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 150px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -4674,7 +4674,7 @@ exports[`MigrationTransactionsTable > should render skeleton on mobile 2`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 105px; height: 16px;"
+                      style="width: 1px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -5022,7 +5022,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 142px; height: 16px;"
+                    style="width: 1px; height: 16px;"
                   >
                     ‌
                   </span>
@@ -5058,7 +5058,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 137px; height: 16px;"
+                    style="width: 1px; height: 16px;"
                   >
                     ‌
                   </span>
@@ -5099,7 +5099,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 84px; height: 16px;"
+                      style="width: 0px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -5213,7 +5213,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 121px; height: 16px;"
+                    style="width: 1px; height: 16px;"
                   >
                     ‌
                   </span>
@@ -5249,7 +5249,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 124px; height: 16px;"
+                    style="width: 1px; height: 16px;"
                   >
                     ‌
                   </span>
@@ -5290,7 +5290,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 84px; height: 16px;"
+                      style="width: 0px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -5404,7 +5404,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 137px; height: 16px;"
+                    style="width: 1px; height: 16px;"
                   >
                     ‌
                   </span>
@@ -5440,7 +5440,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 122px; height: 16px;"
+                    style="width: 1px; height: 16px;"
                   >
                     ‌
                   </span>
@@ -5481,7 +5481,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 96px; height: 16px;"
+                      style="width: 0px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -5595,7 +5595,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 136px; height: 16px;"
+                    style="width: 1px; height: 16px;"
                   >
                     ‌
                   </span>
@@ -5631,7 +5631,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 138px; height: 16px;"
+                    style="width: 1px; height: 16px;"
                   >
                     ‌
                   </span>
@@ -5672,7 +5672,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 96px; height: 16px;"
+                      style="width: 0px; height: 16px;"
                     >
                       ‌
                     </span>
@@ -5786,7 +5786,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 139px; height: 16px;"
+                    style="width: 1px; height: 16px;"
                   >
                     ‌
                   </span>
@@ -5822,7 +5822,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 120px; height: 16px;"
+                    style="width: 1px; height: 16px;"
                   >
                     ‌
                   </span>
@@ -5863,7 +5863,7 @@ exports[`MigrationTransactionsTable > should render skeletons 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 79px; height: 16px;"
+                      style="width: 0px; height: 16px;"
                     >
                       ‌
                     </span>
