@@ -65,37 +65,13 @@ const MigrationContext = React.createContext<any>(undefined);
 export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
-	const [migrations, setMigrations] = useState<Migration[]>();
-	const [expiredMigrations, setExpiredMigrations] = useState(false);
 	const profile = useProfileWatcher();
-
-	const storeMigrationTransactions = useCallback(async () => {
-		/* istanbul ignore next -- @preserve */
-		if (repository === undefined) {
-			return;
-		}
-
-		repository.set(migrations!);
-
-		await persist();
-
-		const hasAnyPendingMigration = migrations!.some(
-			(migration) => migration.status === MigrationTransactionStatus.Waiting,
-		);
-
-		if (hasAnyPendingMigration) {
-			const reloadMigrations = () => {
-				loadMigrations();
-			};
-
-			setTimeout(reloadMigrations, 1000);
-		}
-	}, [migrations, repository]);
+	const [migrations, setMigrations] = useState<Migration[]>();
 
 	const loadMigrations = useCallback(async () => {
-		const migrations = repository!.all();
+		const storedMigrations = repository!.all();
 
-		const transactionsIds = migrations.map((migration: Migration) => `0x${migration.id}`);
+		const transactionsIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
 
 		const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
 
@@ -105,7 +81,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			transactionsIds,
 		);
 
-		const updatedMigrations = migrations.map((migration: Migration): Migration => {
+		const updatedMigrations = storedMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
 				(contractMigration: ARKMigrationViewStructOutput) =>
 					contractMigration.arkTxHash === `0x${migration.id}`,
@@ -122,44 +98,32 @@ export const MigrationProvider = ({ children }: Properties) => {
 			};
 		});
 
-		setMigrations(updatedMigrations);
-	}, [storeMigrationTransactions, repository]);
+		repository!.set(updatedMigrations);
+
+		await migrationsUpdated(repository!.all());
+	}, [repository]);
+
+	const migrationsUpdated = useCallback(
+		async (migrations: Migration[]) => {
+			await persist();
+
+			setMigrations(migrations);
+		},
+		[persist],
+	);
 
 	useEffect(() => {
-		if (migrations === undefined) {
-			return;
-		}
+		setMigrations(undefined);
 
-		storeMigrationTransactions();
-	}, [migrations, storeMigrationTransactions]);
-
-	useEffect(() => {
 		if (profile) {
 			setRepository(new MigrationRepository(profile, env.data()));
 		} else {
 			setRepository(undefined);
-			setMigrations(undefined);
 		}
-
-		setExpiredMigrations(true);
-	}, [profile]);
-
-	useEffect(() => {
-		if (!expiredMigrations) {
-			return;
-		}
-
-		if (repository === undefined) {
-			setMigrations(undefined);
-		} else {
-			loadMigrations();
-		}
-
-		setExpiredMigrations(false);
-	}, [expiredMigrations, loadMigrations, repository]);
+	}, [profile, env]);
 
 	const addTransaction = useCallback(
-		(transaction: DTO.ExtendedSignedTransactionData) => {
+		async (transaction: DTO.ExtendedSignedTransactionData) => {
 			const migration: Migration = {
 				address: transaction.sender(),
 				amount: transaction.amount(),
@@ -170,9 +134,29 @@ export const MigrationProvider = ({ children }: Properties) => {
 			};
 
 			repository!.add(migration);
+
+			await migrationsUpdated(repository!.all());
 		},
-		[repository],
+		[repository, migrationsUpdated],
 	);
+
+	useEffect(() => {
+		// Migrations not loaded yet
+		if (migrations === undefined && repository !== undefined) {
+			loadMigrations();
+		}
+
+		const reloadInterval = setInterval(() => {
+			if (repository === undefined || !repository.hasPending()) {
+				clearInterval(reloadInterval);
+				return;
+			}
+
+			loadMigrations();
+		}, 1000);
+
+		return () => clearInterval(reloadInterval);
+	}, [repository, loadMigrations, migrations]);
 
 	return (
 		<MigrationContext.Provider value={{ addTransaction, migrations } as MigrationContextType}>

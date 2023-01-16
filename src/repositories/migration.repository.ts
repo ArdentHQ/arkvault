@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { Migration } from "@/domains/migration/migration.contracts";
+import { Migration, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 
 const STORAGE_KEY = "ark-migration";
 
@@ -18,6 +18,10 @@ export class MigrationRepository {
 		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
 
 		return all[this.#profile.id()] || [];
+	}
+
+	public hasPending(): boolean {
+		return this.all().some((migration) => migration.status === MigrationTransactionStatus.Waiting);
 	}
 
 	public set(data: Migration[]): void {
