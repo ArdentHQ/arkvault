@@ -18,6 +18,7 @@ import { Spinner } from "@/app/components/Spinner";
 import {
 	metamaskUrl,
 	migrationGuideUrl,
+	migrationMinBalance,
 	migrationNetwork,
 	migrationTransactionFee,
 	migrationWalletAddress,
@@ -118,8 +119,7 @@ export const MigrationConnectStep = () => {
 			profile
 				.wallets()
 				.findByCoinWithNetwork("ARK", migrationNetwork())
-				// Only wallets with a balance greater than the transaction fee +0.05 ARK
-				.filter((wallet) => wallet.balance() >= fee + 0.05),
+				.filter((wallet) => wallet.balance() >= migrationMinBalance() + fee),
 		[profile],
 	);
 
