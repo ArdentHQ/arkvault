@@ -3,7 +3,7 @@ export const migrationTransactionFee = () =>
 
 export const migrationGuideUrl = () => import.meta.env.VITE_MIGRATION_GUIDE_URL || "https://arkvault.io/docs";
 
-export const migrationMinBalance = () => import.meta.env.VITE_MIGRATION_MIN_BALANCE || 1;
+export const migrationMinBalance = () => Number.parseFloat(import.meta.env.VITE_MIGRATION_MIN_BALANCE || 1);
 
 export const metamaskUrl = () => "https://metamask.io/";
 
