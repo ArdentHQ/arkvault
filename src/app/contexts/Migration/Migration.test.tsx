@@ -9,16 +9,16 @@ import * as contexts from "@/app/contexts";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 
 const Test = () => {
-	const { migrations, addTransaction } = useMigrations();
+	const { migrations, storeTransaction } = useMigrations();
 
-	const createAndAddTransaction = () => {
+	const createAndStoreTransaction = () => {
 		const transaction = {
 			amount: () => 123,
 			id: () => "abc123",
 			recipient: () => "0x123",
 			sender: () => "AdDreSs",
 		} as DTO.ExtendedSignedTransactionData;
-		addTransaction(transaction);
+		storeTransaction(transaction);
 	};
 
 	if (migrations === undefined) {
@@ -35,7 +35,7 @@ const Test = () => {
 				))}
 
 				<li>
-					<button data-testid="Migrations__add" type="button" onClick={createAndAddTransaction}>
+					<button data-testid="Migrations__store" type="button" onClick={createAndStoreTransaction}>
 						Add
 					</button>
 				</li>
@@ -218,7 +218,7 @@ describe("Migration Context", () => {
 
 		expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Migrations__add"));
+		userEvent.click(screen.getByTestId("Migrations__store"));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);

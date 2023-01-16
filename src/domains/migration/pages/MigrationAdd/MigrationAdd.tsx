@@ -63,7 +63,7 @@ export const MigrationAdd = () => {
 
 	const wallet = watch("wallet");
 
-	const { addTransaction } = useMigrations();
+	const { storeTransaction } = useMigrations();
 	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
 
 	useEffect(
@@ -98,7 +98,7 @@ export const MigrationAdd = () => {
 	const handleNext = () => {
 		const newStep = activeStep + 1;
 
-		if (newStep === Step.Authenticate && wallet?.isLedger()) {
+		if (newStep === Step.Authenticate && wallet.isLedger()) {
 			handleSubmit();
 		}
 
@@ -111,7 +111,7 @@ export const MigrationAdd = () => {
 
 			setTransaction(transaction);
 
-			addTransaction(transaction);
+			storeTransaction(transaction);
 
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {

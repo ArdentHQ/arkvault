@@ -81,8 +81,8 @@ describe("MigrationAdd", () => {
 
 	beforeEach(() => {
 		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
-			addTransaction: vi.fn(),
 			migrations: [],
+			storeTransaction: vi.fn(),
 		});
 	});
 
