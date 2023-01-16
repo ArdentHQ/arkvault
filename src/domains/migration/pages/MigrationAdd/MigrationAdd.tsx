@@ -106,12 +106,8 @@ export const MigrationAdd = () => {
 	};
 
 	const transactionIsConfirmed = useMemo(() => {
-		if (transaction === undefined) {
-			return;
-		}
-
-		if (migrations === undefined) {
-			return [];
+		if (transaction === undefined || migrations === undefined) {
+			return false;
 		}
 
 		const migrationTransaction = migrations.find((migration) => migration.id === transaction.id());
@@ -126,6 +122,8 @@ export const MigrationAdd = () => {
 			storeTransaction(transaction);
 
 			setTransaction(transaction);
+
+			console.log({ id: transaction.id(), transaction });
 
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {
@@ -171,7 +169,7 @@ export const MigrationAdd = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.Finished}>
-								<MigrationSuccessStep />
+								<MigrationSuccessStep migrationTransaction={transaction!} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.Error}>
