@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useEffect, useState } from "react";
+import React, { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { generatePath, useHistory } from "react-router-dom";
 import { DTO } from "@ardenthq/sdk-profiles";
@@ -17,7 +17,7 @@ import { Button } from "@/app/components/Button";
 import { ProfilePaths } from "@/router/paths";
 import { MigrationErrorStep } from "@/domains/migration/components/MigrationErrorStep";
 import { useMigrations } from "@/app/contexts";
-
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 export enum Step {
 	Connect = 1,
 	Review,
@@ -63,7 +63,7 @@ export const MigrationAdd = () => {
 
 	const wallet = watch("wallet");
 
-	const { storeTransaction } = useMigrations();
+	const { storeTransaction, migrations } = useMigrations();
 	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
 
 	useEffect(
@@ -105,13 +105,27 @@ export const MigrationAdd = () => {
 		setActiveStep((index) => index + 1);
 	};
 
+	const transactionIsConfirmed = useMemo(() => {
+		if (transaction === undefined) {
+			return;
+		}
+
+		if (migrations === undefined) {
+			return [];
+		}
+
+		const migrationTransaction = migrations.find((migration) => migration.id === transaction.id());
+
+		return migrationTransaction?.status === MigrationTransactionStatus.Confirmed;
+	}, [transaction, migrations]);
+
 	const handleSubmit = async () => {
 		try {
 			const transaction = await sendTransaction();
 
-			setTransaction(transaction);
-
 			storeTransaction(transaction);
+
+			setTransaction(transaction);
 
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {
@@ -120,7 +134,13 @@ export const MigrationAdd = () => {
 		}
 	};
 
-	const hideFormButtons = activeStep > Step.Authenticate || (activeStep === Step.Authenticate && wallet?.isLedger());
+	useEffect(() => {
+		if (transactionIsConfirmed) {
+			setActiveStep(Step.Finished);
+		}
+	}, [transactionIsConfirmed]);
+
+	const hideFormButtons = activeStep > Step.Authenticate || (activeStep === Step.Authenticate && wallet.isLedger());
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
