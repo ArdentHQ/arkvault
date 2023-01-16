@@ -144,16 +144,20 @@ export const MigrationProvider = ({ children }: Properties) => {
 		// Migrations not loaded yet
 		if (migrations === undefined && repository !== undefined) {
 			loadMigrations();
+		} else if (repository === undefined) {
+			return;
 		}
 
-		const reloadInterval = setInterval(() => {
+		const reloadIntervalCallback = () => {
 			if (repository === undefined || !repository.hasPending()) {
 				clearInterval(reloadInterval);
 				return;
 			}
 
 			loadMigrations();
-		}, 1000);
+		};
+
+		const reloadInterval = setInterval(reloadIntervalCallback, 1000);
 
 		return () => clearInterval(reloadInterval);
 	}, [repository, loadMigrations, migrations]);
