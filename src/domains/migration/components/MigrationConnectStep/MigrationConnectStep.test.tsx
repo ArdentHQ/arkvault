@@ -132,7 +132,9 @@ describe("MigrationConnectStep", () => {
 
 	describe("with valid wallets", () => {
 		beforeAll(() => {
-			arkMainnetWalletSpy = vi.spyOn(wallet, "balance").mockReturnValue(migrationMinBalance() + migrationTransactionFee());
+			arkMainnetWalletSpy = vi
+				.spyOn(wallet, "balance")
+				.mockReturnValue(migrationMinBalance() + migrationTransactionFee());
 		});
 
 		afterAll(() => {
