@@ -76,7 +76,12 @@ describe("MigrationTransactionsTable", () => {
 
 	it.each([true, false])("should render skeletons (isCompact = %s)", (isCompact) => {
 		const { container } = render(
-			<MigrationTransactionsTable migrationTransactions={migrationTransactions} onClick={vi.fn()} isCompact={isCompact} isLoading />,
+			<MigrationTransactionsTable
+				migrationTransactions={migrationTransactions}
+				onClick={vi.fn()}
+				isCompact={isCompact}
+				isLoading
+			/>,
 		);
 
 		expect(screen.getAllByTestId("MigrationTransactionsRowSkeleton")).toHaveLength(5);
