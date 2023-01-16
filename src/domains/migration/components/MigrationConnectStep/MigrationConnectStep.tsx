@@ -18,6 +18,7 @@ import { Spinner } from "@/app/components/Spinner";
 import {
 	metamaskUrl,
 	migrationGuideUrl,
+	migrationMinBalance,
 	migrationNetwork,
 	migrationTransactionFee,
 	migrationWalletAddress,
@@ -91,7 +92,17 @@ const PolygonFieldMessage = ({
 };
 
 export const MigrationConnectStep = () => {
-	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet, connecting, supportsMetaMask } = useMetaMask();
+	const {
+		needsMetaMask,
+		isOnPolygonNetwork,
+		account,
+		connectWallet,
+		connecting,
+		supportsMetaMask,
+		switching,
+		switchToPolygonNetwork,
+	} = useMetaMask();
+
 	const { openExternal } = useLink();
 
 	const form = useFormContext();
@@ -108,8 +119,7 @@ export const MigrationConnectStep = () => {
 			profile
 				.wallets()
 				.findByCoinWithNetwork("ARK", migrationNetwork())
-				// Only wallets with a balance greater than the transaction fee +0.05 ARK
-				.filter((wallet) => wallet.balance() >= fee + 0.05),
+				.filter((wallet) => wallet.balance() >= migrationMinBalance() + fee),
 		[profile],
 	);
 
@@ -278,6 +288,32 @@ export const MigrationConnectStep = () => {
 										linkMigrationGuide: <Link to={migrationGuideUrl()} isExternal />,
 									}}
 								/>
+
+								<div className="mt-3 flex justify-center border-t border-theme-secondary-300 p-3 dark:border-theme-secondary-800">
+									{switching ? (
+										<div
+											data-testid="MigrationStep__switching"
+											className="flex items-center space-x-2"
+										>
+											<Spinner size="sm" theme="system" width={3} />
+
+											<span className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+												{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.SWITCHING_NETWORK")}
+											</span>
+										</div>
+									) : (
+										<button
+											type="button"
+											onClick={switchToPolygonNetwork}
+											className="link flex items-center space-x-2"
+											data-testid="MigrationStep__switchtopolygon"
+										>
+											<Icon name="Polygon" />
+
+											<span>{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.SWITCH_TO_POLYGON")}</span>
+										</button>
+									)}
+								</div>
 							</div>
 						</div>
 					)}

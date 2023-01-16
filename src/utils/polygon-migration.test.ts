@@ -1,6 +1,7 @@
 import {
 	migrationTransactionFee,
 	migrationGuideUrl,
+	migrationMinBalance,
 	metamaskUrl,
 	migrationNetwork,
 	migrationWalletAddress,
@@ -17,6 +18,10 @@ describe("Polygon Migration Utility Functions", () => {
 
 	it("#migrationGuideUrl", () => {
 		expect(migrationGuideUrl()).toBe("https://arkvault.io/docs");
+	});
+
+	it("#migrationMinBalance", () => {
+		expect(migrationMinBalance()).toBe(1);
 	});
 
 	it("#metamaskUrl", () => {

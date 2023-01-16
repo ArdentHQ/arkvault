@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import { MigrationConnectStep } from "./MigrationConnectStep";
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
+import { migrationMinBalance, migrationTransactionFee } from "@/utils/polygon-migration";
 import { render, screen, env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
 import { Form } from "@/app/components/Form";
 import * as useMetaMask from "@/domains/migration/hooks/use-meta-mask";
@@ -79,6 +80,28 @@ describe("MigrationConnectStep", () => {
 
 		await expect(screen.findByTestId("MigrationStep__wrongnetwork")).resolves.toBeVisible();
 
+		expect(screen.getByTestId("MigrationStep__switchtopolygon")).toBeVisible();
+
+		useMetaMaskMock.mockRestore();
+	});
+
+	it("should show a switching message", async () => {
+		const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+			account: "0x0000000000000000000000000000000000000000",
+			connectWallet: vi.fn(),
+			connecting: false,
+			isOnPolygonNetwork: false,
+			needsMetaMask: false,
+			supportsMetaMask: true,
+			switching: true,
+		});
+
+		renderComponent();
+
+		await expect(screen.findByTestId("MigrationStep__wrongnetwork")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("MigrationStep__switching")).toBeVisible();
+
 		useMetaMaskMock.mockRestore();
 	});
 
@@ -109,7 +132,9 @@ describe("MigrationConnectStep", () => {
 
 	describe("with valid wallets", () => {
 		beforeAll(() => {
-			arkMainnetWalletSpy = vi.spyOn(wallet, "balance").mockReturnValue(0.1);
+			arkMainnetWalletSpy = vi
+				.spyOn(wallet, "balance")
+				.mockReturnValue(migrationMinBalance() + migrationTransactionFee());
 		});
 
 		afterAll(() => {
