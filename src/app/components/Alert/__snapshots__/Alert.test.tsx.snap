@@ -50,7 +50,7 @@ exports[`Alert > should render 1`] = `
       </span>
     </div>
     <div
-      class="css-1csip2u"
+      class="css-rfibfr"
     >
       <span>
         Hello World!
@@ -105,7 +105,7 @@ exports[`Alert > should render as danger alert 1`] = `
       </span>
     </div>
     <div
-      class="css-67yi2s"
+      class="css-1h3dpsb"
     >
       <span>
         Hello World!
@@ -118,7 +118,7 @@ exports[`Alert > should render as danger alert 1`] = `
 exports[`Alert > should render as danger horizontal alert 1`] = `
 <DocumentFragment>
   <div
-    class="css-4zwx4s"
+    class="css-8lshr7"
   >
     <div
       class="css-ezkci6"
@@ -157,7 +157,7 @@ exports[`Alert > should render as danger horizontal alert 1`] = `
       </div>
     </div>
     <div
-      class="css-1sga8n7"
+      class="css-1aqy085"
     >
       <span>
         Hello World!
@@ -211,7 +211,7 @@ exports[`Alert > should render as hint alert 1`] = `
       </span>
     </div>
     <div
-      class="css-4irxhl"
+      class="css-odkf9y"
     >
       <span>
         Hello World!
@@ -224,7 +224,7 @@ exports[`Alert > should render as hint alert 1`] = `
 exports[`Alert > should render as hint horizontal alert 1`] = `
 <DocumentFragment>
   <div
-    class="css-4qoi80"
+    class="css-dcf6k1"
   >
     <div
       class="css-6zq3l2"
@@ -262,7 +262,7 @@ exports[`Alert > should render as hint horizontal alert 1`] = `
       </div>
     </div>
     <div
-      class="css-1sga8n7"
+      class="css-1aqy085"
     >
       <span>
         Hello World!
@@ -322,7 +322,7 @@ exports[`Alert > should render as info alert 1`] = `
       </span>
     </div>
     <div
-      class="css-1916guv"
+      class="css-1b40hgy"
     >
       <span>
         Hello World!
@@ -335,7 +335,7 @@ exports[`Alert > should render as info alert 1`] = `
 exports[`Alert > should render as info horizontal alert 1`] = `
 <DocumentFragment>
   <div
-    class="css-1e005za"
+    class="css-7o8bqz"
   >
     <div
       class="css-1kew733"
@@ -379,7 +379,7 @@ exports[`Alert > should render as info horizontal alert 1`] = `
       </div>
     </div>
     <div
-      class="css-1sga8n7"
+      class="css-1aqy085"
     >
       <span>
         Hello World!
@@ -434,7 +434,7 @@ exports[`Alert > should render as success alert 1`] = `
       </span>
     </div>
     <div
-      class="css-rbb9vf"
+      class="css-90mh6d"
     >
       <span>
         Hello World!
@@ -447,7 +447,7 @@ exports[`Alert > should render as success alert 1`] = `
 exports[`Alert > should render as success horizontal alert 1`] = `
 <DocumentFragment>
   <div
-    class="css-zc5279"
+    class="css-p5cw6y"
   >
     <div
       class="css-16mr7l8"
@@ -486,7 +486,7 @@ exports[`Alert > should render as success horizontal alert 1`] = `
       </div>
     </div>
     <div
-      class="css-1sga8n7"
+      class="css-1aqy085"
     >
       <span>
         Hello World!
@@ -546,7 +546,7 @@ exports[`Alert > should render as warning alert 1`] = `
       </span>
     </div>
     <div
-      class="css-1csip2u"
+      class="css-rfibfr"
     >
       <span>
         Hello World!
@@ -559,7 +559,7 @@ exports[`Alert > should render as warning alert 1`] = `
 exports[`Alert > should render as warning horizontal alert 1`] = `
 <DocumentFragment>
   <div
-    class="css-yvcyxz"
+    class="css-34bhu5"
   >
     <div
       class="css-2ok1cn"
@@ -603,7 +603,7 @@ exports[`Alert > should render as warning horizontal alert 1`] = `
       </div>
     </div>
     <div
-      class="css-1sga8n7"
+      class="css-1aqy085"
     >
       <span>
         Hello World!
