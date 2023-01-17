@@ -45,7 +45,7 @@ describe("MigrationPendingStep", () => {
 	it.each(["xs", "sm"])("should render in %s", (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/migration/add">
-				<MigrationPendingStep migrationTransaction={transactionFixture} />
+				<MigrationPendingStep transaction={transactionFixture} />
 			</Route>,
 			breakpoint,
 			{
@@ -62,7 +62,7 @@ describe("MigrationPendingStep", () => {
 
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/migration/add">
-				<MigrationPendingStep migrationTransaction={transactionFixture} />
+				<MigrationPendingStep transaction={transactionFixture} />
 			</Route>,
 			breakpoint,
 			{
@@ -79,7 +79,7 @@ describe("MigrationPendingStep", () => {
 
 		render(
 			<Route path="/profiles/:profileId/migration/add">
-				<MigrationPendingStep migrationTransaction={transactionFixture} />
+				<MigrationPendingStep transaction={transactionFixture} />
 			</Route>,
 			{
 				history,

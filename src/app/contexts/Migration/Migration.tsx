@@ -39,6 +39,11 @@ const contractABI = [
 						name: "arkTxHash",
 						type: "bytes32",
 					},
+					// {
+					// 	internalType: "bytes32",
+					// 	name: "txHash",
+					// 	type: "bytes32",
+					// },
 				],
 				internalType: "struct ARKMigrator.ARKMigrationView[]",
 				name: "",
@@ -69,6 +74,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrations, setMigrations] = useState<Migration[]>();
 
 	const loadMigrations = useCallback(async () => {
+		// repository!.set([]);
+
 		const storedMigrations = repository!.all();
 
 		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
@@ -98,6 +105,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 			return {
 				...migration,
+				// migrationId: contractMigration.txHash,
 				status,
 			};
 		});

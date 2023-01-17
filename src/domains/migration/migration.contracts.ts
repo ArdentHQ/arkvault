@@ -8,6 +8,7 @@ export interface Migration {
 	address: string;
 	id: string;
 	amount: number;
+	migrationId?: string;
 	migrationAddress: string;
 	status: MigrationTransactionStatus;
 	timestamp: number;

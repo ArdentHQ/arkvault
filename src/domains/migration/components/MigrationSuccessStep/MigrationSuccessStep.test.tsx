@@ -55,7 +55,7 @@ describe("MigrationSuccessStep", () => {
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/migration/add">
 				<WrapperForm>
-					<MigrationSuccessStep migrationTransaction={transactionFixture} />
+					<MigrationSuccessStep transaction={transactionFixture} migrationTransaction={{ id: "0xabcdef" }} />
 				</WrapperForm>
 			</Route>,
 			breakpoint,

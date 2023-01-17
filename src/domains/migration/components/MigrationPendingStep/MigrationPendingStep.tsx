@@ -14,10 +14,10 @@ import { MigrationAddress, MigrationDetail } from "@/domains/migration/component
 import { Header } from "@/app/components/Header";
 
 interface MigrationPendingStepProperties {
-	migrationTransaction: DTO.ExtendedSignedTransactionData;
+	transaction: DTO.ExtendedSignedTransactionData;
 }
 
-export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({ migrationTransaction }) => {
+export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({ transaction }) => {
 	const timeFormat = useTimeFormat();
 
 	const { t } = useTranslation();
@@ -58,11 +58,11 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 				<div className="space-y-3 sm:-mx-5">
 					<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 						<MigrationDetail label={t("COMMON.DATE")} className="px-5 pt-6 pb-5">
-							<span className="font-semibold">{migrationTransaction.timestamp().format(timeFormat)}</span>
+							<span className="font-semibold">{transaction.timestamp().format(timeFormat)}</span>
 						</MigrationDetail>
 
 						<MigrationAddress
-							address={migrationTransaction.sender()}
+							address={transaction.sender()}
 							className="px-5 pb-6"
 							label={t("MIGRATION.MIGRATION_ADD.FROM_ARK_ADDRESS")}
 						/>
@@ -74,7 +74,7 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 						</div>
 
 						<MigrationAddress
-							address={migrationTransaction.memo() || ""}
+							address={transaction.memo() || ""}
 							className="px-5 pt-6 pb-5"
 							label={t("MIGRATION.MIGRATION_ADD.TO_POLYGON_ADDRESS")}
 							isEthereum
@@ -82,7 +82,7 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 
 						<MigrationDetail label={t("COMMON.AMOUNT")} className="px-5 pb-6">
 							<Amount
-								value={migrationTransaction.amount()}
+								value={transaction.amount()}
 								ticker="ARK"
 								className="text-lg font-semibold"
 							/>
