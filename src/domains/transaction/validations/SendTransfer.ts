@@ -3,6 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { migrationWalletAddress } from "@/utils/polygon-migration";
 
 export const sendTransfer = (t: TFunction) => ({
 	amount: (
@@ -81,6 +82,10 @@ export const sendTransfer = (t: TFunction) => ({
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t("COMMON.RECIPIENT"),
 					});
+				}
+
+				if (address === migrationWalletAddress()) {
+					return t("TRANSACTION.VALIDATION.MIGRATION_ADDRESS");
 				}
 
 				const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
