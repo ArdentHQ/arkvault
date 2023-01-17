@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 import { Migration } from "./Migration";
 import { render, screen, env, getDefaultProfileId, waitFor, within } from "@/utils/testing-library";
 import { MigrationTransactionStatus, Migration as MigrationType } from "@/domains/migration/migration.contracts";
-import * as context from "@/app/contexts";
+import * as contexts from "@/app/contexts";
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
@@ -31,7 +31,7 @@ let useMigrationsSpy: vi.SpyInstance;
 describe("Migration", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({ migrations: [] });
+		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({ migrations: [] });
 	});
 
 	afterAll(() => {
@@ -83,7 +83,7 @@ describe("Migration", () => {
 	});
 
 	it("shows a warning and disables the add button if contract is paused", async () => {
-		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
+		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			contractIsPaused: true,
 		});
 
@@ -92,8 +92,6 @@ describe("Migration", () => {
 		expect(screen.getByTestId("Migrations__add-migration-btn")).toBeDisabled();
 
 		expect(screen.getByTestId("ContractPausedAlert")).toBeInTheDocument();
-
-		useMigrationsSpy.mockRestore();
 	});
 
 	it("handles the close button on the disclaimer", async () => {
@@ -120,7 +118,7 @@ describe("Migration", () => {
 			},
 		];
 
-		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({ migrations });
+		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({ migrations });
 
 		renderComponent();
 
