@@ -9,20 +9,20 @@ import { Button } from "@/app/components/Button";
 import { PageHeader } from "@/app/components/Header";
 import { FormButtons } from "@/app/components/Form";
 
-const MigrationHeader: React.FC<MigrationHeaderProperties> = ({ onNewMigration }) => {
+const MigrationHeader: React.FC<MigrationHeaderProperties> = ({ onNewMigration, contractIsPaused }) => {
 	const { t } = useTranslation();
 
 	return (
 		<PageHeader
 			title={t("MIGRATION.PAGE_MIGRATION.TITLE")}
 			subtitle={t("MIGRATION.PAGE_MIGRATION.SUBTITLE")}
-			extra={<MigrationHeaderExtra onNewMigration={onNewMigration} />}
+			extra={<MigrationHeaderExtra onNewMigration={onNewMigration} contractIsPaused={contractIsPaused} />}
 			border
 		/>
 	);
 };
 
-const MigrationHeaderExtra: React.FC<MigrationHeaderExtraProperties> = ({ onNewMigration }) => {
+const MigrationHeaderExtra: React.FC<MigrationHeaderExtraProperties> = ({ onNewMigration, contractIsPaused }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -33,6 +33,7 @@ const MigrationHeaderExtra: React.FC<MigrationHeaderExtraProperties> = ({ onNewM
 					sizeClassName="px-5 md:py-3 py-2"
 					data-testid="Migrations__add-migration-btn"
 					onClick={onNewMigration}
+					disabled={contractIsPaused}
 				>
 					{t("MIGRATION.PAGE_MIGRATION.NEW_MIGRATION")}
 				</Button>
@@ -43,13 +44,19 @@ const MigrationHeaderExtra: React.FC<MigrationHeaderExtraProperties> = ({ onNewM
 
 const MigrationNewMigrationMobileButton: React.FC<MigrationNewMigrationMobileButtonProperties> = ({
 	onNewMigration,
+	contractIsPaused,
 }) => {
 	const { t } = useTranslation();
 
 	return (
 		<div className="sm:hidden">
 			<FormButtons>
-				<Button variant="primary" data-testid="Migrations__add-migration-btn-mobile" onClick={onNewMigration}>
+				<Button
+					variant="primary"
+					data-testid="Migrations__add-migration-btn-mobile"
+					onClick={onNewMigration}
+					disabled={contractIsPaused}
+				>
 					{t("MIGRATION.PAGE_MIGRATION.NEW_MIGRATION")}
 				</Button>
 			</FormButtons>

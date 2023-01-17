@@ -16,7 +16,7 @@ export const Migration = () => {
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 	const history = useHistory();
 	const profile = useActiveProfile();
-	const { migrations } = useMigrations();
+	const { migrations, contractIsPaused } = useMigrations();
 
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
@@ -32,7 +32,7 @@ export const Migration = () => {
 	return (
 		<>
 			<Page pageTitle={t("MIGRATION.PAGE_MIGRATION.TITLE")} isBackDisabled={true} data-testid="Migration">
-				<MigrationHeader onNewMigration={onNewMigrationHandler} />
+				<MigrationHeader onNewMigration={onNewMigrationHandler} contractIsPaused={contractIsPaused} />
 
 				<Section className="mt-4">
 					<MigrationTransactionsTable
@@ -43,7 +43,10 @@ export const Migration = () => {
 					/>
 				</Section>
 
-				<MigrationNewMigrationMobileButton onNewMigration={onNewMigrationHandler} />
+				<MigrationNewMigrationMobileButton
+					onNewMigration={onNewMigrationHandler}
+					contractIsPaused={contractIsPaused}
+				/>
 
 				<MigrationDisclaimer
 					isOpen={isDisclaimerOpen}
