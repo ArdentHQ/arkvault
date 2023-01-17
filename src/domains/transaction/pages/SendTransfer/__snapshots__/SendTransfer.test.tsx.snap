@@ -828,10 +828,10 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -870,7 +870,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -15348,10 +15348,10 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -15390,7 +15390,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -16654,10 +16654,10 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -16696,7 +16696,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -18513,10 +18513,10 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -18555,7 +18555,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -19819,10 +19819,10 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -19861,7 +19861,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -21125,10 +21125,10 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -21167,7 +21167,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -21606,12 +21606,16 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
 exports[`SendTransfer > should show error step and go back 1`] = `
 <div>
   <div
-    class="css-kmmje1"
+    class="css-w3nefz"
   >
     <div
-      class="css-1mnbipv"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
+      <div
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+        data-testid="NavigationBar__buttons-separator"
+      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
@@ -22559,10 +22563,10 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                         An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
                       </p>
                       <div
-                        class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                        class="md:hidden css-mpc03v"
                       >
                         <div
-                          class="css-ic0qlc"
+                          class="css-1f7sa7y"
                         >
                           <div
                             class="css-v0ob3f"
@@ -22601,7 +22605,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                           </span>
                         </div>
                         <div
-                          class="css-6o9bco"
+                          class="css-1h3dpsb"
                         >
                           An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
                         </div>
