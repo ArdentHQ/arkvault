@@ -387,7 +387,7 @@ describe("Migration Context", () => {
 		clearStoredMigrationsMock();
 	});
 
-	it("should not load the migrations if contractAddress is not defined", async () => {
+	it("should not load the migrations if contractAddress is not defined", () => {
 		polygonMigrationSpy = vi.spyOn(polygonMigration, "polygonContractAddress").mockReturnValue(undefined);
 
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
