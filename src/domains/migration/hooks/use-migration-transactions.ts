@@ -1,9 +1,8 @@
-import React, { useCallback, useEffect, useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useConfiguration, useMigrations } from "@/app/contexts";
 import { useLatestTransactions } from "@/domains/dashboard/hooks";
-import { migrationNetwork, polygonRpcUrl } from "@/utils/polygon-migration";
-import { ethers } from "ethers";
+import { migrationNetwork } from "@/utils/polygon-migration";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsSyncing } = useConfiguration();
@@ -18,17 +17,19 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			.filter((wallet) => wallet.networkId() === migrationNetwork()),
 	});
 
-	const migrationTransactions = useMemo(() => {
-		return latestTransactions.filter((transaction) => {
-			const polygonAddress = transaction.memo();
+	const migrationTransactions = useMemo(
+		() =>
+			latestTransactions.filter((transaction) => {
+				const polygonAddress = transaction.memo();
 
-			if (!polygonAddress) {
-				return false;
-			}
+				if (!polygonAddress) {
+					return false;
+				}
 
-			return true;
-		});
-	}, [latestTransactions, isLoadingTransactions]);
+				return true;
+			}),
+		[latestTransactions, isLoadingTransactions],
+	);
 
 	useEffect(() => {
 		for (const transaction of migrationTransactions) {
