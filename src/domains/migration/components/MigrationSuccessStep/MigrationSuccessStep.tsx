@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { DTO } from "@ardenthq/sdk-profiles";
 import { Amount } from "@/app/components/Amount";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Header } from "@/app/components/Header";
@@ -10,21 +11,18 @@ import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { MigrationAddress, MigrationDetail } from "@/domains/migration/components/MigrationAddress";
 import { polygonTransactionLink } from "@/utils/polygon-migration";
 
-const migrationTransaction: any = {
-	address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
-	amount: 123,
-	id: "id",
-	migrationAddress: "0x0000000000000000000000000000000000000000",
-	timestamp: Date.now() / 1000,
-};
-
-export const MigrationSuccessStep: React.FC = () => {
+interface MigrationSuccessStepProperties {
+	migrationTransaction: DTO.ExtendedSignedTransactionData;
+}
+export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({ migrationTransaction }) => {
 	const { t } = useTranslation();
 
 	const reference = useRef(null);
 
+	const polygonId = useMemo(() => `0x${migrationTransaction.id()}`, [migrationTransaction]);
+
 	return (
-		<>
+		<div data-testid="MigrationSuccessStep">
 			<div className="flex flex-col">
 				<Header
 					title={t("MIGRATION.MIGRATION_ADD.STEP_SUCCESS.TITLE")}
@@ -42,7 +40,7 @@ export const MigrationSuccessStep: React.FC = () => {
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 					<MigrationAddress
 						label={t("MIGRATION.POLYGON_ADDRESS")}
-						address={migrationTransaction.migrationAddress}
+						address={migrationTransaction.memo() || ""}
 					/>
 
 					<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
@@ -54,7 +52,7 @@ export const MigrationSuccessStep: React.FC = () => {
 					</div>
 
 					<MigrationDetail label={t("COMMON.AMOUNT")}>
-						<Amount value={migrationTransaction.amount} ticker="ARK" className="text-lg font-semibold" />
+						<Amount value={migrationTransaction.amount()} ticker="ARK" className="text-lg font-semibold" />
 					</MigrationDetail>
 				</div>
 
@@ -65,23 +63,23 @@ export const MigrationSuccessStep: React.FC = () => {
 						</span>
 						<span ref={reference} className="overflow-hidden">
 							<Link
-								to={polygonTransactionLink(migrationTransaction.id)}
-								tooltip={migrationTransaction.id}
+								to={polygonTransactionLink(polygonId)}
+								tooltip={polygonId}
 								showExternalIcon={false}
 								isExternal
 							>
-								<TruncateMiddleDynamic value={migrationTransaction.id} parentRef={reference} />
+								<TruncateMiddleDynamic value={polygonId} parentRef={reference} />
 							</Link>
 						</span>
 					</div>
 
 					<div className="flex items-center bg-theme-navy-100 px-5 text-theme-navy-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
-						<Clipboard variant="icon" data={migrationTransaction.id}>
+						<Clipboard variant="icon" data={polygonId}>
 							<Icon name="Copy" />
 						</Clipboard>
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
