@@ -51,7 +51,7 @@ const contractABI = [
 
 // @TODO: make this transactions dynamic, an option is to store/get using the
 // env storage, e.g. env.storage().get("ark-migration-transactions")
-const fakeTransactionsIds = [
+const fakeTransactionIds = [
 	// Invalid one
 	"0x74a1e612846da4c3da618a77e82e6f8468fd88459662738babce5b6014b023f4",
 	// Valid ones
@@ -125,12 +125,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const loadMigrations = useCallback(async () => {
 		const migrations = repository!.all();
-		const transactionsIds = [
+		const transactionIds = [
 			...migrations.map((tx: Migration) => tx.id),
 			// Add some initial transaction ids
 			// @TODO: Potentially remove this in favour of storing the transactions
 			// when a new migration is added
-			...fakeTransactionsIds,
+			...fakeTransactionIds,
 		]
 			// Remove duplicated transactions ids
 			// @TODO: not needed once we remove the fake ones
@@ -143,9 +143,13 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		const contract = new Contract(polygonContractAddress(), contractABI, provider);
 
-		const contractMigrations: ARKMigrationViewStructOutput[] = await contract.getMigrationsByArkTxHash(
-			transactionsIds,
-		);
+		let contractMigrations: ARKMigrationViewStructOutput[] = [];
+
+		try {
+			contractMigrations = await contract.getMigrationsByArkTxHash(transactionIds);
+		} catch {
+			//
+		}
 
 		const formattedMigrations = contractMigrations.map(transactionMapper);
 

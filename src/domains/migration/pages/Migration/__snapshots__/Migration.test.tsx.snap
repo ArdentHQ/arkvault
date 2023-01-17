@@ -660,7 +660,16 @@ exports[`Migration > should render 1`] = `
       >
         <div
           class="mx-auto px-8 md:px-10 lg:container"
-        />
+        >
+          <div
+            class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
+            data-testid="MigrationTransactionsTable__empty-message"
+          >
+            <div>
+              You don't have any migration transactions yet.
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="sm:hidden"
@@ -1346,7 +1355,16 @@ exports[`Migration > should render compact 1`] = `
       >
         <div
           class="mx-auto px-8 md:px-10 lg:container"
-        />
+        >
+          <div
+            class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
+            data-testid="MigrationTransactionsTable__empty-message"
+          >
+            <div>
+              You don't have any migration transactions yet.
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="sm:hidden"
