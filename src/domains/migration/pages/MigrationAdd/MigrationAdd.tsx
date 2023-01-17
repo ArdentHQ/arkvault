@@ -1,23 +1,24 @@
-import React, { PropsWithChildren, useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import React, { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { generatePath, useHistory } from "react-router-dom";
 import { DTO } from "@ardenthq/sdk-profiles";
-import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
+import { useTranslation } from "react-i18next";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
-import { MigrationPendingStep } from "@/domains/migration/components/MigrationPendingStep";
-import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
-import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
-import { MigrationAuthenticationStep } from "@/domains/migration/components/MigrationAuthenticationStep";
 import { useMigrationForm, useMigrationTransaction } from "@/domains/migration/hooks";
-import { Button } from "@/app/components/Button";
-import { ProfilePaths } from "@/router/paths";
-import { MigrationErrorStep } from "@/domains/migration/components/MigrationErrorStep";
-import { useMigrations } from "@/app/contexts";
 
+import { Button } from "@/app/components/Button";
+import { MigrationAuthenticationStep } from "@/domains/migration/components/MigrationAuthenticationStep";
+import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
+import { MigrationErrorStep } from "@/domains/migration/components/MigrationErrorStep";
+import { MigrationPendingStep } from "@/domains/migration/components/MigrationPendingStep";
+import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
+import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { ProfilePaths } from "@/router/paths";
+import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
+import { useMigrations } from "@/app/contexts";
 export enum Step {
 	Connect = 1,
 	Review,
@@ -63,7 +64,7 @@ export const MigrationAdd = () => {
 
 	const wallet = watch("wallet");
 
-	const { storeTransaction } = useMigrations();
+	const { storeTransaction, migrations } = useMigrations();
 	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
 
 	useEffect(
@@ -105,9 +106,21 @@ export const MigrationAdd = () => {
 		setActiveStep((index) => index + 1);
 	};
 
+	const transactionIsConfirmed = useMemo(() => {
+		if (transaction === undefined || migrations === undefined) {
+			return false;
+		}
+
+		const migrationTransaction = migrations.find((migration) => migration.id === transaction.id());
+
+		return migrationTransaction?.status === MigrationTransactionStatus.Confirmed;
+	}, [transaction, migrations]);
+
 	const handleSubmit = async () => {
 		try {
 			const transaction = await sendTransaction();
+
+			storeTransaction(transaction);
 
 			setTransaction(transaction);
 
@@ -120,7 +133,13 @@ export const MigrationAdd = () => {
 		}
 	};
 
-	const hideFormButtons = activeStep > Step.Authenticate || (activeStep === Step.Authenticate && wallet?.isLedger());
+	useEffect(() => {
+		if (transactionIsConfirmed) {
+			setActiveStep(Step.Finished);
+		}
+	}, [transactionIsConfirmed]);
+
+	const hideFormButtons = activeStep > Step.Authenticate || (activeStep === Step.Authenticate && wallet.isLedger());
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
@@ -151,7 +170,7 @@ export const MigrationAdd = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.Finished}>
-								<MigrationSuccessStep />
+								<MigrationSuccessStep migrationTransaction={transaction!} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.Error}>
