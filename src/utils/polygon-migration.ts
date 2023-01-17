@@ -1,4 +1,4 @@
-import { AddEthereumChainParameter } from "@/domains/migration/hooks/use-meta-mask.contracts.ts";
+import { AddEthereumChainParameter } from "@/domains/migration/hooks/use-meta-mask.contracts";
 
 export const migrationTransactionFee = () =>
 	Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
