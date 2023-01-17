@@ -1,34 +1,52 @@
 import React from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { Contract } from "ethers";
+import { DTO, Contracts } from "@ardenthq/sdk-profiles";
+import { Contract, ethers } from "ethers";
+import userEvent from "@testing-library/user-event";
 import { MigrationProvider, useMigrations } from "./Migration";
 import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
 import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testing-library";
 import * as contexts from "@/app/contexts";
-import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 
 const Test = () => {
-	const { migrations } = useMigrations();
+	const { migrations, storeTransaction } = useMigrations();
+
+	const createAndStoreTransaction = () => {
+		const transaction = {
+			amount: () => 123,
+			id: () => "abc123",
+			recipient: () => "0x123",
+			sender: () => "AdDreSs",
+		} as DTO.ExtendedSignedTransactionData;
+		storeTransaction(transaction);
+	};
 
 	if (migrations === undefined) {
 		return <span data-testid="Migration__loading">Loading...</span>;
 	}
 
 	return (
-		<ul data-testid="Migrations">
-			{migrations.map((migration) => (
-				<li data-testid="MigrationItem" key={migration.id}>
-					{migration.address}
+		<div>
+			<ul data-testid="Migrations">
+				{migrations.map((migration) => (
+					<li data-testid="MigrationItem" key={migration.id}>
+						{migration.address}
+					</li>
+				))}
+
+				<li>
+					<button data-testid="Migrations__store" type="button" onClick={createAndStoreTransaction}>
+						Add
+					</button>
 				</li>
-			))}
-		</ul>
+			</ul>
+		</div>
 	);
 };
 
 let profile: Contracts.IProfile;
 
 describe("Migration Context", () => {
-	let environmentMock;
 	let configurationMock;
 	let profileWatcherMock;
 	let ethersLibraryContractSpy;
@@ -41,6 +59,50 @@ describe("Migration Context", () => {
 			}),
 		},
 		persist: vi.fn(),
+	};
+
+	const mockStoredMigrations = (migrations: Migration[]) => {
+		const profileMigrations = {
+			[profile.id()]: migrations,
+		};
+
+		const getMigrationsMock = vi.fn().mockReturnValue(profileMigrations);
+
+		const environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
+			...environmentMockData,
+			env: {
+				data: () => ({
+					get: getMigrationsMock,
+					set: () => {},
+				}),
+			},
+		});
+
+		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() =>
+			migrations.map((migration) => ({
+				amount: migration.amount,
+				arkTxHash: `0x${migration.id}`,
+				recipient:
+					migration.status === MigrationTransactionStatus.Waiting
+						? ethers.constants.AddressZero
+						: "0xWhatevs",
+			})),
+		);
+
+		const ethersMock = Contract.mockImplementation(() => ({
+			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
+		}));
+
+		const clearStoredMigrationsMock = () => {
+			environmentMock.mockRestore();
+			ethersMock.mockRestore();
+		};
+
+		return {
+			clearStoredMigrationsMock,
+			getMigrationsByArkTxHashMock,
+			getMigrationsMock,
+		};
 	};
 
 	beforeAll(() => {
@@ -61,7 +123,6 @@ describe("Migration Context", () => {
 	});
 
 	beforeEach(() => {
-		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue(environmentMockData);
 		configurationMock = vi.spyOn(contexts, "useConfiguration").mockReturnValue({
 			profileHasSyncedOnce: true,
 		});
@@ -74,7 +135,6 @@ describe("Migration Context", () => {
 	});
 
 	afterEach(() => {
-		environmentMock.mockRestore();
 		configurationMock.mockRestore();
 		profileWatcherMock.mockRestore();
 		ethersLibraryContractSpy.mockRestore();
@@ -107,21 +167,43 @@ describe("Migration Context", () => {
 	});
 
 	it("should list the migrations", async () => {
-		const { BigNumber } = await vi.importActual("ethers");
+		const { clearStoredMigrationsMock } = mockStoredMigrations([
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "123",
+				migrationAddress: "BuRnAdDreSs",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		]);
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		clearStoredMigrationsMock();
+	});
+
+	it("should add a transaction", async () => {
+		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
+
+		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => ({
+			amount: 123,
+			arkTxHash: `0xabc123`,
+			recipient: "0xabc",
+		}));
 
 		const ethersMock = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: () => [
-				{
-					amount: BigNumber.from(124),
-					arkTxHash: "0x456",
-					recipient: "0x123",
-				},
-				{
-					amount: BigNumber.from(450),
-					arkTxHash: "0x012",
-					recipient: "0x789",
-				},
-			],
+			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
 		}));
 
 		render(
@@ -134,61 +216,46 @@ describe("Migration Context", () => {
 			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
 		});
 
-		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
+		expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("Migrations__store"));
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
 
 		ethersMock.mockRestore();
 	});
 
 	it("should not reload the migrations if no pending migrations", async () => {
-		const reloadMigration = vi.fn();
-
-		const migrations = {};
-		migrations[profile.id()] = [
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
 			{
 				address: "AdDreSs",
-				amount: 123,
-				id: "0x123",
-				migrationAddress: "0x456",
+				amount: 111,
+				id: "123",
+				migrationAddress: "BuRnAdDreSs",
 				status: MigrationTransactionStatus.Confirmed,
 				timestamp: Date.now() / 1000,
 			},
-		];
-
-		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
-			...environmentMockData,
-			env: {
-				data: () => ({
-					get: () => migrations,
-					set: () => {},
-				}),
+			{
+				address: "AdDreSs2",
+				amount: 222,
+				id: "456",
+				migrationAddress: "BuRnAdDreSs",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
 			},
-		});
+		]);
 
-		const setTimeoutSpy = vi.spyOn(window, "setTimeout").mockImplementation((callback) => {
-			if (callback.name === "reloadMigrations") {
-				reloadMigration();
+		let reloadIntervalCallback;
+
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
+			if (callback.name === "reloadIntervalCallback") {
+				reloadIntervalCallback = callback;
 			}
 
 			return 1;
 		});
-
-		const { BigNumber } = await vi.importActual("ethers");
-
-		const ethersMock = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: () => [
-				{
-					amount: BigNumber.from(124),
-					arkTxHash: "0x456",
-					recipient: "0x123",
-				},
-				// Address zero is the pending migration
-				{
-					amount: BigNumber.from(450),
-					arkTxHash: "0x012",
-					recipient: "0x123",
-				},
-			],
-		}));
 
 		render(
 			<MigrationProvider>
@@ -202,67 +269,45 @@ describe("Migration Context", () => {
 
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
 
-		expect(reloadMigration).not.toHaveBeenCalled();
+		reloadIntervalCallback();
 
-		ethersMock.mockRestore();
+		// Contract method should have been called only when loaded
+		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(1);
 
-		setTimeoutSpy.mockRestore();
+		setIntervalSpy.mockRestore();
+
+		clearStoredMigrationsMock();
 	});
 
 	it("should reload the migrations if at least one migration is pending", async () => {
-		const migrations = {};
-		migrations[profile.id()] = [
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
 			{
 				address: "AdDreSs",
-				amount: 123,
-				id: "0x123",
-				migrationAddress: "0x456",
+				amount: 111,
+				id: "123",
+				migrationAddress: "BuRnAdDreSs",
 				status: MigrationTransactionStatus.Confirmed,
 				timestamp: Date.now() / 1000,
 			},
-		];
+			{
+				address: "AdDreSs2",
+				amount: 222,
+				id: "456",
+				migrationAddress: "BuRnAdDreSs",
+				status: MigrationTransactionStatus.Waiting,
+				timestamp: Date.now() / 1000,
+			},
+		]);
 
-		const getMigrationMock = vi.fn().mockImplementation(() => migrations);
+		let reloadIntervalCallback;
 
-		environmentMock.mockRestore();
-
-		let reloadMigrationCallback: any;
-
-		const setTimeoutSpy = vi.spyOn(window, "setTimeout").mockImplementation((callback) => {
-			if (callback.name === "reloadMigrations") {
-				reloadMigrationCallback = callback;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
+			if (callback.name === "reloadIntervalCallback") {
+				reloadIntervalCallback = callback;
 			}
 
 			return 1;
 		});
-
-		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
-			...environmentMockData,
-			env: {
-				data: () => ({
-					get: getMigrationMock,
-					set: () => {},
-				}),
-			},
-		});
-
-		const { BigNumber, constants } = await vi.importActual("ethers");
-
-		const ethersMock = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: () => [
-				{
-					amount: BigNumber.from(124),
-					arkTxHash: "0x456",
-					recipient: "0x123",
-				},
-				// Address zero is the pending migration
-				{
-					amount: BigNumber.from(450),
-					arkTxHash: "0x012",
-					recipient: constants.AddressZero,
-				},
-			],
-		}));
 
 		render(
 			<MigrationProvider>
@@ -274,15 +319,17 @@ describe("Migration Context", () => {
 			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
 		});
 
-		reloadMigrationCallback();
-
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
 
-		expect(getMigrationMock).toHaveBeenCalledTimes(3);
+		reloadIntervalCallback();
 
-		ethersMock.mockRestore();
+		// Contract method should have been twice, once when page loaded
+		// and once when interval was called
+		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(2);
 
-		setTimeoutSpy.mockRestore();
+		setIntervalSpy.mockRestore();
+
+		clearStoredMigrationsMock();
 	});
 
 	it("should throw without provider", () => {
@@ -303,19 +350,7 @@ describe("Migration Context", () => {
 	it("should not load migrations if profile is undefined", async () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(undefined);
 
-		const getMigrationMock = vi.fn().mockImplementation(() => []);
-
-		environmentMock.mockRestore();
-
-		environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
-			...environmentMockData,
-			env: {
-				data: () => ({
-					get: getMigrationMock,
-					set: () => {},
-				}),
-			},
-		});
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
 
 		render(
 			<MigrationProvider>
@@ -327,6 +362,8 @@ describe("Migration Context", () => {
 			expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 		});
 
-		expect(getMigrationMock).not.toHaveBeenCalled();
+		expect(getMigrationsByArkTxHashMock).not.toHaveBeenCalled();
+
+		clearStoredMigrationsMock();
 	});
 });

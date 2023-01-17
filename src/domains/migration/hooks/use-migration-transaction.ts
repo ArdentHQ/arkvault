@@ -1,9 +1,8 @@
 import { useRef, useState } from "react";
 import { UseFormMethods } from "react-hook-form";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { Services } from "@ardenthq/sdk";
-
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
@@ -39,7 +38,10 @@ export const useMigrationTransaction = ({
 		wallet,
 	} = watch();
 
-	const signTransaction = async () => {
+	const signTransaction = async (): Promise<{
+		transaction: DTO.ExtendedSignedTransactionData;
+		uuid: string;
+	}> => {
 		const signatory = await wallet.signatoryFactory().make({
 			encryptionPassword,
 			mnemonic,

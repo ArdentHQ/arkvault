@@ -16,6 +16,7 @@ import {
 } from "@/utils/testing-library";
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
 import * as useMetaMask from "@/domains/migration/hooks/use-meta-mask";
+import * as contexts from "@/app/contexts";
 import { migrationNetwork } from "@/utils/polygon-migration";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
@@ -24,7 +25,9 @@ const history = createHashHistory();
 const migrationUrl = `/profiles/${getDefaultProfileId()}/migration/add`;
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let secret = "123";
+let useMigrationsSpy;
+
+const secret = "123";
 
 const arkDevnetNetwork = "ark.devnet";
 const arkCoin = "ARK";
@@ -74,6 +77,17 @@ describe("MigrationAdd", () => {
 		profile.wallets().push(wallet);
 
 		await profile.wallets().findByCoinWithNetwork(arkCoin, arkDevnetNetwork)[0].synchroniser().identity();
+	});
+
+	beforeEach(() => {
+		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: [],
+			storeTransaction: vi.fn(),
+		});
+	});
+
+	afterEach(() => {
+		useMigrationsSpy.mockRestore();
 	});
 
 	it("should render", () => {
