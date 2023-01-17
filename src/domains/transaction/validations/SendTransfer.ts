@@ -1,7 +1,7 @@
 import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { migrationWalletAddress } from "@/utils/polygon-migration";
 
