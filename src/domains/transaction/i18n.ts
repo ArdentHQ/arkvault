@@ -425,6 +425,7 @@ export const translations = {
 		MESSAGE_MISSING: "message parameter is missing.",
 		METHOD_MISSING: "method parameter is missing",
 		METHOD_NOT_SUPPORTED: "method <strong>{{method}}</strong> is not supported.",
+		MIGRATION_ADDRESS: "Sending to the migration address is not possible outside of the Migration page",
 		NETHASH_NOT_ENABLED: "network with nethash <strong>{{nethash}}</strong> is not enabled or available.",
 		NETWORK_INVALID: "network <strong>{{network}}</strong> is invalid.",
 		NETWORK_MISMATCH: "data belongs to another network.",

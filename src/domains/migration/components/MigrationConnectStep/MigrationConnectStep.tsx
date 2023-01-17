@@ -123,22 +123,12 @@ export const MigrationConnectStep = () => {
 		[profile],
 	);
 
-	const walletBalance = useMemo(() => {
-		if (!wallet) {
-			return 0;
-		}
-
-		return Math.round(wallet.balance() * 100) / 100;
-	}, [wallet]);
-
 	const amountYouGet = useMemo(() => {
 		if (!wallet) {
 			return 0;
 		}
 
-		const amount = wallet.balance() - migrationTransactionFee();
-
-		return Math.round(amount * 100) / 100;
+		return +(wallet.balance() - migrationTransactionFee()).toFixed(8);
 	}, [wallet]);
 
 	const accountIsInWrongNetwork = useMemo(() => {
@@ -222,7 +212,7 @@ export const MigrationConnectStep = () => {
 							</div>
 
 							<div className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-								<Amount ticker="ARK" value={walletBalance} />
+								<Amount ticker="ARK" value={wallet?.balance() ?? 0} />
 							</div>
 						</div>
 
