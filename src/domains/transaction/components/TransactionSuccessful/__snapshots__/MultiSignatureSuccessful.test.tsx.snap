@@ -122,10 +122,10 @@ exports[`MultiSignatureSuccessful > should handle empty wallet and transation pr
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -164,7 +164,7 @@ exports[`MultiSignatureSuccessful > should handle empty wallet and transation pr
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -298,10 +298,10 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -340,7 +340,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -1165,10 +1165,10 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -1207,7 +1207,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -2032,10 +2032,10 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -2074,7 +2074,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -2829,10 +2829,10 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -2871,7 +2871,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -3696,10 +3696,10 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -3738,7 +3738,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -4493,10 +4493,10 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -4535,7 +4535,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -5360,10 +5360,10 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -5402,7 +5402,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -6047,10 +6047,10 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -6089,7 +6089,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
