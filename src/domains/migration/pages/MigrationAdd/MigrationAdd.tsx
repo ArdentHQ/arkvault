@@ -1,13 +1,14 @@
+import React, { PropsWithChildren, useEffect, useMemo, useState } from "react";
+import { generatePath, useHistory } from "react-router-dom";
+import { DTO } from "@ardenthq/sdk-profiles";
+import { useTranslation } from "react-i18next";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
-import React, { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { generatePath, useHistory } from "react-router-dom";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { useMigrationForm, useMigrationTransaction } from "@/domains/migration/hooks";
 
 import { Button } from "@/app/components/Button";
-import { DTO } from "@ardenthq/sdk-profiles";
 import { MigrationAuthenticationStep } from "@/domains/migration/components/MigrationAuthenticationStep";
 import MigrationConnectStep from "@/domains/migration/components/MigrationConnectStep";
 import { MigrationErrorStep } from "@/domains/migration/components/MigrationErrorStep";
@@ -18,7 +19,6 @@ import { MigrationTransactionStatus } from "@/domains/migration/migration.contra
 import { ProfilePaths } from "@/router/paths";
 import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
 import { useMigrations } from "@/app/contexts";
-import { useTranslation } from "react-i18next";
 export enum Step {
 	Connect = 1,
 	Review,
