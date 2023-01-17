@@ -272,7 +272,7 @@ describe("Migration Context", () => {
 		ethersMock.mockRestore();
 	});
 
-	it("should handle exceptions on pause method", async () => {
+	it("should handle exceptions on pause method", () => {
 		const ethersMock = Contract.mockImplementation(() => ({
 			getMigrationsByArkTxHash: vi.fn(),
 			paused: () => {

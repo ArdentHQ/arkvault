@@ -82,7 +82,7 @@ describe("Migration", () => {
 		await waitFor(() => expect(screen.queryByTestId("MigrationDisclaimer__cancel-button")).not.toBeInTheDocument());
 	});
 
-	it("shows a warning and disables the add button if contract is paused", async () => {
+	it("shows a warning and disables the add button if contract is paused", () => {
 		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			contractIsPaused: true,
 		});

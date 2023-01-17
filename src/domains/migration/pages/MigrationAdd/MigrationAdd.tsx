@@ -2,7 +2,7 @@ import React, { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { generatePath, useHistory } from "react-router-dom";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
-import { ContractPausedAlert } from "../Migration/Migration.blocks";
+import { ContractPausedAlert } from "@/domains/migration/pages/Migration/Migration.blocks";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
