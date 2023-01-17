@@ -247,11 +247,11 @@ describe("Migration Context", () => {
 			},
 		]);
 
-		let reloadIntervalCallback;
+		let reloadMigrationsCallback;
 
 		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
-			if (callback.name === "reloadIntervalCallback") {
-				reloadIntervalCallback = callback;
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
 			}
 
 			return 1;
@@ -269,7 +269,7 @@ describe("Migration Context", () => {
 
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
 
-		reloadIntervalCallback();
+		reloadMigrationsCallback();
 
 		// Contract method should have been called only when loaded
 		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(1);
@@ -299,11 +299,11 @@ describe("Migration Context", () => {
 			},
 		]);
 
-		let reloadIntervalCallback;
+		let reloadMigrationsCallback;
 
 		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
-			if (callback.name === "reloadIntervalCallback") {
-				reloadIntervalCallback = callback;
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
 			}
 
 			return 1;
@@ -321,7 +321,7 @@ describe("Migration Context", () => {
 
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
 
-		reloadIntervalCallback();
+		reloadMigrationsCallback();
 
 		// Contract method should have been twice, once when page loaded
 		// and once when interval was called
