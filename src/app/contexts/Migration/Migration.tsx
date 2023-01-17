@@ -227,9 +227,13 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	// Create contract instance when context is created
 	useEffect(() => {
-		const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
+		try {
+			const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
 
-		setContract(new Contract(polygonContractAddress(), contractABI, provider));
+			setContract(new Contract(polygonContractAddress(), contractABI, provider));
+		} catch {
+			//
+		}
 	}, []);
 
 	return (
