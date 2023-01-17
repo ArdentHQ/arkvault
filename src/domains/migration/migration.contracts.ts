@@ -18,4 +18,5 @@ export type ARKMigrationViewStructOutput = [string, BigNumber, string] & {
 	recipient: string;
 	amount: BigNumber;
 	arkTxHash: string;
+	txHash: string;
 };

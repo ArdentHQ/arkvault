@@ -29,8 +29,6 @@ export const Migration = () => {
 		history.push(path);
 	}, [history, profile]);
 
-	console.log(migrations);
-
 	return (
 		<>
 			<Page pageTitle={t("MIGRATION.PAGE_MIGRATION.TITLE")} isBackDisabled={true} data-testid="Migration">

@@ -39,6 +39,7 @@ const contractABI = [
 						name: "arkTxHash",
 						type: "bytes32",
 					},
+					// @TBD uncomment once available
 					// {
 					// 	internalType: "bytes32",
 					// 	name: "txHash",
@@ -74,8 +75,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrations, setMigrations] = useState<Migration[]>();
 
 	const loadMigrations = useCallback(async () => {
-		// repository!.set([]);
-
 		const storedMigrations = repository!.all();
 
 		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
@@ -105,7 +104,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 			return {
 				...migration,
-				// migrationId: contractMigration.txHash,
+				migrationId: contractMigration.txHash || "test-tx-hash",
 				status,
 			};
 		});
