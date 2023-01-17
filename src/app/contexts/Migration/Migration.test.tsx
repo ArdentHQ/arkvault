@@ -6,6 +6,7 @@ import { MigrationProvider, useMigrations } from "./Migration";
 import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
 import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testing-library";
 import * as contexts from "@/app/contexts";
+import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 
 const Test = () => {
@@ -63,6 +64,7 @@ describe("Migration Context", () => {
 	let configurationMock;
 	let profileWatcherMock;
 	let ethersLibraryContractSpy;
+	let polygonMigrationSpy;
 
 	const environmentMockData = {
 		env: {
@@ -145,6 +147,10 @@ describe("Migration Context", () => {
 
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
 
+		polygonMigrationSpy = vi
+			.spyOn(polygonMigration, "polygonContractAddress")
+			.mockReturnValue("0x4a12a2ADc21F896E6F8e564a106A4cab8746a92f");
+
 		ethersLibraryContractSpy = Contract.mockImplementation(() => ({
 			getMigrationsByArkTxHash: () => [],
 			paused: () => false,
@@ -155,6 +161,7 @@ describe("Migration Context", () => {
 		configurationMock.mockRestore();
 		profileWatcherMock.mockRestore();
 		ethersLibraryContractSpy.mockRestore();
+		polygonMigrationSpy.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {
@@ -378,6 +385,24 @@ describe("Migration Context", () => {
 		setIntervalSpy.mockRestore();
 
 		clearStoredMigrationsMock();
+	});
+
+	it("should not load the migrations if contractAddress is not defined", async () => {
+		polygonMigrationSpy = vi.spyOn(polygonMigration, "polygonContractAddress").mockReturnValue(undefined);
+
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(0);
+
+		clearStoredMigrationsMock();
+
+		polygonMigrationSpy.mockRestore();
 	});
 
 	it("should reload the migrations if at least one migration is pending", async () => {
