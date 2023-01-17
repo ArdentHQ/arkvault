@@ -4,6 +4,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationAdd, SuccessButtonWrapper } from "./MigrationAdd";
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import {
 	render,
 	getDefaultProfileId,
@@ -275,6 +276,90 @@ describe("MigrationAdd", () => {
 		userEvent.click(screen.getByTestId("MigrationAdd__send-button"));
 
 		await expect(screen.findByTestId("MigrationPendingStep")).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+	});
+
+	it("should redirect to success step once migration finished", async () => {
+		useMigrationsSpy.mockRestore();
+
+		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: [
+				{
+					address: "AdDreSs",
+					amount: 123,
+					id: "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
+					migrationAddress: "BuRnAdDreSs",
+					status: MigrationTransactionStatus.Confirmed,
+					timestamp: Date.now() / 1000,
+				},
+			],
+			storeTransaction: vi.fn(),
+		});
+
+		renderComponent();
+
+		const signatory = await profile
+			.wallets()
+			.findByCoinWithNetwork(arkCoin, arkDevnetNetwork)[0]
+			.signatoryFactory()
+			.make({
+				secret,
+			});
+
+		vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+
+		expect(screen.getByTestId("header__title")).toBeInTheDocument();
+
+		expect(screen.getByTestId("header__title")).toHaveTextContent(
+			migrationTranslations.MIGRATION_ADD.STEP_CONNECT.TITLE,
+		);
+
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+		await expect(screen.findByTestId(walletListItem)).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId(walletListItem));
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
+
+		userEvent.click(screen.getByTestId(continueButton));
+
+		await expect(screen.findByTestId("MigrationReview")).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
+		userEvent.click(screen.getByTestId(continueButton));
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), secret);
+
+		expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue(secret);
+
+		await waitFor(() => expect(screen.getByTestId("MigrationAdd__send-button")).toBeEnabled());
+
+		// Step 5 (skip ledger confirmation)
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signTransfer")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [transactionFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(TransactionFixture);
+
+		userEvent.click(screen.getByTestId("MigrationAdd__send-button"));
+
+		await expect(screen.findByTestId("MigrationPendingStep")).resolves.toBeVisible();
+
+		await expect(screen.findByTestId("MigrationSuccessStep")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
