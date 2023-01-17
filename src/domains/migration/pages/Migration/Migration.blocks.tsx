@@ -20,7 +20,7 @@ const ContractPausedAlert = () => {
 	}
 
 	return (
-		<Alert layout="horizontal">
+		<Alert data-testid="ContractPausedAlert" layout="horizontal">
 			<Trans
 				i18nKey="MIGRATION.CONTRACT_PAUSED_MESSAGE"
 				components={{
