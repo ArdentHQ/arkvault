@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Ethereum, METAMASK_ERROR_CODES, WindowWithEthereum, WindowWithMaybeEthereum } from "./use-meta-mask.contracts";
 import { polygonNetworkData } from "@/utils/polygon-migration";
 function hasMetaMask() {
@@ -35,7 +35,7 @@ export const useMetaMask = () => {
 	const [connecting, setConnecting] = useState<boolean>(false);
 	const [switching, setSwitching] = useState<boolean>(false);
 
-	const isOnValidNetwork = useMemo(() => chainId === Number.parseInt(networkData.chainId), [chainId]);
+	const isOnValidNetwork = chainId === Number.parseInt(networkData.chainId);
 
 	const supportsMetaMask = isMetaMaskSupportedBrowser();
 	const needsMetaMask = !hasMetaMask() || !supportsMetaMask;
