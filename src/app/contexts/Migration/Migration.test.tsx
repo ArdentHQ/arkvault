@@ -15,9 +15,11 @@ const Test = () => {
 		const transaction = {
 			amount: () => 123,
 			id: () => "abc123",
-			recipient: () => "0x123",
+			memo: () => "0x123",
+			recipient: () => "burn-addy",
 			sender: () => "AdDreSs",
 		} as DTO.ExtendedSignedTransactionData;
+
 		storeTransaction(transaction);
 	};
 
