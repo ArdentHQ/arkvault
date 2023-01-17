@@ -15,7 +15,7 @@ const TestComponent: React.FC = () => {
 		account,
 		chainId,
 		connectWallet,
-		isOnPolygonNetwork,
+		isOnValidNetwork,
 		needsMetaMask,
 		supportsMetaMask,
 	} = useMetaMask();
@@ -50,7 +50,7 @@ const TestComponent: React.FC = () => {
 				<li>{!!chainId && <div data-testid="TestComponent__chain">{chainId}</div>}</li>
 				<li>{account && <div data-testid="TestComponent__account">{account}</div>}</li>
 				<li>
-					{isOnPolygonNetwork ? (
+					{isOnValidNetwork ? (
 						<div data-testid="TestComponent__isonpolygon" />
 					) : (
 						<div data-testid="TestComponent__notinpolygon" />
