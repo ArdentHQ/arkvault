@@ -128,7 +128,7 @@ export const MigrationConnectStep = () => {
 			return 0;
 		}
 
-		return wallet.balance() - migrationTransactionFee();
+		return +(wallet.balance() - migrationTransactionFee()).toFixed(8);
 	}, [wallet]);
 
 	const accountIsInWrongNetwork = useMemo(() => {
