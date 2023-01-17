@@ -2,7 +2,7 @@ import tw, { TwStyle } from "twin.macro";
 import { AlertLayout, Color } from "@/types";
 
 const headerBaseStyle = tw`flex items-center`;
-const bodyBaseStyle = tw`text-sm leading-relaxed break-words text-left `;
+const bodyBaseStyle = tw`text-sm leading-relaxed break-words`;
 
 const getWrapperVariant = (layout?: AlertLayout, variant?: Color) => {
 	if (layout === "horizontal") {
@@ -23,7 +23,7 @@ const getWrapperVariant = (layout?: AlertLayout, variant?: Color) => {
 
 const getWrapperLayout = (layout?: AlertLayout) => {
 	if (layout === "horizontal") {
-		return tw`flex items-center justify-center overflow-hidden dark:bg-theme-secondary-800`;
+		return tw`flex flex-col py-4 sm:py-3 px-8 md:px-10 sm:flex-row items-center justify-center overflow-hidden dark:bg-theme-secondary-800`;
 	}
 
 	return tw`flex flex-col overflow-hidden rounded-xl`;
@@ -81,10 +81,10 @@ const getBodyVariant = (layout?: AlertLayout, variant?: Color) => {
 
 const getBodyLayout = (layout?: AlertLayout) => {
 	if (layout === "horizontal") {
-		return tw`font-semibold px-2 py-4`;
+		return tw`font-semibold sm:pl-2 sm:pt-0 pt-3 text-center sm:text-left`;
 	}
 
-	return tw`w-full dark:bg-theme-secondary-800 p-4`;
+	return tw`w-full dark:bg-theme-secondary-800 p-4 text-left`;
 };
 
 const getWrapperStyles = ({ variant, layout }: { variant?: Color; layout?: AlertLayout }) => [
