@@ -80,6 +80,8 @@ const ONE_SECOND = 1000;
 
 const ONE_MINUTE = 60 * ONE_SECOND;
 
+const contractAddress = polygonContractAddress();
+
 export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
@@ -197,7 +199,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 			return;
 		}
 
-		// Determine if the contract is paused
 		if (contractIsPaused === undefined) {
 			determineIfContractIsPaused();
 			return;
@@ -227,13 +228,14 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	// Create contract instance when context is created
 	useEffect(() => {
-		try {
-			const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
-
-			setContract(new Contract(polygonContractAddress(), contractABI, provider));
-		} catch (error) {
-			console.error(error);
+		/* istanbul ignore next -- @preserve */
+		if (contractAddress === undefined) {
+			return;
 		}
+
+		const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
+
+		setContract(new Contract(contractAddress, contractABI, provider));
 	}, []);
 
 	return (
