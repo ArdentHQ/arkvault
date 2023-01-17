@@ -12,10 +12,11 @@ interface LatestTransactionsStateProperties {
 
 interface LatestTransactionsProperties {
 	profile: Contracts.IProfile;
+	wallets?: Contracts.IReadWriteWallet[];
 	profileIsSyncing: boolean;
 }
 
-export const useLatestTransactions = ({ profile, profileIsSyncing }: LatestTransactionsProperties) => {
+export const useLatestTransactions = ({ profile, profileIsSyncing, wallets }: LatestTransactionsProperties) => {
 	const limit = 10;
 	const [{ latestTransactions, isLoadingTransactions }, setState] = useState<LatestTransactionsStateProperties>({
 		isLoadingTransactions: true,
@@ -31,7 +32,7 @@ export const useLatestTransactions = ({ profile, profileIsSyncing }: LatestTrans
 	} = useProfileTransactions({
 		limit,
 		profile,
-		wallets: selectedWallets,
+		wallets: wallets || selectedWallets,
 	});
 
 	useEffect(() => {

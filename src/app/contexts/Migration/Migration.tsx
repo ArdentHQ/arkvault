@@ -52,7 +52,7 @@ const contractABI = [
 
 interface MigrationContextType {
 	migrations?: Migration[];
-	storeTransaction: (transaction: DTO.ExtendedSignedTransactionData) => void;
+	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData) => void;
 }
 
 interface Properties {
@@ -127,12 +127,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, [profile, env]);
 
 	const storeTransaction = useCallback(
-		async (transaction: DTO.ExtendedSignedTransactionData) => {
+		async (transaction: DTO.ExtendedConfirmedTransactionData) => {
 			const migration: Migration = {
 				address: transaction.sender(),
 				amount: transaction.amount(),
 				id: transaction.id(),
-				migrationAddress: transaction.recipient(),
+				migrationAddress: transaction.memo()!,
 				status: MigrationTransactionStatus.Waiting,
 				timestamp: Date.now() / 1000,
 			};
@@ -175,7 +175,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 export const useMigrations = (): {
 	migrations: Migration[] | undefined;
-	storeTransaction: (transaction: DTO.ExtendedSignedTransactionData) => void;
+	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData) => void;
 } => {
 	const value = React.useContext(MigrationContext);
 

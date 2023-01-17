@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { generatePath, useHistory } from "react-router-dom";
 import { MigrationHeader, MigrationNewMigrationMobileButton } from "./Migration.blocks";
@@ -7,7 +7,7 @@ import { MigrationDisclaimer } from "@/domains/migration/components/MigrationDis
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { MigrationTransactionsTable } from "@/domains/migration/components/MigrationTransactionsTable";
 import { ProfilePaths } from "@/router/paths";
-import { useMigrations } from "@/app/contexts";
+import { useMigrationTransactions } from "@/domains/migration/hooks/use-migration-transactions";
 
 export const Migration = () => {
 	const { t } = useTranslation();
@@ -16,7 +16,7 @@ export const Migration = () => {
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 	const history = useHistory();
 	const profile = useActiveProfile();
-	const { migrations } = useMigrations();
+	const { migrations } = useMigrationTransactions({ profile });
 
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
