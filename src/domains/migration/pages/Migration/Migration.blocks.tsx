@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import {
 	MigrationHeaderProperties,
 	MigrationHeaderExtraProperties,
@@ -8,6 +8,28 @@ import {
 import { Button } from "@/app/components/Button";
 import { PageHeader } from "@/app/components/Header";
 import { FormButtons } from "@/app/components/Form";
+import { Alert } from "@/app/components/Alert";
+import { Link } from "@/app/components/Link";
+import { useMigrations } from "@/app/contexts";
+
+const ContractPausedAlert = () => {
+	const { contractIsPaused } = useMigrations();
+
+	if (!contractIsPaused) {
+		return <></>;
+	}
+
+	return (
+		<Alert layout="horizontal">
+			<Trans
+				i18nKey="MIGRATION.CONTRACT_PAUSED_MESSAGE"
+				components={{
+					linkTwitter: <Link to="https://twitter.com/arkecosystem" isExternal />,
+				}}
+			/>
+		</Alert>
+	);
+};
 
 const MigrationHeader: React.FC<MigrationHeaderProperties> = ({ onNewMigration, contractIsPaused }) => {
 	const { t } = useTranslation();
@@ -64,4 +86,4 @@ const MigrationNewMigrationMobileButton: React.FC<MigrationNewMigrationMobileBut
 	);
 };
 
-export { MigrationHeader, MigrationHeaderExtra, MigrationNewMigrationMobileButton };
+export { MigrationHeader, MigrationHeaderExtra, MigrationNewMigrationMobileButton, ContractPausedAlert };

@@ -2,6 +2,7 @@ import React, { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { generatePath, useHistory } from "react-router-dom";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
+import { ContractPausedAlert } from "../Migration/Migration.blocks";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -143,6 +144,8 @@ export const MigrationAdd = () => {
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
+			<ContractPausedAlert />
+
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
 					<StepIndicatorAlt
