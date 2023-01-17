@@ -26,9 +26,16 @@ const renderComponent = (profileId = profile.id()) => {
 	);
 };
 
+let useMigrationsSpy: vi.SpyInstance;
+
 describe("Migration", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
+		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({ migrations: [] });
+	});
+
+	afterAll(() => {
+		useMigrationsSpy.mockRestore();
 	});
 
 	it("should render", () => {
@@ -99,13 +106,11 @@ describe("Migration", () => {
 			},
 		];
 
-		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations }));
+		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({ migrations });
 
 		renderComponent();
 
-		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
-
-		useMigrationsSpy.mockRestore();
+		userEvent.click(within(screen.getAllByTestId("MigrationTransactionsRow")[0]).getAllByRole("button")[0]);
 
 		// @TBD
 	});

@@ -13,6 +13,7 @@ import { MigrationTransactionsRowMobile } from "@/domains/migration/components/M
 export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties> = ({
 	migrationTransactions,
 	isCompact,
+	isLoading = false,
 	onClick,
 }) => {
 	const { t } = useTranslation();
@@ -59,6 +60,7 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 			},
 			{
 				Header: t("COMMON.AMOUNT"),
+				className: "justify-end float-right",
 			},
 			{
 				Header: "Actions",
@@ -70,18 +72,29 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 		[t],
 	);
 
-	const data = useMemo(() => migrationTransactions, [migrationTransactions]);
+	const data = useMemo<any[]>(() => {
+		const skeletonRows: any[] = Array.from({ length: 5 }, () => ({} as any));
+
+		return isLoading ? skeletonRows : migrationTransactions!;
+	}, [isLoading, migrationTransactions]);
 
 	const renderTableRow = useCallback(
 		(migrationTransaction: any) => {
 			if (useResponsive) {
-				return <MigrationTransactionsRowMobile migrationTransaction={migrationTransaction} onClick={onClick} />;
+				return (
+					<MigrationTransactionsRowMobile
+						migrationTransaction={migrationTransaction}
+						isLoading={isLoading}
+						onClick={onClick}
+					/>
+				);
 			}
 
 			return (
 				<MigrationTransactionsRow
 					migrationTransaction={migrationTransaction}
 					isCompact={isCompact}
+					isLoading={isLoading}
 					onClick={onClick}
 				/>
 			);
