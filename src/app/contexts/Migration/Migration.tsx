@@ -71,15 +71,19 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const loadMigrations = useCallback(async () => {
 		const storedMigrations = repository!.all();
 
-		const transactionsIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
+		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
 
 		const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
 
 		const contract = new Contract(polygonContractAddress(), contractABI, provider);
 
-		const contractMigrations: ARKMigrationViewStructOutput[] = await contract.getMigrationsByArkTxHash(
-			transactionsIds,
-		);
+		let contractMigrations: ARKMigrationViewStructOutput[] = [];
+
+		try {
+			contractMigrations = await contract.getMigrationsByArkTxHash(transactionIds);
+		} catch {
+			//
+		}
 
 		const updatedMigrations = storedMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
