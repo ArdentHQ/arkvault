@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { generatePath, useHistory } from "react-router-dom";
 import { MigrationHeader, MigrationNewMigrationMobileButton } from "./Migration.blocks";
