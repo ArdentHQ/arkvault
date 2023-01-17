@@ -231,8 +231,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 			const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
 
 			setContract(new Contract(polygonContractAddress(), contractABI, provider));
-		} catch {
-			//
+		} catch (error) {
+			console.error(error);
 		}
 	}, []);
 
