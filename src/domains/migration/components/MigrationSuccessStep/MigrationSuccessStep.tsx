@@ -16,7 +16,10 @@ interface MigrationSuccessStepProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	migrationTransaction: Migration;
 }
-export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({ transaction, migrationTransaction }) => {
+export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
+	transaction,
+	migrationTransaction,
+}) => {
 	const { t } = useTranslation();
 
 	const reference = useRef(null);
@@ -38,10 +41,7 @@ export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 
 			<div className="sm:-mx-5">
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-					<MigrationAddress
-						label={t("MIGRATION.POLYGON_ADDRESS")}
-						address={transaction.memo() || ""}
-					/>
+					<MigrationAddress label={t("MIGRATION.POLYGON_ADDRESS")} address={transaction.memo() || ""} />
 
 					<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
 						<div className="absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800">
@@ -68,7 +68,10 @@ export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 								showExternalIcon={false}
 								isExternal
 							>
-								<TruncateMiddleDynamic value={migrationTransaction.migrationId!} parentRef={reference} />
+								<TruncateMiddleDynamic
+									value={migrationTransaction.migrationId!}
+									parentRef={reference}
+								/>
 							</Link>
 						</span>
 					</div>

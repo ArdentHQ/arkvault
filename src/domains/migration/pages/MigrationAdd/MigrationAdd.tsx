@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useEffect, useMemo, useState } from "react";
+import React, { PropsWithChildren, useEffect, useState } from "react";
 import { generatePath, useHistory } from "react-router-dom";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
@@ -167,7 +167,10 @@ export const MigrationAdd = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.Finished}>
-								<MigrationSuccessStep transaction={transaction!} migrationTransaction={migrationTransaction!} />
+								<MigrationSuccessStep
+									transaction={transaction!}
+									migrationTransaction={migrationTransaction!}
+								/>
 							</TabPanel>
 
 							<TabPanel tabId={Step.Error}>
