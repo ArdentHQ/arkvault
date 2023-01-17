@@ -65,7 +65,7 @@ export const MigrationAdd = () => {
 
 	const wallet = watch("wallet");
 
-	const { storeTransaction, migrations } = useMigrations();
+	const { storeTransaction, migrations, contractIsPaused } = useMigrations();
 	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
 
 	useEffect(
@@ -195,7 +195,7 @@ export const MigrationAdd = () => {
 										<Button
 											data-testid="MigrationAdd__continue-button"
 											variant="primary"
-											disabled={!isValid}
+											disabled={!isValid || contractIsPaused}
 											onClick={handleNext}
 										>
 											{t("COMMON.CONTINUE")}
@@ -205,7 +205,7 @@ export const MigrationAdd = () => {
 									{activeStep === Step.Authenticate && (
 										<Button
 											type="submit"
-											disabled={isSubmitting || !isValid}
+											disabled={isSubmitting || !isValid || contractIsPaused}
 											data-testid="MigrationAdd__send-button"
 											isLoading={isSubmitting}
 											icon="DoubleArrowRight"
