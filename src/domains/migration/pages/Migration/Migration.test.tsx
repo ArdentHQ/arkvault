@@ -92,6 +92,8 @@ describe("Migration", () => {
 		expect(screen.getByTestId("Migrations__add-migration-btn")).toBeDisabled();
 
 		expect(screen.getByTestId("ContractPausedAlert")).toBeInTheDocument();
+
+		useMigrationsSpy.mockRestore();
 	});
 
 	it("handles the close button on the disclaimer", async () => {
@@ -123,6 +125,8 @@ describe("Migration", () => {
 		renderComponent();
 
 		userEvent.click(within(screen.getAllByTestId("MigrationTransactionsRow")[0]).getAllByRole("button")[0]);
+
+		useMigrationsSpy.mockRestore();
 
 		// @TBD
 	});
