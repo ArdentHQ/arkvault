@@ -132,7 +132,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				address: transaction.sender(),
 				amount: transaction.amount(),
 				id: transaction.id(),
-				migrationAddress: transaction.recipient(),
+				migrationAddress: transaction.memo()!,
 				status: MigrationTransactionStatus.Pending,
 				timestamp: Date.now() / 1000,
 			};
