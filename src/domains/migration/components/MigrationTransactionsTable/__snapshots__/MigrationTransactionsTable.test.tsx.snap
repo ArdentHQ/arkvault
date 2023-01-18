@@ -349,7 +349,7 @@ exports[`MigrationTransactionsTable > should render 1`] = `
               >
                 <span>
                   <div
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    class="text-theme-warning-300 css-1i4b0eq"
                     height="20"
                     width="20"
                   >
@@ -1038,7 +1038,7 @@ exports[`MigrationTransactionsTable > should render compact 1`] = `
               >
                 <span>
                   <div
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    class="text-theme-warning-300 css-1i4b0eq"
                     height="20"
                     width="20"
                   >
@@ -1564,10 +1564,10 @@ exports[`MigrationTransactionsTable > should render mobile 1`] = `
                   class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
                 >
                   <span>
-                    Waiting
+                    Pending
                   </span>
                   <div
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    class="text-theme-warning-300 css-1i4b0eq"
                     height="20"
                     width="20"
                   >
@@ -2019,10 +2019,10 @@ exports[`MigrationTransactionsTable > should render mobile 2`] = `
                   class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
                 >
                   <span>
-                    Waiting
+                    Pending
                   </span>
                   <div
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    class="text-theme-warning-300 css-1i4b0eq"
                     height="20"
                     width="20"
                   >
