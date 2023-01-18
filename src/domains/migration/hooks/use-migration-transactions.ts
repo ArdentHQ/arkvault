@@ -48,6 +48,10 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			return true;
 		}
 
+		if (!(migrationTransactions.length > 0 && !migrations)) {
+			console.log("case 1", migrationTransactions, migrations);
+		}
+
 		return migrationTransactions.length > 0 && !migrations;
 	};
 
