@@ -16,7 +16,7 @@ export const Migration = () => {
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 	const history = useHistory();
 	const profile = useActiveProfile();
-	const { migrations } = useMigrationTransactions({ profile });
+	const { migrations, isLoading } = useMigrationTransactions({ profile });
 
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
@@ -38,7 +38,7 @@ export const Migration = () => {
 					<MigrationTransactionsTable
 						migrationTransactions={migrations}
 						isCompact={isCompact}
-						isLoading={migrations === undefined}
+						isLoading={isLoading}
 						onClick={() => console.log("row click")}
 					/>
 				</Section>

@@ -37,5 +37,13 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		}
 	}, [migrationTransactions]);
 
-	return { isLoading: isLoadingTransactions, migrations };
+	const isLoading = () => {
+		if (isLoadingTransactions) {
+			return true;
+		}
+
+		return migrationTransactions.length > 0 && !migrations;
+	};
+
+	return { isLoading: isLoading(), migrations };
 };
