@@ -83,7 +83,7 @@ describe("Migration Context", () => {
 				amount: migration.amount,
 				arkTxHash: `0x${migration.id}`,
 				recipient:
-					migration.status === MigrationTransactionStatus.Waiting
+					migration.status === MigrationTransactionStatus.Pending
 						? ethers.constants.AddressZero
 						: "0xWhatevs",
 			})),
@@ -294,7 +294,7 @@ describe("Migration Context", () => {
 				amount: 222,
 				id: "456",
 				migrationAddress: "BuRnAdDreSs",
-				status: MigrationTransactionStatus.Waiting,
+				status: MigrationTransactionStatus.Pending,
 				timestamp: Date.now() / 1000,
 			},
 		]);

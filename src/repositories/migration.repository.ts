@@ -21,7 +21,7 @@ export class MigrationRepository {
 	}
 
 	public hasPending(): boolean {
-		return this.all().some((migration) => migration.status === MigrationTransactionStatus.Waiting);
+		return this.all().some((migration) => migration.status === MigrationTransactionStatus.Pending);
 	}
 
 	public set(data: Migration[]): void {
