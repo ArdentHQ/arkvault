@@ -105,10 +105,10 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
               />
             </svg>
             <div
-              class="flex flex-col overflow-hidden rounded-xl"
+              class="css-mpc03v"
             >
               <div
-                class="css-pra96q"
+                class="css-1hv657z"
               >
                 <div
                   class="css-v0ob3f"
@@ -152,7 +152,7 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
                 </span>
               </div>
               <div
-                class="css-1pvpof3"
+                class="css-rfibfr"
               >
                 You have selected a high fee. Your transaction can be confirmed with a lower fee. Do you wish to continue anyway?
               </div>
@@ -318,10 +318,10 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
               />
             </svg>
             <div
-              class="flex flex-col overflow-hidden rounded-xl"
+              class="css-mpc03v"
             >
               <div
-                class="css-pra96q"
+                class="css-1hv657z"
               >
                 <div
                   class="css-v0ob3f"
@@ -365,7 +365,7 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
                 </span>
               </div>
               <div
-                class="css-1pvpof3"
+                class="css-rfibfr"
               >
                 You have selected a low fee. Your transaction may never be confirmed. Do you wish to continue anyway?
               </div>

@@ -6,10 +6,11 @@ import { MigrationProvider, useMigrations } from "./Migration";
 import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
 import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testing-library";
 import * as contexts from "@/app/contexts";
+import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 
 const Test = () => {
-	const { migrations, storeTransaction } = useMigrations();
+	const { migrations, storeTransaction, contractIsPaused } = useMigrations();
 
 	const createAndStoreTransaction = () => {
 		const transaction = {
@@ -18,11 +19,19 @@ const Test = () => {
 			memo: () => "0x123",
 			sender: () => "AdDreSs",
 		} as DTO.ExtendedSignedTransactionData;
+
 		storeTransaction(transaction);
 	};
 
-	if (migrations === undefined) {
-		return <span data-testid="Migration__loading">Loading...</span>;
+	if (migrations === undefined || contractIsPaused === undefined) {
+		return (
+			<>
+				{contractIsPaused === undefined && (
+					<span data-testid="Migration__contract_loading">Contract Loading...</span>
+				)}
+				{migrations === undefined && <span data-testid="Migration__loading">Loading...</span>}
+			</>
+		);
 	}
 
 	return (
@@ -39,6 +48,12 @@ const Test = () => {
 						Add
 					</button>
 				</li>
+
+				{contractIsPaused ? (
+					<span data-testid="Migration__contract_paused">Contract paused</span>
+				) : (
+					<span data-testid="Migration__contract_not_paused">Contract not paused</span>
+				)}
 			</ul>
 		</div>
 	);
@@ -50,6 +65,7 @@ describe("Migration Context", () => {
 	let configurationMock;
 	let profileWatcherMock;
 	let ethersLibraryContractSpy;
+	let polygonMigrationSpy;
 
 	const environmentMockData = {
 		env: {
@@ -88,9 +104,11 @@ describe("Migration Context", () => {
 						: "0xWhatevs",
 			})),
 		);
+		const getPausedMock = vi.fn().mockImplementation(() => false);
 
 		const ethersMock = Contract.mockImplementation(() => ({
 			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
+			paused: getPausedMock,
 		}));
 
 		const clearStoredMigrationsMock = () => {
@@ -102,6 +120,7 @@ describe("Migration Context", () => {
 			clearStoredMigrationsMock,
 			getMigrationsByArkTxHashMock,
 			getMigrationsMock,
+			getPausedMock,
 		};
 	};
 
@@ -129,8 +148,13 @@ describe("Migration Context", () => {
 
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
 
+		polygonMigrationSpy = vi
+			.spyOn(polygonMigration, "polygonContractAddress")
+			.mockReturnValue("0x4a12a2ADc21F896E6F8e564a106A4cab8746a92f");
+
 		ethersLibraryContractSpy = Contract.mockImplementation(() => ({
 			getMigrationsByArkTxHash: () => [],
+			paused: () => false,
 		}));
 	});
 
@@ -138,6 +162,7 @@ describe("Migration Context", () => {
 		configurationMock.mockRestore();
 		profileWatcherMock.mockRestore();
 		ethersLibraryContractSpy.mockRestore();
+		polygonMigrationSpy.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {
@@ -159,10 +184,26 @@ describe("Migration Context", () => {
 			</MigrationProvider>,
 		);
 
-		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+		});
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+	});
+
+	it("should load contract state", async () => {
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
 		});
 	});
 
@@ -193,6 +234,73 @@ describe("Migration Context", () => {
 		clearStoredMigrationsMock();
 	});
 
+	it("should determine if a contract is paused", async () => {
+		const ethersMock = Contract.mockImplementation(() => ({
+			getMigrationsByArkTxHash: vi.fn(),
+			paused: () => true,
+		}));
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("Migration__contract_paused")).toBeInTheDocument();
+
+		ethersMock.mockRestore();
+	});
+
+	it("should determine if a contract is not paused", async () => {
+		const ethersMock = Contract.mockImplementation(() => ({
+			getMigrationsByArkTxHash: vi.fn(),
+			paused: () => false,
+		}));
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("Migration__contract_not_paused")).toBeInTheDocument();
+
+		ethersMock.mockRestore();
+	});
+
+	it("should handle exceptions on pause method", () => {
+		const ethersMock = Contract.mockImplementation(() => ({
+			getMigrationsByArkTxHash: vi.fn(),
+			paused: () => {
+				throw new Error("Error");
+			},
+		}));
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+		expect(screen.queryByTestId("Migration__contract_not_paused")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("Migration__contract_paused")).not.toBeInTheDocument();
+
+		ethersMock.mockRestore();
+	});
+
 	it("should add a transaction", async () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
 
@@ -204,6 +312,7 @@ describe("Migration Context", () => {
 
 		const ethersMock = Contract.mockImplementation(() => ({
 			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
+			paused: () => false,
 		}));
 
 		render(
@@ -247,11 +356,11 @@ describe("Migration Context", () => {
 			},
 		]);
 
-		let reloadIntervalCallback;
+		let reloadMigrationsCallback;
 
 		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
-			if (callback.name === "reloadIntervalCallback") {
-				reloadIntervalCallback = callback;
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
 			}
 
 			return 1;
@@ -269,7 +378,7 @@ describe("Migration Context", () => {
 
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
 
-		reloadIntervalCallback();
+		reloadMigrationsCallback();
 
 		// Contract method should have been called only when loaded
 		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(1);
@@ -277,6 +386,24 @@ describe("Migration Context", () => {
 		setIntervalSpy.mockRestore();
 
 		clearStoredMigrationsMock();
+	});
+
+	it("should not load the migrations if contractAddress is not defined", () => {
+		polygonMigrationSpy = vi.spyOn(polygonMigration, "polygonContractAddress").mockReturnValue(undefined);
+
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(0);
+
+		clearStoredMigrationsMock();
+
+		polygonMigrationSpy.mockRestore();
 	});
 
 	it("should reload the migrations if at least one migration is pending", async () => {
@@ -299,11 +426,11 @@ describe("Migration Context", () => {
 			},
 		]);
 
-		let reloadIntervalCallback;
+		let reloadMigrationsCallback;
 
 		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
-			if (callback.name === "reloadIntervalCallback") {
-				reloadIntervalCallback = callback;
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
 			}
 
 			return 1;
@@ -321,7 +448,7 @@ describe("Migration Context", () => {
 
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
 
-		reloadIntervalCallback();
+		reloadMigrationsCallback();
 
 		// Contract method should have been twice, once when page loaded
 		// and once when interval was called
@@ -363,6 +490,40 @@ describe("Migration Context", () => {
 		});
 
 		expect(getMigrationsByArkTxHashMock).not.toHaveBeenCalled();
+
+		clearStoredMigrationsMock();
+	});
+
+	it("should reload paused state", async () => {
+		const { clearStoredMigrationsMock, getPausedMock } = mockStoredMigrations([]);
+
+		let reloadPausedStateCallback;
+
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
+			if (callback.name === "reloadPausedStateCallback") {
+				reloadPausedStateCallback = callback;
+			}
+
+			return 1;
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+		});
+
+		reloadPausedStateCallback();
+
+		// Contract method should have been twice, once when page loaded
+		// and once when interval was called
+		expect(getPausedMock).toHaveBeenCalledTimes(2);
+
+		setIntervalSpy.mockRestore();
 
 		clearStoredMigrationsMock();
 	});

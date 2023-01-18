@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
 import {
@@ -48,9 +48,23 @@ const contractABI = [
 		stateMutability: "view",
 		type: "function",
 	},
+	{
+		inputs: [],
+		name: "paused",
+		outputs: [
+			{
+				internalType: "bool",
+				name: "",
+				type: "bool",
+			},
+		],
+		stateMutability: "view",
+		type: "function",
+	},
 ];
 
 interface MigrationContextType {
+	contractIsPaused?: boolean;
 	migrations?: Migration[];
 	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
 }
@@ -62,25 +76,27 @@ interface Properties {
 
 const MigrationContext = React.createContext<any>(undefined);
 
+const ONE_SECOND = 1000;
+
+const ONE_MINUTE = 60 * ONE_SECOND;
+
 export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
 	const profile = useProfileWatcher();
 	const [migrations, setMigrations] = useState<Migration[]>();
+	const [contract, setContract] = useState<Contract>();
+	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
 
 	const loadMigrations = useCallback(async () => {
 		const storedMigrations = repository!.all();
 
 		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
 
-		const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
-
-		const contract = new Contract(polygonContractAddress(), contractABI, provider);
-
 		let contractMigrations: ARKMigrationViewStructOutput[] = [];
 
 		try {
-			contractMigrations = await contract.getMigrationsByArkTxHash(transactionIds);
+			contractMigrations = await contract!.getMigrationsByArkTxHash(transactionIds);
 		} catch {
 			//
 		}
@@ -105,7 +121,15 @@ export const MigrationProvider = ({ children }: Properties) => {
 		repository!.set(updatedMigrations);
 
 		await migrationsUpdated(repository!.all());
-	}, [repository]);
+	}, [repository, contract]);
+
+	const determineIfContractIsPaused = useCallback(async () => {
+		try {
+			setContractIsPaused(await contract!.paused());
+		} catch {
+			//
+		}
+	}, [contract]);
 
 	const migrationsUpdated = useCallback(
 		async (migrations: Migration[]) => {
@@ -115,16 +139,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 		},
 		[persist],
 	);
-
-	useEffect(() => {
-		setMigrations(undefined);
-
-		if (profile) {
-			setRepository(new MigrationRepository(profile, env.data()));
-		} else {
-			setRepository(undefined);
-		}
-	}, [profile, env]);
 
 	const storeTransaction = useCallback(
 		async (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
@@ -144,16 +158,26 @@ export const MigrationProvider = ({ children }: Properties) => {
 		[repository, migrationsUpdated],
 	);
 
+	const hasContractAndRepository = useMemo(
+		() => repository !== undefined && contract !== undefined,
+		[contract, repository],
+	);
+
 	useEffect(() => {
-		// Migrations not loaded yet
-		if (migrations === undefined && repository !== undefined) {
-			loadMigrations();
-		} else if (repository === undefined) {
+		let reloadInterval: ReturnType<typeof setInterval>;
+
+		if (!hasContractAndRepository) {
 			return;
 		}
 
-		const reloadIntervalCallback = () => {
-			if (repository === undefined || !repository.hasPending()) {
+		// Load migrations for the first time if there are pending migrations
+		if (migrations === undefined) {
+			loadMigrations();
+			return;
+		}
+
+		const reloadMigrationsCallback = () => {
+			if (!repository!.hasPending()) {
 				clearInterval(reloadInterval);
 				return;
 			}
@@ -161,19 +185,67 @@ export const MigrationProvider = ({ children }: Properties) => {
 			loadMigrations();
 		};
 
-		const reloadInterval = setInterval(reloadIntervalCallback, 1000);
+		reloadInterval = setInterval(reloadMigrationsCallback, ONE_SECOND);
 
 		return () => clearInterval(reloadInterval);
-	}, [repository, loadMigrations, migrations]);
+	}, [repository, loadMigrations, migrations, hasContractAndRepository]);
+
+	useEffect(() => {
+		let reloadInerval: ReturnType<typeof setInterval>;
+
+		if (!hasContractAndRepository) {
+			return;
+		}
+
+		if (contractIsPaused === undefined) {
+			determineIfContractIsPaused();
+			return;
+		}
+
+		const reloadPausedStateCallback = () => {
+			determineIfContractIsPaused();
+		};
+
+		if (contractIsPaused !== undefined) {
+			reloadInerval = setInterval(reloadPausedStateCallback, ONE_MINUTE);
+		}
+
+		return () => clearInterval(reloadInerval);
+	}, [repository, determineIfContractIsPaused, hasContractAndRepository, contractIsPaused]);
+
+	// Initialize repository when a new profile is loaded
+	useEffect(() => {
+		setMigrations(undefined);
+
+		if (profile) {
+			setRepository(new MigrationRepository(profile, env.data()));
+		} else {
+			setRepository(undefined);
+		}
+	}, [profile, env]);
+
+	// Create contract instance when context is created
+	useEffect(() => {
+		const contractAddress = polygonContractAddress();
+
+		if (contractAddress === undefined) {
+			return;
+		}
+
+		const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
+
+		setContract(new Contract(contractAddress, contractABI, provider));
+	}, []);
 
 	return (
-		<MigrationContext.Provider value={{ migrations, storeTransaction } as MigrationContextType}>
+		<MigrationContext.Provider value={{ contractIsPaused, migrations, storeTransaction } as MigrationContextType}>
 			{children}
 		</MigrationContext.Provider>
 	);
 };
 
 export const useMigrations = (): {
+	contractIsPaused?: boolean;
 	migrations: Migration[] | undefined;
 	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
 } => {

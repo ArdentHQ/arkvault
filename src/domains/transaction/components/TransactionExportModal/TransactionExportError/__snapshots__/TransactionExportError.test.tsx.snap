@@ -43,10 +43,10 @@ exports[`TransactionExportError > should render in lg 1`] = `
       />
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl mb-6"
+      class="mb-6 css-mpc03v"
     >
       <div
-        class="css-ic0qlc"
+        class="css-1f7sa7y"
       >
         <div
           class="css-v0ob3f"
@@ -85,7 +85,7 @@ exports[`TransactionExportError > should render in lg 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1h3dpsb"
       />
     </div>
     <div
@@ -161,10 +161,10 @@ exports[`TransactionExportError > should render in md 1`] = `
       />
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl mb-6"
+      class="mb-6 css-mpc03v"
     >
       <div
-        class="css-ic0qlc"
+        class="css-1f7sa7y"
       >
         <div
           class="css-v0ob3f"
@@ -203,7 +203,7 @@ exports[`TransactionExportError > should render in md 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1h3dpsb"
       />
     </div>
     <div
@@ -279,10 +279,10 @@ exports[`TransactionExportError > should render in sm 1`] = `
       />
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl mb-6"
+      class="mb-6 css-mpc03v"
     >
       <div
-        class="css-ic0qlc"
+        class="css-1f7sa7y"
       >
         <div
           class="css-v0ob3f"
@@ -321,7 +321,7 @@ exports[`TransactionExportError > should render in sm 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1h3dpsb"
       />
     </div>
     <div
@@ -397,10 +397,10 @@ exports[`TransactionExportError > should render in xl 1`] = `
       />
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl mb-6"
+      class="mb-6 css-mpc03v"
     >
       <div
-        class="css-ic0qlc"
+        class="css-1f7sa7y"
       >
         <div
           class="css-v0ob3f"
@@ -439,7 +439,7 @@ exports[`TransactionExportError > should render in xl 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1h3dpsb"
       />
     </div>
     <div
@@ -515,10 +515,10 @@ exports[`TransactionExportError > should render in xs 1`] = `
       />
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl mb-6"
+      class="mb-6 css-mpc03v"
     >
       <div
-        class="css-ic0qlc"
+        class="css-1f7sa7y"
       >
         <div
           class="css-v0ob3f"
@@ -557,7 +557,7 @@ exports[`TransactionExportError > should render in xs 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1h3dpsb"
       />
     </div>
     <div
