@@ -1,27 +1,7 @@
 import { ethers } from "ethers";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import {
-	AddEthereumChainParameter,
-	Ethereum,
-	METAMASK_ERROR_CODES,
-	WindowWithEthereum,
-	WindowWithMaybeEthereum,
-} from "./use-meta-mask.contracts";
-
-// @TODO: Potentially make this dynamic if we want to support testnet on dev
-// environments
-const polygonNetworkData: AddEthereumChainParameter = {
-	blockExplorerUrls: ["https://polygonscan.com/"],
-	chainId: "0x89",
-	chainName: "Polygon Mainnet",
-	nativeCurrency: {
-		decimals: 18,
-		name: "MATIC",
-		symbol: "MATIC",
-	},
-	rpcUrls: ["https://polygon-rpc.com/"],
-};
-
+import { useCallback, useEffect, useState } from "react";
+import { Ethereum, METAMASK_ERROR_CODES, WindowWithEthereum, WindowWithMaybeEthereum } from "./use-meta-mask.contracts";
+import { polygonNetworkData } from "@/utils/polygon-migration";
 function hasMetaMask() {
 	return !!(window as WindowWithMaybeEthereum).ethereum;
 }
@@ -45,6 +25,8 @@ function isMetaMaskSupportedBrowser() {
 	return isCompatible && !isMobile;
 }
 
+const networkData = polygonNetworkData();
+
 export const useMetaMask = () => {
 	const [initialized, setInitialized] = useState<boolean>(false);
 	const [chainId, setChainId] = useState<number>();
@@ -52,7 +34,8 @@ export const useMetaMask = () => {
 	const [ethereumProvider, setEthereumProvider] = useState<ethers.providers.Web3Provider>();
 	const [connecting, setConnecting] = useState<boolean>(false);
 	const [switching, setSwitching] = useState<boolean>(false);
-	const isOnPolygonNetwork = useMemo(() => chainId === Number.parseInt(polygonNetworkData.chainId), [chainId]);
+
+	const isOnValidNetwork = chainId === Number.parseInt(networkData.chainId);
 
 	const supportsMetaMask = isMetaMaskSupportedBrowser();
 	const needsMetaMask = !hasMetaMask() || !supportsMetaMask;
@@ -169,7 +152,7 @@ export const useMetaMask = () => {
 		try {
 			await ethereum.request({
 				method: "wallet_addEthereumChain",
-				params: [polygonNetworkData],
+				params: [networkData],
 			});
 		} catch {
 			// Nothing to do here, likely the user rejected the request
@@ -186,7 +169,7 @@ export const useMetaMask = () => {
 		try {
 			await ethereum.request({
 				method: "wallet_switchEthereumChain",
-				params: [{ chainId: polygonNetworkData.chainId }],
+				params: [{ chainId: networkData.chainId }],
 			});
 
 			setSwitching(false);
@@ -206,7 +189,7 @@ export const useMetaMask = () => {
 		connectWallet,
 		connecting,
 		initialized,
-		isOnPolygonNetwork,
+		isOnValidNetwork,
 		needsMetaMask,
 		supportsMetaMask,
 		switchToPolygonNetwork,
