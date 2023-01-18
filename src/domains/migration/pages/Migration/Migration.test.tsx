@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -7,6 +7,8 @@ import { Migration } from "./Migration";
 import { render, screen, env, getDefaultProfileId, waitFor, within } from "@/utils/testing-library";
 import { MigrationTransactionStatus, Migration as MigrationType } from "@/domains/migration/migration.contracts";
 import * as context from "@/app/contexts";
+import * as useLatestTransactions from "@/domains/dashboard/hooks";
+
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
@@ -94,7 +96,59 @@ describe("Migration", () => {
 		await waitFor(() => expect(screen.queryByTestId("Modal__close-button")).not.toBeInTheDocument());
 	});
 
-	it("should display details of migration transaction", () => {
+	it("should display details of migration transaction", async () => {
+		const wallet = profile.wallets().first();
+		const transactionFixture = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: wallet.address(),
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
+		const secondTransactionFixture = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: wallet.address(),
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
+		vi.spyOn(transactionFixture, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
+
+		const useLatestTransactionsSpy = vi.spyOn(useLatestTransactions, "useLatestTransactions").mockReturnValue({
+			isLoadingTransactions: false,
+			latestTransactions: [transactionFixture, secondTransactionFixture],
+		});
+
 		const migrations: MigrationType[] = [
 			{
 				address: "AdDreSs",
@@ -106,7 +160,11 @@ describe("Migration", () => {
 			},
 		];
 
-		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({ migrations });
+		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
+			migrations,
+
+			storeTransaction: () => {},
+		});
 
 		renderComponent();
 
