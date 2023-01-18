@@ -9,6 +9,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	const { migrations, storeTransaction } = useMigrations();
 
 	const { isLoadingTransactions, latestTransactions } = useLatestTransactions({
+		limit: 200,
 		profile,
 		profileIsSyncing,
 		wallets: profile

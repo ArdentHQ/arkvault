@@ -134,7 +134,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				id: transaction.id(),
 				migrationAddress: transaction.memo()!,
 				status: MigrationTransactionStatus.Waiting,
-				timestamp: Date.now() / 1000,
+				timestamp: transaction.timestamp()!.toUNIX(),
 			};
 
 			repository!.add(migration);
