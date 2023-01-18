@@ -82,7 +82,7 @@ describe("Migration Context", () => {
 			migrations.map((migration) => ({
 				amount: migration.amount,
 				arkTxHash: `0x${migration.id}`,
-				memo:
+				recipient:
 					migration.status === MigrationTransactionStatus.Waiting
 						? ethers.constants.AddressZero
 						: "0xWhatevs",
@@ -279,7 +279,7 @@ describe("Migration Context", () => {
 		clearStoredMigrationsMock();
 	});
 
-	it.skip("should reload the migrations if at least one migration is pending", async () => {
+	it("should reload the migrations if at least one migration is pending", async () => {
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
 			{
 				address: "AdDreSs",
