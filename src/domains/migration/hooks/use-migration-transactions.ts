@@ -6,7 +6,7 @@ import { useLatestTransactions } from "@/domains/dashboard/hooks";
 import { migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { profileIsSyncing } = useConfiguration();
+	const { profileIsSyncing, profileIsRestoring } = useConfiguration();
 	const { migrations, storeTransaction } = useMigrations();
 
 	const { isLoadingTransactions, latestTransactions } = useLatestTransactions({
@@ -44,12 +44,12 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	}, [migrationTransactions]);
 
 	const isLoading = () => {
-		if (isLoadingTransactions) {
+		if (profileIsRestoring) {
 			return true;
 		}
 
-		if (!(migrationTransactions.length > 0 && !migrations)) {
-			console.log("case 1", migrationTransactions, migrations);
+		if (isLoadingTransactions) {
+			return true;
 		}
 
 		return migrationTransactions.length > 0 && !migrations;
