@@ -144,7 +144,7 @@ describe("Migration", () => {
 
 		vi.spyOn(transactionFixture, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
 
-		const useLatestTransactionsSpy = vi.spyOn(useLatestTransactions, "useLatestTransactions").mockReturnValue({
+		vi.spyOn(useLatestTransactions, "useLatestTransactions").mockReturnValue({
 			isLoadingTransactions: false,
 			latestTransactions: [transactionFixture, secondTransactionFixture],
 		});
