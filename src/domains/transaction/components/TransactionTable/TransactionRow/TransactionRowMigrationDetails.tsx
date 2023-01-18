@@ -4,32 +4,53 @@ import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk-profiles";
 
 import { Image } from "@/app/components/Image";
-import { Link } from "@/app/components/Link";
 import { Icon } from "@/app/components/Icon";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { Divider } from "@/app/components/Divider";
+import { Tooltip } from "@/app/components/Tooltip";
 
 interface Properties {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	isCompact: boolean;
+	onClick?: () => void;
 }
 
 export const TransactionMigrationLink = ({
 	transaction,
 	children,
+	onClick,
 }: {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	children: React.ReactElement;
-}) => (
-	<Link to={transaction.explorerLink()} tooltip={transaction.id()} showExternalIcon={false} isExternal>
-		<span className="flex items-center space-x-2">
-			<span>{children}</span>
-			<Icon name="ChevronRight" dimensions={[12, 12]} />
-		</span>
-	</Link>
-);
+	onClick?: () => void;
+}) => {
+	const clickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+		event.preventDefault();
 
-export const TransactionRowMigrationDetails = ({ transaction, isCompact }: Properties) => {
+		event.stopPropagation();
+
+		onClick?.();
+	};
+
+	return (
+		<Tooltip content={transaction.id()}>
+			<button type="button" className="link font-semibold" onClick={clickHandler}>
+				<span className="flex items-center space-x-2">
+					<span>{children}</span>
+					<Icon name="ChevronRight" dimensions={[12, 12]} />
+				</span>
+			</button>
+		</Tooltip>
+	);
+	// <Link to={transaction.explorerLink()} tooltip={} showExternalIcon={false} isExternal>
+	// 	<span className="flex items-center space-x-2">
+	// 		<span>{children}</span>
+	// 		<Icon name="ChevronRight" dimensions={[12, 12]} />
+	// 	</span>
+	// </Link>
+};
+
+export const TransactionRowMigrationDetails = ({ transaction, isCompact, onClick }: Properties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -56,7 +77,7 @@ export const TransactionRowMigrationDetails = ({ transaction, isCompact }: Prope
 
 				<Divider type="vertical" />
 
-				<TransactionMigrationLink transaction={transaction}>
+				<TransactionMigrationLink transaction={transaction} onClick={onClick}>
 					<span>{t("TRANSACTION.DETAILS")}</span>
 				</TransactionMigrationLink>
 			</div>
