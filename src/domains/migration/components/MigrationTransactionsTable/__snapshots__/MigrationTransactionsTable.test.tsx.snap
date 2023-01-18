@@ -242,36 +242,54 @@ exports[`MigrationTransactionsTable > should render 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1d4ra48"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
-                  class="hidden lg:flex"
+                  class="flex items-center -space-x-1"
                 >
                   <div
-                    class="border-theme-hint-100 bg-theme-hint-50 text-theme-hint-600 dark:border-theme-hint-300 dark:bg-theme-secondary-900 dark:text-theme-hint-300 ring-theme-background duration-100 css-14jhlj1"
+                    class="hidden lg:flex"
                   >
                     <div
-                      class="css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="border-theme-hint-100 bg-theme-hint-50 text-theme-hint-600 dark:border-theme-hint-300 dark:bg-theme-secondary-900 dark:text-theme-hint-300 ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        class="css-1i4b0eq"
+                        height="20"
+                        width="20"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+                        title="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                      />
                     </div>
                   </div>
                 </div>
@@ -331,7 +349,7 @@ exports[`MigrationTransactionsTable > should render 1`] = `
               >
                 <span>
                   <div
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    class="text-theme-warning-300 css-1i4b0eq"
                     height="20"
                     width="20"
                   >
@@ -489,36 +507,54 @@ exports[`MigrationTransactionsTable > should render 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1d4ra48"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
-                  class="hidden lg:flex"
+                  class="flex items-center -space-x-1"
                 >
                   <div
-                    class="border-theme-hint-100 bg-theme-hint-50 text-theme-hint-600 dark:border-theme-hint-300 dark:bg-theme-secondary-900 dark:text-theme-hint-300 ring-theme-background duration-100 css-14jhlj1"
+                    class="hidden lg:flex"
                   >
                     <div
-                      class="css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="border-theme-hint-100 bg-theme-hint-50 text-theme-hint-600 dark:border-theme-hint-300 dark:bg-theme-secondary-900 dark:text-theme-hint-300 ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <svg
-                        id="sent"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        class="css-1i4b0eq"
+                        height="20"
+                        width="20"
                       >
-                        <path
-                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="sent"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+                        title="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                      />
                     </div>
                   </div>
                 </div>
@@ -899,35 +935,53 @@ exports[`MigrationTransactionsTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1rods8x"
+                class="space-x-4 css-1rods8x"
               >
-                <span
-                  class="hidden h-5 w-5 items-center text-theme-hint-600 lg:flex"
+                <div
+                  class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <span
+                    class="hidden h-5 w-5 items-center text-theme-hint-600 lg:flex"
                   >
-                    <svg
-                      id="sent"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <path
-                        d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <div
+                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+                        title="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
                       />
-                    </svg>
+                    </div>
                   </div>
-                </span>
+                </div>
                 <div
                   class="w-0 flex-1"
                 >
@@ -984,7 +1038,7 @@ exports[`MigrationTransactionsTable > should render compact 1`] = `
               >
                 <span>
                   <div
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    class="text-theme-warning-300 css-1i4b0eq"
                     height="20"
                     width="20"
                   >
@@ -1142,35 +1196,53 @@ exports[`MigrationTransactionsTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1rods8x"
+                class="space-x-4 css-1rods8x"
               >
-                <span
-                  class="hidden h-5 w-5 items-center text-theme-hint-600 lg:flex"
+                <div
+                  class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <span
+                    class="hidden h-5 w-5 items-center text-theme-hint-600 lg:flex"
                   >
-                    <svg
-                      id="sent"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <path
-                        d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <div
+                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+                        title="AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX"
                       />
-                    </svg>
+                    </div>
                   </div>
-                </span>
+                </div>
                 <div
                   class="w-0 flex-1"
                 >
@@ -1492,10 +1564,10 @@ exports[`MigrationTransactionsTable > should render mobile 1`] = `
                   class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
                 >
                   <span>
-                    Waiting
+                    Pending
                   </span>
                   <div
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    class="text-theme-warning-300 css-1i4b0eq"
                     height="20"
                     width="20"
                   >
@@ -1947,10 +2019,10 @@ exports[`MigrationTransactionsTable > should render mobile 2`] = `
                   class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
                 >
                   <span>
-                    Waiting
+                    Pending
                   </span>
                   <div
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    class="text-theme-warning-300 css-1i4b0eq"
                     height="20"
                     width="20"
                   >

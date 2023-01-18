@@ -71,7 +71,7 @@ describe("MigrationConnectStep", () => {
 			account: "0x0000000000000000000000000000000000000000",
 			connectWallet: vi.fn(),
 			connecting: false,
-			isOnPolygonNetwork: false,
+			isOnValidNetwork: false,
 			needsMetaMask: false,
 			supportsMetaMask: true,
 		});
@@ -90,7 +90,7 @@ describe("MigrationConnectStep", () => {
 			account: "0x0000000000000000000000000000000000000000",
 			connectWallet: vi.fn(),
 			connecting: false,
-			isOnPolygonNetwork: false,
+			isOnValidNetwork: false,
 			needsMetaMask: false,
 			supportsMetaMask: true,
 			switching: true,
@@ -112,7 +112,7 @@ describe("MigrationConnectStep", () => {
 			account: "0x0000000000000000000000000000000000000000",
 			connectWallet: vi.fn(),
 			connecting: false,
-			isOnPolygonNetwork: true,
+			isOnValidNetwork: true,
 			needsMetaMask: true,
 			supportsMetaMask: true,
 		});
@@ -146,7 +146,7 @@ describe("MigrationConnectStep", () => {
 				account: "0x0000000000000000000000000000000000000000",
 				connectWallet: vi.fn(),
 				connecting: false,
-				isOnPolygonNetwork: true,
+				isOnValidNetwork: true,
 				needsMetaMask: false,
 				supportsMetaMask: true,
 			});
@@ -163,7 +163,7 @@ describe("MigrationConnectStep", () => {
 				account: "0x0000000000000000000000000000000000000000",
 				connectWallet: vi.fn(),
 				connecting: false,
-				isOnPolygonNetwork: false,
+				isOnValidNetwork: false,
 				needsMetaMask: true,
 				supportsMetaMask: true,
 			});
@@ -180,7 +180,7 @@ describe("MigrationConnectStep", () => {
 				account: "0x0000000000000000000000000000000000000000",
 				connectWallet: vi.fn(),
 				connecting: false,
-				isOnPolygonNetwork: false,
+				isOnValidNetwork: false,
 				needsMetaMask: true,
 				supportsMetaMask: false,
 			});
@@ -197,7 +197,7 @@ describe("MigrationConnectStep", () => {
 				account: null,
 				connectWallet: vi.fn(),
 				connecting: false,
-				isOnPolygonNetwork: true,
+				isOnValidNetwork: true,
 				needsMetaMask: false,
 				supportsMetaMask: true,
 			});
@@ -214,7 +214,7 @@ describe("MigrationConnectStep", () => {
 				account: "0x0000000000000000000000000000000000000000",
 				connectWallet: vi.fn(),
 				connecting: true,
-				isOnPolygonNetwork: true,
+				isOnValidNetwork: true,
 				needsMetaMask: true,
 				supportsMetaMask: true,
 			});

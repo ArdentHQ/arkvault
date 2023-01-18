@@ -8,7 +8,7 @@ exports[`BaseTransactionRowMode > should render migration 1`] = `
     transaction="[object Object]"
   >
     <span
-      class="flex h-5 w-5 items-center border-0 border-theme-hint-100 bg-theme-hint-50 dark:bg-transparent text-theme-hint-600 dark:border-theme-hint-300 dark:bg-theme-secondary-900 dark:text-theme-hint-300"
+      class="flex h-5 w-5 items-center border-0 border-theme-hint-100 text-theme-hint-600 dark:border-theme-hint-300 dark:text-theme-hint-300"
     >
       <div
         class="css-1i4b0eq"

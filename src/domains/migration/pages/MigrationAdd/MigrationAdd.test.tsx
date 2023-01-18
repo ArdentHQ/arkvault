@@ -55,7 +55,7 @@ describe("MigrationAdd", () => {
 			account: "0x0000000000000000000000000000000000000000",
 			connectWallet: vi.fn(),
 			connecting: false,
-			isOnPolygonNetwork: true,
+			isOnValidNetwork: true,
 			needsMetaMask: false,
 			supportsMetaMask: true,
 		});
