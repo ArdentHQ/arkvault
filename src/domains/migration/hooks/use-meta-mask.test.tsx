@@ -15,7 +15,7 @@ const TestComponent: React.FC = () => {
 		account,
 		chainId,
 		connectWallet,
-		isOnPolygonNetwork,
+		isOnValidNetwork,
 		needsMetaMask,
 		supportsMetaMask,
 	} = useMetaMask();
@@ -50,7 +50,7 @@ const TestComponent: React.FC = () => {
 				<li>{!!chainId && <div data-testid="TestComponent__chain">{chainId}</div>}</li>
 				<li>{account && <div data-testid="TestComponent__account">{account}</div>}</li>
 				<li>
-					{isOnPolygonNetwork ? (
+					{isOnValidNetwork ? (
 						<div data-testid="TestComponent__isonpolygon" />
 					) : (
 						<div data-testid="TestComponent__notinpolygon" />
@@ -171,7 +171,7 @@ describe("useMetaMask", () => {
 		it("should connect", async () => {
 			testingUtils.mockNotConnectedWallet();
 
-			testingUtils.mockChainId(137);
+			testingUtils.mockChainId(80_001);
 
 			testingUtils.mockRequestAccounts(["0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf"]);
 
@@ -183,13 +183,13 @@ describe("useMetaMask", () => {
 
 			await expect(screen.findByTestId("TestComponent")).resolves.toBeVisible();
 
-			expect(screen.getByTestId("TestComponent__chain")).toHaveTextContent("137");
+			expect(screen.getByTestId("TestComponent__chain")).toHaveTextContent("80001");
 		});
 
 		it("should connect and handle case no accounts", async () => {
 			testingUtils.mockNotConnectedWallet();
 
-			testingUtils.mockChainId(137);
+			testingUtils.mockChainId(80_001);
 
 			testingUtils.mockRequestAccounts([]);
 
@@ -207,7 +207,7 @@ describe("useMetaMask", () => {
 		it("should handle case cannot connect", async () => {
 			testingUtils.mockNotConnectedWallet();
 
-			testingUtils.mockChainId(137);
+			testingUtils.mockChainId(80_001);
 
 			render(<TestComponent />);
 
@@ -223,7 +223,7 @@ describe("useMetaMask", () => {
 		describe("on polygon", () => {
 			beforeEach(() => {
 				testingUtils.mockConnectedWallet(["0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf"], {
-					chainId: 137,
+					chainId: 80_001,
 				});
 			});
 
@@ -305,7 +305,7 @@ describe("useMetaMask", () => {
 
 				// mockManager is private so we need to cast it to any
 				(testingUtils as any).mockManager.emit("connect", {
-					chainId: 137,
+					chainId: 80_001,
 				});
 
 				await expect(screen.findByTestId("TestComponent__account")).resolves.toBeVisible();
@@ -357,7 +357,7 @@ describe("useMetaMask", () => {
 							throw new Error("Is not wallet_switchEthereumChain");
 						}
 
-						testingUtils.mockChainChanged("0x89");
+						testingUtils.mockChainChanged("0x13881");
 
 						return Promise.resolve(true);
 					});
@@ -400,7 +400,7 @@ describe("useMetaMask", () => {
 							throw new Error("Is not wallet_addEthereumChain");
 						}
 
-						testingUtils.mockChainChanged("0x89");
+						testingUtils.mockChainChanged("0x13881");
 						return Promise.resolve(true);
 					});
 
@@ -452,9 +452,9 @@ describe("useMetaMask", () => {
 
 				expect(screen.getByTestId("TestComponent__chain")).toHaveTextContent("1");
 
-				testingUtils.mockChainChanged("0x89");
+				testingUtils.mockChainChanged("0x13881");
 
-				await waitFor(() => expect(screen.queryByTestId("TestComponent__chain")).toHaveTextContent("137"));
+				await waitFor(() => expect(screen.queryByTestId("TestComponent__chain")).toHaveTextContent("80001"));
 			});
 		});
 	});

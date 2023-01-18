@@ -94,7 +94,7 @@ const PolygonFieldMessage = ({
 export const MigrationConnectStep = () => {
 	const {
 		needsMetaMask,
-		isOnPolygonNetwork,
+		isOnValidNetwork,
 		account,
 		connectWallet,
 		connecting,
@@ -136,12 +136,12 @@ export const MigrationConnectStep = () => {
 			return false;
 		}
 
-		return !isOnPolygonNetwork;
-	}, [account, isOnPolygonNetwork, needsMetaMask]);
+		return !isOnValidNetwork;
+	}, [account, isOnValidNetwork, needsMetaMask]);
 
 	const polygonFieldIsDisabled = useMemo(
-		() => needsMetaMask || !account || !isOnPolygonNetwork,
-		[needsMetaMask, account, isOnPolygonNetwork],
+		() => needsMetaMask || !account || !isOnValidNetwork,
+		[needsMetaMask, account, isOnValidNetwork],
 	);
 
 	const handleSelectAddress = (selectedAddress: string) => {
