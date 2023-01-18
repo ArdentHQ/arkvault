@@ -11,6 +11,7 @@ import * as useMigrations from "@/app/contexts";
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 let transactionFixture: DTO.ExtendedSignedTransactionData;
+let secondTransactionFixture: DTO.ExtendedSignedTransactionData;
 
 describe("useMigrationTransactions hook", () => {
 	beforeAll(async () => {
@@ -24,6 +25,28 @@ describe("useMigrationTransactions hook", () => {
 		const wallet = profile.wallets().first();
 
 		transactionFixture = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: wallet.address(),
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
+		secondTransactionFixture = new DTO.ExtendedSignedTransactionData(
 			await wallet
 				.coin()
 				.transaction()
@@ -72,7 +95,7 @@ describe("useMigrationTransactions hook", () => {
 	it("should store and return migrations", async () => {
 		const useLatestTransactionsSpy = vi.spyOn(useLatestTransactions, "useLatestTransactions").mockReturnValue({
 			isLoadingTransactions: false,
-			latestTransactions: [transactionFixture],
+			latestTransactions: [transactionFixture, secondTransactionFixture],
 		});
 
 		const useMigrationsSpy = vi.spyOn(useMigrations, "useMigrations").mockReturnValue({
