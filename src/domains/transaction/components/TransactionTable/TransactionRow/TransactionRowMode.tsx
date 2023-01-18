@@ -25,8 +25,10 @@ export const BaseTransactionRowMode = ({
 	const { modeIconName, tooltipContent, modeCircleStyle } = useMemo(() => {
 		if (isMigration) {
 			return {
-				modeCircleStyle:
-					"border-theme-hint-100 bg-theme-hint-50 dark:bg-transparent text-theme-hint-600 dark:border-theme-hint-300 dark:bg-theme-secondary-900 dark:text-theme-hint-300",
+				modeCircleStyle: cn(
+					"border-theme-hint-100 text-theme-hint-600 dark:border-theme-hint-300 dark:text-theme-hint-300",
+					{ "bg-theme-hint-50": !isCompact },
+				),
 				modeIconName: "Sent",
 				tooltipContent: t("TRANSACTION.MIGRATION"),
 			};
@@ -55,8 +57,9 @@ export const BaseTransactionRowMode = ({
 		};
 	}, [isSent, isReturn, t, type]);
 
-	const shadowClasses =
-		"ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black";
+	const shadowClasses = cn("ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black", {
+		"group-hover:bg-theme-secondary-100 dark:group-hover:bg-black": !isMigration,
+	});
 
 	return (
 		<div

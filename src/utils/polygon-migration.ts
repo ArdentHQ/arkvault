@@ -1,3 +1,5 @@
+import { AddEthereumChainParameter } from "@/domains/migration/hooks/use-meta-mask.contracts";
+
 export const migrationTransactionFee = () =>
 	Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
 
@@ -19,3 +21,31 @@ export const polygonRpcUrl = () => import.meta.env.VITE_POLYGON_RPC_URL || "http
 
 export const migrationWalletAddress = () =>
 	import.meta.env.VITE_MIGRATION_ADDRESS || "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
+
+export const polygonNetworkData = (): AddEthereumChainParameter => {
+	if (migrationNetwork() === "ark.devnet") {
+		return {
+			blockExplorerUrls: ["https://mumbai.polygonscan.com/"],
+			chainId: "0x13881",
+			chainName: "Mumbai",
+			nativeCurrency: {
+				decimals: 18,
+				name: "MATIC",
+				symbol: "MATIC",
+			},
+			rpcUrls: ["https://matic-mumbai.chainstacklabs.com/"],
+		};
+	}
+
+	return {
+		blockExplorerUrls: ["https://polygonscan.com/"],
+		chainId: "0x89",
+		chainName: "Polygon Mainnet",
+		nativeCurrency: {
+			decimals: 18,
+			name: "MATIC",
+			symbol: "MATIC",
+		},
+		rpcUrls: ["https://polygon-rpc.com/"],
+	};
+};

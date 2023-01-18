@@ -93,7 +93,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 			const status =
 				contractMigration.recipient === ethers.constants.AddressZero
-					? MigrationTransactionStatus.Waiting
+					? MigrationTransactionStatus.Pending
 					: MigrationTransactionStatus.Confirmed;
 
 			return {
@@ -133,7 +133,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				amount: transaction.amount(),
 				id: transaction.id(),
 				migrationAddress: transaction.memo()!,
-				status: MigrationTransactionStatus.Waiting,
+				status: MigrationTransactionStatus.Pending,
 				timestamp: Date.now() / 1000,
 			};
 

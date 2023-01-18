@@ -19,7 +19,7 @@ const migrationTransactions = [
 		address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
 		amount: 123,
 		migrationAddress: "0x0000000000000000000000000000000000000000",
-		status: MigrationTransactionStatus.Waiting,
+		status: MigrationTransactionStatus.Pending,
 		timestamp: new Date("2021-01-01").getTime() / 1000,
 	},
 ];
