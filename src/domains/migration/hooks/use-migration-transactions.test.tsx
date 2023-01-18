@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { env, getDefaultProfileId, WithProviders } from "@/utils/testing-library";
-import { mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 import { useMigrationTransactions } from "./use-migration-transactions";
+import { env, getDefaultProfileId, WithProviders, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 import * as useLatestTransactions from "@/domains/dashboard/hooks";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import * as useMigrations from "@/app/contexts";
