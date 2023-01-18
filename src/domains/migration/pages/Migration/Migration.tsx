@@ -5,9 +5,9 @@ import { MigrationHeader, MigrationNewMigrationMobileButton } from "./Migration.
 import { Page, Section } from "@/app/components/Layout";
 import { MigrationDisclaimer } from "@/domains/migration/components/MigrationDisclaimer";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
-import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { MigrationTransactionsTable } from "@/domains/migration/components/MigrationTransactionsTable";
 import { ProfilePaths } from "@/router/paths";
+import { useMigrations } from "@/app/contexts";
 
 export const Migration = () => {
 	const { t } = useTranslation();
@@ -16,25 +16,7 @@ export const Migration = () => {
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 	const history = useHistory();
 	const profile = useActiveProfile();
-
-	// @TBD
-	const migrations = [
-		{
-			address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
-			amount: 123,
-			id: "id",
-			migrationAddress: "0x0000000000000000000000000000000000000000",
-			status: MigrationTransactionStatus.Confirmed,
-			timestamp: Date.now() / 1000,
-		},
-		{
-			address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
-			amount: 123,
-			migrationAddress: "0x0000000000000000000000000000000000000000",
-			status: MigrationTransactionStatus.Waiting,
-			timestamp: Date.now() / 1000,
-		},
-	];
+	const { migrations } = useMigrations();
 
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
@@ -56,6 +38,7 @@ export const Migration = () => {
 					<MigrationTransactionsTable
 						migrationTransactions={migrations}
 						isCompact={isCompact}
+						isLoading={migrations === undefined}
 						onClick={() => console.log("row click")}
 					/>
 				</Section>

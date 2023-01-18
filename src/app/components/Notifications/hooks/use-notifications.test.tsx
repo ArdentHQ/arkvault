@@ -4,9 +4,9 @@ import { renderHook } from "@testing-library/react-hooks";
 
 import { useNotifications } from "./use-notifications";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
-
+import * as context from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
-
+import { MigrationTransactionStatus, Migration as MigrationType } from "@/domains/migration/migration.contracts";
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
 import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
@@ -47,6 +47,57 @@ describe("useNotifications", () => {
 		const { result } = renderHook(() => useNotifications({ profile }));
 
 		expect(result.current.transactions).toHaveLength(3);
+	});
+
+	it("handle undefined migrations", async () => {
+		const useMigrationsSpy = vi
+			.spyOn(context, "useMigrations")
+			.mockImplementation(() => ({ migrations: undefined }));
+
+		const { result } = renderHook(() => useNotifications({ profile }));
+
+		expect(result.current.migrationTransactions).toHaveLength(0);
+
+		useMigrationsSpy.mockRestore();
+	});
+
+	it("handle empty migrations", async () => {
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations: [] }));
+
+		const { result } = renderHook(() => useNotifications({ profile }));
+
+		expect(result.current.migrationTransactions).toHaveLength(0);
+
+		useMigrationsSpy.mockRestore();
+	});
+
+	it("filter pending migrations", async () => {
+		const migrations: MigrationType[] = [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x456",
+				migrationAddress: "0x789",
+				status: MigrationTransactionStatus.Pending,
+				timestamp: Date.now() / 1000,
+			},
+		];
+
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations }));
+
+		const { result } = renderHook(() => useNotifications({ profile }));
+
+		expect(result.current.migrationTransactions).toHaveLength(1);
+
+		useMigrationsSpy.mockRestore();
 	});
 
 	it("#markAsRead", async () => {

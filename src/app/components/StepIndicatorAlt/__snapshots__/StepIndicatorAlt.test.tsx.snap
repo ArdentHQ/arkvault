@@ -14,20 +14,20 @@ exports[`StepIndicatorAlt > should render 1`] = `
       style="width: 0%;"
     />
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-primary-600 bg-theme-navy-100"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-primary-600"
       data-testid="StepIndicatorAlt__step"
     >
       <div
-        class=" h-2 w-2 rounded-full bg-theme-primary-600"
+        class="h-2 w-2 rounded-full bg-theme-primary-600"
         data-testid="StepIndicatorAlt__activestep"
       />
     </div>
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-secondary-300 bg-white dark:border-theme-secondary-800"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-secondary-300 dark:border-theme-secondary-800"
       data-testid="StepIndicatorAlt__step"
     />
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-secondary-300 bg-white dark:border-theme-secondary-800"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-secondary-300 dark:border-theme-secondary-800"
       data-testid="StepIndicatorAlt__step"
     />
   </div>
@@ -48,7 +48,7 @@ exports[`StepIndicatorAlt > should render checkmark if active index is last step
       style="width: 100%;"
     />
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-primary-600 bg-theme-navy-100"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 bg-theme-navy-100 border-theme-primary-600"
       data-testid="StepIndicatorAlt__step"
     >
       <div
@@ -77,7 +77,7 @@ exports[`StepIndicatorAlt > should render checkmark if active index is last step
       </div>
     </div>
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-primary-600 bg-theme-navy-100"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 bg-theme-navy-100 border-theme-primary-600"
       data-testid="StepIndicatorAlt__step"
     >
       <div
@@ -106,7 +106,7 @@ exports[`StepIndicatorAlt > should render checkmark if active index is last step
       </div>
     </div>
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-primary-600 bg-theme-navy-100"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 bg-theme-navy-100 border-theme-primary-600"
       data-testid="StepIndicatorAlt__step"
     >
       <div
@@ -152,7 +152,7 @@ exports[`StepIndicatorAlt > should render with active index 1`] = `
       style="width: 50%;"
     />
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-primary-600 bg-theme-navy-100"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 bg-theme-navy-100 border-theme-primary-600"
       data-testid="StepIndicatorAlt__step"
     >
       <div
@@ -181,16 +181,16 @@ exports[`StepIndicatorAlt > should render with active index 1`] = `
       </div>
     </div>
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-primary-600 bg-theme-navy-100"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-primary-600"
       data-testid="StepIndicatorAlt__step"
     >
       <div
-        class=" h-2 w-2 rounded-full bg-theme-primary-600"
+        class="h-2 w-2 rounded-full bg-theme-primary-600"
         data-testid="StepIndicatorAlt__activestep"
       />
     </div>
     <div
-      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 dark:bg-theme-secondary-900 border-theme-secondary-300 bg-white dark:border-theme-secondary-800"
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-secondary-300 dark:border-theme-secondary-800"
       data-testid="StepIndicatorAlt__step"
     />
   </div>

@@ -15,6 +15,8 @@ import { Link } from "@/app/components/Link";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { getIcon } from "@/domains/migration/utils";
 import { Button } from "@/app/components/Button";
+import { polygonTransactionLink } from "@/utils/polygon-migration";
+import { MigrationTransactionsRowMobileSkeleton } from "@/domains/migration/components/MigrationTransactionsTable/MigrationTransactionsRowMobileSkeleton";
 
 const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusProperties> = ({ status }) => {
 	const { t } = useTranslation();
@@ -31,26 +33,31 @@ const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusPro
 
 interface MigrationTransactionsRowMobileProperties {
 	migrationTransaction: any;
+	isLoading: boolean;
 	onClick: () => void;
 }
 
 export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMobileProperties> = ({
 	migrationTransaction,
+	isLoading,
 	onClick,
 }) => {
 	const timeFormat = useTimeFormat();
-
 	const { t } = useTranslation();
 
+	if (isLoading) {
+		return <MigrationTransactionsRowMobileSkeleton />;
+	}
+
 	return (
-		<TableRow onClick={onClick}>
-			<td data-testid="TableRow__mobile" className="flex-col space-y-4 py-4">
+		<TableRow data-testid="MigrationTransactionsRowMobile" onClick={onClick}>
+			<td className="flex-col space-y-4 py-4">
 				<RowWrapper>
 					<RowLabel>{t("COMMON.ID")}</RowLabel>
 
 					{migrationTransaction.status === MigrationTransactionStatus.Confirmed ? (
 						<Link
-							to={`https://polygonscan.com/tx/${migrationTransaction.id}`}
+							to={polygonTransactionLink(migrationTransaction.id)}
 							tooltip={migrationTransaction.id}
 							showExternalIcon={false}
 							isExternal

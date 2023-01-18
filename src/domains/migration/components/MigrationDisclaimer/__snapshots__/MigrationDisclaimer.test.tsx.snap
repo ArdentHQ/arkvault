@@ -66,7 +66,7 @@ exports[`MigrationDisclaimer > should render the modal 1`] = `
             class="flex flex-1 flex-col"
           >
             <svg
-              class="my-8 mx-auto max-w-52"
+              class="mx-auto mt-4 mb-8 max-w-52"
               viewBox="0 0 207 106"
               xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +172,7 @@ exports[`MigrationDisclaimer > should render the modal 1`] = `
                     type="checkbox"
                   />
                   <span
-                    class="whitespace-pre-line text-sm text-theme-secondary-700 dark:text-theme-secondary-600"
+                    class="whitespace-pre-line text-sm leading-6 text-theme-secondary-700 dark:text-theme-secondary-600"
                   >
                     I agree with the rules and with something else 
                     <a

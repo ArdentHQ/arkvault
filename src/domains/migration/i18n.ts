@@ -48,7 +48,13 @@ export const translations = {
 				SELECT_WALLET_TO_MIGRATE_DESCRIPTION:
 					"Select a wallet for which you want to migrate the balance to the new token.",
 			},
+			SWITCHING_NETWORK: "Switching …",
+			SWITCH_TO_POLYGON: "Switch to Polygon",
 			TITLE: "Migration",
+		},
+
+		STEP_ERROR: {
+			TITLE: "Transaction Error",
 		},
 
 		STEP_PENDING: {
@@ -75,6 +81,7 @@ export const translations = {
 	NOTIFICATIONS: {
 		MIGRATION_SUCCESSFUL: "Migration Successful",
 	},
+
 	PAGE_MIGRATION: {
 		NEW_MIGRATION: "New Migration",
 		NO_MIGRATIONS: "You don't have any migration transactions yet.",
@@ -89,5 +96,6 @@ export const translations = {
 		CONFIRMED: "Confirmed",
 		WAITING: "Waiting",
 	},
+
 	TRANSACTION_ID: "Transaction ID",
 };

@@ -16,6 +16,8 @@ import { Address } from "@/app/components/Address";
 import { EthereumAvatar } from "@/app/components/Avatar";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { getIcon } from "@/domains/migration/utils";
+import { polygonTransactionLink } from "@/utils/polygon-migration";
+import { MigrationTransactionsRowSkeleton } from "@/domains/migration/components/MigrationTransactionsTable/MigrationTransactionsRowSkeleton";
 
 const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusProperties> = ({ status }) => {
 	const { t } = useTranslation();
@@ -34,25 +36,31 @@ const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusPro
 interface MigrationTransactionsRowProperties {
 	migrationTransaction: any;
 	isCompact: boolean;
+	isLoading: boolean;
 	onClick: () => void;
 }
 
 export const MigrationTransactionsRow = ({
 	migrationTransaction,
 	isCompact,
+	isLoading,
 	onClick,
 }: MigrationTransactionsRowProperties) => {
 	const timeFormat = useTimeFormat();
 	const { t } = useTranslation();
 
+	if (isLoading) {
+		return <MigrationTransactionsRowSkeleton isCompact={isCompact} />;
+	}
+
 	return (
-		<TableRow>
+		<TableRow data-testid="MigrationTransactionsRow">
 			<TableCell variant="start" isCompact={isCompact}>
 				<Tooltip content={migrationTransaction.id} className="no-ligatures">
 					<span className="flex items-center">
 						{migrationTransaction.status === MigrationTransactionStatus.Confirmed ? (
 							<Link
-								to={`https://polygonscan.com/tx/${migrationTransaction.id}`}
+								to={polygonTransactionLink(migrationTransaction.id)}
 								tooltip={migrationTransaction.id}
 								showExternalIcon={false}
 								isExternal
@@ -108,7 +116,7 @@ export const MigrationTransactionsRow = ({
 				<MigrationTransactionsRowStatus status={migrationTransaction.status} />
 			</TableCell>
 
-			<TableCell isCompact={isCompact}>
+			<TableCell innerClassName="justify-end" isCompact={isCompact}>
 				<AmountLabel value={migrationTransaction.amount} ticker="ARK" isCompact={isCompact} isNegative />
 			</TableCell>
 

@@ -8,11 +8,13 @@ import { TransactionRowSender } from "./TransactionRowSender";
 import { TransactionRowSkeleton } from "./TransactionRowSkeleton";
 import { TransactionRowProperties } from "./TransactionRow.contracts";
 import { TransactionRowMobile } from "./TransactionRowMobile";
+import { TransactionRowMigrationDetails } from "./TransactionRowMigrationDetails";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { useBreakpoint } from "@/app/hooks";
+import { useTransaction } from "@/domains/transaction/hooks";
 
 export const TransactionRow = memo(
 	({
@@ -27,6 +29,7 @@ export const TransactionRow = memo(
 		const { isXs, isSm, isMd } = useBreakpoint();
 		const { t } = useTranslation();
 		const timeFormat = useTimeFormat();
+		const { isMigrationTransaction } = useTransaction();
 
 		const isCompact = useMemo(
 			() => !profile.appearance().get("useExpandedTables") || isSm || isXs || isMd,
@@ -77,7 +80,13 @@ export const TransactionRow = memo(
 				</TableCell>
 
 				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-					<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={isCompact} />
+					{!isMigrationTransaction(transaction) && (
+						<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={isCompact} />
+					)}
+
+					{isMigrationTransaction(transaction) && (
+						<TransactionRowMigrationDetails transaction={transaction} isCompact={isCompact} />
+					)}
 				</TableCell>
 
 				<TableCell innerClassName="justify-end" isCompact={isCompact}>

@@ -1,5 +1,9 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useCallback, useMemo } from "react";
+import { migrationWalletAddress } from "@/utils/polygon-migration";
+
+const isMigrationTransaction = (transaction: DTO.ExtendedConfirmedTransactionData) =>
+	transaction.recipient() === migrationWalletAddress();
 
 export const useTransaction = () => {
 	const fetchWalletUnconfirmedTransactions = useCallback(async (wallet: Contracts.IReadWriteWallet) => {
@@ -20,6 +24,7 @@ export const useTransaction = () => {
 	return useMemo(
 		() => ({
 			fetchWalletUnconfirmedTransactions,
+			isMigrationTransaction,
 		}),
 		[fetchWalletUnconfirmedTransactions],
 	);
