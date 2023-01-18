@@ -12,7 +12,7 @@ import {
 	env,
 	getDefaultProfileId,
 	MNEMONICS,
-	render,
+	renderResponsiveWithRoute,
 	RenderResult,
 	screen,
 	syncDelegates,
@@ -30,10 +30,11 @@ let wallet: Contracts.IReadWriteWallet;
 let unvotedWallet: Contracts.IReadWriteWallet;
 
 const renderPage = async ({ waitForTopSection = true } = {}) => {
-	const utils: RenderResult = render(
+	const utils: RenderResult = renderResponsiveWithRoute(
 		<Route path="/profiles/:profileId/wallets/:walletId">
 			<WalletDetails />,
 		</Route>,
+		"md",
 		{
 			history,
 			route: walletUrl,
