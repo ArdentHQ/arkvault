@@ -1,4 +1,7 @@
 export const translations = {
+	CONTRACT_PAUSED_MESSAGE:
+		"The migration is temporarily paused. Please check our <linkTwitter>Twitter</linkTwitter> for more details.",
+
 	DISCLAIMER_MODAL: {
 		// @TBD
 		DISCLAIMER:
@@ -8,7 +11,6 @@ export const translations = {
 		WARNING:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus, mollitia natus est, voluptas eligendi nihil dolorum illum accusamus obcaecati itaque corrupti tenetur, accusantium perferendis officiis hic modi neque aspernatur!",
 	},
-
 	MIGRATION_ADD: {
 		FROM_ARK_ADDRESS: "From ARK Address",
 
@@ -78,6 +80,7 @@ export const translations = {
 
 		TO_POLYGON_ADDRESS: "To Polygon Address",
 	},
+
 	NOTIFICATIONS: {
 		MIGRATION_SUCCESSFUL: "Migration Successful",
 	},

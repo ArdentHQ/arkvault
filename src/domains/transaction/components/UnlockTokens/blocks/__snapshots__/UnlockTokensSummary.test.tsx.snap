@@ -302,10 +302,10 @@ exports[`UnlockTokensSummary > should render 1`] = `
       Your balance unlock transaction has been sent successfully.
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -344,7 +344,7 @@ exports[`UnlockTokensSummary > should render 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your balance unlock transaction has been sent successfully.
       </div>

@@ -2,6 +2,7 @@ import React, { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { generatePath, useHistory } from "react-router-dom";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
+import { ContractPausedAlert } from "@/domains/migration/pages/Migration/Migration.blocks";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -64,7 +65,7 @@ export const MigrationAdd = () => {
 
 	const wallet = watch("wallet");
 
-	const { storeTransaction, migrations } = useMigrations();
+	const { storeTransaction, migrations, contractIsPaused } = useMigrations();
 	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
 
 	useEffect(
@@ -143,6 +144,8 @@ export const MigrationAdd = () => {
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
+			<ContractPausedAlert />
+
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
 					<StepIndicatorAlt
@@ -192,7 +195,7 @@ export const MigrationAdd = () => {
 										<Button
 											data-testid="MigrationAdd__continue-button"
 											variant="primary"
-											disabled={!isValid}
+											disabled={!isValid || contractIsPaused}
 											onClick={handleNext}
 										>
 											{t("COMMON.CONTINUE")}
@@ -202,7 +205,7 @@ export const MigrationAdd = () => {
 									{activeStep === Step.Authenticate && (
 										<Button
 											type="submit"
-											disabled={isSubmitting || !isValid}
+											disabled={isSubmitting || !isValid || contractIsPaused}
 											data-testid="MigrationAdd__send-button"
 											isLoading={isSubmitting}
 											icon="DoubleArrowRight"

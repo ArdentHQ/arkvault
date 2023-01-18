@@ -34,10 +34,10 @@ exports[`Import Profile - Processing import > should enter password again 1`] = 
         data-testid="ImportError"
       >
         <div
-          class="flex flex-col overflow-hidden rounded-xl mt-6"
+          class="mt-6 css-mpc03v"
         >
           <div
-            class="css-ic0qlc"
+            class="css-1f7sa7y"
           >
             <div
               class="css-v0ob3f"
@@ -76,7 +76,7 @@ exports[`Import Profile - Processing import > should enter password again 1`] = 
             </span>
           </div>
           <div
-            class="css-6o9bco"
+            class="css-1h3dpsb"
           >
             An error occurred while importing the profile, try importing again. Select Retry to re-import the profile. If the error occurs again, you can contact our support team.
           </div>
@@ -241,10 +241,10 @@ exports[`Import Profile - Processing import > should handle import error 1`] = `
         data-testid="ImportError"
       >
         <div
-          class="flex flex-col overflow-hidden rounded-xl mt-6"
+          class="mt-6 css-mpc03v"
         >
           <div
-            class="css-ic0qlc"
+            class="css-1f7sa7y"
           >
             <div
               class="css-v0ob3f"
@@ -283,7 +283,7 @@ exports[`Import Profile - Processing import > should handle import error 1`] = `
             </span>
           </div>
           <div
-            class="css-6o9bco"
+            class="css-1h3dpsb"
           >
             An error occurred while importing the profile, try importing again. Select Retry to re-import the profile. If the error occurs again, you can contact our support team.
           </div>
@@ -582,10 +582,10 @@ exports[`Import Profile - Processing import > should show error if json import h
         data-testid="ImportError"
       >
         <div
-          class="flex flex-col overflow-hidden rounded-xl mt-6"
+          class="mt-6 css-mpc03v"
         >
           <div
-            class="css-ic0qlc"
+            class="css-1f7sa7y"
           >
             <div
               class="css-v0ob3f"
@@ -624,7 +624,7 @@ exports[`Import Profile - Processing import > should show error if json import h
             </span>
           </div>
           <div
-            class="css-6o9bco"
+            class="css-1h3dpsb"
           >
             An error occurred while importing the profile, try importing again. Select Retry to re-import the profile. If the error occurs again, you can contact our support team.
           </div>

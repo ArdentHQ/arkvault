@@ -32,6 +32,8 @@ export type ResponsiveButtonVariant = {
 	[key in LayoutBreakpoint]?: ButtonVariant;
 };
 
+export type AlertLayout = "vertical" | "horizontal";
+
 export type NavbarVariant = "full" | "logo-only";
 
 export type Theme = "system" | "dark" | "light";

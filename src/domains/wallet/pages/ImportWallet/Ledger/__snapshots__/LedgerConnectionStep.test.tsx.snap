@@ -192,10 +192,10 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
       </div>
     </fieldset>
     <div
-      class="flex flex-col overflow-hidden rounded-xl"
+      class="css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -234,7 +234,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Successfully connected
       </div>
@@ -435,10 +435,10 @@ exports[`LedgerConnectionStep > should emit event on connection fail 1`] = `
       </div>
     </fieldset>
     <div
-      class="flex flex-col overflow-hidden rounded-xl"
+      class="css-mpc03v"
     >
       <div
-        class="css-ic0qlc"
+        class="css-1f7sa7y"
       >
         <div
           class="css-v0ob3f"
@@ -477,7 +477,7 @@ exports[`LedgerConnectionStep > should emit event on connection fail 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1h3dpsb"
       >
         Unable to connect to Ledger device. Please ensure that all other applications that connect to your Ledger are closed.
       </div>
@@ -798,10 +798,10 @@ exports[`LedgerConnectionStep > should show update error if app version is less 
       </div>
     </fieldset>
     <div
-      class="flex flex-col overflow-hidden rounded-xl"
+      class="css-mpc03v"
     >
       <div
-        class="css-ic0qlc"
+        class="css-1f7sa7y"
       >
         <div
           class="css-v0ob3f"
@@ -840,7 +840,7 @@ exports[`LedgerConnectionStep > should show update error if app version is less 
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1h3dpsb"
       >
         The ARK app version is 1.0.1. Please update the ARK app via Ledger Live.
       </div>
