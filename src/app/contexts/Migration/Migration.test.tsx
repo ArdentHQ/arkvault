@@ -8,6 +8,7 @@ import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testi
 import * as contexts from "@/app/contexts";
 import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 const Test = () => {
 	const { migrations, storeTransaction, contractIsPaused } = useMigrations();
@@ -18,6 +19,7 @@ const Test = () => {
 			id: () => "abc123",
 			memo: () => "0x123",
 			sender: () => "AdDreSs",
+			timestamp: () => DateTime.make(),
 		} as DTO.ExtendedSignedTransactionData;
 
 		storeTransaction(transaction);
@@ -303,7 +305,6 @@ describe("Migration Context", () => {
 
 	it("should add a transaction", async () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
-
 		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => ({
 			amount: 123,
 			arkTxHash: `0xabc123`,
