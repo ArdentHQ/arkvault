@@ -121,9 +121,8 @@ export const MigrationAdd = () => {
 		try {
 			const transaction = await sendTransaction();
 
-			storeTransaction(transaction);
-
 			setTransaction(transaction);
+			storeTransaction(transaction);
 
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {

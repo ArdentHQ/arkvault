@@ -48,7 +48,7 @@ describe("useLatestTransactions", () => {
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
 
 		const { result, waitForNextUpdate } = renderHook(
-			() => useLatestTransactions({ profile, profileIsSyncing: false }),
+			() => useLatestTransactions({ limit: 10, profile, profileIsSyncing: false }),
 			{ wrapper },
 		);
 

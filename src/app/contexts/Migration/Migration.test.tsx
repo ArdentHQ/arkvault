@@ -2,6 +2,7 @@ import React from "react";
 import { DTO, Contracts } from "@ardenthq/sdk-profiles";
 import { Contract, ethers } from "ethers";
 import userEvent from "@testing-library/user-event";
+import { DateTime } from "@ardenthq/sdk-intl";
 import { MigrationProvider, useMigrations } from "./Migration";
 import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
 import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testing-library";
@@ -17,8 +18,8 @@ const Test = () => {
 			amount: () => 123,
 			id: () => "abc123",
 			memo: () => "0x123",
-			recipient: () => "burn-addy",
 			sender: () => "AdDreSs",
+			timestamp: () => DateTime.make(),
 		} as DTO.ExtendedSignedTransactionData;
 
 		storeTransaction(transaction);
@@ -304,11 +305,10 @@ describe("Migration Context", () => {
 
 	it("should add a transaction", async () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
-
 		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => ({
 			amount: 123,
 			arkTxHash: `0xabc123`,
-			recipient: "0xabc",
+			memo: "0xabc",
 		}));
 
 		const ethersMock = Contract.mockImplementation(() => ({
@@ -330,9 +330,12 @@ describe("Migration Context", () => {
 
 		userEvent.click(screen.getByTestId("Migrations__store"));
 
-		await waitFor(() => {
-			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
-		});
+		await waitFor(
+			() => {
+				expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+			},
+			{ timeout: 4000 },
+		);
 
 		ethersMock.mockRestore();
 	});
