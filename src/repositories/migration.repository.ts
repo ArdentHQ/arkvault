@@ -48,4 +48,10 @@ export class MigrationRepository {
 
 		this.#data.set(STORAGE_KEY, all);
 	}
+
+	public remove(items: Migration[]): void {
+		const ids = items.map((item) => item.id);
+
+		this.set(this.all().filter((item) => !ids.includes(item.id)));
+	}
 }

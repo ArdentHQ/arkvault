@@ -67,6 +67,7 @@ interface MigrationContextType {
 	contractIsPaused?: boolean;
 	migrations?: Migration[];
 	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
+	removeTransactions: (address: string) => void;
 }
 
 interface Properties {
@@ -158,6 +159,16 @@ export const MigrationProvider = ({ children }: Properties) => {
 		[repository, migrationsUpdated],
 	);
 
+	const removeTransactions = useCallback(async (address: string) => {
+		if (!migrations || !repository) {
+			return;
+		}
+
+		repository.remove(migrations.filter((migration) => migration.address === address));
+
+		await migrationsUpdated(repository.all());
+	}, [migrations, repository, migrationsUpdated]);
+
 	const hasContractAndRepository = useMemo(
 		() => repository !== undefined && contract !== undefined,
 		[contract, repository],
@@ -238,16 +249,17 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, []);
 
 	return (
-		<MigrationContext.Provider value={{ contractIsPaused, migrations, storeTransaction } as MigrationContextType}>
+		<MigrationContext.Provider value={{ contractIsPaused, migrations, storeTransaction, removeTransactions } as MigrationContextType}>
 			{children}
 		</MigrationContext.Provider>
 	);
 };
 
 export const useMigrations = (): {
-	contractIsPaused?: boolean;
 	migrations: Migration[] | undefined;
 	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
+	removeTransactions: (address: string) => void;
+	contractIsPaused: boolean | undefined;
 } => {
 	const value = React.useContext(MigrationContext);
 

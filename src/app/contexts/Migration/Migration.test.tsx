@@ -11,7 +11,7 @@ import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 
 const Test = () => {
-	const { migrations, storeTransaction, contractIsPaused } = useMigrations();
+	const { migrations, storeTransaction, removeTransactions, contractIsPaused } = useMigrations();
 
 	const createAndStoreTransaction = () => {
 		const transaction = {
@@ -23,6 +23,12 @@ const Test = () => {
 		} as DTO.ExtendedSignedTransactionData;
 
 		storeTransaction(transaction);
+	};
+
+	const removeTransaction = () => {
+		if (migrations) {
+			removeTransactions(migrations[0].address);
+		}
 	};
 
 	if (migrations === undefined || contractIsPaused === undefined) {
@@ -48,6 +54,12 @@ const Test = () => {
 				<li>
 					<button data-testid="Migrations__store" type="button" onClick={createAndStoreTransaction}>
 						Add
+					</button>
+				</li>
+
+				<li>
+					<button data-testid="Migrations__remove" type="button" onClick={removeTransaction}>
+						Remove
 					</button>
 				</li>
 
@@ -336,6 +348,47 @@ describe("Migration Context", () => {
 			},
 			{ timeout: 4000 },
 		);
+
+		ethersMock.mockRestore();
+	});
+
+	it("should remove a transaction", async () => {
+		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
+
+		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => ({
+			amount: 123,
+			arkTxHash: `0xabc123`,
+			recipient: "0xabc",
+		}));
+
+		const ethersMock = Contract.mockImplementation(() => ({
+			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
+			paused: () => false,
+		}));
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+		});
+
+		expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("Migrations__store"));
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
+
+		userEvent.click(screen.getByTestId("Migrations__remove"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
+		});
 
 		ethersMock.mockRestore();
 	});
