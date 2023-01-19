@@ -161,6 +161,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const removeTransactions = useCallback(
 		async (address: string) => {
+			/* istanbul ignore next -- @preserve */
 			if (!migrations || !repository) {
 				return;
 			}
