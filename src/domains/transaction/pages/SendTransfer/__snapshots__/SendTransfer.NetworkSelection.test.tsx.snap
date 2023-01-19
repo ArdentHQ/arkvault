@@ -199,7 +199,7 @@ exports[`SendTransfer Network Selection > should select a cryptoasset and select
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="mr-auto ml-4 flex h-21 space-x-8"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -292,44 +292,6 @@ exports[`SendTransfer Network Selection > should select a cryptoasset and select
               </a>
             </li>
           </ul>
-          <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
-            data-testid="NavigationBar__menu-toggle"
-          >
-            <div
-              class="static sm:relative"
-            >
-              <span
-                data-testid="dropdown__toggle"
-              >
-                <button
-                  class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                  type="button"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
-                  >
-                    <svg
-                      viewBox="0 0 20 20"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 15.5h18M1 10h18M1 4.5h18"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </span>
-            </div>
-          </div>
           <div
             class="mr-4 flex items-center space-x-2 sm:space-x-4"
           >
@@ -1693,7 +1655,7 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="mr-auto ml-4 flex h-21 space-x-8"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -1786,44 +1748,6 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
               </a>
             </li>
           </ul>
-          <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
-            data-testid="NavigationBar__menu-toggle"
-          >
-            <div
-              class="static sm:relative"
-            >
-              <span
-                data-testid="dropdown__toggle"
-              >
-                <button
-                  class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                  type="button"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
-                  >
-                    <svg
-                      viewBox="0 0 20 20"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 15.5h18M1 10h18M1 4.5h18"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </span>
-            </div>
-          </div>
           <div
             class="mr-4 flex items-center space-x-2 sm:space-x-4"
           >
