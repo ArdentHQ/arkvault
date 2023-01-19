@@ -5,28 +5,24 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import userEvent from "@testing-library/user-event";
 import { MigrationDetailsModal } from "./MigrationDetailsModal";
 import { translations } from "@/domains/migration/i18n";
-import { render, getDefaultProfileId, screen, env } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 import * as context from "@/app/contexts";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 
 let transactionFixture: DTO.ExtendedConfirmedTransactionData;
 
 describe("MigrationDetailsModal", () => {
-	beforeAll(async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
-
-		const wallet = profile.wallets().first();
-
+	beforeAll(() => {
 		transactionFixture = {
 			amount: () => 123,
 			id: () => "transaction-id",
 			memo: () => "0x123456789",
-			sender: () => wallet.address(),
+			sender: () => "Address",
 			timestamp: () => DateTime.make(),
 		} as unknown as DTO.ExtendedConfirmedTransactionData;
 	});
 
-	it("should render empty if transaction is not defined", async () => {
+	it("should render empty if transaction is not defined", () => {
 		render(<MigrationDetailsModal transaction={undefined} onClose={vi.fn()} />);
 
 		expect(screen.queryByTestId("MigrationDetailsModal")).not.toBeInTheDocument();
