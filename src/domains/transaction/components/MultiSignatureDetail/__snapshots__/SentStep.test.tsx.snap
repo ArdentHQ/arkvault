@@ -302,10 +302,10 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="md:hidden css-mpc03v"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1fsr3xk"
       >
         <div
           class="css-v0ob3f"
@@ -344,7 +344,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-90mh6d"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>

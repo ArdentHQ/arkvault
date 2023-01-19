@@ -9,7 +9,7 @@ export const getIcon = (status: MigrationTransactionStatus) => {
 	}
 
 	return {
-		color: "text-theme-secondary-500 dark:text-theme-secondary-700",
+		color: "text-theme-warning-300",
 		name: "Clock",
 	};
 };

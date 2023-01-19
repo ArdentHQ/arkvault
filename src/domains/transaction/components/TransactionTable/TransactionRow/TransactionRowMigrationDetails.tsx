@@ -24,7 +24,7 @@ export const TransactionMigrationLink = ({
 	<Link to={transaction.explorerLink()} tooltip={transaction.id()} showExternalIcon={false} isExternal>
 		<span className="flex items-center space-x-2">
 			<span>{children}</span>
-			<Icon name="ChevronRight" size="md" />
+			<Icon name="ChevronRight" dimensions={[12, 12]} />
 		</span>
 	</Link>
 );
@@ -44,8 +44,8 @@ export const TransactionRowMigrationDetails = ({ transaction, isCompact }: Prope
 					className={`border-transparent text-theme-hint-600 ${
 						isCompact ? "" : "absolute top-0 h-full w-full"
 					}`}
+					showTooltip={false}
 					noShadow
-					tooltipDarkTheme
 				/>
 			</div>
 

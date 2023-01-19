@@ -562,7 +562,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -1398,7 +1398,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -2269,7 +2269,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -3151,7 +3151,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -3915,7 +3915,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -4544,7 +4544,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -5290,7 +5290,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -6040,7 +6040,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -6846,7 +6846,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -7389,7 +7389,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -7896,7 +7896,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -8496,7 +8496,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
