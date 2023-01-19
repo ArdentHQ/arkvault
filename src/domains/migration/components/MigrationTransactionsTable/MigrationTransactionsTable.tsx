@@ -23,7 +23,7 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 			sortBy: [
 				{
 					desc: true,
-					id: "createdAt",
+					id: "timestamp",
 				},
 			],
 		}),
@@ -42,7 +42,7 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 			},
 			{
 				Header: t("COMMON.DATE"),
-				accessor: "createdAt",
+				accessor: "timestamp",
 				headerClassName: "hidden lg:table-cell",
 			},
 			{

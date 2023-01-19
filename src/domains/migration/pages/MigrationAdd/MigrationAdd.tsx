@@ -61,7 +61,7 @@ export const MigrationAdd = () => {
 	const form = useMigrationForm();
 
 	const { formState, watch } = form;
-	const { isSubmitting, isValid } = formState;
+	const { isSubmitting, isDirty, isValid } = formState;
 
 	const wallet = watch("wallet");
 
@@ -121,10 +121,7 @@ export const MigrationAdd = () => {
 		try {
 			const transaction = await sendTransaction();
 
-			storeTransaction(transaction);
-
 			setTransaction(transaction);
-
 			storeTransaction(transaction);
 
 			setActiveStep(Step.PendingTransaction);
@@ -141,6 +138,8 @@ export const MigrationAdd = () => {
 	}, [transactionIsConfirmed]);
 
 	const hideFormButtons = activeStep > Step.Authenticate || (activeStep === Step.Authenticate && wallet.isLedger());
+
+	const isNextDisabled = isDirty ? !isValid : true;
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
@@ -195,7 +194,7 @@ export const MigrationAdd = () => {
 										<Button
 											data-testid="MigrationAdd__continue-button"
 											variant="primary"
-											disabled={!isValid || contractIsPaused}
+											disabled={contractIsPaused || isNextDisabled}
 											onClick={handleNext}
 										>
 											{t("COMMON.CONTINUE")}
@@ -205,7 +204,7 @@ export const MigrationAdd = () => {
 									{activeStep === Step.Authenticate && (
 										<Button
 											type="submit"
-											disabled={isSubmitting || !isValid || contractIsPaused}
+											disabled={contractIsPaused || isSubmitting || isNextDisabled}
 											data-testid="MigrationAdd__send-button"
 											isLoading={isSubmitting}
 											icon="DoubleArrowRight"

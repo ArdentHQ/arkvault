@@ -66,7 +66,7 @@ const contractABI = [
 interface MigrationContextType {
 	contractIsPaused?: boolean;
 	migrations?: Migration[];
-	storeTransaction: (transaction: DTO.ExtendedSignedTransactionData) => void;
+	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
 }
 
 interface Properties {
@@ -141,14 +141,14 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	const storeTransaction = useCallback(
-		async (transaction: DTO.ExtendedSignedTransactionData) => {
+		async (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
 			const migration: Migration = {
 				address: transaction.sender(),
 				amount: transaction.amount(),
 				id: transaction.id(),
 				migrationAddress: transaction.memo()!,
 				status: MigrationTransactionStatus.Pending,
-				timestamp: Date.now() / 1000,
+				timestamp: transaction.timestamp()!.toUNIX(),
 			};
 
 			repository!.add(migration);
@@ -245,9 +245,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 };
 
 export const useMigrations = (): {
+	contractIsPaused?: boolean;
 	migrations: Migration[] | undefined;
-	storeTransaction: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	contractIsPaused: boolean | undefined;
+	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
 } => {
 	const value = React.useContext(MigrationContext);
 
