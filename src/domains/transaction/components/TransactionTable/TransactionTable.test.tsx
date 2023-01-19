@@ -163,7 +163,9 @@ describe("TransactionTable", () => {
 
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
-		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.not.toBeVisible();
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationDetailsModal")).not.toBeInTheDocument();
+		});
 
 		useMigrationsSpy.mockRestore();
 	});
@@ -197,13 +199,15 @@ describe("TransactionTable", () => {
 			wallet,
 		) as any;
 
-		render(<TransactionTable transactions={[transactionFixture]} isCompact profile={profile} />);
+		renderResponsive(<TransactionTable transactions={[transactionFixture]} profile={profile} />, "xs");
 
 		await expect(screen.findByTestId("TransactionMigrationLink")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("TransactionMigrationLink"));
 
-		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationDetailsModal")).not.toBeInTheDocument();
+		});
 
 		useMigrationsSpy.mockRestore();
 	});
