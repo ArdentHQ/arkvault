@@ -42,13 +42,13 @@ describe("Migration", () => {
 		useMigrationsSpy.mockRestore();
 	});
 
-	it("should render", async () => {
+	it("should render", () => {
 		renderComponent();
 
 		expect(screen.getByTestId(addMigrationButton)).toBeInTheDocument();
 	});
 
-	it("should render compact", async () => {
+	it("should render compact", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
 		renderComponent();
