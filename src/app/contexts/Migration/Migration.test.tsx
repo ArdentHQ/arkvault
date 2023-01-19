@@ -315,50 +315,13 @@ describe("Migration Context", () => {
 		ethersMock.mockRestore();
 	});
 
-	it("should add a transaction", async () => {
+	it("should add and remove a transaction", async () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
+
 		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => ({
 			amount: 123,
 			arkTxHash: `0xabc123`,
 			memo: "0xabc",
-		}));
-
-		const ethersMock = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
-			paused: () => false,
-		}));
-
-		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
-		});
-
-		expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("Migrations__store"));
-
-		await waitFor(
-			() => {
-				expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
-			},
-			{ timeout: 4000 },
-		);
-
-		ethersMock.mockRestore();
-	});
-
-	it("should remove a transaction", async () => {
-		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
-
-		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => ({
-			amount: 123,
-			arkTxHash: `0xabc123`,
-			recipient: "0xabc",
 		}));
 
 		const ethersMock = Contract.mockImplementation(() => ({
