@@ -27,7 +27,6 @@ export const useMigrationForm = () => {
 			fee: migrationTransactionFee(),
 		},
 		mode: "onChange",
-		shouldUnregister: false,
 	});
 
 	const { register } = form;
@@ -36,6 +35,7 @@ export const useMigrationForm = () => {
 		register("fee");
 		register("migrationAddress", { required: true });
 		register("wallet", { required: true });
+		register("recipients", { required: true });
 	}, [register]);
 
 	return form;
