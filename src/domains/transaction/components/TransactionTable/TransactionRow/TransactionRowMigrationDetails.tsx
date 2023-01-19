@@ -34,7 +34,12 @@ export const TransactionMigrationLink = ({
 
 	return (
 		<Tooltip content={transaction.id()}>
-			<button type="button" className="link font-semibold" onClick={clickHandler}>
+			<button
+				data-testid="TransactionMigrationLink"
+				type="button"
+				className="link font-semibold"
+				onClick={clickHandler}
+			>
 				<span className="flex items-center space-x-2">
 					<span>{children}</span>
 					<Icon name="ChevronRight" dimensions={[12, 12]} />

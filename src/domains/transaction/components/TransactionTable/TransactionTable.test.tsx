@@ -2,9 +2,11 @@ import { sortByDesc } from "@ardenthq/sdk-helpers";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-
 import { TransactionTable } from "./TransactionTable";
+import { migrationWalletAddress } from "@/utils/polygon-migration";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+import * as context from "@/app/contexts";
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import {
 	env,
 	getDefaultProfileId,
@@ -120,5 +122,85 @@ describe("TransactionTable", () => {
 		userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(transactions[1]));
+	});
+
+	it("should show the migration modal on row click", async () => {
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({
+			getTransactionStatus: () => Promise.resolve(MigrationTransactionStatus.Confirmed),
+		}));
+
+		const profile = env.profiles().findById(getDefaultProfileId());
+
+		const transactionFixture = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: migrationWalletAddress(),
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		) as any;
+
+		render(<TransactionTable transactions={[transactionFixture]} profile={profile} />);
+
+		await expect(screen.findByTestId("TransactionMigrationLink")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("TransactionMigrationLink"));
+
+		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
+
+		useMigrationsSpy.mockRestore();
+	});
+
+	it("should show the migration modal on compact row click", async () => {
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({
+			getTransactionStatus: () => Promise.resolve(MigrationTransactionStatus.Confirmed),
+		}));
+
+		const profile = env.profiles().findById(getDefaultProfileId());
+
+		const transactionFixture = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: migrationWalletAddress(),
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		) as any;
+
+		render(<TransactionTable transactions={[transactionFixture]} isCompact profile={profile} />);
+
+		await expect(screen.findByTestId("TransactionMigrationLink")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("TransactionMigrationLink"));
+
+		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
+
+		useMigrationsSpy.mockRestore();
 	});
 });
