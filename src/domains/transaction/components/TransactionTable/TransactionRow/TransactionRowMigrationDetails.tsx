@@ -42,12 +42,6 @@ export const TransactionMigrationLink = ({
 			</button>
 		</Tooltip>
 	);
-	// <Link to={transaction.explorerLink()} tooltip={} showExternalIcon={false} isExternal>
-	// 	<span className="flex items-center space-x-2">
-	// 		<span>{children}</span>
-	// 		<Icon name="ChevronRight" dimensions={[12, 12]} />
-	// 	</span>
-	// </Link>
 };
 
 export const TransactionRowMigrationDetails = ({ transaction, isCompact, onClick }: Properties) => {

@@ -45,6 +45,7 @@ export const TransactionRow = memo(
 					transaction={transaction}
 					exchangeCurrency={exchangeCurrency}
 					profile={profile}
+					onShowMigrationDetails={onShowMigrationDetails}
 				/>
 			);
 		}
