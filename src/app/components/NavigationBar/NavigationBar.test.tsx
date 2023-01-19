@@ -193,10 +193,6 @@ describe("NavigationBar", () => {
 
 		await expect(screen.findByTestId("NavigationBar__menu-toggle")).resolves.toBeVisible();
 
-		// userEvent.click(screen.getByTestId("NavigationBar__menu-toggle"));
-		//
-		// expect(screen.getByText("Portfolio")).toBeInTheDocument();
-		//
 		expect(asFragment()).toMatchSnapshot();
 	});
 
