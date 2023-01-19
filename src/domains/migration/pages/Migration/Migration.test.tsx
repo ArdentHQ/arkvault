@@ -31,6 +31,8 @@ const renderComponent = (profileId = profile.id()) => {
 let useMigrationsSpy: vi.SpyInstance;
 
 describe("Migration", () => {
+	const addMigrationButton = "Migrations__add-migration-btn";
+
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({ migrations: [] });
@@ -43,14 +45,14 @@ describe("Migration", () => {
 	it("should render", async () => {
 		renderComponent();
 
-		await waitFor(() => expect(screen.getByTestId("Migrations__add-migration-btn")).toBeInTheDocument());
+		expect(screen.getByTestId(addMigrationButton)).toBeInTheDocument();
 	});
 
 	it("should render compact", async () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
 		renderComponent();
-		await waitFor(() => expect(screen.getByTestId("Migrations__add-migration-btn")).toBeInTheDocument());
+		expect(screen.getByTestId(addMigrationButton)).toBeInTheDocument();
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});
@@ -58,7 +60,7 @@ describe("Migration", () => {
 	it("should redirect user to migration add page after accepted disclaimer", () => {
 		renderComponent();
 
-		userEvent.click(screen.getByTestId("Migrations__add-migration-btn"));
+		userEvent.click(screen.getByTestId(addMigrationButton));
 
 		expect(screen.getByTestId("MigrationDisclaimer__submit-button")).toBeVisible();
 
@@ -74,7 +76,7 @@ describe("Migration", () => {
 	it("handles the cancel button on the disclaimer", async () => {
 		renderComponent();
 
-		userEvent.click(screen.getByTestId("Migrations__add-migration-btn"));
+		userEvent.click(screen.getByTestId(addMigrationButton));
 
 		expect(screen.getByTestId("MigrationDisclaimer__cancel-button")).toBeVisible();
 
@@ -90,7 +92,7 @@ describe("Migration", () => {
 
 		renderComponent();
 
-		expect(screen.getByTestId("Migrations__add-migration-btn")).toBeDisabled();
+		expect(screen.getByTestId(addMigrationButton)).toBeDisabled();
 
 		expect(screen.getByTestId("ContractPausedAlert")).toBeInTheDocument();
 
@@ -100,7 +102,7 @@ describe("Migration", () => {
 	it("handles the close button on the disclaimer", async () => {
 		renderComponent();
 
-		userEvent.click(screen.getByTestId("Migrations__add-migration-btn"));
+		userEvent.click(screen.getByTestId(addMigrationButton));
 
 		expect(screen.getByTestId("Modal__close-button")).toBeVisible();
 

@@ -76,6 +76,38 @@ describe("useMigrationTransactions hook", () => {
 		resetProfileNetworksMock();
 	});
 
+	it("should return loading state if profile is restoring", async () => {
+		vi.spyOn(contexts, "useConfiguration").mockReturnValue({
+			profileIsRestoring: true,
+			profileIsSyncing: false,
+		});
+
+		vi.spyOn(useLatestTransactions, "useLatestTransactions").mockReturnValue({
+			isLoadingTransactions: false,
+			latestTransactions: [transactionFixture, secondTransactionFixture],
+		});
+
+		vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: [],
+			storeTransaction: () => {},
+		});
+
+		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
+
+		const sent = await profile.transactionAggregate().all({ limit: 10 });
+		const items = sent.items();
+
+		const mockTransactionsAggregate = vi
+			.spyOn(profile.transactionAggregate(), "all")
+			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
+
+		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
+		expect(result.current.migrations).toHaveLength(0);
+		expect(result.current.isLoading).toBe(true);
+
+		mockTransactionsAggregate.mockRestore();
+	});
+
 	it("should return undefined migrations", async () => {
 		vi.spyOn(contexts, "useConfiguration").mockReturnValue({
 			profileIsRestoring: false,
