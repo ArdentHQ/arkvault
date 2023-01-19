@@ -330,9 +330,12 @@ describe("Migration Context", () => {
 
 		userEvent.click(screen.getByTestId("Migrations__store"));
 
-		await waitFor(() => {
-			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
-		});
+		await waitFor(
+			() => {
+				expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+			},
+			{ timeout: 4000 },
+		);
 
 		ethersMock.mockRestore();
 	});

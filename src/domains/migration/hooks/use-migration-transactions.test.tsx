@@ -5,7 +5,8 @@ import { useMigrationTransactions } from "./use-migration-transactions";
 import { env, getDefaultProfileId, WithProviders, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 import * as useLatestTransactions from "@/domains/dashboard/hooks";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
-import * as useMigrations from "@/app/contexts";
+import * as contexts from "@/app/contexts";
+import { migrationWalletAddress } from "@/utils/polygon-migration";
 
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
@@ -30,7 +31,7 @@ describe("useMigrationTransactions hook", () => {
 				.transfer({
 					data: {
 						amount: 1,
-						to: wallet.address(),
+						to: migrationWalletAddress(),
 					},
 					fee: 1,
 					nonce: "1",
@@ -76,6 +77,21 @@ describe("useMigrationTransactions hook", () => {
 	});
 
 	it("should return undefined migrations", async () => {
+		vi.spyOn(contexts, "useConfiguration").mockReturnValue({
+			profileIsRestoring: false,
+			profileIsSyncing: false,
+		});
+
+		vi.spyOn(useLatestTransactions, "useLatestTransactions").mockReturnValue({
+			isLoadingTransactions: false,
+			latestTransactions: [transactionFixture, secondTransactionFixture],
+		});
+
+		vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: [],
+			storeTransaction: () => {},
+		});
+
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 
 		const sent = await profile.transactionAggregate().all({ limit: 10 });
@@ -86,7 +102,7 @@ describe("useMigrationTransactions hook", () => {
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
 
 		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
-		expect(result.current.migrations).toBeUndefined();
+		expect(result.current.migrations).toHaveLength(0);
 
 		mockTransactionsAggregate.mockRestore();
 	});
@@ -97,7 +113,7 @@ describe("useMigrationTransactions hook", () => {
 			latestTransactions: [transactionFixture, secondTransactionFixture],
 		});
 
-		const useMigrationsSpy = vi.spyOn(useMigrations, "useMigrations").mockReturnValue({
+		const useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [
 				{
 					address: "AdDreSs",

@@ -23,7 +23,6 @@ export const useLatestTransactions = ({
 	wallets,
 	limit = 10,
 }: LatestTransactionsProperties) => {
-	console.log({ limit });
 	const [{ latestTransactions, isLoadingTransactions }, setState] = useState<LatestTransactionsStateProperties>({
 		isLoadingTransactions: true,
 		latestTransactions: [],
