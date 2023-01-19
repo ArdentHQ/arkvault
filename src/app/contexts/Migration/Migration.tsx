@@ -64,8 +64,11 @@ const contractABI = [
 ];
 
 interface MigrationContextType {
+	getTransactionStatus: (
+		transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
+	) => Promise<MigrationTransactionStatus>;
 	contractIsPaused?: boolean;
-	migrations?: Migration[];
+	migrations: Migration[] | undefined;
 	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
 }
 
@@ -88,18 +91,43 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
 
+	const getContractMigrations = useCallback(
+		async (transactionIds: string[]) => {
+			let contractMigrations: ARKMigrationViewStructOutput[] = [];
+
+			try {
+				contractMigrations = await contract!.getMigrationsByArkTxHash(transactionIds);
+			} catch {
+				//
+			}
+
+			return contractMigrations;
+		},
+		[contract],
+	);
+
+	const getTransactionStatus = useCallback(
+		async (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
+			const contractMigrations = await getContractMigrations([`0x${transaction.id()}`]);
+
+			const contractMigration = contractMigrations.find(
+				(contractMigration: ARKMigrationViewStructOutput) =>
+					contractMigration.arkTxHash === `0x${transaction.id()}`,
+			);
+
+			return contractMigration!.recipient === ethers.constants.AddressZero
+				? MigrationTransactionStatus.Pending
+				: MigrationTransactionStatus.Confirmed;
+		},
+		[contract, getContractMigrations],
+	);
+
 	const loadMigrations = useCallback(async () => {
 		const storedMigrations = repository!.all();
 
 		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
 
-		let contractMigrations: ARKMigrationViewStructOutput[] = [];
-
-		try {
-			contractMigrations = await contract!.getMigrationsByArkTxHash(transactionIds);
-		} catch {
-			//
-		}
+		const contractMigrations = await getContractMigrations(transactionIds);
 
 		const updatedMigrations = storedMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
@@ -121,7 +149,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		repository!.set(updatedMigrations);
 
 		await migrationsUpdated(repository!.all());
-	}, [repository, contract]);
+	}, [repository, getContractMigrations]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
 		try {
@@ -238,17 +266,15 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, []);
 
 	return (
-		<MigrationContext.Provider value={{ contractIsPaused, migrations, storeTransaction } as MigrationContextType}>
+		<MigrationContext.Provider
+			value={{ contractIsPaused, getTransactionStatus, migrations, storeTransaction } as MigrationContextType}
+		>
 			{children}
 		</MigrationContext.Provider>
 	);
 };
 
-export const useMigrations = (): {
-	contractIsPaused?: boolean;
-	migrations: Migration[] | undefined;
-	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
-} => {
+export const useMigrations = (): MigrationContextType => {
 	const value = React.useContext(MigrationContext);
 
 	if (value === undefined) {

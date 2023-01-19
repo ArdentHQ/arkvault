@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { DTO } from "@ardenthq/sdk-profiles";
 import { Trans, useTranslation } from "react-i18next";
@@ -23,21 +23,28 @@ export interface MigrationDetailsModalProperties {
 export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetailsModalProperties) => {
 	const { t } = useTranslation();
 
+	const [transactionIsConfirmed, setTransactionIsConfirmed] = useState<boolean>();
+
+	const loadTransactionStatus = useCallback(async () => {
+		const status = await getTransactionStatus(transaction!);
+
+		setTransactionIsConfirmed(status === MigrationTransactionStatus.Confirmed);
+	}, [transaction]);
+
+	useEffect(() => {
+		if (transaction === undefined) {
+			setTransactionIsConfirmed(undefined);
+			return;
+		}
+
+		loadTransactionStatus();
+	}, [transaction, loadTransactionStatus]);
+
 	const reference = useRef(null);
 
 	const timeFormat = useTimeFormat();
 
-	const { migrations } = useMigrations();
-
-	const transactionIsConfirmed = useMemo(() => {
-		if (transaction === undefined || migrations === undefined) {
-			return false;
-		}
-
-		const migrationTransaction = migrations.find((migration) => migration.id === transaction.id());
-
-		return migrationTransaction?.status === MigrationTransactionStatus.Confirmed;
-	}, [transaction, migrations]);
+	const { getTransactionStatus } = useMigrations();
 
 	const title = useMemo(() => {
 		if (transactionIsConfirmed) {
@@ -45,7 +52,7 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 		}
 
 		return t("MIGRATION.DETAILS_MODAL.STEP_PENDING.TITLE");
-	}, [transaction]);
+	}, [transactionIsConfirmed]);
 
 	const description = useMemo(() => {
 		if (transactionIsConfirmed) {
@@ -53,7 +60,7 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 		}
 
 		return t("MIGRATION.DETAILS_MODAL.STEP_PENDING.DESCRIPTION");
-	}, [transaction]);
+	}, [transactionIsConfirmed]);
 
 	const polygonId = useMemo(() => {
 		if (transaction === undefined) {
@@ -63,7 +70,7 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 		return `0x${transaction.id()}`;
 	}, [transaction]);
 
-	if (!transaction) {
+	if (!transaction || transactionIsConfirmed === undefined) {
 		return <></>;
 	}
 
@@ -72,7 +79,10 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 			<div data-testid="MigrationDetailsModal" className="flex flex-col space-y-3 pt-8">
 				{transactionIsConfirmed ? (
 					<>
-						<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
+						<div
+							data-testid="MigrationDetailsModal__confirmed"
+							className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+						>
 							<MigrationAddress
 								label={t("MIGRATION.POLYGON_ADDRESS")}
 								address={transaction.memo() || ""}
@@ -117,7 +127,10 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 					</>
 				) : (
 					<>
-						<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
+						<div
+							data-testid="MigrationDetailsModal__pending"
+							className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+						>
 							<MigrationDetail label={t("COMMON.DATE")} className="px-5 pt-6 pb-5">
 								<span className="font-semibold">{transaction.timestamp()!.format(timeFormat)}</span>
 							</MigrationDetail>
