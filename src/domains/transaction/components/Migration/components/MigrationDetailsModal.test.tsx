@@ -63,7 +63,7 @@ describe("MigrationDetailsModal", () => {
 
 			await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
 
-			expect(screen.getByTestId("MigrationDetailsModal__confirmed")).toBeInTheDocument();
+			expect(screen.getByTestId(`MigrationDetailsModal__${status}`)).toBeInTheDocument();
 
 			useMigrationsSpy.mockRestore();
 		},
