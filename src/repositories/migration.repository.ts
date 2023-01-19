@@ -50,8 +50,8 @@ export class MigrationRepository {
 	}
 
 	public remove(items: Migration[]): void {
-		const ids = items.map((item) => item.id);
+		const ids = new Set(items.map((item) => item.id));
 
-		this.set(this.all().filter((item) => !ids.includes(item.id)));
+		this.set(this.all().filter((item) => !ids.has(item.id)));
 	}
 }

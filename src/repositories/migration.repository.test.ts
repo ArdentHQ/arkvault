@@ -20,8 +20,8 @@ describe("MigrationRepository", () => {
 	});
 
 	it("should remove items", () => {
-		const migration1 = { id: "migration-id-1" }
-		const migration2 = { id: "migration-id-2" }
+		const migration1 = { id: "migration-id-1" };
+		const migration2 = { id: "migration-id-2" };
 
 		const repository = new MigrationRepository(profile, env.data());
 

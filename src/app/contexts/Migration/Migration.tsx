@@ -159,15 +159,18 @@ export const MigrationProvider = ({ children }: Properties) => {
 		[repository, migrationsUpdated],
 	);
 
-	const removeTransactions = useCallback(async (address: string) => {
-		if (!migrations || !repository) {
-			return;
-		}
+	const removeTransactions = useCallback(
+		async (address: string) => {
+			if (!migrations || !repository) {
+				return;
+			}
 
-		repository.remove(migrations.filter((migration) => migration.address === address));
+			repository.remove(migrations.filter((migration) => migration.address === address));
 
-		await migrationsUpdated(repository.all());
-	}, [migrations, repository, migrationsUpdated]);
+			await migrationsUpdated(repository.all());
+		},
+		[migrations, repository, migrationsUpdated],
+	);
 
 	const hasContractAndRepository = useMemo(
 		() => repository !== undefined && contract !== undefined,
@@ -249,7 +252,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, []);
 
 	return (
-		<MigrationContext.Provider value={{ contractIsPaused, migrations, storeTransaction, removeTransactions } as MigrationContextType}>
+		<MigrationContext.Provider
+			value={{ contractIsPaused, migrations, removeTransactions, storeTransaction } as MigrationContextType}
+		>
 			{children}
 		</MigrationContext.Provider>
 	);
