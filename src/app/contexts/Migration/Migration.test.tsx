@@ -2,13 +2,13 @@ import React from "react";
 import { DTO, Contracts } from "@ardenthq/sdk-profiles";
 import { Contract, ethers } from "ethers";
 import userEvent from "@testing-library/user-event";
+import { DateTime } from "@ardenthq/sdk-intl";
 import { MigrationProvider, useMigrations } from "./Migration";
 import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
 import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testing-library";
 import * as contexts from "@/app/contexts";
 import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
-import { DateTime } from "@ardenthq/sdk-intl";
 
 const Test = () => {
 	const { migrations, storeTransaction, contractIsPaused } = useMigrations();
