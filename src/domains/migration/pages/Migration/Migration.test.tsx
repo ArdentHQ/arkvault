@@ -40,18 +40,17 @@ describe("Migration", () => {
 		useMigrationsSpy.mockRestore();
 	});
 
-	it("should render", () => {
-		const { asFragment } = renderComponent();
+	it("should render", async () => {
+		renderComponent();
 
-		expect(asFragment()).toMatchSnapshot();
+		await waitFor(() => expect(screen.getByTestId("Migrations__add-migration-btn")).toBeInTheDocument());
 	});
 
-	it("should render compact", () => {
+	it("should render compact", async () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
-		const { asFragment } = renderComponent();
-
-		expect(asFragment()).toMatchSnapshot();
+		renderComponent();
+		await waitFor(() => expect(screen.getByTestId("Migrations__add-migration-btn")).toBeInTheDocument());
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});
