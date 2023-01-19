@@ -913,10 +913,10 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -955,7 +955,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -2304,10 +2304,10 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -2346,7 +2346,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>

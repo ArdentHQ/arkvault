@@ -55,7 +55,7 @@ describe("MigrationAdd", () => {
 			account: "0x0000000000000000000000000000000000000000",
 			connectWallet: vi.fn(),
 			connecting: false,
-			isOnPolygonNetwork: true,
+			isOnValidNetwork: true,
 			needsMetaMask: false,
 			supportsMetaMask: true,
 		});
@@ -171,6 +171,43 @@ describe("MigrationAdd", () => {
 		userEvent.click(screen.getByTestId("MigrationAdd__back-button"));
 
 		expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/migration/add`);
+	});
+
+	it("shows a warning and disables the button if contract is paused", async () => {
+		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			contractIsPaused: true,
+		});
+
+		renderComponent();
+
+		expect(screen.getByTestId("ContractPausedAlert")).toBeInTheDocument();
+
+		const signatory = await profile
+			.wallets()
+			.findByCoinWithNetwork(arkCoin, arkDevnetNetwork)[0]
+			.signatoryFactory()
+			.make({
+				secret,
+			});
+
+		vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+
+		expect(screen.getByTestId("header__title")).toBeInTheDocument();
+
+		expect(screen.getByTestId("header__title")).toHaveTextContent(
+			migrationTranslations.MIGRATION_ADD.STEP_CONNECT.TITLE,
+		);
+
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+		await expect(screen.findByTestId(walletListItem)).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId(walletListItem));
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeDisabled());
 	});
 
 	it("should complete migration steps", async () => {

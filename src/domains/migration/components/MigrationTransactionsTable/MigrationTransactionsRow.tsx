@@ -18,6 +18,7 @@ import { MigrationTransactionStatus } from "@/domains/migration/migration.contra
 import { getIcon } from "@/domains/migration/utils";
 import { polygonTransactionLink } from "@/utils/polygon-migration";
 import { MigrationTransactionsRowSkeleton } from "@/domains/migration/components/MigrationTransactionsTable/MigrationTransactionsRowSkeleton";
+import { TransactionRowRecipientIcon } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipientIcon";
 
 const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusProperties> = ({ status }) => {
 	const { t } = useTranslation();
@@ -82,23 +83,33 @@ export const MigrationTransactionsRow = ({
 				</span>
 			</TableCell>
 
-			<TableCell innerClassName="gap-3" isCompact={isCompact}>
-				{isCompact && (
-					<span className="hidden h-5 w-5 items-center text-theme-hint-600 lg:flex">
-						<Icon name="Sent" size="lg" />
-					</span>
-				)}
-
-				{!isCompact && (
-					<div className="hidden lg:flex">
-						<Circle
-							size="lg"
-							className="border-theme-hint-100 bg-theme-hint-50 text-theme-hint-600 dark:border-theme-hint-300 dark:bg-theme-secondary-900 dark:text-theme-hint-300"
-						>
+			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
+				<div className={cn("flex items-center", isCompact ? "space-x-2" : "-space-x-1")}>
+					{isCompact && (
+						<span className="hidden h-5 w-5 items-center text-theme-hint-600 lg:flex">
 							<Icon name="Sent" size="lg" />
-						</Circle>
-					</div>
-				)}
+						</span>
+					)}
+
+					{!isCompact && (
+						<div className="hidden lg:flex">
+							<Tooltip content={t("TRANSACTION.MIGRATION")}>
+								<Circle
+									size="lg"
+									className="border-theme-hint-100 bg-theme-hint-50 text-theme-hint-600 dark:border-theme-hint-300 dark:bg-theme-secondary-900 dark:text-theme-hint-300"
+								>
+									<Icon name="Sent" size="lg" />
+								</Circle>
+							</Tooltip>
+						</div>
+					)}
+
+					<TransactionRowRecipientIcon
+						recipient={migrationTransaction.address}
+						type="transfer"
+						isCompact={isCompact}
+					/>
+				</div>
 
 				<div className="w-0 flex-1">
 					<Address address={migrationTransaction.address} />

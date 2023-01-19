@@ -516,10 +516,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                     </div>
                   </div>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl mt-6"
+                    class="mt-6 css-mpc03v"
                   >
                     <div
-                      class="css-pra96q"
+                      class="css-1hv657z"
                     >
                       <div
                         class="css-v0ob3f"
@@ -563,7 +563,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                       </span>
                     </div>
                     <div
-                      class="css-1pvpof3"
+                      class="css-rfibfr"
                     >
                       This action is permanent and cannot be undone. It is registered on the network.
                     </div>
@@ -1524,10 +1524,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                     </div>
                   </div>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl mt-6"
+                    class="mt-6 css-mpc03v"
                   >
                     <div
-                      class="css-pra96q"
+                      class="css-1hv657z"
                     >
                       <div
                         class="css-v0ob3f"
@@ -1571,7 +1571,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                       </span>
                     </div>
                     <div
-                      class="css-1pvpof3"
+                      class="css-rfibfr"
                     >
                       This action is permanent and cannot be undone. It is registered on the network.
                     </div>
@@ -4540,10 +4540,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
                       </p>
                       <div
-                        class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                        class="md:hidden css-mpc03v"
                       >
                         <div
-                          class="css-ic0qlc"
+                          class="css-1f7sa7y"
                         >
                           <div
                             class="css-v0ob3f"
@@ -4582,7 +4582,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                           </span>
                         </div>
                         <div
-                          class="css-6o9bco"
+                          class="css-1h3dpsb"
                         >
                           An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
                         </div>
@@ -6395,10 +6395,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -6437,7 +6437,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -7705,10 +7705,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -7747,7 +7747,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -8890,10 +8890,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -8932,7 +8932,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
