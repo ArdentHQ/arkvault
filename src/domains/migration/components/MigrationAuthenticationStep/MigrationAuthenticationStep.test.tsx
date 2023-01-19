@@ -1,3 +1,4 @@
+import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
@@ -29,33 +30,28 @@ vi.mock("@/domains/migration/hooks/use-migration-transaction", () => ({
 	}),
 }));
 
-const AuthenticationStepWrapper = () => {
-	const form = useMigrationForm();
-	form.setValue("wallet", wallet);
-
-	return (
-		<Route path="/profiles/:profileId/migration/add">
-			<Form context={form}>
-				<MigrationAuthenticationStep />
-			</Form>
-		</Route>
-	);
-};
-
 describe("MigrationAuthenticationStep", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
+		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
+
 		migrationUrl = `/profiles/${profile.id()}/migration/add`;
 		history.push(migrationUrl);
-		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
 	it("should render authentication step", async () => {
-		const { asFragment } = render(
-			<AuthenticationStepWrapper />,
+		const { result: form } = renderHook(() => useMigrationForm());
 
+		form.current.setValue("wallet", wallet);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/migration/add">
+				<Form context={form.current}>
+					<MigrationAuthenticationStep />
+				</Form>
+			</Route>,
 			{
 				history,
 				route: migrationUrl,
@@ -69,6 +65,10 @@ describe("MigrationAuthenticationStep", () => {
 	});
 
 	it("should render ledger authentication step", async () => {
+		const { result: form } = renderHook(() => useMigrationForm());
+
+		form.current.setValue("wallet", wallet);
+
 		mockNanoXTransport();
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
@@ -83,8 +83,11 @@ describe("MigrationAuthenticationStep", () => {
 		vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
 
 		const { asFragment } = render(
-			<AuthenticationStepWrapper />,
-
+			<Route path="/profiles/:profileId/migration/add">
+				<Form context={form.current}>
+					<MigrationAuthenticationStep />
+				</Form>
+			</Route>,
 			{
 				history,
 				route: migrationUrl,

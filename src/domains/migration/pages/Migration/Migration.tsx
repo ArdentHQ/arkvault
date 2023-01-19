@@ -7,6 +7,7 @@ import { MigrationDisclaimer } from "@/domains/migration/components/MigrationDis
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { MigrationTransactionsTable } from "@/domains/migration/components/MigrationTransactionsTable";
 import { ProfilePaths } from "@/router/paths";
+import { useMigrationTransactions } from "@/domains/migration/hooks/use-migration-transactions";
 import { useMigrations } from "@/app/contexts";
 
 export const Migration = () => {
@@ -16,7 +17,8 @@ export const Migration = () => {
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 	const history = useHistory();
 	const profile = useActiveProfile();
-	const { migrations, contractIsPaused } = useMigrations();
+	const { migrations, isLoading } = useMigrationTransactions({ profile });
+	const { contractIsPaused } = useMigrations();
 
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
@@ -40,7 +42,7 @@ export const Migration = () => {
 					<MigrationTransactionsTable
 						migrationTransactions={migrations}
 						isCompact={isCompact}
-						isLoading={migrations === undefined}
+						isLoading={isLoading}
 						onClick={() => console.log("row click")}
 					/>
 				</Section>
