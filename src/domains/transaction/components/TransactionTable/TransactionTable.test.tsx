@@ -124,7 +124,7 @@ describe("TransactionTable", () => {
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(transactions[1]));
 	});
 
-	it("should show the migration modal on row click", async () => {
+	it("should show the migration modal on row click and hide", async () => {
 		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({
 			getTransactionStatus: () => Promise.resolve(MigrationTransactionStatus.Confirmed),
 		}));
@@ -160,6 +160,10 @@ describe("TransactionTable", () => {
 		userEvent.click(screen.getByTestId("TransactionMigrationLink"));
 
 		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.not.toBeVisible();
 
 		useMigrationsSpy.mockRestore();
 	});
