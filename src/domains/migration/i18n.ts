@@ -2,6 +2,17 @@ export const translations = {
 	CONTRACT_PAUSED_MESSAGE:
 		"The migration is temporarily paused. Please check our <linkTwitter>Twitter</linkTwitter> for more details.",
 
+	DETAILS_MODAL: {
+		STEP_PENDING: {
+			DESCRIPTION: "Migration is in the process, you will be notified once the process is complete.",
+			TITLE: "Migration Pending",
+		},
+		STEP_SUCCESS: {
+			DESCRIPTION: "Your migration was successful.",
+			TITLE: "Successfully Migrated",
+		},
+	},
+
 	DISCLAIMER_MODAL: {
 		// @TBD
 		DISCLAIMER:
@@ -11,6 +22,7 @@ export const translations = {
 		WARNING:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus, mollitia natus est, voluptas eligendi nihil dolorum illum accusamus obcaecati itaque corrupti tenetur, accusantium perferendis officiis hic modi neque aspernatur!",
 	},
+
 	MIGRATION_ADD: {
 		FROM_ARK_ADDRESS: "From ARK Address",
 
