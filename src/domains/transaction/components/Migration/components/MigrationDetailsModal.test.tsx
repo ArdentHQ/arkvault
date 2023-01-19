@@ -44,27 +44,30 @@ describe("MigrationDetailsModal", () => {
 		useMigrationsSpy.mockRestore();
 	});
 
-	it("should show the success step if the migration has confirmed state with undefined `memo`", async () => {
-		const transactionWithEmptyMemo = {
-			amount: () => 123,
-			id: () => "transaction-id",
-			memo: () => {},
-			sender: () => "Address",
-			timestamp: () => DateTime.make(),
-		} as unknown as DTO.ExtendedConfirmedTransactionData;
+	it.each([MigrationTransactionStatus.Pending, MigrationTransactionStatus.Confirmed])(
+		"should show the handle undefined `memo`",
+		async (status) => {
+			const transactionWithEmptyMemo = {
+				amount: () => 123,
+				id: () => "transaction-id",
+				memo: () => {},
+				sender: () => "Address",
+				timestamp: () => DateTime.make(),
+			} as unknown as DTO.ExtendedConfirmedTransactionData;
 
-		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({
-			getTransactionStatus: () => Promise.resolve(MigrationTransactionStatus.Confirmed),
-		}));
+			const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({
+				getTransactionStatus: () => Promise.resolve(status),
+			}));
 
-		render(<MigrationDetailsModal transaction={transactionWithEmptyMemo} onClose={vi.fn()} />);
+			render(<MigrationDetailsModal transaction={transactionWithEmptyMemo} onClose={vi.fn()} />);
 
-		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
+			await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
 
-		expect(screen.getByTestId("MigrationDetailsModal__confirmed")).toBeInTheDocument();
+			expect(screen.getByTestId("MigrationDetailsModal__confirmed")).toBeInTheDocument();
 
-		useMigrationsSpy.mockRestore();
-	});
+			useMigrationsSpy.mockRestore();
+		},
+	);
 
 	it("should show the pending step if the migration has pending state ", async () => {
 		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({
