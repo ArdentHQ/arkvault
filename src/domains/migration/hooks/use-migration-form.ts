@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useForm } from "react-hook-form";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
@@ -31,7 +31,7 @@ export const useMigrationForm = () => {
 
 	const { register } = form;
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		register("fee");
 		register("migrationAddress", { required: true });
 		register("wallet", { required: true });
