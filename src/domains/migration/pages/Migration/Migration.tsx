@@ -52,6 +52,7 @@ export const Migration = () => {
 
 		console.log({
 			identifiers: migrations.map((migration) => ({
+				transactionType: "sent",
 				type: "address",
 				value: migration.address,
 			})),
