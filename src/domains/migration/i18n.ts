@@ -4,7 +4,7 @@ export const translations = {
 
 	DETAILS_MODAL: {
 		STEP_PENDING: {
-			DESCRIPTION: "Migration is in the process, you will be notified once the process is complete.",
+			DESCRIPTION: "Migration is progress, you will be notified once the process is complete.",
 			TITLE: "Migration Pending",
 		},
 		STEP_SUCCESS: {
