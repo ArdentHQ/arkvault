@@ -4,6 +4,7 @@ import preloadLazy from "@/utils/preload-lazy";
 
 const Migration = preloadLazy(() => import("./pages/Migration"));
 const MigrationAdd = preloadLazy(() => import("./pages/MigrationAdd"));
+const MigrationDetails = preloadLazy(() => import("./pages/MigrationDetails"));
 
 export const MigrationRoutes: RouteItem[] = [
 	{
@@ -15,5 +16,10 @@ export const MigrationRoutes: RouteItem[] = [
 		component: MigrationAdd,
 		exact: true,
 		path: ProfilePaths.MigrationAdd,
+	},
+	{
+		component: MigrationDetails,
+		exact: true,
+		path: ProfilePaths.MigrationDetails,
 	},
 ];

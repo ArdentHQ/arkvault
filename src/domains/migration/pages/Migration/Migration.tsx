@@ -9,6 +9,7 @@ import { MigrationTransactionsTable } from "@/domains/migration/components/Migra
 import { ProfilePaths } from "@/router/paths";
 import { useMigrationTransactions } from "@/domains/migration/hooks/use-migration-transactions";
 import { useMigrations } from "@/app/contexts";
+import { Migration as MigrationTransaction } from "@/domains/migration/migration.contracts";
 
 export const Migration = () => {
 	const { t } = useTranslation();
@@ -31,6 +32,17 @@ export const Migration = () => {
 		history.push(path);
 	}, [history, profile]);
 
+	const detailsHandler = useCallback(
+		(migrationTransaction: MigrationTransaction) => {
+			const path = generatePath(ProfilePaths.MigrationDetails, {
+				profileId: profile.id(),
+				transactionId: migrationTransaction.id,
+			});
+			history.push(path);
+		},
+		[history, profile],
+	);
+
 	return (
 		<>
 			<Page pageTitle={t("MIGRATION.PAGE_MIGRATION.TITLE")} isBackDisabled={true} data-testid="Migration">
@@ -43,7 +55,7 @@ export const Migration = () => {
 						migrationTransactions={migrations}
 						isCompact={isCompact}
 						isLoading={isLoading}
-						onClick={() => console.log("row click")}
+						onClick={(migrationTransaction) => detailsHandler(migrationTransaction)}
 					/>
 				</Section>
 
