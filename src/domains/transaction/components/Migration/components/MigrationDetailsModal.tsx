@@ -89,11 +89,8 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 		<Modal title={title} description={description} size="3xl" isOpen onClose={onClose}>
 			<div ref={reference} data-testid="MigrationDetailsModal" className="flex flex-col space-y-3 pt-8">
 				{isLoading ? (
-					<div className="flex flex-col space-y-3">
-						<div
-							data-testid="MigrationDetailsModal__loading"
-							className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
-						>
+					<div className="flex flex-col space-y-3" data-testid="MigrationDetailsModal__loading">
+						<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 							<div className="flex flex-col space-y-5 p-5">
 								<div className="flex flex-col space-y-2">
 									<Skeleton height={16} width={30} />

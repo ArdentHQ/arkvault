@@ -5,7 +5,7 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import userEvent from "@testing-library/user-event";
 import { MigrationDetailsModal } from "./MigrationDetailsModal";
 import { translations } from "@/domains/migration/i18n";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 import * as context from "@/app/contexts";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 
@@ -26,6 +26,7 @@ describe("MigrationDetailsModal", () => {
 		render(<MigrationDetailsModal transaction={undefined} onClose={vi.fn()} />);
 
 		expect(screen.queryByTestId("MigrationDetailsModal")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("MigrationDetailsModal__loading")).not.toBeInTheDocument();
 	});
 
 	it("should show the success step if the migration has confirmed state", async () => {
@@ -35,7 +36,9 @@ describe("MigrationDetailsModal", () => {
 
 		render(<MigrationDetailsModal transaction={transactionFixture} onClose={vi.fn()} />);
 
-		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationDetailsModal__loading")).not.toBeInTheDocument();
+		});
 
 		expect(screen.getByText(translations.DETAILS_MODAL.STEP_SUCCESS.TITLE)).toBeInTheDocument();
 		expect(screen.getByText(translations.DETAILS_MODAL.STEP_SUCCESS.DESCRIPTION)).toBeInTheDocument();
@@ -61,7 +64,9 @@ describe("MigrationDetailsModal", () => {
 
 			render(<MigrationDetailsModal transaction={transactionWithEmptyMemo} onClose={vi.fn()} />);
 
-			await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
+			await waitFor(() => {
+				expect(screen.queryByTestId("MigrationDetailsModal__loading")).not.toBeInTheDocument();
+			});
 
 			expect(screen.getByTestId(`MigrationDetailsModal__${status}`)).toBeInTheDocument();
 
@@ -76,7 +81,9 @@ describe("MigrationDetailsModal", () => {
 
 		render(<MigrationDetailsModal transaction={transactionFixture} onClose={vi.fn()} />);
 
-		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationDetailsModal__loading")).not.toBeInTheDocument();
+		});
 
 		expect(screen.getByText(translations.DETAILS_MODAL.STEP_PENDING.TITLE)).toBeInTheDocument();
 		expect(screen.getByText(translations.DETAILS_MODAL.STEP_PENDING.DESCRIPTION)).toBeInTheDocument();
@@ -94,7 +101,9 @@ describe("MigrationDetailsModal", () => {
 
 		render(<MigrationDetailsModal transaction={transactionFixture} onClose={onCloseMock} />);
 
-		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationDetailsModal__loading")).not.toBeInTheDocument();
+		});
 
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
