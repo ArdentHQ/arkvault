@@ -97,11 +97,11 @@ export const MigrationAdd = () => {
 		return history.push(dashboardPath);
 	};
 
-	const handleNext = () => {
+	const handleNext = async () => {
 		const newStep = activeStep + 1;
 
 		if (newStep === Step.Authenticate && wallet.isLedger()) {
-			handleSubmit();
+			await handleSubmit();
 		}
 
 		setActiveStep((index) => index + 1);

@@ -396,7 +396,9 @@ describe("MigrationAdd", () => {
 
 		await expect(screen.findByTestId("MigrationPendingStep")).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("MigrationSuccessStep")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.findByTestId("MigrationSuccessStep")).resolves.toBeVisible();
+		});
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -453,7 +455,9 @@ describe("MigrationAdd", () => {
 		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
 		userEvent.click(screen.getByTestId(continueButton));
 
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+		});
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
