@@ -205,9 +205,7 @@ describe("TransactionTable", () => {
 
 		userEvent.click(screen.getByTestId("TransactionMigrationLink"));
 
-		await waitFor(() => {
-			expect(screen.queryByTestId("MigrationDetailsModal")).not.toBeInTheDocument();
-		});
+		await expect(screen.findByTestId("MigrationDetailsModal")).resolves.toBeVisible();
 
 		useMigrationsSpy.mockRestore();
 	});
