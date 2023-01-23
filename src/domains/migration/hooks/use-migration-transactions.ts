@@ -19,9 +19,9 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			}
 
 			const wallet = await profile.walletFactory().fromAddress({
+				address: migrationWalletAddress(),
 				coin: "ARK",
 				network: migrationNetwork(),
-				address: migrationWalletAddress(),
 			});
 
 			const senderIds = profile
@@ -36,8 +36,8 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			}
 
 			const transactions = await wallet.transactionIndex().received({
-				senderId: senderIds.join(","),
 				recipientId: migrationWalletAddress(),
+				senderId: senderIds.join(","),
 			});
 
 			setLatestTransactions(transactions.items());
