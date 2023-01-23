@@ -6,6 +6,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { WalletDetails } from "./WalletDetails";
+import * as migrationsModule from "@/app/contexts/Migration/Migration";
 import { buildTranslations } from "@/app/i18n/helpers";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import {
@@ -127,6 +128,8 @@ describe("WalletDetails", () => {
 
 		// Mock musig server requests
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+
+		vi.spyOn(migrationsModule, "useMigrations").mockReturnValue({ removeTransactions: vi.fn() });
 	});
 
 	beforeEach(async () => {
