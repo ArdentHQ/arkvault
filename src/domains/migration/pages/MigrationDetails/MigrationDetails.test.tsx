@@ -30,7 +30,7 @@ const renderComponent = ({ transaction, handleBack = vi.fn() }) => {
 };
 
 describe("MigrationDetails", () => {
-	beforeAll(async () => {
+	beforeAll(() => {
 		transactionFixture = {
 			amount: () => 123,
 			id: () => "transaction-id",
