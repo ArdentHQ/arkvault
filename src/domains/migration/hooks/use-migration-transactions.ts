@@ -31,6 +31,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 				.map((wallet) => wallet.address());
 
 			if (senderIds.length === 0) {
+				setIsLoadingTransactions(false);
 				return;
 			}
 
