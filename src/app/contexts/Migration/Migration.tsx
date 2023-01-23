@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
+import { uniqBy } from "@ardenthq/sdk-helpers";
 import {
 	ARKMigrationViewStructOutput,
 	Migration,
@@ -9,7 +10,8 @@ import {
 import { useEnvironmentContext } from "@/app/contexts";
 import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
-import { polygonContractAddress, polygonRpcUrl } from "@/utils/polygon-migration";
+import { httpClient } from "@/app/services";
+import { polygonContractAddress, polygonIndexerUrl, polygonRpcUrl } from "@/utils/polygon-migration";
 
 const contractABI = [
 	{
@@ -39,12 +41,6 @@ const contractABI = [
 						name: "arkTxHash",
 						type: "bytes32",
 					},
-					// @TBD uncomment once available
-					// {
-					// 	internalType: "bytes32",
-					// 	name: "txHash",
-					// 	type: "bytes32",
-					// },
 				],
 				internalType: "struct ARKMigrator.ARKMigrationView[]",
 				name: "",
@@ -97,7 +93,11 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const loadMigrations = useCallback(async () => {
 		const storedMigrations = repository!.all();
 
-		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
+		const pendingMigrations = storedMigrations.filter(
+			(migration) => migration.status === MigrationTransactionStatus.Pending,
+		);
+
+		const transactionIds = pendingMigrations.map((migration: Migration) => `0x${migration.id}`);
 
 		let contractMigrations: ARKMigrationViewStructOutput[] = [];
 
@@ -107,7 +107,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			//
 		}
 
-		const updatedMigrations = storedMigrations.map((migration: Migration): Migration => {
+		const updatedMigrations = pendingMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
 				(contractMigration: ARKMigrationViewStructOutput) =>
 					contractMigration.arkTxHash === `0x${migration.id}`,
@@ -125,7 +125,32 @@ export const MigrationProvider = ({ children }: Properties) => {
 			};
 		});
 
-		repository!.set(updatedMigrations);
+		const confirmedMigrations = updatedMigrations.filter(
+			(migration) => migration.status === MigrationTransactionStatus.Confirmed,
+		);
+
+		// const confirmedMigrations = [
+		// 	{ id: "34eed5035a09e2b2301534870ca66e8368f3324818226dc4804d43702dd65780" },
+		// 	{ id: "20d941d24c79d1c3db65d76d61d08727f941e89dd456c4b8985ab1e97cf40c93" },
+		// ];
+
+		if (confirmedMigrations.length > 0) {
+			const response = await httpClient.get(`${polygonIndexerUrl()}transactions`, {
+				arkTxHashes: confirmedMigrations.map((migration: Migration) => migration.id),
+			});
+
+			for (const polygonMigration of response.json().data) {
+				const confirmedMigration = confirmedMigrations.find(
+					(migration) => migration.id === polygonMigration.arkTxHash,
+				);
+
+				if (confirmedMigration) {
+					confirmedMigration.migrationId = polygonMigration.polygonTxHash;
+				}
+			}
+		}
+
+		repository!.set(uniqBy([...storedMigrations, ...confirmedMigrations], (migration) => migration.id));
 
 		await migrationsUpdated(repository!.all());
 	}, [repository, contract]);
