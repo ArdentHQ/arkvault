@@ -65,9 +65,6 @@ const contractABI = [
 ];
 
 interface MigrationContextType {
-	getTransactionStatus: (
-		transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
-	) => Promise<MigrationTransactionStatus>;
 	contractIsPaused?: boolean;
 	migrations: MigrationTransaction[] | undefined;
 	storeTransactions: (
@@ -108,22 +105,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 			return contractMigrations;
 		},
 		[contract],
-	);
-
-	const getTransactionStatus = useCallback(
-		async (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
-			const contractMigrations = await getContractMigrations([`0x${transaction.id()}`]);
-
-			const contractMigration = contractMigrations.find(
-				(contractMigration: ARKMigrationViewStructOutput) =>
-					contractMigration.arkTxHash === `0x${transaction.id()}`,
-			);
-
-			return contractMigration!.recipient === ethers.constants.AddressZero
-				? MigrationTransactionStatus.Pending
-				: MigrationTransactionStatus.Confirmed;
-		},
-		[contract, getContractMigrations],
 	);
 
 	const getMigrationTransaction = useCallback(
@@ -297,7 +278,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 			value={
 				{
 					contractIsPaused,
-					getTransactionStatus,
 					migrations,
 					storeTransactions,
 				} as MigrationContextType

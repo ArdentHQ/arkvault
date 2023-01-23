@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useMemo, useRef } from "react";
 
 import { DTO } from "@ardenthq/sdk-profiles";
 import { Trans, useTranslation } from "react-i18next";
@@ -8,13 +8,12 @@ import { MigrationPolygonIcon } from "@/domains/migration/components/MigrationPo
 import { Amount } from "@/app/components/Amount";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { useMigrations } from "@/app/contexts";
-import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Clipboard } from "@/app/components/Clipboard";
 import { polygonTransactionLink } from "@/utils/polygon-migration";
-
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 export interface MigrationDetailsModalProperties {
 	transaction?: DTO.ExtendedConfirmedTransactionData;
 	onClose: () => void;
@@ -23,28 +22,25 @@ export interface MigrationDetailsModalProperties {
 export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetailsModalProperties) => {
 	const { t } = useTranslation();
 
-	const [transactionIsConfirmed, setTransactionIsConfirmed] = useState<boolean>();
+	const { migrations } = useMigrations();
 
-	const loadTransactionStatus = useCallback(async () => {
-		const status = await getTransactionStatus(transaction!);
-
-		setTransactionIsConfirmed(status === MigrationTransactionStatus.Confirmed);
-	}, [transaction]);
-
-	useEffect(() => {
-		if (transaction === undefined) {
-			setTransactionIsConfirmed(undefined);
+	const transactionIsConfirmed = useMemo(() => {
+		if (migrations === undefined || transaction === undefined) {
 			return;
 		}
 
-		loadTransactionStatus();
-	}, [transaction, loadTransactionStatus]);
+		const migrationTransaction = migrations.find((migration) => migration.transaction.id() === transaction.id());
+
+		if (migrationTransaction === undefined) {
+			return;
+		}
+
+		return migrationTransaction.status === MigrationTransactionStatus.Confirmed;
+	}, [transaction, migrations]);
 
 	const reference = useRef(null);
 
 	const timeFormat = useTimeFormat();
-
-	const { getTransactionStatus } = useMigrations();
 
 	const title = useMemo(() => {
 		if (transactionIsConfirmed) {
