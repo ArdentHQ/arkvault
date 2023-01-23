@@ -126,17 +126,27 @@ export const MigrationProvider = ({ children }: Properties) => {
 		[contract, getContractMigrations],
 	);
 
+	const getMigrationTransaction = useCallback(
+		(migration: Migration) => {
+			const wallet = profile!.wallets().findById(migration.walletId);
+			return wallet.transactionIndex().findById(migration.transactionId);
+		},
+		[profile],
+	);
+
 	const migrationsUpdated = useCallback(async () => {
 		const migrations = repository!.all();
 
 		const migrationTransactions: MigrationTransaction[] = [];
 
-		for (const migration of migrations) {
-			const wallet = profile!.wallets().findById(migration.walletId);
-			const transaction = await wallet.transactionIndex().findById(migration.transactionId);
+		const transactions = await Promise.all(
+			migrations.map((migration: Migration) => getMigrationTransaction(migration)),
+		);
+
+		for (const [index, migration] of migrations.entries()) {
 			migrationTransactions.push({
 				status: migration.status,
-				transaction,
+				transaction: transactions[index],
 			});
 		}
 
