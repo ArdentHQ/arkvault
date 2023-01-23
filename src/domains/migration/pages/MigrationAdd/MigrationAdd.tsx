@@ -31,7 +31,7 @@ export enum Step {
 
 const TOTAL_STEPS = 5;
 
-export const MigrationTabsWrapper: React.FC<PropsWithChildren> = ({ children }) => (
+const MigrationTabsWrapper: React.FC<PropsWithChildren> = ({ children }) => (
 	<div className="mt-6 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-10 md:-mx-10">
 		{children}
 	</div>
@@ -65,7 +65,7 @@ export const MigrationAdd = () => {
 
 	const wallet = watch("wallet");
 
-	const { storeTransactions, migrations, contractIsPaused } = useMigrations();
+	const { storeTransaction, migrations, contractIsPaused } = useMigrations();
 	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
 
 	useEffect(
@@ -122,7 +122,7 @@ export const MigrationAdd = () => {
 			const transaction = await sendTransaction();
 
 			setTransaction(transaction);
-			storeTransactions([transaction]);
+			storeTransaction(transaction);
 
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {
