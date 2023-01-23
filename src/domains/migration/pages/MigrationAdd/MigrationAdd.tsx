@@ -122,7 +122,7 @@ export const MigrationAdd = () => {
 			const transaction = await sendTransaction();
 
 			setTransaction(transaction);
-			storeTransaction(transaction);
+			await storeTransaction(transaction);
 
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {
