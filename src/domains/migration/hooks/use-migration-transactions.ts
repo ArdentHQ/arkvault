@@ -8,8 +8,8 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	const { profileIsRestoring } = useConfiguration();
 	const { migrations, storeTransactions } = useMigrations();
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
-	const [isStoringMigrationTransactions, setIsStoringMigrationTransactions] = useState(true);
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
+	const [isStoringMigrationTransactions, setIsStoringMigrationTransactions] = useState(true);
 
 	useEffect(() => {
 		const loadMigrationWalletTransactions = async () => {
@@ -95,7 +95,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		}
 
 		return migrations === undefined;
-	}, [isLoadingTransactions, migrations, migrationTransactions, profileIsRestoring]);
+	}, [isLoadingTransactions, migrations, migrationTransactions, isStoringMigrationTransactions, profileIsRestoring]);
 
 	return { isLoading, migrations: migrations || [] };
 };
