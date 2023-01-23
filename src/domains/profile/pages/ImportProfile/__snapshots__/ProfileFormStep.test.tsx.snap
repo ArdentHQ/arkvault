@@ -603,7 +603,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                       class="ring-focus group inline-block css-15tcy38"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="http://arkvault.io/terms-of-service"
+                      href="https://arkvault.io/terms-of-service"
                       rel="noopener noreferrer"
                     >
                       <span
@@ -1279,7 +1279,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                       class="ring-focus group inline-block css-15tcy38"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="http://arkvault.io/terms-of-service"
+                      href="https://arkvault.io/terms-of-service"
                       rel="noopener noreferrer"
                     >
                       <span
@@ -1955,7 +1955,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                       class="ring-focus group inline-block css-15tcy38"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="http://arkvault.io/terms-of-service"
+                      href="https://arkvault.io/terms-of-service"
                       rel="noopener noreferrer"
                     >
                       <span
@@ -2637,7 +2637,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                       class="ring-focus group inline-block css-15tcy38"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="http://arkvault.io/terms-of-service"
+                      href="https://arkvault.io/terms-of-service"
                       rel="noopener noreferrer"
                     >
                       <span
@@ -3366,7 +3366,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                       class="ring-focus group inline-block css-15tcy38"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="http://arkvault.io/terms-of-service"
+                      href="https://arkvault.io/terms-of-service"
                       rel="noopener noreferrer"
                     >
                       <span
@@ -4096,7 +4096,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                       class="ring-focus group inline-block css-15tcy38"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="http://arkvault.io/terms-of-service"
+                      href="https://arkvault.io/terms-of-service"
                       rel="noopener noreferrer"
                     >
                       <span

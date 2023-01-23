@@ -152,7 +152,7 @@ exports[`MigrationDisclaimer > should render the modal 1`] = `
               <div
                 class="css-rfibfr"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus, mollitia natus est, voluptas eligendi nihil dolorum illum accusamus obcaecati itaque corrupti tenetur, accusantium perferendis officiis hic modi neque aspernatur!
+                By using ARKVault to migrate your token, you acknowledge that you have read and understood the terms and conditions and privacy policy. You are solely responsible for ensuring the accuracy of the information provided during the migration process. Incorrect information may result in the loss of your tokens.
               </div>
             </div>
             <div
@@ -174,7 +174,7 @@ exports[`MigrationDisclaimer > should render the modal 1`] = `
                   <span
                     class="whitespace-pre-line text-sm leading-6 text-theme-secondary-700 dark:text-theme-secondary-600"
                   >
-                    I agree with the rules and with something else 
+                    I have read and agree with the 
                     <a
                       class="ring-focus group inline-block css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -212,7 +212,7 @@ exports[`MigrationDisclaimer > should render the modal 1`] = `
                         </svg>
                       </div>
                     </a>
-                     & 
+                    , 
                     <a
                       class="ring-focus group inline-block css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -250,6 +250,7 @@ exports[`MigrationDisclaimer > should render the modal 1`] = `
                         </svg>
                       </div>
                     </a>
+                    , and information above.
                   </span>
                 </label>
               </fieldset>
