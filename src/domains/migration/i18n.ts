@@ -5,11 +5,11 @@ export const translations = {
 	DISCLAIMER_MODAL: {
 		// @TBD
 		DISCLAIMER:
-			"I agree with the rules and with something else <linkTerms>Terms of Service</linkTerms> & <linkPrivacyPolicy>Privacy Policy</linkPrivacyPolicy>",
+			"I have read and agree with the <linkTerms>Terms of Service</linkTerms>, <linkPrivacyPolicy>Privacy Policy</linkPrivacyPolicy>, and information above.",
 		TITLE: "Migration Disclaimer",
 		// @TBD
 		WARNING:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus, mollitia natus est, voluptas eligendi nihil dolorum illum accusamus obcaecati itaque corrupti tenetur, accusantium perferendis officiis hic modi neque aspernatur!",
+			"By using ARKVault to migrate your token, you acknowledge that you have read and understood the terms and conditions and privacy policy. You are solely responsible for ensuring the accuracy of the information provided during the migration process. Incorrect information may result in the loss of your tokens.",
 	},
 	MIGRATION_ADD: {
 		FROM_ARK_ADDRESS: "From ARK Address",
