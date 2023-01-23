@@ -60,7 +60,7 @@ export const translations = {
 		},
 
 		STEP_PENDING: {
-			DESCRIPTION: "Migration is processing, you will be notified once the process is complete.",
+			DESCRIPTION: "Migration in progress, you will be notified once the process is complete.",
 			MIGRATION_INFO:
 				"Migration time <strong>≈ 24 hours</strong>.\nUpon completion you will receive a notification.",
 			TITLE: "Migration Pending",
