@@ -1,5 +1,6 @@
+import { DateTime } from "@ardenthq/sdk-intl";
 import cn from "classnames";
-import React, { useMemo } from "react";
+import React from "react";
 
 import { useTranslation } from "react-i18next";
 import { MigrationTransactionsRowStatusProperties } from "./MigrationTransactionsTable.contracts";
@@ -13,7 +14,7 @@ import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { Button } from "@/app/components/Button";
 import { Address } from "@/app/components/Address";
 import { EthereumAvatar } from "@/app/components/Avatar";
-import { MigrationTransactionStatus, MigrationTransaction } from "@/domains/migration/migration.contracts";
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { getIcon } from "@/domains/migration/utils";
 import { polygonTransactionLink } from "@/utils/polygon-migration";
 import { MigrationTransactionsRowSkeleton } from "@/domains/migration/components/MigrationTransactionsTable/MigrationTransactionsRowSkeleton";
@@ -34,26 +35,20 @@ const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusPro
 };
 
 interface MigrationTransactionsRowProperties {
-	migrationTransaction: MigrationTransaction;
+	migrationTransaction: any;
 	isCompact: boolean;
 	isLoading: boolean;
 	onClick: () => void;
 }
 
 export const MigrationTransactionsRow = ({
-	migrationTransaction: { transaction, status },
+	migrationTransaction,
 	isCompact,
 	isLoading,
 	onClick,
 }: MigrationTransactionsRowProperties) => {
 	const timeFormat = useTimeFormat();
 	const { t } = useTranslation();
-
-	const address = useMemo(() => (isLoading ? undefined : transaction.wallet().address()), [transaction, isLoading]);
-	const migrationAddress = useMemo(
-		() => (isLoading ? undefined : transaction.memo() || ""),
-		[transaction, isLoading],
-	);
 
 	if (isLoading) {
 		return <MigrationTransactionsRowSkeleton isCompact={isCompact} />;
@@ -62,12 +57,12 @@ export const MigrationTransactionsRow = ({
 	return (
 		<TableRow data-testid="MigrationTransactionsRow">
 			<TableCell variant="start" isCompact={isCompact}>
-				<Tooltip content={transaction.id()} className="no-ligatures">
+				<Tooltip content={migrationTransaction.id} className="no-ligatures">
 					<span className="flex items-center">
-						{status === MigrationTransactionStatus.Confirmed ? (
+						{migrationTransaction.status === MigrationTransactionStatus.Confirmed ? (
 							<Link
-								to={polygonTransactionLink(transaction.id())}
-								tooltip={transaction.id()}
+								to={polygonTransactionLink(migrationTransaction.id)}
+								tooltip={migrationTransaction.id}
 								showExternalIcon={false}
 								isExternal
 							>
@@ -84,7 +79,7 @@ export const MigrationTransactionsRow = ({
 
 			<TableCell className="hidden lg:table-cell" isCompact={isCompact}>
 				<span data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
-					{transaction.timestamp()?.format(timeFormat)}
+					{DateTime.fromUnix(migrationTransaction.timestamp).format(timeFormat)}
 				</span>
 			</TableCell>
 
@@ -109,27 +104,31 @@ export const MigrationTransactionsRow = ({
 						</div>
 					)}
 
-					<TransactionRowRecipientIcon recipient={address} type="transfer" isCompact={isCompact} />
+					<TransactionRowRecipientIcon
+						recipient={migrationTransaction.address}
+						type="transfer"
+						isCompact={isCompact}
+					/>
 				</div>
 
 				<div className="w-0 flex-1">
-					<Address address={address} />
+					<Address address={migrationTransaction.address} />
 				</div>
 			</TableCell>
 
 			<TableCell innerClassName="gap-3" isCompact={isCompact}>
-				<EthereumAvatar address={migrationAddress} size={isCompact ? "xs" : "lg"} />
+				<EthereumAvatar address={migrationTransaction.migrationAddress} size={isCompact ? "xs" : "lg"} />
 				<div className="w-0 flex-1">
-					<Address address={migrationAddress} />
+					<Address address={migrationTransaction.migrationAddress} />
 				</div>
 			</TableCell>
 
 			<TableCell innerClassName="justify-center" isCompact={isCompact}>
-				<MigrationTransactionsRowStatus status={status} />
+				<MigrationTransactionsRowStatus status={migrationTransaction.status} />
 			</TableCell>
 
 			<TableCell innerClassName="justify-end" isCompact={isCompact}>
-				<AmountLabel value={transaction.amount()} ticker="ARK" isCompact={isCompact} isNegative />
+				<AmountLabel value={migrationTransaction.amount} ticker="ARK" isCompact={isCompact} isNegative />
 			</TableCell>
 
 			<TableCell variant="end" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>

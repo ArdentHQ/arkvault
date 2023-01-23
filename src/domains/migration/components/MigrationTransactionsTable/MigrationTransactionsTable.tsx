@@ -9,7 +9,6 @@ import { Table } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
 
 import { MigrationTransactionsRowMobile } from "@/domains/migration/components/MigrationTransactionsTable/MigrationTransactionsRowMobile";
-import { MigrationTransaction } from "@/domains/migration/migration.contracts";
 
 export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties> = ({
 	migrationTransactions,
@@ -80,13 +79,13 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 	}, [isLoading, migrationTransactions]);
 
 	const renderTableRow = useCallback(
-		(migrationTransaction: MigrationTransaction) => {
+		(migrationTransaction: any) => {
 			if (useResponsive) {
 				return (
 					<MigrationTransactionsRowMobile
 						migrationTransaction={migrationTransaction}
 						isLoading={isLoading}
-						onClick={() => onClick(migrationTransaction)}
+						onClick={onClick}
 					/>
 				);
 			}
@@ -96,7 +95,7 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 					migrationTransaction={migrationTransaction}
 					isCompact={isCompact}
 					isLoading={isLoading}
-					onClick={() => onClick(migrationTransaction)}
+					onClick={onClick}
 				/>
 			);
 		},

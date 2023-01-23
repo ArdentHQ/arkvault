@@ -4,10 +4,9 @@ import { ethers, Contract } from "ethers";
 import {
 	ARKMigrationViewStructOutput,
 	Migration,
-	MigrationTransaction,
 	MigrationTransactionStatus,
 } from "@/domains/migration/migration.contracts";
-import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { useEnvironmentContext } from "@/app/contexts";
 import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
 import { polygonContractAddress, polygonRpcUrl } from "@/utils/polygon-migration";
@@ -65,14 +64,10 @@ const contractABI = [
 ];
 
 interface MigrationContextType {
-	getTransactionStatus: (
-		transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
-	) => Promise<MigrationTransactionStatus>;
 	contractIsPaused?: boolean;
-	migrations: MigrationTransaction[] | undefined;
-	storeTransactions: (
-		transactions: (DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData)[],
-	) => Promise<void>;
+	migrations?: Migration[];
+	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
+	getTransactionStatus: (transaction: DTO.ExtendedConfirmedTransactionData) => Promise<MigrationTransactionStatus>;
 }
 
 interface Properties {
@@ -90,10 +85,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
 	const profile = useProfileWatcher();
-	const [migrations, setMigrations] = useState<MigrationTransaction[]>();
+	const [migrations, setMigrations] = useState<Migration[]>();
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
-	const { profileIsSyncingWallets, profileIsSyncing } = useConfiguration();
 
 	const getContractMigrations = useCallback(
 		async (transactionIds: string[]) => {
@@ -111,7 +105,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	const getTransactionStatus = useCallback(
-		async (transaction: MigrationTransaction["transaction"]) => {
+		async (transaction: DTO.ExtendedConfirmedTransactionData) => {
 			const contractMigrations = await getContractMigrations([`0x${transaction.id()}`]);
 
 			const contractMigration = contractMigrations.find(
@@ -126,46 +120,23 @@ export const MigrationProvider = ({ children }: Properties) => {
 		[contract, getContractMigrations],
 	);
 
-	const getMigrationTransaction = useCallback(
-		(migration: Migration) => {
-			const wallet = profile!.wallets().findById(migration.walletId);
-			return wallet.transactionIndex().findById(migration.transactionId);
-		},
-		[profile],
-	);
-
-	const migrationsUpdated = useCallback(async () => {
-		const migrations = repository!.all();
-
-		const migrationTransactions: MigrationTransaction[] = [];
-
-		const transactions = await Promise.all(
-			migrations.map((migration: Migration) => getMigrationTransaction(migration)),
-		);
-
-		for (const [index, migration] of migrations.entries()) {
-			migrationTransactions.push({
-				status: migration.status,
-				transaction: transactions[index],
-			});
-		}
-
-		setMigrations(migrationTransactions);
-
-		await persist();
-	}, [persist, profile, repository]);
-
 	const loadMigrations = useCallback(async () => {
 		const storedMigrations = repository!.all();
 
-		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.transactionId}`);
+		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
 
-		const contractMigrations = await getContractMigrations(transactionIds);
+		let contractMigrations: ARKMigrationViewStructOutput[] = [];
+
+		try {
+			contractMigrations = await contract!.getMigrationsByArkTxHash(transactionIds);
+		} catch {
+			//
+		}
 
 		const updatedMigrations = storedMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
 				(contractMigration: ARKMigrationViewStructOutput) =>
-					contractMigration.arkTxHash === `0x${migration.transactionId}`,
+					contractMigration.arkTxHash === `0x${migration.id}`,
 			)!;
 
 			const status =
@@ -181,8 +152,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		repository!.set(updatedMigrations);
 
-		await migrationsUpdated();
-	}, [repository, getContractMigrations, migrationsUpdated]);
+		await migrationsUpdated(repository!.all());
+	}, [repository, contract]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
 		try {
@@ -192,36 +163,42 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 	}, [contract]);
 
-	const storeTransactions = useCallback(
-		async (transactions: (DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData)[]) => {
-			const migrations: Migration[] = transactions.map((transaction) => ({
+	const migrationsUpdated = useCallback(
+		async (migrations: Migration[]) => {
+			await persist();
+
+			setMigrations(migrations);
+		},
+		[persist],
+	);
+
+	const storeTransaction = useCallback(
+		async (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
+			const migration: Migration = {
+				address: transaction.sender(),
+				amount: transaction.amount(),
+				id: transaction.id(),
+				migrationAddress: transaction.memo()!,
 				status: MigrationTransactionStatus.Pending,
-				transactionId: transaction.id(),
-				walletId: transaction.wallet().id(),
-			}));
+				timestamp: transaction.timestamp()!.toUNIX(),
+			};
 
-			for (const migration of migrations) {
-				repository!.add(migration);
-			}
+			repository!.add(migration);
 
-			await migrationsUpdated();
+			await migrationsUpdated(repository!.all());
 		},
 		[repository, migrationsUpdated],
 	);
 
-	const isReady = useMemo(
-		() =>
-			repository !== undefined &&
-			contract !== undefined &&
-			profileIsSyncingWallets === false &&
-			profileIsSyncing === false,
-		[contract, repository, profileIsSyncingWallets, profileIsSyncing],
+	const hasContractAndRepository = useMemo(
+		() => repository !== undefined && contract !== undefined,
+		[contract, repository],
 	);
 
 	useEffect(() => {
 		let reloadInterval: ReturnType<typeof setInterval>;
 
-		if (!isReady) {
+		if (!hasContractAndRepository) {
 			return;
 		}
 
@@ -243,12 +220,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 		reloadInterval = setInterval(reloadMigrationsCallback, ONE_SECOND);
 
 		return () => clearInterval(reloadInterval);
-	}, [repository, loadMigrations, migrations, isReady]);
+	}, [repository, loadMigrations, migrations, hasContractAndRepository]);
 
 	useEffect(() => {
 		let reloadInerval: ReturnType<typeof setInterval>;
 
-		if (!isReady) {
+		if (!hasContractAndRepository) {
 			return;
 		}
 
@@ -266,7 +243,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		return () => clearInterval(reloadInerval);
-	}, [repository, determineIfContractIsPaused, isReady, contractIsPaused]);
+	}, [repository, determineIfContractIsPaused, hasContractAndRepository, contractIsPaused]);
 
 	// Initialize repository when a new profile is loaded
 	useEffect(() => {
@@ -294,14 +271,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	return (
 		<MigrationContext.Provider
-			value={
-				{
-					contractIsPaused,
-					getTransactionStatus,
-					migrations,
-					storeTransactions,
-				} as MigrationContextType
-			}
+			value={{ contractIsPaused, getTransactionStatus, migrations, storeTransaction } as MigrationContextType}
 		>
 			{children}
 		</MigrationContext.Provider>

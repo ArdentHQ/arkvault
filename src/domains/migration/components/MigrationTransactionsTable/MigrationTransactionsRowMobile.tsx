@@ -1,4 +1,5 @@
-import React, { useMemo } from "react";
+import { DateTime } from "@ardenthq/sdk-intl";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { MigrationTransactionsRowStatusProperties } from "./MigrationTransactionsTable.contracts";
@@ -11,7 +12,7 @@ import { AmountLabel } from "@/app/components/Amount";
 import { Avatar, EthereumAvatar } from "@/app/components/Avatar";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Link } from "@/app/components/Link";
-import { MigrationTransaction, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { getIcon } from "@/domains/migration/utils";
 import { Button } from "@/app/components/Button";
 import { polygonTransactionLink } from "@/utils/polygon-migration";
@@ -31,25 +32,18 @@ const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusPro
 };
 
 interface MigrationTransactionsRowMobileProperties {
-	migrationTransaction: MigrationTransaction;
+	migrationTransaction: any;
 	isLoading: boolean;
 	onClick: () => void;
 }
 
 export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMobileProperties> = ({
-	migrationTransaction: { transaction, status },
+	migrationTransaction,
 	isLoading,
 	onClick,
 }) => {
 	const timeFormat = useTimeFormat();
 	const { t } = useTranslation();
-
-	const address = useMemo(() => (isLoading ? undefined : transaction.wallet().address()), [transaction, isLoading]);
-
-	const migrationAddress = useMemo(
-		() => (isLoading ? undefined : transaction.memo() || ""),
-		[transaction, isLoading],
-	);
 
 	if (isLoading) {
 		return <MigrationTransactionsRowMobileSkeleton />;
@@ -61,14 +55,14 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 				<RowWrapper>
 					<RowLabel>{t("COMMON.ID")}</RowLabel>
 
-					{status === MigrationTransactionStatus.Confirmed ? (
+					{migrationTransaction.status === MigrationTransactionStatus.Confirmed ? (
 						<Link
-							to={polygonTransactionLink(transaction.id())}
-							tooltip={transaction.id()}
+							to={polygonTransactionLink(migrationTransaction.id)}
+							tooltip={migrationTransaction.id}
 							showExternalIcon={false}
 							isExternal
 						>
-							<TruncateMiddle text={transaction.id()} />
+							<TruncateMiddle text={migrationTransaction.id} />
 						</Link>
 					) : (
 						<span className="text-theme-secondary-700 dark:text-theme-secondary-200">NA</span>
@@ -78,7 +72,7 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 				<RowWrapper>
 					<RowLabel>{t("COMMON.TIMESTAMP")}</RowLabel>
 
-					{transaction.timestamp()?.format(timeFormat)}
+					{DateTime.fromUnix(migrationTransaction.timestamp).format(timeFormat)}
 				</RowWrapper>
 
 				<RowWrapper>
@@ -86,10 +80,10 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 
 					<ResponsiveAddressWrapper innerClassName="gap-2">
 						<div className="w-0 flex-1">
-							<Address address={address} alignment="right" />
+							<Address address={migrationTransaction.address} alignment="right" />
 						</div>
 
-						<Avatar size="xs" address={address} noShadow />
+						<Avatar size="xs" address={migrationTransaction.address} noShadow />
 					</ResponsiveAddressWrapper>
 				</RowWrapper>
 
@@ -98,10 +92,10 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 
 					<ResponsiveAddressWrapper innerClassName="gap-2">
 						<div className="w-0 flex-1">
-							<Address address={migrationAddress} alignment="right" />
+							<Address address={migrationTransaction.migrationAddress} alignment="right" />
 						</div>
 
-						<EthereumAvatar address={migrationAddress} size="xs" />
+						<EthereumAvatar address={migrationTransaction.migrationAddress} size="xs" />
 					</ResponsiveAddressWrapper>
 				</RowWrapper>
 
@@ -114,7 +108,7 @@ export const MigrationTransactionsRowMobile: React.FC<MigrationTransactionsRowMo
 				<RowWrapper>
 					<RowLabel>{t("COMMON.STATUS")}</RowLabel>
 
-					<MigrationTransactionsRowStatus status={status} />
+					<MigrationTransactionsRowStatus status={migrationTransaction.status} />
 				</RowWrapper>
 
 				<RowWrapper>

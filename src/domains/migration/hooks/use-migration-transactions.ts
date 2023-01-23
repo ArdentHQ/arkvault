@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { ethers } from "ethers";
 import { useConfiguration, useMigrations } from "@/app/contexts";
@@ -6,10 +6,9 @@ import { migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migrat
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsRestoring } = useConfiguration();
-	const { migrations, storeTransactions } = useMigrations();
+	const { migrations, storeTransaction } = useMigrations();
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
-	const [isStoringMigrationTransactions, setIsStoringMigrationTransactions] = useState(true);
 
 	useEffect(() => {
 		const loadMigrationWalletTransactions = async () => {
@@ -66,22 +65,13 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		[latestTransactions, isLoadingTransactions],
 	);
 
-	const storeMigrationTransactions = useCallback(async () => {
-		await storeTransactions(migrationTransactions);
-		setIsStoringMigrationTransactions(false);
-	}, [storeTransactions, migrationTransactions]);
-
 	useEffect(() => {
-		if (isLoadingTransactions) {
-			setIsStoringMigrationTransactions(true);
+		for (const transaction of migrationTransactions) {
+			storeTransaction(transaction);
 		}
-	}, [isLoadingTransactions]);
+	}, [migrationTransactions]);
 
-	useEffect(() => {
-		storeMigrationTransactions();
-	}, [storeMigrationTransactions]);
-
-	const isLoading = useMemo(() => {
+	const isLoading = () => {
 		if (profileIsRestoring) {
 			return true;
 		}
@@ -90,12 +80,8 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			return true;
 		}
 
-		if (isStoringMigrationTransactions) {
-			return true;
-		}
+		return migrationTransactions.length > 0 && !migrations;
+	};
 
-		return migrations === undefined;
-	}, [isLoadingTransactions, migrations, migrationTransactions, isStoringMigrationTransactions, profileIsRestoring]);
-
-	return { isLoading, migrations: migrations || [] };
+	return { isLoading: isLoading(), migrations: migrations || [] };
 };

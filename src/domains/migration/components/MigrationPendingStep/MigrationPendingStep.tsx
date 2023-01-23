@@ -1,8 +1,8 @@
 import cn from "classnames";
-import React, { useCallback } from "react";
+import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { MigrationTransaction } from "@/domains/migration/migration.contracts";
+import { DTO } from "@ardenthq/sdk-profiles";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
@@ -14,14 +14,10 @@ import { MigrationAddress, MigrationDetail } from "@/domains/migration/component
 import { Header } from "@/app/components/Header";
 
 interface MigrationPendingStepProperties {
-	migrationTransaction: MigrationTransaction["transaction"];
-	handleBack?: () => void;
+	migrationTransaction: DTO.ExtendedSignedTransactionData;
 }
 
-export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
-	migrationTransaction,
-	handleBack,
-}) => {
+export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({ migrationTransaction }) => {
 	const timeFormat = useTimeFormat();
 
 	const { t } = useTranslation();
@@ -30,15 +26,6 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 
 	const activeProfile = useActiveProfile();
 	const history = useHistory();
-
-	const backHandler = useCallback(() => {
-		if (handleBack) {
-			handleBack();
-			return;
-		}
-
-		history.push(`/profiles/${activeProfile.id()}/dashboard`);
-	}, [activeProfile, history, handleBack]);
 
 	const ButtonWrapper = isXs ? FormButtons : React.Fragment;
 
@@ -71,9 +58,7 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 				<div className="space-y-3 sm:-mx-5">
 					<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 						<MigrationDetail label={t("COMMON.DATE")} className="px-5 pt-6 pb-5">
-							<span className="font-semibold">
-								{migrationTransaction.timestamp()?.format(timeFormat)}
-							</span>
+							<span className="font-semibold">{migrationTransaction.timestamp().format(timeFormat)}</span>
 						</MigrationDetail>
 
 						<MigrationAddress
@@ -113,7 +98,7 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 							<Button
 								data-testid="MigrationAdd_back"
 								variant="primary"
-								onClick={() => backHandler()}
+								onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 								className="my-auto whitespace-nowrap"
 							>
 								{t("COMMON.BACK_TO_DASHBOARD")}

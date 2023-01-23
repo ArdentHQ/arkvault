@@ -1,21 +1,18 @@
 import { BigNumber } from "ethers";
-import { DTO } from "@ardenthq/sdk-profiles";
+
 export enum MigrationTransactionStatus {
 	Confirmed = "confirmed",
 	Pending = "pending",
 }
 
 export interface Migration {
-	transactionId: string;
-	walletId: string;
+	address: string;
+	id: string;
+	amount: number;
+	migrationAddress: string;
 	status: MigrationTransactionStatus;
+	timestamp: number;
 }
-export interface MigrationTransaction {
-	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
-	status: MigrationTransactionStatus;
-}
-
-export type ProfileMigrations = Record<string, Migration[]>;
 
 export type ARKMigrationViewStructOutput = [string, BigNumber, string] & {
 	recipient: string;
