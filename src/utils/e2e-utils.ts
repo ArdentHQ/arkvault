@@ -50,6 +50,7 @@ const pingServerUrls = new Set([
 const knownWallets: any[] = [];
 
 const transactionsFixture = "coins/ark/devnet/transactions";
+const mainnetTransactionsFixture = "coins/ark/mainnet/transactions";
 const delegatesFixture = "coins/ark/devnet/delegates";
 const imageFixture = "/assets/background.png";
 
@@ -370,6 +371,11 @@ export const requestMocks = {
 		mockRequest(
 			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			"coins/ark/devnet/notification-transactions",
+		),
+
+		mockRequest(
+			"https://ark-live.arkvault.io/api/transactions?page=1&limit=10&recipientId=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
+			mainnetTransactionsFixture,
 		),
 
 		mockRequest(
