@@ -83,7 +83,7 @@ describe("useMigrationTransactions hook", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should return loading state if profile is restoring", async () => {
+	it("should return loading state if profile is restoring", () => {
 		vi.spyOn(contexts, "useConfiguration").mockReturnValue({
 			profileIsRestoring: true,
 			profileIsSyncing: false,
@@ -110,7 +110,7 @@ describe("useMigrationTransactions hook", () => {
 		mockWalletTransactions.mockRestore();
 	});
 
-	it("should return undefined migrations", async () => {
+	it("should return undefined migrations", () => {
 		vi.spyOn(contexts, "useConfiguration").mockReturnValue({
 			profileIsRestoring: false,
 			profileIsSyncing: false,
