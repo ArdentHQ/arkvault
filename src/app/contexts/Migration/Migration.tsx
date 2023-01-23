@@ -120,27 +120,21 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 			return {
 				...migration,
-				migrationId: contractMigration.txHash || "test-tx-hash",
 				status,
 			};
 		});
 
-		const confirmedMigrations = updatedMigrations.filter(
-			(migration) => migration.status === MigrationTransactionStatus.Confirmed,
+		const newlyConfirmedMigrations = updatedMigrations.filter(
+			(migration) => migration.status === MigrationTransactionStatus.Confirmed && !migration.migrationId,
 		);
 
-		// const confirmedMigrations = [
-		// 	{ id: "34eed5035a09e2b2301534870ca66e8368f3324818226dc4804d43702dd65780" },
-		// 	{ id: "20d941d24c79d1c3db65d76d61d08727f941e89dd456c4b8985ab1e97cf40c93" },
-		// ];
-
-		if (confirmedMigrations.length > 0) {
+		if (newlyConfirmedMigrations.length > 0) {
 			const response = await httpClient.get(`${polygonIndexerUrl()}transactions`, {
-				arkTxHashes: confirmedMigrations.map((migration: Migration) => migration.id),
+				arkTxHashes: newlyConfirmedMigrations.map((migration: Migration) => migration.id),
 			});
 
 			for (const polygonMigration of response.json().data) {
-				const confirmedMigration = confirmedMigrations.find(
+				const confirmedMigration = newlyConfirmedMigrations.find(
 					(migration) => migration.id === polygonMigration.arkTxHash,
 				);
 
@@ -150,7 +144,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			}
 		}
 
-		repository!.set(uniqBy([...storedMigrations, ...confirmedMigrations], (migration) => migration.id));
+		repository!.set(uniqBy([...storedMigrations, ...newlyConfirmedMigrations], (migration) => migration.id));
 
 		await migrationsUpdated(repository!.all());
 	}, [repository, contract]);
