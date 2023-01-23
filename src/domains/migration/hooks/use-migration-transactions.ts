@@ -72,10 +72,6 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		}
 	}, [migrationTransactions]);
 
-	useEffect(() => {
-		console.log({ latestTransactions });
-	}, [latestTransactions]);
-
 	const resolveTransaction = useCallback(
 		(migration: Migration) => latestTransactions.find((transaction) => transaction.id() === migration.id),
 		[latestTransactions],

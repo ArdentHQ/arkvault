@@ -169,7 +169,7 @@ describe("Migration", () => {
 				{
 					address: "AdDreSs",
 					amount: 123,
-					id: "0x123",
+					id: transactionFixture.id(),
 					migrationAddress: "0x456",
 					status: MigrationTransactionStatus.Confirmed,
 					timestamp: Date.now() / 1000,
@@ -179,6 +179,7 @@ describe("Migration", () => {
 		});
 
 		renderComponent();
+
 		await waitFor(() => {
 			expect(screen.getAllByTestId("MigrationTransactionsRow")[0]).toBeInTheDocument();
 		});
@@ -187,6 +188,9 @@ describe("Migration", () => {
 
 		useMigrationsSpy.mockRestore();
 		walletCreationSpy.mockRestore();
-		// @TBD
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MigrationDetails")).toBeInTheDocument();
+		});
 	});
 });
