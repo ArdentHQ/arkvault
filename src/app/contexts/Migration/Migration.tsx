@@ -66,7 +66,9 @@ const contractABI = [
 interface MigrationContextType {
 	contractIsPaused?: boolean;
 	migrations?: Migration[];
-	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => Promise<void>;
+	storeTransaction: (
+		transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
+	) => Promise<void>;
 	removeTransactions: (address: string) => Promise<void>;
 }
 
@@ -263,7 +265,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 export const useMigrations = (): {
 	migrations: Migration[] | undefined;
-	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => Promise<void>;
+	storeTransaction: (
+		transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
+	) => Promise<void>;
 	removeTransactions: (address: string) => Promise<void>;
 	contractIsPaused: boolean | undefined;
 } => {
