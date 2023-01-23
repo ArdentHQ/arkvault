@@ -5,9 +5,8 @@ import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import { Migration } from "./Migration";
 import { render, screen, env, getDefaultProfileId, waitFor, within } from "@/utils/testing-library";
-import { MigrationTransactionStatus, Migration as MigrationType } from "@/domains/migration/migration.contracts";
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import * as context from "@/app/contexts";
-import * as useLatestTransactions from "@/domains/dashboard/hooks";
 
 let profile: Contracts.IProfile;
 
