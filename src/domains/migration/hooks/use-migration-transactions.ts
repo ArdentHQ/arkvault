@@ -1,23 +1,50 @@
-import { useEffect, useMemo } from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { useEffect, useMemo, useState } from "react";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { ethers } from "ethers";
 import { useConfiguration, useMigrations } from "@/app/contexts";
-import { useLatestTransactions } from "@/domains/dashboard/hooks";
 import { migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { profileIsSyncing, profileIsRestoring } = useConfiguration();
+	const { profileIsRestoring } = useConfiguration();
 	const { migrations, storeTransaction } = useMigrations();
+	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
+	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 
-	const { isLoadingTransactions, latestTransactions } = useLatestTransactions({
-		limit: 100,
-		profile,
-		profileIsSyncing,
-		wallets: profile
-			.wallets()
-			.values()
-			.filter((wallet) => wallet.networkId() === migrationNetwork()),
-	});
+	useEffect(() => {
+		const loadMigrationWalletTransactions = async () => {
+			setIsLoadingTransactions(true);
+
+			if (profileIsRestoring) {
+				return;
+			}
+
+			const wallet = await profile.walletFactory().fromAddress({
+				coin: "ARK",
+				network: migrationNetwork(),
+				address: migrationWalletAddress(),
+			});
+
+			const senderIds = profile
+				.wallets()
+				.values()
+				.filter((wallet) => wallet.networkId() === migrationNetwork())
+				.map((wallet) => wallet.address());
+
+			if (senderIds.length === 0) {
+				return;
+			}
+
+			const transactions = await wallet.transactionIndex().received({
+				senderId: senderIds.join(","),
+				recipientId: migrationWalletAddress(),
+			});
+
+			setLatestTransactions(transactions.items());
+			setIsLoadingTransactions(false);
+		};
+
+		loadMigrationWalletTransactions();
+	}, [profileIsRestoring]);
 
 	const migrationTransactions = useMemo(
 		() =>
