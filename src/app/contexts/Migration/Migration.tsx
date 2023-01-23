@@ -4,9 +4,10 @@ import { ethers, Contract } from "ethers";
 import {
 	ARKMigrationViewStructOutput,
 	Migration,
+	MigrationTransaction,
 	MigrationTransactionStatus,
 } from "@/domains/migration/migration.contracts";
-import { useEnvironmentContext } from "@/app/contexts";
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
 import { polygonContractAddress, polygonRpcUrl } from "@/utils/polygon-migration";
@@ -68,8 +69,10 @@ interface MigrationContextType {
 		transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
 	) => Promise<MigrationTransactionStatus>;
 	contractIsPaused?: boolean;
-	migrations: Migration[] | undefined;
-	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
+	migrations: MigrationTransaction[] | undefined;
+	storeTransactions: (
+		transactions: (DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData)[],
+	) => Promise<void>;
 }
 
 interface Properties {
@@ -87,9 +90,10 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
 	const profile = useProfileWatcher();
-	const [migrations, setMigrations] = useState<Migration[]>();
+	const [migrations, setMigrations] = useState<MigrationTransaction[]>();
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
+	const { profileIsSyncingWallets, profileIsSyncing } = useConfiguration();
 
 	const getContractMigrations = useCallback(
 		async (transactionIds: string[]) => {
@@ -122,17 +126,36 @@ export const MigrationProvider = ({ children }: Properties) => {
 		[contract, getContractMigrations],
 	);
 
+	const migrationsUpdated = useCallback(async () => {
+		const migrations = repository!.all();
+
+		const migrationTransactions: MigrationTransaction[] = [];
+
+		for (const migration of migrations) {
+			const wallet = profile!.wallets().findById(migration.walletId);
+			const transaction = await wallet.transactionIndex().findById(migration.transactionId);
+			migrationTransactions.push({
+				status: migration.status,
+				transaction,
+			});
+		}
+
+		setMigrations(migrationTransactions);
+
+		await persist();
+	}, [persist, profile, repository]);
+
 	const loadMigrations = useCallback(async () => {
 		const storedMigrations = repository!.all();
 
-		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
+		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.transactionId}`);
 
 		const contractMigrations = await getContractMigrations(transactionIds);
 
 		const updatedMigrations = storedMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
 				(contractMigration: ARKMigrationViewStructOutput) =>
-					contractMigration.arkTxHash === `0x${migration.id}`,
+					contractMigration.arkTxHash === `0x${migration.transactionId}`,
 			)!;
 
 			const status =
@@ -148,8 +171,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		repository!.set(updatedMigrations);
 
-		await migrationsUpdated(repository!.all());
-	}, [repository, getContractMigrations]);
+		await migrationsUpdated();
+	}, [repository, getContractMigrations, migrationsUpdated]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
 		try {
@@ -159,42 +182,36 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 	}, [contract]);
 
-	const migrationsUpdated = useCallback(
-		async (migrations: Migration[]) => {
-			await persist();
-
-			setMigrations(migrations);
-		},
-		[persist],
-	);
-
-	const storeTransaction = useCallback(
-		async (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
-			const migration: Migration = {
-				address: transaction.sender(),
-				amount: transaction.amount(),
-				id: transaction.id(),
-				migrationAddress: transaction.memo()!,
+	const storeTransactions = useCallback(
+		async (transactions: (DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData)[]) => {
+			const migrations: Migration[] = transactions.map((transaction) => ({
 				status: MigrationTransactionStatus.Pending,
-				timestamp: transaction.timestamp()!.toUNIX(),
-			};
+				transactionId: transaction.id(),
+				walletId: transaction.wallet().id(),
+			}));
 
-			repository!.add(migration);
+			for (const migration of migrations) {
+				repository!.add(migration);
+			}
 
-			await migrationsUpdated(repository!.all());
+			await migrationsUpdated();
 		},
 		[repository, migrationsUpdated],
 	);
 
-	const hasContractAndRepository = useMemo(
-		() => repository !== undefined && contract !== undefined,
-		[contract, repository],
+	const isReady = useMemo(
+		() =>
+			repository !== undefined &&
+			contract !== undefined &&
+			profileIsSyncingWallets === false &&
+			profileIsSyncing === false,
+		[contract, repository, profileIsSyncingWallets, profileIsSyncing],
 	);
 
 	useEffect(() => {
 		let reloadInterval: ReturnType<typeof setInterval>;
 
-		if (!hasContractAndRepository) {
+		if (!isReady) {
 			return;
 		}
 
@@ -216,12 +233,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 		reloadInterval = setInterval(reloadMigrationsCallback, ONE_SECOND);
 
 		return () => clearInterval(reloadInterval);
-	}, [repository, loadMigrations, migrations, hasContractAndRepository]);
+	}, [repository, loadMigrations, migrations, isReady]);
 
 	useEffect(() => {
 		let reloadInerval: ReturnType<typeof setInterval>;
 
-		if (!hasContractAndRepository) {
+		if (!isReady) {
 			return;
 		}
 
@@ -239,7 +256,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		return () => clearInterval(reloadInerval);
-	}, [repository, determineIfContractIsPaused, hasContractAndRepository, contractIsPaused]);
+	}, [repository, determineIfContractIsPaused, isReady, contractIsPaused]);
 
 	// Initialize repository when a new profile is loaded
 	useEffect(() => {
@@ -267,7 +284,14 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	return (
 		<MigrationContext.Provider
-			value={{ contractIsPaused, getTransactionStatus, migrations, storeTransaction } as MigrationContextType}
+			value={
+				{
+					contractIsPaused,
+					getTransactionStatus,
+					migrations,
+					storeTransactions,
+				} as MigrationContextType
+			}
 		>
 			{children}
 		</MigrationContext.Provider>

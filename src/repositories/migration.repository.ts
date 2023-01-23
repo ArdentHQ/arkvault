@@ -1,9 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { Migration, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { Migration, MigrationTransactionStatus, ProfileMigrations } from "@/domains/migration/migration.contracts";
 
 const STORAGE_KEY = "ark-migration";
-
-type MigrationMap = Record<string, Migration[]>;
 
 export class MigrationRepository {
 	readonly #profile: Contracts.IProfile;
@@ -14,38 +12,35 @@ export class MigrationRepository {
 		this.#data = data;
 	}
 
-	public all(): Migration[] {
-		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
+	public data(): ProfileMigrations {
+		return this.#data.get(STORAGE_KEY, {}) as ProfileMigrations;
+	}
 
-		return all[this.#profile.id()] || [];
+	public all(): Migration[] {
+		return this.data()[this.#profile.id()] || [];
 	}
 
 	public hasPending(): boolean {
 		return this.all().some((migration) => migration.status === MigrationTransactionStatus.Pending);
 	}
 
-	public set(data: Migration[]): void {
-		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
-
-		all[this.#profile.id()] = data;
-
-		this.#data.set(STORAGE_KEY, all);
+	public set(migrations: Migration[]): void {
+		const data = this.data();
+		data[this.#profile.id()] = migrations;
+		this.#data.set(STORAGE_KEY, data);
 	}
 
-	public add(item: Migration): void {
-		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
+	public add(migration: Migration): void {
+		const migrations = this.all();
 
-		const migrations = all[this.#profile.id()] || [];
-		const index = migrations.findIndex((migration) => migration.id === item.id);
+		const index = migrations.findIndex((item) => item.transactionId === migration.transactionId);
 
 		if (index > -1) {
-			migrations[index] = item;
-			this.#data.set(STORAGE_KEY, all);
-			return;
+			migrations[index] = migration;
+		} else {
+			migrations.push(migration);
 		}
 
-		all[this.#profile.id()] = [...(all[this.#profile.id()] || []), item];
-
-		this.#data.set(STORAGE_KEY, all);
+		this.set(migrations);
 	}
 }

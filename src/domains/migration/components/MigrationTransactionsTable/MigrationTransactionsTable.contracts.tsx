@@ -1,7 +1,7 @@
-import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { MigrationTransaction, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 
 export interface MigrationTransactionsTableProperties {
-	migrationTransactions?: any[];
+	migrationTransactions?: MigrationTransaction[];
 	isCompact: boolean;
 	isLoading: boolean;
 	onClick: () => void;
