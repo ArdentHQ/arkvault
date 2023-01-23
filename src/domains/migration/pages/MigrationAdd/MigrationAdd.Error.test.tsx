@@ -24,7 +24,7 @@ const history = createHashHistory();
 const migrationUrl = `/profiles/${getDefaultProfileId()}/migration/add`;
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let secret = "123";
+const secret = "123";
 const continueButton = "MigrationAdd__continue-button";
 
 const renderComponent = () => {
@@ -47,7 +47,7 @@ describe("Migration Error Handling", () => {
 			account: "0x0000000000000000000000000000000000000000",
 			connectWallet: vi.fn(),
 			connecting: false,
-			isOnPolygonNetwork: true,
+			isOnValidNetwork: true,
 			needsMetaMask: false,
 			supportsMetaMask: true,
 		});

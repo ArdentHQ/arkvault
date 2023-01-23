@@ -318,10 +318,10 @@ exports[`MigrationErrorStep > should render 1`] = `
               An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
             </p>
             <div
-              class="flex flex-col overflow-hidden rounded-xl md:hidden"
+              class="md:hidden css-mpc03v"
             >
               <div
-                class="css-ic0qlc"
+                class="css-1f7sa7y"
               >
                 <div
                   class="css-v0ob3f"
@@ -360,7 +360,7 @@ exports[`MigrationErrorStep > should render 1`] = `
                 </span>
               </div>
               <div
-                class="css-6o9bco"
+                class="css-1h3dpsb"
               >
                 An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
               </div>

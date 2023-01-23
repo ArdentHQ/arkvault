@@ -94,7 +94,7 @@ const PolygonFieldMessage = ({
 export const MigrationConnectStep = () => {
 	const {
 		needsMetaMask,
-		isOnPolygonNetwork,
+		isOnValidNetwork,
 		account,
 		connectWallet,
 		connecting,
@@ -123,7 +123,7 @@ export const MigrationConnectStep = () => {
 		[profile],
 	);
 
-	const amountYouGet = useMemo(() => {
+	const migrationAmount = useMemo(() => {
 		if (!wallet) {
 			return 0;
 		}
@@ -136,12 +136,12 @@ export const MigrationConnectStep = () => {
 			return false;
 		}
 
-		return !isOnPolygonNetwork;
-	}, [account, isOnPolygonNetwork, needsMetaMask]);
+		return !isOnValidNetwork;
+	}, [account, isOnValidNetwork, needsMetaMask]);
 
 	const polygonFieldIsDisabled = useMemo(
-		() => needsMetaMask || !account || !isOnPolygonNetwork,
-		[needsMetaMask, account, isOnPolygonNetwork],
+		() => needsMetaMask || !account || !isOnValidNetwork,
+		[needsMetaMask, account, isOnValidNetwork],
 	);
 
 	const handleSelectAddress = (selectedAddress: string) => {
@@ -155,13 +155,20 @@ export const MigrationConnectStep = () => {
 	};
 
 	useEffect(() => {
-		setValue("recipients", [
+		setValue(
+			"recipients",
+			[
+				{
+					address: migrationWalletAddress(),
+					amount: migrationAmount,
+				},
+			],
 			{
-				address: migrationWalletAddress(),
-				amount: amountYouGet,
+				shouldDirty: true,
+				shouldValidate: true,
 			},
-		]);
-	}, [amountYouGet, setValue]);
+		);
+	}, [migrationAmount, setValue]);
 
 	useEffect(() => {
 		let migrationAddress: string | undefined;
@@ -257,7 +264,7 @@ export const MigrationConnectStep = () => {
 							</div>
 
 							<div className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-								<Amount ticker="ARK" value={amountYouGet} />
+								<Amount ticker="ARK" value={migrationAmount} />
 							</div>
 						</div>
 					</div>

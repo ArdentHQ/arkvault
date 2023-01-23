@@ -21,7 +21,7 @@ export class MigrationRepository {
 	}
 
 	public hasPending(): boolean {
-		return this.all().some((migration) => migration.status === MigrationTransactionStatus.Waiting);
+		return this.all().some((migration) => migration.status === MigrationTransactionStatus.Pending);
 	}
 
 	public set(data: Migration[]): void {
@@ -34,6 +34,15 @@ export class MigrationRepository {
 
 	public add(item: Migration): void {
 		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
+
+		const migrations = all[this.#profile.id()] || [];
+		const index = migrations.findIndex((migration) => migration.id === item.id);
+
+		if (index > -1) {
+			migrations[index] = item;
+			this.#data.set(STORAGE_KEY, all);
+			return;
+		}
 
 		all[this.#profile.id()] = [...(all[this.#profile.id()] || []), item];
 

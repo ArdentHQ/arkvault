@@ -2348,10 +2348,10 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
               Select a Delegate
             </h2>
             <div
-              class="flex flex-col overflow-hidden rounded-xl mb-6"
+              class="mb-6 css-mpc03v"
             >
               <div
-                class="css-pra96q"
+                class="css-1hv657z"
               >
                 <div
                   class="css-v0ob3f"
@@ -2395,7 +2395,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                 </span>
               </div>
               <div
-                class="css-1pvpof3"
+                class="css-rfibfr"
               >
                 <div
                   data-testid="Votes__resigned-vote"
@@ -13708,10 +13708,10 @@ exports[`Votes > should show resigned delegate notice 1`] = `
               Select a Delegate
             </h2>
             <div
-              class="flex flex-col overflow-hidden rounded-xl mb-6"
+              class="mb-6 css-mpc03v"
             >
               <div
-                class="css-pra96q"
+                class="css-1hv657z"
               >
                 <div
                   class="css-v0ob3f"
@@ -13755,7 +13755,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                 </span>
               </div>
               <div
-                class="css-1pvpof3"
+                class="css-rfibfr"
               >
                 <div
                   data-testid="Votes__resigned-vote"
@@ -17219,10 +17219,10 @@ exports[`Votes > should trigger network connection warning 1`] = `
               Select a Delegate
             </h2>
             <div
-              class="flex flex-col overflow-hidden rounded-xl mb-6"
+              class="mb-6 css-mpc03v"
             >
               <div
-                class="css-pra96q"
+                class="css-1hv657z"
               >
                 <div
                   class="css-v0ob3f"
@@ -17266,7 +17266,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 </span>
               </div>
               <div
-                class="css-1pvpof3"
+                class="css-rfibfr"
               >
                 <div
                   data-testid="Votes__resigned-vote"

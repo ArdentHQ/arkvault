@@ -1,14 +1,16 @@
 export const translations = {
+	CONTRACT_PAUSED_MESSAGE:
+		"The migration is temporarily paused. Please check our <linkTwitter>Twitter</linkTwitter> for more details.",
+
 	DISCLAIMER_MODAL: {
 		// @TBD
 		DISCLAIMER:
-			"I agree with the rules and with something else <linkTerms>Terms of Service</linkTerms> & <linkPrivacyPolicy>Privacy Policy</linkPrivacyPolicy>",
+			"I have read and agree with the <linkTerms>Terms of Service</linkTerms>, <linkPrivacyPolicy>Privacy Policy</linkPrivacyPolicy>, and information above.",
 		TITLE: "Migration Disclaimer",
 		// @TBD
 		WARNING:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus, mollitia natus est, voluptas eligendi nihil dolorum illum accusamus obcaecati itaque corrupti tenetur, accusantium perferendis officiis hic modi neque aspernatur!",
+			"By using ARKVault to migrate your token, you acknowledge that you have read and understood the terms and conditions and privacy policy. You are solely responsible for ensuring the accuracy of the information provided during the migration process. Incorrect information may result in the loss of your tokens.",
 	},
-
 	MIGRATION_ADD: {
 		FROM_ARK_ADDRESS: "From ARK Address",
 
@@ -58,7 +60,7 @@ export const translations = {
 		},
 
 		STEP_PENDING: {
-			DESCRIPTION: "Migration is processing, you will be notified once the process is complete.",
+			DESCRIPTION: "Migration in progress, you will be notified once the process is complete.",
 			MIGRATION_INFO:
 				"Migration time <strong>≈ 24 hours</strong>.\nUpon completion you will receive a notification.",
 			TITLE: "Migration Pending",
@@ -78,6 +80,7 @@ export const translations = {
 
 		TO_POLYGON_ADDRESS: "To Polygon Address",
 	},
+
 	NOTIFICATIONS: {
 		MIGRATION_SUCCESSFUL: "Migration Successful",
 	},
@@ -94,7 +97,7 @@ export const translations = {
 
 	STATUS: {
 		CONFIRMED: "Confirmed",
-		WAITING: "Waiting",
+		PENDING: "Pending",
 	},
 
 	TRANSACTION_ID: "Transaction ID",

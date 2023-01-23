@@ -5012,10 +5012,10 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                       class="mt-6 -mb-2"
                     >
                       <div
-                        class="flex flex-col overflow-hidden rounded-xl"
+                        class="css-mpc03v"
                       >
                         <div
-                          class="css-ic0qlc"
+                          class="css-1f7sa7y"
                         >
                           <div
                             class="css-v0ob3f"
@@ -5054,7 +5054,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                           </span>
                         </div>
                         <div
-                          class="css-6o9bco"
+                          class="css-1h3dpsb"
                         >
                           An error occurred while creating your new address, please try again. If the error persists, kindly get in touch with our support team.
                         </div>

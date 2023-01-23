@@ -1,9 +1,10 @@
 import { BigNumber } from "ethers";
 
 export enum MigrationTransactionStatus {
-	Waiting = "waiting",
 	Confirmed = "confirmed",
+	Pending = "pending",
 }
+
 export interface Migration {
 	address: string;
 	id: string;

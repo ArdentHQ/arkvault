@@ -36,10 +36,10 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
       />
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl mb-6"
+      class="mb-6 css-mpc03v"
     >
       <div
-        class="css-1mvrtw8"
+        class="css-79bwdk"
       >
         <div
           class="css-v0ob3f"
@@ -83,7 +83,7 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
         </span>
       </div>
       <div
-        class="css-16kimoc"
+        class="css-1b40hgy"
       >
         10 transactions have been retrieved so far, please wait.
       </div>

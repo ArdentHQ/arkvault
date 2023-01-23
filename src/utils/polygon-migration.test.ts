@@ -9,6 +9,7 @@ import {
 	polygonTransactionLink,
 	polygonRpcUrl,
 	polygonContractAddress,
+	polygonNetworkData,
 } from "./polygon-migration";
 
 describe("Polygon Migration Utility Functions", () => {
@@ -54,5 +55,34 @@ describe("Polygon Migration Utility Functions", () => {
 
 	it("#migrationWalletAddress", () => {
 		expect(migrationWalletAddress()).toBe("DNBURNBURNBURNBRNBURNBURNBURKz8StY");
+	});
+
+	it("#polygonNetworkData", () => {
+		expect(polygonNetworkData()).toEqual({
+			blockExplorerUrls: ["https://mumbai.polygonscan.com/"],
+			chainId: "0x13881",
+			chainName: "Mumbai",
+			nativeCurrency: {
+				decimals: 18,
+				name: "MATIC",
+				symbol: "MATIC",
+			},
+			rpcUrls: ["https://matic-mumbai.chainstacklabs.com/"],
+		});
+	});
+	it("#polygonNetworkData mainnet", () => {
+		process.env.VITE_MIGRATION_NETWORK = "ark.mainnet";
+
+		expect(polygonNetworkData()).toEqual({
+			blockExplorerUrls: ["https://polygonscan.com/"],
+			chainId: "0x89",
+			chainName: "Polygon Mainnet",
+			nativeCurrency: {
+				decimals: 18,
+				name: "MATIC",
+				symbol: "MATIC",
+			},
+			rpcUrls: ["https://polygon-rpc.com/"],
+		});
 	});
 });

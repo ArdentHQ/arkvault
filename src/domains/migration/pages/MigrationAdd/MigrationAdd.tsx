@@ -2,6 +2,7 @@ import React, { PropsWithChildren, useEffect, useState } from "react";
 import { generatePath, useHistory } from "react-router-dom";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
+import { ContractPausedAlert } from "@/domains/migration/pages/Migration/Migration.blocks";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -62,11 +63,11 @@ export const MigrationAdd = () => {
 	const form = useMigrationForm();
 
 	const { formState, watch } = form;
-	const { isSubmitting, isValid } = formState;
+	const { isSubmitting, isDirty, isValid } = formState;
 
 	const wallet = watch("wallet");
 
-	const { storeTransaction, migrations } = useMigrations();
+	const { storeTransaction, migrations, contractIsPaused } = useMigrations();
 	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
 
 	useEffect(
@@ -125,9 +126,8 @@ export const MigrationAdd = () => {
 		try {
 			const transaction = await sendTransaction();
 
-			storeTransaction(transaction);
-
 			setTransaction(transaction);
+			storeTransaction(transaction);
 
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {
@@ -138,8 +138,12 @@ export const MigrationAdd = () => {
 
 	const hideFormButtons = activeStep > Step.Authenticate || (activeStep === Step.Authenticate && wallet.isLedger());
 
+	const isNextDisabled = isDirty ? !isValid : true;
+
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
+			<ContractPausedAlert />
+
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
 					<StepIndicatorAlt
@@ -192,7 +196,7 @@ export const MigrationAdd = () => {
 										<Button
 											data-testid="MigrationAdd__continue-button"
 											variant="primary"
-											disabled={!isValid}
+											disabled={contractIsPaused || isNextDisabled}
 											onClick={handleNext}
 										>
 											{t("COMMON.CONTINUE")}
@@ -202,7 +206,7 @@ export const MigrationAdd = () => {
 									{activeStep === Step.Authenticate && (
 										<Button
 											type="submit"
-											disabled={isSubmitting || !isValid}
+											disabled={contractIsPaused || isSubmitting || isNextDisabled}
 											data-testid="MigrationAdd__send-button"
 											isLoading={isSubmitting}
 											icon="DoubleArrowRight"
