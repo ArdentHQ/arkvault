@@ -2,13 +2,19 @@ import React from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { useMigrationTransactions } from "./use-migration-transactions";
-import { env, getDefaultProfileId, WithProviders, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
-import * as useLatestTransactions from "@/domains/dashboard/hooks";
+import {
+	env,
+	getDefaultProfileId,
+	WithProviders,
+	mockProfileWithPublicAndTestNetworks,
+	waitFor,
+} from "@/utils/testing-library";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import * as contexts from "@/app/contexts";
 import { migrationWalletAddress } from "@/utils/polygon-migration";
 
 let profile: Contracts.IProfile;
+let wallet: Contracts.IReadWriteWallet;
 let resetProfileNetworksMock: () => void;
 let transactionFixture: DTO.ExtendedSignedTransactionData;
 let secondTransactionFixture: DTO.ExtendedSignedTransactionData;
@@ -22,7 +28,8 @@ describe("useMigrationTransactions hook", () => {
 	});
 
 	beforeEach(async () => {
-		const wallet = profile.wallets().first();
+		wallet = profile.wallets().first();
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(wallet);
 
 		transactionFixture = new DTO.ExtendedSignedTransactionData(
 			await wallet
@@ -76,17 +83,12 @@ describe("useMigrationTransactions hook", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should return loading state if profile is restoring", async () => {
+	it("should return loading state if profile is restoring", () => {
 		vi.spyOn(contexts, "useConfiguration").mockReturnValue({
 			profileIsRestoring: true,
 			profileIsSyncing: false,
 		});
 
-		vi.spyOn(useLatestTransactions, "useLatestTransactions").mockReturnValue({
-			isLoadingTransactions: false,
-			latestTransactions: [transactionFixture, secondTransactionFixture],
-		});
-
 		vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
 			storeTransaction: () => {},
@@ -94,29 +96,24 @@ describe("useMigrationTransactions hook", () => {
 
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 
-		const sent = await profile.transactionAggregate().all({ limit: 10 });
-		const items = sent.items();
-
-		const mockTransactionsAggregate = vi
-			.spyOn(profile.transactionAggregate(), "all")
-			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
+		const mockWalletTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
+			Promise.resolve({
+				hasMorePages: () => false,
+				items: () => [transactionFixture, secondTransactionFixture],
+			} as any),
+		);
 
 		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
 		expect(result.current.migrations).toHaveLength(0);
 		expect(result.current.isLoading).toBe(true);
 
-		mockTransactionsAggregate.mockRestore();
+		mockWalletTransactions.mockRestore();
 	});
 
-	it("should return undefined migrations", async () => {
+	it("should return undefined migrations", () => {
 		vi.spyOn(contexts, "useConfiguration").mockReturnValue({
 			profileIsRestoring: false,
 			profileIsSyncing: false,
-		});
-
-		vi.spyOn(useLatestTransactions, "useLatestTransactions").mockReturnValue({
-			isLoadingTransactions: false,
-			latestTransactions: [transactionFixture, secondTransactionFixture],
 		});
 
 		vi.spyOn(contexts, "useMigrations").mockReturnValue({
@@ -126,25 +123,17 @@ describe("useMigrationTransactions hook", () => {
 
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 
-		const sent = await profile.transactionAggregate().all({ limit: 10 });
-		const items = sent.items();
-
-		const mockTransactionsAggregate = vi
-			.spyOn(profile.transactionAggregate(), "all")
-			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
+		const mockWalletTransactions = vi
+			.spyOn(wallet.transactionIndex(), "received")
+			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => [] } as any));
 
 		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
 		expect(result.current.migrations).toHaveLength(0);
 
-		mockTransactionsAggregate.mockRestore();
+		mockWalletTransactions.mockRestore();
 	});
 
 	it("should store and return migrations", async () => {
-		const useLatestTransactionsSpy = vi.spyOn(useLatestTransactions, "useLatestTransactions").mockReturnValue({
-			isLoadingTransactions: false,
-			latestTransactions: [transactionFixture, secondTransactionFixture],
-		});
-
 		const useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [
 				{
@@ -160,18 +149,41 @@ describe("useMigrationTransactions hook", () => {
 		});
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 
-		const sent = await profile.transactionAggregate().all({ limit: 10 });
-		const items = sent.items();
-
-		const mockTransactionsAggregate = vi
-			.spyOn(profile.transactionAggregate(), "all")
-			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
+		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
+			Promise.resolve({
+				hasMorePages: () => false,
+				items: () => [transactionFixture, secondTransactionFixture],
+			} as any),
+		);
 
 		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
+
+		await waitFor(() => {
+			expect(result.current.isLoading).toBe(false);
+		});
+
 		expect(result.current.migrations).toHaveLength(1);
 
-		mockTransactionsAggregate.mockRestore();
 		useMigrationsSpy.mockRestore();
-		useLatestTransactionsSpy.mockRestore();
+		mockTransactions.mockRestore();
+	});
+
+	it("should do nothing if profile has no wallets on migration network", async () => {
+		vi.spyOn(contexts, "useConfiguration").mockReturnValue({
+			profileIsRestoring: false,
+			profileIsSyncing: false,
+		});
+		const spyMigrationWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
+
+		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
+
+		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
+		expect(result.current.isLoading).toBe(true);
+
+		await waitFor(() => {
+			expect(result.current.isLoading).toBe(false);
+		});
+
+		spyMigrationWallets.mockRestore();
 	});
 });
