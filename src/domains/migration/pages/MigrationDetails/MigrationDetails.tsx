@@ -14,7 +14,7 @@ import { useMigrations } from "@/app/contexts";
 
 const TOTAL_STEPS = 5;
 interface Properties {
-	transaction: DTO.ExtendedSignedTransactionData;
+	transaction: DTO.ExtendedConfirmedTransactionData;
 	handleBack: () => void;
 }
 

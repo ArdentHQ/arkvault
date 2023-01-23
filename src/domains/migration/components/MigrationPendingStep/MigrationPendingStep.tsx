@@ -14,7 +14,7 @@ import { MigrationAddress, MigrationDetail } from "@/domains/migration/component
 import { Header } from "@/app/components/Header";
 
 interface MigrationPendingStepProperties {
-	migrationTransaction: DTO.ExtendedSignedTransactionData;
+	migrationTransaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 }
 
 export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({ migrationTransaction }) => {

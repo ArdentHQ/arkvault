@@ -1,6 +1,8 @@
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { generatePath, useHistory } from "react-router-dom";
+import { DTO } from "@ardenthq/sdk-profiles";
+import MigrationDetails from "../MigrationDetails";
 import { ContractPausedAlert, MigrationHeader, MigrationNewMigrationMobileButton } from "./Migration.blocks";
 import { Page, Section } from "@/app/components/Layout";
 import { MigrationDisclaimer } from "@/domains/migration/components/MigrationDisclaimer";
@@ -10,7 +12,6 @@ import { ProfilePaths } from "@/router/paths";
 import { useMigrationTransactions } from "@/domains/migration/hooks/use-migration-transactions";
 import { useMigrations } from "@/app/contexts";
 import { Migration as MigrationTransaction } from "@/domains/migration/migration.contracts";
-
 export const Migration = () => {
 	const { t } = useTranslation();
 	const { isMd } = useBreakpoint();
@@ -18,8 +19,9 @@ export const Migration = () => {
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 	const history = useHistory();
 	const profile = useActiveProfile();
-	const { migrations, isLoading } = useMigrationTransactions({ profile });
+	const { migrations, isLoading, resolveTransaction } = useMigrationTransactions({ profile });
 	const { contractIsPaused } = useMigrations();
+	const [expandedTransaction, setExpandedTransaction] = useState<DTO.ExtendedConfirmedTransactionData>();
 
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
@@ -32,13 +34,20 @@ export const Migration = () => {
 		history.push(path);
 	}, [history, profile]);
 
-	const detailsHandler = useCallback(async (migrationTransaction: MigrationTransaction) => {
-		console.log({ migrationTransaction });
-		return;
-		// const transaction = latestTransactions.find((transaction) => transaction.id() === migrationTransaction.id);
-		// console.log({ transaction });
-		// setExpandedTransaction(transaction as unknown as DTO.ExtendedSignedTransactionData);
-	}, []);
+	const detailsHandler = useCallback(
+		(migrationTransaction: MigrationTransaction) => {
+			const transaction = resolveTransaction(migrationTransaction)!;
+
+			setExpandedTransaction(transaction);
+		},
+		[resolveTransaction],
+	);
+
+	if (expandedTransaction) {
+		return (
+			<MigrationDetails transaction={expandedTransaction} handleBack={() => setExpandedTransaction(undefined)} />
+		);
+	}
 
 	return (
 		<>
