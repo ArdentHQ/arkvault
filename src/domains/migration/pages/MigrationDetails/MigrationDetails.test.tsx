@@ -31,10 +31,6 @@ const renderComponent = ({ transaction, handleBack = vi.fn() }) => {
 
 describe("MigrationDetails", () => {
 	beforeAll(async () => {
-		// const profile = env.profiles().findById(getDefaultProfileId());
-
-		// const wallet = profile.wallets().first();
-
 		transactionFixture = {
 			amount: () => 123,
 			id: () => "transaction-id",
@@ -60,6 +56,18 @@ describe("MigrationDetails", () => {
 	});
 
 	it("should render", () => {
+		renderComponent({
+			transaction: transactionFixture,
+		});
+
+		expect(screen.getByTestId("MigrationDetails")).toBeInTheDocument();
+	});
+
+	it("should render if no migrations", () => {
+		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: undefined,
+		});
+
 		renderComponent({
 			transaction: transactionFixture,
 		});
