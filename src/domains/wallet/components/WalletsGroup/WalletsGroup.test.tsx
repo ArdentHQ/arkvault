@@ -9,7 +9,7 @@ import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, withi
 import { PortfolioHeader } from "@/domains/wallet/components/PortfolioHeader";
 import * as envHooks from "@/app/hooks/env";
 import * as configurationModule from "@/app/contexts/Configuration/Configuration";
-import * as migrationModule from "@/app/contexts/Migration/Migration";
+import * as migrationsModule from "@/app/contexts/Migration/Migration";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import * as useDisplayWallets from "@/domains/wallet/hooks/use-display-wallets";
@@ -200,7 +200,7 @@ describe("WalletsGroup", () => {
 
 	it("should delete wallet through wallet dropdown", async () => {
 		const useMigrationsSpy = vi
-			.spyOn(migrationModule, "useMigrations")
+			.spyOn(migrationsModule, "useMigrations")
 			.mockReturnValue({ removeTransactions: vi.fn() });
 
 		render(
