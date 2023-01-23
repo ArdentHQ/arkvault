@@ -1,6 +1,5 @@
 import React, { useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { DTO } from "@ardenthq/sdk-profiles";
 import { Amount } from "@/app/components/Amount";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Header } from "@/app/components/Header";
@@ -10,10 +9,11 @@ import { Link } from "@/app/components/Link";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { MigrationAddress, MigrationDetail } from "@/domains/migration/components/MigrationAddress";
 import { polygonTransactionLink } from "@/utils/polygon-migration";
-
+import { MigrationTransaction } from "@/domains/migration/migration.contracts";
 interface MigrationSuccessStepProperties {
-	migrationTransaction: DTO.ExtendedSignedTransactionData;
+	migrationTransaction: MigrationTransaction["transaction"];
 }
+
 export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({ migrationTransaction }) => {
 	const { t } = useTranslation();
 

@@ -4,7 +4,7 @@ export interface MigrationTransactionsTableProperties {
 	migrationTransactions?: MigrationTransaction[];
 	isCompact: boolean;
 	isLoading: boolean;
-	onClick: () => void;
+	onClick: (migrationTransaction: MigrationTransaction) => void;
 }
 
 export interface MigrationTransactionsRowStatusProperties {
