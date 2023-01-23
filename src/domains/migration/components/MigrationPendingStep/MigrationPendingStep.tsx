@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React from "react";
+import React, { useCallback } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { DTO } from "@ardenthq/sdk-profiles";
@@ -15,9 +15,13 @@ import { Header } from "@/app/components/Header";
 
 interface MigrationPendingStepProperties {
 	migrationTransaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
+	handleBack?: () => void;
 }
 
-export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({ migrationTransaction }) => {
+export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
+	migrationTransaction,
+	handleBack,
+}) => {
 	const timeFormat = useTimeFormat();
 
 	const { t } = useTranslation();
@@ -26,6 +30,15 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 
 	const activeProfile = useActiveProfile();
 	const history = useHistory();
+
+	const handleBackToDashboard = useCallback(() => {
+		if (handleBack) {
+			handleBack();
+			return;
+		}
+
+		history.push(`/profiles/${activeProfile.id()}/dashboard`);
+	}, [history, activeProfile, handleBack]);
 
 	const ButtonWrapper = isXs ? FormButtons : React.Fragment;
 
@@ -58,7 +71,9 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 				<div className="space-y-3 sm:-mx-5">
 					<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 						<MigrationDetail label={t("COMMON.DATE")} className="px-5 pt-6 pb-5">
-							<span className="font-semibold">{migrationTransaction.timestamp().format(timeFormat)}</span>
+							<span className="font-semibold">
+								{migrationTransaction.timestamp()?.format(timeFormat)}
+							</span>
 						</MigrationDetail>
 
 						<MigrationAddress
@@ -98,7 +113,7 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 							<Button
 								data-testid="MigrationAdd_back"
 								variant="primary"
-								onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+								onClick={handleBackToDashboard}
 								className="my-auto whitespace-nowrap"
 							>
 								{t("COMMON.BACK_TO_DASHBOARD")}
