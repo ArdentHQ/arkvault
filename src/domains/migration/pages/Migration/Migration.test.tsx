@@ -113,6 +113,8 @@ describe("Migration", () => {
 
 	it("should display details of migration transaction", async () => {
 		const wallet = profile.wallets().first();
+		const walletCreationSpy = vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(wallet);
+
 		const transactionFixture = new DTO.ExtendedSignedTransactionData(
 			await wallet
 				.coin()
@@ -159,34 +161,33 @@ describe("Migration", () => {
 
 		vi.spyOn(transactionFixture, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
 
-		vi.spyOn(useLatestTransactions, "useLatestTransactions").mockReturnValue({
-			isLoadingTransactions: false,
-			latestTransactions: [transactionFixture, secondTransactionFixture],
+		vi.spyOn(wallet.transactionIndex(), "received").mockResolvedValue({
+			items: () => [transactionFixture, secondTransactionFixture],
 		});
 
-		const migrations: MigrationType[] = [
-			{
-				address: "AdDreSs",
-				amount: 123,
-				id: "0x123",
-				migrationAddress: "0x456",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
-		];
-
 		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
-			migrations,
-
+			migrations: [
+				{
+					address: "AdDreSs",
+					amount: 123,
+					id: "0x123",
+					migrationAddress: "0x456",
+					status: MigrationTransactionStatus.Confirmed,
+					timestamp: Date.now() / 1000,
+				},
+			],
 			storeTransaction: () => {},
 		});
 
 		renderComponent();
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationTransactionsRow")[0]).toBeInTheDocument();
+		});
 
 		userEvent.click(within(screen.getAllByTestId("MigrationTransactionsRow")[0]).getAllByRole("button")[0]);
 
 		useMigrationsSpy.mockRestore();
-
+		walletCreationSpy.mockRestore();
 		// @TBD
 	});
 });
