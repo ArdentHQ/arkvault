@@ -18,7 +18,7 @@ exports[`MigrationPendingStep > should render in sm 1`] = `
         class="flex items-center text-theme-secondary-text"
         data-testid="header__subtitle"
       >
-        Migration is processing, you will be notified once the process is complete.
+        Migration in progress, you will be notified once the process is complete.
       </div>
     </div>
   </div>
@@ -304,7 +304,7 @@ exports[`MigrationPendingStep > should render in sm in dark mode 1`] = `
         class="flex items-center text-theme-secondary-text"
         data-testid="header__subtitle"
       >
-        Migration is processing, you will be notified once the process is complete.
+        Migration in progress, you will be notified once the process is complete.
       </div>
     </div>
   </div>
@@ -590,7 +590,7 @@ exports[`MigrationPendingStep > should render in xs 1`] = `
         class="flex items-center text-theme-secondary-text"
         data-testid="header__subtitle"
       >
-        Migration is processing, you will be notified once the process is complete.
+        Migration in progress, you will be notified once the process is complete.
       </div>
     </div>
   </div>
@@ -880,7 +880,7 @@ exports[`MigrationPendingStep > should render in xs in dark mode 1`] = `
         class="flex items-center text-theme-secondary-text"
         data-testid="header__subtitle"
       >
-        Migration is processing, you will be notified once the process is complete.
+        Migration in progress, you will be notified once the process is complete.
       </div>
     </div>
   </div>
