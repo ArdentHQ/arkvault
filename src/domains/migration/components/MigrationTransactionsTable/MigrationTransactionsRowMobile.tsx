@@ -12,7 +12,7 @@ import { AmountLabel } from "@/app/components/Amount";
 import { Avatar, EthereumAvatar } from "@/app/components/Avatar";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Link } from "@/app/components/Link";
-import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { Migration, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { getIcon } from "@/domains/migration/utils";
 import { Button } from "@/app/components/Button";
 import { polygonTransactionLink } from "@/utils/polygon-migration";
@@ -32,7 +32,7 @@ const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusPro
 };
 
 interface MigrationTransactionsRowMobileProperties {
-	migrationTransaction: any;
+	migrationTransaction: Migration;
 	isLoading: boolean;
 	onClick: () => void;
 }

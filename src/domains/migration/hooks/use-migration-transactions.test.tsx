@@ -168,6 +168,41 @@ describe("useMigrationTransactions hook", () => {
 		mockTransactions.mockRestore();
 	});
 
+	it("should get the transaction for a migration", async () => {
+		const migration = {
+			address: "AdDreSs",
+			amount: 123,
+			id: transactionFixture.id(),
+			migrationAddress: "BuRnAdDreSs",
+			status: MigrationTransactionStatus.Confirmed,
+			timestamp: Date.now() / 1000,
+		};
+
+		const useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: [migration],
+			storeTransaction: () => {},
+		});
+		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
+
+		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
+			Promise.resolve({
+				hasMorePages: () => false,
+				items: () => [transactionFixture, secondTransactionFixture],
+			} as any),
+		);
+
+		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
+
+		await waitFor(() => {
+			expect(result.current.isLoading).toBe(false);
+		});
+
+		expect(result.current.resolveTransaction(migration)).toEqual(transactionFixture);
+
+		useMigrationsSpy.mockRestore();
+		mockTransactions.mockRestore();
+	});
+
 	it("should do nothing if profile has no wallets on migration network", async () => {
 		vi.spyOn(contexts, "useConfiguration").mockReturnValue({
 			profileIsRestoring: false,
