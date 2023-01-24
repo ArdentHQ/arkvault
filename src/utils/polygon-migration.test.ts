@@ -65,7 +65,7 @@ describe("Polygon Migration Utility Functions", () => {
 		expect(polygonMigrationStartTime()).toBe(0);
 
 		process.env.VITE_POLYGON_MIGRATION_START_TIME = "12345";
-		expect(polygonMigrationStartTime()).toBe(12345);
+		expect(polygonMigrationStartTime()).toBe(12_345);
 	});
 
 	it("#migrationWalletAddress", () => {

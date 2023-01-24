@@ -38,7 +38,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			const query: {
 				recipientId: string;
 				senderId: string;
-				timestamp?: { from?: number, to?: number };
+				timestamp?: { from?: number; to?: number };
 			} = {
 				recipientId: migrationWalletAddress(),
 				senderId: senderIds.join(","),
