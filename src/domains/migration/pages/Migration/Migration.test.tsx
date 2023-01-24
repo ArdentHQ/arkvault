@@ -162,6 +162,7 @@ describe("Migration", () => {
 
 		vi.spyOn(wallet.transactionIndex(), "received").mockResolvedValue({
 			items: () => [transactionFixture, secondTransactionFixture],
+			currentPage: () => 1,
 		});
 
 		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({

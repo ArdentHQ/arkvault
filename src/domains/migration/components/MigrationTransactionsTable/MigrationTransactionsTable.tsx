@@ -9,12 +9,16 @@ import { Table } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
 
 import { MigrationTransactionsRowMobile } from "@/domains/migration/components/MigrationTransactionsTable/MigrationTransactionsRowMobile";
+import { Button } from "@/app/components/Button";
 
 export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties> = ({
 	migrationTransactions,
 	isCompact,
 	isLoading = false,
+	isLoadingMore = false,
+	hasMore = true,
 	onClick,
+	onLoadMore,
 }) => {
 	const { t } = useTranslation();
 
@@ -115,6 +119,18 @@ export const MigrationTransactionsTable: FC<MigrationTransactionsTableProperties
 			<Table columns={columns} data={data} initialState={initialState} hideHeader={useResponsive}>
 				{renderTableRow}
 			</Table>
+
+			{hasMore && (
+				<Button
+					data-testid="transactions__fetch-more-button"
+					variant="secondary"
+					className="mt-10 mb-5 w-full"
+					disabled={isLoadingMore}
+					onClick={onLoadMore}
+				>
+					{isLoadingMore ? t("COMMON.LOADING") : t("COMMON.VIEW_MORE")}
+				</Button>
+			)}
 		</div>
 	);
 };
