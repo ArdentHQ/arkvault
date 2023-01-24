@@ -98,7 +98,7 @@ describe("Migration Context", () => {
 		};
 
 		const getMigrationsMock = vi.fn().mockReturnValue(profileMigrations);
-		const setMigrationMock = vi.fn();
+		const setMigrationMock = vi.fn().mockImplementation(() => {});
 
 		const environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
 			...environmentMockData,
