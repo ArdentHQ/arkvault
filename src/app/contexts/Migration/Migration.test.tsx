@@ -72,6 +72,7 @@ describe("Migration Context", () => {
 	let polygonContractAddressSpy;
 	let polygonIndexerUrlSpy;
 	let migrationFixture;
+	let migrationPendingFixture;
 
 	const environmentMockData = {
 		env: {
@@ -178,11 +179,24 @@ describe("Migration Context", () => {
 			timestamp: Date.now() / 1000,
 		};
 
+		migrationPendingFixture = {
+			address: "AdDreSs2",
+			amount: 456,
+			id: "bc68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
+			migrationAddress: "BuRnAdDreSs",
+			status: MigrationTransactionStatus.Pending,
+			timestamp: Date.now() / 1000,
+		};
+
 		server.use(
 			requestMock("https://mumbai.ihost.org/transactions", [
 				{
 					arkTxHash: migrationFixture.id,
 					polygonTxHash: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
+				},
+				{
+					arkTxHash: migrationPendingFixture.id,
+					polygonTxHash: "0x66a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f211",
 				},
 			]),
 		);
@@ -541,17 +555,21 @@ describe("Migration Context", () => {
 	it.each([MigrationTransactionStatus.Pending, MigrationTransactionStatus.Confirmed])(
 		"should determine transaction status",
 		async (status) => {
-			const { clearStoredMigrationsMock } = mockStoredMigrations([migrationFixture]);
+			const { clearStoredMigrationsMock } = mockStoredMigrations([migrationFixture, migrationPendingFixture]);
 
 			const Test = () => {
 				const [transactionStatus, setTransactionStatus] = useState<any>();
 				const { getTransactionStatus } = useMigrations();
 
 				const loadTransactionStatus = async () => {
-					const status = await getTransactionStatus({
-						id: () => "123",
+					const transactionStatus = await getTransactionStatus({
+						id: () =>
+							status === MigrationTransactionStatus.Pending
+								? migrationPendingFixture.id
+								: migrationFixture.id,
 					} as any);
-					setTransactionStatus(status);
+
+					setTransactionStatus(transactionStatus);
 				};
 
 				if (transactionStatus !== undefined) {
