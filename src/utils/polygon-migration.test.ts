@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@ardenthq/sdk-profiles";
 
 import {
 	migrationTransactionFee,
