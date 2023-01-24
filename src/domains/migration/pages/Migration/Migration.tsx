@@ -46,7 +46,7 @@ export const Migration = () => {
 		[resolveTransaction],
 	);
 
-	if (expandedTransaction) {
+	if (expandedTransaction && expandedMigration) {
 		return (
 			<MigrationDetails
 				transaction={expandedTransaction}

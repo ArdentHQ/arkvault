@@ -83,10 +83,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	}, [migrationTransactions]);
 
 	const resolveTransaction = useCallback(
-		(migration: Migration) => {
-			console.log({ latestTransactions });
-			return latestTransactions.find((transaction) => transaction.id() === migration.id);
-		},
+		(migration: Migration) => latestTransactions.find((transaction) => transaction.id() === migration.id),
 		[latestTransactions],
 	);
 

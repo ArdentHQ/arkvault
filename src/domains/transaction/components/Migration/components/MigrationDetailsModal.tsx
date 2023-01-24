@@ -187,14 +187,14 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 										</span>
 										<span className="overflow-hidden">
 											<Link
-												to={polygonTransactionLink(polygonId)}
+												to={polygonTransactionLink(polygonId!)}
 												tooltip={polygonId}
 												showExternalIcon={false}
 												isExternal
 											>
 												<TruncateMiddleDynamic
 													offset={96}
-													value={polygonId}
+													value={polygonId!}
 													parentRef={reference}
 												/>
 											</Link>
@@ -202,7 +202,7 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 									</div>
 
 									<div className="flex items-center bg-theme-navy-100 px-5 text-theme-navy-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
-										<Clipboard variant="icon" data={polygonId}>
+										<Clipboard variant="icon" data={polygonId!}>
 											<Icon name="Copy" />
 										</Clipboard>
 									</div>
