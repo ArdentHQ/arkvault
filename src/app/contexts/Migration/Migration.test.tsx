@@ -239,16 +239,7 @@ describe("Migration Context", () => {
 	});
 
 	it("should list the migrations", async () => {
-		const { clearStoredMigrationsMock } = mockStoredMigrations([
-			{
-				address: "AdDreSs",
-				amount: 123,
-				id: "123",
-				migrationAddress: "BuRnAdDreSs",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
-		]);
+		const { clearStoredMigrationsMock } = mockStoredMigrations([migrationFixture]);
 
 		render(
 			<MigrationProvider>
@@ -371,14 +362,7 @@ describe("Migration Context", () => {
 
 	it("should not reload the migrations if no pending migrations", async () => {
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
-			{
-				address: "AdDreSs",
-				amount: 111,
-				id: "123",
-				migrationAddress: "BuRnAdDreSs",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
+			migrationFixture,
 			{
 				address: "AdDreSs2",
 				amount: 222,
@@ -441,14 +425,7 @@ describe("Migration Context", () => {
 
 	it("should reload the migrations if at least one migration is pending", async () => {
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
-			{
-				address: "AdDreSs",
-				amount: 111,
-				id: "123",
-				migrationAddress: "BuRnAdDreSs",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
+			migrationFixture,
 			{
 				address: "AdDreSs2",
 				amount: 222,
@@ -564,16 +541,7 @@ describe("Migration Context", () => {
 	it.each([MigrationTransactionStatus.Pending, MigrationTransactionStatus.Confirmed])(
 		"should determine transaction status",
 		async (status) => {
-			const { clearStoredMigrationsMock } = mockStoredMigrations([
-				{
-					address: "AdDreSs",
-					amount: 123,
-					id: "123",
-					migrationAddress: "BuRnAdDreSs",
-					status: status,
-					timestamp: Date.now() / 1000,
-				},
-			]);
+			const { clearStoredMigrationsMock } = mockStoredMigrations([migrationFixture]);
 
 			const Test = () => {
 				const [transactionStatus, setTransactionStatus] = useState<any>();
