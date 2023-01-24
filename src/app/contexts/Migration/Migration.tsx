@@ -70,7 +70,7 @@ interface MigrationContextType {
 		transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
 	) => Promise<void>;
 	getTransactionStatus: (transaction: DTO.ExtendedConfirmedTransactionData) => Promise<MigrationTransactionStatus>;
-  removeTransactions: (address: string) => Promise<void>;
+	removeTransactions: (address: string) => Promise<void>;
 }
 
 interface Properties {
@@ -288,7 +288,15 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	return (
 		<MigrationContext.Provider
-			value={{ contractIsPaused, getTransactionStatus, migrations, removeTransactions, storeTransaction } as MigrationContextType}
+			value={
+				{
+					contractIsPaused,
+					getTransactionStatus,
+					migrations,
+					removeTransactions,
+					storeTransaction,
+				} as MigrationContextType
+			}
 		>
 			{children}
 		</MigrationContext.Provider>
