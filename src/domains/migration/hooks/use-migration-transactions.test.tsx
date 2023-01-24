@@ -194,6 +194,7 @@ describe("useMigrationTransactions hook", () => {
 			Promise.resolve({
 				hasMorePages: () => false,
 				items: () => [transactionFixture, secondTransactionFixture],
+				currentPage: () => 1,
 			} as any),
 		);
 
