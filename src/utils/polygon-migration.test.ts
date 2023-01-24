@@ -61,10 +61,12 @@ describe("Polygon Migration Utility Functions", () => {
 	});
 
 	it("#polygonMigrationStartTime", () => {
-		process.env.VITE_POLYGON_MIGRATION_START_TIME = undefined;
+		delete process.env.VITE_POLYGON_MIGRATION_START_TIME;
+
 		expect(polygonMigrationStartTime()).toBe(0);
 
 		process.env.VITE_POLYGON_MIGRATION_START_TIME = "12345";
+
 		expect(polygonMigrationStartTime()).toBe(12_345);
 	});
 
