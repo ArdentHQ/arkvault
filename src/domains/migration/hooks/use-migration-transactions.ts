@@ -1,7 +1,13 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useConfiguration, useMigrations } from "@/app/contexts";
-import { isValidMigrationTransaction, migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
+import {
+	isValidMigrationTransaction,
+	migrationMinBalance,
+	migrationNetwork,
+	migrationTransactionFee,
+	migrationWalletAddress,
+} from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
@@ -38,6 +44,9 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			const transactions = await wallet.transactionIndex().received({
 				recipientId: migrationWalletAddress(),
 				senderId: senderIds.join(","),
+				//@ts-ignore
+				"amount.from": migrationMinBalance(),
+				"fee.from": migrationTransactionFee(),
 			});
 
 			setLatestTransactions(transactions.items());
