@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { ethers } from "ethers";
 import { useConfiguration, useMigrations } from "@/app/contexts";
-import { migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
+import { migrationNetwork, migrationWalletAddress, polygonMigrationStartTime } from "@/utils/polygon-migration";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsRestoring } = useConfiguration();
@@ -35,10 +35,20 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 				return;
 			}
 
-			const transactions = await wallet.transactionIndex().received({
+			const query: {
+				recipientId: string;
+				senderId: string;
+				timestamp?: { from?: number, to?: number };
+			} = {
 				recipientId: migrationWalletAddress(),
 				senderId: senderIds.join(","),
-			});
+			};
+
+			if (polygonMigrationStartTime() > 0) {
+				query.timestamp = { from: polygonMigrationStartTime() };
+			}
+
+			const transactions = await wallet.transactionIndex().received(query);
 
 			setLatestTransactions(transactions.items());
 			setIsLoadingTransactions(false);

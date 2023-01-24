@@ -10,6 +10,8 @@ import {
 	polygonRpcUrl,
 	polygonContractAddress,
 	polygonNetworkData,
+	polygonIndexerUrl,
+	polygonMigrationStartTime,
 } from "./polygon-migration";
 
 describe("Polygon Migration Utility Functions", () => {
@@ -51,6 +53,19 @@ describe("Polygon Migration Utility Functions", () => {
 	it("#polygonRpcUrl", () => {
 		process.env.VITE_POLYGON_RPC_URL = "https://rpc-mumbai.maticvigil.com/";
 		expect(polygonRpcUrl()).toBe("https://rpc-mumbai.maticvigil.com/");
+	});
+
+	it("#polygonIndexerUrl", () => {
+		process.env.VITE_POLYGON_INDEXER_URL = "indexer-url";
+		expect(polygonIndexerUrl()).toBe("indexer-url");
+	});
+
+	it("#polygonMigrationStartTime", () => {
+		process.env.VITE_POLYGON_MIGRATION_START_TIME = undefined;
+		expect(polygonMigrationStartTime()).toBe(0);
+
+		process.env.VITE_POLYGON_MIGRATION_START_TIME = "12345";
+		expect(polygonMigrationStartTime()).toBe(12345);
 	});
 
 	it("#migrationWalletAddress", () => {
