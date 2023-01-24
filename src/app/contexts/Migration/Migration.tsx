@@ -10,6 +10,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
 import { polygonContractAddress, polygonRpcUrl } from "@/utils/polygon-migration";
+import { sortBy } from "@ardenthq/sdk-helpers";
 
 const contractABI = [
 	{
@@ -269,9 +270,20 @@ export const MigrationProvider = ({ children }: Properties) => {
 		setContract(new Contract(contractAddress, contractABI, provider));
 	}, []);
 
+	const migrationsSorted = useMemo(() => {
+		return sortBy(migrations || [], (migration) => -migration.timestamp);
+	}, [migrations]);
+
 	return (
 		<MigrationContext.Provider
-			value={{ contractIsPaused, getTransactionStatus, migrations, storeTransaction } as MigrationContextType}
+			value={
+				{
+					contractIsPaused,
+					getTransactionStatus,
+					migrations: migrationsSorted,
+					storeTransaction,
+				} as MigrationContextType
+			}
 		>
 			{children}
 		</MigrationContext.Provider>
