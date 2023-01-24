@@ -9,6 +9,7 @@ import {
 	migrationWalletAddress,
 } from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsRestoring } = useConfiguration();
@@ -45,8 +46,8 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 				recipientId: migrationWalletAddress(),
 				senderId: senderIds.join(","),
 				//@ts-ignore
-				"amount.from": migrationMinBalance(),
-				"fee.from": migrationTransactionFee(),
+				"amount.from": BigNumber.make(migrationMinBalance()).times(1e8).toString(),
+				"fee.from": BigNumber.make(migrationTransactionFee()).times(1e8).toString(),
 			});
 
 			setLatestTransactions(transactions.items());
