@@ -31,7 +31,7 @@ export enum Step {
 
 const TOTAL_STEPS = 5;
 
-const MigrationTabsWrapper: React.FC<PropsWithChildren> = ({ children }) => (
+export const MigrationTabsWrapper: React.FC<PropsWithChildren> = ({ children }) => (
 	<div className="mt-6 dark:border-theme-secondary-800 sm:rounded-2.5xl sm:border sm:border-theme-secondary-300 sm:p-10 md:-mx-10">
 		{children}
 	</div>

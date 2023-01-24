@@ -12,7 +12,7 @@ import { MigrationAddress, MigrationDetail } from "@/domains/migration/component
 import { polygonTransactionLink } from "@/utils/polygon-migration";
 
 interface MigrationSuccessStepProperties {
-	migrationTransaction: DTO.ExtendedSignedTransactionData;
+	migrationTransaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 }
 export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({ migrationTransaction }) => {
 	const { t } = useTranslation();

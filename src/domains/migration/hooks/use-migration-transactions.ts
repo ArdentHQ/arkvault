@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { ethers } from "ethers";
 import { useConfiguration, useMigrations } from "@/app/contexts";
 import { migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
+import { Migration } from "@/domains/migration/migration.contracts";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsRestoring } = useConfiguration();
@@ -71,7 +72,12 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		}
 	}, [migrationTransactions]);
 
-	const isLoading = () => {
+	const resolveTransaction = useCallback(
+		(migration: Migration) => latestTransactions.find((transaction) => transaction.id() === migration.id),
+		[latestTransactions],
+	);
+
+	const isLoading = useMemo(() => {
 		if (profileIsRestoring) {
 			return true;
 		}
@@ -81,7 +87,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		}
 
 		return migrationTransactions.length > 0 && !migrations;
-	};
+	}, [profileIsRestoring, isLoadingTransactions, migrationTransactions, migrations]);
 
-	return { isLoading: isLoading(), migrations: migrations || [] };
+	return { isLoading, migrations: migrations || [], resolveTransaction };
 };
