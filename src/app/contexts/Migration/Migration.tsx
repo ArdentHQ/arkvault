@@ -150,7 +150,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 			//
 		}
 
-		const confirmedCountBefore = storedMigrations.filter((migration) => migration.status === MigrationTransactionStatus.Confirmed).length;
+		const confirmedCountBefore = storedMigrations.filter(
+			(migration) => migration.status === MigrationTransactionStatus.Confirmed,
+		).length;
 
 		const updatedMigrations = storedMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
@@ -169,7 +171,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 			};
 		});
 
-		const confirmedCountAfter = updatedMigrations.filter((migration) => migration.status === MigrationTransactionStatus.Confirmed).length;
+		const confirmedCountAfter = updatedMigrations.filter(
+			(migration) => migration.status === MigrationTransactionStatus.Confirmed,
+		).length;
 
 		if (confirmedCountBefore !== confirmedCountAfter) {
 			repository.set(updatedMigrations);
