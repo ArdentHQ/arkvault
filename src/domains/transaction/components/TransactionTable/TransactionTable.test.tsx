@@ -7,6 +7,7 @@ import { migrationWalletAddress } from "@/utils/polygon-migration";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import * as context from "@/app/contexts";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import * as polygonMigration from "@/utils/polygon-migration";
 import {
 	env,
 	getDefaultProfileId,
@@ -24,15 +25,33 @@ describe("TransactionTable", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let transactions: DTO.ExtendedConfirmedTransactionData[];
+	let polygonIndexerUrlSpy;
 
 	beforeEach(async () => {
+		polygonIndexerUrlSpy = vi
+			.spyOn(polygonMigration, "polygonIndexerUrl")
+			.mockReturnValue("https://mumbai.ihost.org/");
+
 		server.use(requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture));
+
+		server.use(
+			requestMock("https://mumbai.ihost.org/transactions", [
+				{
+					arkTxHash: "abc123",
+					polygonTxHash: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
+				},
+			]),
+		);
 
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById(getDefaultWalletId());
 
 		const allTransactions = await wallet.transactionIndex().all();
 		transactions = allTransactions.items();
+	});
+
+	afterEach(() => {
+		polygonIndexerUrlSpy.mockRestore();
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", (breakpoint) => {
