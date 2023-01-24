@@ -192,9 +192,9 @@ describe("useMigrationTransactions hook", () => {
 
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
 			Promise.resolve({
+				currentPage: () => 1,
 				hasMorePages: () => false,
 				items: () => [transactionFixture, secondTransactionFixture],
-				currentPage: () => 1,
 			} as any),
 		);
 
