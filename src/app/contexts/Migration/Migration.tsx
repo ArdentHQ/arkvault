@@ -94,7 +94,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		const storedMigrations = repository!.all();
 
 		const pendingMigrations = storedMigrations.filter(
-			(migration) => migration.status === MigrationTransactionStatus.Pending,
+			(migration) => migration.status === MigrationTransactionStatus.Pending || !migration.migrationId,
 		);
 
 		const transactionIds = pendingMigrations.map((migration: Migration) => `0x${migration.id}`);
@@ -144,7 +144,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			}
 		}
 
-		repository!.set(uniqBy([...storedMigrations, ...newlyConfirmedMigrations], (migration) => migration.id));
+		repository!.set(uniqBy([...newlyConfirmedMigrations, ...storedMigrations], (migration) => migration.id));
 
 		await migrationsUpdated(repository!.all());
 	}, [repository, contract]);
