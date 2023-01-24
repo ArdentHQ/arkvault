@@ -96,7 +96,7 @@ describe("MigrationPendingStep", () => {
 
 		render(
 			<Route path="/profiles/:profileId/migration/add">
-				<MigrationPendingStep migrationTransaction={transactionFixture} handleBack={handleBack} />
+				<MigrationPendingStep transaction={transactionFixture} handleBack={handleBack} />
 			</Route>,
 			{
 				history,
