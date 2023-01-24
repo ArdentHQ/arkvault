@@ -6,10 +6,7 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import userEvent from "@testing-library/user-event";
 import { MigrationDetails } from "./MigrationDetails";
 import { render, getDefaultProfileId, screen } from "@/utils/testing-library";
-import * as contexts from "@/app/contexts";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
-
-let useMigrationsSpy;
 
 const history = createHashHistory();
 const migrationUrl = `/profiles/${getDefaultProfileId()}/migration`;
@@ -60,10 +57,6 @@ describe("MigrationDetails", () => {
 	});
 
 	it("should render if no migrations", () => {
-		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
-			migrations: undefined,
-		});
-
 		renderComponent({
 			migrationTransaction: migrationTransactionFixture,
 			transaction: transactionFixture,
