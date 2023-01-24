@@ -9,6 +9,8 @@ import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testi
 import * as contexts from "@/app/contexts";
 import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
+import { httpClient } from "@/app/services";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const Test = () => {
 	const { migrations, storeTransaction, contractIsPaused } = useMigrations();
@@ -67,7 +69,9 @@ describe("Migration Context", () => {
 	let configurationMock;
 	let profileWatcherMock;
 	let ethersLibraryContractSpy;
-	let polygonMigrationSpy;
+	let polygonContractAddressSpy;
+	let polygonIndexerUrlSpy;
+	let migrationFixture;
 
 	const environmentMockData = {
 		env: {
@@ -150,21 +154,46 @@ describe("Migration Context", () => {
 
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
 
-		polygonMigrationSpy = vi
+		polygonContractAddressSpy = vi
 			.spyOn(polygonMigration, "polygonContractAddress")
 			.mockReturnValue("0x4a12a2ADc21F896E6F8e564a106A4cab8746a92f");
+
+		polygonIndexerUrlSpy = vi
+			.spyOn(polygonMigration, "polygonIndexerUrl")
+			.mockReturnValue("https://mumbai.ihost.org/");
 
 		ethersLibraryContractSpy = Contract.mockImplementation(() => ({
 			getMigrationsByArkTxHash: () => [],
 			paused: () => false,
 		}));
+
+		httpClient.clearCache();
+
+		migrationFixture = {
+			address: "AdDreSs",
+			amount: 123,
+			id: "ad68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
+			migrationAddress: "BuRnAdDreSs",
+			status: MigrationTransactionStatus.Confirmed,
+			timestamp: Date.now() / 1000,
+		};
+
+		server.use(
+			requestMock("https://mumbai.ihost.org/transactions", [
+				{
+					arkTxHash: migrationFixture.id,
+					polygonTxHash: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
+				},
+			]),
+		);
 	});
 
 	afterEach(() => {
 		configurationMock.mockRestore();
 		profileWatcherMock.mockRestore();
 		ethersLibraryContractSpy.mockRestore();
-		polygonMigrationSpy.mockRestore();
+		polygonContractAddressSpy.mockRestore();
+		polygonIndexerUrlSpy.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {
@@ -393,7 +422,7 @@ describe("Migration Context", () => {
 	});
 
 	it("should not load the migrations if contractAddress is not defined", () => {
-		polygonMigrationSpy = vi.spyOn(polygonMigration, "polygonContractAddress").mockReturnValue(undefined);
+		polygonContractAddressSpy = vi.spyOn(polygonMigration, "polygonContractAddress").mockReturnValue(undefined);
 
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
 
@@ -407,7 +436,7 @@ describe("Migration Context", () => {
 
 		clearStoredMigrationsMock();
 
-		polygonMigrationSpy.mockRestore();
+		polygonContractAddressSpy.mockRestore();
 	});
 
 	it("should reload the migrations if at least one migration is pending", async () => {
