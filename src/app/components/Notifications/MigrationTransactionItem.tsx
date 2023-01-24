@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { css } from "twin.macro";
+import VisibilitySensor from "react-visibility-sensor";
 import { NotificationsMigrationItemProperties } from "./Notifications.contracts";
 import { MigrationTransactionItemMobile } from "./MigrationTransactionItemMobile";
 import { TableCell, TableRow } from "@/app/components/Table";
@@ -8,7 +9,6 @@ import { useWalletAlias, useBreakpoint } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
-
 const rowStyles = [
 	css`
 		&:hover td > div {
@@ -17,7 +17,13 @@ const rowStyles = [
 	`,
 ];
 
-export const MigrationTransactionItem = ({ transaction, profile, onClick }: NotificationsMigrationItemProperties) => {
+export const MigrationTransactionItem = ({
+	transaction,
+	profile,
+	onClick,
+	containmentRef,
+	onVisibilityChange,
+}: NotificationsMigrationItemProperties) => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 	const { isXs, isSm } = useBreakpoint();
@@ -40,40 +46,49 @@ export const MigrationTransactionItem = ({ transaction, profile, onClick }: Noti
 	}, [profile, transaction, wallet]);
 
 	if (isXs || isSm) {
-		return <MigrationTransactionItemMobile transaction={transaction} alias={alias} onClick={onClick} />;
+		return (
+			<MigrationTransactionItemMobile
+				transaction={transaction}
+				alias={alias}
+				onClick={onClick}
+				onVisibilityChange={onVisibilityChange}
+			/>
+		);
 	}
 
 	return (
-		<TableRow className="group" styles={rowStyles} onClick={() => onClick?.(transaction)}>
-			<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
-				<div className="flex flex-1 items-center space-x-3 overflow-auto">
-					<Icon name="CircleCheckMark" size="lg" className="text-theme-hint-600" />
+		<VisibilitySensor onChange={onVisibilityChange} scrollCheck delayedCall containment={containmentRef?.current}>
+			<TableRow className="group" styles={rowStyles} onClick={() => onClick?.(transaction)}>
+				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
+					<div className="flex flex-1 items-center space-x-3 overflow-auto">
+						<Icon name="CircleCheckMark" size="lg" className="text-theme-hint-600" />
 
-					<Avatar size="xs" address={transaction.address} noShadow />
+						<Avatar size="xs" address={transaction.address} noShadow />
 
-					<div className="w-20 flex-1">
-						<Address
-							address={transaction.address}
-							walletName={alias}
-							addressClass="text-theme-hint-300 dark:text-theme-secondary-700"
-						/>
+						<div className="w-20 flex-1">
+							<Address
+								address={transaction.address}
+								walletName={alias}
+								addressClass="text-theme-hint-300 dark:text-theme-secondary-700"
+							/>
+						</div>
 					</div>
-				</div>
-			</TableCell>
+				</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end" isCompact>
-				<button
-					data-testid="MigrationTransactionItem__button"
-					type="button"
-					className="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
-				>
-					<span className="whitespace-nowrap font-semibold">
-						{t("MIGRATION.NOTIFICATIONS.MIGRATION_SUCCESSFUL")}
-					</span>
+				<TableCell variant="end" innerClassName="justify-end" isCompact>
+					<button
+						data-testid="MigrationTransactionItem__button"
+						type="button"
+						className="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+					>
+						<span className="whitespace-nowrap font-semibold">
+							{t("MIGRATION.NOTIFICATIONS.MIGRATION_SUCCESSFUL")}
+						</span>
 
-					<Icon name="ChevronRightSmall" size="sm" />
-				</button>
-			</TableCell>
-		</TableRow>
+						<Icon name="ChevronRightSmall" size="sm" />
+					</button>
+				</TableCell>
+			</TableRow>
+		</VisibilitySensor>
 	);
 };

@@ -1,19 +1,29 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Migration, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { useMigrations } from "@/app/contexts";
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
 
-	const { migrations } = useMigrations();
+	const { migrations, markMigrationAsRead } = useMigrations();
+	const [confirmedMigrations, setConfirmedMigrations] = useState<Migration[]>([]);
 
-	const confirmedMigrations = useMemo<Migration[]>(() => {
+	useEffect(() => {
 		if (migrations === undefined) {
-			return [];
+			return;
 		}
 
-		return migrations.filter((migration) => migration.status === MigrationTransactionStatus.Confirmed);
-	}, [migrations]);
+		setConfirmedMigrations(
+			migrations.filter(
+				(migration) =>
+					migration.status === MigrationTransactionStatus.Confirmed &&
+					(migration.readAt === undefined ||
+						// If were loaded on the session we should kept it to avoid
+						// immediately hide the notification
+						confirmedMigrations.some((confirmedMigration) => confirmedMigration.id === migration.id)),
+			),
+		);
+	}, [migrations, confirmedMigrations]);
 
 	const { markAllTransactionsAsRead, markAsRead, releases, transactions, migrationTransactions } = useMemo(() => {
 		const markAllTransactionsAsRead = (isVisible: boolean) => {
@@ -49,6 +59,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		hasUnread: (releases.length > 0 || transactions.length > 0) && profile.notifications().hasUnread(),
 		markAllTransactionsAsRead,
 		markAsRead,
+		markMigrationAsRead,
 		migrationTransactions,
 		releases,
 		transactions,
