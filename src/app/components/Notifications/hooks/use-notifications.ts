@@ -13,7 +13,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 			return;
 		}
 
-		setConfirmedMigrations(
+		setConfirmedMigrations((confirmedMigrations) =>
 			migrations.filter(
 				(migration) =>
 					migration.status === MigrationTransactionStatus.Confirmed &&
@@ -23,7 +23,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 						confirmedMigrations.some((confirmedMigration) => confirmedMigration.id === migration.id)),
 			),
 		);
-	}, [migrations, confirmedMigrations]);
+	}, [migrations]);
 
 	const { markAllTransactionsAsRead, markAsRead, releases, transactions, migrationTransactions } = useMemo(() => {
 		const markAllTransactionsAsRead = (isVisible: boolean) => {
