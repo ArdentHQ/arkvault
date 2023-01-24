@@ -7,19 +7,52 @@ import { MigrationDetailsModal } from "./MigrationDetailsModal";
 import { translations } from "@/domains/migration/i18n";
 import { render, screen, waitFor } from "@/utils/testing-library";
 import * as context from "@/app/contexts";
-import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
+import { httpClient } from "@/app/services";
+import { server, requestMock } from "@/tests/mocks/server";
+import * as polygonMigration from "@/utils/polygon-migration";
 
 let transactionFixture: DTO.ExtendedConfirmedTransactionData;
+let migrationFixture: Migration;
+let polygonIndexerUrlSpy;
 
 describe("MigrationDetailsModal", () => {
-	beforeAll(() => {
+	beforeEach(() => {
+		polygonIndexerUrlSpy = vi
+			.spyOn(polygonMigration, "polygonIndexerUrl")
+			.mockReturnValue("https://mumbai.ihost.org/");
+
+		httpClient.clearCache();
+
+		migrationFixture = {
+			address: "AdDreSs",
+			amount: 123,
+			id: "ad68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
+			migrationAddress: "BuRnAdDreSs",
+			status: MigrationTransactionStatus.Confirmed,
+			timestamp: Date.now() / 1000,
+		};
+
 		transactionFixture = {
 			amount: () => 123,
-			id: () => "transaction-id",
+			id: () => migrationFixture.id,
 			memo: () => "0x123456789",
 			sender: () => "Address",
 			timestamp: () => DateTime.make(),
 		} as unknown as DTO.ExtendedConfirmedTransactionData;
+
+		server.use(
+			requestMock("https://mumbai.ihost.org/transactions", [
+				{
+					arkTxHash: migrationFixture.id,
+					polygonTxHash: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
+				},
+			]),
+		);
+	});
+
+	afterEach(() => {
+		polygonIndexerUrlSpy.mockRestore();
 	});
 
 	it("should render empty if transaction is not defined", () => {
