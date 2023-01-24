@@ -110,7 +110,7 @@ describe("Migration", () => {
 		await waitFor(() => expect(screen.queryByTestId("Modal__close-button")).not.toBeInTheDocument());
 	});
 
-	it("should display details of migration transaction", async () => {
+	it("should display and hide details of migration transaction", async () => {
 		const wallet = profile.wallets().first();
 		const walletCreationSpy = vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(wallet);
 
@@ -169,7 +169,7 @@ describe("Migration", () => {
 				{
 					address: "AdDreSs",
 					amount: 123,
-					id: "0x123",
+					id: transactionFixture.id(),
 					migrationAddress: "0x456",
 					status: MigrationTransactionStatus.Confirmed,
 					timestamp: Date.now() / 1000,
@@ -179,6 +179,7 @@ describe("Migration", () => {
 		});
 
 		renderComponent();
+
 		await waitFor(() => {
 			expect(screen.getAllByTestId("MigrationTransactionsRow")[0]).toBeInTheDocument();
 		});
@@ -187,6 +188,15 @@ describe("Migration", () => {
 
 		useMigrationsSpy.mockRestore();
 		walletCreationSpy.mockRestore();
-		// @TBD
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MigrationDetails")).toBeInTheDocument();
+		});
+
+		userEvent.click(screen.getByTestId("MigrationAdd__back-to-dashboard-button"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationDetails")).not.toBeInTheDocument();
+		});
 	});
 });

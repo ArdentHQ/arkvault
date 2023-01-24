@@ -111,4 +111,19 @@ describe("MigrationTransactionsTable", () => {
 
 		expect(onClick).toHaveBeenCalled();
 	});
+
+	it("should execute onClick callback on mobile", () => {
+		const onClick = vi.fn();
+
+		renderResponsive(
+			<MigrationTransactionsTable migrationTransactions={migrationTransactions} onClick={onClick} />,
+			"xs",
+		);
+
+		expect(screen.getAllByTestId("MigrationTransactionsRowMobile")).toHaveLength(migrationTransactions.length);
+
+		userEvent.click(within(screen.getAllByTestId("MigrationTransactionsRowMobile")[0]).getAllByRole("button")[0]);
+
+		expect(onClick).toHaveBeenCalled();
+	});
 });
