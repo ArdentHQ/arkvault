@@ -1,3 +1,5 @@
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+
 import {
 	migrationTransactionFee,
 	migrationGuideUrl,
@@ -10,7 +12,10 @@ import {
 	polygonRpcUrl,
 	polygonContractAddress,
 	polygonNetworkData,
+	isValidMigrationTransaction,
 } from "./polygon-migration";
+
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("Polygon Migration Utility Functions", () => {
 	it("#migrationTransactionFee", () => {
@@ -70,6 +75,7 @@ describe("Polygon Migration Utility Functions", () => {
 			rpcUrls: ["https://matic-mumbai.chainstacklabs.com/"],
 		});
 	});
+
 	it("#polygonNetworkData mainnet", () => {
 		process.env.VITE_MIGRATION_NETWORK = "ark.mainnet";
 
@@ -84,5 +90,74 @@ describe("Polygon Migration Utility Functions", () => {
 			},
 			rpcUrls: ["https://polygon-rpc.com/"],
 		});
+	});
+});
+
+describe("Polygon Migration Transaction Validation", () => {
+	let transaction: DTO.ExtendedSignedTransactionData;
+
+	beforeAll(async () => {
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const wallet = profile.wallets().first();
+
+		transaction = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: migrationWalletAddress(),
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+	});
+
+	it("should return false if memo is undefined", async () => {
+		vi.spyOn(transaction, "memo").mockReturnValue(undefined);
+		expect(isValidMigrationTransaction(transaction)).toBe(false);
+	});
+
+	it("should return false if memo is invalid polygon address", async () => {
+		vi.spyOn(transaction, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db6249");
+		expect(isValidMigrationTransaction(transaction)).toBe(false);
+	});
+
+	it("should return true if recipient is the migration wallet", async () => {
+		vi.spyOn(transaction, "recipient").mockReturnValue(migrationWalletAddress());
+		vi.spyOn(transaction, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
+		expect(isValidMigrationTransaction(transaction)).toBe(true);
+	});
+
+	it("should return false if recipient is not the migration wallet", async () => {
+		vi.spyOn(transaction, "recipient").mockReturnValue("DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8");
+		vi.spyOn(transaction, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
+		expect(isValidMigrationTransaction(transaction)).toBe(false);
+	});
+
+	it("should return false if transaction amount is less than the min allowed threshold", async () => {
+		vi.spyOn(transaction, "recipient").mockReturnValue(migrationWalletAddress());
+		vi.spyOn(transaction, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
+		vi.spyOn(transaction, "amount").mockReturnValue(0.01);
+		expect(isValidMigrationTransaction(transaction)).toBe(false);
+
+		vi.restoreAllMocks();
+	});
+
+	it("should return false if transaction fee is less than the min allowed threshold", async () => {
+		vi.spyOn(transaction, "recipient").mockReturnValue(migrationWalletAddress());
+		vi.spyOn(transaction, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
+		vi.spyOn(transaction, "fee").mockReturnValue(0.01);
+		expect(isValidMigrationTransaction(transaction)).toBe(false);
 	});
 });

@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { ethers } from "ethers";
 import { useConfiguration, useMigrations } from "@/app/contexts";
-import { migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
+import { isValidMigrationTransaction, migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsRestoring } = useConfiguration();
@@ -48,20 +47,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	}, [profileIsRestoring]);
 
 	const migrationTransactions = useMemo(
-		() =>
-			latestTransactions.filter((transaction) => {
-				const polygonAddress = transaction.memo();
-
-				if (!polygonAddress) {
-					return false;
-				}
-
-				if (transaction.recipient() !== migrationWalletAddress()) {
-					return false;
-				}
-
-				return ethers.utils.isAddress(polygonAddress);
-			}),
+		() => latestTransactions.filter((transaction) => isValidMigrationTransaction(transaction)),
 		[latestTransactions, isLoadingTransactions],
 	);
 
