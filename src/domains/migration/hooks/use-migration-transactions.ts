@@ -20,23 +20,24 @@ export const fetchMigrationTransactions = async ({ profile, page }: { page: numb
 
 	if (senderIds.length === 0) {
 		return {
-			items: [],
-			hasMore: false,
 			cursor: page,
+			hasMore: false,
+			items: [],
 		};
 	}
 
 	const transactions = await wallet.transactionIndex().received({
-		senderId: senderIds.join(","),
+		limit: 11,
+
 		// @ts-ignore
 		page,
-		limit: 11,
+		senderId: senderIds.join(","),
 	});
 
 	return {
+		cursor: Number(transactions.currentPage()),
 		hasMore: transactions.items().length > 0,
 		items: transactions.items(),
-		cursor: Number(transactions.currentPage()),
 	};
 };
 
@@ -55,7 +56,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 
 		setIsLoadingTransactions(true);
 
-		const { items, hasMore, cursor } = await fetchMigrationTransactions({ profile, page: page + 1 });
+		const { items, hasMore, cursor } = await fetchMigrationTransactions({ page: page + 1, profile });
 
 		setLatestTransactions(items);
 		setIsLoadingTransactions(false);
@@ -111,10 +112,10 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	return {
 		hasMore,
 		isLoading: page === 0 && isLoading,
-		migrations: migrations || [],
-		page,
-		onLoadMore: () => loadMigrationWalletTransactions(),
 		isLoadingMore: page > 0 && isLoading,
+		migrations: migrations || [],
+		onLoadMore: () => loadMigrationWalletTransactions(),
+		page,
 		resolveTransaction,
 	};
 };
