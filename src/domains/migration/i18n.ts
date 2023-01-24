@@ -2,6 +2,17 @@ export const translations = {
 	CONTRACT_PAUSED_MESSAGE:
 		"The migration is temporarily paused. Please check our <linkTwitter>Twitter</linkTwitter> for more details.",
 
+	DETAILS_MODAL: {
+		STEP_PENDING: {
+			DESCRIPTION: "Migration in progress, you will be notified once the process is complete.",
+			TITLE: "Migration Pending",
+		},
+		STEP_SUCCESS: {
+			DESCRIPTION: "Your migration was successful.",
+			TITLE: "Successfully Migrated",
+		},
+	},
+
 	DISCLAIMER_MODAL: {
 		// @TBD
 		DISCLAIMER:
@@ -11,6 +22,7 @@ export const translations = {
 		WARNING:
 			"By using ARKVault to migrate your token, you acknowledge that you have read and understood the terms and conditions and privacy policy. You are solely responsible for ensuring the accuracy of the information provided during the migration process. Incorrect information may result in the loss of your tokens.",
 	},
+
 	MIGRATION_ADD: {
 		FROM_ARK_ADDRESS: "From ARK Address",
 

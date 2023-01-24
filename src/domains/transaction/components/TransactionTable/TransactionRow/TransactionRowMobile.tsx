@@ -24,6 +24,7 @@ export const TransactionRowMobile = memo(
 		onClick,
 		isLoading = false,
 		profile,
+		onShowMigrationDetails,
 		...properties
 	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
@@ -77,7 +78,10 @@ export const TransactionRowMobile = memo(
 						<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
 
 						{isMigrationTransaction(transaction) && (
-							<TransactionMigrationLink transaction={transaction}>
+							<TransactionMigrationLink
+								transaction={transaction}
+								onClick={() => onShowMigrationDetails?.(transaction)}
+							>
 								<span>{t("TRANSACTION.MIGRATION")}</span>
 							</TransactionMigrationLink>
 						)}

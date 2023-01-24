@@ -22,6 +22,7 @@ export const TransactionRow = memo(
 		exchangeCurrency,
 		transaction,
 		onClick,
+		onShowMigrationDetails,
 		isLoading = false,
 		profile,
 		...properties
@@ -44,6 +45,7 @@ export const TransactionRow = memo(
 					transaction={transaction}
 					exchangeCurrency={exchangeCurrency}
 					profile={profile}
+					onShowMigrationDetails={onShowMigrationDetails}
 				/>
 			);
 		}
@@ -85,7 +87,11 @@ export const TransactionRow = memo(
 					)}
 
 					{isMigrationTransaction(transaction) && (
-						<TransactionRowMigrationDetails transaction={transaction} isCompact={isCompact} />
+						<TransactionRowMigrationDetails
+							transaction={transaction}
+							isCompact={isCompact}
+							onClick={() => onShowMigrationDetails?.(transaction)}
+						/>
 					)}
 				</TableCell>
 

@@ -91,4 +91,21 @@ describe("MigrationPendingStep", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 	});
+	it("should handle custom back action", () => {
+		const handleBack = vi.fn();
+
+		render(
+			<Route path="/profiles/:profileId/migration/add">
+				<MigrationPendingStep migrationTransaction={transactionFixture} handleBack={handleBack} />
+			</Route>,
+			{
+				history,
+				route: migrationUrl,
+			},
+		);
+
+		userEvent.click(screen.getByTestId("MigrationAdd_back"));
+
+		expect(handleBack).toHaveBeenCalled();
+	});
 });

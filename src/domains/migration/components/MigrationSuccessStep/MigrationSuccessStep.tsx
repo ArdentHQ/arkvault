@@ -13,9 +13,10 @@ import { polygonTransactionLink } from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
 
 interface MigrationSuccessStepProperties {
-	transaction: DTO.ExtendedSignedTransactionData;
+	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 	migrationTransaction: Migration;
 }
+
 export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 	transaction,
 	migrationTransaction,
