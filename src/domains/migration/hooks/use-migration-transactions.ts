@@ -5,7 +5,15 @@ import { useConfiguration, useMigrations } from "@/app/contexts";
 import { migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
 
-export const fetchMigrationTransactions = async ({ profile, page }: { page: number; profile: Contracts.IProfile }) => {
+export const fetchMigrationTransactions = async ({
+	profile,
+	page,
+	limit = 10,
+}: {
+	limit?: number;
+	page: number;
+	profile: Contracts.IProfile;
+}) => {
 	const wallet = await profile.walletFactory().fromAddress({
 		address: migrationWalletAddress(),
 		coin: "ARK",
@@ -27,7 +35,7 @@ export const fetchMigrationTransactions = async ({ profile, page }: { page: numb
 	}
 
 	const transactions = await wallet.transactionIndex().received({
-		limit: 11,
+		limit: limit + 1,
 
 		// @ts-ignore
 		page,
@@ -48,6 +56,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [hasMore, setHasMore] = useState(false);
 	const [page, setPage] = useState(0);
+	const limit = 10;
 
 	const loadMigrationWalletTransactions = useCallback(async () => {
 		if (profileIsRestoring) {
@@ -109,11 +118,19 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		return migrationTransactions.length > 0 && !migrations;
 	}, [profileIsRestoring, isLoadingTransactions, migrationTransactions, migrations]);
 
+	const migrationsPage = useMemo(() => {
+		if (!migrations) {
+			return [];
+		}
+
+		return migrations.slice(0, page * limit);
+	}, [migrations, page, limit]);
+
 	return {
 		hasMore,
 		isLoading: page === 0 && isLoading,
 		isLoadingMore: page > 0 && isLoading,
-		migrations: migrations || [],
+		migrations: migrationsPage,
 		onLoadMore: () => loadMigrationWalletTransactions(),
 		page,
 		resolveTransaction,
