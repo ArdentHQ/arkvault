@@ -133,7 +133,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				arkTxHashes: newlyConfirmedMigrations.map((migration: Migration) => migration.id),
 			});
 
-			for (const polygonMigration of response.json().data) {
+			for (const polygonMigration of response.json()) {
 				const confirmedMigration = newlyConfirmedMigrations.find(
 					(migration) => migration.id === polygonMigration.arkTxHash,
 				);
