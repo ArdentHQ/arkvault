@@ -65,7 +65,7 @@ export const MigrationAdd = () => {
 
 	const wallet = watch("wallet");
 
-	const { storeTransaction, migrations, contractIsPaused } = useMigrations();
+	const { storeTransactions, migrations, contractIsPaused } = useMigrations();
 	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
 
 	useEffect(
@@ -122,7 +122,7 @@ export const MigrationAdd = () => {
 			const transaction = await sendTransaction();
 
 			setTransaction(transaction);
-			await storeTransaction(transaction);
+			await storeTransactions([transaction]);
 
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {

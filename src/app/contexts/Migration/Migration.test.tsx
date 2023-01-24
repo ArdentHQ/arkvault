@@ -11,9 +11,9 @@ import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 
 const Test = () => {
-	const { migrations, storeTransaction, removeTransactions, contractIsPaused } = useMigrations();
+	const { migrations, storeTransactions, removeTransactions, contractIsPaused } = useMigrations();
 
-	const createAndStoreTransaction = () => {
+	const createAndStoreTransaction = async () => {
 		const transaction = {
 			amount: () => 123,
 			id: () => "abc123",
@@ -22,7 +22,7 @@ const Test = () => {
 			timestamp: () => DateTime.make(),
 		} as DTO.ExtendedSignedTransactionData;
 
-		storeTransaction(transaction);
+		await storeTransactions([transaction]);
 	};
 
 	const removeTransaction = () => {

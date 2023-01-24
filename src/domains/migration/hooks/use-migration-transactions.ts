@@ -7,7 +7,7 @@ import { Migration } from "@/domains/migration/migration.contracts";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsRestoring } = useConfiguration();
-	const { migrations, storeTransaction } = useMigrations();
+	const { migrations, storeTransactions } = useMigrations();
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 
@@ -48,28 +48,34 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		loadMigrationWalletTransactions();
 	}, [profileIsRestoring]);
 
-	const migrationTransactions = useMemo(
-		() =>
-			latestTransactions.filter((transaction) => {
-				const polygonAddress = transaction.memo();
+	const migrationTransactions = useMemo(() => {
+		const storedMigrationIds = new Set((migrations ?? []).map((migration) => migration.id));
 
-				if (!polygonAddress) {
-					return false;
-				}
+		return latestTransactions.filter((transaction) => {
+			if (storedMigrationIds.has(transaction.id())) {
+				return false;
+			}
 
-				if (transaction.recipient() !== migrationWalletAddress()) {
-					return false;
-				}
+			const polygonAddress = transaction.memo();
 
-				return ethers.utils.isAddress(polygonAddress);
-			}),
-		[latestTransactions, isLoadingTransactions],
-	);
+			if (!polygonAddress) {
+				return false;
+			}
+
+			if (transaction.recipient() !== migrationWalletAddress()) {
+				return false;
+			}
+
+			return ethers.utils.isAddress(polygonAddress);
+		});
+	}, [migrations, latestTransactions, isLoadingTransactions]);
 
 	useEffect(() => {
-		for (const transaction of migrationTransactions) {
-			storeTransaction(transaction);
-		}
+		const updateTransactions = async () => {
+			await storeTransactions(migrationTransactions);
+		};
+
+		updateTransactions();
 	}, [migrationTransactions]);
 
 	const resolveTransaction = useCallback(

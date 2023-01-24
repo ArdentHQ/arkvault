@@ -12,6 +12,7 @@ import { ProfilePaths } from "@/router/paths";
 import { useMigrationTransactions } from "@/domains/migration/hooks/use-migration-transactions";
 import { useMigrations } from "@/app/contexts";
 import { Migration as MigrationTransaction } from "@/domains/migration/migration.contracts";
+
 export const Migration = () => {
 	const { t } = useTranslation();
 	const { isMd } = useBreakpoint();
