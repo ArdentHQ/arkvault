@@ -1,9 +1,10 @@
 import { DTO } from "@ardenthq/sdk-profiles";
-import React, { FC, useCallback, useMemo } from "react";
+import React, { FC, useCallback, useMemo, useState } from "react";
 import { TableState } from "react-table";
 
 import { TransactionRow } from "./TransactionRow/TransactionRow";
 import { TransactionTableProperties } from "./TransactionTable.contracts";
+import { MigrationDetailsModal } from "@/domains/transaction/components/Migration";
 import { Table } from "@/app/components/Table";
 import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import { useBreakpoint } from "@/app/hooks";
@@ -17,6 +18,8 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	onRowClick,
 	profile,
 }) => {
+	const [expandedMigrationTransaction, setExpandedMigrationTransaction] =
+		useState<DTO.ExtendedConfirmedTransactionData>();
 	const { isXs, isSm } = useBreakpoint();
 	const columns = useTransactionTableColumns(exchangeCurrency);
 	const initialState = useMemo<Partial<TableState<DTO.ExtendedConfirmedTransactionData>>>(
@@ -41,6 +44,10 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 		return showSkeleton ? skeletonRows : transactions;
 	}, [showSkeleton, transactions, skeletonRowsLimit]);
 
+	const showMigrationDetailsHandler = (transaction: DTO.ExtendedConfirmedTransactionData) => {
+		setExpandedMigrationTransaction(transaction);
+	};
+
 	const renderTableRow = useCallback(
 		(row: DTO.ExtendedConfirmedTransactionData) => (
 			<TransactionRow
@@ -48,6 +55,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				onClick={() => onRowClick?.(row)}
 				transaction={row}
 				exchangeCurrency={exchangeCurrency}
+				onShowMigrationDetails={showMigrationDetailsHandler}
 				profile={profile}
 			/>
 		),
@@ -59,6 +67,11 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 			<Table hideHeader={isSm || isXs || hideHeader} columns={columns} data={data} initialState={initialState}>
 				{renderTableRow}
 			</Table>
+
+			<MigrationDetailsModal
+				transaction={expandedMigrationTransaction}
+				onClose={() => setExpandedMigrationTransaction(undefined)}
+			/>
 		</div>
 	);
 };

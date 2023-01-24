@@ -98,9 +98,9 @@ describe("useMigrationTransactions hook", () => {
 
 		const mockWalletTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
 			Promise.resolve({
+				currentPage: () => 1,
 				hasMorePages: () => false,
 				items: () => [transactionFixture, secondTransactionFixture],
-				currentPage: () => 1,
 			} as any),
 		);
 
@@ -126,9 +126,9 @@ describe("useMigrationTransactions hook", () => {
 
 		const mockWalletTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
 			Promise.resolve({
+				currentPage: () => 1,
 				hasMorePages: () => false,
 				items: () => [],
-				currentPage: () => 1,
 			} as any),
 		);
 
@@ -156,9 +156,9 @@ describe("useMigrationTransactions hook", () => {
 
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
 			Promise.resolve({
+				currentPage: () => 1,
 				hasMorePages: () => false,
 				items: () => [transactionFixture, secondTransactionFixture],
-				currentPage: () => 1,
 			} as any),
 		);
 
@@ -239,9 +239,9 @@ describe("useMigrationTransactions hook", () => {
 		vi.spyOn(transactionFixture, "recipient").mockReturnValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
 			Promise.resolve({
+				currentPage: () => 1,
 				hasMorePages: () => false,
 				items: () => [transactionFixture, secondTransactionFixture],
-				currentPage: () => 1,
 			} as any),
 		);
 
@@ -275,9 +275,9 @@ describe("useMigrationTransactions hook", () => {
 
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
 			Promise.resolve({
+				currentPage: () => 1,
 				hasMorePages: () => false,
 				items: () => [transactionFixture, secondTransactionFixture],
-				currentPage: () => 1,
 			} as any),
 		);
 
