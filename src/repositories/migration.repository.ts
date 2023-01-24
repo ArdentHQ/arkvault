@@ -53,6 +53,7 @@ export class MigrationRepository {
 		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
 
 		const migrations = all[this.#profile.id()];
+
 		const index = migrations.findIndex((migration) => migration.id === item.id);
 
 		migrations[index] = {
