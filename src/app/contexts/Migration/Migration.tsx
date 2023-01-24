@@ -69,7 +69,8 @@ interface MigrationContextType {
 	storeTransaction: (
 		transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
 	) => Promise<void>;
-	removeTransactions: (address: string) => Promise<void>;
+	getTransactionStatus: (transaction: DTO.ExtendedConfirmedTransactionData) => Promise<MigrationTransactionStatus>;
+  removeTransactions: (address: string) => Promise<void>;
 }
 
 interface Properties {
@@ -90,6 +91,37 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrations, setMigrations] = useState<Migration[]>();
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
+
+	const getContractMigrations = useCallback(
+		async (transactionIds: string[]) => {
+			let contractMigrations: ARKMigrationViewStructOutput[] = [];
+
+			try {
+				contractMigrations = await contract!.getMigrationsByArkTxHash(transactionIds);
+			} catch {
+				//
+			}
+
+			return contractMigrations;
+		},
+		[contract],
+	);
+
+	const getTransactionStatus = useCallback(
+		async (transaction: DTO.ExtendedConfirmedTransactionData) => {
+			const contractMigrations = await getContractMigrations([`0x${transaction.id()}`]);
+
+			const contractMigration = contractMigrations.find(
+				(contractMigration: ARKMigrationViewStructOutput) =>
+					contractMigration.arkTxHash === `0x${transaction.id()}`,
+			);
+
+			return contractMigration!.recipient === ethers.constants.AddressZero
+				? MigrationTransactionStatus.Pending
+				: MigrationTransactionStatus.Confirmed;
+		},
+		[contract, getContractMigrations],
+	);
 
 	const loadMigrations = useCallback(async () => {
 		const storedMigrations = repository!.all();
@@ -256,21 +288,14 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	return (
 		<MigrationContext.Provider
-			value={{ contractIsPaused, migrations, removeTransactions, storeTransaction } as MigrationContextType}
+			value={{ contractIsPaused, getTransactionStatus, migrations, removeTransactions, storeTransaction } as MigrationContextType}
 		>
 			{children}
 		</MigrationContext.Provider>
 	);
 };
 
-export const useMigrations = (): {
-	migrations: Migration[] | undefined;
-	storeTransaction: (
-		transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
-	) => Promise<void>;
-	removeTransactions: (address: string) => Promise<void>;
-	contractIsPaused: boolean | undefined;
-} => {
+export const useMigrations = (): MigrationContextType => {
 	const value = React.useContext(MigrationContext);
 
 	if (value === undefined) {

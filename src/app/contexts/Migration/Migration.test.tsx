@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { DTO, Contracts } from "@ardenthq/sdk-profiles";
 import { Contract, ethers } from "ethers";
 import userEvent from "@testing-library/user-event";
@@ -547,4 +547,60 @@ describe("Migration Context", () => {
 
 		clearStoredMigrationsMock();
 	});
+
+	it.each([MigrationTransactionStatus.Pending, MigrationTransactionStatus.Confirmed])(
+		"should determine transaction status",
+		async (status) => {
+			const { clearStoredMigrationsMock } = mockStoredMigrations([
+				{
+					address: "AdDreSs",
+					amount: 123,
+					id: "123",
+					migrationAddress: "BuRnAdDreSs",
+					status: status,
+					timestamp: Date.now() / 1000,
+				},
+			]);
+
+			const Test = () => {
+				const [transactionStatus, setTransactionStatus] = useState<any>();
+				const { getTransactionStatus } = useMigrations();
+
+				const loadTransactionStatus = async () => {
+					const status = await getTransactionStatus({
+						id: () => "123",
+					} as any);
+					setTransactionStatus(status);
+				};
+
+				if (transactionStatus !== undefined) {
+					return <div data-testid="Status">{transactionStatus}</div>;
+				}
+
+				return (
+					<button data-testid="LoadStatus" type="button" onClick={loadTransactionStatus}>
+						Load Status
+					</button>
+				);
+			};
+
+			render(
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>,
+			);
+
+			expect(screen.getByTestId("LoadStatus")).toBeInTheDocument();
+
+			userEvent.click(screen.getByTestId("LoadStatus"));
+
+			await waitFor(() => {
+				expect(screen.getByTestId("Status")).toBeInTheDocument();
+			});
+
+			expect(screen.getByTestId("Status")).toHaveTextContent(status);
+
+			clearStoredMigrationsMock();
+		},
+	);
 });
