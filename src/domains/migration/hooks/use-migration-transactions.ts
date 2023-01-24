@@ -25,12 +25,6 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 				network: migrationNetwork(),
 			});
 
-			console.log({
-				address: migrationWalletAddress(),
-				coin: "ARK",
-				network: migrationNetwork(),
-			});
-
 			const senderIds = profile
 				.wallets()
 				.values()
@@ -83,7 +77,6 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	);
 
 	useEffect(() => {
-		console.log({ migrationTransactions });
 		for (const transaction of migrationTransactions) {
 			storeTransaction(transaction);
 		}
