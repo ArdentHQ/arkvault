@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { DTO, Contracts } from "@ardenthq/sdk-profiles";
 import { Contract, ethers } from "ethers";
 import userEvent from "@testing-library/user-event";
@@ -26,9 +26,9 @@ const Test = () => {
 		storeTransaction(transaction);
 	};
 
-	const markMigrationAsReadHandler = useCallback(() => {
+	const markMigrationAsReadHandler = () => {
 		markMigrationAsRead(migrations![0]);
-	}, [migrations, markMigrationAsRead]);
+	};
 
 	if (migrations === undefined || contractIsPaused === undefined) {
 		return (
@@ -45,10 +45,10 @@ const Test = () => {
 		<div>
 			<ul data-testid="Migrations">
 				{migrations.map((migration) => (
-					<li data-testid="MigrationItem" key={`${migration.id}-${migration.readAt}`}>
+					<li data-testid="MigrationItem" key={migration.id}>
 						{migration.address}
 
-						{migration.readAt !== undefined && <span data-testid="MigrationItem__read">Read</span>}
+						{migration.readAt !== undefined}
 					</li>
 				))}
 
