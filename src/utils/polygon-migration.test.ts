@@ -123,29 +123,29 @@ describe("Polygon Migration Transaction Validation", () => {
 		);
 	});
 
-	it("should return false if memo is undefined", async () => {
+	it("should return false if memo is undefined", () => {
 		vi.spyOn(transaction, "memo").mockReturnValue(undefined);
 		expect(isValidMigrationTransaction(transaction)).toBe(false);
 	});
 
-	it("should return false if memo is invalid polygon address", async () => {
+	it("should return false if memo is invalid polygon address", () => {
 		vi.spyOn(transaction, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db6249");
 		expect(isValidMigrationTransaction(transaction)).toBe(false);
 	});
 
-	it("should return true if recipient is the migration wallet", async () => {
+	it("should return true if recipient is the migration wallet", () => {
 		vi.spyOn(transaction, "recipient").mockReturnValue(migrationWalletAddress());
 		vi.spyOn(transaction, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
 		expect(isValidMigrationTransaction(transaction)).toBe(true);
 	});
 
-	it("should return false if recipient is not the migration wallet", async () => {
+	it("should return false if recipient is not the migration wallet", () => {
 		vi.spyOn(transaction, "recipient").mockReturnValue("DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8");
 		vi.spyOn(transaction, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
 		expect(isValidMigrationTransaction(transaction)).toBe(false);
 	});
 
-	it("should return false if transaction amount is less than the min allowed threshold", async () => {
+	it("should return false if transaction amount is less than the min allowed threshold", () => {
 		vi.spyOn(transaction, "recipient").mockReturnValue(migrationWalletAddress());
 		vi.spyOn(transaction, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
 		vi.spyOn(transaction, "amount").mockReturnValue(0.01);
@@ -154,7 +154,7 @@ describe("Polygon Migration Transaction Validation", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should return false if transaction fee is less than the min allowed threshold", async () => {
+	it("should return false if transaction fee is less than the min allowed threshold", () => {
 		vi.spyOn(transaction, "recipient").mockReturnValue(migrationWalletAddress());
 		vi.spyOn(transaction, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
 		vi.spyOn(transaction, "fee").mockReturnValue(0.01);
