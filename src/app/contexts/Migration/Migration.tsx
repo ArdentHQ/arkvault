@@ -195,7 +195,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 				}
 			}
 
-			await migrationsUpdated(uniqBy([...newlyConfirmedMigrations, ...repository.all()], (migration) => migration.id));
+			await migrationsUpdated(
+				uniqBy([...newlyConfirmedMigrations, ...repository.all()], (migration) => migration.id),
+			);
 		}
 	}, [repository, contract, migrationsUpdated]);
 
