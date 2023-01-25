@@ -12,15 +12,7 @@ import {
 } from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
 
-export const fetchMigrationTransactions = async ({
-	profile,
-	page,
-	limit = 10,
-}: {
-	limit?: number;
-	page: number;
-	profile: Contracts.IProfile;
-}) => {
+export const fetchMigrationTransactions = async ({ profile, page }: { page: number; profile: Contracts.IProfile }) => {
 	const wallet = await profile.walletFactory().fromAddress({
 		address: migrationWalletAddress(),
 		coin: "ARK",
@@ -48,9 +40,7 @@ export const fetchMigrationTransactions = async ({
 		fee: { from: string };
 		timestamp?: { from?: number; to?: number };
 		page?: number;
-		limit?: number;
 	} = {
-		limit: limit + 1,
 		page,
 		amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
 		fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
