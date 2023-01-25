@@ -575,7 +575,7 @@ describe("Migration Context", () => {
 		consoleSpy.mockRestore();
 	});
 
-	it.skip("should not load migrations if profile is undefined", async () => {
+	it("should not load migrations if profile is undefined", async () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(undefined);
 
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
@@ -586,9 +586,7 @@ describe("Migration Context", () => {
 			</MigrationProvider>,
 		);
 
-		await waitFor(() => {
-			expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
-		});
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
 
 		expect(getMigrationsByArkTxHashMock).not.toHaveBeenCalled();
 
