@@ -59,20 +59,17 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		loadMigrationWalletTransactions();
 	}, [profileIsRestoring]);
 
-	const migrationTransactions = useMemo(
-		() => {
-      const storedMigrationIds = new Set((migrations ?? []).map((migration) => migration.id));
+	const migrationTransactions = useMemo(() => {
+		const storedMigrationIds = new Set((migrations ?? []).map((migration) => migration.id));
 
-      return latestTransactions.filter((transaction) => {
-        if (storedMigrationIds.has(transaction.id())) {
-	  			return false;
-  			}
+		return latestTransactions.filter((transaction) => {
+			if (storedMigrationIds.has(transaction.id())) {
+				return false;
+			}
 
-        return isValidMigrationTransaction(transaction);
-      });
-    },
-		[migrations, latestTransactions, isLoadingTransactions],
-	);
+			return isValidMigrationTransaction(transaction);
+		});
+	}, [migrations, latestTransactions, isLoadingTransactions]);
 
 	useEffect(() => {
 		const updateTransactions = async () => {

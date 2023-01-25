@@ -12,7 +12,8 @@ import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 
 const Test = () => {
-	const { migrations, storeTransactions, removeTransactions, contractIsPaused, markMigrationAsRead } = useMigrations();
+	const { migrations, storeTransactions, removeTransactions, contractIsPaused, markMigrationAsRead } =
+		useMigrations();
 
 	const createAndStoreTransaction = async () => {
 		const transaction = {
@@ -65,7 +66,7 @@ const Test = () => {
 				</li>
 
 				<li>
-          <button data-testid="Migrations__remove" type="button" onClick={removeTransaction}>
+					<button data-testid="Migrations__remove" type="button" onClick={removeTransaction}>
 						Remove
 					</button>
 				</li>

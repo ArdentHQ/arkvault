@@ -325,7 +325,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 					contractIsPaused,
 					getTransactionStatus,
 					markMigrationAsRead,
-          migrations,
+					migrations,
 					removeTransactions,
 					storeTransactions,
 				} as MigrationContextType
