@@ -40,7 +40,7 @@ const Test = () => {
 	};
 
 	if (contractIsPaused === undefined) {
-		return <span data-testid="Migration__contract_loading">Contract Loading...</span>
+		return <span data-testid="Migration__contract_loading">Contract Loading...</span>;
 	}
 
 	return (
@@ -61,7 +61,11 @@ const Test = () => {
 
 			<ul>
 				<li>
-					<button data-testid="Migrations__store" type="button" onClick={async () => await createAndStoreTransaction()}>
+					<button
+						data-testid="Migrations__store"
+						type="button"
+						onClick={async () => await createAndStoreTransaction()}
+					>
 						Add
 					</button>
 				</li>
@@ -376,11 +380,13 @@ describe("Migration Context", () => {
 	it("should add and remove a transaction", async () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
 
-		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => ([{
-			amount: 123,
-			arkTxHash: `0xabc123`,
-			memo: "0xabc",
-		}]));
+		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => [
+			{
+				amount: 123,
+				arkTxHash: `0xabc123`,
+				memo: "0xabc",
+			},
+		]);
 
 		const ethersMock = Contract.mockImplementation(() => ({
 			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
