@@ -100,6 +100,78 @@ describe("useNotifications", () => {
 		useMigrationsSpy.mockRestore();
 	});
 
+	it("filter read migrations", async () => {
+		const migrations: MigrationType[] = [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x456",
+				migrationAddress: "0x789",
+				readAt: Date.now(),
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		];
+
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations }));
+
+		const { result } = renderHook(() => useNotifications({ profile }));
+
+		expect(result.current.migrationTransactions).toHaveLength(1);
+
+		useMigrationsSpy.mockRestore();
+	});
+
+	it("marks notification as read without filtering", async () => {
+		const migrations: MigrationType[] = [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x456",
+				migrationAddress: "0x789",
+				readAt: Date.now(),
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		];
+		const markMigrationAsRead = vi.fn();
+
+		const useMigrationsSpy = vi
+			.spyOn(context, "useMigrations")
+			.mockImplementation(() => ({ markMigrationAsRead: markMigrationAsRead, migrations }));
+
+		const { result } = renderHook(() => useNotifications({ profile }));
+
+		result.current.markMigrationAsRead({
+			address: "AdDreSs",
+			amount: 123,
+			id: "0x123",
+			migrationAddress: "0x456",
+			status: MigrationTransactionStatus.Confirmed,
+			timestamp: Date.now() / 1000,
+		});
+
+		expect(markMigrationAsRead).toHaveBeenCalled();
+
+		useMigrationsSpy.mockRestore();
+	});
+
 	it("#markAsRead", async () => {
 		const { result } = renderHook(() => useNotifications({ profile }));
 		const notification = result.current.releases[0];

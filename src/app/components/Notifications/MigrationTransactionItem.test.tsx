@@ -31,7 +31,12 @@ describe("MigrationTransactionItem", () => {
 		render(
 			<table>
 				<tbody>
-					<MigrationTransactionItem transaction={transaction} profile={profile} onClick={() => {}} />
+					<MigrationTransactionItem
+						transaction={transaction}
+						profile={profile}
+						onClick={() => {}}
+						onVisibilityChange={vi.fn()}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -43,7 +48,11 @@ describe("MigrationTransactionItem", () => {
 		const { container } = renderResponsive(
 			<table>
 				<tbody>
-					<MigrationTransactionItem transaction={transaction} profile={profile} />
+					<MigrationTransactionItem
+						transaction={transaction}
+						profile={profile}
+						onVisibilityChange={vi.fn()}
+					/>
 				</tbody>
 			</table>,
 			breakpoint,
@@ -69,7 +78,12 @@ describe("MigrationTransactionItem", () => {
 		render(
 			<table>
 				<tbody>
-					<MigrationTransactionItem transaction={transaction} profile={profile} onClick={() => {}} />
+					<MigrationTransactionItem
+						transaction={transaction}
+						profile={profile}
+						onClick={() => {}}
+						onVisibilityChange={vi.fn()}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -87,7 +101,12 @@ describe("MigrationTransactionItem", () => {
 		renderResponsive(
 			<table>
 				<tbody>
-					<MigrationTransactionItem transaction={transaction} profile={profile} onClick={onClick} />
+					<MigrationTransactionItem
+						transaction={transaction}
+						profile={profile}
+						onClick={onClick}
+						onVisibilityChange={vi.fn()}
+					/>
 				</tbody>
 			</table>,
 			breakpoint,

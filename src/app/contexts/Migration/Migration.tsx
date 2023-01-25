@@ -68,6 +68,7 @@ interface MigrationContextType {
 	migrations?: Migration[];
 	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
 	getTransactionStatus: (transaction: DTO.ExtendedConfirmedTransactionData) => Promise<MigrationTransactionStatus>;
+	markMigrationAsRead: (migration: Migration) => void;
 }
 
 interface Properties {
@@ -269,9 +270,26 @@ export const MigrationProvider = ({ children }: Properties) => {
 		setContract(new Contract(contractAddress, contractABI, provider));
 	}, []);
 
+	const markMigrationAsRead = useCallback(
+		(migration: Migration) => {
+			repository!.markAsRead(migration);
+
+			migrationsUpdated(repository!.all());
+		},
+		[repository, migrationsUpdated],
+	);
+
 	return (
 		<MigrationContext.Provider
-			value={{ contractIsPaused, getTransactionStatus, migrations, storeTransaction } as MigrationContextType}
+			value={
+				{
+					contractIsPaused,
+					getTransactionStatus,
+					markMigrationAsRead,
+					migrations,
+					storeTransaction,
+				} as MigrationContextType
+			}
 		>
 			{children}
 		</MigrationContext.Provider>
