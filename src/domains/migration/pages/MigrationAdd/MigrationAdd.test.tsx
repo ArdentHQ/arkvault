@@ -330,13 +330,16 @@ describe("MigrationAdd", () => {
 
 		useMigrationsSpy.mockRestore();
 
-		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
-			migrations: [migration],
-			storeTransactions: () => Promise.resolve({}),
-		}).mockReturnValueOnce({
-			migrations: [{ ...migration, status: MigrationTransactionStatus.Pending }],
-			storeTransactions: () => Promise.resolve({}),
-		});
+		useMigrationsSpy = vi
+			.spyOn(contexts, "useMigrations")
+			.mockReturnValue({
+				migrations: [migration],
+				storeTransactions: () => Promise.resolve({}),
+			})
+			.mockReturnValueOnce({
+				migrations: [{ ...migration, status: MigrationTransactionStatus.Pending }],
+				storeTransactions: () => Promise.resolve({}),
+			});
 
 		renderComponent();
 
