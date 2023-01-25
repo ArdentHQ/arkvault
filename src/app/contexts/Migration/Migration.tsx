@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { uniqBy } from "@ardenthq/sdk-helpers";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
 import {
@@ -98,8 +99,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 		async (migrations: Migration[]) => {
 			await persist();
 
-			console.log("settings migrations:", migrations);
-
 			setMigrations(migrations);
 		},
 		[persist],
@@ -191,16 +190,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 				if (confirmedMigration) {
 					confirmedMigration.migrationId = polygonMigration.polygonTxHash;
+
+					repository.add(confirmedMigration);
 				}
 			}
-		}
 
-		if (newlyConfirmedMigrations.length > 0) {
-			for (const confirmedMigration of newlyConfirmedMigrations) {
-				repository.add(confirmedMigration);
-			}
-
-			await migrationsUpdated(repository.all());
+			await migrationsUpdated(uniqBy([...newlyConfirmedMigrations, ...repository.all()], (migration) => migration.id));
 		}
 	}, [repository, contract, migrationsUpdated]);
 
