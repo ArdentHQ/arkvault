@@ -319,19 +319,22 @@ describe("MigrationAdd", () => {
 	});
 
 	it.skip("should redirect to success step once migration finished", async () => {
+		const migration = {
+			address: "AdDreSs",
+			amount: 123,
+			id: "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
+			migrationAddress: "BuRnAdDreSs",
+			status: MigrationTransactionStatus.Confirmed,
+			timestamp: Date.now() / 1000,
+		};
+
 		useMigrationsSpy.mockRestore();
 
 		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
-			migrations: [
-				{
-					address: "AdDreSs",
-					amount: 123,
-					id: "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
-					migrationAddress: "BuRnAdDreSs",
-					status: MigrationTransactionStatus.Confirmed,
-					timestamp: Date.now() / 1000,
-				},
-			],
+			migrations: [migration],
+			storeTransactions: () => Promise.resolve({}),
+		}).mockReturnValueOnce({
+			migrations: [{ ...migration, status: MigrationTransactionStatus.Pending }],
 			storeTransactions: () => Promise.resolve({}),
 		});
 
@@ -398,10 +401,17 @@ describe("MigrationAdd", () => {
 			expect(screen.getByTestId("MigrationPendingStep")).toBeInTheDocument();
 		});
 
-		// await waitFor(() => {
-		// 	expect(screen.getByTestId("MigrationSuccessStep")).toBeInTheDocument();
-		// });
+		await waitFor(() => {
+			expect(screen.getByTestId("MigrationSuccessStep")).toBeInTheDocument();
+		});
 
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+
+		userEvent.click(screen.getByTestId("MigrationAdd__back-to-dashboard-button"));
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+
+		historySpy.mockRestore();
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 	});
