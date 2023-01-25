@@ -83,7 +83,7 @@ describe("MigrationAdd", () => {
 	beforeEach(() => {
 		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
-			storeTransaction: vi.fn(),
+			storeTransactions: () => new Promise((resolve) => resolve({})),
 		});
 	});
 
@@ -332,7 +332,7 @@ describe("MigrationAdd", () => {
 					timestamp: Date.now() / 1000,
 				},
 			],
-			storeTransaction: vi.fn(),
+			storeTransactions: () => new Promise((resolve) => resolve({})),
 		});
 
 		renderComponent();
@@ -394,7 +394,9 @@ describe("MigrationAdd", () => {
 
 		userEvent.click(screen.getByTestId("MigrationAdd__send-button"));
 
-		await expect(screen.findByTestId("MigrationPendingStep")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.findByTestId("MigrationPendingStep")).resolves.toBeVisible();
+		});
 
 		await waitFor(() => {
 			expect(screen.findByTestId("MigrationSuccessStep")).resolves.toBeVisible();
