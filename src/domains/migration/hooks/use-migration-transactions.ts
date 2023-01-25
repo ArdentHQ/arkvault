@@ -41,9 +41,9 @@ export const fetchMigrationTransactions = async ({ profile, page }: { page: numb
 		timestamp?: { from?: number; to?: number };
 		page?: number;
 	} = {
-		page,
 		amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
 		fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
+		page,
 		recipientId: migrationWalletAddress(),
 		senderId: senderIds.join(","),
 	};
