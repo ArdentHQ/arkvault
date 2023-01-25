@@ -11,6 +11,7 @@ import {
 } from "@/utils/testing-library";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import * as contexts from "@/app/contexts";
+import * as polygonMigration from "@/utils/polygon-migration";
 import { migrationWalletAddress } from "@/utils/polygon-migration";
 
 let profile: Contracts.IProfile;
@@ -18,6 +19,7 @@ let wallet: Contracts.IReadWriteWallet;
 let resetProfileNetworksMock: () => void;
 let transactionFixture: DTO.ExtendedSignedTransactionData;
 let secondTransactionFixture: DTO.ExtendedSignedTransactionData;
+let polygonMigrationStartTimeSpy;
 
 describe("useMigrationTransactions hook", () => {
 	beforeAll(async () => {
@@ -30,6 +32,8 @@ describe("useMigrationTransactions hook", () => {
 	beforeEach(async () => {
 		wallet = profile.wallets().first();
 		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(wallet);
+
+		polygonMigrationStartTimeSpy = vi.spyOn(polygonMigration, "polygonMigrationStartTime").mockReturnValue(123);
 
 		transactionFixture = new DTO.ExtendedSignedTransactionData(
 			await wallet
@@ -81,6 +85,8 @@ describe("useMigrationTransactions hook", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+
+		polygonMigrationStartTimeSpy.mockRestore();
 	});
 
 	it("should return loading state if profile is restoring", () => {

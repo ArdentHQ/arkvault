@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useNotifications } from "./hooks/use-notifications";
@@ -12,19 +12,32 @@ import { Table } from "@/app/components/Table";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NotificationTransactionsTable } from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
 import { useBreakpoint } from "@/app/hooks";
+import { Migration } from "@/domains/migration/migration.contracts";
 
 export const Notifications = ({ profile, onNotificationAction, onTransactionClick }: NotificationsProperties) => {
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
 	const { isXs, isSm } = useBreakpoint();
 
-	const { releases, transactions, markAllTransactionsAsRead, migrationTransactions } = useNotifications({ profile });
+	const { releases, transactions, markAllTransactionsAsRead, migrationTransactions, markMigrationAsRead } =
+		useNotifications({ profile });
 	const wrapperReference = useRef();
 
 	useEffect(() => {
 		markAllTransactionsAsRead(true);
 		persist();
 	}, []);
+
+	const onVisibilityChangeHandler = useCallback(
+		(migration: Migration, isVisible: boolean) => {
+			if (!isVisible || migration.readAt !== undefined) {
+				return;
+			}
+
+			markMigrationAsRead(migration);
+		},
+		[markMigrationAsRead],
+	);
 
 	if (transactions.length === 0 && releases.length === 0 && migrationTransactions.length === 0) {
 		return (
@@ -68,7 +81,11 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 						</div>
 
 						{migrationTransactions.length > 0 && (
-							<NotificationsMigrations transactions={migrationTransactions} profile={profile} />
+							<NotificationsMigrations
+								transactions={migrationTransactions}
+								profile={profile}
+								onVisibilityChange={onVisibilityChangeHandler}
+							/>
 						)}
 
 						<div className="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden">

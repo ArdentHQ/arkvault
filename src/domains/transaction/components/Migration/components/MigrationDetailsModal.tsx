@@ -13,9 +13,9 @@ import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Clipboard } from "@/app/components/Clipboard";
-import { polygonTransactionLink } from "@/utils/polygon-migration";
+import { polygonIndexerUrl, polygonTransactionLink } from "@/utils/polygon-migration";
 import { Skeleton } from "@/app/components/Skeleton";
-
+import { httpClient } from "@/app/services";
 export interface MigrationDetailsModalProperties {
 	transaction?: DTO.ExtendedConfirmedTransactionData;
 	onClose: () => void;
@@ -25,18 +25,47 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 	const { t } = useTranslation();
 
 	const [transactionIsConfirmed, setTransactionIsConfirmed] = useState<boolean>();
+	const [isLoading, setIsLoading] = useState<boolean>(true);
+	const [polygonId, setPolygonId] = useState<string>();
 
-	const loadTransactionStatus = useCallback(async () => {
-		const status = await getTransactionStatus(transaction!);
+	const fetchMigrationId = useCallback(async () => {
+		const response = await httpClient.get(`${polygonIndexerUrl()}transactions`, {
+			arkTxHashes: [transaction!.id()],
+		});
 
-		setTransactionIsConfirmed(status === MigrationTransactionStatus.Confirmed);
+		const confirmedMigration:
+			| undefined
+			| {
+					arkTxHash: string;
+					polygonTxHash: string;
+			  } = JSON.parse(response.body())[0];
+
+		if (confirmedMigration && confirmedMigration.arkTxHash === transaction!.id()) {
+			return confirmedMigration.polygonTxHash;
+		}
 	}, [transaction]);
 
-	const isLoading = useMemo(() => transactionIsConfirmed === undefined, [transactionIsConfirmed]);
+	const loadTransactionStatus = useCallback(async () => {
+		setIsLoading(true);
+
+		const status = await getTransactionStatus(transaction!);
+
+		const isConfirmed = status === MigrationTransactionStatus.Confirmed;
+
+		if (isConfirmed) {
+			const polygonId = await fetchMigrationId();
+			setPolygonId(polygonId);
+		}
+
+		setTransactionIsConfirmed(status === MigrationTransactionStatus.Confirmed);
+
+		setIsLoading(false);
+	}, [transaction, fetchMigrationId]);
 
 	useEffect(() => {
 		if (transaction === undefined) {
-			setTransactionIsConfirmed(undefined);
+			setPolygonId(undefined);
+			setIsLoading(true);
 			return;
 		}
 
@@ -72,14 +101,6 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 
 		return t("MIGRATION.DETAILS_MODAL.STEP_PENDING.DESCRIPTION");
 	}, [transactionIsConfirmed, isLoading]);
-
-	const polygonId = useMemo(() => {
-		if (transaction === undefined) {
-			return "";
-		}
-
-		return `0x${transaction.id()}`;
-	}, [transaction]);
 
 	if (transaction === undefined) {
 		return <></>;
@@ -166,14 +187,14 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 										</span>
 										<span className="overflow-hidden">
 											<Link
-												to={polygonTransactionLink(polygonId)}
+												to={polygonTransactionLink(polygonId!)}
 												tooltip={polygonId}
 												showExternalIcon={false}
 												isExternal
 											>
 												<TruncateMiddleDynamic
 													offset={96}
-													value={polygonId}
+													value={polygonId!}
 													parentRef={reference}
 												/>
 											</Link>
@@ -181,7 +202,7 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 									</div>
 
 									<div className="flex items-center bg-theme-navy-100 px-5 text-theme-navy-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
-										<Clipboard variant="icon" data={polygonId}>
+										<Clipboard variant="icon" data={polygonId!}>
 											<Icon name="Copy" />
 										</Clipboard>
 									</div>

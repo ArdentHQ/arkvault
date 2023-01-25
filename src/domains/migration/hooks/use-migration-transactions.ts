@@ -1,8 +1,15 @@
 import { useEffect, useMemo, useState, useCallback } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { ethers } from "ethers";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { useConfiguration, useMigrations } from "@/app/contexts";
-import { migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
+import {
+	isValidMigrationTransaction,
+	migrationMinBalance,
+	migrationNetwork,
+	migrationTransactionFee,
+	migrationWalletAddress,
+	polygonMigrationStartTime,
+} from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
 
 export const fetchMigrationTransactions = async ({
@@ -74,24 +81,58 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	}, [profileIsRestoring, profile, page, hasMore]);
 
 	useEffect(() => {
+		const loadMigrationWalletTransactions = async () => {
+			setIsLoadingTransactions(true);
+
+			if (profileIsRestoring) {
+				return;
+			}
+
+			const wallet = await profile.walletFactory().fromAddress({
+				address: migrationWalletAddress(),
+				coin: "ARK",
+				network: migrationNetwork(),
+			});
+
+			const senderIds = profile
+				.wallets()
+				.values()
+				.filter((wallet) => wallet.networkId() === migrationNetwork())
+				.map((wallet) => wallet.address());
+
+			if (senderIds.length === 0) {
+				setIsLoadingTransactions(false);
+				return;
+			}
+
+			const query: {
+				recipientId: string;
+				senderId: string;
+				amount: { from: string };
+				fee: { from: string };
+				timestamp?: { from?: number; to?: number };
+			} = {
+				amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
+				fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
+				recipientId: migrationWalletAddress(),
+				senderId: senderIds.join(","),
+			};
+
+			if (polygonMigrationStartTime() > 0) {
+				query.timestamp = { from: polygonMigrationStartTime() };
+			}
+
+			const transactions = await wallet.transactionIndex().received(query);
+
+			setLatestTransactions(transactions.items());
+			setIsLoadingTransactions(false);
+		};
+
 		loadMigrationWalletTransactions();
 	}, [profileIsRestoring]);
 
 	const migrationTransactions = useMemo(
-		() =>
-			latestTransactions.filter((transaction) => {
-				const polygonAddress = transaction.memo();
-
-				if (!polygonAddress) {
-					return false;
-				}
-
-				if (transaction.recipient() !== migrationWalletAddress()) {
-					return false;
-				}
-
-				return ethers.utils.isAddress(polygonAddress);
-			}),
+		() => latestTransactions.filter((transaction) => isValidMigrationTransaction(transaction)),
 		[latestTransactions, isLoadingTransactions],
 	);
 

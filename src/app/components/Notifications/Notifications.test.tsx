@@ -10,7 +10,6 @@ import { server, requestMock } from "@/tests/mocks/server";
 import { MigrationTransactionStatus, Migration as MigrationType } from "@/domains/migration/migration.contracts";
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
 import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-
 let profile: Contracts.IProfile;
 
 describe("Notifications", () => {
@@ -111,6 +110,101 @@ describe("Notifications", () => {
 		expect(container).toMatchSnapshot();
 
 		useNotificationsSpy.mockRestore();
+	});
+
+	it("should mark migrations as read", () => {
+		const markMigrationAsRead = vi.fn();
+
+		vi.mock("react-visibility-sensor", () => ({
+			default: ({ children, onChange }) => (
+				<>
+					<button data-testid="TriggerVisibility" onClick={(isVisible, ...rest) => onChange(true, ...rest)} />
+
+					{children}
+				</>
+			),
+		}));
+
+		const migrations: MigrationType[] = [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		];
+
+		const useNotificationsSpy = vi.spyOn(useNotifications, "useNotifications").mockReturnValue({
+			markAllTransactionsAsRead: () => {},
+			markMigrationAsRead,
+			migrationTransactions: migrations,
+			releases: [],
+			transactions: [],
+		} as any);
+
+		const { container } = render(<Notifications profile={profile} />);
+
+		expect(screen.getByTestId("NotificationsMigrations")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("TriggerVisibility"));
+
+		expect(container).toMatchSnapshot();
+
+		useNotificationsSpy.mockRestore();
+
+		vi.unmock("react-visibility-sensor");
+
+		expect(markMigrationAsRead).toHaveBeenCalled();
+	});
+
+	it("should not mark migration as read if already read", () => {
+		const markMigrationAsRead = vi.fn();
+
+		vi.mock("react-visibility-sensor", () => ({
+			default: ({ children, onChange }) => (
+				<>
+					<button data-testid="TriggerVisibility" onClick={(isVisible, ...rest) => onChange(true, ...rest)} />
+
+					{children}
+				</>
+			),
+		}));
+
+		const migrations: MigrationType[] = [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				readAt: Date.now(),
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		];
+
+		const useNotificationsSpy = vi.spyOn(useNotifications, "useNotifications").mockReturnValue({
+			markAllTransactionsAsRead: () => {},
+			markMigrationAsRead,
+			migrationTransactions: migrations,
+			releases: [],
+			transactions: [],
+		} as any);
+
+		const { container } = render(<Notifications profile={profile} />);
+
+		expect(screen.getByTestId("NotificationsMigrations")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("TriggerVisibility"));
+
+		expect(container).toMatchSnapshot();
+
+		useNotificationsSpy.mockRestore();
+
+		vi.unmock("react-visibility-sensor");
+
+		expect(markMigrationAsRead).not.toHaveBeenCalled();
 	});
 
 	it("should render empty", () => {

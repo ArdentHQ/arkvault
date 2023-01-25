@@ -1,12 +1,12 @@
-import { sortByDesc } from "@ardenthq/sdk-helpers";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
 import React from "react";
+import { sortByDesc } from "@ardenthq/sdk-helpers";
+import userEvent from "@testing-library/user-event";
 import { TransactionTable } from "./TransactionTable";
-import { migrationWalletAddress } from "@/utils/polygon-migration";
-import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import * as context from "@/app/contexts";
-import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import * as polygonMigration from "@/utils/polygon-migration";
+import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+
 import {
 	env,
 	getDefaultProfileId,
@@ -18,21 +18,41 @@ import {
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { migrationWalletAddress } from "@/utils/polygon-migration";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10.json";
 
 describe("TransactionTable", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let transactions: DTO.ExtendedConfirmedTransactionData[];
+	let polygonIndexerUrlSpy;
 
 	beforeEach(async () => {
+		polygonIndexerUrlSpy = vi
+			.spyOn(polygonMigration, "polygonIndexerUrl")
+			.mockReturnValue("https://mumbai.somehost.com/");
+
 		server.use(requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture));
+
+		server.use(
+			requestMock("https://mumbai.somehost.com/transactions", [
+				{
+					arkTxHash: "abc123",
+					polygonTxHash: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
+				},
+			]),
+		);
 
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById(getDefaultWalletId());
 
 		const allTransactions = await wallet.transactionIndex().all();
 		transactions = allTransactions.items();
+	});
+
+	afterEach(() => {
+		polygonIndexerUrlSpy.mockRestore();
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", (breakpoint) => {

@@ -1,3 +1,5 @@
+import { ethers } from "ethers";
+import { DTO } from "@ardenthq/sdk-profiles";
 import { AddEthereumChainParameter } from "@/domains/migration/hooks/use-meta-mask.contracts";
 
 export const migrationTransactionFee = () =>
@@ -18,6 +20,10 @@ export const polygonTransactionLink = (transactionId: string) => `${polygonExplo
 export const polygonContractAddress = () => import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
 
 export const polygonRpcUrl = () => import.meta.env.VITE_POLYGON_RPC_URL || "https://rpc-mumbai.maticvigil.com/";
+
+export const polygonIndexerUrl = () => import.meta.env.VITE_POLYGON_INDEXER_URL;
+
+export const polygonMigrationStartTime = () => Number.parseInt(import.meta.env.VITE_POLYGON_MIGRATION_START_TIME || 0);
 
 export const migrationWalletAddress = () =>
 	import.meta.env.VITE_MIGRATION_ADDRESS || "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
@@ -48,4 +54,32 @@ export const polygonNetworkData = (): AddEthereumChainParameter => {
 		},
 		rpcUrls: ["https://polygon-rpc.com/"],
 	};
+};
+
+export const isValidMigrationTransaction = (
+	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
+) => {
+	const polygonAddress = transaction.memo();
+
+	if (!polygonAddress) {
+		return false;
+	}
+
+	if (transaction.recipient() !== migrationWalletAddress()) {
+		return false;
+	}
+
+	if (!ethers.utils.isAddress(polygonAddress)) {
+		return false;
+	}
+
+	if (transaction.amount() < migrationMinBalance()) {
+		return false;
+	}
+
+	if (transaction.fee() < migrationTransactionFee()) {
+		return false;
+	}
+
+	return true;
 };

@@ -57,12 +57,12 @@ export const MigrationTransactionsRow = ({
 	return (
 		<TableRow data-testid="MigrationTransactionsRow">
 			<TableCell variant="start" isCompact={isCompact}>
-				<Tooltip content={migrationTransaction.id} className="no-ligatures">
+				<Tooltip content={migrationTransaction.migrationId} className="no-ligatures">
 					<span className="flex items-center">
 						{migrationTransaction.status === MigrationTransactionStatus.Confirmed ? (
 							<Link
-								to={polygonTransactionLink(migrationTransaction.id)}
-								tooltip={migrationTransaction.id}
+								to={polygonTransactionLink(migrationTransaction.migrationId)}
+								tooltip={migrationTransaction.migrationId}
 								showExternalIcon={false}
 								isExternal
 							>

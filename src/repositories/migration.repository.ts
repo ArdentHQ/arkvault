@@ -48,4 +48,21 @@ export class MigrationRepository {
 
 		this.#data.set(STORAGE_KEY, all);
 	}
+
+	public markAsRead(item: Migration): void {
+		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
+
+		const migrations = all[this.#profile.id()];
+
+		const index = migrations.findIndex((migration) => migration.id === item.id);
+
+		migrations[index] = {
+			...item,
+			readAt: Date.now(),
+		};
+
+		all[this.#profile.id()] = migrations;
+
+		this.#data.set(STORAGE_KEY, all);
+	}
 }

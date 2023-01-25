@@ -1,4 +1,5 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Migration } from "@/domains/migration/migration.contracts";
 
 export interface Action {
 	label: string;
@@ -33,23 +34,24 @@ export interface NotificationsProperties {
 }
 
 export interface NotificationsMigrationItemProperties {
-	// @TODO: assign a proper type for this once defined
 	transaction: any;
 	profile: Contracts.IProfile;
-	// @TBD (also @TODO set transaction type)
-	onClick?: (transaction: any) => void;
+	onClick?: (transaction: Migration) => void;
+	containmentRef?: any;
+	onVisibilityChange: (isVisible: boolean) => void;
 }
 
 export interface NotificationsMigrationItemPropertiesMobile {
-	// @TODO: assign a proper type for this once defined
-	transaction: any;
-	// @TBD (also @TODO set transaction type)
-	onClick?: (transaction: any) => void;
+	transaction: Migration;
+	onClick?: (transaction: Migration) => void;
 	alias?: string;
+	containmentRef?: any;
+	onVisibilityChange: (isVisible: boolean) => void;
 }
 
 export interface NotificationsMigrationProperties {
 	profile: Contracts.IProfile;
 	// @TODO: assign a proper type for this once defined
-	transactions: any[];
+	transactions: Migration[];
+	onVisibilityChange: (migration: Migration, isVisible: boolean) => void;
 }
