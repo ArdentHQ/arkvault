@@ -1150,7 +1150,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
               <span
                 class="text-sm"
               >
-                Learn more
+                Learn More
               </span>
             </span>
             <div
@@ -1342,7 +1342,7 @@ exports[`WalletVote > should render 1`] = `
               <span
                 class="text-sm"
               >
-                Learn more
+                Learn More
               </span>
             </span>
             <div
@@ -1673,7 +1673,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
               <span
                 class="text-sm"
               >
-                Learn more
+                Learn More
               </span>
             </span>
             <div
@@ -1943,7 +1943,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
               <span
                 class="text-sm"
               >
-                Learn more
+                Learn More
               </span>
             </span>
             <div
@@ -2100,7 +2100,7 @@ exports[`WalletVote > should render without votes 1`] = `
               <span
                 class="text-sm"
               >
-                Learn more
+                Learn More
               </span>
             </span>
             <div
