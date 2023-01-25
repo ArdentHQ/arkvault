@@ -48,7 +48,9 @@ export const fetchMigrationTransactions = async ({
 		fee: { from: string };
 		timestamp?: { from?: number; to?: number };
 		page?: number;
+		limit?: number;
 	} = {
+		limit: limit + 1,
 		page,
 		amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
 		fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
