@@ -318,28 +318,20 @@ describe("MigrationAdd", () => {
 		broadcastMock.mockRestore();
 	});
 
-	it.skip("should redirect to success step once migration finished", async () => {
-		const migration = {
-			address: "AdDreSs",
-			amount: 123,
-			id: "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
-			migrationAddress: "BuRnAdDreSs",
-			status: MigrationTransactionStatus.Confirmed,
-			timestamp: Date.now() / 1000,
-		};
-
+	it("should redirect to success step once migration finished", async () => {
 		useMigrationsSpy.mockRestore();
 
-		useMigrationsSpy = vi
-			.spyOn(contexts, "useMigrations")
-			.mockReturnValue({
-				migrations: [migration],
-				storeTransactions: () => Promise.resolve({}),
-			})
-			.mockReturnValueOnce({
-				migrations: [{ ...migration, status: MigrationTransactionStatus.Pending }],
-				storeTransactions: () => Promise.resolve({}),
-			});
+		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockImplementation(() => ({
+			migrations: [{
+				address: "AdDreSs",
+				amount: 123,
+				id: "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
+				migrationAddress: "BuRnAdDreSs",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			}],
+			storeTransactions: () => Promise.resolve({}),
+		}));
 
 		renderComponent();
 
@@ -402,6 +394,10 @@ describe("MigrationAdd", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("MigrationPendingStep")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationPendingStep")).not.toBeInTheDocument();
 		});
 
 		await waitFor(() => {
