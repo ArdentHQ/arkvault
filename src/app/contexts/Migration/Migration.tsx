@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
+import { uniqBy } from "@ardenthq/sdk-helpers";
 import {
 	ARKMigrationViewStructOutput,
 	Migration,
@@ -9,7 +10,8 @@ import {
 import { useEnvironmentContext } from "@/app/contexts";
 import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
-import { polygonContractAddress, polygonRpcUrl } from "@/utils/polygon-migration";
+import { httpClient } from "@/app/services";
+import { polygonContractAddress, polygonIndexerUrl, polygonRpcUrl } from "@/utils/polygon-migration";
 
 const contractABI = [
 	{
@@ -124,7 +126,11 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const loadMigrations = useCallback(async () => {
 		const storedMigrations = repository!.all();
 
-		const transactionIds = storedMigrations.map((migration: Migration) => `0x${migration.id}`);
+		const pendingMigrations = storedMigrations.filter(
+			(migration) => migration.status === MigrationTransactionStatus.Pending || !migration.migrationId,
+		);
+
+		const transactionIds = pendingMigrations.map((migration: Migration) => `0x${migration.id}`);
 
 		let contractMigrations: ARKMigrationViewStructOutput[] = [];
 
@@ -134,7 +140,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			//
 		}
 
-		const updatedMigrations = storedMigrations.map((migration: Migration): Migration => {
+		const updatedMigrations = pendingMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
 				(contractMigration: ARKMigrationViewStructOutput) =>
 					contractMigration.arkTxHash === `0x${migration.id}`,
@@ -151,7 +157,27 @@ export const MigrationProvider = ({ children }: Properties) => {
 			};
 		});
 
-		repository!.set(updatedMigrations);
+		const newlyConfirmedMigrations = updatedMigrations.filter(
+			(migration) => migration.status === MigrationTransactionStatus.Confirmed && !migration.migrationId,
+		);
+
+		if (newlyConfirmedMigrations.length > 0) {
+			const response = await httpClient.get(`${polygonIndexerUrl()}transactions`, {
+				arkTxHashes: newlyConfirmedMigrations.map((migration: Migration) => migration.id),
+			});
+
+			for (const polygonMigration of JSON.parse(response.body())) {
+				const confirmedMigration = newlyConfirmedMigrations.find(
+					(migration) => migration.id === polygonMigration.arkTxHash,
+				);
+
+				if (confirmedMigration) {
+					confirmedMigration.migrationId = polygonMigration.polygonTxHash;
+				}
+			}
+		}
+
+		repository!.set(uniqBy([...newlyConfirmedMigrations, ...storedMigrations], (migration) => migration.id));
 
 		await migrationsUpdated(repository!.all());
 	}, [repository, contract]);
