@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
+import { sortBy } from "@ardenthq/sdk-helpers";
 import {
 	ARKMigrationViewStructOutput,
 	Migration,
@@ -10,7 +11,6 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
 import { polygonContractAddress, polygonRpcUrl } from "@/utils/polygon-migration";
-import { sortBy } from "@ardenthq/sdk-helpers";
 
 const contractABI = [
 	{
@@ -272,7 +272,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const migrationsSorted = useMemo(() => {
 		if (!migrations) {
-			return undefined;
+			return;
 		}
 
 		return sortBy(migrations, (migration) => -migration.timestamp);
