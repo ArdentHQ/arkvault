@@ -15,12 +15,12 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 
 		setConfirmedMigrations((confirmedMigrations) =>
 			migrations.filter(
-				(migration) =>
-					migration.status === MigrationTransactionStatus.Confirmed &&
-					(migration.readAt === undefined ||
-						// If were loaded on the session we should kept it to avoid
-						// immediately hide the notification
-						confirmedMigrations.some((confirmedMigration) => confirmedMigration.id === migration.id)),
+				(migration) => migration.status === MigrationTransactionStatus.Confirmed,
+				// &&
+				// (migration.readAt === undefined ||
+				// 	// If were loaded on the session we should kept it to avoid
+				// 	// immediately hide the notification
+				// 	confirmedMigrations.some((confirmedMigration) => confirmedMigration.id === migration.id)),
 			),
 		);
 	}, [migrations]);
