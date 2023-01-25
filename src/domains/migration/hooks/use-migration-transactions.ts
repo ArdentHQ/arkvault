@@ -41,13 +41,26 @@ export const fetchMigrationTransactions = async ({
 		};
 	}
 
-	const transactions = await wallet.transactionIndex().received({
-		limit: limit + 1,
-
-		// @ts-ignore
+	const query: {
+		recipientId: string;
+		senderId: string;
+		amount: { from: string };
+		fee: { from: string };
+		timestamp?: { from?: number; to?: number };
+		page?: number;
+	} = {
 		page,
+		amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
+		fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
+		recipientId: migrationWalletAddress(),
 		senderId: senderIds.join(","),
-	});
+	};
+
+	if (polygonMigrationStartTime() > 0) {
+		query.timestamp = { from: polygonMigrationStartTime() };
+	}
+
+	const transactions = await wallet.transactionIndex().received(query);
 
 	return {
 		cursor: Number(transactions.currentPage()),
@@ -72,7 +85,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 
 		setIsLoadingTransactions(true);
 
-		const { items, hasMore, cursor } = await fetchMigrationTransactions({ page: page + 1, profile });
+		const { items, hasMore, cursor } = await fetchMigrationTransactions({ page: page + 1, profile, limit });
 
 		setLatestTransactions(items);
 		setIsLoadingTransactions(false);
@@ -81,53 +94,6 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	}, [profileIsRestoring, profile, page, hasMore]);
 
 	useEffect(() => {
-		const loadMigrationWalletTransactions = async () => {
-			setIsLoadingTransactions(true);
-
-			if (profileIsRestoring) {
-				return;
-			}
-
-			const wallet = await profile.walletFactory().fromAddress({
-				address: migrationWalletAddress(),
-				coin: "ARK",
-				network: migrationNetwork(),
-			});
-
-			const senderIds = profile
-				.wallets()
-				.values()
-				.filter((wallet) => wallet.networkId() === migrationNetwork())
-				.map((wallet) => wallet.address());
-
-			if (senderIds.length === 0) {
-				setIsLoadingTransactions(false);
-				return;
-			}
-
-			const query: {
-				recipientId: string;
-				senderId: string;
-				amount: { from: string };
-				fee: { from: string };
-				timestamp?: { from?: number; to?: number };
-			} = {
-				amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
-				fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
-				recipientId: migrationWalletAddress(),
-				senderId: senderIds.join(","),
-			};
-
-			if (polygonMigrationStartTime() > 0) {
-				query.timestamp = { from: polygonMigrationStartTime() };
-			}
-
-			const transactions = await wallet.transactionIndex().received(query);
-
-			setLatestTransactions(transactions.items());
-			setIsLoadingTransactions(false);
-		};
-
 		loadMigrationWalletTransactions();
 	}, [profileIsRestoring]);
 
@@ -169,7 +135,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 
 	return {
 		hasMore,
-		isLoading: page === 0 && isLoading,
+		isLoading: (page === 0 && isLoading) || !migrations,
 		isLoadingMore: page > 0 && isLoading,
 		migrations: migrationsPage,
 		onLoadMore: () => loadMigrationWalletTransactions(),
