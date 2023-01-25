@@ -23,6 +23,7 @@ export const Migration = () => {
 	const { migrations, isLoading, resolveTransaction } = useMigrationTransactions({ profile });
 	const { contractIsPaused } = useMigrations();
 	const [expandedTransaction, setExpandedTransaction] = useState<DTO.ExtendedConfirmedTransactionData>();
+	const [expandedMigration, setExpandedMigration] = useState<MigrationTransaction>();
 
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 
@@ -39,14 +40,19 @@ export const Migration = () => {
 		(migrationTransaction: MigrationTransaction) => {
 			const transaction = resolveTransaction(migrationTransaction)!;
 
+			setExpandedMigration(migrationTransaction);
 			setExpandedTransaction(transaction);
 		},
 		[resolveTransaction],
 	);
 
-	if (expandedTransaction) {
+	if (expandedTransaction && expandedMigration) {
 		return (
-			<MigrationDetails transaction={expandedTransaction} handleBack={() => setExpandedTransaction(undefined)} />
+			<MigrationDetails
+				transaction={expandedTransaction}
+				migrationTransaction={expandedMigration}
+				handleBack={() => setExpandedTransaction(undefined)}
+			/>
 		);
 	}
 

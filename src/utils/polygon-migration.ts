@@ -21,6 +21,10 @@ export const polygonContractAddress = () => import.meta.env.VITE_POLYGON_CONTRAC
 
 export const polygonRpcUrl = () => import.meta.env.VITE_POLYGON_RPC_URL || "https://rpc-mumbai.maticvigil.com/";
 
+export const polygonIndexerUrl = () => import.meta.env.VITE_POLYGON_INDEXER_URL;
+
+export const polygonMigrationStartTime = () => Number.parseInt(import.meta.env.VITE_POLYGON_MIGRATION_START_TIME || 0);
+
 export const migrationWalletAddress = () =>
 	import.meta.env.VITE_MIGRATION_ADDRESS || "DNBURNBURNBURNBRNBURNBURNBURKz8StY";
 

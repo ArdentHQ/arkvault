@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useEffect, useMemo, useState } from "react";
+import React, { PropsWithChildren, useEffect, useState } from "react";
 import { generatePath, useHistory } from "react-router-dom";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
@@ -16,7 +16,7 @@ import { MigrationErrorStep } from "@/domains/migration/components/MigrationErro
 import { MigrationPendingStep } from "@/domains/migration/components/MigrationPendingStep";
 import { MigrationReviewStep } from "@/domains/migration/components/MigrationReviewStep";
 import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
-import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { Migration, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { ProfilePaths } from "@/router/paths";
 import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
 import { useMigrations } from "@/app/contexts";
@@ -52,7 +52,9 @@ export const MigrationAdd = () => {
 
 	const [activeStep, setActiveStep] = useState(Step.Connect);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
+	const [migrationTransaction, setMigrationTransaction] = useState<Migration | undefined>();
 
 	const history = useHistory();
 
@@ -107,14 +109,17 @@ export const MigrationAdd = () => {
 		setActiveStep((index) => index + 1);
 	};
 
-	const transactionIsConfirmed = useMemo(() => {
+	useEffect(() => {
 		if (transaction === undefined || migrations === undefined) {
-			return false;
+			return;
 		}
 
 		const migrationTransaction = migrations.find((migration) => migration.id === transaction.id());
 
-		return migrationTransaction?.status === MigrationTransactionStatus.Confirmed;
+		if (migrationTransaction?.status === MigrationTransactionStatus.Confirmed) {
+			setMigrationTransaction(migrationTransaction);
+			setActiveStep(Step.Finished);
+		}
 	}, [transaction, migrations]);
 
 	const handleSubmit = async () => {
@@ -130,12 +135,6 @@ export const MigrationAdd = () => {
 			setActiveStep(Step.Error);
 		}
 	};
-
-	useEffect(() => {
-		if (transactionIsConfirmed) {
-			setActiveStep(Step.Finished);
-		}
-	}, [transactionIsConfirmed]);
 
 	const hideFormButtons = activeStep > Step.Authenticate || (activeStep === Step.Authenticate && wallet.isLedger());
 
@@ -168,11 +167,14 @@ export const MigrationAdd = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.PendingTransaction}>
-								<MigrationPendingStep migrationTransaction={transaction!} />
+								<MigrationPendingStep transaction={transaction!} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.Finished}>
-								<MigrationSuccessStep migrationTransaction={transaction!} />
+								<MigrationSuccessStep
+									transaction={transaction!}
+									migrationTransaction={migrationTransaction!}
+								/>
 							</TabPanel>
 
 							<TabPanel tabId={Step.Error}>
