@@ -175,7 +175,7 @@ describe("Migration", () => {
 					timestamp: Date.now() / 1000,
 				},
 			],
-			storeTransactions: () => {},
+			storeTransactions: () => new Promise((resolve) => resolve({})),
 		});
 
 		renderComponent();
