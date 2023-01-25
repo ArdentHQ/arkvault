@@ -575,7 +575,7 @@ describe("Migration Context", () => {
 		consoleSpy.mockRestore();
 	});
 
-	it("should not load migrations if profile is undefined", async () => {
+	it("should not load migrations if profile is undefined", () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(undefined);
 
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
