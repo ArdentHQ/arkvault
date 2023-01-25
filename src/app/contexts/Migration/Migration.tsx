@@ -98,6 +98,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 		async (migrations: Migration[]) => {
 			await persist();
 
+			console.log("settings migrations:", migrations);
+
 			setMigrations(migrations);
 		},
 		[persist],
@@ -156,10 +158,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 			//
 		}
 
-		const confirmedCountBefore = storedMigrations.filter(
-			(migration) => migration.status === MigrationTransactionStatus.Confirmed,
-		).length;
-
 		const updatedMigrations = pendingMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
 				(contractMigration: ARKMigrationViewStructOutput) =>
@@ -198,8 +196,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		if (newlyConfirmedMigrations.length > 0) {
-			for (const migration of newlyConfirmedMigrations) {
-				repository.add(migration);
+			for (const confirmedMigration of newlyConfirmedMigrations) {
+				repository.add(confirmedMigration);
 			}
 
 			await migrationsUpdated(repository.all());
