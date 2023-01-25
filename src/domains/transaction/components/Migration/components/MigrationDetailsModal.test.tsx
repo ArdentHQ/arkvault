@@ -42,7 +42,7 @@ describe("MigrationDetailsModal", () => {
 		} as unknown as DTO.ExtendedConfirmedTransactionData;
 
 		server.use(
-			requestMock("https://mumbai.somehost.com//transactions", [
+			requestMock("https://mumbai.somehost.com/transactions", [
 				{
 					arkTxHash: migrationFixture.id,
 					polygonTxHash: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
