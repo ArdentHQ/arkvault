@@ -85,7 +85,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 
 		setIsLoadingTransactions(true);
 
-		const { items, hasMore, cursor } = await fetchMigrationTransactions({ page: page + 1, profile, limit });
+		const { items, hasMore, cursor } = await fetchMigrationTransactions({ page: page + 1, profile });
 
 		setLatestTransactions(items);
 		setIsLoadingTransactions(false);
