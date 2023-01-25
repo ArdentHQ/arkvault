@@ -57,14 +57,9 @@ export const MigrationTransactionItem = ({
 	}
 
 	return (
-		<TableRow className="group" styles={rowStyles} onClick={() => onClick?.(transaction)}>
-			<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
-				<VisibilitySensor
-					onChange={onVisibilityChange}
-					scrollCheck
-					delayedCall
-					containment={containmentRef?.current}
-				>
+		<VisibilitySensor onChange={onVisibilityChange} scrollCheck delayedCall containment={containmentRef?.current}>
+			<TableRow className="group" styles={rowStyles} onClick={() => onClick?.(transaction)}>
+				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
 					<div className="flex flex-1 items-center space-x-3 overflow-auto">
 						<Icon name="CircleCheckMark" size="lg" className="text-theme-hint-600" />
 
@@ -78,22 +73,22 @@ export const MigrationTransactionItem = ({
 							/>
 						</div>
 					</div>
-				</VisibilitySensor>
-			</TableCell>
+				</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end" isCompact>
-				<button
-					data-testid="MigrationTransactionItem__button"
-					type="button"
-					className="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
-				>
-					<span className="whitespace-nowrap font-semibold">
-						{t("MIGRATION.NOTIFICATIONS.MIGRATION_SUCCESSFUL")}
-					</span>
+				<TableCell variant="end" innerClassName="justify-end" isCompact>
+					<button
+						data-testid="MigrationTransactionItem__button"
+						type="button"
+						className="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+					>
+						<span className="whitespace-nowrap font-semibold">
+							{t("MIGRATION.NOTIFICATIONS.MIGRATION_SUCCESSFUL")}
+						</span>
 
-					<Icon name="ChevronRightSmall" size="sm" />
-				</button>
-			</TableCell>
-		</TableRow>
+						<Icon name="ChevronRightSmall" size="sm" />
+					</button>
+				</TableCell>
+			</TableRow>
+		</VisibilitySensor>
 	);
 };
