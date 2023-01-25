@@ -83,7 +83,7 @@ describe("MigrationAdd", () => {
 	beforeEach(() => {
 		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
-			storeTransactions: () => {},
+			storeTransaction: vi.fn(),
 		});
 	});
 
@@ -332,7 +332,7 @@ describe("MigrationAdd", () => {
 					timestamp: Date.now() / 1000,
 				},
 			],
-			storeTransactions: () => {},
+			storeTransaction: vi.fn(),
 		});
 
 		renderComponent();
