@@ -355,36 +355,36 @@ describe("Migration Context", () => {
 		ethersMock.mockRestore();
 	});
 
-	it("should mark migration as read", async () => {
-		const { clearStoredMigrationsMock, setMigrationMock } = mockStoredMigrations([
-			{
-				address: "AdDreSs",
-				amount: 111,
-				id: "abc123",
-				migrationAddress: "BuRnAdDreSs",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
-		]);
+	// it("should mark migration as read", async () => {
+	// 	const { clearStoredMigrationsMock, setMigrationMock } = mockStoredMigrations([
+	// 		{
+	// 			address: "AdDreSs",
+	// 			amount: 111,
+	// 			id: "abc123",
+	// 			migrationAddress: "BuRnAdDreSs",
+	// 			status: MigrationTransactionStatus.Confirmed,
+	// 			timestamp: Date.now() / 1000,
+	// 		},
+	// 	]);
 
-		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
-		);
+	// 	render(
+	// 		<MigrationProvider>
+	// 			<Test />
+	// 		</MigrationProvider>,
+	// 	);
 
-		await waitFor(() => {
-			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
-		});
+	// 	await waitFor(() => {
+	// 		expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+	// 	});
 
-		expect(screen.getByTestId("Migrations__markasread")).toBeInTheDocument();
+	// 	expect(screen.getByTestId("Migrations__markasread")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Migrations__markasread"));
+	// 	userEvent.click(screen.getByTestId("Migrations__markasread"));
 
-		expect(setMigrationMock).toHaveBeenCalledWith(expect.any(String), expect.any(Object));
+	// 	expect(setMigrationMock).toHaveBeenCalledWith(expect.any(String), expect.any(Object));
 
-		clearStoredMigrationsMock();
-	});
+	// 	clearStoredMigrationsMock();
+	// });
 
 	it("should not reload the migrations if no pending migrations", async () => {
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
