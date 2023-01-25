@@ -46,14 +46,14 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			const query: {
 				recipientId: string;
 				senderId: string;
-				amount: { from: string },
-				fee: { from: string },
+				amount: { from: string };
+				fee: { from: string };
 				timestamp?: { from?: number; to?: number };
 			} = {
-				recipientId: migrationWalletAddress(),
-				senderId: senderIds.join(","),
 				amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
 				fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
+				recipientId: migrationWalletAddress(),
+				senderId: senderIds.join(","),
 			};
 
 			if (polygonMigrationStartTime() > 0) {
