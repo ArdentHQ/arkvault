@@ -8,6 +8,7 @@ import {
 	migrationNetwork,
 	migrationTransactionFee,
 	migrationWalletAddress,
+	polygonMigrationStartTime,
 } from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
 
@@ -42,15 +43,24 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 				return;
 			}
 
-			const transactions = await wallet.transactionIndex().received({
-				//@ts-ignore
-				"amount.from": BigNumber.make(migrationMinBalance()).times(1e8).toString(),
-
-				"fee.from": BigNumber.make(migrationTransactionFee()).times(1e8).toString(),
-
+			const query: {
+				recipientId: string;
+				senderId: string;
+				amount: { from: string };
+				fee: { from: string };
+				timestamp?: { from?: number; to?: number };
+			} = {
+				amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
+				fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
 				recipientId: migrationWalletAddress(),
 				senderId: senderIds.join(","),
-			});
+			};
+
+			if (polygonMigrationStartTime() > 0) {
+				query.timestamp = { from: polygonMigrationStartTime() };
+			}
+
+			const transactions = await wallet.transactionIndex().received(query);
 
 			setLatestTransactions(transactions.items());
 			setIsLoadingTransactions(false);

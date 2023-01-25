@@ -10,6 +10,8 @@ import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testi
 import * as contexts from "@/app/contexts";
 import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
+import { httpClient } from "@/app/services";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const Test = () => {
 	const { migrations, storeTransaction, contractIsPaused, markMigrationAsRead } = useMigrations();
@@ -80,7 +82,10 @@ describe("Migration Context", () => {
 	let configurationMock;
 	let profileWatcherMock;
 	let ethersLibraryContractSpy;
-	let polygonMigrationSpy;
+	let polygonContractAddressSpy;
+	let polygonIndexerUrlSpy;
+	let migrationFixture;
+	let migrationPendingFixture;
 
 	const environmentMockData = {
 		env: {
@@ -165,21 +170,59 @@ describe("Migration Context", () => {
 
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
 
-		polygonMigrationSpy = vi
+		polygonContractAddressSpy = vi
 			.spyOn(polygonMigration, "polygonContractAddress")
 			.mockReturnValue("0x4a12a2ADc21F896E6F8e564a106A4cab8746a92f");
+
+		polygonIndexerUrlSpy = vi
+			.spyOn(polygonMigration, "polygonIndexerUrl")
+			.mockReturnValue("https://mumbai.somehost.com/");
 
 		ethersLibraryContractSpy = Contract.mockImplementation(() => ({
 			getMigrationsByArkTxHash: () => [],
 			paused: () => false,
 		}));
+
+		httpClient.clearCache();
+
+		migrationFixture = {
+			address: "AdDreSs",
+			amount: 123,
+			id: "ad68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
+			migrationAddress: "BuRnAdDreSs",
+			status: MigrationTransactionStatus.Confirmed,
+			timestamp: Date.now() / 1000,
+		};
+
+		migrationPendingFixture = {
+			address: "AdDreSs2",
+			amount: 456,
+			id: "bc68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
+			migrationAddress: "BuRnAdDreSs",
+			status: MigrationTransactionStatus.Pending,
+			timestamp: Date.now() / 1000,
+		};
+
+		server.use(
+			requestMock("https://mumbai.somehost.com/transactions", [
+				{
+					arkTxHash: migrationFixture.id,
+					polygonTxHash: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
+				},
+				{
+					arkTxHash: migrationPendingFixture.id,
+					polygonTxHash: "0x66a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f211",
+				},
+			]),
+		);
 	});
 
 	afterEach(() => {
 		configurationMock.mockRestore();
 		profileWatcherMock.mockRestore();
 		ethersLibraryContractSpy.mockRestore();
-		polygonMigrationSpy.mockRestore();
+		polygonContractAddressSpy.mockRestore();
+		polygonIndexerUrlSpy.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {
@@ -225,16 +268,7 @@ describe("Migration Context", () => {
 	});
 
 	it("should list the migrations", async () => {
-		const { clearStoredMigrationsMock } = mockStoredMigrations([
-			{
-				address: "AdDreSs",
-				amount: 123,
-				id: "123",
-				migrationAddress: "BuRnAdDreSs",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
-		]);
+		const { clearStoredMigrationsMock } = mockStoredMigrations([migrationFixture]);
 
 		render(
 			<MigrationProvider>
@@ -388,14 +422,7 @@ describe("Migration Context", () => {
 
 	it("should not reload the migrations if no pending migrations", async () => {
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
-			{
-				address: "AdDreSs",
-				amount: 111,
-				id: "123",
-				migrationAddress: "BuRnAdDreSs",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
+			migrationFixture,
 			{
 				address: "AdDreSs2",
 				amount: 222,
@@ -439,7 +466,7 @@ describe("Migration Context", () => {
 	});
 
 	it("should not load the migrations if contractAddress is not defined", () => {
-		polygonMigrationSpy = vi.spyOn(polygonMigration, "polygonContractAddress").mockReturnValue(undefined);
+		polygonContractAddressSpy = vi.spyOn(polygonMigration, "polygonContractAddress").mockReturnValue(undefined);
 
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
 
@@ -453,19 +480,12 @@ describe("Migration Context", () => {
 
 		clearStoredMigrationsMock();
 
-		polygonMigrationSpy.mockRestore();
+		polygonContractAddressSpy.mockRestore();
 	});
 
 	it("should reload the migrations if at least one migration is pending", async () => {
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
-			{
-				address: "AdDreSs",
-				amount: 111,
-				id: "123",
-				migrationAddress: "BuRnAdDreSs",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
+			migrationFixture,
 			{
 				address: "AdDreSs2",
 				amount: 222,
@@ -581,26 +601,21 @@ describe("Migration Context", () => {
 	it.each([MigrationTransactionStatus.Pending, MigrationTransactionStatus.Confirmed])(
 		"should determine transaction status",
 		async (status) => {
-			const { clearStoredMigrationsMock } = mockStoredMigrations([
-				{
-					address: "AdDreSs",
-					amount: 123,
-					id: "123",
-					migrationAddress: "BuRnAdDreSs",
-					status: status,
-					timestamp: Date.now() / 1000,
-				},
-			]);
+			const { clearStoredMigrationsMock } = mockStoredMigrations([migrationFixture, migrationPendingFixture]);
 
 			const Test = () => {
 				const [transactionStatus, setTransactionStatus] = useState<any>();
 				const { getTransactionStatus } = useMigrations();
 
 				const loadTransactionStatus = async () => {
-					const status = await getTransactionStatus({
-						id: () => "123",
+					const transactionStatus = await getTransactionStatus({
+						id: () =>
+							status === MigrationTransactionStatus.Pending
+								? migrationPendingFixture.id
+								: migrationFixture.id,
 					} as any);
-					setTransactionStatus(status);
+
+					setTransactionStatus(transactionStatus);
 				};
 
 				if (transactionStatus !== undefined) {
