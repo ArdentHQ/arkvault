@@ -12,6 +12,7 @@ export interface Migration {
 	migrationAddress: string;
 	status: MigrationTransactionStatus;
 	timestamp: number;
+	readAt?: number;
 }
 
 export type ARKMigrationViewStructOutput = [string, BigNumber, string] & {

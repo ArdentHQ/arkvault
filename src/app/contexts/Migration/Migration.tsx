@@ -71,6 +71,7 @@ interface MigrationContextType {
 	) => Promise<void>;
 	getTransactionStatus: (transaction: DTO.ExtendedConfirmedTransactionData) => Promise<MigrationTransactionStatus>;
 	removeTransactions: (address: string) => Promise<void>;
+	markMigrationAsRead: (migration: Migration) => void;
 }
 
 interface Properties {
@@ -308,13 +309,23 @@ export const MigrationProvider = ({ children }: Properties) => {
 		setContract(new Contract(contractAddress, contractABI, provider));
 	}, []);
 
+	const markMigrationAsRead = useCallback(
+		(migration: Migration) => {
+			repository!.markAsRead(migration);
+
+			migrationsUpdated(repository!.all());
+		},
+		[repository, migrationsUpdated],
+	);
+
 	return (
 		<MigrationContext.Provider
 			value={
 				{
 					contractIsPaused,
 					getTransactionStatus,
-					migrations,
+					markMigrationAsRead,
+          migrations,
 					removeTransactions,
 					storeTransactions,
 				} as MigrationContextType

@@ -1,8 +1,14 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { ethers } from "ethers";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { useConfiguration, useMigrations } from "@/app/contexts";
-import { migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
+import {
+	isValidMigrationTransaction,
+	migrationMinBalance,
+	migrationNetwork,
+	migrationTransactionFee,
+	migrationWalletAddress,
+} from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
@@ -37,6 +43,11 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			}
 
 			const transactions = await wallet.transactionIndex().received({
+				//@ts-ignore
+				"amount.from": BigNumber.make(migrationMinBalance()).times(1e8).toString(),
+
+				"fee.from": BigNumber.make(migrationTransactionFee()).times(1e8).toString(),
+
 				recipientId: migrationWalletAddress(),
 				senderId: senderIds.join(","),
 			});
@@ -48,27 +59,20 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		loadMigrationWalletTransactions();
 	}, [profileIsRestoring]);
 
-	const migrationTransactions = useMemo(() => {
-		const storedMigrationIds = new Set((migrations ?? []).map((migration) => migration.id));
+	const migrationTransactions = useMemo(
+		() => {
+      const storedMigrationIds = new Set((migrations ?? []).map((migration) => migration.id));
 
-		return latestTransactions.filter((transaction) => {
-			if (storedMigrationIds.has(transaction.id())) {
-				return false;
-			}
+      return latestTransactions.filter((transaction) => {
+        if (storedMigrationIds.has(transaction.id())) {
+	  			return false;
+  			}
 
-			const polygonAddress = transaction.memo();
-
-			if (!polygonAddress) {
-				return false;
-			}
-
-			if (transaction.recipient() !== migrationWalletAddress()) {
-				return false;
-			}
-
-			return ethers.utils.isAddress(polygonAddress);
-		});
-	}, [migrations, latestTransactions, isLoadingTransactions]);
+        return isValidMigrationTransaction(transaction);
+      });
+    },
+		[migrations, latestTransactions, isLoadingTransactions],
+	);
 
 	useEffect(() => {
 		const updateTransactions = async () => {
