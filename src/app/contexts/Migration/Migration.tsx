@@ -271,7 +271,11 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, []);
 
 	const migrationsSorted = useMemo(() => {
-		return sortBy(migrations || [], (migration) => -migration.timestamp);
+		if (!migrations) {
+			return undefined;
+		}
+
+		return sortBy(migrations, (migration) => -migration.timestamp);
 	}, [migrations]);
 
 	return (
