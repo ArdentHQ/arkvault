@@ -12,6 +12,8 @@ import {
 	polygonRpcUrl,
 	polygonContractAddress,
 	polygonNetworkData,
+	polygonIndexerUrl,
+	polygonMigrationStartTime,
 	isValidMigrationTransaction,
 } from "./polygon-migration";
 
@@ -56,6 +58,21 @@ describe("Polygon Migration Utility Functions", () => {
 	it("#polygonRpcUrl", () => {
 		process.env.VITE_POLYGON_RPC_URL = "https://rpc-mumbai.maticvigil.com/";
 		expect(polygonRpcUrl()).toBe("https://rpc-mumbai.maticvigil.com/");
+	});
+
+	it("#polygonIndexerUrl", () => {
+		process.env.VITE_POLYGON_INDEXER_URL = "indexer-url";
+		expect(polygonIndexerUrl()).toBe("indexer-url");
+	});
+
+	it("#polygonMigrationStartTime", () => {
+		delete process.env.VITE_POLYGON_MIGRATION_START_TIME;
+
+		expect(polygonMigrationStartTime()).toBe(0);
+
+		process.env.VITE_POLYGON_MIGRATION_START_TIME = "12345";
+
+		expect(polygonMigrationStartTime()).toBe(12_345);
 	});
 
 	it("#migrationWalletAddress", () => {

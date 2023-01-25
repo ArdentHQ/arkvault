@@ -6,21 +6,23 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import userEvent from "@testing-library/user-event";
 import { MigrationDetails } from "./MigrationDetails";
 import { render, getDefaultProfileId, screen } from "@/utils/testing-library";
-import * as contexts from "@/app/contexts";
-import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
-
-let useMigrationsSpy;
+import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 
 const history = createHashHistory();
 const migrationUrl = `/profiles/${getDefaultProfileId()}/migration`;
 let transactionFixture: DTO.ExtendedConfirmedTransactionData;
+let migrationTransactionFixture: Migration;
 
-const renderComponent = ({ transaction, handleBack = vi.fn() }) => {
+const renderComponent = ({ transaction, migrationTransaction, handleBack = vi.fn() }) => {
 	history.push(migrationUrl);
 
 	return render(
 		<Route path="/profiles/:profileId/migration">
-			<MigrationDetails transaction={transaction} handleBack={handleBack} />
+			<MigrationDetails
+				transaction={transaction}
+				migrationTransaction={migrationTransaction}
+				handleBack={handleBack}
+			/>
 		</Route>,
 		{
 			history,
@@ -38,25 +40,16 @@ describe("MigrationDetails", () => {
 			sender: () => "Address",
 			timestamp: () => DateTime.make(),
 		} as DTO.ExtendedConfirmedTransactionData;
-	});
 
-	beforeEach(() => {
-		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
-			migrations: [
-				{
-					id: transactionFixture.id(),
-					status: MigrationTransactionStatus.Confirmed,
-				},
-			],
-		});
-	});
-
-	afterEach(() => {
-		useMigrationsSpy.mockRestore();
+		migrationTransactionFixture = {
+			id: "transaction-id",
+			status: MigrationTransactionStatus.Confirmed,
+		};
 	});
 
 	it("should render", () => {
 		renderComponent({
+			migrationTransaction: migrationTransactionFixture,
 			transaction: transactionFixture,
 		});
 
@@ -64,11 +57,8 @@ describe("MigrationDetails", () => {
 	});
 
 	it("should render if no migrations", () => {
-		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
-			migrations: undefined,
-		});
-
 		renderComponent({
+			migrationTransaction: migrationTransactionFixture,
 			transaction: transactionFixture,
 		});
 
@@ -77,6 +67,7 @@ describe("MigrationDetails", () => {
 
 	it("should render confirmed details if confirmed", () => {
 		renderComponent({
+			migrationTransaction: migrationTransactionFixture,
 			transaction: transactionFixture,
 		});
 
@@ -85,17 +76,13 @@ describe("MigrationDetails", () => {
 
 	it("should handle back", () => {
 		const handleBack = vi.fn();
-		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
-			migrations: [
-				{
-					id: transactionFixture.id(),
-					status: MigrationTransactionStatus.Pending,
-				},
-			],
-		});
 
 		renderComponent({
 			handleBack,
+			migrationTransaction: {
+				migrationTransactionFixture,
+				status: MigrationTransactionStatus.Pending,
+			},
 			transaction: transactionFixture,
 		});
 

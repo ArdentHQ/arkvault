@@ -8,32 +8,26 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { Button } from "@/app/components/Button";
 import { MigrationPendingStep } from "@/domains/migration/components/MigrationPendingStep";
 import { MigrationSuccessStep } from "@/domains/migration/components/MigrationSuccessStep";
-import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { Migration, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
-import { useMigrations } from "@/app/contexts";
 
 const TOTAL_STEPS = 5;
+
 interface Properties {
+	migrationTransaction: Migration;
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	handleBack: () => void;
 }
 
-export const MigrationDetails = ({ transaction, handleBack }: Properties) => {
+export const MigrationDetails = ({ transaction, migrationTransaction, handleBack }: Properties) => {
 	const { t } = useTranslation();
 
 	const [activeStep, setActiveStep] = useState(Step.Connect);
 
-	const { migrations } = useMigrations();
-
-	const transactionIsConfirmed = useMemo(() => {
-		if (transaction === undefined || migrations === undefined) {
-			return false;
-		}
-
-		const migrationTransaction = migrations.find((migration) => migration.id === transaction.id());
-
-		return migrationTransaction?.status === MigrationTransactionStatus.Confirmed;
-	}, [transaction, migrations]);
+	const transactionIsConfirmed = useMemo(
+		() => migrationTransaction.status === MigrationTransactionStatus.Confirmed,
+		[migrationTransaction],
+	);
 
 	useEffect(() => {
 		if (transactionIsConfirmed) {
@@ -54,11 +48,14 @@ export const MigrationDetails = ({ transaction, handleBack }: Properties) => {
 					<MigrationTabsWrapper>
 						<Tabs activeId={activeStep}>
 							<TabPanel tabId={Step.PendingTransaction}>
-								<MigrationPendingStep migrationTransaction={transaction} handleBack={handleBack} />
+								<MigrationPendingStep transaction={transaction} handleBack={handleBack} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.Finished}>
-								<MigrationSuccessStep migrationTransaction={transaction} />
+								<MigrationSuccessStep
+									transaction={transaction}
+									migrationTransaction={migrationTransaction}
+								/>
 							</TabPanel>
 
 							{activeStep === Step.Finished && (
