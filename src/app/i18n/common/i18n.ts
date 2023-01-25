@@ -186,7 +186,7 @@ export const translations = {
 	I_DECLINE: "I Decline",
 	LANGUAGE: "Application Language",
 	LAUNCH: "Launch",
-	LEARN_MORE: "Learn more",
+	LEARN_MORE: "Learn More",
 	LEDGER: "Ledger",
 	LEDGER_CONNECTED: "{{device}} connected",
 	LEDGER_DISCONNECTED: "{{device}} disconnected",
