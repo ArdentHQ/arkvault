@@ -1,8 +1,15 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { ethers } from "ethers";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { useConfiguration, useMigrations } from "@/app/contexts";
-import { migrationNetwork, migrationWalletAddress, polygonMigrationStartTime } from "@/utils/polygon-migration";
+import {
+	isValidMigrationTransaction,
+	migrationMinBalance,
+	migrationNetwork,
+	migrationTransactionFee,
+	migrationWalletAddress,
+	polygonMigrationStartTime,
+} from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
@@ -39,10 +46,14 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			const query: {
 				recipientId: string;
 				senderId: string;
+				amount: { from: string },
+				fee: { from: string },
 				timestamp?: { from?: number; to?: number };
 			} = {
 				recipientId: migrationWalletAddress(),
 				senderId: senderIds.join(","),
+				amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
+				fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
 			};
 
 			if (polygonMigrationStartTime() > 0) {
@@ -59,20 +70,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	}, [profileIsRestoring]);
 
 	const migrationTransactions = useMemo(
-		() =>
-			latestTransactions.filter((transaction) => {
-				const polygonAddress = transaction.memo();
-
-				if (!polygonAddress) {
-					return false;
-				}
-
-				if (transaction.recipient() !== migrationWalletAddress()) {
-					return false;
-				}
-
-				return ethers.utils.isAddress(polygonAddress);
-			}),
+		() => latestTransactions.filter((transaction) => isValidMigrationTransaction(transaction)),
 		[latestTransactions, isLoadingTransactions],
 	);
 

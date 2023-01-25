@@ -1,3 +1,5 @@
+import { ethers } from "ethers";
+import { DTO } from "@ardenthq/sdk-profiles";
 import { AddEthereumChainParameter } from "@/domains/migration/hooks/use-meta-mask.contracts";
 
 export const migrationTransactionFee = () =>
@@ -52,4 +54,32 @@ export const polygonNetworkData = (): AddEthereumChainParameter => {
 		},
 		rpcUrls: ["https://polygon-rpc.com/"],
 	};
+};
+
+export const isValidMigrationTransaction = (
+	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
+) => {
+	const polygonAddress = transaction.memo();
+
+	if (!polygonAddress) {
+		return false;
+	}
+
+	if (transaction.recipient() !== migrationWalletAddress()) {
+		return false;
+	}
+
+	if (!ethers.utils.isAddress(polygonAddress)) {
+		return false;
+	}
+
+	if (transaction.amount() < migrationMinBalance()) {
+		return false;
+	}
+
+	if (transaction.fee() < migrationTransactionFee()) {
+		return false;
+	}
+
+	return true;
 };

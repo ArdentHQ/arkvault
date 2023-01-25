@@ -3,6 +3,7 @@ import { DTO, Contracts } from "@ardenthq/sdk-profiles";
 import { Contract, ethers } from "ethers";
 import userEvent from "@testing-library/user-event";
 import { DateTime } from "@ardenthq/sdk-intl";
+import { vi } from "vitest";
 import { MigrationProvider, useMigrations } from "./Migration";
 import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
 import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testing-library";
@@ -13,7 +14,7 @@ import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
 
 const Test = () => {
-	const { migrations, storeTransaction, contractIsPaused } = useMigrations();
+	const { migrations, storeTransaction, contractIsPaused, markMigrationAsRead } = useMigrations();
 
 	const createAndStoreTransaction = () => {
 		const transaction = {
@@ -25,6 +26,10 @@ const Test = () => {
 		} as DTO.ExtendedSignedTransactionData;
 
 		storeTransaction(transaction);
+	};
+
+	const markMigrationAsReadHandler = () => {
+		markMigrationAsRead(migrations![0]);
 	};
 
 	if (migrations === undefined || contractIsPaused === undefined) {
@@ -44,12 +49,20 @@ const Test = () => {
 				{migrations.map((migration) => (
 					<li data-testid="MigrationItem" key={migration.id}>
 						{migration.address}
+
+						{migration.readAt !== undefined}
 					</li>
 				))}
 
 				<li>
 					<button data-testid="Migrations__store" type="button" onClick={createAndStoreTransaction}>
 						Add
+					</button>
+				</li>
+
+				<li>
+					<button data-testid="Migrations__markasread" type="button" onClick={markMigrationAsReadHandler}>
+						Mark as readed
 					</button>
 				</li>
 
@@ -90,13 +103,14 @@ describe("Migration Context", () => {
 		};
 
 		const getMigrationsMock = vi.fn().mockReturnValue(profileMigrations);
+		const setMigrationMock = vi.fn().mockImplementation(() => {});
 
 		const environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
 			...environmentMockData,
 			env: {
 				data: () => ({
 					get: getMigrationsMock,
-					set: () => {},
+					set: setMigrationMock,
 				}),
 			},
 		});
@@ -128,6 +142,7 @@ describe("Migration Context", () => {
 			getMigrationsByArkTxHashMock,
 			getMigrationsMock,
 			getPausedMock,
+			setMigrationMock,
 		};
 	};
 
@@ -372,6 +387,37 @@ describe("Migration Context", () => {
 		);
 
 		ethersMock.mockRestore();
+	});
+
+	it("should mark migration as read", async () => {
+		const { clearStoredMigrationsMock, setMigrationMock } = mockStoredMigrations([
+			{
+				address: "AdDreSs",
+				amount: 111,
+				id: "abc123",
+				migrationAddress: "BuRnAdDreSs",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		]);
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("Migrations__markasread")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("Migrations__markasread"));
+
+		expect(setMigrationMock).toHaveBeenCalledWith(expect.any(String), expect.any(Object));
+
+		clearStoredMigrationsMock();
 	});
 
 	it("should not reload the migrations if no pending migrations", async () => {

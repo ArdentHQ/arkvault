@@ -1,19 +1,33 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useMemo } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { Migration, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { useMigrations } from "@/app/contexts";
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
 
-	const { migrations } = useMigrations();
+	const { migrations, markMigrationAsRead } = useMigrations();
+	const [readMigrationsIds, setReadMigrationsIds] = useState<string[]>([]);
+
+	const storeReadMigrationsAndMarkAsRead = useCallback(
+		(migration: Migration) => {
+			markMigrationAsRead(migration);
+
+			setReadMigrationsIds((readMigrationsIds) => [...readMigrationsIds, migration.id]);
+		},
+		[markMigrationAsRead],
+	);
 
 	const confirmedMigrations = useMemo<Migration[]>(() => {
 		if (migrations === undefined) {
 			return [];
 		}
 
-		return migrations.filter((migration) => migration.status === MigrationTransactionStatus.Confirmed);
-	}, [migrations]);
+		return migrations.filter(
+			(migration) =>
+				migration.status === MigrationTransactionStatus.Confirmed &&
+				(migration.readAt === undefined || readMigrationsIds.includes(migration.id)),
+		);
+	}, [migrations, readMigrationsIds]);
 
 	const { markAllTransactionsAsRead, markAsRead, releases, transactions, migrationTransactions } = useMemo(() => {
 		const markAllTransactionsAsRead = (isVisible: boolean) => {
@@ -49,6 +63,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		hasUnread: (releases.length > 0 || transactions.length > 0) && profile.notifications().hasUnread(),
 		markAllTransactionsAsRead,
 		markAsRead,
+		markMigrationAsRead: storeReadMigrationsAndMarkAsRead,
 		migrationTransactions,
 		releases,
 		transactions,
