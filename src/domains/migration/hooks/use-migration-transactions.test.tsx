@@ -239,7 +239,7 @@ describe("useMigrationTransactions hook", () => {
 	it("should not include transactions if the recipient is not the migration wallet", async () => {
 		const useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
-			storeTransaction: () => {},
+			storeTransactions: () => {},
 		});
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 
@@ -276,7 +276,7 @@ describe("useMigrationTransactions hook", () => {
 					timestamp: Date.now() / 1000,
 				},
 			],
-			storeTransaction: () => {},
+			storeTransactions: () => {},
 		});
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 
@@ -302,7 +302,7 @@ describe("useMigrationTransactions hook", () => {
 
 		vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
-			storeTransaction: () => {},
+			storeTransactions: () => {},
 		});
 
 		result.current.onLoadMore();
