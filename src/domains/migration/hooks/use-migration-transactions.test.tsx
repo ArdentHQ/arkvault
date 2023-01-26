@@ -104,6 +104,7 @@ describe("useMigrationTransactions hook", () => {
 
 		const mockWalletTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
 			Promise.resolve({
+				currentPage: () => 1,
 				hasMorePages: () => false,
 				items: () => [transactionFixture, secondTransactionFixture],
 			} as any),
@@ -129,9 +130,13 @@ describe("useMigrationTransactions hook", () => {
 
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 
-		const mockWalletTransactions = vi
-			.spyOn(wallet.transactionIndex(), "received")
-			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => [] } as any));
+		const mockWalletTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
+			Promise.resolve({
+				currentPage: () => 1,
+				hasMorePages: () => false,
+				items: () => [],
+			} as any),
+		);
 
 		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
 		expect(result.current.migrations).toHaveLength(0);
@@ -157,6 +162,7 @@ describe("useMigrationTransactions hook", () => {
 
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
 			Promise.resolve({
+				currentPage: () => 1,
 				hasMorePages: () => false,
 				items: () => [transactionFixture, secondTransactionFixture],
 			} as any),
@@ -193,6 +199,7 @@ describe("useMigrationTransactions hook", () => {
 
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
 			Promise.resolve({
+				currentPage: () => 1,
 				hasMorePages: () => false,
 				items: () => [transactionFixture, secondTransactionFixture],
 			} as any),
@@ -227,5 +234,81 @@ describe("useMigrationTransactions hook", () => {
 		});
 
 		spyMigrationWallets.mockRestore();
+	});
+
+	it("should not include transactions if the recipient is not the migration wallet", async () => {
+		const useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: [],
+			storeTransactions: () => {},
+		});
+		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
+
+		vi.spyOn(transactionFixture, "recipient").mockReturnValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
+			Promise.resolve({
+				currentPage: () => 1,
+				hasMorePages: () => false,
+				items: () => [transactionFixture, secondTransactionFixture],
+			} as any),
+		);
+
+		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
+
+		await waitFor(() => {
+			expect(result.current.isLoading).toBe(false);
+		});
+
+		expect(result.current.migrations).toHaveLength(0);
+
+		useMigrationsSpy.mockRestore();
+		mockTransactions.mockRestore();
+	});
+
+	it("should handle load more", async () => {
+		const useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: [
+				{
+					address: "AdDreSs",
+					amount: 123,
+					id: "123",
+					migrationAddress: "BuRnAdDreSs",
+					status: MigrationTransactionStatus.Confirmed,
+					timestamp: Date.now() / 1000,
+				},
+			],
+			storeTransactions: () => {},
+		});
+		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
+
+		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
+			Promise.resolve({
+				currentPage: () => 1,
+				hasMorePages: () => false,
+				items: () => [transactionFixture, secondTransactionFixture],
+			} as any),
+		);
+
+		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
+
+		await waitFor(() => {
+			expect(result.current.isLoading).toBe(false);
+		});
+
+		expect(result.current.migrations).toHaveLength(1);
+
+		vi.spyOn(transactionFixture, "recipient").mockReturnValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+
+		useMigrationsSpy.mockRestore();
+
+		vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: [],
+			storeTransactions: () => {},
+		});
+
+		result.current.onLoadMore();
+		expect(result.current.migrations).toHaveLength(0);
+
+		useMigrationsSpy.mockRestore();
+		mockTransactions.mockRestore();
 	});
 });

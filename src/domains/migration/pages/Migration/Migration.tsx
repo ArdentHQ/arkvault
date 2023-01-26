@@ -20,7 +20,9 @@ export const Migration = () => {
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 	const history = useHistory();
 	const profile = useActiveProfile();
-	const { migrations, isLoading, resolveTransaction } = useMigrationTransactions({ profile });
+	const { migrations, isLoading, onLoadMore, hasMore, isLoadingMore, resolveTransaction } = useMigrationTransactions({
+		profile,
+	});
 	const { contractIsPaused } = useMigrations();
 	const [expandedTransaction, setExpandedTransaction] = useState<DTO.ExtendedConfirmedTransactionData>();
 	const [expandedMigration, setExpandedMigration] = useState<MigrationTransaction>();
@@ -68,7 +70,10 @@ export const Migration = () => {
 						migrationTransactions={migrations}
 						isCompact={isCompact}
 						isLoading={isLoading}
+						isLoadingMore={isLoadingMore}
 						onClick={(migrationTransaction) => detailsHandler(migrationTransaction)}
+						onLoadMore={onLoadMore}
+						hasMore={hasMore}
 					/>
 				</Section>
 

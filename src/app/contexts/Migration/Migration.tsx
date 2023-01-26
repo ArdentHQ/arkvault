@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { uniqBy } from "@ardenthq/sdk-helpers";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
+import { uniqBy, sortBy } from "@ardenthq/sdk-helpers";
 import {
 	ARKMigrationViewStructOutput,
 	Migration,
@@ -336,6 +336,14 @@ export const MigrationProvider = ({ children }: Properties) => {
 		[repository, migrationsUpdated],
 	);
 
+	const migrationsSorted = useMemo(() => {
+		if (!migrations) {
+			return;
+		}
+
+		return sortBy(migrations, (migration) => -migration.timestamp);
+	}, [migrations]);
+
 	return (
 		<MigrationContext.Provider
 			value={
@@ -343,7 +351,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 					contractIsPaused,
 					getTransactionStatus,
 					markMigrationAsRead,
-					migrations,
+					migrations: migrationsSorted,
 					removeTransactions,
 					storeTransactions,
 				} as MigrationContextType
