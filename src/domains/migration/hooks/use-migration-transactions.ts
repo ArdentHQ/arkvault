@@ -12,7 +12,15 @@ import {
 } from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
 
-export const fetchMigrationTransactions = async ({ profile, page }: { page: number; profile: Contracts.IProfile }) => {
+export const fetchMigrationTransactions = async ({
+	profile,
+	page,
+	limit = 10,
+}: {
+	page: number;
+	profile: Contracts.IProfile;
+	limit?: number;
+}) => {
 	const wallet = await profile.walletFactory().fromAddress({
 		address: migrationWalletAddress(),
 		coin: "ARK",
@@ -40,7 +48,9 @@ export const fetchMigrationTransactions = async ({ profile, page }: { page: numb
 		fee: { from: string };
 		timestamp?: { from?: number; to?: number };
 		page?: number;
+		limit?: number;
 	} = {
+		limit: limit + 1,
 		amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
 		fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
 		page,
@@ -56,7 +66,7 @@ export const fetchMigrationTransactions = async ({ profile, page }: { page: numb
 
 	return {
 		cursor: Number(transactions.currentPage()),
-		hasMore: transactions.items().length > 0,
+		hasMore: transactions.hasMorePages(),
 		items: transactions.items(),
 	};
 };
@@ -77,7 +87,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 
 		setIsLoadingTransactions(true);
 
-		const { items, hasMore, cursor } = await fetchMigrationTransactions({ page: page + 1, profile });
+		const { items, hasMore, cursor } = await fetchMigrationTransactions({ page: page + 1, limit, profile });
 
 		setLatestTransactions(items);
 		setIsLoadingTransactions(false);
