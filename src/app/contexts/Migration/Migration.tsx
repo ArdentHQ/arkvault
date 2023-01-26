@@ -353,7 +353,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 					markMigrationAsRead,
 					migrations: migrationsSorted,
 					removeTransactions,
-					storeTransaction,
+					storeTransactions,
 				} as MigrationContextType
 			}
 		>
