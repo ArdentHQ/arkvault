@@ -50,9 +50,9 @@ export const fetchMigrationTransactions = async ({
 		page?: number;
 		limit?: number;
 	} = {
-		limit: limit + 1,
 		amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
 		fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
+		limit: limit + 1,
 		page,
 		recipientId: migrationWalletAddress(),
 		senderId: senderIds.join(","),
@@ -66,7 +66,7 @@ export const fetchMigrationTransactions = async ({
 
 	return {
 		cursor: Number(transactions.currentPage()),
-		hasMore: transactions.hasMorePages(),
+		hasMore: transactions.items().length > 0,
 		items: transactions.items(),
 	};
 };
@@ -87,7 +87,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 
 		setIsLoadingTransactions(true);
 
-		const { items, hasMore, cursor } = await fetchMigrationTransactions({ page: page + 1, limit, profile });
+		const { items, hasMore, cursor } = await fetchMigrationTransactions({ limit, page: page + 1, profile });
 
 		setLatestTransactions(items);
 		setIsLoadingTransactions(false);
