@@ -4,6 +4,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { WalletActionsModals } from "./WalletActionsModals";
+import * as migrationsModule from "@/app/contexts/Migration/Migration";
 import * as envHooks from "@/app/hooks/env";
 import { env, getDefaultProfileId, render, syncDelegates } from "@/utils/testing-library";
 
@@ -28,6 +29,7 @@ describe("WalletActionsModals", () => {
 
 		await syncDelegates(profile);
 
+		vi.spyOn(migrationsModule, "useMigrations").mockReturnValue({ removeTransactions: vi.fn() });
 		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
 

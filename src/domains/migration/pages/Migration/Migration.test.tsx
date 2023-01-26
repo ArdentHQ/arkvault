@@ -34,7 +34,10 @@ describe("Migration", () => {
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({ migrations: [] });
+		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
+			migrations: [],
+			storeTransactions: () => Promise.resolve({}),
+		});
 	});
 
 	afterAll(() => {
@@ -87,6 +90,7 @@ describe("Migration", () => {
 	it("shows a warning and disables the add button if contract is paused", () => {
 		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
 			contractIsPaused: true,
+			storeTransactions: () => Promise.resolve({}),
 		});
 
 		renderComponent();
@@ -175,7 +179,7 @@ describe("Migration", () => {
 					timestamp: Date.now() / 1000,
 				},
 			],
-			storeTransaction: () => {},
+			storeTransactions: () => Promise.resolve({}),
 		});
 
 		renderComponent();
