@@ -83,9 +83,9 @@ interface Properties {
 
 const MigrationContext = React.createContext<any>(undefined);
 
-const ONE_SECOND = 1000;
+const MIGRATION_LOAD_INTERVAL = 5000;
 
-const ONE_MINUTE = 60 * ONE_SECOND;
+const ONE_MINUTE = 60 * 1000;
 
 export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
@@ -275,7 +275,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			loadMigrations();
 		};
 
-		reloadInterval = setInterval(reloadMigrationsCallback, ONE_SECOND);
+		reloadInterval = setInterval(reloadMigrationsCallback, MIGRATION_LOAD_INTERVAL);
 
 		return () => clearInterval(reloadInterval);
 	}, [repository, loadMigrations, migrations, hasContractAndRepository]);
