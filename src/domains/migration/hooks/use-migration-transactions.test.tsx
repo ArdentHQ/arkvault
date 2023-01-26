@@ -97,7 +97,7 @@ describe("useMigrationTransactions hook", () => {
 
 		vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
-			storeTransaction: () => {},
+			storeTransactions: () => Promise.resolve({}),
 		});
 
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
@@ -125,7 +125,7 @@ describe("useMigrationTransactions hook", () => {
 
 		vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
-			storeTransaction: () => {},
+			storeTransactions: () => Promise.resolve({}),
 		});
 
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
@@ -156,7 +156,7 @@ describe("useMigrationTransactions hook", () => {
 					timestamp: Date.now() / 1000,
 				},
 			],
-			storeTransaction: () => {},
+			storeTransactions: () => Promise.resolve({}),
 		});
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 
@@ -192,8 +192,9 @@ describe("useMigrationTransactions hook", () => {
 
 		const useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [migration],
-			storeTransaction: () => {},
+			storeTransactions: () => Promise.resolve({}),
 		});
+
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>

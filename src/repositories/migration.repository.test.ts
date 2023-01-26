@@ -19,6 +19,24 @@ describe("MigrationRepository", () => {
 		expect(repository.all()).toEqual([]);
 	});
 
+	it("should remove items", () => {
+		const migration1 = { id: "migration-id-1" };
+		const migration2 = { id: "migration-id-2" };
+
+		const repository = new MigrationRepository(profile, env.data());
+
+		repository.add(migration1);
+		repository.add(migration2);
+
+		expect(repository.all()).toHaveLength(2);
+		expect(repository.all()[0].id).toBe(migration1.id);
+
+		repository.remove([migration1]);
+
+		expect(repository.all()).toHaveLength(1);
+		expect(repository.all()[0].id).toBe(migration2.id);
+	});
+
 	it("stores migrations for one profile", () => {
 		const repository = new MigrationRepository(profile, env.data());
 		const repository2 = new MigrationRepository(profile2, env.data());

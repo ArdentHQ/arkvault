@@ -49,6 +49,12 @@ export class MigrationRepository {
 		this.#data.set(STORAGE_KEY, all);
 	}
 
+	public remove(items: Migration[]): void {
+		const ids = new Set(items.map((item) => item.id));
+
+		this.set(this.all().filter((item) => !ids.has(item.id)));
+	}
+
 	public markAsRead(item: Migration): void {
 		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
 

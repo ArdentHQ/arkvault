@@ -63,7 +63,7 @@ export const fetchMigrationTransactions = async ({ profile, page }: { page: numb
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsRestoring } = useConfiguration();
-	const { migrations, storeTransaction } = useMigrations();
+	const { migrations, storeTransactions } = useMigrations();
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [hasMore, setHasMore] = useState(false);
@@ -89,15 +89,24 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		loadMigrationWalletTransactions();
 	}, [profileIsRestoring]);
 
-	const migrationTransactions = useMemo(
-		() => latestTransactions.filter((transaction) => isValidMigrationTransaction(transaction)),
-		[latestTransactions, isLoadingTransactions],
-	);
+	const migrationTransactions = useMemo(() => {
+		const storedMigrationIds = new Set((migrations ?? []).map((migration) => migration.id));
+
+		return latestTransactions.filter((transaction) => {
+			if (storedMigrationIds.has(transaction.id())) {
+				return false;
+			}
+
+			return isValidMigrationTransaction(transaction);
+		});
+	}, [migrations, latestTransactions, isLoadingTransactions]);
 
 	useEffect(() => {
-		for (const transaction of migrationTransactions) {
-			storeTransaction(transaction);
-		}
+		const updateTransactions = async () => {
+			await storeTransactions(migrationTransactions);
+		};
+
+		updateTransactions();
 	}, [migrationTransactions]);
 
 	const resolveTransaction = useCallback(

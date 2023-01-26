@@ -68,8 +68,11 @@ const contractABI = [
 interface MigrationContextType {
 	contractIsPaused?: boolean;
 	migrations?: Migration[];
-	storeTransaction: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => void;
+	storeTransactions: (
+		transactions: (DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData)[],
+	) => Promise<void>;
 	getTransactionStatus: (transaction: DTO.ExtendedConfirmedTransactionData) => Promise<MigrationTransactionStatus>;
+	removeTransactions: (address: string) => Promise<void>;
 	markMigrationAsRead: (migration: Migration) => void;
 }
 
@@ -91,6 +94,15 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrations, setMigrations] = useState<Migration[]>();
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
+
+	const migrationsUpdated = useCallback(
+		async (migrations: Migration[]) => {
+			await persist();
+
+			setMigrations(migrations);
+		},
+		[persist],
+	);
 
 	const getContractMigrations = useCallback(
 		async (transactionIds: string[]) => {
@@ -124,7 +136,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	const loadMigrations = useCallback(async () => {
-		const storedMigrations = repository!.all();
+		/* istanbul ignore next -- @preserve */
+		if (!contract || !repository) {
+			return;
+		}
+
+		const storedMigrations = repository.all();
 
 		const pendingMigrations = storedMigrations.filter(
 			(migration) => migration.status === MigrationTransactionStatus.Pending || !migration.migrationId,
@@ -135,7 +152,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		let contractMigrations: ARKMigrationViewStructOutput[] = [];
 
 		try {
-			contractMigrations = await contract!.getMigrationsByArkTxHash(transactionIds);
+			contractMigrations = await contract.getMigrationsByArkTxHash(transactionIds);
 		} catch {
 			//
 		}
@@ -173,14 +190,16 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 				if (confirmedMigration) {
 					confirmedMigration.migrationId = polygonMigration.polygonTxHash;
+
+					repository.add(confirmedMigration);
 				}
 			}
+
+			await migrationsUpdated(
+				uniqBy([...newlyConfirmedMigrations, ...repository.all()], (migration) => migration.id),
+			);
 		}
-
-		repository!.set(uniqBy([...newlyConfirmedMigrations, ...storedMigrations], (migration) => migration.id));
-
-		await migrationsUpdated(repository!.all());
-	}, [repository, contract]);
+	}, [repository, contract, migrationsUpdated]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
 		try {
@@ -190,31 +209,43 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 	}, [contract]);
 
-	const migrationsUpdated = useCallback(
-		async (migrations: Migration[]) => {
-			await persist();
+	const storeTransactions = useCallback(
+		async (transactions: (DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData)[]) => {
+			/* istanbul ignore next -- @preserve */
+			if (!repository) {
+				return;
+			}
 
-			setMigrations(migrations);
-		},
-		[persist],
-	);
+			for (const transaction of transactions) {
+				const migration: Migration = {
+					address: transaction.sender(),
+					amount: transaction.amount(),
+					id: transaction.id(),
+					migrationAddress: transaction.memo()!,
+					status: MigrationTransactionStatus.Pending,
+					timestamp: transaction.timestamp()!.toUNIX(),
+				};
 
-	const storeTransaction = useCallback(
-		async (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
-			const migration: Migration = {
-				address: transaction.sender(),
-				amount: transaction.amount(),
-				id: transaction.id(),
-				migrationAddress: transaction.memo()!,
-				status: MigrationTransactionStatus.Pending,
-				timestamp: transaction.timestamp()!.toUNIX(),
-			};
+				repository.add(migration);
+			}
 
-			repository!.add(migration);
-
-			await migrationsUpdated(repository!.all());
+			await migrationsUpdated(repository.all());
 		},
 		[repository, migrationsUpdated],
+	);
+
+	const removeTransactions = useCallback(
+		async (address: string) => {
+			/* istanbul ignore next -- @preserve */
+			if (!migrations || !repository) {
+				return;
+			}
+
+			repository.remove(migrations.filter((migration) => migration.address === address));
+
+			await migrationsUpdated(repository.all());
+		},
+		[migrations, repository, migrationsUpdated],
 	);
 
 	const hasContractAndRepository = useMemo(
@@ -321,7 +352,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 					getTransactionStatus,
 					markMigrationAsRead,
 					migrations: migrationsSorted,
-					storeTransaction,
+					removeTransactions,
+					storeTransactions,
 				} as MigrationContextType
 			}
 		>

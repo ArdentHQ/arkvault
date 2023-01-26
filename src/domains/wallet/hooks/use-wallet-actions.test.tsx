@@ -5,6 +5,7 @@ import React from "react";
 import { Router } from "react-router-dom";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { DropdownOption } from "@/app/components/Dropdown";
+import * as migrationsModule from "@/app/contexts/Migration/Migration";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
@@ -27,6 +28,7 @@ describe("useWalletActions", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
+		vi.spyOn(migrationsModule, "useMigrations").mockReturnValue({ removeTransactions: vi.fn() });
 		vi.spyOn(useActiveProfileModule, "useActiveProfile").mockReturnValue(profile);
 	});
 

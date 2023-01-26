@@ -14,9 +14,10 @@ import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
 
 const Test = () => {
-	const { migrations, storeTransaction, contractIsPaused, markMigrationAsRead } = useMigrations();
+	const { migrations, storeTransactions, removeTransactions, contractIsPaused, markMigrationAsRead } =
+		useMigrations();
 
-	const createAndStoreTransaction = () => {
+	const createAndStoreTransaction = async () => {
 		const transaction = {
 			amount: () => 123,
 			id: () => "abc123",
@@ -25,53 +26,68 @@ const Test = () => {
 			timestamp: () => DateTime.make(),
 		} as DTO.ExtendedSignedTransactionData;
 
-		storeTransaction(transaction);
+		await storeTransactions([transaction]);
+	};
+
+	const removeTransaction = () => {
+		if (migrations) {
+			removeTransactions(migrations[0].address);
+		}
 	};
 
 	const markMigrationAsReadHandler = () => {
 		markMigrationAsRead(migrations![0]);
 	};
 
-	if (migrations === undefined || contractIsPaused === undefined) {
-		return (
-			<>
-				{contractIsPaused === undefined && (
-					<span data-testid="Migration__contract_loading">Contract Loading...</span>
-				)}
-				{migrations === undefined && <span data-testid="Migration__loading">Loading...</span>}
-			</>
-		);
+	if (contractIsPaused === undefined) {
+		return <span data-testid="Migration__contract_loading">Contract Loading...</span>;
 	}
 
 	return (
 		<div>
-			<ul data-testid="Migrations">
-				{migrations.map((migration) => (
-					<li data-testid="MigrationItem" key={migration.id}>
-						{migration.address}
+			{migrations === undefined ? (
+				<span data-testid="Migration__loading">Loading...</span>
+			) : (
+				<ul data-testid="Migrations">
+					{migrations.map((migration) => (
+						<li data-testid="MigrationItem" key={migration.id}>
+							{migration.address}
 
-						{migration.readAt !== undefined}
-					</li>
-				))}
+							{migration.readAt !== undefined}
+						</li>
+					))}
+				</ul>
+			)}
 
+			<ul>
 				<li>
-					<button data-testid="Migrations__store" type="button" onClick={createAndStoreTransaction}>
+					<button
+						data-testid="Migrations__store"
+						type="button"
+						onClick={async () => await createAndStoreTransaction()}
+					>
 						Add
 					</button>
 				</li>
 
 				<li>
-					<button data-testid="Migrations__markasread" type="button" onClick={markMigrationAsReadHandler}>
-						Mark as readed
+					<button data-testid="Migrations__remove" type="button" onClick={removeTransaction}>
+						Remove
 					</button>
 				</li>
 
-				{contractIsPaused ? (
-					<span data-testid="Migration__contract_paused">Contract paused</span>
-				) : (
-					<span data-testid="Migration__contract_not_paused">Contract not paused</span>
-				)}
+				<li>
+					<button data-testid="Migrations__markasread" type="button" onClick={markMigrationAsReadHandler}>
+						Mark as read
+					</button>
+				</li>
 			</ul>
+
+			{contractIsPaused ? (
+				<span data-testid="Migration__contract_paused">Contract paused</span>
+			) : (
+				<span data-testid="Migration__contract_not_paused">Contract not paused</span>
+			)}
 		</div>
 	);
 };
@@ -238,19 +254,23 @@ describe("Migration Context", () => {
 	});
 
 	it("should load the migrations", async () => {
+		const { clearStoredMigrationsMock } = mockStoredMigrations([]);
+
 		render(
 			<MigrationProvider>
 				<Test />
 			</MigrationProvider>,
 		);
 
-		await waitFor(() => {
-			expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
-		});
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
 		});
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		clearStoredMigrationsMock();
 	});
 
 	it("should load contract state", async () => {
@@ -276,10 +296,15 @@ describe("Migration Context", () => {
 			</MigrationProvider>,
 		);
 
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+
 		await waitFor(() => {
-			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
 		});
 
+		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+
+		expect(screen.getByTestId("Migrations")).toBeInTheDocument();
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
 
 		clearStoredMigrationsMock();
@@ -352,13 +377,16 @@ describe("Migration Context", () => {
 		ethersMock.mockRestore();
 	});
 
-	it("should add a transaction", async () => {
+	it("should add and remove a transaction", async () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
-		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => ({
-			amount: 123,
-			arkTxHash: `0xabc123`,
-			memo: "0xabc",
-		}));
+
+		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => [
+			{
+				amount: 123,
+				arkTxHash: `0xabc123`,
+				memo: "0xabc",
+			},
+		]);
 
 		const ethersMock = Contract.mockImplementation(() => ({
 			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
@@ -372,19 +400,22 @@ describe("Migration Context", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+			expect(screen.getByTestId("Migrations__store")).toBeInTheDocument();
 		});
 
 		expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("Migrations__store"));
 
-		await waitFor(
-			() => {
-				expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
-			},
-			{ timeout: 4000 },
-		);
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
+
+		userEvent.click(screen.getByTestId("Migrations__remove"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
+		});
 
 		ethersMock.mockRestore();
 	});
@@ -544,7 +575,7 @@ describe("Migration Context", () => {
 		consoleSpy.mockRestore();
 	});
 
-	it("should not load migrations if profile is undefined", async () => {
+	it("should not load migrations if profile is undefined", () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(undefined);
 
 		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
@@ -555,9 +586,7 @@ describe("Migration Context", () => {
 			</MigrationProvider>,
 		);
 
-		await waitFor(() => {
-			expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
-		});
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
 
 		expect(getMigrationsByArkTxHashMock).not.toHaveBeenCalled();
 
@@ -565,7 +594,7 @@ describe("Migration Context", () => {
 	});
 
 	it("should reload paused state", async () => {
-		const { clearStoredMigrationsMock, getPausedMock } = mockStoredMigrations([]);
+		const { clearStoredMigrationsMock, getPausedMock } = mockStoredMigrations([migrationFixture]);
 
 		let reloadPausedStateCallback;
 

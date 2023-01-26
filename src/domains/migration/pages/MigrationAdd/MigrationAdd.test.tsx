@@ -83,7 +83,7 @@ describe("MigrationAdd", () => {
 	beforeEach(() => {
 		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
-			storeTransaction: vi.fn(),
+			storeTransactions: () => Promise.resolve({}),
 		});
 	});
 
@@ -321,7 +321,7 @@ describe("MigrationAdd", () => {
 	it("should redirect to success step once migration finished", async () => {
 		useMigrationsSpy.mockRestore();
 
-		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
+		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockImplementation(() => ({
 			migrations: [
 				{
 					address: "AdDreSs",
@@ -332,8 +332,8 @@ describe("MigrationAdd", () => {
 					timestamp: Date.now() / 1000,
 				},
 			],
-			storeTransaction: vi.fn(),
-		});
+			storeTransactions: () => Promise.resolve({}),
+		}));
 
 		renderComponent();
 
@@ -394,10 +394,25 @@ describe("MigrationAdd", () => {
 
 		userEvent.click(screen.getByTestId("MigrationAdd__send-button"));
 
-		await expect(screen.findByTestId("MigrationPendingStep")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.getByTestId("MigrationPendingStep")).toBeInTheDocument();
+		});
 
-		await expect(screen.findByTestId("MigrationSuccessStep")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationPendingStep")).not.toBeInTheDocument();
+		});
 
+		await waitFor(() => {
+			expect(screen.getByTestId("MigrationSuccessStep")).toBeInTheDocument();
+		});
+
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+
+		userEvent.click(screen.getByTestId("MigrationAdd__back-to-dashboard-button"));
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+
+		historySpy.mockRestore();
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 	});
@@ -453,7 +468,9 @@ describe("MigrationAdd", () => {
 		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
 		userEvent.click(screen.getByTestId(continueButton));
 
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+		});
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
