@@ -7,7 +7,7 @@ import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
-import { useTransaction } from "@/domains/transaction/hooks";
+import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 
 export const BaseTransactionRowMode = ({
 	type,
@@ -90,18 +90,14 @@ export const TransactionRowMode = ({
 	address,
 	isCompact,
 	...properties
-}: TransactionRowModeProperties) => {
-	const { isMigrationTransaction } = useTransaction();
-
-	return (
-		<BaseTransactionRowMode
-			isCompact={isCompact}
-			isSent={transaction.isSent()}
-			isReturn={transaction.sender() === transaction.wallet().address() && transaction.isReturn()}
-			type={transactionType || transaction.type()}
-			address={address || transaction.sender()}
-			isMigration={isMigrationTransaction(transaction)}
-			{...properties}
-		/>
-	);
-};
+}: TransactionRowModeProperties) => (
+	<BaseTransactionRowMode
+		isCompact={isCompact}
+		isSent={transaction.isSent()}
+		isReturn={transaction.sender() === transaction.wallet().address() && transaction.isReturn()}
+		type={transactionType || transaction.type()}
+		address={address || transaction.sender()}
+		isMigration={isValidMigrationTransaction(transaction)}
+		{...properties}
+	/>
+);
