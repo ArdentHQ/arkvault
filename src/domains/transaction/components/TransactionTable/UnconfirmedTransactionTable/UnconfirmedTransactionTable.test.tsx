@@ -31,6 +31,7 @@ describe("Unconfirmed transaction table", () => {
 				total: () => BigNumber.make(1),
 				type: () => "transfer",
 				wallet: () => wallet,
+				memo: () => "test",
 			},
 			{
 				convertedTotal: () => BigNumber.ZERO,
@@ -46,6 +47,7 @@ describe("Unconfirmed transaction table", () => {
 				total: () => BigNumber.make(1),
 				type: () => "multiPayment",
 				wallet: () => wallet,
+				memo: () => "test",
 			},
 		];
 	});
