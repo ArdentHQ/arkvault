@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
 import { uniqBy, sortBy } from "@ardenthq/sdk-helpers";
+import { matchPath, useLocation } from "react-router-dom";
 import {
 	ARKMigrationViewStructOutput,
 	Migration,
@@ -12,7 +13,6 @@ import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
 import { httpClient } from "@/app/services";
 import { polygonContractAddress, polygonIndexerUrl, polygonRpcUrl } from "@/utils/polygon-migration";
-import { matchPath, useLocation } from "react-router-dom";
 
 const contractABI = [
 	{
