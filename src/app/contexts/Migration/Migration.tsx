@@ -143,9 +143,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	const loadMigrations = useCallback(async () => {
-		// if (!isMigrationPath) {
-		// 	return;
-		// }
+		if (!isMigrationPath) {
+			return;
+		}
 
 		/* istanbul ignore next -- @preserve */
 		if (!contract || !repository) {
@@ -210,7 +210,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				uniqBy([...newlyConfirmedMigrations, ...repository.all()], (migration) => migration.id),
 			);
 		}
-	}, [repository, contract, migrationsUpdated]);
+	}, [repository, contract, migrationsUpdated, isMigrationPath]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
 		try {
