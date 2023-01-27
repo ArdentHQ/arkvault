@@ -4,6 +4,7 @@ import { Contract, ethers } from "ethers";
 import userEvent from "@testing-library/user-event";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { vi } from "vitest";
+import { Route } from "react-router-dom";
 import { MigrationProvider, useMigrations } from "./Migration";
 import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
 import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testing-library";
@@ -12,7 +13,6 @@ import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
-import { Route } from "react-router-dom";
 
 const Test = () => {
 	const { migrations, storeTransactions, removeTransactions, contractIsPaused, markMigrationAsRead } =
