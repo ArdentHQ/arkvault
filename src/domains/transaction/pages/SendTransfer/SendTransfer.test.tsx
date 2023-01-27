@@ -65,6 +65,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		sender: () => transactionFixture.data.sender,
 		type: () => "transfer",
 		usesMultiSignature: () => false,
+		memo: () => "test",
 	} as any);
 
 let profile: Contracts.IProfile;
@@ -1398,6 +1399,7 @@ describe("SendTransfer", () => {
 						total: () => 1,
 						type: () => "transfer",
 						wallet: () => wallet,
+						memo: () => "test",
 					},
 					{
 						convertedTotal: () => 0,
@@ -1413,6 +1415,7 @@ describe("SendTransfer", () => {
 						total: () => 1,
 						type: () => "multiPayment",
 						wallet: () => wallet,
+						memo: () => "test",
 					},
 				],
 			}),
@@ -1547,6 +1550,7 @@ describe("SendTransfer", () => {
 						total: () => 1,
 						type: () => "transfer",
 						wallet: () => wallet,
+						memo: () => "test",
 					},
 				],
 			}),
@@ -1793,7 +1797,7 @@ describe("SendTransfer", () => {
 	it("should buildTransferData return zero amount for empty single recipient", async () => {
 		const transferData = await buildTransferData({
 			coin: wallet.coin(),
-			memo: "any memo",
+			memo: () => "any memo",
 			recipients: [
 				{
 					address: wallet.address(),
