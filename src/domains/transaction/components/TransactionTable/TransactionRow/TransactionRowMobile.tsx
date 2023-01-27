@@ -14,7 +14,7 @@ import { TableRow } from "@/app/components/Table";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { RowWrapper, RowLabel, ResponsiveAddressWrapper } from "@/app/components/Table/Mobile/Row";
-import { useTransaction } from "@/domains/transaction/hooks";
+import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 
 export const TransactionRowMobile = memo(
 	({
@@ -29,7 +29,6 @@ export const TransactionRowMobile = memo(
 	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
 		const timeFormat = useTimeFormat();
-		const { isMigrationTransaction } = useTransaction();
 
 		if (isLoading) {
 			return <TransactionRowMobileSkeleton />;
@@ -77,7 +76,7 @@ export const TransactionRowMobile = memo(
 					<RowWrapper>
 						<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
 
-						{isMigrationTransaction(transaction) && (
+						{isValidMigrationTransaction(transaction) && (
 							<TransactionMigrationLink
 								transaction={transaction}
 								onClick={() => onShowMigrationDetails?.(transaction)}
@@ -86,7 +85,7 @@ export const TransactionRowMobile = memo(
 							</TransactionMigrationLink>
 						)}
 
-						{!isMigrationTransaction(transaction) && (
+						{!isValidMigrationTransaction(transaction) && (
 							<ResponsiveAddressWrapper innerClassName="flex-row-reverse gap-2">
 								<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={true} />
 							</ResponsiveAddressWrapper>
