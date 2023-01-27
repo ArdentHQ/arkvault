@@ -29,17 +29,6 @@ describe("useTransaction", () => {
 		wallet = profile.wallets().first();
 	});
 
-	it("should check if transaction is a migration", async () => {
-		const { result } = renderHook(() => useTransaction());
-
-		const transactions = await result.current.fetchWalletUnconfirmedTransactions(wallet);
-		const transaction = transactions[0];
-
-		vi.spyOn(transaction, "sender").mockReturnValue("abc");
-
-		expect(result.current.isMigrationTransaction(transactions[0])).toBe(false);
-	});
-
 	it("should fetch wallet unconfirmed transactions", async () => {
 		const { result } = renderHook(() => useTransaction());
 

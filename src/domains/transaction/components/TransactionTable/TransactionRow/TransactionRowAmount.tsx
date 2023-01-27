@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Tooltip } from "@/app/components/Tooltip";
-import { useTransaction } from "@/domains/transaction/hooks";
+import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 
 interface ExchangeTooltipProperties {
 	value: number;
@@ -101,22 +101,17 @@ const TransactionRowAmount = ({
 	exchangeCurrency?: string;
 	exchangeTooltip?: boolean;
 	isCompact?: boolean;
-}): JSX.Element => {
-	const { isMigrationTransaction } = useTransaction();
-
-	return (
-		<BaseTransactionRowAmount
-			isSent={transaction.isSent()}
-			wallet={transaction.wallet()}
-			total={transaction.total()}
-			convertedTotal={transaction.convertedTotal()}
-			exchangeCurrency={exchangeCurrency}
-			exchangeTooltip={exchangeTooltip}
-			isCompact={isCompact}
-			isTestNetwork={transaction.wallet().network().isTest()}
-			isMigration={isMigrationTransaction(transaction)}
-		/>
-	);
-};
-
+}): JSX.Element => (
+	<BaseTransactionRowAmount
+		isSent={transaction.isSent()}
+		wallet={transaction.wallet()}
+		total={transaction.total()}
+		convertedTotal={transaction.convertedTotal()}
+		exchangeCurrency={exchangeCurrency}
+		exchangeTooltip={exchangeTooltip}
+		isCompact={isCompact}
+		isTestNetwork={transaction.wallet().network().isTest()}
+		isMigration={isValidMigrationTransaction(transaction)}
+	/>
+);
 export { BaseTransactionRowAmount, TransactionRowAmount };
