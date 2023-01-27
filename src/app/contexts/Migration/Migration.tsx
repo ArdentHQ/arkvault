@@ -143,9 +143,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	const loadMigrations = useCallback(async () => {
-		if (!isMigrationPath) {
-			return;
-		}
+		// if (!isMigrationPath) {
+		// 	return;
+		// }
 
 		/* istanbul ignore next -- @preserve */
 		if (!contract || !repository) {
@@ -286,7 +286,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			loadMigrations();
 		};
 
-		setTimeout(reloadMigrationsCallback, 1000);
+		loadMigrations();
 		reloadInterval = setInterval(reloadMigrationsCallback, MIGRATION_LOAD_INTERVAL);
 
 		return () => clearInterval(reloadInterval);
