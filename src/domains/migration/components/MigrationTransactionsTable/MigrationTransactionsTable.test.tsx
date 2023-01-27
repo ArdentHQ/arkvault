@@ -45,6 +45,20 @@ describe("MigrationTransactionsTable", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render with loading more button", () => {
+		const { container } = render(
+			<MigrationTransactionsTable
+				migrationTransactions={migrationTransactions}
+				onClick={vi.fn()}
+				isLoadingMore
+			/>,
+		);
+
+		expect(screen.getAllByTestId("MigrationTransactionsRow")).toHaveLength(migrationTransactions.length);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it("should render empty", () => {
 		const { container } = render(<MigrationTransactionsTable migrationTransactions={[]} onClick={vi.fn()} />);
 

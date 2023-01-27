@@ -165,6 +165,7 @@ describe("Migration", () => {
 		vi.spyOn(transactionFixture, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
 
 		vi.spyOn(wallet.transactionIndex(), "received").mockResolvedValue({
+			currentPage: () => 1,
 			items: () => [transactionFixture, secondTransactionFixture],
 		});
 
