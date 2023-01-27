@@ -85,6 +85,7 @@ interface Properties {
 const MigrationContext = React.createContext<any>(undefined);
 
 const MIGRATION_LOAD_INTERVAL = 5000;
+const INITIAL_MIGRATION_LOAD_TIME = 1000;
 
 const ONE_MINUTE = 60 * 1000;
 
@@ -286,7 +287,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			loadMigrations();
 		};
 
-		loadMigrations();
+		setTimeout(() => loadMigrations(), INITIAL_MIGRATION_LOAD_TIME);
 		reloadInterval = setInterval(reloadMigrationsCallback, MIGRATION_LOAD_INTERVAL);
 
 		return () => clearInterval(reloadInterval);

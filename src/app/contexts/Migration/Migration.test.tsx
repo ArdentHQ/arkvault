@@ -520,7 +520,7 @@ describe("Migration Context", () => {
 		reloadMigrationsCallback();
 
 		// Contract method should have been called only when loaded
-		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(2);
+		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(1);
 
 		setIntervalSpy.mockRestore();
 
@@ -590,7 +590,7 @@ describe("Migration Context", () => {
 
 		// Contract method should have been twice, once when page loaded
 		// and once when interval was called
-		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(3);
+		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(2);
 
 		setIntervalSpy.mockRestore();
 
