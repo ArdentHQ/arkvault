@@ -12,6 +12,7 @@ import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
 import { httpClient } from "@/app/services";
 import { polygonContractAddress, polygonIndexerUrl, polygonRpcUrl } from "@/utils/polygon-migration";
+import { matchPath, useLocation } from "react-router-dom";
 
 const contractABI = [
 	{
@@ -94,6 +95,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrations, setMigrations] = useState<Migration[]>();
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
+	const { pathname } = useLocation();
+
+	const isMigrationPath = useMemo(
+		() => !!matchPath(pathname, { path: "/profiles/:profileId/migration" }),
+		[pathname],
+	);
 
 	const migrationsUpdated = useCallback(
 		async (migrations: Migration[]) => {
@@ -136,6 +143,10 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	const loadMigrations = useCallback(async () => {
+		if (!isMigrationPath) {
+			return;
+		}
+
 		/* istanbul ignore next -- @preserve */
 		if (!contract || !repository) {
 			return;
