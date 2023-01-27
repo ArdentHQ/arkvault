@@ -12,6 +12,7 @@ import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
+import { Route } from "react-router-dom";
 
 const Test = () => {
 	const { migrations, storeTransactions, removeTransactions, contractIsPaused, markMigrationAsRead } =
@@ -291,9 +292,15 @@ describe("Migration Context", () => {
 		const { clearStoredMigrationsMock } = mockStoredMigrations([migrationFixture]);
 
 		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
 		);
 
 		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
@@ -365,9 +372,15 @@ describe("Migration Context", () => {
 		}));
 
 		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
 		);
 
 		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
@@ -394,9 +407,15 @@ describe("Migration Context", () => {
 		}));
 
 		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
 		);
 
 		await waitFor(() => {
@@ -433,9 +452,15 @@ describe("Migration Context", () => {
 		]);
 
 		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
 		);
 
 		await waitFor(() => {
@@ -475,9 +500,15 @@ describe("Migration Context", () => {
 		});
 
 		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
 		);
 
 		await waitFor(() => {
@@ -538,9 +569,15 @@ describe("Migration Context", () => {
 		});
 
 		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
 		);
 
 		await waitFor(() => {
@@ -607,9 +644,15 @@ describe("Migration Context", () => {
 		});
 
 		render(
-			<MigrationProvider>
-				<Test />
-			</MigrationProvider>,
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
 		);
 
 		await waitFor(() => {
