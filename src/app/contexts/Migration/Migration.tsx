@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
 import { uniqBy, sortBy } from "@ardenthq/sdk-helpers";
+import { matchPath, useLocation } from "react-router-dom";
 import {
 	ARKMigrationViewStructOutput,
 	Migration,
@@ -83,9 +84,9 @@ interface Properties {
 
 const MigrationContext = React.createContext<any>(undefined);
 
-const ONE_SECOND = 1000;
+const MIGRATION_LOAD_INTERVAL = 5000;
 
-const ONE_MINUTE = 60 * ONE_SECOND;
+const ONE_MINUTE = 60 * 1000;
 
 export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
@@ -94,6 +95,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrations, setMigrations] = useState<Migration[]>();
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
+	const { pathname } = useLocation();
+
+	const isMigrationPath = useMemo(
+		() => !!matchPath(pathname, { path: "/profiles/:profileId/migration" }),
+		[pathname],
+	);
 
 	const migrationsUpdated = useCallback(
 		async (migrations: Migration[]) => {
@@ -136,6 +143,10 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	const loadMigrations = useCallback(async () => {
+		if (!isMigrationPath) {
+			return;
+		}
+
 		/* istanbul ignore next -- @preserve */
 		if (!contract || !repository) {
 			return;
@@ -199,7 +210,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				uniqBy([...newlyConfirmedMigrations, ...repository.all()], (migration) => migration.id),
 			);
 		}
-	}, [repository, contract, migrationsUpdated]);
+	}, [repository, contract, migrationsUpdated, isMigrationPath]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
 		try {
@@ -275,7 +286,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			loadMigrations();
 		};
 
-		reloadInterval = setInterval(reloadMigrationsCallback, ONE_SECOND);
+		reloadInterval = setInterval(reloadMigrationsCallback, MIGRATION_LOAD_INTERVAL);
 
 		return () => clearInterval(reloadInterval);
 	}, [repository, loadMigrations, migrations, hasContractAndRepository]);
