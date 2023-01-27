@@ -286,7 +286,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			loadMigrations();
 		};
 
-		loadMigrations();
+		setTimeout(reloadMigrationsCallback, 1000);
 		reloadInterval = setInterval(reloadMigrationsCallback, MIGRATION_LOAD_INTERVAL);
 
 		return () => clearInterval(reloadInterval);
