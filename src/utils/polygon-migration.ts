@@ -17,11 +17,11 @@ export const polygonExplorerLink = () => import.meta.env.VITE_POLYGON_EXPLORER_U
 
 export const polygonTransactionLink = (transactionId: string) => `${polygonExplorerLink()}/tx/${transactionId}`;
 
-export const polygonContractAddress = () => import.meta.env.VITE_POLYGON_CONTRACT_ADDRESS;
+export const polygonContractAddress = () => "0x3F562f0Db1525a358559cE32acB4Cb683e3E41BD";
 
 export const polygonRpcUrl = () => import.meta.env.VITE_POLYGON_RPC_URL || "https://rpc-mumbai.maticvigil.com/";
 
-export const polygonIndexerUrl = () => import.meta.env.VITE_POLYGON_INDEXER_URL;
+export const polygonIndexerUrl = () => "https://mumbai.ihost.org/";
 
 export const polygonMigrationStartTime = () => Number.parseInt(import.meta.env.VITE_POLYGON_MIGRATION_START_TIME || 0);
 
