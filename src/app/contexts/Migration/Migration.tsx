@@ -336,11 +336,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const markMigrationsAsRead = useCallback(
 		(ids: string[]) => {
-			if (!repository) {
-				return;
-			}
-
-			repository?.markAsRead(ids);
+			repository?.markAsRead?.(ids);
 			migrationsUpdated(repository!.all());
 		},
 		[repository, migrationsUpdated],
