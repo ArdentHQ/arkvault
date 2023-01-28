@@ -157,7 +157,7 @@ describe("TransactionTable", () => {
 				.transaction()
 				.transfer({
 					data: {
-						amount: 1,
+						amount: 10,
 						to: migrationWalletAddress(),
 					},
 					fee: 1,
@@ -172,6 +172,8 @@ describe("TransactionTable", () => {
 				}),
 			wallet,
 		) as any;
+
+		vi.spyOn(transactionFixture, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
 
 		render(<TransactionTable transactions={[transactionFixture]} profile={profile} />);
 
@@ -219,6 +221,7 @@ describe("TransactionTable", () => {
 			wallet,
 		) as any;
 
+		vi.spyOn(transactionFixture, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
 		renderResponsive(<TransactionTable transactions={[transactionFixture]} profile={profile} />, "xs");
 
 		await expect(screen.findByTestId("TransactionMigrationLink")).resolves.toBeVisible();

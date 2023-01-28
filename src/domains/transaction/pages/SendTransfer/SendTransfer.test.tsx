@@ -55,6 +55,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		fee: () => +transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
 		isMultiSignatureRegistration: () => false,
+		memo: () => "test",
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
 			{
@@ -1392,6 +1393,7 @@ describe("SendTransfer", () => {
 						isTransfer: () => true,
 						isUnvote: () => false,
 						isVote: () => false,
+						memo: () => "test",
 						recipient: () => "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 						recipients: () => ["D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", wallet.address()],
 						timestamp: () => DateTime.make(),
@@ -1407,6 +1409,7 @@ describe("SendTransfer", () => {
 						isTransfer: () => false,
 						isUnvote: () => false,
 						isVote: () => false,
+						memo: () => "test",
 						recipient: () => "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 						recipients: () => ["D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", wallet.address()],
 						timestamp: () => DateTime.make(),
@@ -1541,6 +1544,7 @@ describe("SendTransfer", () => {
 						isTransfer: () => true,
 						isUnvote: () => false,
 						isVote: () => false,
+						memo: () => "test",
 						recipient: () => "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 						recipients: () => ["D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", wallet.address()],
 						timestamp: () => DateTime.make(),
@@ -1793,7 +1797,7 @@ describe("SendTransfer", () => {
 	it("should buildTransferData return zero amount for empty single recipient", async () => {
 		const transferData = await buildTransferData({
 			coin: wallet.coin(),
-			memo: "any memo",
+			memo: () => "any memo",
 			recipients: [
 				{
 					address: wallet.address(),
