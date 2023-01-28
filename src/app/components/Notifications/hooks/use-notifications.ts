@@ -1,21 +1,13 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useCallback, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Migration, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { useMigrations } from "@/app/contexts";
+
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
 
-	const { migrations, markMigrationAsRead } = useMigrations();
+	const { migrations, markMigrationsAsRead } = useMigrations();
 	const [readMigrationsIds, setReadMigrationsIds] = useState<string[]>([]);
-
-	const storeReadMigrationsAndMarkAsRead = useCallback(
-		(migration: Migration) => {
-			markMigrationAsRead(migration);
-
-			setReadMigrationsIds((readMigrationsIds) => [...readMigrationsIds, migration.id]);
-		},
-		[markMigrationAsRead],
-	);
 
 	const confirmedMigrations = useMemo<Migration[]>(() => {
 		if (migrations === undefined) {
@@ -23,9 +15,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		}
 
 		return migrations.filter(
-			(migration) =>
-				migration.status === MigrationTransactionStatus.Confirmed &&
-				(migration.readAt === undefined || readMigrationsIds.includes(migration.id)),
+			(migration) => migration.status === MigrationTransactionStatus.Confirmed && migration.readAt === undefined,
 		);
 	}, [migrations, readMigrationsIds]);
 
@@ -57,15 +47,15 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 			releases: profile.notifications().releases().recent(),
 			transactions: profile.notifications().transactions().transactions(),
 		};
-	}, [profile, isSyncing, confirmedMigrations]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [profile, isSyncing, confirmedMigrations, migrations]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return {
 		hasUnread: (releases.length > 0 || transactions.length > 0) && profile.notifications().hasUnread(),
 		markAllTransactionsAsRead,
 		markAsRead,
-		markMigrationAsRead: storeReadMigrationsAndMarkAsRead,
 		migrationTransactions,
 		releases,
 		transactions,
+		markMigrationsAsRead,
 	};
 };
