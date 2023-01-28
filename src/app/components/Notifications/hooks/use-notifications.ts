@@ -52,9 +52,9 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		hasUnread: (releases.length > 0 || transactions.length > 0) && profile.notifications().hasUnread(),
 		markAllTransactionsAsRead,
 		markAsRead,
+		markMigrationsAsRead,
 		migrationTransactions,
 		releases,
 		transactions,
-		markMigrationsAsRead,
 	};
 };

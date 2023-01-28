@@ -356,10 +356,10 @@ export const MigrationProvider = ({ children }: Properties) => {
 				{
 					contractIsPaused,
 					getTransactionStatus,
+					markMigrationsAsRead,
 					migrations: migrationsSorted,
 					removeTransactions,
 					storeTransactions,
-					markMigrationsAsRead,
 				} as MigrationContextType
 			}
 		>
