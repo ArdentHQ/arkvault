@@ -341,7 +341,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			}
 
 			repository?.markAsRead(ids);
-			migrationsUpdated(repository!.all());
+			migrationsUpdated(repository.all());
 		},
 		[repository, migrationsUpdated],
 	);
@@ -360,10 +360,10 @@ export const MigrationProvider = ({ children }: Properties) => {
 				{
 					contractIsPaused,
 					getTransactionStatus,
+					markMigrationsAsRead,
 					migrations: migrationsSorted,
 					removeTransactions,
 					storeTransactions,
-					markMigrationsAsRead,
 				} as MigrationContextType
 			}
 		>
