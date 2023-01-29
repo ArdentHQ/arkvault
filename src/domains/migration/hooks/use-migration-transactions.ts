@@ -52,7 +52,7 @@ export const fetchMigrationTransactions = async ({
 	} = {
 		amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
 		fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
-		limit: limit + 1,
+		limit,
 		page,
 		recipientId: migrationWalletAddress(),
 		senderId: senderIds.join(","),
@@ -78,7 +78,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [hasMore, setHasMore] = useState(false);
 	const [page, setPage] = useState(0);
-	const limit = 10;
+	const limit = 11;
 
 	const loadMigrationWalletTransactions = useCallback(async () => {
 		if (profileIsRestoring) {
