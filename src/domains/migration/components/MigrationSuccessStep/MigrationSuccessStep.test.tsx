@@ -2,7 +2,7 @@ import React from "react";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import { MigrationSuccessStep } from "./MigrationSuccessStep";
-import { renderResponsiveWithRoute, getDefaultProfileId, env } from "@/utils/testing-library";
+import { renderResponsiveWithRoute, getDefaultProfileId } from "@/utils/testing-library";
 import { useMigrationForm } from "@/domains/migration/hooks";
 import { Form } from "@/app/components/Form";
 
@@ -20,11 +20,9 @@ const WrapperForm = ({ children }: { children: React.ReactElement }) => {
 };
 
 describe("MigrationSuccessStep", () => {
-	beforeAll(async () => {
+	beforeAll(() => {
 		migrationUrl = `/profiles/${getDefaultProfileId()}/migration/add`;
 		history.push(migrationUrl);
-		const profile = env.profiles().findById(getDefaultProfileId());
-		const wallet = profile.wallets().first();
 	});
 
 	it.each(["xs", "sm"])("should render in %s", (breakpoint) => {

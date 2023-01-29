@@ -1,11 +1,11 @@
 import React, { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { generatePath, matchPath, useHistory, useLocation } from "react-router-dom";
+import { MigrationDetails } from "@/domains/migration/components/MigrationDetails";
 import { Page } from "@/app/components/Layout";
 import { useMigrationTransactions } from "@/domains/migration/hooks/use-migration-transactions";
 import { useActiveProfile } from "@/app/hooks";
-import { generatePath, matchPath, useHistory, useLocation } from "react-router-dom";
 import { Migration as MigrationTransaction } from "@/domains/migration/migration.contracts";
-import { MigrationDetails } from "../../components/MigrationDetails";
 import { ProfilePaths } from "@/router/paths";
 
 export const MigrationOverview = () => {
@@ -32,7 +32,7 @@ export const MigrationOverview = () => {
 					profileId: profile.id(),
 				}),
 			);
-			return undefined;
+			return;
 		}
 
 		setExpandedMigration(migrationTransaction);

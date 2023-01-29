@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { css } from "twin.macro";
 import VisibilitySensor from "react-visibility-sensor";
+import { useHistory } from "react-router-dom";
 import { NotificationsMigrationItemProperties } from "./Notifications.contracts";
 import { MigrationTransactionItemMobile } from "./MigrationTransactionItemMobile";
 import { TableCell, TableRow } from "@/app/components/Table";
@@ -9,7 +10,6 @@ import { useWalletAlias, useBreakpoint } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
-import { useHistory } from "react-router-dom";
 const rowStyles = [
 	css`
 		&:hover td > div {

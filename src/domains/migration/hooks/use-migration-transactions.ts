@@ -150,6 +150,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	);
 
 	return {
+		getMigrationById,
 		hasMore,
 		isLoading: (page === 0 && isLoading) || !migrations,
 		isLoadingMore: page > 0 && isLoading,
@@ -157,6 +158,5 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		onLoadMore: () => loadMigrationWalletTransactions(),
 		page,
 		resolveTransaction,
-		getMigrationById,
 	};
 };

@@ -50,8 +50,8 @@ export const Migration = () => {
 						onClick={(migrationTransaction) => {
 							history.push(
 								generatePath(ProfilePaths.MigrationOverview, {
-									profileId: profile.id(),
 									migrationId: migrationTransaction.id,
+									profileId: profile.id(),
 								}),
 							);
 						}}

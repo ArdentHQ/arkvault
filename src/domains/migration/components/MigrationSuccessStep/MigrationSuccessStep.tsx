@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { DTO } from "@ardenthq/sdk-profiles";
 import { Amount } from "@/app/components/Amount";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Header } from "@/app/components/Header";

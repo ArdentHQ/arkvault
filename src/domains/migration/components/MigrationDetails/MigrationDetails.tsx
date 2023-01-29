@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { DTO } from "@ardenthq/sdk-profiles";
 import { MigrationTabsWrapper, Step, SuccessButtonWrapper } from "@/domains/migration/pages/MigrationAdd/MigrationAdd";
 import { ContractPausedAlert } from "@/domains/migration/pages/Migration/Migration.blocks";
 import { Section } from "@/app/components/Layout";

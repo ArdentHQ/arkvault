@@ -1,11 +1,10 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory , generatePath } from "react-router-dom";
 import { NotificationsMigrationProperties } from "./Notifications.contracts";
 import { MigrationTransactionItem } from "./MigrationTransactionItem";
 import { Image } from "@/app/components/Image";
 import { Table } from "@/app/components/Table";
 import { Migration } from "@/domains/migration/migration.contracts";
-import { generatePath } from "react-router-dom";
 import { ProfilePaths } from "@/router/paths";
 
 export const NotificationsMigrations = ({
@@ -38,8 +37,8 @@ export const NotificationsMigrations = ({
 							onClick={(migrationTransaction) => {
 								history.push(
 									generatePath(ProfilePaths.MigrationOverview, {
-										profileId: profile.id(),
 										migrationId: migrationTransaction.id,
+										profileId: profile.id(),
 									}),
 								);
 							}}

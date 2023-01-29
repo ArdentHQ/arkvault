@@ -1,6 +1,5 @@
 import React from "react";
 import { createHashHistory } from "history";
-import { DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationPendingStep } from "./MigrationPendingStep";
@@ -10,7 +9,6 @@ import { useTheme } from "@/app/hooks/use-theme";
 
 const history = createHashHistory();
 let migrationUrl: string;
-let transactionFixture: DTO.ExtendedSignedTransactionData;
 let migrationFixture;
 
 describe("MigrationPendingStep", () => {
@@ -29,28 +27,6 @@ describe("MigrationPendingStep", () => {
 			status: MigrationTransactionStatus.Pending,
 			timestamp: Date.now() / 1000,
 		};
-
-		transactionFixture = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.transfer({
-					data: {
-						amount: 1,
-						to: wallet.address(),
-					},
-					fee: 1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
-		);
 	});
 
 	it.each(["xs", "sm"])("should render in %s", (breakpoint) => {

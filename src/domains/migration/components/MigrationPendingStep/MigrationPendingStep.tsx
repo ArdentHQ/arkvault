@@ -2,6 +2,7 @@ import cn from "classnames";
 import React, { useCallback } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import { DateTime } from "@ardenthq/sdk-intl";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
@@ -12,7 +13,6 @@ import { MigrationPolygonIcon } from "@/domains/migration/components/MigrationPo
 import { MigrationAddress, MigrationDetail } from "@/domains/migration/components/MigrationAddress";
 import { Migration } from "@/domains/migration/migration.contracts";
 import { Header } from "@/app/components/Header";
-import { DateTime } from "@ardenthq/sdk-intl";
 
 interface MigrationPendingStepProperties {
 	migrationTransaction: Migration;
