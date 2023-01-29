@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory , generatePath } from "react-router-dom";
+import { useHistory, generatePath } from "react-router-dom";
 import { NotificationsMigrationProperties } from "./Notifications.contracts";
 import { MigrationTransactionItem } from "./MigrationTransactionItem";
 import { Image } from "@/app/components/Image";
