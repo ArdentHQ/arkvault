@@ -2,7 +2,6 @@ import cn from "classnames";
 import React, { useCallback } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { DTO } from "@ardenthq/sdk-profiles";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
@@ -11,14 +10,19 @@ import { useActiveProfile, useBreakpoint, useTheme } from "@/app/hooks";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { MigrationPolygonIcon } from "@/domains/migration/components/MigrationPolygonIcon";
 import { MigrationAddress, MigrationDetail } from "@/domains/migration/components/MigrationAddress";
+import { Migration } from "@/domains/migration/migration.contracts";
 import { Header } from "@/app/components/Header";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 interface MigrationPendingStepProperties {
-	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
+	migrationTransaction: Migration;
 	handleBack?: () => void;
 }
 
-export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({ transaction, handleBack }) => {
+export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
+	migrationTransaction,
+	handleBack,
+}) => {
 	const timeFormat = useTimeFormat();
 
 	const { t } = useTranslation();
@@ -68,11 +72,13 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 				<div className="space-y-3 sm:-mx-5">
 					<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 						<MigrationDetail label={t("COMMON.DATE")} className="px-5 pt-6 pb-5">
-							<span className="font-semibold">{transaction.timestamp()?.format(timeFormat)}</span>
+							<span className="font-semibold">
+								{DateTime.make(migrationTransaction.timestamp).format(timeFormat)}
+							</span>
 						</MigrationDetail>
 
 						<MigrationAddress
-							address={transaction.sender()}
+							address={migrationTransaction.address}
 							className="px-5 pb-6"
 							label={t("MIGRATION.MIGRATION_ADD.FROM_ARK_ADDRESS")}
 						/>
@@ -84,14 +90,18 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 						</div>
 
 						<MigrationAddress
-							address={transaction.memo() || ""}
+							address={migrationTransaction.migrationAddress}
 							className="px-5 pt-6 pb-5"
 							label={t("MIGRATION.MIGRATION_ADD.TO_POLYGON_ADDRESS")}
 							isEthereum
 						/>
 
 						<MigrationDetail label={t("COMMON.AMOUNT")} className="px-5 pb-6">
-							<Amount value={transaction.amount()} ticker="ARK" className="text-lg font-semibold" />
+							<Amount
+								value={migrationTransaction.amount}
+								ticker="ARK"
+								className="text-lg font-semibold"
+							/>
 						</MigrationDetail>
 					</div>
 

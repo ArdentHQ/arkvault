@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { MigrationTabsWrapper, Step, SuccessButtonWrapper } from "@/domains/migration/pages/MigrationAdd/MigrationAdd";
 import { ContractPausedAlert } from "@/domains/migration/pages/Migration/Migration.blocks";
-import { Page, Section } from "@/app/components/Layout";
+import { Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { Button } from "@/app/components/Button";
 import { MigrationPendingStep } from "@/domains/migration/components/MigrationPendingStep";
@@ -15,11 +15,10 @@ const TOTAL_STEPS = 5;
 
 interface Properties {
 	migrationTransaction: Migration;
-	transaction: DTO.ExtendedConfirmedTransactionData;
 	handleBack: () => void;
 }
 
-export const MigrationDetails = ({ transaction, migrationTransaction, handleBack }: Properties) => {
+export const MigrationDetails = ({ migrationTransaction, handleBack }: Properties) => {
 	const { t } = useTranslation();
 
 	const [activeStep, setActiveStep] = useState(Step.Connect);
@@ -38,7 +37,7 @@ export const MigrationDetails = ({ transaction, migrationTransaction, handleBack
 	}, [transactionIsConfirmed]);
 
 	return (
-		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
+		<>
 			<ContractPausedAlert />
 
 			<Section className="flex-1">
@@ -48,14 +47,14 @@ export const MigrationDetails = ({ transaction, migrationTransaction, handleBack
 					<MigrationTabsWrapper>
 						<Tabs activeId={activeStep}>
 							<TabPanel tabId={Step.PendingTransaction}>
-								<MigrationPendingStep transaction={transaction} handleBack={handleBack} />
+								<MigrationPendingStep
+									migrationTransaction={migrationTransaction}
+									handleBack={handleBack}
+								/>
 							</TabPanel>
 
 							<TabPanel tabId={Step.Finished}>
-								<MigrationSuccessStep
-									transaction={transaction}
-									migrationTransaction={migrationTransaction}
-								/>
+								<MigrationSuccessStep migrationTransaction={migrationTransaction} />
 							</TabPanel>
 
 							{activeStep === Step.Finished && (
@@ -69,6 +68,6 @@ export const MigrationDetails = ({ transaction, migrationTransaction, handleBack
 					</MigrationTabsWrapper>
 				</div>
 			</Section>
-		</Page>
+		</>
 	);
 };

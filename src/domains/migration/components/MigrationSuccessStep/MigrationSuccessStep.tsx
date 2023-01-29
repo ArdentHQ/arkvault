@@ -13,14 +13,10 @@ import { polygonTransactionLink } from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
 
 interface MigrationSuccessStepProperties {
-	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 	migrationTransaction: Migration;
 }
 
-export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
-	transaction,
-	migrationTransaction,
-}) => {
+export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({ migrationTransaction }) => {
 	const { t } = useTranslation();
 
 	const reference = useRef(null);
@@ -42,7 +38,10 @@ export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 
 			<div className="sm:-mx-5">
 				<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-					<MigrationAddress label={t("MIGRATION.POLYGON_ADDRESS")} address={transaction.memo() || ""} />
+					<MigrationAddress
+						label={t("MIGRATION.POLYGON_ADDRESS")}
+						address={migrationTransaction.migrationAddress}
+					/>
 
 					<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
 						<div className="absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800">
@@ -53,7 +52,7 @@ export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 					</div>
 
 					<MigrationDetail label={t("COMMON.AMOUNT")}>
-						<Amount value={transaction.amount()} ticker="ARK" className="text-lg font-semibold" />
+						<Amount value={migrationTransaction.amount} ticker="ARK" className="text-lg font-semibold" />
 					</MigrationDetail>
 				</div>
 

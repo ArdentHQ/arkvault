@@ -9,6 +9,7 @@ import { useWalletAlias, useBreakpoint } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
+import { useHistory } from "react-router-dom";
 const rowStyles = [
 	css`
 		&:hover td > div {
@@ -27,6 +28,7 @@ export const MigrationTransactionItem = ({
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 	const { isXs, isSm } = useBreakpoint();
+	const history = useHistory();
 
 	const wallet = useMemo(
 		() => profile.wallets().findByAddressWithNetwork(transaction.address, "ark.mainnet"),
@@ -77,6 +79,7 @@ export const MigrationTransactionItem = ({
 
 				<TableCell variant="end" innerClassName="justify-end" isCompact>
 					<button
+						onClick={() => onClick?.(transaction)}
 						data-testid="MigrationTransactionItem__button"
 						type="button"
 						className="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"

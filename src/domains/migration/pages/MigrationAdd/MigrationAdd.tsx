@@ -167,14 +167,11 @@ export const MigrationAdd = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.PendingTransaction}>
-								<MigrationPendingStep transaction={transaction!} />
+								<MigrationPendingStep migrationTransaction={migrationTransaction!} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.Finished}>
-								<MigrationSuccessStep
-									transaction={transaction!}
-									migrationTransaction={migrationTransaction!}
-								/>
+								<MigrationSuccessStep migrationTransaction={migrationTransaction!} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.Error}>

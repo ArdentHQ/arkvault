@@ -89,7 +89,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 
 		const { items, hasMore, cursor } = await fetchMigrationTransactions({ limit, page: page + 1, profile });
 
-		setLatestTransactions(items);
+		setLatestTransactions((existingItems) => [...existingItems, ...items]);
 		setIsLoadingTransactions(false);
 		setHasMore(hasMore);
 		setPage(cursor);
@@ -144,6 +144,13 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		return migrations.slice(0, page * limit);
 	}, [migrations, page, limit]);
 
+	const getMigrationById = useCallback(
+		(id: string) => {
+			return (migrations || []).find((migration) => migration.id === id);
+		},
+		[migrations, page, limit],
+	);
+
 	return {
 		hasMore,
 		isLoading: (page === 0 && isLoading) || !migrations,
@@ -152,5 +159,6 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		onLoadMore: () => loadMigrationWalletTransactions(),
 		page,
 		resolveTransaction,
+		getMigrationById,
 	};
 };
