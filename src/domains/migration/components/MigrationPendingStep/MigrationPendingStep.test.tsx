@@ -5,11 +5,13 @@ import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationPendingStep } from "./MigrationPendingStep";
 import { renderResponsiveWithRoute, render, getDefaultProfileId, screen, env } from "@/utils/testing-library";
+import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { useTheme } from "@/app/hooks/use-theme";
 
 const history = createHashHistory();
 let migrationUrl: string;
 let transactionFixture: DTO.ExtendedSignedTransactionData;
+let migrationFixture;
 
 describe("MigrationPendingStep", () => {
 	beforeAll(async () => {
@@ -18,6 +20,15 @@ describe("MigrationPendingStep", () => {
 
 		migrationUrl = `/profiles/${getDefaultProfileId()}/migration/add`;
 		history.push(migrationUrl);
+
+		migrationFixture = {
+			address: "AdDreSs2",
+			amount: 456,
+			id: "bc68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
+			migrationAddress: "BuRnAdDreSs",
+			status: MigrationTransactionStatus.Pending,
+			timestamp: Date.now() / 1000,
+		};
 
 		transactionFixture = new DTO.ExtendedSignedTransactionData(
 			await wallet
@@ -45,7 +56,7 @@ describe("MigrationPendingStep", () => {
 	it.each(["xs", "sm"])("should render in %s", (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/migration/add">
-				<MigrationPendingStep transaction={transactionFixture} />
+				<MigrationPendingStep migrationTransaction={migrationFixture} />
 			</Route>,
 			breakpoint,
 			{
@@ -62,7 +73,7 @@ describe("MigrationPendingStep", () => {
 
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/migration/add">
-				<MigrationPendingStep transaction={transactionFixture} />
+				<MigrationPendingStep migrationTransaction={migrationFixture} />
 			</Route>,
 			breakpoint,
 			{
@@ -79,7 +90,7 @@ describe("MigrationPendingStep", () => {
 
 		render(
 			<Route path="/profiles/:profileId/migration/add">
-				<MigrationPendingStep transaction={transactionFixture} />
+				<MigrationPendingStep migrationTransaction={migrationFixture} />
 			</Route>,
 			{
 				history,
@@ -96,7 +107,7 @@ describe("MigrationPendingStep", () => {
 
 		render(
 			<Route path="/profiles/:profileId/migration/add">
-				<MigrationPendingStep transaction={transactionFixture} handleBack={handleBack} />
+				<MigrationPendingStep migrationTransaction={migrationFixture} handleBack={handleBack} />
 			</Route>,
 			{
 				history,

@@ -140,33 +140,9 @@ describe("Migration", () => {
 			wallet,
 		);
 
-		const secondTransactionFixture = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.transfer({
-					data: {
-						amount: 1,
-						to: wallet.address(),
-					},
-					fee: 1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
-		);
-
-		vi.spyOn(transactionFixture, "memo").mockReturnValue("0xb9EDE6f94D192073D8eaF85f8db677133d483249");
-
 		vi.spyOn(wallet.transactionIndex(), "received").mockResolvedValue({
 			currentPage: () => 1,
-			items: () => [transactionFixture, secondTransactionFixture],
+			items: () => [transactionFixture],
 		});
 
 		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
@@ -194,14 +170,6 @@ describe("Migration", () => {
 		useMigrationsSpy.mockRestore();
 		walletCreationSpy.mockRestore();
 
-		await waitFor(() => {
-			expect(screen.getByTestId("MigrationDetails")).toBeInTheDocument();
-		});
-
-		userEvent.click(screen.getByTestId("MigrationAdd__back-to-dashboard-button"));
-
-		await waitFor(() => {
-			expect(screen.queryByTestId("MigrationDetails")).not.toBeInTheDocument();
-		});
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/migrations/${transactionFixture.id()}`);
 	});
 });

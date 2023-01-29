@@ -15,7 +15,7 @@ import { Migration } from "@/domains/migration/migration.contracts";
 export const fetchMigrationTransactions = async ({
 	profile,
 	page,
-	limit = 10,
+	limit,
 }: {
 	page: number;
 	profile: Contracts.IProfile;
@@ -145,9 +145,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	}, [migrations, page, limit]);
 
 	const getMigrationById = useCallback(
-		(id: string) => {
-			return (migrations || []).find((migration) => migration.id === id);
-		},
+		(id: string) => migrations?.find((migration) => migration.id === id),
 		[migrations, page, limit],
 	);
 

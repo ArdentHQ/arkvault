@@ -32,7 +32,7 @@ export const MigrationOverview = () => {
 					profileId: profile.id(),
 				}),
 			);
-			return;
+			return undefined;
 		}
 
 		setExpandedMigration(migrationTransaction);
