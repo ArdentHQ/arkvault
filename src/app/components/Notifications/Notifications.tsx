@@ -29,7 +29,7 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 		persist();
 
 		return () => {
-			markMigrationsAsRead(markedAsReadIds.current);
+			markMigrationsAsRead?.(markedAsReadIds.current);
 		};
 	}, []);
 

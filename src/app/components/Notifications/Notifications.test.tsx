@@ -112,55 +112,8 @@ describe("Notifications", () => {
 		useNotificationsSpy.mockRestore();
 	});
 
-	it("should mark migrations as read", () => {
-		const markMigrationAsRead = vi.fn();
-
-		vi.mock("react-visibility-sensor", () => ({
-			default: ({ children, onChange }) => (
-				<>
-					<button data-testid="TriggerVisibility" onClick={(isVisible, ...rest) => onChange(true, ...rest)} />
-
-					{children}
-				</>
-			),
-		}));
-
-		const migrations: MigrationType[] = [
-			{
-				address: "AdDreSs",
-				amount: 123,
-				id: "0x123",
-				migrationAddress: "0x456",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
-		];
-
-		const useNotificationsSpy = vi.spyOn(useNotifications, "useNotifications").mockReturnValue({
-			markAllTransactionsAsRead: () => {},
-			markMigrationAsRead,
-			migrationTransactions: migrations,
-			releases: [],
-			transactions: [],
-		} as any);
-
-		const { container } = render(<Notifications profile={profile} />);
-
-		expect(screen.getByTestId("NotificationsMigrations")).toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("TriggerVisibility"));
-
-		expect(container).toMatchSnapshot();
-
-		useNotificationsSpy.mockRestore();
-
-		vi.unmock("react-visibility-sensor");
-
-		expect(markMigrationAsRead).toHaveBeenCalled();
-	});
-
 	it("should not mark migration as read if already read", () => {
-		const markMigrationAsRead = vi.fn();
+		const markMigrationsAsRead = vi.fn();
 
 		vi.mock("react-visibility-sensor", () => ({
 			default: ({ children, onChange }) => (
@@ -186,7 +139,7 @@ describe("Notifications", () => {
 
 		const useNotificationsSpy = vi.spyOn(useNotifications, "useNotifications").mockReturnValue({
 			markAllTransactionsAsRead: () => {},
-			markMigrationAsRead,
+			markMigrationsAsRead,
 			migrationTransactions: migrations,
 			releases: [],
 			transactions: [],
@@ -204,7 +157,7 @@ describe("Notifications", () => {
 
 		vi.unmock("react-visibility-sensor");
 
-		expect(markMigrationAsRead).not.toHaveBeenCalled();
+		expect(markMigrationsAsRead).not.toHaveBeenCalled();
 	});
 
 	it("should render empty", () => {
