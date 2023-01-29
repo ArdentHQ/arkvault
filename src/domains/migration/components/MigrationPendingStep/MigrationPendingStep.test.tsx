@@ -12,10 +12,7 @@ let migrationUrl: string;
 let migrationFixture;
 
 describe("MigrationPendingStep", () => {
-	beforeAll(async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
-		const wallet = profile.wallets().first();
-
+	beforeAll(() => {
 		migrationUrl = `/profiles/${getDefaultProfileId()}/migration/add`;
 		history.push(migrationUrl);
 

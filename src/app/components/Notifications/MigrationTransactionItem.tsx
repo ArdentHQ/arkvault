@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { css } from "twin.macro";
 import VisibilitySensor from "react-visibility-sensor";
-import { useHistory } from "react-router-dom";
 import { NotificationsMigrationItemProperties } from "./Notifications.contracts";
 import { MigrationTransactionItemMobile } from "./MigrationTransactionItemMobile";
 import { TableCell, TableRow } from "@/app/components/Table";
@@ -28,7 +27,6 @@ export const MigrationTransactionItem = ({
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 	const { isXs, isSm } = useBreakpoint();
-	const history = useHistory();
 
 	const wallet = useMemo(
 		() => profile.wallets().findByAddressWithNetwork(transaction.address, "ark.mainnet"),
