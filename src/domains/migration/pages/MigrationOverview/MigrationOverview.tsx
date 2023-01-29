@@ -39,7 +39,7 @@ export const MigrationOverview = () => {
 	}, [migrations, migrationId]);
 
 	if (!expandedMigration) {
-		return;
+		return <></>;
 	}
 
 	return (
