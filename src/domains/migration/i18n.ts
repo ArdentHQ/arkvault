@@ -119,7 +119,8 @@ export const translations = {
 	STATUS: {
 		CONFIRMED: "Confirmed",
 		PENDING: "Pending",
-		UNKNOWN: "Unknown Status. Try again later.",
+		UNKNOWN: "Unknown",
+		UNKNOWN_DETAILS: "Unknown Status. Try again later.",
 	},
 
 	TRANSACTION_ID: "Transaction ID",
