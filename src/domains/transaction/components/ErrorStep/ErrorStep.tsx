@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Alert } from "@/app/components/Alert";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
@@ -43,10 +42,6 @@ export const ErrorStep = ({
 					<p className="hidden text-theme-secondary-text md:block">
 						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
 					</p>
-
-					<Alert className="md:hidden" variant="danger">
-						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
-					</Alert>
 
 					{errorMessage && (
 						<TextArea
