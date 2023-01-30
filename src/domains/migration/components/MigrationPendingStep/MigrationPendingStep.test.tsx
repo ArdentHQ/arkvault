@@ -87,9 +87,9 @@ describe("MigrationPendingStep", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("MigrationAdd_back"));
+		userEvent.click(screen.getByTestId("MigrationAdd__back-button"));
 
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/migration`);
 	});
 	it("should handle custom back action", () => {
 		const handleBack = vi.fn();
@@ -104,7 +104,7 @@ describe("MigrationPendingStep", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("MigrationAdd_back"));
+		userEvent.click(screen.getByTestId("MigrationAdd__back-button"));
 
 		expect(handleBack).toHaveBeenCalled();
 	});

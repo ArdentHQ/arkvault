@@ -198,7 +198,7 @@ describe("Migration", () => {
 			expect(screen.getByTestId("MigrationDetails")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("MigrationAdd__back-to-dashboard-button"));
+		userEvent.click(screen.getByTestId("MigrationAdd__back-to-migration-button"));
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("MigrationDetails")).not.toBeInTheDocument();
