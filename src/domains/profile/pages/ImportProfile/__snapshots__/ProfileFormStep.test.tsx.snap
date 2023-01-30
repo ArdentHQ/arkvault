@@ -612,7 +612,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                         Terms of Service
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -650,7 +650,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                         Privacy Policy
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -1288,7 +1288,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                         Terms of Service
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -1326,7 +1326,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                         Privacy Policy
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -1964,7 +1964,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                         Terms of Service
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -2002,7 +2002,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                         Privacy Policy
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -2646,7 +2646,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                         Terms of Service
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -2684,7 +2684,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                         Privacy Policy
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -3375,7 +3375,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                         Terms of Service
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -3413,7 +3413,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                         Privacy Policy
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -4105,7 +4105,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                         Terms of Service
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -4143,7 +4143,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                         Privacy Policy
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
                         height="16"
                         width="16"

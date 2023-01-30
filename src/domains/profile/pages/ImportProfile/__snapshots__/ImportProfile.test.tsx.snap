@@ -738,7 +738,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                     Terms of Service
                                   </span>
                                   <div
-                                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                                     data-testid="Link__external"
                                     height="16"
                                     width="16"
@@ -776,7 +776,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                     Privacy Policy
                                   </span>
                                   <div
-                                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                                     data-testid="Link__external"
                                     height="16"
                                     width="16"
@@ -1583,7 +1583,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                     Terms of Service
                                   </span>
                                   <div
-                                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                                     data-testid="Link__external"
                                     height="16"
                                     width="16"
@@ -1621,7 +1621,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                     Privacy Policy
                                   </span>
                                   <div
-                                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                                     data-testid="Link__external"
                                     height="16"
                                     width="16"

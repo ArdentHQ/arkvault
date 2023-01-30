@@ -1576,7 +1576,7 @@ exports[`SendIpfs > should render summary step 1`] = `
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                     data-testid="Link__external"
                     height="16"
                     width="16"
@@ -2857,7 +2857,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                                   data-testid="Link__external"
                                   height="16"
                                   width="16"
@@ -4182,7 +4182,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                                   </span>
                                 </span>
                                 <div
-                                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                                   data-testid="Link__external"
                                   height="16"
                                   width="16"
@@ -5509,7 +5509,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                                   </span>
                                 </span>
                                 <div
-                                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
                                   data-testid="Link__external"
                                   height="16"
                                   width="16"
