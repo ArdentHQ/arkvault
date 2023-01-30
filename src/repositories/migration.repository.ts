@@ -55,17 +55,18 @@ export class MigrationRepository {
 		this.set(this.all().filter((item) => !ids.has(item.id)));
 	}
 
-	public markAsRead(item: Migration): void {
+	public markAsRead(ids: string[]): void {
 		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
 
-		const migrations = all[this.#profile.id()];
+		const allMigrations = all[this.#profile.id()] || [];
 
-		const index = migrations.findIndex((migration) => migration.id === item.id);
+		const migrations = allMigrations.map((migration: Migration) => {
+			if (ids.includes(migration.id)) {
+				return { ...migration, readAt: Date.now() };
+			}
 
-		migrations[index] = {
-			...item,
-			readAt: Date.now(),
-		};
+			return migration;
+		});
 
 		all[this.#profile.id()] = migrations;
 

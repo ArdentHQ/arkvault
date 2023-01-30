@@ -74,7 +74,7 @@ interface MigrationContextType {
 	) => Promise<void>;
 	getTransactionStatus: (transaction: DTO.ExtendedConfirmedTransactionData) => Promise<MigrationTransactionStatus>;
 	removeTransactions: (address: string) => Promise<void>;
-	markMigrationAsRead: (migration: Migration) => void;
+	markMigrationsAsRead: (ids: string[]) => void;
 }
 
 interface Properties {
@@ -143,10 +143,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	const loadMigrations = useCallback(async () => {
-		if (!isMigrationPath) {
-			return;
-		}
-
 		/* istanbul ignore next -- @preserve */
 		if (!contract || !repository) {
 			return;
@@ -338,10 +334,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 		setContract(new Contract(contractAddress, contractABI, provider));
 	}, []);
 
-	const markMigrationAsRead = useCallback(
-		(migration: Migration) => {
-			repository!.markAsRead(migration);
-
+	const markMigrationsAsRead = useCallback(
+		(ids: string[]) => {
+			repository?.markAsRead?.(ids);
 			migrationsUpdated(repository!.all());
 		},
 		[repository, migrationsUpdated],
@@ -361,7 +356,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				{
 					contractIsPaused,
 					getTransactionStatus,
-					markMigrationAsRead,
+					markMigrationsAsRead,
 					migrations: migrationsSorted,
 					removeTransactions,
 					storeTransactions,

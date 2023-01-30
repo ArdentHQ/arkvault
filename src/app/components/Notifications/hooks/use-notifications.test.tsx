@@ -150,15 +150,16 @@ describe("useNotifications", () => {
 				timestamp: Date.now() / 1000,
 			},
 		];
-		const markMigrationAsRead = vi.fn();
+		const markMigrationsAsRead = vi.fn();
 
-		const useMigrationsSpy = vi
-			.spyOn(context, "useMigrations")
-			.mockImplementation(() => ({ markMigrationAsRead: markMigrationAsRead, migrations }));
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({
+			markMigrationsAsRead,
+			migrations,
+		}));
 
 		const { result } = renderHook(() => useNotifications({ profile }));
 
-		result.current.markMigrationAsRead({
+		result.current.markMigrationsAsRead({
 			address: "AdDreSs",
 			amount: 123,
 			id: "0x123",
@@ -167,7 +168,7 @@ describe("useNotifications", () => {
 			timestamp: Date.now() / 1000,
 		});
 
-		expect(markMigrationAsRead).toHaveBeenCalled();
+		expect(markMigrationsAsRead).toHaveBeenCalled();
 
 		useMigrationsSpy.mockRestore();
 	});

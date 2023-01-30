@@ -476,7 +476,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
 </div>
 `;
 
-exports[`Notifications > should mark migrations as read 1`] = `
+exports[`Notifications > should mark migration as read 1`] = `
 <div>
   <div
     class="css-80avit"
