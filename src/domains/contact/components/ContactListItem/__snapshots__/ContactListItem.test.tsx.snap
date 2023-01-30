@@ -36,7 +36,7 @@ exports[`ContactListItem > should render 1`] = `
               data-testid="ContactListItem__name"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 Brian
@@ -109,7 +109,7 @@ exports[`ContactListItem > should render 1`] = `
                   class="relative grow text-left"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -298,7 +298,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
               data-testid="ContactListItem__name"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 Caio
@@ -371,7 +371,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
                   class="relative grow text-left"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -560,7 +560,7 @@ exports[`ContactListItem > should render options 1`] = `
               data-testid="ContactListItem__name"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 Brian
@@ -633,7 +633,7 @@ exports[`ContactListItem > should render options 1`] = `
                   class="relative grow text-left"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -855,7 +855,7 @@ exports[`ContactListItem > should render options 1`] = `
                   class="relative grow text-left"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1077,7 +1077,7 @@ exports[`ContactListItem > should render options 1`] = `
                   class="relative grow text-left"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -1266,7 +1266,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               data-testid="ContactListItem__name"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 Brian
@@ -1339,7 +1339,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   class="relative grow text-left"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1561,7 +1561,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   class="relative grow text-left"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1783,7 +1783,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   class="relative grow text-left"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu

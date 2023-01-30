@@ -300,7 +300,7 @@ exports[`MigrationTransactionsTable > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -334,7 +334,7 @@ exports[`MigrationTransactionsTable > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0x0000000000000000000000000000000000000000
@@ -565,7 +565,7 @@ exports[`MigrationTransactionsTable > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -599,7 +599,7 @@ exports[`MigrationTransactionsTable > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0x0000000000000000000000000000000000000000
@@ -1000,7 +1000,7 @@ exports[`MigrationTransactionsTable > should render compact 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -1034,7 +1034,7 @@ exports[`MigrationTransactionsTable > should render compact 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0x0000000000000000000000000000000000000000
@@ -1261,7 +1261,7 @@ exports[`MigrationTransactionsTable > should render compact 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -1295,7 +1295,7 @@ exports[`MigrationTransactionsTable > should render compact 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0x0000000000000000000000000000000000000000
@@ -1481,7 +1481,7 @@ exports[`MigrationTransactionsTable > should render mobile 1`] = `
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -1526,7 +1526,7 @@ exports[`MigrationTransactionsTable > should render mobile 1`] = `
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0x0000000000000000000000000000000000000000
@@ -1665,7 +1665,7 @@ exports[`MigrationTransactionsTable > should render mobile 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       id
@@ -1704,7 +1704,7 @@ exports[`MigrationTransactionsTable > should render mobile 1`] = `
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -1749,7 +1749,7 @@ exports[`MigrationTransactionsTable > should render mobile 1`] = `
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0x0000000000000000000000000000000000000000
@@ -1947,7 +1947,7 @@ exports[`MigrationTransactionsTable > should render mobile 2`] = `
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -1992,7 +1992,7 @@ exports[`MigrationTransactionsTable > should render mobile 2`] = `
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0x0000000000000000000000000000000000000000
@@ -2131,7 +2131,7 @@ exports[`MigrationTransactionsTable > should render mobile 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       id
@@ -2170,7 +2170,7 @@ exports[`MigrationTransactionsTable > should render mobile 2`] = `
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -2215,7 +2215,7 @@ exports[`MigrationTransactionsTable > should render mobile 2`] = `
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0x0000000000000000000000000000000000000000
@@ -7499,7 +7499,7 @@ exports[`MigrationTransactionsTable > should render with loading more button 1`]
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -7533,7 +7533,7 @@ exports[`MigrationTransactionsTable > should render with loading more button 1`]
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0x0000000000000000000000000000000000000000
@@ -7764,7 +7764,7 @@ exports[`MigrationTransactionsTable > should render with loading more button 1`]
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -7798,7 +7798,7 @@ exports[`MigrationTransactionsTable > should render with loading more button 1`]
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0x0000000000000000000000000000000000000000

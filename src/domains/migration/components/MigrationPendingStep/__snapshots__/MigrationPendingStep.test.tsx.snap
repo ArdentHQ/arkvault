@@ -158,7 +158,7 @@ exports[`MigrationPendingStep > should render in sm 1`] = `
               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 AdDreSs2
@@ -245,7 +245,7 @@ exports[`MigrationPendingStep > should render in sm 1`] = `
               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 BuRnAdDreSs
@@ -457,7 +457,7 @@ exports[`MigrationPendingStep > should render in sm in dark mode 1`] = `
               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 AdDreSs2
@@ -544,7 +544,7 @@ exports[`MigrationPendingStep > should render in sm in dark mode 1`] = `
               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 BuRnAdDreSs
@@ -756,7 +756,7 @@ exports[`MigrationPendingStep > should render in xs 1`] = `
               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 AdDreSs2
@@ -843,7 +843,7 @@ exports[`MigrationPendingStep > should render in xs 1`] = `
               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 BuRnAdDreSs
@@ -1059,7 +1059,7 @@ exports[`MigrationPendingStep > should render in xs in dark mode 1`] = `
               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 AdDreSs2
@@ -1146,7 +1146,7 @@ exports[`MigrationPendingStep > should render in xs in dark mode 1`] = `
               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 BuRnAdDreSs

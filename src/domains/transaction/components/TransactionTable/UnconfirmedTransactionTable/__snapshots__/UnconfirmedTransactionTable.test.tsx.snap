@@ -176,14 +176,14 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -512,14 +512,14 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -733,14 +733,14 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="css-u3jrna"
+                          class="no-ligatures css-u3jrna"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 2
                         </span>
                       </span>
                       <span
-                        class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                         data-testid="Address__address"
                       >
                         D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1113,14 +1113,14 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1334,14 +1334,14 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="css-u3jrna"
+                          class="no-ligatures css-u3jrna"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 2
                         </span>
                       </span>
                       <span
-                        class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                         data-testid="Address__address"
                       >
                         D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb

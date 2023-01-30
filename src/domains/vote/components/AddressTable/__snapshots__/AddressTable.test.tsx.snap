@@ -308,14 +308,14 @@ exports[`AddressTable > should render 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -588,14 +588,14 @@ exports[`AddressTable > should render in xs screen 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
                               </span>
                             </span>
                             <span
-                              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -849,14 +849,14 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
                               </span>
                             </span>
                             <span
-                              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1110,14 +1110,14 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
                               </span>
                             </span>
                             <span
-                              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1524,14 +1524,14 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1942,14 +1942,14 @@ exports[`AddressTable > should render with voting delegates and handle exception
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

@@ -1032,7 +1032,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     1e9b975eff66a731095876c3b6…3bb37a4127c46db3d69131067e
@@ -1239,14 +1239,14 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

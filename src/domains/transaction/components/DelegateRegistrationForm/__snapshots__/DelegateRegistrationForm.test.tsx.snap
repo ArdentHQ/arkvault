@@ -155,14 +155,14 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -553,14 +553,14 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -837,14 +837,14 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1146,14 +1146,14 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1519,14 +1519,14 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1917,14 +1917,14 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

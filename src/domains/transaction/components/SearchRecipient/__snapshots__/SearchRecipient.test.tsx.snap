@@ -279,7 +279,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -289,7 +289,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -361,7 +361,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -371,7 +371,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -702,7 +702,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -712,7 +712,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -784,7 +784,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -794,7 +794,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1063,14 +1063,14 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 1
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1379,7 +1379,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -1389,7 +1389,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1461,7 +1461,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -1471,7 +1471,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1802,7 +1802,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -1812,7 +1812,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1884,7 +1884,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -1894,7 +1894,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2163,14 +2163,14 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 1
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2233,14 +2233,14 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2549,7 +2549,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -2559,7 +2559,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2631,7 +2631,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -2641,7 +2641,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb

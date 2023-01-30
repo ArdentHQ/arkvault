@@ -544,14 +544,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -795,14 +795,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1049,14 +1049,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1305,14 +1305,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1564,14 +1564,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1812,14 +1812,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2063,14 +2063,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2316,14 +2316,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2569,14 +2569,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2824,14 +2824,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3076,14 +3076,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3331,14 +3331,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3582,7 +3582,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -3616,7 +3616,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -3805,7 +3805,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -3839,7 +3839,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -4028,7 +4028,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4062,7 +4062,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -4251,7 +4251,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4285,7 +4285,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -4474,7 +4474,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4508,7 +4508,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -4697,7 +4697,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4731,7 +4731,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -4920,7 +4920,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4954,7 +4954,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -5143,7 +5143,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -5177,7 +5177,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -5366,7 +5366,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -5400,7 +5400,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -5589,7 +5589,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -5623,7 +5623,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -5812,7 +5812,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -5846,7 +5846,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -6035,7 +6035,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6069,7 +6069,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -6258,7 +6258,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6292,7 +6292,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -6481,7 +6481,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6515,7 +6515,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -6704,7 +6704,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6738,7 +6738,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -6927,7 +6927,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6961,7 +6961,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -7150,7 +7150,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7184,7 +7184,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -7373,7 +7373,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7407,7 +7407,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -7596,7 +7596,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7630,7 +7630,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -7819,7 +7819,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7853,7 +7853,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -8042,7 +8042,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8080,14 +8080,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -8276,7 +8276,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8314,14 +8314,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -8510,7 +8510,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8548,14 +8548,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -8744,7 +8744,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8782,14 +8782,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -8978,7 +8978,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9012,7 +9012,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9201,7 +9201,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9235,7 +9235,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9424,7 +9424,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9458,7 +9458,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9647,7 +9647,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9681,7 +9681,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9870,7 +9870,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9904,7 +9904,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -10093,7 +10093,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -10127,7 +10127,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -10316,7 +10316,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -10350,7 +10350,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -10539,7 +10539,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -10573,7 +10573,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -10762,7 +10762,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -11003,7 +11003,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -11244,7 +11244,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -11485,7 +11485,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -11726,7 +11726,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -11760,7 +11760,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -11949,7 +11949,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -11983,7 +11983,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -12172,7 +12172,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -12206,7 +12206,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -12395,7 +12395,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -12429,7 +12429,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -12618,7 +12618,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -12885,7 +12885,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13152,7 +13152,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13419,7 +13419,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13686,7 +13686,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13720,7 +13720,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -13909,7 +13909,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13943,7 +13943,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -14132,7 +14132,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -14166,7 +14166,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -14355,7 +14355,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -14389,7 +14389,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -15001,14 +15001,14 @@ exports[`Transactions > should hide view more button when there are no next page
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -15252,14 +15252,14 @@ exports[`Transactions > should hide view more button when there are no next page
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -15506,14 +15506,14 @@ exports[`Transactions > should hide view more button when there are no next page
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -15754,14 +15754,14 @@ exports[`Transactions > should hide view more button when there are no next page
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -16002,14 +16002,14 @@ exports[`Transactions > should hide view more button when there are no next page
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -16257,14 +16257,14 @@ exports[`Transactions > should hide view more button when there are no next page
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -16508,7 +16508,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -16542,7 +16542,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -16731,7 +16731,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -16765,7 +16765,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -16954,7 +16954,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -16988,7 +16988,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -17177,7 +17177,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -17211,7 +17211,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -17400,7 +17400,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -17434,7 +17434,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -17623,7 +17623,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -17657,7 +17657,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -17846,7 +17846,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -17880,7 +17880,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -18069,7 +18069,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -18103,7 +18103,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -18292,7 +18292,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -18326,7 +18326,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -18515,7 +18515,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -18549,7 +18549,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -18738,7 +18738,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -18776,14 +18776,14 @@ exports[`Transactions > should hide view more button when there are no next page
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -18972,7 +18972,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19010,14 +19010,14 @@ exports[`Transactions > should hide view more button when there are no next page
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -19206,7 +19206,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19240,7 +19240,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19429,7 +19429,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19463,7 +19463,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19652,7 +19652,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19686,7 +19686,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -19875,7 +19875,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19909,7 +19909,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -20098,7 +20098,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -20339,7 +20339,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -20580,7 +20580,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -20614,7 +20614,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -20803,7 +20803,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -20837,7 +20837,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -21026,7 +21026,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -21293,7 +21293,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -21560,7 +21560,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -21594,7 +21594,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -21783,7 +21783,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -21817,7 +21817,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -22429,14 +22429,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -22685,14 +22685,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -22944,14 +22944,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -23197,14 +23197,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -23450,14 +23450,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -23705,14 +23705,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -23956,7 +23956,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -23990,7 +23990,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -24179,7 +24179,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -24213,7 +24213,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -24402,7 +24402,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -24436,7 +24436,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -24625,7 +24625,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -24659,7 +24659,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -24848,7 +24848,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -24882,7 +24882,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -25071,7 +25071,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -25105,7 +25105,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -25294,7 +25294,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -25328,7 +25328,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -25517,7 +25517,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -25551,7 +25551,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -25740,7 +25740,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -25774,7 +25774,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -25963,7 +25963,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -25997,7 +25997,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -26186,7 +26186,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -26224,14 +26224,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -26420,7 +26420,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -26458,14 +26458,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -26654,7 +26654,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -26688,7 +26688,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -26877,7 +26877,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -26911,7 +26911,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -27100,7 +27100,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -27134,7 +27134,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -27323,7 +27323,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -27357,7 +27357,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -27546,7 +27546,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -27787,7 +27787,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -28028,7 +28028,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -28062,7 +28062,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -28251,7 +28251,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -28285,7 +28285,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -28474,7 +28474,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -28741,7 +28741,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -29008,7 +29008,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -29042,7 +29042,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -29231,7 +29231,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -29265,7 +29265,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -29877,14 +29877,14 @@ exports[`Transactions > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -30128,14 +30128,14 @@ exports[`Transactions > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -30382,14 +30382,14 @@ exports[`Transactions > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -30630,14 +30630,14 @@ exports[`Transactions > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -30878,14 +30878,14 @@ exports[`Transactions > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -31133,14 +31133,14 @@ exports[`Transactions > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -31384,7 +31384,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -31418,7 +31418,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -31607,7 +31607,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -31641,7 +31641,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -31830,7 +31830,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -31864,7 +31864,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -32053,7 +32053,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -32087,7 +32087,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -32276,7 +32276,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -32310,7 +32310,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -32499,7 +32499,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -32533,7 +32533,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -32722,7 +32722,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -32756,7 +32756,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -32945,7 +32945,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -32979,7 +32979,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -33168,7 +33168,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -33202,7 +33202,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -33391,7 +33391,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -33425,7 +33425,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -33614,7 +33614,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -33652,14 +33652,14 @@ exports[`Transactions > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -33848,7 +33848,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -33886,14 +33886,14 @@ exports[`Transactions > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -34082,7 +34082,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -34116,7 +34116,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -34305,7 +34305,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -34339,7 +34339,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -34528,7 +34528,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -34562,7 +34562,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -34751,7 +34751,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -34785,7 +34785,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -34974,7 +34974,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -35215,7 +35215,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -35456,7 +35456,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -35490,7 +35490,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -35679,7 +35679,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -35713,7 +35713,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -35902,7 +35902,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -36169,7 +36169,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -36436,7 +36436,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -36470,7 +36470,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -36659,7 +36659,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -36693,7 +36693,7 @@ exports[`Transactions > should render 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -37318,14 +37318,14 @@ exports[`Transactions > should render with custom title 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -37569,14 +37569,14 @@ exports[`Transactions > should render with custom title 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -37823,14 +37823,14 @@ exports[`Transactions > should render with custom title 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -38071,14 +38071,14 @@ exports[`Transactions > should render with custom title 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -38319,14 +38319,14 @@ exports[`Transactions > should render with custom title 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -38574,14 +38574,14 @@ exports[`Transactions > should render with custom title 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -38825,7 +38825,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -38859,7 +38859,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -39048,7 +39048,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -39082,7 +39082,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -39271,7 +39271,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -39305,7 +39305,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -39494,7 +39494,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -39528,7 +39528,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -39717,7 +39717,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -39751,7 +39751,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -39940,7 +39940,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -39974,7 +39974,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -40163,7 +40163,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -40197,7 +40197,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -40386,7 +40386,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -40420,7 +40420,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHg1jYVS23D6GP7RuhckuJsYAr6crH6c3Z
@@ -40609,7 +40609,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -40643,7 +40643,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -40832,7 +40832,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -40866,7 +40866,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP
@@ -41055,7 +41055,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -41093,14 +41093,14 @@ exports[`Transactions > should render with custom title 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -41289,7 +41289,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -41327,14 +41327,14 @@ exports[`Transactions > should render with custom title 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         genesis_17
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -41523,7 +41523,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -41557,7 +41557,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -41746,7 +41746,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -41780,7 +41780,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -41969,7 +41969,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -42003,7 +42003,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -42192,7 +42192,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -42226,7 +42226,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPv1wzB2xJtJQH5PaCMnw1V9mUBugzP8yQ
@@ -42415,7 +42415,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -42656,7 +42656,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -42897,7 +42897,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -42931,7 +42931,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -43120,7 +43120,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -43154,7 +43154,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8c6zgQ2CYWvbCzqZbhWCKXDFHyje9tUMR
@@ -43343,7 +43343,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -43610,7 +43610,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -43877,7 +43877,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -43911,7 +43911,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z
@@ -44100,7 +44100,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -44134,7 +44134,7 @@ exports[`Transactions > should render with custom title 1`] = `
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z

@@ -698,7 +698,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                           class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -1518,7 +1518,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                           class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -2338,7 +2338,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                           class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr

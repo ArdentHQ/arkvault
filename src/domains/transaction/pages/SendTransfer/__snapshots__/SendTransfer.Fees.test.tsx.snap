@@ -1032,7 +1032,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -1230,14 +1230,14 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1288,7 +1288,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -2461,7 +2461,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -2659,14 +2659,14 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2717,7 +2717,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv

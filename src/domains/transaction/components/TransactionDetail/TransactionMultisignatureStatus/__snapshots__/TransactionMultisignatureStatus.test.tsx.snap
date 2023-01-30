@@ -39,14 +39,14 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -80,14 +80,14 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
               data-testid="Address__alias"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
               </span>
             </span>
             <span
-              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -211,14 +211,14 @@ exports[`TransactionMultisignatureStatus > should render in lg awaiting final si
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -252,14 +252,14 @@ exports[`TransactionMultisignatureStatus > should render in lg awaiting final si
               data-testid="Address__alias"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
               </span>
             </span>
             <span
-              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -350,14 +350,14 @@ exports[`TransactionMultisignatureStatus > should render in md awaiting final si
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -391,14 +391,14 @@ exports[`TransactionMultisignatureStatus > should render in md awaiting final si
               data-testid="Address__alias"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
               </span>
             </span>
             <span
-              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -496,14 +496,14 @@ exports[`TransactionMultisignatureStatus > should render in sm awaiting final si
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -536,14 +536,14 @@ exports[`TransactionMultisignatureStatus > should render in sm awaiting final si
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -636,14 +636,14 @@ exports[`TransactionMultisignatureStatus > should render in xl awaiting final si
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -677,14 +677,14 @@ exports[`TransactionMultisignatureStatus > should render in xl awaiting final si
               data-testid="Address__alias"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
               </span>
             </span>
             <span
-              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -782,14 +782,14 @@ exports[`TransactionMultisignatureStatus > should render in xs awaiting final si
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -822,14 +822,14 @@ exports[`TransactionMultisignatureStatus > should render in xs awaiting final si
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

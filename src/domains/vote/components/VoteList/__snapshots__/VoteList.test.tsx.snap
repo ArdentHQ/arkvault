@@ -33,14 +33,14 @@ exports[`VoteList > should render in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -76,14 +76,14 @@ exports[`VoteList > should render in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -119,14 +119,14 @@ exports[`VoteList > should render in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -171,14 +171,14 @@ exports[`VoteList > should render in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -214,14 +214,14 @@ exports[`VoteList > should render in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -257,14 +257,14 @@ exports[`VoteList > should render in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -295,14 +295,14 @@ exports[`VoteList > should render in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -338,14 +338,14 @@ exports[`VoteList > should render in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -381,14 +381,14 @@ exports[`VoteList > should render in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -447,14 +447,14 @@ exports[`VoteList > should render in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -490,14 +490,14 @@ exports[`VoteList > should render in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -533,14 +533,14 @@ exports[`VoteList > should render in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -571,14 +571,14 @@ exports[`VoteList > should render in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -614,14 +614,14 @@ exports[`VoteList > should render in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -657,14 +657,14 @@ exports[`VoteList > should render in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -723,14 +723,14 @@ exports[`VoteList > should render with amount in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -776,14 +776,14 @@ exports[`VoteList > should render with amount in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -829,14 +829,14 @@ exports[`VoteList > should render with amount in lg 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -891,14 +891,14 @@ exports[`VoteList > should render with amount in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -944,14 +944,14 @@ exports[`VoteList > should render with amount in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -997,14 +997,14 @@ exports[`VoteList > should render with amount in md 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -1055,14 +1055,14 @@ exports[`VoteList > should render with amount in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1108,14 +1108,14 @@ exports[`VoteList > should render with amount in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -1161,14 +1161,14 @@ exports[`VoteList > should render with amount in sm 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -1227,14 +1227,14 @@ exports[`VoteList > should render with amount in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1280,14 +1280,14 @@ exports[`VoteList > should render with amount in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -1333,14 +1333,14 @@ exports[`VoteList > should render with amount in xl 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -1391,14 +1391,14 @@ exports[`VoteList > should render with amount in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1444,14 +1444,14 @@ exports[`VoteList > should render with amount in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -1497,14 +1497,14 @@ exports[`VoteList > should render with amount in xs 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
