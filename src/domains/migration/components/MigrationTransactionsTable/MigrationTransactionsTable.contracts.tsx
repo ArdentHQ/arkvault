@@ -11,5 +11,5 @@ export interface MigrationTransactionsTableProperties {
 }
 
 export interface MigrationTransactionsRowStatusProperties {
-	status: MigrationTransactionStatus;
+	status?: MigrationTransactionStatus;
 }
