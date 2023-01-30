@@ -11,7 +11,7 @@ export interface Migration {
 	amount: number;
 	migrationId?: string;
 	migrationAddress: string;
-	status: MigrationTransactionStatus;
+	status?: MigrationTransactionStatus;
 	timestamp: number;
 	readAt?: number;
 }

@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { generatePath, useHistory } from "react-router-dom";
@@ -14,6 +14,7 @@ import { MigrationAddress, MigrationDetail } from "@/domains/migration/component
 import { Migration } from "@/domains/migration/migration.contracts";
 import { Header } from "@/app/components/Header";
 import { ProfilePaths } from "@/router/paths";
+import { Alert } from "@/app/components/Alert";
 
 interface MigrationPendingStepProperties {
 	migrationTransaction: Migration;
@@ -44,14 +45,26 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 
 	const ButtonWrapper = isXs ? FormButtons : React.Fragment;
 
+	const unknownStatus = useMemo(() => migrationTransaction.status === undefined, [migrationTransaction]);
+
 	return (
 		<>
 			<Header
-				title={t("MIGRATION.MIGRATION_ADD.STEP_PENDING.TITLE")}
-				subtitle={t("MIGRATION.MIGRATION_ADD.STEP_PENDING.DESCRIPTION")}
+				title={
+					unknownStatus
+						? t("MIGRATION.DETAILS_MODAL.ERROR.TITLE")
+						: t("MIGRATION.MIGRATION_ADD.STEP_PENDING.TITLE")
+				}
+				subtitle={unknownStatus ? undefined : t("MIGRATION.MIGRATION_ADD.STEP_PENDING.DESCRIPTION")}
 			/>
 
 			<div className="my-5 flex flex-col" data-testid="MigrationPendingStep">
+				{unknownStatus && (
+					<Alert variant="danger" className="mb-6">
+						{t("MIGRATION.DETAILS_MODAL.ERROR.DESCRIPTION")}
+					</Alert>
+				)}
+
 				<div className="relative mx-auto mb-6 flex w-full items-center justify-between gap-x-5">
 					<Image name="MigrationPendingBanner" domain="migration" useAccentColor={false} className="w-full" />
 
@@ -106,22 +119,24 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 						</MigrationDetail>
 					</div>
 
-					<div className="flex items-center justify-between overflow-hidden rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
-						<span className="whitespace-pre-line text-sm">
-							<Trans i18nKey="MIGRATION.MIGRATION_ADD.STEP_PENDING.MIGRATION_INFO" />
-						</span>
+					{!unknownStatus && (
+						<div className="flex items-center justify-between overflow-hidden rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
+							<span className="whitespace-pre-line text-sm">
+								<Trans i18nKey="MIGRATION.MIGRATION_ADD.STEP_PENDING.MIGRATION_INFO" />
+							</span>
 
-						<ButtonWrapper>
-							<Button
-								data-testid="MigrationAdd__back-button"
-								variant="primary"
-								onClick={handleBackToMigration}
-								className="my-auto whitespace-nowrap"
-							>
-								{t("MIGRATION.BACK_TO_MIGRATION")}
-							</Button>
-						</ButtonWrapper>
-					</div>
+							<ButtonWrapper>
+								<Button
+									data-testid="MigrationAdd__back-button"
+									variant="primary"
+									onClick={handleBackToMigration}
+									className="my-auto whitespace-nowrap"
+								>
+									{t("MIGRATION.BACK_TO_MIGRATION")}
+								</Button>
+							</ButtonWrapper>
+						</div>
+					)}
 				</div>
 			</div>
 		</>

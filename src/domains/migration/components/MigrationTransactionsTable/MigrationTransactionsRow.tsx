@@ -26,7 +26,7 @@ const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusPro
 	const { name, color } = getIcon(status);
 
 	return (
-		<Tooltip content={t(`MIGRATION.STATUS.${status.toUpperCase()}`)}>
+		<Tooltip content={t(`MIGRATION.STATUS.${status ? status.toUpperCase() : "UNKNOWN"}`)}>
 			<span>
 				<Icon name={name} size="lg" className={color} />
 			</span>

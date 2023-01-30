@@ -73,7 +73,8 @@ export const fetchMigrationTransactions = async ({
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsRestoring } = useConfiguration();
-	const { migrations, storeTransactions } = useMigrations();
+	const { migrations, storeTransactions, loadMigrationsError } = useMigrations();
+
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [hasMore, setHasMore] = useState(false);
@@ -154,6 +155,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		hasMore,
 		isLoading: (page === 0 && isLoading) || !migrations,
 		isLoadingMore: page > 0 && isLoading,
+		loadMigrationsError,
 		migrations: migrationsPage,
 		onLoadMore: () => loadMigrationWalletTransactions(),
 		page,

@@ -104,6 +104,9 @@ export const translations = {
 	},
 
 	PAGE_MIGRATION: {
+		ERRORS: {
+			FETCHING_MIGRATIONS_FAILED: "We were not able to obtain details of all migrations.",
+		},
 		NEW_MIGRATION: "New Migration",
 		NO_MIGRATIONS: "You don't have any migration transactions yet.",
 		SUBTITLE: 'ARK is moving to Polygon. Click "New Migration" to get started.',
@@ -116,6 +119,7 @@ export const translations = {
 	STATUS: {
 		CONFIRMED: "Confirmed",
 		PENDING: "Pending",
+		UNKNOWN: "Unknown Status. Try again later.",
 	},
 
 	TRANSACTION_ID: "Transaction ID",
