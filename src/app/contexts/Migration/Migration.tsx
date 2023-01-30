@@ -119,7 +119,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const getContractMigrations = useCallback(
 		async (transactionIds: string[], tries = 0): Promise<ARKMigrationViewStructOutput[]> => {
 			try {
-				throw new Error("Contract not found");
 				return await contract!.getMigrationsByArkTxHash(transactionIds);
 			} catch (error) {
 				if (tries > GET_MIGRATIONS_MAX_TRIES) {
