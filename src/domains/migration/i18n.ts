@@ -1,4 +1,6 @@
 export const translations = {
+	BACK_TO_MIGRATION: "Back to Migration",
+
 	CONTRACT_PAUSED_MESSAGE:
 		"The migration is temporarily paused. Please check our <linkTwitter>Twitter</linkTwitter> for more details.",
 

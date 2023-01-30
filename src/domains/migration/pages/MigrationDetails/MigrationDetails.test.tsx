@@ -88,7 +88,7 @@ describe("MigrationDetails", () => {
 
 		expect(screen.getByTestId("MigrationPendingStep")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("MigrationAdd_back"));
+		userEvent.click(screen.getByTestId("MigrationAdd__back-button"));
 
 		expect(handleBack).toHaveBeenCalled();
 	});
