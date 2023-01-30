@@ -119,7 +119,7 @@ describe("MigrationTransactionItem", () => {
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(transaction));
 	});
 
-	it("should emit onClick event when clickining on migration succesfsul link", async () => {
+	it("should emit onClick event when clicking on migration successful link", async () => {
 		const onClick = vi.fn();
 
 		render(
