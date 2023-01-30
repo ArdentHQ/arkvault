@@ -386,10 +386,10 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                     data-testid="Link__external"
-                    height="16"
-                    width="16"
+                    height="12"
+                    width="12"
                   >
                     <svg
                       id="arrow-external"
@@ -1253,10 +1253,10 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                     data-testid="Link__external"
-                    height="16"
-                    width="16"
+                    height="12"
+                    width="12"
                   >
                     <svg
                       id="arrow-external"
@@ -2123,10 +2123,10 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       </span>
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                       data-testid="Link__external"
-                      height="16"
-                      width="16"
+                      height="12"
+                      width="12"
                     >
                       <svg
                         id="arrow-external"
@@ -2917,10 +2917,10 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                     data-testid="Link__external"
-                    height="16"
-                    width="16"
+                    height="12"
+                    width="12"
                   >
                     <svg
                       id="arrow-external"
@@ -3787,10 +3787,10 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       </span>
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                       data-testid="Link__external"
-                      height="16"
-                      width="16"
+                      height="12"
+                      width="12"
                     >
                       <svg
                         id="arrow-external"
@@ -4581,10 +4581,10 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                     data-testid="Link__external"
-                    height="16"
-                    width="16"
+                    height="12"
+                    width="12"
                   >
                     <svg
                       id="arrow-external"
@@ -5448,10 +5448,10 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                     data-testid="Link__external"
-                    height="16"
-                    width="16"
+                    height="12"
+                    width="12"
                   >
                     <svg
                       id="arrow-external"
@@ -6135,10 +6135,10 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                     data-testid="Link__external"
-                    height="16"
-                    width="16"
+                    height="12"
+                    width="12"
                   >
                     <svg
                       id="arrow-external"
