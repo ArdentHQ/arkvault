@@ -486,7 +486,7 @@ exports[`LedgerScanStep > should render compact table 1`] = `
                       class="flex w-32 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -938,7 +938,7 @@ exports[`LedgerScanStep > should render responsive (lg) 1`] = `
                       class="flex w-32 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1390,7 +1390,7 @@ exports[`LedgerScanStep > should render responsive (xs) 1`] = `
                       class="flex w-32 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

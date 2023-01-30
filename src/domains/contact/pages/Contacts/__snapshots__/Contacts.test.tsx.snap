@@ -924,7 +924,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -1158,7 +1158,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -1380,7 +1380,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -1602,7 +1602,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -2691,7 +2691,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -2925,7 +2925,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -3147,7 +3147,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -3369,7 +3369,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -5399,7 +5399,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -5633,7 +5633,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -5855,7 +5855,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
@@ -6077,7 +6077,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"

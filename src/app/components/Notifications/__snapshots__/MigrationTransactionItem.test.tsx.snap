@@ -26,7 +26,7 @@ exports[`MigrationTransactionItem > should render in xs 1`] = `
                 class="w-0 flex-1 pr-2"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                 >
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-sm"
@@ -163,7 +163,7 @@ exports[`MigrationTransactionItem > should render in xs 2`] = `
                 class="w-0 flex-1 pr-2"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                 >
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-sm"
@@ -341,7 +341,7 @@ exports[`MigrationTransactionItem > should render in xs 3`] = `
                 class="w-20 flex-1"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"
@@ -467,7 +467,7 @@ exports[`MigrationTransactionItem > should render in xs 4`] = `
                 class="w-20 flex-1"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"
@@ -593,7 +593,7 @@ exports[`MigrationTransactionItem > should render in xs 5`] = `
                 class="w-20 flex-1"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-hint-300 dark:text-theme-secondary-700 font-semibold text-base"

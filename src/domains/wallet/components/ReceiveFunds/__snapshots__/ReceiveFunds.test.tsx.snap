@@ -100,7 +100,7 @@ exports[`ReceiveFunds > should not render qrcode without an address 1`] = `
                         class="absolute flex max-w-full items-center space-x-2 overflow-auto"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         />
                         <span
                           class="flex grow text-theme-primary-300 dark:text-theme-secondary-600"
@@ -367,7 +367,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
                         class="absolute flex max-w-full items-center space-x-2 overflow-auto"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -609,7 +609,7 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
                         class="absolute flex max-w-full items-center space-x-2 overflow-auto"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

@@ -103,7 +103,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -154,7 +154,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -683,7 +683,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -734,7 +734,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1263,7 +1263,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1314,7 +1314,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1817,7 +1817,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1868,7 +1868,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2359,7 +2359,7 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2845,7 +2845,7 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2996,7 +2996,7 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                                       class="w-28 flex-1 justify-end md:ml-4"
                                     >
                                       <div
-                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -3079,7 +3079,7 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                                       class="w-28 flex-1 justify-end md:ml-4"
                                     >
                                       <div
-                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -3589,7 +3589,7 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -4030,7 +4030,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -4081,7 +4081,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -4572,7 +4572,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -4643,7 +4643,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                                 class="ml-4 w-28 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
@@ -5068,7 +5068,7 @@ exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -5139,7 +5139,7 @@ exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
                                 class="ml-4 w-28 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
@@ -5882,7 +5882,7 @@ exports[`MultiSignatureDetail > should show send button when able to add final s
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -5933,7 +5933,7 @@ exports[`MultiSignatureDetail > should show send button when able to add final s
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -6450,7 +6450,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -6501,7 +6501,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

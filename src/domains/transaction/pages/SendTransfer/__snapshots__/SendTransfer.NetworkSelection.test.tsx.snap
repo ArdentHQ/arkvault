@@ -905,7 +905,7 @@ exports[`SendTransfer Network Selection > should select a cryptoasset and select
                             class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"

@@ -69,7 +69,7 @@ exports[`DelegateFooter > should render 1`] = `
                   class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"

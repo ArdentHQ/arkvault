@@ -1100,7 +1100,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -1162,7 +1162,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1533,7 +1533,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                       class="w-0 flex-1"
                                     >
                                       <div
-                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-base text-theme-text"
@@ -3252,7 +3252,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                             class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -4749,7 +4749,7 @@ exports[`SendTransfer > should render form and use location state with network p
                             class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -6246,7 +6246,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                             class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -7116,7 +7116,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -7929,7 +7929,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -8729,7 +8729,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -9577,7 +9577,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -10425,7 +10425,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -11176,7 +11176,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -13057,7 +13057,7 @@ exports[`SendTransfer > should render review step 1`] = `
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -13119,7 +13119,7 @@ exports[`SendTransfer > should render review step 1`] = `
             class="w-0 flex-1 text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base flex-1 md:flex-none text-theme-text"
@@ -13435,7 +13435,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -13601,7 +13601,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -13682,7 +13682,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -14005,7 +14005,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -14171,7 +14171,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -14252,7 +14252,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -15620,7 +15620,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -15682,7 +15682,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -16926,7 +16926,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -16988,7 +16988,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -17359,7 +17359,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                       class="w-0 flex-1"
                                     >
                                       <div
-                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-base text-theme-text"
@@ -18785,7 +18785,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -18847,7 +18847,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -20091,7 +20091,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -20153,7 +20153,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -21397,7 +21397,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -21459,7 +21459,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

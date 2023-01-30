@@ -190,7 +190,7 @@ Welcome to Polygon!
                 />
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </div>
           </div>
@@ -515,7 +515,7 @@ Welcome to Polygon!
                 />
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </div>
           </div>

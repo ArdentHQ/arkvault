@@ -24,7 +24,7 @@ exports[`TransactionRecipients > should render a single recipient 1`] = `
           class="w-0 flex-1 text-right md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
               class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -80,7 +80,7 @@ exports[`TransactionRecipients > should render a single recipient that is delega
           class="w-0 flex-1 text-right md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
               class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -169,7 +169,7 @@ exports[`TransactionRecipients > should render a single recipient with alias 1`]
           class="w-0 flex-1 text-right md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
               class="font-semibold text-base flex-1 md:flex-none text-theme-text"
@@ -236,7 +236,7 @@ exports[`TransactionRecipients > should render in lg 1`] = `
           class="w-0 flex-1 text-right md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
               class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -292,7 +292,7 @@ exports[`TransactionRecipients > should render in md 1`] = `
           class="w-0 flex-1 text-right md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
               class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -351,7 +351,7 @@ exports[`TransactionRecipients > should render in sm 1`] = `
             class="w-0 flex-1 text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -424,7 +424,7 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -510,7 +510,7 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -585,7 +585,7 @@ exports[`TransactionRecipients > should render in xl 1`] = `
           class="w-0 flex-1 text-right md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
               class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -644,7 +644,7 @@ exports[`TransactionRecipients > should render in xs 1`] = `
             class="w-0 flex-1 text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -717,7 +717,7 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -803,7 +803,7 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -978,7 +978,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1061,7 +1061,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1236,7 +1236,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1319,7 +1319,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1410,7 +1410,7 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1477,7 +1477,7 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1633,7 +1633,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1716,7 +1716,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1807,7 +1807,7 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1874,7 +1874,7 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2030,7 +2030,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2113,7 +2113,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2288,7 +2288,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2371,7 +2371,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2462,7 +2462,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2562,7 +2562,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2718,7 +2718,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2801,7 +2801,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2892,7 +2892,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2992,7 +2992,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

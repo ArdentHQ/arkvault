@@ -1228,7 +1228,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -1310,7 +1310,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                 class="ml-4 w-28 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
@@ -1363,7 +1363,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                 class="ml-4 w-28 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"

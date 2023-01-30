@@ -301,7 +301,7 @@ exports[`AddressTable > should render 1`] = `
                       class="w-40 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
@@ -581,7 +581,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                           class="flex w-0 flex-1 overflow-hidden"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -842,7 +842,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                           class="flex w-0 flex-1 overflow-hidden"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1103,7 +1103,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                           class="flex w-0 flex-1 overflow-hidden"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1517,7 +1517,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                       class="w-40 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
@@ -1935,7 +1935,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                       class="w-40 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"

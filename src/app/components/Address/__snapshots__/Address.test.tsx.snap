@@ -3,7 +3,7 @@
 exports[`Formatted Address > should not render without address 1`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`Formatted Address > should not render without address 1`] = `
 exports[`Formatted Address > should render address only 1`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
     <span
       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -26,7 +26,7 @@ exports[`Formatted Address > should render address only 1`] = `
 exports[`Formatted Address > should render with center alignment 1`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
   >
     <span
       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -41,7 +41,7 @@ exports[`Formatted Address > should render with center alignment 1`] = `
 exports[`Formatted Address > should render with horizontal orientation 1`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
     <span
       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -56,7 +56,7 @@ exports[`Formatted Address > should render with horizontal orientation 1`] = `
 exports[`Formatted Address > should render with horizontal orientation 2`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
     <span
       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -71,7 +71,7 @@ exports[`Formatted Address > should render with horizontal orientation 2`] = `
 exports[`Formatted Address > should render with normal font 1`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
     <span
       class="font-normal text-base text-theme-text"
@@ -97,7 +97,7 @@ exports[`Formatted Address > should render with normal font 1`] = `
 exports[`Formatted Address > should render with right alignment 1`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
   >
     <span
       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -112,7 +112,7 @@ exports[`Formatted Address > should render with right alignment 1`] = `
 exports[`Formatted Address > should render with truncate on table = false 1`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
     <span
       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -127,7 +127,7 @@ exports[`Formatted Address > should render with truncate on table = false 1`] = 
 exports[`Formatted Address > should render with truncate on table = true 1`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
     <div
       class="relative grow text-left"
@@ -149,7 +149,7 @@ exports[`Formatted Address > should render with truncate on table = true 1`] = `
 exports[`Formatted Address > should render with vertical orientation 1`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+    class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
   >
     <span
       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -164,7 +164,7 @@ exports[`Formatted Address > should render with vertical orientation 1`] = `
 exports[`Formatted Address > should render with vertical orientation 2`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+    class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
   >
     <span
       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -179,7 +179,7 @@ exports[`Formatted Address > should render with vertical orientation 2`] = `
 exports[`Formatted Address > should render with wallet name 1`] = `
 <div>
   <div
-    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
     <span
       class="font-semibold text-base text-theme-text"

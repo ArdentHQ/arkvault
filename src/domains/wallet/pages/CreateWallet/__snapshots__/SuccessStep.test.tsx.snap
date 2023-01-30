@@ -140,10 +140,10 @@ exports[`SuccessStep > should render (lg) 1`] = `
             class="hidden items-center font-semibold sm:flex"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -161,10 +161,10 @@ exports[`SuccessStep > should render (lg) 1`] = `
               class="w-full truncate"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -424,10 +424,10 @@ exports[`SuccessStep > should render (xs) 1`] = `
             class="hidden items-center font-semibold sm:flex"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -445,10 +445,10 @@ exports[`SuccessStep > should render (xs) 1`] = `
               class="w-full truncate"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

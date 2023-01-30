@@ -158,7 +158,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                       class="flex w-full min-w-0 flex-col justify-between"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
@@ -222,7 +222,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                         class="flex w-full min-w-0 flex-col justify-between"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="font-semibold text-base text-theme-text"
@@ -328,7 +328,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                       class="flex w-full min-w-0 flex-col justify-between"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
@@ -392,7 +392,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                         class="flex w-full min-w-0 flex-col justify-between"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="font-semibold text-base text-theme-text"
@@ -627,7 +627,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       class="flex w-full min-w-0 flex-col justify-between"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
@@ -691,7 +691,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                         class="flex w-full min-w-0 flex-col justify-between"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="font-semibold text-base text-theme-text"
@@ -797,7 +797,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       class="flex w-full min-w-0 flex-col justify-between"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
@@ -861,7 +861,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                         class="flex w-full min-w-0 flex-col justify-between"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="font-semibold text-base text-theme-text"
@@ -1078,7 +1078,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
             class="hidden items-center font-semibold sm:flex"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1099,7 +1099,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
               class="w-full truncate"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1408,7 +1408,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
             class="hidden items-center font-semibold sm:flex"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1429,7 +1429,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
               class="w-full truncate"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

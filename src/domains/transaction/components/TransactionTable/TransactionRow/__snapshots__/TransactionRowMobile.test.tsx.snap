@@ -72,7 +72,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -131,7 +131,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -271,7 +271,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -330,7 +330,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -470,7 +470,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
@@ -540,7 +540,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
@@ -686,7 +686,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
@@ -756,7 +756,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
@@ -1762,7 +1762,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1821,7 +1821,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1966,7 +1966,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2025,7 +2025,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

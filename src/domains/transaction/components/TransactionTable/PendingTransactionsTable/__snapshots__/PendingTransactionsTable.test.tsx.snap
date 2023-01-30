@@ -5718,7 +5718,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                       class="w-0 flex-1 overflow-hidden"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -6085,7 +6085,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   </div>
                 </div>
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -6488,7 +6488,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   </div>
                 </div>
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -7941,7 +7941,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   </div>
                 </div>
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -8174,7 +8174,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                       class="w-0 flex-1 overflow-hidden"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

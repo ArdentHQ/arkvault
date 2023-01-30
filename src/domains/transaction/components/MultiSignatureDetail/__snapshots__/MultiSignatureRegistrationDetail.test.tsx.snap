@@ -95,7 +95,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -339,7 +339,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                               class="w-28 flex-1 justify-end md:ml-4"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -400,7 +400,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                               class="w-28 flex-1 justify-end md:ml-4"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -481,7 +481,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                     class="w-0 flex-1 text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -710,7 +710,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -954,7 +954,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                               class="w-28 flex-1 justify-end md:ml-4"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1015,7 +1015,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                               class="w-28 flex-1 justify-end md:ml-4"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1096,7 +1096,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                     class="w-0 flex-1 text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1328,7 +1328,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       class="w-0 flex-1 overflow-auto text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
@@ -1561,7 +1561,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       class="hidden w-0 flex-1 text-right sm:block md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1679,7 +1679,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       class="w-0 flex-1 text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1913,7 +1913,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -2157,7 +2157,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                               class="w-28 flex-1 justify-end md:ml-4"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2218,7 +2218,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                               class="w-28 flex-1 justify-end md:ml-4"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2299,7 +2299,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                     class="w-0 flex-1 text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2531,7 +2531,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       class="w-0 flex-1 overflow-auto text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
@@ -2764,7 +2764,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       class="hidden w-0 flex-1 text-right sm:block md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2882,7 +2882,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       class="w-0 flex-1 text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

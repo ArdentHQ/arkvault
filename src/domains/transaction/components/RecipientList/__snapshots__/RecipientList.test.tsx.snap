@@ -104,7 +104,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -208,7 +208,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -311,7 +311,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -414,7 +414,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -580,7 +580,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="w-28 flex-1 justify-end md:ml-4"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -652,7 +652,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="w-28 flex-1 justify-end md:ml-4"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -724,7 +724,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="w-28 flex-1 justify-end md:ml-4"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -796,7 +796,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="w-28 flex-1 justify-end md:ml-4"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -939,7 +939,7 @@ exports[`RecipientList > should render editable 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -1042,7 +1042,7 @@ exports[`RecipientList > should render editable 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -1145,7 +1145,7 @@ exports[`RecipientList > should render editable 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -1248,7 +1248,7 @@ exports[`RecipientList > should render editable 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1402,7 +1402,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -1457,7 +1457,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -1512,7 +1512,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -1567,7 +1567,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1689,7 +1689,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -1765,7 +1765,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -1841,7 +1841,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -1917,7 +1917,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                 </span>
               </div>
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

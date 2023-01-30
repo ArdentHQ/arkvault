@@ -302,7 +302,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -416,7 +416,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -768,7 +768,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -861,7 +861,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1213,7 +1213,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1306,7 +1306,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1679,7 +1679,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1793,7 +1793,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -2102,7 +2102,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -2207,7 +2207,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -2496,7 +2496,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -2601,7 +2601,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -2890,7 +2890,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -2995,7 +2995,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -3348,7 +3348,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -3462,7 +3462,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -3835,7 +3835,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -3949,7 +3949,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -4369,7 +4369,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -4498,7 +4498,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -4910,7 +4910,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -5017,7 +5017,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -5429,7 +5429,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -5536,7 +5536,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -5969,7 +5969,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -6097,7 +6097,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -6420,7 +6420,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -6525,7 +6525,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -6814,7 +6814,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -6919,7 +6919,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -7208,7 +7208,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -7313,7 +7313,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -7712,7 +7712,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -7840,7 +7840,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -8273,7 +8273,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -8401,7 +8401,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"

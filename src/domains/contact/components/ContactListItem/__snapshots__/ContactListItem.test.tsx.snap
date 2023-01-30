@@ -103,7 +103,7 @@ exports[`ContactListItem > should render 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
                   class="relative grow text-left"
@@ -365,7 +365,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
                   class="relative grow text-left"
@@ -627,7 +627,7 @@ exports[`ContactListItem > should render options 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
                   class="relative grow text-left"
@@ -849,7 +849,7 @@ exports[`ContactListItem > should render options 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
                   class="relative grow text-left"
@@ -1071,7 +1071,7 @@ exports[`ContactListItem > should render options 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
                   class="relative grow text-left"
@@ -1333,7 +1333,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
                   class="relative grow text-left"
@@ -1555,7 +1555,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
                   class="relative grow text-left"
@@ -1777,7 +1777,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               class="w-0 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
                   class="relative grow text-left"

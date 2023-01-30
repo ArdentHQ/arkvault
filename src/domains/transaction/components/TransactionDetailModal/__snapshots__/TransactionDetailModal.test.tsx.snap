@@ -87,7 +87,7 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -488,7 +488,7 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -892,7 +892,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -979,7 +979,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                     class="block w-0 flex-1 text-right md:hidden md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden font-normal font-semibold text-base"
@@ -1316,7 +1316,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -1664,7 +1664,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -1777,7 +1777,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                     class="hidden w-0 flex-1 text-right sm:block md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2266,7 +2266,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -2709,7 +2709,7 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -3057,7 +3057,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -3119,7 +3119,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                     class="w-0 flex-1 text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -3571,7 +3571,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -3653,7 +3653,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                         class="ml-4 w-28 flex-1"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="font-semibold text-base text-theme-text"
@@ -3719,7 +3719,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                         class="ml-4 w-28 flex-1"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="font-semibold text-base text-theme-text"
@@ -4051,7 +4051,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -4133,7 +4133,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                         class="ml-4 w-28 flex-1"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="font-semibold text-base text-theme-text"
@@ -4199,7 +4199,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                         class="ml-4 w-28 flex-1"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="font-semibold text-base text-theme-text"
@@ -4531,7 +4531,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"
@@ -4613,7 +4613,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                         class="ml-4 w-28 flex-1"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="font-semibold text-base text-theme-text"
@@ -4679,7 +4679,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                         class="ml-4 w-28 flex-1"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="font-semibold text-base text-theme-text"
@@ -5011,7 +5011,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                     class="w-0 flex-1 overflow-auto text-right md:text-left"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base text-theme-text"

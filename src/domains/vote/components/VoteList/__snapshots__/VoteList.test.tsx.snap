@@ -26,7 +26,7 @@ exports[`VoteList > should render in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -69,7 +69,7 @@ exports[`VoteList > should render in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -112,7 +112,7 @@ exports[`VoteList > should render in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -164,7 +164,7 @@ exports[`VoteList > should render in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -207,7 +207,7 @@ exports[`VoteList > should render in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -250,7 +250,7 @@ exports[`VoteList > should render in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -288,7 +288,7 @@ exports[`VoteList > should render in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -331,7 +331,7 @@ exports[`VoteList > should render in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -374,7 +374,7 @@ exports[`VoteList > should render in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -440,7 +440,7 @@ exports[`VoteList > should render in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -483,7 +483,7 @@ exports[`VoteList > should render in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -526,7 +526,7 @@ exports[`VoteList > should render in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -564,7 +564,7 @@ exports[`VoteList > should render in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -607,7 +607,7 @@ exports[`VoteList > should render in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -650,7 +650,7 @@ exports[`VoteList > should render in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -716,7 +716,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -769,7 +769,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -822,7 +822,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -884,7 +884,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -937,7 +937,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -990,7 +990,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -1048,7 +1048,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -1101,7 +1101,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -1154,7 +1154,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -1220,7 +1220,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -1273,7 +1273,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -1326,7 +1326,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -1384,7 +1384,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -1437,7 +1437,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
@@ -1490,7 +1490,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"

@@ -35,7 +35,7 @@ exports[`TransactionExplorerLink > should render a transaction link 1`] = `
                 class="css-1y2194z"
               >
                 <span
-                  class="css-0"
+                  class="no-ligatures css-0"
                   data-testid="TruncateMiddle"
                 >
                   test-id
@@ -149,7 +149,7 @@ exports[`TransactionExplorerLink > should render a transaction link responsive a
                 class="css-1y2194z"
               >
                 <span
-                  class="css-0"
+                  class="no-ligatures css-0"
                   data-testid="TruncateMiddle"
                 >
                   test-id

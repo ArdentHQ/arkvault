@@ -80,7 +80,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
               class="w-20 flex-1 overflow-hidden"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
               >
                 <span
                   class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
@@ -411,7 +411,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         class="flex w-20 flex-1 flex-col font-semibold"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+          class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
         >
           <span
             class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -617,7 +617,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
               class="w-20 flex-1 overflow-hidden"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
               >
                 <span
                   class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
@@ -991,7 +991,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
               class="w-20 flex-1 overflow-hidden"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
               >
                 <span
                   class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
@@ -1321,7 +1321,7 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
         class="flex w-20 flex-1 flex-col font-semibold"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+          class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
         >
           <span
             class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -1480,7 +1480,7 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
         class="flex w-20 flex-1 flex-col font-semibold"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+          class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
         >
           <span
             class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -1730,7 +1730,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
               class="w-20 flex-1 overflow-hidden"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
               >
                 <span
                   class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
@@ -2104,7 +2104,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
               class="w-20 flex-1 overflow-hidden"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
               >
                 <span
                   class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
@@ -2526,7 +2526,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
               class="w-20 flex-1 overflow-hidden"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
               >
                 <span
                   class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
@@ -2900,7 +2900,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
               class="w-20 flex-1 overflow-hidden"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
               >
                 <span
                   class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"

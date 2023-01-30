@@ -695,7 +695,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1515,7 +1515,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2335,7 +2335,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                         class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

@@ -1244,7 +1244,7 @@ exports[`Votes > should filter current delegates 1`] = `
                             class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -3227,7 +3227,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                             class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -5153,7 +5153,7 @@ exports[`Votes > should render 1`] = `
                             class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -7075,7 +7075,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -9755,7 +9755,7 @@ exports[`Votes > should select a delegate 1`] = `
                             class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -14587,7 +14587,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                             class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -16142,7 +16142,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                           class="w-40 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -16246,7 +16246,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                           class="w-40 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -16360,7 +16360,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                           class="w-40 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -18104,7 +18104,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"

@@ -854,7 +854,7 @@ exports[`SendIpfs > should render form step 1`] = `
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -1167,7 +1167,7 @@ exports[`SendIpfs > should render review step 1`] = `
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -1769,7 +1769,7 @@ exports[`SendIpfs > should render summary step 1`] = `
               class="w-0 flex-1 text-right md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </div>
           </div>
@@ -3050,7 +3050,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -4375,7 +4375,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -5702,7 +5702,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -6412,7 +6412,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                           class="w-0 flex-1 overflow-auto text-right md:text-left"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"

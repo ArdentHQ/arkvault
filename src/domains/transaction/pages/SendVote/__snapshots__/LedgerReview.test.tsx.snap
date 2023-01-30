@@ -42,7 +42,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -108,7 +108,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -274,7 +274,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -440,7 +440,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"

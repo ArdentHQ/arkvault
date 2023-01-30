@@ -95,7 +95,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
         class="w-full"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
         >
           <span
             class="font-semibold text-base text-theme-secondary-200"

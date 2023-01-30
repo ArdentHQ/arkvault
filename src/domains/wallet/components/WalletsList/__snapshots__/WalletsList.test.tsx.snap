@@ -317,7 +317,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                     class="w-20 flex-1 overflow-hidden"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                      class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                     >
                       <span
                         class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
@@ -541,7 +541,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                     class="w-20 flex-1 overflow-hidden"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                      class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                     >
                       <span
                         class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
@@ -1021,7 +1021,7 @@ exports[`WalletsList > should render 1`] = `
                     class="w-20 flex-1 overflow-hidden"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                      class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                     >
                       <span
                         class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
@@ -1245,7 +1245,7 @@ exports[`WalletsList > should render 1`] = `
                     class="w-20 flex-1 overflow-hidden"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                      class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                     >
                       <span
                         class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
@@ -2228,7 +2228,7 @@ exports[`WalletsList > should render responsive 1`] = `
               class="flex w-20 flex-1 flex-col font-semibold"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
               >
                 <span
                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -2382,7 +2382,7 @@ exports[`WalletsList > should render responsive 1`] = `
               class="flex w-20 flex-1 flex-col font-semibold"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
               >
                 <span
                   class="font-semibold text-base text-sm text-theme-text w-full truncate"

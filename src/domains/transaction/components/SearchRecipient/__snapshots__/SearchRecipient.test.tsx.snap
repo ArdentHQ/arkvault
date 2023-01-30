@@ -272,7 +272,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -354,7 +354,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -695,7 +695,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -777,7 +777,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1056,7 +1056,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -1372,7 +1372,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1454,7 +1454,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1795,7 +1795,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1877,7 +1877,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -2156,7 +2156,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -2226,7 +2226,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
@@ -2542,7 +2542,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -2624,7 +2624,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"

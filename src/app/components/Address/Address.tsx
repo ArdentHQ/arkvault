@@ -89,7 +89,7 @@ export const Address = ({
 		<div
 			ref={ref}
 			className={cn(
-				"no-ligatures flex overflow-hidden whitespace-nowrap",
+				"flex overflow-hidden whitespace-nowrap",
 				orientation === "horizontal" ? "items-center space-x-2" : "flex-col items-start",
 				alignment === "center" ? "min-w-0" : "w-full",
 				{

@@ -331,7 +331,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                         class="flex-1 truncate font-semibold"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -751,7 +751,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                         class="flex-1 truncate font-semibold"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1215,7 +1215,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                         class="flex-1 truncate font-semibold"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

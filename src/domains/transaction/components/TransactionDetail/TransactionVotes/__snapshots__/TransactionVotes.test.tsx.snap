@@ -95,7 +95,7 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -138,7 +138,7 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -204,7 +204,7 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -247,7 +247,7 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -318,7 +318,7 @@ exports[`TransactionVotes > should render with unvotes 1`] = `
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -389,7 +389,7 @@ exports[`TransactionVotes > should render with votes 1`] = `
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -460,7 +460,7 @@ exports[`TransactionVotes > should render with votes and unvotes 1`] = `
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
@@ -526,7 +526,7 @@ exports[`TransactionVotes > should render with votes and unvotes 1`] = `
               class="ml-4 w-28 flex-1"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"

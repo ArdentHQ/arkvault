@@ -6200,7 +6200,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -12740,7 +12740,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -20382,7 +20382,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -28044,7 +28044,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -29215,7 +29215,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -30363,7 +30363,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -31511,7 +31511,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -32659,7 +32659,7 @@ exports[`DelegateTable > should render 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -34003,7 +34003,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -35174,7 +35174,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -36325,7 +36325,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -37471,7 +37471,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -39120,7 +39120,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -40462,7 +40462,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -41633,7 +41633,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -42787,7 +42787,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -43933,7 +43933,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -45275,7 +45275,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -46446,7 +46446,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -47592,7 +47592,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
@@ -48743,7 +48743,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                     class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
-                      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <span
                         class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"

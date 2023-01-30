@@ -672,7 +672,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                           class="w-0 flex-1 overflow-auto text-right md:text-left"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -1718,7 +1718,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                           class="w-0 flex-1 overflow-auto text-right md:text-left"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -2688,7 +2688,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                           class="w-0 flex-1 overflow-auto text-right md:text-left"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
@@ -6940,7 +6940,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -8288,7 +8288,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
@@ -9511,7 +9511,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"

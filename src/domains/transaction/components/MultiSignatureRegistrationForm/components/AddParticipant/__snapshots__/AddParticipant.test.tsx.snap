@@ -292,7 +292,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
             class="max-w-full overflow-auto sm:w-full"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -680,7 +680,7 @@ exports[`Add Participant > should fail to find 1`] = `
             class="max-w-full overflow-auto sm:w-full"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -1089,7 +1089,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
             class="max-w-full overflow-auto sm:w-full"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -1466,7 +1466,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
             class="max-w-full overflow-auto sm:w-full"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -1854,7 +1854,7 @@ exports[`Add Participant > should handle exception on find and show address not 
             class="max-w-full overflow-auto sm:w-full"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -2143,7 +2143,7 @@ exports[`Add Participant > should render custom participants 1`] = `
             class="max-w-full overflow-auto sm:w-full"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2451,7 +2451,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
             class="max-w-full overflow-auto sm:w-full"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -2580,7 +2580,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
             class="max-w-full overflow-auto sm:w-full"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"

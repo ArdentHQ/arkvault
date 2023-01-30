@@ -12,7 +12,7 @@ exports[`SelectAddress > should render disabled 1`] = `
       class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
     >
       <div
-        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
@@ -95,7 +95,7 @@ exports[`SelectAddress > should render empty 1`] = `
       class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
     >
       <div
-        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
@@ -176,7 +176,7 @@ exports[`SelectAddress > should render invalid 1`] = `
       class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 right-24"
     >
       <div
-        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
@@ -299,7 +299,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
     >
       <div
-        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       >
         <span
           class="font-semibold text-base text-theme-text"
@@ -409,7 +409,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
       class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
     >
       <div
-        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div

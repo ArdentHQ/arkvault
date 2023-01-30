@@ -2866,7 +2866,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             class="hidden items-center font-semibold sm:flex"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -2887,7 +2887,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
               class="w-full truncate"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -3196,7 +3196,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             class="hidden items-center font-semibold sm:flex"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
@@ -3217,7 +3217,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
               class="w-full truncate"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
