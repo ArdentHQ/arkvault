@@ -1127,7 +1127,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-smtkcc"
+                                  class="css-1mmcyzk"
                                   color="info"
                                 />
                               </div>
@@ -1211,7 +1211,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-smtkcc"
+                                  class="css-1mmcyzk"
                                   color="info"
                                 />
                               </div>
@@ -2493,7 +2493,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-smtkcc"
+                                  class="css-1mmcyzk"
                                   color="info"
                                 />
                               </div>
@@ -2577,7 +2577,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-smtkcc"
+                                  class="css-1mmcyzk"
                                   color="info"
                                 />
                               </div>
@@ -2880,7 +2880,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="css-smtkcc"
+                                              class="css-1mmcyzk"
                                               color="info"
                                             />
                                           </div>
@@ -3149,7 +3149,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="css-smtkcc"
+                                              class="css-1mmcyzk"
                                               color="info"
                                             />
                                           </div>
@@ -3391,7 +3391,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="css-smtkcc"
+                                              class="css-1mmcyzk"
                                               color="info"
                                             />
                                           </div>
@@ -4685,7 +4685,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-smtkcc"
+                                  class="css-1mmcyzk"
                                   color="info"
                                 />
                               </div>
@@ -4769,7 +4769,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-smtkcc"
+                                  class="css-1mmcyzk"
                                   color="info"
                                 />
                               </div>
@@ -5072,7 +5072,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="css-smtkcc"
+                                              class="css-1mmcyzk"
                                               color="info"
                                             />
                                           </div>
@@ -5341,7 +5341,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="css-smtkcc"
+                                              class="css-1mmcyzk"
                                               color="info"
                                             />
                                           </div>
@@ -5583,7 +5583,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="css-smtkcc"
+                                              class="css-1mmcyzk"
                                               color="info"
                                             />
                                           </div>
@@ -6877,7 +6877,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-smtkcc"
+                                  class="css-1mmcyzk"
                                   color="info"
                                 />
                               </div>
@@ -6961,7 +6961,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="css-smtkcc"
+                                  class="css-1mmcyzk"
                                   color="info"
                                 />
                               </div>
@@ -7106,7 +7106,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           data-testid="CustomPeersPeer--statusloading"
                                         >
                                           <div
-                                            class="css-smtkcc"
+                                            class="css-1mmcyzk"
                                             color="info"
                                           />
                                         </div>
@@ -7260,7 +7260,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           data-testid="CustomPeersPeer--statusloading"
                                         >
                                           <div
-                                            class="css-smtkcc"
+                                            class="css-1mmcyzk"
                                             color="info"
                                           />
                                         </div>
@@ -7389,7 +7389,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           data-testid="CustomPeersPeer--statusloading"
                                         >
                                           <div
-                                            class="css-smtkcc"
+                                            class="css-1mmcyzk"
                                             color="info"
                                           />
                                         </div>
