@@ -16,7 +16,7 @@ const getColor = (color: Color, theme?: Theme) => {
 	let styles = [tw`border-theme-secondary-200 dark:border-black`];
 
 	if (theme === "dark") {
-		styles = [tw`border-black`]
+		styles = [tw`border-black`];
 	}
 
 	if (theme === "system") {
