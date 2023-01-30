@@ -167,10 +167,10 @@ exports[`MultiPaymentDetail > should render a modal 1`] = `
                         View Full List
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                         data-testid="Link__external"
-                        height="16"
-                        width="16"
+                        height="12"
+                        width="12"
                       >
                         <svg
                           id="arrow-external"
@@ -216,10 +216,10 @@ exports[`MultiPaymentDetail > should render a modal 1`] = `
                       View Full List
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
+                      class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                       data-testid="Link__external"
-                      height="16"
-                      width="16"
+                      height="12"
+                      width="12"
                     >
                       <svg
                         id="arrow-external"
@@ -514,10 +514,10 @@ exports[`MultiPaymentDetail > should render a modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
+                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                           data-testid="Link__external"
-                          height="16"
-                          width="16"
+                          height="12"
+                          width="12"
                         >
                           <svg
                             id="arrow-external"
@@ -756,10 +756,10 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                         View Full List
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                         data-testid="Link__external"
-                        height="16"
-                        width="16"
+                        height="12"
+                        width="12"
                       >
                         <svg
                           id="arrow-external"
@@ -812,10 +812,10 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                       View Full List
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
+                      class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                       data-testid="Link__external"
-                      height="16"
-                      width="16"
+                      height="12"
+                      width="12"
                     >
                       <svg
                         id="arrow-external"
@@ -1149,10 +1149,10 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
+                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                           data-testid="Link__external"
-                          height="16"
-                          width="16"
+                          height="12"
+                          width="12"
                         >
                           <svg
                             id="arrow-external"
@@ -1391,10 +1391,10 @@ exports[`MultiPaymentDetail > should render with recipients 1`] = `
                         View Full List
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                         data-testid="Link__external"
-                        height="16"
-                        width="16"
+                        height="12"
+                        width="12"
                       >
                         <svg
                           id="arrow-external"
@@ -1447,10 +1447,10 @@ exports[`MultiPaymentDetail > should render with recipients 1`] = `
                       View Full List
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
+                      class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                       data-testid="Link__external"
-                      height="16"
-                      width="16"
+                      height="12"
+                      width="12"
                     >
                       <svg
                         id="arrow-external"
@@ -1750,10 +1750,10 @@ exports[`MultiPaymentDetail > should render with recipients 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-v0ob3f"
+                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                           data-testid="Link__external"
-                          height="16"
-                          width="16"
+                          height="12"
+                          width="12"
                         >
                           <svg
                             id="arrow-external"
