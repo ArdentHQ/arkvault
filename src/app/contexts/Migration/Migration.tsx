@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
