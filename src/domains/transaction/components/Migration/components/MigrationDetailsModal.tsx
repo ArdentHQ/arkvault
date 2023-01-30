@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 
 import { DTO } from "@ardenthq/sdk-profiles";
 import { Trans, useTranslation } from "react-i18next";
+import classNames from "classnames";
 import { Modal } from "@/app/components/Modal";
 import { MigrationAddress, MigrationDetail } from "@/domains/migration/components/MigrationAddress";
 import { MigrationPolygonIcon } from "@/domains/migration/components/MigrationPolygonIcon";
@@ -16,6 +17,7 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { polygonIndexerUrl, polygonTransactionLink } from "@/utils/polygon-migration";
 import { Skeleton } from "@/app/components/Skeleton";
 import { httpClient } from "@/app/services";
+import { Alert } from "@/app/components/Alert";
 export interface MigrationDetailsModalProperties {
 	transaction?: DTO.ExtendedConfirmedTransactionData;
 	onClose: () => void;
@@ -27,6 +29,7 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 	const [transactionIsConfirmed, setTransactionIsConfirmed] = useState<boolean>();
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 	const [polygonId, setPolygonId] = useState<string>();
+	const [loadStatusError, setLoadStatusError] = useState<Error>();
 
 	const fetchMigrationId = useCallback(async () => {
 		const response = await httpClient.get(`${polygonIndexerUrl()}transactions`, {
@@ -46,9 +49,20 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 	}, [transaction]);
 
 	const loadTransactionStatus = useCallback(async () => {
+		setLoadStatusError(undefined);
+
 		setIsLoading(true);
 
-		const status = await getTransactionStatus(transaction!);
+		let status: MigrationTransactionStatus;
+
+		try {
+			status = await getTransactionStatus(transaction!);
+		} catch (error) {
+			setLoadStatusError(error);
+
+			setIsLoading(false);
+			return;
+		}
 
 		const isConfirmed = status === MigrationTransactionStatus.Confirmed;
 
@@ -83,6 +97,10 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 			return <Skeleton height={32} width={250} />;
 		}
 
+		if (loadStatusError) {
+			return t("MIGRATION.DETAILS_MODAL.ERROR.TITLE");
+		}
+
 		if (transactionIsConfirmed) {
 			return t("MIGRATION.DETAILS_MODAL.STEP_SUCCESS.TITLE");
 		}
@@ -93,6 +111,10 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 	const description = useMemo(() => {
 		if (isLoading) {
 			return <Skeleton height={20} width={350} />;
+		}
+
+		if (loadStatusError) {
+			return;
 		}
 
 		if (transactionIsConfirmed) {
@@ -108,7 +130,13 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 
 	return (
 		<Modal title={title} description={description} size="3xl" isOpen onClose={onClose}>
-			<div ref={reference} data-testid="MigrationDetailsModal" className="flex flex-col space-y-3 pt-8">
+			<div
+				ref={reference}
+				data-testid="MigrationDetailsModal"
+				className={classNames("flex flex-col space-y-3", {
+					"pt-8": loadStatusError === undefined,
+				})}
+			>
 				{isLoading ? (
 					<div className="flex flex-col space-y-3" data-testid="MigrationDetailsModal__loading">
 						<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
@@ -152,6 +180,10 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 					</div>
 				) : (
 					<>
+						{loadStatusError !== undefined && (
+							<Alert variant="danger">{t("MIGRATION.DETAILS_MODAL.ERROR.DESCRIPTION")}</Alert>
+						)}
+
 						{transactionIsConfirmed ? (
 							<>
 								<div
@@ -248,11 +280,13 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 									</MigrationDetail>
 								</div>
 
-								<div className="flex items-center justify-between overflow-hidden rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
-									<span className="whitespace-pre-line text-sm">
-										<Trans i18nKey="MIGRATION.MIGRATION_ADD.STEP_PENDING.MIGRATION_INFO" />
-									</span>
-								</div>
+								{loadStatusError === undefined && (
+									<div className="flex items-center justify-between overflow-hidden rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
+										<span className="whitespace-pre-line text-sm">
+											<Trans i18nKey="MIGRATION.MIGRATION_ADD.STEP_PENDING.MIGRATION_INFO" />
+										</span>
+									</div>
+								)}
 							</>
 						)}
 					</>

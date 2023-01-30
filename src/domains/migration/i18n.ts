@@ -5,6 +5,10 @@ export const translations = {
 		"The migration is temporarily paused. Please check our <linkTwitter>Twitter</linkTwitter> for more details.",
 
 	DETAILS_MODAL: {
+		ERROR: {
+			DESCRIPTION: "We failed to fetch the migration status. Please try again later.",
+			TITLE: "Migration Details",
+		},
 		STEP_PENDING: {
 			DESCRIPTION: "Migration in progress, you will be notified once the process is complete.",
 			TITLE: "Migration Pending",

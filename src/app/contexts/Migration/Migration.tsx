@@ -88,6 +88,9 @@ const MIGRATION_LOAD_INTERVAL = 5000;
 
 const ONE_MINUTE = 60 * 1000;
 
+const GET_MIGRATIONS_MAX_TRIES = 5;
+const GET_MIGRATIONS_TRY_INTERVAL = 1000;
+
 export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
@@ -96,6 +99,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
 	const { pathname } = useLocation();
+	const [error, setError] = useState<Error>();
 
 	const isMigrationPath = useMemo(
 		() => !!matchPath(pathname, { path: "/profiles/:profileId/migration" }),
@@ -112,16 +116,19 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	const getContractMigrations = useCallback(
-		async (transactionIds: string[]) => {
-			let contractMigrations: ARKMigrationViewStructOutput[] = [];
-
+		async (transactionIds: string[], tries = 0): Promise<ARKMigrationViewStructOutput[]> => {
 			try {
-				contractMigrations = await contract!.getMigrationsByArkTxHash(transactionIds);
-			} catch {
-				//
-			}
+				return await contract!.getMigrationsByArkTxHash(transactionIds);
+			} catch (error) {
+				if (tries > GET_MIGRATIONS_MAX_TRIES) {
+					throw error;
+				}
 
-			return contractMigrations;
+				// Wait a second to try again
+				await new Promise((resolve) => setTimeout(resolve, GET_MIGRATIONS_TRY_INTERVAL));
+
+				return getContractMigrations(transactionIds, tries + 1);
+			}
 		},
 		[contract],
 	);
@@ -159,10 +166,14 @@ export const MigrationProvider = ({ children }: Properties) => {
 		let contractMigrations: ARKMigrationViewStructOutput[] = [];
 
 		try {
-			contractMigrations = await contract.getMigrationsByArkTxHash(transactionIds);
-		} catch {
-			//
+			contractMigrations = await getContractMigrations(transactionIds);
+			setError(undefined);
+		} catch (error) {
+			setError(error);
+			return;
 		}
+
+		console.log({ contractMigrations });
 
 		const updatedMigrations = pendingMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
@@ -206,7 +217,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				uniqBy([...newlyConfirmedMigrations, ...repository.all()], (migration) => migration.id),
 			);
 		}
-	}, [repository, contract, migrationsUpdated, isMigrationPath]);
+	}, [repository, getContractMigrations, migrationsUpdated, isMigrationPath]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
 		try {
@@ -355,6 +366,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			value={
 				{
 					contractIsPaused,
+					error,
 					getTransactionStatus,
 					markMigrationsAsRead,
 					migrations: migrationsSorted,
