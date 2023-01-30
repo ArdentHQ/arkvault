@@ -14,6 +14,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
 import { polygonContractAddress, polygonIndexerUrl, polygonRpcUrl } from "@/utils/polygon-migration";
+import { waitFor } from "@/utils/wait-for";
 
 const contractABI = [
 	{
@@ -127,7 +128,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				}
 
 				// Wait a second to try again
-				await new Promise((resolve) => setTimeout(resolve, GET_MIGRATIONS_TRY_INTERVAL));
+				await waitFor(GET_MIGRATIONS_TRY_INTERVAL);
 
 				return getContractMigrations(transactionIds, tries + 1);
 			}

@@ -13,10 +13,16 @@ import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
-
+import * as waitForMock from "@/utils/wait-for";
 const Test = () => {
-	const { migrations, storeTransactions, removeTransactions, contractIsPaused, markMigrationsAsRead } =
-		useMigrations();
+	const {
+		migrations,
+		storeTransactions,
+		removeTransactions,
+		contractIsPaused,
+		markMigrationsAsRead,
+		loadMigrationsError,
+	} = useMigrations();
 
 	const createAndStoreTransaction = async () => {
 		const transaction = {
@@ -42,6 +48,10 @@ const Test = () => {
 
 	if (contractIsPaused === undefined) {
 		return <span data-testid="Migration__contract_loading">Contract Loading...</span>;
+	}
+
+	if (loadMigrationsError) {
+		return <span data-testid="Migration__load_error">Load error</span>;
 	}
 
 	return (
@@ -315,6 +325,41 @@ describe("Migration Context", () => {
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
 
 		clearStoredMigrationsMock();
+	});
+
+	it("should handle load error", async () => {
+		const waitForSpy = vi.spyOn(waitForMock, "waitFor").mockImplementation(() => Promise.resolve());
+
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([migrationFixture]);
+
+		getMigrationsByArkTxHashMock.mockImplementation(() => {
+			throw new Error("error");
+		});
+
+		render(
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
+		);
+
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__load_error")).toBeInTheDocument();
+		});
+
+		clearStoredMigrationsMock();
+		waitForSpy.mockRestore();
 	});
 
 	it("should determine if a contract is paused", async () => {
