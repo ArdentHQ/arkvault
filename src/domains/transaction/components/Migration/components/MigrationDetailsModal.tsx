@@ -181,7 +181,9 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 				) : (
 					<>
 						{loadStatusError !== undefined && (
-							<Alert variant="danger">{t("MIGRATION.DETAILS_MODAL.ERROR.DESCRIPTION")}</Alert>
+							<Alert data-testid="MigrationDetailsModal__error" variant="danger">
+								{t("MIGRATION.DETAILS_MODAL.ERROR.DESCRIPTION")}
+							</Alert>
 						)}
 
 						{transactionIsConfirmed ? (
@@ -281,7 +283,10 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 								</div>
 
 								{loadStatusError === undefined && (
-									<div className="flex items-center justify-between overflow-hidden rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
+									<div
+										data-testid="MigrationDetailsModal__info"
+										className="flex items-center justify-between overflow-hidden rounded-xl bg-theme-secondary-100 p-5 dark:bg-black"
+									>
 										<span className="whitespace-pre-line text-sm">
 											<Trans i18nKey="MIGRATION.MIGRATION_ADD.STEP_PENDING.MIGRATION_INFO" />
 										</span>
