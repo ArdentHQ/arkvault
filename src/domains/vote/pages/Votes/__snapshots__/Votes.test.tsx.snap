@@ -756,7 +756,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     >
                       <div>
                         <div
-                          class="flex w-56 flex-col items-start space-y-5 py-7 px-10 text-theme-secondary-700 dark:text-theme-secondary-200"
+                          class="flex w-56 flex-col items-start space-y-5 p-10 text-theme-secondary-700 dark:text-theme-secondary-200"
                         >
                           <label
                             class="flex h-5 cursor-pointer items-center space-x-3 rounded-md"
@@ -10843,7 +10843,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                     >
                       <div>
                         <div
-                          class="w-full py-7 px-10 sm:w-96 md:w-128"
+                          class="w-full p-10 sm:w-96 md:w-128"
                         >
                           <div
                             class="flex flex-col text-left"
@@ -12268,7 +12268,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                     >
                       <div>
                         <div
-                          class="w-full py-7 px-10 sm:w-96 md:w-128"
+                          class="w-full p-10 sm:w-96 md:w-128"
                         >
                           <div
                             class="flex flex-col text-left"
@@ -15669,7 +15669,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     >
                       <div>
                         <div
-                          class="w-full py-7 px-10 sm:w-96 md:w-128"
+                          class="w-full p-10 sm:w-96 md:w-128"
                         >
                           <div
                             class="flex flex-col text-left"
