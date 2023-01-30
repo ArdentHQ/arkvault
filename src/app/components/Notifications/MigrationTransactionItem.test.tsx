@@ -118,4 +118,27 @@ describe("MigrationTransactionItem", () => {
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(transaction));
 	});
+
+	it("should emit onClick event when clicking on migration successful link", async () => {
+		const onClick = vi.fn();
+
+		render(
+			<table>
+				<tbody>
+					<MigrationTransactionItem
+						transaction={transaction}
+						profile={profile}
+						onClick={onClick}
+						onVisibilityChange={vi.fn()}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(1));
+
+		userEvent.click(screen.getByTestId("MigrationTransactionItem__button"));
+
+		await waitFor(() => expect(onClick).toHaveBeenCalledWith(transaction));
+	});
 });

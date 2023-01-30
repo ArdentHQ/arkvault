@@ -78,6 +78,7 @@ export const MigrationTransactionItem = ({
 
 				<TableCell variant="end" innerClassName="justify-end" isCompact>
 					<button
+						onClick={() => onClick?.(transaction)}
 						data-testid="MigrationTransactionItem__button"
 						type="button"
 						className="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"

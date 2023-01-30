@@ -15,7 +15,7 @@ import { Migration } from "@/domains/migration/migration.contracts";
 export const fetchMigrationTransactions = async ({
 	profile,
 	page,
-	limit = 10,
+	limit,
 }: {
 	page: number;
 	profile: Contracts.IProfile;
@@ -52,7 +52,7 @@ export const fetchMigrationTransactions = async ({
 	} = {
 		amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
 		fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
-		limit: limit + 1,
+		limit,
 		page,
 		recipientId: migrationWalletAddress(),
 		senderId: senderIds.join(","),
@@ -78,7 +78,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [hasMore, setHasMore] = useState(false);
 	const [page, setPage] = useState(0);
-	const limit = 10;
+	const limit = 11;
 
 	const loadMigrationWalletTransactions = useCallback(async () => {
 		if (profileIsRestoring) {
@@ -89,7 +89,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 
 		const { items, hasMore, cursor } = await fetchMigrationTransactions({ limit, page: page + 1, profile });
 
-		setLatestTransactions(items);
+		setLatestTransactions((existingItems) => [...existingItems, ...items]);
 		setIsLoadingTransactions(false);
 		setHasMore(hasMore);
 		setPage(cursor);
@@ -144,7 +144,13 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		return migrations.slice(0, page * limit);
 	}, [migrations, page, limit]);
 
+	const getMigrationById = useCallback(
+		(id: string) => migrations?.find((migration) => migration.id === id),
+		[migrations, page, limit],
+	);
+
 	return {
+		getMigrationById,
 		hasMore,
 		isLoading: (page === 0 && isLoading) || !migrations,
 		isLoadingMore: page > 0 && isLoading,

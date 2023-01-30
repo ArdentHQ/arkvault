@@ -1,12 +1,12 @@
 import { styled } from "twin.macro";
 
-import { getStyles, SpinnerTheme } from "./Spinner.styles";
-import { Color, Size } from "@/types";
+import { getStyles } from "./Spinner.styles";
+import { Color, Size, Theme } from "@/types";
 
 interface SpinnerType {
 	color?: Color;
 	size?: Size;
-	theme?: SpinnerTheme;
+	theme?: Theme;
 	width?: number;
 }
 

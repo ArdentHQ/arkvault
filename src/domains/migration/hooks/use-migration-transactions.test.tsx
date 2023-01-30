@@ -311,4 +311,42 @@ describe("useMigrationTransactions hook", () => {
 		useMigrationsSpy.mockRestore();
 		mockTransactions.mockRestore();
 	});
+
+	it("should find migration by id", async () => {
+		const useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: [
+				{
+					address: "AdDreSs",
+					amount: 123,
+					id: "123",
+					migrationAddress: "BuRnAdDreSs",
+					status: MigrationTransactionStatus.Confirmed,
+					timestamp: Date.now() / 1000,
+				},
+			],
+			storeTransactions: () => {},
+		});
+		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
+
+		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
+			Promise.resolve({
+				currentPage: () => 1,
+				hasMorePages: () => false,
+				items: () => [transactionFixture, secondTransactionFixture],
+			} as any),
+		);
+
+		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
+
+		await waitFor(() => {
+			expect(result.current.isLoading).toBe(false);
+		});
+
+		expect(result.current.migrations).toHaveLength(1);
+
+		expect(result.current.getMigrationById("123")).toBeDefined();
+
+		useMigrationsSpy.mockRestore();
+		mockTransactions.mockRestore();
+	});
 });
