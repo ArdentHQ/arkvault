@@ -1,12 +1,10 @@
 import tw, { css } from "twin.macro";
 
-import { Color, Size } from "@/types";
+import { Color, Size, Theme } from "@/types";
 
 const baseStyle = tw`animate-spin rounded-full border border-width[5px] flex-shrink-0`;
 
-export type SpinnerTheme = "dark" | "system";
-
-const getColor = (color: Color, theme?: SpinnerTheme) => {
+const getColor = (color: Color, theme?: Theme) => {
 	const baseColors: Record<Color, string> = {
 		danger: "danger-400",
 		hint: "hint-500",
@@ -15,10 +13,18 @@ const getColor = (color: Color, theme?: SpinnerTheme) => {
 		warning: "warning-600",
 	};
 
+	let styles = [tw`border-theme-secondary-200 dark:border-black`];
+
+	if (theme === "dark") {
+		styles = [tw`border-black`]
+	}
+
+	if (theme === "system") {
+		styles = [tw`border-theme-primary-100 dark:border-theme-secondary-800`];
+	}
+
 	return [
-		theme === "dark" && tw`border-black`,
-		theme === "system" && tw`border-theme-primary-100 dark:border-theme-secondary-800`,
-		!theme && tw`border-theme-secondary-200 dark:border-black`,
+		...styles,
 		css`
 			border-left-color: var(--theme-color-${baseColors[color]}) !important;
 		`,
@@ -37,7 +43,7 @@ const getSize = (size?: Size) => {
 };
 
 const getWidth = (width?: number) => {
-	if (width !== null) {
+	if (width !== undefined) {
 		return css`
 			border-width: ${width}px !important;
 		`;
@@ -52,6 +58,6 @@ export const getStyles = ({
 }: {
 	color?: Color;
 	size?: Size;
-	theme?: SpinnerTheme;
+	theme?: Theme;
 	width?: number;
 }) => [baseStyle, getSize(size), getColor(color!, theme), getWidth(width)];
