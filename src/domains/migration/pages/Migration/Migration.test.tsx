@@ -6,6 +6,7 @@ import { Route } from "react-router-dom";
 import { Migration } from "./Migration";
 import { render, screen, env, getDefaultProfileId, waitFor, within } from "@/utils/testing-library";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import * as useConfigurationModule from "@/app/contexts/Configuration/Configuration";
 import * as context from "@/app/contexts";
 
 let profile: Contracts.IProfile;
@@ -117,6 +118,9 @@ describe("Migration", () => {
 	it("should display and hide details of migration transaction", async () => {
 		const wallet = profile.wallets().first();
 		const walletCreationSpy = vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(wallet);
+		const useConfigurationSpy = vi
+			.spyOn(useConfigurationModule, "useConfiguration")
+			.mockReturnValue({ profileIsSyncing: false });
 
 		const transactionFixture = new DTO.ExtendedSignedTransactionData(
 			await wallet
@@ -169,6 +173,7 @@ describe("Migration", () => {
 
 		useMigrationsSpy.mockRestore();
 		walletCreationSpy.mockRestore();
+		useConfigurationSpy.mockRestore();
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/migrations/${transactionFixture.id()}`);
 	});
