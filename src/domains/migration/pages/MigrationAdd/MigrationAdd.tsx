@@ -126,6 +126,15 @@ export const MigrationAdd = () => {
 		try {
 			const transaction = await sendTransaction();
 
+			setMigrationTransaction({
+				address: transaction.sender(),
+				amount: transaction.amount(),
+				id: transaction.id(),
+				migrationAddress: transaction.memo()!,
+				status: MigrationTransactionStatus.Pending,
+				timestamp: transaction.timestamp()!.toUNIX(),
+			});
+
 			setTransaction(transaction);
 			await storeTransactions([transaction]);
 
@@ -167,14 +176,15 @@ export const MigrationAdd = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.PendingTransaction}>
-								<MigrationPendingStep transaction={transaction!} />
+								{migrationTransaction && (
+									<MigrationPendingStep migrationTransaction={migrationTransaction} />
+								)}
 							</TabPanel>
 
 							<TabPanel tabId={Step.Finished}>
-								<MigrationSuccessStep
-									transaction={transaction!}
-									migrationTransaction={migrationTransaction!}
-								/>
+								{migrationTransaction && (
+									<MigrationSuccessStep migrationTransaction={migrationTransaction} />
+								)}
 							</TabPanel>
 
 							<TabPanel tabId={Step.Error}>
