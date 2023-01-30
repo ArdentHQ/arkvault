@@ -3,11 +3,12 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
+import { vi } from "vitest";
 import { Migration } from "./Migration";
 import { render, screen, env, getDefaultProfileId, waitFor, within } from "@/utils/testing-library";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import * as context from "@/app/contexts";
-
+import { toasts } from "@/app/services";
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
@@ -100,6 +101,20 @@ describe("Migration", () => {
 		expect(screen.getByTestId("ContractPausedAlert")).toBeInTheDocument();
 
 		useMigrationsSpy.mockRestore();
+	});
+
+	it("triggers a toats if cannot load migrations", () => {
+		const toastSpy = vi.spyOn(toasts, "error");
+		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
+			contractIsPaused: true,
+			loadMigrationsError: new Error("error"),
+			storeTransactions: () => Promise.resolve({}),
+		});
+
+		renderComponent();
+
+		useMigrationsSpy.mockRestore();
+		toastSpy.mockRestore();
 	});
 
 	it("handles the close button on the disclaimer", async () => {
