@@ -13,7 +13,7 @@ const migrationUrl = `/profiles/${getDefaultProfileId()}/migration`;
 let transactionFixture: DTO.ExtendedConfirmedTransactionData;
 let migrationTransactionFixture: Migration;
 
-const renderComponent = ({ transaction, migrationTransaction, handleBack = vi.fn() }) => {
+const renderComponent = ({ migrationTransaction, handleBack = vi.fn() }) => {
 	history.push(migrationUrl);
 
 	return render(
