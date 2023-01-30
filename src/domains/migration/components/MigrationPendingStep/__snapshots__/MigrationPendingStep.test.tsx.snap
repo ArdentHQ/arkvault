@@ -126,7 +126,7 @@ exports[`MigrationPendingStep > should render in sm 1`] = `
           <span
             class="font-semibold"
           >
-            20.01.1970 9:16 AM
+            20.01.1970 9:17 AM
           </span>
         </div>
         <div
@@ -425,7 +425,7 @@ exports[`MigrationPendingStep > should render in sm in dark mode 1`] = `
           <span
             class="font-semibold"
           >
-            20.01.1970 9:16 AM
+            20.01.1970 9:17 AM
           </span>
         </div>
         <div
@@ -724,7 +724,7 @@ exports[`MigrationPendingStep > should render in xs 1`] = `
           <span
             class="font-semibold"
           >
-            20.01.1970 9:16 AM
+            20.01.1970 9:17 AM
           </span>
         </div>
         <div
@@ -1027,7 +1027,7 @@ exports[`MigrationPendingStep > should render in xs in dark mode 1`] = `
           <span
             class="font-semibold"
           >
-            20.01.1970 9:16 AM
+            20.01.1970 9:17 AM
           </span>
         </div>
         <div
