@@ -241,7 +241,7 @@ Welcome to Polygon!
               class="whitespace-nowrap text-lg font-semibold"
               data-testid="Amount"
             >
-              1 ARK
+              NaN ARK
             </span>
           </div>
         </div>
@@ -566,7 +566,7 @@ Welcome to Polygon!
               class="whitespace-nowrap text-lg font-semibold"
               data-testid="Amount"
             >
-              1 ARK
+              NaN ARK
             </span>
           </div>
         </div>

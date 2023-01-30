@@ -255,6 +255,20 @@ describe("MigrationAdd", () => {
 	it("should complete migration steps", async () => {
 		renderComponent();
 
+		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockImplementation(() => ({
+			migrations: [
+				{
+					address: "AdDreSs",
+					amount: 123,
+					id: "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
+					migrationAddress: "BuRnAdDreSs",
+					status: MigrationTransactionStatus.Confirmed,
+					timestamp: Date.now() / 1000,
+				},
+			],
+			storeTransactions: () => Promise.resolve({}),
+		}));
+
 		const signatory = await profile
 			.wallets()
 			.findByCoinWithNetwork(arkCoin, arkDevnetNetwork)[0]
