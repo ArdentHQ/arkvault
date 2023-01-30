@@ -173,8 +173,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 			return;
 		}
 
-		console.log({ contractMigrations });
-
 		const updatedMigrations = pendingMigrations.map((migration: Migration): Migration => {
 			const contractMigration = contractMigrations.find(
 				(contractMigration: ARKMigrationViewStructOutput) =>
