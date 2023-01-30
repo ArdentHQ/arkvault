@@ -67,7 +67,11 @@ const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProperties>(
 				<Icon
 					data-testid="Link__external"
 					name="ArrowExternal"
-					className={cn("mb-[3px] shrink-0 align-middle duration-200", { "inline-block text-sm": children })}
+					dimensions={[12, 12]}
+					className={cn(
+						"mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700",
+						{ "inline-block text-sm": children },
+					)}
 				/>
 			)}
 		</AnchorStyled>
