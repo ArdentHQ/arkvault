@@ -18,11 +18,7 @@ const renderComponent = ({ transaction, migrationTransaction, handleBack = vi.fn
 
 	return render(
 		<Route path="/profiles/:profileId/migration">
-			<MigrationDetails
-				transaction={transaction}
-				migrationTransaction={migrationTransaction}
-				handleBack={handleBack}
-			/>
+			<MigrationDetails migrationTransaction={migrationTransaction} handleBack={handleBack} />
 		</Route>,
 		{
 			history,
@@ -88,7 +84,7 @@ describe("MigrationDetails", () => {
 
 		expect(screen.getByTestId("MigrationPendingStep")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("MigrationAdd_back"));
+		userEvent.click(screen.getByTestId("MigrationAdd__back-button"));
 
 		expect(handleBack).toHaveBeenCalled();
 	});

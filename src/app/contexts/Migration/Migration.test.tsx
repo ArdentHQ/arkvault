@@ -15,7 +15,7 @@ import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
 
 const Test = () => {
-	const { migrations, storeTransactions, removeTransactions, contractIsPaused, markMigrationAsRead } =
+	const { migrations, storeTransactions, removeTransactions, contractIsPaused, markMigrationsAsRead } =
 		useMigrations();
 
 	const createAndStoreTransaction = async () => {
@@ -37,7 +37,7 @@ const Test = () => {
 	};
 
 	const markMigrationAsReadHandler = () => {
-		markMigrationAsRead(migrations![0]);
+		markMigrationsAsRead([migrations![0]]);
 	};
 
 	if (contractIsPaused === undefined) {

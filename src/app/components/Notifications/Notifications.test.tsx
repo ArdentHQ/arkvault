@@ -112,8 +112,8 @@ describe("Notifications", () => {
 		useNotificationsSpy.mockRestore();
 	});
 
-	it("should mark migrations as read", () => {
-		const markMigrationAsRead = vi.fn();
+	it("should mark migration as read", () => {
+		const markMigrationsAsRead = vi.fn();
 
 		vi.mock("react-visibility-sensor", () => ({
 			default: ({ children, onChange }) => (
@@ -131,6 +131,7 @@ describe("Notifications", () => {
 				amount: 123,
 				id: "0x123",
 				migrationAddress: "0x456",
+				readAt: undefined,
 				status: MigrationTransactionStatus.Confirmed,
 				timestamp: Date.now() / 1000,
 			},
@@ -138,7 +139,7 @@ describe("Notifications", () => {
 
 		const useNotificationsSpy = vi.spyOn(useNotifications, "useNotifications").mockReturnValue({
 			markAllTransactionsAsRead: () => {},
-			markMigrationAsRead,
+			markMigrationsAsRead,
 			migrationTransactions: migrations,
 			releases: [],
 			transactions: [],
@@ -156,11 +157,11 @@ describe("Notifications", () => {
 
 		vi.unmock("react-visibility-sensor");
 
-		expect(markMigrationAsRead).toHaveBeenCalled();
+		expect(markMigrationsAsRead).not.toHaveBeenCalled();
 	});
 
 	it("should not mark migration as read if already read", () => {
-		const markMigrationAsRead = vi.fn();
+		const markMigrationsAsRead = vi.fn();
 
 		vi.mock("react-visibility-sensor", () => ({
 			default: ({ children, onChange }) => (
@@ -186,7 +187,7 @@ describe("Notifications", () => {
 
 		const useNotificationsSpy = vi.spyOn(useNotifications, "useNotifications").mockReturnValue({
 			markAllTransactionsAsRead: () => {},
-			markMigrationAsRead,
+			markMigrationsAsRead,
 			migrationTransactions: migrations,
 			releases: [],
 			transactions: [],
@@ -204,7 +205,7 @@ describe("Notifications", () => {
 
 		vi.unmock("react-visibility-sensor");
 
-		expect(markMigrationAsRead).not.toHaveBeenCalled();
+		expect(markMigrationsAsRead).not.toHaveBeenCalled();
 	});
 
 	it("should render empty", () => {

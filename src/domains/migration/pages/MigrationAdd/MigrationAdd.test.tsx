@@ -422,7 +422,7 @@ describe("MigrationAdd", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.click(screen.getByTestId("MigrationAdd__back-to-dashboard-button"));
+		userEvent.click(screen.getByTestId("MigrationAdd__back-to-migration-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 

@@ -284,13 +284,13 @@ Upon completion you will receive a notification.
         </span>
         <button
           class="my-auto whitespace-nowrap css-1bx0hyc"
-          data-testid="MigrationAdd_back"
+          data-testid="MigrationAdd__back-button"
           type="button"
         >
           <div
             class="flex items-center space-x-2"
           >
-            Back to Dashboard
+            Back to Migration
           </div>
         </button>
       </div>
@@ -583,13 +583,13 @@ Upon completion you will receive a notification.
         </span>
         <button
           class="my-auto whitespace-nowrap css-1bx0hyc"
-          data-testid="MigrationAdd_back"
+          data-testid="MigrationAdd__back-button"
           type="button"
         >
           <div
             class="flex items-center space-x-2"
           >
-            Back to Dashboard
+            Back to Migration
           </div>
         </button>
       </div>
@@ -885,13 +885,13 @@ Upon completion you will receive a notification.
         >
           <button
             class="my-auto whitespace-nowrap css-1bx0hyc"
-            data-testid="MigrationAdd_back"
+            data-testid="MigrationAdd__back-button"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
-              Back to Dashboard
+              Back to Migration
             </div>
           </button>
         </div>
@@ -1188,13 +1188,13 @@ Upon completion you will receive a notification.
         >
           <button
             class="my-auto whitespace-nowrap css-1bx0hyc"
-            data-testid="MigrationAdd_back"
+            data-testid="MigrationAdd__back-button"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
-              Back to Dashboard
+              Back to Migration
             </div>
           </button>
         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useLayoutEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MigrationTabsWrapper, Step, SuccessButtonWrapper } from "@/domains/migration/pages/MigrationAdd/MigrationAdd";
 import { ContractPausedAlert } from "@/domains/migration/pages/Migration/Migration.blocks";
@@ -20,14 +20,14 @@ interface Properties {
 export const MigrationDetails = ({ migrationTransaction, handleBack }: Properties) => {
 	const { t } = useTranslation();
 
-	const [activeStep, setActiveStep] = useState(Step.Connect);
+	const [activeStep, setActiveStep] = useState<Step | undefined>();
 
 	const transactionIsConfirmed = useMemo(
 		() => migrationTransaction.status === MigrationTransactionStatus.Confirmed,
 		[migrationTransaction],
 	);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (transactionIsConfirmed) {
 			setActiveStep(Step.Finished);
 		} else {
@@ -58,8 +58,8 @@ export const MigrationDetails = ({ migrationTransaction, handleBack }: Propertie
 
 							{activeStep === Step.Finished && (
 								<SuccessButtonWrapper>
-									<Button data-testid="MigrationAdd__back-to-dashboard-button" onClick={handleBack}>
-										{t("COMMON.BACK_TO_DASHBOARD")}
+									<Button data-testid="MigrationAdd__back-to-migration-button" onClick={handleBack}>
+										{t("MIGRATION.BACK_TO_MIGRATION")}
 									</Button>
 								</SuccessButtonWrapper>
 							)}

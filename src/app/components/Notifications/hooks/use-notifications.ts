@@ -1,21 +1,12 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useCallback, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Migration, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { useMigrations } from "@/app/contexts";
+
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
 
-	const { migrations, markMigrationAsRead } = useMigrations();
-	const [readMigrationsIds, setReadMigrationsIds] = useState<string[]>([]);
-
-	const storeReadMigrationsAndMarkAsRead = useCallback(
-		(migration: Migration) => {
-			markMigrationAsRead(migration);
-
-			setReadMigrationsIds((readMigrationsIds) => [...readMigrationsIds, migration.id]);
-		},
-		[markMigrationAsRead],
-	);
+	const { migrations, markMigrationsAsRead } = useMigrations();
 
 	const confirmedMigrations = useMemo<Migration[]>(() => {
 		if (migrations === undefined) {
@@ -23,11 +14,9 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		}
 
 		return migrations.filter(
-			(migration) =>
-				migration.status === MigrationTransactionStatus.Confirmed &&
-				(migration.readAt === undefined || readMigrationsIds.includes(migration.id)),
+			(migration) => migration.status === MigrationTransactionStatus.Confirmed && migration.readAt === undefined,
 		);
-	}, [migrations, readMigrationsIds]);
+	}, [migrations]);
 
 	const { markAllTransactionsAsRead, markAsRead, releases, transactions, migrationTransactions } = useMemo(() => {
 		const markAllTransactionsAsRead = (isVisible: boolean) => {
@@ -57,13 +46,13 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 			releases: profile.notifications().releases().recent(),
 			transactions: profile.notifications().transactions().transactions(),
 		};
-	}, [profile, isSyncing, confirmedMigrations]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [profile, isSyncing, confirmedMigrations, migrations]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return {
 		hasUnread: (releases.length > 0 || transactions.length > 0) && profile.notifications().hasUnread(),
 		markAllTransactionsAsRead,
 		markAsRead,
-		markMigrationAsRead: storeReadMigrationsAndMarkAsRead,
+		markMigrationsAsRead,
 		migrationTransactions,
 		releases,
 		transactions,

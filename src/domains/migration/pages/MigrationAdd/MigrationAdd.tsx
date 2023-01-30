@@ -230,8 +230,8 @@ export const MigrationAdd = () => {
 
 							{activeStep === Step.Finished && (
 								<SuccessButtonWrapper>
-									<Button data-testid="MigrationAdd__back-to-dashboard-button" onClick={handleBack}>
-										{t("COMMON.BACK_TO_DASHBOARD")}
+									<Button data-testid="MigrationAdd__back-to-migration-button" onClick={handleBack}>
+										{t("MIGRATION.BACK_TO_MIGRATION")}
 									</Button>
 								</SuccessButtonWrapper>
 							)}
