@@ -18,26 +18,28 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
 	const { isXs, isSm } = useBreakpoint();
+	const markedAsReadIds = useRef<string[]>([]);
 
-	const { releases, transactions, markAllTransactionsAsRead, migrationTransactions, markMigrationAsRead } =
+	const { releases, transactions, markAllTransactionsAsRead, migrationTransactions, markMigrationsAsRead } =
 		useNotifications({ profile });
 	const wrapperReference = useRef();
 
 	useEffect(() => {
 		markAllTransactionsAsRead(true);
 		persist();
+
+		return () => {
+			markMigrationsAsRead?.(markedAsReadIds.current);
+		};
 	}, []);
 
-	const onVisibilityChangeHandler = useCallback(
-		(migration: Migration, isVisible: boolean) => {
-			if (!isVisible || migration.readAt !== undefined) {
-				return;
-			}
+	const onVisibilityChangeHandler = useCallback((migration: Migration, isVisible: boolean) => {
+		if (!isVisible || migration.readAt !== undefined) {
+			return;
+		}
 
-			markMigrationAsRead(migration);
-		},
-		[markMigrationAsRead],
-	);
+		markedAsReadIds.current = [...markedAsReadIds.current, migration.id];
+	}, []);
 
 	if (transactions.length === 0 && releases.length === 0 && migrationTransactions.length === 0) {
 		return (
