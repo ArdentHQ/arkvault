@@ -9,6 +9,7 @@ import { useWalletAlias, useBreakpoint } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
+import { migrationNetwork } from "@/utils/polygon-migration";
 const rowStyles = [
 	css`
 		&:hover td > div {
@@ -29,7 +30,7 @@ export const MigrationTransactionItem = ({
 	const { isXs, isSm } = useBreakpoint();
 
 	const wallet = useMemo(
-		() => profile.wallets().findByAddressWithNetwork(transaction.address, "ark.mainnet"),
+		() => profile.wallets().findByAddressWithNetwork(transaction.address, migrationNetwork()),
 		[profile],
 	);
 
