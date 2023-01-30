@@ -1,6 +1,6 @@
 import cn from "classnames";
 import React from "react";
-import tw, { styled } from "twin.macro";
+import { styled } from "twin.macro";
 
 import { Tooltip } from "@/app/components/Tooltip";
 
@@ -29,7 +29,12 @@ export const TruncateMiddle = React.forwardRef<HTMLElement, TruncateMiddleProper
 
 		return (
 			<Tooltip content={text} disabled={!showTooltip}>
-				<Wrapper ref={reference} data-testid="TruncateMiddle" className={cn("no-ligatures", className)} {...properties}>
+				<Wrapper
+					ref={reference}
+					data-testid="TruncateMiddle"
+					className={cn("no-ligatures", className)}
+					{...properties}
+				>
 					{result}
 				</Wrapper>
 			</Tooltip>
