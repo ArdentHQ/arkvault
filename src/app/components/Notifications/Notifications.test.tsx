@@ -112,6 +112,54 @@ describe("Notifications", () => {
 		useNotificationsSpy.mockRestore();
 	});
 
+	it("should mark migration as read", () => {
+		const markMigrationsAsRead = vi.fn();
+
+		vi.mock("react-visibility-sensor", () => ({
+			default: ({ children, onChange }) => (
+				<>
+					<button data-testid="TriggerVisibility" onClick={(isVisible, ...rest) => onChange(true, ...rest)} />
+
+					{children}
+				</>
+			),
+		}));
+
+		const migrations: MigrationType[] = [
+			{
+				address: "AdDreSs",
+				amount: 123,
+				id: "0x123",
+				migrationAddress: "0x456",
+				readAt: undefined,
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+		];
+
+		const useNotificationsSpy = vi.spyOn(useNotifications, "useNotifications").mockReturnValue({
+			markAllTransactionsAsRead: () => {},
+			markMigrationsAsRead,
+			migrationTransactions: migrations,
+			releases: [],
+			transactions: [],
+		} as any);
+
+		const { container } = render(<Notifications profile={profile} />);
+
+		expect(screen.getByTestId("NotificationsMigrations")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("TriggerVisibility"));
+
+		expect(container).toMatchSnapshot();
+
+		useNotificationsSpy.mockRestore();
+
+		vi.unmock("react-visibility-sensor");
+
+		expect(markMigrationsAsRead).not.toHaveBeenCalled();
+	});
+
 	it("should not mark migration as read if already read", () => {
 		const markMigrationsAsRead = vi.fn();
 
