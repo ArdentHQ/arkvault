@@ -661,7 +661,7 @@ exports[`Dashboard > should render 1`] = `
               .
             </div>
             <div
-              class="mt-8 flex space-x-3 "
+              class="mt-8 flex space-x-3"
             >
               <button
                 class="css-1bx0hyc"
