@@ -368,7 +368,17 @@ export const MigrationProvider = ({ children }: Properties) => {
 			if (storedMigrations.length > 0) {
 				setMigrations(storedMigrations);
 
-				setMigrationsLoaded(true);
+				// For performance we can assume that the migration are loaded
+				// if we have some stored migrations but only if they are not
+				// newly confirmed migrations in which case is better to wait
+				// until they are confirmed
+				const hasNewlyConfirmedMigrations = storedMigrations.some(
+					(migration) => migration.status === MigrationTransactionStatus.Confirmed && !migration.migrationId,
+				);
+
+				if (!hasNewlyConfirmedMigrations) {
+					setMigrationsLoaded(true);
+				}
 			}
 		} else {
 			setRepository(undefined);
@@ -390,7 +400,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const markMigrationsAsRead = useCallback(
 		(ids: string[]) => {
-			repository?.markAsRead?.(ids);
+			repository?.markAsRead(ids);
 			migrationsUpdated(repository!.all());
 		},
 		[repository, migrationsUpdated],
