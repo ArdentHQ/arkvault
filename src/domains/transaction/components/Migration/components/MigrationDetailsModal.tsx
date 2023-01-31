@@ -161,6 +161,7 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 									<MigrationAddress
 										label={t("MIGRATION.POLYGON_ADDRESS")}
 										address={transaction.memo() || ""}
+										isEthereum
 									/>
 
 									<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
