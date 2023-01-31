@@ -92,6 +92,7 @@ describe("Migration", () => {
 	it("shows a warning and disables the add button if contract is paused", () => {
 		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
 			contractIsPaused: true,
+			migrations: [],
 			storeTransactions: () => Promise.resolve({}),
 		});
 
@@ -109,6 +110,7 @@ describe("Migration", () => {
 		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
 			contractIsPaused: true,
 			loadMigrationsError: new Error("error"),
+			migrations: [],
 			storeTransactions: () => Promise.resolve({}),
 		});
 
