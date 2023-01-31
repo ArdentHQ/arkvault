@@ -44,9 +44,9 @@ export const ErrorStep = ({
 						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
 					</p>
 
-					<Alert className="md:hidden" variant="danger">
-						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
-					</Alert>
+					<div className="md:hidden">
+						<Alert variant="danger">{description || t("TRANSACTION.ERROR.DESCRIPTION")}</Alert>
+					</div>
 
 					{errorMessage && (
 						<TextArea
