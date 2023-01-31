@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useMemo, useState } from "react";
+import React, { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MigrationTabsWrapper, Step, SuccessButtonWrapper } from "@/domains/migration/pages/MigrationAdd/MigrationAdd";
 import { ContractPausedAlert } from "@/domains/migration/pages/Migration/Migration.blocks";
@@ -35,12 +35,14 @@ export const MigrationDetails = ({ migrationTransaction, handleBack }: Propertie
 		}
 	}, [transactionIsConfirmed]);
 
+	const reference = useRef<HTMLDivElement>(null);
+
 	return (
 		<>
 			<ContractPausedAlert />
 
 			<Section className="flex-1">
-				<div data-testid="MigrationDetails" className="mx-auto max-w-xl">
+				<div ref={reference} data-testid="MigrationDetails" className="mx-auto max-w-xl">
 					<StepIndicatorAlt length={TOTAL_STEPS} activeIndex={activeStep} className="mb-8 sm:mx-10 md:mx-0" />
 
 					<MigrationTabsWrapper>
@@ -53,7 +55,10 @@ export const MigrationDetails = ({ migrationTransaction, handleBack }: Propertie
 							</TabPanel>
 
 							<TabPanel tabId={Step.Finished}>
-								<MigrationSuccessStep migrationTransaction={migrationTransaction} />
+								<MigrationSuccessStep
+									migrationTransaction={migrationTransaction}
+									reference={reference}
+								/>
 							</TabPanel>
 
 							{activeStep === Step.Finished && (
