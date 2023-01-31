@@ -419,7 +419,9 @@ describe("Migration Context", () => {
 	it("should handle load error", async () => {
 		const waitForSpy = vi.spyOn(waitForMock, "waitFor").mockImplementation(() => Promise.resolve());
 
-		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
+			migrationPendingFixture,
+		]);
 
 		getMigrationsByArkTxHashMock.mockImplementation(() => {
 			throw new Error("error");

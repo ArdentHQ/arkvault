@@ -100,7 +100,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const { env, persist } = useEnvironmentContext();
 	const profile = useProfileWatcher();
 	const [migrations, setMigrations] = useState<Migration[]>([]);
-	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(true);
+	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(false);
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
 	const { pathname } = useLocation();
@@ -361,26 +361,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		if (profile) {
 			const repository = new MigrationRepository(profile, env.data());
-
 			setRepository(repository);
-
-			const storedMigrations = repository.all();
-
-			if (storedMigrations.length > 0) {
-				setMigrations(storedMigrations);
-
-				// For performance we can assume that the migration are loaded
-				// if we have some stored migrations but only if they are not
-				// newly confirmed migrations in which case is better to wait
-				// until they are confirmed
-				const hasNewlyConfirmedMigrations = storedMigrations.some(
-					(migration) => migration.status === MigrationTransactionStatus.Confirmed && !migration.migrationId,
-				);
-
-				if (!hasNewlyConfirmedMigrations) {
-					setMigrationsLoaded(true);
-				}
-			}
+			setMigrations(repository.all());
 		} else {
 			setMigrationsLoaded(false);
 			setRepository(undefined);
