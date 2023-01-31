@@ -183,7 +183,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				const contractMigration = contractMigrations.find(
 					(contractMigration: ARKMigrationViewStructOutput) =>
 						contractMigration.arkTxHash === `0x${migration.id}`,
-				)!;
+				);
 
 				let status: MigrationTransactionStatus | undefined;
 
@@ -235,8 +235,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 			repository.set(migrations);
 
 			await migrationsUpdated(repository.all());
+			// If no new migrations found but the migrations are not stored yet
+			// then store them
+		} else if (migrations === undefined) {
+			setMigrations(repository.all());
 		}
-	}, [repository, getContractMigrations, migrationsUpdated, isMigrationPath]);
+	}, [repository, getContractMigrations, migrationsUpdated, isMigrationPath, migrations]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
 		try {

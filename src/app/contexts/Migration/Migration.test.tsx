@@ -279,7 +279,7 @@ describe("Migration Context", () => {
 			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
 		});
 
-		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 
 		clearStoredMigrationsMock();
 	});
