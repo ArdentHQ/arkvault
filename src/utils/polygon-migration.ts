@@ -5,7 +5,8 @@ import { AddEthereumChainParameter } from "@/domains/migration/hooks/use-meta-ma
 export const migrationTransactionFee = () =>
 	Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
 
-export const migrationGuideUrl = () => import.meta.env.VITE_MIGRATION_GUIDE_URL || "https://arkvault.io/docs";
+export const migrationGuideUrl = () =>
+	import.meta.env.VITE_MIGRATION_GUIDE_URL || "https://ark.dev/docs/core/migration/devnet";
 
 export const migrationMinBalance = () => Number.parseFloat(import.meta.env.VITE_MIGRATION_MIN_BALANCE || 1);
 

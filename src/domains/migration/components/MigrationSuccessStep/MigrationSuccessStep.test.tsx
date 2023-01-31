@@ -25,7 +25,7 @@ describe("MigrationSuccessStep", () => {
 		history.push(migrationUrl);
 	});
 
-	it.each(["xs", "sm"])("should render in %s", (breakpoint) => {
+	it.each(["xs", "sm", "md"])("should render in %s", (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/migration/add">
 				<WrapperForm>

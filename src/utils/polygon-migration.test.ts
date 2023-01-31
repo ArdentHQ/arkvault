@@ -25,7 +25,7 @@ describe("Polygon Migration Utility Functions", () => {
 	});
 
 	it("#migrationGuideUrl", () => {
-		expect(migrationGuideUrl()).toBe("https://arkvault.io/docs");
+		expect(migrationGuideUrl()).toBe("https://ark.dev/docs/core/migration/devnet");
 	});
 
 	it("#migrationMinBalance", () => {
