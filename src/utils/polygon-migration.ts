@@ -8,6 +8,9 @@ export const migrationTransactionFee = () =>
 export const migrationGuideUrl = () =>
 	import.meta.env.VITE_MIGRATION_GUIDE_URL || "https://ark.dev/docs/core/migration/devnet";
 
+export const migrationLearnMoreUrl = () =>
+	import.meta.env.VITE_MIGRATION_LEARN_MORE_URL || "https://arkscic.com/blog/ark-is-moving-to-polygon";
+
 export const migrationMinBalance = () => Number.parseFloat(import.meta.env.VITE_MIGRATION_MIN_BALANCE || 1);
 
 export const metamaskUrl = () => "https://metamask.io/";

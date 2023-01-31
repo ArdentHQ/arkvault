@@ -7,7 +7,7 @@ import { Link } from "@/app/components/Link";
 import { Image } from "@/app/components/Image";
 import { useLink } from "@/app/hooks/use-link";
 import { ProfilePaths } from "@/router/paths";
-import { migrationGuideUrl } from "@/utils/polygon-migration";
+import { migrationGuideUrl, migrationLearnMoreUrl } from "@/utils/polygon-migration";
 
 export const MigrationBanner = () => {
 	const { t } = useTranslation();
@@ -48,7 +48,7 @@ export const MigrationBanner = () => {
 						<Button
 							data-testid="MigrationBanner--learnmore"
 							variant="secondary-alt"
-							onClick={() => openExternal(migrationGuideUrl())}
+							onClick={() => openExternal(migrationLearnMoreUrl())}
 						>
 							{t("COMMON.LEARN_MORE")}
 						</Button>

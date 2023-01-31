@@ -3,6 +3,7 @@ import { DTO } from "@ardenthq/sdk-profiles";
 import {
 	migrationTransactionFee,
 	migrationGuideUrl,
+	migrationLearnMoreUrl,
 	migrationMinBalance,
 	metamaskUrl,
 	migrationNetwork,
@@ -26,6 +27,10 @@ describe("Polygon Migration Utility Functions", () => {
 
 	it("#migrationGuideUrl", () => {
 		expect(migrationGuideUrl()).toBe("https://ark.dev/docs/core/migration/devnet");
+	});
+
+	it("#migrationLearnMoreUrl", () => {
+		expect(migrationLearnMoreUrl()).toBe("https://arkscic.com/blog/ark-is-moving-to-polygon");
 	});
 
 	it("#migrationMinBalance", () => {
