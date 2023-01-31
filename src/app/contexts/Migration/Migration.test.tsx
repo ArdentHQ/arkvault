@@ -327,6 +327,46 @@ describe("Migration Context", () => {
 		clearStoredMigrationsMock();
 	});
 
+	it("should load the migration id for newly confirmed migrations", async () => {
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
+			migrationPendingFixture,
+		]);
+
+		getMigrationsByArkTxHashMock.mockImplementation(() => [
+			{
+				amount: migrationPendingFixture.amount,
+				arkTxHash: `0x${migrationPendingFixture.id}`,
+				// A recipient means confirmed
+				recipient: "0xWhatevs",
+			},
+		]);
+
+		render(
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
+		);
+
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+
+		expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		clearStoredMigrationsMock();
+	});
+
 	it("should handle load error", async () => {
 		const waitForSpy = vi.spyOn(waitForMock, "waitFor").mockImplementation(() => Promise.resolve());
 
