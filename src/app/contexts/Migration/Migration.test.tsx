@@ -146,6 +146,7 @@ describe("Migration Context", () => {
 			migrations.map((migration) => ({
 				amount: migration.amount,
 				arkTxHash: `0x${migration.id}`,
+				migrationId: migration.migrationId,
 				recipient:
 					migration.status === MigrationTransactionStatus.Pending
 						? ethers.constants.AddressZero
@@ -338,6 +339,40 @@ describe("Migration Context", () => {
 				arkTxHash: `0x${migrationPendingFixture.id}`,
 				// A recipient means confirmed
 				recipient: "0xWhatevs",
+			},
+		]);
+
+		render(
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
+		);
+
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+
+		expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		clearStoredMigrationsMock();
+	});
+
+	it("should load the migration when it has migrationId", async () => {
+		const { clearStoredMigrationsMock } = mockStoredMigrations([
+			{
+				...migrationPendingFixture,
+				migrationId: "0x123",
 			},
 		]);
 
