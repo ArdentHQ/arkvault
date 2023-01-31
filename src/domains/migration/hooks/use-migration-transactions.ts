@@ -73,7 +73,7 @@ export const fetchMigrationTransactions = async ({
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsSyncing } = useConfiguration();
-	const { migrations, storeTransactions, loadMigrationsError, loadingMigrations } = useMigrations();
+	const { migrations, storeTransactions, loadMigrationsError, migrationsLoaded } = useMigrations();
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [hasMore, setHasMore] = useState(false);
@@ -125,7 +125,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	);
 
 	const isLoading = useMemo(() => {
-		if (loadingMigrations) {
+		if (!migrationsLoaded) {
 			return true;
 		}
 

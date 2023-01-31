@@ -16,7 +16,7 @@ import { server, requestMock } from "@/tests/mocks/server";
 import * as waitForMock from "@/utils/wait-for";
 const Test = () => {
 	const {
-		loadingMigrations,
+		migrationsLoaded,
 		migrations,
 		storeTransactions,
 		removeTransactions,
@@ -57,9 +57,7 @@ const Test = () => {
 
 	return (
 		<div>
-			{loadingMigrations ? (
-				<span data-testid="Migration__loading">Loading...</span>
-			) : (
+			{migrationsLoaded ? (
 				<ul data-testid="Migrations">
 					{migrations.map((migration) => (
 						<li data-testid="MigrationItem" key={migration.id}>
@@ -69,6 +67,8 @@ const Test = () => {
 						</li>
 					))}
 				</ul>
+			) : (
+				<span data-testid="Migration__loading">Loading...</span>
 			)}
 
 			<ul>
@@ -188,7 +188,7 @@ describe("Migration Context", () => {
 
 		vi.mock("@/app/contexts/Migration/Migration", () => ({
 			MigrationProvider: ({ children }) => React.createElement("div", {}, children),
-			useMigrations: () => ({ loadingMigrations: false, migrations: [] }),
+			useMigrations: () => ({ migrations: [], migrationsLoaded: false }),
 		}));
 	});
 
@@ -377,6 +377,16 @@ describe("Migration Context", () => {
 			},
 		]);
 
+		let reloadMigrationsCallback;
+
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+			}
+
+			return 1;
+		});
+
 		render(
 			<Route path="/profiles/:profileId/migration">
 				<MigrationProvider>
@@ -397,16 +407,19 @@ describe("Migration Context", () => {
 
 		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 
+		reloadMigrationsCallback();
+
 		expect(screen.getByTestId("Migrations")).toBeInTheDocument();
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
 
 		clearStoredMigrationsMock();
+		setIntervalSpy.mockRestore();
 	});
 
 	it("should handle load error", async () => {
 		const waitForSpy = vi.spyOn(waitForMock, "waitFor").mockImplementation(() => Promise.resolve());
 
-		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([migrationFixture]);
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
 
 		getMigrationsByArkTxHashMock.mockImplementation(() => {
 			throw new Error("error");
@@ -689,8 +702,7 @@ describe("Migration Context", () => {
 
 		reloadMigrationsCallback();
 
-		// Contract method should have been called only when loaded
-		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(1);
+		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(0);
 
 		setIntervalSpy.mockRestore();
 
@@ -758,9 +770,7 @@ describe("Migration Context", () => {
 
 		reloadMigrationsCallback();
 
-		// Contract method should have been twice, once when page loaded
-		// and once when interval was called
-		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(2);
+		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(1);
 
 		setIntervalSpy.mockRestore();
 

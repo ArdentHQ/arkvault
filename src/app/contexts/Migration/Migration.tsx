@@ -78,7 +78,7 @@ interface MigrationContextType {
 	removeTransactions: (address: string) => Promise<void>;
 	markMigrationsAsRead: (ids: string[]) => void;
 	loadMigrationsError: Error | undefined;
-	loadingMigrations: boolean;
+	migrationsLoaded: boolean;
 }
 
 interface Properties {
@@ -100,7 +100,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const { env, persist } = useEnvironmentContext();
 	const profile = useProfileWatcher();
 	const [migrations, setMigrations] = useState<Migration[]>([]);
-	const [loadingMigrations, setLoadingMigrations] = useState<boolean>(true);
+	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(true);
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
 	const { pathname } = useLocation();
@@ -173,6 +173,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		let contractMigrations: ARKMigrationViewStructOutput[] = [];
 
+		console.log(":D");
 		try {
 			contractMigrations = await getContractMigrations(transactionIds);
 			setLoadMigrationsError(undefined);
@@ -188,8 +189,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 				);
 
 				let status: MigrationTransactionStatus | undefined;
-
-				console.log({ migration });
 
 				if (contractMigration) {
 					status =
@@ -239,11 +238,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 			repository.set(migrations);
 
 			await migrationsUpdated(repository.all());
-			// If no new migrations found but the migrations are not stored yet
-			// then store them
 		}
 
-		setLoadingMigrations(false);
+		setMigrationsLoaded(true);
 	}, [repository, getContractMigrations, migrationsUpdated, isMigrationPath]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
@@ -315,10 +312,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 			return;
 		}
 
-		// Load migrations for the first time if there are pending migrations
-		if (migrations === undefined) {
+		// Load migrations immediatly if not loaded yet
+		if (!migrationsLoaded) {
 			loadMigrations();
-			return;
 		}
 
 		const reloadMigrationsCallback = () => {
@@ -333,7 +329,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		reloadInterval = setInterval(reloadMigrationsCallback, MIGRATION_LOAD_INTERVAL);
 
 		return () => clearInterval(reloadInterval);
-	}, [repository, loadMigrations, migrations, hasContractAndRepository, loadMigrationsError]);
+	}, [repository, loadMigrations, migrationsLoaded, hasContractAndRepository, loadMigrationsError]);
 
 	useEffect(() => {
 		let reloadInerval: ReturnType<typeof setInterval>;
@@ -360,10 +356,20 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	// Initialize repository when a new profile is loaded
 	useEffect(() => {
-		setLoadingMigrations(true);
+		setMigrationsLoaded(false);
 
 		if (profile) {
-			setRepository(new MigrationRepository(profile, env.data()));
+			const repository = new MigrationRepository(profile, env.data());
+
+			setRepository(repository);
+
+			const storedMigrations = repository.all();
+
+			if (storedMigrations.length > 0) {
+				setMigrations(storedMigrations);
+
+				setMigrationsLoaded(true);
+			}
 		} else {
 			setRepository(undefined);
 		}
@@ -399,9 +405,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 					contractIsPaused,
 					getTransactionStatus,
 					loadMigrationsError,
-					loadingMigrations,
 					markMigrationsAsRead,
 					migrations: migrationsSorted,
+					migrationsLoaded,
 					removeTransactions,
 					storeTransactions,
 				} as MigrationContextType
