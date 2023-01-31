@@ -1,8 +1,8 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
-import { uniqBy, sortBy } from "@ardenthq/sdk-helpers";
+import { uniqBy, sortBy, BigNumber } from "@ardenthq/sdk-helpers";
 import { matchPath, useLocation } from "react-router-dom";
 import { httpClient } from "@/app/services";
 import {
@@ -13,7 +13,17 @@ import {
 import { useEnvironmentContext } from "@/app/contexts";
 import { MigrationRepository } from "@/repositories/migration.repository";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
-import { polygonContractAddress, polygonIndexerUrl, polygonRpcUrl } from "@/utils/polygon-migration";
+import {
+	polygonContractAddress,
+	polygonIndexerUrl,
+	polygonRpcUrl,
+	migrationMinBalance,
+	migrationNetwork,
+	migrationTransactionFee,
+	migrationWalletAddress,
+	polygonMigrationStartTime,
+	isValidMigrationTransaction,
+} from "@/utils/polygon-migration";
 import { waitFor } from "@/utils/wait-for";
 
 const contractABI = [
@@ -79,6 +89,14 @@ interface MigrationContextType {
 	markMigrationsAsRead: (ids: string[]) => void;
 	loadMigrationsError: Error | undefined;
 	migrationsLoaded: boolean;
+	resolveTransaction: (migration: Migration) => DTO.ExtendedConfirmedTransactionData | undefined;
+	paginatedMigrations: Migration[];
+	isLoading: boolean;
+	isLoadingMore: boolean;
+	getMigrationById: (id: string) => Migration | undefined;
+	hasMore: boolean;
+	onLoadMore: () => void;
+	page: number;
 }
 
 interface Properties {
@@ -103,16 +121,80 @@ const fetchPolygonMigrations = async (arkTxHashes: string[]) => {
 	return JSON.parse(response.body());
 };
 
+export const fetchMigrationTransactions = async ({
+	profile,
+	page,
+	limit,
+}: {
+	page: number;
+	profile: Contracts.IProfile;
+	limit?: number;
+}) => {
+	const wallet = await profile.walletFactory().fromAddress({
+		address: migrationWalletAddress(),
+		coin: "ARK",
+		network: migrationNetwork(),
+	});
+
+	const senderIds = profile
+		.wallets()
+		.values()
+		.filter((wallet) => wallet.networkId() === migrationNetwork())
+		.map((wallet) => wallet.address());
+
+	if (senderIds.length === 0) {
+		return {
+			cursor: page,
+			hasMore: false,
+			items: [],
+		};
+	}
+
+	const query: {
+		recipientId: string;
+		senderId: string;
+		amount: { from: string };
+		fee: { from: string };
+		timestamp?: { from?: number; to?: number };
+		page?: number;
+		limit?: number;
+	} = {
+		amount: { from: BigNumber.make(migrationMinBalance()).times(1e8).toString() },
+		fee: { from: BigNumber.make(migrationTransactionFee()).times(1e8).toString() },
+		limit,
+		page,
+		recipientId: migrationWalletAddress(),
+		senderId: senderIds.join(","),
+	};
+
+	if (polygonMigrationStartTime() > 0) {
+		query.timestamp = { from: polygonMigrationStartTime() };
+	}
+
+	const transactions = await wallet.transactionIndex().received(query);
+
+	return {
+		cursor: Number(transactions.currentPage()),
+		hasMore: transactions.items().length > 0,
+		items: transactions.items(),
+	};
+};
+
 export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
 	const profile = useProfileWatcher();
 	const [migrations, setMigrations] = useState<Migration[]>([]);
-	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(false);
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
 	const { pathname } = useLocation();
 	const [loadMigrationsError, setLoadMigrationsError] = useState<Error>();
+	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
+	const [hasMore, setHasMore] = useState(false);
+	const [page, setPage] = useState(0);
+	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(false);
+	const [transactionsLoaded, setTransactionsLoaded] = useState<boolean>(false);
+	const [isLoadingMore, setIsLoadingMore] = useState(true);
 
 	const isMigrationPath = useMemo(
 		() => !!matchPath(pathname, { path: "/profiles/:profileId/migration" }),
@@ -127,6 +209,26 @@ export const MigrationProvider = ({ children }: Properties) => {
 		},
 		[persist],
 	);
+
+	const limit = 11;
+
+	const loadMigrationWalletTransactions = useCallback(async () => {
+		if (transactionsLoaded) {
+			setIsLoadingMore(true);
+		}
+
+		const { items, hasMore, cursor } = await fetchMigrationTransactions({
+			limit,
+			page: page + 1,
+			profile: profile!,
+		});
+
+		setLatestTransactions((existingItems) => [...existingItems, ...items]);
+		setHasMore(hasMore);
+		setPage(cursor);
+		setTransactionsLoaded(true);
+		setIsLoadingMore(false);
+	}, [profile, page, hasMore, transactionsLoaded]);
 
 	const getContractMigrations = useCallback(
 		async (transactionIds: string[], tries = 0): Promise<ARKMigrationViewStructOutput[]> => {
@@ -318,32 +420,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	useEffect(() => {
-		let reloadInterval: ReturnType<typeof setInterval>;
-
-		if (!hasContractAndRepository) {
-			return;
-		}
-
-		// Load migrations immediatly if no loaded yet
-		if (!migrationsLoaded) {
-			loadMigrations();
-		}
-
-		const reloadMigrationsCallback = () => {
-			if (!repository!.hasPending() && !repository!.hasWithoutMigrationId() && !loadMigrationsError) {
-				clearInterval(reloadInterval);
-				return;
-			}
-
-			loadMigrations();
-		};
-
-		reloadInterval = setInterval(reloadMigrationsCallback, MIGRATION_LOAD_INTERVAL);
-
-		return () => clearInterval(reloadInterval);
-	}, [repository, loadMigrations, migrationsLoaded, hasContractAndRepository, loadMigrationsError]);
-
-	useEffect(() => {
 		let reloadInerval: ReturnType<typeof setInterval>;
 
 		if (!hasContractAndRepository) {
@@ -366,6 +442,78 @@ export const MigrationProvider = ({ children }: Properties) => {
 		return () => clearInterval(reloadInerval);
 	}, [determineIfContractIsPaused, hasContractAndRepository, contractIsPaused]);
 
+	const markMigrationsAsRead = useCallback(
+		(ids: string[]) => {
+			repository?.markAsRead(ids);
+			migrationsUpdated(repository!.all());
+		},
+		[repository, migrationsUpdated],
+	);
+
+	const migrationsSorted = useMemo(() => sortBy(migrations, (migration) => -migration.timestamp), [migrations]);
+
+	const resolveTransaction = useCallback(
+		(migration: Migration) => latestTransactions.find((transaction) => transaction.id() === migration.id),
+		[latestTransactions],
+	);
+
+	const isLoading = useMemo(() => !migrationsLoaded && !transactionsLoaded, [migrationsLoaded, transactionsLoaded]);
+
+	const paginatedMigrations = useMemo(() => migrations.slice(0, page * limit), [migrations, page, limit]);
+
+	const getMigrationById = useCallback(
+		(id: string) => migrations.find((migration) => migration.id === id),
+		[migrations],
+	);
+
+	// Look into the loaded migration transactions and store the new ones
+	useEffect(() => {
+		const storedMigrationIds = new Set(migrations.map((migration) => migration.id));
+
+		const migrationTransactions = latestTransactions.filter((transaction) => {
+			if (storedMigrationIds.has(transaction.id())) {
+				return false;
+			}
+
+			return isValidMigrationTransaction(transaction);
+		});
+
+		if (migrationTransactions.length > 0) {
+			storeTransactions(migrationTransactions);
+		}
+	}, [migrations, latestTransactions, storeTransactions]);
+
+	// When the contract and repository is set, call the method that load
+	// the status of the current stored migrations and the method that load
+	// the migration transactions from the network.
+	useEffect(() => {
+		let reloadInterval: ReturnType<typeof setInterval>;
+
+		if (!hasContractAndRepository) {
+			return;
+		}
+
+		// Load migrations immediatly if no loaded yet
+		if (!migrationsLoaded) {
+			loadMigrations();
+
+			loadMigrationWalletTransactions();
+		}
+
+		const reloadMigrationsCallback = () => {
+			if (!repository!.hasPending() && !repository!.hasWithoutMigrationId() && !loadMigrationsError) {
+				clearInterval(reloadInterval);
+				return;
+			}
+
+			loadMigrations();
+		};
+
+		reloadInterval = setInterval(reloadMigrationsCallback, MIGRATION_LOAD_INTERVAL);
+
+		return () => clearInterval(reloadInterval);
+	}, [repository, loadMigrations, migrationsLoaded, hasContractAndRepository, loadMigrationsError]);
+
 	// Initialize repository when a new profile is loaded
 	useEffect(() => {
 		if (contract === undefined) {
@@ -375,6 +523,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		if (profile) {
 			const repository = new MigrationRepository(profile, env.data());
 			setRepository(repository);
+			console.log({ all: repository.all() });
 			setMigrations(repository.all());
 		} else {
 			setMigrationsLoaded(false);
@@ -396,27 +545,31 @@ export const MigrationProvider = ({ children }: Properties) => {
 		setContract(new Contract(contractAddress, contractABI, provider));
 	}, []);
 
-	const markMigrationsAsRead = useCallback(
-		(ids: string[]) => {
-			repository?.markAsRead(ids);
-			migrationsUpdated(repository!.all());
-		},
-		[repository, migrationsUpdated],
-	);
-
-	const migrationsSorted = useMemo(() => sortBy(migrations, (migration) => -migration.timestamp), [migrations]);
-
 	return (
 		<MigrationContext.Provider
 			value={
 				{
 					contractIsPaused,
+					getMigrationById,
 					getTransactionStatus,
+					hasMore,
+					isLoading,
+					isLoadingMore: isLoadingMore,
 					loadMigrationsError,
 					markMigrationsAsRead,
 					migrations: migrationsSorted,
+
 					migrationsLoaded,
+
+					onLoadMore: () => loadMigrationWalletTransactions(),
+
+					page,
+
+					// @TODO: use-transactions use this as migrations
+					paginatedMigrations,
+
 					removeTransactions,
+					resolveTransaction,
 					storeTransactions,
 				} as MigrationContextType
 			}
