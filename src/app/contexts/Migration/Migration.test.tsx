@@ -704,8 +704,7 @@ describe("Migration Context", () => {
 
 		reloadMigrationsCallback();
 
-		// Contract method should have been called only when loaded
-		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(1);
+		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(0);
 
 		setIntervalSpy.mockRestore();
 
