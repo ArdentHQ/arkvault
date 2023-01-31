@@ -183,7 +183,7 @@ Welcome to Polygon!
             >
               <div
                 class="shrink-0 css-1vy2z2u"
-                data-testid="Avatar"
+                data-testid="EthereumAvatar"
               >
                 <div
                   class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
@@ -508,7 +508,7 @@ Welcome to Polygon!
             >
               <div
                 class="shrink-0 css-1vy2z2u"
-                data-testid="Avatar"
+                data-testid="EthereumAvatar"
               >
                 <div
                   class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
@@ -833,7 +833,7 @@ Welcome to Polygon!
             >
               <div
                 class="shrink-0 css-1vy2z2u"
-                data-testid="Avatar"
+                data-testid="EthereumAvatar"
               >
                 <div
                   class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
