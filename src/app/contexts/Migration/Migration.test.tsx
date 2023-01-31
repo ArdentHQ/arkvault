@@ -484,6 +484,55 @@ describe("Migration Context", () => {
 		ethersMock.mockRestore();
 	});
 
+	it("should not add a transaction that already exists twice", async () => {
+		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
+
+		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => [
+			{
+				amount: 123,
+				arkTxHash: `0xabc123`,
+				memo: "0xabc",
+			},
+		]);
+
+		const ethersMock = Contract.mockImplementation(() => ({
+			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
+			paused: () => false,
+		}));
+
+		render(
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migrations__store")).toBeInTheDocument();
+		});
+
+		expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("Migrations__store"));
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
+
+		userEvent.click(screen.getByTestId("Migrations__store"));
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
+
+		ethersMock.mockRestore();
+	});
+
 	it("should mark migration as read", async () => {
 		const { clearStoredMigrationsMock, setMigrationMock } = mockStoredMigrations([
 			{
