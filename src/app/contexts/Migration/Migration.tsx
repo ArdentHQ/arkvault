@@ -173,7 +173,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		let contractMigrations: ARKMigrationViewStructOutput[] = [];
 
-		console.log(":D");
 		try {
 			contractMigrations = await getContractMigrations(transactionIds);
 			setLoadMigrationsError(undefined);
