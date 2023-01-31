@@ -95,6 +95,14 @@ const ONE_MINUTE = 60 * 1000;
 const GET_MIGRATIONS_MAX_TRIES = 5;
 const GET_MIGRATIONS_TRY_INTERVAL = 1000;
 
+const fetchPolygonMigrations = async (arkTxHashes: string[]) => {
+	const response = await httpClient.get(`${polygonIndexerUrl()}transactions`, {
+		arkTxHashes: arkTxHashes,
+	});
+
+	return JSON.parse(response.body());
+};
+
 export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
@@ -212,11 +220,11 @@ export const MigrationProvider = ({ children }: Properties) => {
 		);
 
 		if (newlyConfirmedMigrations.length > 0) {
-			const response = await httpClient.get(`${polygonIndexerUrl()}transactions`, {
-				arkTxHashes: newlyConfirmedMigrations.map((migration: Migration) => migration.id),
-			});
+			const polygonMigrations = await fetchPolygonMigrations(
+				newlyConfirmedMigrations.map((migration: Migration) => migration.id),
+			);
 
-			for (const polygonMigration of JSON.parse(response.body())) {
+			for (const polygonMigration of polygonMigrations) {
 				const confirmedMigration = newlyConfirmedMigrations.find(
 					(migration) => migration.id === polygonMigration.arkTxHash,
 				);
@@ -275,6 +283,11 @@ export const MigrationProvider = ({ children }: Properties) => {
 					timestamp: transaction.timestamp()!.toUNIX(),
 				};
 
+				if (status === MigrationTransactionStatus.Confirmed) {
+					const [polygonMigration] = await fetchPolygonMigrations([migration.id]);
+					migration.migrationId = polygonMigration.polygonTxHash;
+				}
+
 				repository.add(migration);
 			}
 
@@ -311,13 +324,13 @@ export const MigrationProvider = ({ children }: Properties) => {
 			return;
 		}
 
-		// Load migrations immediatly if not loaded yet
+		// Load migrations immediatly if no loaded yet
 		if (!migrationsLoaded) {
 			loadMigrations();
 		}
 
 		const reloadMigrationsCallback = () => {
-			if (!repository!.hasPending() && !loadMigrationsError) {
+			if (!repository!.hasPending() && !repository!.hasWithoutMigrationId() && !loadMigrationsError) {
 				clearInterval(reloadInterval);
 				return;
 			}

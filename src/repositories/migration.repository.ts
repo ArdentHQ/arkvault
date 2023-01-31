@@ -24,6 +24,10 @@ export class MigrationRepository {
 		return this.all().some((migration) => migration.status === MigrationTransactionStatus.Pending);
 	}
 
+	public hasWithoutMigrationId(): boolean {
+		return this.all().some((migration) => migration.migrationId === undefined);
+	}
+
 	public set(data: Migration[]): void {
 		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
 
