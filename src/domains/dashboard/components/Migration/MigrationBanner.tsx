@@ -35,7 +35,7 @@ export const MigrationBanner = () => {
 
 					<div className="leading-7">
 						{t("DASHBOARD.MIGRATION_BANNER.DESCRIPTION")}{" "}
-						<Link to="https://docs.arkvault.io/" isExternal>
+						<Link to={migrationGuideUrl()} isExternal>
 							{t("DASHBOARD.MIGRATION_BANNER.MIGRATION_GUIDE")}
 						</Link>
 						.
