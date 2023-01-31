@@ -8,6 +8,7 @@ import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { isValidMigrationTransaction } from "@/utils/polygon-migration";
+import { useTheme } from "@/app/hooks";
 
 export const BaseTransactionRowMode = ({
 	type,
@@ -19,6 +20,7 @@ export const BaseTransactionRowMode = ({
 	...properties
 }: BaseTransactionRowModeProperties) => {
 	const { t } = useTranslation();
+	const { isDarkMode } = useTheme();
 
 	const iconSize = isCompact ? "xs" : "lg";
 
@@ -27,7 +29,7 @@ export const BaseTransactionRowMode = ({
 			return {
 				modeCircleStyle: cn(
 					"border-theme-hint-100 text-theme-hint-600 dark:border-theme-hint-300 dark:text-theme-hint-300",
-					{ "bg-theme-hint-50": !isCompact },
+					{ "bg-theme-hint-50": !isCompact && !isDarkMode },
 				),
 				modeIconName: "Sent",
 				tooltipContent: t("TRANSACTION.MIGRATION"),
