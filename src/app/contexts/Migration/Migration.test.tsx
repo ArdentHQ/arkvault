@@ -219,6 +219,7 @@ describe("Migration Context", () => {
 			amount: 123,
 			id: "ad68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
 			migrationAddress: "BuRnAdDreSs",
+			migrationId: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
 			status: MigrationTransactionStatus.Confirmed,
 			timestamp: Date.now() / 1000,
 		};
@@ -669,6 +670,7 @@ describe("Migration Context", () => {
 				amount: 222,
 				id: "456",
 				migrationAddress: "BuRnAdDreSs",
+				migrationId: "abc123",
 				status: MigrationTransactionStatus.Confirmed,
 				timestamp: Date.now() / 1000,
 			},
@@ -704,7 +706,8 @@ describe("Migration Context", () => {
 
 		reloadMigrationsCallback();
 
-		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(0);
+		// Contract method should have been called only when loaded
+		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(1);
 
 		setIntervalSpy.mockRestore();
 
