@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useEffect, useState } from "react";
+import React, { PropsWithChildren, useEffect, useRef, useState } from "react";
 import { generatePath, useHistory } from "react-router-dom";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
@@ -149,94 +149,104 @@ export const MigrationAdd = () => {
 
 	const isNextDisabled = isDirty ? !isValid : true;
 
+	const reference = useRef<HTMLDivElement>(null);
+
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
 			<ContractPausedAlert />
 
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
-					<StepIndicatorAlt
-						length={TOTAL_STEPS}
-						activeIndex={activeStep === Step.Error ? Step.Authenticate : activeStep}
-						className="mb-8 sm:mx-10 md:mx-0"
-					/>
+					<div ref={reference}>
+						<StepIndicatorAlt
+							length={TOTAL_STEPS}
+							activeIndex={activeStep === Step.Error ? Step.Authenticate : activeStep}
+							className="mb-8 sm:mx-10 md:mx-0"
+						/>
 
-					<MigrationTabsWrapper>
-						<Tabs activeId={activeStep}>
-							<TabPanel tabId={Step.Connect}>
-								<MigrationConnectStep />
-							</TabPanel>
+						<MigrationTabsWrapper>
+							<Tabs activeId={activeStep}>
+								<TabPanel tabId={Step.Connect}>
+									<MigrationConnectStep />
+								</TabPanel>
 
-							<TabPanel tabId={Step.Review}>
-								<MigrationReviewStep />
-							</TabPanel>
+								<TabPanel tabId={Step.Review}>
+									<MigrationReviewStep />
+								</TabPanel>
 
-							<TabPanel tabId={Step.Authenticate}>
-								<MigrationAuthenticationStep />
-							</TabPanel>
+								<TabPanel tabId={Step.Authenticate}>
+									<MigrationAuthenticationStep />
+								</TabPanel>
 
-							<TabPanel tabId={Step.PendingTransaction}>
-								{migrationTransaction && (
-									<MigrationPendingStep migrationTransaction={migrationTransaction} />
-								)}
-							</TabPanel>
-
-							<TabPanel tabId={Step.Finished}>
-								{migrationTransaction && (
-									<MigrationSuccessStep migrationTransaction={migrationTransaction} />
-								)}
-							</TabPanel>
-
-							<TabPanel tabId={Step.Error}>
-								<MigrationErrorStep errorMessage={errorMessage} onBack={handleBack} />
-							</TabPanel>
-
-							{!hideFormButtons && (
-								<FormButtons>
-									<Button
-										data-testid="MigrationAdd__back-button"
-										variant="secondary"
-										onClick={handleBack}
-										disabled={isSubmitting}
-									>
-										{activeStep === Step.Connect ? t("COMMON.CANCEL") : t("COMMON.BACK")}
-									</Button>
-
-									{activeStep < Step.Authenticate && (
-										<Button
-											data-testid="MigrationAdd__continue-button"
-											variant="primary"
-											disabled={contractIsPaused || isNextDisabled}
-											onClick={handleNext}
-										>
-											{t("COMMON.CONTINUE")}
-										</Button>
+								<TabPanel tabId={Step.PendingTransaction}>
+									{migrationTransaction && (
+										<MigrationPendingStep migrationTransaction={migrationTransaction} />
 									)}
+								</TabPanel>
 
-									{activeStep === Step.Authenticate && (
-										<Button
-											type="submit"
-											disabled={contractIsPaused || isSubmitting || isNextDisabled}
-											data-testid="MigrationAdd__send-button"
-											isLoading={isSubmitting}
-											icon="DoubleArrowRight"
-											iconPosition="right"
-										>
-											<span>{t("COMMON.SEND")}</span>
-										</Button>
+								<TabPanel tabId={Step.Finished}>
+									{migrationTransaction && (
+										<MigrationSuccessStep
+											migrationTransaction={migrationTransaction}
+											reference={reference}
+										/>
 									)}
-								</FormButtons>
-							)}
+								</TabPanel>
 
-							{activeStep === Step.Finished && (
-								<SuccessButtonWrapper>
-									<Button data-testid="MigrationAdd__back-to-migration-button" onClick={handleBack}>
-										{t("MIGRATION.BACK_TO_MIGRATION")}
-									</Button>
-								</SuccessButtonWrapper>
-							)}
-						</Tabs>
-					</MigrationTabsWrapper>
+								<TabPanel tabId={Step.Error}>
+									<MigrationErrorStep errorMessage={errorMessage} onBack={handleBack} />
+								</TabPanel>
+
+								{!hideFormButtons && (
+									<FormButtons>
+										<Button
+											data-testid="MigrationAdd__back-button"
+											variant="secondary"
+											onClick={handleBack}
+											disabled={isSubmitting}
+										>
+											{activeStep === Step.Connect ? t("COMMON.CANCEL") : t("COMMON.BACK")}
+										</Button>
+
+										{activeStep < Step.Authenticate && (
+											<Button
+												data-testid="MigrationAdd__continue-button"
+												variant="primary"
+												disabled={contractIsPaused || isNextDisabled}
+												onClick={handleNext}
+											>
+												{t("COMMON.CONTINUE")}
+											</Button>
+										)}
+
+										{activeStep === Step.Authenticate && (
+											<Button
+												type="submit"
+												disabled={contractIsPaused || isSubmitting || isNextDisabled}
+												data-testid="MigrationAdd__send-button"
+												isLoading={isSubmitting}
+												icon="DoubleArrowRight"
+												iconPosition="right"
+											>
+												<span>{t("COMMON.SEND")}</span>
+											</Button>
+										)}
+									</FormButtons>
+								)}
+
+								{activeStep === Step.Finished && (
+									<SuccessButtonWrapper>
+										<Button
+											data-testid="MigrationAdd__back-to-migration-button"
+											onClick={handleBack}
+										>
+											{t("MIGRATION.BACK_TO_MIGRATION")}
+										</Button>
+									</SuccessButtonWrapper>
+								)}
+							</Tabs>
+						</MigrationTabsWrapper>
+					</div>
 				</Form>
 			</Section>
 		</Page>
