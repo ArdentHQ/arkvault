@@ -49,7 +49,9 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 	}, [profile, isSyncing, confirmedMigrations, migrations]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return {
-		hasUnread: (releases.length > 0 || transactions.length > 0) && profile.notifications().hasUnread(),
+		hasUnread:
+			((releases.length > 0 || transactions.length > 0) && profile.notifications().hasUnread()) ||
+			confirmedMigrations.length > 0,
 		markAllTransactionsAsRead,
 		markAsRead,
 		markMigrationsAsRead,
