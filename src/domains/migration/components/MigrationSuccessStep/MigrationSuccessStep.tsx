@@ -54,6 +54,7 @@ export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 					<MigrationAddress
 						label={t("MIGRATION.POLYGON_ADDRESS")}
 						address={migrationTransaction.migrationAddress}
+						isEthereum
 					/>
 
 					<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
