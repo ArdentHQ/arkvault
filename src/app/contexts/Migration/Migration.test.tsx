@@ -16,6 +16,7 @@ import { server, requestMock } from "@/tests/mocks/server";
 import * as waitForMock from "@/utils/wait-for";
 const Test = () => {
 	const {
+		loadingMigrations,
 		migrations,
 		storeTransactions,
 		removeTransactions,
@@ -43,7 +44,7 @@ const Test = () => {
 	};
 
 	const markMigrationAsReadHandler = () => {
-		markMigrationsAsRead([migrations![0]]);
+		markMigrationsAsRead([migrations[0]]);
 	};
 
 	if (contractIsPaused === undefined) {
@@ -56,7 +57,7 @@ const Test = () => {
 
 	return (
 		<div>
-			{migrations === undefined ? (
+			{loadingMigrations ? (
 				<span data-testid="Migration__loading">Loading...</span>
 			) : (
 				<ul data-testid="Migrations">
@@ -187,7 +188,7 @@ describe("Migration Context", () => {
 
 		vi.mock("@/app/contexts/Migration/Migration", () => ({
 			MigrationProvider: ({ children }) => React.createElement("div", {}, children),
-			useMigrations: () => ({ migrations: undefined }),
+			useMigrations: () => ({ loadingMigrations: false, migrations: [] }),
 		}));
 	});
 

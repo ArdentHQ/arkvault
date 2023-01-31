@@ -73,7 +73,7 @@ export const fetchMigrationTransactions = async ({
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { profileIsSyncing } = useConfiguration();
-	const { migrations, storeTransactions, loadMigrationsError } = useMigrations();
+	const { migrations, storeTransactions, loadMigrationsError, loadingMigrations } = useMigrations();
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [hasMore, setHasMore] = useState(false);
@@ -100,7 +100,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	}, [profileIsSyncing]);
 
 	const migrationTransactions = useMemo(() => {
-		const storedMigrationIds = new Set((migrations ?? []).map((migration) => migration.id));
+		const storedMigrationIds = new Set(migrations.map((migration) => migration.id));
 
 		return latestTransactions.filter((transaction) => {
 			if (storedMigrationIds.has(transaction.id())) {
@@ -125,6 +125,10 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	);
 
 	const isLoading = useMemo(() => {
+		if (loadingMigrations) {
+			return true;
+		}
+
 		if (profileIsSyncing) {
 			return true;
 		}
@@ -136,23 +140,17 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		return migrationTransactions.length > 0 && !migrations;
 	}, [profileIsSyncing, isLoadingTransactions, migrationTransactions, migrations]);
 
-	const migrationsPage = useMemo(() => {
-		if (!migrations) {
-			return [];
-		}
-
-		return migrations.slice(0, page * limit);
-	}, [migrations, page, limit]);
+	const migrationsPage = useMemo(() => migrations.slice(0, page * limit), [migrations, page, limit]);
 
 	const getMigrationById = useCallback(
-		(id: string) => migrations?.find((migration) => migration.id === id),
+		(id: string) => migrations.find((migration) => migration.id === id),
 		[migrations, page, limit],
 	);
 
 	return {
 		getMigrationById,
 		hasMore,
-		isLoading: (page === 0 && isLoading) || !migrations,
+		isLoading: page === 0 && isLoading,
 		isLoadingMore: page > 0 && isLoading,
 		loadMigrationsError,
 		migrations: migrationsPage,

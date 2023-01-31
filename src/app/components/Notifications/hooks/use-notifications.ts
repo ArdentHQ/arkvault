@@ -8,15 +8,14 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 
 	const { migrations, markMigrationsAsRead } = useMigrations();
 
-	const confirmedMigrations = useMemo<Migration[]>(() => {
-		if (migrations === undefined) {
-			return [];
-		}
-
-		return migrations.filter(
-			(migration) => migration.status === MigrationTransactionStatus.Confirmed && migration.readAt === undefined,
-		);
-	}, [migrations]);
+	const confirmedMigrations = useMemo<Migration[]>(
+		() =>
+			migrations.filter(
+				(migration) =>
+					migration.status === MigrationTransactionStatus.Confirmed && migration.readAt === undefined,
+			),
+		[migrations],
+	);
 
 	const { markAllTransactionsAsRead, markAsRead, releases, transactions, migrationTransactions } = useMemo(() => {
 		const markAllTransactionsAsRead = (isVisible: boolean) => {

@@ -70,7 +70,7 @@ const contractABI = [
 
 interface MigrationContextType {
 	contractIsPaused?: boolean;
-	migrations?: Migration[];
+	migrations: Migration[];
 	storeTransactions: (
 		transactions: (DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData)[],
 	) => Promise<void>;
@@ -78,6 +78,7 @@ interface MigrationContextType {
 	removeTransactions: (address: string) => Promise<void>;
 	markMigrationsAsRead: (ids: string[]) => void;
 	loadMigrationsError: Error | undefined;
+	loadingMigrations: boolean;
 }
 
 interface Properties {
@@ -98,7 +99,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [repository, setRepository] = useState<MigrationRepository>();
 	const { env, persist } = useEnvironmentContext();
 	const profile = useProfileWatcher();
-	const [migrations, setMigrations] = useState<Migration[]>();
+	const [migrations, setMigrations] = useState<Migration[]>([]);
+	const [loadingMigrations, setLoadingMigrations] = useState<boolean>(true);
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
 	const { pathname } = useLocation();
@@ -187,6 +189,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 				let status: MigrationTransactionStatus | undefined;
 
+				console.log({ migration });
+
 				if (contractMigration) {
 					status =
 						contractMigration.recipient === ethers.constants.AddressZero
@@ -237,10 +241,10 @@ export const MigrationProvider = ({ children }: Properties) => {
 			await migrationsUpdated(repository.all());
 			// If no new migrations found but the migrations are not stored yet
 			// then store them
-		} else if (migrations === undefined) {
-			setMigrations(repository.all());
 		}
-	}, [repository, getContractMigrations, migrationsUpdated, isMigrationPath, migrations]);
+
+		setLoadingMigrations(false);
+	}, [repository, getContractMigrations, migrationsUpdated, isMigrationPath]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
 		try {
@@ -356,7 +360,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	// Initialize repository when a new profile is loaded
 	useEffect(() => {
-		setMigrations(undefined);
+		setLoadingMigrations(true);
 
 		if (profile) {
 			setRepository(new MigrationRepository(profile, env.data()));
@@ -386,13 +390,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		[repository, migrationsUpdated],
 	);
 
-	const migrationsSorted = useMemo(() => {
-		if (!migrations) {
-			return;
-		}
-
-		return sortBy(migrations, (migration) => -migration.timestamp);
-	}, [migrations]);
+	const migrationsSorted = useMemo(() => sortBy(migrations, (migration) => -migration.timestamp), [migrations]);
 
 	return (
 		<MigrationContext.Provider
@@ -401,6 +399,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 					contractIsPaused,
 					getTransactionStatus,
 					loadMigrationsError,
+					loadingMigrations,
 					markMigrationsAsRead,
 					migrations: migrationsSorted,
 					removeTransactions,
