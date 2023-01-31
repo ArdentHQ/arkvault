@@ -3,7 +3,7 @@
 exports[`Notifications > should emit transactionClick event 1`] = `
 <div>
   <div
-    class="css-80avit"
+    class="css-ottnn8"
     data-testid="NotificationsWrapper"
   >
     <div
@@ -104,7 +104,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
     </div>
     <div>
       <div
-        class="md:space-y-2 "
+        class="md:space-y-2"
       >
         <div
           class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
@@ -479,12 +479,12 @@ exports[`Notifications > should emit transactionClick event 1`] = `
 exports[`Notifications > should mark migration as read 1`] = `
 <div>
   <div
-    class="css-80avit"
+    class="css-ottnn8"
     data-testid="NotificationsWrapper"
   >
     <div>
       <div
-        class="md:space-y-2 "
+        class="md:space-y-2"
       >
         <div
           class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
@@ -777,12 +777,12 @@ exports[`Notifications > should mark migration as read 1`] = `
 exports[`Notifications > should not mark migration as read if already read 1`] = `
 <div>
   <div
-    class="css-80avit"
+    class="css-ottnn8"
     data-testid="NotificationsWrapper"
   >
     <div>
       <div
-        class="md:space-y-2 "
+        class="md:space-y-2"
       >
         <div
           class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
@@ -1075,7 +1075,7 @@ exports[`Notifications > should not mark migration as read if already read 1`] =
 exports[`Notifications > should render with empty notifications 1`] = `
 <div>
   <div
-    class="css-19lwrp1"
+    class="css-mtuqg2"
     data-testid="Notifications__empty"
   >
     <div
@@ -1164,12 +1164,12 @@ exports[`Notifications > should render with empty notifications 1`] = `
 exports[`Notifications > should render with migrations but not transactions 1`] = `
 <div>
   <div
-    class="css-80avit"
+    class="css-ottnn8"
     data-testid="NotificationsWrapper"
   >
     <div>
       <div
-        class="md:space-y-2 "
+        class="md:space-y-2"
       >
         <div
           class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
@@ -1462,7 +1462,7 @@ exports[`Notifications > should render with migrations but not transactions 1`] 
 exports[`Notifications > should render with plugins 1`] = `
 <div>
   <div
-    class="css-80avit"
+    class="css-ottnn8"
     data-testid="NotificationsWrapper"
   >
     <div
@@ -1563,7 +1563,7 @@ exports[`Notifications > should render with plugins 1`] = `
     </div>
     <div>
       <div
-        class="md:space-y-2 "
+        class="md:space-y-2"
       >
         <div
           class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
@@ -1938,7 +1938,7 @@ exports[`Notifications > should render with plugins 1`] = `
 exports[`Notifications > should render with transactions and plugins 1`] = `
 <div>
   <div
-    class="css-80avit"
+    class="css-ottnn8"
     data-testid="NotificationsWrapper"
   >
     <div
@@ -2039,7 +2039,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
     </div>
     <div>
       <div
-        class="md:space-y-2 "
+        class="md:space-y-2"
       >
         <div
           class="hidden text-lg font-semibold text-theme-secondary-500 md:block"

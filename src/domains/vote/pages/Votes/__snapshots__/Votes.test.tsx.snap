@@ -750,7 +750,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       </div>
                     </span>
                     <div
-                      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
+                      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
                       data-testid="dropdown__content"
                       style="opacity: 1; height: -30px; overflow-y: scroll;"
                     >
@@ -10837,7 +10837,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                       </div>
                     </span>
                     <div
-                      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mx-4 sm:mx-0 css-37ekmz"
+                      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mx-4 sm:mx-0 css-37ekmz"
                       data-testid="dropdown__content"
                       style="opacity: 1; height: -30px; overflow-y: scroll;"
                     >
@@ -12262,7 +12262,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                       </div>
                     </span>
                     <div
-                      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mx-4 sm:mx-0 css-37ekmz"
+                      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mx-4 sm:mx-0 css-37ekmz"
                       data-testid="dropdown__content"
                       style="opacity: 1; height: -30px; overflow-y: scroll;"
                     >
@@ -15663,7 +15663,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </div>
                     </span>
                     <div
-                      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mx-4 sm:mx-0 css-37ekmz"
+                      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mx-4 sm:mx-0 css-37ekmz"
                       data-testid="dropdown__content"
                       style="opacity: 1; height: -30px; overflow-y: scroll;"
                     >

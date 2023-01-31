@@ -171,7 +171,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 				>
 					{(top || options?.length) && (
 						<div className="py-3">
-							{top && top}
+							{top}
 							{options && renderOptions({ onSelect: onSelectOption, options })}
 						</div>
 					)}

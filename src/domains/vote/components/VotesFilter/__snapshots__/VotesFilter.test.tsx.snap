@@ -106,7 +106,7 @@ exports[`VotesFilter > should render default 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -213,7 +213,7 @@ exports[`VotesFilter > should render with current option selected 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -313,7 +313,7 @@ exports[`VotesFilter > should render with disabled current option 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
