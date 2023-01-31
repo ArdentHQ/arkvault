@@ -176,7 +176,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		const updatedMigrations = pendingMigrations
-			.map((migration: Migration): Migration => {
+			.map((migration: Migration): Migration | undefined => {
 				const contractMigration = contractMigrations.find(
 					(contractMigration: ARKMigrationViewStructOutput) =>
 						contractMigration.arkTxHash === `0x${migration.id}`,
@@ -191,16 +191,16 @@ export const MigrationProvider = ({ children }: Properties) => {
 							: MigrationTransactionStatus.Confirmed;
 				}
 
-				if (migration.status !== status) {
-					return {
-						...migration,
-						status,
-					};
+				if (migration.status === status) {
+					return;
 				}
 
-				return migration;
+				return {
+					...migration,
+					status,
+				};
 			})
-			.filter(Boolean);
+			.filter(Boolean) as Migration[];
 
 		const newlyConfirmedMigrations = updatedMigrations.filter(
 			(migration) => migration.status === MigrationTransactionStatus.Confirmed && !migration.migrationId,
@@ -259,7 +259,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 				repository.add(migration);
 			}
 
-			await migrationsUpdated(repository.all());
+			if (transactions.length > 0) {
+				await migrationsUpdated(repository.all());
+			}
 		},
 		[repository, migrationsUpdated],
 	);
