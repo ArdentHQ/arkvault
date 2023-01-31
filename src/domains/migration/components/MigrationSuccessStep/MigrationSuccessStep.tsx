@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
 import { Clipboard } from "@/app/components/Clipboard";
@@ -10,15 +10,29 @@ import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { MigrationAddress, MigrationDetail } from "@/domains/migration/components/MigrationAddress";
 import { polygonTransactionLink } from "@/utils/polygon-migration";
 import { Migration } from "@/domains/migration/migration.contracts";
+import { useBreakpoint } from "@/app/hooks";
 
 interface MigrationSuccessStepProperties {
 	migrationTransaction: Migration;
+	reference?: React.RefObject<HTMLDivElement>;
 }
 
-export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({ migrationTransaction }) => {
+export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({ migrationTransaction, reference }) => {
 	const { t } = useTranslation();
 
-	const reference = useRef(null);
+	const { isXs, isSm } = useBreakpoint();
+
+	const offset = useMemo(() => {
+		if (isSm) {
+			return 130;
+		}
+
+		if (isXs) {
+			return 100;
+		}
+
+		return 56;
+	}, [isXs, isSm]);
 
 	return (
 		<div data-testid="MigrationSuccessStep">
@@ -40,6 +54,7 @@ export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 					<MigrationAddress
 						label={t("MIGRATION.POLYGON_ADDRESS")}
 						address={migrationTransaction.migrationAddress}
+						isEthereum
 					/>
 
 					<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
@@ -60,7 +75,7 @@ export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 						<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 							{t("MIGRATION.TRANSACTION_ID")}
 						</span>
-						<span ref={reference} className="overflow-hidden">
+						<span className="overflow-hidden">
 							<Link
 								to={polygonTransactionLink(migrationTransaction.migrationId!)}
 								tooltip={migrationTransaction.migrationId}
@@ -70,6 +85,7 @@ export const MigrationSuccessStep: React.FC<MigrationSuccessStepProperties> = ({
 								<TruncateMiddleDynamic
 									value={migrationTransaction.migrationId!}
 									parentRef={reference}
+									offset={offset}
 								/>
 							</Link>
 						</span>

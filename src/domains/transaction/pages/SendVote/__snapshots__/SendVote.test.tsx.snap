@@ -3137,51 +3137,55 @@ exports[`SendVote > should show error step and go back 1`] = `
                         An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
                       </p>
                       <div
-                        class="md:hidden css-mpc03v"
+                        class="md:hidden"
                       >
                         <div
-                          class="css-1f7sa7y"
+                          class="css-mpc03v"
                         >
                           <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
+                            class="css-1f7sa7y"
                           >
-                            <svg
-                              id="circle-cross"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              class="css-v0ob3f"
+                              height="16"
+                              width="16"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
+                              <svg
+                                id="circle-cross"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <circle
-                                  cx="10"
-                                  cy="10"
-                                  r="9"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M7 13l6-6M13 13L7 7"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="9"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M7 13l6-6M13 13L7 7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                            <span>
+                              Error
+                            </span>
                           </div>
-                          <span>
-                            Error
-                          </span>
-                        </div>
-                        <div
-                          class="css-1h3dpsb"
-                        >
-                          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
+                          <div
+                            class="css-1h3dpsb"
+                          >
+                            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
+                          </div>
                         </div>
                       </div>
                       <div

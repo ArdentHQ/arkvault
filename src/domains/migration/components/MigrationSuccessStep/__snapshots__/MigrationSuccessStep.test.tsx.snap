@@ -1,5 +1,330 @@
 // Vitest Snapshot v1
 
+exports[`MigrationSuccessStep > should render in md 1`] = `
+<DocumentFragment>
+  <form
+    class="mx-auto max-w-xl"
+    data-testid="Form"
+  >
+    <div
+      data-testid="MigrationSuccessStep"
+    >
+      <div
+        class="flex flex-col"
+      >
+        <div
+          class="flex items-end justify-between bg-theme-background mx-auto text-center"
+        >
+          <div
+            class="space-y-4"
+          >
+            <h1
+              class="mb-0 text-lg sm:text-2xl"
+              data-testid="header__title"
+            >
+              Successfully Migrated
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Your migration was successful.
+Welcome to Polygon!
+            </div>
+          </div>
+        </div>
+        <div
+          class="mx-auto my-6 max-w-2xl"
+        >
+          <svg
+            class="w-full"
+            id="migration-success-banner-light"
+            viewBox="0 0 296 130"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M142 8.464a12 12 0 0 1 12 0l39.962 23.072a12 12 0 0 1 6 10.392v46.144c0 4.287-2.288 8.248-6 10.392L154 121.536a12.003 12.003 0 0 1-12 0l-39.962-23.072a12 12 0 0 1-6-10.392V41.928a12 12 0 0 1 6-10.392L142 8.464z"
+              fill="#F5F5FF"
+              stroke="#5452CE"
+              stroke-width="1.407"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M148.074 52.265L114 88.123 148.074 33l33.827 55.123-33.827-35.858zm-15.352 24.35l5.445-5.754h19.72l5.445 5.754h-30.61zm9.323-9.76l6.024-6.17 5.94 6.17h-11.964z"
+              fill="#D6D5FF"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M148.074 52.265l.728-.686a1.001 1.001 0 0 0-1.453-.003l.725.69v-.001zM114 88.123l-.851-.526a1.001 1.001 0 0 0 1.576 1.215l-.725-.69v.001zM148.074 33l.853-.523a1.001 1.001 0 0 0-1.703-.003l.85.526zm33.827 55.123l-.728.686a1 1 0 0 0 1.58-1.21l-.852.524zm-49.179-11.508l-.726-.688a1 1 0 0 0 .726 1.688v-1zm5.445-5.754v-1c-.274 0-.537.113-.726.312l.726.688zm19.72 0l.726-.688a1 1 0 0 0-.726-.312v1zm5.445 5.754v1a1 1 0 0 0 .727-1.688l-.727.688zm-21.287-9.76l-.716-.698a1 1 0 0 0 .716 1.699v-1.001zm6.024-6.17l.72-.694a1 1 0 0 0-1.436-.005l.716.699zm5.94 6.17v1a1 1 0 0 0 .72-1.693l-.72.694v-.001zm-6.66-15.279l-34.074 35.858 1.45 1.378 34.074-35.858-1.45-1.378zm-32.498 37.072l34.074-55.122-1.701-1.052-34.075 55.123 1.702 1.052v-.001zm32.371-55.125l33.826 55.123 1.705-1.046-33.826-55.123-1.705 1.046zm35.406 53.913L148.802 51.58l-1.455 1.373 33.826 35.857 1.455-1.373v-.001zm-49.18-10.134l5.446-5.754-1.453-1.375-5.445 5.754 1.452 1.375zm4.719-5.441h19.72v-2h-19.72v2zm18.994-.313l5.445 5.754 1.453-1.375-5.446-5.754-1.452 1.375zm6.171 4.067h-30.61v2h30.61v-2zm-20.572-8.06l6.024-6.172-1.431-1.397-6.024 6.171 1.431 1.398zm4.588-6.177l5.94 6.171 1.441-1.387-5.94-6.17-1.441 1.386zm6.661 4.478h-11.964v2h11.964v-2z"
+              fill="#5452CE"
+            />
+            <path
+              d="M141 4.041a14 14 0 0 1 14 0l42.292 24.418a14 14 0 0 1 7 12.124v48.834a14 14 0 0 1-7 12.124L155 125.959a14.004 14.004 0 0 1-14 0l-42.292-24.418a14 14 0 0 1-7-12.124V40.583a14 14 0 0 1 7-12.124L141 4.04v.001z"
+              fill="none"
+              stroke="#D6D5FF"
+              stroke-width="1.407"
+            />
+            <path
+              d="M144 12.31a8 8 0 0 1 8 0l39.631 22.88a8 8 0 0 1 4 6.929V87.88c0 2.858-1.524 5.5-4 6.928L152 117.691a8 8 0 0 1-8 0l-39.631-22.882a7.998 7.998 0 0 1-4-6.928V42.12c0-2.858 1.524-5.5 4-6.928L144 12.309v.001z"
+              fill="none"
+              stroke="#D6D5FF"
+              stroke-width="1.407"
+            />
+            <g
+              fill="none"
+              stroke-width="2"
+            >
+              <path
+                d="M213 110.842c.219-6.433 5.089-19.718 22.812-21.396m-13.38-6.503c2.266-3.776 4.694-12.88-3.729-19.09M283.846 7c19.53 16.362 12.284 38.197-12.944 26.431s-6.137-24.753 13.384-.21m3.51 6.294c2.851 8.18-4.826 21.816-26.321 13.845-21.496-7.972-6.361-28.949 15.354-.63m2.632 5.664c4.385 9.86-.658 21.816-24.347 15.313-23.689-6.502-9.432-31.675 12.722-1.887m3.729 6.083c2.266 6.922 1.14 19.844-21.496 16.152"
+                stroke="#5452CE"
+                stroke-linecap="round"
+              />
+              <ellipse
+                cx="254.898"
+                cy="107.696"
+                rx="3.071"
+                ry="2.937"
+                stroke="#6E6CEF"
+              />
+              <ellipse
+                cx="233.98"
+                cy="67.697"
+                rx="3.071"
+                ry="2.937"
+                stroke="#6E6CEF"
+              />
+              <ellipse
+                cx="248.032"
+                cy="120.5"
+                rx="2.614"
+                ry="2.5"
+                stroke="#6E6CEF"
+              />
+              <ellipse
+                cx="285.671"
+                cy="85.5"
+                rx="2.614"
+                ry="2.5"
+                stroke="#DE5846"
+              />
+              <ellipse
+                cx="229.728"
+                cy="111"
+                rx="4.183"
+                ry="4"
+                stroke="#DE5846"
+              />
+            </g>
+            <g
+              fill="none"
+              stroke-width="2"
+            >
+              <path
+                d="M83 110.842c-.22-6.433-5.09-19.718-22.815-21.396m13.382-6.503c-2.267-3.776-4.695-12.88 3.729-19.09M12.155 7C-7.377 23.362-.13 45.197 25.1 33.431s6.138-24.753-13.386-.21m-3.51 6.294c-2.851 8.18 4.827 21.816 26.324 13.845 21.498-7.972 6.362-28.949-15.355-.63m-2.632 5.664c-4.386 9.86.658 21.816 24.349 15.313 23.691-6.502 9.432-31.675-12.723-1.887m-3.73 6.083c-2.266 6.922-1.14 19.844 21.498 16.152"
+                stroke="#DE5846"
+                stroke-linecap="round"
+              />
+              <ellipse
+                cx="41.114"
+                cy="107.697"
+                rx="3.071"
+                ry="2.937"
+                stroke="#FEB8AE"
+              />
+              <ellipse
+                cx="62.03"
+                cy="67.697"
+                rx="3.071"
+                ry="2.937"
+                stroke="#FEB8AE"
+              />
+              <ellipse
+                cx="47.976"
+                cy="120.5"
+                rx="2.614"
+                ry="2.5"
+                stroke="#FEB8AE"
+              />
+              <ellipse
+                cx="10.331"
+                cy="85.5"
+                rx="2.614"
+                ry="2.5"
+                stroke="#5452CE"
+              />
+              <ellipse
+                cx="66.281"
+                cy="111"
+                rx="4.183"
+                ry="4"
+                stroke="#5452CE"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="sm:-mx-5"
+      >
+        <div
+          class="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="flex flex-col space-y-1 py-6 px-5"
+          >
+            <span
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Polygon Address
+            </span>
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="shrink-0 css-1vy2z2u"
+                data-testid="EthereumAvatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                />
+              </div>
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              />
+            </div>
+          </div>
+          <div
+            class="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800"
+          >
+            <div
+              class="absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800"
+            >
+              <div
+                class="flex h-6 w-6 items-center justify-center rounded-full border-2 border-theme-navy-600 bg-theme-navy-100 text-theme-navy-600 dark:bg-transparent"
+              >
+                <div
+                  class="css-15txs7d"
+                  height="10"
+                  width="10"
+                >
+                  <svg
+                    id="check-mark-small"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col space-y-1 py-6 px-5"
+          >
+            <span
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Amount
+            </span>
+            <span
+              class="whitespace-nowrap text-lg font-semibold"
+              data-testid="Amount"
+            >
+              NaN ARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="mt-3 flex overflow-hidden rounded-xl"
+        >
+          <div
+            class="flex flex-1 flex-col bg-theme-secondary-100 p-5 dark:bg-black"
+          >
+            <span
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Transaction ID
+            </span>
+            <span
+              class="overflow-hidden"
+            >
+              <a
+                class="ring-focus group inline-block css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://mumbai.polygonscan.com/tx/0xabcdef"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  <span
+                    class="min-w-0 overflow-hidden"
+                  >
+                    0xabcdef
+                  </span>
+                </span>
+              </a>
+            </span>
+          </div>
+          <div
+            class="flex items-center bg-theme-navy-100 px-5 text-theme-navy-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg
+                  id="copy"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                    />
+                    <path
+                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
 exports[`MigrationSuccessStep > should render in sm 1`] = `
 <DocumentFragment>
   <form
@@ -183,7 +508,7 @@ Welcome to Polygon!
             >
               <div
                 class="shrink-0 css-1vy2z2u"
-                data-testid="Avatar"
+                data-testid="EthereumAvatar"
               >
                 <div
                   class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
@@ -508,7 +833,7 @@ Welcome to Polygon!
             >
               <div
                 class="shrink-0 css-1vy2z2u"
-                data-testid="Avatar"
+                data-testid="EthereumAvatar"
               >
                 <div
                   class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
