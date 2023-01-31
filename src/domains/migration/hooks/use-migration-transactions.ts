@@ -72,9 +72,8 @@ export const fetchMigrationTransactions = async ({
 };
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { profileIsRestoring } = useConfiguration();
+	const { profileIsSyncing } = useConfiguration();
 	const { migrations, storeTransactions, loadMigrationsError } = useMigrations();
-
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [hasMore, setHasMore] = useState(false);
@@ -82,7 +81,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	const limit = 11;
 
 	const loadMigrationWalletTransactions = useCallback(async () => {
-		if (profileIsRestoring) {
+		if (profileIsSyncing) {
 			return;
 		}
 
@@ -94,11 +93,11 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		setIsLoadingTransactions(false);
 		setHasMore(hasMore);
 		setPage(cursor);
-	}, [profileIsRestoring, profile, page, hasMore]);
+	}, [profileIsSyncing, profile, page, hasMore]);
 
 	useEffect(() => {
 		loadMigrationWalletTransactions();
-	}, [profileIsRestoring]);
+	}, [profileIsSyncing]);
 
 	const migrationTransactions = useMemo(() => {
 		const storedMigrationIds = new Set((migrations ?? []).map((migration) => migration.id));
@@ -126,7 +125,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	);
 
 	const isLoading = useMemo(() => {
-		if (profileIsRestoring) {
+		if (profileIsSyncing) {
 			return true;
 		}
 
@@ -135,7 +134,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		}
 
 		return migrationTransactions.length > 0 && !migrations;
-	}, [profileIsRestoring, isLoadingTransactions, migrationTransactions, migrations]);
+	}, [profileIsSyncing, isLoadingTransactions, migrationTransactions, migrations]);
 
 	const migrationsPage = useMemo(() => {
 		if (!migrations) {
