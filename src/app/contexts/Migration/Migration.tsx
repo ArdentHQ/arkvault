@@ -137,7 +137,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	);
 
 	const getTransactionStatus = useCallback(
-		async (transaction: DTO.ExtendedConfirmedTransactionData) => {
+		async (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
 			const contractMigrations = await getContractMigrations([`0x${transaction.id()}`]);
 
 			const contractMigration = contractMigrations.find(
@@ -161,7 +161,10 @@ export const MigrationProvider = ({ children }: Properties) => {
 		const storedMigrations = repository.all();
 
 		const pendingMigrations = storedMigrations.filter(
-			(migration) => migration.status === MigrationTransactionStatus.Pending || !migration.migrationId,
+			(migration) =>
+				migration.status === MigrationTransactionStatus.Pending ||
+				migration.status === undefined ||
+				!migration.migrationId,
 		);
 
 		const transactionIds = pendingMigrations.map((migration: Migration) => `0x${migration.id}`);
@@ -227,7 +230,11 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		if (updatedMigrations.length > 0) {
-			await migrationsUpdated(uniqBy([...updatedMigrations, ...repository.all()], (migration) => migration.id));
+			const migrations = uniqBy([...updatedMigrations, ...repository.all()], (migration) => migration.id);
+
+			repository.set(migrations);
+
+			await migrationsUpdated(repository.all());
 		}
 	}, [repository, getContractMigrations, migrationsUpdated, isMigrationPath]);
 
@@ -246,13 +253,21 @@ export const MigrationProvider = ({ children }: Properties) => {
 				return;
 			}
 
-			for (const transaction of transactions) {
+			const storedMigrations = repository.all();
+
+			const newTransactions = transactions.filter(
+				(transaction) => !storedMigrations.some((migration) => migration.id === transaction.id()),
+			);
+
+			for (const transaction of newTransactions) {
+				const status = await getTransactionStatus(transaction);
+
 				const migration: Migration = {
 					address: transaction.sender(),
 					amount: transaction.amount(),
 					id: transaction.id(),
 					migrationAddress: transaction.memo()!,
-					status: MigrationTransactionStatus.Pending,
+					status,
 					timestamp: transaction.timestamp()!.toUNIX(),
 				};
 
@@ -263,7 +278,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				await migrationsUpdated(repository.all());
 			}
 		},
-		[repository, migrationsUpdated],
+		[repository, migrationsUpdated, getTransactionStatus],
 	);
 
 	const removeTransactions = useCallback(
