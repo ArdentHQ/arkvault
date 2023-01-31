@@ -117,7 +117,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		};
 
 		updateTransactions();
-	}, [migrationTransactions]);
+	}, [migrationTransactions, storeTransactions]);
 
 	const resolveTransaction = useCallback(
 		(migration: Migration) => latestTransactions.find((transaction) => transaction.id() === migration.id),

@@ -151,7 +151,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				? MigrationTransactionStatus.Pending
 				: MigrationTransactionStatus.Confirmed;
 		},
-		[contract, getContractMigrations],
+		[getContractMigrations],
 	);
 
 	const loadMigrations = useCallback(async () => {
@@ -351,11 +351,13 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		return () => clearInterval(reloadInerval);
-	}, [repository, determineIfContractIsPaused, hasContractAndRepository, contractIsPaused]);
+	}, [determineIfContractIsPaused, hasContractAndRepository, contractIsPaused]);
 
 	// Initialize repository when a new profile is loaded
 	useEffect(() => {
-		setMigrationsLoaded(false);
+		if (contract === undefined) {
+			return;
+		}
 
 		if (profile) {
 			const repository = new MigrationRepository(profile, env.data());
@@ -380,9 +382,11 @@ export const MigrationProvider = ({ children }: Properties) => {
 				}
 			}
 		} else {
+			setMigrationsLoaded(false);
 			setRepository(undefined);
+			setMigrations([]);
 		}
-	}, [profile, env]);
+	}, [profile, env, contract]);
 
 	// Create contract instance when context is created
 	useEffect(() => {
