@@ -176,6 +176,7 @@ describe("MigrationAdd", () => {
 	it("shows a warning and disables the button if contract is paused", async () => {
 		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			contractIsPaused: true,
+			migrations: [],
 		});
 
 		renderComponent();
@@ -342,6 +343,7 @@ describe("MigrationAdd", () => {
 					amount: 123,
 					id: "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
 					migrationAddress: "BuRnAdDreSs",
+					migrationId: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
 					status: MigrationTransactionStatus.Confirmed,
 					timestamp: Date.now() / 1000,
 				},

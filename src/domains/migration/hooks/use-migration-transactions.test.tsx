@@ -97,6 +97,36 @@ describe("useMigrationTransactions hook", () => {
 
 		vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
+			migrationsLoaded: true,
+			storeTransactions: () => Promise.resolve({}),
+		});
+
+		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
+
+		const mockWalletTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
+			Promise.resolve({
+				currentPage: () => 1,
+				hasMorePages: () => false,
+				items: () => [transactionFixture, secondTransactionFixture],
+			} as any),
+		);
+
+		const { result } = renderHook(() => useMigrationTransactions({ profile }), { wrapper });
+		expect(result.current.migrations).toHaveLength(0);
+		expect(result.current.isLoading).toBe(true);
+
+		mockWalletTransactions.mockRestore();
+	});
+
+	it("should return loading state if profile is syncing", () => {
+		vi.spyOn(contexts, "useConfiguration").mockReturnValue({
+			profileIsRestoring: false,
+			profileIsSyncing: true,
+		});
+
+		vi.spyOn(contexts, "useMigrations").mockReturnValue({
+			migrations: [],
+			migrationsLoaded: true,
 			storeTransactions: () => Promise.resolve({}),
 		});
 
@@ -125,6 +155,7 @@ describe("useMigrationTransactions hook", () => {
 
 		vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
+			migrationsLoaded: true,
 			storeTransactions: () => Promise.resolve({}),
 		});
 
@@ -156,6 +187,7 @@ describe("useMigrationTransactions hook", () => {
 					timestamp: Date.now() / 1000,
 				},
 			],
+			migrationsLoaded: true,
 			storeTransactions: () => Promise.resolve({}),
 		});
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
@@ -192,6 +224,7 @@ describe("useMigrationTransactions hook", () => {
 
 		const useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [migration],
+			migrationsLoaded: true,
 			storeTransactions: () => Promise.resolve({}),
 		});
 
@@ -239,6 +272,7 @@ describe("useMigrationTransactions hook", () => {
 	it("should not include transactions if the recipient is not the migration wallet", async () => {
 		const useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
+			migrationsLoaded: true,
 			storeTransactions: () => {},
 		});
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
@@ -276,6 +310,7 @@ describe("useMigrationTransactions hook", () => {
 					timestamp: Date.now() / 1000,
 				},
 			],
+			migrationsLoaded: true,
 			storeTransactions: () => {},
 		});
 		const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
@@ -302,6 +337,7 @@ describe("useMigrationTransactions hook", () => {
 
 		vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			migrations: [],
+			migrationsLoaded: true,
 			storeTransactions: () => {},
 		});
 

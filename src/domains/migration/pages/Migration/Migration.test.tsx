@@ -3,12 +3,13 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
+import { vi } from "vitest";
 import { Migration } from "./Migration";
 import { render, screen, env, getDefaultProfileId, waitFor, within } from "@/utils/testing-library";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import * as useConfigurationModule from "@/app/contexts/Configuration/Configuration";
 import * as context from "@/app/contexts";
-
+import { toasts } from "@/app/services";
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
@@ -91,6 +92,7 @@ describe("Migration", () => {
 	it("shows a warning and disables the add button if contract is paused", () => {
 		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
 			contractIsPaused: true,
+			migrations: [],
 			storeTransactions: () => Promise.resolve({}),
 		});
 
@@ -101,6 +103,21 @@ describe("Migration", () => {
 		expect(screen.getByTestId("ContractPausedAlert")).toBeInTheDocument();
 
 		useMigrationsSpy.mockRestore();
+	});
+
+	it("triggers a toats if cannot load migrations", () => {
+		const toastSpy = vi.spyOn(toasts, "error");
+		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
+			contractIsPaused: true,
+			loadMigrationsError: new Error("error"),
+			migrations: [],
+			storeTransactions: () => Promise.resolve({}),
+		});
+
+		renderComponent();
+
+		useMigrationsSpy.mockRestore();
+		toastSpy.mockRestore();
 	});
 
 	it("handles the close button on the disclaimer", async () => {

@@ -11,7 +11,7 @@ import { MigrationTransactionStatus, Migration } from "@/domains/migration/migra
 import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
 import * as polygonMigration from "@/utils/polygon-migration";
-
+import * as waitForMock from "@/utils/wait-for";
 let transactionFixture: DTO.ExtendedConfirmedTransactionData;
 let migrationFixture: Migration;
 let polygonIndexerUrlSpy;
@@ -123,6 +123,31 @@ describe("MigrationDetailsModal", () => {
 		expect(screen.getByTestId("MigrationDetailsModal__pending")).toBeInTheDocument();
 
 		useMigrationsSpy.mockRestore();
+	});
+
+	it("should show a generic title and a warning if cannot retrieve the state", async () => {
+		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({
+			getTransactionStatus: () => {
+				throw new Error("Random Error");
+			},
+		}));
+
+		const waitForSpy = vi.spyOn(waitForMock, "waitFor").mockImplementation(() => Promise.resolve());
+
+		render(<MigrationDetailsModal transaction={transactionFixture} onClose={vi.fn()} />);
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("MigrationDetailsModal__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getByText(translations.DETAILS_MODAL.ERROR.TITLE)).toBeInTheDocument();
+		expect(screen.queryByText(translations.DETAILS_MODAL.STEP_PENDING.DESCRIPTION)).not.toBeInTheDocument();
+		expect(screen.getByTestId("MigrationDetailsModal__error")).toBeInTheDocument();
+		expect(screen.queryByTestId("MigrationDetailsModal__info")).not.toBeInTheDocument();
+
+		useMigrationsSpy.mockRestore();
+
+		waitForSpy.mockRestore();
 	});
 
 	it("should handle close button", async () => {

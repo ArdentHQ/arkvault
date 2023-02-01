@@ -59,6 +59,23 @@ describe("MigrationTransactionsTable", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it.each(["xs", "sm"])("should render with migrations that has no status", (breakpoint) => {
+		const { asFragment } = renderResponsive(
+			<MigrationTransactionsTable
+				migrationTransactions={migrationTransactions.map((migration) => ({
+					...migration,
+					status: undefined,
+				}))}
+				onClick={vi.fn()}
+			/>,
+			breakpoint,
+		);
+
+		expect(screen.getAllByText("Unknown")).toHaveLength(migrationTransactions.length);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render empty", () => {
 		const { container } = render(<MigrationTransactionsTable migrationTransactions={[]} onClick={vi.fn()} />);
 

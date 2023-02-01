@@ -909,7 +909,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -1100,21 +1100,21 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1162,10 +1162,10 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -1533,21 +1533,21 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                       class="w-0 flex-1"
                                     >
                                       <div
-                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-base text-theme-text"
                                           data-testid="Address__alias"
                                         >
                                           <span
-                                            class="css-u3jrna"
+                                            class="no-ligatures css-u3jrna"
                                             data-testid="TruncateEnd"
                                           >
                                             ARK Wallet 2
                                           </span>
                                         </span>
                                         <span
-                                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                           data-testid="Address__address"
                                         >
                                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3252,21 +3252,21 @@ exports[`SendTransfer > should render form and use location state with nethash p
                             class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4749,21 +4749,21 @@ exports[`SendTransfer > should render form and use location state with network p
                             class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6246,21 +6246,21 @@ exports[`SendTransfer > should render form and use location state without memo 1
                             class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7116,7 +7116,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -7929,7 +7929,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -8729,21 +8729,21 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -9577,21 +9577,21 @@ exports[`SendTransfer > should render form step with deeplink values and use the
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -10425,7 +10425,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -11176,7 +11176,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -13057,21 +13057,21 @@ exports[`SendTransfer > should render review step 1`] = `
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13119,21 +13119,21 @@ exports[`SendTransfer > should render review step 1`] = `
             class="w-0 flex-1 text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base flex-1 md:flex-none text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13435,21 +13435,21 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13601,10 +13601,10 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13682,10 +13682,10 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -14005,21 +14005,21 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -14171,10 +14171,10 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -14252,10 +14252,10 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -15429,7 +15429,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -15620,21 +15620,21 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -15682,10 +15682,10 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -16735,7 +16735,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -16926,21 +16926,21 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -16988,10 +16988,10 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -17359,21 +17359,21 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                       class="w-0 flex-1"
                                     >
                                       <div
-                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-base text-theme-text"
                                           data-testid="Address__alias"
                                         >
                                           <span
-                                            class="css-u3jrna"
+                                            class="no-ligatures css-u3jrna"
                                             data-testid="TruncateEnd"
                                           >
                                             ARK Wallet 2
                                           </span>
                                         </span>
                                         <span
-                                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                           data-testid="Address__address"
                                         >
                                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -18594,7 +18594,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -18785,21 +18785,21 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -18847,10 +18847,10 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -19900,7 +19900,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -20091,21 +20091,21 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -20153,10 +20153,10 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -21206,7 +21206,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -21397,21 +21397,21 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -21459,10 +21459,10 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv

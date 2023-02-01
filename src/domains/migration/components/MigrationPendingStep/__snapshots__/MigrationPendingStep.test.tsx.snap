@@ -126,7 +126,7 @@ exports[`MigrationPendingStep > should render in sm 1`] = `
           <span
             class="font-semibold"
           >
-            20.01.1970 9:20 AM
+            01.02.2023 10:42 AM
           </span>
         </div>
         <div
@@ -155,10 +155,10 @@ exports[`MigrationPendingStep > should render in sm 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 AdDreSs2
@@ -242,10 +242,10 @@ exports[`MigrationPendingStep > should render in sm 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 BuRnAdDreSs
@@ -425,7 +425,7 @@ exports[`MigrationPendingStep > should render in sm in dark mode 1`] = `
           <span
             class="font-semibold"
           >
-            20.01.1970 9:20 AM
+            01.02.2023 10:42 AM
           </span>
         </div>
         <div
@@ -454,10 +454,10 @@ exports[`MigrationPendingStep > should render in sm in dark mode 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 AdDreSs2
@@ -541,10 +541,10 @@ exports[`MigrationPendingStep > should render in sm in dark mode 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 BuRnAdDreSs
@@ -724,7 +724,7 @@ exports[`MigrationPendingStep > should render in xs 1`] = `
           <span
             class="font-semibold"
           >
-            20.01.1970 9:20 AM
+            01.02.2023 10:42 AM
           </span>
         </div>
         <div
@@ -753,10 +753,10 @@ exports[`MigrationPendingStep > should render in xs 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 AdDreSs2
@@ -840,10 +840,10 @@ exports[`MigrationPendingStep > should render in xs 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 BuRnAdDreSs
@@ -1027,7 +1027,7 @@ exports[`MigrationPendingStep > should render in xs in dark mode 1`] = `
           <span
             class="font-semibold"
           >
-            20.01.1970 9:20 AM
+            01.02.2023 10:42 AM
           </span>
         </div>
         <div
@@ -1056,10 +1056,10 @@ exports[`MigrationPendingStep > should render in xs in dark mode 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 AdDreSs2
@@ -1143,10 +1143,10 @@ exports[`MigrationPendingStep > should render in xs in dark mode 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 BuRnAdDreSs

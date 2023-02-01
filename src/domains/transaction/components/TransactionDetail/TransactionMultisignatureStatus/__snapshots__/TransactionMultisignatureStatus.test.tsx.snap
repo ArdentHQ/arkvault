@@ -32,21 +32,21 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
             class="hidden w-0 flex-1 overflow-auto text-right md:block md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -73,21 +73,21 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
           class="w-full overflow-auto text-right md:hidden md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
           >
             <span
               class="font-semibold text-base text-theme-text"
               data-testid="Address__alias"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
               </span>
             </span>
             <span
-              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -204,21 +204,21 @@ exports[`TransactionMultisignatureStatus > should render in lg awaiting final si
             class="hidden w-0 flex-1 overflow-auto text-right md:block md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -245,21 +245,21 @@ exports[`TransactionMultisignatureStatus > should render in lg awaiting final si
           class="w-full overflow-auto text-right md:hidden md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
           >
             <span
               class="font-semibold text-base text-theme-text"
               data-testid="Address__alias"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
               </span>
             </span>
             <span
-              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -343,21 +343,21 @@ exports[`TransactionMultisignatureStatus > should render in md awaiting final si
             class="hidden w-0 flex-1 overflow-auto text-right md:block md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -384,21 +384,21 @@ exports[`TransactionMultisignatureStatus > should render in md awaiting final si
           class="w-full overflow-auto text-right md:hidden md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
           >
             <span
               class="font-semibold text-base text-theme-text"
               data-testid="Address__alias"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
               </span>
             </span>
             <span
-              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -489,21 +489,21 @@ exports[`TransactionMultisignatureStatus > should render in sm awaiting final si
               class="hidden w-0 flex-1 overflow-auto text-right md:block md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -529,21 +529,21 @@ exports[`TransactionMultisignatureStatus > should render in sm awaiting final si
               class="w-full overflow-auto text-right md:hidden md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -629,21 +629,21 @@ exports[`TransactionMultisignatureStatus > should render in xl awaiting final si
             class="hidden w-0 flex-1 overflow-auto text-right md:block md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -670,21 +670,21 @@ exports[`TransactionMultisignatureStatus > should render in xl awaiting final si
           class="w-full overflow-auto text-right md:hidden md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
           >
             <span
               class="font-semibold text-base text-theme-text"
               data-testid="Address__alias"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
               </span>
             </span>
             <span
-              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -775,21 +775,21 @@ exports[`TransactionMultisignatureStatus > should render in xs awaiting final si
               class="hidden w-0 flex-1 overflow-auto text-right md:block md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -815,21 +815,21 @@ exports[`TransactionMultisignatureStatus > should render in xs awaiting final si
               class="w-full overflow-auto text-right md:hidden md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

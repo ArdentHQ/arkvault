@@ -25,7 +25,7 @@ const MigrationTransactionsRowStatus: React.FC<MigrationTransactionsRowStatusPro
 
 	return (
 		<span className="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200">
-			<span>{t(`MIGRATION.STATUS.${status.toUpperCase()}`)}</span>
+			<span>{t(`MIGRATION.STATUS.${status ? status.toUpperCase() : "UNKNOWN"}`)}</span>
 			<Icon name={name} size="lg" className={color} />
 		</span>
 	);

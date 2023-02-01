@@ -13,10 +13,17 @@ import * as polygonMigration from "@/utils/polygon-migration";
 import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
 import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
-
+import * as waitForMock from "@/utils/wait-for";
 const Test = () => {
-	const { migrations, storeTransactions, removeTransactions, contractIsPaused, markMigrationsAsRead } =
-		useMigrations();
+	const {
+		migrationsLoaded,
+		migrations,
+		storeTransactions,
+		removeTransactions,
+		contractIsPaused,
+		markMigrationsAsRead,
+		loadMigrationsError,
+	} = useMigrations();
 
 	const createAndStoreTransaction = async () => {
 		const transaction = {
@@ -37,18 +44,20 @@ const Test = () => {
 	};
 
 	const markMigrationAsReadHandler = () => {
-		markMigrationsAsRead([migrations![0]]);
+		markMigrationsAsRead([migrations[0]]);
 	};
 
 	if (contractIsPaused === undefined) {
 		return <span data-testid="Migration__contract_loading">Contract Loading...</span>;
 	}
 
+	if (loadMigrationsError) {
+		return <span data-testid="Migration__load_error">Load error</span>;
+	}
+
 	return (
 		<div>
-			{migrations === undefined ? (
-				<span data-testid="Migration__loading">Loading...</span>
-			) : (
+			{migrationsLoaded ? (
 				<ul data-testid="Migrations">
 					{migrations.map((migration) => (
 						<li data-testid="MigrationItem" key={migration.id}>
@@ -58,6 +67,8 @@ const Test = () => {
 						</li>
 					))}
 				</ul>
+			) : (
+				<span data-testid="Migration__loading">Loading...</span>
 			)}
 
 			<ul>
@@ -136,6 +147,7 @@ describe("Migration Context", () => {
 			migrations.map((migration) => ({
 				amount: migration.amount,
 				arkTxHash: `0x${migration.id}`,
+				migrationId: migration.migrationId,
 				recipient:
 					migration.status === MigrationTransactionStatus.Pending
 						? ethers.constants.AddressZero
@@ -176,7 +188,7 @@ describe("Migration Context", () => {
 
 		vi.mock("@/app/contexts/Migration/Migration", () => ({
 			MigrationProvider: ({ children }) => React.createElement("div", {}, children),
-			useMigrations: () => ({ migrations: undefined }),
+			useMigrations: () => ({ migrations: [], migrationsLoaded: false }),
 		}));
 	});
 
@@ -207,6 +219,7 @@ describe("Migration Context", () => {
 			amount: 123,
 			id: "ad68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
 			migrationAddress: "BuRnAdDreSs",
+			migrationId: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
 			status: MigrationTransactionStatus.Confirmed,
 			timestamp: Date.now() / 1000,
 		};
@@ -269,7 +282,7 @@ describe("Migration Context", () => {
 			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
 		});
 
-		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 
 		clearStoredMigrationsMock();
 	});
@@ -315,6 +328,130 @@ describe("Migration Context", () => {
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
 
 		clearStoredMigrationsMock();
+	});
+
+	it("should load the migration id for newly confirmed migrations", async () => {
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
+			migrationPendingFixture,
+		]);
+
+		getMigrationsByArkTxHashMock.mockImplementation(() => [
+			{
+				amount: migrationPendingFixture.amount,
+				arkTxHash: `0x${migrationPendingFixture.id}`,
+				// A recipient means confirmed
+				recipient: "0xWhatevs",
+			},
+		]);
+
+		render(
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
+		);
+
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+
+		expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		clearStoredMigrationsMock();
+	});
+
+	it("should load the migration when it has migrationId", async () => {
+		const { clearStoredMigrationsMock } = mockStoredMigrations([
+			{
+				...migrationPendingFixture,
+				migrationId: "0x123",
+			},
+		]);
+
+		let reloadMigrationsCallback;
+
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+			}
+
+			return 1;
+		});
+
+		render(
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
+		);
+
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+
+		reloadMigrationsCallback();
+
+		expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		clearStoredMigrationsMock();
+		setIntervalSpy.mockRestore();
+	});
+
+	it("should handle load error", async () => {
+		const waitForSpy = vi.spyOn(waitForMock, "waitFor").mockImplementation(() => Promise.resolve());
+
+		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
+			migrationPendingFixture,
+		]);
+
+		getMigrationsByArkTxHashMock.mockImplementation(() => {
+			throw new Error("error");
+		});
+
+		render(
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
+		);
+
+		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__load_error")).toBeInTheDocument();
+		});
+
+		clearStoredMigrationsMock();
+		waitForSpy.mockRestore();
 	});
 
 	it("should determine if a contract is paused", async () => {
@@ -439,6 +576,55 @@ describe("Migration Context", () => {
 		ethersMock.mockRestore();
 	});
 
+	it("should not add a transaction that already exists twice", async () => {
+		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
+
+		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => [
+			{
+				amount: 123,
+				arkTxHash: `0xabc123`,
+				memo: "0xabc",
+			},
+		]);
+
+		const ethersMock = Contract.mockImplementation(() => ({
+			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
+			paused: () => false,
+		}));
+
+		render(
+			<Route path="/profiles/:profileId/migration">
+				<MigrationProvider>
+					<Test />
+				</MigrationProvider>
+				,
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/migration`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migrations__store")).toBeInTheDocument();
+		});
+
+		expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("Migrations__store"));
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
+
+		userEvent.click(screen.getByTestId("Migrations__store"));
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
+
+		ethersMock.mockRestore();
+	});
+
 	it("should mark migration as read", async () => {
 		const { clearStoredMigrationsMock, setMigrationMock } = mockStoredMigrations([
 			{
@@ -484,6 +670,7 @@ describe("Migration Context", () => {
 				amount: 222,
 				id: "456",
 				migrationAddress: "BuRnAdDreSs",
+				migrationId: "abc123",
 				status: MigrationTransactionStatus.Confirmed,
 				timestamp: Date.now() / 1000,
 			},

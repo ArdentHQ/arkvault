@@ -25,7 +25,7 @@ exports[`MigrationBanner > should render 1`] = `
             class="ring-focus group inline-block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://docs.arkvault.io/"
+            href="https://ark.dev/docs/core/migration/devnet"
             rel="noopener noreferrer"
           >
             <span

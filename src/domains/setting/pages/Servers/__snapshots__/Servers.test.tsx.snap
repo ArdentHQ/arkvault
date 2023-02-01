@@ -2801,7 +2801,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK #1
@@ -3050,7 +3050,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Devnet Musig #1
@@ -3292,7 +3292,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Musig #1
@@ -4993,7 +4993,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK #1
@@ -5242,7 +5242,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Devnet Musig #1
@@ -5484,7 +5484,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Musig #1
@@ -9022,7 +9022,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK #1
@@ -9299,7 +9299,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Devnet Musig #1
@@ -9569,7 +9569,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Musig #1
@@ -15441,7 +15441,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK #1
@@ -15715,7 +15715,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Devnet Musig #1
@@ -15982,7 +15982,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             class="cursor-pointer truncate font-semibold transition-colors duration-100 text-theme-secondary-900 dark:text-theme-secondary-200"
                                           >
                                             <span
-                                              class="css-u3jrna"
+                                              class="no-ligatures css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
                                               ARK Musig #1

@@ -242,21 +242,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -350,21 +350,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 1
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -458,21 +458,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 1
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -595,21 +595,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       class="w-0 flex-1 overflow-auto text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -657,21 +657,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       class="w-0 flex-1 text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base flex-1 md:flex-none text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -950,7 +950,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             class="css-1y2194z"
                           >
                             <span
-                              class="css-0"
+                              class="no-ligatures css-0"
                               data-testid="TruncateMiddle"
                             >
                               127d323ff3c3a40cb7abec8aa3…c8feb7dc667d2f85978f8b10cd
@@ -1277,21 +1277,21 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1385,21 +1385,21 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 1
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1493,21 +1493,21 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 1
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1793,21 +1793,21 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1901,21 +1901,21 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 1
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2009,21 +2009,21 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 1
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2265,21 +2265,21 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                 class="w-0 flex-1 pr-2"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 2
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-sm"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-sm"
                                     data-testid="Address__address"
                                   >
                                     D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2350,10 +2350,10 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                 class="w-0 flex-1 pr-2"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                 >
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                     data-testid="Address__address"
                                   >
                                     DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -2424,10 +2424,10 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                 class="w-0 flex-1 pr-2"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                 >
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                     data-testid="Address__address"
                                   >
                                     DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -2731,21 +2731,21 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2839,21 +2839,21 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 1
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2947,21 +2947,21 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               class="w-20 flex-1"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 1
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3210,21 +3210,21 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                 class="w-0 flex-1 pr-2"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 2
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-sm"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-sm"
                                     data-testid="Address__address"
                                   >
                                     D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3295,10 +3295,10 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                 class="w-0 flex-1 pr-2"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                 >
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                     data-testid="Address__address"
                                   >
                                     DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -3369,10 +3369,10 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                 class="w-0 flex-1 pr-2"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                 >
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                     data-testid="Address__address"
                                   >
                                     DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
