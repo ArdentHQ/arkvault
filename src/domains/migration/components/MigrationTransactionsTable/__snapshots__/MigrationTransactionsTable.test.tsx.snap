@@ -7969,10 +7969,10 @@ exports[`MigrationTransactionsTable > should render with migrations that has no 
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -8014,10 +8014,10 @@ exports[`MigrationTransactionsTable > should render with migrations that has no 
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0x0000000000000000000000000000000000000000
@@ -8177,10 +8177,10 @@ exports[`MigrationTransactionsTable > should render with migrations that has no 
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -8222,10 +8222,10 @@ exports[`MigrationTransactionsTable > should render with migrations that has no 
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0x0000000000000000000000000000000000000000
@@ -8419,10 +8419,10 @@ exports[`MigrationTransactionsTable > should render with migrations that has no 
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -8464,10 +8464,10 @@ exports[`MigrationTransactionsTable > should render with migrations that has no 
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0x0000000000000000000000000000000000000000
@@ -8627,10 +8627,10 @@ exports[`MigrationTransactionsTable > should render with migrations that has no 
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX
@@ -8672,10 +8672,10 @@ exports[`MigrationTransactionsTable > should render with migrations that has no 
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0x0000000000000000000000000000000000000000
