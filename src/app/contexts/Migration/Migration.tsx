@@ -3,7 +3,6 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { ethers, Contract } from "ethers";
 import { uniqBy, sortBy } from "@ardenthq/sdk-helpers";
-import { matchPath, useLocation } from "react-router-dom";
 import { httpClient } from "@/app/services";
 import {
 	ARKMigrationViewStructOutput,
@@ -111,13 +110,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(false);
 	const [contract, setContract] = useState<Contract>();
 	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
-	const { pathname } = useLocation();
 	const [loadMigrationsError, setLoadMigrationsError] = useState<Error>();
-
-	const isMigrationPath = useMemo(
-		() => !!matchPath(pathname, { path: "/profiles/:profileId/migration" }),
-		[pathname],
-	);
 
 	const migrationsUpdated = useCallback(
 		async (migrations: Migration[]) => {
@@ -161,6 +154,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 		},
 		[getContractMigrations],
 	);
+
+	const migrationCount = repository?.all().length ?? 0;
 
 	const loadMigrations = useCallback(async () => {
 		/* istanbul ignore next -- @preserve */
@@ -248,7 +243,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		setMigrationsLoaded(true);
-	}, [repository, getContractMigrations, migrationsUpdated, isMigrationPath]);
+	}, [repository, getContractMigrations, migrationsUpdated]);
 
 	const determineIfContractIsPaused = useCallback(async () => {
 		try {
@@ -324,7 +319,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			return;
 		}
 
-		// Load migrations immediatly if no loaded yet
+		// Load migrations immediatly if not loaded yet
 		if (!migrationsLoaded) {
 			loadMigrations();
 		}
@@ -341,7 +336,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		reloadInterval = setInterval(reloadMigrationsCallback, MIGRATION_LOAD_INTERVAL);
 
 		return () => clearInterval(reloadInterval);
-	}, [repository, loadMigrations, migrationsLoaded, hasContractAndRepository, loadMigrationsError]);
+	}, [repository, loadMigrations, migrationCount, migrationsLoaded, hasContractAndRepository, loadMigrationsError]);
 
 	useEffect(() => {
 		let reloadInerval: ReturnType<typeof setInterval>;
