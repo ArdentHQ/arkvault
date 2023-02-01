@@ -116,7 +116,7 @@ export const MigrationAdd = () => {
 
 		const migrationTransaction = migrations.find((migration) => migration.id === transaction.id());
 
-		if (migrationTransaction?.status === MigrationTransactionStatus.Confirmed) {
+		if (migrationTransaction?.status === MigrationTransactionStatus.Confirmed && migrationTransaction?.migrationId) {
 			setMigrationTransaction(migrationTransaction);
 			setActiveStep(Step.Finished);
 		}
