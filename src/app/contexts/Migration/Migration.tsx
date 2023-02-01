@@ -125,7 +125,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 					if (ids.includes(migration.id)) {
 						return {
 							...migration,
-							read: true,
+							readAt: Date.now(),
 						};
 					}
 
