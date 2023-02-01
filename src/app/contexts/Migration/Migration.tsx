@@ -260,7 +260,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 			value={
 				{
 					contractIsPaused,
-
 					getMigrationById,
 					getTransactionStatus,
 					hasMore: hasMore && !isLoading,
