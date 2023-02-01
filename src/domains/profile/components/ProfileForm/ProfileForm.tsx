@@ -19,7 +19,7 @@ import { Checkbox } from "@/app/components/Checkbox";
 import { Link } from "@/app/components/Link";
 
 const PRIVACY_POLICY_URL = "https://arkvault.io/privacy-policy";
-const TERMS_URL = "http://arkvault.io/terms-of-service";
+const TERMS_URL = "https://arkvault.io/terms-of-service";
 
 export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, showPasswordFields }: any) => {
 	const { t } = useTranslation();

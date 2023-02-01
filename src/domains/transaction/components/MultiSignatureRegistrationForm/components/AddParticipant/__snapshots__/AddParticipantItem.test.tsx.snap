@@ -39,21 +39,21 @@ exports[`Add Participant item > should render 1`] = `
           class="max-w-full overflow-auto sm:w-full"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
               class="font-semibold text-base text-theme-text"
               data-testid="Address__alias"
             >
               <span
-                class="css-u3jrna"
+                class="no-ligatures css-u3jrna"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 2
               </span>
             </span>
             <span
-              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb

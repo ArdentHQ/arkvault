@@ -302,14 +302,14 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -319,7 +319,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -416,14 +416,14 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -433,7 +433,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -768,14 +768,14 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -785,7 +785,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -861,14 +861,14 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -878,7 +878,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1213,14 +1213,14 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -1230,7 +1230,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1306,14 +1306,14 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -1323,7 +1323,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1679,14 +1679,14 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -1696,7 +1696,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1793,14 +1793,14 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -1810,7 +1810,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2102,21 +2102,21 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     Sample Wallet
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2207,21 +2207,21 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2496,21 +2496,21 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     Sample Wallet
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2601,21 +2601,21 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2890,21 +2890,21 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     Sample Wallet
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2995,21 +2995,21 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3348,14 +3348,14 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -3365,7 +3365,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3462,14 +3462,14 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -3479,7 +3479,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3835,14 +3835,14 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -3852,7 +3852,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3949,14 +3949,14 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -3966,7 +3966,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -4369,14 +4369,14 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -4386,7 +4386,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4498,14 +4498,14 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -4515,7 +4515,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -4910,14 +4910,14 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -4927,7 +4927,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5017,14 +5017,14 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -5034,7 +5034,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -5429,14 +5429,14 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -5446,7 +5446,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5536,14 +5536,14 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -5553,7 +5553,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -5969,14 +5969,14 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -5986,7 +5986,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6097,14 +6097,14 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -6114,7 +6114,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -6420,21 +6420,21 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     Sample Wallet
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6525,21 +6525,21 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -6814,21 +6814,21 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     Sample Wallet
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6919,21 +6919,21 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -7208,21 +7208,21 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     Sample Wallet
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7313,21 +7313,21 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               class="flex w-20 flex-1 flex-col font-semibold"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
                               >
                                 <span
                                   class="font-semibold text-base text-sm text-theme-text w-full truncate"
                                   data-testid="Address__alias"
                                 >
                                   <span
-                                    class="css-u3jrna"
+                                    class="no-ligatures css-u3jrna"
                                     data-testid="TruncateEnd"
                                   >
                                     ARK Wallet 2
                                   </span>
                                 </span>
                                 <span
-                                  class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -7712,14 +7712,14 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -7729,7 +7729,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7840,14 +7840,14 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -7857,7 +7857,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -8273,14 +8273,14 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -8290,7 +8290,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8401,14 +8401,14 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -8418,7 +8418,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb

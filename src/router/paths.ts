@@ -3,6 +3,9 @@ export enum ProfilePaths {
 	// Navigation Menu
 	Dashboard = "/profiles/:profileId/dashboard",
 	Exchange = "/profiles/:profileId/exchange",
+	Migration = "/profiles/:profileId/migration",
+	MigrationOverview = "/profiles/:profileId/migrations/:migrationId",
+	MigrationAdd = "/profiles/:profileId/migration/add",
 	// Contacts
 	Contacts = "/profiles/:profileId/contacts",
 	// Wallet

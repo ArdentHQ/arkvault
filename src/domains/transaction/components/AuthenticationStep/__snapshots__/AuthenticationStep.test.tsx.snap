@@ -776,7 +776,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1v2j3qb"
+          class="css-qed8fm"
           color="info"
         />
         <span
@@ -1056,7 +1056,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1v2j3qb"
+          class="css-qed8fm"
           color="info"
         />
         <span
@@ -1276,7 +1276,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1v2j3qb"
+          class="css-qed8fm"
           color="info"
         />
         <span
@@ -1496,7 +1496,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1v2j3qb"
+          class="css-qed8fm"
           color="info"
         />
         <span
@@ -1716,7 +1716,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1v2j3qb"
+          class="css-qed8fm"
           color="info"
         />
         <span
@@ -1894,7 +1894,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1v2j3qb"
+        class="css-qed8fm"
         color="info"
       />
       <span
@@ -3032,7 +3032,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1v2j3qb"
+          class="css-qed8fm"
           color="info"
         />
         <span
@@ -3312,7 +3312,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1v2j3qb"
+          class="css-qed8fm"
           color="info"
         />
         <span
@@ -3532,7 +3532,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1v2j3qb"
+          class="css-qed8fm"
           color="info"
         />
         <span
@@ -3752,7 +3752,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1v2j3qb"
+          class="css-qed8fm"
           color="info"
         />
         <span
@@ -3972,7 +3972,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1v2j3qb"
+          class="css-qed8fm"
           color="info"
         />
         <span
@@ -4150,7 +4150,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1v2j3qb"
+        class="css-qed8fm"
         color="info"
       />
       <span

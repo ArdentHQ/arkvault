@@ -3,7 +3,7 @@
 exports[`VotesHeader > should render a different title if on select delegate step 1`] = `
 <DocumentFragment>
   <section
-    class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
+    class="h-13 flex min-h-[52px] w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
   >
     <h1
       class="mb-0 text-lg"
@@ -266,7 +266,7 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
 exports[`VotesHeader > should render responsive (xs) 1`] = `
 <DocumentFragment>
   <section
-    class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
+    class="h-13 flex min-h-[52px] w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
   >
     <h1
       class="mb-0 text-lg"

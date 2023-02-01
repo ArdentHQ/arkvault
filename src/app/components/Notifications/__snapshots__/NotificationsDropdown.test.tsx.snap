@@ -155,15 +155,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -174,7 +180,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -239,21 +245,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 2
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -285,7 +291,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -347,21 +353,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 1
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -393,7 +399,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -455,21 +461,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 1
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -593,21 +599,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       class="w-0 flex-1 overflow-auto text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -655,21 +661,21 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       class="w-0 flex-1 text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
                           class="font-semibold text-base flex-1 md:flex-none text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -948,17 +954,17 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             class="css-1y2194z"
                           >
                             <span
-                              class="css-0"
+                              class="no-ligatures css-0"
                               data-testid="TruncateMiddle"
                             >
                               127d323ff3c3a40cb7abec8aa3…c8feb7dc667d2f85978f8b10cd
                             </span>
                           </span>
                           <div
-                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                             data-testid="Link__external"
-                            height="16"
-                            width="16"
+                            height="12"
+                            width="12"
                           >
                             <svg
                               id="arrow-external"
@@ -1188,15 +1194,21 @@ exports[`Notifications > should render with transactions in lg 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -1207,7 +1219,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1272,21 +1284,21 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 2
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1318,7 +1330,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1380,21 +1392,21 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 1
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1426,7 +1438,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1488,21 +1500,21 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 1
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1702,15 +1714,21 @@ exports[`Notifications > should render with transactions in md 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -1721,7 +1739,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1786,21 +1804,21 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 2
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1832,7 +1850,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -1894,21 +1912,21 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 1
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1940,7 +1958,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -2002,21 +2020,21 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 1
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2216,15 +2234,21 @@ exports[`Notifications > should render with transactions in sm 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -2235,11 +2259,11 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -2256,21 +2280,21 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                   class="w-0 flex-1 pr-2"
                                 >
                                   <div
-                                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="font-semibold text-base text-theme-text"
+                                      class="font-semibold text-sm text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span
-                                        class="css-u3jrna"
+                                        class="no-ligatures css-u3jrna"
                                         data-testid="TruncateEnd"
                                       >
                                         ARK Wallet 2
                                       </span>
                                     </span>
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2320,11 +2344,11 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -2341,10 +2365,10 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                   class="w-0 flex-1 pr-2"
                                 >
                                   <div
-                                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -2394,11 +2418,11 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -2415,10 +2439,10 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                   class="w-0 flex-1 pr-2"
                                 >
                                   <div
-                                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -2636,15 +2660,21 @@ exports[`Notifications > should render with transactions in xl 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -2655,7 +2685,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -2720,21 +2750,21 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 2
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2766,7 +2796,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -2828,21 +2858,21 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 1
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2874,7 +2904,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
@@ -2936,21 +2966,21 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                 class="w-20 flex-1"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
                                     class="font-semibold text-base text-theme-text"
                                     data-testid="Address__alias"
                                   >
                                     <span
-                                      class="css-u3jrna"
+                                      class="no-ligatures css-u3jrna"
                                       data-testid="TruncateEnd"
                                     >
                                       ARK Wallet 1
                                     </span>
                                   </span>
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3157,15 +3187,21 @@ exports[`Notifications > should render with transactions in xs 1`] = `
               </div>
               <div>
                 <div
-                  class="space-y-2"
+                  class="md:space-y-2 "
                 >
                   <div
-                    class="text-base font-semibold text-theme-secondary-500"
+                    class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
+                  >
+                    Transactions
+                  </div>
+                  <div
+                    class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
                   >
                     Transactions
                   </div>
                   <div
                     class=" css-1m6rt2i"
+                    data-testid="NotificationTransactionsTable"
                     role="table"
                   >
                     <table
@@ -3176,11 +3212,11 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -3197,21 +3233,21 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                   class="w-0 flex-1 pr-2"
                                 >
                                   <div
-                                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="font-semibold text-base text-theme-text"
+                                      class="font-semibold text-sm text-theme-text"
                                       data-testid="Address__alias"
                                     >
                                       <span
-                                        class="css-u3jrna"
+                                        class="no-ligatures css-u3jrna"
                                         data-testid="TruncateEnd"
                                       >
                                         ARK Wallet 2
                                       </span>
                                     </span>
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3261,11 +3297,11 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -3282,10 +3318,10 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                   class="w-0 flex-1 pr-2"
                                 >
                                   <div
-                                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -3335,11 +3371,11 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="group css-1gk67vk"
+                          class="group css-1src4hy"
                           data-testid="TableRow"
                         >
                           <td
-                            class="flex-col space-y-4 py-4"
+                            class="flex-col space-y-4 py-4 text-sm"
                           >
                             <div
                               class="flex items-center justify-between space-x-4"
@@ -3356,10 +3392,10 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                   class="w-0 flex-1 pr-2"
                                 >
                                   <div
-                                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                                       data-testid="Address__address"
                                     >
                                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2

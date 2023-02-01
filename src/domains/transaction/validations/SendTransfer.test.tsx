@@ -3,6 +3,7 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { sendTransfer } from "./SendTransfer";
+import { migrationWalletAddress } from "@/utils/polygon-migration";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
@@ -31,6 +32,12 @@ describe("Send transfer validations", () => {
 		const noAddressWithoutRecipients = sendTransfer(translationMock).recipientAddress(profile, network, [], false);
 
 		await expect(noAddressWithoutRecipients.validate.valid("")).resolves.toBe("COMMON.VALIDATION.FIELD_REQUIRED");
+
+		const withMigrationAddress = sendTransfer(translationMock).recipientAddress(profile, network, [{}], false);
+
+		await expect(withMigrationAddress.validate.valid(migrationWalletAddress())).resolves.toBe(
+			"TRANSACTION.VALIDATION.MIGRATION_ADDRESS",
+		);
 	});
 
 	it("amount", () => {

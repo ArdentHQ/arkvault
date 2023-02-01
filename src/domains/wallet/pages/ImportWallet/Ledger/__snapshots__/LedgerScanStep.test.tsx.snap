@@ -107,7 +107,7 @@ exports[`LedgerScanStep > should render cancelling screen 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1v2j3qb"
+        class="css-qed8fm"
         color="info"
       />
       <span
@@ -486,10 +486,10 @@ exports[`LedgerScanStep > should render compact table 1`] = `
                       class="flex w-32 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG
@@ -938,10 +938,10 @@ exports[`LedgerScanStep > should render responsive (lg) 1`] = `
                       class="flex w-32 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG
@@ -1390,10 +1390,10 @@ exports[`LedgerScanStep > should render responsive (xs) 1`] = `
                       class="flex w-32 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG

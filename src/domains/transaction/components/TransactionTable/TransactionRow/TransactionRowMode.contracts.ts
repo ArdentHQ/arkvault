@@ -7,6 +7,7 @@ export interface BaseTransactionRowModeProperties extends React.HTMLAttributes<H
 	isReturn?: boolean;
 	address: string;
 	isCompact: boolean;
+	isMigration?: boolean;
 }
 
 export interface TransactionRowModeProperties extends React.HTMLAttributes<HTMLDivElement> {

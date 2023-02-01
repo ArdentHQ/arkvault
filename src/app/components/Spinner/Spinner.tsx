@@ -7,6 +7,7 @@ interface SpinnerType {
 	color?: Color;
 	size?: Size;
 	theme?: Theme;
+	width?: number;
 }
 
 export const Spinner = styled.div<SpinnerType>(getStyles);

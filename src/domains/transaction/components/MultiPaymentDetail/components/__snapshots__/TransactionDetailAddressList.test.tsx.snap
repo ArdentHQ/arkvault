@@ -40,10 +40,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -76,10 +76,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
             class="hidden w-0 flex-1 text-right sm:block md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 test-address1
@@ -99,10 +99,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -188,10 +188,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -224,10 +224,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
             class="hidden w-0 flex-1 text-right sm:block md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 test-address1
@@ -247,10 +247,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -336,10 +336,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -369,10 +369,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
           class="hidden w-0 flex-1 text-right sm:block md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
-              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
               data-testid="Address__address"
             >
               test-address1
@@ -392,10 +392,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
             View Full List
           </span>
           <div
-            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
             data-testid="Link__external"
-            height="16"
-            width="16"
+            height="12"
+            width="12"
           >
             <svg
               id="arrow-external"
@@ -480,10 +480,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -513,10 +513,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
           class="hidden w-0 flex-1 text-right sm:block md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
-              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
               data-testid="Address__address"
             >
               test-address1
@@ -536,10 +536,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
             View Full List
           </span>
           <div
-            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
             data-testid="Link__external"
-            height="16"
-            width="16"
+            height="12"
+            width="12"
           >
             <svg
               id="arrow-external"
@@ -624,10 +624,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -657,10 +657,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
           class="hidden w-0 flex-1 text-right sm:block md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
-              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
               data-testid="Address__address"
             >
               test-address1
@@ -680,10 +680,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
             View Full List
           </span>
           <div
-            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
             data-testid="Link__external"
-            height="16"
-            width="16"
+            height="12"
+            width="12"
           >
             <svg
               id="arrow-external"

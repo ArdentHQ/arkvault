@@ -7,7 +7,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -83,7 +83,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -95,7 +95,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -107,24 +107,65 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -787,10 +828,10 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -829,7 +870,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -868,17 +909,17 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
                                   </span>
                                 </span>
                                 <div
-                                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                                   data-testid="Link__external"
-                                  height="16"
-                                  width="16"
+                                  height="12"
+                                  width="12"
                                 >
                                   <svg
                                     id="arrow-external"
@@ -1059,21 +1100,21 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1121,10 +1162,10 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -1492,21 +1533,21 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                       class="w-0 flex-1"
                                     >
                                       <div
-                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-base text-theme-text"
                                           data-testid="Address__alias"
                                         >
                                           <span
-                                            class="css-u3jrna"
+                                            class="no-ligatures css-u3jrna"
                                             data-testid="TruncateEnd"
                                           >
                                             ARK Wallet 2
                                           </span>
                                         </span>
                                         <span
-                                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                           data-testid="Address__address"
                                         >
                                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1587,7 +1628,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -1663,7 +1704,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -1675,7 +1716,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -1687,24 +1728,65 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -2399,7 +2481,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -2475,7 +2557,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -2487,7 +2569,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -2499,24 +2581,65 @@ exports[`SendTransfer > should render form and use location state with nethash p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -3129,21 +3252,21 @@ exports[`SendTransfer > should render form and use location state with nethash p
                             class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3855,7 +3978,7 @@ exports[`SendTransfer > should render form and use location state with network p
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -3931,7 +4054,7 @@ exports[`SendTransfer > should render form and use location state with network p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -3943,7 +4066,7 @@ exports[`SendTransfer > should render form and use location state with network p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -3955,24 +4078,65 @@ exports[`SendTransfer > should render form and use location state with network p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -4585,21 +4749,21 @@ exports[`SendTransfer > should render form and use location state with network p
                             class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5311,7 +5475,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -5387,7 +5551,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -5399,7 +5563,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -5411,24 +5575,65 @@ exports[`SendTransfer > should render form and use location state without memo 1
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -6041,21 +6246,21 @@ exports[`SendTransfer > should render form and use location state without memo 1
                             class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6911,7 +7116,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -6921,7 +7126,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
               />
               <div
-                class="relative flex h-full flex-1 invisible"
+                class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
@@ -7724,7 +7929,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -7734,7 +7939,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
               />
               <div
-                class="relative flex h-full flex-1 invisible"
+                class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
@@ -8524,21 +8729,21 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -9372,21 +9577,21 @@ exports[`SendTransfer > should render form step with deeplink values and use the
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -10220,7 +10425,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -10230,7 +10435,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                 class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
               />
               <div
-                class="relative flex h-full flex-1 invisible"
+                class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
@@ -10971,7 +11176,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </span>
             <div
@@ -10981,7 +11186,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                 class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
               />
               <div
-                class="relative flex h-full flex-1 invisible"
+                class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
@@ -11630,7 +11835,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -11706,7 +11911,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -11718,7 +11923,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -11730,24 +11935,65 @@ exports[`SendTransfer > should render network selection without selected wallet 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -12811,21 +13057,21 @@ exports[`SendTransfer > should render review step 1`] = `
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -12873,21 +13119,21 @@ exports[`SendTransfer > should render review step 1`] = `
             class="w-0 flex-1 text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base flex-1 md:flex-none text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13189,21 +13435,21 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13355,10 +13601,10 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13436,10 +13682,10 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -13759,21 +14005,21 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13925,10 +14171,10 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -14006,10 +14252,10 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                       class="w-28 flex-1 justify-end md:ml-4"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -14281,7 +14527,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -14357,7 +14603,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -14369,7 +14615,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -14381,24 +14627,65 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -15061,10 +15348,10 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -15103,7 +15390,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -15142,17 +15429,17 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
                                   </span>
                                 </span>
                                 <div
-                                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                                   data-testid="Link__external"
-                                  height="16"
-                                  width="16"
+                                  height="12"
+                                  width="12"
                                 >
                                   <svg
                                     id="arrow-external"
@@ -15333,21 +15620,21 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -15395,10 +15682,10 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -15546,7 +15833,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -15622,7 +15909,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -15634,7 +15921,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -15646,24 +15933,65 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -16326,10 +16654,10 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -16368,7 +16696,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -16407,17 +16735,17 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
                                   </span>
                                 </span>
                                 <div
-                                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                                   data-testid="Link__external"
-                                  height="16"
-                                  width="16"
+                                  height="12"
+                                  width="12"
                                 >
                                   <svg
                                     id="arrow-external"
@@ -16598,21 +16926,21 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -16660,10 +16988,10 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -17031,21 +17359,21 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                       class="w-0 flex-1"
                                     >
                                       <div
-                                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                       >
                                         <span
                                           class="font-semibold text-base text-theme-text"
                                           data-testid="Address__alias"
                                         >
                                           <span
-                                            class="css-u3jrna"
+                                            class="no-ligatures css-u3jrna"
                                             data-testid="TruncateEnd"
                                           >
                                             ARK Wallet 2
                                           </span>
                                         </span>
                                         <span
-                                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                           data-testid="Address__address"
                                         >
                                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -17364,7 +17692,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -17440,7 +17768,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -17452,7 +17780,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -17464,24 +17792,65 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -18144,10 +18513,10 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -18186,7 +18555,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -18225,17 +18594,17 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
                                   </span>
                                 </span>
                                 <div
-                                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                                   data-testid="Link__external"
-                                  height="16"
-                                  width="16"
+                                  height="12"
+                                  width="12"
                                 >
                                   <svg
                                     id="arrow-external"
@@ -18416,21 +18785,21 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -18478,10 +18847,10 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -18629,7 +18998,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -18705,7 +19074,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -18717,7 +19086,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -18729,24 +19098,65 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -19409,10 +19819,10 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -19451,7 +19861,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -19490,17 +19900,17 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
                                   </span>
                                 </span>
                                 <div
-                                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                                   data-testid="Link__external"
-                                  height="16"
-                                  width="16"
+                                  height="12"
+                                  width="12"
                                 >
                                   <svg
                                     id="arrow-external"
@@ -19681,21 +20091,21 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -19743,10 +20153,10 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -19894,7 +20304,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -19970,7 +20380,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -19982,7 +20392,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -19994,24 +20404,65 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -20674,10 +21125,10 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                     Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                   </p>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                    class="md:hidden css-mpc03v"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1fsr3xk"
                     >
                       <div
                         class="css-v0ob3f"
@@ -20716,7 +21167,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-90mh6d"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -20755,17 +21206,17 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
                                   </span>
                                 </span>
                                 <div
-                                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                                   data-testid="Link__external"
-                                  height="16"
-                                  width="16"
+                                  height="12"
+                                  width="12"
                                 >
                                   <svg
                                     id="arrow-external"
@@ -20946,21 +21397,21 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -21008,10 +21459,10 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="w-0 flex-1 text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -21278,7 +21729,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -21354,7 +21805,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -21366,7 +21817,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -21378,24 +21829,65 @@ exports[`SendTransfer > should show error step and go back 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -22064,54 +22556,58 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                       <p
                         class="hidden text-theme-secondary-text md:block"
                       >
-                        An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+                        An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
                       </p>
                       <div
-                        class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                        class="md:hidden"
                       >
                         <div
-                          class="css-ic0qlc"
+                          class="css-mpc03v"
                         >
                           <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
+                            class="css-1f7sa7y"
                           >
-                            <svg
-                              id="circle-cross"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              class="css-v0ob3f"
+                              height="16"
+                              width="16"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
+                              <svg
+                                id="circle-cross"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <circle
-                                  cx="10"
-                                  cy="10"
-                                  r="9"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M7 13l6-6M13 13L7 7"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="9"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M7 13l6-6M13 13L7 7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                            <span>
+                              Error
+                            </span>
                           </div>
-                          <span>
-                            Error
-                          </span>
-                        </div>
-                        <div
-                          class="css-6o9bco"
-                        >
-                          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+                          <div
+                            class="css-1h3dpsb"
+                          >
+                            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.
+                          </div>
                         </div>
                       </div>
                       <div

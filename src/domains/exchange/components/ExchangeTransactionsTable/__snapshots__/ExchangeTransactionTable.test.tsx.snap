@@ -5758,7 +5758,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td
@@ -5778,7 +5778,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                   type="button"
                 >
                   <span
-                    class="css-0"
+                    class="no-ligatures css-0"
                     data-testid="TruncateMiddle"
                   >
                     3
@@ -5981,7 +5981,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             </td>
           </tr>
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td
@@ -6001,7 +6001,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                   type="button"
                 >
                   <span
-                    class="css-0"
+                    class="no-ligatures css-0"
                     data-testid="TruncateMiddle"
                   >
                     2
@@ -6204,7 +6204,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             </td>
           </tr>
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td
@@ -6224,7 +6224,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                   type="button"
                 >
                   <span
-                    class="css-0"
+                    class="no-ligatures css-0"
                     data-testid="TruncateMiddle"
                   >
                     1
@@ -6450,7 +6450,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td
@@ -6470,7 +6470,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                   type="button"
                 >
                   <span
-                    class="css-0"
+                    class="no-ligatures css-0"
                     data-testid="TruncateMiddle"
                   >
                     3
@@ -6673,7 +6673,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             </td>
           </tr>
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td
@@ -6693,7 +6693,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                   type="button"
                 >
                   <span
-                    class="css-0"
+                    class="no-ligatures css-0"
                     data-testid="TruncateMiddle"
                   >
                     2
@@ -6896,7 +6896,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             </td>
           </tr>
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td
@@ -6916,7 +6916,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                   type="button"
                 >
                   <span
-                    class="css-0"
+                    class="no-ligatures css-0"
                     data-testid="TruncateMiddle"
                   >
                     1

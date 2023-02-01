@@ -23,7 +23,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow__mobile"
           >
             <td
@@ -49,7 +49,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e4d245…150377
@@ -484,7 +484,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -562,7 +562,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -840,7 +840,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow__mobile"
           >
             <td
@@ -866,7 +866,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e4d245…150377
@@ -1320,7 +1320,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -1398,7 +1398,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -1700,7 +1700,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow__mobile"
           >
             <td
@@ -1726,7 +1726,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e4d245…150377
@@ -2191,7 +2191,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -2269,7 +2269,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -2582,7 +2582,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow__mobile"
           >
             <td
@@ -2608,7 +2608,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e4d245…150377
@@ -3073,7 +3073,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -3151,7 +3151,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -3464,7 +3464,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow__mobile"
           >
             <td
@@ -3490,7 +3490,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e42296…f37711
@@ -3837,7 +3837,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -3915,7 +3915,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -4090,7 +4090,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow__mobile"
           >
             <td
@@ -4116,7 +4116,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       09e50e…4b2002
@@ -4466,7 +4466,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -4544,7 +4544,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -4722,7 +4722,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow__mobile"
           >
             <td
@@ -4748,7 +4748,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e4d245…150377
@@ -5212,7 +5212,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -5290,7 +5290,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -5602,7 +5602,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow__mobile"
           >
             <td
@@ -5628,7 +5628,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       287a58…77d89b
@@ -5718,10 +5718,10 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                       class="w-0 flex-1 overflow-hidden"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5962,7 +5962,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -6040,7 +6040,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -6085,10 +6085,10 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   </div>
                 </div>
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6365,7 +6365,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -6488,10 +6488,10 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   </div>
                 </div>
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6768,7 +6768,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -6846,7 +6846,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -7311,7 +7311,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -7389,7 +7389,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -7818,7 +7818,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -7896,7 +7896,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -7941,10 +7941,10 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   </div>
                 </div>
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8058,7 +8058,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow__mobile"
           >
             <td
@@ -8084,7 +8084,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       287a58…77d89b
@@ -8174,10 +8174,10 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                       class="w-0 flex-1 overflow-hidden"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8418,7 +8418,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>
@@ -8496,7 +8496,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -8961,7 +8961,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-1src4hy"
             data-testid="TableRow"
           >
             <td>

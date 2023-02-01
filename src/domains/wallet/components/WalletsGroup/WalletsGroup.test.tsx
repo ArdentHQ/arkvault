@@ -9,6 +9,7 @@ import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, withi
 import { PortfolioHeader } from "@/domains/wallet/components/PortfolioHeader";
 import * as envHooks from "@/app/hooks/env";
 import * as configurationModule from "@/app/contexts/Configuration/Configuration";
+import * as migrationsModule from "@/app/contexts/Migration/Migration";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import * as useDisplayWallets from "@/domains/wallet/hooks/use-display-wallets";
@@ -198,6 +199,10 @@ describe("WalletsGroup", () => {
 	});
 
 	it("should delete wallet through wallet dropdown", async () => {
+		const useMigrationsSpy = vi
+			.spyOn(migrationsModule, "useMigrations")
+			.mockReturnValue({ removeTransactions: vi.fn() });
+
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<PortfolioHeader />
@@ -235,6 +240,8 @@ describe("WalletsGroup", () => {
 		await waitFor(() => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 		});
+
+		useMigrationsSpy.mockRestore();
 	});
 
 	it.each([-500, 0, 500])("should render group with different widths", (width) => {

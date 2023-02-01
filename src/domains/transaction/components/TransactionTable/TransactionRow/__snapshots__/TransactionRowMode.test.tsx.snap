@@ -1,0 +1,47 @@
+// Vitest Snapshot v1
+
+exports[`BaseTransactionRowMode > should render migration 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center space-x-2"
+    data-testid="TransactionRowMode"
+    transaction="[object Object]"
+  >
+    <span
+      class="flex h-5 w-5 items-center border-0 border-theme-hint-100 text-theme-hint-600 dark:border-theme-hint-300 dark:text-theme-hint-300"
+    >
+      <div
+        class="css-1i4b0eq"
+        height="20"
+        width="20"
+      >
+        <svg
+          id="sent"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <path
+            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+    </span>
+    <div
+      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+      data-testid="Avatar"
+    >
+      <div
+        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

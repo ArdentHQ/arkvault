@@ -134,16 +134,16 @@ exports[`ConfirmationStep > should render 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="min-w-0 overflow-hidden"
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
                       payinHash
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                     data-testid="Link__external"
-                    height="16"
-                    width="16"
+                    height="12"
+                    width="12"
                   >
                     <svg
                       id="arrow-external"
@@ -233,16 +233,16 @@ exports[`ConfirmationStep > should render 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="min-w-0 overflow-hidden"
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
                       payinAddress
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                     data-testid="Link__external"
-                    height="16"
-                    width="16"
+                    height="12"
+                    width="12"
                   >
                     <svg
                       id="arrow-external"
@@ -405,7 +405,7 @@ exports[`ConfirmationStep > should render 1`] = `
               class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
             >
               <span
-                class="min-w-0 overflow-hidden"
+                class="no-ligatures min-w-0 overflow-hidden"
               >
                 payoutAddress
               </span>
@@ -1232,16 +1232,16 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             class="css-1y2194z"
                           >
                             <span
-                              class="min-w-0 overflow-hidden"
+                              class="no-ligatures min-w-0 overflow-hidden"
                             >
                               payinHash
                             </span>
                           </span>
                           <div
-                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                             data-testid="Link__external"
-                            height="16"
-                            width="16"
+                            height="12"
+                            width="12"
                           >
                             <svg
                               id="arrow-external"
@@ -1331,16 +1331,16 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             class="css-1y2194z"
                           >
                             <span
-                              class="min-w-0 overflow-hidden"
+                              class="no-ligatures min-w-0 overflow-hidden"
                             >
                               payinAddress
                             </span>
                           </span>
                           <div
-                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                             data-testid="Link__external"
-                            height="16"
-                            width="16"
+                            height="12"
+                            width="12"
                           >
                             <svg
                               id="arrow-external"
@@ -1503,16 +1503,16 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             class="css-1y2194z"
                           >
                             <span
-                              class="min-w-0 overflow-hidden"
+                              class="no-ligatures min-w-0 overflow-hidden"
                             >
                               payoutHash
                             </span>
                           </span>
                           <div
-                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                             data-testid="Link__external"
-                            height="16"
-                            width="16"
+                            height="12"
+                            width="12"
                           >
                             <svg
                               id="arrow-external"
@@ -1602,16 +1602,16 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             class="css-1y2194z"
                           >
                             <span
-                              class="min-w-0 overflow-hidden"
+                              class="no-ligatures min-w-0 overflow-hidden"
                             >
                               payoutAddress
                             </span>
                           </span>
                           <div
-                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                             data-testid="Link__external"
-                            height="16"
-                            width="16"
+                            height="12"
+                            width="12"
                           >
                             <svg
                               id="arrow-external"
@@ -1842,7 +1842,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                 >
                   <span
-                    class="min-w-0 overflow-hidden no-ligatures"
+                    class="no-ligatures min-w-0 overflow-hidden no-ligatures"
                   >
                     payinAddress
                   </span>
@@ -1899,7 +1899,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   data-testid="StatusIcon__spinner"
                 >
                   <div
-                    class="css-1v2j3qb"
+                    class="css-qed8fm"
                     color="info"
                   />
                 </span>
@@ -1987,7 +1987,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   class="flex items-center space-x-2 whitespace-nowrap font-semibold"
                 >
                   <span
-                    class="min-w-0 overflow-hidden no-ligatures"
+                    class="no-ligatures min-w-0 overflow-hidden no-ligatures"
                   >
                     payoutAddress
                   </span>
@@ -2051,10 +2051,10 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   support@changenow.io
                 </span>
                 <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
                   data-testid="Link__external"
-                  height="16"
-                  width="16"
+                  height="12"
+                  width="12"
                 >
                   <svg
                     id="arrow-external"
@@ -2694,7 +2694,7 @@ exports[`ReviewStep > should render 1`] = `
           1 ARK
         </span>
         <span
-          class="min-w-0 overflow-hidden no-ligatures text-xs font-semibold"
+          class="no-ligatures min-w-0 overflow-hidden no-ligatures text-xs font-semibold"
         >
           AYx3T2He3Ubz7H5pycQNG2Cvn6HYzeiC73
         </span>
@@ -2727,10 +2727,10 @@ exports[`ReviewStep > should render 1`] = `
               Terms of Use
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -2765,10 +2765,10 @@ exports[`ReviewStep > should render 1`] = `
               Privacy Policy
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -2883,7 +2883,7 @@ exports[`StatusStep > should render 1`] = `
           class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
         >
           <span
-            class="min-w-0 overflow-hidden no-ligatures"
+            class="no-ligatures min-w-0 overflow-hidden no-ligatures"
           >
             payinAddress
           </span>
@@ -2940,7 +2940,7 @@ exports[`StatusStep > should render 1`] = `
           data-testid="StatusIcon__spinner"
         >
           <div
-            class="css-1v2j3qb"
+            class="css-qed8fm"
             color="info"
           />
         </span>
@@ -3028,7 +3028,7 @@ exports[`StatusStep > should render 1`] = `
           class="flex items-center space-x-2 whitespace-nowrap font-semibold"
         >
           <span
-            class="min-w-0 overflow-hidden no-ligatures"
+            class="no-ligatures min-w-0 overflow-hidden no-ligatures"
           >
             payoutAddress
           </span>
@@ -3092,10 +3092,10 @@ exports[`StatusStep > should render 1`] = `
           support@changenow.io
         </span>
         <div
-          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
           data-testid="Link__external"
-          height="16"
-          width="16"
+          height="12"
+          width="12"
         >
           <svg
             id="arrow-external"

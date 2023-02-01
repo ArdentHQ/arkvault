@@ -5,6 +5,7 @@ import { matchPath, useHistory } from "react-router-dom";
 
 import { LocationState } from "router/router.types";
 import cn from "classnames";
+import { Id } from "react-toastify";
 import { Card } from "@/app/components/Card";
 import { Circle } from "@/app/components/Circle";
 import { DropdownOption } from "@/app/components/Dropdown";
@@ -26,7 +27,7 @@ export const Welcome = () => {
 	const isProfileCardClickedOnce = useRef(false);
 
 	const { t } = useTranslation();
-	const { handleDeepLink, isDeeplink, validateDeeplink } = useDeeplink();
+	const { handleDeepLink, isDeeplink, isPageDeeplink, validateDeeplink } = useDeeplink();
 
 	const profileCardActions = useMemo(
 		() => [
@@ -73,7 +74,11 @@ export const Welcome = () => {
 			if (isDeeplink()) {
 				toasts.dismiss();
 
-				const validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
+				let validatingToastId: Id;
+
+				if (!isPageDeeplink()) {
+					validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
+				}
 
 				const password = profile.usesPassword() ? profile.password().get() : undefined;
 
@@ -85,7 +90,12 @@ export const Welcome = () => {
 				profile.status().reset();
 
 				if (error) {
-					toasts.update(validatingToastId, "error", error);
+					if (isPageDeeplink()) {
+						toasts.error(error);
+					} else {
+						toasts.update(validatingToastId!, "error", error);
+					}
+
 					isProfileCardClickedOnce.current = false;
 
 					history.push("/");

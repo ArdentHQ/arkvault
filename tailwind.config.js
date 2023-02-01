@@ -96,6 +96,7 @@ module.exports = {
 			"theme-warning-900": "var(--theme-color-warning-900)",
 
 			"theme-danger-50": "var(--theme-color-danger-50)",
+			"theme-danger-50/80": "rgba(255, 245, 242, 0.8)",
 			"theme-danger-100": "var(--theme-color-danger-100)",
 			"theme-danger-200": "var(--theme-color-danger-200)",
 			"theme-danger-300": "var(--theme-color-danger-300)",
@@ -140,6 +141,24 @@ module.exports = {
 			"theme-navy-900": "var(--theme-color-navy-900)",
 		},
 		extend: {
+			backgroundSize: {
+				500: "500px",
+			},
+			animation: {
+				"move-bg": "move-bg 15s infinite linear",
+				"move-bg-fast": "move-bg 2.5s infinite linear",
+				"move-bg-start-right": "move-bg-start-right 15s infinite linear",
+			},
+			keyframes: {
+				"move-bg": {
+					"0%": { backgroundPosition: 0 },
+					"100%": { backgroundPosition: "500px" },
+				},
+				"move-bg-start-right": {
+					"0%": { backgroundPosition: "calc(100%)" },
+					"100%": { backgroundPosition: "calc(100% + 500px)" },
+				},
+			},
 			lineHeight: {
 				tighter: "1.125rem",
 			},

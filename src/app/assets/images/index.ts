@@ -24,6 +24,10 @@ import { ReactComponent as NoResultsLightGreen } from "./no-results-light-green.
 import { ReactComponent as NoResultsLightNavy } from "./no-results-light-navy.svg";
 import { ReactComponent as WelcomeBannerDark } from "./welcome-banner-dark.svg";
 import { ReactComponent as WelcomeBannerLight } from "./welcome-banner-light.svg";
+import { ReactComponent as PolygonMigrationBannerLightNavy } from "./polygon-migration-banner-light-navy.svg";
+import { ReactComponent as PolygonMigrationBannerLightGreen } from "./polygon-migration-banner-light-green.svg";
+import { ReactComponent as PolygonMigrationBannerDark } from "./polygon-migration-banner-dark.svg";
+import { ReactComponent as MetamaskLogo } from "./metamask-logo.svg";
 import {
 	ReactComponent as IOsInstructionsStep1DarkBlue,
 	ReactComponent as IOsInstructionsStep1DarkGreen,
@@ -55,11 +59,16 @@ import { ReactComponent as InfoDark } from "./info-dark.svg";
 import { ReactComponent as WarningLight } from "./warning-light.svg";
 import { ReactComponent as WarningDark } from "./warning-dark.svg";
 import { ReactComponent as WorldMap } from "./world-map.svg";
-import { wallet } from "@/domains/wallet/images";
-import { transaction } from "@/domains/transaction/images";
-import { profile } from "@/domains/profile/images";
-import { exchange } from "@/domains/exchange/images";
+import { ReactComponent as HexagonLight } from "./hexagon-light.svg";
+import { ReactComponent as HexagonBoldLight } from "./hexagon-bold-light.svg";
+import { ReactComponent as HexagonDark } from "./hexagon-dark.svg";
+import { ReactComponent as HexagonBoldDark } from "./hexagon-bold-dark.svg";
 import { error } from "@/domains/error/images";
+import { exchange } from "@/domains/exchange/images";
+import { migration } from "@/domains/migration/images";
+import { profile } from "@/domains/profile/images";
+import { transaction } from "@/domains/transaction/images";
+import { wallet } from "@/domains/wallet/images";
 
 export const images = {
 	common: {
@@ -79,6 +88,10 @@ export const images = {
 		GenericWarningDarkNavy,
 		GenericWarningLightGreen,
 		GenericWarningLightNavy,
+		HexagonBoldDark,
+		HexagonBoldLight,
+		HexagonDark,
+		HexagonLight,
 		IOsInstructionsStep1DarkBlue,
 		IOsInstructionsStep1DarkGreen,
 		IOsInstructionsStep1LightBlue,
@@ -97,10 +110,14 @@ export const images = {
 		InfoLight,
 		InfoLightGreen: InfoLight,
 		InfoLightNavy: InfoLight,
+		MetamaskLogo,
 		NoResultsDarkGreen,
 		NoResultsDarkNavy,
 		NoResultsLightGreen,
 		NoResultsLightNavy,
+		PolygonMigrationBannerDark,
+		PolygonMigrationBannerLightGreen,
+		PolygonMigrationBannerLightNavy,
 		SuccessDarkGreen,
 		SuccessDarkNavy,
 		SuccessLightGreen,
@@ -115,6 +132,7 @@ export const images = {
 	},
 	error,
 	exchange,
+	migration,
 	profile,
 	transaction,
 	wallet,

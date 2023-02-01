@@ -113,10 +113,10 @@ exports[`DeleteWallet > should render a modal 1`] = `
               />
             </svg>
             <div
-              class="flex flex-col overflow-hidden rounded-xl"
+              class="css-mpc03v"
             >
               <div
-                class="css-pra96q"
+                class="css-1hv657z"
               >
                 <div
                   class="css-v0ob3f"
@@ -160,7 +160,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                 </span>
               </div>
               <div
-                class="css-1pvpof3"
+                class="css-rfibfr"
               >
                 Are you sure you wish to delete the selected wallet? Before deleting, make sure the mnemonic passphrase is secured safely.
               </div>
@@ -185,10 +185,10 @@ exports[`DeleteWallet > should render a modal 1`] = `
                   class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
