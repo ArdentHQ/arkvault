@@ -448,6 +448,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		} else {
 			setTransactionsLoaded(false);
 			setLatestTransactions([]);
+			setMigrations([]);
 		}
 	}, [readyToLoad, transactionsLoaded, loadMigrationWalletTransactions]);
 
