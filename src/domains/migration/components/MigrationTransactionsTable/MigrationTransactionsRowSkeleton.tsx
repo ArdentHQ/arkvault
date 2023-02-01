@@ -59,12 +59,11 @@ export const MigrationTransactionsRowSkeleton = ({ isCompact }: Properties) => {
 			<TableCell innerClassName="justify-end" isCompact={isCompact}>
 				<span className="flex items-center space-x-1">
 					<Skeleton height={16} width={currencyWidth} />
-					<Skeleton height={16} width={35} />
 				</span>
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-center" isCompact={isCompact}>
-				{isCompact ? <Skeleton height={16} width={140} /> : <Skeleton height={44} width={140} />}
+			<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
+				{isCompact ? <Skeleton height={16} width={80} /> : <Skeleton height={44} width={100} />}
 			</TableCell>
 		</TableRow>
 	);
