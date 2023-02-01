@@ -379,7 +379,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                     class="css-1lmkmoz"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       ea63bf9a4b3eaf75a1dfff7219…7facf1aef29461868681b5c79b
@@ -611,10 +611,10 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                 class="w-0 flex-1 text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -699,10 +699,10 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
               class="w-0 flex-1 overflow-auto text-right md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -844,10 +844,10 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -905,10 +905,10 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1246,7 +1246,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                     class="css-1lmkmoz"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       ea63bf9a4b3eaf75a1dfff7219…7facf1aef29461868681b5c79b
@@ -1478,10 +1478,10 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                 class="w-0 flex-1 text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -1566,10 +1566,10 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
               class="w-0 flex-1 overflow-auto text-right md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -1711,10 +1711,10 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1772,10 +1772,10 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2116,7 +2116,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       class="css-1lmkmoz"
                     >
                       <span
-                        class="css-0"
+                        class="no-ligatures css-0"
                         data-testid="TruncateMiddle"
                       >
                         ea63bf9a4b3ea…1868681b5c79b
@@ -2360,10 +2360,10 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                   class="w-0 flex-1 text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -2452,10 +2452,10 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 class="w-0 flex-1 overflow-auto text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -2529,10 +2529,10 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       class="w-0 flex-1 overflow-auto text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2596,10 +2596,10 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       class="w-0 flex-1 overflow-auto text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2910,7 +2910,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                     class="css-1lmkmoz"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       ea63bf9a4b3eaf75a1dfff7219…7facf1aef29461868681b5c79b
@@ -3142,10 +3142,10 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                 class="w-0 flex-1 text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -3230,10 +3230,10 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
               class="w-0 flex-1 overflow-auto text-right md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -3375,10 +3375,10 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3436,10 +3436,10 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3780,7 +3780,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       class="css-1lmkmoz"
                     >
                       <span
-                        class="css-0"
+                        class="no-ligatures css-0"
                         data-testid="TruncateMiddle"
                       >
                         ea63bf9…1b5c79b
@@ -4024,10 +4024,10 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                   class="w-0 flex-1 text-right md:text-left"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -4116,10 +4116,10 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 class="w-0 flex-1 overflow-auto text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -4193,10 +4193,10 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       class="w-0 flex-1 overflow-auto text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4260,10 +4260,10 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       class="w-0 flex-1 overflow-auto text-right md:text-left"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -4574,7 +4574,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                     class="css-1lmkmoz"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       ea63bf9a4b3eaf75a1dfff7219…7facf1aef29461868681b5c79b
@@ -4806,10 +4806,10 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                 class="w-0 flex-1 text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -4894,10 +4894,10 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
               class="w-0 flex-1 overflow-auto text-right md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -5039,10 +5039,10 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5100,10 +5100,10 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -5441,7 +5441,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                     class="css-1lmkmoz"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       ea63bf9a4b3eaf75a1dfff7219…7facf1aef29461868681b5c79b
@@ -5726,10 +5726,10 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5787,10 +5787,10 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -6128,7 +6128,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                     class="css-1lmkmoz"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       ea63bf9a4b3eaf75a1dfff7219…7facf1aef29461868681b5c79b
@@ -6413,10 +6413,10 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6474,10 +6474,10 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         class="w-28 flex-1 justify-end md:ml-4"
                       >
                         <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
                           <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb

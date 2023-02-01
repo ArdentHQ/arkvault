@@ -854,21 +854,21 @@ exports[`SendIpfs > should render form step 1`] = `
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1167,21 +1167,21 @@ exports[`SendIpfs > should render review step 1`] = `
             class="w-0 flex-1 overflow-auto text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1569,7 +1569,7 @@ exports[`SendIpfs > should render summary step 1`] = `
                     class="css-1lmkmoz"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       7d5eb5fc782c766af4af5eee22…d7bab166df567f315d72e1db07
@@ -1769,7 +1769,7 @@ exports[`SendIpfs > should render summary step 1`] = `
               class="w-0 flex-1 text-right md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               />
             </div>
           </div>
@@ -2850,7 +2850,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     1e9b975eff66a731095876c3b6…3bb37a4127c46db3d69131067e
@@ -3050,21 +3050,21 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4175,7 +4175,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     1e9b975eff66a731095876c3b6…3bb37a4127c46db3d69131067e
@@ -4375,21 +4375,21 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5502,7 +5502,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     1e9b975eff66a731095876c3b6…3bb37a4127c46db3d69131067e
@@ -5702,21 +5702,21 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6412,21 +6412,21 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                           class="w-0 flex-1 overflow-auto text-right md:text-left"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
                               </span>
                             </span>
                             <span
-                              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

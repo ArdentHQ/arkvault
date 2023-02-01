@@ -3889,10 +3889,10 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -3923,21 +3923,21 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4115,21 +4115,21 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4160,10 +4160,10 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -4344,10 +4344,10 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4378,21 +4378,21 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4573,10 +4573,10 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4607,21 +4607,21 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4802,10 +4802,10 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4836,21 +4836,21 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5031,10 +5031,10 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5065,21 +5065,21 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5260,10 +5260,10 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5294,21 +5294,21 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5489,10 +5489,10 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5523,21 +5523,21 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5718,10 +5718,10 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5752,21 +5752,21 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5944,21 +5944,21 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5989,10 +5989,10 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6088,7 +6088,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       ea63bf…b5c79b
@@ -6129,10 +6129,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -6188,21 +6188,21 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6284,7 +6284,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       4425c0…5cd09d
@@ -6325,21 +6325,21 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6395,10 +6395,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -6480,7 +6480,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       ee3739…18f0dd
@@ -6521,10 +6521,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6580,21 +6580,21 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6676,7 +6676,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       b0b409…cb5320
@@ -6717,10 +6717,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6776,21 +6776,21 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6872,7 +6872,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       91097d…dc6599
@@ -6913,10 +6913,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6972,21 +6972,21 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7068,7 +7068,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e6fcdc…632d4b
@@ -7109,10 +7109,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7168,21 +7168,21 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7264,7 +7264,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       59c886…618520
@@ -7305,10 +7305,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7364,21 +7364,21 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7460,7 +7460,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       8c7b53…e63ded
@@ -7501,10 +7501,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7560,21 +7560,21 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7656,7 +7656,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       1a767e…7389f6
@@ -7697,10 +7697,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7756,21 +7756,21 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7852,7 +7852,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       b233ea…358428
@@ -7893,21 +7893,21 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7963,10 +7963,10 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8072,7 +8072,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       ea63bf…b5c79b
@@ -8113,10 +8113,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -8172,21 +8172,21 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8268,7 +8268,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       4425c0…5cd09d
@@ -8309,21 +8309,21 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8379,10 +8379,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -8464,7 +8464,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       ee3739…18f0dd
@@ -8505,10 +8505,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8564,21 +8564,21 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8660,7 +8660,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       b0b409…cb5320
@@ -8701,10 +8701,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8760,21 +8760,21 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8856,7 +8856,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       91097d…dc6599
@@ -8897,10 +8897,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8956,21 +8956,21 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -9052,7 +9052,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e6fcdc…632d4b
@@ -9093,10 +9093,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -9152,21 +9152,21 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -9248,7 +9248,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       59c886…618520
@@ -9289,10 +9289,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -9348,21 +9348,21 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -9444,7 +9444,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       8c7b53…e63ded
@@ -9485,10 +9485,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -9544,21 +9544,21 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -9640,7 +9640,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       1a767e…7389f6
@@ -9681,10 +9681,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -9740,21 +9740,21 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -9836,7 +9836,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       b233ea…358428
@@ -9877,21 +9877,21 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
                           class="font-semibold text-base text-theme-text"
                           data-testid="Address__alias"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
                           </span>
                         </span>
                         <span
-                          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -9947,10 +9947,10 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="w-0 flex-1"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10312,10 +10312,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -10346,21 +10346,21 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -10538,21 +10538,21 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -10583,10 +10583,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -10767,10 +10767,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10801,21 +10801,21 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -10996,10 +10996,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -11030,21 +11030,21 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -11225,10 +11225,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -11259,21 +11259,21 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -11454,10 +11454,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -11488,21 +11488,21 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -11683,10 +11683,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -11717,21 +11717,21 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -11912,10 +11912,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -11946,21 +11946,21 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -12141,10 +12141,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12175,21 +12175,21 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -12367,21 +12367,21 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -12412,10 +12412,10 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12767,10 +12767,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -12801,21 +12801,21 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -12993,21 +12993,21 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13038,10 +13038,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -13222,10 +13222,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -13256,21 +13256,21 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13451,10 +13451,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -13485,21 +13485,21 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13680,10 +13680,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -13714,21 +13714,21 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13909,10 +13909,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -13943,21 +13943,21 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -14138,10 +14138,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14172,21 +14172,21 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -14367,10 +14367,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14401,21 +14401,21 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -14596,10 +14596,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14630,21 +14630,21 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -14822,21 +14822,21 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -14867,10 +14867,10 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -15222,10 +15222,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -15256,21 +15256,21 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -15448,21 +15448,21 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -15493,10 +15493,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -15677,10 +15677,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -15711,21 +15711,21 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -15906,10 +15906,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -15940,21 +15940,21 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -16135,10 +16135,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -16169,21 +16169,21 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -16364,10 +16364,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -16398,21 +16398,21 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -16593,10 +16593,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -16627,21 +16627,21 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -16822,10 +16822,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -16856,21 +16856,21 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -17051,10 +17051,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -17085,21 +17085,21 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -17277,21 +17277,21 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -17322,10 +17322,10 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2

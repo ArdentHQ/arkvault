@@ -672,21 +672,21 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                           class="w-0 flex-1 overflow-auto text-right md:text-left"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 testwallet2
                               </span>
                             </span>
                             <span
-                              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -1718,21 +1718,21 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                           class="w-0 flex-1 overflow-auto text-right md:text-left"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 testwallet2
                               </span>
                             </span>
                             <span
-                              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -2688,21 +2688,21 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                           class="w-0 flex-1 overflow-auto text-right md:text-left"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
                               class="font-semibold text-base text-theme-text"
                               data-testid="Address__alias"
                             >
                               <span
-                                class="css-u3jrna"
+                                class="no-ligatures css-u3jrna"
                                 data-testid="TruncateEnd"
                               >
                                 testwallet2
                               </span>
                             </span>
                             <span
-                              class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -6746,7 +6746,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -6944,21 +6944,21 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   testwallet2
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -8094,7 +8094,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -8292,21 +8292,21 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   testwallet2
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -9317,7 +9317,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                                   class="css-1y2194z"
                                 >
                                   <span
-                                    class="css-0"
+                                    class="no-ligatures css-0"
                                     data-testid="TruncateMiddle"
                                   >
                                     8f913b6b719e7767d49861c0ae…645cb793d75d2f1b89abb49877
@@ -9515,21 +9515,21 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                             class="w-0 flex-1 overflow-auto text-right md:text-left"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
                                 class="font-semibold text-base text-theme-text"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   testwallet2
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr

@@ -1961,10 +1961,10 @@ exports[`Dashboard > should render 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -1995,10 +1995,10 @@ exports[`Dashboard > should render 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -2184,10 +2184,10 @@ exports[`Dashboard > should render 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2218,10 +2218,10 @@ exports[`Dashboard > should render 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -2407,10 +2407,10 @@ exports[`Dashboard > should render 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2441,10 +2441,10 @@ exports[`Dashboard > should render 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -2630,10 +2630,10 @@ exports[`Dashboard > should render 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2664,10 +2664,10 @@ exports[`Dashboard > should render 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A

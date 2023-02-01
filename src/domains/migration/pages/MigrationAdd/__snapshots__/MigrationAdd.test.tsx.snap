@@ -739,7 +739,7 @@ exports[`MigrationAdd > should render in sm 1`] = `
                               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               />
                             </span>
                             <div
@@ -877,10 +877,10 @@ exports[`MigrationAdd > should render in sm 1`] = `
                                 class="absolute inset-y-0 right-4 left-14 flex items-center border border-transparent"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     0x0000000000000000000000000000000000000000
@@ -1690,7 +1690,7 @@ exports[`MigrationAdd > should render in xs 1`] = `
                               class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                             >
                               <div
-                                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               />
                             </span>
                             <div
@@ -1828,10 +1828,10 @@ exports[`MigrationAdd > should render in xs 1`] = `
                                 class="absolute inset-y-0 right-4 left-14 flex items-center border border-transparent"
                               >
                                 <div
-                                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                                 >
                                   <span
-                                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     0x0000000000000000000000000000000000000000
