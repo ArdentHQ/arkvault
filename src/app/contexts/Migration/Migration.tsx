@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { ethers, Contract } from "ethers";
+import { ethers } from "ethers";
 import { uniqBy, sortBy, BigNumber } from "@ardenthq/sdk-helpers";
 import { httpClient } from "@/app/services";
 import {
@@ -11,9 +11,7 @@ import {
 } from "@/domains/migration/migration.contracts";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
 import {
-	polygonContractAddress,
 	polygonIndexerUrl,
-	polygonRpcUrl,
 	migrationMinBalance,
 	migrationNetwork,
 	migrationTransactionFee,
@@ -21,59 +19,8 @@ import {
 	polygonMigrationStartTime,
 	isValidMigrationTransaction,
 } from "@/utils/polygon-migration";
-import { waitFor } from "@/utils/wait-for";
 
-const contractABI = [
-	{
-		inputs: [
-			{
-				internalType: "bytes32[]",
-				name: "arkTxHashes",
-				type: "bytes32[]",
-			},
-		],
-		name: "getMigrationsByArkTxHash",
-		outputs: [
-			{
-				components: [
-					{
-						internalType: "address",
-						name: "recipient",
-						type: "address",
-					},
-					{
-						internalType: "uint96",
-						name: "amount",
-						type: "uint96",
-					},
-					{
-						internalType: "bytes32",
-						name: "arkTxHash",
-						type: "bytes32",
-					},
-				],
-				internalType: "struct ARKMigrator.ARKMigrationView[]",
-				name: "",
-				type: "tuple[]",
-			},
-		],
-		stateMutability: "view",
-		type: "function",
-	},
-	{
-		inputs: [],
-		name: "paused",
-		outputs: [
-			{
-				internalType: "bool",
-				name: "",
-				type: "bool",
-			},
-		],
-		stateMutability: "view",
-		type: "function",
-	},
-];
+import { useContract } from "@/domains/migration/hooks/use-contract";
 
 interface MigrationContextType {
 	contractIsPaused?: boolean;
@@ -103,11 +50,6 @@ interface Properties {
 const MigrationContext = React.createContext<any>(undefined);
 
 const MIGRATION_LOAD_INTERVAL = 5000;
-
-const ONE_MINUTE = 60 * 1000;
-
-const GET_MIGRATIONS_MAX_TRIES = 5;
-const GET_MIGRATIONS_TRY_INTERVAL = 1000;
 
 const fetchPolygonMigrations = async (arkTxHashes: string[]) => {
 	const response = await httpClient.get(`${polygonIndexerUrl()}transactions`, {
@@ -177,10 +119,11 @@ export const fetchMigrationTransactions = async ({
 };
 
 export const MigrationProvider = ({ children }: Properties) => {
+	const { contract, contractIsPaused, getContractMigrations } = useContract();
+
 	const profile = useProfileWatcher();
 	const [migrations, setMigrations] = useState<Migration[]>([]);
-	const [contract, setContract] = useState<Contract>();
-	const [contractIsPaused, setContractIsPaused] = useState<boolean>();
+
 	const [loadMigrationsError, setLoadMigrationsError] = useState<Error>();
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [hasMore, setHasMore] = useState(false);
@@ -207,24 +150,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 		setPage(cursor);
 		setTransactionsLoaded(true);
 	}, [profile, page, hasMore, transactionsLoaded]);
-
-	const getContractMigrations = useCallback(
-		async (transactionIds: string[], tries = 0): Promise<ARKMigrationViewStructOutput[]> => {
-			try {
-				return await contract!.getMigrationsByArkTxHash(transactionIds);
-			} catch (error) {
-				if (tries > GET_MIGRATIONS_MAX_TRIES) {
-					throw error;
-				}
-
-				// Wait a second to try again
-				await waitFor(GET_MIGRATIONS_TRY_INTERVAL);
-
-				return getContractMigrations(transactionIds, tries + 1);
-			}
-		},
-		[contract],
-	);
 
 	const getTransactionStatus = useCallback(
 		async (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
@@ -289,14 +214,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		setMigrations(updatedMigrations);
 	}, [migrations, getContractMigrations]);
-
-	const determineIfContractIsPaused = useCallback(async () => {
-		try {
-			setContractIsPaused(await contract!.paused());
-		} catch {
-			//
-		}
-	}, [contract]);
 
 	const storeTransactions = useCallback(
 		async (transactions: (DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData)[]) => {
@@ -392,29 +309,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const readyToLoad = useMemo(() => contract !== undefined && profile !== undefined, [contract, profile]);
 
 	useEffect(() => {
-		let reloadInerval: ReturnType<typeof setInterval>;
-
-		if (!readyToLoad) {
-			return;
-		}
-
-		if (contractIsPaused === undefined) {
-			determineIfContractIsPaused();
-			return;
-		}
-
-		const reloadPausedStateCallback = () => {
-			determineIfContractIsPaused();
-		};
-
-		if (contractIsPaused !== undefined) {
-			reloadInerval = setInterval(reloadPausedStateCallback, ONE_MINUTE);
-		}
-
-		return () => clearInterval(reloadInerval);
-	}, [readyToLoad, determineIfContractIsPaused, contractIsPaused]);
-
-	useEffect(() => {
 		let reloadInterval: ReturnType<typeof setInterval>;
 
 		if (!readyToLoad) {
@@ -451,19 +345,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 			setMigrations([]);
 		}
 	}, [readyToLoad, transactionsLoaded, loadMigrationWalletTransactions]);
-
-	// Create contract instance when context is created
-	useEffect(() => {
-		const contractAddress = polygonContractAddress();
-
-		if (contractAddress === undefined) {
-			return;
-		}
-
-		const provider = new ethers.providers.JsonRpcProvider(polygonRpcUrl());
-
-		setContract(new Contract(contractAddress, contractABI, provider));
-	}, []);
 
 	return (
 		<MigrationContext.Provider
