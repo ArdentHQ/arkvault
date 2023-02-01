@@ -87,7 +87,7 @@ export const MigrationPendingStep: React.FC<MigrationPendingStepProperties> = ({
 					<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 						<MigrationDetail label={t("COMMON.DATE")} className="px-5 pt-6 pb-5">
 							<span className="font-semibold">
-								{DateTime.make(migrationTransaction.timestamp).format(timeFormat)}
+								{DateTime.fromUnix(migrationTransaction.timestamp).format(timeFormat)}
 							</span>
 						</MigrationDetail>
 
