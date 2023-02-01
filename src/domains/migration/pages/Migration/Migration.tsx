@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { generatePath, useHistory } from "react-router-dom";
 import { ContractPausedAlert, MigrationHeader, MigrationNewMigrationMobileButton } from "./Migration.blocks";
@@ -9,19 +9,32 @@ import { MigrationTransactionsTable } from "@/domains/migration/components/Migra
 import { ProfilePaths } from "@/router/paths";
 import { useMigrationTransactions } from "@/domains/migration/hooks/use-migration-transactions";
 import { useMigrations } from "@/app/contexts";
-
+import { toasts } from "@/app/services";
 export const Migration = () => {
 	const { t } = useTranslation();
 	const { isMd } = useBreakpoint();
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
-
+	const [errorMessageShown, setErrorMessageShown] = useState(false);
 	const history = useHistory();
 	const profile = useActiveProfile();
 
 	const { contractIsPaused } = useMigrations();
-	const { migrations, isLoading, onLoadMore, hasMore, isLoadingMore } = useMigrationTransactions({
-		profile,
-	});
+	const { migrations, isLoading, onLoadMore, hasMore, isLoadingMore, loadMigrationsError } = useMigrationTransactions(
+		{
+			profile,
+		},
+	);
+
+	useEffect(() => {
+		if (loadMigrationsError) {
+			if (!errorMessageShown) {
+				toasts.error(t("MIGRATION.PAGE_MIGRATION.ERRORS.FETCHING_MIGRATIONS_FAILED"));
+				setErrorMessageShown(true);
+			}
+		} else {
+			setErrorMessageShown(false);
+		}
+	}, [loadMigrationsError, errorMessageShown]);
 
 	const isCompact = useMemo(() => !profile.appearance().get("useExpandedTables") || isMd, [profile, isMd]);
 

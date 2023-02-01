@@ -48,7 +48,7 @@ vi.mock("@/app/hooks/use-synchronizer", async () => {
 vi.mock("@/app/contexts/Migration/Migration", () => {
 	return {
 		MigrationProvider: ({ children }) => React.createElement("div", {}, children),
-		useMigrations: () => ({ migrations: undefined }),
+		useMigrations: () => ({ migrations: [], migrationsLoaded: false }),
 	};
 });
 

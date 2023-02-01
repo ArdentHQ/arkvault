@@ -49,10 +49,10 @@ describe("useNotifications", () => {
 		expect(result.current.transactions).toHaveLength(3);
 	});
 
-	it("handle undefined migrations", async () => {
+	it("handle not loaded migrations", async () => {
 		const useMigrationsSpy = vi
 			.spyOn(context, "useMigrations")
-			.mockImplementation(() => ({ migrations: undefined }));
+			.mockImplementation(() => ({ migrations: [], migrationsLoaded: false }));
 
 		const { result } = renderHook(() => useNotifications({ profile }));
 
@@ -62,7 +62,9 @@ describe("useNotifications", () => {
 	});
 
 	it("handle empty migrations", async () => {
-		const useMigrationsSpy = vi.spyOn(context, "useMigrations").mockImplementation(() => ({ migrations: [] }));
+		const useMigrationsSpy = vi
+			.spyOn(context, "useMigrations")
+			.mockImplementation(() => ({ migrations: [], migrationsLoaded: true }));
 
 		const { result } = renderHook(() => useNotifications({ profile }));
 

@@ -5,6 +5,10 @@ export const translations = {
 		"The migration is temporarily paused. Please check our <linkTwitter>Twitter</linkTwitter> for more details.",
 
 	DETAILS_MODAL: {
+		ERROR: {
+			DESCRIPTION: "We failed to fetch the migration status. Please try again later.",
+			TITLE: "Migration Details",
+		},
 		STEP_PENDING: {
 			DESCRIPTION: "Migration in progress, you will be notified once the process is complete.",
 			TITLE: "Migration Pending",
@@ -100,6 +104,9 @@ export const translations = {
 	},
 
 	PAGE_MIGRATION: {
+		ERRORS: {
+			FETCHING_MIGRATIONS_FAILED: "We were not able to obtain details of all migrations.",
+		},
 		NEW_MIGRATION: "New Migration",
 		NO_MIGRATIONS: "You don't have any migration transactions yet.",
 		SUBTITLE: 'ARK is moving to Polygon. Click "New Migration" to get started.',
@@ -112,6 +119,8 @@ export const translations = {
 	STATUS: {
 		CONFIRMED: "Confirmed",
 		PENDING: "Pending",
+		UNKNOWN: "Unknown",
+		UNKNOWN_DETAILS: "Unknown Status. Try again later.",
 	},
 
 	TRANSACTION_ID: "Transaction ID",

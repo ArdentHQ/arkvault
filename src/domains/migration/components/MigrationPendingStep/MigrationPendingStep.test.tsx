@@ -6,6 +6,7 @@ import { MigrationPendingStep } from "./MigrationPendingStep";
 import { renderResponsiveWithRoute, render, getDefaultProfileId, screen, env } from "@/utils/testing-library";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { useTheme } from "@/app/hooks/use-theme";
+import { translations } from "@/domains/migration/i18n";
 
 const history = createHashHistory();
 let migrationUrl: string;
@@ -39,6 +40,25 @@ describe("MigrationPendingStep", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+	it.each(["xs", "sm"])("should handle an unknown status in %s", (breakpoint) => {
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/migration/add">
+				<MigrationPendingStep
+					migrationTransaction={{
+						...migrationFixture,
+						status: undefined,
+					}}
+				/>
+			</Route>,
+			breakpoint,
+			{
+				history,
+				route: migrationUrl,
+			},
+		);
+
+		expect(screen.getByText(translations.DETAILS_MODAL.ERROR.TITLE)).toBeInTheDocument();
 	});
 
 	it.each(["xs", "sm"])("should render in %s in dark mode", (breakpoint) => {

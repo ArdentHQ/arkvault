@@ -176,6 +176,7 @@ describe("MigrationAdd", () => {
 	it("shows a warning and disables the button if contract is paused", async () => {
 		useMigrationsSpy = vi.spyOn(contexts, "useMigrations").mockReturnValue({
 			contractIsPaused: true,
+			migrations: [],
 		});
 
 		renderComponent();

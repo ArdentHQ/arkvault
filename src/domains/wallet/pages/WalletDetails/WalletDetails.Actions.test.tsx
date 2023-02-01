@@ -70,7 +70,7 @@ describe("WalletDetails", () => {
 		// Mock musig server requests
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 
-		vi.spyOn(migrationsModule, "useMigrations").mockReturnValue({ removeTransactions: vi.fn() });
+		vi.spyOn(migrationsModule, "useMigrations").mockReturnValue({ migrations: [], removeTransactions: vi.fn() });
 	});
 
 	beforeEach(async () => {
