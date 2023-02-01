@@ -23,7 +23,7 @@ describe("MigrationPendingStep", () => {
 			id: "bc68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
 			migrationAddress: "BuRnAdDreSs",
 			status: MigrationTransactionStatus.Pending,
-			timestamp: Date.now() / 1000,
+			timestamp: 1_675_248_153,
 		};
 	});
 
