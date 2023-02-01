@@ -76,10 +76,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
             class="hidden w-0 flex-1 text-right sm:block md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 test-address1
@@ -224,10 +224,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
             class="hidden w-0 flex-1 text-right sm:block md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 test-address1
@@ -369,10 +369,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
           class="hidden w-0 flex-1 text-right sm:block md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
-              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
               data-testid="Address__address"
             >
               test-address1
@@ -513,10 +513,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
           class="hidden w-0 flex-1 text-right sm:block md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
-              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
               data-testid="Address__address"
             >
               test-address1
@@ -657,10 +657,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
           class="hidden w-0 flex-1 text-right sm:block md:text-left"
         >
           <div
-            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
-              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
               data-testid="Address__address"
             >
               test-address1

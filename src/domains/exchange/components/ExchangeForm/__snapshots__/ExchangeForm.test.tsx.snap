@@ -134,7 +134,7 @@ exports[`ConfirmationStep > should render 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="min-w-0 overflow-hidden"
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
                       payinHash
                     </span>
@@ -233,7 +233,7 @@ exports[`ConfirmationStep > should render 1`] = `
                     class="css-1y2194z"
                   >
                     <span
-                      class="min-w-0 overflow-hidden"
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
                       payinAddress
                     </span>
@@ -405,7 +405,7 @@ exports[`ConfirmationStep > should render 1`] = `
               class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
             >
               <span
-                class="min-w-0 overflow-hidden"
+                class="no-ligatures min-w-0 overflow-hidden"
               >
                 payoutAddress
               </span>
@@ -1232,7 +1232,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             class="css-1y2194z"
                           >
                             <span
-                              class="min-w-0 overflow-hidden"
+                              class="no-ligatures min-w-0 overflow-hidden"
                             >
                               payinHash
                             </span>
@@ -1331,7 +1331,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             class="css-1y2194z"
                           >
                             <span
-                              class="min-w-0 overflow-hidden"
+                              class="no-ligatures min-w-0 overflow-hidden"
                             >
                               payinAddress
                             </span>
@@ -1503,7 +1503,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             class="css-1y2194z"
                           >
                             <span
-                              class="min-w-0 overflow-hidden"
+                              class="no-ligatures min-w-0 overflow-hidden"
                             >
                               payoutHash
                             </span>
@@ -1602,7 +1602,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             class="css-1y2194z"
                           >
                             <span
-                              class="min-w-0 overflow-hidden"
+                              class="no-ligatures min-w-0 overflow-hidden"
                             >
                               payoutAddress
                             </span>
@@ -1842,7 +1842,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                 >
                   <span
-                    class="min-w-0 overflow-hidden no-ligatures"
+                    class="no-ligatures min-w-0 overflow-hidden no-ligatures"
                   >
                     payinAddress
                   </span>
@@ -1987,7 +1987,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   class="flex items-center space-x-2 whitespace-nowrap font-semibold"
                 >
                   <span
-                    class="min-w-0 overflow-hidden no-ligatures"
+                    class="no-ligatures min-w-0 overflow-hidden no-ligatures"
                   >
                     payoutAddress
                   </span>
@@ -2694,7 +2694,7 @@ exports[`ReviewStep > should render 1`] = `
           1 ARK
         </span>
         <span
-          class="min-w-0 overflow-hidden no-ligatures text-xs font-semibold"
+          class="no-ligatures min-w-0 overflow-hidden no-ligatures text-xs font-semibold"
         >
           AYx3T2He3Ubz7H5pycQNG2Cvn6HYzeiC73
         </span>
@@ -2883,7 +2883,7 @@ exports[`StatusStep > should render 1`] = `
           class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
         >
           <span
-            class="min-w-0 overflow-hidden no-ligatures"
+            class="no-ligatures min-w-0 overflow-hidden no-ligatures"
           >
             payinAddress
           </span>
@@ -3028,7 +3028,7 @@ exports[`StatusStep > should render 1`] = `
           class="flex items-center space-x-2 whitespace-nowrap font-semibold"
         >
           <span
-            class="min-w-0 overflow-hidden no-ligatures"
+            class="no-ligatures min-w-0 overflow-hidden no-ligatures"
           >
             payoutAddress
           </span>
