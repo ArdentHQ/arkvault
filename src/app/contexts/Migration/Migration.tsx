@@ -206,7 +206,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 		setHasMore(hasMore);
 		setPage(cursor);
 		setTransactionsLoaded(true);
-		setIsLoadingMore(false);
 	}, [profile, page, hasMore, transactionsLoaded]);
 
 	const getContractMigrations = useCallback(
@@ -327,7 +326,11 @@ export const MigrationProvider = ({ children }: Properties) => {
 				setMigrations((migrations) => [...migrations, ...newMigrations]);
 			}
 
+			// Setting the following values because we want to hide the loading
+			// indicator until we have loaded all the migration details for the
+			// transactions.
 			setMigrationsLoaded(true);
+			setIsLoadingMore(false);
 		},
 		[getTransactionStatus],
 	);
