@@ -263,7 +263,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 					loadMigrationsError,
 					markMigrationsAsRead,
 					migrations: sortedMigrations,
-					onLoadMore: () => loadMigrationWalletTransactions,
+					onLoadMore: () => loadMigrationWalletTransactions(),
 					page,
 					paginatedMigrations,
 					removeTransactions,

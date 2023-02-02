@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { DTO, Contracts } from "@ardenthq/sdk-profiles";
 import { ethers } from "ethers";
 import { vi } from "vitest";
@@ -14,11 +14,24 @@ import * as useContractMock from "@/domains/migration/hooks/use-contract";
 import * as useMigrationTransactionsMock from "@/domains/migration/hooks/use-migration-transactions";
 
 const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransaction }) => {
-	const { isLoading, migrations, storeTransactions, contractIsPaused, markMigrationsAsRead, loadMigrationsError } =
-		useMigrations();
+	const {
+		isLoading,
+		migrations,
+		storeTransactions,
+		contractIsPaused,
+		markMigrationsAsRead,
+		loadMigrationsError,
+		onLoadMore,
+		getMigrationById,
+	} = useMigrations();
+
+	const [selectedMigration, setSelectedMigration] = useState<MigrationTransaction | undefined>(undefined);
 
 	const createAndStoreTransaction = async () => {
 		await storeTransactions([transactionToHandle]);
+	};
+	const getMigration = () => {
+		setSelectedMigration(getMigrationById(transactionToHandle.id()));
 	};
 
 	const markMigrationAsReadHandler = () => {
@@ -31,6 +44,10 @@ const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransact
 
 	if (loadMigrationsError) {
 		return <span data-testid="Migration__load_error">Load error</span>;
+	}
+
+	if (selectedMigration) {
+		return <span data-testid="Migration__selected">{selectedMigration.id}</span>;
 	}
 
 	return (
@@ -59,6 +76,16 @@ const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransact
 				<li>
 					<button data-testid="Migrations__markasread" type="button" onClick={markMigrationAsReadHandler}>
 						Mark as read
+					</button>
+				</li>
+				<li>
+					<button data-testid="Migrations__loadmore" type="button" onClick={onLoadMore}>
+						Load More
+					</button>
+				</li>
+				<li>
+					<button data-testid="Migrations__get" type="button" onClick={getMigration}>
+						Get Migration
 					</button>
 				</li>
 			</ul>
@@ -309,6 +336,56 @@ describe("Migration Context", () => {
 		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(2);
 
 		setIntervalSpy.mockRestore();
+	});
+
+	it("should call the method to load more transactions", async () => {
+		const loadMoreTransactionsSpy = vi.fn();
+
+		mockTransactions([transactionFixture], {
+			loadMigrationWalletTransactions: loadMoreTransactionsSpy,
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		userEvent.click(screen.getByTestId("Migrations__loadmore"));
+
+		expect(loadMoreTransactionsSpy).toHaveBeenCalled();
+	});
+
+	it("should get a migration by id", async () => {
+		mockTransactions([transactionFixture]);
+
+		render(
+			<MigrationProvider>
+				<Test transactionToHandle={transactionFixture} />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		mockTransactions([transactionFixture, secondTransactionFixture]);
+
+		userEvent.click(screen.getByTestId("Migrations__get"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__selected")).toHaveTextContent(transactionFixture.id());
+		});
 	});
 
 	// it("should load the migration id for newly confirmed migrations", async () => {
