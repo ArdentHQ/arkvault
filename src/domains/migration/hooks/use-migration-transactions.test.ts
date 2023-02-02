@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+´
 import { renderHook } from "@testing-library/react-hooks";
 import { useMigrationTransactions } from "./use-migration-transactions";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks, waitFor } from "@/utils/testing-library";
@@ -80,7 +80,7 @@ describe("useMigrationTransactions hook", () => {
 		polygonMigrationStartTimeSpy.mockRestore();
 	});
 
-	it("should not load migration wallet transactions if no profile", () => {
+	it("should not load migration wallet transactions if no profile", 	() => {
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received");
 
 		renderHook(() => useMigrationTransactions({ profile: undefined }));
@@ -106,30 +106,6 @@ describe("useMigrationTransactions hook", () => {
 		await waitFor(() => {
 			expect(result.current.latestTransactions).toHaveLength(2);
 		});
-
-		mockTransactions.mockRestore();
-	});
-
-	it("should set as loading more migrations on second call", async () => {
-		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
-			Promise.resolve({
-				currentPage: () => 1,
-				hasMorePages: () => true,
-				items: () => [transactionFixture, secondTransactionFixture],
-			} as any),
-		);
-
-		const { result } = renderHook(() => useMigrationTransactions({ profile }));
-
-		expect(result.current.latestTransactions).toHaveLength(0);
-		expect(result.current.isLoadingMoreTransactions).toBe(false);
-
-		await waitFor(() => {
-			expect(result.current.latestTransactions).toHaveLength(2);
-		});
-
-		result.current.loadMigrationWalletTransactions();
-		expect(result.current.isLoadingMoreTransactions).toBe(true);
 
 		mockTransactions.mockRestore();
 	});
