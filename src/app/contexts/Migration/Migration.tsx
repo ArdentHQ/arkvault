@@ -118,6 +118,30 @@ export const MigrationProvider = ({ children }: Properties) => {
 			})
 			.filter(Boolean) as Migration[];
 
+		const newlyConfirmedMigrations = updatedMigrations.filter(
+			(migration) => migration.status === MigrationTransactionStatus.Confirmed && !migration.migrationId,
+		);
+
+		if (newlyConfirmedMigrations.length > 0) {
+			const polygonMigrations = await fetchPolygonMigrations(
+				newlyConfirmedMigrations.map((migration: Migration) => migration.id),
+			);
+
+			for (const polygonMigration of polygonMigrations) {
+				const confirmedMigration = newlyConfirmedMigrations.find(
+					(migration) => migration.id === polygonMigration.arkTxHash,
+				);
+
+				if (confirmedMigration) {
+					const migrationIndex = updatedMigrations.findIndex(
+						(migration) => migration.id === confirmedMigration.id,
+					);
+
+					updatedMigrations[migrationIndex].migrationId = polygonMigration.polygonTxHash;
+				}
+			}
+		}
+
 		updatedMigrations = uniqBy([...updatedMigrations, ...migrations], (migration) => migration.id);
 
 		setMigrations(updatedMigrations);
@@ -205,7 +229,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 				setMigrations((migrations) => [...migrations, ...newMigrations]);
 			}
 
-			console.log("set migrations loaded somewhere");
 			setMigrationsLoaded(true);
 		},
 		[getTransactionStatus],
@@ -270,12 +293,10 @@ export const MigrationProvider = ({ children }: Properties) => {
 			JSON.stringify(migrations) === JSON.stringify(cachedMigrations.migrations) &&
 			page === cachedMigrations.page
 		) {
-			console.log("Equal");
 			return;
 		}
 
 		if (page === 0) {
-			console.log("page not loaded yet");
 			return;
 		}
 

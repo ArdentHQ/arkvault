@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Migration } from "@/domains/migration/migration.contracts";
 
-const STORAGE_KEY = "ark-migrations-cacheTPDsdgadsgsP";
+const STORAGE_KEY = "ark-migrations-cache";
 
 export interface MigrationsPage {
 	migrations: Migration[];
