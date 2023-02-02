@@ -61,10 +61,10 @@ exports[`MigrationTransactionItem > should render in xs 1`] = `
               Type
             </div>
             <div
-              class="flex items-center space-x-3"
+              class="flex items-center space-x-2"
             >
               <button
-                class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                class="flex items-center space-x-2 text-theme-navy-600 hover:text-theme-navy-700"
                 type="button"
               >
                 <span
@@ -73,9 +73,9 @@ exports[`MigrationTransactionItem > should render in xs 1`] = `
                   Migration Successful
                 </span>
                 <div
-                  class="css-15txs7d"
-                  height="10"
-                  width="10"
+                  class="css-1fio4bh"
+                  height="12"
+                  width="12"
                 >
                   <svg
                     id="chevron-right-small"
@@ -198,10 +198,10 @@ exports[`MigrationTransactionItem > should render in xs 2`] = `
               Type
             </div>
             <div
-              class="flex items-center space-x-3"
+              class="flex items-center space-x-2"
             >
               <button
-                class="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+                class="flex items-center space-x-2 text-theme-navy-600 hover:text-theme-navy-700"
                 type="button"
               >
                 <span
@@ -210,9 +210,9 @@ exports[`MigrationTransactionItem > should render in xs 2`] = `
                   Migration Successful
                 </span>
                 <div
-                  class="css-15txs7d"
-                  height="10"
-                  width="10"
+                  class="css-1fio4bh"
+                  height="12"
+                  width="12"
                 >
                   <svg
                     id="chevron-right-small"
