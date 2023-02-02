@@ -80,7 +80,7 @@ describe("useMigrationTransactions hook", () => {
 		polygonMigrationStartTimeSpy.mockRestore();
 	});
 
-	it("should not load migration wallet transactions if no profile", async () => {
+	it("should not load migration wallet transactions if no profile", () => {
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received");
 
 		renderHook(() => useMigrationTransactions({ profile: undefined }));

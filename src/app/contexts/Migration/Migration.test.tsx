@@ -354,7 +354,7 @@ describe("Migration Context", () => {
 		setIntervalSpy.mockRestore();
 	});
 
-	it("should not add a reload interval if no profile", async () => {
+	it("should not add a reload interval if no profile", () => {
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(undefined);
 
 		mockTransactions([]);

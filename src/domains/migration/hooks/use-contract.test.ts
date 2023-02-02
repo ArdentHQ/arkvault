@@ -107,7 +107,7 @@ describe("useContract hook", () => {
 		setIntervalSpy.mockRestore();
 	});
 
-	it("should get the migrations from the contract", async () => {
+	it("should get the migrations from the contract", () => {
 		const getMigrationsByArkTxHashMock = vi.fn();
 
 		const ethersMock = Contract.mockImplementation(() => ({
