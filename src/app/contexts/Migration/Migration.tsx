@@ -70,10 +70,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [page, setPage] = useState<number>(0);
 	const [isLoadingMore, setIsLoadingMore] = useState<boolean>(false);
 
-	useEffect(() => {
-		setPage(transactionsPage);
-	}, [transactionsPage]);
-
 	const loadMigrationDetails = useCallback(async () => {
 		const pendingMigrations = migrations.filter(
 			(migration) => migration.status === MigrationTransactionStatus.Pending || migration.status === undefined,
@@ -227,8 +223,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 			}
 
 			setMigrationsLoaded(true);
+
+			setIsLoadingMore(false);
+
+			setPage(transactionsPage);
 		},
-		[getTransactionStatus],
+		[getTransactionStatus, transactionsPage],
 	);
 
 	useEffect(() => {
@@ -320,10 +320,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		await loadMigrationWalletTransactions();
-
-		if (migrationsLoaded) {
-			setIsLoadingMore(false);
-		}
 	}, [loadMigrationWalletTransactions, migrationsLoaded]);
 
 	return (
