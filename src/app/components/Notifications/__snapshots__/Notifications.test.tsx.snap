@@ -492,7 +492,7 @@ exports[`Notifications > should mark migration as read 1`] = `
           Transactions
         </div>
         <div
-          class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+          class="-mx-10 -mt-10 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
           data-testid="NotificationsMigrations"
         >
           <div
@@ -652,7 +652,7 @@ exports[`Notifications > should mark migration as read 1`] = `
                         class="flex space-x-3 css-mx19qq"
                       >
                         <div
-                          class="flex flex-1 items-center space-x-3 overflow-auto"
+                          class="flex flex-1 items-center overflow-auto"
                         >
                           <div
                             class="text-theme-hint-600 css-1i4b0eq"
@@ -687,7 +687,7 @@ exports[`Notifications > should mark migration as read 1`] = `
                             </svg>
                           </div>
                           <div
-                            class="shrink-0 css-jxpwdn"
+                            class="ml-2 mr-3 shrink-0 css-jxpwdn"
                             data-testid="Avatar"
                           >
                             <div
@@ -732,9 +732,9 @@ exports[`Notifications > should mark migration as read 1`] = `
                             Migration Successful
                           </span>
                           <div
-                            class="css-15txs7d"
-                            height="10"
-                            width="10"
+                            class="css-1fio4bh"
+                            height="12"
+                            width="12"
                           >
                             <svg
                               id="chevron-right-small"
@@ -790,7 +790,7 @@ exports[`Notifications > should not mark migration as read if already read 1`] =
           Transactions
         </div>
         <div
-          class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+          class="-mx-10 -mt-10 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
           data-testid="NotificationsMigrations"
         >
           <div
@@ -950,7 +950,7 @@ exports[`Notifications > should not mark migration as read if already read 1`] =
                         class="flex space-x-3 css-mx19qq"
                       >
                         <div
-                          class="flex flex-1 items-center space-x-3 overflow-auto"
+                          class="flex flex-1 items-center overflow-auto"
                         >
                           <div
                             class="text-theme-hint-600 css-1i4b0eq"
@@ -985,7 +985,7 @@ exports[`Notifications > should not mark migration as read if already read 1`] =
                             </svg>
                           </div>
                           <div
-                            class="shrink-0 css-jxpwdn"
+                            class="ml-2 mr-3 shrink-0 css-jxpwdn"
                             data-testid="Avatar"
                           >
                             <div
@@ -1030,9 +1030,9 @@ exports[`Notifications > should not mark migration as read if already read 1`] =
                             Migration Successful
                           </span>
                           <div
-                            class="css-15txs7d"
-                            height="10"
-                            width="10"
+                            class="css-1fio4bh"
+                            height="12"
+                            width="12"
                           >
                             <svg
                               id="chevron-right-small"
@@ -1177,7 +1177,7 @@ exports[`Notifications > should render with migrations but not transactions 1`] 
           Transactions
         </div>
         <div
-          class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+          class="-mx-10 -mt-10 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
           data-testid="NotificationsMigrations"
         >
           <div
@@ -1337,7 +1337,7 @@ exports[`Notifications > should render with migrations but not transactions 1`] 
                         class="flex space-x-3 css-mx19qq"
                       >
                         <div
-                          class="flex flex-1 items-center space-x-3 overflow-auto"
+                          class="flex flex-1 items-center overflow-auto"
                         >
                           <div
                             class="text-theme-hint-600 css-1i4b0eq"
@@ -1372,7 +1372,7 @@ exports[`Notifications > should render with migrations but not transactions 1`] 
                             </svg>
                           </div>
                           <div
-                            class="shrink-0 css-jxpwdn"
+                            class="ml-2 mr-3 shrink-0 css-jxpwdn"
                             data-testid="Avatar"
                           >
                             <div
@@ -1417,9 +1417,9 @@ exports[`Notifications > should render with migrations but not transactions 1`] 
                             Migration Successful
                           </span>
                           <div
-                            class="css-15txs7d"
-                            height="10"
-                            width="10"
+                            class="css-1fio4bh"
+                            height="12"
+                            width="12"
                           >
                             <svg
                               id="chevron-right-small"
