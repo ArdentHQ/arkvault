@@ -89,8 +89,6 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			profile: profile!,
 		});
 
-		console.log({ cursor, hasMore, items });
-
 		setLatestTransactions((existingItems) => [...existingItems, ...items]);
 		setHasMore(hasMore);
 		setPage(cursor);
