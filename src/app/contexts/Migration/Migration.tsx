@@ -56,7 +56,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const {
 		latestTransactions,
 		isLoadingMoreTransactions,
-		transactionsLoaded,
 		loadMigrationWalletTransactions,
 		removeTransactions,
 		page,
@@ -248,13 +247,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		return () => clearInterval(reloadInterval);
 	}, [readyToLoad, loadMigrationDetails, loadMigrationsError]);
-
-	useEffect(() => {
-		if (!readyToLoad) {
-			setMigrations([]);
-			setMigrationsLoaded(false);
-		}
-	}, [readyToLoad, transactionsLoaded]);
 
 	const isLoading = useMemo<boolean>(() => !migrationsLoaded, [migrationsLoaded]);
 

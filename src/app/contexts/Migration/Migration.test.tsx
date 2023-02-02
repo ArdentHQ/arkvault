@@ -7,7 +7,7 @@ import { MigrationProvider, useMigrations } from "./Migration";
 import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
 import { render, screen, getDefaultProfileId, env, waitFor } from "@/utils/testing-library";
 import * as polygonMigration from "@/utils/polygon-migration";
-import { MigrationTransaction, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import { Migration, MigrationTransaction, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
 import * as useContractMock from "@/domains/migration/hooks/use-contract";
@@ -23,15 +23,21 @@ const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransact
 		loadMigrationsError,
 		onLoadMore,
 		getMigrationById,
+		resolveTransaction,
 	} = useMigrations();
 
-	const [selectedMigration, setSelectedMigration] = useState<MigrationTransaction | undefined>(undefined);
+	const [selectedMigration, setSelectedMigration] = useState<Migration | undefined>(undefined);
+	const [selectedTransaction, setSelectedTransaction] = useState<MigrationTransaction | undefined>(undefined);
 
 	const createAndStoreTransaction = async () => {
 		await storeTransactions([transactionToHandle]);
 	};
 	const getMigration = () => {
 		setSelectedMigration(getMigrationById(transactionToHandle.id()));
+	};
+
+	const getTransaction = () => {
+		setSelectedTransaction(resolveTransaction(migrations.find((m) => m.id === transactionToHandle.id())));
 	};
 
 	const markMigrationAsReadHandler = () => {
@@ -48,6 +54,9 @@ const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransact
 
 	if (selectedMigration) {
 		return <span data-testid="Migration__selected">{selectedMigration.id}</span>;
+	}
+	if (selectedTransaction) {
+		return <span data-testid="Transaction__selected">{selectedTransaction.id()}</span>;
 	}
 
 	return (
@@ -84,6 +93,11 @@ const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransact
 				<li>
 					<button data-testid="Migrations__get" type="button" onClick={getMigration}>
 						Get Migration
+					</button>
+				</li>
+				<li>
+					<button data-testid="Migrations__get_transaction" type="button" onClick={getTransaction}>
+						Get Transaction
 					</button>
 				</li>
 			</ul>
@@ -336,6 +350,34 @@ describe("Migration Context", () => {
 		setIntervalSpy.mockRestore();
 	});
 
+	it("should not add a reload interval if no profile", async () => {
+		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(undefined);
+
+		mockTransactions([]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(reloadMigrationsCallback).toBeUndefined();
+
+		setIntervalSpy.mockRestore();
+	});
+
 	it("should reload migrations details if has a migrations with undefined status", async () => {
 		mockTransactions([transactionFixture], {}, [undefined]);
 
@@ -505,6 +547,30 @@ describe("Migration Context", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Migration__selected")).toHaveTextContent(transactionFixture.id());
+		});
+	});
+
+	it("should resolve a transaction", async () => {
+		mockTransactions([transactionFixture]);
+
+		render(
+			<MigrationProvider>
+				<Test transactionToHandle={transactionFixture} />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		userEvent.click(screen.getByTestId("Migrations__get_transaction"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Transaction__selected")).toHaveTextContent(transactionFixture.id());
 		});
 	});
 
