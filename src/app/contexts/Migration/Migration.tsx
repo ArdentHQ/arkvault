@@ -244,6 +244,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		if (newMigrationTransactions.length > 0) {
 			storeTransactions(newMigrationTransactions);
+		} else {
+			setMigrationsLoaded(true);
 		}
 	}, [migrations, latestTransactions, storeTransactions]);
 
