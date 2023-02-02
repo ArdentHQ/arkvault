@@ -67,7 +67,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [loadMigrationsError, setLoadMigrationsError] = useState<Error>();
 	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(false);
 	const { getMigrations, storeMigrations, cacheIsReady } = useMigrationsCache({ profile });
-	const [page, setPage] = useState<number>(0);
+	const [page, setPage] = useState<number>(1);
 	const [isLoadingMore, setIsLoadingMore] = useState<boolean>(false);
 
 	const loadMigrationDetails = useCallback(async () => {
