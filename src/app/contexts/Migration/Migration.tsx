@@ -150,7 +150,15 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const getTransactionStatus = useCallback(
 		async (transaction: MigrationTransaction) => {
-			const contractMigrations = await getContractMigrations([`0x${transaction.id()}`]);
+			let contractMigrations: ARKMigrationViewStructOutput[];
+
+			try {
+				contractMigrations = await getContractMigrations([`0x${transaction.id()}`]);
+				setLoadMigrationsError(undefined);
+			} catch (error) {
+				setLoadMigrationsError(error);
+				return;
+			}
 
 			const contractMigration = contractMigrations.find(
 				(contractMigration: ARKMigrationViewStructOutput) =>

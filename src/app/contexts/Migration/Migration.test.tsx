@@ -336,6 +336,78 @@ describe("Migration Context", () => {
 		setIntervalSpy.mockRestore();
 	});
 
+	it("should reload migrations details if has a migrations with undefined status", async () => {
+		mockTransactions([transactionFixture], {}, [undefined]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(1);
+
+		reloadMigrationsCallback();
+
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(1);
+
+		setIntervalSpy.mockRestore();
+	});
+
+	it("should not reload migrations details if all migrations are confirmed", async () => {
+		mockTransactions([transactionFixture], {}, [MigrationTransactionStatus.Confirmed]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(1);
+
+		reloadMigrationsCallback();
+
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(1);
+
+		setIntervalSpy.mockRestore();
+	});
+
 	it("should update the status of the migrations", async () => {
 		// When loaded first transaction is pending
 		mockTransactions([transactionFixture, secondTransactionFixture], {}, [
@@ -434,6 +506,70 @@ describe("Migration Context", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("Migration__selected")).toHaveTextContent(transactionFixture.id());
 		});
+	});
+
+	it("should handle rpc error when loading initial status", async () => {
+		mockTransactions([transactionFixture]);
+
+		getContractMigrationsSpy.mockImplementation(() => {
+			throw new Error("RPC Error");
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("Migration__load_error")).toBeInTheDocument();
+	});
+
+	it("should handle rpc error when loading migration details", async () => {
+		mockTransactions([transactionFixture]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.queryByTestId("Migration__load_error")).not.toBeInTheDocument();
+
+		getContractMigrationsSpy.mockImplementation(() => {
+			throw new Error("RPC Error");
+		});
+
+		reloadMigrationsCallback();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__load_error")).to.toBeInTheDocument();
+		});
+
+		setIntervalSpy.mockRestore();
 	});
 
 	// it("should load the migration id for newly confirmed migrations", async () => {
