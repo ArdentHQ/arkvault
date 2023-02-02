@@ -289,10 +289,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 			return;
 		}
 
-		if (page === 1) {
-			storeMigrations(migrations);
-		}
-	}, [cacheIsReady, migrations, storeMigrations, getMigrations, page]);
+		storeMigrations(migrations);
+	}, [cacheIsReady, migrations, storeMigrations, getMigrations]);
 
 	useEffect(() => {
 		if (!readyToLoad) {
