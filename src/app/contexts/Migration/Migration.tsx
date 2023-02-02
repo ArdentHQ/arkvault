@@ -90,7 +90,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			setLoadMigrationsError(error);
 		}
 
-		let updatedMigrations = pendingMigrations
+		const updatedMigrations = pendingMigrations
 			.map((migration: Migration): Migration | undefined => {
 				const contractMigration = contractMigrations.find(
 					(contractMigration: ARKMigrationViewStructOutput) =>
@@ -141,9 +141,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 			}
 		}
 
-		updatedMigrations = uniqBy([...updatedMigrations, ...migrations], (migration) => migration.id);
-
-		setMigrations(updatedMigrations);
+		setMigrations((migrations) => uniqBy([...updatedMigrations, ...migrations], (migration) => migration.id));
 	}, [migrations, getContractMigrations]);
 
 	const markMigrationsAsRead = useCallback(
