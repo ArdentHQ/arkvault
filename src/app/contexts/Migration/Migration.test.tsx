@@ -55,9 +55,7 @@ const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransact
 			<ul data-testid="Migrations">
 				{migrations.map((migration) => (
 					<li data-testid="MigrationItem" key={migration.id}>
-						{migration.address}
-
-						{migration.readAt !== undefined}
+						{migration.address}:{migration.status}
 					</li>
 				))}
 			</ul>
@@ -123,7 +121,7 @@ describe("Migration Context", () => {
 	const mockTransactions = (
 		transactions: MigrationTransaction[],
 		useTransactionsOverrides = {},
-		status = [MigrationTransactionStatus.Pending, MigrationTransactionStatus.Completed],
+		status = [MigrationTransactionStatus.Pending, MigrationTransactionStatus.Confirmed],
 	) => {
 		useTransactionsSpy = vi.spyOn(useMigrationTransactionsMock, "useMigrationTransactions").mockReturnValue({
 			...useTransactionsDefault,
@@ -334,6 +332,56 @@ describe("Migration Context", () => {
 		reloadMigrationsCallback();
 
 		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(2);
+
+		setIntervalSpy.mockRestore();
+	});
+
+	it("should update the status of the migrations", async () => {
+		// When loaded first transaction is pending
+		mockTransactions([transactionFixture, secondTransactionFixture], {}, [
+			MigrationTransactionStatus.Pending,
+			MigrationTransactionStatus.Confirmed,
+		]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(`${transactionFixture.sender()}:pending`);
+
+		// Once realoded the first transaction is now confirmed
+		mockTransactions([transactionFixture, secondTransactionFixture], {}, [
+			MigrationTransactionStatus.Confirmed,
+			MigrationTransactionStatus.Confirmed,
+		]);
+
+		reloadMigrationsCallback();
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(
+				`${transactionFixture.sender()}:confirmed`,
+			);
+		});
 
 		setIntervalSpy.mockRestore();
 	});
