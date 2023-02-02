@@ -311,19 +311,16 @@ describe("Migration Context", () => {
 	it("should load the migrations from the cache", async () => {
 		useMigrationsCacheSpy = vi.spyOn(useMigrationsCacheMock, "useMigrationsCache").mockReturnValue({
 			cacheIsReady: true,
-			getMigrations: vi.fn().mockReturnValue({
-				migrations: [
-					{
-						address: transactionFixture.sender(),
-						amount: transactionFixture.amount(),
-						id: transactionFixture.id(),
-						migrationAddress: transactionFixture.memo()!,
-						status: MigrationTransactionStatus.Pending,
-						timestamp: transactionFixture.timestamp()!.toUNIX(),
-					},
-				],
-				page: 1,
-			}),
+			getMigrations: vi.fn().mockReturnValue([
+				{
+					address: transactionFixture.sender(),
+					amount: transactionFixture.amount(),
+					id: transactionFixture.id(),
+					migrationAddress: transactionFixture.memo()!,
+					status: MigrationTransactionStatus.Pending,
+					timestamp: transactionFixture.timestamp()!.toUNIX(),
+				},
+			]),
 			storeMigrations: vi.fn(),
 		});
 
