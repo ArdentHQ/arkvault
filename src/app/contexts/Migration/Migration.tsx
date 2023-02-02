@@ -312,6 +312,14 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const isLoading = useMemo(() => !migrationsLoaded || !readyToLoad, [migrationsLoaded, readyToLoad]);
 
+	useEffect(() => {
+		if (!profile) {
+			setMigrations([]);
+			setMigrationsLoaded(false);
+			setPage(1);
+		}
+	}, [profile]);
+
 	const onLoadMore = useCallback(async () => {
 		if (migrationsLoaded) {
 			setIsLoadingMore(true);
