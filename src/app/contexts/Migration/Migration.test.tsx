@@ -28,6 +28,7 @@ const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransact
 
 	const [selectedMigration, setSelectedMigration] = useState<Migration | undefined>(undefined);
 	const [selectedTransaction, setSelectedTransaction] = useState<MigrationTransaction | undefined>(undefined);
+	const [markedAsRead, setMarkedAsRead] = useState(false);
 
 	const createAndStoreTransaction = async () => {
 		await storeTransactions([transactionToHandle]);
@@ -41,7 +42,8 @@ const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransact
 	};
 
 	const markMigrationAsReadHandler = () => {
-		markMigrationsAsRead([migrations[0]]);
+		markMigrationsAsRead([transactionToHandle.id()]);
+		setMarkedAsRead(true);
 	};
 
 	if (isLoading) {
@@ -65,6 +67,7 @@ const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransact
 				{migrations.map((migration) => (
 					<li data-testid="MigrationItem" key={migration.id}>
 						{migration.address}:{migration.status}
+						{migration.readAt !== undefined && `:read`}
 					</li>
 				))}
 			</ul>
@@ -102,6 +105,7 @@ const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransact
 				</li>
 			</ul>
 
+			{markedAsRead && <span data-testid="Migration__markedasread">Marked as read</span>}
 			{contractIsPaused ? (
 				<span data-testid="Migration__contract_paused">Contract paused</span>
 			) : (
@@ -500,6 +504,56 @@ describe("Migration Context", () => {
 		setIntervalSpy.mockRestore();
 	});
 
+	it("should not update the migrations if status does not change", async () => {
+		// When loaded first transaction is pending
+		mockTransactions([transactionFixture, secondTransactionFixture], {}, [MigrationTransactionStatus.Confirmed]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(`${transactionFixture.sender()}:confirmed`);
+
+		reloadMigrationsCallback();
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(
+				`${transactionFixture.sender()}:confirmed`,
+			);
+		});
+
+		// Reload again not status should change
+		reloadMigrationsCallback();
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(
+				`${transactionFixture.sender()}:confirmed`,
+			);
+		});
+
+		setIntervalSpy.mockRestore();
+	});
+
 	it("should call the method to load more transactions", async () => {
 		const loadMoreTransactionsSpy = vi.fn();
 
@@ -548,6 +602,58 @@ describe("Migration Context", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("Migration__selected")).toHaveTextContent(transactionFixture.id());
 		});
+	});
+
+	it("should mark a migration as read", async () => {
+		mockTransactions([transactionFixture]);
+
+		render(
+			<MigrationProvider>
+				<Test transactionToHandle={transactionFixture} />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		userEvent.click(screen.getByTestId("Migrations__markasread"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__markedasread")).toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(`read`);
+	});
+
+	it("shouldnt mark a migration as read if not exists", async () => {
+		mockTransactions([transactionFixture]);
+
+		render(
+			<MigrationProvider>
+				<Test transactionToHandle={secondTransactionFixture} />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		userEvent.click(screen.getByTestId("Migrations__markasread"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__markedasread")).toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")[0]).not.toHaveTextContent(`read`);
 	});
 
 	it("should resolve a transaction", async () => {
@@ -651,5 +757,37 @@ describe("Migration Context", () => {
 		);
 
 		consoleSpy.mockRestore();
+	});
+
+	it("shouldnt has more while is loading", async () => {
+		const TestLoadMore = () => {
+			const { hasMore, isLoading } = useMigrations();
+
+			return (
+				<div>
+					{hasMore && <span data-testid="Migration__hasmore">Has More</span>}
+					{isLoading && <span data-testid="Migration__loading">Contract Loading...</span>}
+				</div>
+			);
+		};
+
+		mockTransactions([transactionFixture, secondTransactionFixture], {
+			hasMore: true,
+		});
+
+		render(
+			<MigrationProvider>
+				<TestLoadMore />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+		expect(screen.queryByTestId("Migration__hasmore")).not.toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("Migration__hasmore")).toBeInTheDocument();
 	});
 });

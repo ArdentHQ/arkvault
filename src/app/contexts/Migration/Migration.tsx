@@ -99,7 +99,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 							: MigrationTransactionStatus.Confirmed;
 				}
 
-				if (migration.status === status && migration.migrationId) {
+				if (migration.status === status) {
 					return;
 				}
 
