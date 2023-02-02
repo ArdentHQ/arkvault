@@ -1,4 +1,4 @@
-´
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { useMigrationTransactions } from "./use-migration-transactions";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks, waitFor } from "@/utils/testing-library";
@@ -80,7 +80,7 @@ describe("useMigrationTransactions hook", () => {
 		polygonMigrationStartTimeSpy.mockRestore();
 	});
 
-	it("should not load migration wallet transactions if no profile", 	() => {
+	it("should not load migration wallet transactions if no profile", async () => {
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received");
 
 		renderHook(() => useMigrationTransactions({ profile: undefined }));
