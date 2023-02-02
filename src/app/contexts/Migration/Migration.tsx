@@ -2,7 +2,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ethers } from "ethers";
 import { uniqBy, sortBy } from "@ardenthq/sdk-helpers";
-import { useConfiguration } from "../Configuration";
+import { useConfiguration } from "@/app/contexts";
 import { httpClient } from "@/app/services";
 import {
 	ARKMigrationViewStructOutput,
@@ -67,7 +67,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrations, setMigrations] = useState<Migration[]>([]);
 	const [loadMigrationsError, setLoadMigrationsError] = useState<Error>();
 	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(false);
-	const [isLoading, setIsLoading] = useState(true);
 	const { getMigrations, storeMigrations, cacheIsReady } = useMigrationsCache({ profile });
 	const [page, setPage] = useState<number>(0);
 

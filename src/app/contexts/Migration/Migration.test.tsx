@@ -12,6 +12,8 @@ import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
 import * as useContractMock from "@/domains/migration/hooks/use-contract";
 import * as useMigrationTransactionsMock from "@/domains/migration/hooks/use-migration-transactions";
+import * as useMigrationsCacheMock from "@/domains/migration/hooks/use-migrations-cache";
+import * as contextMock from "@/app/contexts";
 
 const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransaction }) => {
 	const {
@@ -120,6 +122,8 @@ let profile: Contracts.IProfile;
 describe("Migration Context", () => {
 	let useContractSpy;
 	let useTransactionsSpy;
+	let useMigrationsCacheSpy;
+	let useConfigurationSpy;
 	const useTransactionsDefault = {
 		hasMore: false,
 		isLoadingMoreTransactions: false,
@@ -241,6 +245,16 @@ describe("Migration Context", () => {
 			.spyOn(useMigrationTransactionsMock, "useMigrationTransactions")
 			.mockReturnValue(useTransactionsDefault);
 
+		useMigrationsCacheSpy = vi.spyOn(useMigrationsCacheMock, "useMigrationsCache").mockReturnValue({
+			cacheIsReady: true,
+			getMigrations: vi.fn().mockReturnValue(undefined),
+			storeMigrations: vi.fn(),
+		});
+
+		useConfigurationSpy = vi.spyOn(contextMock, "useConfiguration").mockReturnValue({
+			profileIsSyncing: false,
+		});
+
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
 
 		polygonIndexerUrlSpy = vi
@@ -260,6 +274,8 @@ describe("Migration Context", () => {
 		isValidMigrationTransactionSpy.mockRestore();
 		useContractSpy.mockRestore();
 		useTransactionsSpy.mockRestore();
+		useMigrationsCacheSpy.mockRestore();
+		useConfigurationSpy.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {
@@ -290,6 +306,44 @@ describe("Migration Context", () => {
 		});
 
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
+	});
+
+	it("should load the migrations from the cache", async () => {
+		useMigrationsCacheSpy = vi.spyOn(useMigrationsCacheMock, "useMigrationsCache").mockReturnValue({
+			cacheIsReady: true,
+			getMigrations: vi.fn().mockReturnValue({
+				migrations: [
+					{
+						address: transactionFixture.sender(),
+						amount: transactionFixture.amount(),
+						id: transactionFixture.id(),
+						migrationAddress: transactionFixture.memo()!,
+						status: MigrationTransactionStatus.Pending,
+						timestamp: transactionFixture.timestamp()!.toUNIX(),
+					},
+				],
+				page: 1,
+			}),
+			storeMigrations: vi.fn(),
+		});
+
+		mockTransactions([transactionFixture, secondTransactionFixture]);
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		// cached transactions
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
+
+		// All transactions loaded
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
 	});
 
 	it("should store a new migration", async () => {
