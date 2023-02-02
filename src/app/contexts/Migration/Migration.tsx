@@ -71,17 +71,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [isLoadingMore, setIsLoadingMore] = useState<boolean>(false);
 
 	useEffect(() => {
-		console.log({ transactionsPage });
 		setPage(transactionsPage);
 	}, [transactionsPage]);
-
-	useEffect(() => {
-		console.log({ page });
-	}, [page]);
-
-	useEffect(() => {
-		console.log({ isLoadingMore });
-	}, [isLoadingMore]);
 
 	const loadMigrationDetails = useCallback(async () => {
 		const pendingMigrations = migrations.filter(
@@ -326,7 +317,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const isLoading = useMemo(() => !migrationsLoaded || !readyToLoad, [migrationsLoaded, readyToLoad]);
 
 	const onLoadMore = useCallback(async () => {
-		console.log({ migrationsLoaded });
 		if (migrationsLoaded) {
 			setIsLoadingMore(true);
 		}
