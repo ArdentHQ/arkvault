@@ -77,7 +77,7 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 
 			{(transactions.length > 0 || migrationTransactions.length > 0) && (
 				<div>
-					<div className="md:space-y-2 ">
+					<div className="md:space-y-2">
 						<div className="hidden text-lg font-semibold text-theme-secondary-500 md:block">
 							{t("COMMON.NOTIFICATIONS.TRANSACTIONS_TITLE")}
 						</div>

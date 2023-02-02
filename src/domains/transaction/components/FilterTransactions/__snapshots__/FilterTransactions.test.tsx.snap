@@ -62,153 +62,157 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
         </button>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl md:w-80 md:max-h-128 md:overflow-y-auto md:w-auto mx-4 sm:w-full sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl md:w-80 md:max-h-128 md:overflow-y-auto md:w-auto mx-4 sm:w-full sm:mx-0 css-yq8tnb"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
         <div
-          class="py-1"
+          class="py-3"
         >
           <div
-            class=""
-          >
-            <ul>
-              <ul
-                data-testid="dropdown__options"
-              >
-                <li
-                  class="css-x2cq94"
-                  data-testid="dropdown__option--all-0"
-                  tabindex="0"
-                >
-                  <span>
-                    All
-                  </span>
-                </li>
-              </ul>
-            </ul>
-          </div>
-          <div
-            class="mt-4"
+            class="py-1"
           >
             <div
-              class="mx-8 -my-2"
+              class=""
             >
-              <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"
-                type="horizontal"
-              />
-            </div>
-            <ul>
-              <li
-                class="block whitespace-nowrap px-8 text-left text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-600"
-              >
-                CORE
-              </li>
-              <ul
-                data-testid="dropdown__options"
-              >
-                <li
-                  class="css-x2cq94"
-                  data-testid="dropdown__option--core-0"
-                  tabindex="0"
+              <ul>
+                <ul
+                  data-testid="dropdown__options"
                 >
-                  <span>
-                    Delegate Registration
-                  </span>
-                </li>
-                <li
-                  class="css-x2cq94"
-                  data-testid="dropdown__option--core-1"
-                  tabindex="0"
-                >
-                  <span>
-                    Delegate Resignation
-                  </span>
-                </li>
-                <li
-                  class="css-x2cq94"
-                  data-testid="dropdown__option--core-2"
-                  tabindex="0"
-                >
-                  <span>
-                    IPFS
-                  </span>
-                </li>
-                <li
-                  class="css-x2cq94"
-                  data-testid="dropdown__option--core-3"
-                  tabindex="0"
-                >
-                  <span>
-                    Multipayment
-                  </span>
-                </li>
-                <li
-                  class="css-x2cq94"
-                  data-testid="dropdown__option--core-4"
-                  tabindex="0"
-                >
-                  <span>
-                    Multisignature
-                  </span>
-                </li>
-                <li
-                  class="css-x2cq94"
-                  data-testid="dropdown__option--core-5"
-                  tabindex="0"
-                >
-                  <span>
-                    Second Signature
-                  </span>
-                </li>
-                <li
-                  class="css-x2cq94"
-                  data-testid="dropdown__option--core-6"
-                  tabindex="0"
-                >
-                  <span>
-                    Transfer
-                  </span>
-                </li>
-                <li
-                  class="css-x2cq94"
-                  data-testid="dropdown__option--core-7"
-                  tabindex="0"
-                >
-                  <span>
-                    Vote
-                  </span>
-                </li>
+                  <li
+                    class="css-x2cq94"
+                    data-testid="dropdown__option--all-0"
+                    tabindex="0"
+                  >
+                    <span>
+                      All
+                    </span>
+                  </li>
+                </ul>
               </ul>
-            </ul>
-          </div>
-          <div
-            class="mt-4"
-          >
+            </div>
             <div
-              class="mx-8 -my-2"
+              class="mt-4"
             >
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"
-                type="horizontal"
-              />
-            </div>
-            <ul>
-              <ul
-                data-testid="dropdown__options"
+                class="mx-8 -my-2"
               >
+                <div
+                  class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"
+                  type="horizontal"
+                />
+              </div>
+              <ul>
                 <li
-                  class="css-x2cq94"
-                  data-testid="dropdown__option--magistrate-0"
-                  tabindex="0"
+                  class="block whitespace-nowrap px-8 text-left text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-600"
                 >
-                  <span>
-                    Magistrate
-                  </span>
+                  CORE
                 </li>
+                <ul
+                  data-testid="dropdown__options"
+                >
+                  <li
+                    class="css-x2cq94"
+                    data-testid="dropdown__option--core-0"
+                    tabindex="0"
+                  >
+                    <span>
+                      Delegate Registration
+                    </span>
+                  </li>
+                  <li
+                    class="css-x2cq94"
+                    data-testid="dropdown__option--core-1"
+                    tabindex="0"
+                  >
+                    <span>
+                      Delegate Resignation
+                    </span>
+                  </li>
+                  <li
+                    class="css-x2cq94"
+                    data-testid="dropdown__option--core-2"
+                    tabindex="0"
+                  >
+                    <span>
+                      IPFS
+                    </span>
+                  </li>
+                  <li
+                    class="css-x2cq94"
+                    data-testid="dropdown__option--core-3"
+                    tabindex="0"
+                  >
+                    <span>
+                      Multipayment
+                    </span>
+                  </li>
+                  <li
+                    class="css-x2cq94"
+                    data-testid="dropdown__option--core-4"
+                    tabindex="0"
+                  >
+                    <span>
+                      Multisignature
+                    </span>
+                  </li>
+                  <li
+                    class="css-x2cq94"
+                    data-testid="dropdown__option--core-5"
+                    tabindex="0"
+                  >
+                    <span>
+                      Second Signature
+                    </span>
+                  </li>
+                  <li
+                    class="css-x2cq94"
+                    data-testid="dropdown__option--core-6"
+                    tabindex="0"
+                  >
+                    <span>
+                      Transfer
+                    </span>
+                  </li>
+                  <li
+                    class="css-x2cq94"
+                    data-testid="dropdown__option--core-7"
+                    tabindex="0"
+                  >
+                    <span>
+                      Vote
+                    </span>
+                  </li>
+                </ul>
               </ul>
-            </ul>
+            </div>
+            <div
+              class="mt-4"
+            >
+              <div
+                class="mx-8 -my-2"
+              >
+                <div
+                  class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"
+                  type="horizontal"
+                />
+              </div>
+              <ul>
+                <ul
+                  data-testid="dropdown__options"
+                >
+                  <li
+                    class="css-x2cq94"
+                    data-testid="dropdown__option--magistrate-0"
+                    tabindex="0"
+                  >
+                    <span>
+                      Magistrate
+                    </span>
+                  </li>
+                </ul>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

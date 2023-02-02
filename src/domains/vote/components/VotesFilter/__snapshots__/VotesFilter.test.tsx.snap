@@ -106,13 +106,13 @@ exports[`VotesFilter > should render default 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
         <div>
           <div
-            class="flex w-56 flex-col items-start space-y-5 py-7 px-10 text-theme-secondary-700 dark:text-theme-secondary-200"
+            class="flex w-56 flex-col items-start space-y-5 p-10 text-theme-secondary-700 dark:text-theme-secondary-200"
           >
             <label
               class="flex h-5 cursor-pointer items-center space-x-3 rounded-md"
@@ -213,13 +213,13 @@ exports[`VotesFilter > should render with current option selected 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
         <div>
           <div
-            class="flex w-56 flex-col items-start space-y-5 py-7 px-10 text-theme-secondary-700 dark:text-theme-secondary-200"
+            class="flex w-56 flex-col items-start space-y-5 p-10 text-theme-secondary-700 dark:text-theme-secondary-200"
           >
             <label
               class="flex h-5 cursor-pointer items-center space-x-3 rounded-md"
@@ -313,13 +313,13 @@ exports[`VotesFilter > should render with disabled current option 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
         <div>
           <div
-            class="flex w-56 flex-col items-start space-y-5 py-7 px-10 text-theme-secondary-700 dark:text-theme-secondary-200"
+            class="flex w-56 flex-col items-start space-y-5 p-10 text-theme-secondary-700 dark:text-theme-secondary-200"
           >
             <label
               class="flex h-5 cursor-pointer items-center space-x-3 rounded-md"

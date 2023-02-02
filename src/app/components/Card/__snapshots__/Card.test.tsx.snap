@@ -96,23 +96,27 @@ exports[`Card > should render with custom options 1`] = `
             </div>
           </span>
           <div
-            class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13dpsn2"
+            class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13dpsn2"
             data-testid="dropdown__content"
             style="opacity: 1; height: -30px; overflow-y: scroll;"
           >
-            <ul
-              data-testid="dropdown__options"
+            <div
+              class="py-3"
             >
-              <li
-                class="css-x2cq94"
-                data-testid="dropdown__option--0"
-                tabindex="0"
+              <ul
+                data-testid="dropdown__options"
               >
-                <span>
-                  Action 1
-                </span>
-              </li>
-            </ul>
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--0"
+                  tabindex="0"
+                >
+                  <span>
+                    Action 1
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
