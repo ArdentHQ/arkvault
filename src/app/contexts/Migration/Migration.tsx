@@ -320,9 +320,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 	const paginatedMigrations = useMemo(() => migrations.slice(0, page * limit), [migrations, page, limit]);
 
-	useEffect(() => {
-		setIsLoading(!migrationsLoaded || !readyToLoad);
-	}, [migrationsLoaded, readyToLoad]);
+	const isLoading = useMemo(() => !migrationsLoaded || !readyToLoad, [migrationsLoaded, readyToLoad]);
 
 	return (
 		<MigrationContext.Provider
