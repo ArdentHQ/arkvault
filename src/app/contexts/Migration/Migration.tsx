@@ -2,6 +2,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ethers } from "ethers";
 import { uniqBy, sortBy } from "@ardenthq/sdk-helpers";
+import { useConfiguration } from "../Configuration";
 import { httpClient } from "@/app/services";
 import {
 	ARKMigrationViewStructOutput,
@@ -11,10 +12,9 @@ import {
 } from "@/domains/migration/migration.contracts";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
 import { polygonIndexerUrl, isValidMigrationTransaction } from "@/utils/polygon-migration";
-
 import { useContract } from "@/domains/migration/hooks/use-contract";
 import { useMigrationTransactions } from "@/domains/migration/hooks/use-migration-transactions";
-
+import { useMigrationsCache } from "@/domains/migration/hooks/use-migrations-cache";
 interface MigrationContextType {
 	contractIsPaused?: boolean;
 	migrations: Migration[];
@@ -52,13 +52,14 @@ const fetchPolygonMigrations = async (arkTxHashes: string[]) => {
 
 export const MigrationProvider = ({ children }: Properties) => {
 	const profile = useProfileWatcher();
+	const { profileIsSyncing } = useConfiguration();
 	const { contract, contractIsPaused, getContractMigrations } = useContract();
 	const {
 		latestTransactions,
 		isLoadingMoreTransactions,
 		loadMigrationWalletTransactions,
 		removeTransactions,
-		page,
+		page: transactionsPage,
 		hasMore,
 		limit,
 	} = useMigrationTransactions({ profile });
@@ -66,6 +67,13 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrations, setMigrations] = useState<Migration[]>([]);
 	const [loadMigrationsError, setLoadMigrationsError] = useState<Error>();
 	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(false);
+	const [isLoading, setIsLoading] = useState(true);
+	const { getMigrations, storeMigrations, cacheIsReady } = useMigrationsCache({ profile });
+	const [page, setPage] = useState<number>(0);
+
+	useEffect(() => {
+		setPage(transactionsPage);
+	}, [transactionsPage]);
 
 	const loadMigrationDetails = useCallback(async () => {
 		const pendingMigrations = migrations.filter(
@@ -140,8 +148,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 		[latestTransactions],
 	);
 
-	const paginatedMigrations = useMemo(() => migrations.slice(0, page * limit), [migrations, page, limit]);
-
 	const getMigrationById = useCallback(
 		(id: string) => migrations.find((migration) => migration.id === id),
 		[migrations],
@@ -199,6 +205,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 				setMigrations((migrations) => [...migrations, ...newMigrations]);
 			}
 
+			console.log("set migrations loaded somewhere");
 			setMigrationsLoaded(true);
 		},
 		[getTransactionStatus],
@@ -220,7 +227,10 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 	}, [migrations, latestTransactions, storeTransactions]);
 
-	const readyToLoad = useMemo(() => contract !== undefined && profile !== undefined, [contract, profile]);
+	const readyToLoad = useMemo(
+		() => contract !== undefined && profile !== undefined && cacheIsReady && !profileIsSyncing,
+		[contract, profile, cacheIsReady, profileIsSyncing],
+	);
 
 	useEffect(() => {
 		let reloadInterval: ReturnType<typeof setInterval>;
@@ -248,7 +258,51 @@ export const MigrationProvider = ({ children }: Properties) => {
 		return () => clearInterval(reloadInterval);
 	}, [readyToLoad, loadMigrationDetails, loadMigrationsError]);
 
-	const isLoading = useMemo<boolean>(() => !migrationsLoaded, [migrationsLoaded]);
+	useEffect(() => {
+		if (!readyToLoad) {
+			return;
+		}
+
+		const cachedMigrations = getMigrations();
+
+		if (
+			cachedMigrations !== undefined &&
+			JSON.stringify(migrations) === JSON.stringify(cachedMigrations.migrations) &&
+			page === cachedMigrations.page
+		) {
+			console.log("Equal");
+			return;
+		}
+
+		if (page === 0) {
+			console.log("page not loaded yet");
+			return;
+		}
+
+		storeMigrations(migrations, page);
+	}, [cacheIsReady, migrations, storeMigrations, getMigrations, page]);
+
+	useEffect(() => {
+		if (!readyToLoad) {
+			return;
+		}
+
+		const cachedMigrations = getMigrations();
+
+		if (cachedMigrations !== undefined) {
+			setPage(cachedMigrations.page);
+
+			setMigrations(cachedMigrations.migrations);
+
+			setMigrationsLoaded(true);
+		}
+	}, [readyToLoad, getMigrations]);
+
+	const paginatedMigrations = useMemo(() => migrations.slice(0, page * limit), [migrations, page, limit]);
+
+	useEffect(() => {
+		setIsLoading(!migrationsLoaded || !readyToLoad);
+	}, [migrationsLoaded, readyToLoad]);
 
 	return (
 		<MigrationContext.Provider
