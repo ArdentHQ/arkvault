@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
-import { MigrationRepository, MigrationsPage } from "@/repositories/migration.repository";
+import { MigrationRepository } from "@/repositories/migration.repository";
 import { Migration } from "@/domains/migration/migration.contracts";
 
 export const useMigrationsCache = ({ profile }) => {
@@ -18,15 +18,15 @@ export const useMigrationsCache = ({ profile }) => {
 	}, [profile, env]);
 
 	const storeMigrations = useCallback(
-		async (migrations: Migration[], page: number) => {
-			repository!.set(migrations, page);
+		async (migrations: Migration[]) => {
+			repository!.set(migrations);
 
 			await persist();
 		},
 		[repository, persist],
 	);
 
-	const getMigrations = useCallback((): MigrationsPage | undefined => repository!.get(), [repository]);
+	const getMigrations = useCallback((): Migration[] | undefined => repository!.get(), [repository]);
 
 	const cacheIsReady = useMemo(() => !!repository, [repository]);
 

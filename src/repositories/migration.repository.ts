@@ -3,12 +3,7 @@ import { Migration } from "@/domains/migration/migration.contracts";
 
 const STORAGE_KEY = "ark-migrations-cache";
 
-export interface MigrationsPage {
-	migrations: Migration[];
-	page: number;
-}
-
-type MigrationMap = Record<string, MigrationsPage>;
+type MigrationMap = Record<string, Migration[]>;
 
 export class MigrationRepository {
 	readonly #profile: Contracts.IProfile;
@@ -19,19 +14,16 @@ export class MigrationRepository {
 		this.#data = data;
 	}
 
-	public get(): MigrationsPage | undefined {
+	public get(): Migration[] | undefined {
 		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
 
 		return all[this.#profile.id()];
 	}
 
-	public set(migrations: Migration[], page: number): void {
+	public set(migrations: Migration[]): void {
 		const all = this.#data.get(STORAGE_KEY, {}) as MigrationMap;
 
-		all[this.#profile.id()] = {
-			migrations,
-			page,
-		};
+		all[this.#profile.id()] = migrations;
 
 		this.#data.set(STORAGE_KEY, all);
 	}

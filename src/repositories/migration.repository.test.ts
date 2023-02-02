@@ -23,13 +23,14 @@ describe("MigrationRepository", () => {
 		const repository = new MigrationRepository(profile, env.data());
 		const repository2 = new MigrationRepository(profile2, env.data());
 
-		repository.set([{ id: "1" }, { id: "2" }], 2);
+		repository.set([{ id: "1" }, { id: "2" }]);
 
 		const data = repository.get();
+
 		const data2 = repository2.get();
 
-		expect(data.migrations).toHaveLength(2);
-		expect(data.page).toBe(2);
+		expect(data).toHaveLength(2);
+
 		expect(data2).toBeUndefined();
 	});
 });

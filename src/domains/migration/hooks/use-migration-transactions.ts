@@ -78,14 +78,10 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	const [transactionsLoaded, setTransactionsLoaded] = useState<boolean>(false);
 	const [toLoadTransactions, setToLoadTransactions] = useState<boolean>(false);
 	const [isLoading, setisLoading] = useState(true);
-	const [isLoadingMoreTransactions, setIsLoadingMoreTransactions] = useState(false);
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 
 	const loadMigrationWalletTransactions = useCallback(async () => {
 		setisLoading(true);
-		if (transactionsLoaded) {
-			setIsLoadingMoreTransactions(true);
-		}
 
 		const { items, hasMore, cursor } = await fetchMigrationTransactions({
 			limit: PAGINATION_LIMIT,
@@ -93,10 +89,11 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			profile: profile!,
 		});
 
+		console.log({ cursor, hasMore, items });
+
 		setLatestTransactions((existingItems) => [...existingItems, ...items]);
 		setHasMore(hasMore);
 		setPage(cursor);
-		setIsLoadingMoreTransactions(false);
 		setTransactionsLoaded(true);
 		setisLoading(false);
 	}, [profile, page, hasMore, transactionsLoaded]);
@@ -120,7 +117,6 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 			setTransactionsLoaded(false);
 			setPage(0);
 			setisLoading(true);
-			setIsLoadingMoreTransactions(false);
 			setHasMore(false);
 			setLatestTransactions([]);
 		} else {
@@ -131,7 +127,6 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	return {
 		hasMore,
 		isLoading,
-		isLoadingMoreTransactions,
 		latestTransactions,
 		limit: PAGINATION_LIMIT,
 		loadMigrationWalletTransactions,

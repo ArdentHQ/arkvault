@@ -56,7 +56,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const { contract, contractIsPaused, getContractMigrations } = useContract();
 	const {
 		latestTransactions,
-		isLoadingMoreTransactions,
 		loadMigrationWalletTransactions,
 		removeTransactions,
 		page: transactionsPage,
@@ -69,10 +68,20 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(false);
 	const { getMigrations, storeMigrations, cacheIsReady } = useMigrationsCache({ profile });
 	const [page, setPage] = useState<number>(0);
+	const [isLoadingMore, setIsLoadingMore] = useState<boolean>(false);
 
 	useEffect(() => {
+		console.log({ transactionsPage });
 		setPage(transactionsPage);
 	}, [transactionsPage]);
+
+	useEffect(() => {
+		console.log({ page });
+	}, [page]);
+
+	useEffect(() => {
+		console.log({ isLoadingMore });
+	}, [isLoadingMore]);
 
 	const loadMigrationDetails = useCallback(async () => {
 		const pendingMigrations = migrations.filter(
@@ -287,19 +296,13 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		const cachedMigrations = getMigrations();
 
-		if (
-			cachedMigrations !== undefined &&
-			JSON.stringify(migrations) === JSON.stringify(cachedMigrations.migrations) &&
-			page === cachedMigrations.page
-		) {
+		if (cachedMigrations !== undefined && JSON.stringify(migrations) === JSON.stringify(cachedMigrations)) {
 			return;
 		}
 
-		if (page === 0) {
-			return;
+		if (page === 1) {
+			storeMigrations(migrations);
 		}
-
-		storeMigrations(migrations, page);
 	}, [cacheIsReady, migrations, storeMigrations, getMigrations, page]);
 
 	useEffect(() => {
@@ -310,9 +313,9 @@ export const MigrationProvider = ({ children }: Properties) => {
 		const cachedMigrations = getMigrations();
 
 		if (cachedMigrations !== undefined) {
-			setPage(cachedMigrations.page);
+			setMigrations(cachedMigrations);
 
-			setMigrations(cachedMigrations.migrations);
+			setPage(1);
 
 			setMigrationsLoaded(true);
 		}
@@ -321,6 +324,19 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const paginatedMigrations = useMemo(() => migrations.slice(0, page * limit), [migrations, page, limit]);
 
 	const isLoading = useMemo(() => !migrationsLoaded || !readyToLoad, [migrationsLoaded, readyToLoad]);
+
+	const onLoadMore = useCallback(async () => {
+		console.log({ migrationsLoaded });
+		if (migrationsLoaded) {
+			setIsLoadingMore(true);
+		}
+
+		await loadMigrationWalletTransactions();
+
+		if (migrationsLoaded) {
+			setIsLoadingMore(false);
+		}
+	}, [loadMigrationWalletTransactions, migrationsLoaded]);
 
 	return (
 		<MigrationContext.Provider
@@ -331,11 +347,11 @@ export const MigrationProvider = ({ children }: Properties) => {
 					getTransactionStatus,
 					hasMore: hasMore && !isLoading,
 					isLoading,
-					isLoadingMore: isLoadingMoreTransactions,
+					isLoadingMore,
 					loadMigrationsError,
 					markMigrationsAsRead,
 					migrations: sortedMigrations,
-					onLoadMore: () => loadMigrationWalletTransactions(),
+					onLoadMore,
 					page,
 					paginatedMigrations,
 					removeTransactions,
