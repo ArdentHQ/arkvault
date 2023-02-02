@@ -13,25 +13,12 @@ import { server, requestMock } from "@/tests/mocks/server";
 import * as useContractMock from "@/domains/migration/hooks/use-contract";
 import * as useMigrationTransactionsMock from "@/domains/migration/hooks/use-migration-transactions";
 
-const Test = ({ transactionToStore }: { transactionToStore?: MigrationTransaction }) => {
-	const {
-		isLoading,
-		migrations,
-		storeTransactions,
-		removeTransactions,
-		contractIsPaused,
-		markMigrationsAsRead,
-		loadMigrationsError,
-	} = useMigrations();
+const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransaction }) => {
+	const { isLoading, migrations, storeTransactions, contractIsPaused, markMigrationsAsRead, loadMigrationsError } =
+		useMigrations();
 
 	const createAndStoreTransaction = async () => {
-		await storeTransactions([transactionToStore]);
-	};
-
-	const removeTransaction = () => {
-		if (migrations) {
-			removeTransactions(migrations[0].address);
-		}
+		await storeTransactions([transactionToHandle]);
 	};
 
 	const markMigrationAsReadHandler = () => {
@@ -66,12 +53,6 @@ const Test = ({ transactionToStore }: { transactionToStore?: MigrationTransactio
 						onClick={async () => await createAndStoreTransaction()}
 					>
 						Add
-					</button>
-				</li>
-
-				<li>
-					<button data-testid="Migrations__remove" type="button" onClick={removeTransaction}>
-						Remove
 					</button>
 				</li>
 
@@ -273,7 +254,7 @@ describe("Migration Context", () => {
 
 		render(
 			<MigrationProvider>
-				<Test transactionToStore={secondTransactionFixture} />
+				<Test transactionToHandle={secondTransactionFixture} />
 			</MigrationProvider>,
 		);
 
@@ -294,12 +275,24 @@ describe("Migration Context", () => {
 		});
 	});
 
-	it("should not store a new migration if already exist", async () => {
-		mockTransactions([transactionFixture, secondTransactionFixture], {}, []);
+	it("should reload migrations details if has pending migrations", async () => {
+		mockTransactions([transactionFixture]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
 
 		render(
 			<MigrationProvider>
-				<Test transactionToStore={secondTransactionFixture} />
+				<Test />
 			</MigrationProvider>,
 		);
 
@@ -309,13 +302,13 @@ describe("Migration Context", () => {
 			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 		});
 
-		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(1);
 
-		userEvent.click(screen.getByTestId("Migrations__store"));
+		reloadMigrationsCallback();
 
-		await waitFor(() => {
-			expect(screen.queryAllByTestId("MigrationItem")).toHaveLength(2);
-		});
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(2);
+
+		setIntervalSpy.mockRestore();
 	});
 
 	// it("should load the migration id for newly confirmed migrations", async () => {
@@ -511,55 +504,6 @@ describe("Migration Context", () => {
 	// 	expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
 	// 	expect(screen.queryByTestId("Migration__contract_not_paused")).not.toBeInTheDocument();
 	// 	expect(screen.queryByTestId("Migration__contract_paused")).not.toBeInTheDocument();
-
-	// 	ethersMock.mockRestore();
-	// });
-
-	// it("should add and remove a transaction", async () => {
-	// 	profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
-
-	// 	const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => [
-	// 		{
-	// 			amount: 123,
-	// 			arkTxHash: `0xabc123`,
-	// 			memo: "0xabc",
-	// 		},
-	// 	]);
-
-	// 	const ethersMock = Contract.mockImplementation(() => ({
-	// 		getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
-	// 		paused: () => false,
-	// 	}));
-
-	// 	render(
-	// 		<Route path="/profiles/:profileId/migration">
-	// 			<MigrationProvider>
-	// 				<Test />
-	// 			</MigrationProvider>
-	// 			,
-	// 		</Route>,
-	// 		{
-	// 			route: `/profiles/${profile.id()}/migration`,
-	// 		},
-	// 	);
-
-	// 	await waitFor(() => {
-	// 		expect(screen.getByTestId("Migrations__store")).toBeInTheDocument();
-	// 	});
-
-	// 	expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
-
-	// 	userEvent.click(screen.getByTestId("Migrations__store"));
-
-	// 	await waitFor(() => {
-	// 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
-	// 	});
-
-	// 	userEvent.click(screen.getByTestId("Migrations__remove"));
-
-	// 	await waitFor(() => {
-	// 		expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
-	// 	});
 
 	// 	ethersMock.mockRestore();
 	// });
@@ -772,20 +716,20 @@ describe("Migration Context", () => {
 	// 	clearStoredMigrationsMock();
 	// });
 
-	// it("should throw without provider", () => {
-	// 	const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+	it("should throw without provider", () => {
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
-	// 	const Test = () => {
-	// 		useMigrations();
-	// 		return <p>Content</p>;
-	// 	};
+		const Test = () => {
+			useMigrations();
+			return <p>Content</p>;
+		};
 
-	// 	expect(() => render(<Test />, { withProviders: false })).toThrow(
-	// 		"[useMigrations] Component not wrapped within a Provider",
-	// 	);
+		expect(() => render(<Test />, { withProviders: false })).toThrow(
+			"[useMigrations] Component not wrapped within a Provider",
+		);
 
-	// 	consoleSpy.mockRestore();
-	// });
+		consoleSpy.mockRestore();
+	});
 
 	// it("should not load migrations if profile is undefined", () => {
 	// 	profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(undefined);

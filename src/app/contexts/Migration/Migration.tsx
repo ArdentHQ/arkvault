@@ -58,10 +58,12 @@ export const MigrationProvider = ({ children }: Properties) => {
 		isLoadingMoreTransactions,
 		transactionsLoaded,
 		loadMigrationWalletTransactions,
+		removeTransactions,
 		page,
 		hasMore,
 		limit,
 	} = useMigrationTransactions({ profile });
+
 	const [migrations, setMigrations] = useState<Migration[]>([]);
 	const [loadMigrationsError, setLoadMigrationsError] = useState<Error>();
 	const [migrationsLoaded, setMigrationsLoaded] = useState<boolean>(false);
@@ -113,10 +115,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 
 		setMigrations(updatedMigrations);
 	}, [migrations, getContractMigrations]);
-
-	const removeTransactions = (address: string) => {
-		setMigrations((migrations) => migrations.filter((migration) => migration.address !== address));
-	};
 
 	const markMigrationsAsRead = useCallback(
 		(ids: string[]) => {
@@ -194,9 +192,6 @@ export const MigrationProvider = ({ children }: Properties) => {
 				setMigrations((migrations) => [...migrations, ...newMigrations]);
 			}
 
-			// Setting the following values because we want to hide the loading
-			// indicator until we have loaded all the migration details for the
-			// transactions.
 			setMigrationsLoaded(true);
 		},
 		[getTransactionStatus],

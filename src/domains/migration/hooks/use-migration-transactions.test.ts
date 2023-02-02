@@ -149,4 +149,28 @@ describe("useMigrationTransactions hook", () => {
 
 		spyMigrationWallets.mockRestore();
 	});
+
+	it("removes the transactions for a wallet", async () => {
+		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
+			Promise.resolve({
+				currentPage: () => 1,
+				hasMorePages: () => false,
+				items: () => [transactionFixture, secondTransactionFixture],
+			} as any),
+		);
+
+		const { result } = renderHook(() => useMigrationTransactions({ profile }));
+
+		expect(result.current.latestTransactions).toHaveLength(0);
+
+		await waitFor(() => {
+			expect(result.current.latestTransactions).toHaveLength(2);
+		});
+
+		result.current.removeTransactions(wallet.address());
+
+		expect(result.current.latestTransactions).toHaveLength(0);
+
+		mockTransactions.mockRestore();
+	});
 });

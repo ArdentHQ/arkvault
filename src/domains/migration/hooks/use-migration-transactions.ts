@@ -101,6 +101,12 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		setisLoading(false);
 	}, [profile, page, hasMore, transactionsLoaded]);
 
+	const removeTransactions = (walletAddress: string) => {
+		setLatestTransactions((transactions) =>
+			transactions.filter((transaction) => transaction.wallet().address() !== walletAddress),
+		);
+	};
+
 	useEffect(() => {
 		if (toLoadTransactions) {
 			setToLoadTransactions(false);
@@ -130,6 +136,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		limit: PAGINATION_LIMIT,
 		loadMigrationWalletTransactions,
 		page,
+		removeTransactions,
 		transactionsLoaded,
 	};
 };
