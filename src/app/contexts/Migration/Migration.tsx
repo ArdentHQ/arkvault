@@ -70,8 +70,18 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [isLoadingMore, setIsLoadingMore] = useState<boolean>(false);
 
 	useEffect(() => {
+		// If no loading transactions and we have not transactions we can
+		// reset the migrations to an empty array.
 		if (!isLoadingTransactions && latestTransactions.length === 0) {
+			setMigrations([]);
 			setMigrationsLoaded(true);
+		}
+
+		// If we are loading transactions and we have no migrations we can
+		// reset the state as loading migrations.
+		if (isLoadingTransactions && migrations.length === 0) {
+			setMigrationsLoaded(false);
+			setPage(1);
 		}
 	}, [isLoadingTransactions, latestTransactions]);
 
