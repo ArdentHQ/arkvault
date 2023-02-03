@@ -126,6 +126,7 @@ describe("Migration Context", () => {
 	let useConfigurationSpy;
 	const useTransactionsDefault = {
 		hasMore: false,
+		isLoading: false,
 		isLoadingMoreTransactions: false,
 		latestTransactions: [],
 		limit: 11,
@@ -340,6 +341,22 @@ describe("Migration Context", () => {
 		// All transactions loaded
 		await waitFor(() => {
 			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
+	});
+
+	it("should reset initial migration loading state when is loading transactions and have no migrations", async () => {
+		mockTransactions([], {
+			isLoading: true,
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 		});
 	});
 

@@ -9,8 +9,8 @@ type Properties = {
 } & React.HTMLProps<any>;
 
 export const MigrationTransactionsRowSkeleton = ({ isCompact }: Properties) => {
-	const senderWidth = useRandomNumber(120, 150);
-	const recipientWidth = useRandomNumber(120, 150);
+	const senderWidth = useRandomNumber(80, 100);
+	const recipientWidth = useRandomNumber(80, 100);
 	const amountWidth = useRandomNumber(100, 130);
 	const currencyWidth = Math.floor(amountWidth * 0.75);
 

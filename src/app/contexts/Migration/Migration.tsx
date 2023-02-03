@@ -2,7 +2,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ethers } from "ethers";
 import { uniqBy, sortBy } from "@ardenthq/sdk-helpers";
-import { useConfiguration } from "@/app/contexts";
 import { httpClient } from "@/app/services";
 import {
 	ARKMigrationViewStructOutput,
@@ -52,7 +51,6 @@ const fetchPolygonMigrations = async (arkTxHashes: string[]) => {
 
 export const MigrationProvider = ({ children }: Properties) => {
 	const profile = useProfileWatcher();
-	const { profileIsSyncing } = useConfiguration();
 	const { contract, contractIsPaused, getContractMigrations } = useContract();
 	const {
 		isLoading: isLoadingTransactions,
@@ -72,8 +70,18 @@ export const MigrationProvider = ({ children }: Properties) => {
 	const [isLoadingMore, setIsLoadingMore] = useState<boolean>(false);
 
 	useEffect(() => {
+		// If no loading transactions and we have not transactions we can
+		// reset the migrations to an empty array.
 		if (!isLoadingTransactions && latestTransactions.length === 0) {
+			setMigrations([]);
 			setMigrationsLoaded(true);
+		}
+
+		// If we are loading transactions and we have no migrations we can
+		// reset the state as loading migrations.
+		if (isLoadingTransactions && migrations.length === 0) {
+			setMigrationsLoaded(false);
+			setPage(1);
 		}
 	}, [isLoadingTransactions, latestTransactions]);
 
@@ -255,8 +263,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, [migrations, latestTransactions, storeTransactions]);
 
 	const readyToLoad = useMemo(
-		() => contract !== undefined && profile !== undefined && cacheIsReady && !profileIsSyncing,
-		[contract, profile, cacheIsReady, profileIsSyncing],
+		() => contract !== undefined && profile !== undefined && cacheIsReady,
+		[contract, profile, cacheIsReady],
 	);
 
 	useEffect(() => {
@@ -286,7 +294,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, [readyToLoad, loadMigrationDetails, loadMigrationsError]);
 
 	useEffect(() => {
-		if (!readyToLoad) {
+		if (!readyToLoad || isLoadingTransactions) {
 			return;
 		}
 
@@ -297,7 +305,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		storeMigrations(migrations);
-	}, [cacheIsReady, migrations, storeMigrations, getMigrations]);
+	}, [cacheIsReady, migrations, storeMigrations, getMigrations, isLoadingTransactions]);
 
 	useEffect(() => {
 		if (!readyToLoad) {
