@@ -284,7 +284,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, [readyToLoad, loadMigrationDetails, loadMigrationsError]);
 
 	useEffect(() => {
-		if (!readyToLoad) {
+		if (!readyToLoad || isLoadingTransactions) {
 			return;
 		}
 
@@ -295,7 +295,7 @@ export const MigrationProvider = ({ children }: Properties) => {
 		}
 
 		storeMigrations(migrations);
-	}, [cacheIsReady, migrations, storeMigrations, getMigrations]);
+	}, [cacheIsReady, migrations, storeMigrations, getMigrations, isLoadingTransactions]);
 
 	useEffect(() => {
 		if (!readyToLoad) {
