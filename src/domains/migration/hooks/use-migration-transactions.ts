@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import {
@@ -8,16 +8,18 @@ import {
 	migrationWalletAddress,
 	polygonMigrationStartTime,
 } from "@/utils/polygon-migration";
-
+import { useConfiguration } from "@/app/contexts";
 const PAGINATION_LIMIT = 11;
 
 export const fetchMigrationTransactions = async ({
 	profile,
+	profileWallets,
 	page,
 	limit,
 }: {
 	page: number;
 	profile: Contracts.IProfile;
+	profileWallets: Contracts.IReadWriteWallet[];
 	limit?: number;
 }) => {
 	const wallet = await profile.walletFactory().fromAddress({
@@ -26,11 +28,7 @@ export const fetchMigrationTransactions = async ({
 		network: migrationNetwork(),
 	});
 
-	const senderIds = profile
-		.wallets()
-		.values()
-		.filter((wallet) => wallet.networkId() === migrationNetwork())
-		.map((wallet) => wallet.address());
+	const senderIds = profileWallets.map((wallet) => wallet.address());
 
 	if (senderIds.length === 0) {
 		return {
@@ -73,28 +71,43 @@ export const fetchMigrationTransactions = async ({
 };
 
 export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile | undefined }) => {
+	const { profileIsSyncing } = useConfiguration();
 	const [hasMore, setHasMore] = useState(false);
 	const [page, setPage] = useState(0);
 	const [transactionsLoaded, setTransactionsLoaded] = useState<boolean>(false);
 	const [toLoadTransactions, setToLoadTransactions] = useState<boolean>(false);
-	const [isLoading, setisLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(true);
 	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 
+	const walletsCount = profile?.wallets().count();
+
+	const profileWallets = useMemo(() => {
+		if (profileIsSyncing || !profile) {
+			return;
+		}
+
+		return profile
+			.wallets()
+			.values()
+			.filter((wallet) => wallet.networkId() === migrationNetwork());
+	}, [walletsCount, profileIsSyncing, profile]);
+
 	const loadMigrationWalletTransactions = useCallback(async () => {
-		setisLoading(true);
+		setIsLoading(true);
 
 		const { items, hasMore, cursor } = await fetchMigrationTransactions({
 			limit: PAGINATION_LIMIT,
 			page: page + 1,
 			profile: profile!,
+			profileWallets: profileWallets!,
 		});
 
 		setLatestTransactions((existingItems) => [...existingItems, ...items]);
 		setHasMore(hasMore);
 		setPage(cursor);
 		setTransactionsLoaded(true);
-		setisLoading(false);
-	}, [profile, page, hasMore, transactionsLoaded]);
+		setIsLoading(false);
+	}, [profile, page, hasMore, transactionsLoaded, profileWallets]);
 
 	const removeTransactions = (walletAddress: string) => {
 		setLatestTransactions((transactions) =>
@@ -104,23 +117,31 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 
 	useEffect(() => {
 		if (toLoadTransactions) {
-			setToLoadTransactions(false);
-
 			loadMigrationWalletTransactions();
+
+			setToLoadTransactions(false);
 		}
 	}, [toLoadTransactions, loadMigrationWalletTransactions]);
 
 	useEffect(() => {
-		if (profile === undefined) {
-			setTransactionsLoaded(false);
-			setPage(0);
-			setisLoading(true);
-			setHasMore(false);
-			setLatestTransactions([]);
+		setTransactionsLoaded(false);
+		setPage(0);
+		setIsLoading(true);
+		setHasMore(false);
+		setLatestTransactions([]);
+
+		if (profileIsSyncing) {
+			return;
+		}
+
+		if (walletsCount === 0) {
+			setTransactionsLoaded(true);
+			setIsLoading(false);
+			setPage(1);
 		} else {
 			setToLoadTransactions(true);
 		}
-	}, [profile]);
+	}, [walletsCount, profileIsSyncing]);
 
 	return {
 		hasMore,
