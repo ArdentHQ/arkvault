@@ -451,7 +451,7 @@ export const requestMocks = {
 			{ data: [], meta: {} },
 		),
 		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?limit=11&recipientId=DNBURNBURNBURNBRNBURNBURNBURKz8StY&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			/^https:\/\/ark-test\.arkvault\.io\/api\/transactions\?limit=11&recipientId=DNBURNBURNBURNBRNBURNBURNBURKz8StY.*$/,
 			{ data: [], meta: {} },
 		),
 
