@@ -61,10 +61,10 @@ export const MigrationTransactionItem = ({
 		<VisibilitySensor onChange={onVisibilityChange} scrollCheck delayedCall containment={containmentRef?.current}>
 			<TableRow className="group" styles={rowStyles} onClick={() => onClick?.(transaction)}>
 				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
-					<div className="flex flex-1 items-center space-x-3 overflow-auto">
+					<div className="flex flex-1 items-center overflow-auto">
 						<Icon name="CircleCheckMark" size="lg" className="text-theme-hint-600" />
 
-						<Avatar size="xs" address={transaction.address} noShadow />
+						<Avatar className="ml-2 mr-3" size="xs" address={transaction.address} noShadow />
 
 						<div className="w-20 flex-1">
 							<Address
@@ -87,7 +87,7 @@ export const MigrationTransactionItem = ({
 							{t("MIGRATION.NOTIFICATIONS.MIGRATION_SUCCESSFUL")}
 						</span>
 
-						<Icon name="ChevronRightSmall" size="sm" />
+						<Icon name="ChevronRightSmall" dimensions={[12, 12]} />
 					</button>
 				</TableCell>
 			</TableRow>

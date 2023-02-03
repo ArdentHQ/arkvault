@@ -39,16 +39,16 @@ export const MigrationTransactionItemMobile = ({
 					<RowWrapper>
 						<RowLabel>{t("COMMON.TYPE")}</RowLabel>
 
-						<div className="flex items-center space-x-3">
+						<div className="flex items-center space-x-2">
 							<button
 								type="button"
-								className="flex items-center space-x-3 text-theme-navy-600 hover:text-theme-navy-700"
+								className="flex items-center space-x-2 text-theme-navy-600 hover:text-theme-navy-700"
 							>
 								<span className="whitespace-nowrap font-semibold">
 									{t("MIGRATION.NOTIFICATIONS.MIGRATION_SUCCESSFUL")}
 								</span>
 
-								<Icon name="ChevronRightSmall" size="sm" />
+								<Icon name="ChevronRightSmall" dimensions={[12, 12]} />
 							</button>
 
 							<Icon name="CircleCheckMark" size="lg" className="text-theme-hint-600" />

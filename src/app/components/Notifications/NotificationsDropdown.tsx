@@ -32,9 +32,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 					</NavigationButtonWrapper>
 				}
 			>
-				<div className="mt-2">
-					<Notifications profile={profile} onTransactionClick={setTransactionModalItem} />
-				</div>
+				<Notifications profile={profile} onTransactionClick={setTransactionModalItem} />
 			</Dropdown>
 
 			{transactionModalItem && (

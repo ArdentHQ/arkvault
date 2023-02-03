@@ -41,7 +41,7 @@ export const MigrationBanner = () => {
 						.
 					</div>
 
-					<div className="mt-8 flex space-x-3 ">
+					<div className="mt-8 flex space-x-3">
 						<Button variant="primary" onClick={migrateButtonHandler} data-testid="MigrationBanner--migrate">
 							{t("DASHBOARD.MIGRATION_BANNER.MIGRATE_TOKENS")}
 						</Button>
