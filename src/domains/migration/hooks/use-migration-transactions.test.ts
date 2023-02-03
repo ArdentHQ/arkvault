@@ -145,7 +145,7 @@ describe("useMigrationTransactions hook", () => {
 		mockTransactions.mockRestore();
 	});
 
-	it("should do nothing if profile has no wallets on migration network", async () => {
+	it("should do nothing if profile has no wallets on migration network", () => {
 		const spyMigrationWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
 		const spyMigrationWalletsCount = vi.spyOn(profile.wallets(), "count").mockReturnValue(0);
 
