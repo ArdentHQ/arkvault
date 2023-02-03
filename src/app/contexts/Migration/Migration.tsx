@@ -2,7 +2,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ethers } from "ethers";
 import { uniqBy, sortBy } from "@ardenthq/sdk-helpers";
-import { useConfiguration } from "@/app/contexts";
 import { httpClient } from "@/app/services";
 import {
 	ARKMigrationViewStructOutput,
@@ -52,7 +51,6 @@ const fetchPolygonMigrations = async (arkTxHashes: string[]) => {
 
 export const MigrationProvider = ({ children }: Properties) => {
 	const profile = useProfileWatcher();
-	const { profileIsSyncing } = useConfiguration();
 	const { contract, contractIsPaused, getContractMigrations } = useContract();
 	const {
 		isLoading: isLoadingTransactions,
@@ -255,8 +253,8 @@ export const MigrationProvider = ({ children }: Properties) => {
 	}, [migrations, latestTransactions, storeTransactions]);
 
 	const readyToLoad = useMemo(
-		() => contract !== undefined && profile !== undefined && cacheIsReady && !profileIsSyncing,
-		[contract, profile, cacheIsReady, profileIsSyncing],
+		() => contract !== undefined && profile !== undefined && cacheIsReady,
+		[contract, profile, cacheIsReady],
 	);
 
 	useEffect(() => {
