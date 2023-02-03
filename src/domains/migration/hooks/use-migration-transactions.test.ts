@@ -4,13 +4,14 @@ import { useMigrationTransactions } from "./use-migration-transactions";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks, waitFor } from "@/utils/testing-library";
 import * as polygonMigration from "@/utils/polygon-migration";
 import { migrationWalletAddress } from "@/utils/polygon-migration";
-
+import * as contextMock from "@/app/contexts";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let resetProfileNetworksMock: () => void;
 let transactionFixture: DTO.ExtendedSignedTransactionData;
 let secondTransactionFixture: DTO.ExtendedSignedTransactionData;
 let polygonMigrationStartTimeSpy;
+let useConfigurationSpy;
 
 describe("useMigrationTransactions hook", () => {
 	beforeAll(async () => {
@@ -21,6 +22,10 @@ describe("useMigrationTransactions hook", () => {
 	});
 
 	beforeEach(async () => {
+		useConfigurationSpy = vi.spyOn(contextMock, "useConfiguration").mockReturnValue({
+			profileIsSyncing: false,
+		});
+
 		wallet = profile.wallets().first();
 		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(wallet);
 
@@ -78,9 +83,15 @@ describe("useMigrationTransactions hook", () => {
 		resetProfileNetworksMock();
 
 		polygonMigrationStartTimeSpy.mockRestore();
+
+		useConfigurationSpy.mockRestore();
 	});
 
 	it("should not load migration wallet transactions if no profile", () => {
+		useConfigurationSpy = vi.spyOn(contextMock, "useConfiguration").mockReturnValue({
+			profileIsSyncing: true,
+		});
+
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received");
 
 		renderHook(() => useMigrationTransactions({ profile: undefined }));
@@ -110,22 +121,6 @@ describe("useMigrationTransactions hook", () => {
 		mockTransactions.mockRestore();
 	});
 
-	it("should do nothing if profile has no wallets on migration network", async () => {
-		const spyMigrationWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
-
-		const { result } = renderHook(() => useMigrationTransactions({ profile }));
-
-		expect(result.current.isLoading).toBe(true);
-
-		await waitFor(() => {
-			expect(result.current.isLoading).toBe(false);
-		});
-
-		expect(result.current.latestTransactions).toHaveLength(0);
-
-		spyMigrationWallets.mockRestore();
-	});
-
 	it("removes the transactions for a wallet", async () => {
 		const mockTransactions = vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() =>
 			Promise.resolve({
@@ -148,5 +143,39 @@ describe("useMigrationTransactions hook", () => {
 		expect(result.current.latestTransactions).toHaveLength(0);
 
 		mockTransactions.mockRestore();
+	});
+
+	it("should do nothing if profile has no wallets on migration network", async () => {
+		const spyMigrationWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
+		const spyMigrationWalletsCount = vi.spyOn(profile.wallets(), "count").mockReturnValue(0);
+
+		const { result } = renderHook(() => useMigrationTransactions({ profile }));
+
+		expect(result.current.isLoading).toBe(false);
+
+		expect(result.current.latestTransactions).toHaveLength(0);
+
+		spyMigrationWallets.mockRestore();
+		spyMigrationWalletsCount.mockRestore();
+	});
+
+	it("should load empty if profile has no wallets on migration network", async () => {
+		const spyMigrationWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
+		const spyMigrationWalletsCount = vi.spyOn(profile.wallets(), "count").mockReturnValue(0);
+
+		const { result } = renderHook(() => useMigrationTransactions({ profile }));
+
+		result.current.loadMigrationWalletTransactions();
+
+		expect(result.current.isLoading).toBe(true);
+
+		await waitFor(() => {
+			expect(result.current.isLoading).toBe(false);
+		});
+
+		expect(result.current.latestTransactions).toHaveLength(0);
+
+		spyMigrationWallets.mockRestore();
+		spyMigrationWalletsCount.mockRestore();
 	});
 });
