@@ -10,9 +10,10 @@ import { TransactionResponsiveIcon } from "@/domains/transaction/components/Tran
 
 type TransactionSenderProperties = {
 	type: string;
+	isMigration?: boolean;
 } & TransactionDetailProperties;
 
-export const TransactionType = ({ type, ...properties }: TransactionSenderProperties) => {
+export const TransactionType = ({ isMigration, type, ...properties }: TransactionSenderProperties) => {
 	const { t } = useTranslation();
 
 	const { getIcon, getLabel } = useTransactionTypes();
@@ -24,7 +25,7 @@ export const TransactionType = ({ type, ...properties }: TransactionSenderProper
 			extra={<TransactionResponsiveIcon icon={getIcon(type)} />}
 			{...properties}
 		>
-			{getLabel(type)}
+			{isMigration ? t("TRANSACTION.TRANSACTION_TYPES.MIGRATION") : getLabel(type)}
 		</TransactionDetail>
 	);
 };

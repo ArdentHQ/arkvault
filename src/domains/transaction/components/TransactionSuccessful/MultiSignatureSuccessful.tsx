@@ -23,6 +23,7 @@ import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendR
 import { assertString } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useBreakpoint } from "@/app/hooks";
+import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 
 interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;
@@ -115,9 +116,9 @@ export const MultiSignatureSuccessful = ({
 				{description || t("TRANSACTION.SUCCESS.MUSIG_DESCRIPTION")}
 			</p>
 
-			<Alert variant="success" className="md:hidden">
-				{t("TRANSACTION.SUCCESS.MUSIG_DESCRIPTION")}
-			</Alert>
+			<div className="md:hidden">
+				<Alert variant="success">{t("TRANSACTION.SUCCESS.MUSIG_DESCRIPTION")}</Alert>
+			</div>
 
 			<div>
 				{senderWallet && transaction && (
@@ -129,7 +130,10 @@ export const MultiSignatureSuccessful = ({
 							isDisabled
 						/>
 
-						<TransactionType type={transaction.type()} />
+						<TransactionType
+							type={transaction.type()}
+							isMigration={isValidMigrationTransaction(transaction)}
+						/>
 
 						<TransactionNetwork network={senderWallet.network()} />
 

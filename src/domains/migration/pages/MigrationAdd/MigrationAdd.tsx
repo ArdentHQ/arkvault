@@ -20,6 +20,7 @@ import { Migration, MigrationTransactionStatus } from "@/domains/migration/migra
 import { ProfilePaths } from "@/router/paths";
 import { StepIndicatorAlt } from "@/app/components/StepIndicatorAlt";
 import { useMigrations } from "@/app/contexts";
+import { MultiSignatureSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 export enum Step {
 	Connect = 1,
 	Review,
@@ -68,7 +69,10 @@ export const MigrationAdd = () => {
 	const wallet = watch("wallet");
 
 	const { storeTransactions, migrations, contractIsPaused } = useMigrations();
-	const { sendTransaction, abortTransaction } = useMigrationTransaction({ context: form, profile: activeProfile });
+	const { sendTransaction, abortTransaction } = useMigrationTransaction({
+		context: form,
+		profile: activeProfile,
+	});
 
 	useEffect(
 		() => () => {
@@ -99,11 +103,16 @@ export const MigrationAdd = () => {
 		return history.push(dashboardPath);
 	};
 
-	const handleNext = () => {
+	const handleNext = async () => {
 		const newStep = activeStep + 1;
 
 		if (newStep === Step.Authenticate && wallet.isLedger()) {
-			handleSubmit();
+			form.handleSubmit(() => submit())();
+		}
+
+		if (newStep === Step.Authenticate && wallet.isMultiSignature()) {
+			form.handleSubmit(() => submit())();
+			return;
 		}
 
 		setActiveStep((index) => index + 1);
@@ -125,9 +134,15 @@ export const MigrationAdd = () => {
 		}
 	}, [transaction, migrations]);
 
-	const handleSubmit = async () => {
+	const submit = async () => {
 		try {
 			const transaction = await sendTransaction();
+			setTransaction(transaction);
+
+			if (wallet.isMultiSignature()) {
+				setActiveStep(Step.Finished);
+				return;
+			}
 
 			setMigrationTransaction({
 				address: transaction.sender(),
@@ -138,9 +153,7 @@ export const MigrationAdd = () => {
 				timestamp: transaction.timestamp()!.toUNIX(),
 			});
 
-			setTransaction(transaction);
 			await storeTransactions([transaction]);
-
 			setActiveStep(Step.PendingTransaction);
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
@@ -153,13 +166,14 @@ export const MigrationAdd = () => {
 	const isNextDisabled = isDirty ? !isValid : true;
 
 	const reference = useRef<HTMLDivElement>(null);
+	console.log({ activeStep });
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
 			<ContractPausedAlert />
 
 			<Section className="flex-1">
-				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
+				<Form className="mx-auto max-w-xl" context={form} onSubmit={submit}>
 					<div ref={reference}>
 						<StepIndicatorAlt
 							length={TOTAL_STEPS}
@@ -188,6 +202,10 @@ export const MigrationAdd = () => {
 								</TabPanel>
 
 								<TabPanel tabId={Step.Finished}>
+									{wallet?.isMultiSignature() && (
+										<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction} />
+									)}
+
 									{migrationTransaction && (
 										<MigrationSuccessStep
 											migrationTransaction={migrationTransaction}
@@ -215,7 +233,8 @@ export const MigrationAdd = () => {
 											<Button
 												data-testid="MigrationAdd__continue-button"
 												variant="primary"
-												disabled={contractIsPaused || isNextDisabled}
+												disabled={contractIsPaused || isNextDisabled || isSubmitting}
+												isLoading={isSubmitting}
 												onClick={handleNext}
 											>
 												{t("COMMON.CONTINUE")}

@@ -376,6 +376,7 @@ export const translations = {
 		UNVOTE: "Unvote",
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Switch Vote",
+		MIGRATION: "Migration",
 	},
 
 	TYPE: "Type",
