@@ -68,6 +68,7 @@ const walletMocks = () => {
 		"D68sFcspN2LVd9HZpf98c7bXkNimK3M6AZ",
 		"DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
 		"DNTwQTSp999ezQ425utBsWetcmzDuCn2pN",
+		"DNBURNBURNBURNBRNBURNBURNBURKz8StY",
 	];
 
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
