@@ -450,6 +450,10 @@ export const requestMocks = {
 			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			{ data: [], meta: {} },
 		),
+		mockRequest(
+			"https://ark-test.arkvault.io/api/transactions?limit=11&recipientId=DNBURNBURNBURNBRNBURNBURNBURKz8StY&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr&amount.from=100000000&fee.from=5000000&page=1",
+			{ data: [], meta: {} },
+		),
 
 		// mainnet
 		mockRequest("https://ark-live.arkvault.io/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
