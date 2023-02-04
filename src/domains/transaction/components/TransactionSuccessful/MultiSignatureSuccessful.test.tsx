@@ -199,9 +199,9 @@ describe("MultiSignatureSuccessful", () => {
 	it("should render for migration transaction", async () => {
 		const transaction = {
 			...TransactionFixture,
-			wallet: () => wallet,
 			memo: () => "0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
 			recipient: () => migrationWalletAddress(),
+			wallet: () => wallet,
 		};
 
 		const publicKey = wallet.publicKey();

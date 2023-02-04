@@ -368,6 +368,7 @@ export const translations = {
 		HTLC_REFUND: "Timelock Refund",
 		IPFS: "IPFS",
 		MAGISTRATE: "Magistrate",
+		MIGRATION: "Migration",
 		MULTI_PAYMENT: "Multipayment",
 		MULTI_SIGNATURE: "Multisignature",
 		SECOND_SIGNATURE: "Second Signature",
@@ -376,7 +377,6 @@ export const translations = {
 		UNVOTE: "Unvote",
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Switch Vote",
-		MIGRATION: "Migration",
 	},
 
 	TYPE: "Type",

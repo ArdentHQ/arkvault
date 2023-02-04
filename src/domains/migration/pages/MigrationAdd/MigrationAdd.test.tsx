@@ -500,9 +500,9 @@ describe("MigrationAdd", () => {
 		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
 
 		vi.spyOn(migrationHooks, "useMigrationTransaction").mockImplementation(() => ({
-			abortTransaction: () => undefined,
+			abortTransaction: () => {},
 			sendTransaction: () => ({
-				amount: () => 10000,
+				amount: () => 10_000,
 				explorerLink: () => "test",
 				fee: () => 5000,
 				get: () => ({
