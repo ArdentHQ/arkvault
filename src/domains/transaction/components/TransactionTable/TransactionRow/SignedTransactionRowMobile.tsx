@@ -14,6 +14,8 @@ import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
+import { isValidMigrationTransaction } from "@/utils/polygon-migration";
+import { TransactionMigrationLink } from "./TransactionRowMigrationDetails";
 interface SignedTransactionRowMobileProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	onSign?: (transaction: DTO.ExtendedSignedTransactionData) => void;
@@ -67,21 +69,38 @@ export const SignedTransactionRowMobile = ({
 				</RowWrapper>
 
 				<RowWrapper>
-					<RowLabel>{t("COMMON.SENDER")}</RowLabel>
+					<>
+						{!isValidMigrationTransaction(transaction) && (
+							<>
+								<RowLabel>{t("COMMON.SENDER")}</RowLabel>
+								<ResponsiveAddressWrapper>
+									<BaseTransactionRowMode
+										className="flex items-center gap-x-2"
+										isCompact={true}
+										isSent={true}
+										type={transaction.type()}
+										address={recipient}
+									/>
 
-					<ResponsiveAddressWrapper>
-						<BaseTransactionRowMode
-							className="flex items-center gap-x-2"
-							isCompact={true}
-							isSent={true}
-							type={transaction.type()}
-							address={recipient}
-						/>
+									<div className="ml-2 overflow-hidden">
+										<BaseTransactionRowRecipientLabel
+											type={transaction.type()}
+											recipient={recipient}
+										/>
+									</div>
+								</ResponsiveAddressWrapper>
+							</>
+						)}
 
-						<div className="ml-2 overflow-hidden">
-							<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} />
-						</div>
-					</ResponsiveAddressWrapper>
+						{isValidMigrationTransaction(transaction) && (
+							<>
+								<RowLabel>{t("COMMON.TYPE")}</RowLabel>
+								<TransactionMigrationLink transaction={transaction}>
+									<span>{t("TRANSACTION.MIGRATION")}</span>
+								</TransactionMigrationLink>
+							</>
+						)}
+					</>
 				</RowWrapper>
 
 				<RowWrapper>
@@ -91,6 +110,7 @@ export const SignedTransactionRowMobile = ({
 						total={transaction.amount() + transaction.fee()}
 						wallet={wallet}
 						isCompact={false}
+						isMigration={isValidMigrationTransaction(transaction)}
 					/>
 				</RowWrapper>
 

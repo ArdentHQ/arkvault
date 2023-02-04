@@ -16,6 +16,8 @@ import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { assertString } from "@/utils/assertions";
+import { isValidMigrationTransaction } from "@/utils/polygon-migration";
+import { TransactionRowMigrationDetails } from "./TransactionRowMigrationDetails";
 
 interface SignedTransactionRowProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -186,14 +188,22 @@ export const SignedTransactionRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-				<BaseTransactionRowMode
-					isSent={true}
-					type={transaction.type()}
-					address={recipient}
-					isCompact={isCompact}
-				/>
+				{!isValidMigrationTransaction(transaction) && (
+					<>
+						<BaseTransactionRowMode
+							isSent={true}
+							type={transaction.type()}
+							address={recipient}
+							isCompact={isCompact}
+						/>
 
-				<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} />
+						<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} />
+					</>
+				)}
+
+				{isValidMigrationTransaction(transaction) && (
+					<TransactionRowMigrationDetails transaction={transaction} isCompact={isCompact} />
+				)}
 			</TableCell>
 
 			<TableCell className="w-16" innerClassName="justify-center truncate" isCompact={isCompact}>
@@ -210,6 +220,7 @@ export const SignedTransactionRow = ({
 					isSent={true}
 					total={transaction.amount() + transaction.fee()}
 					wallet={wallet}
+					isMigration={isValidMigrationTransaction(transaction)}
 				/>
 			</TableCell>
 
