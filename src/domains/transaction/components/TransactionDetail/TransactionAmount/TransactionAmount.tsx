@@ -83,7 +83,17 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 		);
 	};
 
-	const hint = returnedAmount ? t("TRANSACTION.HINT_AMOUNT", { amount: returnedAmount, currency }) : undefined;
+	const hint = () => {
+		if (returnedAmount) {
+			return t("TRANSACTION.HINT_AMOUNT", { amount: returnedAmount, currency });
+		}
+
+		if (isMigration) {
+			return t("COMMON.MIGRATION");
+		}
+
+		return undefined;
+	};
 
 	return (
 		<TransactionDetail
@@ -92,7 +102,7 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 			extra={renderModeIcon()}
 			{...properties}
 		>
-			<AmountLabel isNegative={isSent} value={amount} ticker={currency} hint={hint} isMigration />
+			<AmountLabel isNegative={isSent} value={amount} ticker={currency} hint={hint()} isMigration={isMigration} />
 
 			{isMdAndAbove && !!exchangeCurrency && !!convertedAmount && (
 				<Amount ticker={exchangeCurrency} value={convertedAmount} className="ml-2 text-theme-secondary-400" />

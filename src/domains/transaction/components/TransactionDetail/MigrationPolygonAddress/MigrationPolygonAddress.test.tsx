@@ -35,7 +35,7 @@ describe("MigrationPolygonAddress", () => {
 		);
 	});
 
-	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", async (breakpoint) => {
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
 		const { container } = renderResponsive(
 			<MigrationPolygonAddress transaction={transactionFixture} />,
 			breakpoint,
