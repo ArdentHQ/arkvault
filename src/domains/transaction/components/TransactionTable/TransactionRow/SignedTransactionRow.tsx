@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";
 import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
+import { TransactionRowMigrationDetails } from "./TransactionRowMigrationDetails";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
@@ -17,7 +18,6 @@ import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { assertString } from "@/utils/assertions";
 import { isValidMigrationTransaction } from "@/utils/polygon-migration";
-import { TransactionRowMigrationDetails } from "./TransactionRowMigrationDetails";
 
 interface SignedTransactionRowProperties {
 	transaction: DTO.ExtendedSignedTransactionData;

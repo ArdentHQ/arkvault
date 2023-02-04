@@ -6,6 +6,7 @@ import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";
 import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 import { SignButton } from "./SignedTransactionRow";
+import { TransactionMigrationLink } from "./TransactionRowMigrationDetails";
 import { TableRow } from "@/app/components/Table";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { ResponsiveAddressWrapper, RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
@@ -15,7 +16,6 @@ import { Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { isValidMigrationTransaction } from "@/utils/polygon-migration";
-import { TransactionMigrationLink } from "./TransactionRowMigrationDetails";
 interface SignedTransactionRowMobileProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	onSign?: (transaction: DTO.ExtendedSignedTransactionData) => void;

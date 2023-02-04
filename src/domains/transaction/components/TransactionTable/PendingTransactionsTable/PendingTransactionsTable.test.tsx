@@ -19,7 +19,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import { migrationWalletAddress, migrationTransactionFee, migrationMinBalance } from "@/utils/polygon-migration";
+import { migrationWalletAddress, migrationTransactionFee } from "@/utils/polygon-migration";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
@@ -347,7 +347,7 @@ describe("Signed Transaction Table", () => {
 
 		const migrationAmountMock = vi
 			.spyOn(pendingMultisignatureTransactions[0].transaction, "amount")
-			.mockReturnValue(10000);
+			.mockReturnValue(10_000);
 
 		const { asFragment } = renderResponsive(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
