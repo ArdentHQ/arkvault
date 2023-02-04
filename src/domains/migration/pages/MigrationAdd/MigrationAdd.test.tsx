@@ -501,20 +501,10 @@ describe("MigrationAdd", () => {
 
 		vi.spyOn(migrationHooks, "useMigrationTransaction").mockImplementation(() => ({
 			abortTransaction: () => undefined,
-			sendTransaction: async () => ({
-				id: () => transactionFixture.data.id,
-				type: () => "transfer",
-				sender: () => wallet.address(),
-				recipient: () => migrationWalletAddress(),
+			sendTransaction: () => ({
 				amount: () => 10000,
-				fee: () => 5000,
-				memo: () => "0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
-				timestamp: () => Date.now(),
-				wallet: () => wallet,
-				isMultiSignatureRegistration: () => false,
-				recipients: () => [],
 				explorerLink: () => "test",
-				publicKey: () => wallet.publicKey(),
+				fee: () => 5000,
 				get: () => ({
 					min: 2,
 					publicKeys: [
@@ -522,6 +512,16 @@ describe("MigrationAdd", () => {
 						"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
 					],
 				}),
+				id: () => transactionFixture.data.id,
+				isMultiSignatureRegistration: () => false,
+				memo: () => "0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
+				publicKey: () => wallet.publicKey(),
+				recipient: () => migrationWalletAddress(),
+				recipients: () => [],
+				sender: () => wallet.address(),
+				timestamp: () => Date.now(),
+				type: () => "transfer",
+				wallet: () => wallet,
 			}),
 		}));
 

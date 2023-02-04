@@ -8,7 +8,7 @@ import {
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionResponsiveIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
 import { Networks } from "@ardenthq/sdk";
-import { TransactionMigrationIcon } from "../../TransactionTable/TransactionRow/TransactionRowMigrationDetails";
+import { TransactionMigrationIcon } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMigrationDetails";
 import { useBreakpoint } from "@/app/hooks";
 
 type TransactionSenderProperties = {
