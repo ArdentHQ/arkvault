@@ -5,6 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import { MigrationAdd, SuccessButtonWrapper } from "./MigrationAdd";
 import { MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
+import * as migrationHooks from "@/domains/migration/hooks";
 import {
 	render,
 	getDefaultProfileId,
@@ -18,7 +19,7 @@ import {
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
 import * as useMetaMask from "@/domains/migration/hooks/use-meta-mask";
 import * as contexts from "@/app/contexts";
-import { migrationNetwork } from "@/utils/polygon-migration";
+import { migrationNetwork, migrationWalletAddress } from "@/utils/polygon-migration";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 
@@ -490,5 +491,73 @@ describe("MigrationAdd", () => {
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
+	});
+
+	it("should successfully create a migration transaction using a musig wallet", async () => {
+		useMigrationsSpy.mockRestore();
+
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+
+		vi.spyOn(migrationHooks, "useMigrationTransaction").mockImplementation(() => ({
+			abortTransaction: () => undefined,
+			sendTransaction: async () => ({
+				id: () => transactionFixture.data.id,
+				type: () => "transfer",
+				sender: () => wallet.address(),
+				recipient: () => migrationWalletAddress(),
+				amount: () => 10000,
+				fee: () => 5000,
+				memo: () => "0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
+				timestamp: () => Date.now(),
+				wallet: () => wallet,
+				isMultiSignatureRegistration: () => false,
+				recipients: () => [],
+				explorerLink: () => "test",
+				publicKey: () => wallet.publicKey(),
+				get: () => ({
+					min: 2,
+					publicKeys: [
+						"03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+						"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+					],
+				}),
+			}),
+		}));
+
+		renderComponent();
+
+		expect(screen.getByTestId("header__title")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+		await expect(screen.findByTestId(walletListItem)).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId(walletListItem));
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
+
+		userEvent.click(screen.getByTestId(continueButton));
+
+		await expect(screen.findByTestId("MigrationReview")).resolves.toBeVisible();
+
+		vi.spyOn(wallet.transaction(), "signTransfer").mockReturnValue(Promise.resolve(transactionFixture.data.id));
+		vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [transactionFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(TransactionFixture);
+
+		await waitFor(() => expect(screen.getByTestId(continueButton)).toBeEnabled());
+		userEvent.click(screen.getByTestId(continueButton));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+		});
+
+		vi.restoreAllMocks();
 	});
 });

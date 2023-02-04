@@ -166,7 +166,6 @@ export const MigrationAdd = () => {
 	const isNextDisabled = isDirty ? !isValid : true;
 
 	const reference = useRef<HTMLDivElement>(null);
-	console.log({ activeStep });
 
 	return (
 		<Page pageTitle={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}>
