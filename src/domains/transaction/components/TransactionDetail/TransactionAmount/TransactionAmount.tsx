@@ -27,21 +27,19 @@ type TransactionAmountProperties = {
 } & TransactionDetailProperties;
 
 // TODO: Use common component with musig migration success step.
-const TransactionMigrationIcon = ({ network }: { network?: Networks.Network }) => {
-	return (
-		<div className="relative flex items-center">
-			<Image name="HexagonBold" width={44} height={44} useAccentColor={false} />
+const TransactionMigrationIcon = ({ network }: { network?: Networks.Network }) => (
+	<div className="relative flex items-center">
+		<Image name="HexagonBold" width={44} height={44} useAccentColor={false} />
 
-			<NetworkIcon
-				network={network}
-				size="lg"
-				className="absolute top-0 h-full w-full border-transparent text-theme-hint-600"
-				showTooltip={false}
-				noShadow
-			/>
-		</div>
-	);
-};
+		<NetworkIcon
+			network={network}
+			size="lg"
+			className="absolute top-0 h-full w-full border-transparent text-theme-hint-600"
+			showTooltip={false}
+			noShadow
+		/>
+	</div>
+);
 
 export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 	amount,

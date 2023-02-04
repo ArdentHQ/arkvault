@@ -2,11 +2,11 @@ import React from "react";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 
+import { DTO } from "@ardenthq/sdk-profiles";
 import { Address } from "@/app/components/Address";
 import { EthereumAvatar } from "@/app/components/Avatar";
 import { useBreakpoint } from "@/app/hooks";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
-import { DTO } from "@ardenthq/sdk-profiles";
 
 export const MigrationPolygonAddress = ({ transaction }: { transaction: DTO.ExtendedSignedTransactionData }) => {
 	const { t } = useTranslation();
