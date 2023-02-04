@@ -16,6 +16,14 @@ const migrationTransactions = [
 		timestamp: new Date("2021-01-01").getTime() / 1000,
 	},
 	{
+		address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HXx",
+		amount: 123,
+		id: "id",
+		migrationAddress: "0x0000000000000000000000000000000000000000",
+		status: undefined,
+		timestamp: new Date("2021-01-01").getTime() / 1000,
+	},
+	{
 		address: "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
 		amount: 123,
 		migrationAddress: "0x0000000000000000000000000000000000000000",
