@@ -3822,7 +3822,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4051,7 +4051,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4277,7 +4277,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4506,7 +4506,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4735,7 +4735,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4964,7 +4964,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5193,7 +5193,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5422,7 +5422,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5651,7 +5651,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5880,7 +5880,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -6113,49 +6113,7 @@ exports[`TransactionTable > should render responsive 1`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
-                          title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -6309,60 +6267,7 @@ exports[`TransactionTable > should render responsive 1`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="font-semibold text-base text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-u3jrna"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -6505,49 +6410,7 @@ exports[`TransactionTable > should render responsive 1`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -6701,49 +6564,7 @@ exports[`TransactionTable > should render responsive 1`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -6897,49 +6718,7 @@ exports[`TransactionTable > should render responsive 1`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -7093,49 +6872,7 @@ exports[`TransactionTable > should render responsive 1`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -7289,49 +7026,7 @@ exports[`TransactionTable > should render responsive 1`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -7485,49 +7180,7 @@ exports[`TransactionTable > should render responsive 1`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -7681,49 +7334,7 @@ exports[`TransactionTable > should render responsive 1`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -7877,60 +7488,7 @@ exports[`TransactionTable > should render responsive 1`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="font-semibold text-base text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-u3jrna"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -8097,49 +7655,7 @@ exports[`TransactionTable > should render responsive 2`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
-                          title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -8293,60 +7809,7 @@ exports[`TransactionTable > should render responsive 2`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="font-semibold text-base text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-u3jrna"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -8489,49 +7952,7 @@ exports[`TransactionTable > should render responsive 2`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -8685,49 +8106,7 @@ exports[`TransactionTable > should render responsive 2`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -8881,49 +8260,7 @@ exports[`TransactionTable > should render responsive 2`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -9077,49 +8414,7 @@ exports[`TransactionTable > should render responsive 2`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -9273,49 +8568,7 @@ exports[`TransactionTable > should render responsive 2`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -9469,49 +8722,7 @@ exports[`TransactionTable > should render responsive 2`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -9665,49 +8876,7 @@ exports[`TransactionTable > should render responsive 2`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -9861,60 +9030,7 @@ exports[`TransactionTable > should render responsive 2`] = `
               </div>
               <div
                 class="flex items-center justify-between space-x-4"
-              >
-                <div
-                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                >
-                  Sender
-                </div>
-                <div
-                  class="flex w-full text-right"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
-                  >
-                    <div
-                      class="w-0 flex-1"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-                      >
-                        <span
-                          class="font-semibold text-base text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-u3jrna"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="shrink-0 css-jxpwdn"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
               <div
                 class="flex items-center justify-between space-x-4"
               >
@@ -10245,7 +9361,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10474,7 +9590,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10700,7 +9816,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10929,7 +10045,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11158,7 +10274,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11387,7 +10503,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11616,7 +10732,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11845,7 +10961,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -12074,7 +11190,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -12303,7 +11419,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -12700,7 +11816,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -12929,7 +12045,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -13155,7 +12271,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -13384,7 +12500,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -13613,7 +12729,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -13842,7 +12958,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -14071,7 +13187,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -14300,7 +13416,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -14529,7 +13645,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -14758,7 +13874,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -15155,7 +14271,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -15384,7 +14500,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -15610,7 +14726,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -15839,7 +14955,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -16068,7 +15184,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -16297,7 +15413,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -16526,7 +15642,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -16755,7 +15871,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -16984,7 +16100,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"
@@ -17213,7 +16329,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="table-cell md:hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   class="whitespace-nowrap"

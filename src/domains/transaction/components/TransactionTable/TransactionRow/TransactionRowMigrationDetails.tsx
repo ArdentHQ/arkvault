@@ -50,7 +50,12 @@ export const TransactionMigrationLink = ({
 	);
 };
 
-export const TransactionRowMigrationDetails = ({ transaction, isCompact, showDetailsLink, onClick }: Properties) => {
+export const TransactionRowMigrationDetails = ({
+	transaction,
+	isCompact,
+	showDetailsLink = true,
+	onClick,
+}: Properties) => {
 	const { t } = useTranslation();
 
 	return (

@@ -67,7 +67,7 @@ describe("TransactionRow", () => {
 		expect(screen.getAllByRole("cell")).toHaveLength(1);
 		expect(screen.getByRole("link", { name: "ea63bf…b5c79b" })).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(2);
+		expect(screen.getAllByTestId("Address__address")).toHaveLength(1);
 		expect(screen.getByTestId("Amount")).toBeInTheDocument();
 	});
 
