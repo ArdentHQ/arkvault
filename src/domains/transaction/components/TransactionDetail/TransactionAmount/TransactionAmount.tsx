@@ -91,8 +91,6 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 		if (isMigration) {
 			return t("COMMON.MIGRATION");
 		}
-
-		return undefined;
 	};
 
 	return (
