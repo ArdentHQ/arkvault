@@ -11,9 +11,10 @@ import { Divider } from "@/app/components/Divider";
 import { Tooltip } from "@/app/components/Tooltip";
 
 interface Properties {
-	transaction: DTO.ExtendedConfirmedTransactionData;
+	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 	isCompact: boolean;
 	onClick?: () => void;
+	showDetailsLink?: boolean;
 }
 
 export const TransactionMigrationLink = ({
@@ -21,7 +22,7 @@ export const TransactionMigrationLink = ({
 	children,
 	onClick,
 }: {
-	transaction: DTO.ExtendedConfirmedTransactionData;
+	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 	children: React.ReactElement;
 	onClick?: () => void;
 }) => {
@@ -71,7 +72,7 @@ export const TransactionMigrationIcon = ({
 	</div>
 );
 
-export const TransactionRowMigrationDetails = ({ transaction, isCompact, onClick }: Properties) => {
+export const TransactionRowMigrationDetails = ({ transaction, isCompact, onClick, showDetailsLink }: Properties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -83,11 +84,15 @@ export const TransactionRowMigrationDetails = ({ transaction, isCompact, onClick
 					{t("TRANSACTION.MIGRATION")}
 				</span>
 
-				<Divider type="vertical" />
+				{showDetailsLink && (
+					<div>
+						<Divider type="vertical" />
 
-				<TransactionMigrationLink transaction={transaction} onClick={onClick}>
-					<span>{t("TRANSACTION.DETAILS")}</span>
-				</TransactionMigrationLink>
+						<TransactionMigrationLink transaction={transaction} onClick={onClick}>
+							<span>{t("TRANSACTION.DETAILS")}</span>
+						</TransactionMigrationLink>
+					</div>
+				)}
 			</div>
 		</>
 	);
