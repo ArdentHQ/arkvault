@@ -7,7 +7,6 @@ import { MigrationDisclaimer } from "@/domains/migration/components/MigrationDis
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { MigrationTransactionsTable } from "@/domains/migration/components/MigrationTransactionsTable";
 import { ProfilePaths } from "@/router/paths";
-import { useMigrationTransactions } from "@/domains/migration/hooks/use-migration-transactions";
 import { useMigrations } from "@/app/contexts";
 import { toasts } from "@/app/services";
 export const Migration = () => {
@@ -18,12 +17,15 @@ export const Migration = () => {
 	const history = useHistory();
 	const profile = useActiveProfile();
 
-	const { contractIsPaused } = useMigrations();
-	const { migrations, isLoading, onLoadMore, hasMore, isLoadingMore, loadMigrationsError } = useMigrationTransactions(
-		{
-			profile,
-		},
-	);
+	const {
+		contractIsPaused,
+		isLoading,
+		onLoadMore,
+		hasMore,
+		isLoadingMore,
+		loadMigrationsError,
+		paginatedMigrations,
+	} = useMigrations();
 
 	useEffect(() => {
 		if (loadMigrationsError) {
@@ -56,7 +58,7 @@ export const Migration = () => {
 
 				<Section className="mt-4">
 					<MigrationTransactionsTable
-						migrationTransactions={migrations}
+						migrationTransactions={paginatedMigrations}
 						isCompact={isCompact}
 						isLoading={isLoading}
 						isLoadingMore={isLoadingMore}

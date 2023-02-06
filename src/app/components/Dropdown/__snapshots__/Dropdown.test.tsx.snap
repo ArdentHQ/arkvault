@@ -41,41 +41,45 @@ exports[`Dropdown > should render a bottom position 1`] = `
       </div>
     </span>
     <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1upl337"
+      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1upl337"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
-      <ul
-        data-testid="dropdown__options"
+      <div
+        class="py-3"
       >
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--0"
-          tabindex="0"
+        <ul
+          data-testid="dropdown__options"
         >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--0"
+            tabindex="0"
+          >
+            <span>
+              Option 1
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--1"
+            tabindex="0"
+          >
+            <span>
+              Option 2
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--2"
+            tabindex="0"
+          >
+            <span>
+              Option 3
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -100,41 +104,45 @@ exports[`Dropdown > should render a bottom-left position 1`] = `
       </div>
     </span>
     <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13cbeio"
+      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13cbeio"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
-      <ul
-        data-testid="dropdown__options"
+      <div
+        class="py-3"
       >
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--0"
-          tabindex="0"
+        <ul
+          data-testid="dropdown__options"
         >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--0"
+            tabindex="0"
+          >
+            <span>
+              Option 1
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--1"
+            tabindex="0"
+          >
+            <span>
+              Option 2
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--2"
+            tabindex="0"
+          >
+            <span>
+              Option 3
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -181,41 +189,45 @@ exports[`Dropdown > should render a left position 1`] = `
       </div>
     </span>
     <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1ejkw7g"
+      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1ejkw7g"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
-      <ul
-        data-testid="dropdown__options"
+      <div
+        class="py-3"
       >
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--0"
-          tabindex="0"
+        <ul
+          data-testid="dropdown__options"
         >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--0"
+            tabindex="0"
+          >
+            <span>
+              Option 1
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--1"
+            tabindex="0"
+          >
+            <span>
+              Option 2
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--2"
+            tabindex="0"
+          >
+            <span>
+              Option 3
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -262,41 +274,45 @@ exports[`Dropdown > should render a top 1`] = `
       </div>
     </span>
     <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1mb6n1o"
+      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1mb6n1o"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
-      <ul
-        data-testid="dropdown__options"
+      <div
+        class="py-3"
       >
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--0"
-          tabindex="0"
+        <ul
+          data-testid="dropdown__options"
         >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--0"
+            tabindex="0"
+          >
+            <span>
+              Option 1
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--1"
+            tabindex="0"
+          >
+            <span>
+              Option 2
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--2"
+            tabindex="0"
+          >
+            <span>
+              Option 3
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -321,41 +337,45 @@ exports[`Dropdown > should render a top-left position 1`] = `
       </div>
     </span>
     <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1uay2ot"
+      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1uay2ot"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
-      <ul
-        data-testid="dropdown__options"
+      <div
+        class="py-3"
       >
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--0"
-          tabindex="0"
+        <ul
+          data-testid="dropdown__options"
         >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--0"
+            tabindex="0"
+          >
+            <span>
+              Option 1
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--1"
+            tabindex="0"
+          >
+            <span>
+              Option 2
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--2"
+            tabindex="0"
+          >
+            <span>
+              Option 3
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -380,41 +400,45 @@ exports[`Dropdown > should render a top-right 1`] = `
       </div>
     </span>
     <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13dpsn2"
+      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13dpsn2"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
-      <ul
-        data-testid="dropdown__options"
+      <div
+        class="py-3"
       >
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--0"
-          tabindex="0"
+        <ul
+          data-testid="dropdown__options"
         >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-x2cq94"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--0"
+            tabindex="0"
+          >
+            <span>
+              Option 1
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--1"
+            tabindex="0"
+          >
+            <span>
+              Option 2
+            </span>
+          </li>
+          <li
+            class="css-x2cq94"
+            data-testid="dropdown__option--2"
+            tabindex="0"
+          >
+            <span>
+              Option 3
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -439,96 +463,100 @@ exports[`Dropdown > should render dropdown group options with divider, icon and 
       </div>
     </span>
     <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13dpsn2"
+      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13dpsn2"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
       <div
-        class="py-1"
+        class="py-3"
       >
         <div
-          class="mt-4"
-        >
-          <ul>
-            <li
-              class="block whitespace-nowrap px-8 text-left text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-600"
-            >
-              Primary Options 1
-            </li>
-            <ul
-              data-testid="dropdown__options"
-            >
-              <li
-                class="css-x2cq94"
-                data-testid="dropdown__option--primary-0"
-                tabindex="0"
-              >
-                <span>
-                  Primary Options 1.1
-                </span>
-              </li>
-              <li
-                class="css-x2cq94"
-                data-testid="dropdown__option--primary-1"
-                tabindex="0"
-              >
-                <span>
-                  Primary Options 1.2
-                </span>
-              </li>
-            </ul>
-          </ul>
-        </div>
-        <div
-          class="mt-4"
+          class="py-1"
         >
           <div
-            class="mx-8 -my-2"
+            class="mt-4"
+          >
+            <ul>
+              <li
+                class="block whitespace-nowrap px-8 text-left text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-600"
+              >
+                Primary Options 1
+              </li>
+              <ul
+                data-testid="dropdown__options"
+              >
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--primary-0"
+                  tabindex="0"
+                >
+                  <span>
+                    Primary Options 1.1
+                  </span>
+                </li>
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--primary-1"
+                  tabindex="0"
+                >
+                  <span>
+                    Primary Options 1.2
+                  </span>
+                </li>
+              </ul>
+            </ul>
+          </div>
+          <div
+            class="mt-4"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"
-              type="horizontal"
-            />
-          </div>
-          <ul>
-            <ul
-              data-testid="dropdown__options"
+              class="mx-8 -my-2"
             >
-              <li
-                class="css-x2cq94"
-                data-testid="dropdown__option--secondary-0"
-                tabindex="0"
+              <div
+                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"
+                type="horizontal"
+              />
+            </div>
+            <ul>
+              <ul
+                data-testid="dropdown__options"
               >
-                <span>
-                  Secondary Options 1.1
-                </span>
-                <div
-                  class="dark:text-theme-secondary-600 css-v0ob3f"
-                  height="16"
-                  width="16"
-                />
-              </li>
-              <li
-                class="css-x2cq94"
-                data-testid="dropdown__option--secondary-1"
-                tabindex="0"
-              >
-                <div
-                  class="dark:text-theme-secondary-600 css-v0ob3f"
-                  height="16"
-                  width="16"
-                />
-                <span>
-                  Secondary Options 1.2
-                  <span
-                    class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-600"
-                  >
-                    secondary label
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--secondary-0"
+                  tabindex="0"
+                >
+                  <span>
+                    Secondary Options 1.1
                   </span>
-                </span>
-              </li>
+                  <div
+                    class="dark:text-theme-secondary-600 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  />
+                </li>
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--secondary-1"
+                  tabindex="0"
+                >
+                  <div
+                    class="dark:text-theme-secondary-600 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  />
+                  <span>
+                    Secondary Options 1.2
+                    <span
+                      class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-600"
+                    >
+                      secondary label
+                    </span>
+                  </span>
+                </li>
+              </ul>
             </ul>
-          </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -631,13 +659,17 @@ exports[`Dropdown > should render without options one 1`] = `
       </div>
     </span>
     <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13dpsn2"
+      class="opacity-0 mt-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13dpsn2"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
       <div
-        class="py-1"
-      />
+        class="py-3"
+      >
+        <div
+          class="py-1"
+        />
+      </div>
     </div>
   </div>
 </div>

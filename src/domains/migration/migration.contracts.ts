@@ -1,4 +1,7 @@
 import { BigNumber } from "ethers";
+import { DTO } from "@ardenthq/sdk-profiles";
+
+export type MigrationTransaction = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
 export enum MigrationTransactionStatus {
 	Confirmed = "confirmed",

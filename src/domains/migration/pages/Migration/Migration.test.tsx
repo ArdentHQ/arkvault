@@ -34,12 +34,21 @@ let useMigrationsSpy: vi.SpyInstance;
 describe("Migration", () => {
 	const addMigrationButton = "Migrations__add-migration-btn";
 
+	const useMigrationDefaultData = {
+		hasMore: false,
+		isLoading: false,
+		isLoadingMore: false,
+		loadMigrationsError: undefined,
+		migrations: [],
+		onLoadMore: vi.fn(),
+		paginatedMigrations: [],
+		storeTransactions: () => Promise.resolve({}),
+	};
+
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
-			migrations: [],
-			storeTransactions: () => Promise.resolve({}),
-		});
+
+		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue(useMigrationDefaultData);
 	});
 
 	afterAll(() => {
@@ -91,9 +100,8 @@ describe("Migration", () => {
 
 	it("shows a warning and disables the add button if contract is paused", () => {
 		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
+			...useMigrationDefaultData,
 			contractIsPaused: true,
-			migrations: [],
-			storeTransactions: () => Promise.resolve({}),
 		});
 
 		renderComponent();
@@ -107,11 +115,10 @@ describe("Migration", () => {
 
 	it("triggers a toats if cannot load migrations", () => {
 		const toastSpy = vi.spyOn(toasts, "error");
+
 		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
-			contractIsPaused: true,
+			...useMigrationDefaultData,
 			loadMigrationsError: new Error("error"),
-			migrations: [],
-			storeTransactions: () => Promise.resolve({}),
 		});
 
 		renderComponent();
@@ -166,19 +173,18 @@ describe("Migration", () => {
 			items: () => [transactionFixture],
 		});
 
-		useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
-			migrations: [
-				{
-					address: "AdDreSs",
-					amount: 123,
-					id: transactionFixture.id(),
-					migrationAddress: "0x456",
-					status: MigrationTransactionStatus.Confirmed,
-					timestamp: Date.now() / 1000,
-				},
-			],
-			storeTransactions: () => Promise.resolve({}),
-		});
+		const migration = {
+				address: "AdDreSs",
+				amount: 123,
+				id: transactionFixture.id(),
+				migrationAddress: "0x456",
+				status: MigrationTransactionStatus.Confirmed,
+				timestamp: Date.now() / 1000,
+			},
+			useMigrationsSpy = vi.spyOn(context, "useMigrations").mockReturnValue({
+				...useMigrationDefaultData,
+				paginatedMigrations: [migration],
+			});
 
 		renderComponent();
 

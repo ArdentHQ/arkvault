@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
-import { DTO } from "@ardenthq/sdk-profiles";
 import { AddEthereumChainParameter } from "@/domains/migration/hooks/use-meta-mask.contracts";
+import { MigrationTransaction } from "@/domains/migration/migration.contracts";
 
 export const migrationTransactionFee = () =>
 	Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
@@ -60,9 +60,7 @@ export const polygonNetworkData = (): AddEthereumChainParameter => {
 	};
 };
 
-export const isValidMigrationTransaction = (
-	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData,
-) => {
+export const isValidMigrationTransaction = (transaction: MigrationTransaction) => {
 	const polygonAddress = transaction.memo();
 
 	if (!polygonAddress) {

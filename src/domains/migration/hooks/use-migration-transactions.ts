@@ -1,24 +1,25 @@
-import { useEffect, useMemo, useState, useCallback } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { BigNumber } from "@ardenthq/sdk-helpers";
-import { useConfiguration, useMigrations } from "@/app/contexts";
 import {
-	isValidMigrationTransaction,
 	migrationMinBalance,
 	migrationNetwork,
 	migrationTransactionFee,
 	migrationWalletAddress,
 	polygonMigrationStartTime,
 } from "@/utils/polygon-migration";
-import { Migration } from "@/domains/migration/migration.contracts";
+import { useConfiguration } from "@/app/contexts";
+const PAGINATION_LIMIT = 11;
 
 export const fetchMigrationTransactions = async ({
 	profile,
+	profileWallets,
 	page,
 	limit,
 }: {
 	page: number;
 	profile: Contracts.IProfile;
+	profileWallets: Contracts.IReadWriteWallet[];
 	limit?: number;
 }) => {
 	const wallet = await profile.walletFactory().fromAddress({
@@ -27,11 +28,7 @@ export const fetchMigrationTransactions = async ({
 		network: migrationNetwork(),
 	});
 
-	const senderIds = profile
-		.wallets()
-		.values()
-		.filter((wallet) => wallet.networkId() === migrationNetwork())
-		.map((wallet) => wallet.address());
+	const senderIds = profileWallets.map((wallet) => wallet.address());
 
 	if (senderIds.length === 0) {
 		return {
@@ -58,8 +55,10 @@ export const fetchMigrationTransactions = async ({
 		senderId: senderIds.join(","),
 	};
 
-	if (polygonMigrationStartTime() > 0) {
-		query.timestamp = { from: polygonMigrationStartTime() };
+	const startTime = polygonMigrationStartTime();
+
+	if (startTime > 0) {
+		query.timestamp = { from: startTime };
 	}
 
 	const transactions = await wallet.transactionIndex().received(query);
@@ -71,91 +70,87 @@ export const fetchMigrationTransactions = async ({
 	};
 };
 
-export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile }) => {
+export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProfile | undefined }) => {
 	const { profileIsSyncing } = useConfiguration();
-	const { migrations, storeTransactions, loadMigrationsError, migrationsLoaded } = useMigrations();
-	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
-	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [hasMore, setHasMore] = useState(false);
 	const [page, setPage] = useState(0);
-	const limit = 11;
+	const [transactionsLoaded, setTransactionsLoaded] = useState<boolean>(false);
+	const [toLoadTransactions, setToLoadTransactions] = useState<boolean>(false);
+	const [isLoading, setIsLoading] = useState(true);
+	const [latestTransactions, setLatestTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
+
+	const walletsCount = profile?.wallets().count();
+
+	const profileWallets = useMemo(() => {
+		if (profileIsSyncing || !profile) {
+			return;
+		}
+
+		return profile
+			.wallets()
+			.values()
+			.filter((wallet) => wallet.networkId() === migrationNetwork());
+	}, [walletsCount, profileIsSyncing, profile]);
 
 	const loadMigrationWalletTransactions = useCallback(async () => {
+		setIsLoading(true);
+
+		const { items, hasMore, cursor } = await fetchMigrationTransactions({
+			limit: PAGINATION_LIMIT,
+			page: page + 1,
+			profile: profile!,
+			profileWallets: profileWallets!,
+		});
+
+		setLatestTransactions((existingItems) => [...existingItems, ...items]);
+		setHasMore(hasMore);
+		setPage(cursor);
+		setTransactionsLoaded(true);
+		setIsLoading(false);
+	}, [profile, page, hasMore, transactionsLoaded, profileWallets]);
+
+	const removeTransactions = (walletAddress: string) => {
+		setLatestTransactions((transactions) =>
+			transactions.filter((transaction) => transaction.wallet().address() !== walletAddress),
+		);
+	};
+
+	useEffect(() => {
+		if (toLoadTransactions) {
+			loadMigrationWalletTransactions();
+
+			setToLoadTransactions(false);
+		}
+	}, [toLoadTransactions, loadMigrationWalletTransactions]);
+
+	useEffect(() => {
+		setTransactionsLoaded(false);
+		setPage(0);
+		setIsLoading(true);
+		setHasMore(false);
+		setLatestTransactions([]);
+
 		if (profileIsSyncing) {
 			return;
 		}
 
-		setIsLoadingTransactions(true);
-
-		const { items, hasMore, cursor } = await fetchMigrationTransactions({ limit, page: page + 1, profile });
-
-		setLatestTransactions((existingItems) => [...existingItems, ...items]);
-		setIsLoadingTransactions(false);
-		setHasMore(hasMore);
-		setPage(cursor);
-	}, [profileIsSyncing, profile, page, hasMore]);
-
-	useEffect(() => {
-		loadMigrationWalletTransactions();
-	}, [profileIsSyncing]);
-
-	const migrationTransactions = useMemo(() => {
-		const storedMigrationIds = new Set(migrations.map((migration) => migration.id));
-
-		return latestTransactions.filter((transaction) => {
-			if (storedMigrationIds.has(transaction.id())) {
-				return false;
-			}
-
-			return isValidMigrationTransaction(transaction);
-		});
-	}, [migrations, latestTransactions, isLoadingTransactions]);
-
-	useEffect(() => {
-		const updateTransactions = async () => {
-			await storeTransactions(migrationTransactions);
-		};
-
-		updateTransactions();
-	}, [migrationTransactions, storeTransactions]);
-
-	const resolveTransaction = useCallback(
-		(migration: Migration) => latestTransactions.find((transaction) => transaction.id() === migration.id),
-		[latestTransactions],
-	);
-
-	const isLoading = useMemo(() => {
-		if (!migrationsLoaded) {
-			return true;
+		if (walletsCount === 0) {
+			setTransactionsLoaded(true);
+			setIsLoading(false);
+			setPage(1);
+		} else {
+			setToLoadTransactions(true);
 		}
-
-		if (profileIsSyncing) {
-			return true;
-		}
-
-		if (isLoadingTransactions) {
-			return true;
-		}
-
-		return migrationTransactions.length > 0 && !migrations;
-	}, [profileIsSyncing, isLoadingTransactions, migrationTransactions, migrations]);
-
-	const migrationsPage = useMemo(() => migrations.slice(0, page * limit), [migrations, page, limit]);
-
-	const getMigrationById = useCallback(
-		(id: string) => migrations.find((migration) => migration.id === id),
-		[migrations, page, limit],
-	);
+	}, [walletsCount, profileIsSyncing]);
 
 	return {
-		getMigrationById,
 		hasMore,
-		isLoading: page === 0 && isLoading,
-		isLoadingMore: page > 0 && isLoading,
-		loadMigrationsError,
-		migrations: migrationsPage,
-		onLoadMore: () => loadMigrationWalletTransactions(),
+		isLoading,
+		latestTransactions,
+		limit: PAGINATION_LIMIT,
+		loadMigrationWalletTransactions,
 		page,
-		resolveTransaction,
+		removeTransactions,
+		transactionsLoaded,
 	};
 };
