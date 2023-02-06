@@ -90,6 +90,7 @@ export const TransactionRow = memo(
 							transaction={transaction}
 							isCompact={isCompact}
 							onClick={() => onShowMigrationDetails?.(transaction)}
+							showDetailsLink
 						/>
 					)}
 				</TableCell>
