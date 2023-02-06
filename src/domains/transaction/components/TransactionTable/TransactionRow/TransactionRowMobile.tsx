@@ -60,17 +60,20 @@ export const TransactionRowMobile = memo(
 					</RowWrapper>
 
 					<RowWrapper>
-						<RowLabel>{t("COMMON.SENDER")}</RowLabel>
-						<ResponsiveAddressWrapper innerClassName="gap-2">
-							<TransactionRowSender
-								transaction={transaction}
-								profile={profile}
-								isCompact={true}
-								showTransactionMode={false}
-							/>
+						<>
+							{isValidMigrationTransaction(transaction) && (
+								<ResponsiveAddressWrapper innerClassName="gap-2">
+									<TransactionRowSender
+										transaction={transaction}
+										profile={profile}
+										isCompact={true}
+										showTransactionMode={false}
+									/>
 
-							<Avatar size="xs" address={transaction.sender()} noShadow />
-						</ResponsiveAddressWrapper>
+									<Avatar size="xs" address={transaction.sender()} noShadow />
+								</ResponsiveAddressWrapper>
+							)}
+						</>
 					</RowWrapper>
 
 					<RowWrapper>

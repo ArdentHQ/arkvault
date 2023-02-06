@@ -547,6 +547,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="TransactionRow__timestamp"
                 >
                   01.07.2020 12:00 AM
@@ -1383,6 +1384,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="TransactionRow__timestamp"
                 >
                   01.07.2020 12:00 AM
@@ -2254,6 +2256,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="TransactionRow__timestamp"
                 >
                   01.07.2020 12:00 AM
@@ -3136,6 +3139,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="TransactionRow__timestamp"
                 >
                   01.07.2020 12:00 AM
@@ -5275,6 +5279,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="TransactionRow__timestamp"
                 >
                   01.07.2020 12:00 AM
@@ -5569,6 +5574,1592 @@ exports[`Signed Transaction Table > should render different status > should show
                     </span>
                   </div>
                 </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Signed Transaction Table > should render pending migration transactions in lg 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="PendingTransactions"
+  >
+    <h2
+      class="mb-6 text-2xl font-bold"
+    >
+      Pending Transactions
+    </h2>
+    <div
+      class="-mt-3 css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <thead>
+          <tr
+            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  ID
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden lg:table-cell w-50 min-w-50"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Date
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-96 min-w-96"
+              colspan="1"
+              data-testid="table__th--2"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Recipient
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-20 min-w-20"
+              colspan="1"
+              data-testid="table__th--3"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div
+                  class=""
+                >
+                  Status
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--4"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top justify-end flex-row-reverse"
+              >
+                <div
+                  class=""
+                >
+                  Amount
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-24 min-w-24"
+              colspan="1"
+              data-testid="table__th--5"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Sign
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class="group css-1src4hy"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <span
+                  class="text-theme-secondary-300 dark:text-theme-secondary-800"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="text-theme-secondary-text css-1d4ra48"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="TransactionRow__timestamp"
+                >
+                  01.07.2020 12:00 AM
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="space-x-4 css-1d4ra48"
+              >
+                <div
+                  class="relative flex items-center"
+                >
+                  <svg
+                    height="44"
+                    viewBox="0 0 40 44"
+                    width="44"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 1.732a6 6 0 0 1 6 0l13.053 7.536a6 6 0 0 1 3 5.196v15.072a6 6 0 0 1-3 5.196L23 42.268a6 6 0 0 1-6 0L3.947 34.732a6 6 0 0 1-3-5.196V14.464a6 6 0 0 1 3-5.196L17 1.732z"
+                      fill="#F5F5FF"
+                      stroke="#5452CE"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <div
+                    aria-label="ARK Devnet"
+                    class="border-transparent text-theme-hint-600 absolute top-0 h-full w-full ring-theme-background duration-100 css-aozgpb"
+                    data-testid="NetworkIcon-ARK-ark.devnet"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      data-testid="NetworkIcon__icon"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="ark"
+                        viewBox="0 0 36.3 30.6"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center"
+                >
+                  <span
+                    class="font-semibold text-theme-text"
+                    data-testid="MigrationRowDetailsLabel"
+                  >
+                    Migration
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="justify-center truncate css-1d4ra48"
+              >
+                <span
+                  class="p-1 text-theme-secondary-700"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg
+                      id="pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end css-1d4ra48"
+              >
+                <div
+                  class="css-4dh3tj"
+                  color="hint"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-hint-100 dark:bg-theme-hint-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 10,000.05 DARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end space-x-2 css-1hhowo0"
+              >
+                <div
+                  class="hidden space-x-3 xl:flex"
+                >
+                  <div>
+                    <button
+                      class="css-1cp5yjb"
+                      data-testid="TableRemoveButton"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg
+                            id="trash"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="xl:hidden"
+                >
+                  <div
+                    class="static sm:relative"
+                    data-testid="SignedTransactionRow--dropdown"
+                  >
+                    <span
+                      data-testid="dropdown__toggle"
+                    >
+                      <button
+                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-wlb9q7"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
+                          >
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Signed Transaction Table > should render pending migration transactions in md 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="PendingTransactions"
+  >
+    <h2
+      class="mb-6 text-2xl font-bold"
+    >
+      Pending Transactions
+    </h2>
+    <div
+      class="-mt-3 css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <thead>
+          <tr
+            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  ID
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden lg:table-cell w-50 min-w-50"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Date
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-96 min-w-96"
+              colspan="1"
+              data-testid="table__th--2"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Recipient
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-20 min-w-20"
+              colspan="1"
+              data-testid="table__th--3"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div
+                  class=""
+                >
+                  Status
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--4"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top justify-end flex-row-reverse"
+              >
+                <div
+                  class=""
+                >
+                  Amount
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-24 min-w-24"
+              colspan="1"
+              data-testid="table__th--5"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Sign
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class="group css-1src4hy"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <span
+                  class="text-theme-secondary-300 dark:text-theme-secondary-800"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="text-theme-secondary-text css-1d4ra48"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="TransactionRow__timestamp"
+                >
+                  01.07.2020 12:00 AM
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="space-x-4 css-1d4ra48"
+              >
+                <div
+                  class="relative flex items-center"
+                >
+                  <svg
+                    height="44"
+                    viewBox="0 0 40 44"
+                    width="44"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 1.732a6 6 0 0 1 6 0l13.053 7.536a6 6 0 0 1 3 5.196v15.072a6 6 0 0 1-3 5.196L23 42.268a6 6 0 0 1-6 0L3.947 34.732a6 6 0 0 1-3-5.196V14.464a6 6 0 0 1 3-5.196L17 1.732z"
+                      fill="#F5F5FF"
+                      stroke="#5452CE"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <div
+                    aria-label="ARK Devnet"
+                    class="border-transparent text-theme-hint-600 absolute top-0 h-full w-full ring-theme-background duration-100 css-aozgpb"
+                    data-testid="NetworkIcon-ARK-ark.devnet"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      data-testid="NetworkIcon__icon"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="ark"
+                        viewBox="0 0 36.3 30.6"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center"
+                >
+                  <span
+                    class="font-semibold text-theme-text"
+                    data-testid="MigrationRowDetailsLabel"
+                  >
+                    Migration
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="justify-center truncate css-1d4ra48"
+              >
+                <span
+                  class="p-1 text-theme-secondary-700"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg
+                      id="pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end css-1d4ra48"
+              >
+                <div
+                  class="css-4dh3tj"
+                  color="hint"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-hint-100 dark:bg-theme-hint-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 10,000.05 DARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end space-x-2 css-1hhowo0"
+              >
+                <div
+                  class="hidden space-x-3 xl:flex"
+                >
+                  <div>
+                    <button
+                      class="css-1cp5yjb"
+                      data-testid="TableRemoveButton"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg
+                            id="trash"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="xl:hidden"
+                >
+                  <div
+                    class="static sm:relative"
+                    data-testid="SignedTransactionRow--dropdown"
+                  >
+                    <span
+                      data-testid="dropdown__toggle"
+                    >
+                      <button
+                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-wlb9q7"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
+                          >
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Signed Transaction Table > should render pending migration transactions in sm 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="PendingTransactions"
+  >
+    <h2
+      class="mb-6 text-2xl font-bold"
+    >
+      Pending Transactions
+    </h2>
+    <div
+      class=" css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class="group css-1src4hy"
+            data-testid="TableRow__mobile"
+          >
+            <td
+              class="flex-col space-y-4 py-4"
+              data-testid="TableRow__mobile"
+            >
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  ID
+                </div>
+                <a
+                  class="ring-focus group inline-block css-15tcy38"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="css-1y2194z"
+                  >
+                    <span
+                      class="no-ligatures css-0"
+                      data-testid="TruncateMiddle"
+                    >
+                      e4d245…150377
+                    </span>
+                  </span>
+                </a>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Timestamp
+                </div>
+                <div
+                  class="whitespace-nowrap"
+                  data-testid="TransactionRow__timestamp"
+                >
+                  01.07.2020 12:00 AM
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Type
+                </div>
+                <button
+                  class="link font-semibold"
+                  data-testid="TransactionMigrationLink"
+                  type="button"
+                >
+                  <span
+                    class="flex items-center space-x-2"
+                  >
+                    <span>
+                      <span>
+                        Migration
+                      </span>
+                    </span>
+                    <div
+                      class="css-1fio4bh"
+                      height="12"
+                      width="12"
+                    >
+                      <svg
+                        id="chevron-right"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.6 1l8.6 8.6c.3.3.3.6 0 .8h0L5.6 19"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Amount
+                </div>
+                <div
+                  class="css-4dh3tj"
+                  color="hint"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-hint-100 dark:bg-theme-hint-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 10,000.05 DARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Status
+                </div>
+                <div
+                  class="flex items-center gap-x-2"
+                >
+                  Awaiting our signature
+                  <span
+                    class="p-1 text-theme-secondary-700"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="pencil"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <button
+                  class="flex items-center ml-auto flex-grow sm:flex-grow-0 css-1cp5yjb"
+                  data-testid="SignedTransactionRowMobile--remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <span
+                      class="sm:hidden"
+                    >
+                      Remove
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Signed Transaction Table > should render pending migration transactions in xs 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="PendingTransactions"
+  >
+    <h2
+      class="mb-6 text-2xl font-bold"
+    >
+      Pending Transactions
+    </h2>
+    <div
+      class=" css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class="group css-1src4hy"
+            data-testid="TableRow__mobile"
+          >
+            <td
+              class="flex-col space-y-4 py-4"
+              data-testid="TableRow__mobile"
+            >
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  ID
+                </div>
+                <a
+                  class="ring-focus group inline-block css-15tcy38"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="css-1y2194z"
+                  >
+                    <span
+                      class="no-ligatures css-0"
+                      data-testid="TruncateMiddle"
+                    >
+                      e4d245…150377
+                    </span>
+                  </span>
+                </a>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Timestamp
+                </div>
+                <div
+                  class="whitespace-nowrap"
+                  data-testid="TransactionRow__timestamp"
+                >
+                  01.07.2020 12:00 AM
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Type
+                </div>
+                <button
+                  class="link font-semibold"
+                  data-testid="TransactionMigrationLink"
+                  type="button"
+                >
+                  <span
+                    class="flex items-center space-x-2"
+                  >
+                    <span>
+                      <span>
+                        Migration
+                      </span>
+                    </span>
+                    <div
+                      class="css-1fio4bh"
+                      height="12"
+                      width="12"
+                    >
+                      <svg
+                        id="chevron-right"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.6 1l8.6 8.6c.3.3.3.6 0 .8h0L5.6 19"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Amount
+                </div>
+                <div
+                  class="css-4dh3tj"
+                  color="hint"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-hint-100 dark:bg-theme-hint-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 10,000.05 DARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Status
+                </div>
+                <div
+                  class="flex items-center gap-x-2"
+                >
+                  Awaiting our signature
+                  <span
+                    class="p-1 text-theme-secondary-700"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="pencil"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <button
+                  class="flex items-center ml-auto flex-grow sm:flex-grow-0 css-1cp5yjb"
+                  data-testid="SignedTransactionRowMobile--remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <span
+                      class="sm:hidden"
+                    >
+                      Remove
+                    </span>
+                  </div>
+                </button>
               </div>
             </td>
           </tr>
@@ -6831,6 +8422,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                 class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="TransactionRow__timestamp"
                 >
                   01.07.2020 12:00 AM
@@ -7374,6 +8966,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                 class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="TransactionRow__timestamp"
                 >
                   01.07.2020 12:00 AM
@@ -8481,6 +10074,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="TransactionRow__timestamp"
                 >
                   01.07.2020 12:00 AM
@@ -9024,6 +10618,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 class="text-theme-secondary-text css-1rods8x"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="TransactionRow__timestamp"
                 >
                   01.07.2020 12:00 AM
