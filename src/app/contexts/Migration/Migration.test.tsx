@@ -1,75 +1,78 @@
 import React, { useState } from "react";
 import { DTO, Contracts } from "@ardenthq/sdk-profiles";
-import { Contract, ethers } from "ethers";
-import userEvent from "@testing-library/user-event";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { ethers } from "ethers";
 import { vi } from "vitest";
-import { Route } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
 import { MigrationProvider, useMigrations } from "./Migration";
 import * as useProfileWatcher from "@/app/hooks/use-profile-watcher";
-import { render, screen, waitFor, getDefaultProfileId, env } from "@/utils/testing-library";
-import * as contexts from "@/app/contexts";
+import { render, screen, getDefaultProfileId, env, waitFor } from "@/utils/testing-library";
 import * as polygonMigration from "@/utils/polygon-migration";
-import { MigrationTransactionStatus, Migration } from "@/domains/migration/migration.contracts";
+import { Migration, MigrationTransaction, MigrationTransactionStatus } from "@/domains/migration/migration.contracts";
 import { httpClient } from "@/app/services";
 import { server, requestMock } from "@/tests/mocks/server";
-import * as waitForMock from "@/utils/wait-for";
-const Test = () => {
+import * as useContractMock from "@/domains/migration/hooks/use-contract";
+import * as useMigrationTransactionsMock from "@/domains/migration/hooks/use-migration-transactions";
+import * as useMigrationsCacheMock from "@/domains/migration/hooks/use-migrations-cache";
+import * as contextMock from "@/app/contexts";
+
+const Test = ({ transactionToHandle }: { transactionToHandle?: MigrationTransaction }) => {
 	const {
-		migrationsLoaded,
+		isLoading,
 		migrations,
 		storeTransactions,
-		removeTransactions,
 		contractIsPaused,
 		markMigrationsAsRead,
 		loadMigrationsError,
+		onLoadMore,
+		getMigrationById,
+		resolveTransaction,
 	} = useMigrations();
 
-	const createAndStoreTransaction = async () => {
-		const transaction = {
-			amount: () => 123,
-			id: () => "abc123",
-			memo: () => "0x123",
-			sender: () => "AdDreSs",
-			timestamp: () => DateTime.make(),
-		} as DTO.ExtendedSignedTransactionData;
+	const [selectedMigration, setSelectedMigration] = useState<Migration | undefined>(undefined);
+	const [selectedTransaction, setSelectedTransaction] = useState<MigrationTransaction | undefined>(undefined);
+	const [markedAsRead, setMarkedAsRead] = useState(false);
 
-		await storeTransactions([transaction]);
+	const createAndStoreTransaction = async () => {
+		await storeTransactions([transactionToHandle]);
+	};
+	const getMigration = () => {
+		setSelectedMigration(getMigrationById(transactionToHandle.id()));
 	};
 
-	const removeTransaction = () => {
-		if (migrations) {
-			removeTransactions(migrations[0].address);
-		}
+	const getTransaction = () => {
+		setSelectedTransaction(resolveTransaction(migrations.find((m) => m.id === transactionToHandle.id())));
 	};
 
 	const markMigrationAsReadHandler = () => {
-		markMigrationsAsRead([migrations[0]]);
+		markMigrationsAsRead([transactionToHandle.id()]);
+		setMarkedAsRead(true);
 	};
 
-	if (contractIsPaused === undefined) {
-		return <span data-testid="Migration__contract_loading">Contract Loading...</span>;
+	if (isLoading) {
+		return <span data-testid="Migration__loading">Contract Loading...</span>;
 	}
 
 	if (loadMigrationsError) {
 		return <span data-testid="Migration__load_error">Load error</span>;
 	}
 
+	if (selectedMigration) {
+		return <span data-testid="Migration__selected">{selectedMigration.id}</span>;
+	}
+	if (selectedTransaction) {
+		return <span data-testid="Transaction__selected">{selectedTransaction.id()}</span>;
+	}
+
 	return (
 		<div>
-			{migrationsLoaded ? (
-				<ul data-testid="Migrations">
-					{migrations.map((migration) => (
-						<li data-testid="MigrationItem" key={migration.id}>
-							{migration.address}
-
-							{migration.readAt !== undefined}
-						</li>
-					))}
-				</ul>
-			) : (
-				<span data-testid="Migration__loading">Loading...</span>
-			)}
+			<ul data-testid="Migrations">
+				{migrations.map((migration) => (
+					<li data-testid="MigrationItem" key={migration.id}>
+						{migration.address}:{migration.status}
+						{migration.readAt !== undefined && `:read`}
+					</li>
+				))}
+			</ul>
 
 			<ul>
 				<li>
@@ -83,18 +86,28 @@ const Test = () => {
 				</li>
 
 				<li>
-					<button data-testid="Migrations__remove" type="button" onClick={removeTransaction}>
-						Remove
-					</button>
-				</li>
-
-				<li>
 					<button data-testid="Migrations__markasread" type="button" onClick={markMigrationAsReadHandler}>
 						Mark as read
 					</button>
 				</li>
+				<li>
+					<button data-testid="Migrations__loadmore" type="button" onClick={onLoadMore}>
+						Load More
+					</button>
+				</li>
+				<li>
+					<button data-testid="Migrations__get" type="button" onClick={getMigration}>
+						Get Migration
+					</button>
+				</li>
+				<li>
+					<button data-testid="Migrations__get_transaction" type="button" onClick={getTransaction}>
+						Get Transaction
+					</button>
+				</li>
 			</ul>
 
+			{markedAsRead && <span data-testid="Migration__markedasread">Marked as read</span>}
 			{contractIsPaused ? (
 				<span data-testid="Migration__contract_paused">Contract paused</span>
 			) : (
@@ -107,76 +120,104 @@ const Test = () => {
 let profile: Contracts.IProfile;
 
 describe("Migration Context", () => {
-	let configurationMock;
-	let profileWatcherMock;
-	let ethersLibraryContractSpy;
-	let polygonContractAddressSpy;
-	let polygonIndexerUrlSpy;
-	let migrationFixture;
-	let migrationPendingFixture;
-
-	const environmentMockData = {
-		env: {
-			data: () => ({
-				get: () => ({}),
-				set: () => {},
-			}),
-		},
-		persist: vi.fn(),
+	let useContractSpy;
+	let useTransactionsSpy;
+	let useMigrationsCacheSpy;
+	let useConfigurationSpy;
+	const useTransactionsDefault = {
+		hasMore: false,
+		isLoading: false,
+		isLoadingMoreTransactions: false,
+		latestTransactions: [],
+		limit: 11,
+		loadMigrationWalletTransactions: vi.fn(),
+		page: 1,
+		transactionsLoaded: false,
 	};
+	let profileWatcherMock;
+	let polygonIndexerUrlSpy;
+	let isValidMigrationTransactionSpy;
+	let transactionFixture;
+	let secondTransactionFixture;
+	let getContractMigrationsSpy;
 
-	const mockStoredMigrations = (migrations: Migration[]) => {
-		const profileMigrations = {
-			[profile.id()]: migrations,
-		};
-
-		const getMigrationsMock = vi.fn().mockReturnValue(profileMigrations);
-		const setMigrationMock = vi.fn().mockImplementation(() => {});
-
-		const environmentMock = vi.spyOn(contexts, "useEnvironmentContext").mockReturnValue({
-			...environmentMockData,
-			env: {
-				data: () => ({
-					get: getMigrationsMock,
-					set: setMigrationMock,
-				}),
-			},
+	const mockTransactions = (
+		transactions: MigrationTransaction[],
+		useTransactionsOverrides = {},
+		status = [MigrationTransactionStatus.Pending, MigrationTransactionStatus.Confirmed],
+	) => {
+		useTransactionsSpy = vi.spyOn(useMigrationTransactionsMock, "useMigrationTransactions").mockReturnValue({
+			...useTransactionsDefault,
+			latestTransactions: transactions,
+			...useTransactionsOverrides,
 		});
 
-		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() =>
-			migrations.map((migration) => ({
-				amount: migration.amount,
-				arkTxHash: `0x${migration.id}`,
-				migrationId: migration.migrationId,
-				recipient:
-					migration.status === MigrationTransactionStatus.Pending
-						? ethers.constants.AddressZero
-						: "0xWhatevs",
-			})),
-		);
-		const getPausedMock = vi.fn().mockImplementation(() => false);
-
-		const ethersMock = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
-			paused: getPausedMock,
+		const contractMigrations = transactions.map((transaction, index) => ({
+			arkTxHash: `0x${transaction.id()}`,
+			recipient:
+				status[index] === MigrationTransactionStatus.Pending
+					? ethers.constants.AddressZero
+					: transaction.recipient(),
 		}));
 
-		const clearStoredMigrationsMock = () => {
-			environmentMock.mockRestore();
-			ethersMock.mockRestore();
-		};
+		getContractMigrationsSpy.mockReturnValue(contractMigrations);
 
-		return {
-			clearStoredMigrationsMock,
-			getMigrationsByArkTxHashMock,
-			getMigrationsMock,
-			getPausedMock,
-			setMigrationMock,
-		};
+		const polygonMigrations = transactions.map((transaction, index) => ({
+			arkTxHash: transaction.id(),
+			polygonTxHash: `0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236${index}`,
+		}));
+
+		server.use(requestMock("https://mumbai.somehost.com/transactions", polygonMigrations));
 	};
 
-	beforeAll(() => {
+	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		const wallet = profile.wallets().first();
+
+		transactionFixture = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: polygonMigration.migrationWalletAddress(),
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
+		secondTransactionFixture = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: wallet.address(),
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
 
 		vi.mock("ethers");
 
@@ -193,66 +234,49 @@ describe("Migration Context", () => {
 	});
 
 	beforeEach(() => {
-		configurationMock = vi.spyOn(contexts, "useConfiguration").mockReturnValue({
-			profileHasSyncedOnce: true,
+		getContractMigrationsSpy = vi.fn().mockReturnValue([]);
+
+		useContractSpy = vi.spyOn(useContractMock, "useContract").mockReturnValue({
+			contract: {},
+			contractIsPaused: false,
+			getContractMigrations: getContractMigrationsSpy,
+		});
+
+		useTransactionsSpy = vi
+			.spyOn(useMigrationTransactionsMock, "useMigrationTransactions")
+			.mockReturnValue(useTransactionsDefault);
+
+		useMigrationsCacheSpy = vi.spyOn(useMigrationsCacheMock, "useMigrationsCache").mockReturnValue({
+			cacheIsReady: true,
+			getMigrations: vi.fn().mockReturnValue(undefined),
+			storeMigrations: vi.fn(),
+		});
+
+		useConfigurationSpy = vi.spyOn(contextMock, "useConfiguration").mockReturnValue({
+			profileIsSyncing: false,
 		});
 
 		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
-
-		polygonContractAddressSpy = vi
-			.spyOn(polygonMigration, "polygonContractAddress")
-			.mockReturnValue("0x4a12a2ADc21F896E6F8e564a106A4cab8746a92f");
 
 		polygonIndexerUrlSpy = vi
 			.spyOn(polygonMigration, "polygonIndexerUrl")
 			.mockReturnValue("https://mumbai.somehost.com/");
 
-		ethersLibraryContractSpy = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: () => [],
-			paused: () => false,
-		}));
+		isValidMigrationTransactionSpy = vi
+			.spyOn(polygonMigration, "isValidMigrationTransaction")
+			.mockReturnValue(true);
 
 		httpClient.clearCache();
-
-		migrationFixture = {
-			address: "AdDreSs",
-			amount: 123,
-			id: "ad68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
-			migrationAddress: "BuRnAdDreSs",
-			migrationId: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
-			status: MigrationTransactionStatus.Confirmed,
-			timestamp: Date.now() / 1000,
-		};
-
-		migrationPendingFixture = {
-			address: "AdDreSs2",
-			amount: 456,
-			id: "bc68f6c81b7fe5146fe9dd71424740f96909feab7a12a19fe368b7ef4d828445",
-			migrationAddress: "BuRnAdDreSs",
-			status: MigrationTransactionStatus.Pending,
-			timestamp: Date.now() / 1000,
-		};
-
-		server.use(
-			requestMock("https://mumbai.somehost.com/transactions", [
-				{
-					arkTxHash: migrationFixture.id,
-					polygonTxHash: "0x33a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f236",
-				},
-				{
-					arkTxHash: migrationPendingFixture.id,
-					polygonTxHash: "0x66a45223a017970c476e2fd86da242e57c941ba825b6817efa2b1c105378f211",
-				},
-			]),
-		);
 	});
 
 	afterEach(() => {
-		configurationMock.mockRestore();
 		profileWatcherMock.mockRestore();
-		ethersLibraryContractSpy.mockRestore();
-		polygonContractAddressSpy.mockRestore();
 		polygonIndexerUrlSpy.mockRestore();
+		isValidMigrationTransactionSpy.mockRestore();
+		useContractSpy.mockRestore();
+		useTransactionsSpy.mockRestore();
+		useMigrationsCacheSpy.mockRestore();
+		useConfigurationSpy.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {
@@ -268,7 +292,7 @@ describe("Migration Context", () => {
 	});
 
 	it("should load the migrations", async () => {
-		const { clearStoredMigrationsMock } = mockStoredMigrations([]);
+		mockTransactions([transactionFixture, secondTransactionFixture]);
 
 		render(
 			<MigrationProvider>
@@ -276,189 +300,293 @@ describe("Migration Context", () => {
 			</MigrationProvider>,
 		);
 
-		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 		});
 
-		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
-
-		clearStoredMigrationsMock();
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
 	});
 
-	it("should load contract state", async () => {
+	it("should load the migrations from the cache", async () => {
+		useMigrationsCacheSpy = vi.spyOn(useMigrationsCacheMock, "useMigrationsCache").mockReturnValue({
+			cacheIsReady: true,
+			getMigrations: vi.fn().mockReturnValue([
+				{
+					address: transactionFixture.sender(),
+					amount: transactionFixture.amount(),
+					id: transactionFixture.id(),
+					migrationAddress: transactionFixture.memo()!,
+					status: MigrationTransactionStatus.Pending,
+					timestamp: transactionFixture.timestamp()!.toUNIX(),
+				},
+			]),
+			storeMigrations: vi.fn(),
+		});
+
+		mockTransactions([transactionFixture, secondTransactionFixture]);
+
 		render(
 			<MigrationProvider>
 				<Test />
 			</MigrationProvider>,
 		);
 
-		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
-
+		// cached transactions
 		await waitFor(() => {
-			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		});
+
+		// All transactions loaded
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
 		});
 	});
 
-	it("should list the migrations", async () => {
-		const { clearStoredMigrationsMock } = mockStoredMigrations([migrationFixture]);
+	it("should reset initial migration loading state when is loading transactions and have no migrations", async () => {
+		mockTransactions([], {
+			isLoading: true,
+		});
 
 		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
 		);
 
-		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
-
 		await waitFor(() => {
-			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+			expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 		});
-
-		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
-
-		expect(screen.getByTestId("Migrations")).toBeInTheDocument();
-		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
-
-		clearStoredMigrationsMock();
 	});
 
-	it("should load the migration id for newly confirmed migrations", async () => {
-		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
-			migrationPendingFixture,
-		]);
-
-		getMigrationsByArkTxHashMock.mockImplementation(() => [
-			{
-				amount: migrationPendingFixture.amount,
-				arkTxHash: `0x${migrationPendingFixture.id}`,
-				// A recipient means confirmed
-				recipient: "0xWhatevs",
-			},
-		]);
+	it("should store a new migration", async () => {
+		mockTransactions([transactionFixture]);
 
 		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
+			<MigrationProvider>
+				<Test transactionToHandle={secondTransactionFixture} />
+			</MigrationProvider>,
 		);
 
-		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 		});
 
-		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
-
-		expect(screen.getByTestId("Migrations")).toBeInTheDocument();
 		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
 
-		clearStoredMigrationsMock();
+		mockTransactions([transactionFixture, secondTransactionFixture]);
+
+		userEvent.click(screen.getByTestId("Migrations__store"));
+
+		await waitFor(() => {
+			expect(screen.queryAllByTestId("MigrationItem")).toHaveLength(2);
+		});
 	});
 
-	it("should load the migration when it has migrationId", async () => {
-		const { clearStoredMigrationsMock } = mockStoredMigrations([
-			{
-				...migrationPendingFixture,
-				migrationId: "0x123",
-			},
+	it("should reload migrations details if has pending migrations", async () => {
+		mockTransactions([transactionFixture]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(1);
+
+		reloadMigrationsCallback();
+
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(2);
+
+		setIntervalSpy.mockRestore();
+	});
+
+	it("should not add a reload interval if no profile", () => {
+		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(undefined);
+
+		mockTransactions([]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(reloadMigrationsCallback).toBeUndefined();
+
+		setIntervalSpy.mockRestore();
+	});
+
+	it("should reload migrations details if has a migrations with undefined status", async () => {
+		mockTransactions([transactionFixture], {}, [undefined]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(1);
+
+		reloadMigrationsCallback();
+
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(1);
+
+		setIntervalSpy.mockRestore();
+	});
+
+	it("should not reload migrations details if all migrations are confirmed", async () => {
+		mockTransactions([transactionFixture], {}, [MigrationTransactionStatus.Confirmed]);
+
+		let reloadMigrationsCallback;
+
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
+		});
+
+		render(
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(1);
+
+		reloadMigrationsCallback();
+
+		expect(getContractMigrationsSpy).toHaveBeenCalledTimes(1);
+
+		setIntervalSpy.mockRestore();
+	});
+
+	it("should update the status of the migrations", async () => {
+		// When loaded first transaction is pending
+		mockTransactions([transactionFixture, secondTransactionFixture], {}, [
+			MigrationTransactionStatus.Pending,
+			MigrationTransactionStatus.Confirmed,
 		]);
 
 		let reloadMigrationsCallback;
 
-		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
 			if (callback.name === "reloadMigrationsCallback") {
 				reloadMigrationsCallback = callback;
+				return;
 			}
 
-			return 1;
+			originalSetInterval(callback, time);
 		});
 
 		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
 		);
 
-		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 		});
 
-		expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(`${transactionFixture.sender()}:pending`);
+
+		// Once realoded the first transaction is now confirmed
+		mockTransactions([transactionFixture, secondTransactionFixture], {}, [
+			MigrationTransactionStatus.Confirmed,
+			MigrationTransactionStatus.Confirmed,
+		]);
 
 		reloadMigrationsCallback();
 
-		expect(screen.getByTestId("Migrations")).toBeInTheDocument();
-		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(
+				`${transactionFixture.sender()}:confirmed`,
+			);
+		});
 
-		clearStoredMigrationsMock();
 		setIntervalSpy.mockRestore();
 	});
 
-	it("should handle load error", async () => {
-		const waitForSpy = vi.spyOn(waitForMock, "waitFor").mockImplementation(() => Promise.resolve());
+	it("should not update the migrations if status does not change", async () => {
+		// When loaded first transaction is pending
+		mockTransactions([transactionFixture, secondTransactionFixture], {}, [MigrationTransactionStatus.Confirmed]);
 
-		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
-			migrationPendingFixture,
-		]);
+		let reloadMigrationsCallback;
 
-		getMigrationsByArkTxHashMock.mockImplementation(() => {
-			throw new Error("error");
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
+			if (callback.name === "reloadMigrationsCallback") {
+				reloadMigrationsCallback = callback;
+				return;
+			}
+
+			originalSetInterval(callback, time);
 		});
-
-		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
-		);
-
-		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
-
-		await waitFor(() => {
-			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
-		});
-
-		await waitFor(() => {
-			expect(screen.getByTestId("Migration__load_error")).toBeInTheDocument();
-		});
-
-		clearStoredMigrationsMock();
-		waitForSpy.mockRestore();
-	});
-
-	it("should determine if a contract is paused", async () => {
-		const ethersMock = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: vi.fn(),
-			paused: () => true,
-		}));
 
 		render(
 			<MigrationProvider>
@@ -466,22 +594,40 @@ describe("Migration Context", () => {
 			</MigrationProvider>,
 		);
 
-		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 		});
 
-		expect(screen.getByTestId("Migration__contract_paused")).toBeInTheDocument();
+		expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(`${transactionFixture.sender()}:confirmed`);
 
-		ethersMock.mockRestore();
+		reloadMigrationsCallback();
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(
+				`${transactionFixture.sender()}:confirmed`,
+			);
+		});
+
+		// Reload again not status should change
+		reloadMigrationsCallback();
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(
+				`${transactionFixture.sender()}:confirmed`,
+			);
+		});
+
+		setIntervalSpy.mockRestore();
 	});
 
-	it("should determine if a contract is not paused", async () => {
-		const ethersMock = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: vi.fn(),
-			paused: () => false,
-		}));
+	it("should call the method to load more transactions", async () => {
+		const loadMoreTransactionsSpy = vi.fn();
+
+		mockTransactions([transactionFixture], {
+			loadMigrationWalletTransactions: loadMoreTransactionsSpy,
+		});
 
 		render(
 			<MigrationProvider>
@@ -489,235 +635,125 @@ describe("Migration Context", () => {
 			</MigrationProvider>,
 		);
 
-		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("Migration__contract_loading")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 		});
 
-		expect(screen.getByTestId("Migration__contract_not_paused")).toBeInTheDocument();
+		userEvent.click(screen.getByTestId("Migrations__loadmore"));
 
-		ethersMock.mockRestore();
+		expect(loadMoreTransactionsSpy).toHaveBeenCalled();
 	});
 
-	it("should handle exceptions on pause method", () => {
-		const ethersMock = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: vi.fn(),
-			paused: () => {
-				throw new Error("Error");
-			},
-		}));
+	it("should get a migration by id", async () => {
+		mockTransactions([transactionFixture]);
 
 		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
+			<MigrationProvider>
+				<Test transactionToHandle={transactionFixture} />
+			</MigrationProvider>,
 		);
 
-		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
-		expect(screen.queryByTestId("Migration__contract_not_paused")).not.toBeInTheDocument();
-		expect(screen.queryByTestId("Migration__contract_paused")).not.toBeInTheDocument();
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 
-		ethersMock.mockRestore();
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		mockTransactions([transactionFixture, secondTransactionFixture]);
+
+		userEvent.click(screen.getByTestId("Migrations__get"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__selected")).toHaveTextContent(transactionFixture.id());
+		});
 	});
 
-	it("should add and remove a transaction", async () => {
-		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
-
-		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => [
-			{
-				amount: 123,
-				arkTxHash: `0xabc123`,
-				memo: "0xabc",
-			},
-		]);
-
-		const ethersMock = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
-			paused: () => false,
-		}));
+	it("should mark a migration as read", async () => {
+		mockTransactions([transactionFixture]);
 
 		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
+			<MigrationProvider>
+				<Test transactionToHandle={transactionFixture} />
+			</MigrationProvider>,
 		);
 
-		await waitFor(() => {
-			expect(screen.getByTestId("Migrations__store")).toBeInTheDocument();
-		});
-
-		expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("Migrations__store"));
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("Migrations__remove"));
-
-		await waitFor(() => {
-			expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
-		});
-
-		ethersMock.mockRestore();
-	});
-
-	it("should not add a transaction that already exists twice", async () => {
-		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(profile);
-
-		const getMigrationsByArkTxHashMock = vi.fn().mockImplementation(() => [
-			{
-				amount: 123,
-				arkTxHash: `0xabc123`,
-				memo: "0xabc",
-			},
-		]);
-
-		const ethersMock = Contract.mockImplementation(() => ({
-			getMigrationsByArkTxHash: getMigrationsByArkTxHashMock,
-			paused: () => false,
-		}));
-
-		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("Migrations__store")).toBeInTheDocument();
-		});
-
-		expect(screen.queryByTestId("MigrationItem")).not.toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("Migrations__store"));
-
-		await waitFor(() => {
-			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
-		});
-
-		userEvent.click(screen.getByTestId("Migrations__store"));
-
-		await waitFor(() => {
-			expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
-		});
-
-		ethersMock.mockRestore();
-	});
-
-	it("should mark migration as read", async () => {
-		const { clearStoredMigrationsMock, setMigrationMock } = mockStoredMigrations([
-			{
-				address: "AdDreSs",
-				amount: 111,
-				id: "abc123",
-				migrationAddress: "BuRnAdDreSs",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
-		]);
-
-		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
-		});
-
-		expect(screen.getByTestId("Migrations__markasread")).toBeInTheDocument();
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
 
 		userEvent.click(screen.getByTestId("Migrations__markasread"));
 
-		expect(setMigrationMock).toHaveBeenCalledWith(expect.any(String), expect.any(Object));
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__markedasread")).toBeInTheDocument();
+		});
 
-		clearStoredMigrationsMock();
+		expect(screen.getAllByTestId("MigrationItem")[0]).toHaveTextContent(`read`);
 	});
 
-	it("should not reload the migrations if no pending migrations", async () => {
-		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
-			migrationFixture,
-			{
-				address: "AdDreSs2",
-				amount: 222,
-				id: "456",
-				migrationAddress: "BuRnAdDreSs",
-				migrationId: "abc123",
-				status: MigrationTransactionStatus.Confirmed,
-				timestamp: Date.now() / 1000,
-			},
-		]);
-
-		let reloadMigrationsCallback;
-
-		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
-			if (callback.name === "reloadMigrationsCallback") {
-				reloadMigrationsCallback = callback;
-			}
-
-			return 1;
-		});
+	it("shouldnt mark a migration as read if not exists", async () => {
+		mockTransactions([transactionFixture]);
 
 		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
+			<MigrationProvider>
+				<Test transactionToHandle={secondTransactionFixture} />
+			</MigrationProvider>,
 		);
 
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
 		await waitFor(() => {
-			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 		});
 
-		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
 
-		reloadMigrationsCallback();
+		userEvent.click(screen.getByTestId("Migrations__markasread"));
 
-		// Contract method should have been called only when loaded
-		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(1);
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__markedasread")).toBeInTheDocument();
+		});
 
-		setIntervalSpy.mockRestore();
-
-		clearStoredMigrationsMock();
+		expect(screen.getAllByTestId("MigrationItem")[0]).not.toHaveTextContent(`read`);
 	});
 
-	it("should not load the migrations if contractAddress is not defined", () => {
-		polygonContractAddressSpy = vi.spyOn(polygonMigration, "polygonContractAddress").mockReturnValue(undefined);
+	it("should resolve a transaction", async () => {
+		mockTransactions([transactionFixture]);
 
-		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
+		render(
+			<MigrationProvider>
+				<Test transactionToHandle={transactionFixture} />
+			</MigrationProvider>,
+		);
+
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(1);
+
+		userEvent.click(screen.getByTestId("Migrations__get_transaction"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Transaction__selected")).toHaveTextContent(transactionFixture.id());
+		});
+	});
+
+	it("should handle rpc error when loading initial status", async () => {
+		mockTransactions([transactionFixture]);
+
+		getContractMigrationsSpy.mockImplementation(() => {
+			throw new Error("RPC Error");
+		});
 
 		render(
 			<MigrationProvider>
@@ -725,63 +761,55 @@ describe("Migration Context", () => {
 			</MigrationProvider>,
 		);
 
-		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(0);
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
 
-		clearStoredMigrationsMock();
+		await waitFor(() => {
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
+		});
 
-		polygonContractAddressSpy.mockRestore();
+		expect(screen.getByTestId("Migration__load_error")).toBeInTheDocument();
 	});
 
-	it("should reload the migrations if at least one migration is pending", async () => {
-		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([
-			migrationFixture,
-			{
-				address: "AdDreSs2",
-				amount: 222,
-				id: "456",
-				migrationAddress: "BuRnAdDreSs",
-				status: MigrationTransactionStatus.Pending,
-				timestamp: Date.now() / 1000,
-			},
-		]);
+	it("should handle rpc error when loading migration details", async () => {
+		mockTransactions([transactionFixture]);
 
 		let reloadMigrationsCallback;
 
-		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
+		const originalSetInterval = window.setInterval;
+		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback, time) => {
 			if (callback.name === "reloadMigrationsCallback") {
 				reloadMigrationsCallback = callback;
+				return;
 			}
 
-			return 1;
+			originalSetInterval(callback, time);
 		});
 
 		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
+			<MigrationProvider>
+				<Test />
+			</MigrationProvider>,
 		);
 
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+
 		await waitFor(() => {
-			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 		});
 
-		expect(screen.getAllByTestId("MigrationItem")).toHaveLength(2);
+		expect(screen.queryByTestId("Migration__load_error")).not.toBeInTheDocument();
+
+		getContractMigrationsSpy.mockImplementation(() => {
+			throw new Error("RPC Error");
+		});
 
 		reloadMigrationsCallback();
 
-		// Contract method should have been twice, once when page loaded
-		// and once when interval was called
-		expect(getMigrationsByArkTxHashMock).toHaveBeenCalledTimes(2);
+		await waitFor(() => {
+			expect(screen.getByTestId("Migration__load_error")).to.toBeInTheDocument();
+		});
 
 		setIntervalSpy.mockRestore();
-
-		clearStoredMigrationsMock();
 	});
 
 	it("should throw without provider", () => {
@@ -799,112 +827,35 @@ describe("Migration Context", () => {
 		consoleSpy.mockRestore();
 	});
 
-	it("should not load migrations if profile is undefined", () => {
-		profileWatcherMock = vi.spyOn(useProfileWatcher, "useProfileWatcher").mockReturnValue(undefined);
+	it("shouldnt has more while is loading", async () => {
+		const TestLoadMore = () => {
+			const { hasMore, isLoading } = useMigrations();
 
-		const { clearStoredMigrationsMock, getMigrationsByArkTxHashMock } = mockStoredMigrations([]);
+			return (
+				<div>
+					{hasMore && <span data-testid="Migration__hasmore">Has More</span>}
+					{isLoading && <span data-testid="Migration__loading">Contract Loading...</span>}
+				</div>
+			);
+		};
+
+		mockTransactions([transactionFixture, secondTransactionFixture], {
+			hasMore: true,
+		});
 
 		render(
 			<MigrationProvider>
-				<Test />
+				<TestLoadMore />
 			</MigrationProvider>,
 		);
 
-		expect(screen.getByTestId("Migration__contract_loading")).toBeInTheDocument();
-
-		expect(getMigrationsByArkTxHashMock).not.toHaveBeenCalled();
-
-		clearStoredMigrationsMock();
-	});
-
-	it("should reload paused state", async () => {
-		const { clearStoredMigrationsMock, getPausedMock } = mockStoredMigrations([migrationFixture]);
-
-		let reloadPausedStateCallback;
-
-		const setIntervalSpy = vi.spyOn(window, "setInterval").mockImplementation((callback) => {
-			if (callback.name === "reloadPausedStateCallback") {
-				reloadPausedStateCallback = callback;
-			}
-
-			return 1;
-		});
-
-		render(
-			<Route path="/profiles/:profileId/migration">
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>
-				,
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/migration`,
-			},
-		);
+		expect(screen.getByTestId("Migration__loading")).toBeInTheDocument();
+		expect(screen.queryByTestId("Migration__hasmore")).not.toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("Migrations")).toBeInTheDocument();
+			expect(screen.queryByTestId("Migration__loading")).not.toBeInTheDocument();
 		});
 
-		reloadPausedStateCallback();
-
-		// Contract method should have been twice, once when page loaded
-		// and once when interval was called
-		expect(getPausedMock).toHaveBeenCalledTimes(2);
-
-		setIntervalSpy.mockRestore();
-
-		clearStoredMigrationsMock();
+		expect(screen.getByTestId("Migration__hasmore")).toBeInTheDocument();
 	});
-
-	it.each([MigrationTransactionStatus.Pending, MigrationTransactionStatus.Confirmed])(
-		"should determine transaction status",
-		async (status) => {
-			const { clearStoredMigrationsMock } = mockStoredMigrations([migrationFixture, migrationPendingFixture]);
-
-			const Test = () => {
-				const [transactionStatus, setTransactionStatus] = useState<any>();
-				const { getTransactionStatus } = useMigrations();
-
-				const loadTransactionStatus = async () => {
-					const transactionStatus = await getTransactionStatus({
-						id: () =>
-							status === MigrationTransactionStatus.Pending
-								? migrationPendingFixture.id
-								: migrationFixture.id,
-					} as any);
-
-					setTransactionStatus(transactionStatus);
-				};
-
-				if (transactionStatus !== undefined) {
-					return <div data-testid="Status">{transactionStatus}</div>;
-				}
-
-				return (
-					<button data-testid="LoadStatus" type="button" onClick={loadTransactionStatus}>
-						Load Status
-					</button>
-				);
-			};
-
-			render(
-				<MigrationProvider>
-					<Test />
-				</MigrationProvider>,
-			);
-
-			expect(screen.getByTestId("LoadStatus")).toBeInTheDocument();
-
-			userEvent.click(screen.getByTestId("LoadStatus"));
-
-			await waitFor(() => {
-				expect(screen.getByTestId("Status")).toBeInTheDocument();
-			});
-
-			expect(screen.getByTestId("Status")).toHaveTextContent(status);
-
-			clearStoredMigrationsMock();
-		},
-	);
 });

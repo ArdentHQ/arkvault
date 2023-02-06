@@ -3,10 +3,10 @@ import { useTranslation } from "react-i18next";
 import { generatePath, matchPath, useHistory, useLocation } from "react-router-dom";
 import { MigrationDetails } from "@/domains/migration/components/MigrationDetails";
 import { Page } from "@/app/components/Layout";
-import { useMigrationTransactions } from "@/domains/migration/hooks/use-migration-transactions";
 import { useActiveProfile } from "@/app/hooks";
 import { Migration as MigrationTransaction } from "@/domains/migration/migration.contracts";
 import { ProfilePaths } from "@/router/paths";
+import { useMigrations } from "@/app/contexts";
 
 export const MigrationOverview = () => {
 	const { t } = useTranslation();
@@ -19,9 +19,7 @@ export const MigrationOverview = () => {
 	const [expandedMigration, setExpandedMigration] = useState<MigrationTransaction>();
 	const history = useHistory();
 
-	const { migrations, getMigrationById } = useMigrationTransactions({
-		profile,
-	});
+	const { getMigrationById } = useMigrations();
 
 	useLayoutEffect(() => {
 		const migrationTransaction = getMigrationById(migrationId);
@@ -36,7 +34,7 @@ export const MigrationOverview = () => {
 		}
 
 		setExpandedMigration(migrationTransaction);
-	}, [migrations, migrationId]);
+	}, [migrationId, getMigrationById]);
 
 	if (!expandedMigration) {
 		return <></>;
