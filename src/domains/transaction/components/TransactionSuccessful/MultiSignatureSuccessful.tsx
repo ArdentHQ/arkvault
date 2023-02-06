@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
 import { Alert } from "@/app/components/Alert";
-import { Avatar } from "@/app/components/Avatar";
+import { Avatar, EthereumAvatar } from "@/app/components/Avatar";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
@@ -23,6 +23,7 @@ import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendR
 import { assertString } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useBreakpoint } from "@/app/hooks";
+import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 
 interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;
@@ -115,9 +116,9 @@ export const MultiSignatureSuccessful = ({
 				{description || t("TRANSACTION.SUCCESS.MUSIG_DESCRIPTION")}
 			</p>
 
-			<Alert variant="success" className="md:hidden">
-				{t("TRANSACTION.SUCCESS.MUSIG_DESCRIPTION")}
-			</Alert>
+			<div className="md:hidden">
+				<Alert variant="success">{t("TRANSACTION.SUCCESS.MUSIG_DESCRIPTION")}</Alert>
+			</div>
 
 			<div>
 				{senderWallet && transaction && (
@@ -129,7 +130,11 @@ export const MultiSignatureSuccessful = ({
 							isDisabled
 						/>
 
-						<TransactionType type={transaction.type()} />
+						<TransactionType
+							type={transaction.type()}
+							isMigration={isValidMigrationTransaction(transaction)}
+							network={transaction.wallet().network()}
+						/>
 
 						<TransactionNetwork network={senderWallet.network()} />
 
@@ -167,7 +172,26 @@ export const MultiSignatureSuccessful = ({
 							<TransactionSender address={generatedAddress} network={senderWallet.network()} />
 						)}
 
-						{!transaction.isMultiSignatureRegistration() && (
+						{isValidMigrationTransaction(transaction) && (
+							<TransactionDetail
+								data-testid="TransactionSuccessful__musig-polygon-address"
+								label={t("MIGRATION.POLYGON_ADDRESS")}
+								extra={
+									<EthereumAvatar address={transaction.memo()} size={isXs || isSm ? "xs" : "lg"} />
+								}
+							>
+								<div className="flex grow items-center space-x-2 text-theme-primary-300 dark:text-theme-secondary-600">
+									<div className="w-0 flex-1 text-right md:text-left">
+										<Address address={transaction.memo()} />
+									</div>
+									<Clipboard variant="icon" data={transaction.memo()!}>
+										<Icon name="Copy" />
+									</Clipboard>
+								</div>
+							</TransactionDetail>
+						)}
+
+						{!transaction.isMultiSignatureRegistration() && !isValidMigrationTransaction(transaction) && (
 							<TransactionRecipients
 								label={t("TRANSACTION.RECIPIENTS_COUNT", {
 									count: transaction.recipients().length,
