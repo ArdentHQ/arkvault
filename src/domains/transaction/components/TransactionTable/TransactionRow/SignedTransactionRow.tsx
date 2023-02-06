@@ -241,7 +241,6 @@ export const SignedTransactionRow = ({
 						isAwaitingOurFinalSignature={isAwaitingOurFinalSignature}
 						onClick={() => onSign?.(transaction)}
 					/>
-					h
 					<Tooltip
 						content={
 							canBeDeleted
