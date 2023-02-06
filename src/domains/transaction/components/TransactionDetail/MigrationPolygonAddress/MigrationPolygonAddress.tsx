@@ -17,7 +17,7 @@ export const MigrationPolygonAddress = ({ transaction }: { transaction: DTO.Exte
 	return (
 		<TransactionDetail
 			data-testid="TransactionMigrationAddress"
-			label={t("COMMON.MIGRATION_ADDRESS")}
+			label={t("MIGRATION.POLYGON_ADDRESS")}
 			extra={
 				<div className={cn("flex items-center", iconSpaceClass)}>
 					<EthereumAvatar address={transaction.memo()} size={iconSize} />
