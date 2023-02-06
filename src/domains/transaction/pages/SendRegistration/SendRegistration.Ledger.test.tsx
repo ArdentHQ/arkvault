@@ -88,12 +88,12 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		},
 		id: () => MultisignatureRegistrationFixture.data.id,
 		isMultiSignatureRegistration: () => true,
+		memo: () => "test",
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "multiSignature",
-		memo: () => "test",
-		wallet: () => wallet,
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
