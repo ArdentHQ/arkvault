@@ -140,7 +140,7 @@ export const MigrationAdd = () => {
 			setTransaction(transaction);
 
 			if (wallet.isMultiSignature()) {
-				setActiveStep(Step.Finished);
+				setActiveStep(Step.Authenticate);
 				return;
 			}
 
@@ -191,7 +191,11 @@ export const MigrationAdd = () => {
 								</TabPanel>
 
 								<TabPanel tabId={Step.Authenticate}>
-									<MigrationAuthenticationStep />
+									{wallet?.isMultiSignature() && (
+										<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction} />
+									)}
+
+									{!wallet?.isMultiSignature() && <MigrationAuthenticationStep />}
 								</TabPanel>
 
 								<TabPanel tabId={Step.PendingTransaction}>
@@ -201,10 +205,6 @@ export const MigrationAdd = () => {
 								</TabPanel>
 
 								<TabPanel tabId={Step.Finished}>
-									{wallet?.isMultiSignature() && (
-										<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction} />
-									)}
-
 									{migrationTransaction && (
 										<MigrationSuccessStep
 											migrationTransaction={migrationTransaction}
