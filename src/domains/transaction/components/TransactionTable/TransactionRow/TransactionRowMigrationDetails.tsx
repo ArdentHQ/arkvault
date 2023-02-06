@@ -3,6 +3,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk-profiles";
 
+import { Networks } from "@ardenthq/sdk";
 import { Image } from "@/app/components/Image";
 import { Icon } from "@/app/components/Icon";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
@@ -49,25 +50,33 @@ export const TransactionMigrationLink = ({
 	);
 };
 
+export const TransactionMigrationIcon = ({
+	network,
+	isCompact,
+}: {
+	isCompact?: boolean;
+	network?: Networks.Network;
+}) => (
+	<div className="relative flex items-center">
+		{!isCompact && <Image name="HexagonBold" width={44} height={44} useAccentColor={false} />}
+
+		<NetworkIcon
+			isCompact={isCompact}
+			network={network}
+			size="lg"
+			className={`border-transparent text-theme-hint-600 ${isCompact ? "" : "absolute top-0 h-full w-full"}`}
+			showTooltip={false}
+			noShadow
+		/>
+	</div>
+);
+
 export const TransactionRowMigrationDetails = ({ transaction, isCompact, onClick }: Properties) => {
 	const { t } = useTranslation();
 
 	return (
 		<>
-			<div className="relative flex items-center">
-				{!isCompact && <Image name="HexagonBold" width={44} height={44} useAccentColor={false} />}
-
-				<NetworkIcon
-					isCompact={isCompact}
-					network={transaction.wallet().network()}
-					size="lg"
-					className={`border-transparent text-theme-hint-600 ${
-						isCompact ? "" : "absolute top-0 h-full w-full"
-					}`}
-					showTooltip={false}
-					noShadow
-				/>
-			</div>
+			<TransactionMigrationIcon network={transaction.wallet().network()} isCompact={isCompact} />
 
 			<div className="flex items-center">
 				<span data-testid="MigrationRowDetailsLabel" className="font-semibold text-theme-text">
