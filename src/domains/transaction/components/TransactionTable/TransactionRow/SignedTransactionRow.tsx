@@ -184,7 +184,9 @@ export const SignedTransactionRow = ({
 				innerClassName="text-theme-secondary-text"
 				isCompact={isCompact}
 			>
-				<span data-testid="TransactionRow__timestamp">{transaction.timestamp().format(timeFormat)}</span>
+				<span data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
+					{transaction.timestamp().format(timeFormat)}
+				</span>
 			</TableCell>
 
 			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
@@ -202,7 +204,11 @@ export const SignedTransactionRow = ({
 				)}
 
 				{isValidMigrationTransaction(transaction) && (
-					<TransactionRowMigrationDetails transaction={transaction} isCompact={isCompact} />
+					<TransactionRowMigrationDetails
+						transaction={transaction}
+						isCompact={isCompact}
+						showDetailsLink={false}
+					/>
 				)}
 			</TableCell>
 
