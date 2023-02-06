@@ -13,28 +13,10 @@ describe("MigrationRepository", () => {
 		profile2 = await env.profiles().create("new profile 2");
 	});
 
-	it("return an empty array for a new repository", () => {
+	it("return an undefined value for a new repository", () => {
 		const repository = new MigrationRepository(profile, env.data());
 
-		expect(repository.all()).toEqual([]);
-	});
-
-	it("should remove items", () => {
-		const migration1 = { id: "migration-id-1" };
-		const migration2 = { id: "migration-id-2" };
-
-		const repository = new MigrationRepository(profile, env.data());
-
-		repository.add(migration1);
-		repository.add(migration2);
-
-		expect(repository.all()).toHaveLength(2);
-		expect(repository.all()[0].id).toBe(migration1.id);
-
-		repository.remove([migration1]);
-
-		expect(repository.all()).toHaveLength(1);
-		expect(repository.all()[0].id).toBe(migration2.id);
+		expect(repository.get()).toBeUndefined();
 	});
 
 	it("stores migrations for one profile", () => {
@@ -43,8 +25,12 @@ describe("MigrationRepository", () => {
 
 		repository.set([{ id: "1" }, { id: "2" }]);
 
-		expect(repository.all()).toHaveLength(2);
+		const data = repository.get();
 
-		expect(repository2.all()).toHaveLength(0);
+		const data2 = repository2.get();
+
+		expect(data).toHaveLength(2);
+
+		expect(data2).toBeUndefined();
 	});
 });
