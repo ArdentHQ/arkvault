@@ -231,6 +231,8 @@ export const MultiSignatureSuccessful = ({
 								currency={senderWallet.currency()}
 								isTotalAmount={transaction.recipients().length > 1}
 								isSent={true}
+								isMigration={isValidMigrationTransaction(transaction)}
+								network={transaction.wallet().network()}
 							/>
 						)}
 					</>
