@@ -202,8 +202,8 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-4dh3tj"
-                            color="hint"
+                            class="css-fbeerz"
+                            color="danger"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -782,8 +782,8 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-4dh3tj"
-                            color="hint"
+                            class="css-fbeerz"
+                            color="danger"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -1362,8 +1362,8 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-4dh3tj"
-                            color="hint"
+                            class="css-fbeerz"
+                            color="danger"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -1916,8 +1916,8 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-4dh3tj"
-                            color="hint"
+                            class="css-fbeerz"
+                            color="danger"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -2887,7 +2887,7 @@ exports[`MultiSignatureDetail > should render summary step for migration transac
                         <div
                           class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                         >
-                          Migration Address
+                          Polygon Address
                         </div>
                         <div
                           class="flex items-center font-semibold"
@@ -2950,6 +2950,40 @@ exports[`MultiSignatureDetail > should render summary step for migration transac
                             <div
                               class="flex space-x-1 items-stretch"
                             >
+                              <div
+                                class="flex items-center justify-center bg-theme-hint-100 dark:bg-theme-hint-600 -ml-1.5 px-2"
+                                data-testid="AmountLabel__hint"
+                              >
+                                <div
+                                  class="dark:text-white css-15txs7d"
+                                  height="10"
+                                  width="10"
+                                >
+                                  <svg
+                                    id="hint-small"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <circle
+                                      cx="4.5"
+                                      cy="1"
+                                      fill="currentColor"
+                                      r="1"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
                               <span
                                 class="whitespace-nowrap"
                                 data-testid="Amount"
@@ -3704,8 +3738,8 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-4dh3tj"
-                            color="hint"
+                            class="css-fbeerz"
+                            color="danger"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -4687,8 +4721,8 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-4dh3tj"
-                            color="hint"
+                            class="css-fbeerz"
+                            color="danger"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -6539,8 +6573,8 @@ exports[`MultiSignatureDetail > should show send button when able to add final s
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-4dh3tj"
-                            color="hint"
+                            class="css-fbeerz"
+                            color="danger"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -7107,8 +7141,8 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-4dh3tj"
-                            color="hint"
+                            class="css-fbeerz"
+                            color="danger"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
