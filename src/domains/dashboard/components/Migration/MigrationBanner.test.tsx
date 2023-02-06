@@ -16,6 +16,8 @@ vi.mock("react-router-dom", async () => ({
 	...(await vi.importActual("react-router-dom")),
 }));
 
+const migrateButton = () => screen.getByTestId("MigrationBanner--migrate");
+
 describe("MigrationBanner", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -69,7 +71,7 @@ describe("MigrationBanner", () => {
 
 		render(<MigrationBanner />);
 
-		userEvent.click(screen.getByTestId("MigrationBanner--migrate"));
+		userEvent.click(migrateButton());
 
 		expect(pushMock).toHaveBeenCalledWith(`/profiles/${profile.id()}/migration`);
 
@@ -79,7 +81,7 @@ describe("MigrationBanner", () => {
 	it("the migrate button redirects to migrate page while loading", () => {
 		useMigrationsSpy = vi.spyOn(contextMock, "useMigrations").mockReturnValue({
 			isLoading: true,
-			migrations: []
+			migrations: [],
 		});
 
 		const pushMock = vi.fn();
@@ -88,7 +90,7 @@ describe("MigrationBanner", () => {
 
 		render(<MigrationBanner />);
 
-		userEvent.click(screen.getByTestId("MigrationBanner--migrate"));
+		userEvent.click(migrateButton());
 
 		expect(pushMock).toHaveBeenCalledWith(`/profiles/${profile.id()}/migration`);
 
@@ -102,7 +104,7 @@ describe("MigrationBanner", () => {
 
 		render(<MigrationBanner />);
 
-		userEvent.click(screen.getByTestId("MigrationBanner--migrate"));
+		userEvent.click(migrateButton());
 
 		expect(screen.getByTestId("MigrationDisclaimer__submit-button")).toBeVisible();
 
@@ -120,7 +122,7 @@ describe("MigrationBanner", () => {
 	it("handles the cancel button on the disclaimer modal", async () => {
 		render(<MigrationBanner />);
 
-		userEvent.click(screen.getByTestId("MigrationBanner--migrate"));
+		userEvent.click(migrateButton());
 
 		expect(screen.getByTestId("MigrationDisclaimer__cancel-button")).toBeVisible();
 
@@ -132,7 +134,7 @@ describe("MigrationBanner", () => {
 	it("handles the close button on the disclaimer modal", async () => {
 		render(<MigrationBanner />);
 
-		userEvent.click(screen.getByTestId("MigrationBanner--migrate"));
+		userEvent.click(migrateButton());
 
 		expect(screen.getByTestId("Modal__close-button")).toBeVisible();
 
