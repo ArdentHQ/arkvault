@@ -161,7 +161,10 @@ export const MigrationAdd = () => {
 		}
 	};
 
-	const hideFormButtons = activeStep > Step.Authenticate || (activeStep === Step.Authenticate && wallet.isLedger());
+	const hideFormButtons =
+		activeStep > Step.Authenticate ||
+		(activeStep === Step.Authenticate && wallet.isLedger()) ||
+		(activeStep === Step.Authenticate && wallet.isMultiSignature());
 
 	const isNextDisabled = isDirty ? !isValid : true;
 
