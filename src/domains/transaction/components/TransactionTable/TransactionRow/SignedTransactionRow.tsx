@@ -95,6 +95,15 @@ export const SignButton = ({
 	);
 };
 
+export const canDeletePendingTransaction = (transaction: DTO.ExtendedSignedTransactionData) => {
+	const publicKey = transaction.wallet().publicKey();
+
+	assertString(publicKey);
+
+	const musigInfo = getMultiSignatureInfo(transaction);
+	return musigInfo.publicKeys.includes(publicKey);
+};
+
 export const SignedTransactionRow = ({
 	transaction,
 	onSign,
@@ -111,14 +120,7 @@ export const SignedTransactionRow = ({
 		wallet,
 	});
 
-	const canBeDeleted = useMemo(() => {
-		const publicKey = transaction.wallet().publicKey();
-
-		assertString(publicKey);
-
-		const musigInfo = getMultiSignatureInfo(transaction);
-		return musigInfo.publicKeys.includes(publicKey);
-	}, [transaction]);
+	const canBeDeleted = useMemo(() => canDeletePendingTransaction(transaction), [transaction]);
 
 	const handleRemove = (event?: MouseEvent) => {
 		event?.preventDefault();
@@ -239,7 +241,7 @@ export const SignedTransactionRow = ({
 						isAwaitingOurFinalSignature={isAwaitingOurFinalSignature}
 						onClick={() => onSign?.(transaction)}
 					/>
-
+					h
 					<Tooltip
 						content={
 							canBeDeleted

@@ -1,11 +1,11 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { MouseEvent } from "react";
+import React, { MouseEvent, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";
 import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
-import { SignButton } from "./SignedTransactionRow";
+import { canDeletePendingTransaction, SignButton } from "./SignedTransactionRow";
 import { TransactionMigrationLink } from "./TransactionRowMigrationDetails";
 import { TableRow } from "@/app/components/Table";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
@@ -38,6 +38,8 @@ export const SignedTransactionRowMobile = ({
 		transaction,
 		wallet,
 	});
+
+	const canBeDeleted = useMemo(() => canDeletePendingTransaction(transaction), [transaction]);
 
 	const handleRemove = (event?: MouseEvent) => {
 		event?.preventDefault();
@@ -142,6 +144,7 @@ export const SignedTransactionRowMobile = ({
 						data-testid="SignedTransactionRowMobile--remove"
 						variant="danger"
 						onClick={handleRemove}
+						disabled={!canBeDeleted}
 					>
 						<Icon name="Trash" size="lg" />
 
