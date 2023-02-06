@@ -13,7 +13,7 @@ exports[`MigrationPolygonAddress > should render in lg 1`] = `
       <div
         class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
       >
-        Migration Address
+        Polygon Address
       </div>
       <div
         class="flex items-center font-semibold"
@@ -56,7 +56,7 @@ exports[`MigrationPolygonAddress > should render in md 1`] = `
       <div
         class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
       >
-        Migration Address
+        Polygon Address
       </div>
       <div
         class="flex items-center font-semibold"
@@ -99,7 +99,7 @@ exports[`MigrationPolygonAddress > should render in sm 1`] = `
       <div
         class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
       >
-        Migration Address
+        Polygon Address
       </div>
       <div
         class="flex min-w-0 grow items-center justify-end space-x-4"
@@ -146,7 +146,7 @@ exports[`MigrationPolygonAddress > should render in xl 1`] = `
       <div
         class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
       >
-        Migration Address
+        Polygon Address
       </div>
       <div
         class="flex items-center font-semibold"
@@ -189,7 +189,7 @@ exports[`MigrationPolygonAddress > should render in xs 1`] = `
       <div
         class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
       >
-        Migration Address
+        Polygon Address
       </div>
       <div
         class="flex min-w-0 grow items-center justify-end space-x-4"
