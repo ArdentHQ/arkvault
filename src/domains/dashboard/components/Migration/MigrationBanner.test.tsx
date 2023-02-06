@@ -76,6 +76,25 @@ describe("MigrationBanner", () => {
 		useHistorySpy.mockRestore();
 	});
 
+	it("the migrate button redirects to migrate page while loading", () => {
+		useMigrationsSpy = vi.spyOn(contextMock, "useMigrations").mockReturnValue({
+			isLoading: true,
+			migrations: []
+		});
+
+		const pushMock = vi.fn();
+
+		const useHistorySpy = vi.spyOn(reactRouterDom, "useHistory").mockReturnValue({ push: pushMock });
+
+		render(<MigrationBanner />);
+
+		userEvent.click(screen.getByTestId("MigrationBanner--migrate"));
+
+		expect(pushMock).toHaveBeenCalledWith(`/profiles/${profile.id()}/migration`);
+
+		useHistorySpy.mockRestore();
+	});
+
 	it("opens the migrate disclaimer modal if no migrations and redirects to the user migration add page", () => {
 		const pushMock = vi.fn();
 

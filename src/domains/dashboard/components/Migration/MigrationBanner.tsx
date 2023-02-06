@@ -17,7 +17,7 @@ export const MigrationBanner = () => {
 	const { isDarkMode } = useTheme();
 	const history = useHistory();
 	const profile = useActiveProfile();
-	const { migrations } = useMigrations();
+	const { migrations, isLoading } = useMigrations();
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 
 	const confirmHandler = useCallback(() => {
@@ -26,14 +26,14 @@ export const MigrationBanner = () => {
 	}, [history, profile]);
 
 	const migrateButtonHandler = useCallback(() => {
-		if (migrations.length > 0) {
+		if (migrations.length > 0 || isLoading) {
 			const path = generatePath(ProfilePaths.Migration, { profileId: profile.id() });
 
 			history.push(path);
 		} else {
 			setIsDisclaimerOpen(true);
 		}
-	}, [history, profile, migrations]);
+	}, [history, profile, migrations, isLoading]);
 
 	return (
 		<>
