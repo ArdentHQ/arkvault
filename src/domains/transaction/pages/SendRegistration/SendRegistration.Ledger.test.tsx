@@ -91,6 +91,8 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "multiSignature",
+		memo: () => "test",
+		wallet: () => wallet,
 		usesMultiSignature: () => false,
 	} as any);
 
