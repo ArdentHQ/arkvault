@@ -1,8 +1,8 @@
-import { migrationWalletAddress } from "@/utils/polygon-migration";
 import { Http } from "@ardenthq/sdk";
 import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";
 import { Cache } from "./Cache";
+import { migrationWalletAddress } from "@/utils/polygon-migration";
 
 type Primitive = null | undefined | string | number | boolean | symbol | bigint;
 
@@ -37,7 +37,7 @@ export class HttpClient extends Http.AbstractRequest {
 		const cacheKey: string = hash(`${method}.${url}.${JSON.stringify(data)}`).toString();
 
 		if (url.includes(migrationWalletAddress())) {
-			console.log({ url, method });
+			console.log({ method, url });
 		}
 
 		return this.cache.remember(cacheKey, async () => {

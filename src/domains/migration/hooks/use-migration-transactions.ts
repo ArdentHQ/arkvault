@@ -9,8 +9,8 @@ import {
 	polygonMigrationStartTime,
 } from "@/utils/polygon-migration";
 import { useConfiguration } from "@/app/contexts";
-const PAGINATION_LIMIT = 11;
 import { httpClient } from "@/app/services";
+const PAGINATION_LIMIT = 11;
 
 export const fetchMigrationTransactions = async ({
 	profile,
