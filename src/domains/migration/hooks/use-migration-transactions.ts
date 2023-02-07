@@ -10,6 +10,7 @@ import {
 } from "@/utils/polygon-migration";
 import { useConfiguration } from "@/app/contexts";
 const PAGINATION_LIMIT = 11;
+import { httpClient } from "@/app/services";
 
 export const fetchMigrationTransactions = async ({
 	profile,
@@ -61,7 +62,10 @@ export const fetchMigrationTransactions = async ({
 		query.timestamp = { from: startTime };
 	}
 
+	httpClient.clearCache();
+	console.log("Migration request");
 	const transactions = await wallet.transactionIndex().received(query);
+	console.log("Migration request end =====");
 
 	return {
 		cursor: Number(transactions.currentPage()),
