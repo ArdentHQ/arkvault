@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import {
@@ -91,7 +91,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		const { items, hasMore, cursor } = await fetchMigrationTransactions({
 			limit: PAGINATION_LIMIT,
 			page: page + 1,
-			profile: profile!,
+			profile: profile,
 			profileWallets: profile
 				?.wallets()
 				.values()
