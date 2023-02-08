@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";
 import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
+import { TransactionRowMigrationDetails } from "./TransactionRowMigrationDetails";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
@@ -16,6 +17,7 @@ import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { assertString } from "@/utils/assertions";
+import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 
 interface SignedTransactionRowProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -93,6 +95,15 @@ export const SignButton = ({
 	);
 };
 
+export const canDeletePendingTransaction = (transaction: DTO.ExtendedSignedTransactionData) => {
+	const publicKey = transaction.wallet().publicKey();
+
+	assertString(publicKey);
+
+	const musigInfo = getMultiSignatureInfo(transaction);
+	return musigInfo.publicKeys.includes(publicKey);
+};
+
 export const SignedTransactionRow = ({
 	transaction,
 	onSign,
@@ -109,14 +120,7 @@ export const SignedTransactionRow = ({
 		wallet,
 	});
 
-	const canBeDeleted = useMemo(() => {
-		const publicKey = transaction.wallet().publicKey();
-
-		assertString(publicKey);
-
-		const musigInfo = getMultiSignatureInfo(transaction);
-		return musigInfo.publicKeys.includes(publicKey);
-	}, [transaction]);
+	const canBeDeleted = useMemo(() => canDeletePendingTransaction(transaction), [transaction]);
 
 	const handleRemove = (event?: MouseEvent) => {
 		event?.preventDefault();
@@ -182,18 +186,32 @@ export const SignedTransactionRow = ({
 				innerClassName="text-theme-secondary-text"
 				isCompact={isCompact}
 			>
-				<span data-testid="TransactionRow__timestamp">{transaction.timestamp().format(timeFormat)}</span>
+				<span data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
+					{transaction.timestamp().format(timeFormat)}
+				</span>
 			</TableCell>
 
 			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-				<BaseTransactionRowMode
-					isSent={true}
-					type={transaction.type()}
-					address={recipient}
-					isCompact={isCompact}
-				/>
+				{!isValidMigrationTransaction(transaction) && (
+					<>
+						<BaseTransactionRowMode
+							isSent={true}
+							type={transaction.type()}
+							address={recipient}
+							isCompact={isCompact}
+						/>
 
-				<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} />
+						<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} />
+					</>
+				)}
+
+				{isValidMigrationTransaction(transaction) && (
+					<TransactionRowMigrationDetails
+						transaction={transaction}
+						isCompact={isCompact}
+						showDetailsLink={false}
+					/>
+				)}
 			</TableCell>
 
 			<TableCell className="w-16" innerClassName="justify-center truncate" isCompact={isCompact}>
@@ -210,6 +228,7 @@ export const SignedTransactionRow = ({
 					isSent={true}
 					total={transaction.amount() + transaction.fee()}
 					wallet={wallet}
+					isMigration={isValidMigrationTransaction(transaction)}
 				/>
 			</TableCell>
 
@@ -222,7 +241,6 @@ export const SignedTransactionRow = ({
 						isAwaitingOurFinalSignature={isAwaitingOurFinalSignature}
 						onClick={() => onSign?.(transaction)}
 					/>
-
 					<Tooltip
 						content={
 							canBeDeleted
