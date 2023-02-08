@@ -79,8 +79,6 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 
 			await removeTransactions(walletAddress);
 
-			await persist();
-
 			if (history.location.pathname === generatePath(ProfilePaths.WalletDetails, { profileId, walletId })) {
 				history.push(generatePath(ProfilePaths.Dashboard, { profileId }));
 				return;

@@ -95,11 +95,17 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	const loadMigrationWalletTransactions = useCallback(async () => {
 		setIsLoading(true);
 
+		const wallies =
+			profile
+				?.wallets()
+				.values()
+				.filter((wallet) => wallet.networkId() === migrationNetwork()) || [];
+
 		const { items, hasMore, cursor } = await fetchMigrationTransactions({
 			limit: PAGINATION_LIMIT,
 			page: page + 1,
 			profile: profile!,
-			profileWallets: profileWallets!,
+			profileWallets: wallies,
 		});
 
 		setLatestTransactions((existingItems) => [...existingItems, ...items]);
@@ -107,7 +113,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		setPage(cursor);
 		setTransactionsLoaded(true);
 		setIsLoading(false);
-	}, [profile, page, hasMore, transactionsLoaded, profileWallets]);
+	}, [profile, page, hasMore, transactionsLoaded, profileWallets, walletsCount]);
 
 	const removeTransactions = async (walletAddress: string) => {
 		setLatestTransactions((transactions) =>
