@@ -102,7 +102,7 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		const { items, hasMore, cursor } = await fetchMigrationTransactions({
 			limit: PAGINATION_LIMIT,
 			page: page + 1,
-			profile: profile!,
+			profile: profile,
 			profileWallets: profileWallets!,
 		});
 
