@@ -109,10 +109,14 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		setIsLoading(false);
 	}, [profile, page, hasMore, transactionsLoaded, profileWallets]);
 
-	const removeTransactions = (walletAddress: string) => {
+	const removeTransactions = async (walletAddress: string) => {
 		setLatestTransactions((transactions) =>
 			transactions.filter((transaction) => transaction.wallet().address() !== walletAddress),
 		);
+
+		await loadMigrationWalletTransactions();
+
+		setToLoadTransactions(true);
 	};
 
 	useEffect(() => {
