@@ -93,6 +93,10 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 	}, [walletsCount, profileIsSyncing, profile]);
 
 	const loadMigrationWalletTransactions = useCallback(async () => {
+		if (!profile) {
+			return;
+		}
+
 		setIsLoading(true);
 
 		const { items, hasMore, cursor } = await fetchMigrationTransactions({
