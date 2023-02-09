@@ -19,7 +19,7 @@ interface MigrationContextType {
 	migrations: Migration[];
 	storeTransactions: (transactions: MigrationTransaction[]) => Promise<void>;
 	getTransactionStatus: (transaction: MigrationTransaction) => Promise<MigrationTransactionStatus>;
-	removeTransactions: (address: string) => void;
+	removeTransactions: (address: string) => Promise<void>;
 	markMigrationsAsRead: (ids: string[]) => void;
 	loadMigrationsError: Error | undefined;
 	resolveTransaction: (migration: Migration) => MigrationTransaction | undefined;
