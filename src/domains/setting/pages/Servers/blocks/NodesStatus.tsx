@@ -42,13 +42,18 @@ const NodeStatusNode: React.VFC<{
 			updatedServerStatus[network.id()] = {};
 		}
 
-		updatedServerStatus[network.id()][fullHost.host] = fullHostResult.status === "fulfilled" && fullHostResult.value === true;
+		updatedServerStatus[network.id()][fullHost.host] =
+			fullHostResult.status === "fulfilled" && fullHostResult.value === true;
 
 		if (musigHostResult) {
-			updatedServerStatus[network.id()][musigHost.host] = musigHostResult.status === "fulfilled" && musigHostResult.value === true;
+			updatedServerStatus[network.id()][musigHost.host] =
+				musigHostResult.status === "fulfilled" && musigHostResult.value === true;
 		}
 
-		setIsOnline(updatedServerStatus[network.id()][fullHost.host] && (updatedServerStatus[network.id()][musigHost?.host] ?? true))
+		setIsOnline(
+			updatedServerStatus[network.id()][fullHost.host] &&
+				(updatedServerStatus[network.id()][musigHost?.host] ?? true),
+		);
 
 		setConfiguration({
 			serverStatus: updatedServerStatus,
@@ -127,9 +132,7 @@ const NodeStatusNode: React.VFC<{
 	);
 };
 
-const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({
-	networks,
-}) => (
+const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) => (
 	<div data-testid="NodesStatus" className="mt-3 sm:grid sm:grid-cols-2 sm:gap-x-6">
 		{networks.map((network, index) => (
 			<NodeStatusNode

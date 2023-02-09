@@ -5,13 +5,7 @@ import { pingServerAddress, getServerHeight } from "@/utils/peers";
 import { useHosts } from "@/domains/setting/pages/Servers/hooks/use-hosts";
 import { useConfiguration } from "@/app/contexts";
 
-export const useServerStatus = ({
-	profile,
-	network,
-}: {
-	profile: Contracts.IProfile;
-	network: NormalizedNetwork;
-}) => {
+export const useServerStatus = ({ profile, network }: { profile: Contracts.IProfile; network: NormalizedNetwork }) => {
 	const [serverStatus, setServerStatus] = useState(ServerStatus.Loading);
 	const { updateNetwork } = useHosts({ profile });
 

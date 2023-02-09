@@ -12,7 +12,7 @@ export const useServerHealthStatus = () => {
 		const getOverallStatus = (serverStatus: any) => {
 			const peersByNetwork = Object.values(serverStatus);
 
-			let status: ServerHealthStatus | undefined = undefined;
+			let status: ServerHealthStatus | undefined;
 
 			for (const peers of peersByNetwork) {
 				if (Object.values(peers as any).every((isUp) => !isUp)) {

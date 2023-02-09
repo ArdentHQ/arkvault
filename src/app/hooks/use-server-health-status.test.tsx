@@ -39,7 +39,7 @@ describe("useServerHealthStatus", () => {
 	});
 
 	it("should render as downgraded", async () => {
-		render(<ServerHealthStatusWrapper status={{ "ark.devnet": { up: true, down: false } }} />);
+		render(<ServerHealthStatusWrapper status={{ "ark.devnet": { down: false, up: true } }} />);
 
 		await expect(screen.findByTestId("ServerHealthStatus--1")).resolves.toBeVisible();
 	});
