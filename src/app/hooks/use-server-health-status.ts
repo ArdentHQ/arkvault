@@ -36,7 +36,7 @@ export const useServerHealthStatus = () => {
 			}
 		};
 
-		const overallStatus = getOverallStatus(serverStatus);
+		const overallStatus = getOverallStatus(serverStatus ?? {});
 		const label = getLabel(overallStatus);
 
 		return {
