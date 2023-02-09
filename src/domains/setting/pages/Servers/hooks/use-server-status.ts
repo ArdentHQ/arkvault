@@ -1,12 +1,20 @@
 import { useCallback, useState } from "react";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
-import { NormalizedNetwork, ServerHealthStatus, ServerStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { NormalizedNetwork, ServerStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { pingServerAddress, getServerHeight } from "@/utils/peers";
 import { useHosts } from "@/domains/setting/pages/Servers/hooks/use-hosts";
 import { useConfiguration } from "@/app/contexts";
 import { ProfilePeers } from "@/utils/profile-peers";
 
-export const useServerStatus = ({ env, profile, network }: { env: Environment; profile: Contracts.IProfile; network: NormalizedNetwork }) => {
+export const useServerStatus = ({
+	env,
+	profile,
+	network,
+}: {
+	env: Environment;
+	profile: Contracts.IProfile;
+	network: NormalizedNetwork;
+}) => {
 	const [serverStatus, setServerStatus] = useState(ServerStatus.Loading);
 	const { updateNetwork } = useHosts({ profile });
 

@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -9,11 +10,15 @@ import { Spinner } from "@/app/components/Spinner";
 import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { ProfilePeers } from "@/utils/profile-peers";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { useConfiguration } from "@/app/contexts";
 
-const NodeStatusNode: React.VFC<{ env: Environment; profile: Contracts.IProfile; network: Networks.Network; lastRow: boolean }> = ({ env, profile, network, lastRow }) => {
+const NodeStatusNode: React.VFC<{
+	env: Environment;
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	lastRow: boolean;
+}> = ({ env, profile, network, lastRow }) => {
 	const { t } = useTranslation();
 
 	const { serverStatus, setConfiguration } = useConfiguration();
@@ -129,7 +134,11 @@ const NodeStatusNode: React.VFC<{ env: Environment; profile: Contracts.IProfile;
 	);
 };
 
-const NodesStatus: React.VFC<{ env: Environment; profile: Contracts.IProfile; networks: Networks.Network[] }> = ({ env, profile, networks }) => (
+const NodesStatus: React.VFC<{ env: Environment; profile: Contracts.IProfile; networks: Networks.Network[] }> = ({
+	env,
+	profile,
+	networks,
+}) => (
 	<div data-testid="NodesStatus" className="mt-3 sm:grid sm:grid-cols-2 sm:gap-x-6">
 		{networks.map((network, index) => (
 			<NodeStatusNode

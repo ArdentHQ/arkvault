@@ -232,8 +232,8 @@ const CustomPeersPeer: React.VFC<{
 	const { name, network, serverType, address, height, enabled } = normalizedNetwork;
 
 	const { serverStatus, syncStatus } = useServerStatus({
-		network: normalizedNetwork,
 		env,
+		network: normalizedNetwork,
 		profile,
 	});
 

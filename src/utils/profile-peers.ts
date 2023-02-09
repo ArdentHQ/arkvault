@@ -30,7 +30,8 @@ const Peer = (peer: PeerData): IPeer => {
 	};
 };
 
-const groupPeersByNetwork = (peers: IPeer[]) => groupBy(peers, (peer) => peer.network().id()) as Record<string, IPeer[]>;
+const groupPeersByNetwork = (peers: IPeer[]) =>
+	groupBy(peers, (peer) => peer.network().id()) as Record<string, IPeer[]>;
 
 const customPeers = (env: Environment, profile: Contracts.IProfile) =>
 	customNetworks(env, profile)
@@ -48,14 +49,14 @@ const defaultPeers = (env: Environment, profile: Contracts.IProfile) => {
 						address: host.host ?? "",
 						network,
 						serverType: host.type as NetworkHostType,
-					})
-				)
+					}),
+				);
 			}
 		}
 	}
 
 	return peers;
-}
+};
 
 const isHealthy = (peers: IPeer[]) => peers.every((peer) => peer.isUp());
 const isDowngraded = (peers: IPeer[]) => !isHealthy(peers) && peers.some((peer) => peer.isUp());
@@ -74,7 +75,10 @@ export const ProfilePeers = (env: Environment, profile: Contracts.IProfile) => {
 		return [...customPeers(env, profile), ...defaultPeers(env, profile)];
 	};
 
-	const healthStatusByNetwork = async (networkId?: string, type?: "custom" | "default"): Promise<Record<string, ServerHealthStatus>> => {
+	const healthStatusByNetwork = async (
+		networkId?: string,
+		type?: "custom" | "default",
+	): Promise<Record<string, ServerHealthStatus>> => {
 		let peers: IPeer[] = getPeers(type);
 
 		if (networkId) {

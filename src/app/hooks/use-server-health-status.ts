@@ -15,7 +15,7 @@ export const useServerHealthStatus = () => {
 				return ServerHealthStatus.Healthy;
 			}
 
-			if (statuses.some((status) => status === ServerHealthStatus.Downgraded)) {
+			if (statuses.includes(ServerHealthStatus.Downgraded)) {
 				return ServerHealthStatus.Downgraded;
 			}
 
