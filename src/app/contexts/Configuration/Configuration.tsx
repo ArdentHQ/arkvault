@@ -35,7 +35,7 @@ export const ConfigurationProvider = ({ children, defaultConfiguration }: Proper
 
 		profileIsSyncingWallets: false,
 		restoredProfiles: [],
-		serverStatus: ServerHealthStatus.Healthy,
+		serverStatus: {},
 		...defaultConfiguration,
 	});
 
