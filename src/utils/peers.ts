@@ -84,6 +84,10 @@ const pingServerAddress = async (address: string, type: NetworkHostType): Promis
 		}
 	};
 
+	if (address.includes("https://ark-live.arkvault.io/api")) {
+		return false;
+	}
+
 	return pingServer();
 };
 

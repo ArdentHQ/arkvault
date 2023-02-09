@@ -18,12 +18,6 @@ interface IPeer {
 	isUp: () => boolean;
 }
 
-interface INetworkPeers {
-	sync: () => Promise<void[]>;
-	isUnavailable: () => boolean;
-	isDowngraded: () => boolean;
-}
-
 const Peer = (peer: PeerData): IPeer => {
 	let isUp = false;
 
@@ -36,7 +30,7 @@ const Peer = (peer: PeerData): IPeer => {
 	};
 };
 
-const groupByNetwork = (peers: IPeer[]) => Object.values(groupBy(peers, (peer) => peer.network().id()));
+const groupPeersByNetwork = (peers: IPeer[]) => groupBy(peers, (peer) => peer.network().id()) as Record<string, IPeer[]>;
 
 const customPeers = (env: Environment, profile: Contracts.IProfile) =>
 	customNetworks(env, profile)
@@ -52,41 +46,44 @@ const defaultPeers = (env: Environment, profile: Contracts.IProfile) =>
 		}))
 		.map(Peer);
 
-const NetworkPeers = (peers: IPeer[]): INetworkPeers => {
-	const isHealthy = () => peers.every((peer) => peer.isUp());
-
-	return {
-		isDowngraded: () => !isHealthy() && peers.some((peer) => peer.isUp()),
-		isUnavailable: () => peers.every((peer) => !peer.isUp()),
-		sync: () => Promise.all(peers.map((peer) => peer.sync())),
-	};
-};
-
-const NetworkPeerStatuses = (networks: INetworkPeers[]) => ({
-	isAnyDowngraded: () => networks.some((network) => network.isDowngraded()),
-	isAnyUnavailable: () => networks.some((network) => network.isUnavailable()),
-	sync: () => Promise.all(networks.map((network) => network.sync())),
-});
-
 export const ProfilePeers = (env: Environment, profile: Contracts.IProfile) => {
 	const allPeers = () => [...customPeers(env, profile), ...defaultPeers(env, profile)];
 
-	const healthStatus = async (): Promise<ServerHealthStatus> => {
-		const networks = NetworkPeerStatuses(groupByNetwork(allPeers()).map(NetworkPeers));
-		await networks.sync();
+	const isHealthy = (peers: IPeer[]) => peers.every((peer) => peer.isUp());
+	const isDowngraded = (peers: IPeer[]) => !isHealthy(peers) && peers.some((peer) => peer.isUp());
+	const isUnavailable = (peers: IPeer[]) => peers.every((peer) => !peer.isUp());
 
-		if (networks.isAnyUnavailable()) {
-			return ServerHealthStatus.Unavailable;
+	const healthStatusByNetwork = async (): Promise<Record<string, ServerHealthStatus>> => {
+		const peers = allPeers();
+
+		await Promise.all(peers.map((peer) => peer.sync()));
+
+		const networks = groupPeersByNetwork(peers);
+
+		const statuses: Record<string, ServerHealthStatus> = {};
+
+		for (const [networkId, peers] of Object.entries(networks)) {
+			let status;
+
+			if (isHealthy(peers)) {
+				status = ServerHealthStatus.Healthy;
+			}
+
+			if (isDowngraded(peers)) {
+				status = ServerHealthStatus.Downgraded;
+			}
+
+			if (isUnavailable(peers)) {
+				status = ServerHealthStatus.Unavailable;
+			}
+
+			statuses[networkId] = status;
 		}
 
-		if (networks.isAnyDowngraded()) {
-			return ServerHealthStatus.Downgraded;
-		}
-
-		return ServerHealthStatus.Healthy;
+		return statuses;
 	};
 
 	return {
-		healthStatus,
+		healthStatusByNetwork,
 	};
 };
