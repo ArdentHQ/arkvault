@@ -7,40 +7,43 @@ export const useServerHealthStatus = () => {
 	const { t } = useTranslation();
 	const { serverStatus } = useConfiguration();
 
-	const overallStatus = useMemo(() => {
-		const statuses = Object.values(serverStatus);
+	const status = useMemo(() => {
+		const getOverallStatus = (serverStatus: any) => {
+			const statuses = Object.values(serverStatus);
 
-		console.log(statuses);
+			if (statuses.every((status) => status === ServerHealthStatus.Healthy)) {
+				return ServerHealthStatus.Healthy;
+			}
 
-		if (statuses.every((status) => status === ServerHealthStatus.Healthy)) {
-			return ServerHealthStatus.Healthy;
-		}
+			if (statuses.some((status) => status === ServerHealthStatus.Downgraded)) {
+				return ServerHealthStatus.Downgraded;
+			}
 
-		if (statuses.some((status) => status === ServerHealthStatus.Downgraded)) {
-			return ServerHealthStatus.Downgraded;
-		}
+			return ServerHealthStatus.Unavailable;
+		};
 
-		return ServerHealthStatus.Unavailable;
-	}, [serverStatus]);
+		const getLabel = (overallStatus: ServerHealthStatus) => {
+			if (overallStatus === ServerHealthStatus.Healthy) {
+				return t("COMMON.SERVER_STATUS.HEALTHY");
+			}
 
-	const label = useMemo(() => {
-		if (overallStatus === ServerHealthStatus.Healthy) {
-			return t("COMMON.SERVER_STATUS.HEALTHY");
-		}
+			if (overallStatus === ServerHealthStatus.Downgraded) {
+				return t("COMMON.SERVER_STATUS.DOWNGRADED");
+			}
 
-		if (overallStatus === ServerHealthStatus.Downgraded) {
-			return t("COMMON.SERVER_STATUS.DOWNGRADED");
-		}
+			if (overallStatus === ServerHealthStatus.Unavailable) {
+				return t("COMMON.SERVER_STATUS.UNAVAILABLE");
+			}
+		};
 
-		if (overallStatus === ServerHealthStatus.Unavailable) {
-			return t("COMMON.SERVER_STATUS.UNAVAILABLE");
-		}
-	}, [overallStatus]);
+		const overallStatus = getOverallStatus(serverStatus);
+		const label = getLabel(overallStatus);
 
-	return {
-		status: {
+		return {
 			label,
 			value: overallStatus,
-		},
-	};
+		};
+	}, [serverStatus]);
+
+	return { status };
 };
