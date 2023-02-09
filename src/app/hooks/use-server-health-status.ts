@@ -8,6 +8,7 @@ export const useServerHealthStatus = () => {
 	const { serverStatus } = useConfiguration();
 
 	const status = useMemo(() => {
+		// eslint-disable-next-line sonarjs/cognitive-complexity
 		const getOverallStatus = (serverStatus: any) => {
 			const peersByNetwork = Object.values(serverStatus);
 
