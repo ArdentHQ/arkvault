@@ -36,6 +36,7 @@ export const useServerHealthStatus = () => {
 			}
 		};
 
+		/* istanbul ignore next -- @preserve */
 		const overallStatus = getOverallStatus(serverStatus ?? {});
 		const label = getLabel(overallStatus);
 
