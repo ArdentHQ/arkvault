@@ -110,6 +110,16 @@ const publicKeysMainnet = ["035b3d223f75bde72d0599272ae37573e254b611896241e36881
 const multisignatureMocks = () => {
 	const mocks: any = [];
 
+	mocks.push(mockRequest("https://ark-live-musig.arkvault.io", {
+		name: "@ardenthq/ark-musig-server",
+		version: "1.5.0",
+	}));
+
+	mocks.push(mockRequest("https://ark-test-musig.arkvault.io", {
+		name: "@ardenthq/ark-musig-server",
+		version: "1.5.0",
+	}));
+
 	for (const state of ["ready", "pending"]) {
 		mocks.push(
 			...publicKeys.map(() => mockMuSigRequest("https://ark-test-musig.arkvault.io/", "list", { result: [] })),
