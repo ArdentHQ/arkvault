@@ -144,7 +144,9 @@ describe("Migration", () => {
 		const walletCreationSpy = vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(wallet);
 		const useConfigurationSpy = vi
 			.spyOn(useConfigurationModule, "useConfiguration")
-			.mockReturnValue({ profileIsSyncing: false });
+			.mockReturnValue({
+				profileIsSyncing: false,
+			});
 
 		const transactionFixture = new DTO.ExtendedSignedTransactionData(
 			await wallet
