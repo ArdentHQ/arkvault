@@ -1,0 +1,224 @@
+// Vitest Snapshot v1
+
+exports[`MigrationPolygonAddress > should render in lg 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionMigrationAddress"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Polygon Address
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="w-0 flex-1 overflow-auto text-right md:text-left"
+        >
+          <div
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex items-center -space-x-1"
+    >
+      <div
+        class="shrink-0 css-8d0u1i"
+        data-testid="EthereumAvatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MigrationPolygonAddress > should render in md 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionMigrationAddress"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Polygon Address
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="w-0 flex-1 overflow-auto text-right md:text-left"
+        >
+          <div
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex items-center -space-x-1"
+    >
+      <div
+        class="shrink-0 css-8d0u1i"
+        data-testid="EthereumAvatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MigrationPolygonAddress > should render in sm 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionMigrationAddress"
+  >
+    <div
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
+      data-testid="TransactionDetail--mobile"
+    >
+      <div
+        class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+      >
+        Polygon Address
+      </div>
+      <div
+        class="flex min-w-0 grow items-center justify-end space-x-4"
+      >
+        <div
+          class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+        >
+          <div
+            class="w-0 flex-1 overflow-auto text-right md:text-left"
+          >
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+            />
+          </div>
+        </div>
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="shrink-0 css-1vy2z2u"
+            data-testid="EthereumAvatar"
+          >
+            <div
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MigrationPolygonAddress > should render in xl 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionMigrationAddress"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Polygon Address
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="w-0 flex-1 overflow-auto text-right md:text-left"
+        >
+          <div
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex items-center -space-x-1"
+    >
+      <div
+        class="shrink-0 css-8d0u1i"
+        data-testid="EthereumAvatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MigrationPolygonAddress > should render in xs 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionMigrationAddress"
+  >
+    <div
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
+      data-testid="TransactionDetail--mobile"
+    >
+      <div
+        class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+      >
+        Polygon Address
+      </div>
+      <div
+        class="flex min-w-0 grow items-center justify-end space-x-4"
+      >
+        <div
+          class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+        >
+          <div
+            class="w-0 flex-1 overflow-auto text-right md:text-left"
+          >
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+            />
+          </div>
+        </div>
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="shrink-0 css-1vy2z2u"
+            data-testid="EthereumAvatar"
+          >
+            <div
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

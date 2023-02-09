@@ -68,8 +68,8 @@ export const TransactionRow = memo(
 
 				<TableCell
 					innerClassName="text-theme-secondary-text"
-					isCompact={isCompact}
 					className="table-cell md:hidden lg:table-cell"
+					isCompact={isCompact}
 				>
 					<span data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
 						{transaction.timestamp()!.format(timeFormat)}
@@ -90,6 +90,7 @@ export const TransactionRow = memo(
 							transaction={transaction}
 							isCompact={isCompact}
 							onClick={() => onShowMigrationDetails?.(transaction)}
+							showDetailsLink
 						/>
 					)}
 				</TableCell>

@@ -7,7 +7,9 @@ import { Route } from "react-router-dom";
 import { MultiSignatureDetail } from "./MultiSignatureDetail";
 import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { translations } from "@/domains/transaction/i18n";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+import { migrationWalletAddress } from "@/utils/polygon-migration";
 import {
 	env,
 	getDefaultProfileId,
@@ -258,6 +260,40 @@ describe("MultiSignatureDetail", () => {
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
 		isAwaitingSignatureMock.mockRestore();
+	});
+
+	it("should render summary step for migration transaction", async () => {
+		mockPendingTransfers(wallet);
+
+		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
+		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
+		const isAwaitingSignatureMock = vi
+			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
+			.mockReturnValue(false);
+
+		const memoMock = vi
+			.spyOn(fixtures.transfer, "memo")
+			.mockReturnValue("0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf");
+		const recpientMock = vi.spyOn(fixtures.transfer, "recipient").mockReturnValue(migrationWalletAddress());
+
+		const { container } = render(
+			<Route path="/profiles/:profileId">
+				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		await waitFor(() => expect(screen.getByText(commonTranslations.MIGRATION)));
+
+		expect(container).toMatchSnapshot();
+
+		canBeBroadcastedMock.mockRestore();
+		canBeSignedMock.mockRestore();
+		isAwaitingSignatureMock.mockRestore();
+		memoMock.mockRestore();
+		recpientMock.mockRestore();
 	});
 
 	it("should render summary step and handle exception", async () => {

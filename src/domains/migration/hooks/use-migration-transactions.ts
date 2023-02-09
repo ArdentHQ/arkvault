@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import {
@@ -81,25 +81,21 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 
 	const walletsCount = profile?.wallets().count();
 
-	const profileWallets = useMemo(() => {
+	const loadMigrationWalletTransactions = useCallback(async () => {
 		if (profileIsSyncing || !profile) {
 			return;
 		}
 
-		return profile
-			.wallets()
-			.values()
-			.filter((wallet) => wallet.networkId() === migrationNetwork());
-	}, [walletsCount, profileIsSyncing, profile]);
-
-	const loadMigrationWalletTransactions = useCallback(async () => {
 		setIsLoading(true);
 
 		const { items, hasMore, cursor } = await fetchMigrationTransactions({
 			limit: PAGINATION_LIMIT,
 			page: page + 1,
-			profile: profile!,
-			profileWallets: profileWallets!,
+			profile: profile,
+			profileWallets: profile
+				?.wallets()
+				.values()
+				.filter((wallet) => wallet.networkId() === migrationNetwork()),
 		});
 
 		setLatestTransactions((existingItems) => [...existingItems, ...items]);
@@ -107,12 +103,16 @@ export const useMigrationTransactions = ({ profile }: { profile: Contracts.IProf
 		setPage(cursor);
 		setTransactionsLoaded(true);
 		setIsLoading(false);
-	}, [profile, page, hasMore, transactionsLoaded, profileWallets]);
+	}, [profile, page, hasMore, transactionsLoaded, walletsCount]);
 
-	const removeTransactions = (walletAddress: string) => {
+	const removeTransactions = async (walletAddress: string) => {
 		setLatestTransactions((transactions) =>
 			transactions.filter((transaction) => transaction.wallet().address() !== walletAddress),
 		);
+
+		await loadMigrationWalletTransactions();
+
+		setToLoadTransactions(true);
 	};
 
 	useEffect(() => {

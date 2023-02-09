@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, renderResponsiveWithRoute, screen, waitFor } from "@/utils/testing-library";
+import { migrationWalletAddress } from "@/utils/polygon-migration";
 
 describe("MultiSignatureSuccessful", () => {
 	let profile: Contracts.IProfile;
@@ -189,6 +190,50 @@ describe("MultiSignatureSuccessful", () => {
 		);
 
 		await expect(screen.findByTestId("MultiSignatureSuccessful__publicKeys")).resolves.toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render for migration transaction", async () => {
+		const transaction = {
+			...TransactionFixture,
+			memo: () => "0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
+			recipient: () => migrationWalletAddress(),
+			wallet: () => wallet,
+		};
+
+		const publicKey = wallet.publicKey();
+
+		vi.spyOn(transaction, "get").mockImplementation((attribute) => {
+			if (attribute === "multiSignature") {
+				return {
+					min: 2,
+					publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()],
+				};
+			}
+
+			if (attribute === Contracts.WalletData.DerivationPath) {
+				return publicKey;
+			}
+
+			//@ts-ignore
+			return transaction[attribute]();
+		});
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId">
+				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
+					<div />
+				</MultiSignatureSuccessful>
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		await expect(screen.findByTestId("TransactionSuccessful__musig-polygon-address")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
