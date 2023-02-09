@@ -6,7 +6,7 @@ import { Networks } from "@ardenthq/sdk";
 import { Numeral } from "@ardenthq/sdk-intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
-import { NormalizedNetwork, ServerStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Button } from "@/app/components/Button";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
@@ -30,7 +30,7 @@ interface PeerRowProperties {
 	checked: boolean;
 	height: number | undefined;
 	network: Networks.Network;
-	serverStatus: ServerStatus;
+	serverStatus: boolean;
 	serverType: Networks.NetworkHost["type"];
 	onToggle: (isEnabled: boolean) => void;
 	onSelectOption: ({ value }: DropdownOption) => void;
@@ -59,7 +59,7 @@ const PeerRow = ({
 
 	const rowColor = useMemo(() => {
 		if (checked) {
-			if (serverStatus === ServerStatus.Offline) {
+			if (serverStatus === false) {
 				return "bg-theme-danger-50 dark:bg-transparent dark:border-theme-danger-400";
 			} else {
 				return "bg-theme-primary-50 dark:bg-transparent dark:border-theme-primary-600";
@@ -186,7 +186,7 @@ const CustomPeersPeerMobileRow: React.VFC<{
 	</div>
 );
 
-const CustomPeerStatusIcon = ({ status }: { status: ServerStatus }) => {
+const CustomPeerStatusIcon = ({ status }: { status?: boolean }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -194,7 +194,7 @@ const CustomPeerStatusIcon = ({ status }: { status: ServerStatus }) => {
 			className="flex cursor-pointer justify-center"
 			onClick={(event: React.MouseEvent) => event.stopPropagation()}
 		>
-			{status === ServerStatus.Online && (
+			{status === true && (
 				<Tooltip content={t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.HEALTHY")}>
 					<div data-testid="CustomPeersPeer--statusok">
 						<Icon name="StatusOk" className="text-theme-success-600" size="lg" />
@@ -202,7 +202,7 @@ const CustomPeerStatusIcon = ({ status }: { status: ServerStatus }) => {
 				</Tooltip>
 			)}
 
-			{status === ServerStatus.Offline && (
+			{status === false && (
 				<Tooltip content={t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.WITH_ISSUES")}>
 					<div data-testid="CustomPeersPeer--statuserror">
 						<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
@@ -210,7 +210,7 @@ const CustomPeerStatusIcon = ({ status }: { status: ServerStatus }) => {
 				</Tooltip>
 			)}
 
-			{status === ServerStatus.Loading && (
+			{status === undefined && (
 				<div data-testid="CustomPeersPeer--statusloading">
 					<Spinner size="sm" />
 				</div>
@@ -349,13 +349,13 @@ const CustomPeersPeer: React.VFC<{
 
 								<CustomPeersPeerMobileRow label={t("COMMON.STATUS")}>
 									<div className="flex w-0 flex-1 items-center justify-end space-x-3 overflow-hidden">
-										{serverStatus === ServerStatus.Online && (
+										{serverStatus === true && (
 											<span className="truncate">
 												{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.HEALTHY")}
 											</span>
 										)}
 
-										{serverStatus === ServerStatus.Offline && (
+										{serverStatus === false && (
 											<span className="truncate">
 												{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.WITH_ISSUES")}
 											</span>
