@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ARK } from "@ardenthq/sdk-ark";
+
 interface ConfigurationContextType {
 	configuration: Record<string, any>;
 	setConfiguration: (configuration: Record<string, any>) => void;
@@ -34,7 +36,14 @@ export const ConfigurationProvider = ({ children, defaultConfiguration }: Proper
 
 		profileIsSyncingWallets: false,
 		restoredProfiles: [],
-		serverStatus: {},
+		serverStatus: Object.entries(ARK.manifest.networks).reduce((status, [network, networkConfiguration]) => {
+			console.log(network)
+			const fullHost = networkConfiguration.hosts.find((host) => host.type === "full");
+
+			status[network] = { [fullHost!.host]: true };
+
+			return status;
+		}, {}),
 		...defaultConfiguration,
 	});
 
