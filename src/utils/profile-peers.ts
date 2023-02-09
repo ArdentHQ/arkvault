@@ -57,6 +57,10 @@ const defaultPeers = (env: Environment, profile: Contracts.IProfile) => {
 	return peers;
 }
 
+const isHealthy = (peers: IPeer[]) => peers.every((peer) => peer.isUp());
+const isDowngraded = (peers: IPeer[]) => !isHealthy(peers) && peers.some((peer) => peer.isUp());
+const isUnavailable = (peers: IPeer[]) => peers.every((peer) => !peer.isUp());
+
 export const ProfilePeers = (env: Environment, profile: Contracts.IProfile) => {
 	const getPeers = (type?: "custom" | "default") => {
 		if (type === "custom") {
@@ -69,10 +73,6 @@ export const ProfilePeers = (env: Environment, profile: Contracts.IProfile) => {
 
 		return [...customPeers(env, profile), ...defaultPeers(env, profile)];
 	};
-
-	const isHealthy = (peers: IPeer[]) => peers.every((peer) => peer.isUp());
-	const isDowngraded = (peers: IPeer[]) => !isHealthy(peers) && peers.some((peer) => peer.isUp());
-	const isUnavailable = (peers: IPeer[]) => peers.every((peer) => !peer.isUp());
 
 	const healthStatusByNetwork = async (networkId?: string, type?: "custom" | "default"): Promise<Record<string, ServerHealthStatus>> => {
 		let peers: IPeer[] = getPeers(type);
