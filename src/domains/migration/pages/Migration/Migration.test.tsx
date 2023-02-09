@@ -142,11 +142,9 @@ describe("Migration", () => {
 	it("should display and hide details of migration transaction", async () => {
 		const wallet = profile.wallets().first();
 		const walletCreationSpy = vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(wallet);
-		const useConfigurationSpy = vi
-			.spyOn(useConfigurationModule, "useConfiguration")
-			.mockReturnValue({
-				profileIsSyncing: false,
-			});
+		const useConfigurationSpy = vi.spyOn(useConfigurationModule, "useConfiguration").mockReturnValue({
+			profileIsSyncing: false,
+		});
 
 		const transactionFixture = new DTO.ExtendedSignedTransactionData(
 			await wallet
