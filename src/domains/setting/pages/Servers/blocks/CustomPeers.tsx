@@ -30,7 +30,7 @@ interface PeerRowProperties {
 	checked: boolean;
 	height: number | undefined;
 	network: Networks.Network;
-	serverStatus: boolean;
+	serverStatus?: boolean;
 	serverType: Networks.NetworkHost["type"];
 	onToggle: (isEnabled: boolean) => void;
 	onSelectOption: ({ value }: DropdownOption) => void;
