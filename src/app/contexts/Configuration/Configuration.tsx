@@ -1,5 +1,4 @@
 import React from "react";
-import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 
 interface ConfigurationContextType {
 	configuration: Record<string, any>;
