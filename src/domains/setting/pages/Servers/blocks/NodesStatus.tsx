@@ -5,32 +5,50 @@ import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 import { Tooltip } from "@/app/components/Tooltip";
-import { pingServerAddress } from "@/utils/peers";
 import { Spinner } from "@/app/components/Spinner";
 import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { ProfilePeers } from "@/utils/profile-peers";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { useConfiguration } from "@/app/contexts";
 
-const NodeStatusNode: React.VFC<{ network: Networks.Network; lastRow: boolean }> = ({ network, lastRow }) => {
+const NodeStatusNode: React.VFC<{ env: Environment; profile: Contracts.IProfile; network: Networks.Network; lastRow: boolean }> = ({ env, profile, network, lastRow }) => {
 	const { t } = useTranslation();
+
+	const { serverStatus, setConfiguration } = useConfiguration();
 
 	const [isOnline, setIsOnline] = useState<boolean | undefined>(undefined);
 
 	const checkNetworkStatus = useCallback(async () => {
 		setIsOnline(undefined);
 
-		const peerHost = network.toObject().hosts.find((host) => host.type === "full")!;
+		const defaultPeerStatus = await ProfilePeers(env, profile).healthStatusByNetwork(network.id(), "default");
+		const customPeerStatus = await ProfilePeers(env, profile).healthStatusByNetwork(network.id(), "custom");
 
-		const musigHost = network.toObject().hosts.find((host) => host.type === "musig")!;
+		setIsOnline(defaultPeerStatus[network.id()] === ServerHealthStatus.Healthy);
 
-		const promises = [pingServerAddress(peerHost.host, "full")];
+		console.log(defaultPeerStatus[network.id()] && customPeerStatus[network.id()]);
 
-		if (musigHost) {
-			promises.push(pingServerAddress(musigHost.host, "musig"));
-		}
+		setConfiguration({
+			serverStatus: {
+				...serverStatus,
+				[network.id()]: defaultPeerStatus[network.id()] && customPeerStatus[network.id()], // fix this
+			},
+		});
+		// const peerHost = network.toObject().hosts.find((host) => host.type === "full")!;
 
-		const results = await Promise.allSettled(promises);
+		// const musigHost = network.toObject().hosts.find((host) => host.type === "musig")!;
 
-		setIsOnline(results.every((result) => result.status === "fulfilled" && result.value === true));
+		// const promises = [pingServerAddress(peerHost.host, "full")];
+
+		// if (musigHost) {
+		// 	promises.push(pingServerAddress(musigHost.host, "musig"));
+		// }
+
+		// const results = await Promise.allSettled(promises);
+
+		// setIsOnline(results.every((result) => result.status === "fulfilled" && result.value === true));
 	}, [network]);
 
 	useEffect(() => {
@@ -105,11 +123,13 @@ const NodeStatusNode: React.VFC<{ network: Networks.Network; lastRow: boolean }>
 	);
 };
 
-const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) => (
+const NodesStatus: React.VFC<{ env: Environment; profile: Contracts.IProfile; networks: Networks.Network[] }> = ({ env, profile, networks }) => (
 	<div data-testid="NodesStatus" className="mt-3 sm:grid sm:grid-cols-2 sm:gap-x-6">
 		{networks.map((network, index) => (
 			<NodeStatusNode
 				key={network.id()}
+				env={env}
+				profile={profile}
 				network={network}
 				lastRow={index === networks.length - 1 || (networks.length % 2 === 0 && index === networks.length - 2)}
 			/>

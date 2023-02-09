@@ -37,24 +37,49 @@ const customPeers = (env: Environment, profile: Contracts.IProfile) =>
 		.filter((network) => network.enabled)
 		.map(Peer);
 
-const defaultPeers = (env: Environment, profile: Contracts.IProfile) =>
-	profileAllEnabledNetworks(profile)
-		.map((network) => ({
-			address: network.toObject().hosts.find((host) => host.type === "full")?.host || "",
-			network,
-			serverType: "full" as NetworkHostType,
-		}))
-		.map(Peer);
+const defaultPeers = (env: Environment, profile: Contracts.IProfile) => {
+	const peers: IPeer[] = [];
+
+	for (const network of profileAllEnabledNetworks(profile)) {
+		for (const host of network.toObject().hosts) {
+			if (host.type === "full" || host.type === "musig") {
+				peers.push(
+					Peer({
+						address: host.host ?? "",
+						network,
+						serverType: host.type as NetworkHostType,
+					})
+				)
+			}
+		}
+	}
+
+	return peers;
+}
 
 export const ProfilePeers = (env: Environment, profile: Contracts.IProfile) => {
-	const allPeers = () => [...customPeers(env, profile), ...defaultPeers(env, profile)];
+	const getPeers = (type?: "custom" | "default") => {
+		if (type === "custom") {
+			return [...customPeers(env, profile)];
+		}
+
+		if (type === "default") {
+			return [...defaultPeers(env, profile)];
+		}
+
+		return [...customPeers(env, profile), ...defaultPeers(env, profile)];
+	};
 
 	const isHealthy = (peers: IPeer[]) => peers.every((peer) => peer.isUp());
 	const isDowngraded = (peers: IPeer[]) => !isHealthy(peers) && peers.some((peer) => peer.isUp());
 	const isUnavailable = (peers: IPeer[]) => peers.every((peer) => !peer.isUp());
 
-	const healthStatusByNetwork = async (): Promise<Record<string, ServerHealthStatus>> => {
-		const peers = allPeers();
+	const healthStatusByNetwork = async (networkId?: string, type?: "custom" | "default"): Promise<Record<string, ServerHealthStatus>> => {
+		let peers: IPeer[] = getPeers(type);
+
+		if (networkId) {
+			peers = peers.filter((peer) => peer.network().id() === networkId);
+		}
 
 		await Promise.all(peers.map((peer) => peer.sync()));
 

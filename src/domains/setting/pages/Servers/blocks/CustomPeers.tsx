@@ -228,11 +228,12 @@ const CustomPeersPeer: React.VFC<{
 	// TODO: break it down into smaller components.
 	// eslint-disable-next-line sonarjs/cognitive-complexity
 }> = ({ normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
-	const { persist } = useEnvironmentContext();
+	const { env, persist } = useEnvironmentContext();
 	const { name, network, serverType, address, height, enabled } = normalizedNetwork;
 
 	const { serverStatus, syncStatus } = useServerStatus({
 		network: normalizedNetwork,
+		env,
 		profile,
 	});
 
@@ -257,7 +258,7 @@ const CustomPeersPeer: React.VFC<{
 
 		if (value === "refresh") {
 			await syncStatus();
-			persist();
+			await persist();
 		}
 	};
 
