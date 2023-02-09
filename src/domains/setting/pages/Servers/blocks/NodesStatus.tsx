@@ -18,37 +18,36 @@ const NodeStatusNode: React.VFC<{ env: Environment; profile: Contracts.IProfile;
 
 	const { serverStatus, setConfiguration } = useConfiguration();
 
-	const [isOnline, setIsOnline] = useState<boolean | undefined>(undefined);
+	const [status, setStatus] = useState<ServerHealthStatus | undefined>(undefined);
 
 	const checkNetworkStatus = useCallback(async () => {
-		setIsOnline(undefined);
+		setStatus(undefined);
 
 		const defaultPeerStatus = await ProfilePeers(env, profile).healthStatusByNetwork(network.id(), "default");
 		const customPeerStatus = await ProfilePeers(env, profile).healthStatusByNetwork(network.id(), "custom");
 
-		setIsOnline(defaultPeerStatus[network.id()] === ServerHealthStatus.Healthy);
+		setStatus(defaultPeerStatus[network.id()]);
 
-		console.log(defaultPeerStatus[network.id()] && customPeerStatus[network.id()]);
+		const getCombinedStatus = (defaultStatus: ServerHealthStatus, customStatus: ServerHealthStatus) => {
+			const [first, second] = [defaultStatus, customStatus].sort();
+
+			if (first === ServerHealthStatus.Healthy) {
+				if (second === ServerHealthStatus.Healthy) {
+					return ServerHealthStatus.Healthy;
+				}
+
+				return ServerHealthStatus.Downgraded;
+			}
+
+			return first;
+		};
 
 		setConfiguration({
 			serverStatus: {
 				...serverStatus,
-				[network.id()]: defaultPeerStatus[network.id()] && customPeerStatus[network.id()], // fix this
+				[network.id()]: getCombinedStatus(defaultPeerStatus[network.id()], customPeerStatus[network.id()]),
 			},
 		});
-		// const peerHost = network.toObject().hosts.find((host) => host.type === "full")!;
-
-		// const musigHost = network.toObject().hosts.find((host) => host.type === "musig")!;
-
-		// const promises = [pingServerAddress(peerHost.host, "full")];
-
-		// if (musigHost) {
-		// 	promises.push(pingServerAddress(musigHost.host, "musig"));
-		// }
-
-		// const results = await Promise.allSettled(promises);
-
-		// setIsOnline(results.every((result) => result.status === "fulfilled" && result.value === true));
 	}, [network]);
 
 	useEffect(() => {
@@ -83,21 +82,28 @@ const NodeStatusNode: React.VFC<{ env: Environment; profile: Contracts.IProfile;
 				{networkDisplayName(network)}
 			</div>
 			<div className="cursor-pointer">
-				{isOnline === true && (
+				{status === ServerHealthStatus.Healthy && (
 					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.HEALTHY")}>
 						<div data-testid="NodeStatus--statusok">
 							<Icon name="StatusOk" className="text-theme-success-600" size="lg" />
 						</div>
 					</Tooltip>
 				)}
-				{isOnline === false && (
+				{status === ServerHealthStatus.Downgraded && (
+					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES")}>
+						<div data-testid="NodeStatus--statuserror">
+							<Icon name="StatusError" className="text-theme-warning-600" size="lg" />
+						</div>
+					</Tooltip>
+				)}
+				{status === ServerHealthStatus.Unavailable && (
 					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES")}>
 						<div data-testid="NodeStatus--statuserror">
 							<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
 						</div>
 					</Tooltip>
 				)}
-				{isOnline === undefined && (
+				{status === undefined && (
 					<div data-testid="NodeStatus--statusloading">
 						<Spinner size="sm" />
 					</div>
@@ -107,13 +113,13 @@ const NodeStatusNode: React.VFC<{ env: Environment; profile: Contracts.IProfile;
 			<Divider type="vertical" />
 
 			<div className="flex items-center">
-				<button type="button" onClick={checkNetworkStatus} disabled={isOnline === undefined}>
+				<button type="button" onClick={checkNetworkStatus} disabled={status === undefined}>
 					<Icon
 						name="ArrowRotateLeft"
 						className={cn({
 							"text-theme-primary-300 hover:text-theme-primary-400 dark:text-theme-secondary-600 hover:dark:text-theme-secondary-200":
-								isOnline !== undefined,
-							"text-theme-secondary-600 dark:text-theme-secondary-800": isOnline === undefined,
+								status !== undefined,
+							"text-theme-secondary-600 dark:text-theme-secondary-800": status === undefined,
 						})}
 						size="md"
 					/>
