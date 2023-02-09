@@ -1,17 +1,14 @@
 import { useCallback, useState } from "react";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { NormalizedNetwork, ServerStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { pingServerAddress, getServerHeight } from "@/utils/peers";
 import { useHosts } from "@/domains/setting/pages/Servers/hooks/use-hosts";
 import { useConfiguration } from "@/app/contexts";
-import { ProfilePeers } from "@/utils/profile-peers";
 
 export const useServerStatus = ({
-	env,
 	profile,
 	network,
 }: {
-	env: Environment;
 	profile: Contracts.IProfile;
 	network: NormalizedNetwork;
 }) => {
@@ -36,13 +33,16 @@ export const useServerStatus = ({
 			});
 		}
 
-		const updatedServerStatus = await ProfilePeers(env, profile).healthStatusByNetwork(network.network.id());
+		const updatedServerStatus = { ...serverStatusByNetwork };
+
+		if (updatedServerStatus[network.network.id()] === undefined) {
+			updatedServerStatus[network.network.id()] = {};
+		}
+
+		updatedServerStatus[network.network.id()][network.address] = status;
 
 		setConfiguration({
-			serverStatus: {
-				...serverStatusByNetwork,
-				...updatedServerStatus,
-			},
+			serverStatus: serverStatusByNetwork,
 		});
 	}, [profile, network]);
 

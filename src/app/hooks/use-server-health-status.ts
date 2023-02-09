@@ -9,17 +9,25 @@ export const useServerHealthStatus = () => {
 
 	const status = useMemo(() => {
 		const getOverallStatus = (serverStatus: any) => {
-			const statuses = Object.values(serverStatus);
+			const peersByNetwork = Object.values(serverStatus);
 
-			if (statuses.every((status) => status === ServerHealthStatus.Healthy)) {
-				return ServerHealthStatus.Healthy;
+			let status: ServerHealthStatus | undefined = undefined;
+
+			for (const peers of peersByNetwork) {
+				if (Object.values(peers as any).every((isUp) => !isUp)) {
+					return ServerHealthStatus.Unavailable;
+				}
+
+				if (Object.values(peers as any).some((isUp) => !isUp)) {
+					status = ServerHealthStatus.Downgraded;
+				}
+
+				if (status === undefined) {
+					status = ServerHealthStatus.Healthy;
+				}
 			}
 
-			if (statuses.includes(ServerHealthStatus.Downgraded)) {
-				return ServerHealthStatus.Downgraded;
-			}
-
-			return ServerHealthStatus.Unavailable;
+			return status!;
 		};
 
 		const getLabel = (overallStatus: ServerHealthStatus) => {

@@ -132,7 +132,7 @@ export const ServersSettings = () => {
 				wrapperClass: "py-6",
 			},
 			{
-				content: <NodesStatus env={env} profile={profile} networks={enabledNetworks} />,
+				content: <NodesStatus networks={enabledNetworks} />,
 				label: t("SETTINGS.SERVERS.OPTIONS.DEFAULT_NODE_STATUS.TITLE"),
 				labelDescription: t("SETTINGS.SERVERS.OPTIONS.DEFAULT_NODE_STATUS.DESCRIPTION"),
 				wrapperClass: "pt-6 pb-3",

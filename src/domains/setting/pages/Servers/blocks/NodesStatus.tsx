@@ -2,56 +2,56 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Spinner } from "@/app/components/Spinner";
 import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { ProfilePeers } from "@/utils/profile-peers";
-import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { useConfiguration } from "@/app/contexts";
+import { pingServerAddress } from "@/utils/peers";
 
 const NodeStatusNode: React.VFC<{
-	env: Environment;
-	profile: Contracts.IProfile;
 	network: Networks.Network;
 	lastRow: boolean;
-}> = ({ env, profile, network, lastRow }) => {
+}> = ({ network, lastRow }) => {
 	const { t } = useTranslation();
 
 	const { serverStatus, setConfiguration } = useConfiguration();
 
-	const [status, setStatus] = useState<ServerHealthStatus | undefined>(undefined);
+	const [isOnline, setIsOnline] = useState<boolean | undefined>(undefined);
 
 	const checkNetworkStatus = useCallback(async () => {
-		setStatus(undefined);
+		setIsOnline(undefined);
 
-		const defaultPeerStatus = await ProfilePeers(env, profile).healthStatusByNetwork(network.id(), "default");
-		const customPeerStatus = await ProfilePeers(env, profile).healthStatusByNetwork(network.id(), "custom");
+		const fullHost = network.toObject().hosts.find((host) => host.type === "full")!;
 
-		setStatus(defaultPeerStatus[network.id()]);
+		const musigHost = network.toObject().hosts.find((host) => host.type === "musig")!;
 
-		const getCombinedStatus = (defaultStatus: ServerHealthStatus, customStatus: ServerHealthStatus) => {
-			const [first, second] = [defaultStatus, customStatus].sort();
+		const promises = [pingServerAddress(fullHost.host, "full")];
 
-			if (first === ServerHealthStatus.Healthy) {
-				if (second === ServerHealthStatus.Healthy) {
-					return ServerHealthStatus.Healthy;
-				}
+		if (musigHost) {
+			promises.push(pingServerAddress(musigHost.host, "musig"));
+		}
 
-				return ServerHealthStatus.Downgraded;
-			}
+		const [fullHostResult, musigHostResult] = await Promise.allSettled(promises);
 
-			return first;
-		};
+		const updatedServerStatus = { ...serverStatus };
+
+		if (updatedServerStatus[network.id()] === undefined) {
+			updatedServerStatus[network.id()] = {};
+		}
+
+		updatedServerStatus[network.id()][fullHost.host] = fullHostResult.status === "fulfilled" && fullHostResult.value === true;
+
+		if (musigHostResult) {
+			updatedServerStatus[network.id()][musigHost.host] = musigHostResult.status === "fulfilled" && musigHostResult.value === true;
+		}
+
+		setIsOnline(updatedServerStatus[network.id()][fullHost.host] && (updatedServerStatus[network.id()][musigHost?.host] ?? true))
 
 		setConfiguration({
-			serverStatus: {
-				...serverStatus,
-				[network.id()]: getCombinedStatus(defaultPeerStatus[network.id()], customPeerStatus[network.id()]),
-			},
+			serverStatus: updatedServerStatus,
 		});
 	}, [network]);
 
@@ -87,28 +87,21 @@ const NodeStatusNode: React.VFC<{
 				{networkDisplayName(network)}
 			</div>
 			<div className="cursor-pointer">
-				{status === ServerHealthStatus.Healthy && (
+				{isOnline === true && (
 					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.HEALTHY")}>
 						<div data-testid="NodeStatus--statusok">
 							<Icon name="StatusOk" className="text-theme-success-600" size="lg" />
 						</div>
 					</Tooltip>
 				)}
-				{status === ServerHealthStatus.Downgraded && (
-					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES")}>
-						<div data-testid="NodeStatus--statuserror">
-							<Icon name="StatusError" className="text-theme-warning-600" size="lg" />
-						</div>
-					</Tooltip>
-				)}
-				{status === ServerHealthStatus.Unavailable && (
+				{isOnline === false && (
 					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES")}>
 						<div data-testid="NodeStatus--statuserror">
 							<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
 						</div>
 					</Tooltip>
 				)}
-				{status === undefined && (
+				{isOnline === undefined && (
 					<div data-testid="NodeStatus--statusloading">
 						<Spinner size="sm" />
 					</div>
@@ -118,13 +111,13 @@ const NodeStatusNode: React.VFC<{
 			<Divider type="vertical" />
 
 			<div className="flex items-center">
-				<button type="button" onClick={checkNetworkStatus} disabled={status === undefined}>
+				<button type="button" onClick={checkNetworkStatus} disabled={isOnline === undefined}>
 					<Icon
 						name="ArrowRotateLeft"
 						className={cn({
 							"text-theme-primary-300 hover:text-theme-primary-400 dark:text-theme-secondary-600 hover:dark:text-theme-secondary-200":
-								status !== undefined,
-							"text-theme-secondary-600 dark:text-theme-secondary-800": status === undefined,
+								isOnline !== undefined,
+							"text-theme-secondary-600 dark:text-theme-secondary-800": isOnline === undefined,
 						})}
 						size="md"
 					/>
@@ -134,17 +127,13 @@ const NodeStatusNode: React.VFC<{
 	);
 };
 
-const NodesStatus: React.VFC<{ env: Environment; profile: Contracts.IProfile; networks: Networks.Network[] }> = ({
-	env,
-	profile,
+const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({
 	networks,
 }) => (
 	<div data-testid="NodesStatus" className="mt-3 sm:grid sm:grid-cols-2 sm:gap-x-6">
 		{networks.map((network, index) => (
 			<NodeStatusNode
 				key={network.id()}
-				env={env}
-				profile={profile}
 				network={network}
 				lastRow={index === networks.length - 1 || (networks.length % 2 === 0 && index === networks.length - 2)}
 			/>
