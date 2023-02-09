@@ -14,6 +14,17 @@ interface Properties {
 
 const ConfigurationContext = React.createContext<any>(undefined);
 
+const defaultServerStatus = () => {
+	const status = {};
+
+	for (const [network, networkConfiguration] of Object.entries(ARK.manifest.networks)) {
+		const fullHost = networkConfiguration.hosts.find((host) => host.type === "full");
+		status[network] = { [fullHost!.host]: true };
+	}
+
+	return status;
+};
+
 export const ConfigurationProvider = ({ children, defaultConfiguration }: Properties) => {
 	const [configuration, setConfig] = React.useState<any>({
 		// Domain specific configuration defaults
@@ -36,14 +47,7 @@ export const ConfigurationProvider = ({ children, defaultConfiguration }: Proper
 
 		profileIsSyncingWallets: false,
 		restoredProfiles: [],
-		serverStatus: Object.entries(ARK.manifest.networks).reduce((status, [network, networkConfiguration]) => {
-			console.log(network)
-			const fullHost = networkConfiguration.hosts.find((host) => host.type === "full");
-
-			status[network] = { [fullHost!.host]: true };
-
-			return status;
-		}, {}),
+		serverStatus: defaultServerStatus(),
 		...defaultConfiguration,
 	});
 
