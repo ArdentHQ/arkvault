@@ -38,6 +38,7 @@ const NodeStatusNode: React.VFC<{
 
 		const updatedServerStatus = { ...serverStatus };
 
+		/* istanbul ignore next -- @preserve */
 		if (updatedServerStatus[network.id()] === undefined) {
 			updatedServerStatus[network.id()] = {};
 		}

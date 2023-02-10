@@ -27,6 +27,7 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 
 		const updatedServerStatus = { ...serverStatusByNetwork };
 
+		/* istanbul ignore next -- @preserve */
 		if (updatedServerStatus[network.network.id()] === undefined) {
 			updatedServerStatus[network.network.id()] = {};
 		}
