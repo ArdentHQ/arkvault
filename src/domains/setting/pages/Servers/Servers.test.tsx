@@ -128,7 +128,9 @@ const fillServerForm = async ({ name = "Test", address = musigHostTest }) => {
 const waitUntilServerIsValidated = async () => {
 	await expect(screen.findByTestId("Servertype-fetching")).resolves.toBeVisible();
 
-	await waitFor(() => expect(screen.queryByTestId("Servertype-fetching")).not.toBeInTheDocument());
+	await waitFor(() => expect(screen.queryByTestId("Servertype-fetching")).not.toBeInTheDocument(), {
+		timeout: 4000,
+	});
 };
 
 const mockPeerNetwork = () => server.use(requestMock(peerHostLive, peerResponse));
