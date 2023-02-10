@@ -118,8 +118,8 @@ const multisignatureMocks = () => {
 		mockRequest("https://ark-test-musig.arkvault.io", {
 			name: "@ardenthq/ark-musig-server",
 			version: "1.5.0",
-		},
-	));
+		}),
+	);
 
 	for (const state of ["ready", "pending"]) {
 		mocks.push(
