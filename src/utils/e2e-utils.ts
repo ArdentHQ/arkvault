@@ -37,6 +37,8 @@ export const scrollToElement = async (selector: Selector, scrollable?: Selector)
 export const BASEURL = "https://ark-test.arkvault.io/api/";
 
 const PING_RESPONSE_PATH = "coins/ark/mainnet/ping";
+const PING_MUSIG_RESPONSE_PATH = "coins/ark/mainnet/ping-musig";
+
 const pingServerUrls = new Set([
 	"https://ark-live.arkvault.io",
 	"https://ark-test.arkvault.io",
@@ -45,6 +47,11 @@ const pingServerUrls = new Set([
 	"https://apis-testnet.compendia.org",
 	"https://qredit.cloud",
 	"https://qredit.dev",
+]);
+
+const pingMusigServerUrls = new Set([
+	"https://ark-live-musig.arkvault.io",
+	"https://ark-test-musig.arkvault.io",
 ]);
 
 const knownWallets: any[] = [];
@@ -109,17 +116,6 @@ const publicKeysMainnet = ["035b3d223f75bde72d0599272ae37573e254b611896241e36881
 
 const multisignatureMocks = () => {
 	const mocks: any = [];
-
-	mocks.push(
-		mockRequest("https://ark-live-musig.arkvault.io", {
-			name: "@ardenthq/ark-musig-server",
-			version: "1.5.0",
-		}),
-		mockRequest("https://ark-test-musig.arkvault.io", {
-			name: "@ardenthq/ark-musig-server",
-			version: "1.5.0",
-		}),
-	);
 
 	for (const state of ["ready", "pending"]) {
 		mocks.push(
@@ -211,6 +207,10 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 
 					if (pingServerUrls.has(request.url)) {
 						return require(`../tests/fixtures/${PING_RESPONSE_PATH}.json`);
+					}
+
+					if (pingMusigServerUrls.has(request.url)) {
+						return require(`../tests/fixtures/${PING_MUSIG_RESPONSE_PATH}.json`);
 					}
 
 					if (typeof fixture === "string") {
