@@ -64,7 +64,7 @@ describe("Server Status Indicator", () => {
 	it("should render as downgraded", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<ServerHealthStatusWrapper status={{ "ark.devnet": { up: true, down: false } }} />
+				<ServerHealthStatusWrapper status={{ "ark.devnet": { down: false, up: true } }} />
 			</Route>,
 			{
 				history,
