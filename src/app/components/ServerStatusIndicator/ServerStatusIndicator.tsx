@@ -36,6 +36,8 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 	const { isSm, isMd } = useBreakpoint();
 	const { status } = useServerHealthStatus();
 
+	console.log(status);
+
 	return (
 		<div>
 			<Dropdown
