@@ -373,7 +373,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                           class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
-                            class="h-2 w-2 rounded-full bg-theme-gray-100"
+                            class="h-2 w-2 rounded-full bg-theme-success-700"
                           />
                         </div>
                       </div>
@@ -1617,7 +1617,7 @@ exports[`ExchangeView > should render 1`] = `
                           class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
-                            class="h-2 w-2 rounded-full bg-theme-gray-100"
+                            class="h-2 w-2 rounded-full bg-theme-success-700"
                           />
                         </div>
                       </div>
@@ -2845,7 +2845,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                           class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
-                            class="h-2 w-2 rounded-full bg-theme-gray-100"
+                            class="h-2 w-2 rounded-full bg-theme-success-700"
                           />
                         </div>
                       </div>
@@ -4085,7 +4085,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                           class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
-                            class="h-2 w-2 rounded-full bg-theme-gray-100"
+                            class="h-2 w-2 rounded-full bg-theme-success-700"
                           />
                         </div>
                       </div>
@@ -5325,7 +5325,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
                           class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
-                            class="h-2 w-2 rounded-full bg-theme-gray-100"
+                            class="h-2 w-2 rounded-full bg-theme-success-700"
                           />
                         </div>
                       </div>
