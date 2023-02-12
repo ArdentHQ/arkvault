@@ -93,7 +93,7 @@
 		"socks-proxy-agent": "^7.0.0",
 		"string-hash": "^1.1.3",
 		"tippy.js": "^6.3.7",
-		"yup": "^0.32.9"
+		"yup": "^1.0.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.12",
