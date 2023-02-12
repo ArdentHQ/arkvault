@@ -643,7 +643,7 @@ exports[`MigrationAdd > should render in sm 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -1594,7 +1594,7 @@ exports[`MigrationAdd > should render in xs 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"

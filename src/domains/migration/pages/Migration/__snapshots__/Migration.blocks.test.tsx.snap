@@ -6,7 +6,7 @@ exports[`MigrationHeader > should render 1`] = `
     class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
   >
     <div
-      class="mx-auto px-8 md:px-10 lg:container"
+      class="mx-auto px-8 lg:container md:px-10"
     >
       <div
         class="flex items-end justify-between bg-theme-background"
