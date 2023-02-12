@@ -144,7 +144,7 @@
 		"identity-obj-proxy": "^3.0.0",
 		"jest-extended": "^3.2.3",
 		"jest-when": "^3.5.2",
-		"jsdom": "^20.0.3",
+		"jsdom": "^21.1.0",
 		"mockdate": "^3.0.5",
 		"msw": "^0.49.1",
 		"postcss": "^8.4.21",
