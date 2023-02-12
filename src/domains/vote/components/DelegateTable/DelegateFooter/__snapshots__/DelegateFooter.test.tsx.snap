@@ -7,7 +7,7 @@ exports[`DelegateFooter > should render 1`] = `
     data-testid="DelegateTable__footer"
   >
     <div
-      class="mx-auto px-8 md:px-10 lg:container"
+      class="mx-auto px-8 lg:container md:px-10"
     >
       <div
         class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"

@@ -607,7 +607,7 @@ exports[`Dashboard > should render 1`] = `
         data-testid="MigrationBanner"
       >
         <div
-          class="flex items-center px-8 md:px-10 lg:container lg:mx-auto"
+          class="flex items-center px-8 lg:container md:px-10 lg:mx-auto"
         >
           <div
             class="max-w-2xl flex-1 py-6"
@@ -877,7 +877,7 @@ exports[`Dashboard > should render 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 py-4 px-8 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mt-0 sm:mb-6 sm:border-b-0 sm:bg-transparent sm:py-0 sm:px-0 sm:dark:bg-transparent"
@@ -1223,7 +1223,7 @@ exports[`Dashboard > should render 1`] = `
         </div>
       </div>
       <div
-        class="md:px-10 lg:container lg:mx-auto"
+        class="lg:container md:px-10 lg:mx-auto"
       >
         <div
           data-testid="NetworkWalletsGroupList"
@@ -1640,7 +1640,7 @@ exports[`Dashboard > should render 1`] = `
         class="mt-4 md:mt-0 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <h2
             class="mb-6 text-2xl font-bold"

@@ -62,7 +62,7 @@ exports[`CreateProfile > should render 1`] = `
         class="flex flex-1 flex-col sm:-mt-5 sm:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto max-w-lg"

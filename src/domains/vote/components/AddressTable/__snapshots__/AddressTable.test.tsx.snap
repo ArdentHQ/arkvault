@@ -6,7 +6,7 @@ exports[`AddressTable > should render 1`] = `
     class=" css-ycib48"
   >
     <div
-      class="mx-auto px-8 md:px-10 lg:container"
+      class="mx-auto px-8 lg:container md:px-10"
     >
       <div
         data-testid="AddressTable"
@@ -1238,7 +1238,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
     class=" css-ycib48"
   >
     <div
-      class="mx-auto px-8 md:px-10 lg:container"
+      class="mx-auto px-8 lg:container md:px-10"
     >
       <div
         data-testid="AddressTable"
@@ -1640,7 +1640,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
     class=" css-ycib48"
   >
     <div
-      class="mx-auto px-8 md:px-10 lg:container"
+      class="mx-auto px-8 lg:container md:px-10"
     >
       <div
         data-testid="AddressTable"

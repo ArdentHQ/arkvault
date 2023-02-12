@@ -612,7 +612,7 @@ exports[`Votes > should filter current delegates 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -805,7 +805,7 @@ exports[`Votes > should filter current delegates 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -1182,7 +1182,7 @@ exports[`Votes > should filter current delegates 1`] = `
               data-testid="DelegateTable__footer"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container"
+                class="mx-auto px-8 lg:container md:px-10"
               >
                 <div
                   class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -2196,7 +2196,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -2337,7 +2337,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -3165,7 +3165,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
               data-testid="DelegateTable__footer"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container"
+                class="mx-auto px-8 lg:container md:px-10"
               >
                 <div
                   class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -4183,7 +4183,7 @@ exports[`Votes > should render 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -4324,7 +4324,7 @@ exports[`Votes > should render 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -5091,7 +5091,7 @@ exports[`Votes > should render 1`] = `
               data-testid="DelegateTable__footer"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container"
+                class="mx-auto px-8 lg:container md:px-10"
               >
                 <div
                   class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -6105,7 +6105,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -6246,7 +6246,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -7013,7 +7013,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               data-testid="DelegateTable__footer"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container"
+                class="mx-auto px-8 lg:container md:px-10"
               >
                 <div
                   class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -8025,7 +8025,7 @@ exports[`Votes > should render with no wallets 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -8053,7 +8053,7 @@ exports[`Votes > should render with no wallets 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -8785,7 +8785,7 @@ exports[`Votes > should select a delegate 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -8926,7 +8926,7 @@ exports[`Votes > should select a delegate 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -9693,7 +9693,7 @@ exports[`Votes > should select a delegate 1`] = `
               data-testid="DelegateTable__footer"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container"
+                class="mx-auto px-8 lg:container md:px-10"
               >
                 <div
                   class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -10703,7 +10703,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -11021,7 +11021,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex h-full flex-col justify-center bg-theme-background text-center mt-16"
@@ -12128,7 +12128,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -12446,7 +12446,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex h-full flex-col justify-center bg-theme-background text-center mt-16"
@@ -13556,7 +13556,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -13697,7 +13697,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -14525,7 +14525,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
               data-testid="DelegateTable__footer"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container"
+                class="mx-auto px-8 lg:container md:px-10"
               >
                 <div
                   class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -15536,7 +15536,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -15847,7 +15847,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             data-testid="AddressTable"
@@ -17067,7 +17067,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -17208,7 +17208,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -18042,7 +18042,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               data-testid="DelegateTable__footer"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container"
+                class="mx-auto px-8 lg:container md:px-10"
               >
                 <div
                   class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
