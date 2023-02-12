@@ -162,7 +162,7 @@
 		"vite-plugin-babel-macros": "^1.0.6",
 		"vite-plugin-optimize-persist": "^0.1.2",
 		"vite-plugin-package-config": "^0.1.1",
-		"vite-plugin-pwa": "^0.13.1",
+		"vite-plugin-pwa": "^0.14.4",
 		"vite-plugin-svgr": "^2.4.0",
 		"vite-tsconfig-paths": "^4.0.5",
 		"vitest": "^0.28.4",
