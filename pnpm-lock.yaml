@@ -45,7 +45,7 @@ specifiers:
   assert: ^2.0.0
   autoprefixer: ^10.4.13
   babel-plugin-macros: ^3.1.0
-  browser-fs-access: ^0.31.1
+  browser-fs-access: ^0.31.2
   classnames: ^2.3.2
   cross-fetch: ^3.1.5
   dlv: ^1.1.3
@@ -57,7 +57,7 @@ specifiers:
   eslint-plugin-promise: ^6.1.1
   eslint-plugin-react: ^7.32.2
   eslint-plugin-react-hooks: ^4.6.0
-  eslint-plugin-sonarjs: ^0.17.0
+  eslint-plugin-sonarjs: ^0.18.0
   eslint-plugin-sort-keys-fix: ^1.1.2
   eslint-plugin-testcafe: ^0.2.1
   eslint-plugin-testing-library: ^5.10.1
@@ -145,7 +145,7 @@ dependencies:
   '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
   '@types/dlv': 1.1.2
   assert: 2.0.0
-  browser-fs-access: 0.31.1
+  browser-fs-access: 0.31.2
   classnames: 2.3.2
   downshift: 6.1.12_react@18.2.0
   ethereum-blockies-base64: 1.0.2
@@ -220,7 +220,7 @@ devDependencies:
   eslint-plugin-promise: 6.1.1_eslint@8.34.0
   eslint-plugin-react: 7.32.2_eslint@8.34.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.34.0
-  eslint-plugin-sonarjs: 0.17.0_eslint@8.34.0
+  eslint-plugin-sonarjs: 0.18.0_eslint@8.34.0
   eslint-plugin-sort-keys-fix: 1.1.2
   eslint-plugin-testcafe: 0.2.1
   eslint-plugin-testing-library: 5.10.1_7kw3g6rralp5ps6mg3uyzz6azm
@@ -4194,8 +4194,8 @@ packages:
   /brorand/1.1.0:
     resolution: {integrity: sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==}
 
-  /browser-fs-access/0.31.1:
-    resolution: {integrity: sha512-jMz9f56DkLM7LyA8wZYO7CtpoF3RdUk1/FXrnRNybgV0R5eqk/fgFWR0k5IMjPYgK4jmZecytP/UDO5WBi9Dhg==}
+  /browser-fs-access/0.31.2:
+    resolution: {integrity: sha512-wZSA7UgKMwR6oxddFQeSIoD7cxiNiaZT+iuVJw4/avr9t2ROwu80gxENT0YJChsLxJ7xBbLZDGHTAXfAg3Pq5Q==}
     dev: false
 
   /browserslist/4.21.4:
@@ -5609,8 +5609,8 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-sonarjs/0.17.0_eslint@8.34.0:
-    resolution: {integrity: sha512-jtGtxI49UbJJeJj7CVRLI3+LLH+y+hkR3GOOwM7vBbci9DEFIRGCWvEd2BJScrzltZ6D6iubukTAfc9cyG7sdw==}
+  /eslint-plugin-sonarjs/0.18.0_eslint@8.34.0:
+    resolution: {integrity: sha512-DJ3osLnt6KFdT5e9ZuIDOjT5A6wUGSLeiJJT03lPgpdD+7CVWlYAw9Goe3bt7SmbFO3Xh89NOCZAuB9XA7bAUQ==}
     engines: {node: '>=14'}
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
