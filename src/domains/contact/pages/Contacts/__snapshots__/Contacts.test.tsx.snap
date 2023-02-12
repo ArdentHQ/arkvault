@@ -604,7 +604,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -710,7 +710,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="w-full"
@@ -2371,7 +2371,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -2477,7 +2477,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="w-full"
@@ -5079,7 +5079,7 @@ exports[`Contacts > should render with contacts 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -5185,7 +5185,7 @@ exports[`Contacts > should render with contacts 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="w-full"
@@ -6846,7 +6846,7 @@ exports[`Contacts > should render without contacts 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -6891,7 +6891,7 @@ exports[`Contacts > should render without contacts 1`] = `
         class="mt-4 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
