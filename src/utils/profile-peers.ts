@@ -3,8 +3,14 @@ import { Networks } from "@ardenthq/sdk";
 import { groupBy } from "@ardenthq/sdk-helpers";
 import { profileAllEnabledNetworks } from "./network-utils";
 import { pingServerAddress } from "@/utils/peers";
-import { ServerHealthStatus, NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { customNetworks } from "@/utils/server-utils";
+
+export interface ServerStatus {
+	[network: string]: {
+		[host: string]: boolean;
+	};
+}
 
 interface PeerData {
 	address: string;
@@ -14,20 +20,16 @@ interface PeerData {
 
 interface IPeer {
 	network: () => Networks.Network;
+	address: () => string;
 	sync: () => Promise<void>;
 	isUp: () => boolean;
-}
-
-interface INetworkPeers {
-	sync: () => Promise<void[]>;
-	isUnavailable: () => boolean;
-	isDowngraded: () => boolean;
 }
 
 const Peer = (peer: PeerData): IPeer => {
 	let isUp = false;
 
 	return {
+		address: () => peer.address,
 		isUp: () => isUp,
 		network: () => peer.network,
 		sync: async () => {
@@ -36,57 +38,56 @@ const Peer = (peer: PeerData): IPeer => {
 	};
 };
 
-const groupByNetwork = (peers: IPeer[]) => Object.values(groupBy(peers, (peer) => peer.network().id()));
+const groupPeersByNetwork = (peers: IPeer[]) =>
+	groupBy(peers, (peer) => peer.network().id()) as Record<string, IPeer[]>;
 
 const customPeers = (env: Environment, profile: Contracts.IProfile) =>
 	customNetworks(env, profile)
 		.filter((network) => network.enabled)
 		.map(Peer);
 
-const defaultPeers = (env: Environment, profile: Contracts.IProfile) =>
-	profileAllEnabledNetworks(profile)
-		.map((network) => ({
-			address: network.toObject().hosts.find((host) => host.type === "full")?.host || "",
-			network,
-			serverType: "full" as NetworkHostType,
-		}))
-		.map(Peer);
+const defaultPeers = (env: Environment, profile: Contracts.IProfile) => {
+	const peers: IPeer[] = [];
 
-const NetworkPeers = (peers: IPeer[]): INetworkPeers => {
-	const isHealthy = () => peers.every((peer) => peer.isUp());
+	for (const network of profileAllEnabledNetworks(profile)) {
+		for (const host of network.toObject().hosts) {
+			if (host.type === "full" || host.type === "musig") {
+				peers.push(
+					Peer({
+						address: host.host ?? "",
+						network,
+						serverType: host.type as NetworkHostType,
+					}),
+				);
+			}
+		}
+	}
 
-	return {
-		isDowngraded: () => !isHealthy() && peers.some((peer) => peer.isUp()),
-		isUnavailable: () => peers.every((peer) => !peer.isUp()),
-		sync: () => Promise.all(peers.map((peer) => peer.sync())),
-	};
+	return peers;
 };
 
-const NetworkPeerStatuses = (networks: INetworkPeers[]) => ({
-	isAnyDowngraded: () => networks.some((network) => network.isDowngraded()),
-	isAnyUnavailable: () => networks.some((network) => network.isUnavailable()),
-	sync: () => Promise.all(networks.map((network) => network.sync())),
-});
-
 export const ProfilePeers = (env: Environment, profile: Contracts.IProfile) => {
-	const allPeers = () => [...customPeers(env, profile), ...defaultPeers(env, profile)];
+	const healthStatusByNetwork = async (): Promise<ServerStatus> => {
+		let peers: IPeer[] = [...customPeers(env, profile), ...defaultPeers(env, profile)];
 
-	const healthStatus = async (): Promise<ServerHealthStatus> => {
-		const networks = NetworkPeerStatuses(groupByNetwork(allPeers()).map(NetworkPeers));
-		await networks.sync();
+		await Promise.all(peers.map((peer) => peer.sync()));
 
-		if (networks.isAnyUnavailable()) {
-			return ServerHealthStatus.Unavailable;
+		const peerMap = groupPeersByNetwork(peers);
+
+		const status: ServerStatus = {};
+
+		for (const [networkId, peers] of Object.entries(peerMap)) {
+			status[networkId] = {};
+
+			for (const peer of peers) {
+				status[networkId][peer.address()] = peer.isUp();
+			}
 		}
 
-		if (networks.isAnyDowngraded()) {
-			return ServerHealthStatus.Downgraded;
-		}
-
-		return ServerHealthStatus.Healthy;
+		return status;
 	};
 
 	return {
-		healthStatus,
+		healthStatusByNetwork,
 	};
 };

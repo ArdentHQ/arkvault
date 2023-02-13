@@ -1,5 +1,6 @@
 import React from "react";
-import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
+
+import { ARK } from "@ardenthq/sdk-ark";
 
 interface ConfigurationContextType {
 	configuration: Record<string, any>;
@@ -12,6 +13,17 @@ interface Properties {
 }
 
 const ConfigurationContext = React.createContext<any>(undefined);
+
+const defaultServerStatus = () => {
+	const status = {};
+
+	for (const [network, networkConfiguration] of Object.entries(ARK.manifest.networks)) {
+		const fullHost = networkConfiguration.hosts.find((host) => host.type === "full");
+		status[network] = { [fullHost!.host]: true };
+	}
+
+	return status;
+};
 
 export const ConfigurationProvider = ({ children, defaultConfiguration }: Properties) => {
 	const [configuration, setConfig] = React.useState<any>({
@@ -35,7 +47,7 @@ export const ConfigurationProvider = ({ children, defaultConfiguration }: Proper
 
 		profileIsSyncingWallets: false,
 		restoredProfiles: [],
-		serverStatus: ServerHealthStatus.Healthy,
+		serverStatus: defaultServerStatus(),
 		...defaultConfiguration,
 	});
 
