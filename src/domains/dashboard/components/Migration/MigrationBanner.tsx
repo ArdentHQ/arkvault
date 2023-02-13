@@ -41,7 +41,7 @@ export const MigrationBanner = () => {
 				data-testid="MigrationBanner"
 				className="mb-4 bg-theme-primary-100 text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500 sm:mb-0 sm:dark:bg-black"
 			>
-				<div className="flex items-center px-8 md:px-10 lg:container lg:mx-auto">
+				<div className="flex items-center px-8 lg:container md:px-10 lg:mx-auto">
 					<div className="max-w-2xl flex-1 py-6">
 						<h2 className="text-lg text-theme-secondary-900 dark:text-theme-secondary-200 md:text-2xl">
 							{t("DASHBOARD.MIGRATION_BANNER.TITLE")}

@@ -91,7 +91,7 @@ exports[`App > should not migrate profiles 1`] = `
               class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center emotion-cache-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container"
+                class="mx-auto px-8 lg:container md:px-10"
               >
                 <div
                   class="mx-auto hidden w-96 md:block"
@@ -653,7 +653,7 @@ exports[`App > should render application error if the app fails to boot 1`] = `
           class="flex flex-1 flex-col justify-center text-center css-ycib48"
         >
           <div
-            class="mx-auto px-8 md:px-10 lg:container"
+            class="mx-auto px-8 lg:container md:px-10"
           >
             <div
               class="mx-auto flex w-full max-w-xs justify-center"
@@ -955,7 +955,7 @@ exports[`App > should render mock 1`] = `
               class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center emotion-cache-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container"
+                class="mx-auto px-8 lg:container md:px-10"
               >
                 <div
                   class="mx-auto hidden w-96 md:block"
@@ -1538,7 +1538,7 @@ exports[`App > should render the offline screen if there is no internet connecti
             class="flex flex-1 flex-col justify-center text-center emotion-cache-ycib48"
           >
             <div
-              class="mx-auto px-8 md:px-10 lg:container"
+              class="mx-auto px-8 lg:container md:px-10"
             >
               <div
                 class="mx-auto flex w-full max-w-xs justify-center"
@@ -1915,7 +1915,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
               class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center emotion-cache-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container"
+                class="mx-auto px-8 lg:container md:px-10"
               >
                 <div
                   class="mx-auto hidden w-96 md:block"

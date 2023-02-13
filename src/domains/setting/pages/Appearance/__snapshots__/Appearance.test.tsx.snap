@@ -967,7 +967,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"

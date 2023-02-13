@@ -62,7 +62,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
         class="-mt-8 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mt-6 sm:mt-8"
@@ -907,7 +907,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
         class="-mt-8 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mt-6 sm:mt-8"
@@ -1752,7 +1752,7 @@ exports[`ImportProfile > should render first step 1`] = `
         class="-mt-8 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mt-6 sm:mt-8"

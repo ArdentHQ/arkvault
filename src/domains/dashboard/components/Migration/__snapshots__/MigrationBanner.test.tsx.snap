@@ -7,7 +7,7 @@ exports[`MigrationBanner > should render 1`] = `
     data-testid="MigrationBanner"
   >
     <div
-      class="flex items-center px-8 md:px-10 lg:container lg:mx-auto"
+      class="flex items-center px-8 lg:container md:px-10 lg:mx-auto"
     >
       <div
         class="max-w-2xl flex-1 py-6"

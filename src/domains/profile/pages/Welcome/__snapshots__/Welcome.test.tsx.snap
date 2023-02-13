@@ -62,7 +62,7 @@ exports[`Welcome > should change route to create profile 1`] = `
         class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto hidden w-96 md:block"
@@ -528,7 +528,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
         class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto hidden w-96 md:block"
@@ -1091,7 +1091,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
         class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto hidden w-96 md:block"
@@ -1654,7 +1654,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
         class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto hidden w-96 md:block"
@@ -2217,7 +2217,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
         class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto hidden w-96 md:block"
@@ -2780,7 +2780,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
         class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto hidden w-96 md:block"
@@ -3343,7 +3343,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
         class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto hidden w-96 md:block"
@@ -3809,7 +3809,7 @@ exports[`Welcome > should render with profiles 1`] = `
         class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto hidden w-96 md:block"
@@ -4372,7 +4372,7 @@ exports[`Welcome > should render without profiles 1`] = `
         class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto hidden w-96 md:block"

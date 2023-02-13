@@ -6138,7 +6138,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -12678,7 +12678,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -20320,7 +20320,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -27982,7 +27982,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -29153,7 +29153,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -30301,7 +30301,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -31449,7 +31449,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -32597,7 +32597,7 @@ exports[`DelegateTable > should render 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -33941,7 +33941,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -35112,7 +35112,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -36263,7 +36263,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -37409,7 +37409,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -39058,7 +39058,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -40400,7 +40400,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -41571,7 +41571,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -42725,7 +42725,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -43871,7 +43871,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -45213,7 +45213,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -46384,7 +46384,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -47530,7 +47530,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
@@ -48681,7 +48681,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
       data-testid="DelegateTable__footer"
     >
       <div
-        class="mx-auto px-8 md:px-10 lg:container"
+        class="mx-auto px-8 lg:container md:px-10"
       >
         <div
           class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"

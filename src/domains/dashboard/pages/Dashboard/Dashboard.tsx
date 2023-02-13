@@ -62,7 +62,7 @@ export const Dashboard: React.VFC = () => {
 					/>
 				</Section>
 
-				<div className="md:px-10 lg:container lg:mx-auto">
+				<div className="lg:container md:px-10 lg:mx-auto">
 					<WalletsGroupsList />
 				</div>
 

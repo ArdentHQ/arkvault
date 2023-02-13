@@ -485,7 +485,7 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -2430,7 +2430,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -3755,7 +3755,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -5082,7 +5082,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -6284,7 +6284,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -7303,7 +7303,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"

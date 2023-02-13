@@ -608,7 +608,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"

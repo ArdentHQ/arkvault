@@ -11,6 +11,11 @@ exports[`InputDate > should render 1`] = `
       <div
         class="react-datepicker__input-container"
       >
+        <span
+          aria-live="polite"
+          class="react-datepicker__aria-live"
+          role="alert"
+        />
         <div
           class="react-datepicker-ignore-onclickoutside css-1psxlcd"
         >
@@ -90,6 +95,11 @@ exports[`InputDate > should render 1`] = `
             <div
               class="react-datepicker__triangle"
               style="position: absolute;"
+            />
+            <span
+              aria-live="polite"
+              class="react-datepicker__aria-live"
+              role="alert"
             />
             <button
               aria-label="Previous Month"

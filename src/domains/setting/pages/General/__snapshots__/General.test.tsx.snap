@@ -971,7 +971,7 @@ exports[`General Settings > should disable submit button when profile is not res
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -3006,7 +3006,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -5124,7 +5124,7 @@ exports[`General Settings > should render 1`] = `
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -7159,7 +7159,7 @@ exports[`General Settings > should show identicon when removing image if name is
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -9190,7 +9190,7 @@ exports[`General Settings > should update profile 1`] = `
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -11225,7 +11225,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -13260,7 +13260,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
