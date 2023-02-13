@@ -5,32 +5,60 @@ import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 import { Tooltip } from "@/app/components/Tooltip";
-import { pingServerAddress } from "@/utils/peers";
 import { Spinner } from "@/app/components/Spinner";
 import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { useConfiguration } from "@/app/contexts";
+import { pingServerAddress } from "@/utils/peers";
 
-const NodeStatusNode: React.VFC<{ network: Networks.Network; lastRow: boolean }> = ({ network, lastRow }) => {
+const NodeStatusNode: React.VFC<{
+	network: Networks.Network;
+	lastRow: boolean;
+}> = ({ network, lastRow }) => {
 	const { t } = useTranslation();
+
+	const { serverStatus, setConfiguration } = useConfiguration();
 
 	const [isOnline, setIsOnline] = useState<boolean | undefined>(undefined);
 
 	const checkNetworkStatus = useCallback(async () => {
 		setIsOnline(undefined);
 
-		const peerHost = network.toObject().hosts.find((host) => host.type === "full")!;
+		const fullHost = network.toObject().hosts.find((host) => host.type === "full")!;
 
 		const musigHost = network.toObject().hosts.find((host) => host.type === "musig")!;
 
-		const promises = [pingServerAddress(peerHost.host, "full")];
+		const promises = [pingServerAddress(fullHost.host, "full")];
 
 		if (musigHost) {
 			promises.push(pingServerAddress(musigHost.host, "musig"));
 		}
 
-		const results = await Promise.allSettled(promises);
+		const [fullHostResult, musigHostResult] = await Promise.allSettled(promises);
 
-		setIsOnline(results.every((result) => result.status === "fulfilled" && result.value === true));
+		const updatedServerStatus = { ...serverStatus };
+
+		/* istanbul ignore next -- @preserve */
+		if (updatedServerStatus[network.id()] === undefined) {
+			updatedServerStatus[network.id()] = {};
+		}
+
+		updatedServerStatus[network.id()][fullHost.host] =
+			fullHostResult.status === "fulfilled" && fullHostResult.value === true;
+
+		if (musigHostResult) {
+			updatedServerStatus[network.id()][musigHost.host] =
+				musigHostResult.status === "fulfilled" && musigHostResult.value === true;
+		}
+
+		setIsOnline(
+			updatedServerStatus[network.id()][fullHost.host] &&
+				(updatedServerStatus[network.id()][musigHost?.host] ?? true),
+		);
+
+		setConfiguration({
+			serverStatus: updatedServerStatus,
+		});
 	}, [network]);
 
 	useEffect(() => {

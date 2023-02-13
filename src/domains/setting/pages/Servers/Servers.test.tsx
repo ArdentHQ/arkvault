@@ -128,7 +128,9 @@ const fillServerForm = async ({ name = "Test", address = musigHostTest }) => {
 const waitUntilServerIsValidated = async () => {
 	await expect(screen.findByTestId("Servertype-fetching")).resolves.toBeVisible();
 
-	await waitFor(() => expect(screen.queryByTestId("Servertype-fetching")).not.toBeInTheDocument());
+	await waitFor(() => expect(screen.queryByTestId("Servertype-fetching")).not.toBeInTheDocument(), {
+		timeout: 4000,
+	});
 };
 
 const mockPeerNetwork = () => server.use(requestMock(peerHostLive, peerResponse));
@@ -751,6 +753,10 @@ describe("Servers Settings", () => {
 		});
 
 		it("can fill the form and generate a name", async () => {
+			const musigHost = "https://ark-test-musig2.arkvault.io";
+
+			server.use(requestMock(musigHost, musigResponse));
+
 			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
 			render(
@@ -780,9 +786,9 @@ describe("Servers Settings", () => {
 
 			const addressField = screen.getByTestId("ServerFormModal--address");
 			userEvent.clear(addressField);
-			userEvent.paste(addressField, musigHostTest);
+			userEvent.paste(addressField, musigHost);
 
-			expect(addressField).toHaveValue(musigHostTest);
+			expect(addressField).toHaveValue(musigHost);
 
 			fireEvent.focusOut(addressField);
 
@@ -790,10 +796,16 @@ describe("Servers Settings", () => {
 
 			const nameField = screen.getByTestId("ServerFormModal--name");
 
-			expect(nameField).toHaveValue("ARK Musig #2");
+			await waitFor(() => {
+				expect(nameField).toHaveValue("ARK Musig #2");
+			});
 		});
 
 		it("should fill the form and generate a name for peer", async () => {
+			const peerHost = "https://ark-live2.arkvault.io";
+
+			server.use(requestMock(peerHost, peerResponse));
+
 			const networks: any = {
 				ark: {
 					mainnet: [
@@ -838,9 +850,9 @@ describe("Servers Settings", () => {
 
 			const addressField = screen.getByTestId("ServerFormModal--address");
 			userEvent.clear(addressField);
-			userEvent.paste(addressField, peerHostLive);
+			userEvent.paste(addressField, peerHost);
 
-			expect(addressField).toHaveValue(peerHostLive);
+			expect(addressField).toHaveValue(peerHost);
 
 			fireEvent.focusOut(addressField);
 
