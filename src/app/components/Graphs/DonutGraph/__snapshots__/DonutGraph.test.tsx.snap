@@ -630,6 +630,7 @@ exports[`DonutGraph > should render tooltip on hover 1`] = `
     <div
       class="absolute z-10 transition-opacity duration-200 opacity-0 hidden"
       data-testid="TooltipContainer"
+      style="left: -32px; top: -24px;"
     >
       <div
         data-testid="TooltipContent"
