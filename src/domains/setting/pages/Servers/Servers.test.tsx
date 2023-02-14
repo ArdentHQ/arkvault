@@ -294,12 +294,12 @@ describe("Servers Settings", () => {
 
 				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
-				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
+				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
 
 				// Loading initially
-				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
+				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(2);
 
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statusok")).toHaveLength(1));
+				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statusok")).toHaveLength(2));
 			});
 
 			it("should load the node statuses in an interval", async () => {
@@ -328,12 +328,12 @@ describe("Servers Settings", () => {
 
 				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
-				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
+				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
 
 				// Loading initially
-				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
+				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(2);
 
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statusok")).toHaveLength(1));
+				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statusok")).toHaveLength(2));
 
 				intervalPingFunction();
 
@@ -342,7 +342,7 @@ describe("Servers Settings", () => {
 					expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
 				});
 
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statusok")).toHaveLength(1));
+				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statusok")).toHaveLength(2));
 
 				setIntervalSpy.mockRestore();
 			});
@@ -366,10 +366,10 @@ describe("Servers Settings", () => {
 
 				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
-				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
+				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
 
 				// Loading initially
-				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
+				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(2);
 
 				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
 			});
@@ -390,10 +390,10 @@ describe("Servers Settings", () => {
 
 				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
-				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
+				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
 
 				// Loading initially
-				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
+				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(2);
 
 				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
 			});
