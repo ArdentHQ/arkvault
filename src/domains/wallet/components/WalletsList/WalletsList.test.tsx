@@ -17,9 +17,9 @@ import {
 	syncDelegates,
 	within,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
-import { server, requestMock } from "@/tests/mocks/server";
 
 const starredButton = () => within(screen.getByTestId("table__th--0")).getByRole("button");
 
