@@ -59,7 +59,7 @@ const NodeStatusNode: React.VFC<{
 		let name = networkDisplayName(network);
 
 		if (host.type === "musig") {
-			name = `${name} Musig`;
+			name = `${name} ${t("COMMON.MULTISIG")}`;
 		}
 
 		return name;
