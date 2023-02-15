@@ -19,6 +19,7 @@ import {
 } from "@/utils/testing-library";
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
+import { server, requestMock } from "@/tests/mocks/server";
 
 const starredButton = () => within(screen.getByTestId("table__th--0")).getByRole("button");
 
@@ -44,6 +45,10 @@ describe("WalletsList", () => {
 		history.push(dashboardURL);
 
 		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+	});
+
+	beforeEach(() => {
+		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
 	});
 
 	it("should render", () => {
