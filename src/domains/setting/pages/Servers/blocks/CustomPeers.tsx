@@ -281,7 +281,7 @@ const CustomPeersPeer: React.VFC<{
 								"text-theme-secondary-700": !network.isLive(),
 							})}
 						>
-							<div className="shrink-0">
+							<div className="flex shrink-0 items-center">
 								<NetworkIcon network={network} showTooltip={false} isCompact />
 							</div>
 
