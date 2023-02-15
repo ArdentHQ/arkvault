@@ -60,6 +60,42 @@ describe("ImportWallet Validations", () => {
 		resetProfileNetworksMock();
 	});
 
+	it("should prompt for mnemonic if user enters bip39 compliant secret", async () => {
+		render(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				route: route,
+			},
+		);
+
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
+
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
+
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
+
+		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
+
+		userEvent.click(screen.getByText(commonTranslations.SECRET));
+
+		expect(methodStep()).toBeInTheDocument();
+
+		const passphraseInput = screen.getByTestId(secretInputID);
+
+		expect(passphraseInput).toBeInTheDocument();
+
+		userEvent.paste(passphraseInput, MNEMONICS[0]);
+
+		await waitFor(() => expect(continueButton()).not.toBeEnabled());
+	});
+
 	it("should show an error message for invalid second secret", async () => {
 		const walletId = profile
 			.wallets()
