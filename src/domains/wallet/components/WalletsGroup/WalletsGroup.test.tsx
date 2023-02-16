@@ -18,6 +18,7 @@ import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.co
 import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup/WalletsGroupsList";
 import { WalletsGroup } from "@/domains/wallet/components/WalletsGroup/WalletsGroup";
 import * as useThemeHook from "@/app/hooks/use-theme";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
@@ -77,6 +78,8 @@ describe("WalletsGroup", () => {
 			...useDisplayWalletsResult,
 			availableWallets: duplicateWallets,
 		} as ReturnType<UseDisplayWallets>);
+
+		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
 	});
 
 	afterEach(() => {

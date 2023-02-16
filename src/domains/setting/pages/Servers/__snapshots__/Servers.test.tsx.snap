@@ -1082,7 +1082,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                           data-testid="NodesStatus"
                         >
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -1166,7 +1166,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                             </div>
                           </div>
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -2448,7 +2448,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                           data-testid="NodesStatus"
                         >
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -2532,7 +2532,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                             </div>
                           </div>
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -4640,7 +4640,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                           data-testid="NodesStatus"
                         >
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -4724,7 +4724,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                             </div>
                           </div>
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -6832,7 +6832,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                           data-testid="NodesStatus"
                         >
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800 border-b last:border-b-0"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -6916,7 +6916,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                             </div>
                           </div>
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800 border-b last:border-b-0"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -7061,7 +7061,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-primary-600"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK"
@@ -7190,7 +7190,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-secondary-700"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK Devnet"
@@ -7344,7 +7344,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-primary-600"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK"
@@ -8615,7 +8615,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           data-testid="NodesStatus"
                         >
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -8726,7 +8726,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                             </div>
                           </div>
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -10945,7 +10945,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           data-testid="NodesStatus"
                         >
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800 border-b last:border-b-0"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -11056,7 +11056,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                             </div>
                           </div>
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800 border-b last:border-b-0"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -11228,7 +11228,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-primary-600"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK"
@@ -11385,7 +11385,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-secondary-700"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK Devnet"
@@ -11567,7 +11567,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-primary-600"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK"
@@ -12866,7 +12866,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           data-testid="NodesStatus"
                         >
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800 border-b last:border-b-0"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -12977,7 +12977,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                             </div>
                           </div>
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800 border-b last:border-b-0"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -13149,7 +13149,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-primary-600"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK"
@@ -13559,7 +13559,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-secondary-700"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK Devnet"
@@ -13741,7 +13741,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-primary-600"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK"
@@ -15040,7 +15040,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           data-testid="NodesStatus"
                         >
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -15148,7 +15148,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                             </div>
                           </div>
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -17355,7 +17355,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           data-testid="NodesStatus"
                         >
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800 border-b last:border-b-0"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -17463,7 +17463,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                             </div>
                           </div>
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800 border-b last:border-b-0"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -17632,7 +17632,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-primary-600"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK"
@@ -17786,7 +17786,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-secondary-700"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK Devnet"
@@ -17965,7 +17965,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-primary-600"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK"
@@ -19261,7 +19261,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           data-testid="NodesStatus"
                         >
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800 border-b last:border-b-0"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -19369,7 +19369,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                             </div>
                           </div>
                           <div
-                            class="flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0"
+                            class="flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800 border-b last:border-b-0"
                             data-testid="NodesStatus--node"
                           >
                             <div
@@ -19538,7 +19538,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-primary-600"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK"
@@ -19942,7 +19942,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-secondary-700"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK Devnet"
@@ -20121,7 +20121,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       class="flex w-0 flex-grow items-center space-x-3 text-theme-primary-600"
                                     >
                                       <div
-                                        class="shrink-0"
+                                        class="flex shrink-0 items-center"
                                       >
                                         <div
                                           aria-label="ARK"
