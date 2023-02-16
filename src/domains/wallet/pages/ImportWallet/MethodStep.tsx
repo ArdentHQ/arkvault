@@ -269,9 +269,13 @@ const ImportInputField = ({
 				try {
 					const { address } = await coin.address().fromSecret(value);
 					return address;
-				} catch {
+				} catch (error) {
+					if (error.message.includes("value is BIP39")) {
+						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
+					}
+
 					/* istanbul ignore next -- @preserve */
-					throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
+					throw error;
 				}
 			}}
 			network={network}
