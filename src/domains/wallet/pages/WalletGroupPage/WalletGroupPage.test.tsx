@@ -10,6 +10,7 @@ import { env, getDefaultProfileId, render, screen, syncDelegates } from "@/utils
 import * as envHooks from "@/app/hooks/env";
 import * as useDisplayWallets from "@/domains/wallet/hooks/use-display-wallets";
 import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const history = createHashHistory();
 
@@ -61,6 +62,8 @@ describe("WalletGroupPage", () => {
 			...useDisplayWalletsResult,
 			availableWallets: duplicateWallets,
 		} as ReturnType<UseDisplayWallets>);
+
+		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
 	});
 
 	afterEach(() => {
