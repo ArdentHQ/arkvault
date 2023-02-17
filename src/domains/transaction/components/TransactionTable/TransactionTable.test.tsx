@@ -31,7 +31,7 @@ describe("TransactionTable", () => {
 	beforeEach(async () => {
 		polygonIndexerUrlSpy = vi
 			.spyOn(polygonMigration, "polygonIndexerUrl")
-			.mockReturnValue("https://mumbai.somehost.com/");
+			.mockReturnValue("https://mumbai.somehost.com");
 
 		server.use(requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture));
 

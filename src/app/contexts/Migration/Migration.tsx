@@ -42,7 +42,7 @@ const MigrationContext = React.createContext<any>(undefined);
 const MIGRATION_LOAD_INTERVAL = 5000;
 
 const fetchPolygonMigrations = async (arkTxHashes: string[]) => {
-	const response = await httpClient.get(`${polygonIndexerUrl()}transactions`, {
+	const response = await httpClient.get(`${polygonIndexerUrl()}/transactions`, {
 		arkTxHashes: arkTxHashes,
 	});
 

@@ -32,7 +32,7 @@ export const MigrationDetailsModal = ({ transaction, onClose }: MigrationDetails
 	const [loadStatusError, setLoadStatusError] = useState<Error>();
 
 	const fetchMigrationId = useCallback(async () => {
-		const response = await httpClient.get(`${polygonIndexerUrl()}transactions`, {
+		const response = await httpClient.get(`${polygonIndexerUrl()}/transactions`, {
 			arkTxHashes: [transaction!.id()],
 		});
 
