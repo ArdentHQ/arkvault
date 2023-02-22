@@ -1,5 +1,6 @@
 import { LedgerTransportFactory } from "@ardenthq/sdk-ledger";
 import { Contracts } from "@ardenthq/sdk";
+import { isE2E, isUnit } from "@/utils/test-helpers";
 
 export const supportedTransport = async () => new LedgerTransportFactory().supportedTransport();
 
@@ -14,6 +15,15 @@ export const closeDevices = async () => {
 			// Device is not opened. Ignore.
 		}
 	}
+};
+
+export const isLedgerTransportSupported = () => {
+	if (isUnit()) {
+		return true;
+	}
+
+	//@ts-ignore
+	return !!navigator.usb || !!navigator.hid;
 };
 
 // Assumes user has already granted permission.

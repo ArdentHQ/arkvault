@@ -24,6 +24,8 @@ export const translations = {
 		CONNECT_DEVICE: "Connect your Ledger and confirm input.",
 		CONNECT_DEVICE_MODEL: "Connect your {{model}} and confirm input.",
 		CONNECT_SUCCESS: "Successfully connected",
+		COMPATIBILITY_ERROR:
+			"ARKVault requires the use of a chromium based browser when using a Ledger device. Please use another browser like Chrome.",
 		DEVICE_NOT_SUPPORTED:
 			"A <bold>{{connectedModel}}</bold> is connected, but his operation requires a <bold>{{supportedModel}}</bold>. Connect the appropriate device to continue.",
 		GENERIC_CONNECTION_ERROR:
