@@ -1,6 +1,6 @@
 import { LedgerTransportFactory } from "@ardenthq/sdk-ledger";
 import { Contracts } from "@ardenthq/sdk";
-import { isE2E, isUnit } from "@/utils/test-helpers";
+import { isUnit } from "@/utils/test-helpers";
 
 export const supportedTransport = async () => new LedgerTransportFactory().supportedTransport();
 
