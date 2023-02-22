@@ -20,7 +20,7 @@ describe("MigrationDetailsModal", () => {
 	beforeEach(() => {
 		polygonIndexerUrlSpy = vi
 			.spyOn(polygonMigration, "polygonIndexerUrl")
-			.mockReturnValue("https://mumbai.somehost.com/");
+			.mockReturnValue("https://mumbai.somehost.com");
 
 		httpClient.clearCache();
 

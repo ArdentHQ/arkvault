@@ -61,8 +61,8 @@ describe("Polygon Migration Utility Functions", () => {
 	});
 
 	it("#polygonRpcUrl", () => {
-		process.env.VITE_POLYGON_RPC_URL = "https://rpc-mumbai.maticvigil.com/";
-		expect(polygonRpcUrl()).toBe("https://rpc-mumbai.maticvigil.com/");
+		process.env.VITE_POLYGON_RPC_URL = "https://rpc-mumbai.maticvigil.com";
+		expect(polygonRpcUrl()).toBe("https://rpc-mumbai.maticvigil.com");
 	});
 
 	it("#polygonIndexerUrl", () => {
