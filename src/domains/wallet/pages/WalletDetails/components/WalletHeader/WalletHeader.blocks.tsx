@@ -283,20 +283,22 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 				</Tooltip>
 			</div>
 
-			<Button
-				data-testid="WalletHeader__send-button"
-				disabled={
-					wallet.balance() === 0 ||
-					!wallet.hasBeenFullyRestored() ||
-					!wallet.hasSyncedWithNetwork() ||
-					!isLedgerWalletCompatible(wallet)
-				}
-				className="bg-theme-dark-500 my-auto ml-3"
-				theme="dark"
-				onClick={handleSend}
-			>
-				{t("COMMON.SEND")}
-			</Button>
+			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
+				<Button
+					data-testid="WalletHeader__send-button"
+					disabled={
+						wallet.balance() === 0 ||
+						!wallet.hasBeenFullyRestored() ||
+						!wallet.hasSyncedWithNetwork() ||
+						!isLedgerWalletCompatible(wallet)
+					}
+					className="bg-theme-dark-500 my-auto ml-3"
+					theme="dark"
+					onClick={handleSend}
+				>
+					{t("COMMON.SEND")}
+				</Button>
+			</Tooltip>
 
 			{renderLockedButton()}
 		</>

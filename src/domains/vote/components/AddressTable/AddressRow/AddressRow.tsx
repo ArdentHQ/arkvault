@@ -247,16 +247,18 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			)}
 
 			<TableCell variant="end" innerClassName="justify-end" isCompact={useCompact}>
-				<Button
-					size={useCompact ? "icon" : undefined}
-					disabled={isButtonDisabled}
-					variant={useCompact ? "transparent" : "secondary"}
-					className={cn({ "-mr-3 text-theme-primary-600 hover:text-theme-primary-700": useCompact })}
-					onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
-					data-testid={`AddressRow__select-${index}`}
-				>
-					{t("COMMON.VOTE")}
-				</Button>
+				<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
+					<Button
+						size={useCompact ? "icon" : undefined}
+						disabled={isButtonDisabled}
+						variant={useCompact ? "transparent" : "secondary"}
+						className={cn({ "-mr-3 text-theme-primary-600 hover:text-theme-primary-700": useCompact })}
+						onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
+						data-testid={`AddressRow__select-${index}`}
+					>
+						{t("COMMON.VOTE")}
+					</Button>
+				</Tooltip>
 			</TableCell>
 		</TableRow>
 	);
