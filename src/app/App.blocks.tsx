@@ -121,7 +121,7 @@ const Main: React.VFC = () => {
 			history.replace("/");
 		},
 		onLedgerCompatibilityError: () => {
-			toasts.warning(t("COMMON.LEDGER_COMPATIBILITY_ERROR"), { autoClose: false });
+			toasts.warning(t("COMMON.LEDGER_COMPATIBILITY_ERROR_LONG"), { autoClose: false });
 		},
 	});
 
