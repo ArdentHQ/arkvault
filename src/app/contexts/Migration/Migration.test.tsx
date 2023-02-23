@@ -260,7 +260,7 @@ describe("Migration Context", () => {
 
 		polygonIndexerUrlSpy = vi
 			.spyOn(polygonMigration, "polygonIndexerUrl")
-			.mockReturnValue("https://mumbai.somehost.com/");
+			.mockReturnValue("https://mumbai.somehost.com");
 
 		isValidMigrationTransactionSpy = vi
 			.spyOn(polygonMigration, "isValidMigrationTransaction")
