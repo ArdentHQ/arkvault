@@ -5,6 +5,7 @@ import { EmptyVotes, Votes } from "./WalletVote.blocks";
 import { WalletVoteSkeleton } from "./WalletVoteSkeleton";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
+import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 interface WalletVoteProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -41,7 +42,8 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 					(wallet.network().usesLockedBalance() &&
 						wallet.balance("available") < wallet.network().votesAmountStep()) ||
 					!wallet.hasBeenFullyRestored() ||
-					!wallet.hasSyncedWithNetwork()
+					!wallet.hasSyncedWithNetwork() ||
+					!isLedgerWalletCompatible(wallet)
 				}
 				variant="secondary"
 				className="mt-4 w-full space-x-2 md:mt-0 md:w-auto"

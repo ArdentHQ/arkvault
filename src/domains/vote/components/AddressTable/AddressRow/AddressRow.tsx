@@ -15,6 +15,7 @@ import { WalletIcons } from "@/app/components/WalletIcons";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { assertReadOnlyWallet } from "@/utils/assertions";
+import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 interface AddressRowProperties {
 	index: number;
@@ -180,7 +181,11 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 		);
 	};
 
-	const isButtonDisabled = !wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork() || !wallet.balance();
+	const isButtonDisabled =
+		!wallet.hasBeenFullyRestored() ||
+		!wallet.hasSyncedWithNetwork() ||
+		!wallet.balance() ||
+		!isLedgerWalletCompatible(wallet);
 
 	return (
 		<TableRow>
