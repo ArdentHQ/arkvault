@@ -13,7 +13,12 @@ import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
 import { delay } from "@/utils/delay";
-import { getErroredNetworks, getProfileFromUrl, getProfileStoredPassword } from "@/utils/profile-utils";
+import {
+	getErroredNetworks,
+	getProfileFromUrl,
+	getProfileStoredPassword,
+	hasIncompatibleLedgerWallets,
+} from "@/utils/profile-utils";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { enabledNetworksCount, profileAllEnabledNetworks, profileEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
@@ -330,6 +335,7 @@ interface ProfileSynchronizerProperties {
 	onProfileSyncComplete?: () => void;
 	onProfileSignOut?: () => void;
 	onProfileUpdated?: () => void;
+	onLedgerCompatibilityError?: () => void;
 }
 
 export const useProfileSynchronizer = ({
@@ -339,6 +345,7 @@ export const useProfileSynchronizer = ({
 	onProfileSyncComplete,
 	onProfileSignOut,
 	onProfileUpdated,
+	onLedgerCompatibilityError,
 }: ProfileSynchronizerProperties = {}) => {
 	const location = useLocation();
 	const { env, persist } = useEnvironmentContext();
@@ -479,6 +486,10 @@ export const useProfileSynchronizer = ({
 				setProfileAccentColor(profile);
 
 				startIdleTimer();
+
+				if (hasIncompatibleLedgerWallets(profile)) {
+					onLedgerCompatibilityError?.();
+				}
 			}
 
 			await profileSyncing(profile);

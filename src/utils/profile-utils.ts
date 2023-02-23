@@ -2,6 +2,7 @@ import { matchPath } from "react-router-dom";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 
 import { profileAllEnabledNetworkIds } from "./network-utils";
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 export const getProfileById = (env: Environment, id: string) => {
 	if (!id) {
@@ -79,4 +80,13 @@ export const isValidProfileUrl = (env: Environment, url: string) => {
 	}
 
 	return true;
+};
+
+export const hasIncompatibleLedgerWallets = (profile: Contracts.IProfile) => {
+	const hasLedgerWallets = profile
+		.wallets()
+		.values()
+		.some((wallet) => wallet.isLedger());
+
+	return hasLedgerWallets && !isLedgerTransportSupported();
 };

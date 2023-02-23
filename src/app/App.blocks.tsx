@@ -80,6 +80,7 @@ const Main: React.VFC = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
 	const history = useHistory();
+	const syncingMessageToastId = useRef<number | string>();
 
 	const { resetAccentColor } = useAccentColor();
 	const { resetTheme } = useTheme();
@@ -106,18 +107,21 @@ const Main: React.VFC = () => {
 			setShowMobileNavigation(false);
 		},
 		onProfileSyncComplete: async () => {
-			await toasts.dismiss();
+			await toasts.dismiss(syncingMessageToastId.current);
 			toasts.success(t("COMMON.PROFILE_SYNC_COMPLETED"));
 		},
 		onProfileSyncError: async (failedNetworkNames, retryProfileSync) => {
-			await toasts.dismiss();
+			await toasts.dismiss(syncingMessageToastId.current);
 			toasts.warning(<SyncErrorMessage failedNetworkNames={failedNetworkNames} onRetry={retryProfileSync} />);
 		},
 		onProfileSyncStart: () => {
-			toasts.warning(t("COMMON.PROFILE_SYNC_STARTED"), { autoClose: false });
+			syncingMessageToastId.current = toasts.warning(t("COMMON.PROFILE_SYNC_STARTED"), { autoClose: false });
 		},
 		onProfileUpdated: () => {
 			history.replace("/");
+		},
+		onLedgerCompatibilityError: () => {
+			toasts.warning(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"), { autoClose: false });
 		},
 	});
 

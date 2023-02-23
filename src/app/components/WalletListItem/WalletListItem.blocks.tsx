@@ -26,6 +26,7 @@ import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use
 import { Skeleton } from "@/app/components/Skeleton";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
+import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
@@ -388,7 +389,8 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompac
 	const { primaryOptions, secondaryOptions } = useWalletOptions(wallet);
 
 	const isRestoring = !wallet.hasBeenFullyRestored();
-	const isButtonDisabled = wallet.balance() === 0 || isRestoring || !wallet.hasSyncedWithNetwork();
+	const isButtonDisabled =
+		wallet.balance() === 0 || isRestoring || !wallet.hasSyncedWithNetwork() || !isLedgerWalletCompatible(wallet);
 
 	const handleStopPropagation = useCallback((event: React.MouseEvent) => {
 		event.preventDefault();

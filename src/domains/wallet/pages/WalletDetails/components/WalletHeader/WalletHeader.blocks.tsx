@@ -19,6 +19,7 @@ import { Avatar } from "@/app/components/Avatar";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Clipboard } from "@/app/components/Clipboard";
+import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 const WalletHeaderButton = styled.button`
 	${tw`inline-flex items-center justify-center w-8 h-8 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text hover:text-theme-secondary-500 disabled:(cursor-not-allowed text-theme-secondary-800)`}
@@ -284,7 +285,12 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 
 			<Button
 				data-testid="WalletHeader__send-button"
-				disabled={wallet.balance() === 0 || !wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork()}
+				disabled={
+					wallet.balance() === 0 ||
+					!wallet.hasBeenFullyRestored() ||
+					!wallet.hasSyncedWithNetwork() ||
+					!isLedgerWalletCompatible(wallet)
+				}
 				className="bg-theme-dark-500 my-auto ml-3"
 				theme="dark"
 				onClick={handleSend}
