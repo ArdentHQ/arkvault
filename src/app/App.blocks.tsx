@@ -90,6 +90,9 @@ const Main: React.VFC = () => {
 	const { t } = useTranslation();
 
 	useProfileSynchronizer({
+		onLedgerCompatibilityError: () => {
+			toasts.warning(t("COMMON.LEDGER_COMPATIBILITY_ERROR_LONG"), { autoClose: false });
+		},
 		onProfileRestoreError: () =>
 			history.push({
 				pathname: "/",
@@ -119,9 +122,6 @@ const Main: React.VFC = () => {
 		},
 		onProfileUpdated: () => {
 			history.replace("/");
-		},
-		onLedgerCompatibilityError: () => {
-			toasts.warning(t("COMMON.LEDGER_COMPATIBILITY_ERROR_LONG"), { autoClose: false });
 		},
 	});
 
