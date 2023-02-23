@@ -37,23 +37,25 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 			{renderVotes()}
 
 			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
-				<Button
-					data-testid="WalletVote__button"
-					disabled={
-						wallet.balance() === 0 ||
-						(wallet.network().usesLockedBalance() &&
-							wallet.balance("available") < wallet.network().votesAmountStep()) ||
-						!wallet.hasBeenFullyRestored() ||
-						!wallet.hasSyncedWithNetwork() ||
-						!isLedgerWalletCompatible(wallet)
-					}
-					variant="secondary"
-					className="mt-4 w-full space-x-2 md:mt-0 md:w-auto"
-					onClick={() => onButtonClick()}
-				>
-					<Icon name="Vote" />
-					<span>{t("COMMON.VOTE")}</span>
-				</Button>
+				<div>
+					<Button
+						data-testid="WalletVote__button"
+						disabled={
+							wallet.balance() === 0 ||
+							(wallet.network().usesLockedBalance() &&
+								wallet.balance("available") < wallet.network().votesAmountStep()) ||
+							!wallet.hasBeenFullyRestored() ||
+							!wallet.hasSyncedWithNetwork() ||
+							!isLedgerWalletCompatible(wallet)
+						}
+						variant="secondary"
+						className="mt-4 w-full space-x-2 md:mt-0 md:w-auto"
+						onClick={() => onButtonClick()}
+					>
+						<Icon name="Vote" />
+						<span>{t("COMMON.VOTE")}</span>
+					</Button>
+				</div>
 			</Tooltip>
 		</div>
 	);

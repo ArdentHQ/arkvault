@@ -190,7 +190,7 @@ export const translations = {
 	LEDGER_CONNECTED: "{{device}} connected",
 	LEDGER_DISCONNECTED: "{{device}} disconnected",
 	LEDGER_WALLET: "This is a Ledger wallet",
-	LEDGER_COMPATIBILITY_ERROR: "Please use a different browser like Chrome for Ledger usage",
+	LEDGER_COMPATIBILITY_ERROR: "Please use a different browser like Chrome for Ledger usage.",
 	LINK: "Link",
 	LOAD: "Load",
 	LOADING: "Loading ...",
