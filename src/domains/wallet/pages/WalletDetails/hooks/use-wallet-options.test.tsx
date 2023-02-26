@@ -151,4 +151,18 @@ describe("Wallet Options Hook", () => {
 
 		vi.restoreAllMocks();
 	});
+
+	it("should not render actions if wallet is ledger and ledger transport is incompatible ", () => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		const { result } = renderHook(() => useWalletOptions(wallet));
+
+		expect(result.current.registrationOptions).toMatchInlineSnapshot(`
+			{
+			  "key": "registrations",
+			  "options": [],
+			  "title": "Register",
+			}
+		`);
+	});
 });

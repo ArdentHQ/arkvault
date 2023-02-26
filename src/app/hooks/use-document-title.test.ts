@@ -23,4 +23,20 @@ describe("use-document-title", () => {
 		documentTitleGetSpy.mockRestore();
 		documentTitleSetSpy.mockRestore();
 	});
+
+	it("should set arkvault title if custom title is not provided", () => {
+		const originalTitle = "Original title";
+		const ArkVaultTitle = "ARKVault";
+
+		let documentTitle = originalTitle;
+		const documentTitleSetSpy = vi.spyOn(document, "title", "set").mockImplementation((value) => {
+			documentTitle = value;
+		});
+
+		renderHook(() => useDocumentTitle());
+
+		expect(documentTitle).toBe(ArkVaultTitle);
+
+		documentTitleSetSpy.mockRestore();
+	});
 });

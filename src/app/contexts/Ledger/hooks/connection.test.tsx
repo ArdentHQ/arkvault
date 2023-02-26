@@ -546,5 +546,38 @@ describe("Use Ledger Connection", () => {
 			coinSpy.mockRestore();
 			listenSpy.mockRestore();
 		});
+
+		it("should fail to connect and throw a browser compatibility error", async () => {
+			process.env.REACT_APP_IS_UNIT = undefined;
+
+			const listenSpy = mockNanoXTransport();
+
+			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+				throw new Error("COMPATIBILITY_ERROR");
+			});
+
+			render(
+				<Component
+					retryOptions={{
+						factor: 1,
+						minTimeout: 10,
+						randomize: false,
+						retries: 2,
+					}}
+				/>,
+			);
+
+			userEvent.click(screen.getByText("Connect"));
+			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument(), {
+				timeout: 4000,
+			});
+
+			await expect(
+				screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR),
+			).resolves.toBeVisible();
+
+			connectSpy.mockReset();
+			listenSpy.mockReset();
+		});
 	});
 });

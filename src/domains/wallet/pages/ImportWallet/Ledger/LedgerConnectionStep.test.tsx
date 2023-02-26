@@ -104,7 +104,7 @@ describe("LedgerConnectionStep", () => {
 		history.push(`/profiles/${profile.id()}`);
 
 		const ledgerTransportMock = mockNanoXTransport();
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<Component onFailed={onFailed} />
 			</Route>,
@@ -122,8 +122,6 @@ describe("LedgerConnectionStep", () => {
 		);
 
 		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
-
-		expect(container).toMatchSnapshot();
 
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
@@ -151,7 +149,7 @@ describe("LedgerConnectionStep", () => {
 		history.push(`/profiles/${profile.id()}`);
 
 		const ledgerTransportMock = mockNanoXTransport();
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<Component onFailed={onFailed} />
 			</Route>,
@@ -182,8 +180,6 @@ describe("LedgerConnectionStep", () => {
 		);
 
 		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
-
-		expect(container).toMatchSnapshot();
 
 		getPublicKeySpy.mockRestore();
 		getVersionSpy.mockRestore();

@@ -85,6 +85,7 @@ const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
 
 beforeAll(async () => {
+	process.env.REACT_APP_IS_UNIT = "1";
 	server.listen({ onUnhandledRequest: "error" });
 
 	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
