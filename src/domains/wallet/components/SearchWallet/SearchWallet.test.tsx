@@ -74,6 +74,52 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		networkMocksRestore();
 	});
 
+	it("should render with incompatible ledger wallet", async () => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+		const networkMocksRestore = mockProfileWithPublicAndTestNetworks(profile);
+
+		const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
+			address: "FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
+			coin: "ARK",
+			network: "ark.devnet",
+			path: "m/44'/1'/0'/0/3",
+		});
+
+		profile.wallets().push(wallet);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<SearchWallet
+					profile={profile}
+					showConvertedValue={showConvertedValue}
+					isOpen={true}
+					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+					wallets={[wallet]}
+					onSelectWallet={() => void 0}
+				/>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		await waitFor(() =>
+			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
+		);
+
+		await waitFor(() =>
+			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
+		);
+
+		profile.wallets().forget(wallet.id());
+
+		expect(asFragment()).toMatchSnapshot();
+
+		networkMocksRestore();
+	});
+
 	it("should render compact on md screen", async () => {
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
