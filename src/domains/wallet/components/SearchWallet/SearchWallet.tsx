@@ -26,6 +26,8 @@ import {
 	WalletListItemMobile,
 	WalletItemDetails,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
+import { Tooltip } from "@/app/components/Tooltip";
+import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 const SearchWalletListItem = ({
 	index,
@@ -58,16 +60,20 @@ const SearchWalletListItem = ({
 		}
 
 		return (
-			<Button
-				data-testid={`SearchWalletListItem__select-${index}`}
-				disabled={disabled}
-				size={isCompact ? "icon" : undefined}
-				variant={isCompact ? "transparent" : "secondary"}
-				className={cn("text-theme-primary-600", { "-mr-3": isCompact })}
-				onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-			>
-				{t("COMMON.SELECT")}
-			</Button>
+			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
+				<div>
+					<Button
+						data-testid={`SearchWalletListItem__select-${index}`}
+						disabled={disabled || !isLedgerWalletCompatible(wallet)}
+						size={isCompact ? "icon" : undefined}
+						variant={isCompact ? "transparent" : "secondary"}
+						className={cn("text-theme-primary-600", { "-mr-3": isCompact })}
+						onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
+					>
+						{t("COMMON.SELECT")}
+					</Button>
+				</div>
+			</Tooltip>
 		);
 	};
 
