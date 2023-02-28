@@ -27,7 +27,7 @@ describe("WalletsControls", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render for incompatible ledger wallet", async () => {
+	it("should render for incompatible ledger wallet", () => {
 		process.env.REACT_APP_IS_UNIT = undefined;
 
 		const { container } = render(
