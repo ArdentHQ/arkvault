@@ -426,17 +426,19 @@ exports[`AddressTable > should render 1`] = `
                   <div
                     class="justify-end css-1hhowo0"
                   >
-                    <button
-                      class="css-1jhy6v9"
-                      data-testid="AddressRow__select-0"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
+                    <div>
+                      <button
+                        class="css-1jhy6v9"
+                        data-testid="AddressRow__select-0"
+                        type="button"
                       >
-                        Vote
-                      </div>
-                    </button>
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          Vote
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -1611,17 +1613,19 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   <div
                     class="justify-end css-1hhowo0"
                   >
-                    <button
-                      class="css-1jhy6v9"
-                      data-testid="AddressRow__select-0"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
+                    <div>
+                      <button
+                        class="css-1jhy6v9"
+                        data-testid="AddressRow__select-0"
+                        type="button"
                       >
-                        Vote
-                      </div>
-                    </button>
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          Vote
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -2009,17 +2013,19 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   <div
                     class="justify-end css-1hhowo0"
                   >
-                    <button
-                      class="css-1jhy6v9"
-                      data-testid="AddressRow__select-0"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
+                    <div>
+                      <button
+                        class="css-1jhy6v9"
+                        data-testid="AddressRow__select-0"
+                        type="button"
                       >
-                        Vote
-                      </div>
-                    </button>
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          Vote
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </td>
               </tr>

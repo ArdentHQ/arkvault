@@ -7,6 +7,7 @@ import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { DropdownOptionGroup } from "@/app/components/Dropdown";
 import { isCustomNetwork } from "@/utils/network-utils";
 import { hasAvailableMusigServer } from "@/utils/server-utils";
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
 	try {
@@ -88,6 +89,10 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 		title: t("WALLETS.PAGE_WALLET_DETAILS.REGISTRATION_OPTIONS"),
 	};
 
+	if (wallet.isLedger() && !isLedgerTransportSupported()) {
+		return registrationOptions;
+	}
+
 	if (wallet.balance() > 0 && !wallet.isLedger() && !isMultiSignature(wallet) && isRestoredAndSynced(wallet)) {
 		if (
 			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateRegistration) &&
@@ -145,6 +150,10 @@ const getAdditionalOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction) 
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.TRANSACTION_HISTORY"),
 			value: "transaction-history",
 		});
+	}
+
+	if (wallet.isLedger() && !isLedgerTransportSupported()) {
+		return additionalOptions;
 	}
 
 	if (!isMultiSignature(wallet) && wallet.network().allows(Enums.FeatureFlag.MessageSign)) {

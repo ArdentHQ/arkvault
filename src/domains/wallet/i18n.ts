@@ -21,6 +21,8 @@ export const translations = {
 
 	// @TODO: Remove this once the new wallet ledger create flow is complete
 	MODAL_LEDGER_WALLET: {
+		COMPATIBILITY_ERROR:
+			"ARKVault requires the use of a chromium based browser when using a Ledger device. Please use another browser like Chrome.",
 		CONNECT_DEVICE: "Connect your Ledger and confirm input.",
 		CONNECT_DEVICE_MODEL: "Connect your {{model}} and confirm input.",
 		CONNECT_SUCCESS: "Successfully connected",

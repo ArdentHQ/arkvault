@@ -15,6 +15,7 @@ import { WalletIcons } from "@/app/components/WalletIcons";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { assertReadOnlyWallet } from "@/utils/assertions";
+import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 interface AddressRowProperties {
 	index: number;
@@ -180,7 +181,11 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 		);
 	};
 
-	const isButtonDisabled = !wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork() || !wallet.balance();
+	const isButtonDisabled =
+		!wallet.hasBeenFullyRestored() ||
+		!wallet.hasSyncedWithNetwork() ||
+		!wallet.balance() ||
+		!isLedgerWalletCompatible(wallet);
 
 	return (
 		<TableRow>
@@ -242,16 +247,20 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			)}
 
 			<TableCell variant="end" innerClassName="justify-end" isCompact={useCompact}>
-				<Button
-					size={useCompact ? "icon" : undefined}
-					disabled={isButtonDisabled}
-					variant={useCompact ? "transparent" : "secondary"}
-					className={cn({ "-mr-3 text-theme-primary-600 hover:text-theme-primary-700": useCompact })}
-					onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
-					data-testid={`AddressRow__select-${index}`}
-				>
-					{t("COMMON.VOTE")}
-				</Button>
+				<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
+					<div>
+						<Button
+							size={useCompact ? "icon" : undefined}
+							disabled={isButtonDisabled}
+							variant={useCompact ? "transparent" : "secondary"}
+							className={cn({ "-mr-3 text-theme-primary-600 hover:text-theme-primary-700": useCompact })}
+							onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
+							data-testid={`AddressRow__select-${index}`}
+						>
+							{t("COMMON.VOTE")}
+						</Button>
+					</div>
+				</Tooltip>
 			</TableCell>
 		</TableRow>
 	);

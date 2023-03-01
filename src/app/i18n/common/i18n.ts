@@ -186,6 +186,9 @@ export const translations = {
 	LAUNCH: "Launch",
 	LEARN_MORE: "Learn more",
 	LEDGER: "Ledger",
+	LEDGER_COMPATIBILITY_ERROR: "ARKVault requires the use of a chromium based browser when using a Ledger.",
+	LEDGER_COMPATIBILITY_ERROR_LONG:
+		"Your portfolio contains 1 or more Ledger wallets. ARKVault requires the use of a chromium based browser such as Chrome, Brave or Edge when using a Ledger device.",
 	LEDGER_CONNECTED: "{{device}} connected",
 	LEDGER_DISCONNECTED: "{{device}} disconnected",
 	LEDGER_WALLET: "This is a Ledger wallet",

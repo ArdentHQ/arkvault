@@ -15795,18 +15795,20 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       <div
                         class="justify-end css-br23tb"
                       >
-                        <button
-                          class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-127bt7l"
-                          data-testid="AddressRow__select-0"
-                          disabled=""
-                          type="button"
-                        >
-                          <div
-                            class="flex items-center space-x-2"
+                        <div>
+                          <button
+                            class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-127bt7l"
+                            data-testid="AddressRow__select-0"
+                            disabled=""
+                            type="button"
                           >
-                            Vote
-                          </div>
-                        </button>
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Vote
+                            </div>
+                          </button>
+                        </div>
                       </div>
                     </td>
                   </tr>
@@ -15910,17 +15912,19 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       <div
                         class="justify-end css-br23tb"
                       >
-                        <button
-                          class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
-                          data-testid="AddressRow__select-1"
-                          type="button"
-                        >
-                          <div
-                            class="flex items-center space-x-2"
+                        <div>
+                          <button
+                            class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                            data-testid="AddressRow__select-1"
+                            type="button"
                           >
-                            Vote
-                          </div>
-                        </button>
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Vote
+                            </div>
+                          </button>
+                        </div>
                       </div>
                     </td>
                   </tr>
@@ -16024,17 +16028,19 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       <div
                         class="justify-end css-br23tb"
                       >
-                        <button
-                          class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
-                          data-testid="AddressRow__select-2"
-                          type="button"
-                        >
-                          <div
-                            class="flex items-center space-x-2"
+                        <div>
+                          <button
+                            class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                            data-testid="AddressRow__select-2"
+                            type="button"
                           >
-                            Vote
-                          </div>
-                        </button>
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Vote
+                            </div>
+                          </button>
+                        </div>
                       </div>
                     </td>
                   </tr>

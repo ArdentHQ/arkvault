@@ -29,6 +29,7 @@ import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-url";
 import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 const MAX_TABS = 5;
 
@@ -193,6 +194,11 @@ export const SendTransfer = () => {
 		}
 
 		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger()) {
+			if (!isLedgerTransportSupported()) {
+				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
+				setActiveTab(SendTransferStep.ErrorStep);
+				return;
+			}
 			connectLedger();
 		}
 

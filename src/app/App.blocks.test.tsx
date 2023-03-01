@@ -37,6 +37,7 @@ vi.mock("@/domains/profile/routing", async () => {
 
 describe("App Router", () => {
 	beforeEach(() => {
+		process.env.REACT_APP_IS_UNIT = undefined;
 		history.push("/");
 	});
 
@@ -206,6 +207,46 @@ describe("App Main", () => {
 		successToastSpy.mockRestore();
 		warningToastSpy.mockRestore();
 		dismissToastSpy.mockRestore();
+	});
+
+	it("should show warning toast when profile has ledger wallets in an incompatible browser", async () => {
+		const profile = env.profiles().findById(getDefaultProfileId());
+
+		const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
+			address: "FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
+			coin: "ARK",
+			network: "ark.devnet",
+			path: "m/44'/1'/0'/0/3",
+		});
+
+		profile.wallets().push(wallet);
+
+		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
+
+		const restoredMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
+		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+
+		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
+		history.push(profileUrl);
+
+		render(
+			<Route path="/profiles/:profileId/exchange">
+				<Main />
+			</Route>,
+			{
+				history,
+				route: profileUrl,
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
+		await waitFor(() => expect(warningToastSpy).toHaveBeenCalled());
+
+		profile.wallets().forget(wallet.id());
+
+		restoredMock.mockRestore();
+		warningToastSpy.mockRestore();
 	});
 
 	it("should redirect to login page if profile changes", async () => {

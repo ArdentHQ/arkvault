@@ -1069,4 +1069,51 @@ describe("useProfileStatusWatcher", () => {
 		expect(onProfileSyncComplete).not.toHaveBeenCalled();
 		expect(onProfileSyncError).not.toHaveBeenCalled();
 	});
+
+	it("should emit error for incompatible ledger wallets", async () => {
+		const profile = env.profiles().findById(getDefaultProfileId());
+
+		vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
+		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
+		process.env.REACT_APP_IS_UNIT = undefined;
+
+		const ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
+			address: "FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
+			coin: "ARK",
+			network: "ark.devnet",
+			path: "m/44'/1'/0'/0/3",
+		});
+
+		profile.wallets().push(ledgerWallet);
+
+		history.push(dashboardURL);
+
+		const onLedgerCompatibilityError = vi.fn();
+
+		const Component = () => {
+			useProfileSynchronizer({
+				onLedgerCompatibilityError,
+			});
+
+			return <div data-testid="ProfileSynced">test</div>;
+		};
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Component />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
+
+		await waitFor(() => {
+			expect(onLedgerCompatibilityError).toHaveBeenCalledTimes(1);
+		});
+
+		vi.restoreAllMocks();
+	});
 });
