@@ -27,6 +27,16 @@ describe("WalletsControls", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render for incompatible ledger wallet", () => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+
+		const { container } = render(
+			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", (breakpoint) => {
 		const { container } = renderResponsive(
 			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,

@@ -476,4 +476,16 @@ describe("WalletHeader", () => {
 		allowsLockedBalance.mockRestore();
 		ledgerSpy.mockRestore();
 	});
+
+	it("should render with incompatible ledger wallet", async () => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+		const walletSpy = vi.spyOn(profile.wallets().first(), "isLedger").mockReturnValue(true);
+
+		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+		walletSpy.mockRestore();
+	});
 });

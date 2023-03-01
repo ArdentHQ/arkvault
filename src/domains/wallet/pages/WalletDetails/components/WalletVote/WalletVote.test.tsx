@@ -52,6 +52,20 @@ describe("WalletVote", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render ledger for incompatible ledger wallet", async () => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+		const ledgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		const { asFragment } = render(
+			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+		);
+
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+		ledgerMock.mockRestore();
+	});
+
 	it("should render skelethon if loading", async () => {
 		const { asFragment } = render(
 			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={true} />,
@@ -283,6 +297,7 @@ describe("WalletVote", () => {
 		let maxVotesSpy: vi.SpyInstance;
 
 		beforeEach(() => {
+			process.env.REACT_APP_IS_UNIT = "1";
 			maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
 		});
 

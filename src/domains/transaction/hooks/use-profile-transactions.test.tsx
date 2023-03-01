@@ -13,6 +13,10 @@ const wrapper = ({ children }: any) => (
 );
 
 describe("useProfileTransactions", () => {
+	beforeEach(() => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+	});
+
 	// TODO: Inspect timeout issue and restore this test. It works locally but timetouts in CI
 	it.skip("should hide unconfirmed transactions", async () => {
 		vi.useRealTimers();
