@@ -1,8 +1,7 @@
 import * as browserAccess from "browser-fs-access";
 import { renderHook } from "@testing-library/react-hooks";
-import { requestMock, server } from "@/tests/mocks/server";
-
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
+import { requestMock, server } from "@/tests/mocks/server";
 
 vi.spyOn(global, "fetch").mockImplementation(() =>
 	Promise.resolve({
