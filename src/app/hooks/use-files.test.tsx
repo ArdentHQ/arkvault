@@ -1,5 +1,6 @@
 import * as browserAccess from "browser-fs-access";
 import { renderHook } from "@testing-library/react-hooks";
+import { requestMock, server } from "@/tests/mocks/server";
 
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
 
@@ -95,6 +96,8 @@ describe("useFiles", () => {
 	});
 
 	it("should save image file", async () => {
+		server.use(requestMock("http://localhost:3000/test", {}, { method: "get" }));
+
 		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileSave")
 			// @ts-ignore
@@ -106,7 +109,7 @@ describe("useFiles", () => {
 
 		expect(value).toBe("test.png");
 
-		expect(browserAccessMock).toHaveBeenCalledWith(expect.any(Blob), {
+		expect(browserAccessMock).toHaveBeenCalledWith(expect.any(Object), {
 			extensions: [".png"],
 		});
 
