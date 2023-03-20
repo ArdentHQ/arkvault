@@ -219,7 +219,7 @@ describe("SendTransfer Network Selection", () => {
 	it("should select a cryptoasset and select sender without wallet id param", async () => {
 		history.push(transferURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/send-transfer">
 				<SendTransfer />
 			</Route>,
