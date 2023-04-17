@@ -375,4 +375,25 @@ describe("AddressRow", () => {
 		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());
 		expect(asFragment()).toMatchSnapshot();
 	});
+
+	it("should render tooltip wallet when ledger and incompatible", async () => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		const { asFragment, container } = render(
+			<AddressWrapper>
+				<AddressRow index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		const voteButton = "AddressRow__select-0";
+		await expect(screen.findByTestId(voteButton)).resolves.toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
 });

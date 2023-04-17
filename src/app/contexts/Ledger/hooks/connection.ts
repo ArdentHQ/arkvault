@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "r
 import { useTranslation } from "react-i18next";
 
 import { connectionReducer, defaultConnectionState } from "./connection.state";
-import { openTransport, closeDevices } from "@/app/contexts/Ledger/transport";
+import { openTransport, closeDevices, isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { useEnvironmentContext } from "@/app/contexts/Environment";
 import { toasts } from "@/app/services";
 import { useLedgerImport } from "@/app/contexts/Ledger/hooks/import";
@@ -62,6 +62,10 @@ export const useLedgerConnection = () => {
 				//
 			}
 
+			if (error.message === "COMPATIBILITY_ERROR") {
+				return dispatch({ message: t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"), type: "failed" });
+			}
+
 			if (error.statusText === "UNKNOWN_ERROR") {
 				return dispatch({ message: t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR"), type: "failed" });
 			}
@@ -87,13 +91,18 @@ export const useLedgerConnection = () => {
 
 	const connect = useCallback(
 		async (profile: Contracts.IProfile, coin: string, network: string, retryOptions?: Options) => {
+			const coinInstance = profile.coins().set(coin, network);
+
+			if (!isLedgerTransportSupported()) {
+				handleLedgerConnectionError({ message: "COMPATIBILITY_ERROR" }, coinInstance);
+				return;
+			}
+
 			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
 			await resetConnectionState();
 
 			dispatch({ type: "waiting" });
 			abortRetryReference.current = false;
-
-			const coinInstance = profile.coins().set(coin, network);
 
 			try {
 				await persistLedgerConnection({

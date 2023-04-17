@@ -9,6 +9,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { FilterWallets, FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import { Divider } from "@/app/components/Divider";
 import { useBreakpoint } from "@/app/hooks";
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 enum NewWalletOption {
 	Create,
@@ -98,17 +99,24 @@ export const WalletsControls = React.memo(
 				</div>
 
 				<div className="hidden gap-3 sm:flex">
-					<Button
-						onClick={onImportLedgerWallet}
-						variant="secondary"
-						showOn="md"
-						data-testid="WalletControls__import-ledger"
-					>
-						<div className="flex items-center space-x-2">
-							<Icon name="Ledger" />
-							<span className="hidden lg:inline">{t("DASHBOARD.WALLET_CONTROLS.IMPORT_LEDGER")}</span>
+					<Tooltip content={isLedgerTransportSupported() ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
+						<div>
+							<Button
+								disabled={!isLedgerTransportSupported()}
+								onClick={onImportLedgerWallet}
+								variant="secondary"
+								showOn="md"
+								data-testid="WalletControls__import-ledger"
+							>
+								<div className="flex items-center space-x-2">
+									<Icon name="Ledger" />
+									<span className="hidden lg:inline">
+										{t("DASHBOARD.WALLET_CONTROLS.IMPORT_LEDGER")}
+									</span>
+								</div>
+							</Button>
 						</div>
-					</Button>
+					</Tooltip>
 
 					<Button onClick={onImportWallet} variant="secondary" data-testid="WalletControls__import-wallet">
 						<div className="flex items-center space-x-2">

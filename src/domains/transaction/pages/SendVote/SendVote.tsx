@@ -31,6 +31,7 @@ import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
 import { useDelegatesFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { toasts } from "@/app/services";
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 enum Step {
 	FormStep = 1,
@@ -216,6 +217,11 @@ export const SendVote = () => {
 		}
 
 		if (newIndex === Step.AuthenticationStep && senderWallet.isLedger()) {
+			if (!isLedgerTransportSupported()) {
+				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
+				setActiveTab(Step.ErrorStep);
+				return;
+			}
 			void handleSubmit(submitForm)();
 		}
 

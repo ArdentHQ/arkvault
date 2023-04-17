@@ -5,6 +5,7 @@ import {
 	getProfileStoredPassword,
 	getErroredNetworks,
 	isValidProfileUrl,
+	hasIncompatibleLedgerWallets,
 } from "./profile-utils";
 import { mockProfileWithPublicAndTestNetworks } from "./testing-library";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
@@ -83,5 +84,18 @@ describe("Profile utils", () => {
 		expect(isValidProfileUrl(env, "/profiles/1")).toBe(false);
 		// Ignore all the rest urls.
 		expect(isValidProfileUrl(env, "/")).toBe(true);
+	});
+
+	it("#hasIncompatibleLedgerWallets", async () => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const ledgerWalletMock = vi.spyOn(profile.wallets().first(), "isLedger").mockReturnValue(true);
+
+		expect(hasIncompatibleLedgerWallets(profile)).toBe(true);
+
+		ledgerWalletMock.mockRestore();
+
+		process.env.REACT_APP_IS_UNIT = "1";
+		expect(hasIncompatibleLedgerWallets(profile)).toBe(false);
 	});
 });

@@ -1,7 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 
-import { supportedTransport, connectedTransport, openTransport, closeDevices } from "./transport";
+import {
+	supportedTransport,
+	connectedTransport,
+	openTransport,
+	closeDevices,
+	isLedgerTransportSupported,
+} from "./transport";
 import {
 	env,
 	getDefaultProfileId,
@@ -104,6 +110,38 @@ describe("Ledger transport", () => {
 		);
 
 		await expect(closeDevices()).resolves.not.toThrow();
+
+		mockDevices.mockRestore();
+	});
+
+	it("#isLedgerTransportSupported", async () => {
+		ledgerListenSpy.mockRestore();
+
+		process.env.REACT_APP_IS_UNIT = undefined;
+		window.navigator.usb = "1";
+		window.navigator.hid = "1";
+
+		const mockDevices = mockLedgerDevicesList(
+			vi.fn().mockImplementation(() => [
+				{
+					close: vi.fn(),
+					open: vi.fn(),
+				},
+				{
+					close: () => {
+						throw new Error("error");
+					},
+					open: vi.fn(),
+				},
+			]),
+		);
+
+		expect(isLedgerTransportSupported()).toBe(true);
+
+		window.navigator.usb = undefined;
+		window.navigator.hid = undefined;
+
+		expect(isLedgerTransportSupported()).toBe(false);
 
 		mockDevices.mockRestore();
 	});

@@ -1,20 +1,27 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-import { isEqual } from "@ardenthq/sdk-helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { Services } from "@ardenthq/sdk";
+import { isEqual } from "@ardenthq/sdk-helpers";
 import { usePrevious } from "./use-previous";
 import { useSynchronizer } from "./use-synchronizer";
 import { useTheme } from "./use-theme";
-import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { useAccentColor } from "@/app/hooks/use-accent-color";
-import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
-import { delay } from "@/utils/delay";
-import { getErroredNetworks, getProfileById, getProfileFromUrl, getProfileStoredPassword } from "@/utils/profile-utils";
-import { ProfilePeers } from "@/utils/profile-peers";
 import { enabledNetworksCount, profileAllEnabledNetworks, profileEnabledNetworkIds } from "@/utils/network-utils";
+import {
+	getErroredNetworks,
+	getProfileById,
+	getProfileFromUrl,
+	getProfileStoredPassword,
+	hasIncompatibleLedgerWallets,
+} from "@/utils/profile-utils";
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
+import { ProfilePeers } from "@/utils/profile-peers";
+import { delay } from "@/utils/delay";
+/* eslint-disable sonarjs/cognitive-complexity */
+import { useAccentColor } from "@/app/hooks/use-accent-color";
+import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { useZendesk } from "@/app/contexts/Zendesk";
 
 enum Intervals {
@@ -342,6 +349,7 @@ interface ProfileSynchronizerProperties {
 	onProfileSyncComplete?: () => void;
 	onProfileSignOut?: () => void;
 	onProfileUpdated?: () => void;
+	onLedgerCompatibilityError?: () => void;
 }
 
 export const useProfileSynchronizer = ({
@@ -351,6 +359,7 @@ export const useProfileSynchronizer = ({
 	onProfileSyncComplete,
 	onProfileSignOut,
 	onProfileUpdated,
+	onLedgerCompatibilityError,
 }: ProfileSynchronizerProperties = {}) => {
 	const location = useLocation();
 	const { env, persist } = useEnvironmentContext();
@@ -491,6 +500,10 @@ export const useProfileSynchronizer = ({
 				setProfileAccentColor(profile);
 
 				startIdleTimer();
+
+				if (hasIncompatibleLedgerWallets(profile)) {
+					onLedgerCompatibilityError?.();
+				}
 			}
 
 			await profileSyncing(profile);

@@ -26,6 +26,7 @@ import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use
 import { Skeleton } from "@/app/components/Skeleton";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
+import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
@@ -388,7 +389,8 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompac
 	const { primaryOptions, secondaryOptions } = useWalletOptions(wallet);
 
 	const isRestoring = !wallet.hasBeenFullyRestored();
-	const isButtonDisabled = wallet.balance() === 0 || isRestoring || !wallet.hasSyncedWithNetwork();
+	const isButtonDisabled =
+		wallet.balance() === 0 || isRestoring || !wallet.hasSyncedWithNetwork() || !isLedgerWalletCompatible(wallet);
 
 	const handleStopPropagation = useCallback((event: React.MouseEvent) => {
 		event.preventDefault();
@@ -397,21 +399,23 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompac
 
 	return (
 		<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>
-			<div onClick={handleStopPropagation}>
-				<Button
-					data-testid="WalletListItem__send-button"
-					size={isCompact ? "icon" : undefined}
-					disabled={isButtonDisabled}
-					variant={isCompact ? "transparent" : "secondary"}
-					className={cn({
-						"my-auto": !isCompact,
-						"text-theme-primary-600 hover:text-theme-primary-700": isCompact,
-					})}
-					onClick={onSend}
-				>
-					{t("COMMON.SEND")}
-				</Button>
-			</div>
+			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
+				<div onClick={handleStopPropagation}>
+					<Button
+						data-testid="WalletListItem__send-button"
+						size={isCompact ? "icon" : undefined}
+						disabled={isButtonDisabled}
+						variant={isCompact ? "transparent" : "secondary"}
+						className={cn({
+							"my-auto": !isCompact,
+							"text-theme-primary-600 hover:text-theme-primary-700": isCompact,
+						})}
+						onClick={onSend}
+					>
+						{t("COMMON.SEND")}
+					</Button>
+				</div>
+			</Tooltip>
 			<div data-testid="WalletListItem__more-button" className={cn({ "ml-3": !isCompact })}>
 				<Dropdown
 					toggleContent={
