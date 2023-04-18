@@ -87,6 +87,12 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 					disableSortBy: true,
 				},
 				{
+					Header: t("COMMON.EXPLORER"),
+					accessor: "explorer",
+					className: "justify-center",
+					disableSortBy: true,
+				},
+				{
 					accessor: "onSelect",
 					disableSortBy: true,
 					headerClassName: "no-border",

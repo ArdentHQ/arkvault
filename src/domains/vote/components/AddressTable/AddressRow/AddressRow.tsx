@@ -172,22 +172,10 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 
 		if (maxVotes === 1) {
 			return (
-				<div
-					data-testid="AddressRow__delegate"
-					className={cn("space-x-3", {
-						"cursor-pointer": !!votes[0].wallet?.explorerLink(),
-					})}
-					onClick={() => {
-						if (!votes[0].wallet) {
-							return;
-						}
-
-						openExternal(votes[0].wallet?.explorerLink());
-					}}
-				>
+				<>
 					<Avatar size={useCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
 					<span>{votes[0].wallet?.username()}</span>
-				</div>
+				</>
 			);
 		}
 
@@ -273,6 +261,23 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 
 					<TableCell innerClassName="justify-center" isCompact={useCompact}>
 						{renderDelegateStatus(votes[0]?.wallet, wallet.network().delegateCount())}
+					</TableCell>
+
+					<TableCell
+						className="hidden sm:table-cell"
+						innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent", {
+							"h-12": isCompact,
+						})}
+						isCompact={isCompact}
+					>
+						<Link
+							to={votes[0]?.wallet?.explorerLink() || ""}
+							tooltip={t("COMMON.OPEN_IN_EXPLORER")}
+							showExternalIcon={false}
+							isExternal
+						>
+							<Icon name="ArrowExternal" />
+						</Link>
 					</TableCell>
 				</>
 			) : (
