@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { generatePath } from "react-router";
 import { useHistory } from "react-router-dom";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Avatar } from "@/app/components/Avatar";
@@ -9,13 +9,15 @@ import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useConfiguration } from "@/app/contexts";
-import { useActiveProfile, useWalletAlias } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { assertReadOnlyWallet } from "@/utils/assertions";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { ProfilePaths } from "@/router/paths";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 
 interface AddressRowMobileProperties {
 	index: number;
@@ -31,6 +33,16 @@ const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color
 		</span>
 	</Tooltip>
 );
+
+const DelegateName = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet }) => {
+	const parentReference = useRef(null);
+
+	return (
+		<div ref={parentReference} className="flex w-full items-center">
+			<TruncateMiddleDynamic value={wallet?.username() || ""} availableWidth={80} parentRef={parentReference} />
+		</div>
+	);
+};
 
 export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressRowMobileProperties) => {
 	const { t } = useTranslation();
@@ -146,13 +158,15 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 					<Avatar size="xs" address={votes[0].wallet.address()} noShadow />
 
 					{votes[0].wallet && (
-						<div className="flex items-center text-right">
+						<div className="flex items-center">
 							<div className="flex flex-1 justify-end overflow-hidden">
-								<span className="overflow-hidden overflow-ellipsis whitespace-nowrap">
-									<Link isExternal to={votes[0].wallet.explorerLink()}>
-										<span className="text-white">{votes[0].wallet.username()}</span>
-									</Link>
-								</span>
+								<Link
+									isExternal
+									to={votes[0].wallet.explorerLink()}
+									className="flex w-full items-center"
+								>
+									<DelegateName wallet={votes[0].wallet} />
+								</Link>
 							</div>
 						</div>
 					)}
