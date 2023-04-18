@@ -712,7 +712,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                                   class="css-1y2194z"
                                 >
                                   <div
-                                    class="flex w-full items-center"
+                                    class="flex w-full items-center text-theme-text"
                                   >
                                     <span
                                       class="css-0"
@@ -1014,7 +1014,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                                   class="css-1y2194z"
                                 >
                                   <div
-                                    class="flex w-full items-center"
+                                    class="flex w-full items-center text-theme-text"
                                   >
                                     <span
                                       class="css-0"
@@ -1316,7 +1316,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                                   class="css-1y2194z"
                                 >
                                   <div
-                                    class="flex w-full items-center"
+                                    class="flex w-full items-center text-theme-text"
                                   >
                                     <span
                                       class="css-0"
