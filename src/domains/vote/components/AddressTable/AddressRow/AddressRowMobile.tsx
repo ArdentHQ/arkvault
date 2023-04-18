@@ -16,7 +16,6 @@ import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { ProfilePaths } from "@/router/paths";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useMediaQuery } from "react-responsive";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
@@ -35,14 +34,14 @@ const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color
 	</Tooltip>
 );
 
-const DelegateName = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet }) => {
+const AddressRowMobileDelegateName = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet }) => {
 	const parentReference = useRef(null);
 
-	const xs = useMediaQuery({ maxWidth: 404 });
+	const is2Xs = useMediaQuery({ maxWidth: 404 });
 
 	return (
 		<div ref={parentReference} className="flex w-full items-center">
-			<TruncateMiddle text={wallet?.username() || ""} maxChars={xs ? 12 : 50} />
+			<TruncateMiddle text={wallet?.username() || ""} maxChars={is2Xs ? 12 : 50} />
 		</div>
 	);
 };
@@ -168,7 +167,7 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 									to={votes[0].wallet.explorerLink()}
 									className="flex w-full items-center"
 								>
-									<DelegateName wallet={votes[0].wallet} />
+									<AddressRowMobileDelegateName wallet={votes[0].wallet} />
 								</Link>
 							</div>
 						</div>

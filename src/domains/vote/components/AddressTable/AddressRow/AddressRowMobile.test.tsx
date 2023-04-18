@@ -11,6 +11,7 @@ import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
+import { Context as ResponsiveContext } from "react-responsive";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -126,6 +127,27 @@ describe("AddressRowMobile", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		isMultiSignatureSpy.mockRestore();
+	});
+
+	it.each([275, 420])("should render in % screen width", (width: number) => {
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
+
+		const { asFragment, container } = render(
+			<ResponsiveContext.Provider value={{ width }}>
+				<AddressWrapper>
+					<AddressRowMobile index={0} maxVotes={1} wallet={wallet} />
+				</AddressWrapper>
+				,
+			</ResponsiveContext.Provider>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+
+		votesMock.mockRestore();
 	});
 
 	it("should render when wallet not found for votes", async () => {
