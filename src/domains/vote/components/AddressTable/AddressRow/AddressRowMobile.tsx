@@ -1,6 +1,9 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { generatePath } from "react-router";
+import { useHistory } from "react-router-dom";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+
 import { Avatar } from "@/app/components/Avatar";
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
@@ -11,6 +14,8 @@ import { assertReadOnlyWallet } from "@/utils/assertions";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
+import { Link } from "@/app/components/Link";
+import { ProfilePaths } from "@/router/paths";
 
 interface AddressRowMobileProperties {
 	index: number;
@@ -31,6 +36,7 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
+	const history = useHistory();
 
 	const { getWalletAlias } = useWalletAlias();
 
@@ -143,7 +149,9 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 						<div className="flex items-center text-right">
 							<div className="flex flex-1 justify-end overflow-hidden">
 								<span className="overflow-hidden overflow-ellipsis whitespace-nowrap">
-									{votes[0].wallet.username()}
+									<Link isExternal to={votes[0].wallet.explorerLink()}>
+										<span className="text-white">{votes[0].wallet.username()}</span>
+									</Link>
 								</span>
 							</div>
 						</div>
@@ -170,7 +178,17 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 	return (
 		<tr data-testid="AddressRowMobile">
 			<td className="pt-3">
-				<div className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
+				<div
+					className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+					onClick={() => {
+						history.push(
+							generatePath(ProfilePaths.WalletDetails, {
+								profileId: activeProfile.id(),
+								walletId: wallet.id(),
+							}),
+						);
+					}}
+				>
 					<div className="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
 							<Avatar className="shrink-0" size="xs" address={wallet.address()} noShadow />
