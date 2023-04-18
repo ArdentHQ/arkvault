@@ -4,8 +4,9 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
+import { createHashHistory } from "history";
 
-import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
+import { AddressRow, WalletAvatar } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
@@ -43,7 +44,7 @@ const votingMockReturnValue = (delegatesIndex: number[]) =>
 		amount: 0,
 		wallet: new ReadOnlyWallet({
 			address: data[index].address,
-			explorerLink: "",
+			explorerLink: `https://test.arkscan.io/wallets/${data[0].address}`,
 			governanceIdentifier: "address",
 			isDelegate: true,
 			isResignedDelegate: false,
@@ -395,5 +396,85 @@ describe("AddressRow", () => {
 		await expect(screen.findByTestId(voteButton)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should redirect to wallet details page", async () => {
+		const route = `/profiles/${profile.id()}/votes`;
+		const history = createHashHistory();
+
+		const historySpy = vi.spyOn(history, "push");
+
+		const { container } = render(
+			<AddressWrapper>
+				<AddressRow index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route,
+				history,
+			},
+		);
+		history.push(route);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("AddressRow__wallet"));
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+	});
+
+	it("should redirect to delegate explorer page", async () => {
+		const redirectSpy = vi.spyOn(window, "open");
+
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
+			{
+				amount: 0,
+				wallet: undefined,
+			},
+		]);
+
+		const { container } = render(
+			<AddressWrapper>
+				<AddressRow index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("AddressRow__delegate"));
+
+		expect(redirectSpy).not.toHaveBeenCalledWith();
+		votesMock.mockRestore();
+	});
+
+	it("should not redirect to delegate explorer page if delegate vote wallet is not provided", async () => {
+		global.open = vi.fn();
+
+		const delegates = votingMockReturnValue([0, 1, 2, 3]);
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(delegates);
+
+		const { container } = render(
+			<AddressWrapper>
+				<AddressRow index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("AddressRow__delegate"));
+
+		expect(global.open).toHaveBeenCalledWith(delegates[0].wallet.explorerLink(), "_blank");
+		votesMock.mockRestore();
+	});
+
+	it("should not render wallet avatar if wallet is not provided", async () => {
+		render(<WalletAvatar />);
+
+		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
 	});
 });

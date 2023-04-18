@@ -173,6 +173,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 		if (maxVotes === 1) {
 			return (
 				<div
+					data-testid="AddressRow__delegate"
 					className={cn("space-x-3", {
 						"cursor-pointer": !!votes[0].wallet?.explorerLink(),
 					})}
@@ -214,6 +215,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 	return (
 		<TableRow>
 			<TableCell
+				data-testid="AddressRow__wallet"
 				onClick={() => {
 					history.push(
 						generatePath(ProfilePaths.WalletDetails, {

@@ -8,7 +8,9 @@ exports[`AddressRow > should emit action on select button 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -133,6 +135,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           >
             <div
               class="space-x-3 cursor-pointer"
+              data-testid="AddressRow__delegate"
             >
               <div
                 class="shrink-0 css-tthe5h"
@@ -241,7 +244,9 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -402,6 +407,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           >
             <div
               class="space-x-3 cursor-pointer"
+              data-testid="AddressRow__delegate"
             >
               <div
                 class="shrink-0 css-tthe5h"
@@ -510,7 +516,9 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -635,6 +643,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           >
             <div
               class="space-x-3 cursor-pointer"
+              data-testid="AddressRow__delegate"
             >
               <div
                 class="shrink-0 css-tthe5h"
@@ -744,7 +753,9 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -869,6 +880,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           >
             <div
               class="space-x-3 cursor-pointer"
+              data-testid="AddressRow__delegate"
             >
               <div
                 class="shrink-0 css-tthe5h"
@@ -977,7 +989,9 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-3 css-mx19qq"
           >
@@ -1102,6 +1116,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           >
             <div
               class="space-x-3 cursor-pointer"
+              data-testid="AddressRow__delegate"
             >
               <div
                 class="shrink-0 css-jxpwdn"
@@ -1210,7 +1225,9 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -1335,6 +1352,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           >
             <div
               class="space-x-3 cursor-pointer"
+              data-testid="AddressRow__delegate"
             >
               <div
                 class="shrink-0 css-tthe5h"
@@ -1434,7 +1452,9 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -1559,7 +1579,9 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -1684,6 +1706,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           >
             <div
               class="space-x-3 cursor-pointer"
+              data-testid="AddressRow__delegate"
             >
               <div
                 class="shrink-0 css-tthe5h"
@@ -1783,7 +1806,9 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -1898,7 +1923,9 @@ exports[`AddressRow > should render with active delegate 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -2023,6 +2050,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           >
             <div
               class="space-x-3"
+              data-testid="AddressRow__delegate"
             >
               <div
                 class="shrink-0 css-tthe5h"
@@ -2129,7 +2157,9 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -2313,7 +2343,9 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -2443,7 +2475,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -2493,7 +2525,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -2543,7 +2575,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -2593,7 +2625,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -2693,7 +2725,9 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -2823,7 +2857,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -2873,7 +2907,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -2923,7 +2957,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -3032,7 +3066,9 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-3 css-mx19qq"
           >
@@ -3216,7 +3252,9 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-3 css-mx19qq"
           >
@@ -3346,7 +3384,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -3396,7 +3434,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -3446,7 +3484,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -3496,7 +3534,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -3596,7 +3634,9 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-3 css-mx19qq"
           >
@@ -3726,7 +3766,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -3776,7 +3816,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -3826,7 +3866,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                 class="ring-focus group inline-block flex css-15tcy38"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href=""
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 rel="noopener noreferrer"
               >
                 <span
@@ -3935,7 +3975,9 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -4060,6 +4102,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           >
             <div
               class="space-x-3"
+              data-testid="AddressRow__delegate"
             >
               <div
                 class="shrink-0 css-tthe5h"
@@ -4168,7 +4211,9 @@ exports[`AddressRow > should render with standby delegate 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
             class="font-bold cursor-pointer space-x-4 css-14huxtf"
           >
@@ -4293,6 +4338,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           >
             <div
               class="space-x-3"
+              data-testid="AddressRow__delegate"
             >
               <div
                 class="shrink-0 css-tthe5h"
