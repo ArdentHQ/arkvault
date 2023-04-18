@@ -15712,7 +15712,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                   >
                     <td>
                       <div
-                        class="font-bold space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -15818,7 +15818,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                   >
                     <td>
                       <div
-                        class="font-bold space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -15934,7 +15934,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                   >
                     <td>
                       <div
-                        class="font-bold space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
