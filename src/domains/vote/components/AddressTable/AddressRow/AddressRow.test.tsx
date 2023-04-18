@@ -422,56 +422,6 @@ describe("AddressRow", () => {
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 	});
 
-	it("should redirect to delegate explorer page", async () => {
-		const redirectSpy = vi.spyOn(window, "open");
-
-		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
-			{
-				amount: 0,
-				wallet: undefined,
-			},
-		]);
-
-		const { container } = render(
-			<AddressWrapper>
-				<AddressRow index={0} maxVotes={1} wallet={wallet} />
-			</AddressWrapper>,
-			{
-				route: `/profiles/${profile.id()}/votes`,
-			},
-		);
-
-		expect(container).toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("AddressRow__delegate"));
-
-		expect(redirectSpy).not.toHaveBeenCalledWith();
-		votesMock.mockRestore();
-	});
-
-	it("should not redirect to delegate explorer page if delegate vote wallet is not provided", async () => {
-		global.open = vi.fn();
-
-		const delegates = votingMockReturnValue([0, 1, 2, 3]);
-		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(delegates);
-
-		const { container } = render(
-			<AddressWrapper>
-				<AddressRow index={0} maxVotes={1} wallet={wallet} />
-			</AddressWrapper>,
-			{
-				route: `/profiles/${profile.id()}/votes`,
-			},
-		);
-
-		expect(container).toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("AddressRow__delegate"));
-
-		expect(global.open).toHaveBeenCalledWith(delegates[0].wallet.explorerLink(), "_blank");
-		votesMock.mockRestore();
-	});
-
 	it("should not render wallet avatar if wallet is not provided", async () => {
 		render(<WalletAvatar />);
 

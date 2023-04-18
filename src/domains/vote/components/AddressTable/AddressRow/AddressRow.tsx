@@ -19,7 +19,6 @@ import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { assertReadOnlyWallet } from "@/utils/assertions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { ProfilePaths } from "@/router/paths";
-import { useLink } from "@/app/hooks/use-link";
 import { Link } from "@/app/components/Link";
 
 interface AddressRowProperties {
@@ -63,7 +62,6 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 	const activeProfile = useActiveProfile();
 	const { isMd, isSm, isXs } = useBreakpoint();
 	const history = useHistory();
-	const { openExternal } = useLink();
 
 	const useCompact = useMemo(() => isCompact || isMd || isSm || isXs, [isCompact, isMd, isSm, isXs]);
 
