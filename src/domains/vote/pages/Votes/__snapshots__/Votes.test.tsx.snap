@@ -15730,7 +15730,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="font-bold cursor-pointer space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer group space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -15881,7 +15881,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="font-bold cursor-pointer space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer group space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -15904,7 +15904,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                             class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="font-semibold text-base text-theme-text"
+                              class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                               data-testid="Address__alias"
                             >
                               <span
@@ -16042,7 +16042,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="font-bold cursor-pointer space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer group space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -16065,7 +16065,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                             class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="font-semibold text-base text-theme-text"
+                              class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                               data-testid="Address__alias"
                             >
                               <span
