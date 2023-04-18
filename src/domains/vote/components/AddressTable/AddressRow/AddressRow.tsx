@@ -212,7 +212,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 				}}
 				variant="start"
 				innerClassName={cn(
-					"font-bold cursor-pointer",
+					"font-bold cursor-pointer group",
 					{ "space-x-3": useCompact },
 					{ "space-x-4": !useCompact },
 				)}
@@ -220,7 +220,11 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			>
 				<Avatar className="shrink-0" size={useCompact ? "xs" : "lg"} address={wallet.address()} noShadow />
 				<div className="w-40 flex-1">
-					<Address address={wallet.address()} walletName={alias} />
+					<Address
+						address={wallet.address()}
+						walletName={alias}
+						walletNameClass="text-theme-text group-hover:text-theme-primary-700"
+					/>
 				</div>
 			</TableCell>
 
