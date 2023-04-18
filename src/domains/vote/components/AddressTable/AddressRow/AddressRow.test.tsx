@@ -409,8 +409,8 @@ describe("AddressRow", () => {
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
 			{
-				route,
 				history,
+				route,
 			},
 		);
 		history.push(route);
