@@ -34,11 +34,15 @@ const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color
 	</Tooltip>
 );
 
-const AddressRowMobileDelegateName = ({ name }: { name: string }) => {
+export const AddressRowMobileDelegateName = ({ name }: { name?: string }) => {
 	const is2Xs = useMediaQuery({ maxWidth: 404 });
 
+	if (!name) {
+		return null;
+	}
+
 	return (
-		<div className="flex w-full items-center">
+		<div className="flex w-full items-center text-theme-text">
 			<TruncateMiddle text={name} maxChars={is2Xs ? 12 : 50} />
 		</div>
 	);

@@ -6,7 +6,10 @@ import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
 import { Context as ResponsiveContext } from "react-responsive";
-import { AddressRowMobile } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
+import {
+	AddressRowMobile,
+	AddressRowMobileDelegateName,
+} from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
@@ -148,6 +151,14 @@ describe("AddressRowMobile", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		votesMock.mockRestore();
+	});
+
+	it("should not render delegate name if name is not provided", async () => {
+		const { asFragment } = render(<AddressRowMobileDelegateName />, {
+			route: `/profiles/${profile.id()}/votes`,
+		});
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render when wallet not found for votes", async () => {
