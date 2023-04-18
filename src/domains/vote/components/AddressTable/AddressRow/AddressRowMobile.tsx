@@ -35,7 +35,7 @@ const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color
 );
 
 export const AddressRowMobileDelegateName = ({ name }: { name?: string }) => {
-	const is2Xs = useMediaQuery({ maxWidth: 404 });
+	const is2Xs = useMediaQuery({ maxWidth: 410 });
 
 	if (!name) {
 		return null;
@@ -43,7 +43,7 @@ export const AddressRowMobileDelegateName = ({ name }: { name?: string }) => {
 
 	return (
 		<div className="flex w-full items-center text-theme-text">
-			<TruncateMiddle text={name} maxChars={is2Xs ? 12 : 50} />
+			<TruncateMiddle text={name} maxChars={is2Xs ? 10 : 50} />
 		</div>
 	);
 };
