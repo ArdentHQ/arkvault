@@ -281,7 +281,7 @@ exports[`AddressTable > should render 1`] = `
               >
                 <td>
                   <div
-                    class="font-bold space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -350,22 +350,26 @@ exports[`AddressTable > should render 1`] = `
                     class="font-bold space-x-4 css-1d4ra48"
                   >
                     <div
-                      class="shrink-0 css-tthe5h"
-                      data-testid="Avatar"
+                      class="space-x-3 cursor-pointer"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="shrink-0 css-tthe5h"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                          title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        />
+                        <div
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        >
+                          <img
+                            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                          />
+                        </div>
                       </div>
+                      <span>
+                        arkx
+                      </span>
                     </div>
-                    <span>
-                      arkx
-                    </span>
                   </div>
                 </td>
                 <td
@@ -1499,7 +1503,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               >
                 <td>
                   <div
-                    class="font-bold space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -1570,24 +1574,56 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                     <div
                       class="flex items-center -space-x-2"
                     >
-                      <span
-                        class="flex"
+                      <a
+                        class="ring-focus group inline-block flex css-15tcy38"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                        rel="noopener noreferrer"
                       >
-                        <div
-                          class="shrink-0 css-8d0u1i"
-                          data-testid="Avatar"
+                        <span
+                          class="css-1y2194z"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="shrink-0 css-8d0u1i"
+                            data-testid="Avatar"
                           >
-                            <img
-                              alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                              title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                            />
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                              />
+                            </div>
                           </div>
+                        </span>
+                        <div
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
+                        >
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
                         </div>
-                      </span>
+                      </a>
                     </div>
                   </div>
                 </td>
@@ -1919,7 +1955,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
               >
                 <td>
                   <div
-                    class="font-bold space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
