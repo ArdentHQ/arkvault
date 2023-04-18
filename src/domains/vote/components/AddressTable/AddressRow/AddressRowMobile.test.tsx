@@ -129,7 +129,7 @@ describe("AddressRowMobile", () => {
 		isMultiSignatureSpy.mockRestore();
 	});
 
-	it.each([275, 420])("should render in % screen width", (width: number) => {
+	it.each([275, 420])("should render in %s screen width", (width: number) => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
 
 		const { asFragment, container } = render(

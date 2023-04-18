@@ -205,7 +205,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRowMobile > should render in % screen width 275 1`] = `
+exports[`AddressRowMobile > should render in 275 screen width 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -409,7 +409,7 @@ exports[`AddressRowMobile > should render in % screen width 275 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRowMobile > should render in % screen width 420 1`] = `
+exports[`AddressRowMobile > should render in 420 screen width 1`] = `
 <DocumentFragment>
   <table>
     <tbody>

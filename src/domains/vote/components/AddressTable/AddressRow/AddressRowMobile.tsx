@@ -34,14 +34,12 @@ const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color
 	</Tooltip>
 );
 
-const AddressRowMobileDelegateName = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet }) => {
-	const parentReference = useRef(null);
-
+const AddressRowMobileDelegateName = ({ name }: { name: string }) => {
 	const is2Xs = useMediaQuery({ maxWidth: 404 });
 
 	return (
-		<div ref={parentReference} className="flex w-full items-center">
-			<TruncateMiddle text={wallet?.username() || ""} maxChars={is2Xs ? 12 : 50} />
+		<div className="flex w-full items-center">
+			<TruncateMiddle text={name} maxChars={is2Xs ? 12 : 50} />
 		</div>
 	);
 };
@@ -167,7 +165,7 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 									to={votes[0].wallet.explorerLink()}
 									className="flex w-full items-center"
 								>
-									<AddressRowMobileDelegateName wallet={votes[0].wallet} />
+									<AddressRowMobileDelegateName name={votes[0].wallet.username()} />
 								</Link>
 							</div>
 						</div>
