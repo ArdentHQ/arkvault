@@ -279,7 +279,9 @@ exports[`AddressTable > should render 1`] = `
                 class=" css-1li86da"
                 data-testid="TableRow"
               >
-                <td>
+                <td
+                  data-testid="AddressRow__wallet"
+                >
                   <div
                     class="font-bold cursor-pointer space-x-4 css-14huxtf"
                   >
@@ -351,6 +353,7 @@ exports[`AddressTable > should render 1`] = `
                   >
                     <div
                       class="space-x-3 cursor-pointer"
+                      data-testid="AddressRow__delegate"
                     >
                       <div
                         class="shrink-0 css-tthe5h"
@@ -1501,7 +1504,9 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 class=" css-1li86da"
                 data-testid="TableRow"
               >
-                <td>
+                <td
+                  data-testid="AddressRow__wallet"
+                >
                   <div
                     class="font-bold cursor-pointer space-x-4 css-14huxtf"
                   >
@@ -1953,7 +1958,9 @@ exports[`AddressTable > should render with voting delegates and handle exception
                 class=" css-1li86da"
                 data-testid="TableRow"
               >
-                <td>
+                <td
+                  data-testid="AddressRow__wallet"
+                >
                   <div
                     class="font-bold cursor-pointer space-x-4 css-14huxtf"
                   >

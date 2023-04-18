@@ -15710,7 +15710,9 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class=" css-1li86da"
                     data-testid="TableRow"
                   >
-                    <td>
+                    <td
+                      data-testid="AddressRow__wallet"
+                    >
                       <div
                         class="font-bold cursor-pointer space-x-3 css-mx19qq"
                       >
@@ -15816,7 +15818,9 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class=" css-1li86da"
                     data-testid="TableRow"
                   >
-                    <td>
+                    <td
+                      data-testid="AddressRow__wallet"
+                    >
                       <div
                         class="font-bold cursor-pointer space-x-3 css-mx19qq"
                       >
@@ -15932,7 +15936,9 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class=" css-1li86da"
                     data-testid="TableRow"
                   >
-                    <td>
+                    <td
+                      data-testid="AddressRow__wallet"
+                    >
                       <div
                         class="font-bold cursor-pointer space-x-3 css-mx19qq"
                       >
