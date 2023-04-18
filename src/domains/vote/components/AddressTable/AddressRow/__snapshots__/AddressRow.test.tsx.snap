@@ -12,7 +12,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -35,7 +35,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -286,7 +286,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -309,7 +309,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -596,7 +596,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -619,7 +619,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -871,7 +871,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -894,7 +894,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1145,7 +1145,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-3 css-mx19qq"
+            class="font-bold cursor-pointer group space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -1168,7 +1168,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1419,7 +1419,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1442,7 +1442,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1684,7 +1684,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1707,7 +1707,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1854,7 +1854,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1877,7 +1877,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2119,7 +2119,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -2279,7 +2279,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -2302,7 +2302,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2551,7 +2551,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -2574,7 +2574,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2737,7 +2737,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -2760,7 +2760,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3119,7 +3119,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -3142,7 +3142,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3460,7 +3460,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-3 css-mx19qq"
+            class="font-bold cursor-pointer group space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -3483,7 +3483,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3646,7 +3646,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-3 css-mx19qq"
+            class="font-bold cursor-pointer group space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -3669,7 +3669,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -4028,7 +4028,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-3 css-mx19qq"
+            class="font-bold cursor-pointer group space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -4051,7 +4051,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -4369,7 +4369,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -4392,7 +4392,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -4643,7 +4643,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -4666,7 +4666,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span

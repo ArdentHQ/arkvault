@@ -299,7 +299,7 @@ exports[`AddressTable > should render 1`] = `
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="font-bold cursor-pointer space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer group space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -322,7 +322,7 @@ exports[`AddressTable > should render 1`] = `
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="font-semibold text-base text-theme-text"
+                          class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                           data-testid="Address__alias"
                         >
                           <span
@@ -1682,7 +1682,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="font-bold cursor-pointer space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer group space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -1705,7 +1705,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="font-semibold text-base text-theme-text"
+                          class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                           data-testid="Address__alias"
                         >
                           <span
@@ -2152,7 +2152,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="font-bold cursor-pointer space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer group space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -2175,7 +2175,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="font-semibold text-base text-theme-text"
+                          class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
                           data-testid="Address__alias"
                         >
                           <span
