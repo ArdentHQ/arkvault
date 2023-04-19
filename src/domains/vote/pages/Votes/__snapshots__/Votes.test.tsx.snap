@@ -15686,25 +15686,9 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                      colspan="1"
-                      data-testid="table__th--6"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-center"
-                      >
-                        <div
-                          class=""
-                        >
-                          Explorer
-                        </div>
-                      </div>
-                    </th>
-                    <th
                       class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
                       colspan="1"
-                      data-testid="table__th--7"
+                      data-testid="table__th--6"
                       role="columnheader"
                     >
                       <div
@@ -15730,7 +15714,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="font-bold cursor-pointer group space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer group transition duration-300 space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -15809,13 +15793,6 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="justify-center css-1rods8x"
                       />
                     </td>
-                    <td
-                      class="hidden sm:table-cell"
-                    >
-                      <div
-                        class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
-                      />
-                    </td>
                     <td>
                       <div
                         class="justify-end css-br23tb"
@@ -15845,7 +15822,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="font-bold cursor-pointer group space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer group transition duration-300 space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -15868,7 +15845,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                             class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
+                              class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                               data-testid="Address__alias"
                             >
                               <span
@@ -15935,13 +15912,6 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="justify-center css-1rods8x"
                       />
                     </td>
-                    <td
-                      class="hidden sm:table-cell"
-                    >
-                      <div
-                        class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
-                      />
-                    </td>
                     <td>
                       <div
                         class="justify-end css-br23tb"
@@ -15970,7 +15940,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="font-bold cursor-pointer group space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer group transition duration-300 space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -15993,7 +15963,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                             class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
+                              class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                               data-testid="Address__alias"
                             >
                               <span
@@ -16058,13 +16028,6 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     <td>
                       <div
                         class="justify-center css-1rods8x"
-                      />
-                    </td>
-                    <td
-                      class="hidden sm:table-cell"
-                    >
-                      <div
-                        class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
                       />
                     </td>
                     <td>

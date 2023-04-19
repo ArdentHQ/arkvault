@@ -255,25 +255,9 @@ exports[`AddressTable > should render 1`] = `
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                  colspan="1"
-                  data-testid="table__th--6"
-                  role="columnheader"
-                >
-                  <div
-                    class="flex flex-inline align-top justify-center"
-                  >
-                    <div
-                      class=""
-                    >
-                      Explorer
-                    </div>
-                  </div>
-                </th>
-                <th
                   class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
                   colspan="1"
-                  data-testid="table__th--7"
+                  data-testid="table__th--6"
                   role="columnheader"
                 >
                   <div
@@ -299,7 +283,7 @@ exports[`AddressTable > should render 1`] = `
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="font-bold cursor-pointer group space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -322,7 +306,7 @@ exports[`AddressTable > should render 1`] = `
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
+                          class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                           data-testid="Address__alias"
                         >
                           <span
@@ -368,7 +352,7 @@ exports[`AddressTable > should render 1`] = `
                     class="font-bold space-x-4 css-1d4ra48"
                   >
                     <div
-                      class="relative flex items-center space-x-3 overflow-hidden"
+                      class="flex items-center space-x-3 overflow-hidden"
                     >
                       <div
                         class="shrink-0 css-tthe5h"
@@ -384,11 +368,43 @@ exports[`AddressTable > should render 1`] = `
                           />
                         </div>
                       </div>
-                      <div
-                        class="w-24 truncate md:w-auto"
+                      <a
+                        class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                        rel="noopener noreferrer"
                       >
-                        arkx
-                      </div>
+                        <span
+                          class="css-1y2194z"
+                        >
+                          arkx
+                        </span>
+                        <div
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
+                        >
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </td>
@@ -444,49 +460,6 @@ exports[`AddressTable > should render 1`] = `
                         </svg>
                       </div>
                     </span>
-                  </div>
-                </td>
-                <td
-                  class="hidden sm:table-cell"
-                >
-                  <div
-                    class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
-                  >
-                    <a
-                      class="ring-focus group inline-block css-15tcy38"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      rel="noopener noreferrer"
-                    >
-                      <span
-                        class="css-1y2194z"
-                      >
-                        <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="arrow-external"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </span>
-                    </a>
                   </div>
                 </td>
                 <td>
@@ -718,7 +691,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                                   class="css-1y2194z"
                                 >
                                   <div
-                                    class="flex w-full items-center text-theme-text"
+                                    class="flex w-full items-center"
                                   >
                                     <span
                                       class="css-0"
@@ -1020,7 +993,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                                   class="css-1y2194z"
                                 >
                                   <div
-                                    class="flex w-full items-center text-theme-text"
+                                    class="flex w-full items-center"
                                   >
                                     <span
                                       class="css-0"
@@ -1322,7 +1295,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                                   class="css-1y2194z"
                                 >
                                   <div
-                                    class="flex w-full items-center text-theme-text"
+                                    class="flex w-full items-center"
                                   >
                                     <span
                                       class="css-0"
@@ -1691,7 +1664,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="font-bold cursor-pointer group space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -1714,7 +1687,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
+                          class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                           data-testid="Address__alias"
                         >
                           <span
@@ -2117,25 +2090,9 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                  colspan="1"
-                  data-testid="table__th--6"
-                  role="columnheader"
-                >
-                  <div
-                    class="flex flex-inline align-top justify-center"
-                  >
-                    <div
-                      class=""
-                    >
-                      Explorer
-                    </div>
-                  </div>
-                </th>
-                <th
                   class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
                   colspan="1"
-                  data-testid="table__th--7"
+                  data-testid="table__th--6"
                   role="columnheader"
                 >
                   <div
@@ -2161,7 +2118,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="font-bold cursor-pointer group space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -2184,7 +2141,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          class="font-semibold text-base text-theme-text group-hover:text-theme-primary-700"
+                          class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                           data-testid="Address__alias"
                         >
                           <span
@@ -2249,13 +2206,6 @@ exports[`AddressTable > should render with voting delegates and handle exception
                 <td>
                   <div
                     class="justify-center css-1d4ra48"
-                  />
-                </td>
-                <td
-                  class="hidden sm:table-cell"
-                >
-                  <div
-                    class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                   />
                 </td>
                 <td>
