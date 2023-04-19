@@ -230,7 +230,6 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 						address={wallet.address()}
 						walletName={alias}
 						walletNameClass="text-theme-primary-700 hover:border-b"
-						addressClass="text-theme-primary-700 hover:border-b"
 					/>
 				</div>
 			</TableCell>
