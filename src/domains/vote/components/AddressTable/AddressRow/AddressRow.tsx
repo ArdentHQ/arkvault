@@ -170,16 +170,12 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 
 		if (maxVotes === 1) {
 			return (
-				<Link
-					to={votes[0].wallet?.explorerLink() as string}
-					isExternal
-					className="flex items-center overflow-hidden"
-				>
-					<div className="flex items-center space-x-3 overflow-hidden">
-						<Avatar size={useCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
-						<div className="w-24 truncate md:w-auto">{votes[0].wallet?.username()}</div>
-					</div>
-				</Link>
+				<div className="flex items-center space-x-3 overflow-hidden">
+					<Avatar size={useCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
+					<Link to={votes[0].wallet?.explorerLink() as string} isExternal>
+						<span className="w-24 truncate md:w-auto">{votes[0].wallet?.username()}</span>
+					</Link>
+				</div>
 			);
 		}
 
@@ -229,7 +225,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 					<Address
 						address={wallet.address()}
 						walletName={alias}
-						walletNameClass="text-theme-primary-700 hover:border-b"
+						walletNameClass="text-theme-primary-700 hover:underline"
 					/>
 				</div>
 			</TableCell>
