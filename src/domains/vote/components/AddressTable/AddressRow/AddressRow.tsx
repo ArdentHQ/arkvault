@@ -170,10 +170,10 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 
 		if (maxVotes === 1) {
 			return (
-				<>
+				<div className="relative flex items-center space-x-3 overflow-hidden">
 					<Avatar size={useCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
-					<span>{votes[0].wallet?.username()}</span>
-				</>
+					<div className="w-24 truncate md:w-full">{votes[0].wallet?.username()}</div>
+				</div>
 			);
 		}
 
