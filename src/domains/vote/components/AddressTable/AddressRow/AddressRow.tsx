@@ -229,7 +229,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 					<Address
 						address={wallet.address()}
 						walletName={alias}
-						walletNameClass="text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-[1.1rem]"
+						walletNameClass="text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
 					/>
 				</div>
 			</TableCell>
