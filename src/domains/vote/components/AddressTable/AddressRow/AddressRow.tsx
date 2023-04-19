@@ -272,8 +272,6 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 						})}
 						isCompact={isCompact}
 					>
-						{!hasVotes && <span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>}
-
 						{hasVotes && (
 							<Link
 								to={votes[0]?.wallet?.explorerLink() || ""}
