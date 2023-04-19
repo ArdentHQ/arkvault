@@ -25,7 +25,6 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 
 	const network = profile.availableNetworks().find((network) => network.id() === wallet.network().id());
 	assertNetwork(network);
-	const defaultHeaderClassName = "justify-center";
 
 	const columns = useMemo<Column<Contracts.IReadWriteWallet>[]>(() => {
 		const commonColumns: Column<Contracts.IReadWriteWallet>[] = [
@@ -38,7 +37,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				Header: t("COMMON.WALLET_TYPE"),
 				accessor: () => "wallet-type",
 				cellWidth: "w-30",
-				className: defaultHeaderClassName,
+				className: "justify-center",
 				disableSortBy: true,
 				headerClassName: "hidden md:table-cell",
 			},
@@ -76,7 +75,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 					Header: t("COMMON.RANK"),
 					accessor: "rank",
 					cellWidth: "w-20",
-					className: defaultHeaderClassName,
+					className: "justify-center",
 					disableSortBy: true,
 					headerClassName: "hidden lg:table-cell",
 				},
@@ -84,13 +83,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 					Header: t("COMMON.STATUS"),
 					accessor: "status",
 					cellWidth: "w-20",
-					className: defaultHeaderClassName,
-					disableSortBy: true,
-				},
-				{
-					Header: t("COMMON.EXPLORER"),
-					accessor: "explorer",
-					className: defaultHeaderClassName,
+					className: "justify-center",
 					disableSortBy: true,
 				},
 				{
@@ -107,7 +100,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				Header: t("COMMON.VOTES"),
 				accessor: "votes",
 				cellWidth: "w-20",
-				className: defaultHeaderClassName,
+				className: "justify-center",
 				disableSortBy: true,
 			},
 			{

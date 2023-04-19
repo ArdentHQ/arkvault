@@ -42,7 +42,7 @@ export const AddressRowMobileDelegateName = ({ name }: { name?: string }) => {
 	}
 
 	return (
-		<div className="flex w-full items-center text-theme-text">
+		<div className="flex w-full items-center">
 			<TruncateMiddle text={name} maxChars={is2Xs ? 10 : 50} />
 		</div>
 	);
