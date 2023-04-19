@@ -109,7 +109,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                           class="css-1y2194z"
                         >
                           <div
-                            class="flex w-full items-center text-theme-text"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="css-0"
@@ -312,7 +312,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                           class="css-1y2194z"
                         >
                           <div
-                            class="flex w-full items-center text-theme-text"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="css-0"
@@ -516,7 +516,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                           class="css-1y2194z"
                         >
                           <div
-                            class="flex w-full items-center text-theme-text"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="css-0"
@@ -1133,7 +1133,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                           class="css-1y2194z"
                         >
                           <div
-                            class="flex w-full items-center text-theme-text"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="css-0"
@@ -1438,7 +1438,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                           class="css-1y2194z"
                         >
                           <div
-                            class="flex w-full items-center text-theme-text"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="css-0"
@@ -1840,7 +1840,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                           class="css-1y2194z"
                         >
                           <div
-                            class="flex w-full items-center text-theme-text"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="css-0"
@@ -2043,7 +2043,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                           class="css-1y2194z"
                         >
                           <div
-                            class="flex w-full items-center text-theme-text"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="css-0"
@@ -2246,7 +2246,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                           class="css-1y2194z"
                         >
                           <div
-                            class="flex w-full items-center text-theme-text"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="css-0"
