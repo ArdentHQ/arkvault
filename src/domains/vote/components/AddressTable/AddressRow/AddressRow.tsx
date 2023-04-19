@@ -172,7 +172,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			return (
 				<div className="relative flex items-center space-x-3 overflow-hidden">
 					<Avatar size={useCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
-					<div className="w-24 truncate md:w-full">{votes[0].wallet?.username()}</div>
+					<div className="w-24 truncate md:w-auto">{votes[0].wallet?.username()}</div>
 				</div>
 			);
 		}
@@ -272,14 +272,18 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 						})}
 						isCompact={isCompact}
 					>
-						<Link
-							to={votes[0]?.wallet?.explorerLink() || ""}
-							tooltip={t("COMMON.OPEN_IN_EXPLORER")}
-							showExternalIcon={false}
-							isExternal
-						>
-							<Icon name="ArrowExternal" />
-						</Link>
+						{!hasVotes && <span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>}
+
+						{hasVotes && (
+							<Link
+								to={votes[0]?.wallet?.explorerLink() || ""}
+								tooltip={t("COMMON.OPEN_IN_EXPLORER")}
+								showExternalIcon={false}
+								isExternal
+							>
+								<Icon name="ArrowExternal" />
+							</Link>
+						)}
 					</TableCell>
 				</>
 			) : (
