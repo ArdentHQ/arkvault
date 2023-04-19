@@ -172,8 +172,12 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			return (
 				<div className="flex items-center space-x-3 overflow-hidden">
 					<Avatar size={useCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
-					<Link to={votes[0].wallet?.explorerLink() as string} isExternal>
-						<span className="w-24 truncate md:w-auto">{votes[0].wallet?.username()}</span>
+					<Link
+						to={votes[0].wallet?.explorerLink() as string}
+						isExternal
+						className="block w-24 truncate md:w-auto"
+					>
+						{votes[0].wallet?.username()}
 					</Link>
 				</div>
 			);
@@ -214,7 +218,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 				}}
 				variant="start"
 				innerClassName={cn(
-					"font-bold cursor-pointer group",
+					"font-bold cursor-pointer group transition duration-300",
 					{ "space-x-3": useCompact },
 					{ "space-x-4": !useCompact },
 				)}
@@ -225,7 +229,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 					<Address
 						address={wallet.address()}
 						walletName={alias}
-						walletNameClass="text-theme-primary-700 hover:underline"
+						walletNameClass="text-theme-primary-700 transition hover:border-current border-b border-transparent transition-property[color, border-color] transition-duration[200ms, 350ms] transition-delay[0s, 100ms]"
 					/>
 				</div>
 			</TableCell>
