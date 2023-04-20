@@ -15710,9 +15710,11 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class=" css-1li86da"
                     data-testid="TableRow"
                   >
-                    <td>
+                    <td
+                      data-testid="AddressRow__wallet"
+                    >
                       <div
-                        class="font-bold space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer group transition duration-300 space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -15816,9 +15818,11 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class=" css-1li86da"
                     data-testid="TableRow"
                   >
-                    <td>
+                    <td
+                      data-testid="AddressRow__wallet"
+                    >
                       <div
-                        class="font-bold space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer group transition duration-300 space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -15841,7 +15845,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                             class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="font-semibold text-base text-theme-text"
+                              class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                               data-testid="Address__alias"
                             >
                               <span
@@ -15932,9 +15936,11 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class=" css-1li86da"
                     data-testid="TableRow"
                   >
-                    <td>
+                    <td
+                      data-testid="AddressRow__wallet"
+                    >
                       <div
-                        class="font-bold space-x-3 css-mx19qq"
+                        class="font-bold cursor-pointer group transition duration-300 space-x-3 css-mx19qq"
                       >
                         <div
                           class="shrink-0 shrink-0 css-jxpwdn"
@@ -15957,7 +15963,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                             class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="font-semibold text-base text-theme-text"
+                              class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                               data-testid="Address__alias"
                             >
                               <span

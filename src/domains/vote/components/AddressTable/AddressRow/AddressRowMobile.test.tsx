@@ -5,7 +5,11 @@ import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
-import { AddressRowMobile } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
+import { Context as ResponsiveContext } from "react-responsive";
+import {
+	AddressRowMobile,
+	AddressRowMobileDelegateName,
+} from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
@@ -126,6 +130,35 @@ describe("AddressRowMobile", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		isMultiSignatureSpy.mockRestore();
+	});
+
+	it.each([375, 420])("should render in %s screen width", (width: number) => {
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
+
+		const { asFragment, container } = render(
+			<ResponsiveContext.Provider value={{ width }}>
+				<AddressWrapper>
+					<AddressRowMobile index={0} maxVotes={1} wallet={wallet} />
+				</AddressWrapper>
+				,
+			</ResponsiveContext.Provider>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+
+		votesMock.mockRestore();
+	});
+
+	it("should not render delegate name if name is not provided", async () => {
+		const { asFragment } = render(<AddressRowMobileDelegateName />, {
+			route: `/profiles/${profile.id()}/votes`,
+		});
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render when wallet not found for votes", async () => {
