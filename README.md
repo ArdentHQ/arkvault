@@ -7,8 +7,6 @@
 
 ARKVault is a custom web-based wallet designed for ARK Core-based blockchains. It provides real-time updates and can be accessed from any internet-connected device. With Ledger support, ARKVault ensures the utmost security for your assets.
 
-
-
 ## Development
 
 ### Requirements
@@ -66,6 +64,7 @@ pnpm test
 # Run unit tests and generate and display the coverage report
 pnpm test:coverage
 ```
+
 </details>
 
 ## Security
