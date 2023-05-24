@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`AddressTable > should render 1`] = `
 <DocumentFragment>
@@ -694,7 +694,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                                     class="flex w-full items-center"
                                   >
                                     <span
-                                      class="css-0"
+                                      class="no-ligatures css-0"
                                       data-testid="TruncateMiddle"
                                     >
                                       arkx
@@ -996,7 +996,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                                     class="flex w-full items-center"
                                   >
                                     <span
-                                      class="css-0"
+                                      class="no-ligatures css-0"
                                       data-testid="TruncateMiddle"
                                     >
                                       arkx
@@ -1298,7 +1298,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                                     class="flex w-full items-center"
                                   >
                                     <span
-                                      class="css-0"
+                                      class="no-ligatures css-0"
                                       data-testid="TruncateMiddle"
                                     >
                                       arkx
