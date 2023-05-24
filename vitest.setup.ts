@@ -5,9 +5,10 @@ import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
+
 import { server } from "./src/tests/mocks/server";
+
 import * as matchers from "jest-extended";
-import React from "react";
 expect.extend(matchers);
 
 vi.mock("@/utils/debounce", () => ({
@@ -42,13 +43,6 @@ vi.mock("@/app/hooks/use-synchronizer", async () => {
 
 			return useSynchronizer(jobs);
 		},
-	};
-});
-
-vi.mock("@/app/contexts/Migration/Migration", () => {
-	return {
-		MigrationProvider: ({ children }) => React.createElement("div", {}, children),
-		useMigrations: () => ({ migrations: [] }),
 	};
 });
 

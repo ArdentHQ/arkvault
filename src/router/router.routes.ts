@@ -2,7 +2,6 @@ import { ContactRoutes } from "@/domains/contact/routing";
 import { DashboardRoutes } from "@/domains/dashboard/routing";
 import { ExchangeRoutes } from "@/domains/exchange/routing";
 import { MessageRoutes } from "@/domains/message/routing";
-import { MigrationRoutes } from "@/domains/migration/routing";
 import { SettingRoutes } from "@/domains/setting/routing";
 import { TransactionRoutes } from "@/domains/transaction/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
@@ -15,7 +14,6 @@ export const routes: RouteItem[] = [
 	...DashboardRoutes,
 	...ExchangeRoutes,
 	...MessageRoutes,
-	...MigrationRoutes,
 	...SettingRoutes,
 	...TransactionRoutes,
 	...VoteRoutes,

@@ -30,10 +30,10 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
           </div>
         </div>
         <div
-          class="mt-6 css-mpc03v"
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-1hv657z"
+            class="css-pra96q"
           >
             <div
               class="css-v0ob3f"
@@ -77,7 +77,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
             </span>
           </div>
           <div
-            class="css-rfibfr"
+            class="css-1pvpof3"
           >
             The Delegate name is permanent and cannot be modified later. It is registered on the network.
           </div>
@@ -428,10 +428,10 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
           </div>
         </div>
         <div
-          class="mt-6 css-mpc03v"
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-1hv657z"
+            class="css-pra96q"
           >
             <div
               class="css-v0ob3f"
@@ -475,7 +475,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
             </span>
           </div>
           <div
-            class="css-rfibfr"
+            class="css-1pvpof3"
           >
             The Delegate name is permanent and cannot be modified later. It is registered on the network.
           </div>
@@ -1021,10 +1021,10 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
           </div>
         </div>
         <div
-          class="mt-6 css-mpc03v"
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-1hv657z"
+            class="css-pra96q"
           >
             <div
               class="css-v0ob3f"
@@ -1068,7 +1068,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
             </span>
           </div>
           <div
-            class="css-rfibfr"
+            class="css-1pvpof3"
           >
             The Delegate name is permanent and cannot be modified later. It is registered on the network.
           </div>
@@ -1394,10 +1394,10 @@ exports[`DelegateRegistrationForm > should show error if username already exists
           </div>
         </div>
         <div
-          class="mt-6 css-mpc03v"
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-1hv657z"
+            class="css-pra96q"
           >
             <div
               class="css-v0ob3f"
@@ -1441,7 +1441,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
             </span>
           </div>
           <div
-            class="css-rfibfr"
+            class="css-1pvpof3"
           >
             The Delegate name is permanent and cannot be modified later. It is registered on the network.
           </div>
@@ -1792,10 +1792,10 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
           </div>
         </div>
         <div
-          class="mt-6 css-mpc03v"
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-1hv657z"
+            class="css-pra96q"
           >
             <div
               class="css-v0ob3f"
@@ -1839,7 +1839,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
             </span>
           </div>
           <div
-            class="css-rfibfr"
+            class="css-1pvpof3"
           >
             The Delegate name is permanent and cannot be modified later. It is registered on the network.
           </div>

@@ -326,10 +326,10 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -730,10 +730,10 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -1154,10 +1154,10 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -1502,10 +1502,10 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -1744,10 +1744,10 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                         View Full List
                       </span>
                       <div
-                        class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                         data-testid="Link__external"
-                        height="12"
-                        width="12"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="arrow-external"
@@ -1800,10 +1800,10 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                       View Full List
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                       data-testid="Link__external"
-                      height="12"
-                      width="12"
+                      height="16"
+                      width="16"
                     >
                       <svg
                         id="arrow-external"
@@ -2104,10 +2104,10 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -2547,10 +2547,10 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -2895,10 +2895,10 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -3409,10 +3409,10 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -3889,10 +3889,10 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -4369,10 +4369,10 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -4849,10 +4849,10 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -5258,10 +5258,10 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"

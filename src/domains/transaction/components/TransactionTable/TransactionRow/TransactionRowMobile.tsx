@@ -7,14 +7,12 @@ import { TransactionRowRecipient } from "./TransactionRowRecipient";
 import { TransactionRowSender } from "./TransactionRowSender";
 import { TransactionRowMobileSkeleton } from "./TransactionRowMobileSkeleton";
 import { TransactionRowProperties } from "./TransactionRow.contracts";
-import { TransactionMigrationLink } from "./TransactionRowMigrationDetails";
 import { Avatar } from "@/app/components/Avatar";
 import { Link } from "@/app/components/Link";
 import { TableRow } from "@/app/components/Table";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { RowWrapper, RowLabel, ResponsiveAddressWrapper } from "@/app/components/Table/Mobile/Row";
-import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 
 export const TransactionRowMobile = memo(
 	({
@@ -24,7 +22,6 @@ export const TransactionRowMobile = memo(
 		onClick,
 		isLoading = false,
 		profile,
-		onShowMigrationDetails,
 		...properties
 	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
@@ -60,39 +57,24 @@ export const TransactionRowMobile = memo(
 					</RowWrapper>
 
 					<RowWrapper>
-						<>
-							{isValidMigrationTransaction(transaction) && (
-								<ResponsiveAddressWrapper innerClassName="gap-2">
-									<TransactionRowSender
-										transaction={transaction}
-										profile={profile}
-										isCompact={true}
-										showTransactionMode={false}
-									/>
+						<RowLabel>{t("COMMON.SENDER")}</RowLabel>
+						<ResponsiveAddressWrapper innerClassName="gap-2">
+							<TransactionRowSender
+								transaction={transaction}
+								profile={profile}
+								isCompact={true}
+								showTransactionMode={false}
+							/>
 
-									<Avatar size="xs" address={transaction.sender()} noShadow />
-								</ResponsiveAddressWrapper>
-							)}
-						</>
+							<Avatar size="xs" address={transaction.sender()} noShadow />
+						</ResponsiveAddressWrapper>
 					</RowWrapper>
 
 					<RowWrapper>
 						<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
-
-						{isValidMigrationTransaction(transaction) && (
-							<TransactionMigrationLink
-								transaction={transaction}
-								onClick={() => onShowMigrationDetails?.(transaction)}
-							>
-								<span>{t("TRANSACTION.MIGRATION")}</span>
-							</TransactionMigrationLink>
-						)}
-
-						{!isValidMigrationTransaction(transaction) && (
-							<ResponsiveAddressWrapper innerClassName="flex-row-reverse gap-2">
-								<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={true} />
-							</ResponsiveAddressWrapper>
-						)}
+						<ResponsiveAddressWrapper innerClassName="flex-row-reverse gap-2">
+							<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={true} />
+						</ResponsiveAddressWrapper>
 					</RowWrapper>
 
 					<RowWrapper>

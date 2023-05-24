@@ -54,7 +54,6 @@ const pingMusigServerUrls = new Set(["https://ark-live-musig.arkvault.io", "http
 const knownWallets: any[] = [];
 
 const transactionsFixture = "coins/ark/devnet/transactions";
-const mainnetTransactionsFixture = "coins/ark/mainnet/transactions";
 const delegatesFixture = "coins/ark/devnet/delegates";
 const imageFixture = "/assets/background.png";
 
@@ -72,7 +71,6 @@ const walletMocks = () => {
 		"D68sFcspN2LVd9HZpf98c7bXkNimK3M6AZ",
 		"DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
 		"DNTwQTSp999ezQ425utBsWetcmzDuCn2pN",
-		"DNBURNBURNBURNBRNBURNBURNBURKz8StY",
 	];
 
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
@@ -383,11 +381,6 @@ export const requestMocks = {
 		),
 
 		mockRequest(
-			"https://ark-live.arkvault.io/api/transactions?page=1&limit=10&recipientId=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
-			mainnetTransactionsFixture,
-		),
-
-		mockRequest(
 			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			"coins/ark/devnet/notification-transactions",
 		),
@@ -457,10 +450,6 @@ export const requestMocks = {
 
 		mockRequest(
 			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			{ data: [], meta: {} },
-		),
-		mockRequest(
-			/^https:\/\/ark-test\.arkvault\.io\/api\/transactions\?limit=11&recipientId=DNBURNBURNBURNBRNBURNBURNBURKz8StY.*$/,
 			{ data: [], meta: {} },
 		),
 

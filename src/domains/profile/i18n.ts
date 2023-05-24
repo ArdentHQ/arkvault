@@ -110,7 +110,4 @@ export const translations = {
 			TITLE: "Select Profile",
 		},
 	},
-	VALIDATION: {
-		INVALID_PAGE: "page <strong>{{page}}</strong> is not valid.",
-	},
 };

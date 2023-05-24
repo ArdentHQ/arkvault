@@ -339,10 +339,10 @@ exports[`VoteDetail > should render a modal with unvotes 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -753,10 +753,10 @@ exports[`VoteDetail > should render a modal with votes 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"
@@ -1233,10 +1233,10 @@ exports[`VoteDetail > should render a modal with votes and unvotes 1`] = `
                           </span>
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                           data-testid="Link__external"
-                          height="12"
-                          width="12"
+                          height="16"
+                          width="16"
                         >
                           <svg
                             id="arrow-external"

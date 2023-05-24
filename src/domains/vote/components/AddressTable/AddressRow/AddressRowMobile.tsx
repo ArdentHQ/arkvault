@@ -1,6 +1,10 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { generatePath } from "react-router";
+import { useHistory } from "react-router-dom";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { useMediaQuery } from "react-responsive";
 import { Avatar } from "@/app/components/Avatar";
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
@@ -11,6 +15,9 @@ import { assertReadOnlyWallet } from "@/utils/assertions";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
+import { Link } from "@/app/components/Link";
+import { ProfilePaths } from "@/router/paths";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
 interface AddressRowMobileProperties {
 	index: number;
@@ -27,10 +34,25 @@ const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color
 	</Tooltip>
 );
 
+export const AddressRowMobileDelegateName = ({ name }: { name?: string }) => {
+	const is2Xs = useMediaQuery({ maxWidth: 410 });
+
+	if (!name) {
+		return null;
+	}
+
+	return (
+		<div className="flex w-full items-center">
+			<TruncateMiddle text={name} maxChars={is2Xs ? 10 : 50} />
+		</div>
+	);
+};
+
 export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressRowMobileProperties) => {
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
+	const history = useHistory();
 
 	const { getWalletAlias } = useWalletAlias();
 
@@ -140,11 +162,15 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 					<Avatar size="xs" address={votes[0].wallet.address()} noShadow />
 
 					{votes[0].wallet && (
-						<div className="flex items-center text-right">
+						<div className="flex items-center">
 							<div className="flex flex-1 justify-end overflow-hidden">
-								<span className="overflow-hidden overflow-ellipsis whitespace-nowrap">
-									{votes[0].wallet.username()}
-								</span>
+								<Link
+									isExternal
+									to={votes[0].wallet.explorerLink()}
+									className="flex w-full items-center"
+								>
+									<AddressRowMobileDelegateName name={votes[0].wallet.username()} />
+								</Link>
 							</div>
 						</div>
 					)}
@@ -170,7 +196,17 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 	return (
 		<tr data-testid="AddressRowMobile">
 			<td className="pt-3">
-				<div className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
+				<div
+					className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+					onClick={() => {
+						history.push(
+							generatePath(ProfilePaths.WalletDetails, {
+								profileId: activeProfile.id(),
+								walletId: wallet.id(),
+							}),
+						);
+					}}
+				>
 					<div className="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
 							<Avatar className="shrink-0" size="xs" address={wallet.address()} noShadow />

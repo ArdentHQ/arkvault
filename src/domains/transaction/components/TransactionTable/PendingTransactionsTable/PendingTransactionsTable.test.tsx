@@ -19,8 +19,6 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import { migrationWalletAddress, migrationTransactionFee } from "@/utils/polygon-migration";
-
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 const translations = buildTranslations();
@@ -329,44 +327,6 @@ describe("Signed Transaction Table", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		vi.restoreAllMocks();
-	});
-
-	it.each(["xs", "sm", "md", "lg"])("should render pending migration transactions in %s", async (breakpoint) => {
-		mockPendingTransfers(wallet);
-		const memoMock = vi
-			.spyOn(pendingMultisignatureTransactions[0].transaction, "memo")
-			.mockReturnValue("0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf");
-
-		const migrationAddressMock = vi
-			.spyOn(pendingMultisignatureTransactions[0].transaction, "recipient")
-			.mockReturnValue(migrationWalletAddress());
-
-		const migrationFeeMock = vi
-			.spyOn(pendingMultisignatureTransactions[0].transaction, "fee")
-			.mockReturnValue(migrationTransactionFee());
-
-		const migrationAmountMock = vi
-			.spyOn(pendingMultisignatureTransactions[0].transaction, "amount")
-			.mockReturnValue(10_000);
-
-		const { asFragment } = renderResponsive(
-			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
-			breakpoint,
-		);
-
-		const migrationIdentifier = ["xs", "sm"].includes(breakpoint)
-			? "TransactionMigrationLink"
-			: "MigrationRowDetailsLabel";
-
-		await expect(screen.findByTestId(migrationIdentifier)).resolves.toBeVisible();
-		expect(asFragment()).toMatchSnapshot();
-
-		vi.restoreAllMocks();
-
-		migrationAddressMock.mockRestore();
-		memoMock.mockRestore();
-		migrationFeeMock.mockRestore();
-		migrationAmountMock.mockRestore();
 	});
 
 	it("should handle click on pending transfer row", async () => {

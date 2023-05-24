@@ -20,12 +20,11 @@ export const NotificationTransactionItemMobile = ({
 	return (
 		<VisibilitySensor scrollCheck delayedCall containment={containmentRef?.current}>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
-				<td className="flex-col space-y-4 py-4 text-sm">
+				<td className="flex-col space-y-4 py-4">
 					<RowWrapper>
 						<RowLabel>{t("COMMON.SENDER")}</RowLabel>
 						<div className="flex w-full items-center space-x-0 text-right">
 							<TransactionRowSender
-								addressSize="sm"
 								transaction={transaction}
 								profile={profile}
 								isCompact={true}

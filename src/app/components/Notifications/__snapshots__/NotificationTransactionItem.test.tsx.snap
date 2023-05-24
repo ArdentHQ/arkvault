@@ -5,11 +5,11 @@ exports[`Notifications > should render in xs 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1src4hy"
+        class="group css-1gk67vk"
         data-testid="TableRow"
       >
         <td
-          class="flex-col space-y-4 py-4 text-sm"
+          class="flex-col space-y-4 py-4"
         >
           <div
             class="flex items-center justify-between space-x-4"
@@ -26,10 +26,10 @@ exports[`Notifications > should render in xs 1`] = `
                 class="w-0 flex-1 pr-2"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -88,11 +88,11 @@ exports[`Notifications > should render in xs 2`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1src4hy"
+        class="group css-1gk67vk"
         data-testid="TableRow"
       >
         <td
-          class="flex-col space-y-4 py-4 text-sm"
+          class="flex-col space-y-4 py-4"
         >
           <div
             class="flex items-center justify-between space-x-4"
@@ -109,10 +109,10 @@ exports[`Notifications > should render in xs 2`] = `
                 class="w-0 flex-1 pr-2"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -171,21 +171,21 @@ exports[`Notifications > should render in xs 3`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1src4hy"
+        class="group css-1gk67vk"
         data-testid="TableRow"
       >
         <td
           class="w-3/5"
         >
           <div
-            class="flex space-x-3 css-mx19qq"
+            class="flex space-x-3 css-14huxtf"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center -space-x-1"
               data-testid="TransactionRowMode"
             >
-              <span
-                class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+              <div
+                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
               >
                 <div
                   class="css-1i4b0eq"
@@ -213,9 +213,9 @@ exports[`Notifications > should render in xs 3`] = `
                     </g>
                   </svg>
                 </div>
-              </span>
+              </div>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
                 data-testid="Avatar"
               >
                 <div
@@ -233,21 +233,21 @@ exports[`Notifications > should render in xs 3`] = `
               class="w-20 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -258,7 +258,7 @@ exports[`Notifications > should render in xs 3`] = `
         </td>
         <td>
           <div
-            class="justify-end css-br23tb"
+            class="justify-end css-1hhowo0"
           >
             <div
               class="css-1vb1527"
@@ -288,21 +288,21 @@ exports[`Notifications > should render in xs 4`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1src4hy"
+        class="group css-1gk67vk"
         data-testid="TableRow"
       >
         <td
           class="w-3/5"
         >
           <div
-            class="flex space-x-3 css-mx19qq"
+            class="flex space-x-3 css-14huxtf"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center -space-x-1"
               data-testid="TransactionRowMode"
             >
-              <span
-                class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+              <div
+                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
               >
                 <div
                   class="css-1i4b0eq"
@@ -330,9 +330,9 @@ exports[`Notifications > should render in xs 4`] = `
                     </g>
                   </svg>
                 </div>
-              </span>
+              </div>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
                 data-testid="Avatar"
               >
                 <div
@@ -350,21 +350,21 @@ exports[`Notifications > should render in xs 4`] = `
               class="w-20 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -375,7 +375,7 @@ exports[`Notifications > should render in xs 4`] = `
         </td>
         <td>
           <div
-            class="justify-end css-br23tb"
+            class="justify-end css-1hhowo0"
           >
             <div
               class="css-1vb1527"
@@ -405,21 +405,21 @@ exports[`Notifications > should render in xs 5`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1src4hy"
+        class="group css-1gk67vk"
         data-testid="TableRow"
       >
         <td
           class="w-3/5"
         >
           <div
-            class="flex space-x-3 css-mx19qq"
+            class="flex space-x-3 css-14huxtf"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center -space-x-1"
               data-testid="TransactionRowMode"
             >
-              <span
-                class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+              <div
+                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
               >
                 <div
                   class="css-1i4b0eq"
@@ -447,9 +447,9 @@ exports[`Notifications > should render in xs 5`] = `
                     </g>
                   </svg>
                 </div>
-              </span>
+              </div>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
                 data-testid="Avatar"
               >
                 <div
@@ -467,21 +467,21 @@ exports[`Notifications > should render in xs 5`] = `
               class="w-20 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -492,7 +492,7 @@ exports[`Notifications > should render in xs 5`] = `
         </td>
         <td>
           <div
-            class="justify-end css-br23tb"
+            class="justify-end css-1hhowo0"
           >
             <div
               class="css-1vb1527"
@@ -522,21 +522,21 @@ exports[`Notifications > should render notification item 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1src4hy"
+        class="group css-1gk67vk"
         data-testid="TableRow"
       >
         <td
           class="w-3/5"
         >
           <div
-            class="flex space-x-3 css-mx19qq"
+            class="flex space-x-3 css-14huxtf"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center -space-x-1"
               data-testid="TransactionRowMode"
             >
-              <span
-                class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+              <div
+                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
               >
                 <div
                   class="css-1i4b0eq"
@@ -564,9 +564,9 @@ exports[`Notifications > should render notification item 1`] = `
                     </g>
                   </svg>
                 </div>
-              </span>
+              </div>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
                 data-testid="Avatar"
               >
                 <div
@@ -584,21 +584,21 @@ exports[`Notifications > should render notification item 1`] = `
               class="w-20 flex-1"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -609,7 +609,7 @@ exports[`Notifications > should render notification item 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-br23tb"
+            class="justify-end css-1hhowo0"
           >
             <div
               class="css-1vb1527"

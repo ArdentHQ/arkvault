@@ -30,37 +30,6 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
 	});
 
-	it("should validate a page", async () => {
-		const parameters = new URLSearchParams("page=migration");
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBe(true);
-	});
-
-	it("should invalidate an invalid page", async () => {
-		const parameters = new URLSearchParams("page=random");
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "INVALID_PAGE", value: "random" },
-		});
-	});
-
-	it("should generate page path", () => {
-		const parameters = new URLSearchParams("page=migration");
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		expect(
-			result.current.pages.migration.path({
-				profile,
-				searchParameters: parameters,
-			}),
-		).toBe(`/profiles/${profile.id()}/migration?page=migration`);
-	});
-
 	it("should validate search parameters without errors (with nethash)", async () => {
 		const parameters = new URLSearchParams(
 			"coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",

@@ -140,10 +140,10 @@ exports[`ConfirmationStep > should render 1`] = `
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                     data-testid="Link__external"
-                    height="12"
-                    width="12"
+                    height="16"
+                    width="16"
                   >
                     <svg
                       id="arrow-external"
@@ -239,10 +239,10 @@ exports[`ConfirmationStep > should render 1`] = `
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                     data-testid="Link__external"
-                    height="12"
-                    width="12"
+                    height="16"
+                    width="16"
                   >
                     <svg
                       id="arrow-external"
@@ -1238,10 +1238,10 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             </span>
                           </span>
                           <div
-                            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                             data-testid="Link__external"
-                            height="12"
-                            width="12"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               id="arrow-external"
@@ -1337,10 +1337,10 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             </span>
                           </span>
                           <div
-                            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                             data-testid="Link__external"
-                            height="12"
-                            width="12"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               id="arrow-external"
@@ -1509,10 +1509,10 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             </span>
                           </span>
                           <div
-                            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                             data-testid="Link__external"
-                            height="12"
-                            width="12"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               id="arrow-external"
@@ -1608,10 +1608,10 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             </span>
                           </span>
                           <div
-                            class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                             data-testid="Link__external"
-                            height="12"
-                            width="12"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               id="arrow-external"
@@ -1899,7 +1899,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   data-testid="StatusIcon__spinner"
                 >
                   <div
-                    class="css-qed8fm"
+                    class="css-1v2j3qb"
                     color="info"
                   />
                 </span>
@@ -2051,10 +2051,10 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   support@changenow.io
                 </span>
                 <div
-                  class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
                   data-testid="Link__external"
-                  height="12"
-                  width="12"
+                  height="16"
+                  width="16"
                 >
                   <svg
                     id="arrow-external"
@@ -2727,10 +2727,10 @@ exports[`ReviewStep > should render 1`] = `
               Terms of Use
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
               data-testid="Link__external"
-              height="12"
-              width="12"
+              height="16"
+              width="16"
             >
               <svg
                 id="arrow-external"
@@ -2765,10 +2765,10 @@ exports[`ReviewStep > should render 1`] = `
               Privacy Policy
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
               data-testid="Link__external"
-              height="12"
-              width="12"
+              height="16"
+              width="16"
             >
               <svg
                 id="arrow-external"
@@ -2940,7 +2940,7 @@ exports[`StatusStep > should render 1`] = `
           data-testid="StatusIcon__spinner"
         >
           <div
-            class="css-qed8fm"
+            class="css-1v2j3qb"
             color="info"
           />
         </span>
@@ -3092,10 +3092,10 @@ exports[`StatusStep > should render 1`] = `
           support@changenow.io
         </span>
         <div
-          class="mb-[3px] shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-secondary-700 inline-block text-sm css-1fio4bh"
+          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
           data-testid="Link__external"
-          height="12"
-          width="12"
+          height="16"
+          width="16"
         >
           <svg
             id="arrow-external"

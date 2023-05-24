@@ -8,22 +8,14 @@ interface Properties {
 	titleSuffix?: string | React.ReactNode;
 	subtitle?: string | React.ReactNode;
 	className?: string;
-	headerClassName?: string;
 	extra?: React.ReactNode;
 	border?: boolean;
 }
 
-export const Header = ({
-	title,
-	titleSuffix,
-	className,
-	headerClassName = "text-2xl",
-	subtitle,
-	extra,
-}: Properties) => (
+export const Header = ({ title, titleSuffix, className, subtitle, extra }: Properties) => (
 	<div className={cn("flex items-end justify-between bg-theme-background", className)}>
 		<div className="space-y-4">
-			<h1 className={cn("mb-0", headerClassName)} data-testid="header__title">
+			<h1 className="mb-0 text-2xl" data-testid="header__title">
 				{title}
 				{titleSuffix && <span> {titleSuffix}</span>}
 			</h1>
@@ -50,7 +42,7 @@ export const PageHeader = ({ title, titleSuffix, subtitle, extra, border = false
 	}
 
 	return (
-		<section className="h-13 flex min-h-[52px] w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black">
+		<section className="h-13 flex w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black">
 			<h1 className="mb-0 text-lg">{title}</h1>
 			{extra}
 		</section>

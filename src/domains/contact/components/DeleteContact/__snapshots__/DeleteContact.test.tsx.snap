@@ -113,10 +113,10 @@ exports[`DeleteContact > should render a modal 1`] = `
               />
             </svg>
             <div
-              class="css-mpc03v"
+              class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-1hv657z"
+                class="css-pra96q"
               >
                 <div
                   class="css-v0ob3f"
@@ -160,7 +160,7 @@ exports[`DeleteContact > should render a modal 1`] = `
                 </span>
               </div>
               <div
-                class="css-rfibfr"
+                class="css-1pvpof3"
               >
                 Are you sure you want to delete this Contact? This action cannot be undone.
               </div>

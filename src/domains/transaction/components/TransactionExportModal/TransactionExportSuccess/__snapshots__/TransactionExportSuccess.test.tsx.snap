@@ -45,10 +45,10 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       />
     </svg>
     <div
-      class="mb-6 css-mpc03v"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1fsr3xk"
+        class="css-1dwg83m"
       >
         <div
           class="css-v0ob3f"
@@ -87,7 +87,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         </span>
       </div>
       <div
-        class="css-90mh6d"
+        class="css-k5jr4t"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
@@ -167,10 +167,10 @@ exports[`TransactionExportForm > should render in md 1`] = `
       />
     </svg>
     <div
-      class="mb-6 css-mpc03v"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1fsr3xk"
+        class="css-1dwg83m"
       >
         <div
           class="css-v0ob3f"
@@ -209,7 +209,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         </span>
       </div>
       <div
-        class="css-90mh6d"
+        class="css-k5jr4t"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
@@ -289,10 +289,10 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       />
     </svg>
     <div
-      class="mb-6 css-mpc03v"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1fsr3xk"
+        class="css-1dwg83m"
       >
         <div
           class="css-v0ob3f"
@@ -331,7 +331,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         </span>
       </div>
       <div
-        class="css-90mh6d"
+        class="css-k5jr4t"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
@@ -411,10 +411,10 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       />
     </svg>
     <div
-      class="mb-6 css-mpc03v"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1fsr3xk"
+        class="css-1dwg83m"
       >
         <div
           class="css-v0ob3f"
@@ -453,7 +453,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         </span>
       </div>
       <div
-        class="css-90mh6d"
+        class="css-k5jr4t"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
@@ -533,10 +533,10 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       />
     </svg>
     <div
-      class="mb-6 css-mpc03v"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1fsr3xk"
+        class="css-1dwg83m"
       >
         <div
           class="css-v0ob3f"
@@ -575,7 +575,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         </span>
       </div>
       <div
-        class="css-90mh6d"
+        class="css-k5jr4t"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
@@ -651,10 +651,10 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
       />
     </svg>
     <div
-      class="mb-6 css-mpc03v"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1hv657z"
+        class="css-pra96q"
       >
         <div
           class="css-v0ob3f"
@@ -698,7 +698,7 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
         </span>
       </div>
       <div
-        class="css-rfibfr"
+        class="css-1pvpof3"
       >
         No transactions could be found for the selected period.
       </div>

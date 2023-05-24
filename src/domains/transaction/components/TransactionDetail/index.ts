@@ -11,4 +11,3 @@ export * from "./TransactionTimestamp";
 export * from "./TransactionType";
 export * from "./TransactionVotes";
 export * from "./TransactionMultisignatureStatus";
-export * from "./MigrationPolygonAddress";

@@ -3,10 +3,10 @@
 exports[`ExchangeStatus > should show expired status 1`] = `
 <div>
   <div
-    class="my-6 css-mpc03v"
+    class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-1f7sa7y"
+      class="css-ic0qlc"
     >
       <div
         class="css-v0ob3f"
@@ -45,7 +45,7 @@ exports[`ExchangeStatus > should show expired status 1`] = `
       </span>
     </div>
     <div
-      class="css-1h3dpsb"
+      class="css-6o9bco"
     >
       This transaction has expired.
     </div>
@@ -56,10 +56,10 @@ exports[`ExchangeStatus > should show expired status 1`] = `
 exports[`ExchangeStatus > should show failed status 1`] = `
 <div>
   <div
-    class="my-6 css-mpc03v"
+    class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-1f7sa7y"
+      class="css-ic0qlc"
     >
       <div
         class="css-v0ob3f"
@@ -98,7 +98,7 @@ exports[`ExchangeStatus > should show failed status 1`] = `
       </span>
     </div>
     <div
-      class="css-1h3dpsb"
+      class="css-6o9bco"
     >
       This transaction has failed.
     </div>
@@ -109,10 +109,10 @@ exports[`ExchangeStatus > should show failed status 1`] = `
 exports[`ExchangeStatus > should show refunded status 1`] = `
 <div>
   <div
-    class="my-6 css-mpc03v"
+    class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-1hv657z"
+      class="css-pra96q"
     >
       <div
         class="css-v0ob3f"
@@ -156,7 +156,7 @@ exports[`ExchangeStatus > should show refunded status 1`] = `
       </span>
     </div>
     <div
-      class="css-rfibfr"
+      class="css-1pvpof3"
     >
       This transaction has been refunded.
     </div>
@@ -167,10 +167,10 @@ exports[`ExchangeStatus > should show refunded status 1`] = `
 exports[`ExchangeStatus > should show verifying status 1`] = `
 <div>
   <div
-    class="my-6 css-mpc03v"
+    class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-1hv657z"
+      class="css-pra96q"
     >
       <div
         class="css-v0ob3f"
@@ -214,7 +214,7 @@ exports[`ExchangeStatus > should show verifying status 1`] = `
       </span>
     </div>
     <div
-      class="css-rfibfr"
+      class="css-1pvpof3"
     >
       This transaction is being verified by the provider.
     </div>

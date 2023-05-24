@@ -5,7 +5,6 @@ import { SettingRoutes } from "@/domains/setting/routing";
 import { ContactRoutes } from "@/domains/contact/routing";
 import { ExchangeRoutes } from "@/domains/exchange/routing";
 import { MessageRoutes } from "@/domains/message/routing";
-import { MigrationRoutes } from "@/domains/migration/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
 import { WalletRoutes } from "@/domains/wallet/routing";
 import { TransactionRoutes } from "@/domains/transaction/routing";
@@ -38,7 +37,7 @@ describe("PreloadMiddleware", () => {
 			vi.spyOn(route.component as any, "preload"),
 		);
 
-		const commonSpies = [...TransactionRoutes, ...MessageRoutes, ...MigrationRoutes].map((route) =>
+		const commonSpies = [...TransactionRoutes, ...MessageRoutes].map((route) =>
 			vi.spyOn(route.component as any, "preload"),
 		);
 

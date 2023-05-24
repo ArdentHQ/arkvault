@@ -17,7 +17,6 @@ export const TableRow: React.FC<TableRowProperties> = ({
 	children,
 	isSelected,
 	onClick,
-	styles,
 	...properties
 }) => (
 	<TableRowStyled
@@ -27,7 +26,6 @@ export const TableRow: React.FC<TableRowProperties> = ({
 		dotted={dotted}
 		isSelected={isSelected}
 		onClick={onClick}
-		styles={styles}
 	>
 		{children}
 	</TableRowStyled>

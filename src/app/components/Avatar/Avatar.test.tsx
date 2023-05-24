@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Avatar, EthereumAvatar } from "./Avatar";
+import { Avatar } from "./Avatar";
 import { Size } from "@/types";
 import { render, screen } from "@/utils/testing-library";
 
@@ -9,13 +9,6 @@ describe("Avatar", () => {
 		const { asFragment } = render(<Avatar address="abc" />);
 
 		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render with variant", () => {
-		const { asFragment } = render(<Avatar variant="ethereum" address="abc" />);
-
-		expect(screen.getByTestId("EthereumAvatar")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -51,15 +44,6 @@ describe("Avatar", () => {
 		const { asFragment } = render(<Avatar address="abc" size={size as Size} />);
 
 		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
-
-describe("EthereumAvatar", () => {
-	it("should render", () => {
-		const { asFragment } = render(<EthereumAvatar address="abc" />);
-
-		expect(screen.getByTestId("EthereumAvatar")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

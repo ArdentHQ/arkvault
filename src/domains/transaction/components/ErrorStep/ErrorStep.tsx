@@ -17,7 +17,6 @@ interface Properties {
 	onBack?: () => void;
 	onRepeat?: () => void;
 	errorMessage?: string;
-	noHeading?: boolean;
 }
 
 export const ErrorStep = ({
@@ -27,7 +26,6 @@ export const ErrorStep = ({
 	onRepeat,
 	isRepeatDisabled = false,
 	errorMessage = "test",
-	noHeading,
 }: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef();
@@ -35,7 +33,7 @@ export const ErrorStep = ({
 	return (
 		<div data-testid="ErrorStep">
 			<div className="space-y-8">
-				{!noHeading && <StepHeader title={title || t("TRANSACTION.ERROR.TITLE")} />}
+				<StepHeader title={title || t("TRANSACTION.ERROR.TITLE")} />
 
 				<Image name="TransactionErrorBanner" domain="transaction" className="hidden w-full md:block" />
 
@@ -44,9 +42,9 @@ export const ErrorStep = ({
 						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
 					</p>
 
-					<div className="md:hidden">
-						<Alert variant="danger">{description || t("TRANSACTION.ERROR.DESCRIPTION")}</Alert>
-					</div>
+					<Alert className="md:hidden" variant="danger">
+						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
+					</Alert>
 
 					{errorMessage && (
 						<TextArea

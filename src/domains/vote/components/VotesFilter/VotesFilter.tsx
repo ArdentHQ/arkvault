@@ -31,7 +31,7 @@ export const VotesFilter = ({
 					</ControlButton>
 				}
 			>
-				<div className="flex w-56 flex-col items-start space-y-5 p-10 text-theme-secondary-700 dark:text-theme-secondary-200">
+				<div className="flex w-56 flex-col items-start space-y-5 py-7 px-10 text-theme-secondary-700 dark:text-theme-secondary-200">
 					<label
 						className="flex h-5 cursor-pointer items-center space-x-3 rounded-md"
 						data-testid="VotesFilter__option--all"

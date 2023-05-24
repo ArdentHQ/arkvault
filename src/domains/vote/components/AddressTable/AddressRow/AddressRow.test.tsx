@@ -4,8 +4,9 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
+import { createHashHistory } from "history";
 
-import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
+import { AddressRow, WalletAvatar } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
@@ -43,7 +44,7 @@ const votingMockReturnValue = (delegatesIndex: number[]) =>
 		amount: 0,
 		wallet: new ReadOnlyWallet({
 			address: data[index].address,
-			explorerLink: "",
+			explorerLink: `https://test.arkscan.io/wallets/${data[0].address}`,
 			governanceIdentifier: "address",
 			isDelegate: true,
 			isResignedDelegate: false,
@@ -395,5 +396,76 @@ describe("AddressRow", () => {
 		await expect(screen.findByTestId(voteButton)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should redirect to wallet details page", async () => {
+		const route = `/profiles/${profile.id()}/votes`;
+		const history = createHashHistory();
+
+		const historySpy = vi.spyOn(history, "push");
+
+		const { container } = render(
+			<AddressWrapper>
+				<AddressRow index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				history,
+				route,
+			},
+		);
+		history.push(route);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("AddressRow__wallet"));
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+	});
+
+	it("should render wallet avatar", async () => {
+		render(
+			<WalletAvatar
+				wallet={
+					new ReadOnlyWallet({
+						address: data[0].address,
+						explorerLink: `https://test.arkscan.io/wallets/${data[0].address}`,
+						governanceIdentifier: "address",
+						isDelegate: true,
+						isResignedDelegate: false,
+						publicKey: data[0].publicKey,
+						username: data[0].username,
+					})
+				}
+			/>,
+		);
+
+		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
+	});
+
+	it("should render wallet avatar in compact mode", async () => {
+		render(
+			<WalletAvatar
+				useCompact
+				wallet={
+					new ReadOnlyWallet({
+						address: data[0].address,
+						explorerLink: `https://test.arkscan.io/wallets/${data[0].address}`,
+						governanceIdentifier: "address",
+						isDelegate: true,
+						isResignedDelegate: false,
+						publicKey: data[0].publicKey,
+						username: data[0].username,
+					})
+				}
+			/>,
+		);
+
+		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
+	});
+
+	it("should not render wallet avatar if wallet is not provided", async () => {
+		render(<WalletAvatar />);
+
+		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
 	});
 });

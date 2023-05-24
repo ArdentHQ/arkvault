@@ -3,7 +3,7 @@
 exports[`Notifications > should emit transactionClick event 1`] = `
 <div>
   <div
-    class="css-ottnn8"
+    class="css-80avit"
     data-testid="NotificationsWrapper"
   >
     <div
@@ -36,9 +36,6 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 />
               </td>
               <td>
-                <button
-                  data-testid="TriggerVisibility"
-                />
                 <div>
                   <span
                     class="text-md font-bold text-theme-secondary-600"
@@ -73,9 +70,6 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 />
               </td>
               <td>
-                <button
-                  data-testid="TriggerVisibility"
-                />
                 <div>
                   <span
                     class="text-md font-bold text-theme-secondary-600"
@@ -104,24 +98,15 @@ exports[`Notifications > should emit transactionClick event 1`] = `
     </div>
     <div>
       <div
-        class="md:space-y-2"
+        class="space-y-2"
       >
         <div
-          class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
+          class="text-base font-semibold text-theme-secondary-500"
         >
           Transactions
         </div>
-        <div
-          class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
-        >
-          Transactions
-        </div>
-        <button
-          data-testid="TriggerVisibility"
-        />
         <div
           class=" css-1m6rt2i"
-          data-testid="NotificationTransactionsTable"
           role="table"
         >
           <table
@@ -131,11 +116,8 @@ exports[`Notifications > should emit transactionClick event 1`] = `
             <tbody
               role="rowgroup"
             >
-              <button
-                data-testid="TriggerVisibility"
-              />
               <tr
-                class="group css-1src4hy"
+                class="group css-1gk67vk"
                 data-testid="TableRow"
               >
                 <td
@@ -245,11 +227,8 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                   </div>
                 </td>
               </tr>
-              <button
-                data-testid="TriggerVisibility"
-              />
               <tr
-                class="group css-1src4hy"
+                class="group css-1gk67vk"
                 data-testid="TableRow"
               >
                 <td
@@ -356,11 +335,8 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                   </div>
                 </td>
               </tr>
-              <button
-                data-testid="TriggerVisibility"
-              />
               <tr
-                class="group css-1src4hy"
+                class="group css-1gk67vk"
                 data-testid="TableRow"
               >
                 <td
@@ -476,15 +452,17 @@ exports[`Notifications > should emit transactionClick event 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
+=======
 exports[`Notifications > should mark migration as read 1`] = `
 <div>
   <div
-    class="css-ottnn8"
+    class="css-80avit"
     data-testid="NotificationsWrapper"
   >
     <div>
       <div
-        class="md:space-y-2"
+        class="md:space-y-2 "
       >
         <div
           class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
@@ -492,7 +470,7 @@ exports[`Notifications > should mark migration as read 1`] = `
           Transactions
         </div>
         <div
-          class="-mx-10 -mt-10 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+          class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
           data-testid="NotificationsMigrations"
         >
           <div
@@ -652,7 +630,7 @@ exports[`Notifications > should mark migration as read 1`] = `
                         class="flex space-x-3 css-mx19qq"
                       >
                         <div
-                          class="flex flex-1 items-center overflow-auto"
+                          class="flex flex-1 items-center space-x-3 overflow-auto"
                         >
                           <div
                             class="text-theme-hint-600 css-1i4b0eq"
@@ -687,7 +665,7 @@ exports[`Notifications > should mark migration as read 1`] = `
                             </svg>
                           </div>
                           <div
-                            class="ml-2 mr-3 shrink-0 css-jxpwdn"
+                            class="shrink-0 css-jxpwdn"
                             data-testid="Avatar"
                           >
                             <div
@@ -732,9 +710,9 @@ exports[`Notifications > should mark migration as read 1`] = `
                             Migration Successful
                           </span>
                           <div
-                            class="css-1fio4bh"
-                            height="12"
-                            width="12"
+                            class="css-15txs7d"
+                            height="10"
+                            width="10"
                           >
                             <svg
                               id="chevron-right-small"
@@ -777,12 +755,12 @@ exports[`Notifications > should mark migration as read 1`] = `
 exports[`Notifications > should not mark migration as read if already read 1`] = `
 <div>
   <div
-    class="css-ottnn8"
+    class="css-80avit"
     data-testid="NotificationsWrapper"
   >
     <div>
       <div
-        class="md:space-y-2"
+        class="md:space-y-2 "
       >
         <div
           class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
@@ -790,7 +768,7 @@ exports[`Notifications > should not mark migration as read if already read 1`] =
           Transactions
         </div>
         <div
-          class="-mx-10 -mt-10 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+          class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
           data-testid="NotificationsMigrations"
         >
           <div
@@ -950,7 +928,7 @@ exports[`Notifications > should not mark migration as read if already read 1`] =
                         class="flex space-x-3 css-mx19qq"
                       >
                         <div
-                          class="flex flex-1 items-center overflow-auto"
+                          class="flex flex-1 items-center space-x-3 overflow-auto"
                         >
                           <div
                             class="text-theme-hint-600 css-1i4b0eq"
@@ -985,7 +963,7 @@ exports[`Notifications > should not mark migration as read if already read 1`] =
                             </svg>
                           </div>
                           <div
-                            class="ml-2 mr-3 shrink-0 css-jxpwdn"
+                            class="shrink-0 css-jxpwdn"
                             data-testid="Avatar"
                           >
                             <div
@@ -1030,9 +1008,9 @@ exports[`Notifications > should not mark migration as read if already read 1`] =
                             Migration Successful
                           </span>
                           <div
-                            class="css-1fio4bh"
-                            height="12"
-                            width="12"
+                            class="css-15txs7d"
+                            height="10"
+                            width="10"
                           >
                             <svg
                               id="chevron-right-small"
@@ -1072,11 +1050,11 @@ exports[`Notifications > should not mark migration as read if already read 1`] =
 </div>
 `;
 
+>>>>>>> 5fbade27 (chore: disable font ligatures in truncation components (#352))
 exports[`Notifications > should render with empty notifications 1`] = `
 <div>
   <div
-    class="css-mtuqg2"
-    data-testid="Notifications__empty"
+    class="css-19lwrp1"
   >
     <div
       class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -1161,15 +1139,17 @@ exports[`Notifications > should render with empty notifications 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
+=======
 exports[`Notifications > should render with migrations but not transactions 1`] = `
 <div>
   <div
-    class="css-ottnn8"
+    class="css-80avit"
     data-testid="NotificationsWrapper"
   >
     <div>
       <div
-        class="md:space-y-2"
+        class="md:space-y-2 "
       >
         <div
           class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
@@ -1177,7 +1157,7 @@ exports[`Notifications > should render with migrations but not transactions 1`] 
           Transactions
         </div>
         <div
-          class="-mx-10 -mt-10 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
+          class="-mx-10 -mt-5 mb-4 items-center border-white bg-theme-hint-50 px-5 pt-6 pb-4 text-theme-secondary-900 dark:border-theme-secondary-800 dark:bg-black dark:text-theme-secondary-200 md:mb-0 md:mt-0 md:space-y-3 md:border-t"
           data-testid="NotificationsMigrations"
         >
           <div
@@ -1337,7 +1317,7 @@ exports[`Notifications > should render with migrations but not transactions 1`] 
                         class="flex space-x-3 css-mx19qq"
                       >
                         <div
-                          class="flex flex-1 items-center overflow-auto"
+                          class="flex flex-1 items-center space-x-3 overflow-auto"
                         >
                           <div
                             class="text-theme-hint-600 css-1i4b0eq"
@@ -1372,7 +1352,7 @@ exports[`Notifications > should render with migrations but not transactions 1`] 
                             </svg>
                           </div>
                           <div
-                            class="ml-2 mr-3 shrink-0 css-jxpwdn"
+                            class="shrink-0 css-jxpwdn"
                             data-testid="Avatar"
                           >
                             <div
@@ -1417,9 +1397,9 @@ exports[`Notifications > should render with migrations but not transactions 1`] 
                             Migration Successful
                           </span>
                           <div
-                            class="css-1fio4bh"
-                            height="12"
-                            width="12"
+                            class="css-15txs7d"
+                            height="10"
+                            width="10"
                           >
                             <svg
                               id="chevron-right-small"
@@ -1459,10 +1439,11 @@ exports[`Notifications > should render with migrations but not transactions 1`] 
 </div>
 `;
 
+>>>>>>> 5fbade27 (chore: disable font ligatures in truncation components (#352))
 exports[`Notifications > should render with plugins 1`] = `
 <div>
   <div
-    class="css-ottnn8"
+    class="css-80avit"
     data-testid="NotificationsWrapper"
   >
     <div
@@ -1495,9 +1476,6 @@ exports[`Notifications > should render with plugins 1`] = `
                 />
               </td>
               <td>
-                <button
-                  data-testid="TriggerVisibility"
-                />
                 <div>
                   <span
                     class="text-md font-bold text-theme-secondary-600"
@@ -1532,9 +1510,6 @@ exports[`Notifications > should render with plugins 1`] = `
                 />
               </td>
               <td>
-                <button
-                  data-testid="TriggerVisibility"
-                />
                 <div>
                   <span
                     class="text-md font-bold text-theme-secondary-600"
@@ -1563,24 +1538,15 @@ exports[`Notifications > should render with plugins 1`] = `
     </div>
     <div>
       <div
-        class="md:space-y-2"
+        class="space-y-2"
       >
         <div
-          class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
+          class="text-base font-semibold text-theme-secondary-500"
         >
           Transactions
         </div>
-        <div
-          class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
-        >
-          Transactions
-        </div>
-        <button
-          data-testid="TriggerVisibility"
-        />
         <div
           class=" css-1m6rt2i"
-          data-testid="NotificationTransactionsTable"
           role="table"
         >
           <table
@@ -1590,11 +1556,8 @@ exports[`Notifications > should render with plugins 1`] = `
             <tbody
               role="rowgroup"
             >
-              <button
-                data-testid="TriggerVisibility"
-              />
               <tr
-                class="group css-1src4hy"
+                class="group css-1gk67vk"
                 data-testid="TableRow"
               >
                 <td
@@ -1704,11 +1667,8 @@ exports[`Notifications > should render with plugins 1`] = `
                   </div>
                 </td>
               </tr>
-              <button
-                data-testid="TriggerVisibility"
-              />
               <tr
-                class="group css-1src4hy"
+                class="group css-1gk67vk"
                 data-testid="TableRow"
               >
                 <td
@@ -1815,11 +1775,8 @@ exports[`Notifications > should render with plugins 1`] = `
                   </div>
                 </td>
               </tr>
-              <button
-                data-testid="TriggerVisibility"
-              />
               <tr
-                class="group css-1src4hy"
+                class="group css-1gk67vk"
                 data-testid="TableRow"
               >
                 <td
@@ -1938,7 +1895,7 @@ exports[`Notifications > should render with plugins 1`] = `
 exports[`Notifications > should render with transactions and plugins 1`] = `
 <div>
   <div
-    class="css-ottnn8"
+    class="css-80avit"
     data-testid="NotificationsWrapper"
   >
     <div
@@ -1971,9 +1928,6 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                 />
               </td>
               <td>
-                <button
-                  data-testid="TriggerVisibility"
-                />
                 <div>
                   <span
                     class="text-md font-bold text-theme-secondary-600"
@@ -2008,9 +1962,6 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                 />
               </td>
               <td>
-                <button
-                  data-testid="TriggerVisibility"
-                />
                 <div>
                   <span
                     class="text-md font-bold text-theme-secondary-600"
@@ -2039,24 +1990,15 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
     </div>
     <div>
       <div
-        class="md:space-y-2"
+        class="space-y-2"
       >
         <div
-          class="hidden text-lg font-semibold text-theme-secondary-500 md:block"
+          class="text-base font-semibold text-theme-secondary-500"
         >
           Transactions
         </div>
-        <div
-          class="mb-2 text-sm font-semibold text-theme-secondary-500 md:hidden"
-        >
-          Transactions
-        </div>
-        <button
-          data-testid="TriggerVisibility"
-        />
         <div
           class=" css-1m6rt2i"
-          data-testid="NotificationTransactionsTable"
           role="table"
         >
           <table
@@ -2066,11 +2008,8 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
             <tbody
               role="rowgroup"
             >
-              <button
-                data-testid="TriggerVisibility"
-              />
               <tr
-                class="group css-1src4hy"
+                class="group css-1gk67vk"
                 data-testid="TableRow"
               >
                 <td
@@ -2180,11 +2119,8 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                   </div>
                 </td>
               </tr>
-              <button
-                data-testid="TriggerVisibility"
-              />
               <tr
-                class="group css-1src4hy"
+                class="group css-1gk67vk"
                 data-testid="TableRow"
               >
                 <td
@@ -2291,11 +2227,8 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                   </div>
                 </td>
               </tr>
-              <button
-                data-testid="TriggerVisibility"
-              />
               <tr
-                class="group css-1src4hy"
+                class="group css-1gk67vk"
                 data-testid="TableRow"
               >
                 <td

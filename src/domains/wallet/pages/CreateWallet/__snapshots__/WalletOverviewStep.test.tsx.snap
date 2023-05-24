@@ -23,10 +23,10 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
       class="mt-8 space-y-8"
     >
       <div
-        class="mt-6 css-mpc03v"
+        class="flex flex-col overflow-hidden rounded-xl mt-6"
       >
         <div
-          class="css-1hv657z"
+          class="css-pra96q"
         >
           <div
             class="css-v0ob3f"
@@ -70,7 +70,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </span>
         </div>
         <div
-          class="css-rfibfr"
+          class="css-1pvpof3"
         >
           You are responsible for storing and protecting this mnemonic passphrase offline. ARKVault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.
         </div>
