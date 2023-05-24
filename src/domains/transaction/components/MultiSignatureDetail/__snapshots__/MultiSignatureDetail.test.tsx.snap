@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`MultiSignatureDetail > should fail to broadcast transaction and show error step 1`] = `
 <div>
@@ -5714,7 +5714,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                         class="inline-flex w-full items-center justify-center space-x-3"
                       >
                         <div
-                          class="css-1v2j3qb"
+                          class="css-qed8fm"
                           color="info"
                         />
                         <span
@@ -7489,7 +7489,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                       class="inline-flex w-full items-center justify-center space-x-3"
                     >
                       <div
-                        class="css-1v2j3qb"
+                        class="css-qed8fm"
                         color="info"
                       />
                       <span

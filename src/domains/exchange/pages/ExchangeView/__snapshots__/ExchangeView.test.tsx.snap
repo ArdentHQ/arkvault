@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
 <div>
@@ -589,7 +589,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
           class="py-32"
         >
           <div
-            class="css-iepbhh"
+            class="css-y2inin"
             color="info"
           />
         </div>
@@ -2979,7 +2979,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
           class="py-32"
         >
           <div
-            class="css-iepbhh"
+            class="css-y2inin"
             color="info"
           />
         </div>
@@ -4178,7 +4178,7 @@ exports[`ExchangeView > should render light theme 1`] = `
           class="py-32"
         >
           <div
-            class="css-iepbhh"
+            class="css-y2inin"
             color="info"
           />
         </div>
@@ -5377,7 +5377,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
           class="py-32"
         >
           <div
-            class="css-iepbhh"
+            class="css-y2inin"
             color="info"
           />
         </div>
