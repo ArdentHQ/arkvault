@@ -28,10 +28,6 @@ interface PathProperties {
 	network: Networks.Network;
 	searchParameters: URLSearchParams;
 }
-interface PagePathProperties {
-	profile: Contracts.IProfile;
-	searchParameters: URLSearchParams;
-}
 
 enum SearchParametersError {
 	AmbiguousDelegate = "AMBIGUOUS_DELEGATE",
@@ -53,11 +49,6 @@ enum SearchParametersError {
 	NetworkNoWallets = "NETWORK_NO_WALLETS",
 	MessageMissing = "MESSAGE_MISSING",
 	InvalidAddress = "INVALID_ADDRESS_OR_NETWORK_MISMATCH",
-	InvalidPage = "INVALID_PAGE",
-}
-
-enum Pages {
-	Migration = "migration",
 }
 
 const defaultNetworks = {
@@ -182,8 +173,6 @@ const validateSign = async ({ parameters, profile, network }: ValidateParameters
 	}
 };
 
-const validatePage = (page: Pages) => Object.values(Pages).includes(page);
-
 /* istanbul ignore next -- @preserve */
 const WrapperQR = ({ children }) => {
 	const { t } = useTranslation();
@@ -246,15 +235,6 @@ export const useSearchParametersValidation = () => {
 		},
 	};
 
-	const pages = {
-		migration: {
-			path: ({ profile, searchParameters }: PagePathProperties) =>
-				`${generatePath(ProfilePaths.Migration, {
-					profileId: profile.id(),
-				})}?${searchParameters.toString()}`,
-		},
-	};
-
 	const validateSearchParameters = async (
 		profile: Contracts.IProfile,
 		env: Environment,
@@ -264,16 +244,6 @@ export const useSearchParametersValidation = () => {
 		assertProfile(profile);
 
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
-
-		const page = parameters.get("page")?.toLowerCase() as Pages | undefined;
-
-		if (page !== undefined) {
-			if (!validatePage(page)) {
-				return { error: { type: SearchParametersError.InvalidPage, value: page } };
-			}
-
-			return true;
-		}
 
 		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
 		const method = parameters.get("method")?.toLowerCase() as string;
@@ -379,10 +349,6 @@ export const useSearchParametersValidation = () => {
 		qr = false,
 	) => {
 		const ErrorWrapper = qr ? WrapperQR : WrapperURI;
-
-		if (type === SearchParametersError.InvalidPage) {
-			return <Trans parent={ErrorWrapper} i18nKey="PROFILE.VALIDATION.INVALID_PAGE" values={{ page: value }} />;
-		}
 
 		if (type === SearchParametersError.AmbiguousDelegate) {
 			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY" />;
@@ -511,5 +477,5 @@ export const useSearchParametersValidation = () => {
 		return <WrapperURI />;
 	};
 
-	return { buildSearchParametersError, methods, pages, validateSearchParameters };
+	return { buildSearchParametersError, methods, validateSearchParameters };
 };

@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`DeleteResource > should not render if not open 1`] = `<DocumentFragment />`;
 
@@ -115,10 +115,10 @@ exports[`DeleteResource > should render with children 1`] = `
               />
             </svg>
             <div
-              class="css-mpc03v"
+              class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-1hv657z"
+                class="css-pra96q"
               >
                 <div
                   class="css-v0ob3f"
@@ -162,7 +162,7 @@ exports[`DeleteResource > should render with children 1`] = `
                 </span>
               </div>
               <div
-                class="css-rfibfr"
+                class="css-1pvpof3"
               />
             </div>
             <span>

@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`AddressRow > should emit action on select button 1`] = `
 <DocumentFragment>
@@ -8,9 +8,11 @@ exports[`AddressRow > should emit action on select button 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -33,7 +35,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -132,22 +134,60 @@ exports[`AddressRow > should emit action on select button 1`] = `
             class="font-bold space-x-4 css-1d4ra48"
           >
             <div
-              class="shrink-0 css-tthe5h"
-              data-testid="Avatar"
+              class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="shrink-0 css-tthe5h"
+                data-testid="Avatar"
               >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  />
+                </div>
               </div>
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <span>
-              arkx
-            </span>
           </div>
         </td>
         <td
@@ -237,9 +277,11 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -262,7 +304,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -397,22 +439,60 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
             class="font-bold space-x-4 css-1d4ra48"
           >
             <div
-              class="shrink-0 css-tthe5h"
-              data-testid="Avatar"
+              class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="shrink-0 css-tthe5h"
+                data-testid="Avatar"
               >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  />
+                </div>
               </div>
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <span>
-              arkx
-            </span>
           </div>
         </td>
         <td
@@ -502,9 +582,11 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -527,7 +609,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -626,22 +708,60 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
             class="font-bold space-x-4 css-1d4ra48"
           >
             <div
-              class="shrink-0 css-tthe5h"
-              data-testid="Avatar"
+              class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="shrink-0 css-tthe5h"
+                data-testid="Avatar"
               >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  />
+                </div>
               </div>
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <span>
-              arkx
-            </span>
           </div>
         </td>
         <td
@@ -732,9 +852,11 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -757,7 +879,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -856,22 +978,60 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
             class="font-bold space-x-4 css-1d4ra48"
           >
             <div
-              class="shrink-0 css-tthe5h"
-              data-testid="Avatar"
+              class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="shrink-0 css-tthe5h"
+                data-testid="Avatar"
               >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  />
+                </div>
               </div>
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <span>
-              arkx
-            </span>
           </div>
         </td>
         <td
@@ -961,9 +1121,11 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-3 css-mx19qq"
+            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -986,7 +1148,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1085,22 +1247,60 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
             class="font-bold space-x-3 css-1rods8x"
           >
             <div
-              class="shrink-0 css-jxpwdn"
-              data-testid="Avatar"
+              class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="shrink-0 css-jxpwdn"
+                data-testid="Avatar"
               >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  />
+                </div>
               </div>
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <span>
-              arkx
-            </span>
           </div>
         </td>
         <td
@@ -1190,9 +1390,11 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1215,7 +1417,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1314,22 +1516,60 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
             class="font-bold space-x-4 css-1d4ra48"
           >
             <div
-              class="shrink-0 css-tthe5h"
-              data-testid="Avatar"
+              class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="shrink-0 css-tthe5h"
+                data-testid="Avatar"
               >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  />
+                </div>
               </div>
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <span>
-              arkx
-            </span>
           </div>
         </td>
         <td
@@ -1410,9 +1650,11 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1435,7 +1677,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1535,9 +1777,11 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1560,7 +1804,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1659,22 +1903,60 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
             class="font-bold space-x-4 css-1d4ra48"
           >
             <div
-              class="shrink-0 css-tthe5h"
-              data-testid="Avatar"
+              class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="shrink-0 css-tthe5h"
+                data-testid="Avatar"
               >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  />
+                </div>
               </div>
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <span>
-              arkx
-            </span>
           </div>
         </td>
         <td
@@ -1755,9 +2037,11 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1870,9 +2154,11 @@ exports[`AddressRow > should render with active delegate 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1895,7 +2181,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1994,22 +2280,60 @@ exports[`AddressRow > should render with active delegate 1`] = `
             class="font-bold space-x-4 css-1d4ra48"
           >
             <div
-              class="shrink-0 css-tthe5h"
-              data-testid="Avatar"
+              class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="shrink-0 css-tthe5h"
+                data-testid="Avatar"
               >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  />
+                </div>
               </div>
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href=""
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <span>
-              arkx
-            </span>
           </div>
         </td>
         <td
@@ -2097,9 +2421,11 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -2122,7 +2448,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2281,9 +2607,11 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -2306,7 +2634,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2407,78 +2735,206 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
             <div
               class="flex items-center -space-x-2"
             >
-              <span
-                class="flex"
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
               >
-                <div
-                  class="shrink-0 css-8d0u1i"
-                  data-testid="Avatar"
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                      title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                      />
+                    </div>
                   </div>
-                </div>
-              </span>
-              <span
-                class="flex"
-              >
+                </span>
                 <div
-                  class="shrink-0 css-8d0u1i"
-                  data-testid="Avatar"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
-                      title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                        title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                      />
+                    </div>
                   </div>
-                </div>
-              </span>
-              <span
-                class="flex"
-              >
+                </span>
                 <div
-                  class="shrink-0 css-8d0u1i"
-                  data-testid="Avatar"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
-                      title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                        title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                      />
+                    </div>
                   </div>
-                </div>
-              </span>
-              <span
-                class="flex"
-              >
+                </span>
                 <div
-                  class="shrink-0 css-8d0u1i"
-                  data-testid="Avatar"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                        title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                      />
+                    </div>
                   </div>
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
                 </div>
-              </span>
+              </a>
             </div>
           </div>
         </td>
@@ -2533,9 +2989,11 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -2558,7 +3016,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2659,60 +3117,156 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
             <div
               class="flex items-center -space-x-2"
             >
-              <span
-                class="flex"
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
               >
-                <div
-                  class="shrink-0 css-8d0u1i"
-                  data-testid="Avatar"
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                      title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                      />
+                    </div>
                   </div>
-                </div>
-              </span>
-              <span
-                class="flex"
-              >
+                </span>
                 <div
-                  class="shrink-0 css-8d0u1i"
-                  data-testid="Avatar"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
-                      title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                        title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                      />
+                    </div>
                   </div>
-                </div>
-              </span>
-              <span
-                class="flex"
-              >
+                </span>
                 <div
-                  class="shrink-0 css-8d0u1i"
-                  data-testid="Avatar"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
-                      title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                        title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                      />
+                    </div>
                   </div>
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
                 </div>
-              </span>
+              </a>
               <div
                 class="relative border-theme-secondary-900 bg-theme-background dark:border-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
               >
@@ -2776,9 +3330,11 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-3 css-mx19qq"
+            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -2801,7 +3357,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2960,9 +3516,11 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-3 css-mx19qq"
+            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -2985,7 +3543,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3086,78 +3644,206 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
             <div
               class="flex items-center -space-x-1"
             >
-              <span
-                class="flex"
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
               >
-                <div
-                  class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
-                  data-testid="Avatar"
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                      title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                      />
+                    </div>
                   </div>
-                </div>
-              </span>
-              <span
-                class="flex"
-              >
+                </span>
                 <div
-                  class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
-                  data-testid="Avatar"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
-                      title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                        title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                      />
+                    </div>
                   </div>
-                </div>
-              </span>
-              <span
-                class="flex"
-              >
+                </span>
                 <div
-                  class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
-                  data-testid="Avatar"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
-                      title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                        title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                      />
+                    </div>
                   </div>
-                </div>
-              </span>
-              <span
-                class="flex"
-              >
+                </span>
                 <div
-                  class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
-                  data-testid="Avatar"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                        title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                      />
+                    </div>
                   </div>
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
                 </div>
-              </span>
+              </a>
             </div>
           </div>
         </td>
@@ -3212,9 +3898,11 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-3 css-mx19qq"
+            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -3237,7 +3925,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3338,60 +4026,156 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
             <div
               class="flex items-center -space-x-1"
             >
-              <span
-                class="flex"
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
               >
-                <div
-                  class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
-                  data-testid="Avatar"
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                      title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                      />
+                    </div>
                   </div>
-                </div>
-              </span>
-              <span
-                class="flex"
-              >
+                </span>
                 <div
-                  class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
-                  data-testid="Avatar"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
-                      title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                        title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                      />
+                    </div>
                   </div>
-                </div>
-              </span>
-              <span
-                class="flex"
-              >
+                </span>
                 <div
-                  class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
-                  data-testid="Avatar"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="ring-focus group inline-block flex css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="shrink-0 css-8d0u1i"
+                    data-testid="Avatar"
                   >
-                    <img
-                      alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
-                      title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                    />
+                    <div
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    >
+                      <img
+                        alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                        title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                      />
+                    </div>
                   </div>
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
                 </div>
-              </span>
+              </a>
               <div
                 class="pl-3"
               >
@@ -3455,9 +4239,11 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -3480,7 +4266,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3579,22 +4365,60 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
             class="font-bold space-x-4 css-1d4ra48"
           >
             <div
-              class="shrink-0 css-tthe5h"
-              data-testid="Avatar"
+              class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="shrink-0 css-tthe5h"
+                data-testid="Avatar"
               >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  />
+                </div>
               </div>
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href=""
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <span>
-              arkx
-            </span>
           </div>
         </td>
         <td
@@ -3684,9 +4508,11 @@ exports[`AddressRow > should render with standby delegate 1`] = `
         class=" css-1li86da"
         data-testid="TableRow"
       >
-        <td>
+        <td
+          data-testid="AddressRow__wallet"
+        >
           <div
-            class="font-bold space-x-4 css-14huxtf"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -3709,7 +4535,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3808,22 +4634,60 @@ exports[`AddressRow > should render with standby delegate 1`] = `
             class="font-bold space-x-4 css-1d4ra48"
           >
             <div
-              class="shrink-0 css-tthe5h"
-              data-testid="Avatar"
+              class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="shrink-0 css-tthe5h"
+                data-testid="Avatar"
               >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  />
+                </div>
               </div>
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href=""
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <span>
-              arkx
-            </span>
           </div>
         </td>
         <td

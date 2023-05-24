@@ -115,10 +115,10 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
               />
             </svg>
             <div
-              class="css-mpc03v"
+              class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-1hv657z"
+                class="css-pra96q"
               >
                 <div
                   class="css-v0ob3f"
@@ -162,7 +162,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                 </span>
               </div>
               <div
-                class="css-rfibfr"
+                class="css-1pvpof3"
               >
                 Are you sure you want to remove Multisignature Registration from the transaction pool? This action cannot be undone.
               </div>
@@ -429,10 +429,10 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
               />
             </svg>
             <div
-              class="css-mpc03v"
+              class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-1hv657z"
+                class="css-pra96q"
               >
                 <div
                   class="css-v0ob3f"
@@ -476,7 +476,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                 </span>
               </div>
               <div
-                class="css-rfibfr"
+                class="css-1pvpof3"
               >
                 Are you sure you want to remove Transfer Transaction from the transaction pool? This action cannot be undone.
               </div>

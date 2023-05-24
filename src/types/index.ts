@@ -20,7 +20,6 @@ export type Position =
 export type ButtonVariant =
 	| "primary"
 	| "secondary"
-	| "secondary-alt"
 	| "danger"
 	| "warning"
 	| "transparent"
@@ -31,8 +30,6 @@ export type ButtonVariant =
 export type ResponsiveButtonVariant = {
 	[key in LayoutBreakpoint]?: ButtonVariant;
 };
-
-export type AlertLayout = "vertical" | "horizontal";
 
 export type NavbarVariant = "full" | "logo-only";
 

@@ -6,13 +6,7 @@ import { I18nextProvider } from "react-i18next";
 import { CacheProvider } from "@emotion/react";
 
 import createCache from "@emotion/cache";
-import {
-	ConfigurationProvider,
-	EnvironmentProvider,
-	LedgerProvider,
-	NavigationProvider,
-	MigrationProvider,
-} from "./contexts";
+import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "./contexts";
 import { i18n as index18n } from "./i18n";
 import { ZendeskProvider } from "./contexts/Zendesk";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
@@ -41,10 +35,8 @@ export const App: React.VFC = () => {
 									<LedgerProvider>
 										<CacheProvider value={emotionCache}>
 											<AppRouter>
-												<MigrationProvider>
-													<GlobalStyles />
-													<Main />
-												</MigrationProvider>
+												<GlobalStyles />
+												<Main />
 											</AppRouter>
 										</CacheProvider>
 									</LedgerProvider>

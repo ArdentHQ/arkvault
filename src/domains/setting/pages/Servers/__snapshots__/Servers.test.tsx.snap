@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Servers Settings > should render servers settings 1`] = `
 <DocumentFragment>
@@ -130,7 +130,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1w4a96c"
+      class="css-1ovuwx0"
     >
       <div
         class="relative flex h-21"
@@ -206,7 +206,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -218,7 +218,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -230,65 +230,24 @@ exports[`Servers Settings > should render servers settings 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
-              </a>
-            </li>
-            <li
-              class="relative flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
-                title="Migration"
-              >
-                <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
-                >
-                  <span>
-                    Migration
-                  </span>
-                </span>
-                <div
-                  class="absolute -right-4 flex h-6"
-                >
-                  <div
-                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
-                    style="clip-path: url(#sparksClipPath);"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        height="12"
-                        id="sparks"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <clippath
-                          id="sparksClipPath"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.2"
-                          />
-                        </clippath>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
               </a>
             </li>
           </ul>
@@ -1497,7 +1456,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1w4a96c"
+      class="css-1ovuwx0"
     >
       <div
         class="relative flex h-21"
@@ -1573,7 +1532,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -1585,7 +1544,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -1597,65 +1556,24 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
-              </a>
-            </li>
-            <li
-              class="relative flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
-                title="Migration"
-              >
-                <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
-                >
-                  <span>
-                    Migration
-                  </span>
-                </span>
-                <div
-                  class="absolute -right-4 flex h-6"
-                >
-                  <div
-                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
-                    style="clip-path: url(#sparksClipPath);"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        height="12"
-                        id="sparks"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <clippath
-                          id="sparksClipPath"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.2"
-                          />
-                        </clippath>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
               </a>
             </li>
           </ul>
@@ -3689,7 +3607,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1w4a96c"
+      class="css-1ovuwx0"
     >
       <div
         class="relative flex h-21"
@@ -3765,7 +3683,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -3777,7 +3695,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -3789,65 +3707,24 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
-              </a>
-            </li>
-            <li
-              class="relative flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
-                title="Migration"
-              >
-                <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
-                >
-                  <span>
-                    Migration
-                  </span>
-                </span>
-                <div
-                  class="absolute -right-4 flex h-6"
-                >
-                  <div
-                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
-                    style="clip-path: url(#sparksClipPath);"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        height="12"
-                        id="sparks"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <clippath
-                          id="sparksClipPath"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.2"
-                          />
-                        </clippath>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
               </a>
             </li>
           </ul>
@@ -5881,7 +5758,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1w4a96c"
+      class="css-1ovuwx0"
     >
       <div
         class="relative flex h-21"
@@ -5957,7 +5834,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -5969,7 +5846,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -5981,65 +5858,24 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
-              </a>
-            </li>
-            <li
-              class="relative flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
-                title="Migration"
-              >
-                <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
-                >
-                  <span>
-                    Migration
-                  </span>
-                </span>
-                <div
-                  class="absolute -right-4 flex h-6"
-                >
-                  <div
-                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
-                    style="clip-path: url(#sparksClipPath);"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        height="12"
-                        id="sparks"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <clippath
-                          id="sparksClipPath"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.2"
-                          />
-                        </clippath>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
               </a>
             </li>
           </ul>
@@ -7664,7 +7500,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1w4a96c"
+      class="css-1ovuwx0"
     >
       <div
         class="relative flex h-21"
@@ -7740,7 +7576,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -7752,7 +7588,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -7764,65 +7600,24 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
-              </a>
-            </li>
-            <li
-              class="relative flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
-                title="Migration"
-              >
-                <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
-                >
-                  <span>
-                    Migration
-                  </span>
-                </span>
-                <div
-                  class="absolute -right-4 flex h-6"
-                >
-                  <div
-                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
-                    style="clip-path: url(#sparksClipPath);"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        height="12"
-                        id="sparks"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <clippath
-                          id="sparksClipPath"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.2"
-                          />
-                        </clippath>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
               </a>
             </li>
           </ul>
@@ -9994,7 +9789,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1w4a96c"
+      class="css-1ovuwx0"
     >
       <div
         class="relative flex h-21"
@@ -10070,7 +9865,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -10082,7 +9877,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -10094,65 +9889,24 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
-              </a>
-            </li>
-            <li
-              class="relative flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
-                title="Migration"
-              >
-                <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
-                >
-                  <span>
-                    Migration
-                  </span>
-                </span>
-                <div
-                  class="absolute -right-4 flex h-6"
-                >
-                  <div
-                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
-                    style="clip-path: url(#sparksClipPath);"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        height="12"
-                        id="sparks"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <clippath
-                          id="sparksClipPath"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.2"
-                          />
-                        </clippath>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
               </a>
             </li>
           </ul>
@@ -11915,7 +11669,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1w4a96c"
+      class="css-1ovuwx0"
     >
       <div
         class="relative flex h-21"
@@ -11991,7 +11745,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -12003,7 +11757,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -12015,65 +11769,24 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
-              </a>
-            </li>
-            <li
-              class="relative flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
-                title="Migration"
-              >
-                <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
-                >
-                  <span>
-                    Migration
-                  </span>
-                </span>
-                <div
-                  class="absolute -right-4 flex h-6"
-                >
-                  <div
-                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
-                    style="clip-path: url(#sparksClipPath);"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        height="12"
-                        id="sparks"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <clippath
-                          id="sparksClipPath"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.2"
-                          />
-                        </clippath>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
               </a>
             </li>
           </ul>
@@ -14089,7 +13802,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1w4a96c"
+      class="css-1ovuwx0"
     >
       <div
         class="relative flex h-21"
@@ -14165,7 +13878,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -14177,7 +13890,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -14189,65 +13902,24 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
-              </a>
-            </li>
-            <li
-              class="relative flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
-                title="Migration"
-              >
-                <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
-                >
-                  <span>
-                    Migration
-                  </span>
-                </span>
-                <div
-                  class="absolute -right-4 flex h-6"
-                >
-                  <div
-                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
-                    style="clip-path: url(#sparksClipPath);"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        height="12"
-                        id="sparks"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <clippath
-                          id="sparksClipPath"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.2"
-                          />
-                        </clippath>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
               </a>
             </li>
           </ul>
@@ -16404,7 +16076,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1w4a96c"
+      class="css-1ovuwx0"
     >
       <div
         class="relative flex h-21"
@@ -16480,7 +16152,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -16492,7 +16164,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -16504,65 +16176,24 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
-              </a>
-            </li>
-            <li
-              class="relative flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
-                title="Migration"
-              >
-                <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
-                >
-                  <span>
-                    Migration
-                  </span>
-                </span>
-                <div
-                  class="absolute -right-4 flex h-6"
-                >
-                  <div
-                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
-                    style="clip-path: url(#sparksClipPath);"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        height="12"
-                        id="sparks"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <clippath
-                          id="sparksClipPath"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.2"
-                          />
-                        </clippath>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
               </a>
             </li>
           </ul>
@@ -18310,7 +17941,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1w4a96c"
+      class="css-1ovuwx0"
     >
       <div
         class="relative flex h-21"
@@ -18386,7 +18017,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -18398,7 +18029,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -18410,65 +18041,24 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
-              </a>
-            </li>
-            <li
-              class="relative flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
-                title="Migration"
-              >
-                <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
-                >
-                  <span>
-                    Migration
-                  </span>
-                </span>
-                <div
-                  class="absolute -right-4 flex h-6"
-                >
-                  <div
-                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
-                    style="clip-path: url(#sparksClipPath);"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        fill="none"
-                        height="12"
-                        id="sparks"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <clippath
-                          id="sparksClipPath"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.2"
-                          />
-                        </clippath>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
               </a>
             </li>
           </ul>

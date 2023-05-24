@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useMemo } from "react";
+import React, { useMemo, VFC } from "react";
 import { useTranslation } from "react-i18next";
 
 import { BaseTransactionRowModeProperties, TransactionRowModeProperties } from "./TransactionRowMode.contracts";
@@ -7,35 +7,20 @@ import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
-import { isValidMigrationTransaction } from "@/utils/polygon-migration";
-import { useTheme } from "@/app/hooks";
 
-export const BaseTransactionRowMode = ({
+export const BaseTransactionRowMode: VFC<BaseTransactionRowModeProperties> = ({
 	type,
 	isSent,
 	isReturn,
 	address,
 	isCompact,
-	isMigration,
 	...properties
-}: BaseTransactionRowModeProperties) => {
+}) => {
 	const { t } = useTranslation();
-	const { isDarkMode } = useTheme();
 
 	const iconSize = isCompact ? "xs" : "lg";
 
 	const { modeIconName, tooltipContent, modeCircleStyle } = useMemo(() => {
-		if (isMigration) {
-			return {
-				modeCircleStyle: cn(
-					"border-theme-hint-100 text-theme-hint-600 dark:border-theme-hint-300 dark:text-theme-hint-300",
-					{ "bg-theme-hint-50": !isCompact && !isDarkMode },
-				),
-				modeIconName: "Sent",
-				tooltipContent: t("TRANSACTION.MIGRATION"),
-			};
-		}
-
 		if (isReturn && (type === "transfer" || type === "multiPayment")) {
 			return {
 				modeCircleStyle: "border-theme-success-200 text-theme-success-600 dark:border-theme-success-600",
@@ -59,9 +44,8 @@ export const BaseTransactionRowMode = ({
 		};
 	}, [isSent, isReturn, t, type]);
 
-	const shadowClasses = cn("ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black", {
-		"group-hover:bg-theme-secondary-100 dark:group-hover:bg-black": !isMigration,
-	});
+	const shadowClasses =
+		"ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black";
 
 	return (
 		<div
@@ -86,20 +70,19 @@ export const BaseTransactionRowMode = ({
 	);
 };
 
-export const TransactionRowMode = ({
+export const TransactionRowMode: VFC<TransactionRowModeProperties> = ({
 	transaction,
 	transactionType,
 	address,
 	isCompact,
 	...properties
-}: TransactionRowModeProperties) => (
+}) => (
 	<BaseTransactionRowMode
 		isCompact={isCompact}
 		isSent={transaction.isSent()}
 		isReturn={transaction.sender() === transaction.wallet().address() && transaction.isReturn()}
 		type={transactionType || transaction.type()}
 		address={address || transaction.sender()}
-		isMigration={isValidMigrationTransaction(transaction)}
 		{...properties}
 	/>
 );

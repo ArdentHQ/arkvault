@@ -28,10 +28,10 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             >
               <td>
                 <div
-                  class="space-x-3 css-mx19qq"
+                  class="space-x-4 css-14huxtf"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <span
                       aria-busy="true"
@@ -40,25 +40,29 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        style="width: 44px; height: 44px; border-radius: 50%;"
                       >
                         ‌
                       </span>
                       <br />
                     </span>
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="z-0 flex rounded-full ring-6 ring-theme-background"
                     >
                       <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        ‌
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
-                      <br />
-                    </span>
+                    </div>
                   </div>
                   <span
                     aria-busy="true"
@@ -77,7 +81,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-1hhowo0"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -118,10 +122,10 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             >
               <td>
                 <div
-                  class="space-x-3 css-mx19qq"
+                  class="space-x-4 css-14huxtf"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <span
                       aria-busy="true"
@@ -130,25 +134,29 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        style="width: 44px; height: 44px; border-radius: 50%;"
                       >
                         ‌
                       </span>
                       <br />
                     </span>
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="z-0 flex rounded-full ring-6 ring-theme-background"
                     >
                       <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        ‌
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
-                      <br />
-                    </span>
+                    </div>
                   </div>
                   <span
                     aria-busy="true"
@@ -167,7 +175,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-1hhowo0"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -208,10 +216,10 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             >
               <td>
                 <div
-                  class="space-x-3 css-mx19qq"
+                  class="space-x-4 css-14huxtf"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <span
                       aria-busy="true"
@@ -220,25 +228,29 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        style="width: 44px; height: 44px; border-radius: 50%;"
                       >
                         ‌
                       </span>
                       <br />
                     </span>
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="z-0 flex rounded-full ring-6 ring-theme-background"
                     >
                       <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        ‌
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
-                      <br />
-                    </span>
+                    </div>
                   </div>
                   <span
                     aria-busy="true"
@@ -257,7 +269,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-1hhowo0"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -298,10 +310,10 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             >
               <td>
                 <div
-                  class="space-x-3 css-mx19qq"
+                  class="space-x-4 css-14huxtf"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <span
                       aria-busy="true"
@@ -310,25 +322,29 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        style="width: 44px; height: 44px; border-radius: 50%;"
                       >
                         ‌
                       </span>
                       <br />
                     </span>
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="z-0 flex rounded-full ring-6 ring-theme-background"
                     >
                       <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        ‌
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
-                      <br />
-                    </span>
+                    </div>
                   </div>
                   <span
                     aria-busy="true"
@@ -347,7 +363,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-1hhowo0"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -388,10 +404,10 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             >
               <td>
                 <div
-                  class="space-x-3 css-mx19qq"
+                  class="space-x-4 css-14huxtf"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <span
                       aria-busy="true"
@@ -400,25 +416,29 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        style="width: 44px; height: 44px; border-radius: 50%;"
                       >
                         ‌
                       </span>
                       <br />
                     </span>
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="z-0 flex rounded-full ring-6 ring-theme-background"
                     >
                       <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        ‌
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
-                      <br />
-                    </span>
+                    </div>
                   </div>
                   <span
                     aria-busy="true"
@@ -437,7 +457,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-1hhowo0"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -478,10 +498,10 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             >
               <td>
                 <div
-                  class="space-x-3 css-mx19qq"
+                  class="space-x-4 css-14huxtf"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <span
                       aria-busy="true"
@@ -490,25 +510,29 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        style="width: 44px; height: 44px; border-radius: 50%;"
                       >
                         ‌
                       </span>
                       <br />
                     </span>
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="z-0 flex rounded-full ring-6 ring-theme-background"
                     >
                       <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        ‌
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
-                      <br />
-                    </span>
+                    </div>
                   </div>
                   <span
                     aria-busy="true"
@@ -527,7 +551,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-1hhowo0"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -568,10 +592,10 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             >
               <td>
                 <div
-                  class="space-x-3 css-mx19qq"
+                  class="space-x-4 css-14huxtf"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <span
                       aria-busy="true"
@@ -580,25 +604,29 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        style="width: 44px; height: 44px; border-radius: 50%;"
                       >
                         ‌
                       </span>
                       <br />
                     </span>
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="z-0 flex rounded-full ring-6 ring-theme-background"
                     >
                       <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        ‌
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
-                      <br />
-                    </span>
+                    </div>
                   </div>
                   <span
                     aria-busy="true"
@@ -617,7 +645,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-1hhowo0"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -658,10 +686,10 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             >
               <td>
                 <div
-                  class="space-x-3 css-mx19qq"
+                  class="space-x-4 css-14huxtf"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <span
                       aria-busy="true"
@@ -670,25 +698,29 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        style="width: 44px; height: 44px; border-radius: 50%;"
                       >
                         ‌
                       </span>
                       <br />
                     </span>
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="z-0 flex rounded-full ring-6 ring-theme-background"
                     >
                       <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        ‌
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
-                      <br />
-                    </span>
+                    </div>
                   </div>
                   <span
                     aria-busy="true"
@@ -707,7 +739,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-1hhowo0"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -748,10 +780,10 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             >
               <td>
                 <div
-                  class="space-x-3 css-mx19qq"
+                  class="space-x-4 css-14huxtf"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <span
                       aria-busy="true"
@@ -760,25 +792,29 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        style="width: 44px; height: 44px; border-radius: 50%;"
                       >
                         ‌
                       </span>
                       <br />
                     </span>
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="z-0 flex rounded-full ring-6 ring-theme-background"
                     >
                       <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        ‌
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
-                      <br />
-                    </span>
+                    </div>
                   </div>
                   <span
                     aria-busy="true"
@@ -797,7 +833,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-1hhowo0"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -838,10 +874,10 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             >
               <td>
                 <div
-                  class="space-x-3 css-mx19qq"
+                  class="space-x-4 css-14huxtf"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <span
                       aria-busy="true"
@@ -850,25 +886,29 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     >
                       <span
                         class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        style="width: 44px; height: 44px; border-radius: 50%;"
                       >
                         ‌
                       </span>
                       <br />
                     </span>
-                    <span
-                      aria-busy="true"
-                      aria-live="polite"
-                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    <div
+                      class="z-0 flex rounded-full ring-6 ring-theme-background"
                     >
                       <span
-                        class="react-loading-skeleton"
-                        style="width: 20px; height: 20px; border-radius: 50%;"
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
-                        ‌
+                        <span
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        <br />
                       </span>
-                      <br />
-                    </span>
+                    </div>
                   </div>
                   <span
                     aria-busy="true"
@@ -887,7 +927,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-1hhowo0"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"

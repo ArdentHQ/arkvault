@@ -3,6 +3,8 @@ import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { generatePath } from "react-router";
+import { useHistory } from "react-router-dom";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
@@ -16,6 +18,8 @@ import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { assertReadOnlyWallet } from "@/utils/assertions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
+import { ProfilePaths } from "@/router/paths";
+import { Link } from "@/app/components/Link";
 
 interface AddressRowProperties {
 	index: number;
@@ -33,11 +37,31 @@ const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color
 	</Tooltip>
 );
 
+export const WalletAvatar = ({ wallet, useCompact }: { useCompact?: boolean; wallet?: Contracts.IReadOnlyWallet }) => {
+	if (!wallet) {
+		return null;
+	}
+
+	return (
+		<Tooltip content={wallet.username()}>
+			<Link to={wallet.explorerLink()} isExternal className="flex">
+				<Avatar
+					className={cn({ "ring-2 ring-theme-background": useCompact })}
+					size={useCompact ? "xs" : "lg"}
+					address={wallet.address()}
+					noShadow={useCompact}
+				/>
+			</Link>
+		</Tooltip>
+	);
+};
+
 export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = false }: AddressRowProperties) => {
 	const { t } = useTranslation();
 	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
 	const activeProfile = useActiveProfile();
 	const { isMd, isSm, isXs } = useBreakpoint();
+	const history = useHistory();
 
 	const useCompact = useMemo(() => isCompact || isMd || isSm || isXs, [isCompact, isMd, isSm, isXs]);
 
@@ -76,19 +100,6 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 
 	const hasVotes = votes.length > 0;
 	const [first, second, third, ...rest] = votes;
-
-	const renderAvatar = (address?: string, username?: string) => (
-		<Tooltip content={username}>
-			<span className="flex">
-				<Avatar
-					className={cn({ "ring-2 ring-theme-background": useCompact })}
-					size={useCompact ? "xs" : "lg"}
-					address={address}
-					noShadow={useCompact}
-				/>
-			</span>
-		</Tooltip>
-	);
 
 	const renderRestOfVotes = (restOfVotes: number) => {
 		const rest = (
@@ -159,22 +170,28 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 
 		if (maxVotes === 1) {
 			return (
-				<>
+				<div className="flex items-center space-x-3 overflow-hidden">
 					<Avatar size={useCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
-					<span>{votes[0].wallet?.username()}</span>
-				</>
+					<Link
+						to={votes[0].wallet?.explorerLink() as string}
+						isExternal
+						className="block w-24 truncate md:w-auto"
+					>
+						{votes[0].wallet?.username()}
+					</Link>
+				</div>
 			);
 		}
 
 		return (
 			<div className={cn("flex items-center", useCompact ? "-space-x-1" : "-space-x-2")}>
-				{renderAvatar(first.wallet?.address(), first.wallet?.username())}
+				<WalletAvatar wallet={first.wallet} />
 
-				{second && renderAvatar(second.wallet?.address(), second.wallet?.username())}
+				{second && <WalletAvatar wallet={second.wallet} />}
 
-				{third && renderAvatar(third.wallet?.address(), third.wallet?.username())}
+				{third && <WalletAvatar wallet={third.wallet} />}
 
-				{rest && rest.length === 1 && renderAvatar(rest[0].wallet?.address(), rest[0].wallet?.username())}
+				{rest && rest.length === 1 && <WalletAvatar wallet={rest[0].wallet} />}
 
 				{rest && rest.length > 1 && renderRestOfVotes(rest.length)}
 			</div>
@@ -190,13 +207,30 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 	return (
 		<TableRow>
 			<TableCell
+				data-testid="AddressRow__wallet"
+				onClick={() => {
+					history.push(
+						generatePath(ProfilePaths.WalletDetails, {
+							profileId: activeProfile.id(),
+							walletId: wallet.id(),
+						}),
+					);
+				}}
 				variant="start"
-				innerClassName={cn("font-bold", { "space-x-3": useCompact }, { "space-x-4": !useCompact })}
+				innerClassName={cn(
+					"font-bold cursor-pointer group transition duration-300",
+					{ "space-x-3": useCompact },
+					{ "space-x-4": !useCompact },
+				)}
 				isCompact={useCompact}
 			>
 				<Avatar className="shrink-0" size={useCompact ? "xs" : "lg"} address={wallet.address()} noShadow />
 				<div className="w-40 flex-1">
-					<Address address={wallet.address()} walletName={alias} />
+					<Address
+						address={wallet.address()}
+						walletName={alias}
+						walletNameClass="text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+					/>
 				</div>
 			</TableCell>
 

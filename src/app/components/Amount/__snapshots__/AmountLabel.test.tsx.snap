@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`AmountLabel > should render 1`] = `
 <DocumentFragment>
@@ -83,26 +83,6 @@ exports[`AmountLabel > should render compact with hint 1`] = `
           </svg>
         </div>
       </div>
-      <span
-        class="whitespace-nowrap"
-        data-testid="Amount"
-      >
-        + 10 ARK
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`AmountLabel > should render migration 1`] = `
-<DocumentFragment>
-  <div
-    class="css-18dmbiz"
-    color="hint"
-  >
-    <div
-      class="flex space-x-1 items-center"
-    >
       <span
         class="whitespace-nowrap"
         data-testid="Amount"

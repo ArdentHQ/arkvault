@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Tooltip } from "@/app/components/Tooltip";
-import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 
 interface ExchangeTooltipProperties {
 	value: number;
@@ -47,11 +46,10 @@ interface TransactionRowProperties {
 	exchangeCurrency?: string;
 	exchangeTooltip?: boolean;
 	isCompact?: boolean;
-	isMigration?: boolean;
 	isTestNetwork?: boolean;
 }
 
-const BaseTransactionRowAmount = ({
+const BaseTransactionRowAmount: React.FC<TransactionRowProperties> = ({
 	isSent,
 	wallet,
 	total,
@@ -60,20 +58,10 @@ const BaseTransactionRowAmount = ({
 	exchangeTooltip,
 	isCompact,
 	isTestNetwork,
-	isMigration,
 }: TransactionRowProperties) => {
 	const isNegative = total !== 0 && isSent;
-	const { t } = useTranslation();
-
 	const TransactionAmount = (
-		<AmountLabel
-			isNegative={isNegative}
-			value={total}
-			ticker={wallet.currency()}
-			isCompact={isCompact}
-			isMigration={isMigration}
-			hint={isMigration ? t("TRANSACTION.MIGRATION_TO_POLYGON") : undefined}
-		/>
+		<AmountLabel isNegative={isNegative} value={total} ticker={wallet.currency()} isCompact={isCompact} />
 	);
 
 	if (!exchangeCurrency || isNil(convertedTotal)) {
@@ -111,7 +99,7 @@ const TransactionRowAmount = ({
 		exchangeTooltip={exchangeTooltip}
 		isCompact={isCompact}
 		isTestNetwork={transaction.wallet().network().isTest()}
-		isMigration={isValidMigrationTransaction(transaction)}
 	/>
 );
+
 export { BaseTransactionRowAmount, TransactionRowAmount };

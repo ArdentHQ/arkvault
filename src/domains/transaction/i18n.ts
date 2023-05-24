@@ -28,12 +28,11 @@ export const translations = {
 	DELEGATE_NAME: "Delegate Name",
 	DELEGATE_PUBLICKEY: "Delegate PublicKey",
 	DESCRIPTION: "Description",
-	DETAILS: "Details",
 	DISPLAY_NAME: "Display Name",
 	ENCRYPTION_PASSWORD: "Encryption Password",
 	ERROR: {
 		DESCRIPTION:
-			"An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet.",
+			"An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet",
 		TITLE: "Transaction Error",
 	},
 	EXPIRATION: {
@@ -129,8 +128,6 @@ export const translations = {
 	},
 	MAGISTRATE: "Magistrate",
 	MEMO: "Memo",
-	MIGRATION: "Migration",
-	MIGRATION_TO_POLYGON: "Migration to Polygon Network",
 	MNEMONIC: "Mnemonic",
 	MODAL_CONFIRM_REMOVE_PENDING_TRANSACTION: {
 		DESCRIPTION:
@@ -368,7 +365,6 @@ export const translations = {
 		HTLC_REFUND: "Timelock Refund",
 		IPFS: "IPFS",
 		MAGISTRATE: "Magistrate",
-		MIGRATION: "Migration",
 		MULTI_PAYMENT: "Multipayment",
 		MULTI_SIGNATURE: "Multisignature",
 		SECOND_SIGNATURE: "Second Signature",
@@ -426,7 +422,6 @@ export const translations = {
 		MESSAGE_MISSING: "message parameter is missing.",
 		METHOD_MISSING: "method parameter is missing",
 		METHOD_NOT_SUPPORTED: "method <strong>{{method}}</strong> is not supported.",
-		MIGRATION_ADDRESS: "Sending to the migration address is not possible outside of the Migration page",
 		NETHASH_NOT_ENABLED: "network with nethash <strong>{{nethash}}</strong> is not enabled or available.",
 		NETWORK_INVALID: "network <strong>{{network}}</strong> is invalid.",
 		NETWORK_MISMATCH: "data belongs to another network.",

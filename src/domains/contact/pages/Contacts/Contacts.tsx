@@ -142,7 +142,7 @@ export const Contacts: FC = () => {
 	const renderContacts = () => {
 		if (contacts.length === 0) {
 			return (
-				<Section className="mt-4">
+				<Section>
 					<EmptyBlock>{t("CONTACTS.CONTACTS_PAGE.EMPTY_MESSAGE")}</EmptyBlock>
 				</Section>
 			);

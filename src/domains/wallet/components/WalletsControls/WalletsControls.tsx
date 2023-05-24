@@ -88,7 +88,7 @@ export const WalletsControls = React.memo(
 						}
 						disableToggle={filterProperties.disabled}
 					>
-						<div className="w-full p-10 sm:w-96 md:w-128">
+						<div className="w-full py-7 px-10 sm:w-96 md:w-128">
 							<FilterWallets {...filterProperties} onChange={onFilterChange} />
 						</div>
 					</Dropdown>

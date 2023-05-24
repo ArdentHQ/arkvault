@@ -11,23 +11,13 @@ export const useDeeplink = () => {
 
 	const history = useHistory();
 	const queryParameters = useQueryParameters();
-	const { methods, pages, buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
+	const { methods, buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
 
-	const isDeeplink = useCallback(
-		() => queryParameters.has("method") || queryParameters.has("page"),
-		[queryParameters],
-	);
-
-	const isPageDeeplink = useCallback(() => queryParameters.has("page"), [queryParameters]);
+	const isDeeplink = useCallback(() => queryParameters.has("method"), [queryParameters]);
 
 	const handleDeepLink = (profile: Contracts.IProfile) => {
-		if (queryParameters.has("page")) {
-			const page = pages[queryParameters.get("page") as string];
-			return history.push(page.path({ env, profile, searchParameters: queryParameters }));
-		} else {
-			const method = methods[queryParameters.get("method") as string];
-			return history.push(method.path({ env, profile, searchParameters: queryParameters }));
-		}
+		const method = methods[queryParameters.get("method") as string];
+		return history.push(method.path({ env, profile, searchParameters: queryParameters }));
 	};
 
 	const validateDeeplink = async (profile: Contracts.IProfile) => {
@@ -41,7 +31,6 @@ export const useDeeplink = () => {
 	return {
 		handleDeepLink,
 		isDeeplink,
-		isPageDeeplink,
 		validateDeeplink,
 	};
 };

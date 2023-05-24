@@ -169,12 +169,8 @@ export const Dropdown: FC<DropdownProperties> = ({
 					variant={variant || options ? "options" : "custom"}
 					className={cn("opacity-0", defaultClasses, dropdownClass)}
 				>
-					{(top || options?.length) && (
-						<div className="py-3">
-							{top}
-							{options && renderOptions({ onSelect: onSelectOption, options })}
-						</div>
-					)}
+					{top}
+					{options?.length && renderOptions({ onSelect: onSelectOption, options })}
 					{children && <div>{children}</div>}
 				</Wrapper>
 			)}

@@ -55,7 +55,6 @@ export const translations = {
 		DESCRIPTION: "Are you sure you wish to navigate away from this page without saving?",
 		TITLE: "Confirmation",
 	},
-	CONNECTING: "Connecting …",
 	CONTACT: "Contact",
 	CONTACTS: "Contacts",
 	CONTACT_US: "Contact Us",
@@ -185,7 +184,7 @@ export const translations = {
 	I_DECLINE: "I Decline",
 	LANGUAGE: "Application Language",
 	LAUNCH: "Launch",
-	LEARN_MORE: "Learn More",
+	LEARN_MORE: "Learn more",
 	LEDGER: "Ledger",
 	LEDGER_COMPATIBILITY_ERROR: "ARKVault requires the use of a chromium based browser when using a Ledger.",
 	LEDGER_COMPATIBILITY_ERROR_LONG:
@@ -202,8 +201,6 @@ export const translations = {
 	MEMO: "Memo",
 	MESSAGE: "Message",
 	METHOD: "Method",
-	MIGRATION: "Migration",
-	MIGRATION_ADDRESS: "Migration Address",
 	MNEMONIC: "Mnemonic",
 	MNEMONIC_TYPE: {
 		BIP39: "Mnemonic",

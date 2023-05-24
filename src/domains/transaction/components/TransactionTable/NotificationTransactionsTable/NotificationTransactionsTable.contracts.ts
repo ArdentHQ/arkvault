@@ -12,4 +12,9 @@ export interface NotificationTransactionsProperties {
 
 export interface NotificationTransactionsSkeletonProperties {
 	limit?: number;
+	isCompact: boolean;
+}
+
+export interface NotificationTransactionSkeletonRowProperties {
+	isCompact: boolean;
 }

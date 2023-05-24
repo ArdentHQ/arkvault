@@ -1,12 +1,12 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Alert > should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-mpc03v"
+    class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-1hv657z"
+      class="css-pra96q"
     >
       <div
         class="css-v0ob3f"
@@ -50,7 +50,7 @@ exports[`Alert > should render 1`] = `
       </span>
     </div>
     <div
-      class="css-rfibfr"
+      class="css-1pvpof3"
     >
       <span>
         Hello World!
@@ -63,10 +63,10 @@ exports[`Alert > should render 1`] = `
 exports[`Alert > should render as danger alert 1`] = `
 <DocumentFragment>
   <div
-    class="css-mpc03v"
+    class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-1f7sa7y"
+      class="css-ic0qlc"
     >
       <div
         class="css-v0ob3f"
@@ -105,59 +105,7 @@ exports[`Alert > should render as danger alert 1`] = `
       </span>
     </div>
     <div
-      class="css-1h3dpsb"
-    >
-      <span>
-        Hello World!
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Alert > should render as danger horizontal alert 1`] = `
-<DocumentFragment>
-  <div
-    class="css-8lshr7"
-  >
-    <div
-      class="css-ezkci6"
-    >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="circle-cross"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
-        >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <circle
-              cx="10"
-              cy="10"
-              r="9"
-              stroke-miterlimit="10"
-            />
-            <path
-              d="M7 13l6-6M13 13L7 7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div
-      class="css-1aqy085"
+      class="css-6o9bco"
     >
       <span>
         Hello World!
@@ -170,10 +118,10 @@ exports[`Alert > should render as danger horizontal alert 1`] = `
 exports[`Alert > should render as hint alert 1`] = `
 <DocumentFragment>
   <div
-    class="css-mpc03v"
+    class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-dhau84"
+      class="css-1is67az"
     >
       <div
         class="css-v0ob3f"
@@ -211,58 +159,7 @@ exports[`Alert > should render as hint alert 1`] = `
       </span>
     </div>
     <div
-      class="css-odkf9y"
-    >
-      <span>
-        Hello World!
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Alert > should render as hint horizontal alert 1`] = `
-<DocumentFragment>
-  <div
-    class="css-dcf6k1"
-  >
-    <div
-      class="css-6zq3l2"
-    >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="circle-question-mark"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
-        >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          >
-            <circle
-              cx="10"
-              cy="10"
-              r="9"
-            />
-            <path
-              d="M10 13.6h0M8.3 7.9c0-.9.7-1.7 1.7-1.7s1.7.7 1.7 1.7c0 .7-.4 1.4-1.2 1.6-.3.1-.5.4-.5.7v.8"
-            />
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div
-      class="css-1aqy085"
+      class="css-2sxw2o"
     >
       <span>
         Hello World!
@@ -275,10 +172,10 @@ exports[`Alert > should render as hint horizontal alert 1`] = `
 exports[`Alert > should render as info alert 1`] = `
 <DocumentFragment>
   <div
-    class="css-mpc03v"
+    class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-79bwdk"
+      class="css-1mvrtw8"
     >
       <div
         class="css-v0ob3f"
@@ -322,64 +219,7 @@ exports[`Alert > should render as info alert 1`] = `
       </span>
     </div>
     <div
-      class="css-1b40hgy"
-    >
-      <span>
-        Hello World!
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Alert > should render as info horizontal alert 1`] = `
-<DocumentFragment>
-  <div
-    class="css-7o8bqz"
-  >
-    <div
-      class="css-1kew733"
-    >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="circle-info"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
-        >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <circle
-              cx="10"
-              cy="10"
-              r="9"
-              stroke-miterlimit="10"
-            />
-            <path
-              d="M10 9.2v5"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
-            />
-            <path
-              d="M10 5.8h0"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div
-      class="css-1aqy085"
+      class="css-16kimoc"
     >
       <span>
         Hello World!
@@ -392,10 +232,10 @@ exports[`Alert > should render as info horizontal alert 1`] = `
 exports[`Alert > should render as success alert 1`] = `
 <DocumentFragment>
   <div
-    class="css-mpc03v"
+    class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-1fsr3xk"
+      class="css-1dwg83m"
     >
       <div
         class="css-v0ob3f"
@@ -434,59 +274,7 @@ exports[`Alert > should render as success alert 1`] = `
       </span>
     </div>
     <div
-      class="css-90mh6d"
-    >
-      <span>
-        Hello World!
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Alert > should render as success horizontal alert 1`] = `
-<DocumentFragment>
-  <div
-    class="css-p5cw6y"
-  >
-    <div
-      class="css-16mr7l8"
-    >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="circle-check-mark"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
-        >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <circle
-              cx="10"
-              cy="10"
-              r="9"
-              stroke-miterlimit="10"
-            />
-            <path
-              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div
-      class="css-1aqy085"
+      class="css-k5jr4t"
     >
       <span>
         Hello World!
@@ -499,10 +287,10 @@ exports[`Alert > should render as success horizontal alert 1`] = `
 exports[`Alert > should render as warning alert 1`] = `
 <DocumentFragment>
   <div
-    class="css-mpc03v"
+    class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-1hv657z"
+      class="css-pra96q"
     >
       <div
         class="css-v0ob3f"
@@ -546,64 +334,7 @@ exports[`Alert > should render as warning alert 1`] = `
       </span>
     </div>
     <div
-      class="css-rfibfr"
-    >
-      <span>
-        Hello World!
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Alert > should render as warning horizontal alert 1`] = `
-<DocumentFragment>
-  <div
-    class="css-34bhu5"
-  >
-    <div
-      class="css-2ok1cn"
-    >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="circle-exclamation-mark"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
-        >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <circle
-              cx="10"
-              cy="10"
-              r="9"
-              stroke-miterlimit="10"
-            />
-            <path
-              d="M10 10.5v-5"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
-            />
-            <path
-              d="M10 14h0"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div
-      class="css-1aqy085"
+      class="css-1pvpof3"
     >
       <span>
         Hello World!

@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`LedgerConnectionStep > should emit event on connect 1`] = `
 <div>
@@ -192,10 +192,10 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
       </div>
     </fieldset>
     <div
-      class="css-mpc03v"
+      class="flex flex-col overflow-hidden rounded-xl"
     >
       <div
-        class="css-1fsr3xk"
+        class="css-1dwg83m"
       >
         <div
           class="css-v0ob3f"
@@ -234,7 +234,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
         </span>
       </div>
       <div
-        class="css-90mh6d"
+        class="css-k5jr4t"
       >
         Successfully connected
       </div>

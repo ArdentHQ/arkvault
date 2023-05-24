@@ -8,13 +8,11 @@ import { TransactionRowSender } from "./TransactionRowSender";
 import { TransactionRowSkeleton } from "./TransactionRowSkeleton";
 import { TransactionRowProperties } from "./TransactionRow.contracts";
 import { TransactionRowMobile } from "./TransactionRowMobile";
-import { TransactionRowMigrationDetails } from "./TransactionRowMigrationDetails";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { useBreakpoint } from "@/app/hooks";
-import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 
 export const TransactionRow = memo(
 	({
@@ -22,7 +20,6 @@ export const TransactionRow = memo(
 		exchangeCurrency,
 		transaction,
 		onClick,
-		onShowMigrationDetails,
 		isLoading = false,
 		profile,
 		...properties
@@ -44,7 +41,6 @@ export const TransactionRow = memo(
 					transaction={transaction}
 					exchangeCurrency={exchangeCurrency}
 					profile={profile}
-					onShowMigrationDetails={onShowMigrationDetails}
 				/>
 			);
 		}
@@ -68,8 +64,8 @@ export const TransactionRow = memo(
 
 				<TableCell
 					innerClassName="text-theme-secondary-text"
-					className="table-cell md:hidden lg:table-cell"
 					isCompact={isCompact}
+					className="table-cell md:hidden lg:table-cell"
 				>
 					<span data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
 						{transaction.timestamp()!.format(timeFormat)}
@@ -81,18 +77,7 @@ export const TransactionRow = memo(
 				</TableCell>
 
 				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-					{!isValidMigrationTransaction(transaction) && (
-						<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={isCompact} />
-					)}
-
-					{isValidMigrationTransaction(transaction) && (
-						<TransactionRowMigrationDetails
-							transaction={transaction}
-							isCompact={isCompact}
-							onClick={() => onShowMigrationDetails?.(transaction)}
-							showDetailsLink
-						/>
-					)}
+					<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={isCompact} />
 				</TableCell>
 
 				<TableCell innerClassName="justify-end" isCompact={isCompact}>

@@ -2026,10 +2026,10 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                       />
                     </svg>
                     <div
-                      class="mb-6 css-mpc03v"
+                      class="flex flex-col overflow-hidden rounded-xl mb-6"
                     >
                       <div
-                        class="css-1hv657z"
+                        class="css-pra96q"
                       >
                         <div
                           class="css-v0ob3f"
@@ -2073,7 +2073,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                         </span>
                       </div>
                       <div
-                        class="css-rfibfr"
+                        class="css-1pvpof3"
                       >
                         No transactions could be found for the selected period.
                       </div>
@@ -2312,10 +2312,10 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                       />
                     </svg>
                     <div
-                      class="mb-6 css-mpc03v"
+                      class="flex flex-col overflow-hidden rounded-xl mb-6"
                     >
                       <div
-                        class="css-1fsr3xk"
+                        class="css-1dwg83m"
                       >
                         <div
                           class="css-v0ob3f"
@@ -2354,7 +2354,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                         </span>
                       </div>
                       <div
-                        class="css-90mh6d"
+                        class="css-k5jr4t"
                       >
                         1 transactions have been retrieved and are ready to be exported.
                       </div>

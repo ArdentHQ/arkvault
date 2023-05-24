@@ -3,7 +3,7 @@ import React, { useCallback, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { generatePath } from "react-router";
 import { DropdownOption } from "@/app/components/Dropdown";
-import { useEnvironmentContext, useMigrations } from "@/app/contexts";
+import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { WalletActionsModalType } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { ProfilePaths } from "@/router/paths";
@@ -14,8 +14,6 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 	const profile = useActiveProfile();
 	const history = useHistory();
 	const { openExternal } = useLink();
-
-	const { removeTransactions } = useMigrations();
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
 
@@ -69,15 +67,11 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 			stopEventBubbling(event);
 
 			const profileId = profile.id();
-			const walletAddress = wallet.address();
 			const walletId = wallet.id();
 
 			profile.wallets().forget(walletId);
 			profile.notifications().transactions().forgetByRecipient(wallet.address());
-
 			await persist();
-
-			await removeTransactions(walletAddress);
 
 			if (history.location.pathname === generatePath(ProfilePaths.WalletDetails, { profileId, walletId })) {
 				history.push(generatePath(ProfilePaths.Dashboard, { profileId }));
@@ -86,7 +80,7 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 
 			return true;
 		},
-		[profile, history, wallet, persist, stopEventBubbling, removeTransactions],
+		[profile, history, wallet, persist, stopEventBubbling],
 	);
 
 	const handleSelectOption = useCallback(

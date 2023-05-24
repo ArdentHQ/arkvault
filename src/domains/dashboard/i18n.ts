@@ -2,7 +2,6 @@ export const translations = {
 	DASHBOARD_PAGE: {
 		TITLE: "Dashboard",
 	},
-
 	FILTER_WALLETS: {
 		CRYPTOASSET: {
 			DESCRIPTION: "Select the networks to show.",
@@ -19,13 +18,6 @@ export const translations = {
 			"You don't have any transactions yet. Once transactions have been made they will show up in your history.",
 		NO_RESULTS: "No <bold>{{type}}</bold> transactions could be found.",
 		TITLE: "Latest Transactions",
-	},
-
-	MIGRATION_BANNER: {
-		DESCRIPTION: "Users can now migrate their tokens to the new ERC20 token on 0xPolygon. Find out more in our",
-		MIGRATE_TOKENS: "Migrate Tokens",
-		MIGRATION_GUIDE: "Migration Guide",
-		TITLE: "ARK is Moving to 0xPolygon!",
 	},
 
 	PORTFOLIO_BREAKDOWN: {

@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Networks } from "@ardenthq/sdk";
 
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Circle } from "@/app/components/Circle";
@@ -11,8 +10,6 @@ import {
 	TransactionDetailProperties,
 } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 import { useBreakpoint } from "@/app/hooks";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { Image } from "@/app/components/Image";
 
 type TransactionAmountProperties = {
 	amount: number;
@@ -22,24 +19,7 @@ type TransactionAmountProperties = {
 	exchangeCurrency?: string;
 	isTotalAmount?: boolean;
 	isSent: boolean;
-	isMigration?: boolean;
-	network?: Networks.Network;
 } & TransactionDetailProperties;
-
-// TODO: Use common component with musig migration success step.
-const TransactionMigrationIcon = ({ network }: { network?: Networks.Network }) => (
-	<div className="relative flex items-center">
-		<Image name="HexagonBold" width={44} height={44} useAccentColor={false} />
-
-		<NetworkIcon
-			network={network}
-			size="lg"
-			className="absolute top-0 h-full w-full border-transparent text-theme-hint-600"
-			showTooltip={false}
-			noShadow
-		/>
-	</div>
-);
 
 export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 	amount,
@@ -49,8 +29,6 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 	exchangeCurrency,
 	isTotalAmount,
 	isSent,
-	isMigration,
-	network,
 	...properties
 }: TransactionAmountProperties) => {
 	const { t } = useTranslation();
@@ -59,10 +37,6 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 	const renderModeIcon = () => {
 		if (!isMdAndAbove) {
 			return null;
-		}
-
-		if (isMigration) {
-			return <TransactionMigrationIcon network={network} />;
 		}
 
 		const modeIconName = isSent ? "Sent" : "Received";
@@ -81,15 +55,7 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 		);
 	};
 
-	const hint = () => {
-		if (returnedAmount) {
-			return t("TRANSACTION.HINT_AMOUNT", { amount: returnedAmount, currency });
-		}
-
-		if (isMigration) {
-			return t("COMMON.MIGRATION");
-		}
-	};
+	const hint = returnedAmount ? t("TRANSACTION.HINT_AMOUNT", { amount: returnedAmount, currency }) : undefined;
 
 	return (
 		<TransactionDetail
@@ -98,7 +64,7 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 			extra={renderModeIcon()}
 			{...properties}
 		>
-			<AmountLabel isNegative={isSent} value={amount} ticker={currency} hint={hint()} isMigration={isMigration} />
+			<AmountLabel isNegative={isSent} value={amount} ticker={currency} hint={hint} />
 
 			{isMdAndAbove && !!exchangeCurrency && !!convertedAmount && (
 				<Amount ticker={exchangeCurrency} value={convertedAmount} className="ml-2 text-theme-secondary-400" />

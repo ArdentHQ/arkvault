@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment, Helpers } from "@ardenthq/sdk-profiles";
 import { Divider } from "@/app/components/Divider";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
@@ -46,6 +46,10 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 		profile.settings().set(Contracts.ProfileSetting.Theme, viewingMode);
 		profile.settings().set(Contracts.ProfileSetting.Avatar, avatarImage);
 		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, currency);
+
+		profile
+			.settings()
+			.set(Contracts.ProfileSetting.Avatar, avatarImage || Helpers.Avatar.make(profile.name().trim()));
 
 		if (enteredPassword || password) {
 			// @ts-ignore

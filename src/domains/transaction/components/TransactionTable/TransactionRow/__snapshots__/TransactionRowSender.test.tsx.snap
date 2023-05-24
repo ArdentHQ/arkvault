@@ -7,7 +7,7 @@ exports[`TransactionRowSender > should render 1`] = `
     data-testid="TransactionRowMode"
   >
     <div
-      class="ring-theme-background group-hover:ring-theme-secondary-100 dark:group-hover:ring-black group-hover:bg-theme-secondary-100 dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+      class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
     >
       <div
         class="css-1i4b0eq"

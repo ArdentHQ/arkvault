@@ -81,11 +81,4 @@ describe("BaseTransactionRowMode", () => {
 
 		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "received")).toBeInTheDocument();
 	});
-
-	it("should render migration", () => {
-		const { asFragment } = render(
-			<BaseTransactionRowMode type="transfer" transaction={TransactionFixture} isCompact isMigration />,
-		);
-		expect(asFragment()).toMatchSnapshot();
-	});
 });

@@ -15,23 +15,16 @@ export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
 		title: t("COMMON.EXCHANGE"),
 	},
 	{
-		mountPath: (profileId) => generatePath(ProfilePaths.Votes, { profileId }),
-		title: t("COMMON.VOTES"),
+		mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
+		title: t("COMMON.CONTACTS"),
 	},
 	{
-		hasGradient: true,
-		mountPath: (profileId) => generatePath(ProfilePaths.Migration, { profileId }),
-		title: t("COMMON.MIGRATION"),
+		mountPath: (profileId) => generatePath(ProfilePaths.Votes, { profileId }),
+		title: t("COMMON.VOTES"),
 	},
 ];
 
 export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBarMenuItem)[] => [
-	{
-		label: t("COMMON.CONTACTS"),
-		mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
-		title: "contacts",
-		value: "contacts",
-	},
 	{
 		label: t("COMMON.SETTINGS"),
 		mountPath: (profileId) => generatePath(ProfilePaths.Settings, { profileId }),

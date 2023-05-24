@@ -53,7 +53,6 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 			onChange,
 			title,
 			description,
-			placeholder,
 			disableAction = (wallet: Contracts.IReadWriteWallet) => !wallet.balance(),
 		}: SelectAddressProperties,
 		reference,
@@ -88,10 +87,6 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 			[getWalletAlias, profile, selectedWallet],
 		);
 
-		const inputValue = useMemo(() => selectedWallet?.address || "", [selectedWallet]);
-
-		const hideInputValue = useMemo(() => !!inputValue, [inputValue]);
-
 		return (
 			<>
 				<button
@@ -120,10 +115,9 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					<Input
 						data-testid="SelectAddress__input"
 						ref={reference}
-						value={inputValue}
-						hideInputValue={hideInputValue}
+						value={selectedWallet?.address || ""}
+						hideInputValue={true}
 						readOnly
-						placeholder={placeholder}
 						disabled={disabled}
 						isInvalid={isInvalidField}
 						addons={

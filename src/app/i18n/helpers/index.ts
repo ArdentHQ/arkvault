@@ -4,7 +4,6 @@ import { translations as DASHBOARD } from "../../../domains/dashboard/i18n";
 import { translations as ERROR } from "../../../domains/error/i18n";
 import { translations as EXCHANGE } from "../../../domains/exchange/i18n";
 import { translations as MESSAGE } from "../../../domains/message/i18n";
-import { translations as MIGRATION } from "../../../domains/migration/i18n";
 import { translations as PROFILE } from "../../../domains/profile/i18n";
 import { translations as SETTINGS } from "../../../domains/setting/i18n";
 import { translations as TRANSACTION } from "../../../domains/transaction/i18n";
@@ -19,7 +18,6 @@ export const buildTranslations = () => ({
 	ERROR,
 	EXCHANGE,
 	MESSAGE,
-	MIGRATION,
 	PROFILE,
 	SETTINGS,
 	TRANSACTION,

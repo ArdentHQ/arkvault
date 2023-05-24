@@ -1,26 +1,27 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-import { isEqual } from "@ardenthq/sdk-helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { matchPath, useHistory, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { Services } from "@ardenthq/sdk";
+import { isEqual } from "@ardenthq/sdk-helpers";
 import { usePrevious } from "./use-previous";
 import { useSynchronizer } from "./use-synchronizer";
 import { useTheme } from "./use-theme";
-import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { useAccentColor } from "@/app/hooks/use-accent-color";
-import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
-import { useProfileWatcher } from "@/app/hooks/use-profile-watcher";
-import { delay } from "@/utils/delay";
+import { enabledNetworksCount, profileAllEnabledNetworks, profileEnabledNetworkIds } from "@/utils/network-utils";
 import {
 	getErroredNetworks,
+	getProfileById,
 	getProfileFromUrl,
 	getProfileStoredPassword,
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { ProfilePeers } from "@/utils/profile-peers";
-import { enabledNetworksCount, profileAllEnabledNetworks, profileEnabledNetworkIds } from "@/utils/network-utils";
+import { delay } from "@/utils/delay";
+/* eslint-disable sonarjs/cognitive-complexity */
+import { useAccentColor } from "@/app/hooks/use-accent-color";
+import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { useZendesk } from "@/app/contexts/Zendesk";
 
 enum Intervals {
@@ -30,6 +31,19 @@ enum Intervals {
 	Long = 120_000,
 	VeryLong = 7_200_000,
 }
+
+const useProfileWatcher = () => {
+	const location = useLocation();
+
+	const { env } = useEnvironmentContext();
+
+	const pathname = (location as any).location?.pathname || location.pathname;
+	const match = useMemo(() => matchPath(pathname, { path: "/profiles/:profileId" }), [pathname]);
+	const profileId = (match?.params as any)?.profileId;
+	const allProfilesCount = env.profiles().count();
+
+	return useMemo(() => getProfileById(env, profileId), [profileId, env, allProfilesCount]); // eslint-disable-line react-hooks/exhaustive-deps
+};
 
 export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any> => {
 	const { env } = useEnvironmentContext();

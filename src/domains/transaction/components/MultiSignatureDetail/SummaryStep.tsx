@@ -19,11 +19,9 @@ import {
 	TransactionTimestamp,
 	TransactionVotes,
 	TransactionMultisignatureStatus,
-	MigrationPolygonAddress,
 } from "@/domains/transaction/components/TransactionDetail";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 
 export const SummaryStep = ({
 	wallet,
@@ -76,19 +74,13 @@ export const SummaryStep = ({
 
 	const { publicKeys, min } = getMultiSignatureInfo(transaction);
 
-	const title = isValidMigrationTransaction(transaction) ? t("COMMON.MIGRATION") : getLabel(type);
-
 	return (
 		<section>
-			<Header title={title} />
+			<Header title={getLabel(type)} />
 
 			<TransactionSender address={transaction.sender()} network={wallet.network()} border={false} />
 
-			{isValidMigrationTransaction(transaction) && <MigrationPolygonAddress transaction={transaction} />}
-
-			{!isValidMigrationTransaction(transaction) && recipients && (
-				<TransactionRecipients currency={wallet.currency()} recipients={recipients} />
-			)}
+			{recipients && <TransactionRecipients currency={wallet.currency()} recipients={recipients} />}
 
 			{(transaction.isTransfer() || transaction.isMultiPayment()) && (
 				<TransactionAmount
@@ -96,8 +88,6 @@ export const SummaryStep = ({
 					currency={wallet.currency()}
 					isTotalAmount={recipients.length > 1}
 					isSent={true}
-					isMigration={isValidMigrationTransaction(transaction)}
-					network={wallet.network()}
 				/>
 			)}
 

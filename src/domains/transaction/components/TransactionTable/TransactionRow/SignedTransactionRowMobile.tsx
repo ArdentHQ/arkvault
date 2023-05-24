@@ -1,12 +1,11 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { MouseEvent, useMemo } from "react";
+import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";
 import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
-import { canDeletePendingTransaction, SignButton } from "./SignedTransactionRow";
-import { TransactionMigrationLink } from "./TransactionRowMigrationDetails";
+import { SignButton } from "./SignedTransactionRow";
 import { TableRow } from "@/app/components/Table";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { ResponsiveAddressWrapper, RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
@@ -15,7 +14,6 @@ import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
-import { isValidMigrationTransaction } from "@/utils/polygon-migration";
 interface SignedTransactionRowMobileProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	onSign?: (transaction: DTO.ExtendedSignedTransactionData) => void;
@@ -38,8 +36,6 @@ export const SignedTransactionRowMobile = ({
 		transaction,
 		wallet,
 	});
-
-	const canBeDeleted = useMemo(() => canDeletePendingTransaction(transaction), [transaction]);
 
 	const handleRemove = (event?: MouseEvent) => {
 		event?.preventDefault();
@@ -71,38 +67,21 @@ export const SignedTransactionRowMobile = ({
 				</RowWrapper>
 
 				<RowWrapper>
-					<>
-						{!isValidMigrationTransaction(transaction) && (
-							<>
-								<RowLabel>{t("COMMON.SENDER")}</RowLabel>
-								<ResponsiveAddressWrapper>
-									<BaseTransactionRowMode
-										className="flex items-center gap-x-2"
-										isCompact={true}
-										isSent={true}
-										type={transaction.type()}
-										address={recipient}
-									/>
+					<RowLabel>{t("COMMON.SENDER")}</RowLabel>
 
-									<div className="ml-2 overflow-hidden">
-										<BaseTransactionRowRecipientLabel
-											type={transaction.type()}
-											recipient={recipient}
-										/>
-									</div>
-								</ResponsiveAddressWrapper>
-							</>
-						)}
+					<ResponsiveAddressWrapper>
+						<BaseTransactionRowMode
+							className="flex items-center gap-x-2"
+							isCompact={true}
+							isSent={true}
+							type={transaction.type()}
+							address={recipient}
+						/>
 
-						{isValidMigrationTransaction(transaction) && (
-							<>
-								<RowLabel>{t("COMMON.TYPE")}</RowLabel>
-								<TransactionMigrationLink transaction={transaction}>
-									<span>{t("TRANSACTION.MIGRATION")}</span>
-								</TransactionMigrationLink>
-							</>
-						)}
-					</>
+						<div className="ml-2 overflow-hidden">
+							<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} />
+						</div>
+					</ResponsiveAddressWrapper>
 				</RowWrapper>
 
 				<RowWrapper>
@@ -112,7 +91,6 @@ export const SignedTransactionRowMobile = ({
 						total={transaction.amount() + transaction.fee()}
 						wallet={wallet}
 						isCompact={false}
-						isMigration={isValidMigrationTransaction(transaction)}
 					/>
 				</RowWrapper>
 
@@ -144,7 +122,6 @@ export const SignedTransactionRowMobile = ({
 						data-testid="SignedTransactionRowMobile--remove"
 						variant="danger"
 						onClick={handleRemove}
-						disabled={!canBeDeleted}
 					>
 						<Icon name="Trash" size="lg" />
 
