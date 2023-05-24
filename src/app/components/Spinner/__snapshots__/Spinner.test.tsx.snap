@@ -1,9 +1,9 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Spinner > should render 1`] = `
 <div>
   <div
-    class="css-1v2j3qb"
+    class="css-qed8fm"
     color="info"
   />
 </div>
@@ -12,7 +12,7 @@ exports[`Spinner > should render 1`] = `
 exports[`Spinner > should render a danger color 1`] = `
 <div>
   <div
-    class="css-nfd0mt"
+    class="css-5b8mx7"
     color="danger"
   />
 </div>
@@ -21,7 +21,7 @@ exports[`Spinner > should render a danger color 1`] = `
 exports[`Spinner > should render a hint color 1`] = `
 <div>
   <div
-    class="css-13pcg61"
+    class="css-1ces6fw"
     color="hint"
   />
 </div>
@@ -30,7 +30,7 @@ exports[`Spinner > should render a hint color 1`] = `
 exports[`Spinner > should render a info color 1`] = `
 <div>
   <div
-    class="css-1v2j3qb"
+    class="css-qed8fm"
     color="info"
   />
 </div>
@@ -39,7 +39,7 @@ exports[`Spinner > should render a info color 1`] = `
 exports[`Spinner > should render a large one 1`] = `
 <div>
   <div
-    class="css-iepbhh"
+    class="css-y2inin"
     color="info"
   />
 </div>
@@ -48,7 +48,7 @@ exports[`Spinner > should render a large one 1`] = `
 exports[`Spinner > should render a small one 1`] = `
 <div>
   <div
-    class="css-xvdci8"
+    class="css-1mmcyzk"
     color="info"
   />
 </div>
@@ -57,7 +57,7 @@ exports[`Spinner > should render a small one 1`] = `
 exports[`Spinner > should render a success color 1`] = `
 <div>
   <div
-    class="css-130bjqv"
+    class="css-k6fzte"
     color="success"
   />
 </div>
@@ -66,7 +66,7 @@ exports[`Spinner > should render a success color 1`] = `
 exports[`Spinner > should render a warning color 1`] = `
 <div>
   <div
-    class="css-1w7h9pk"
+    class="css-vl3uha"
     color="warning"
   />
 </div>

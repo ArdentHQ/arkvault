@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Notifications > should open and close transaction details modal 1`] = `
 <div>
@@ -2270,11 +2270,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                       </span>
                                     </span>
                                     <span
-<<<<<<< HEAD
-                                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-=======
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-sm"
->>>>>>> 5fbade27 (chore: disable font ligatures in truncation components (#352))
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                       data-testid="Address__address"
                                     >
                                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2348,11 +2344,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-<<<<<<< HEAD
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-=======
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
->>>>>>> 5fbade27 (chore: disable font ligatures in truncation components (#352))
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                       data-testid="Address__address"
                                     >
                                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -2426,11 +2418,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-<<<<<<< HEAD
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-=======
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
->>>>>>> 5fbade27 (chore: disable font ligatures in truncation components (#352))
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                       data-testid="Address__address"
                                     >
                                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -3223,11 +3211,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                       </span>
                                     </span>
                                     <span
-<<<<<<< HEAD
-                                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-=======
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-sm"
->>>>>>> 5fbade27 (chore: disable font ligatures in truncation components (#352))
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                       data-testid="Address__address"
                                     >
                                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3301,11 +3285,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-<<<<<<< HEAD
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-=======
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
->>>>>>> 5fbade27 (chore: disable font ligatures in truncation components (#352))
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                       data-testid="Address__address"
                                     >
                                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -3379,11 +3359,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                   >
                                     <span
-<<<<<<< HEAD
-                                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-=======
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
->>>>>>> 5fbade27 (chore: disable font ligatures in truncation components (#352))
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                                       data-testid="Address__address"
                                     >
                                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
