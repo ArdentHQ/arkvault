@@ -3362,13 +3362,13 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
@@ -8112,13 +8112,13 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                             </div>
                           </div>
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
