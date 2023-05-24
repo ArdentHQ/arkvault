@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ImportWallet > import with private key > when is not valid 1`] = `
 <div>
@@ -2204,7 +2204,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                       class="inline-flex w-full items-center justify-center space-x-3"
                     >
                       <div
-                        class="css-1v2j3qb"
+                        class="css-qed8fm"
                         color="info"
                       />
                       <span

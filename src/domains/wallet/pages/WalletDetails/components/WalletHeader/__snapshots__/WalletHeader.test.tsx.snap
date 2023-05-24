@@ -1572,7 +1572,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
             class="min-w-0"
           >
             <span
-              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
