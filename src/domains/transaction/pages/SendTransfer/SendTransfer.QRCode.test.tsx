@@ -151,8 +151,6 @@ describe("SendTransfer QRModal", () => {
 		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: "invalid url" });
 
 		const toastSpy = vi.spyOn(toasts, "error");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
 		history.push(transferURL);
