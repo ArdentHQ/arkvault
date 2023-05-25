@@ -2,6 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks, Coins } from "@ardenthq/sdk";
 import { HttpClient } from "@/app/services/HttpClient";
 import { NetworkHostType, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { isValidUrl } from "./url-validation";
 
 // Valid host @see https://www.rfc-editor.org/rfc/rfc952
 const hostRegex =
@@ -10,16 +11,6 @@ const hostRegex =
 // Valid ip address
 const ipRegex =
 	/^(?:(?<schema>https?):\/\/)?(?<host>(?:(?:\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])\.){3}(?:\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5]))(?::(?<port>\d{1,5}))?/i;
-
-const isValidUrl = (url: string) => {
-	try {
-		new URL(url);
-	} catch {
-		return false;
-	}
-
-	return true;
-};
 
 const hasPath = (url: string, path: string) => new URL(url).pathname === path;
 
