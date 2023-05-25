@@ -1,8 +1,8 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks, Coins } from "@ardenthq/sdk";
+import { isValidUrl } from "./url-validation";
 import { HttpClient } from "@/app/services/HttpClient";
 import { NetworkHostType, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { isValidUrl } from "./url-validation";
 
 // Valid host @see https://www.rfc-editor.org/rfc/rfc952
 const hostRegex =
@@ -103,7 +103,6 @@ export {
 	addressIsValid,
 	hostRegex,
 	ipRegex,
-	isValidUrl,
 	isValidIp,
 	isValidDomain,
 	isSameNetwork,
@@ -116,3 +115,5 @@ export {
 	pingServerAddress,
 	getServerHeight,
 };
+
+export { isValidUrl } from "./url-validation";

@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { URLBuilder } from "@ardenthq/arkvault-url";
 import { FormStep } from "./FormStep";
 import { TransferLedgerReview } from "./LedgerReview";
 import { NetworkStep } from "./NetworkStep";
@@ -30,7 +31,6 @@ import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-u
 import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
-import { URLBuilder } from "@ardenthq/arkvault-url";
 import { isValidUrl } from "@/utils/url-validation";
 
 const MAX_TABS = 5;
