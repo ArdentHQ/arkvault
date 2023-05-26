@@ -23,8 +23,7 @@ export const useWalletConfig = ({
 		...defaults,
 	};
 
-	const { dashboard, setConfiguration, profileHasSyncedOnce, profileIsSyncing, profileIsRestoring } =
-		useConfiguration();
+	const { dashboard, setConfiguration, profileHasSyncedOnce, profileIsRestoring } = useConfiguration();
 
 	const profileDefaults = useMemo(
 		() =>
