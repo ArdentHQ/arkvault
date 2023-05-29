@@ -15,6 +15,7 @@ import { Spinner } from "@/app/components/Spinner";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { assertExchangeService, isUnavailablePairError } from "@/domains/exchange/utils";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
+import { useBreakpoint } from "@/app/hooks";
 
 interface FormStepProperties {
 	profile: Contracts.IProfile;
@@ -35,6 +36,8 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 
 	const { clearErrors, errors, getValues, setError, setValue, trigger, watch } = useFormContext();
 	const { currencies, exchangeRate, fromCurrency, toCurrency, payinAmount, payoutAmount } = watch();
+
+	const { isXs } = useBreakpoint();
 
 	const { exchangeService } = useExchangeContext();
 	assertExchangeService(exchangeService);
@@ -360,7 +363,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 					<FormField name="payinAmount">
 						<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")} />
 						<InputCurrency
-							placeholder={t("COMMON.AMOUNT_PLACEHOLDER")}
+							placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
 							value={payinAmount}
 							onChange={async (amount: string) => await handlePayinAmountChange(amount)}
 							addons={
@@ -418,7 +421,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 						<FormField name="payoutAmount">
 							<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_GET")} />
 							<InputCurrency
-								placeholder={t("COMMON.AMOUNT_PLACEHOLDER")}
+								placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
 								value={payoutAmount}
 								onChange={async (amount: string) => await handlePayoutAmountChange(amount)}
 								addons={
