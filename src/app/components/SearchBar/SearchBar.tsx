@@ -19,8 +19,8 @@ export const SearchBar = ({ placeholder, className, children, onSearch }: Search
 	const { t } = useTranslation();
 
 	return (
-		<div data-testid="SearchBar" className={cn("bg-theme-secondary-100 px-10 pt-8 pb-8", className)}>
-			<div className="flex items-center rounded bg-theme-background py-6 px-10 shadow-xl">
+		<div data-testid="SearchBar" className={cn("bg-theme-secondary-100 px-10 pb-8 pt-8", className)}>
+			<div className="flex items-center rounded bg-theme-background px-10 py-6 shadow-xl">
 				{children || <Icon name="MagnifyingGlass" className="mr-8 w-4 text-theme-secondary-300" />}
 
 				<div className="mr-4 flex-1 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800">

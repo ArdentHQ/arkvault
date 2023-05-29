@@ -22,7 +22,7 @@ export const ReviewStep = () => {
 	return (
 		<div data-testid="ExchangeForm__review-step" className="space-y-6">
 			<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-				<div className="flex flex-col py-5 px-6">
+				<div className="flex flex-col px-6 py-5">
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
 					</span>
@@ -33,12 +33,12 @@ export const ReviewStep = () => {
 				</div>
 
 				<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
-					<div className="absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800">
+					<div className="absolute right-6 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800">
 						<Icon name="MoneyCoinSwap" size="lg" />
 					</div>
 				</div>
 
-				<div className="flex flex-col py-5 px-6">
+				<div className="flex flex-col px-6 py-5">
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
 					</span>

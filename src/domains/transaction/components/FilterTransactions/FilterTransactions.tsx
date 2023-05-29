@@ -69,7 +69,7 @@ export const FilterTransactions = memo(
 							disabled={isDisabled}
 							isOpen={isOpen}
 							className={cn(
-								"w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0",
+								"w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:px-0 md:py-2",
 								{
 									"cursor-not-allowed text-theme-secondary-400 dark:text-theme-secondary-800":
 										isDisabled,

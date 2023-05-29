@@ -150,7 +150,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			</div>
 
 			{!showSkeleton && (
-				<div className="border-b border-theme-secondary-300 pt-2 pb-8 dark:border-theme-secondary-800">
+				<div className="border-b border-theme-secondary-300 pb-8 pt-2 dark:border-theme-secondary-800">
 					<Button
 						data-testid="LedgerScanStep__scan-more"
 						isLoading={isScanningMore}

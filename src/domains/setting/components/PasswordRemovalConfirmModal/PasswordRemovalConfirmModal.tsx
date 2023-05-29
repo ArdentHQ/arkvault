@@ -32,7 +32,7 @@ export const PasswordRemovalConfirmModal: React.FC<PasswordRemovalProperties> = 
 		<Modal
 			isOpen
 			title={t("SETTINGS.PASSWORD.REMOVAL.TITLE")}
-			image={<Image name="Trash" useAccentColor={false} className="my-8 mx-auto max-w-52" />}
+			image={<Image name="Trash" useAccentColor={false} className="mx-auto my-8 max-w-52" />}
 			onClose={onCancel}
 		>
 			<Alert>{t("SETTINGS.PASSWORD.REMOVAL.DESCRIPTION")}</Alert>

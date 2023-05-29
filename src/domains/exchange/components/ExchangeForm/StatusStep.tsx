@@ -65,7 +65,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 				</span>
 			</div>
 
-			<div className="mt-3 flex flex-col rounded-xl border border-theme-secondary-300 py-5 px-6 dark:border-theme-secondary-800">
+			<div className="mt-3 flex flex-col rounded-xl border border-theme-secondary-300 px-6 py-5 dark:border-theme-secondary-800">
 				<div className="flex flex-col space-y-2">
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
@@ -126,7 +126,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 				</div>
 			</div>
 
-			<div className="mt-6 rounded-lg bg-theme-secondary-100 py-3 px-6 text-sm dark:bg-theme-secondary-800">
+			<div className="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-sm dark:bg-theme-secondary-800">
 				<Trans
 					i18nKey="EXCHANGE.EXCHANGE_FORM.SUPPORT_INFO"
 					values={{

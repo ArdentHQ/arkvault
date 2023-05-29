@@ -351,7 +351,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 			{(balance !== undefined || onButtonClick !== undefined) && (
 				<div className="mt-2 flex overflow-hidden rounded-xl">
 					{balance !== undefined && (
-						<div className="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold">
+						<div className="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold">
 							{balance}
 						</div>
 					)}
@@ -367,7 +367,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 								data-testid="WalletListItemMobile--button"
 								className={cn({
 									"cursor-not-allowed opacity-50": isButtonDisabled,
-									"flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white":
+									"flex flex-grow items-center justify-center bg-theme-primary-600 px-3 py-3 font-semibold text-white":
 										true,
 								})}
 								type="button"

@@ -52,7 +52,7 @@ export const CSVSettings = () => {
 
 	return (
 		<>
-			<div className="mt-8 mb-4 text-lg font-semibold">{t("TRANSACTION.EXPORT.FORM.CSV_SETTINGS")}</div>
+			<div className="mb-4 mt-8 text-lg font-semibold">{t("TRANSACTION.EXPORT.FORM.CSV_SETTINGS")}</div>
 
 			<ListDivided
 				items={[

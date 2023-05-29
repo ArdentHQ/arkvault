@@ -39,7 +39,7 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 			<Header title={title} subtitle={subtitle} className="hidden sm:block" />
 
 			{!!error && (
-				<div className="mt-6 -mb-2">
+				<div className="-mb-2 mt-6">
 					<Alert variant="danger">{error}</Alert>
 				</div>
 			)}
