@@ -40,7 +40,7 @@ exports[`Server Status Indicator > should render as downgraded 1`] = `
                 </svg>
               </div>
               <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-warning-600"
@@ -95,7 +95,7 @@ exports[`Server Status Indicator > should render as healthy 1`] = `
                 </svg>
               </div>
               <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -150,7 +150,7 @@ exports[`Server Status Indicator > should render as unavailable 1`] = `
                 </svg>
               </div>
               <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -205,7 +205,7 @@ exports[`Server Status Indicator > should render default 1`] = `
                 </svg>
               </div>
               <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-gray-100"
@@ -260,7 +260,7 @@ exports[`Server Status Indicator > should render in lg 1`] = `
                 </svg>
               </div>
               <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -315,7 +315,7 @@ exports[`Server Status Indicator > should render in md 1`] = `
                 </svg>
               </div>
               <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -370,7 +370,7 @@ exports[`Server Status Indicator > should render in sm 1`] = `
                 </svg>
               </div>
               <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -425,7 +425,7 @@ exports[`Server Status Indicator > should render in xl 1`] = `
                 </svg>
               </div>
               <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
               >
                 <div
                   class="h-2 w-2 rounded-full bg-theme-success-700"
