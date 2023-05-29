@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`PortfolioBreakdown > should render empty (filtered) message when there are no assets that match the current network filters 1`] = `
 <DocumentFragment>
@@ -29,7 +29,7 @@ exports[`PortfolioBreakdown > should render empty block when portfolio is empty 
 exports[`PortfolioBreakdown > should render loading when items converted balance contain a NaN value 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
+    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
     data-testid="PortfolioBreakdownSkeleton"
   >
     <div
@@ -142,7 +142,7 @@ exports[`PortfolioBreakdown > should render loading when items converted balance
 exports[`PortfolioBreakdown > should render loading when no wallets have synced with the network 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
+    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
     data-testid="PortfolioBreakdownSkeleton"
   >
     <div
@@ -255,7 +255,7 @@ exports[`PortfolioBreakdown > should render loading when no wallets have synced 
 exports[`PortfolioBreakdown > should render loading when profile is not restored yet 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
+    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
     data-testid="PortfolioBreakdownSkeleton"
   >
     <div
@@ -368,7 +368,7 @@ exports[`PortfolioBreakdown > should render loading when profile is not restored
 exports[`PortfolioBreakdown > should render loading when some wallets have not synced with the network 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
+    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
     data-testid="PortfolioBreakdownSkeleton"
   >
     <div
@@ -481,7 +481,7 @@ exports[`PortfolioBreakdown > should render loading when some wallets have not s
 exports[`PortfolioBreakdown > should render loading when syncing exchange rates 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
+    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
     data-testid="PortfolioBreakdownSkeleton"
   >
     <div
@@ -594,7 +594,7 @@ exports[`PortfolioBreakdown > should render loading when syncing exchange rates 
 exports[`PortfolioBreakdown > should render when some wallets are cold 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
     data-testid="PortfolioBreakdown"
   >
     <div
@@ -875,7 +875,7 @@ exports[`PortfolioBreakdown > should render when some wallets are cold 1`] = `
 exports[`PortfolioBreakdown > should render with dark mode = false 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
     data-testid="PortfolioBreakdown"
   >
     <div
@@ -1156,7 +1156,7 @@ exports[`PortfolioBreakdown > should render with dark mode = false 1`] = `
 exports[`PortfolioBreakdown > should render with dark mode = true 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
     data-testid="PortfolioBreakdown"
   >
     <div
@@ -1437,7 +1437,7 @@ exports[`PortfolioBreakdown > should render with dark mode = true 1`] = `
 exports[`PortfolioBreakdown > should render zero balance state with dark mode = false 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
     data-testid="PortfolioBreakdown"
   >
     <div
@@ -1542,7 +1542,7 @@ exports[`PortfolioBreakdown > should render zero balance state with dark mode = 
 exports[`PortfolioBreakdown > should render zero balance state with dark mode = true 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
     data-testid="PortfolioBreakdown"
   >
     <div

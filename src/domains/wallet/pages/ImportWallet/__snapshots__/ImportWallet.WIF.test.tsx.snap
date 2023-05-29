@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ImportWallet WIF > should import with invalid wif 1`] = `
 <div>
@@ -121,7 +121,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center py-2 px-1"
+                          class="flex items-center justify-center px-1 py-2"
                           data-testid="SelectDropdown__caret"
                         >
                           <div
@@ -401,7 +401,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center py-2 px-1"
+                          class="flex items-center justify-center px-1 py-2"
                           data-testid="SelectDropdown__caret"
                         >
                           <div

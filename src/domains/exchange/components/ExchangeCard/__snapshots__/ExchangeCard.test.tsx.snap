@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ExchangeCard > should render 1`] = `
 <div>
@@ -35,7 +35,7 @@ exports[`ExchangeCard > should render 1`] = `
           </div>
         </div>
         <div
-          class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+          class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
         />
       </button>
     </div>
@@ -78,7 +78,7 @@ exports[`ExchangeCard > should render when the exchange is not active 1`] = `
           </div>
         </div>
         <div
-          class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+          class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
         />
       </button>
     </div>

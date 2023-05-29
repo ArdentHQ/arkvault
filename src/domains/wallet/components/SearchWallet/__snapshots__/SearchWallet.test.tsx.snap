@@ -15,7 +15,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -506,7 +506,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -955,7 +955,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -1402,7 +1402,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -1893,7 +1893,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -2142,7 +2142,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -2247,7 +2247,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -2287,7 +2287,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -2536,7 +2536,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -2641,7 +2641,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -2681,7 +2681,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -2930,7 +2930,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -3035,7 +3035,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -3075,7 +3075,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -3440,7 +3440,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -3929,7 +3929,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -4420,7 +4420,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -4987,7 +4987,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -5510,7 +5510,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -6031,7 +6031,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -6596,7 +6596,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -6845,7 +6845,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -6950,7 +6950,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -6990,7 +6990,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -7239,7 +7239,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -7344,7 +7344,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -7384,7 +7384,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -7633,7 +7633,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -7738,7 +7738,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                             class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
-                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+                              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
                             >
                               <span
                                 class="whitespace-nowrap text-sm text-white"
@@ -7778,7 +7778,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -8204,7 +8204,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
@@ -8767,7 +8767,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
             class="h-11 w-11 css-12xyeiw"
