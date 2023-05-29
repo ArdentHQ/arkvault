@@ -329,7 +329,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 	return (
 		<div data-testid="ExchangeForm__form-step" className="flex flex-col">
 			<div className="relative flex space-x-3">
-				<div className="w-2/5">
+				<div className="w-1/2 sm:w-2/5">
 					<FormField name="fromCurrency">
 						<FormLabel label={t("COMMON.CRYPTOASSET")} />
 						<Select
@@ -340,11 +340,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 							wrapperClassName="static sm:relative"
 							addons={{
 								start: {
-									content: (
-										<span className="hidden sm:inline">
-											<CurrencyIcon image={fromCurrency?.image} ticker={fromCurrency?.coin} />
-										</span>
-									),
+									content: <CurrencyIcon image={fromCurrency?.image} ticker={fromCurrency?.coin} />,
 								},
 							}}
 							options={
@@ -360,7 +356,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 					</FormField>
 				</div>
 
-				<div className="w-3/5">
+				<div className="w-1/2 sm:w-3/5">
 					<FormField name="payinAmount">
 						<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")} />
 						<InputCurrency
@@ -391,7 +387,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 
 			<div className="space-y-6">
 				<div className="relative flex space-x-3">
-					<div className="w-2/5">
+					<div className="w-1/2 sm:w-2/5">
 						<FormField name="toCurrency">
 							<FormLabel label={t("COMMON.CRYPTOASSET")} />
 							<Select
@@ -402,11 +398,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 								wrapperClassName="static sm:relative"
 								addons={{
 									start: {
-										content: (
-											<span className="hidden sm:inline">
-												<CurrencyIcon image={toCurrency?.image} ticker={toCurrency?.coin} />
-											</span>
-										),
+										content: <CurrencyIcon image={toCurrency?.image} ticker={toCurrency?.coin} />,
 									},
 								}}
 								options={
@@ -422,7 +414,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 						</FormField>
 					</div>
 
-					<div className="w-3/5">
+					<div className="w-1/2 sm:w-3/5">
 						<FormField name="payoutAmount">
 							<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_GET")} />
 							<InputCurrency
