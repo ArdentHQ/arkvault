@@ -7,7 +7,15 @@ import { useWalletConfig } from "@/domains/wallet/hooks";
 import { useNetworks } from "@/app/hooks";
 
 export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { defaultConfiguration, setValue, walletsDisplayType, selectedNetworkIds, viewType } = useWalletConfig({
+	const {
+		defaultConfiguration,
+		setValue,
+		walletsDisplayType,
+		selectedNetworkIds,
+		viewType,
+		profilehasSyncedOnce,
+		profileIsSyncing,
+	} = useWalletConfig({
 		profile,
 	});
 
@@ -24,6 +32,10 @@ export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) =
 	);
 
 	const isFilterChanged = useMemo(() => {
+		if (!profilehasSyncedOnce) {
+			return false;
+		}
+
 		if (walletsDisplayType !== defaultConfiguration.walletsDisplayType) {
 			return true;
 		}
