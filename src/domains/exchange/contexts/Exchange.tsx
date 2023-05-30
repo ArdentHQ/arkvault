@@ -47,6 +47,7 @@ const useExchange = () => {
 		fetchProviders,
 		provider,
 		setProvider,
+		clearCache: () => httpClient.clearCache(),
 	};
 };
 

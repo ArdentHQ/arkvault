@@ -41,7 +41,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
-	const { exchangeService, provider } = useExchangeContext();
+	const { exchangeService, provider, clearCache } = useExchangeContext();
 	const { exchangeOrder } = useValidation();
 	const history = useHistory();
 
@@ -61,6 +61,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	useEffect(() => {
 		const fetchCurrencies = async () => {
 			try {
+				clearCache();
 				const currencies = await exchangeService.currencies();
 
 				const ark = currencies.filter((currency: CurrencyData) => currency.coin === "ark");
@@ -79,6 +80,10 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		};
 
 		fetchCurrencies();
+
+		return () => {
+			form.reset();
+		};
 	}, [provider]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {
