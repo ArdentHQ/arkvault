@@ -283,6 +283,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 
 	const renderCurrencyLabel = ({ value, isSelected }: OptionProperties) => {
 		const currency = currencies.find(({ coin }: any) => coin === (value as string | undefined)?.toLowerCase());
+
 		return (
 			<div className="flex w-full flex-col">
 				<span
@@ -290,7 +291,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 						"text-theme-primary-600": isSelected,
 					})}
 				>
-					{currency.coin.toUpperCase()}
+					{currency?.coin?.toUpperCase()}
 				</span>
 				<span className="dark:theme-text-secondary-700 text-sm text-theme-secondary-500">{currency.name}</span>
 			</div>
