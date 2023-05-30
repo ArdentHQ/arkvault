@@ -42,12 +42,12 @@ const useExchange = () => {
 	}, []);
 
 	return {
+		clearCache: () => httpClient.clearCache(),
 		exchangeProviders,
 		exchangeService,
 		fetchProviders,
 		provider,
 		setProvider,
-		clearCache: () => httpClient.clearCache(),
 	};
 };
 
