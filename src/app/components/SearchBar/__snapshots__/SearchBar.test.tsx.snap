@@ -3,11 +3,11 @@
 exports[`SearchBar > should render 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-secondary-100 px-10 pt-8 pb-8"
+    class="bg-theme-secondary-100 px-10 pb-8 pt-8"
     data-testid="SearchBar"
   >
     <div
-      class="flex items-center rounded bg-theme-background py-6 px-10 shadow-xl"
+      class="flex items-center rounded bg-theme-background px-10 py-6 shadow-xl"
     >
       <div
         class="mr-8 w-4 text-theme-secondary-300 css-v0ob3f"

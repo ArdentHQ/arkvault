@@ -69,7 +69,7 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -180,7 +180,7 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -378,7 +378,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -576,7 +576,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -685,7 +685,7 @@ exports[`SelectDropdown > should render option base 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -863,7 +863,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1041,7 +1041,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1150,7 +1150,7 @@ exports[`SelectDropdown > should render option base with default value when free
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1275,7 +1275,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1384,7 +1384,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1562,7 +1562,7 @@ exports[`SelectDropdown > should render option group 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1739,7 +1739,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1916,7 +1916,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2025,7 +2025,7 @@ exports[`SelectDropdown > should render option group with default value when fre
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2150,7 +2150,7 @@ exports[`SelectDropdown > should render option group with initial default value 
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2259,7 +2259,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2437,7 +2437,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2546,7 +2546,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2655,7 +2655,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2764,7 +2764,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center py-2 px-1"
+                    class="flex items-center justify-center px-1 py-2"
                     data-testid="SelectDropdown__caret"
                   >
                     <div

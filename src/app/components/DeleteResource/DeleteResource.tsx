@@ -37,7 +37,7 @@ export const DeleteResource = ({
 	return (
 		<Modal
 			title={title}
-			image={<Image name="Trash" useAccentColor={false} className="my-8 mx-auto max-w-52" />}
+			image={<Image name="Trash" useAccentColor={false} className="mx-auto my-8 max-w-52" />}
 			size="2xl"
 			isOpen={isOpen}
 			onClose={onClose}

@@ -119,7 +119,7 @@ export const AccordionHeaderSkeletonWrapper: React.VFC<AccordionHeaderSkeletonWr
 }) => (
 	<div
 		data-testid="AccordionHeaderSkeletonWrapper"
-		className="flex h-20 items-center py-4 px-8 md:px-4"
+		className="flex h-20 items-center px-8 py-4 md:px-4"
 		{...properties}
 	>
 		{children}

@@ -28,8 +28,8 @@ export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 	return (
 		<div className="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
 			<div className="relative p-4">
-				<div className="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x">
-					<div className="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left">
+				<div className="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0">
+					<div className="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left">
 						<AmountLabel>{t("TRANSACTION.TRANSACTION_AMOUNT")}</AmountLabel>
 						<Amount className="text-md mt-1 font-semibold" ticker={ticker} value={amount} />
 					</div>
@@ -40,7 +40,7 @@ export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 					</div>
 				</div>
 
-				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+				<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
 					<div className="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600">
 						<Icon name="Plus" />
 					</div>

@@ -2303,7 +2303,7 @@ exports[`WalletsList > should render responsive 1`] = `
             class="mt-2 flex overflow-hidden rounded-xl"
           >
             <div
-              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
             >
               <span
                 class="whitespace-nowrap text-sm text-white"
@@ -2321,7 +2321,7 @@ exports[`WalletsList > should render responsive 1`] = `
               class="flex"
             >
               <button
-                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
+                class="flex flex-grow items-center justify-center bg-theme-primary-600 px-3 py-3 font-semibold text-white"
                 data-testid="WalletListItemMobile--button"
                 type="button"
               >
@@ -2457,7 +2457,7 @@ exports[`WalletsList > should render responsive 1`] = `
             class="mt-2 flex overflow-hidden rounded-xl"
           >
             <div
-              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
+              class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
             >
               <span
                 class="whitespace-nowrap text-sm text-white"
@@ -2475,7 +2475,7 @@ exports[`WalletsList > should render responsive 1`] = `
               class="flex"
             >
               <button
-                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
+                class="flex flex-grow items-center justify-center bg-theme-primary-600 px-3 py-3 font-semibold text-white"
                 data-testid="WalletListItemMobile--button"
                 type="button"
               >

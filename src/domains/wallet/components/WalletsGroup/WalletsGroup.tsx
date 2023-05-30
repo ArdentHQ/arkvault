@@ -37,7 +37,7 @@ export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, walle
 			{isExpanded && wallets.length > MAX_WALLETS_ON_DASHBOARD_LIST && (
 				<Button
 					variant="secondary"
-					className="mx-4 mt-1 mb-4"
+					className="mx-4 mb-4 mt-1"
 					data-testid="WalletsList__ShowAll"
 					onClick={goToCoinWallets}
 				>

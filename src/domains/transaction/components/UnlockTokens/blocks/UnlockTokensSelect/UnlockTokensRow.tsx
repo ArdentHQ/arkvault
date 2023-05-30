@@ -42,7 +42,7 @@ export const UnlockTokensRow: FC<UnlockTokensRowProperties> = ({ loading, item, 
 							<span className="text-theme-secondary-700" data-testid="UnlockableBalanceRow__status">
 								{t("TRANSACTION.UNLOCK_TOKENS.UNLOCKABLE")}
 							</span>
-							<Icon name="LockOpen" size="lg" className="mr-3 ml-2 text-theme-primary-600" />
+							<Icon name="LockOpen" size="lg" className="ml-2 mr-3 text-theme-primary-600" />
 						</div>
 						<Checkbox checked={checked} onChange={onToggle} />
 					</div>
@@ -52,7 +52,7 @@ export const UnlockTokensRow: FC<UnlockTokensRowProperties> = ({ loading, item, 
 							<span className="text-theme-secondary-700" data-testid="UnlockableBalanceRow__status">
 								{t("TRANSACTION.UNLOCK_TOKENS.LOCKED")}
 							</span>
-							<Icon name="Lock" size="lg" className="mr-3 ml-2 text-theme-secondary-700" />
+							<Icon name="Lock" size="lg" className="ml-2 mr-3 text-theme-secondary-700" />
 						</div>
 						<Checkbox checked={false} disabled />
 					</div>

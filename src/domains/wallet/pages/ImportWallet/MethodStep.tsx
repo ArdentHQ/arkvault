@@ -346,7 +346,7 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 						</span>
 
 						<Tooltip
-							className="mb-1 -ml-3"
+							className="-ml-3 mb-1"
 							content={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.ENCRYPTION.NOT_AVAILABLE")}
 							disabled={importOption.canBeEncrypted}
 						>

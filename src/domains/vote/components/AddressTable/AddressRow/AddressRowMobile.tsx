@@ -207,7 +207,7 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 						);
 					}}
 				>
-					<div className="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800">
+					<div className="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
 							<Avatar className="shrink-0" size="xs" address={wallet.address()} noShadow />
 
@@ -218,7 +218,7 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 					</div>
 
 					<div className="flex">
-						<div className="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black">
+						<div className="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black">
 							<span className="text-theme-secondary-500">
 								{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 							</span>

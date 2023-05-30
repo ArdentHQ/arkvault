@@ -58,7 +58,7 @@ export const ControlButton = ({ isChanged, children, className, ...properties }:
 				{isChanged && (
 					<div
 						className={cn(
-							"absolute top-0.5 right-1 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear",
+							"absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear",
 							{ "-mr-2.5": properties.noBorder },
 						)}
 					>

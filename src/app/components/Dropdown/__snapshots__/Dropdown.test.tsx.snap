@@ -483,7 +483,7 @@ exports[`Dropdown > should render dropdown group options with divider, icon and 
           class="mt-4"
         >
           <div
-            class="mx-8 -my-2"
+            class="-my-2 mx-8"
           >
             <div
               class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"

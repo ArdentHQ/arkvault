@@ -3,7 +3,7 @@
 exports[`WalletsGroup > should handle list wallet click 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 py-4 px-8 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mt-0 sm:mb-6 sm:border-b-0 sm:bg-transparent sm:py-0 sm:px-0 sm:dark:bg-transparent"
+    class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 px-8 py-4 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mb-6 sm:mt-0 sm:border-b-0 sm:bg-transparent sm:px-0 sm:py-0 sm:dark:bg-transparent"
     data-testid="Portfolio__Header"
   >
     <div
@@ -221,7 +221,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               data-testid="dropdown__toggle"
             >
               <span
-                class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+                class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -532,7 +532,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               </div>
             </div>
             <div
-              class="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
+              class="absolute -bottom-2 -right-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
             >
               <div
                 class="inline-block p-1 text-theme-secondary-700"
@@ -1927,7 +1927,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               </div>
             </div>
             <div
-              class="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
+              class="absolute -bottom-2 -right-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
             >
               <div
                 class="inline-block p-1 text-theme-secondary-700"
@@ -2440,7 +2440,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               </div>
             </div>
             <div
-              class="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
+              class="absolute -bottom-2 -right-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
             >
               <div
                 class="inline-block p-1 text-theme-secondary-700"
@@ -3397,7 +3397,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               </div>
             </div>
             <div
-              class="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
+              class="absolute -bottom-2 -right-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
             >
               <div
                 class="inline-block p-1 text-theme-secondary-700"

@@ -242,7 +242,7 @@ export const Transactions = memo(function Transactions({
 				<Button
 					data-testid="transactions__fetch-more-button"
 					variant="secondary"
-					className="mt-10 mb-5 w-full"
+					className="mb-5 mt-10 w-full"
 					disabled={isLoadingMore}
 					onClick={() => fetchMore()}
 				>
