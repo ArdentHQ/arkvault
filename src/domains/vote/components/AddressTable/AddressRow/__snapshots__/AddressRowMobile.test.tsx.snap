@@ -18,7 +18,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -221,7 +221,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -425,7 +425,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -629,7 +629,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -840,7 +840,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1042,7 +1042,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1236,7 +1236,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1347,7 +1347,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1541,7 +1541,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1642,7 +1642,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1749,7 +1749,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1952,7 +1952,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -2155,7 +2155,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"

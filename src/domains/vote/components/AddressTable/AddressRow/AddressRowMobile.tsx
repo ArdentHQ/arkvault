@@ -207,7 +207,7 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 						);
 					}}
 				>
-					<div className="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800">
+					<div className="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
 							<Avatar className="shrink-0" size="xs" address={wallet.address()} noShadow />
 

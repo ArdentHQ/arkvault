@@ -600,7 +600,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                     class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
                   >
                     <div
-                      class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+                      class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
                     >
                       <div
                         class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -902,7 +902,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                     class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
                   >
                     <div
-                      class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+                      class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
                     >
                       <div
                         class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1204,7 +1204,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                     class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
                   >
                     <div
-                      class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+                      class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
                     >
                       <div
                         class="flex items-center justify-start space-x-3 overflow-hidden"
