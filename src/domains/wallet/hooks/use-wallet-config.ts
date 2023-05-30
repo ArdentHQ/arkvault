@@ -23,9 +23,7 @@ export const useWalletConfig = ({
 		...defaults,
 	};
 
-	const { dashboard, setConfiguration, profileHasSyncedOnce, profileIsSyncing, profileIsRestoring } =
-		useConfiguration();
-
+	const { dashboard, setConfiguration } = useConfiguration();
 	const profileDefaults = useMemo(
 		() =>
 			profile
@@ -71,15 +69,7 @@ export const useWalletConfig = ({
 
 					return true;
 				}),
-		[
-			profile,
-			dashboard,
-			selectedNetworkIds,
-			walletsDisplayType,
-			allWalletsLength,
-			availableNetworks,
-			profileIsRestoring,
-		], // eslint-disable-line react-hooks/exhaustive-deps
+		[profile, dashboard, selectedNetworkIds, walletsDisplayType, allWalletsLength, availableNetworks], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
 	return {
@@ -87,7 +77,6 @@ export const useWalletConfig = ({
 		setValue,
 		...dashboardConfiguration,
 		defaultConfiguration,
-		selectedNetworkIds: profileIsRestoring ? defaultConfiguration.selectedNetworkIds : selectedNetworkIds,
-		profileHasSyncedOnce,
+		selectedNetworkIds,
 	};
 };
