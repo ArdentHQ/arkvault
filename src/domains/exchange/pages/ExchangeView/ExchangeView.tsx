@@ -59,7 +59,7 @@ export const ExchangeView = () => {
 
 	const renderExchange = () => (
 		<>
-			<div className="mx-auto mb-8 h-8">
+			<div className="mx-auto mb-8 w-24">
 				{logoUrl && (
 					<img
 						src={logoUrl}
