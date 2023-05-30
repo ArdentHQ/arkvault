@@ -63,15 +63,16 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 			try {
 				const currencies = await exchangeService.currencies();
 
-				const arkOrEth = currencies.filter(
-					(currency: CurrencyData) => currency.coin === "ark" || currency.coin === "eth",
-				);
+				const ark = currencies.filter((currency: CurrencyData) => currency.coin === "ark");
+				const eth = currencies.filter((currency: CurrencyData) => currency.coin === "eth");
+				const btc = currencies.filter((currency: CurrencyData) => currency.coin === "btc");
 
 				const rest = currencies.filter(
-					(currency: CurrencyData) => currency.coin !== "ark" && currency.coin !== "eth",
+					(currency: CurrencyData) =>
+						currency.coin !== "ark" && currency.coin !== "eth" && currency.coin !== "btc",
 				);
 
-				setValue("currencies", [...arkOrEth, ...rest]);
+				setValue("currencies", [...ark, ...btc, ...eth, ...rest]);
 			} catch {
 				//
 			}
