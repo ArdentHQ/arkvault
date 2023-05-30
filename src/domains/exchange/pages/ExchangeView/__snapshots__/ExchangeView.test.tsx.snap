@@ -597,7 +597,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
           class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl hidden"
         >
           <div
-            class="mx-auto mb-8 h-8"
+            class="mx-auto mb-8 w-24"
           >
             <img
               alt="ChangeNOW Header Logo"
@@ -1784,7 +1784,7 @@ exports[`ExchangeView > should render 1`] = `
           class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl flex"
         >
           <div
-            class="mx-auto mb-8 h-8"
+            class="mx-auto mb-8 w-24"
           >
             <img
               alt="ChangeNOW Header Logo"
@@ -2971,7 +2971,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
           class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl hidden"
         >
           <div
-            class="mx-auto mb-8 h-8"
+            class="mx-auto mb-8 w-24"
           >
             <img
               alt="ChangeNOW Header Logo"
@@ -4162,7 +4162,7 @@ exports[`ExchangeView > should render light theme 1`] = `
           class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl hidden"
         >
           <div
-            class="mx-auto mb-8 h-8"
+            class="mx-auto mb-8 w-24"
           >
             <img
               alt="ChangeNOW Header Logo"
@@ -5353,7 +5353,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
           class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl hidden"
         >
           <div
-            class="mx-auto mb-8 h-8"
+            class="mx-auto mb-8 w-24"
           />
         </div>
       </div>
