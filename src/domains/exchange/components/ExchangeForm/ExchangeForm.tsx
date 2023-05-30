@@ -14,7 +14,7 @@ import { FormButtons } from "@/app/components/Form/FormButtons";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
-import { useActiveProfile, useValidation } from "@/app/hooks";
+import { useActiveProfile, useQueryParameters, useValidation } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { CurrencyData, ExchangeFormState, Order } from "@/domains/exchange/exchange.contracts";
@@ -41,7 +41,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
-	const { exchangeService, provider, clearCache } = useExchangeContext();
+	const { exchangeService, provider } = useExchangeContext();
 	const { exchangeOrder } = useValidation();
 	const history = useHistory();
 
@@ -57,11 +57,11 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 
 	const { currencies, fromCurrency, toCurrency, minPayinAmount, minPayoutAmount, recipientWallet, refundWallet } =
 		watch();
+	const queryParameters = useQueryParameters();
 
 	useEffect(() => {
 		const fetchCurrencies = async () => {
 			try {
-				clearCache();
 				const currencies = await exchangeService.currencies();
 
 				const ark = currencies.filter((currency: CurrencyData) => currency.coin === "ark");
@@ -73,6 +73,10 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 						currency.coin !== "ark" && currency.coin !== "eth" && currency.coin !== "btc",
 				);
 
+				if (provider?.slug !== queryParameters.get("exchangeId")) {
+					return;
+				}
+
 				setValue("currencies", [...ark, ...btc, ...eth, ...rest]);
 			} catch {
 				//
@@ -80,10 +84,6 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		};
 
 		fetchCurrencies();
-
-		return () => {
-			form.reset();
-		};
 	}, [provider]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {
