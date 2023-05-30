@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Welcome > should change route to create profile 1`] = `
 <DocumentFragment>
@@ -290,7 +290,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -328,7 +328,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -433,7 +433,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     />
                   </button>
                 </div>
@@ -763,7 +763,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -853,7 +853,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -891,7 +891,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -996,7 +996,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     />
                   </button>
                 </div>
@@ -1326,7 +1326,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -1416,7 +1416,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -1454,7 +1454,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -1559,7 +1559,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     />
                   </button>
                 </div>
@@ -1889,7 +1889,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -1979,7 +1979,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -2017,7 +2017,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -2122,7 +2122,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     />
                   </button>
                 </div>
@@ -2452,7 +2452,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -2542,7 +2542,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -2580,7 +2580,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -2685,7 +2685,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     />
                   </button>
                 </div>
@@ -3015,7 +3015,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -3105,7 +3105,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -3143,7 +3143,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -3248,7 +3248,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     />
                   </button>
                 </div>
@@ -3571,7 +3571,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -3609,7 +3609,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -3714,7 +3714,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     />
                   </button>
                 </div>
@@ -4044,7 +4044,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -4134,7 +4134,7 @@ exports[`Welcome > should render with profiles 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -4172,7 +4172,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     >
                       <div
                         class="static sm:relative"
@@ -4277,7 +4277,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     />
                   </button>
                 </div>
@@ -4615,7 +4615,7 @@ exports[`Welcome > should render without profiles 1`] = `
                       </span>
                     </div>
                     <div
-                      class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                     />
                   </button>
                 </div>

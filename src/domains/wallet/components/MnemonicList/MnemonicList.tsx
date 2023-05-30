@@ -19,7 +19,7 @@ export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) =>
 					key={index}
 					className="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
 				>
-					<span className="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block">
+					<span className="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block">
 						{index + 1}
 					</span>
 					<div className="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden">{index + 1}</div>
@@ -49,7 +49,7 @@ export const MnemonicListSkeleton: React.VFC = () => {
 					key={index}
 					className="relative flex items-center rounded border border-theme-secondary-300 p-2 dark:border-theme-secondary-700 sm:p-4"
 				>
-					<span className="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block">
+					<span className="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block">
 						{index + 1}
 					</span>
 					<div className="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden">{index + 1}</div>

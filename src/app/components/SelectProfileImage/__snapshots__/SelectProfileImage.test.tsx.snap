@@ -60,7 +60,7 @@ exports[`SelectProfileImage > should handle upload file 1`] = `
           </button>
         </div>
         <div
-          class="absolute -top-2 -right-2 z-20"
+          class="absolute -right-2 -top-2 z-20"
         >
           <button
             class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
@@ -165,7 +165,7 @@ exports[`SelectProfileImage > should not allow to upload an invalid file image 1
           </button>
         </div>
         <div
-          class="absolute -top-2 -right-2 z-20"
+          class="absolute -right-2 -top-2 z-20"
         >
           <button
             class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
@@ -270,7 +270,7 @@ exports[`SelectProfileImage > should not allow to upload when user aborted a req
           </button>
         </div>
         <div
-          class="absolute -top-2 -right-2 z-20"
+          class="absolute -right-2 -top-2 z-20"
         >
           <button
             class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
@@ -375,7 +375,7 @@ exports[`SelectProfileImage > should not handle upload file 1`] = `
           </button>
         </div>
         <div
-          class="absolute -top-2 -right-2 z-20"
+          class="absolute -right-2 -top-2 z-20"
         >
           <button
             class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
@@ -611,7 +611,7 @@ exports[`SelectProfileImage > should render without value svg 1`] = `
           </button>
         </div>
         <div
-          class="absolute -top-2 -right-2 z-20"
+          class="absolute -right-2 -top-2 z-20"
         >
           <button
             class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"

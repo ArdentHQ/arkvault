@@ -47,7 +47,7 @@ export const NetworkOption = memo(
 export const NetworkOptions = ({ disabled = false, networks = [], onSelect, selected }: NetworkOptionsProperties) => (
 	<div
 		data-testid="NetworkOptions"
-		className="flex-col space-y-3 space-x-0 sm:flex sm:flex-row sm:space-x-3 sm:space-y-0"
+		className="flex-col space-x-0 space-y-3 sm:flex sm:flex-row sm:space-x-3 sm:space-y-0"
 	>
 		{networks.map((network: Networks.Network) => (
 			<NetworkOption

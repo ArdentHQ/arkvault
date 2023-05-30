@@ -32,7 +32,7 @@ export const ConfirmPassphraseStep = () => {
 			/>
 
 			<MnemonicVerification
-				className="mt-6 mb-8"
+				className="mb-8 mt-6"
 				mnemonic={mnemonic}
 				optionsLimit={6}
 				handleComplete={handleComplete}

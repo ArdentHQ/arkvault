@@ -197,7 +197,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -251,7 +251,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -329,7 +329,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -389,7 +389,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -503,11 +503,11 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -731,7 +731,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -826,7 +826,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
                         >
                           <span
-                            class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+                            class="mr-auto mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
                           >
                             Estimated Rate
                             :
@@ -962,7 +962,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div
@@ -1392,7 +1392,7 @@ exports[`ExchangeView > should render 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -1446,7 +1446,7 @@ exports[`ExchangeView > should render 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -1524,7 +1524,7 @@ exports[`ExchangeView > should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -1584,7 +1584,7 @@ exports[`ExchangeView > should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -1698,11 +1698,11 @@ exports[`ExchangeView > should render 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -1916,7 +1916,7 @@ exports[`ExchangeView > should render 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -2011,7 +2011,7 @@ exports[`ExchangeView > should render 1`] = `
                           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
                         >
                           <span
-                            class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+                            class="mr-auto mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
                           >
                             Estimated Rate
                             :
@@ -2145,7 +2145,7 @@ exports[`ExchangeView > should render 1`] = `
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div
@@ -2571,7 +2571,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -2625,7 +2625,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -2703,7 +2703,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -2763,7 +2763,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -2877,11 +2877,11 @@ exports[`ExchangeView > should render dark theme 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -3105,7 +3105,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -3200,7 +3200,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
                         >
                           <span
-                            class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+                            class="mr-auto mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
                           >
                             Estimated Rate
                             :
@@ -3336,7 +3336,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div
@@ -3762,7 +3762,7 @@ exports[`ExchangeView > should render light theme 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -3816,7 +3816,7 @@ exports[`ExchangeView > should render light theme 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -3894,7 +3894,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -3954,7 +3954,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -4068,11 +4068,11 @@ exports[`ExchangeView > should render light theme 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -4296,7 +4296,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -4391,7 +4391,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
                         >
                           <span
-                            class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+                            class="mr-auto mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
                           >
                             Estimated Rate
                             :
@@ -4527,7 +4527,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div
@@ -4953,7 +4953,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -5007,7 +5007,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -5085,7 +5085,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -5145,7 +5145,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -5259,11 +5259,11 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"

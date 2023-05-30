@@ -256,7 +256,7 @@ exports[`Button > should render inactive 1`] = `
 exports[`Button > should render skeleton wrapper 1`] = `
 <div>
   <div
-    class="flex h-20 items-center py-4 px-8 md:px-4"
+    class="flex h-20 items-center px-8 py-4 md:px-4"
     data-testid="AccordionHeaderSkeletonWrapper"
   >
     content

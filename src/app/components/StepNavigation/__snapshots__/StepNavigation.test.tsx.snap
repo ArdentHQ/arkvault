@@ -60,7 +60,7 @@ exports[`StepNavigation > should disable buttons if loading 1`] = `
             </span>
           </span>
           <div
-            class="absolute top-0 left-0 flex h-full w-full items-center justify-center"
+            class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
           >
             <div
               class="css-13oo6ja"

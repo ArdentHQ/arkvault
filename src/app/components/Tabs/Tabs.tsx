@@ -98,7 +98,7 @@ export const TabScroll = ({ children }) => {
 				<TabScrollScroll className="relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
 			</div>
 			<span
-				className="pointer-events-none absolute top-0 right-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
+				className="pointer-events-none absolute right-0 top-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
 				style={{
 					background: `linear-gradient(270deg, rgba(${shadowRGB}, 0.8) 14.49%, rgba(${shadowRGB}, 0) 92.71%)`,
 				}}
@@ -138,7 +138,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			{properties.count !== undefined && (
 				<span
 					data-testid={`tabs__tab-button-${properties.tabId}-count`}
-					className="ml-2 rounded bg-theme-primary-100 py-0.5 px-1.5 text-sm font-semibold dark:bg-theme-secondary-900"
+					className="ml-2 rounded bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
 				>
 					{properties.count}
 				</span>

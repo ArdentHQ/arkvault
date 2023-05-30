@@ -54,13 +54,13 @@ const ModalContent = ({
 			"relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl",
 			{
 				"p-10": noButtons,
-				"px-10 pt-10 pb-24 sm:pb-10": !noButtons,
+				"px-10 pb-24 pt-10 sm:pb-10": !noButtons,
 			},
 		)}
 		data-testid="Modal__inner"
 	>
 		{!hideCloseButton && (
-			<div className="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400">
+			<div className="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400">
 				<Button
 					data-testid="Modal__close-button"
 					variant="transparent"
@@ -75,7 +75,7 @@ const ModalContent = ({
 
 		<div className="relative flex flex-1 flex-col space-y-4">
 			{banner && (
-				<div className="relative -mx-10 mb-10 -mt-10 h-56">
+				<div className="relative -mx-10 -mt-10 mb-10 h-56">
 					{banner}
 
 					<div className="absolute bottom-0 left-0 mb-10 ml-10">

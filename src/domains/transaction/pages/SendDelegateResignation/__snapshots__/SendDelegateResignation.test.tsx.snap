@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] = `
 <DocumentFragment>
@@ -76,7 +76,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -129,7 +129,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -207,7 +207,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -267,7 +267,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -381,11 +381,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -1081,7 +1081,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -1134,7 +1134,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -1212,7 +1212,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -1272,7 +1272,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -1386,11 +1386,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -2063,7 +2063,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -2116,7 +2116,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -2194,7 +2194,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -2254,7 +2254,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -2368,11 +2368,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -2637,10 +2637,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                         class="relative p-4"
                       >
                         <div
-                          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+                          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
                         >
                           <div
-                            class="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+                            class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
                           >
                             <span
                               class="css-1j6ndo3"
@@ -2671,7 +2671,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                           </div>
                         </div>
                         <div
-                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+                          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
                         >
                           <div
                             class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
@@ -2960,7 +2960,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -3013,7 +3013,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -3091,7 +3091,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -3151,7 +3151,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -3265,11 +3265,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -3803,7 +3803,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -3856,7 +3856,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -3934,7 +3934,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -3994,7 +3994,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -4108,11 +4108,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -4773,7 +4773,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -4826,7 +4826,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -4904,7 +4904,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -4964,7 +4964,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -5078,11 +5078,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -5661,7 +5661,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -5714,7 +5714,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -5792,7 +5792,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -5852,7 +5852,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -5966,11 +5966,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -6968,7 +6968,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -7021,7 +7021,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -7099,7 +7099,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -7159,7 +7159,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -7273,11 +7273,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -8150,7 +8150,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -8203,7 +8203,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -8281,7 +8281,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -8341,7 +8341,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -8455,11 +8455,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"

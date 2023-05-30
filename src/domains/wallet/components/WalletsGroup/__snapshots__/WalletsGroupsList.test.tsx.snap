@@ -9,7 +9,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
       class="css-8cvvgy"
     >
       <div
-        class="flex h-20 items-center py-4 px-8 md:px-4"
+        class="flex h-20 items-center px-8 py-4 md:px-4"
         data-testid="WalletsGroupHeaderSkeleton"
       >
         <div
@@ -30,7 +30,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
           </span>
         </div>
         <div
-          class="grow justify-between space-x-3 py-3 px-3"
+          class="grow justify-between space-x-3 px-3 py-3"
         >
           <h1
             class="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"

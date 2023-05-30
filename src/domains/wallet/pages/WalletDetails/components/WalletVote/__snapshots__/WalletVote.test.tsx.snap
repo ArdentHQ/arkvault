@@ -82,7 +82,7 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pr-6 md:pl-0"
+        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -268,7 +268,7 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pr-6 md:pl-0"
+        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -454,7 +454,7 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pr-6 md:pl-0"
+        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -645,7 +645,7 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple st
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pr-6 md:pl-0"
+        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -835,7 +835,7 @@ exports[`WalletVote > multi vote networks > should render votes when all delegat
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pr-6 md:pl-0"
+        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -983,7 +983,7 @@ exports[`WalletVote > multi vote networks > should render votes when all delegat
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pr-6 md:pl-0"
+        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -1512,7 +1512,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pr-6 md:pl-0"
+        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2436,7 +2436,7 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pr-6 md:pl-0"
+        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2610,7 +2610,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pr-6 md:pl-0"
+        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2784,7 +2784,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pr-6 md:pl-0"
+        class="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"

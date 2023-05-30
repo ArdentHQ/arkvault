@@ -95,7 +95,7 @@ export const GroupNetworkIcon: React.VFC<WalletsGroupNetworkIconProperties> = ({
 			/>
 
 			{network.isTest() && (
-				<div className="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden">
+				<div className="absolute -bottom-2 -right-2 h-6 w-6 rounded-full bg-theme-background sm:hidden">
 					<WalletIcon type="TestNetwork" iconSize="md" />
 				</div>
 			)}

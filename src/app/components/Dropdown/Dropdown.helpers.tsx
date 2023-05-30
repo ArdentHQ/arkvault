@@ -36,7 +36,7 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: Dropdo
 	return (
 		<div key={key} className={cn({ "mt-4": title || hasDivider })}>
 			{hasDivider && (
-				<div className="mx-8 -my-2">
+				<div className="-my-2 mx-8">
 					<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" />
 				</div>
 			)}

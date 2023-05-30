@@ -227,7 +227,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const renderNavigationMenu = () => (
 		<>
-			<ul className="mr-auto ml-4 hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
+			<ul className="ml-4 mr-auto hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => (
 					<li key={index} className="flex">
 						<NavLink
@@ -243,7 +243,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 			</ul>
 			<div
 				data-testid="NavigationBar__menu-toggle"
-				className="mr-auto ml-2 flex content-center items-center lg:hidden"
+				className="ml-2 mr-auto flex content-center items-center lg:hidden"
 			>
 				<Dropdown
 					dropdownClass="w-full sm:w-auto mt-6 sm:mt-10 mx-0 rounded-none sm:rounded-xl"
@@ -387,7 +387,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							</div>
 						</div>
 
-						<div className="my-auto mx-4 hidden items-center md:flex" data-testid="NavigationBar__balance">
+						<div className="mx-4 my-auto hidden items-center md:flex" data-testid="NavigationBar__balance">
 							<Balance profile={profile} isLoading={profileIsSyncingExchangeRates} />
 						</div>
 

@@ -29,7 +29,7 @@ export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect
 			tabIndex={onClick ? undefined : -1}
 		>
 			{children}
-			<div className="absolute -top-1 -right-1 m-4 flex items-center space-x-1">
+			<div className="absolute -right-1 -top-1 m-4 flex items-center space-x-1">
 				{addonIcons}
 				{actions && actions.length > 0 && (
 					<Dropdown

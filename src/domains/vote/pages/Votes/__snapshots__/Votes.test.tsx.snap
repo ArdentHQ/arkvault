@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Votes > should emit action on continue button 1`] = `<DocumentFragment />`;
 
@@ -203,7 +203,7 @@ exports[`Votes > should filter current delegates 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -256,7 +256,7 @@ exports[`Votes > should filter current delegates 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -334,7 +334,7 @@ exports[`Votes > should filter current delegates 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -394,7 +394,7 @@ exports[`Votes > should filter current delegates 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -506,11 +506,11 @@ exports[`Votes > should filter current delegates 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -669,7 +669,7 @@ exports[`Votes > should filter current delegates 1`] = `
                           class="ring-focus css-1wz6bm9"
                         >
                           <div
-                            class="absolute top-0.5 right-1 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
+                            class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
                           >
                             <div
                               class="h-2 w-2 rounded-full bg-theme-primary-500"
@@ -715,7 +715,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     >
                       <div>
                         <div
-                          class="flex w-56 flex-col items-start space-y-5 py-7 px-10 text-theme-secondary-700 dark:text-theme-secondary-200"
+                          class="flex w-56 flex-col items-start space-y-5 px-10 py-7 text-theme-secondary-700 dark:text-theme-secondary-200"
                         >
                           <label
                             class="flex h-5 cursor-pointer items-center space-x-3 rounded-md"
@@ -1746,7 +1746,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -1799,7 +1799,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -1877,7 +1877,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -1937,7 +1937,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -2049,11 +2049,11 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -3692,7 +3692,7 @@ exports[`Votes > should render 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -3745,7 +3745,7 @@ exports[`Votes > should render 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -3823,7 +3823,7 @@ exports[`Votes > should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -3883,7 +3883,7 @@ exports[`Votes > should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -3995,11 +3995,11 @@ exports[`Votes > should render 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -5573,7 +5573,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -5626,7 +5626,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -5704,7 +5704,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -5764,7 +5764,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -5876,11 +5876,11 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -7452,7 +7452,7 @@ exports[`Votes > should render with no wallets 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -7506,7 +7506,7 @@ exports[`Votes > should render with no wallets 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -7584,7 +7584,7 @@ exports[`Votes > should render with no wallets 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -7751,11 +7751,11 @@ exports[`Votes > should render with no wallets 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -8171,7 +8171,7 @@ exports[`Votes > should select a delegate 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -8224,7 +8224,7 @@ exports[`Votes > should select a delegate 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -8302,7 +8302,7 @@ exports[`Votes > should select a delegate 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -8362,7 +8362,7 @@ exports[`Votes > should select a delegate 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -8474,11 +8474,11 @@ exports[`Votes > should select a delegate 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -10047,7 +10047,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -10101,7 +10101,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -10179,7 +10179,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -10239,7 +10239,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -10351,11 +10351,11 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -10514,7 +10514,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                           class="ring-focus css-1wz6bm9"
                         >
                           <div
-                            class="absolute top-0.5 right-1 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
+                            class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
                           >
                             <div
                               class="h-2 w-2 rounded-full bg-theme-primary-500"
@@ -10556,7 +10556,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                     >
                       <div>
                         <div
-                          class="w-full py-7 px-10 sm:w-96 md:w-128"
+                          class="w-full px-10 py-7 sm:w-96 md:w-128"
                         >
                           <div
                             class="flex flex-col text-left"
@@ -10592,7 +10592,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                                   data-testid="NetworkOptions"
                                 >
                                   <li
-                                    class="inline-block cursor-pointer pr-5 pb-5"
+                                    class="inline-block cursor-pointer pb-5 pr-5"
                                     data-testid="NetworkOption__ark.devnet"
                                   >
                                     <div
@@ -10658,7 +10658,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                               </div>
                             </div>
                             <div
-                              class="mt-6 mb-8 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="mb-8 mt-6 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                             <div
                               class="flex flex-col"
@@ -11431,7 +11431,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -11485,7 +11485,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -11563,7 +11563,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -11623,7 +11623,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -11735,11 +11735,11 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -11898,7 +11898,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                           class="ring-focus css-1wz6bm9"
                         >
                           <div
-                            class="absolute top-0.5 right-1 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
+                            class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
                           >
                             <div
                               class="h-2 w-2 rounded-full bg-theme-primary-500"
@@ -11940,7 +11940,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                     >
                       <div>
                         <div
-                          class="w-full py-7 px-10 sm:w-96 md:w-128"
+                          class="w-full px-10 py-7 sm:w-96 md:w-128"
                         >
                           <div
                             class="flex flex-col text-left"
@@ -11976,7 +11976,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                                   data-testid="NetworkOptions"
                                 >
                                   <li
-                                    class="inline-block cursor-pointer pr-5 pb-5"
+                                    class="inline-block cursor-pointer pb-5 pr-5"
                                     data-testid="NetworkOption__ark.devnet"
                                   >
                                     <div
@@ -12042,7 +12042,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                               </div>
                             </div>
                             <div
-                              class="mt-6 mb-8 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="mb-8 mt-6 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                             <div
                               class="flex flex-col"
@@ -12819,7 +12819,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -12872,7 +12872,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -12950,7 +12950,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -13010,7 +13010,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -13122,11 +13122,11 @@ exports[`Votes > should show resigned delegate notice 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -14757,7 +14757,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -14811,7 +14811,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -14889,7 +14889,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -14949,7 +14949,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -15061,11 +15061,11 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -15259,7 +15259,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     >
                       <div>
                         <div
-                          class="w-full py-7 px-10 sm:w-96 md:w-128"
+                          class="w-full px-10 py-7 sm:w-96 md:w-128"
                         >
                           <div
                             class="flex flex-col text-left"
@@ -15295,7 +15295,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                                   data-testid="NetworkOptions"
                                 >
                                   <li
-                                    class="inline-block cursor-pointer pr-5 pb-5"
+                                    class="inline-block cursor-pointer pb-5 pr-5"
                                     data-testid="NetworkOption__ark.devnet"
                                   >
                                     <div
@@ -15361,7 +15361,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                               </div>
                             </div>
                             <div
-                              class="mt-6 mb-8 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="mb-8 mt-6 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                             <div
                               class="flex flex-col"
@@ -16260,7 +16260,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -16313,7 +16313,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -16391,7 +16391,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -16451,7 +16451,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -16563,11 +16563,11 @@ exports[`Votes > should trigger network connection warning 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"

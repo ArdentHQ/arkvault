@@ -88,7 +88,7 @@ export const WalletsControls = React.memo(
 						}
 						disableToggle={filterProperties.disabled}
 					>
-						<div className="w-full py-7 px-10 sm:w-96 md:w-128">
+						<div className="w-full px-10 py-7 sm:w-96 md:w-128">
 							<FilterWallets {...filterProperties} onChange={onFilterChange} />
 						</div>
 					</Dropdown>
@@ -137,7 +137,7 @@ export const WalletsControls = React.memo(
 					<Dropdown
 						dropdownClass="mx-4 md:mx-0"
 						toggleContent={
-							<span className="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600">
+							<span className="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600">
 								<Icon name="Plus" />
 							</span>
 						}

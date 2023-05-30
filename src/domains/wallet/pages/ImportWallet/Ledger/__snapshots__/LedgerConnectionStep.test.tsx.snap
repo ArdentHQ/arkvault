@@ -150,7 +150,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center py-2 px-1"
+                          class="flex items-center justify-center px-1 py-2"
                           data-testid="SelectDropdown__caret"
                         >
                           <div

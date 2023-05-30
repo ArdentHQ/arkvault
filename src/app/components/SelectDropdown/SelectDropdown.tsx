@@ -126,7 +126,7 @@ const SelectDropdown = ({
 
 						<div
 							data-testid="SelectDropdown__caret"
-							className="flex items-center justify-center py-2 px-1"
+							className="flex items-center justify-center px-1 py-2"
 							onClick={() => {
 								if (disabled) {
 									return;
