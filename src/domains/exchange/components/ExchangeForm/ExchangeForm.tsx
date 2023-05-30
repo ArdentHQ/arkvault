@@ -17,7 +17,7 @@ import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
 import { useActiveProfile, useValidation } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { ExchangeFormState, Order } from "@/domains/exchange/exchange.contracts";
+import { CurrencyData, ExchangeFormState, Order } from "@/domains/exchange/exchange.contracts";
 import {
 	assertCurrency,
 	assertExchangeService,
@@ -62,14 +62,23 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		const fetchCurrencies = async () => {
 			try {
 				const currencies = await exchangeService.currencies();
-				setValue("currencies", currencies);
+
+				const arkOrEth = currencies.filter(
+					(currency: CurrencyData) => currency.coin === "ark" || currency.coin === "eth",
+				);
+
+				const rest = currencies.filter(
+					(currency: CurrencyData) => currency.coin !== "ark" && currency.coin !== "eth",
+				);
+
+				setValue("currencies", [...arkOrEth, ...rest]);
 			} catch {
 				//
 			}
 		};
 
 		fetchCurrencies();
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [provider]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {
 		const initExchangeTransaction = async () => {
