@@ -15,6 +15,7 @@ import { Spinner } from "@/app/components/Spinner";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { assertExchangeService, isUnavailablePairError } from "@/domains/exchange/utils";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
+import { useBreakpoint } from "@/app/hooks";
 
 interface FormStepProperties {
 	profile: Contracts.IProfile;
@@ -35,6 +36,8 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 
 	const { clearErrors, errors, getValues, setError, setValue, trigger, watch } = useFormContext();
 	const { currencies, exchangeRate, fromCurrency, toCurrency, payinAmount, payoutAmount } = watch();
+
+	const { isXs } = useBreakpoint();
 
 	const { exchangeService } = useExchangeContext();
 	assertExchangeService(exchangeService);
@@ -330,7 +333,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 	return (
 		<div data-testid="ExchangeForm__form-step" className="flex flex-col">
 			<div className="relative flex space-x-3">
-				<div className="w-2/5">
+				<div className="w-1/2 sm:w-2/5">
 					<FormField name="fromCurrency">
 						<FormLabel label={t("COMMON.CRYPTOASSET")} />
 						<Select
@@ -341,11 +344,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 							wrapperClassName="static sm:relative"
 							addons={{
 								start: {
-									content: (
-										<span className="hidden sm:inline">
-											<CurrencyIcon image={fromCurrency?.image} ticker={fromCurrency?.coin} />
-										</span>
-									),
+									content: <CurrencyIcon image={fromCurrency?.image} ticker={fromCurrency?.coin} />,
 								},
 							}}
 							options={
@@ -361,11 +360,11 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 					</FormField>
 				</div>
 
-				<div className="w-3/5">
+				<div className="w-1/2 sm:w-3/5">
 					<FormField name="payinAmount">
 						<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")} />
 						<InputCurrency
-							placeholder={t("COMMON.AMOUNT_PLACEHOLDER")}
+							placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
 							value={payinAmount}
 							onChange={async (amount: string) => await handlePayinAmountChange(amount)}
 							addons={
@@ -392,7 +391,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 
 			<div className="space-y-6">
 				<div className="relative flex space-x-3">
-					<div className="w-2/5">
+					<div className="w-1/2 sm:w-2/5">
 						<FormField name="toCurrency">
 							<FormLabel label={t("COMMON.CRYPTOASSET")} />
 							<Select
@@ -403,11 +402,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 								wrapperClassName="static sm:relative"
 								addons={{
 									start: {
-										content: (
-											<span className="hidden sm:inline">
-												<CurrencyIcon image={toCurrency?.image} ticker={toCurrency?.coin} />
-											</span>
-										),
+										content: <CurrencyIcon image={toCurrency?.image} ticker={toCurrency?.coin} />,
 									},
 								}}
 								options={
@@ -423,11 +418,11 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 						</FormField>
 					</div>
 
-					<div className="w-3/5">
+					<div className="w-1/2 sm:w-3/5">
 						<FormField name="payoutAmount">
 							<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_GET")} />
 							<InputCurrency
-								placeholder={t("COMMON.AMOUNT_PLACEHOLDER")}
+								placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
 								value={payoutAmount}
 								onChange={async (amount: string) => await handlePayoutAmountChange(amount)}
 								addons={
