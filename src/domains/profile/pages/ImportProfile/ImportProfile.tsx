@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { StepsProvider, useEnvironmentContext } from "@/app/contexts";
+import { StepsProvider, useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { ReadableFile } from "@/app/hooks/use-files";
 import { ProcessingImport } from "@/domains/profile/pages/ImportProfile/ProcessingImportStep";
 import { ImportProfileForm } from "@/domains/profile/pages/ImportProfile/ProfileFormStep";
@@ -27,6 +27,7 @@ export const ImportProfile = () => {
 	const [selectedFile, setSelectedFile] = useState<ReadableFile>();
 	const [password, setPassword] = useState<string>();
 	const [profile, setProfile] = useState<Contracts.IProfile>();
+	const { setConfiguration } = useConfiguration();
 
 	const handleSelectedFile = (file: ReadableFile) => {
 		setSelectedFile(file);
@@ -34,6 +35,7 @@ export const ImportProfile = () => {
 	};
 
 	const handleProfileSave = () => {
+		setConfiguration({ dashboard: undefined });
 		persist();
 		history.push("/");
 	};
