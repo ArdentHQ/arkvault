@@ -86,7 +86,7 @@ export const useWalletConfig = ({
 		setValue,
 		...dashboardConfiguration,
 		defaultConfiguration,
-		profileHasSyncedOnce,
 		selectedNetworkIds: profileIsRestoring ? defaultConfiguration.selectedNetworkIds : selectedNetworkIds,
+		profileHasSyncedOnce,
 	};
 };
