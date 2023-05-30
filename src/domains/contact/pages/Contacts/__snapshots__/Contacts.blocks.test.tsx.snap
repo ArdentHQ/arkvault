@@ -1,9 +1,9 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ContactsHeader > should render responsive 1`] = `
 <DocumentFragment>
   <section
-    class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
+    class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-1.5 dark:bg-black"
   >
     <h1
       class="mb-0 text-lg"
@@ -116,7 +116,7 @@ exports[`ContactsHeader > should render responsive 2`] = `
     class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
   >
     <div
-      class="mx-auto px-8 md:px-10 lg:container"
+      class="mx-auto px-8 lg:container md:px-10"
     >
       <div
         class="flex items-end justify-between bg-theme-background"

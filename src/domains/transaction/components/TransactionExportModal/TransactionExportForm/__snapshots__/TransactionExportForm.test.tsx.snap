@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TransactionExportForm > should render fiat column if wallets network is live 1`] = `
 <DocumentFragment>
@@ -174,7 +174,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       CSV Settings
     </div>
@@ -320,7 +320,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       Columns
     </div>
@@ -763,7 +763,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       CSV Settings
     </div>
@@ -909,7 +909,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       Columns
     </div>
@@ -1306,7 +1306,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       CSV Settings
     </div>
@@ -1452,7 +1452,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       Columns
     </div>
@@ -1849,7 +1849,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       CSV Settings
     </div>
@@ -1995,7 +1995,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       Columns
     </div>
@@ -2392,7 +2392,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       CSV Settings
     </div>
@@ -2538,7 +2538,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       Columns
     </div>
@@ -2934,7 +2934,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       CSV Settings
     </div>
@@ -3080,7 +3080,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       </li>
     </ul>
     <div
-      class="mt-8 mb-4 text-lg font-semibold"
+      class="mb-4 mt-8 text-lg font-semibold"
     >
       Columns
     </div>

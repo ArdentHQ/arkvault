@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TransferLedgerReview > should render 1`] = `
 <DocumentFragment>
@@ -69,10 +69,10 @@ exports[`TransferLedgerReview > should render 1`] = `
         class="relative p-4"
       >
         <div
-          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
         >
           <div
-            class="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+            class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
           >
             <span
               class="css-1j6ndo3"
@@ -103,7 +103,7 @@ exports[`TransferLedgerReview > should render 1`] = `
           </div>
         </div>
         <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
         >
           <div
             class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
@@ -243,10 +243,10 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         class="relative p-4"
       >
         <div
-          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
         >
           <div
-            class="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+            class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
           >
             <span
               class="css-1j6ndo3"
@@ -277,7 +277,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
           </div>
         </div>
         <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
         >
           <div
             class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
@@ -454,10 +454,10 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         class="relative p-4"
       >
         <div
-          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
         >
           <div
-            class="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+            class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
           >
             <span
               class="css-1j6ndo3"
@@ -488,7 +488,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
           </div>
         </div>
         <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
         >
           <div
             class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"

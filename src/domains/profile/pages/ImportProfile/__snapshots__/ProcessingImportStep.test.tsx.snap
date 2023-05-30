@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Import Profile - Processing import > should enter password again 1`] = `
 <div>
@@ -535,7 +535,7 @@ exports[`Import Profile - Processing import > should require password for passwo
             </div>
           </div>
           <div
-            class="css-1v2j3qb"
+            class="css-qed8fm"
             color="info"
           />
         </div>
@@ -822,7 +822,7 @@ exports[`Import Profile - Processing import > should successfully import json pr
             </div>
           </div>
           <div
-            class="css-1v2j3qb"
+            class="css-qed8fm"
             color="info"
           />
         </div>
@@ -920,7 +920,7 @@ exports[`Import Profile - Processing import > should successfully import wwe pro
             </div>
           </div>
           <div
-            class="css-1v2j3qb"
+            class="css-qed8fm"
             color="info"
           />
         </div>

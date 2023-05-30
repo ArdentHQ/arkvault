@@ -76,7 +76,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
             class="min-w-0"
           >
             <span
-              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
@@ -502,7 +502,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
             class="min-w-0"
           >
             <span
-              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
@@ -903,7 +903,7 @@ exports[`WalletHeader > should render 1`] = `
             class="min-w-0"
           >
             <span
-              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
@@ -1222,7 +1222,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
             class="min-w-0"
           >
             <span
-              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
@@ -1572,7 +1572,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
             class="min-w-0"
           >
             <span
-              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
@@ -1892,7 +1892,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
             class="min-w-0"
           >
             <span
-              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
@@ -2243,7 +2243,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
             class="min-w-0"
           >
             <span
-              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
@@ -2655,7 +2655,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
             class="min-w-0"
           >
             <span
-              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
@@ -2974,7 +2974,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
             class="min-w-0"
           >
             <span
-              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+              class="no-ligatures min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>

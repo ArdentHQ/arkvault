@@ -31,7 +31,7 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 				<EmptyBlock>
 					<span className="whitespace-nowrap">{t("COMMON.NOTIFICATIONS.EMPTY")}</span>
 				</EmptyBlock>
-				<Image name="EmptyNotifications" className="mx-auto mt-8 mb-2 w-64" />
+				<Image name="EmptyNotifications" className="mx-auto mb-2 mt-8 w-64" />
 			</NotificationsWrapper>
 		);
 	}

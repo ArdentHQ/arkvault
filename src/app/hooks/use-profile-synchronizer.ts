@@ -130,7 +130,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 
 		const syncServerStatus = {
 			callback: async () => {
-				setConfiguration({ serverStatus: await ProfilePeers(env, profile).healthStatus() });
+				setConfiguration({ serverStatus: await ProfilePeers(env, profile).healthStatusByNetwork() });
 			},
 			interval: Intervals.Long,
 		};

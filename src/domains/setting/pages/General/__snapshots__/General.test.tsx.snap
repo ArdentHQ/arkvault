@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`General Settings > should disable submit button when profile is not restored yet 1`] = `
 <DocumentFragment>
@@ -201,7 +201,7 @@ exports[`General Settings > should disable submit button when profile is not res
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -254,7 +254,7 @@ exports[`General Settings > should disable submit button when profile is not res
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -332,7 +332,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -392,7 +392,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -506,11 +506,11 @@ exports[`General Settings > should disable submit button when profile is not res
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -930,7 +930,7 @@ exports[`General Settings > should disable submit button when profile is not res
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -1154,7 +1154,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -1286,7 +1286,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -1422,7 +1422,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -1554,7 +1554,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -1686,7 +1686,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -1842,7 +1842,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div
@@ -2199,7 +2199,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -2252,7 +2252,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -2330,7 +2330,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -2390,7 +2390,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -2504,11 +2504,11 @@ exports[`General Settings > should not update the uploaded avatar when removing 
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -2924,7 +2924,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -3016,7 +3016,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             </button>
                           </div>
                           <div
-                            class="absolute -top-2 -right-2 z-20"
+                            class="absolute -right-2 -top-2 z-20"
                           >
                             <button
                               class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
@@ -3231,7 +3231,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -3363,7 +3363,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -3499,7 +3499,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -3631,7 +3631,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -3763,7 +3763,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -3919,7 +3919,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div
@@ -4276,7 +4276,7 @@ exports[`General Settings > should render 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -4329,7 +4329,7 @@ exports[`General Settings > should render 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -4407,7 +4407,7 @@ exports[`General Settings > should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -4467,7 +4467,7 @@ exports[`General Settings > should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -4581,11 +4581,11 @@ exports[`General Settings > should render 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -5001,7 +5001,7 @@ exports[`General Settings > should render 1`] = `
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -5225,7 +5225,7 @@ exports[`General Settings > should render 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -5357,7 +5357,7 @@ exports[`General Settings > should render 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -5493,7 +5493,7 @@ exports[`General Settings > should render 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -5625,7 +5625,7 @@ exports[`General Settings > should render 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -5757,7 +5757,7 @@ exports[`General Settings > should render 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -5913,7 +5913,7 @@ exports[`General Settings > should render 1`] = `
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div
@@ -6270,7 +6270,7 @@ exports[`General Settings > should show identicon when removing image if name is
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -6323,7 +6323,7 @@ exports[`General Settings > should show identicon when removing image if name is
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -6401,7 +6401,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -6461,7 +6461,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -6575,11 +6575,11 @@ exports[`General Settings > should show identicon when removing image if name is
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -6995,7 +6995,7 @@ exports[`General Settings > should show identicon when removing image if name is
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -7219,7 +7219,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -7351,7 +7351,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -7487,7 +7487,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -7619,7 +7619,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -7751,7 +7751,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -7907,7 +7907,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div
@@ -8264,7 +8264,7 @@ exports[`General Settings > should update profile 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -8317,7 +8317,7 @@ exports[`General Settings > should update profile 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -8395,7 +8395,7 @@ exports[`General Settings > should update profile 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -8455,7 +8455,7 @@ exports[`General Settings > should update profile 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -8569,11 +8569,11 @@ exports[`General Settings > should update profile 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -8985,7 +8985,7 @@ exports[`General Settings > should update profile 1`] = `
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -9209,7 +9209,7 @@ exports[`General Settings > should update profile 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -9341,7 +9341,7 @@ exports[`General Settings > should update profile 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -9477,7 +9477,7 @@ exports[`General Settings > should update profile 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -9609,7 +9609,7 @@ exports[`General Settings > should update profile 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -9741,7 +9741,7 @@ exports[`General Settings > should update profile 1`] = `
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -9897,7 +9897,7 @@ exports[`General Settings > should update profile 1`] = `
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div
@@ -10254,7 +10254,7 @@ exports[`General Settings > should update the avatar when removing focus from na
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -10307,7 +10307,7 @@ exports[`General Settings > should update the avatar when removing focus from na
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -10385,7 +10385,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -10445,7 +10445,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -10559,11 +10559,11 @@ exports[`General Settings > should update the avatar when removing focus from na
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -10979,7 +10979,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -11203,7 +11203,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -11335,7 +11335,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -11471,7 +11471,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -11603,7 +11603,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -11735,7 +11735,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -11891,7 +11891,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div
@@ -12248,7 +12248,7 @@ exports[`General Settings > should update the avatar when removing focus from na
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -12301,7 +12301,7 @@ exports[`General Settings > should update the avatar when removing focus from na
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -12379,7 +12379,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -12439,7 +12439,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -12553,11 +12553,11 @@ exports[`General Settings > should update the avatar when removing focus from na
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -12973,7 +12973,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 md:px-10 lg:container lg:px-12"
+                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -13238,7 +13238,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -13370,7 +13370,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -13506,7 +13506,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -13638,7 +13638,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -13770,7 +13770,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="flex items-center justify-center py-2 px-1"
+                                            class="flex items-center justify-center px-1 py-2"
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
@@ -13926,7 +13926,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             class="flex items-center"
                                           >
                                             <div
-                                              class="flex items-center justify-center py-2 px-1"
+                                              class="flex items-center justify-center px-1 py-2"
                                               data-testid="SelectDropdown__caret"
                                             >
                                               <div

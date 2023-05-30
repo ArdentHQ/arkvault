@@ -13,8 +13,18 @@ const getColor = (color: Color, theme?: Theme) => {
 		warning: "warning-600",
 	};
 
+	let styles = [tw`border-theme-secondary-200 dark:border-black`];
+
+	if (theme === "dark") {
+		styles = [tw`border-black`];
+	}
+
+	if (theme === "system") {
+		styles = [tw`border-theme-primary-100 dark:border-theme-secondary-800`];
+	}
+
 	return [
-		theme === "dark" ? tw`border-black` : tw`border-theme-secondary-200 dark:border-black`,
+		...styles,
 		css`
 			border-left-color: var(--theme-color-${baseColors[color]}) !important;
 		`,
@@ -32,8 +42,22 @@ const getSize = (size?: Size) => {
 	return (sizes[size as keyof typeof sizes] || sizes.default)();
 };
 
-export const getStyles = ({ color, size, theme }: { color?: Color; size?: Size; theme?: Theme }) => [
-	baseStyle,
-	getSize(size),
-	getColor(color!, theme),
-];
+const getWidth = (width?: number) => {
+	if (width !== undefined) {
+		return css`
+			border-width: ${width}px !important;
+		`;
+	}
+};
+
+export const getStyles = ({
+	color,
+	size,
+	theme,
+	width,
+}: {
+	color?: Color;
+	size?: Size;
+	theme?: Theme;
+	width?: number;
+}) => [baseStyle, getSize(size), getColor(color!, theme), getWidth(width)];

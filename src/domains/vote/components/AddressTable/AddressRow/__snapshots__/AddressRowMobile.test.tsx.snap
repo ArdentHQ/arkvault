@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`AddressRowMobile > should emit action on select button 1`] = `<DocumentFragment />`;
 
@@ -18,7 +18,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -41,21 +41,21 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -68,7 +68,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -112,7 +112,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="css-0"
+                              class="no-ligatures css-0"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -221,7 +221,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -244,21 +244,21 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -271,7 +271,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -315,7 +315,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="css-0"
+                              class="no-ligatures css-0"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -425,7 +425,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -448,21 +448,21 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -475,7 +475,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -519,7 +519,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="css-0"
+                              class="no-ligatures css-0"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -629,7 +629,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -652,21 +652,21 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -679,7 +679,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -840,7 +840,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -863,21 +863,21 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -890,7 +890,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -1042,7 +1042,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1065,21 +1065,21 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1092,7 +1092,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -1136,7 +1136,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="css-0"
+                              class="no-ligatures css-0"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -1236,7 +1236,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1259,21 +1259,21 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         testwallet2
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -1286,7 +1286,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -1347,7 +1347,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1370,21 +1370,21 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1397,7 +1397,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -1441,7 +1441,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                             class="flex w-full items-center"
                           >
                             <span
-                              class="css-0"
+                              class="no-ligatures css-0"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -1541,7 +1541,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1564,10 +1564,10 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
@@ -1580,7 +1580,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -1642,7 +1642,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1665,21 +1665,21 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1692,7 +1692,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -1749,7 +1749,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1772,21 +1772,21 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1799,7 +1799,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -1843,7 +1843,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="css-0"
+                              class="no-ligatures css-0"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -1952,7 +1952,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -1975,21 +1975,21 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2002,7 +2002,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -2046,7 +2046,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="css-0"
+                              class="no-ligatures css-0"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -2155,7 +2155,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
             class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 py-4 px-6 dark:border-theme-secondary-800"
+              class="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
             >
               <div
                 class="flex items-center justify-start space-x-3 overflow-hidden"
@@ -2178,21 +2178,21 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2205,7 +2205,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
               class="flex"
             >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 py-4 px-6 dark:bg-black"
+                class="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black"
               >
                 <span
                   class="text-theme-secondary-500"
@@ -2249,7 +2249,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="css-0"
+                              class="no-ligatures css-0"
                               data-testid="TruncateMiddle"
                             >
                               arkx

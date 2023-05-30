@@ -15,7 +15,7 @@ import { FormButtons } from "@/app/components/Form";
 const Banner = ({ step }: { step: WelcomeModalStep }) => {
 	if (step > WelcomeModalStep.Introduction) {
 		return (
-			<div className="-mx-10 my-8 border-t border-b border-theme-secondary-300 dark:border-theme-secondary-800">
+			<div className="-mx-10 my-8 border-b border-t border-theme-secondary-300 dark:border-theme-secondary-800">
 				<Image name={`WelcomeModalStep${step - 1}`} domain="profile" className="h-auto w-full" />
 			</div>
 		);

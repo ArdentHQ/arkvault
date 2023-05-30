@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`SignMessage success step > should render success step in lg 1`] = `
 <DocumentFragment>
@@ -37,21 +37,21 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             class="w-0 flex-1 text-right md:text-left"
           >
             <div
-              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
                 class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
-                  class="css-u3jrna"
+                  class="no-ligatures css-u3jrna"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
                 </span>
               </span>
               <span
-                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -186,21 +186,21 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
               class="w-0 flex-1 text-right md:text-left"
             >
               <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="css-u3jrna"
+                    class="no-ligatures css-u3jrna"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
                   </span>
                 </span>
                 <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

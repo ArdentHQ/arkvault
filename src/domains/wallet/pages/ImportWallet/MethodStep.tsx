@@ -269,9 +269,13 @@ const ImportInputField = ({
 				try {
 					const { address } = await coin.address().fromSecret(value);
 					return address;
-				} catch {
+				} catch (error) {
+					if (error.message.includes("value is BIP39")) {
+						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
+					}
+
 					/* istanbul ignore next -- @preserve */
-					throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
+					throw error;
 				}
 			}}
 			network={network}
@@ -342,7 +346,7 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 						</span>
 
 						<Tooltip
-							className="mb-1 -ml-3"
+							className="-ml-3 mb-1"
 							content={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.ENCRYPTION.NOT_AVAILABLE")}
 							disabled={importOption.canBeEncrypted}
 						>

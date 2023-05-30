@@ -14,7 +14,15 @@ import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { StatusStep } from "./StatusStep";
-import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	render,
+	renderResponsiveWithRoute,
+	screen,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { httpClient, toasts } from "@/app/services";
 import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
@@ -164,6 +172,33 @@ describe("ExchangeForm", () => {
 				route: exchangeURL,
 			},
 		);
+
+	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
+		const onReady = vi.fn();
+
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/exchange/view">
+				<ExchangeProvider>
+					<Wrapper>
+						<ExchangeForm onReady={onReady} />
+					</Wrapper>
+				</ExchangeProvider>
+			</Route>,
+			breakpoint,
+			{
+				history,
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(onReady).toHaveBeenCalledWith();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
+		});
+	});
 
 	it("should render exchange form", async () => {
 		const onReady = vi.fn();

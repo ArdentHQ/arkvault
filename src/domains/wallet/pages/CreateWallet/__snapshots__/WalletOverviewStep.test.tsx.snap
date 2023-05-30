@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`WalletOverviewStep > Render step > should render 1`] = `
 <DocumentFragment>
@@ -83,7 +83,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             1
           </span>
@@ -103,7 +103,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             2
           </span>
@@ -123,7 +123,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             3
           </span>
@@ -143,7 +143,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             4
           </span>
@@ -163,7 +163,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             5
           </span>
@@ -183,7 +183,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             6
           </span>
@@ -203,7 +203,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             7
           </span>
@@ -223,7 +223,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             8
           </span>
@@ -243,7 +243,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             9
           </span>
@@ -263,7 +263,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             10
           </span>
@@ -283,7 +283,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             11
           </span>
@@ -303,7 +303,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             12
           </span>
@@ -323,7 +323,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             13
           </span>
@@ -343,7 +343,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             14
           </span>
@@ -363,7 +363,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             15
           </span>
@@ -383,7 +383,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             16
           </span>
@@ -403,7 +403,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             17
           </span>
@@ -423,7 +423,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             18
           </span>
@@ -443,7 +443,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             19
           </span>
@@ -463,7 +463,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             20
           </span>
@@ -483,7 +483,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             21
           </span>
@@ -503,7 +503,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             22
           </span>
@@ -523,7 +523,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             23
           </span>
@@ -543,7 +543,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
           >
             24
           </span>

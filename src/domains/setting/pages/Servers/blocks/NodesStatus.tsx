@@ -5,32 +5,46 @@ import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 import { Tooltip } from "@/app/components/Tooltip";
-import { pingServerAddress } from "@/utils/peers";
 import { Spinner } from "@/app/components/Spinner";
 import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { useConfiguration } from "@/app/contexts";
+import { pingServerAddress } from "@/utils/peers";
+import { useBreakpoint } from "@/app/hooks";
 
-const NodeStatusNode: React.VFC<{ network: Networks.Network; lastRow: boolean }> = ({ network, lastRow }) => {
+const NodeStatusNode: React.VFC<{
+	network: Networks.Network;
+	host: Networks.NetworkHost;
+	lastRow: boolean;
+}> = ({ network, host, lastRow }) => {
 	const { t } = useTranslation();
+	const { isXs } = useBreakpoint();
+
+	const { serverStatus, setConfiguration } = useConfiguration();
 
 	const [isOnline, setIsOnline] = useState<boolean | undefined>(undefined);
 
 	const checkNetworkStatus = useCallback(async () => {
 		setIsOnline(undefined);
 
-		const peerHost = network.toObject().hosts.find((host) => host.type === "full")!;
+		const promises = [pingServerAddress(host.host, host.type)];
 
-		const musigHost = network.toObject().hosts.find((host) => host.type === "musig")!;
+		const [result] = await Promise.allSettled(promises);
 
-		const promises = [pingServerAddress(peerHost.host, "full")];
+		const updatedServerStatus = { ...serverStatus };
 
-		if (musigHost) {
-			promises.push(pingServerAddress(musigHost.host, "musig"));
+		/* istanbul ignore next -- @preserve */
+		if (updatedServerStatus[network.id()] === undefined) {
+			updatedServerStatus[network.id()] = {};
 		}
 
-		const results = await Promise.allSettled(promises);
+		updatedServerStatus[network.id()][host.host] = result.status === "fulfilled" && result.value === true;
 
-		setIsOnline(results.every((result) => result.status === "fulfilled" && result.value === true));
+		setIsOnline(updatedServerStatus[network.id()][host.host]);
+
+		setConfiguration({
+			serverStatus: updatedServerStatus,
+		});
 	}, [network]);
 
 	useEffect(() => {
@@ -41,13 +55,24 @@ const NodeStatusNode: React.VFC<{ network: Networks.Network; lastRow: boolean }>
 		return () => clearInterval(interval);
 	}, []);
 
+	const renderDisplayName = () => {
+		let name = networkDisplayName(network);
+
+		if (host.type === "musig") {
+			name = `${name} ${t("COMMON.MULTISIG")}`;
+		}
+
+		return name;
+	};
+
 	return (
 		<div
 			data-testid="NodesStatus--node"
 			className={cn(
-				"flex items-center space-x-3 border-b border-theme-secondary-300 py-3 last:border-b-0 dark:border-theme-secondary-800 sm:border-b-0",
+				"flex items-center space-x-3 border-theme-secondary-300 py-3 dark:border-theme-secondary-800",
 				{
-					"sm:border-b": !lastRow,
+					"border-b": !isXs && !lastRow,
+					"border-b last:border-b-0": isXs,
 				},
 			)}
 		>
@@ -62,7 +87,7 @@ const NodeStatusNode: React.VFC<{ network: Networks.Network; lastRow: boolean }>
 			</div>
 
 			<div className="flex-grow font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
-				{networkDisplayName(network)}
+				{renderDisplayName()}
 			</div>
 			<div className="cursor-pointer">
 				{isOnline === true && (
@@ -105,16 +130,40 @@ const NodeStatusNode: React.VFC<{ network: Networks.Network; lastRow: boolean }>
 	);
 };
 
-const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) => (
-	<div data-testid="NodesStatus" className="mt-3 sm:grid sm:grid-cols-2 sm:gap-x-6">
-		{networks.map((network, index) => (
-			<NodeStatusNode
-				key={network.id()}
-				network={network}
-				lastRow={index === networks.length - 1 || (networks.length % 2 === 0 && index === networks.length - 2)}
-			/>
-		))}
-	</div>
-);
+const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) => {
+	let count = 0;
+	let index = 0;
+
+	const hostGroups: { network: Networks.Network; hosts: Networks.NetworkHost[] }[] = [];
+
+	for (const network of networks) {
+		const networkHosts = network.toObject().hosts.filter((host) => host.type === "full" || host.type === "musig");
+
+		if (networkHosts.length > 0) {
+			hostGroups.push({ hosts: networkHosts, network });
+
+			count += networkHosts.length;
+		}
+	}
+
+	return (
+		<div data-testid="NodesStatus" className="mt-3 sm:grid sm:grid-cols-2 sm:gap-x-6">
+			{hostGroups.map((hostGroup) =>
+				hostGroup.hosts.map((host) => {
+					index++;
+
+					return (
+						<NodeStatusNode
+							key={`${hostGroup.network.id()}-${host.type}`}
+							network={hostGroup.network}
+							host={host}
+							lastRow={index === count || (count % 2 === 0 && index === count - 1)}
+						/>
+					);
+				}),
+			)}
+		</div>
+	);
+};
 
 export default NodesStatus;

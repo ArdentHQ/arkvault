@@ -530,7 +530,9 @@ describe("Contacts", () => {
 
 		renderComponent();
 
-		expect(screen.getAllByTestId("ContactListItem__name")).toHaveLength(profile.contacts().count());
+		await waitFor(() => {
+			expect(screen.getAllByTestId("ContactListItem__name")).toHaveLength(profile.contacts().count());
+		});
 		expect(screen.getByText(contact1.name())).toBeInTheDocument();
 		expect(screen.getByText(contact2.name())).toBeInTheDocument();
 
@@ -563,7 +565,9 @@ describe("Contacts", () => {
 
 		renderComponent(blankProfile.id());
 
-		expect(screen.getAllByTestId("ContactListItem__address")).toHaveLength(2);
+		await waitFor(() => {
+			expect(screen.getAllByTestId("ContactListItem__address")).toHaveLength(2);
+		});
 
 		userEvent.click(within(screen.getAllByTestId("HeaderSearchBar")[0]).getByRole("button"));
 

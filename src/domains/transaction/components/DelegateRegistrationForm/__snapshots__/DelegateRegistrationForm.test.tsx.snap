@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
 <DocumentFragment>
@@ -148,21 +148,21 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 class="w-0 flex-1 overflow-auto text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="font-semibold text-base text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -546,21 +546,21 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 class="w-0 flex-1 overflow-auto text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="font-semibold text-base text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -830,21 +830,21 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                 class="w-0 flex-1 overflow-auto text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="font-semibold text-base text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -900,10 +900,10 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
               class="relative p-4"
             >
               <div
-                class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+                class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
               >
                 <div
-                  class="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+                  class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
                 >
                   <span
                     class="css-1j6ndo3"
@@ -934,7 +934,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                 </div>
               </div>
               <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
               >
                 <div
                   class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
@@ -1139,21 +1139,21 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                 class="w-0 flex-1 overflow-auto text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="font-semibold text-base text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1512,21 +1512,21 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 class="w-0 flex-1 overflow-auto text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="font-semibold text-base text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1910,21 +1910,21 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                 class="w-0 flex-1 overflow-auto text-right md:text-left"
               >
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
                     class="font-semibold text-base text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="css-u3jrna"
+                      class="no-ligatures css-u3jrna"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <span
-                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

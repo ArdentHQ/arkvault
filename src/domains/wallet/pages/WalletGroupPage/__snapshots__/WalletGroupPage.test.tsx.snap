@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`WalletGroupPage > should go to main page if no network 1`] = `<DocumentFragment />`;
 
@@ -199,7 +199,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -252,7 +252,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -330,7 +330,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -390,7 +390,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -504,11 +504,11 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -569,7 +569,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex flex-col rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background md:border-2"
@@ -611,7 +611,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                     </div>
                   </div>
                   <div
-                    class="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
+                    class="absolute -bottom-2 -right-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
                   >
                     <div
                       class="inline-block p-1 text-theme-secondary-700"
@@ -1125,21 +1125,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1349,21 +1349,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1573,21 +1573,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1797,21 +1797,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2021,21 +2021,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2245,21 +2245,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2469,21 +2469,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2693,21 +2693,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2917,21 +2917,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3141,21 +3141,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3365,21 +3365,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3589,21 +3589,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3813,21 +3813,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4037,21 +4037,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4261,21 +4261,21 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="w-20 flex-1 overflow-hidden"
                           >
                             <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                              class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
                             >
                               <span
                                 class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="css-u3jrna"
+                                  class="no-ligatures css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
                                 </span>
                               </span>
                               <span
-                                class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4544,7 +4544,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                       </span>
                     </span>
                     <span
-                      class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
+                      class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
                       data-testid="PaginationSearchButton__search"
                     >
                       <div

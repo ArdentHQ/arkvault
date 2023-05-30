@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ControlButton > should render 1`] = `
 <DocumentFragment>
@@ -46,7 +46,7 @@ exports[`ControlButton > should render with dot 1`] = `
       class="ring-focus css-1wz6bm9"
     >
       <div
-        class="absolute top-0.5 right-1 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
+        class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
       >
         <div
           class="h-2 w-2 rounded-full bg-theme-primary-500"
@@ -78,7 +78,7 @@ exports[`ControlButton > should render without border and with dot 1`] = `
       class="ring-focus css-m64h4t"
     >
       <div
-        class="absolute top-0.5 right-1 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
+        class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
       >
         <div
           class="h-2 w-2 rounded-full bg-theme-primary-500"

@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`VoteList > should render in lg 1`] = `
 <DocumentFragment>
@@ -26,21 +26,21 @@ exports[`VoteList > should render in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -69,21 +69,21 @@ exports[`VoteList > should render in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -112,21 +112,21 @@ exports[`VoteList > should render in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -164,21 +164,21 @@ exports[`VoteList > should render in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -207,21 +207,21 @@ exports[`VoteList > should render in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -250,21 +250,21 @@ exports[`VoteList > should render in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -282,27 +282,27 @@ exports[`VoteList > should render in sm 1`] = `
     class="css-1rbgdnn"
   >
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -325,27 +325,27 @@ exports[`VoteList > should render in sm 1`] = `
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -368,27 +368,27 @@ exports[`VoteList > should render in sm 1`] = `
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -440,21 +440,21 @@ exports[`VoteList > should render in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -483,21 +483,21 @@ exports[`VoteList > should render in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -526,21 +526,21 @@ exports[`VoteList > should render in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -558,27 +558,27 @@ exports[`VoteList > should render in xs 1`] = `
     class="css-1rbgdnn"
   >
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -601,27 +601,27 @@ exports[`VoteList > should render in xs 1`] = `
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -644,27 +644,27 @@ exports[`VoteList > should render in xs 1`] = `
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -716,21 +716,21 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -769,21 +769,21 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -822,21 +822,21 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -884,21 +884,21 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -937,21 +937,21 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -990,21 +990,21 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -1032,7 +1032,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
     class="css-1rbgdnn"
   >
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
@@ -1048,21 +1048,21 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1085,7 +1085,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
@@ -1101,21 +1101,21 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -1138,7 +1138,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
@@ -1154,21 +1154,21 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -1220,21 +1220,21 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1273,21 +1273,21 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -1326,21 +1326,21 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="ml-4 w-28 flex-1"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -1368,7 +1368,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
     class="css-1rbgdnn"
   >
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
@@ -1384,21 +1384,21 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               arkx
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1421,7 +1421,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
@@ -1437,21 +1437,21 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_42
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -1474,7 +1474,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
+      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
     >
       <div
         class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
@@ -1490,21 +1490,21 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="w-0 flex-1 text-right md:text-left"
       >
         <div
-          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
             class="font-semibold text-base text-theme-text"
             data-testid="Address__alias"
           >
             <span
-              class="css-u3jrna"
+              class="no-ligatures css-u3jrna"
               data-testid="TruncateEnd"
             >
               genesis_17
             </span>
           </span>
           <span
-            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES

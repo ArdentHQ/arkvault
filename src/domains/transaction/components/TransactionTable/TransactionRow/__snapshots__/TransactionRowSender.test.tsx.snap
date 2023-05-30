@@ -52,21 +52,21 @@ exports[`TransactionRowSender > should render 1`] = `
     class="w-0 flex-1"
   >
     <div
-      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
     >
       <span
         class="font-semibold text-base text-theme-text"
         data-testid="Address__alias"
       >
         <span
-          class="css-u3jrna"
+          class="no-ligatures css-u3jrna"
           data-testid="TruncateEnd"
         >
           ARK Wallet 1
         </span>
       </span>
       <span
-        class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
         data-testid="Address__address"
       >
         D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -128,21 +128,21 @@ exports[`TransactionRowSender > should render compact 1`] = `
     class="w-0 flex-1"
   >
     <div
-      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
     >
       <span
         class="font-semibold text-base text-theme-text"
         data-testid="Address__alias"
       >
         <span
-          class="css-u3jrna"
+          class="no-ligatures css-u3jrna"
           data-testid="TruncateEnd"
         >
           ARK Wallet 1
         </span>
       </span>
       <span
-        class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
         data-testid="Address__address"
       >
         D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

@@ -29,7 +29,7 @@ export const AddRecipientItem: VFC<{
 				<div className="hidden sm:block">
 					<Avatar size="lg" address={address} />
 				</div>
-				<div className="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-y-1 sm:space-x-0">
+				<div className="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1">
 					<div className="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("COMMON.RECIPIENT_#", { count: index + 1 })}
 					</div>
@@ -41,7 +41,7 @@ export const AddRecipientItem: VFC<{
 					</div>
 				</div>
 
-				<div className="flex w-full flex-row items-center space-x-4 overflow-auto sm:w-auto sm:flex-col sm:items-start sm:space-y-1 sm:space-x-0 sm:pl-7">
+				<div className="flex w-full flex-row items-center space-x-4 overflow-auto sm:w-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1 sm:pl-7">
 					<div className="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{showExchangeAmount ? (
 							<>

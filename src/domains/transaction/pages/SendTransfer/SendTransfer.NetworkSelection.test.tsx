@@ -15,6 +15,7 @@ import {
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
+	syncFees,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -49,7 +50,7 @@ describe("SendTransfer Network Selection", () => {
 		profile.wallets().push(arkMainnetWallet);
 	});
 
-	beforeEach(() => {
+	beforeEach(async () => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		server.use(
@@ -71,9 +72,14 @@ describe("SendTransfer Network Selection", () => {
 					},
 				},
 			),
+		);
+
+		server.use(
 			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
 			requestMock("https://ark-live.arkvault.io/api/transactions/fees", transactionFeesFixture),
 		);
+
+		await syncFees(profile);
 	});
 
 	afterEach(() => {
@@ -213,7 +219,7 @@ describe("SendTransfer Network Selection", () => {
 	it("should select a cryptoasset and select sender without wallet id param", async () => {
 		history.push(transferURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/send-transfer">
 				<SendTransfer />
 			</Route>,
@@ -223,9 +229,12 @@ describe("SendTransfer Network Selection", () => {
 			},
 		);
 
+		const firstWallet = profile.wallets().first();
+
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+
 		await waitFor(() => expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet));
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
@@ -238,7 +247,14 @@ describe("SendTransfer Network Selection", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		const firstAddress = screen.getByTestId("SearchWalletListItem__select-1");
+		// Select first wallet.
+		expect(within(screen.getAllByTestId("TableRow")[0]).getByText(firstWallet.address())).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TableRow")).toHaveLength(2);
+		});
+
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 
 		userEvent.click(firstAddress);
 
@@ -246,6 +262,8 @@ describe("SendTransfer Network Selection", () => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 		});
 
-		expect(container).toMatchSnapshot();
+		// Check if sender is selected.
+		expect(screen.queryByTestId("Address__alias")).toHaveTextContent(firstWallet.displayName() as string);
+		expect(screen.queryByTestId("Address__address")).toHaveTextContent(firstWallet.address());
 	});
 });

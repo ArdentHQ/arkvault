@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Exchange > should render empty 1`] = `
 <div>
@@ -198,7 +198,7 @@ exports[`Exchange > should render empty 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -252,7 +252,7 @@ exports[`Exchange > should render empty 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -330,7 +330,7 @@ exports[`Exchange > should render empty 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -390,7 +390,7 @@ exports[`Exchange > should render empty 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -504,11 +504,11 @@ exports[`Exchange > should render empty 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -569,7 +569,7 @@ exports[`Exchange > should render empty 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -631,7 +631,7 @@ exports[`Exchange > should render empty 1`] = `
                   Transactions
                 </span>
                 <span
-                  class="ml-2 rounded bg-theme-primary-100 py-0.5 px-1.5 text-sm font-semibold dark:bg-theme-secondary-900"
+                  class="ml-2 rounded bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
                   data-testid="tabs__tab-button-TRANSACTIONS-count"
                 >
                   0
@@ -645,7 +645,7 @@ exports[`Exchange > should render empty 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -860,7 +860,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -914,7 +914,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -992,7 +992,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -1052,7 +1052,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -1166,11 +1166,11 @@ exports[`Exchange > should render with exchanges 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -1231,7 +1231,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -1293,7 +1293,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   Transactions
                 </span>
                 <span
-                  class="ml-2 rounded bg-theme-primary-100 py-0.5 px-1.5 text-sm font-semibold dark:bg-theme-secondary-900"
+                  class="ml-2 rounded bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
                   data-testid="tabs__tab-button-TRANSACTIONS-count"
                 >
                   0
@@ -1307,7 +1307,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="grid w-full grid-cols-2 gap-4.5 sm:grid-cols-3"
@@ -1345,7 +1345,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                     </div>
                   </div>
                   <div
-                    class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                    class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                   />
                 </button>
               </div>
@@ -1382,7 +1382,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                     </div>
                   </div>
                   <div
-                    class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+                    class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
                   />
                 </button>
               </div>

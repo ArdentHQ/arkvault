@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Tabs > should react to use effect call 1`] = `
 <DocumentFragment>
@@ -114,7 +114,7 @@ exports[`Tabs > should render wit counts 1`] = `
           First
         </span>
         <span
-          class="ml-2 rounded bg-theme-primary-100 py-0.5 px-1.5 text-sm font-semibold dark:bg-theme-secondary-900"
+          class="ml-2 rounded bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
           data-testid="tabs__tab-button-1-count"
         >
           1
@@ -133,7 +133,7 @@ exports[`Tabs > should render wit counts 1`] = `
           Second
         </span>
         <span
-          class="ml-2 rounded bg-theme-primary-100 py-0.5 px-1.5 text-sm font-semibold dark:bg-theme-secondary-900"
+          class="ml-2 rounded bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
           data-testid="tabs__tab-button-2-count"
         >
           2
@@ -152,7 +152,7 @@ exports[`Tabs > should render wit counts 1`] = `
           Third
         </span>
         <span
-          class="ml-2 rounded bg-theme-primary-100 py-0.5 px-1.5 text-sm font-semibold dark:bg-theme-secondary-900"
+          class="ml-2 rounded bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
           data-testid="tabs__tab-button-3-count"
         >
           3
@@ -228,7 +228,7 @@ exports[`Tabs > should render with scroll 1`] = `
         </div>
       </div>
       <span
-        class="pointer-events-none absolute top-0 right-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
+        class="pointer-events-none absolute right-0 top-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
       />
     </div>
   </div>
@@ -297,7 +297,7 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
         </div>
       </div>
       <span
-        class="pointer-events-none absolute top-0 right-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
+        class="pointer-events-none absolute right-0 top-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
       />
     </div>
   </div>

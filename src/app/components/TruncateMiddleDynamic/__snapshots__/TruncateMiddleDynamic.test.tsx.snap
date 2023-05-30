@@ -1,9 +1,9 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TruncateMiddleDynamic > should render 1`] = `
 <DocumentFragment>
   <span
-    class="min-w-0 overflow-hidden"
+    class="no-ligatures min-w-0 overflow-hidden"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
   </span>
@@ -13,7 +13,7 @@ exports[`TruncateMiddleDynamic > should render 1`] = `
 exports[`TruncateMiddleDynamic > should return the value if it fits the given container 1`] = `
 <DocumentFragment>
   <span
-    class="min-w-0 overflow-hidden"
+    class="no-ligatures min-w-0 overflow-hidden"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
   </span>
@@ -23,7 +23,7 @@ exports[`TruncateMiddleDynamic > should return the value if it fits the given co
 exports[`TruncateMiddleDynamic > should return the value if it overflows the given container 1`] = `
 <DocumentFragment>
   <span
-    class="min-w-0 overflow-hidden"
+    class="no-ligatures min-w-0 overflow-hidden"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
   </span>
@@ -33,7 +33,7 @@ exports[`TruncateMiddleDynamic > should return the value if it overflows the giv
 exports[`TruncateMiddleDynamic > should return the value if the elements have no width 1`] = `
 <DocumentFragment>
   <span
-    class="min-w-0 overflow-hidden"
+    class="no-ligatures min-w-0 overflow-hidden"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
   </span>
@@ -43,7 +43,7 @@ exports[`TruncateMiddleDynamic > should return the value if the elements have no
 exports[`TruncateMiddleDynamic > should truncate value if doesn't overflow and availableWidth is set 1`] = `
 <DocumentFragment>
   <span
-    class="min-w-0 overflow-hidden"
+    class="no-ligatures min-w-0 overflow-hidden"
   >
     L….
   </span>
@@ -53,7 +53,7 @@ exports[`TruncateMiddleDynamic > should truncate value if doesn't overflow and a
 exports[`TruncateMiddleDynamic > should truncate value if it overflows and availableWidth is set 1`] = `
 <DocumentFragment>
   <span
-    class="min-w-0 overflow-hidden"
+    class="no-ligatures min-w-0 overflow-hidden"
   >
     D…b
   </span>
