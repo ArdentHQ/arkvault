@@ -144,7 +144,7 @@ describe("ExchangeForm", () => {
 
 		queryParametersMock = vi
 			.spyOn(useQueryParameters, "useQueryParameters")
-			.mockImplementation((parameters: any) => {
+			.mockImplementation(() => {
 				return {
 					get: () => "changenow",
 				};
@@ -1364,7 +1364,7 @@ describe("ExchangeForm", () => {
 		const onReady = vi.fn();
 		queryParametersMock.mockRestore();
 
-		vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation((parameters: any) => {
+		vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => {
 			return {
 				get: () => "changelly",
 			};
