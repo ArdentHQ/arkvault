@@ -5,7 +5,7 @@ import * as browserAccess from "browser-fs-access";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { renderHook } from "@testing-library/react-hooks";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { SendTransfer } from "./SendTransfer";
 import {
@@ -151,8 +151,6 @@ describe("SendTransfer QRModal", () => {
 		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: "invalid url" });
 
 		const toastSpy = vi.spyOn(toasts, "error");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
 		history.push(transferURL);
@@ -175,7 +173,11 @@ describe("SendTransfer QRModal", () => {
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(
-				t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }),
+				<Trans
+					i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
+					parent={expect.anything()}
+					values={{ coin: "ARK" }}
+				/>,
 			),
 		);
 	});

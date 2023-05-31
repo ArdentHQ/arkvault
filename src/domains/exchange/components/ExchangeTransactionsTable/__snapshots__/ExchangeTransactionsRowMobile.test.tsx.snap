@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
 <div>
@@ -25,7 +25,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
               type="button"
             >
               <span
-                class="css-0"
+                class="no-ligatures css-0"
                 data-testid="TruncateMiddle"
               >
                 id
@@ -231,7 +231,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
               type="button"
             >
               <span
-                class="css-0"
+                class="no-ligatures css-0"
                 data-testid="TruncateMiddle"
               >
                 id
@@ -428,7 +428,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
               type="button"
             >
               <span
-                class="css-0"
+                class="no-ligatures css-0"
                 data-testid="TruncateMiddle"
               >
                 id
@@ -625,7 +625,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
               type="button"
             >
               <span
-                class="css-0"
+                class="no-ligatures css-0"
                 data-testid="TruncateMiddle"
               >
                 id
@@ -857,7 +857,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
               type="button"
             >
               <span
-                class="css-0"
+                class="no-ligatures css-0"
                 data-testid="TruncateMiddle"
               >
                 id
@@ -1059,7 +1059,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
               type="button"
             >
               <span
-                class="css-0"
+                class="no-ligatures css-0"
                 data-testid="TruncateMiddle"
               >
                 id
@@ -1446,7 +1446,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
           type="button"
         >
           <span
-            class="css-0"
+            class="no-ligatures css-0"
             data-testid="TruncateMiddle"
           >
             id

@@ -37,7 +37,7 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 				}}
 			/>
 
-			<div className="mt-6 mb-8 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800" />
+			<div className="mb-8 mt-6 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800" />
 
 			<div className="flex flex-col">
 				<div className="flex items-center justify-between">

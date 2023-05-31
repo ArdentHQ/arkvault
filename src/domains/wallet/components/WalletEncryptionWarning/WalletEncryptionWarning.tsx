@@ -18,7 +18,7 @@ export const WalletEncryptionWarning: React.FC<WalletEncryptionWarningProperties
 	return (
 		<Modal
 			title={t("WALLETS.MODAL_WALLET_ENCRYPTION.TITLE")}
-			image={<Image name="Warning" useAccentColor={false} className="my-8 mx-auto max-w-52" />}
+			image={<Image name="Warning" useAccentColor={false} className="mx-auto my-8 max-w-52" />}
 			size="lg"
 			isOpen
 			onClose={onCancel}

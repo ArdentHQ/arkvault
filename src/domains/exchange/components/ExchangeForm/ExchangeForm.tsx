@@ -14,10 +14,10 @@ import { FormButtons } from "@/app/components/Form/FormButtons";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
-import { useActiveProfile, useValidation } from "@/app/hooks";
+import { useActiveProfile, useQueryParameters, useValidation } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { ExchangeFormState, Order } from "@/domains/exchange/exchange.contracts";
+import { CurrencyData, ExchangeFormState, Order } from "@/domains/exchange/exchange.contracts";
 import {
 	assertCurrency,
 	assertExchangeService,
@@ -57,19 +57,34 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 
 	const { currencies, fromCurrency, toCurrency, minPayinAmount, minPayoutAmount, recipientWallet, refundWallet } =
 		watch();
+	const queryParameters = useQueryParameters();
 
 	useEffect(() => {
 		const fetchCurrencies = async () => {
 			try {
 				const currencies = await exchangeService.currencies();
-				setValue("currencies", currencies);
+
+				const ark = currencies.filter((currency: CurrencyData) => currency.coin === "ark");
+				const eth = currencies.filter((currency: CurrencyData) => currency.coin === "eth");
+				const btc = currencies.filter((currency: CurrencyData) => currency.coin === "btc");
+
+				const rest = currencies.filter(
+					(currency: CurrencyData) =>
+						currency.coin !== "ark" && currency.coin !== "eth" && currency.coin !== "btc",
+				);
+
+				if (provider?.slug !== queryParameters.get("exchangeId")) {
+					return;
+				}
+
+				setValue("currencies", [...ark, ...btc, ...eth, ...rest]);
 			} catch {
 				//
 			}
 		};
 
 		fetchCurrencies();
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [provider]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {
 		const initExchangeTransaction = async () => {

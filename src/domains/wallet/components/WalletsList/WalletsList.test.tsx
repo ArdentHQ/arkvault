@@ -17,6 +17,7 @@ import {
 	syncDelegates,
 	within,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
 
@@ -44,6 +45,10 @@ describe("WalletsList", () => {
 		history.push(dashboardURL);
 
 		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+	});
+
+	beforeEach(() => {
+		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
 	});
 
 	it("should render", () => {

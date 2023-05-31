@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { URLBuilder } from "@ardenthq/arkvault-url";
 import { FormStep } from "./FormStep";
 import { TransferLedgerReview } from "./LedgerReview";
 import { NetworkStep } from "./NetworkStep";
@@ -24,12 +25,13 @@ import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransaction } from "@/domains/transaction/hooks";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
-import { assertNetwork, assertWallet } from "@/utils/assertions";
+import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-url";
 import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
+import { isValidUrl } from "@/utils/url-validation";
 
 const MAX_TABS = 5;
 
@@ -231,10 +233,28 @@ export const SendTransfer = () => {
 		let qrData: URLSearchParams | undefined;
 
 		try {
-			qrData = urlSearchParameters(url);
+			let uri = url;
+
+			// If the url is not valid, we assume it's an ARK URI with address only,
+			// and we need to convert it to a URL.
+			if (!isValidUrl(url)) {
+				const urlBuilder = new URLBuilder();
+
+				const coin = network?.coin();
+				assertString(coin);
+
+				urlBuilder.setCoin(coin);
+				urlBuilder.setNethash(network?.meta().nethash);
+
+				uri = urlBuilder.generateTransfer(url);
+			}
+
+			qrData = urlSearchParameters(uri);
 		} catch {
-			toasts.error(t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }));
-			return;
+			if (!qrData) {
+				toasts.error(t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }));
+				return;
+			}
 		}
 
 		const result = await validateSearchParameters(activeProfile, env, qrData, {

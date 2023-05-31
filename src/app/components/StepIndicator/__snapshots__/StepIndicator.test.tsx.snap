@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`StepIndicator > should limit active index to max number of steps 1`] = `
 <DocumentFragment>

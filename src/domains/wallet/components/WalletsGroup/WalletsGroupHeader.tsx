@@ -50,7 +50,7 @@ export const WalletsGroupHeaderSkeleton: React.VFC<WalletsGroupHeaderSkeletonPro
 			<div className="flex h-11 w-11 shrink-0 flex-row items-center justify-center -space-x-1 rounded-xl bg-theme-background bg-clip-padding text-theme-secondary-100 ring-1 ring-theme-secondary-300 dark:bg-theme-background dark:text-theme-secondary-700 dark:ring-theme-secondary-800">
 				{isPlaceholder ? <></> : <Skeleton width={20} height={20} />}
 			</div>
-			<div className="grow justify-between space-x-3 py-3 px-3">
+			<div className="grow justify-between space-x-3 px-3 py-3">
 				<h1
 					className="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"
 					data-testid="header__title"

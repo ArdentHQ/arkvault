@@ -45,7 +45,7 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 					<NavigationButtonWrapper className="group">
 						<Button variant="transparent" size="icon" data-testid="NavigationBar__buttons--server-status">
 							<Icon name="Cloud" size="lg" className="p-1" />
-							<div className="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800">
+							<div className="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800">
 								<StatusDot status={status.value} />
 							</div>
 						</Button>
@@ -58,7 +58,7 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 						<span className="text-sm font-semibold">{t("COMMON.MANAGE_SERVERS")}</span>
 					</Link>
 				</div>
-				<div className="flex items-start space-x-2 px-8 pt-4 pb-2">
+				<div className="flex items-start space-x-2 px-8 py-4">
 					<div className="mt-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800">
 						<StatusDot status={status.value} />
 					</div>

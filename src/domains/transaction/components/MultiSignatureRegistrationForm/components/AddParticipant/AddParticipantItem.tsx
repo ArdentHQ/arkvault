@@ -29,7 +29,7 @@ export const AddParticipantItem: VFC<{
 				<div className="hidden sm:block">
 					<Avatar size="lg" address={address} />
 				</div>
-				<div className="flex max-w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-y-1 sm:space-x-0">
+				<div className="flex max-w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1">
 					<div className="whitespace-nowrap text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("TRANSACTION.MULTISIGNATURE.PARTICIPANT_#", { count: index + 1 })}
 					</div>

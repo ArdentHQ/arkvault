@@ -36,7 +36,7 @@ export const ProfileCard = ({
 				<ProfileAvatar profile={profile} size="xl" />
 				{profile.usesPassword() && (
 					<Badge
-						className="mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+						className="mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
 						icon="Lock"
 						iconSize="lg"
 						size="lg"

@@ -1,9 +1,9 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`WalletsGroupHeaderSkeleton > should render 1`] = `
 <DocumentFragment>
   <div
-    class="flex h-20 items-center py-4 px-8 md:px-4"
+    class="flex h-20 items-center px-8 py-4 md:px-4"
     data-testid="WalletsGroupHeaderSkeleton"
   >
     <div
@@ -24,7 +24,7 @@ exports[`WalletsGroupHeaderSkeleton > should render 1`] = `
       </span>
     </div>
     <div
-      class="grow justify-between space-x-3 py-3 px-3"
+      class="grow justify-between space-x-3 px-3 py-3"
     >
       <h1
         class="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -181,7 +181,7 @@ exports[`WalletsGroupHeaderSkeleton > should render 1`] = `
 exports[`WalletsGroupHeaderSkeleton > should render as placeholder 1`] = `
 <DocumentFragment>
   <div
-    class="flex h-20 items-center py-4 px-8 md:px-4"
+    class="flex h-20 items-center px-8 py-4 md:px-4"
     data-testid="WalletsGroupHeaderSkeleton"
   >
     <div
@@ -202,7 +202,7 @@ exports[`WalletsGroupHeaderSkeleton > should render as placeholder 1`] = `
       </span>
     </div>
     <div
-      class="grow justify-between space-x-3 py-3 px-3"
+      class="grow justify-between space-x-3 px-3 py-3"
     >
       <h1
         class="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -359,7 +359,7 @@ exports[`WalletsGroupHeaderSkeleton > should render as placeholder 1`] = `
 exports[`WalletsGroupHeaderSkeleton > should render responsive 1`] = `
 <DocumentFragment>
   <div
-    class="flex h-20 items-center py-4 px-8 md:px-4"
+    class="flex h-20 items-center px-8 py-4 md:px-4"
     data-testid="WalletsGroupHeaderSkeleton"
   >
     <div
@@ -380,7 +380,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive 1`] = `
       </span>
     </div>
     <div
-      class="grow justify-between space-x-3 py-3 px-3"
+      class="grow justify-between space-x-3 px-3 py-3"
     >
       <h1
         class="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -473,7 +473,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive 1`] = `
 exports[`WalletsGroupHeaderSkeleton > should render responsive as placeholder 1`] = `
 <DocumentFragment>
   <div
-    class="flex h-20 items-center py-4 px-8 md:px-4"
+    class="flex h-20 items-center px-8 py-4 md:px-4"
     data-testid="WalletsGroupHeaderSkeleton"
   >
     <div
@@ -494,7 +494,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive as placeholder 1`
       </span>
     </div>
     <div
-      class="grow justify-between space-x-3 py-3 px-3"
+      class="grow justify-between space-x-3 px-3 py-3"
     >
       <h1
         class="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"

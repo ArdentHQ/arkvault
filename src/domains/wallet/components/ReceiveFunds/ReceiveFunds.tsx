@@ -163,7 +163,7 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 								<span className="text-theme-secondary-text">{t("COMMON.QR_SHORT")}</span>
 							</div>
 
-							<div className="flex grow items-center justify-between space-x-4 overflow-auto bg-theme-secondary-100 pr-5 pl-6 dark:bg-theme-background">
+							<div className="flex grow items-center justify-between space-x-4 overflow-auto bg-theme-secondary-100 pl-6 pr-5 dark:bg-theme-background">
 								{!!uri && (
 									<>
 										<span className="truncate">{uri}</span>

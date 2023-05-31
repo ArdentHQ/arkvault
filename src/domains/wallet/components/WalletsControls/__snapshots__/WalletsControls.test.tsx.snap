@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`WalletsControls > should render 1`] = `
 <div>
@@ -209,7 +209,7 @@ exports[`WalletsControls > should render 1`] = `
           data-testid="dropdown__toggle"
         >
           <span
-            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <div
               class="css-v0ob3f"
@@ -455,7 +455,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
           data-testid="dropdown__toggle"
         >
           <span
-            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <div
               class="css-v0ob3f"
@@ -701,7 +701,7 @@ exports[`WalletsControls > should render responsive 1`] = `
           data-testid="dropdown__toggle"
         >
           <span
-            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <div
               class="css-v0ob3f"
@@ -947,7 +947,7 @@ exports[`WalletsControls > should render responsive 2`] = `
           data-testid="dropdown__toggle"
         >
           <span
-            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <div
               class="css-v0ob3f"
@@ -1193,7 +1193,7 @@ exports[`WalletsControls > should render responsive 3`] = `
           data-testid="dropdown__toggle"
         >
           <span
-            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <div
               class="css-v0ob3f"
@@ -1439,7 +1439,7 @@ exports[`WalletsControls > should render responsive 4`] = `
           data-testid="dropdown__toggle"
         >
           <span
-            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <div
               class="css-v0ob3f"
@@ -1685,7 +1685,7 @@ exports[`WalletsControls > should render responsive 5`] = `
           data-testid="dropdown__toggle"
         >
           <span
-            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <div
               class="css-v0ob3f"
@@ -1931,7 +1931,7 @@ exports[`WalletsControls > should render with networks selection 1`] = `
           data-testid="dropdown__toggle"
         >
           <span
-            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <div
               class="css-v0ob3f"

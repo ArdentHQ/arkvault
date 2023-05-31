@@ -14,10 +14,19 @@ import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { StatusStep } from "./StatusStep";
-import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	render,
+	renderResponsiveWithRoute,
+	screen,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { httpClient, toasts } from "@/app/services";
 import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
+import * as useQueryParameters from "@/app/hooks/use-query-parameters";
 
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
 import order from "@/tests/fixtures/exchange/changenow/order.json";
@@ -128,9 +137,14 @@ const payoutValue = "37042.3588384";
 
 describe("ExchangeForm", () => {
 	let findExchangeTransactionMock;
+	let queryParametersMock;
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+			get: () => "changenow",
+		}));
 	});
 
 	beforeEach(() => {
@@ -164,6 +178,33 @@ describe("ExchangeForm", () => {
 				route: exchangeURL,
 			},
 		);
+
+	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
+		const onReady = vi.fn();
+
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/exchange/view">
+				<ExchangeProvider>
+					<Wrapper>
+						<ExchangeForm onReady={onReady} />
+					</Wrapper>
+				</ExchangeProvider>
+			</Route>,
+			breakpoint,
+			{
+				history,
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(onReady).toHaveBeenCalledWith();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
+		});
+	});
 
 	it("should render exchange form", async () => {
 		const onReady = vi.fn();
@@ -1313,6 +1354,38 @@ describe("ExchangeForm", () => {
 		expect(container).toMatchSnapshot();
 
 		exchangeTransactionUpdateMock.mockRestore();
+	});
+
+	it.each(["xs", "lg"])("should render with changelly in (%s)", async (breakpoint) => {
+		const onReady = vi.fn();
+		queryParametersMock.mockRestore();
+
+		vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+			get: () => "changelly",
+		}));
+
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/exchange/view">
+				<ExchangeProvider>
+					<Wrapper>
+						<ExchangeForm onReady={onReady} />
+					</Wrapper>
+				</ExchangeProvider>
+			</Route>,
+			breakpoint,
+			{
+				history,
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(onReady).toHaveBeenCalledWith();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
+		});
 	});
 });
 

@@ -114,7 +114,7 @@ export const DelegateFooter = ({
 			className="fixed inset-x-0 bottom-0 mb-14 h-auto w-screen bg-theme-background py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:mb-0 md:py-4 lg:py-8"
 			data-testid="DelegateTable__footer"
 		>
-			<div className="mx-auto px-8 md:px-10 lg:container">
+			<div className="mx-auto px-8 lg:container md:px-10">
 				<div className="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0">
 					<div className="flex flex-grow divide-theme-secondary-300 overflow-x-auto dark:divide-theme-secondary-800 sm:mr-auto sm:divide-x">
 						<div className={cn("flex flex-grow overflow-x-auto", { "pr-5": requiresStakeAmount })}>

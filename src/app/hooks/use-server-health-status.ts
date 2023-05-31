@@ -7,24 +7,53 @@ export const useServerHealthStatus = () => {
 	const { t } = useTranslation();
 	const { serverStatus } = useConfiguration();
 
-	const label = useMemo(() => {
-		if (serverStatus === ServerHealthStatus.Healthy) {
-			return t("COMMON.SERVER_STATUS.HEALTHY");
-		}
+	// eslint-disable-next-line sonarjs/cognitive-complexity
+	const status = useMemo(() => {
+		const getOverallStatus = (serverStatus: any) => {
+			const peersByNetwork = Object.values(serverStatus);
 
-		if (serverStatus === ServerHealthStatus.Downgraded) {
-			return t("COMMON.SERVER_STATUS.DOWNGRADED");
-		}
+			let status: ServerHealthStatus | undefined;
 
-		if (serverStatus === ServerHealthStatus.Unavailable) {
-			return t("COMMON.SERVER_STATUS.UNAVAILABLE");
-		}
+			for (const peers of peersByNetwork) {
+				if (Object.values(peers as any).every((isUp) => !isUp)) {
+					return ServerHealthStatus.Unavailable;
+				}
+
+				if (Object.values(peers as any).some((isUp) => !isUp)) {
+					status = ServerHealthStatus.Downgraded;
+				}
+
+				if (status === undefined) {
+					status = ServerHealthStatus.Healthy;
+				}
+			}
+
+			return status!;
+		};
+
+		const getLabel = (overallStatus: ServerHealthStatus) => {
+			if (overallStatus === ServerHealthStatus.Healthy) {
+				return t("COMMON.SERVER_STATUS.HEALTHY");
+			}
+
+			if (overallStatus === ServerHealthStatus.Downgraded) {
+				return t("COMMON.SERVER_STATUS.DOWNGRADED");
+			}
+
+			if (overallStatus === ServerHealthStatus.Unavailable) {
+				return t("COMMON.SERVER_STATUS.UNAVAILABLE");
+			}
+		};
+
+		/* istanbul ignore next -- @preserve */
+		const overallStatus = getOverallStatus(serverStatus ?? {});
+		const label = getLabel(overallStatus);
+
+		return {
+			label,
+			value: overallStatus,
+		};
 	}, [serverStatus]);
 
-	return {
-		status: {
-			label,
-			value: serverStatus,
-		},
-	};
+	return { status };
 };

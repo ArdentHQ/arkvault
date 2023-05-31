@@ -49,7 +49,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e4d245…150377
@@ -866,7 +866,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e4d245…150377
@@ -1726,7 +1726,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e4d245…150377
@@ -2608,7 +2608,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e4d245…150377
@@ -3490,7 +3490,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e42296…f37711
@@ -4116,7 +4116,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       09e50e…4b2002
@@ -4748,7 +4748,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       e4d245…150377
@@ -5628,7 +5628,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       287a58…77d89b
@@ -5718,10 +5718,10 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                       class="w-0 flex-1 overflow-hidden"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6085,10 +6085,10 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   </div>
                 </div>
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6488,10 +6488,10 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   </div>
                 </div>
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7941,10 +7941,10 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   </div>
                 </div>
                 <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8084,7 +8084,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                     class="css-1y2194z"
                   >
                     <span
-                      class="css-0"
+                      class="no-ligatures css-0"
                       data-testid="TruncateMiddle"
                     >
                       287a58…77d89b
@@ -8174,10 +8174,10 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                       class="w-0 flex-1 overflow-hidden"
                     >
                       <div
-                        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
                         <span
-                          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

@@ -49,12 +49,6 @@ interface NormalizedNetwork {
 	height?: number;
 }
 
-export enum ServerStatus {
-	Online = "ONLINE",
-	Offline = "OFFLINE",
-	Loading = "LOADING",
-}
-
 export enum ServerHealthStatus {
 	Healthy,
 	Downgraded,

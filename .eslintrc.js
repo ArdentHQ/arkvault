@@ -171,6 +171,7 @@ module.exports = {
 		"unicorn/prefer-string-slice": "error",
 		"unicorn/prefer-ternary": "off",
 		"unicorn/prefer-top-level-await": "error",
+		"unicorn/prefer-blob-reading-methods": "off",
 		"unicorn/prevent-abbreviations": [
 			"error",
 			{

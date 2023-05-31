@@ -31,7 +31,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                 class="css-1y2194z"
               >
                 <span
-                  class="css-0"
+                  class="no-ligatures css-0"
                   data-testid="TruncateMiddle"
                 >
                   ea63bf…b5c79b
@@ -72,10 +72,10 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -131,10 +131,10 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -230,7 +230,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                 class="css-1y2194z"
               >
                 <span
-                  class="css-0"
+                  class="no-ligatures css-0"
                   data-testid="TruncateMiddle"
                 >
                   ea63bf…b5c79b
@@ -271,10 +271,10 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -330,10 +330,10 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -429,7 +429,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                 class="css-1y2194z"
               >
                 <span
-                  class="css-0"
+                  class="no-ligatures css-0"
                   data-testid="TruncateMiddle"
                 >
                   ea63bf…b5c79b
@@ -470,21 +470,21 @@ exports[`TransactionRowMobile > should render 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -540,21 +540,21 @@ exports[`TransactionRowMobile > should render 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -645,7 +645,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                 class="css-1y2194z"
               >
                 <span
-                  class="css-0"
+                  class="no-ligatures css-0"
                   data-testid="TruncateMiddle"
                 >
                   ea63bf…b5c79b
@@ -686,21 +686,21 @@ exports[`TransactionRowMobile > should render 2`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -756,21 +756,21 @@ exports[`TransactionRowMobile > should render 2`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="css-u3jrna"
+                        class="no-ligatures css-u3jrna"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
                       </span>
                     </span>
                     <span
-                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1721,7 +1721,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                 class="css-1y2194z"
               >
                 <span
-                  class="css-0"
+                  class="no-ligatures css-0"
                   data-testid="TruncateMiddle"
                 >
                   ea63bf…b5c79b
@@ -1762,10 +1762,10 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1821,10 +1821,10 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1925,7 +1925,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                 class="css-1y2194z"
               >
                 <span
-                  class="css-0"
+                  class="no-ligatures css-0"
                   data-testid="TruncateMiddle"
                 >
                   ea63bf…b5c79b
@@ -1966,10 +1966,10 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2025,10 +2025,10 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   class="w-0 flex-1"
                 >
                   <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
                     <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

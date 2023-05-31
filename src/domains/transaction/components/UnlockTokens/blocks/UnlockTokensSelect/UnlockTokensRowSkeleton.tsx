@@ -21,7 +21,7 @@ export const UnlockTokensRowSkeleton: React.FC = () => {
 			<TableCell variant="end" isCompact innerClassName="justify-end">
 				<div className="flex items-center">
 					<Skeleton width={80} height={16} />
-					<Skeleton width={20} height={20} className="mr-3 ml-2" />
+					<Skeleton width={20} height={20} className="ml-2 mr-3" />
 					<Skeleton width={20} height={20} />
 				</div>
 			</TableCell>

@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Contacts > should render compact on md screen 1`] = `
 <DocumentFragment>
@@ -195,7 +195,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -249,7 +249,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -327,7 +327,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -387,7 +387,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -499,11 +499,11 @@ exports[`Contacts > should render compact on md screen 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -564,7 +564,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -670,7 +670,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="w-full"
@@ -817,7 +817,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             Brian
@@ -884,13 +884,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1051,7 +1051,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             Rok
@@ -1118,13 +1118,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
@@ -1340,13 +1340,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
@@ -1562,13 +1562,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -1922,7 +1922,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -1976,7 +1976,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -2054,7 +2054,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -2114,7 +2114,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -2226,11 +2226,11 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -2291,7 +2291,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -2397,7 +2397,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="w-full"
@@ -2544,7 +2544,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             Brian
@@ -2611,13 +2611,13 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -2778,7 +2778,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             Rok
@@ -2845,13 +2845,13 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
@@ -3067,13 +3067,13 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
@@ -3289,13 +3289,13 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -3649,7 +3649,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -3703,7 +3703,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -3781,7 +3781,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -3841,7 +3841,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -3953,11 +3953,11 @@ exports[`Contacts > should render responsive with contacts 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -4015,7 +4015,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
       class="flex flex-1 flex-col"
     >
       <section
-        class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
+        class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-1.5 dark:bg-black"
       >
         <h1
           class="mb-0 text-lg"
@@ -4550,7 +4550,7 @@ exports[`Contacts > should render with contacts 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -4604,7 +4604,7 @@ exports[`Contacts > should render with contacts 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -4682,7 +4682,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -4742,7 +4742,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -4854,11 +4854,11 @@ exports[`Contacts > should render with contacts 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -4919,7 +4919,7 @@ exports[`Contacts > should render with contacts 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -5025,7 +5025,7 @@ exports[`Contacts > should render with contacts 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="w-full"
@@ -5172,7 +5172,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             Brian
@@ -5239,13 +5239,13 @@ exports[`Contacts > should render with contacts 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -5406,7 +5406,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="css-u3jrna"
+                            class="no-ligatures css-u3jrna"
                             data-testid="TruncateEnd"
                           >
                             Rok
@@ -5473,13 +5473,13 @@ exports[`Contacts > should render with contacts 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
@@ -5695,13 +5695,13 @@ exports[`Contacts > should render with contacts 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
@@ -5917,13 +5917,13 @@ exports[`Contacts > should render with contacts 1`] = `
                           class="w-0 flex-1"
                         >
                           <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
                               class="relative grow text-left"
                             >
                               <span
-                                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -6277,7 +6277,7 @@ exports[`Contacts > should render without contacts 1`] = `
             </button>
           </div>
           <ul
-            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -6331,7 +6331,7 @@ exports[`Contacts > should render without contacts 1`] = `
             </li>
           </ul>
           <div
-            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
             data-testid="NavigationBar__menu-toggle"
           >
             <div
@@ -6409,7 +6409,7 @@ exports[`Contacts > should render without contacts 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -6469,7 +6469,7 @@ exports[`Contacts > should render without contacts 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-danger-500"
@@ -6581,11 +6581,11 @@ exports[`Contacts > should render without contacts 1`] = `
             </div>
           </div>
           <div
-            class="my-auto mx-4 hidden items-center md:flex"
+            class="mx-4 my-auto hidden items-center md:flex"
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -6646,7 +6646,7 @@ exports[`Contacts > should render without contacts 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -6691,7 +6691,7 @@ exports[`Contacts > should render without contacts 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"

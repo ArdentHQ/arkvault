@@ -1,3 +1,4 @@
+import cn from "classnames";
 import React from "react";
 import { styled } from "twin.macro";
 
@@ -13,7 +14,7 @@ type TruncateMiddleProperties = {
 const Wrapper = styled.span``;
 
 export const TruncateMiddle = React.forwardRef<HTMLElement, TruncateMiddleProperties>(
-	({ text, maxChars = 16, showTooltip = true, ...properties }: TruncateMiddleProperties, reference) => {
+	({ className, text, maxChars = 16, showTooltip = true, ...properties }: TruncateMiddleProperties, reference) => {
 		const result = React.useMemo(() => {
 			if (!maxChars || text.length <= maxChars) {
 				return text;
@@ -28,7 +29,12 @@ export const TruncateMiddle = React.forwardRef<HTMLElement, TruncateMiddleProper
 
 		return (
 			<Tooltip content={text} disabled={!showTooltip}>
-				<Wrapper ref={reference} data-testid="TruncateMiddle" {...properties}>
+				<Wrapper
+					ref={reference}
+					data-testid="TruncateMiddle"
+					className={cn("no-ligatures", className)}
+					{...properties}
+				>
 					{result}
 				</Wrapper>
 			</Tooltip>

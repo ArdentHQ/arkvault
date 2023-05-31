@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`CreateProfile > should render 1`] = `
 <DocumentFragment>
@@ -62,7 +62,7 @@ exports[`CreateProfile > should render 1`] = `
         class="flex flex-1 flex-col sm:-mt-5 sm:justify-center css-ycib48"
       >
         <div
-          class="mx-auto px-8 md:px-10 lg:container"
+          class="mx-auto px-8 lg:container md:px-10"
         >
           <div
             class="mx-auto max-w-lg"
@@ -88,7 +88,7 @@ exports[`CreateProfile > should render 1`] = `
               </div>
             </div>
             <div
-              class="-mt-8 mb-16 rounded-lg border-theme-secondary-300 bg-theme-background pt-1 dark:border-theme-secondary-800 sm:mt-6 sm:mb-0 sm:border sm:p-10"
+              class="-mt-8 mb-16 rounded-lg border-theme-secondary-300 bg-theme-background pt-1 dark:border-theme-secondary-800 sm:mb-0 sm:mt-6 sm:border sm:p-10"
             >
               <div>
                 <form
@@ -438,7 +438,7 @@ exports[`CreateProfile > should render 1`] = `
                                         class="flex items-center"
                                       >
                                         <div
-                                          class="flex items-center justify-center py-2 px-1"
+                                          class="flex items-center justify-center px-1 py-2"
                                           data-testid="SelectDropdown__caret"
                                         >
                                           <div

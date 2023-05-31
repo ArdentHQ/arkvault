@@ -29,7 +29,7 @@ export const NetworkOption = ({ network, isSelected, onClick }: FilterOption) =>
 
 	return (
 		<li
-			className="inline-block cursor-pointer pr-5 pb-5"
+			className="inline-block cursor-pointer pb-5 pr-5"
 			data-testid={`NetworkOption__${network.id()}`}
 			onClick={onClick}
 		>

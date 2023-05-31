@@ -118,7 +118,7 @@ const PortfolioBreakdownSkeleton: React.VFC = () => {
 
 	return (
 		<div
-			className="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
+			className="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
 			data-testid="PortfolioBreakdownSkeleton"
 		>
 			<div className="flex">
