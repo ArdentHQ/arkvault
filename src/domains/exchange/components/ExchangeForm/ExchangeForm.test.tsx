@@ -142,13 +142,9 @@ describe("ExchangeForm", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		queryParametersMock = vi
-			.spyOn(useQueryParameters, "useQueryParameters")
-			.mockImplementation(() => {
-				return {
-					get: () => "changenow",
-				};
-			});
+		queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+			get: () => "changenow",
+		}));
 	});
 
 	beforeEach(() => {
@@ -1364,11 +1360,9 @@ describe("ExchangeForm", () => {
 		const onReady = vi.fn();
 		queryParametersMock.mockRestore();
 
-		vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => {
-			return {
-				get: () => "changelly",
-			};
-		});
+		vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+			get: () => "changelly",
+		}));
 
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/exchange/view">
