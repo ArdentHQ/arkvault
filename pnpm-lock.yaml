@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -102,8 +102,8 @@ dependencies:
     specifier: ^12.2.0
     version: 12.2.0(i18next@22.4.12)(react-dom@18.2.0)(react@18.2.0)
   react-idle-timer:
-    specifier: 4.6.4
-    version: 4.6.4(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 5.7.2
+    version: 5.7.2(react-dom@18.2.0)(react@18.2.0)
   react-linkify:
     specifier: ^1.0.0-alpha
     version: 1.0.0-alpha
@@ -2227,6 +2227,7 @@ packages:
 
   /@emotion/memoize@0.7.4:
     resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -9469,14 +9470,12 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-idle-timer@4.6.4(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-iq61dPud8fgj7l1KOJEY5pyiD532fW0KcIe/5XUe/0lB/4Vytoy4tZBlLGSiYodPzKxTL6HyKoOmG6tyzjD7OQ==}
+  /react-idle-timer@5.7.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-+BaPfc7XEUU5JFkwZCx6fO1bLVK+RBlFH+iY4X34urvIzZiZINP6v2orePx3E6pAztJGE7t4DzvL7if2SL/0GQ==}
     peerDependencies:
-      prop-types: '>=15'
       react: '>=16'
       react-dom: '>=16'
     dependencies:
-      prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
