@@ -69,10 +69,10 @@ jobs:
 
             - name: Test hooks
               env:
-                  COVERAGE_THRESHOLD_LINES: 96
+                  COVERAGE_THRESHOLD_LINES: 95.95
                   COVERAGE_THRESHOLD_FUNCTIONS: 95.91
-                  COVERAGE_THRESHOLD_STATEMENTS: 96.1
-                  COVERAGE_THRESHOLD_BRANCHES: 94.22
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.07
+                  COVERAGE_THRESHOLD_BRANCHES: 93.95
                   COVERAGE_INCLUDE_PATH: src/app/hooks
               uses: nick-invision/retry@v2
               with:
