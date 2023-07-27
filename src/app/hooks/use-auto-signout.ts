@@ -6,7 +6,7 @@ import { useCallback } from "react";
 export const useAutoSignOut = (profile?: Contracts.IProfile) => {
 	const history = useHistory();
 
-	const timeout = 1000 * 60 * (profile?.settings().get(Contracts.ProfileSetting.AutomaticSignOutPeriod, 15) ?? 0);
+	const timeout = 1000 * 60 * (profile?.settings().get(Contracts.ProfileSetting.AutomaticSignOutPeriod, 15) ?? 1);
 
 	const onIdle = useCallback(() => {
 		if (history.location.pathname === "/") {
