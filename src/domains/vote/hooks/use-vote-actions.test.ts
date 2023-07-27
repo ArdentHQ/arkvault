@@ -3,8 +3,8 @@ import { renderHook } from "@testing-library/react-hooks";
 import { useVoteActions } from "./use-vote-actions";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
-vi.mock("react-router-dom", () => ({
-	...vi.requireActual("react-router-dom"),
+vi.mock("react-router-dom", async () => ({
+	...(await vi.importActual("react-router-dom")),
 	useHistory: () => ({
 		push: vi.fn(),
 	}),
