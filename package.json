@@ -157,14 +157,14 @@
 		"testcafe": "^2.4.0",
 		"twin.macro": "2.8.2",
 		"typescript": "^5.0.4",
-		"vite": "4.3.9",
+		"vite": "4.4.7",
 		"vite-plugin-babel-macros": "^1.0.6",
 		"vite-plugin-optimize-persist": "^0.1.2",
 		"vite-plugin-package-config": "^0.1.1",
 		"vite-plugin-pwa": "^0.15.1",
 		"vite-plugin-svgr": "^3.2.0",
 		"vite-tsconfig-paths": "^4.0.7",
-		"vitest": "^0.29.3",
+		"vitest": "^0.33.0",
 		"workbox-window": "^6.6.0"
 	},
 	"babelMacros": {
