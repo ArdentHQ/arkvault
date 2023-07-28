@@ -35,7 +35,7 @@
 		"serve:https": "vite preview --port 5000 --https",
 		"test": "vitest --update",
 		"test:coverage": "vitest run --coverage",
-		"test:e2e": "pnpm serve & E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json",
+		"test:e2e": "E2E_HOST='http://localhost:5000' gherkin-testcafe chrome --config-file=.testcaferc.json",
 		"test:e2e:ci": "E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json chrome:headless -q attemptLimit=3,successThreshold=1",
 		"test:e2e:ci:firefox": "E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json firefox:headless -q attemptLimit=3,successThreshold=1",
 		"test:e2e:ci:edge": "E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json edge:headless -q attemptLimit=3,successThreshold=1",

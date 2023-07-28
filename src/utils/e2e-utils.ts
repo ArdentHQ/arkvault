@@ -53,12 +53,7 @@ const pingServerUrls = new Set([
 	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
 ]);
 
-const pingMusigServerUrls = new Set([
-	"https://ark-live-musig.arkvault.io/",
-	"https://ark-live-musig.arkvault.io",
-	"https://ark-test-musig.arkvault.io/",
-	"https://ark-test-musig.arkvault.io",
-]);
+const pingMusigServerUrls = new Set([ "https://ark-live-musig.arkvault.io", "https://ark-test-musig.arkvault.io" ]);
 
 const knownWallets: any[] = [];
 
@@ -224,6 +219,8 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 					if (typeof fixture === "function") {
 						return fixture(request);
 					}
+
+					console.log("MISSING", request.url);
 
 					return fixture;
 				};
