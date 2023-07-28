@@ -9,7 +9,10 @@ import { TestStepFunction } from "@cucumber/cucumber/lib/support_code_library_bu
 import delve from "dlv";
 import { buildTranslations } from "../app/i18n/helpers";
 
-export const getPageURL = () => process.env.E2E_HOST;
+export const getPageURL = () => {
+	console.log({ E2E_HOST: process.env.E2E_HOST });
+	return process.env.E2E_HOST;
+};
 
 export const visitWelcomeScreen = async (t: TestController) => {
 	await t.navigateTo(getPageURL());
@@ -41,7 +44,9 @@ const PING_MUSIG_RESPONSE_PATH = "coins/ark/mainnet/ping-musig";
 
 const pingServerUrls = new Set([
 	"https://ark-live.arkvault.io/",
+	"https://ark-live.arkvault.io",
 	"https://ark-test.arkvault.io/",
+	"https://ark-test.arkvault.io",
 	"https://explorer.blockpool.io:19031",
 	"https://apis.compendia.org",
 	"https://apis-testnet.compendia.org",
@@ -51,7 +56,12 @@ const pingServerUrls = new Set([
 	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
 ]);
 
-const pingMusigServerUrls = new Set(["https://ark-live-musig.arkvault.io/", "https://ark-test-musig.arkvault.io/"]);
+const pingMusigServerUrls = new Set([
+	"https://ark-live-musig.arkvault.io/",
+	"https://ark-live-musig.arkvault.io",
+	"https://ark-test-musig.arkvault.io/",
+	"https://ark-test-musig.arkvault.io",
+]);
 
 const knownWallets: any[] = [];
 
@@ -218,6 +228,7 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 						return fixture(request);
 					}
 
+					console.log("MISSING", request.url);
 					return fixture;
 				};
 
