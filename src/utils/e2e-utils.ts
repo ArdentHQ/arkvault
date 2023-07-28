@@ -220,8 +220,6 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 						return fixture(request);
 					}
 
-					console.log("MISSING", request.url);
-
 					return fixture;
 				};
 
