@@ -10,7 +10,6 @@ import delve from "dlv";
 import { buildTranslations } from "../app/i18n/helpers";
 
 export const getPageURL = () => {
-	console.log({ E2E_HOST: process.env.E2E_HOST });
 	return process.env.E2E_HOST;
 };
 
@@ -228,7 +227,6 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 						return fixture(request);
 					}
 
-					console.log("MISSING", request.url);
 					return fixture;
 				};
 

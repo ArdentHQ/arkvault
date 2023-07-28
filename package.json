@@ -31,7 +31,7 @@
 		"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
 		"prettier": "prettier --write \"./*.{ts,tsx,js,json,md}\" \"./**/*.{ts,tsx,js,json,md}\"",
 		"qa": "pnpm install && pnpm build && pnpm serve -- --host=0.0.0.0",
-		"serve": "vite preview --port 5000",
+		"serve": "vite preview --port 5000 --host=0.0.0.0",
 		"serve:https": "vite preview --port 5000 --https",
 		"test": "vitest --update",
 		"test:coverage": "vitest run --coverage",
