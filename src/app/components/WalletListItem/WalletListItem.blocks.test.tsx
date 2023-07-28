@@ -25,7 +25,6 @@ vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions", ()
 	}),
 }));
 
-
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
 

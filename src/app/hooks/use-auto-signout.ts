@@ -17,12 +17,12 @@ export const useAutoSignOut = (profile?: Contracts.IProfile) => {
 	}, [history]);
 
 	const { start, pause } = useIdleTimer({
-		onIdle,
-		timeout,
+		crossTab: true,
 		debounce: 500,
+		onIdle,
 		startManually: true,
 		stopOnIdle: false,
-		crossTab: true,
+		timeout,
 	});
 
 	if (!profile) {
