@@ -105,9 +105,6 @@ jobs:
                   name: dist
                   path: ${{ github.workspace }}/dist
 
-            - name: Start Server
-              run: pnpm serve &
-
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/vote/cucumber
 
@@ -173,9 +170,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/transaction/cucumber
@@ -243,9 +237,6 @@ jobs:
                   name: dist
                   path: ${{ github.workspace }}/dist
 
-            - name: Start Server
-              run: pnpm serve &
-
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/contact/cucumber
 
@@ -311,9 +302,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/dashboard/cucumber
@@ -381,9 +369,6 @@ jobs:
                   name: dist
                   path: ${{ github.workspace }}/dist
 
-            - name: Start Server
-              run: pnpm serve &
-
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/profile/cucumber
 
@@ -449,9 +434,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/message/cucumber
@@ -519,9 +501,6 @@ jobs:
                   name: dist
                   path: ${{ github.workspace }}/dist
 
-            - name: Start Server
-              run: pnpm serve &
-
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/wallet/cucumber
 
@@ -587,9 +566,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/setting/cucumber
