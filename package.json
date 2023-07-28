@@ -35,10 +35,10 @@
 		"serve:https": "vite preview --port 5000 --https",
 		"test": "vitest --update",
 		"test:coverage": "vitest run --coverage",
-		"test:e2e": "pnpm serve & E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json --app='pnpm serve'",
+		"test:e2e": "pnpm serve & E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json --app 'pnpm serve'",
 		"test:e2e:ci": "E2E_HOST='http://localhost:5000/' gherkin-testcafe --config-file=.testcaferc.json chrome:headless -q attemptLimit=3,successThreshold=1 --app='pnpm serve'",
-		"test:e2e:ci:firefox": "E2E_HOST='http://localhost:5000/' gherkin-testcafe --config-file=.testcaferc.json firefox:headless -q attemptLimit=3,successThreshold=1 --app='pnpm serve'",
-		"test:e2e:ci:edge": "E2E_HOST='http://localhost:5000/' gherkin-testcafe --config-file=.testcaferc.json edge:headless -q attemptLimit=3,successThreshold=1 --app='pnpm serve'",
+		"test:e2e:ci:firefox": "E2E_HOST='http://localhost:5000/' gherkin-testcafe --config-file=.testcaferc.json firefox:headless -q attemptLimit=3,successThreshold=1 --app 'pnpm serve' --app-init-delay 5000",
+		"test:e2e:ci:edge": "E2E_HOST='http://localhost:5000/' gherkin-testcafe --config-file=.testcaferc.json edge:headless -q attemptLimit=3,successThreshold=1 --app 'pnpm serve' --app-init-delay 5000",
 		"sdk:install-local": "node scripts/install-local-sdk.js",
 		"sdk:check-updates": "npx npm-check-updates \"/^@ardenthq.*$/\" -u"
 	},
