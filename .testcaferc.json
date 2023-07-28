@@ -9,8 +9,6 @@
 	"skipJsErrors": true,
 	"selectorTimeout": 20000,
 	"assertionTimeout": 15000,
-	"appCommand": "pnpm serve",
-	"appInitDelay": 7000,
 	"compilerOptions": {
 		"typescript": {
 			"customCompilerModulePath": "../typescript",
