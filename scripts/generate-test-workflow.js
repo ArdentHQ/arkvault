@@ -41,7 +41,7 @@ for (const directory of directories) {
 		},
 		strategy: {
 			matrix: {
-				"node-version": ["18.11.0"],
+				"node-version": ["18.17.0"],
 			},
 		},
 		concurrency: {

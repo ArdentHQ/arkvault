@@ -9,9 +9,7 @@ import { TestStepFunction } from "@cucumber/cucumber/lib/support_code_library_bu
 import delve from "dlv";
 import { buildTranslations } from "../app/i18n/helpers";
 
-export const getPageURL = () => {
-	return process.env.E2E_HOST;
-};
+export const getPageURL = () => process.env.E2E_HOST;
 
 export const visitWelcomeScreen = async (t: TestController) => {
 	await t.navigateTo(getPageURL());

@@ -2,7 +2,7 @@
 	"name": "arkvault",
 	"version": "1.14.0",
 	"engines": {
-		"node": ">=18.11.0"
+		"node": ">=18.17.0"
 	},
 	"private": true,
 	"description": "ARKVault",
