@@ -571,7 +571,9 @@ jobs:
               run: pnpm test:e2e:ci src/domains/setting/cucumber
 
             - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/setting/cucumber
+              run: |
+                  pnpm test:e2e:ci src/domains/setting/cucumber/reset-profile.*
+                  pnpm test:e2e:ci:firefox src/domains/setting/cucumber
 
             - name: Edge
               run: pnpm test:e2e:ci:edge src/domains/setting/cucumber
