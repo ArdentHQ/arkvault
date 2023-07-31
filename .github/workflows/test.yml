@@ -10,14 +10,14 @@ on:
             - synchronize
             - opened
 jobs:
-    app:
+    application:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-app
             cancel-in-progress: true
@@ -27,7 +27,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -113,7 +113,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-contact
             cancel-in-progress: true
@@ -123,7 +123,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -149,7 +149,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-dashboard
             cancel-in-progress: true
@@ -159,7 +159,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -185,7 +185,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-error
             cancel-in-progress: true
@@ -195,7 +195,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -221,7 +221,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-exchange
             cancel-in-progress: true
@@ -231,7 +231,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -257,7 +257,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-message
             cancel-in-progress: true
@@ -267,7 +267,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -293,7 +293,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-network
             cancel-in-progress: true
@@ -303,7 +303,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -329,7 +329,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-profile
             cancel-in-progress: true
@@ -339,7 +339,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -365,7 +365,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-setting
             cancel-in-progress: true
@@ -375,7 +375,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -402,7 +402,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-transaction
             cancel-in-progress: true
@@ -412,7 +412,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -524,7 +524,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-vote
             cancel-in-progress: true
@@ -534,7 +534,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -560,7 +560,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-wallet
             cancel-in-progress: true
@@ -570,7 +570,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -596,7 +596,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-router
             cancel-in-progress: true
@@ -606,7 +606,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
@@ -636,7 +636,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.17.1
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-utils
             cancel-in-progress: true
@@ -646,7 +646,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
             - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}

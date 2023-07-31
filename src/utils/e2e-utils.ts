@@ -40,13 +40,17 @@ const PING_RESPONSE_PATH = "coins/ark/mainnet/ping";
 const PING_MUSIG_RESPONSE_PATH = "coins/ark/mainnet/ping-musig";
 
 const pingServerUrls = new Set([
+	"https://ark-live.arkvault.io/",
 	"https://ark-live.arkvault.io",
+	"https://ark-test.arkvault.io/",
 	"https://ark-test.arkvault.io",
 	"https://explorer.blockpool.io:19031",
 	"https://apis.compendia.org",
 	"https://apis-testnet.compendia.org",
 	"https://qredit.cloud",
 	"https://qredit.dev",
+	"https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0",
+	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
 ]);
 
 const pingMusigServerUrls = new Set(["https://ark-live-musig.arkvault.io", "https://ark-test-musig.arkvault.io"]);

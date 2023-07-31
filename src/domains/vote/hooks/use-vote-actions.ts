@@ -41,7 +41,7 @@ export const useVoteActions = ({
 
 		appendParameters(parameters, "vote", votes);
 
-		history.push({
+		history?.push({
 			pathname: generatePath(ProfilePaths.SendVoteWallet, { profileId: profile.id(), walletId }),
 			search: `?${parameters}`,
 		});

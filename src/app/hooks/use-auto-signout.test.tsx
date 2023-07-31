@@ -4,7 +4,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
-import { act, env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { act, env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
@@ -20,7 +20,7 @@ describe("useAutoSignOut", () => {
 		vi.useRealTimers();
 	});
 
-	it("should redirect to home when idle", () => {
+	it("should redirect to home when idle", async () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
 		vi.useFakeTimers();
 
@@ -29,6 +29,7 @@ describe("useAutoSignOut", () => {
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 
+		vi.spyOn(profile.settings(), "get").mockReturnValue(0.001);
 		const Component = () => {
 			const { startIdleTimer } = useAutoSignOut(profile);
 			return <div data-testid="StartIdleTimer" onClick={() => startIdleTimer()} />;
@@ -52,7 +53,9 @@ describe("useAutoSignOut", () => {
 			vi.advanceTimersByTime(1000);
 		});
 
-		expect(history.location.pathname).toBe("/");
+		await waitFor(() => {
+			expect(history.location.pathname).toBe("/");
+		});
 
 		vi.useRealTimers();
 	});

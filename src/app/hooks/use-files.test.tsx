@@ -3,14 +3,6 @@ import { renderHook } from "@testing-library/react-hooks";
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
 import { requestMock, server } from "@/tests/mocks/server";
 
-vi.spyOn(global, "fetch").mockImplementation(() =>
-	Promise.resolve({
-		blob: () => Promise.resolve(new Blob()),
-		json: () => Promise.resolve({ test: "Test" }),
-		text: () => Promise.resolve("text"),
-	}),
-);
-
 describe("useFiles", () => {
 	it("should read file as text", async () => {
 		const { result } = renderHook(() => useFiles());
@@ -95,7 +87,8 @@ describe("useFiles", () => {
 	});
 
 	it("should save image file", async () => {
-		server.use(requestMock("http://localhost:3000/test", {}, { method: "get" }));
+		const url = "http://localhost:3000/test";
+		server.use(requestMock(url, {}, { method: "get" }));
 
 		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileSave")
@@ -104,7 +97,7 @@ describe("useFiles", () => {
 
 		const { result } = renderHook(() => useFiles());
 
-		const value = await result.current.showImageSaveDialog("test", { extensions: [".png"] });
+		const value = await result.current.showImageSaveDialog(url, { extensions: [".png"] });
 
 		expect(value).toBe("test.png");
 
@@ -112,7 +105,7 @@ describe("useFiles", () => {
 			extensions: [".png"],
 		});
 
-		const withFilenameOnly = await result.current.showImageSaveDialog("test", { fileName: "test.png" });
+		const withFilenameOnly = await result.current.showImageSaveDialog(url, { fileName: "test.png" });
 
 		expect(withFilenameOnly).toBe("test.png");
 
