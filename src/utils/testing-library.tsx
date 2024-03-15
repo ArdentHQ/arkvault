@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-node-access */
-import { ARK } from "@ardenthq/sdk-ark";
+import { ARK } from "@ardenthq/sdk-mainsail";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
 import { createHashHistory, HashHistory, To } from "history";

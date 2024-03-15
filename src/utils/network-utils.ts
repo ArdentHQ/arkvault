@@ -1,5 +1,5 @@
 import { UUID } from "@ardenthq/sdk-cryptography";
-import { ARK } from "@ardenthq/sdk-ark";
+import { ARK } from "@ardenthq/sdk-mainsail";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
 import { uniq } from "@ardenthq/sdk-helpers";

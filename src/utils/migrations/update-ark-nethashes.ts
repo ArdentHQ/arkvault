@@ -1,4 +1,4 @@
-import { ARK } from "@ardenthq/sdk-ark";
+import { ARK } from "@ardenthq/sdk-mainsail";
 import { Networks } from "@ardenthq/sdk";
 
 export const updateArkNethashes = ({ data }) => {

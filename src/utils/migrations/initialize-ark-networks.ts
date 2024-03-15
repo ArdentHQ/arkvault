@@ -1,4 +1,4 @@
-import { ARK } from "@ardenthq/sdk-ark";
+import { ARK } from "@ardenthq/sdk-mainsail";
 import { isE2E, isPreview } from "@/utils/test-helpers";
 
 export const initializeArkNetworks = ({ data }) => {

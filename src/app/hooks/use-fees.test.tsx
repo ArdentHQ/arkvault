@@ -1,4 +1,4 @@
-import { ARK } from "@ardenthq/sdk-ark";
+import { ARK } from "@ardenthq/sdk-mainsail";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
