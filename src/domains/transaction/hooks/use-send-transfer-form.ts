@@ -1,5 +1,5 @@
 import { Networks, Services } from "@ardenthq/sdk";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { DefaultValues } from "react-hook-form/dist/types/form";
@@ -14,7 +14,6 @@ import { getTransferType, handleBroadcastError } from "@/domains/transaction/uti
 import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
-import { useTransferTransactionBuilder } from "./use-transfer-transaction-builder";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
@@ -32,7 +31,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	});
 
 	const transactionBuilder = useTransactionBuilder();
-	const trasferTransactionBuilder = useTransferTransactionBuilder();
 	const { persist } = useEnvironmentContext();
 	const { hasAnyParameters, queryParameters } = useTransactionQueryParameters();
 
@@ -99,8 +97,8 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 				const transaction = await transactionService.transfer({
 					data,
-					mnemonic,
 					fee: +fee,
+					mnemonic,
 				});
 
 				const result = await wallet.client().broadcast([transaction]);
