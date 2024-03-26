@@ -45,11 +45,12 @@
 	"dependencies": {
 		"@ardenthq/arkvault-url": "^1.2.0",
 		"@ardenthq/sdk": "../platform-sdk/packages/sdk",
-		"@ardenthq/sdk-mainsail": "../platform-sdk/packages/mainsail",
+		"@ardenthq/sdk-ark": "../platform-sdk/packages/ark",
 		"@ardenthq/sdk-cryptography": "../platform-sdk/packages/cryptography",
 		"@ardenthq/sdk-helpers": "../platform-sdk/packages/helpers",
 		"@ardenthq/sdk-intl": "../platform-sdk/packages/intl",
 		"@ardenthq/sdk-ledger": "../platform-sdk/packages/ledger",
+		"@ardenthq/sdk-mainsail": "../platform-sdk/packages/mainsail",
 		"@ardenthq/sdk-profiles": "../platform-sdk/packages/profiles",
 		"@emotion/cache": "^11.10.5",
 		"@emotion/react": "^11.10.6",
@@ -226,4 +227,3 @@
 		}
 	}
 }
-
