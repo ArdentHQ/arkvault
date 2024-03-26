@@ -1,5 +1,5 @@
 import { Networks, Services } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { DefaultValues } from "react-hook-form/dist/types/form";
@@ -14,6 +14,7 @@ import { getTransferType, handleBroadcastError } from "@/domains/transaction/uti
 import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { useTransferTransactionBuilder } from "./use-transfer-transaction-builder";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
@@ -31,6 +32,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	});
 
 	const transactionBuilder = useTransactionBuilder();
+	const trasferTransactionBuilder = useTransferTransactionBuilder();
 	const { persist } = useEnvironmentContext();
 	const { hasAnyParameters, queryParameters } = useTransactionQueryParameters();
 
@@ -83,46 +85,84 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secondSecret,
 			} = getValues();
 
-			const signatory = await wallet.signatoryFactory().make({
-				encryptionPassword,
-				mnemonic,
-				privateKey,
-				secondMnemonic,
-				secondSecret,
-				secret,
-				wif,
-			});
+			const transferType = getTransferType({ recipients });
 
-			const data = await buildTransferData({
-				coin: wallet.coin(),
-				isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
-				memo,
-				recipients,
-			});
+			if (transferType === "transfer") {
+				const transactionService = wallet.coin().transaction();
 
-			setLastEstimatedExpiration(data.expiration);
+				const data = await buildTransferData({
+					coin: wallet.coin(),
+					isMultiSignature: false,
+					memo,
+					recipients,
+				});
 
-			const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
+				const transaction = await transactionService.transfer({
+					data,
+					mnemonic,
+					fee: +fee,
+				});
 
-			const abortSignal = abortReference.current.signal;
-			const { uuid, transaction } = await transactionBuilder.build(
-				getTransferType({ recipients }),
-				transactionInput,
-				wallet,
-				{
+				const result = await wallet.client().broadcast([transaction]);
+
+				console.log({ result });
+				// result = await wallet.client().broadcast([transaction.data()]);
+				// if
+
+				// setLastEstimatedExpiration(data.expiration);
+
+				// // @TODO: `Services.TransactionInputs` expects a signatory, but we are currenty
+				// // passing the mnemonic directly. This should be refactored depending on the
+				// // implementation of the new SDK.
+				// const transactionInput: Omit<Services.TransactionInputs, "signatory"> & {
+				// 	mnemonic: string;
+				// } = { data, fee: +fee, mnemonic };
+
+				// const result = await trasferTransactionBuilder.build(transactionInput, wallet);
+
+				// console.log({ result });
+
+				// uuid = result.uuid;
+
+				// transaction = result.transaction;
+			} else {
+				const signatory = await wallet.signatoryFactory().make({
+					encryptionPassword,
+					mnemonic,
+					privateKey,
+					secondMnemonic,
+					secondSecret,
+					secret,
+					wif,
+				});
+
+				const data = await buildTransferData({
+					coin: wallet.coin(),
+					isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
+					memo,
+					recipients,
+				});
+
+				setLastEstimatedExpiration(data.expiration);
+
+				const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
+
+				const abortSignal = abortReference.current.signal;
+
+				const { uuid, transaction } = await transactionBuilder.build(transferType, transactionInput, wallet, {
 					abortSignal,
-				},
-			);
+				});
 
-			const response = await wallet.transaction().broadcast(uuid);
+				const response = await wallet.transaction().broadcast(uuid);
 
-			handleBroadcastError(response);
+				handleBroadcastError(response);
 
-			await wallet.transaction().sync();
+				await wallet.transaction().sync();
 
-			await persist();
+				await persist();
 
-			return transaction;
+				return transaction;
+			}
 		},
 		[activeProfile, clearErrors, getValues, persist, transactionBuilder, wallet],
 	);
