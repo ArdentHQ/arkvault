@@ -7,8 +7,8 @@ const createNetwork = (coin: Coins.CoinBundle, network: string) =>
 export const availableNetworksMock: Networks.Network[] = [
 	// createNetwork(ADA, "ada.mainnet"),
 	// createNetwork(ADA, "ada.testnet"),
-	createNetwork(ARK, "ark.mainnet"),
-	createNetwork(ARK, "ark.devnet"),
+	createNetwork(ARK, "mainsail.mainnet"),
+	createNetwork(ARK, "mainsail.devnet"),
 	createNetwork(ARK, "bind.mainnet"),
 	createNetwork(ARK, "bind.testnet"),
 	createNetwork(ARK, "xqr.mainnet"),

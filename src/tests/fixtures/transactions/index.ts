@@ -14,7 +14,7 @@ const wallet = {
 		isAwaitingOurSignature: () => false,
 	}),
 	network: () => ({
-		id: () => "ark.devnet",
+		id: () => "mainsail.devnet",
 		isTest: () => true,
 	}),
 };

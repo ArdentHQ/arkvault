@@ -15,7 +15,7 @@ export const buildNetwork = (
 	networkData: UserCustomNetwork,
 	response: NodeConfigurationResponse,
 ): Networks.NetworkManifest => {
-	const arkNetwork = ARK.manifest.networks["ark.mainnet"];
+	const arkNetwork = ARK.manifest.networks["mainsail.mainnet"];
 
 	const constants: Networks.NetworkManifestConstants = {
 		...arkNetwork.constants,
