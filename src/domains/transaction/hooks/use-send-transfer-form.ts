@@ -101,13 +101,13 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 					mnemonic,
 				});
 
+				setLastEstimatedExpiration(data.expiration);
+
 				const result = await wallet.client().broadcast([transaction]);
 
 				console.log({ result });
 				// result = await wallet.client().broadcast([transaction.data()]);
 				// if
-
-				// setLastEstimatedExpiration(data.expiration);
 
 				// // @TODO: `Services.TransactionInputs` expects a signatory, but we are currenty
 				// // passing the mnemonic directly. This should be refactored depending on the
