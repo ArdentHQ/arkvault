@@ -103,26 +103,15 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 				setLastEstimatedExpiration(data.expiration);
 
-				const result = await wallet.client().broadcast([transaction]);
+				const response = await wallet.client().broadcast([transaction]);
 
-				console.log({ result });
-				// result = await wallet.client().broadcast([transaction.data()]);
-				// if
+				handleBroadcastError(response);
 
-				// // @TODO: `Services.TransactionInputs` expects a signatory, but we are currenty
-				// // passing the mnemonic directly. This should be refactored depending on the
-				// // implementation of the new SDK.
-				// const transactionInput: Omit<Services.TransactionInputs, "signatory"> & {
-				// 	mnemonic: string;
-				// } = { data, fee: +fee, mnemonic };
+				await wallet.transaction().sync();
 
-				// const result = await trasferTransactionBuilder.build(transactionInput, wallet);
+				await persist();
 
-				// console.log({ result });
-
-				// uuid = result.uuid;
-
-				// transaction = result.transaction;
+				return transaction;
 			} else {
 				const signatory = await wallet.signatoryFactory().make({
 					encryptionPassword,
