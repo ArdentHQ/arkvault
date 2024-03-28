@@ -10,7 +10,7 @@ let profile: Contracts.IProfile;
 const requiredParameters = {
 	coin: "ARK",
 	nethash: "1",
-	network: "ark.devnet",
+	network: "mainsail.devnet",
 };
 
 describe("useSearchParametersValidation", () => {
@@ -22,7 +22,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should validate search parameters without errors (with network)", async () => {
 		const parameters = new URLSearchParams(
-			"amount=10&coin=ark&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+			"amount=10&coin=ark&method=transfer&network=mainsail.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -41,7 +41,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should use default if coin is missing", async () => {
-		const parameters = new URLSearchParams("method=transfer&network=ark.devnet");
+		const parameters = new URLSearchParams("method=transfer&network=mainsail.devnet");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -49,7 +49,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error for invalid coin", async () => {
-		const parameters = new URLSearchParams("coin=custom&network=ark.devnet&method=transfer");
+		const parameters = new URLSearchParams("coin=custom&network=mainsail.devnet&method=transfer");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -72,7 +72,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error for missing method", async () => {
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet");
+		const parameters = new URLSearchParams("coin=ARK&network=mainsail.devnet");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -82,7 +82,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error for invalid method", async () => {
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=custom");
+		const parameters = new URLSearchParams("coin=ARK&network=mainsail.devnet&method=custom");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -116,7 +116,7 @@ describe("useSearchParametersValidation", () => {
 			.spyOn(profile, "availableNetworks")
 			.mockReturnValue(profile.availableNetworks().filter((network) => network.id() === "ark.mainnet"));
 
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=transfer");
+		const parameters = new URLSearchParams("coin=ARK&network=mainsail.devnet&method=transfer");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -138,7 +138,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error for network mismatch", async () => {
-		const parameters = new URLSearchParams("coin=ark&method=transfer&network=ark.devnet");
+		const parameters = new URLSearchParams("coin=ark&method=transfer&network=mainsail.devnet");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -166,7 +166,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error if recipient does not correspond to network", async () => {
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=transfer&recipient=custom");
+		const parameters = new URLSearchParams("coin=ARK&network=mainsail.devnet&method=transfer&recipient=custom");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -178,7 +178,7 @@ describe("useSearchParametersValidation", () => {
 	describe("Message Verification", () => {
 		it("should validate verify message", async () => {
 			const parameters = new URLSearchParams(
-				"coin=ARK&network=ark.devnet&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
+				"coin=ARK&network=mainsail.devnet&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
 			);
 
 			const { result } = renderHook(() => useSearchParametersValidation());
@@ -211,7 +211,7 @@ describe("useSearchParametersValidation", () => {
 			const { result } = renderHook(() => useSearchParametersValidation());
 
 			let parameters = new URLSearchParams(
-				"coin=ARK&network=ark.devnet&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
+				"coin=ARK&network=mainsail.devnet&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
 			);
 
 			await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
@@ -219,7 +219,7 @@ describe("useSearchParametersValidation", () => {
 			});
 
 			parameters = new URLSearchParams(
-				"coin=ARK&network=ark.devnet&method=verify&message=hello+world&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
+				"coin=ARK&network=mainsail.devnet&method=verify&message=hello+world&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
 			);
 
 			await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
@@ -227,7 +227,7 @@ describe("useSearchParametersValidation", () => {
 			});
 
 			parameters = new URLSearchParams(
-				"coin=ARK&network=ark.devnet&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca",
+				"coin=ARK&network=mainsail.devnet&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca",
 			);
 
 			await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
@@ -285,7 +285,7 @@ describe("useSearchParametersValidation", () => {
 			.mockReturnValue(profile.wallets().first());
 
 		const parameters = new URLSearchParams(
-			"coin=ARK&network=ark.devnet&method=vote&delegate=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+			"coin=ARK&network=mainsail.devnet&method=vote&delegate=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -300,7 +300,7 @@ describe("useSearchParametersValidation", () => {
 			.spyOn(env.delegates(), "findByPublicKey")
 			.mockReturnValue(profile.wallets().first());
 
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&publicKey=1");
+		const parameters = new URLSearchParams("coin=ARK&network=mainsail.devnet&method=vote&publicKey=1");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -322,7 +322,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should fail to find delegate by public key", async () => {
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&publicKey=1");
+		const parameters = new URLSearchParams("coin=ARK&network=mainsail.devnet&method=vote&publicKey=1");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -332,7 +332,9 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should not allow both delegate name and public keys in the url", async () => {
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&publicKey=1&delegate=test");
+		const parameters = new URLSearchParams(
+			"coin=ARK&network=mainsail.devnet&method=vote&publicKey=1&delegate=test",
+		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -342,7 +344,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should fail to validate delegate address", async () => {
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&delegate=custom");
+		const parameters = new URLSearchParams("coin=ARK&network=mainsail.devnet&method=vote&delegate=custom");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -362,7 +364,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should require delegate parameter if it is a vote link", async () => {
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote");
+		const parameters = new URLSearchParams("coin=ARK&network=mainsail.devnet&method=vote");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -389,7 +391,7 @@ describe("useSearchParametersValidation", () => {
 		const resignedMock = vi.spyOn(delegateWallet, "isResignedDelegate").mockReturnValue(true);
 
 		const parameters = new URLSearchParams(
-			`coin=ARK&network=ark.devnet&method=vote&publicKey=${delegateWallet.publicKey()}`,
+			`coin=ARK&network=mainsail.devnet&method=vote&publicKey=${delegateWallet.publicKey()}`,
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -451,7 +453,7 @@ describe("useSearchParametersValidation", () => {
 		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
-			"amount=10&coin=ark&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+			"amount=10&coin=ark&method=transfer&network=mainsail.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());

@@ -1,4 +1,4 @@
-import { ARK } from "@ardenthq/sdk-ark";
+import { ARK } from "@ardenthq/sdk-mainsail";
 import { Environment } from "@ardenthq/sdk-profiles";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 import { httpClient } from "@/app/services";

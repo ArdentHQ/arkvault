@@ -20,7 +20,7 @@ describe("getDefaultAlias", () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "ARK",
 			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
@@ -37,7 +37,7 @@ describe("getDefaultAlias", () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "ARK",
 			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);

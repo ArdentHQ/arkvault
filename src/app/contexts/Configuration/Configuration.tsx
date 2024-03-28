@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ARK } from "@ardenthq/sdk-ark";
+import { ARK } from "@ardenthq/sdk-mainsail";
 
 interface ConfigurationContextType {
 	configuration: Record<string, any>;

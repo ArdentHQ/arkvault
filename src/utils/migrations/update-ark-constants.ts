@@ -1,5 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
-import { ARK } from "@ardenthq/sdk-ark";
+import { ARK } from "@ardenthq/sdk-mainsail";
 
 export const updateArkConstants = ({ data }) => {
 	if (typeof data.networks === "object" && !data.networks.ark) {

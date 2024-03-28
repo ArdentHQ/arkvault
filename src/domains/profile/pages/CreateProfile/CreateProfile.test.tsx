@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/await-thenable */
 /* eslint-disable testing-library/no-unnecessary-act */
 
-import { ARK } from "@ardenthq/sdk-ark";
+import { ARK } from "@ardenthq/sdk-mainsail";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as browserAccess from "browser-fs-access";
