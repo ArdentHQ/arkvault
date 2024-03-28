@@ -12,10 +12,10 @@ export const initializeArkNetworks = ({ data }) => {
 	}
 
 	data.networks.ark = {
-		mainnet: ARK.manifest.networks["ark.mainnet"],
+		mainnet: ARK.manifest.networks["mainsail.mainnet"],
 	};
 
 	if (isE2E() || isPreview()) {
-		data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
+		data.networks.mainsail.devnet = ARK.manifest.networks["mainsail.devnet"];
 	}
 };
