@@ -146,7 +146,9 @@ export const networksAsOptions = (networks?: Networks.Network[]) => {
 	}
 
 	return networks.map((network) => {
-		let label = network?.coinName();
+		// @TODO: Coiname for mainsail network is ARK, we should chnage it either on the sdk
+		// or make a helper but my not be neccesary if we eventually replace ARK with Mainsail
+		let label = network.id().startsWith("mainsail") ? "Mainsail" : network?.coinName();
 
 		if (network?.isTest() && !isCustomNetwork(network)) {
 			label = `${label} ${network.name()}`;
