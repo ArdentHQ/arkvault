@@ -108,6 +108,12 @@ export const networkDisplayName = (network: Networks.Network | undefined | null)
 		return network.coinName();
 	}
 
+	// @TODO: change the display name directly on the manifest depending if Mainsail
+	// will replace ARK or not
+	if (network.id().startsWith("mainsail")) {
+		return network.displayName().replace("ARK", "Mainsail");
+	}
+
 	return network.displayName();
 };
 
