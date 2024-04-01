@@ -152,7 +152,7 @@ export const FormStep = ({
 					<FormLabel label={t("COMMON.CRYPTOASSET")} />
 					<SelectNetworkDropdown
 						profile={profile}
-						networks={[network]}
+						networks={[network].filter(Boolean)}
 						selectedNetwork={network}
 						isDisabled
 					/>
