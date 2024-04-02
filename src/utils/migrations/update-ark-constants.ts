@@ -1,12 +1,12 @@
-import { Networks } from "@ardenthq/sdk";
 import { ARK } from "@ardenthq/sdk-mainsail";
+import { Networks } from "@ardenthq/sdk";
 
 export const updateArkConstants = ({ data }) => {
-	if (typeof data.networks === "object" && !data.networks.ark) {
+	if (typeof data.networks === "object" && !data.networks.mainsail) {
 		return;
 	}
 
-	for (const manifest of Object.values<Networks.NetworkManifest>(data.networks.ark)) {
+	for (const manifest of Object.values<Networks.NetworkManifest>(data.networks.mainsail)) {
 		if (manifest.constants.epoch === undefined) {
 			manifest.constants.epoch = ARK.manifest.networks[manifest.id].constants.epoch;
 		}

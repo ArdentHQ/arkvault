@@ -2,11 +2,11 @@ import { ARK } from "@ardenthq/sdk-mainsail";
 import { Networks } from "@ardenthq/sdk";
 
 export const updateArkNethashes = ({ data }) => {
-	if (typeof data.networks === "object" && !data.networks.ark) {
+	if (typeof data.networks === "object" && !data.networks.mainsail) {
 		return;
 	}
 
-	for (const manifest of Object.values<Networks.NetworkManifest>(data.networks.ark)) {
+	for (const manifest of Object.values<Networks.NetworkManifest>(data.networks.mainsail)) {
 		if (["mainsail.devnet", "mainsail.mainnet"].includes(manifest.id)) {
 			if (!manifest.meta) {
 				manifest.meta = {};

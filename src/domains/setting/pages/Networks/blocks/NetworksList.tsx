@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
+
+import { Checkbox } from "@/app/components/Checkbox";
+import { Icon } from "@/app/components/Icon";
 import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
-import { Icon } from "@/app/components/Icon";
-import { Checkbox } from "@/app/components/Checkbox";
 import { networkDisplayName } from "@/utils/network-utils";
 
 const NetworksListNetwork: React.VFC<{
@@ -56,17 +57,19 @@ const NetworksList: React.VFC<{
 	networks: Networks.Network[];
 	selectedNetworks: string[];
 	onToggleNetwork: (event: React.ChangeEvent<HTMLInputElement>, network: string) => void;
-}> = ({ networks, onToggleNetwork, selectedNetworks }) => (
-	<div data-testid="NetworksList" className="mt-3 grid gap-3 xl:grid-cols-2">
-		{networks.map((network) => (
-			<NetworksListNetwork
-				network={network}
-				key={network.id()}
-				onToggleNetwork={onToggleNetwork}
-				selectedNetworks={selectedNetworks}
-			/>
-		))}
-	</div>
-);
+}> = ({ networks, onToggleNetwork, selectedNetworks }) => {
+	return (
+		<div data-testid="NetworksList" className="mt-3 grid gap-3 xl:grid-cols-2">
+			{networks.map((network) => (
+				<NetworksListNetwork
+					network={network}
+					key={network.id()}
+					onToggleNetwork={onToggleNetwork}
+					selectedNetworks={selectedNetworks}
+				/>
+			))}
+		</div>
+	);
+};
 
 export default NetworksList;
