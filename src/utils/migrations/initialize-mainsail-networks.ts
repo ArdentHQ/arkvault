@@ -1,6 +1,6 @@
 import { isE2E, isPreview } from "@/utils/test-helpers";
 
-import { ARK } from "@ardenthq/sdk-mainsail";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 
 export const initializeMainsailNetworks = ({ data }) => {
 	if (typeof data.networks === "object" && !!data.networks.mainsail) {
@@ -13,10 +13,10 @@ export const initializeMainsailNetworks = ({ data }) => {
 	}
 
 	data.networks.mainsail = {
-		mainnet: ARK.manifest.networks["mainsail.mainnet"],
+		mainnet: Mainsail.manifest.networks["mainsail.mainnet"],
 	};
 
 	if (isE2E() || isPreview()) {
-		data.networks.mainsail.devnet = ARK.manifest.networks["mainsail.devnet"];
+		data.networks.mainsail.devnet = Mainsail.manifest.networks["mainsail.devnet"];
 	}
 };
