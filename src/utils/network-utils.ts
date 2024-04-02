@@ -110,7 +110,6 @@ export const networkDisplayName = (network: Networks.Network | undefined | null)
 
 	// @TODO: remove this once Mainsail is in a better place
 	if (network.id().startsWith("mainsail")) {
-		console.log("mainsail", network.displayName(), network.displayName().replace("ARK", "Mainsail"));
 		return network.displayName().replace("ARK", "Mainsail");
 	}
 
