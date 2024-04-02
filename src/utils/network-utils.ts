@@ -116,26 +116,32 @@ export const networkDisplayName = (network: Networks.Network | undefined | null)
 	return network.displayName();
 };
 
-export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
-	profile.availableNetworks().filter((network) => {
+export const profileAllEnabledNetworks = (profile: Contracts.IProfile) => {
+	return profile.availableNetworks().filter((network) => {
 		if (isCustomNetwork(network)) {
 			return network.meta().enabled;
 		}
 
 		return true;
 	});
+};
 
 export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	profileAllEnabledNetworks(profile).map((network) => network.id());
 
-export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
-	uniq(
+export const profileEnabledNetworkIds = (profile: Contracts.IProfile) => {
+	console.log(profileAllEnabledNetworkIds(profile));
+	return uniq(
 		profile
 			.wallets()
 			.values()
 			.filter((wallet) => profileAllEnabledNetworkIds(profile).includes(wallet.network().id()))
-			.map((wallet) => wallet.network().id()),
+			.map((wallet) => {
+				console.log(wallet.network());
+				return wallet.network().id();
+			}),
 	);
+};
 
 export const enabledNetworksCount = (profile: Contracts.IProfile) => profileAllEnabledNetworkIds(profile).length;
 
@@ -146,7 +152,7 @@ export const networksAsOptions = (networks?: Networks.Network[]) => {
 
 	return networks.map((network) => {
 		// @TODO: remove this once Mainsail is in a better place
-		let label = network.id().startsWith("mainsail") ? "Mainsail" : network?.coinName();
+		let label = network?.id().startsWith("mainsail") ? "Mainsail" : network?.coinName();
 
 		if (network?.isTest() && !isCustomNetwork(network)) {
 			label = `${label} ${network.name()}`;
