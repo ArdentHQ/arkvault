@@ -1,10 +1,10 @@
-import { UUID } from "@ardenthq/sdk-cryptography";
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
-import { uniq } from "@ardenthq/sdk-helpers";
 import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
+import { UUID } from "@ardenthq/sdk-cryptography";
 import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { uniq } from "@ardenthq/sdk-helpers";
 
 export const networkName = (network: Networks.NetworkManifest) => `${network.name}`;
 
@@ -108,6 +108,12 @@ export const networkDisplayName = (network: Networks.Network | undefined | null)
 		return network.coinName();
 	}
 
+	// @TODO: remove this once Mainsail is in a better place
+	if (network.id().startsWith("mainsail")) {
+		console.log("mainsail", network.displayName(), network.displayName().replace("ARK", "Mainsail"));
+		return network.displayName().replace("ARK", "Mainsail");
+	}
+
 	return network.displayName();
 };
 
@@ -140,7 +146,8 @@ export const networksAsOptions = (networks?: Networks.Network[]) => {
 	}
 
 	return networks.map((network) => {
-		let label = network?.coinName();
+		// @TODO: remove this once Mainsail is in a better place
+		let label = network.id().startsWith("mainsail") ? "Mainsail" : network?.coinName();
 
 		if (network?.isTest() && !isCustomNetwork(network)) {
 			label = `${label} ${network.name()}`;
