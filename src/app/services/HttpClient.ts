@@ -33,6 +33,8 @@ export class HttpClient extends Http.AbstractRequest {
 			url = `${url}?${new URLSearchParams(data.query as any)}`;
 		}
 
+		console.log({ url });
+
 		const cacheKey: string = hash(`${method}.${url}.${JSON.stringify(data)}`).toString();
 
 		return this.cache.remember(cacheKey, async () => {
