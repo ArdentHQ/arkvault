@@ -123,7 +123,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	const remainingNetBalance = useMemo(() => {
 		const netBalance = BigNumber.make(remainingBalance).minus(fee || 0);
 
-		return netBalance.isGreaterThan(0) ? netBalance.toFixed() : 0;
+		return netBalance.isGreaterThan(0) ? netBalance.toFixed(0) : 0;
 	}, [fee, remainingBalance]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
@@ -146,7 +146,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	}, [remainingBalance, setValue, amount, recipientAddress, fee, senderAddress]);
 
 	useEffect(() => {
-		register("amount", sendTransfer.amount(network, remainingNetBalance!, addedRecipients, isSingle));
+		register("amount", sendTransfer.amount(network, remainingNetBalance, addedRecipients, isSingle));
 		register("recipientAddress", sendTransfer.recipientAddress(profile, network, addedRecipients, isSingle));
 	}, [register, network, sendTransfer, addedRecipients, isSingle, profile, remainingNetBalance]);
 
