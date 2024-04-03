@@ -1,19 +1,20 @@
-import { Networks, Services } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
-import { useForm } from "react-hook-form";
-import { DefaultValues } from "react-hook-form/dist/types/form";
-import { assertWallet } from "@/utils/assertions";
-import { lowerCaseEquals } from "@/utils/equals";
-import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useNetworks, useValidation } from "@/app/hooks";
-import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transaction-builder";
-import { SendTransferForm } from "@/domains/transaction/pages/SendTransfer";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { Networks, Services } from "@ardenthq/sdk";
 import { getTransferType, handleBroadcastError } from "@/domains/transaction/utils";
+import { useActiveProfile, useNetworks, useValidation } from "@/app/hooks";
+
+import { DefaultValues } from "react-hook-form/dist/types/form";
+import { SendTransferForm } from "@/domains/transaction/pages/SendTransfer";
+import { assertWallet } from "@/utils/assertions";
+import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { lowerCaseEquals } from "@/utils/equals";
 import { precisionRound } from "@/utils/precision-round";
-import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useForm } from "react-hook-form";
+import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transaction-builder";
+import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
@@ -83,46 +84,84 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secondSecret,
 			} = getValues();
 
-			const signatory = await wallet.signatoryFactory().make({
-				encryptionPassword,
-				mnemonic,
-				privateKey,
-				secondMnemonic,
-				secondSecret,
-				secret,
-				wif,
-			});
+			if (wallet.coinId() === "Mainsail") {
+				const transferType = getTransferType({ recipients });
 
-			const data = await buildTransferData({
-				coin: wallet.coin(),
-				isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
-				memo,
-				recipients,
-			});
+				// @TODO: temporary transfer fix for mainsail until it uses signatory
+				if (transferType === "transfer") {
+					const transactionService = wallet.coin().transaction();
 
-			setLastEstimatedExpiration(data.expiration);
+					const data = await buildTransferData({
+						coin: wallet.coin(),
+						isMultiSignature: false,
+						memo,
+						recipients,
+					});
 
-			const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
+					const transaction = await transactionService.transfer({
+						// @ts-ignore
+						data,
+						fee: +fee,
+						mnemonic,
+					});
 
-			const abortSignal = abortReference.current.signal;
-			const { uuid, transaction } = await transactionBuilder.build(
-				getTransferType({ recipients }),
-				transactionInput,
-				wallet,
-				{
-					abortSignal,
-				},
-			);
+					setLastEstimatedExpiration(data.expiration);
 
-			const response = await wallet.transaction().broadcast(uuid);
+					const response = await wallet.client().broadcast([transaction]);
 
-			handleBroadcastError(response);
+					handleBroadcastError(response);
 
-			await wallet.transaction().sync();
+					await wallet.transaction().sync();
 
-			await persist();
+					await persist();
 
-			return transaction;
+					return new DTO.ExtendedSignedTransactionData(transaction, wallet);
+				} else {
+					// @TODO: handle for mainsail
+					return null;
+				}
+			} else {
+				const signatory = await wallet.signatoryFactory().make({
+					encryptionPassword,
+					mnemonic,
+					privateKey,
+					secondMnemonic,
+					secondSecret,
+					secret,
+					wif,
+				});
+
+				const data = await buildTransferData({
+					coin: wallet.coin(),
+					isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
+					memo,
+					recipients,
+				});
+
+				setLastEstimatedExpiration(data.expiration);
+
+				const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
+
+				const abortSignal = abortReference.current.signal;
+				const { uuid, transaction } = await transactionBuilder.build(
+					getTransferType({ recipients }),
+					transactionInput,
+					wallet,
+					{
+						abortSignal,
+					},
+				);
+
+				const response = await wallet.transaction().broadcast(uuid);
+
+				handleBroadcastError(response);
+
+				await wallet.transaction().sync();
+
+				await persist();
+
+				return transaction;
+			}
 		},
 		[activeProfile, clearErrors, getValues, persist, transactionBuilder, wallet],
 	);

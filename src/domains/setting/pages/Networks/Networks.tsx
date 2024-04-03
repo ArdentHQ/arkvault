@@ -1,30 +1,30 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { useForm } from "react-hook-form";
-import { Trans, useTranslation } from "react-i18next";
-
-import { Prompt } from "react-router-dom";
-import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import NetworkFormModal from "./blocks/NetworkFormModal";
-import UpdateNetworkFormModal from "./blocks/UpdateNetworkFormModal";
-import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
-import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
+import React, { useEffect, useMemo, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
+import { isCustomNetwork, profileEnabledNetworkIds } from "@/utils/network-utils";
+import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+
+import { Button } from "@/app/components/Button";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import CustomNetworkDetailsModal from "@/domains/setting/pages/Networks/blocks/CustomNetworkDetailsModal";
+import CustomNetworksList from "@/domains/setting/pages/Networks/blocks/CustomNetworksList";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
+import DeleteCustomNetworkModal from "@/domains/setting/pages/Networks/blocks/DeleteCustomNetworkModal";
 import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
-import { useActiveProfile, useBreakpoint } from "@/app/hooks";
-import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
-import { toasts } from "@/app/services";
-import { Toggle } from "@/app/components/Toggle";
-import { useEnvironmentContext } from "@/app/contexts";
+import NetworkFormModal from "./blocks/NetworkFormModal";
+import { Networks } from "@ardenthq/sdk";
 import NetworksList from "@/domains/setting/pages/Networks/blocks/NetworksList";
-import CustomNetworksList from "@/domains/setting/pages/Networks/blocks/CustomNetworksList";
-import DeleteCustomNetworkModal from "@/domains/setting/pages/Networks/blocks/DeleteCustomNetworkModal";
-import CustomNetworkDetailsModal from "@/domains/setting/pages/Networks/blocks/CustomNetworkDetailsModal";
-import { isCustomNetwork, profileEnabledNetworkIds } from "@/utils/network-utils";
-import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { useWalletConfig } from "@/domains/wallet/hooks";
+import { Prompt } from "react-router-dom";
+import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
+import { Toggle } from "@/app/components/Toggle";
+import UpdateNetworkFormModal from "./blocks/UpdateNetworkFormModal";
 import { getProfileStoredPassword } from "@/utils/profile-utils";
+import { toasts } from "@/app/services";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useForm } from "react-hook-form";
+import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
+import { useWalletConfig } from "@/domains/wallet/hooks";
 
 export const NetworksSettings = () => {
 	const { t } = useTranslation();
@@ -59,7 +59,12 @@ export const NetworksSettings = () => {
 	const { setValue: setWalletConfig } = useWalletConfig({ profile });
 
 	const defaultNetworks = useMemo(
-		() => env.availableNetworks().filter((item) => ["ark.devnet", "ark.mainnet"].includes(item.id())),
+		() =>
+			env
+				.availableNetworks()
+				.filter((item) =>
+					["ark.devnet", "ark.mainnet", "mainsail.mainnet", "mainsail.devnet"].includes(item.id()),
+				),
 		[env, profile],
 	);
 

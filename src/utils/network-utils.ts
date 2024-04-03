@@ -1,10 +1,10 @@
-import { UUID } from "@ardenthq/sdk-cryptography";
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
-import { uniq } from "@ardenthq/sdk-helpers";
 import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
+import { UUID } from "@ardenthq/sdk-cryptography";
 import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { uniq } from "@ardenthq/sdk-helpers";
 
 export const networkName = (network: Networks.NetworkManifest) => `${network.name}`;
 
@@ -123,13 +123,14 @@ export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
 export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	profileAllEnabledNetworks(profile).map((network) => network.id());
 
-export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
-	uniq(
+export const profileEnabledNetworkIds = (profile: Contracts.IProfile) => uniq(
 		profile
 			.wallets()
 			.values()
 			.filter((wallet) => profileAllEnabledNetworkIds(profile).includes(wallet.network().id()))
-			.map((wallet) => wallet.network().id()),
+			.map((wallet) => {
+				return wallet.network().id();
+			}),
 	);
 
 export const enabledNetworksCount = (profile: Contracts.IProfile) => profileAllEnabledNetworkIds(profile).length;

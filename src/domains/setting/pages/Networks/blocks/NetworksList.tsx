@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
+
+import { Checkbox } from "@/app/components/Checkbox";
+import { Icon } from "@/app/components/Icon";
 import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
-import { Icon } from "@/app/components/Icon";
-import { Checkbox } from "@/app/components/Checkbox";
 import { networkDisplayName } from "@/utils/network-utils";
 
 const NetworksListNetwork: React.VFC<{
