@@ -84,42 +84,37 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secondSecret,
 			} = getValues();
 
-			if (wallet.coinId() === "Mainsail") {
-				const transferType = getTransferType({ recipients });
+			const transferType = getTransferType({ recipients });
 
+			if (wallet.coinId() === "Mainsail" && transferType === "transfer") {
 				// @TODO: temporary transfer fix for mainsail until it uses signatory
-				if (transferType === "transfer") {
-					const transactionService = wallet.coin().transaction();
+				const transactionService = wallet.coin().transaction();
 
-					const data = await buildTransferData({
-						coin: wallet.coin(),
-						isMultiSignature: false,
-						memo,
-						recipients,
-					});
+				const data = await buildTransferData({
+					coin: wallet.coin(),
+					isMultiSignature: false,
+					memo,
+					recipients,
+				});
 
-					const transaction = await transactionService.transfer({
-						// @ts-ignore
-						data,
-						fee: +fee,
-						mnemonic,
-					});
+				const transaction = await transactionService.transfer({
+					// @ts-ignore
+					data,
+					fee: +fee,
+					mnemonic,
+				});
 
-					setLastEstimatedExpiration(data.expiration);
+				setLastEstimatedExpiration(data.expiration);
 
-					const response = await wallet.client().broadcast([transaction]);
+				const response = await wallet.client().broadcast([transaction]);
 
-					handleBroadcastError(response);
+				handleBroadcastError(response);
 
-					await wallet.transaction().sync();
+				await wallet.transaction().sync();
 
-					await persist();
+				await persist();
 
-					return new DTO.ExtendedSignedTransactionData(transaction, wallet);
-				} else {
-					// @TODO: handle for mainsail
-					return null;
-				}
+				return new DTO.ExtendedSignedTransactionData(transaction, wallet);
 			} else {
 				const signatory = await wallet.signatoryFactory().make({
 					encryptionPassword,
