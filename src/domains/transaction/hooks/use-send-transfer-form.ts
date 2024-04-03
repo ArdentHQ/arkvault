@@ -1,10 +1,11 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { Networks, Services } from "@ardenthq/sdk";
+import { DefaultValues } from "react-hook-form/dist/types/form";
+import { useForm } from "react-hook-form";
 import { getTransferType, handleBroadcastError } from "@/domains/transaction/utils";
 import { useActiveProfile, useNetworks, useValidation } from "@/app/hooks";
 
-import { DefaultValues } from "react-hook-form/dist/types/form";
 import { SendTransferForm } from "@/domains/transaction/pages/SendTransfer";
 import { assertWallet } from "@/utils/assertions";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
@@ -12,7 +13,6 @@ import { lowerCaseEquals } from "@/utils/equals";
 import { precisionRound } from "@/utils/precision-round";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useForm } from "react-hook-form";
 import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transaction-builder";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 
@@ -84,84 +84,94 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secondSecret,
 			} = getValues();
 
-			if (wallet.coinId() === "Mainsail") {
-				const transferType = getTransferType({ recipients });
+			// const signatory = await wallet.signatoryFactory().make({
+			// 		encryptionPassword,
+			// 		mnemonic,
+			// 		privateKey,
+			// 		secondMnemonic,
+			// 		secondSecret,
+			// 		secret,
+			// 		wif,
+			// 	});
 
-				// @TODO: temporary transfer fix for mainsail until it uses signatory
-				if (transferType === "transfer") {
-					const transactionService = wallet.coin().transaction();
+			// if (wallet.coinId() === "Mainsail") {
+			// 	const transferType = getTransferType({ recipients });
 
-					const data = await buildTransferData({
-						coin: wallet.coin(),
-						isMultiSignature: false,
-						memo,
-						recipients,
-					});
+			// 	// @TODO: temporary transfer fix for mainsail until it uses signatory
+			// 	if (transferType === "transfer") {
+			// 		const transactionService = wallet.coin().transaction();
 
-					const transaction = await transactionService.transfer({
-						// @ts-ignore
-						data,
-						fee: +fee,
-						mnemonic,
-					});
+			// 		const data = await buildTransferData({
+			// 			coin: wallet.coin(),
+			// 			isMultiSignature: false,
+			// 			memo,
+			// 			recipients,
+			// 		});
 
-					setLastEstimatedExpiration(data.expiration);
+			// 		const transaction = await transactionService.transfer({
+			// 			// @ts-ignore
+			// 			data,
+			// 			fee: +fee,
+			// 			mnemonic,
+			// 		});
 
-					const response = await wallet.client().broadcast([transaction]);
+			// 		setLastEstimatedExpiration(data.expiration);
 
-					handleBroadcastError(response);
+			// 		const response = await wallet.client().broadcast([transaction]);
 
-					await wallet.transaction().sync();
+			// 		handleBroadcastError(response);
 
-					await persist();
+			// 		await wallet.transaction().sync();
 
-					return new DTO.ExtendedSignedTransactionData(transaction, wallet);
-				} else {
-					// @TODO: handle for mainsail
-					return null;
-				}
-			} else {
-				const signatory = await wallet.signatoryFactory().make({
-					encryptionPassword,
-					mnemonic,
-					privateKey,
-					secondMnemonic,
-					secondSecret,
-					secret,
-					wif,
-				});
+			// 		await persist();
 
-				const data = await buildTransferData({
-					coin: wallet.coin(),
-					isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
-					memo,
-					recipients,
-				});
+			// 		return new DTO.ExtendedSignedTransactionData(transaction, wallet);
+			// 	} else {
+			// 		// @TODO: handle for mainsail
+			// 		return null;
+			// 	}
+			// } else {
+			const signatory = await wallet.signatoryFactory().make({
+				encryptionPassword,
+				mnemonic,
+				privateKey,
+				secondMnemonic,
+				secondSecret,
+				secret,
+				wif,
+			});
 
-				setLastEstimatedExpiration(data.expiration);
+			const data = await buildTransferData({
+				coin: wallet.coin(),
+				isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
+				memo,
+				recipients,
+			});
 
-				const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
+			setLastEstimatedExpiration(data.expiration);
 
-				const abortSignal = abortReference.current.signal;
-				const { uuid, transaction } = await transactionBuilder.build(
-					getTransferType({ recipients }),
-					transactionInput,
-					wallet,
-					{
-						abortSignal,
-					},
-				);
+			const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
 
-				const response = await wallet.transaction().broadcast(uuid);
+			const abortSignal = abortReference.current.signal;
+			const { uuid, transaction } = await transactionBuilder.build(
+				getTransferType({ recipients }),
+				transactionInput,
+				wallet,
+				{
+					abortSignal,
+				},
+			);
 
-				handleBroadcastError(response);
+			const response = await wallet.transaction().broadcast(uuid);
 
-				await wallet.transaction().sync();
+			handleBroadcastError(response);
 
-				await persist();
+			await wallet.transaction().sync();
 
-				return transaction;
-			}
+			await persist();
+
+			return transaction;
+			// }
 		},
 		[activeProfile, clearErrors, getValues, persist, transactionBuilder, wallet],
 	);
