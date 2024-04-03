@@ -84,53 +84,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secondSecret,
 			} = getValues();
 
-			// const signatory = await wallet.signatoryFactory().make({
-			// 		encryptionPassword,
-			// 		mnemonic,
-			// 		privateKey,
-			// 		secondMnemonic,
-			// 		secondSecret,
-			// 		secret,
-			// 		wif,
-			// 	});
-
-			// if (wallet.coinId() === "Mainsail") {
-			// 	const transferType = getTransferType({ recipients });
-
-			// 	// @TODO: temporary transfer fix for mainsail until it uses signatory
-			// 	if (transferType === "transfer") {
-			// 		const transactionService = wallet.coin().transaction();
-
-			// 		const data = await buildTransferData({
-			// 			coin: wallet.coin(),
-			// 			isMultiSignature: false,
-			// 			memo,
-			// 			recipients,
-			// 		});
-
-			// 		const transaction = await transactionService.transfer({
-			// 			// @ts-ignore
-			// 			data,
-			// 			fee: +fee,
-			// 			mnemonic,
-			// 		});
-
-			// 		setLastEstimatedExpiration(data.expiration);
-
-			// 		const response = await wallet.client().broadcast([transaction]);
-
-			// 		handleBroadcastError(response);
-
-			// 		await wallet.transaction().sync();
-
-			// 		await persist();
-
-			// 		return new DTO.ExtendedSignedTransactionData(transaction, wallet);
-			// 	} else {
-			// 		// @TODO: handle for mainsail
-			// 		return null;
-			// 	}
-			// } else {
 			const signatory = await wallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
@@ -171,7 +124,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			await persist();
 
 			return transaction;
-			// }
 		},
 		[activeProfile, clearErrors, getValues, persist, transactionBuilder, wallet],
 	);
