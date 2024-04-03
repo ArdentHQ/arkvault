@@ -1,7 +1,7 @@
-import { UUID } from "@ardenthq/sdk-cryptography";
-import { ARK } from "@ardenthq/sdk-mainsail";
+import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
+import { UUID } from "@ardenthq/sdk-cryptography";
 import { uniq } from "@ardenthq/sdk-helpers";
 import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
 import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
@@ -15,7 +15,7 @@ export const buildNetwork = (
 	networkData: UserCustomNetwork,
 	response: NodeConfigurationResponse,
 ): Networks.NetworkManifest => {
-	const arkNetwork = ARK.manifest.networks["mainsail.mainnet"];
+	const arkNetwork = ARK.manifest.networks["ark.mainnet"];
 
 	const constants: Networks.NetworkManifestConstants = {
 		...arkNetwork.constants,
@@ -140,16 +140,16 @@ export const networksAsOptions = (networks?: Networks.Network[]) => {
 	}
 
 	return networks.map((network) => {
-		let label = network?.coinName();
+		let label = network.coinName();
 
-		if (network?.isTest() && !isCustomNetwork(network)) {
+		if (network.isTest() && !isCustomNetwork(network)) {
 			label = `${label} ${network.name()}`;
 		}
 
 		return {
-			isTestNetwork: network?.isTest(),
+			isTestNetwork: network.isTest(),
 			label,
-			value: network?.id(),
+			value: network.id(),
 		};
 	});
 };

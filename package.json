@@ -17,10 +17,8 @@
 	"license": "CC BY-NC-ND 4.0",
 	"author": "ARKVault <info@arkvault.io>",
 	"contributors": [
-		"Alex Barnsley <alex@ark.io>",
-		"Brian Faust <brian@ark.io>",
-		"ItsANameToo <michel@ark.io>",
-		"Lúcio Rubens <lucio@ark.io>"
+		"Alex Barnsley <alex@ardenthq.com>",
+		"ItsANameToo <michel@ardenthq.com>"
 	],
 	"scripts": {
 		"dev": "vite",

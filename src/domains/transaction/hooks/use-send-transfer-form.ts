@@ -1,19 +1,20 @@
-import { Networks, Services } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
-import { useForm } from "react-hook-form";
+import { Networks, Services } from "@ardenthq/sdk";
 import { DefaultValues } from "react-hook-form/dist/types/form";
-import { assertWallet } from "@/utils/assertions";
-import { lowerCaseEquals } from "@/utils/equals";
-import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useNetworks, useValidation } from "@/app/hooks";
-import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transaction-builder";
-import { SendTransferForm } from "@/domains/transaction/pages/SendTransfer";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { useForm } from "react-hook-form";
 import { getTransferType, handleBroadcastError } from "@/domains/transaction/utils";
+import { useActiveProfile, useNetworks, useValidation } from "@/app/hooks";
+
+import { SendTransferForm } from "@/domains/transaction/pages/SendTransfer";
+import { assertWallet } from "@/utils/assertions";
+import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { lowerCaseEquals } from "@/utils/equals";
 import { precisionRound } from "@/utils/precision-round";
-import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transaction-builder";
+import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
@@ -83,35 +84,42 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secondSecret,
 			} = getValues();
 
-			const transferType = getTransferType({ recipients });
+			if (wallet.coinId() === "Mainsail") {
+				const transferType = getTransferType({ recipients });
 
-			if (transferType === "transfer") {
-				const transactionService = wallet.coin().transaction();
+				// @TODO: temporary transfer fix for mainsail until it uses signatory
+				if (transferType === "transfer") {
+					const transactionService = wallet.coin().transaction();
 
-				const data = await buildTransferData({
-					coin: wallet.coin(),
-					isMultiSignature: false,
-					memo,
-					recipients,
-				});
+					const data = await buildTransferData({
+						coin: wallet.coin(),
+						isMultiSignature: false,
+						memo,
+						recipients,
+					});
 
-				const transaction = await transactionService.transfer({
-					data,
-					fee: +fee,
-					mnemonic,
-				});
+					const transaction = await transactionService.transfer({
+						// @ts-ignore
+						data,
+						fee: +fee,
+						mnemonic,
+					});
 
-				setLastEstimatedExpiration(data.expiration);
+					setLastEstimatedExpiration(data.expiration);
 
-				const response = await wallet.client().broadcast([transaction]);
+					const response = await wallet.client().broadcast([transaction]);
 
-				handleBroadcastError(response);
+					handleBroadcastError(response);
 
-				await wallet.transaction().sync();
+					await wallet.transaction().sync();
 
-				await persist();
+					await persist();
 
-				return new DTO.ExtendedSignedTransactionData(transaction, wallet);
+					return new DTO.ExtendedSignedTransactionData(transaction, wallet);
+				} else {
+					// @TODO: handle for mainsail
+					return null;
+				}
 			} else {
 				const signatory = await wallet.signatoryFactory().make({
 					encryptionPassword,
@@ -135,10 +143,14 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
 
 				const abortSignal = abortReference.current.signal;
-
-				const { uuid, transaction } = await transactionBuilder.build(transferType, transactionInput, wallet, {
-					abortSignal,
-				});
+				const { uuid, transaction } = await transactionBuilder.build(
+					getTransferType({ recipients }),
+					transactionInput,
+					wallet,
+					{
+						abortSignal,
+					},
+				);
 
 				const response = await wallet.transaction().broadcast(uuid);
 
