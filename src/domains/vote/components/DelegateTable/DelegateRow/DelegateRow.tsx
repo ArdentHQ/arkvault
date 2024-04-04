@@ -198,7 +198,7 @@ export const DelegateRow = ({
 				isCompact={isCompact}
 				innerClassName={cn("font-bold border-2 border-r-0 border-transparent", rowColor, { "h-12": isCompact })}
 			>
-				<span>{delegate.rank()}</span>
+				<span>{delegate.rank() ?? '0'}</span>
 			</TableCell>
 
 			<TableCell
