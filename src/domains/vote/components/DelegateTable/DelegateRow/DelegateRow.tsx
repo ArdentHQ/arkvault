@@ -3,6 +3,7 @@ import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+import { useResizeDetector } from "react-resize-detector";
 import { DelegateRowSkeleton } from "./DelegateRowSkeleton";
 import { DelegateVoteAmount } from "./DelegateVoteAmount";
 import { DelegateVoteButton } from "./DelegateVoteButton";
@@ -13,6 +14,7 @@ import { TableCell, TableRow } from "@/app/components/Table";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
 import { Tooltip } from "@/app/components/Tooltip";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 
 interface DelegateRowProperties {
 	index: number;
@@ -82,6 +84,8 @@ export const DelegateRow = ({
 
 		return !!voted && (alreadyExistsInVotes || alreadyExistsInUnvotes);
 	}, [selectedVotes, selectedUnvotes, isSelectedUnvote, voted, delegate]);
+
+	const { ref, width } = useResizeDetector<HTMLSpanElement>({ handleHeight: false });
 
 	const rowColor = useMemo(() => {
 		if (isChanged) {
@@ -207,9 +211,14 @@ export const DelegateRow = ({
 				isCompact={isCompact}
 			>
 				<Avatar size={isCompact ? "xs" : "lg"} className="-ml-0.5" address={delegate.address()} noShadow />
-				<div className="relative grow">
-					<span className="absolute flex w-full items-center">
-						<div className="overflow-hidden text-ellipsis">{delegate.username()}</div>
+				<div className="relative grow ">
+					<span className="absolute flex w-full items-center whitespace-nowrap" ref={ref}>
+						{delegate.username() ? (
+							<div className="overflow-hidden text-ellipsis">{delegate.username()}</div>
+						): (
+							<TruncateMiddleDynamic value={delegate.address()} availableWidth={width} />
+						)} 
+						
 						<Link
 							className="ml-2 block sm:hidden"
 							to={delegate.explorerLink()}
