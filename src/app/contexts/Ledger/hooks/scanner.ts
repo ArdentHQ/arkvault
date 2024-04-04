@@ -52,9 +52,10 @@ export const useLedgerScanner = (coin: string, network: string) => {
 				// @ts-ignore
 				const ledgerWallets = await instance.ledger().scan({ onProgress, startPath });
 
-				const legacyWallets = isLoadingMore
-					? {}
-					: await instance.ledger().scan({ onProgress, useLegacy: true });
+				const legacyWallets =
+					isLoadingMore || coin === "Mainsail"
+						? {}
+						: await instance.ledger().scan({ onProgress, useLegacy: true });
 
 				const allWallets = { ...legacyWallets, ...ledgerWallets };
 
