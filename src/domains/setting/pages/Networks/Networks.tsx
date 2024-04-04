@@ -62,9 +62,7 @@ export const NetworksSettings = () => {
 		() =>
 			env
 				.availableNetworks()
-				.filter((item) =>
-					["ark.devnet", "ark.mainnet", "mainsail.mainnet", "mainsail.devnet"].includes(item.id()),
-				),
+				.filter((item) => ["ark.devnet", "ark.mainnet", "mainsail.devnet"].includes(item.id())),
 		[env, profile],
 	);
 
