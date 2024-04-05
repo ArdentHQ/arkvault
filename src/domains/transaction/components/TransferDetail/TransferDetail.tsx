@@ -17,6 +17,7 @@ import { TransactionDetailProperties } from "@/domains/transaction/components/Tr
 export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
+	console.log({ aliases });
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
@@ -28,8 +29,8 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: Transa
 				recipients={[
 					{
 						address: transaction.recipient(),
-						alias: aliases?.recipients[0].alias,
-						isDelegate: aliases?.recipients[0].isDelegate,
+						alias: aliases?.recipients[0]?.alias,
+						isDelegate: aliases?.recipients[0]?.isDelegate ?? false,
 					},
 				]}
 			/>
