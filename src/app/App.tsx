@@ -21,8 +21,8 @@ export const App: React.VFC = () => {
 	 */
 	const environment = useRef(initializeEnvironment());
 
-	const emotionCache = createCache({ key: "emotion-cache" });
-	emotionCache.compat = true;
+	const cache = createCache({ key: "emotion-cache" });
+	cache.compat = true;
 
 	return (
 		<ZendeskProvider>
@@ -33,7 +33,7 @@ export const App: React.VFC = () => {
 							<ExchangeProvider>
 								<ErrorBoundary FallbackComponent={ApplicationError}>
 									<LedgerProvider>
-										<CacheProvider value={emotionCache}>
+										<CacheProvider value={cache}>
 											<AppRouter>
 												<GlobalStyles />
 												<Main />
