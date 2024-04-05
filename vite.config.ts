@@ -139,7 +139,6 @@ export default defineConfig({
 		}),
 	],
 	optimizeDeps: {
-		disabled: 'dev',
 		entries: [
 			"@emotion/cache",
 			"@emotion/react",
