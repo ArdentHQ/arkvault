@@ -21,6 +21,14 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 			icon: "DelegateResignation",
 			label: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_RESIGNATION"),
 		},
+		usernameRegistration: {
+			icon: "DelegateRegistration",
+			label: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
+		},
+		usernameResignation: {
+			icon: "DelegateResignation",
+			label: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_RESIGNATION"),
+		},
 		htlcClaim: {
 			icon: "Timelock",
 			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_CLAIM"),
@@ -83,8 +91,14 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 				),
 			[wallets],
 		),
-		getIcon: (type: string): string => transactionTypes[type].icon,
-		getLabel: (type: string): string => transactionTypes[type].label,
+		getIcon: (type: string): string => {
+			console.log({ type });
+			return transactionTypes[type].icon;
+		},
+		getLabel: (type: string): string => {
+			console.log({ type });
+			return transactionTypes[type].label;
+		},
 		types: {
 			core: useMemo(() => {
 				const allSupportedTypes: string[] = [];
