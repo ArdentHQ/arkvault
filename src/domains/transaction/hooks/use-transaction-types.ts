@@ -21,14 +21,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 			icon: "DelegateResignation",
 			label: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_RESIGNATION"),
 		},
-		usernameRegistration: {
-			icon: "DelegateRegistration",
-			label: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
-		},
-		usernameResignation: {
-			icon: "DelegateResignation",
-			label: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_RESIGNATION"),
-		},
 		htlcClaim: {
 			icon: "Timelock",
 			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_CLAIM"),
@@ -73,6 +65,16 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 			icon: "Unvote",
 			label: t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),
 		},
+		// @TODO: Use new icons for username registration & resignation types when available.
+		// @see https://app.clickup.com/t/86dt6ymku
+		usernameRegistration: {
+			icon: "DelegateRegistration",
+			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
+		},
+		usernameResignation: {
+			icon: "DelegateResignation",
+			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION"),
+		},
 		vote: {
 			icon: "Vote",
 			label: t("TRANSACTION.TRANSACTION_TYPES.VOTE"),
@@ -91,14 +93,8 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 				),
 			[wallets],
 		),
-		getIcon: (type: string): string => {
-			console.log({ type });
-			return transactionTypes[type].icon;
-		},
-		getLabel: (type: string): string => {
-			console.log({ type });
-			return transactionTypes[type].label;
-		},
+		getIcon: (type: string): string => transactionTypes[type].icon,
+		getLabel: (type: string): string => transactionTypes[type].label,
 		types: {
 			core: useMemo(() => {
 				const allSupportedTypes: string[] = [];

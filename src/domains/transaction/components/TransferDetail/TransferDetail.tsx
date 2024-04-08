@@ -17,7 +17,6 @@ import { TransactionDetailProperties } from "@/domains/transaction/components/Tr
 export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
-	console.log({ aliases });
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
