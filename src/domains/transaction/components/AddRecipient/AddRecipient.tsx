@@ -353,9 +353,12 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 						<FormLabel>
 							<span>{t("COMMON.AMOUNT")}</span>
 							{isSenderFilled && !!remainingNetBalance && (
-								<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700">
+								<span
+									data-testid="AddRecipient__available"
+									className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+								>
 									({t("COMMON.AVAILABLE")}{" "}
-									<Amount value={remainingNetBalance} ticker={ticker} showTicker={false} />)
+									<Amount value={+remainingNetBalance} ticker={ticker} showTicker={false} />)
 								</span>
 							)}
 						</FormLabel>
