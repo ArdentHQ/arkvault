@@ -28,8 +28,8 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: Transa
 				recipients={[
 					{
 						address: transaction.recipient(),
-						alias: aliases?.recipients[0].alias,
-						isDelegate: aliases?.recipients[0].isDelegate,
+						alias: aliases?.recipients[0]?.alias,
+						isDelegate: aliases?.recipients[0]?.isDelegate ?? false,
 					},
 				]}
 			/>

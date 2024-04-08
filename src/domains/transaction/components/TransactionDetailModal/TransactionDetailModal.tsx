@@ -59,6 +59,10 @@ export const TransactionDetailModal = ({
 		default: () => void 0,
 		delegateRegistration: () => DelegateRegistrationDetail,
 		delegateResignation: () => DelegateResignationDetail,
+		// @TODO Use dedicated modals when implemented for username registration & resignation.
+		// @see https://app.clickup.com/t/86dt6bry9
+		usernameRegistration: () => DelegateRegistrationDetail,
+		usernameResignation: () => DelegateResignationDetail,
 		ipfs: () => IpfsDetail,
 		magistrate: () => LegacyMagistrateDetail,
 		multiPayment: () => MultiPaymentDetail,
