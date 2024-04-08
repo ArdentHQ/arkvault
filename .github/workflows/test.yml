@@ -10,7 +10,7 @@ on:
             - synchronize
             - opened
 jobs:
-    application:
+    app:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app
