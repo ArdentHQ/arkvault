@@ -16,7 +16,7 @@ export default defineConfig((env) => {
 			test: {
 				pool: "typescript",
 				logHeapUsage: true,
-				maxConcurrency: 1,
+				maxConcurrency: 4,
 				maxWorkers: 2,
 				minWorkers: 2,
 				globals: true,
