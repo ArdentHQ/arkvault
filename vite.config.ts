@@ -8,6 +8,8 @@ import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
 
+const developmentPackages = ["@ardenthq/sdk-profiles", "@ardenthq/sdk-mainsail"];
+
 // https://vitejs.dev/config/
 export default defineConfig({
 	build: {
@@ -139,20 +141,13 @@ export default defineConfig({
 		}),
 	],
 	optimizeDeps: {
-		entries: [
+		exclude: process.env.NODE_ENV === "development" ? developmentPackages : [],
+		include: [
 			"@emotion/cache",
 			"@emotion/react",
 			"@emotion/styled",
 			"@faustbrian/node-haveibeenpwned",
 			"@ardenthq/arkvault-url",
-			"@ardenthq/sdk",
-			"@ardenthq/sdk-ark",
-			"@ardenthq/sdk-cryptography",
-			"@ardenthq/sdk-helpers",
-			"@ardenthq/sdk-intl",
-			"@ardenthq/sdk-ledger",
-			"@ardenthq/sdk-profiles",
-			"@ardenthq/sdk-mainsail",
 			"@tippyjs/react",
 			"assert",
 			"browser-fs-access",
@@ -188,7 +183,14 @@ export default defineConfig({
 			"string-hash",
 			"twin.macro",
 			"yup",
-			"react-zendesk"
+			"react-zendesk",
+			"@ardenthq/sdk",
+			"@ardenthq/sdk-ark",
+			"@ardenthq/sdk-cryptography",
+			"@ardenthq/sdk-helpers",
+			"@ardenthq/sdk-intl",
+			"@ardenthq/sdk-ledger",
+			...(process.env.NODE_ENV !== "development" ? developmentPackages : []),
 		],
 	},
 });
