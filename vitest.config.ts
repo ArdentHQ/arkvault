@@ -13,6 +13,7 @@ export default mergeConfig(
 	viteConfig,
 	defineConfig({
 		test: {
+			threads: false,
 			logHeapUsage: true,
 			maxConcurrency: 3,
 			globals: true,
