@@ -19,7 +19,7 @@ export default defineConfig((env) => {
 				// maxConcurrency: 2,
 				globals: true,
 				environment: "jsdom",
-				// isolate: true,
+				isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
 				server: {
 					deps: {
