@@ -14,11 +14,12 @@ export default defineConfig((env) => {
 		viteConfig(env),
 		defineConfig({
 			test: {
+				pool: "forks",
 				logHeapUsage: true,
-				maxConcurrency: 2,
-				globals: true,
+				// maxConcurrency: 2,
+				// globals: true,
 				environment: "jsdom",
-				isolate: true,
+				// isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
 				server: {
 					deps: {
