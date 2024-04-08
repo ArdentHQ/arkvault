@@ -29,7 +29,7 @@ describe("InputFee.helpers", () => {
 		it("should handle a small result when incrementing", () => {
 			const { increment } = useStepMath(0.01, -0.010_000_01);
 
-			expect(increment()).toBe("0.00000001");
+			expect(increment()).toBe("-0.00000001");
 		});
 	});
 });
