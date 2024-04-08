@@ -14,8 +14,7 @@ export default mergeConfig(
 	defineConfig({
 		test: {
 			logHeapUsage: true,
-			maxConcurrency: 1,
-			threads: false,
+			maxConcurrency: 3,
 			globals: true,
 			environment: "jsdom",
 			isolate: true,
