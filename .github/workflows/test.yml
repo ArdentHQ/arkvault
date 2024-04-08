@@ -155,12 +155,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 95.91
                   COVERAGE_THRESHOLD_STATEMENTS: 96.1
                   COVERAGE_THRESHOLD_BRANCHES: 94.22
-                  COVERAGE_INCLUDE_PATH: src/app/hooks/use-[a-b]*
+                  COVERAGE_INCLUDE_PATH: src/app/hooks/use-[a-b]*test*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 2
-                  command: pnpm test:coverage src/app/hooks/use-[a-b]*
+                  command: pnpm test:coverage src/app/hooks/use-[a-b]*test*
 
             - name: Test hooks (c-e)
               env:
