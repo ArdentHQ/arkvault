@@ -188,6 +188,14 @@ jobs:
                   timeout_minutes: 20
                   max_attempts: 2
                   command: pnpm test:coverage src/domains/contact/pages
+
+            - name: Test (Validations)
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 2
+                  command: pnpm test:coverage src/domains/contact/routing.test.ts src/domains/validations
+
     # domains-dashboard:
     #     runs-on: ubuntu-latest
     #     env:
