@@ -19,8 +19,10 @@ export default mergeConfig(
 			environment: "jsdom",
 			isolate: true,
 			setupFiles: ["./vitest.setup.ts"],
-			deps: {
-				fallbackCJS: true,
+			server: {
+				deps: {
+					fallbackCJS: true,
+				},
 			},
 			coverage: {
 				all: false,
