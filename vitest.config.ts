@@ -14,9 +14,8 @@ export default defineConfig((env) => {
 		viteConfig(env),
 		defineConfig({
 			test: {
-				pool: "vmThreads",
 				logHeapUsage: true,
-				// maxConcurrency: 2,
+				maxConcurrency: 4,
 				globals: true,
 				environment: "jsdom",
 				isolate: true,
