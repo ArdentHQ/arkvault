@@ -106,42 +106,42 @@ jobs:
                   max_attempts: 1
                   command: pnpm test:coverage src/app/components/[P-Z]*
 
-    # domains-contact:
-    #     runs-on: ubuntu-latest
-    #     env:
-    #         COVERAGE_INCLUDE_PATH: src/domains/contact
-    #     strategy:
-    #         matrix:
-    #             node-version:
-    #                 - 20.9.0
-    #     concurrency:
-    #         group: ${{ github.head_ref }}-test-domains-contact
-    #         cancel-in-progress: true
-    #     steps:
-    #         - uses: actions/checkout@v3
-    #           with:
-    #               ref: ${{ github.head_ref }}
-    #         - uses: pnpm/action-setup@v2
-    #           with:
-    #               version: 8
-    #         - uses: actions/setup-node@v3
-    #           with:
-    #               node-version: ${{ matrix.node-version }}
-    #               cache: pnpm
-    #         - name: Update System
-    #           run: sudo apt-get update
-    #         - name: Install (Ledger Requirements)
-    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-    #         - name: Install (pnpm)
-    #           run: pnpm install --frozen-lockfile
-    #         - name: Rebuild
-    #           run: pnpm rebuild
-    #         - name: Test
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/contact
+    domains-contact:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/contact
+        strategy:
+            matrix:
+                node-version:
+                    - 20.9.0
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-contact
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/contact
     # domains-dashboard:
     #     runs-on: ubuntu-latest
     #     env:
