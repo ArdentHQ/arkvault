@@ -14,7 +14,6 @@ export default defineConfig((env) => {
 		viteConfig(env),
 		defineConfig({
 			test: {
-				pool: "browser",
 				logHeapUsage: true,
 				maxConcurrency: 4,
 				maxWorkers: 2,
