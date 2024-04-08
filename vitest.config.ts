@@ -13,9 +13,8 @@ export default mergeConfig(
 	viteConfig,
 	defineConfig({
 		test: {
-			threads: false,
 			logHeapUsage: true,
-			maxConcurrency: 3,
+			maxConcurrency: 2,
 			globals: true,
 			environment: "jsdom",
 			isolate: true,
