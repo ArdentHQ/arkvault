@@ -14,10 +14,11 @@ export default defineConfig((env) => {
 		viteConfig(env),
 		defineConfig({
 			test: {
+				pool: "typescript",
 				logHeapUsage: true,
 				maxConcurrency: 1,
-				maxWorkers: 1,
-				minWorkers: 1,
+				maxWorkers: 2,
+				minWorkers: 2,
 				globals: true,
 				environment: "jsdom",
 				isolate: true,
