@@ -123,7 +123,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	const remainingNetBalance = useMemo(() => {
 		const netBalance = BigNumber.make(remainingBalance).minus(fee || 0);
 
-		return netBalance.isGreaterThan(0) ? netBalance.toFixed(10) : 0;
+		return netBalance.isGreaterThan(0) ? netBalance.toFixed(10) : "0";
 	}, [fee, remainingBalance]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
