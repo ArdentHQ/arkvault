@@ -14,7 +14,7 @@ export default defineConfig((env) => {
 		viteConfig(env),
 		defineConfig({
 			test: {
-				pool: "forks",
+				pool: "vmThreads",
 				logHeapUsage: true,
 				// maxConcurrency: 2,
 				globals: true,
