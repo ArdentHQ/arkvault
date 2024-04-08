@@ -17,7 +17,7 @@ export default defineConfig((env) => {
 				pool: "forks",
 				logHeapUsage: true,
 				// maxConcurrency: 2,
-				// globals: true,
+				globals: true,
 				environment: "jsdom",
 				// isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
