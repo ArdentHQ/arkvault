@@ -16,8 +16,8 @@ export default defineConfig((env) => {
 			test: {
 				logHeapUsage: true,
 				maxConcurrency: 4,
-				maxWorkers: 2,
-				minWorkers: 2,
+				maxWorkers: 1,
+				minWorkers: 1,
 				globals: true,
 				environment: "jsdom",
 				isolate: true,
