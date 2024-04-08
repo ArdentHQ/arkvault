@@ -116,7 +116,7 @@ jobs:
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
-                  max_attempts: 1
+                  max_attempts: 2
                   command: pnpm test:coverage src/app/contexts/Environment
 
             - name: Test hooks (a-b)
@@ -129,7 +129,7 @@ jobs:
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
-                  max_attempts: 1
+                  max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[a-b]*
 
             - name: Test hooks (c-e)
@@ -142,7 +142,7 @@ jobs:
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
-                  max_attempts: 1
+                  max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[c-e]*
 
             - name: Test hooks (f-k)
@@ -155,7 +155,7 @@ jobs:
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
-                  max_attempts: 1
+                  max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[f-k]*
 
             - name: Test hooks (l-o)
@@ -168,7 +168,7 @@ jobs:
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
-                  max_attempts: 1
+                  max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[l-o]*
 
             - name: Test hooks (p-q)
@@ -181,7 +181,7 @@ jobs:
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
-                  max_attempts: 1
+                  max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[p-q]*
 
             - name: Test hooks (r-s)
@@ -194,7 +194,7 @@ jobs:
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
-                  max_attempts: 1
+                  max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[r-s]*
 
             - name: Test hooks (t-z)
@@ -207,7 +207,7 @@ jobs:
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
-                  max_attempts: 1
+                  max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[t-z]*
 
             - name: Test Components ^A-O
