@@ -106,18 +106,57 @@ jobs:
                   max_attempts: 1
                   command: pnpm test:coverage src/app/contexts/Environment
 
-            - name: Test hooks
+            - name: Test hooks (a-e)
               env:
                   COVERAGE_THRESHOLD_LINES: 96
                   COVERAGE_THRESHOLD_FUNCTIONS: 95.91
                   COVERAGE_THRESHOLD_STATEMENTS: 96.1
                   COVERAGE_THRESHOLD_BRANCHES: 94.22
-                  COVERAGE_INCLUDE_PATH: src/app/hooks
+                  COVERAGE_INCLUDE_PATH: src/app/hooks/use-[a-e]*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm test:coverage src/app/hooks
+                  command: pnpm test:coverage src/app/hooks/use-[a-e]*
+
+            - name: Test hooks (f-o)
+              env:
+                  COVERAGE_THRESHOLD_LINES: 96
+                  COVERAGE_THRESHOLD_FUNCTIONS: 95.91
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.1
+                  COVERAGE_THRESHOLD_BRANCHES: 94.22
+                  COVERAGE_INCLUDE_PATH: src/app/hooks/use-[f-o]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/hooks/use-[f-o]*
+
+            - name: Test hooks (p-q)
+              env:
+                  COVERAGE_THRESHOLD_LINES: 96
+                  COVERAGE_THRESHOLD_FUNCTIONS: 95.91
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.1
+                  COVERAGE_THRESHOLD_BRANCHES: 94.22
+                  COVERAGE_INCLUDE_PATH: src/app/hooks/use-[p-q]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/hooks/use-[p-q]*
+
+            - name: Test hooks (r-z)
+              env:
+                  COVERAGE_THRESHOLD_LINES: 96
+                  COVERAGE_THRESHOLD_FUNCTIONS: 95.91
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.1
+                  COVERAGE_THRESHOLD_BRANCHES: 94.22
+                  COVERAGE_INCLUDE_PATH: src/app/hooks/use-[r-z]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/hooks/use-[r-z]*
 
             - name: Test Components ^A-O
               env:
