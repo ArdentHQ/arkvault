@@ -1,10 +1,10 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React from "react";
-
-import { FormStep } from "./FormStep";
-import { ReviewStep } from "./ReviewStep";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { TransactionDetail, TransactionFee } from "@/domains/transaction/components/TransactionDetail";
+
+import { FormStep } from "./FormStep";
+import React from "react";
+import { ReviewStep } from "./ReviewStep";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 
