@@ -18,12 +18,11 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
-	const { delegateRegistration } = useValidation();
+	const { delegateRegistration, validatorRegistration } = useValidation();
 
 	const { getValues, register, setValue } = useFormContext();
-	const username = getValues("username");
+	const { username, publicKey } = getValues(["username", "publicKey"]);
 	const [usernames, setUsernames] = useState<string[]>([]);
-	const [publicKey, setPublicKey] = useState("");
 
 	const network = useMemo(() => wallet.network(), [wallet]);
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
@@ -79,7 +78,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 							data-testid="Input__public_key"
 							defaultValue={publicKey}
 							onChange={(event: ChangeEvent<HTMLInputElement>) =>
-								setValue("public_key", event.target.value, { shouldDirty: true, shouldValidate: true })
+								setValue("publicKey", event.target.value, { shouldDirty: true, shouldValidate: true })
 							}
 						/>
 					</FormField>
