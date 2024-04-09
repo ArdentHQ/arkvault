@@ -85,10 +85,14 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		},
 	};
 
+	const mainsailUnsupportedTypes = new Set(["htlcClaim", "htlcLock", "htlcRefund", "ipfs", "secondSignature", "magistrate"]);
+
+	const isMainsail = wallets.some((wallet) => wallet.network().coinName() === "Mainsail");
+
 	return {
 		canViewMagistrate: useMemo(
 			() =>
-				wallets.some((wallet) =>
+				!isMainsail && wallets.some((wallet) =>
 					(wallet.transactionTypes() as string[]).filter((type) => type === MagistrateTransactionType),
 				),
 			[wallets],
@@ -105,7 +109,14 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 					);
 				}
 
-				return uniq(allSupportedTypes);
+				const types = uniq(allSupportedTypes);
+
+				if (isMainsail) {
+					return types.filter((type) => !mainsailUnsupportedTypes.has(type));
+				}
+
+				return types;
+				
 			}, [wallets]),
 			magistrate: [MagistrateTransactionType],
 		},
