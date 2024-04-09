@@ -8,7 +8,13 @@ import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
 
-const developmentPackages = ["@ardenthq/sdk-profiles", "@ardenthq/sdk-mainsail"];
+// When you run the command pnpm dev, you can optionally pass the parameter
+// `-- --no-optimize` (Notice the double `-- --`) to exclude a specific package
+// from optimization. This is useful to ensure that changes made to a package
+// linked with a symlink are reflected immediately.
+// Example usage: `pnpm dev -- --no-optimize=@ardenthq/sdk-profiles,@ardenthq/sdk-mainsail`
+const noOptimize =
+	(process.env.npm_lifecycle_script ?? "").match(/--no-optimize=([^\s"]+)(?=")/)?.[1]?.split(",") ?? [];
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -141,6 +147,6 @@ export default defineConfig({
 		}),
 	],
 	optimizeDeps: {
-		exclude: process.env.NODE_ENV === "development" ? developmentPackages : [],
+		exclude: noOptimize,
 	},
 });
