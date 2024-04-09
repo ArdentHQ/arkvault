@@ -12,7 +12,7 @@ import { SecondSignatureDetail } from "@/domains/transaction/components/SecondSi
 import { TransferDetail } from "@/domains/transaction/components/TransferDetail";
 import { UnlockTokenDetail } from "@/domains/transaction/components/UnlockTokenDetail";
 import { UsernameRegistrationDetail } from "@/domains/transaction/components/UsernameRegistrationDetail";
-import { UsernameResignationDetail } from "../UsernameResignationDetail";
+import { UsernameResignationDetail } from "@/domains/transaction/components/UsernameResignationDetail";
 import { VoteDetail } from "@/domains/transaction/components/VoteDetail";
 
 export const TransactionDetailModal = ({

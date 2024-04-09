@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
 import {
-	TransactionDetail,
 	TransactionExplorerLink,
 	TransactionFee,
 	TransactionSender,
@@ -9,7 +8,6 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 
 import { Modal } from "@/app/components/Modal";
-import { TransactionDelegateResignationIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 import { useTranslation } from "react-i18next";
 
