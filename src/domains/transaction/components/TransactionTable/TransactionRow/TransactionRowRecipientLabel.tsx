@@ -36,10 +36,10 @@ const VoteCombinationLabel = ({
 	unvotes: string[];
 }) => (
 	<span data-testid="TransactionRowVoteCombinationLabel" className="overflow-auto´ flex max-w-full flex-1">
-		{votes.length === 1 && unvotes.length === 1 ? ? (
+		{votes.length === 1 && unvotes.length === 1 ? (
 			<>
 				<RecipientLabel type="voteCombination" />
-				<DelegateLabel username={delegate?.username()} address={delegate?.address()!} />
+				<DelegateLabel username={delegate?.username()} address={delegate?.address()} />
 			</>
 		) : (
 			<div className="space-x-1">
@@ -67,11 +67,11 @@ const VoteCombinationLabel = ({
 	</span>
 );
 
-const DelegateLabel = ({ username, address, count }: { username?: string; address: string; count?: number }) => {
+const DelegateLabel = ({ username, address, count }: { username?: string; address?: string; count?: number }) => {
 	const { ref, width } = useResizeDetector<HTMLSpanElement>({ handleHeight: false });
 	return (
 		<span className="ml-2 flex flex-1 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700">
-			{username == undefined ? (
+			{username == undefined && address != undefined ? (
 				<span ref={ref} className="max-w-full flex-1">
 					<TruncateMiddleDynamic value={address} availableWidth={width} />
 				</span>
@@ -141,7 +141,7 @@ export const BaseTransactionRowRecipientLabel = ({
 			<span>
 				<RecipientLabel type="multiPayment" />
 				<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-					{transaction?.recipients().length}
+					{transaction.recipients().length}
 				</span>
 			</span>
 		);
@@ -151,8 +151,8 @@ export const BaseTransactionRowRecipientLabel = ({
 		return (
 			<VoteCombinationLabel
 				delegate={delegates.votes[0]}
-				votes={transaction?.votes()}
-				unvotes={transaction?.unvotes()}
+				votes={transaction.votes()}
+				unvotes={transaction.unvotes()}
 			/>
 		);
 	}
@@ -160,7 +160,7 @@ export const BaseTransactionRowRecipientLabel = ({
 	if (transaction?.isVote() || transaction?.isUnvote()) {
 		return (
 			<VoteLabel
-				delegates={delegates[transaction?.isVote() ? "votes" : "unvotes"]}
+				delegates={delegates[transaction.isVote() ? "votes" : "unvotes"]}
 				isUnvote={transaction.isUnvote()}
 			/>
 		);
