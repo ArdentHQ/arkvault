@@ -194,6 +194,12 @@ export const translations = {
 	MODAL_TRANSFER_DETAIL: {
 		TITLE: "Transfer",
 	},
+	MODAL_USERNAME_REGISTRATION_DETAIL: {
+		TITLE: "Username Registration",
+	},
+	MODAL_USERNAME_RESIGNATION_DETAIL: {
+		TITLE: "Username Resignation",
+	},
 	MODAL_VOTE_DETAIL: {
 		TITLE: "Delegate Vote",
 	},
@@ -403,6 +409,7 @@ export const translations = {
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",
+	USERNAME: "Username",
 	VALIDATION: {
 		ALREADY_VOTING: "{{wallet}} is already voting for {{delegate}}.",
 		AMOUNT_BELOW_MINIMUM: "The amount is below the minimum ({{min}} {{ coinId }})",
