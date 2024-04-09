@@ -105,9 +105,6 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			});
 		}
 
-		console.log(Enums.FeatureFlag.TransactionUsernameRegistration)
-		console.log(wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration));
-		console.log(wallet.network().id())
 		if (
 			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration)
 		) {

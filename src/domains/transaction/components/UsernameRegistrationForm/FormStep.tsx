@@ -21,25 +21,15 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const { getValues, register, setValue } = useFormContext();
 	const username = getValues("username");
-	const [usernames, setUsernames] = useState<string[]>([]);
 
 	const network = useMemo(() => wallet.network(), [wallet]);
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
 	useEffect(() => {
-		setUsernames(
-			env
-				.delegates()
-				.all(wallet.coinId(), wallet.networkId())
-				.map((delegate: Contracts.IReadOnlyWallet) => delegate.username()!),
-		);
-	}, [env, wallet]);
-
-	useEffect(() => {
 		if (!username) {
-			register("username", usernameRegistration.username(usernames));
+			register("username", usernameRegistration.username(network));
 		}
-	}, [usernameRegistration, usernames, register, username]);
+	}, [usernameRegistration, register, network, username]);
 
 	return (
 		<section data-testid="DelegateRegistrationForm__form-step">
@@ -69,7 +59,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				<FormField name="fee">
 					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 					<FeeField
-						type="delegateRegistration"
+						type="usernameRegistration"
 						data={feeTransactionData}
 						network={network}
 						profile={profile}

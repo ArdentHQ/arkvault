@@ -37,7 +37,7 @@ const transactionDetails = ({
 	wallet: Contracts.IReadWriteWallet;
 }) => (
 	<>
-		<TransactionDetail label={translations("TRANSACTION.DELEGATE_NAME")}>
+		<TransactionDetail label={translations("TRANSACTION.USERNAME")}>
 			{transaction.username()}
 		</TransactionDetail>
 
@@ -73,6 +73,8 @@ export const signUsernameRegistration = async ({ env, form, profile, signatory }
 	const response = await senderWallet.transaction().broadcast(transactionId);
 
 	handleBroadcastError(response);
+
+	await senderWallet.transaction().sync();
 
 	await env.persist();
 
