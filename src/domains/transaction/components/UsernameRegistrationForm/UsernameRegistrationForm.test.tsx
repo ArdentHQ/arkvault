@@ -230,7 +230,7 @@ describe("UsernameRegistrationForm", () => {
 			id: () => usernameRegistrationFixture.data.id,
 			recipient: () => usernameRegistrationFixture.data.recipient,
 			sender: () => usernameRegistrationFixture.data.sender,
-			username: () => usernameRegistrationFixture.data.asset.delegate.username,
+			username: () => usernameRegistrationFixture.data.asset.username,
 		} as Contracts.SignedTransactionData;
 
 		render(

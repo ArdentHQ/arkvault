@@ -32,7 +32,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	}, [usernameRegistration, register, network, username]);
 
 	return (
-		<section data-testid="DelegateRegistrationForm__form-step">
+		<section data-testid="UsernameRegistrationForm__form-step">
 			<StepHeader
 				title={t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE")}
 				subtitle={t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.DESCRIPTION")}

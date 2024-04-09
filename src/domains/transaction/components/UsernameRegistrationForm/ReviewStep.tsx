@@ -25,7 +25,7 @@ export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 	}, [unregister]);
 
 	return (
-		<section data-testid="DelegateRegistrationForm__review-step">
+		<section data-testid="UsernameRegistrationForm__review-step">
 			<StepHeader
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
