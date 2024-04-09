@@ -61,7 +61,7 @@ export const NetworkIcon: React.VFC<NetworkIconProperties> = ({
 			<Icon
 				className={iconClassName}
 				data-testid="NetworkIcon__icon"
-				name={network.ticker()}
+				name={network.coinName() === "Mainsail" ? "Mainsail" : network.ticker()}
 				fallback={
 					<span className={isCompact ? "inline-flex w-5 justify-center text-sm" : undefined}>
 						{networkDisplayName(network).slice(0, 2).toUpperCase()}
