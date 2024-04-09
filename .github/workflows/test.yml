@@ -303,12 +303,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
                   COVERAGE_THRESHOLD_STATEMENTS: 100
                   COVERAGE_THRESHOLD_BRANCHES: 100
-                  COVERAGE_INCLUDE_PATH: src/app/components/[A-O]*test*
+                  COVERAGE_INCLUDE_PATH: src/app/components/[A-O]*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm test:coverage src/app/components/[A-O]*test*
+                  command: pnpm test:coverage src/app/components/[A-O]*
 
             - name: Test Components ^P-Z
               env:
