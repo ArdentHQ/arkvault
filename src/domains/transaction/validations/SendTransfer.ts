@@ -7,14 +7,15 @@ import { RecipientItem } from "@/domains/transaction/components/RecipientList/Re
 export const sendTransfer = (t: TFunction) => ({
 	amount: (
 		network: Networks.Network | undefined,
-		balance: number,
+		balance: string | undefined,
 		recipients: RecipientItem[],
 		isSingleRecipient: boolean,
 	) => ({
 		validate: {
 			valid: (amountValue: number | string) => {
 				const amount = Number(amountValue) || 0;
-				const hasSufficientBalance = Number(balance || 0) >= amount && balance !== 0;
+				const hasSufficientBalance =
+					Number(balance || 0) >= amount && balance !== "0" && balance !== undefined && balance !== "";
 				const shouldRequire = isSingleRecipient || recipients.length === 0;
 
 				if (!hasSufficientBalance) {
