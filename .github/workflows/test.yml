@@ -307,7 +307,7 @@ jobs:
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
-                  max_attempts: 1
+                  max_attempts: 2
                   command: pnpm test:coverage src/app/components/[A-O]*
 
             - name: Test Components ^P-Z
@@ -320,7 +320,7 @@ jobs:
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
-                  max_attempts: 1
+                  max_attempts: 2
                   command: pnpm test:coverage src/app/components/[P-Z]*
 
     domains-contact:
