@@ -10,7 +10,7 @@ on:
             - synchronize
             - opened
 jobs:
-    application-components:
+    application:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app
@@ -19,7 +19,7 @@ jobs:
                 node-version:
                     - 18.12.1
         concurrency:
-            group: ${{ github.head_ref }}-test-app-components
+            group: ${{ github.head_ref }}-test-app
             cancel-in-progress: true
         steps:
             - uses: actions/checkout@v3
@@ -40,83 +40,83 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
-            # - name: Test App
-            #   env:
-            #       COVERAGE_THRESHOLD_LINES: 100
-            #       COVERAGE_THRESHOLD_FUNCTIONS: 100
-            #       COVERAGE_THRESHOLD_STATEMENTS: 100
-            #       COVERAGE_THRESHOLD_BRANCHES:
-            #       COVERAGE_INCLUDE_PATH: src/app/App*
-            #   uses: nick-invision/retry@v2
-            #   with:
-            #       timeout_minutes: 20
-            #       max_attempts: 1
-            #       command: pnpm test:coverage src/app/App*
-            #
-            # - name: Test App (validations)
-            #   env:
-            #       COVERAGE_THRESHOLD_LINES: 100
-            #       COVERAGE_THRESHOLD_FUNCTIONS: 100
-            #       COVERAGE_THRESHOLD_STATEMENTS: 100
-            #       COVERAGE_THRESHOLD_BRANCHES:
-            #       COVERAGE_INCLUDE_PATH: src/app/validations
-            #   uses: nick-invision/retry@v2
-            #   with:
-            #       timeout_minutes: 20
-            #       max_attempts: 1
-            #       command: pnpm test:coverage src/app/validations
-            #
-            # - name: Test Context Providers (Ledger)
-            #   env:
-            #       COVERAGE_THRESHOLD_LINES: 100
-            #       COVERAGE_THRESHOLD_FUNCTIONS: 100
-            #       COVERAGE_THRESHOLD_STATEMENTS: 100
-            #       COVERAGE_THRESHOLD_BRANCHES: 100
-            #       COVERAGE_INCLUDE_PATH: src/app/contexts/Ledger
-            #   uses: nick-invision/retry@v2
-            #   with:
-            #       timeout_minutes: 20
-            #       max_attempts: 1
-            #       command: pnpm test:coverage src/app/contexts/Ledger/
-            #
+            - name: Test App
+              env:
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES:
+                  COVERAGE_INCLUDE_PATH: src/app/App*test*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/App*test*
+
+            - name: Test App (validations)
+              env:
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES:
+                  COVERAGE_INCLUDE_PATH: src/app/validations/*test*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/validations/*test*
+
+            - name: Test Context Providers (Ledger)
+              env:
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
+                  COVERAGE_INCLUDE_PATH: src/app/contexts/Ledger/*test*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/contexts/Ledger/*test*
+
             - name: Test Context Providers (Configuration)
               env:
                   COVERAGE_THRESHOLD_LINES: 100
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
                   COVERAGE_THRESHOLD_STATEMENTS: 100
                   COVERAGE_THRESHOLD_BRANCHES: 100
-                  COVERAGE_INCLUDE_PATH: src/app/contexts/Configuration
+                  COVERAGE_INCLUDE_PATH: src/app/contexts/Configuration/*test*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm test:coverage src/app/contexts/Configuration
+                  command: pnpm test:coverage src/app/contexts/Configuration/*test*
 
-            # - name: Test Context Providers (Environment)
-            #   env:
-            #       COVERAGE_THRESHOLD_LINES: 100
-            #       COVERAGE_THRESHOLD_FUNCTIONS: 100
-            #       COVERAGE_THRESHOLD_STATEMENTS: 100
-            #       COVERAGE_THRESHOLD_BRANCHES: 100
-            #       COVERAGE_INCLUDE_PATH: src/app/contexts/Environment
-            #   uses: nick-invision/retry@v2
-            #   with:
-            #       timeout_minutes: 20
-            #       max_attempts: 1
-            #       command: pnpm test:coverage src/app/contexts/Environment
-            #
-            # - name: Test Context Providers (Navigation)
-            #   env:
-            #       COVERAGE_THRESHOLD_LINES: 100
-            #       COVERAGE_THRESHOLD_FUNCTIONS: 100
-            #       COVERAGE_THRESHOLD_STATEMENTS: 100
-            #       COVERAGE_THRESHOLD_BRANCHES: 100
-            #       COVERAGE_INCLUDE_PATH: src/app/contexts/Navigation
-            #   uses: nick-invision/retry@v2
-            #   with:
-            #       timeout_minutes: 20
-            #       max_attempts: 2
-            #       command: pnpm test:coverage src/app/contexts/Environment
+            - name: Test Context Providers (Environment)
+              env:
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
+                  COVERAGE_INCLUDE_PATH: src/app/contexts/Environment/*test*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/contexts/Environment/*test*
+
+            - name: Test Context Providers (Navigation)
+              env:
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
+                  COVERAGE_INCLUDE_PATH: src/app/contexts/Navigation/*test*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 2
+                  command: pnpm test:coverage src/app/contexts/Navigation/*test*
 
     application-hooks:
         runs-on: ubuntu-latest
@@ -207,12 +207,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 95.91
                   COVERAGE_THRESHOLD_STATEMENTS: 96.1
                   COVERAGE_THRESHOLD_BRANCHES: 94.22
-                  COVERAGE_INCLUDE_PATH: src/app/hooks/use-[l-o]*
+                  COVERAGE_INCLUDE_PATH: src/app/hooks/use-[l-o]*test*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 2
-                  command: pnpm test:coverage src/app/hooks/use-[l-o]*
+                  command: pnpm test:coverage src/app/hooks/use-[l-o]*test*
 
             - name: Test hooks (p-q)
               env:
@@ -259,38 +259,70 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 95.91
                   COVERAGE_THRESHOLD_STATEMENTS: 96.1
                   COVERAGE_THRESHOLD_BRANCHES: 94.22
-                  COVERAGE_INCLUDE_PATH: src/app/hooks/use-[t-z]*
+                  COVERAGE_INCLUDE_PATH: src/app/hooks/use-[t-z]*test*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 2
-                  command: pnpm test:coverage src/app/hooks/use-[t-z]*
+                  command: pnpm test:coverage src/app/hooks/use-[t-z]*test*
 
-            # - name: Test Components ^A-O
-            #   env:
-            #       COVERAGE_THRESHOLD_LINES: 100
-            #       COVERAGE_THRESHOLD_FUNCTIONS: 100
-            #       COVERAGE_THRESHOLD_STATEMENTS: 100
-            #       COVERAGE_THRESHOLD_BRANCHES: 100
-            #       COVERAGE_INCLUDE_PATH: src/app/components/[A-O]*
-            #   uses: nick-invision/retry@v2
-            #   with:
-            #       timeout_minutes: 20
-            #       max_attempts: 1
-            #       command: pnpm test:coverage src/app/components/[A-O]*
-            #
-            # - name: Test Components ^P-Z
-            #   env:
-            #       COVERAGE_THRESHOLD_LINES: 99.6
-            #       COVERAGE_THRESHOLD_FUNCTIONS: 98.71
-            #       COVERAGE_THRESHOLD_STATEMENTS: 99.62
-            #       COVERAGE_THRESHOLD_BRANCHES: 99.76
-            #       COVERAGE_INCLUDE_PATH: src/app/components/[P-Z]*
-            #   uses: nick-invision/retry@v2
-            #   with:
-            #       timeout_minutes: 20
-            #       max_attempts: 1
-            #       command: pnpm test:coverage src/app/components/[P-Z]*
+    application-components:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/app/components
+        strategy:
+            matrix:
+                node-version:
+                    - 18.12.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-app-components
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+
+            - name: Test Components ^A-O
+              env:
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
+                  COVERAGE_INCLUDE_PATH: src/app/components/[A-O]*test*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/components/[A-O]*test*
+
+            - name: Test Components ^P-Z
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.6
+                  COVERAGE_THRESHOLD_FUNCTIONS: 98.71
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.62
+                  COVERAGE_THRESHOLD_BRANCHES: 99.76
+                  COVERAGE_INCLUDE_PATH: src/app/components/[P-Z]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/components/[P-Z]*
+
     domains-contact:
         runs-on: ubuntu-latest
         env:
