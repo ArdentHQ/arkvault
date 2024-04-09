@@ -19,7 +19,7 @@ jobs:
                 node-version:
                     - 18.12.1
         concurrency:
-            group: ${{ github.head_ref }}-test-app
+            group: ${{ github.head_ref }}-test-app-components
             cancel-in-progress: true
         steps:
             - uses: actions/checkout@v3
@@ -127,7 +127,7 @@ jobs:
                 node-version:
                     - 18.12.1
         concurrency:
-            group: ${{ github.head_ref }}-test-app
+            group: ${{ github.head_ref }}-test-app-hooks
             cancel-in-progress: true
         steps:
             - uses: actions/checkout@v3
