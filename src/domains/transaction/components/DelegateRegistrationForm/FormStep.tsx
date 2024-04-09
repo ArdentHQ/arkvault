@@ -1,17 +1,18 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { FormField, FormLabel } from "@/app/components/Form";
 import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 
 import { Alert } from "@/app/components/Alert";
-import { FormField, FormLabel } from "@/app/components/Form";
-import { InputDefault } from "@/app/components/Input";
-import { useEnvironmentContext } from "@/app/contexts";
-import { useValidation } from "@/app/hooks";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
+import { isMainsailNetwork } from "@/utils/network-utils";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import { useValidation } from "@/app/hooks";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -22,6 +23,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { getValues, register, setValue } = useFormContext();
 	const username = getValues("username");
 	const [usernames, setUsernames] = useState<string[]>([]);
+	const [publicKey, setPublicKey] = useState("");
 
 	const network = useMemo(() => wallet.network(), [wallet]);
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
@@ -48,23 +50,40 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				subtitle={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.DESCRIPTION")}
 			/>
 
-			<Alert className="mt-6">{t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.WARNING")}</Alert>
+			{!isMainsailNetwork(wallet.network()) && (
+				<Alert className="mt-6">{t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.WARNING")}</Alert>
+			)}
 
 			<TransactionNetwork network={wallet.network()} border={false} />
 
 			<TransactionSender address={wallet.address()} network={wallet.network()} borderPosition="both" />
 
 			<div className="space-y-6 pt-6">
-				<FormField name="username">
-					<FormLabel label={t("TRANSACTION.DELEGATE_NAME")} />
-					<InputDefault
-						data-testid="Input__username"
-						defaultValue={username}
-						onChange={(event: ChangeEvent<HTMLInputElement>) =>
-							setValue("username", event.target.value, { shouldDirty: true, shouldValidate: true })
-						}
-					/>
-				</FormField>
+				{!isMainsailNetwork(wallet.network()) && (
+					<FormField name="username">
+						<FormLabel label={t("TRANSACTION.DELEGATE_NAME")} />
+						<InputDefault
+							data-testid="Input__username"
+							defaultValue={username}
+							onChange={(event: ChangeEvent<HTMLInputElement>) =>
+								setValue("username", event.target.value, { shouldDirty: true, shouldValidate: true })
+							}
+						/>
+					</FormField>
+				)}
+
+				{isMainsailNetwork(wallet.network()) && (
+					<FormField name="public_key">
+						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
+						<InputDefault
+							data-testid="Input__public_key"
+							defaultValue={publicKey}
+							onChange={(event: ChangeEvent<HTMLInputElement>) =>
+								setValue("public_key", event.target.value, { shouldDirty: true, shouldValidate: true })
+							}
+						/>
+					</FormField>
+				)}
 
 				<FormField name="fee">
 					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
