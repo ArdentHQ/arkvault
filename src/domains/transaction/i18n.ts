@@ -241,6 +241,13 @@ export const translations = {
 			WARNING: "The Delegate name is permanent and cannot be modified later. It is registered on the network.",
 		},
 	},
+	PAGE_USERNAME_REGISTRATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Register a new username for an address on the network below.",
+			TITLE: "Register Username",
+			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
+		},
+	},
 	PAGE_DELEGATE_RESIGNATION: {
 		FORM_STEP: {
 			DESCRIPTION: "This transaction type permanently retires a Delegate address.",

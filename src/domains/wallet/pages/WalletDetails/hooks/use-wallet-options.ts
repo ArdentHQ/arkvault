@@ -105,6 +105,18 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			});
 		}
 
+		console.log(Enums.FeatureFlag.TransactionUsernameRegistration)
+		console.log(wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration));
+		console.log(wallet.network().id())
+		if (
+			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration)
+		) {
+			registrationOptions.options.push({
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_USERNAME"),
+				value: "username-registration",
+			});
+		}
+
 		if (
 			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateResignation) &&
 			wallet.isDelegate() &&

@@ -10,6 +10,7 @@ import { settings, server, network } from "@/domains/setting/validations";
 import {
 	authentication,
 	common,
+	usernameRegistration,
 	delegateRegistration,
 	multiSignatureRegistration,
 	sendIpfs,
@@ -28,6 +29,7 @@ export const useValidation = () => {
 			common: common(t),
 			createProfile: createProfile(t, env),
 			delegateRegistration: delegateRegistration(t),
+			usernameRegistration: usernameRegistration(t),
 			exchangeOrder: exchangeOrder(t),
 			multiSignatureRegistration: multiSignatureRegistration(t),
 			network: network(t),

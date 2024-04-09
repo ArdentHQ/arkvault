@@ -131,6 +131,15 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 				);
 			}
 
+			if (option.value === "username-registration") {
+				history.push(
+					generatePath(ProfilePaths.SendUsernameRegistration, {
+						profileId: profile.id(),
+						walletId: wallet.id(),
+					}),
+				);
+			}
+
 			if (option.value === "store-hash") {
 				history.push(generatePath(ProfilePaths.SendIpfs, { profileId: profile.id(), walletId: wallet.id() }));
 			}
