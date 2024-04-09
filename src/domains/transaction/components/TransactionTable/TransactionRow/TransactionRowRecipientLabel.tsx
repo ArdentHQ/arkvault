@@ -1,10 +1,13 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 
+import { useResizeDetector } from "react-resize-detector";
 import { Address } from "@/app/components/Address";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { useBreakpoint } from "@/app/hooks";
+
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 
 interface Properties {
 	transaction?: DTO.ExtendedConfirmedTransactionData;
@@ -32,11 +35,11 @@ const VoteCombinationLabel = ({
 	votes: string[];
 	unvotes: string[];
 }) => (
-	<span data-testid="TransactionRowVoteCombinationLabel">
-		{votes.length === 1 && unvotes.length === 1 ? (
+	<span data-testid="TransactionRowVoteCombinationLabel" className="overflow-auto´ flex max-w-full flex-1">
+		{votes.length === 1 && unvotes.length === 1 ? ? (
 			<>
 				<RecipientLabel type="voteCombination" />
-				<DelegateLabel username={delegate?.username()} />
+				<DelegateLabel username={delegate?.username()} address={delegate?.address()!} />
 			</>
 		) : (
 			<div className="space-x-1">
@@ -64,17 +67,33 @@ const VoteCombinationLabel = ({
 	</span>
 );
 
-const DelegateLabel = ({ username, count }: { username?: string; count?: number }) => (
-	<span className="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700">
-		{username}
-		{count !== undefined && count > 1 && <span className="ml-1">+{count - 1}</span>}
-	</span>
-);
+const DelegateLabel = ({ username, address, count }: { username?: string; address: string; count?: number }) => {
+	const { ref, width } = useResizeDetector<HTMLSpanElement>({ handleHeight: false });
+	return (
+		<span className="ml-2 flex flex-1 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700">
+			{username == undefined ? (
+				<span ref={ref} className="max-w-full flex-1">
+					<TruncateMiddleDynamic value={address} availableWidth={width} />
+				</span>
+			) : (
+				username
+			)}
+
+			{count !== undefined && count > 1 && <span className="ml-1">+{count - 1}</span>}
+		</span>
+	);
+};
 
 const VoteLabel = ({ delegates, isUnvote }: { delegates: Contracts.IReadOnlyWallet[]; isUnvote?: boolean }) => (
 	<span data-testid="TransactionRowVoteLabel">
 		<RecipientLabel type={isUnvote ? "unvote" : "vote"} />
-		{delegates.length > 0 && <DelegateLabel username={delegates[0]?.username()} count={delegates.length} />}
+		{delegates.length > 0 && (
+			<DelegateLabel
+				username={delegates[0]?.username()}
+				address={delegates[0].address()}
+				count={delegates.length}
+			/>
+		)}
 	</span>
 );
 
