@@ -75,7 +75,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					<FormField name="publicKey">
 						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
 						<InputDefault
-							ref={register(validatorRegistration.publicKey())}
+							ref={register(validatorRegistration.publicKey(wallet))}
 							data-testid="Input__public_key"
 							defaultValue={publicKey}
 							onChange={(event: ChangeEvent<HTMLInputElement>) =>
