@@ -123,7 +123,8 @@ export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
 export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	profileAllEnabledNetworks(profile).map((network) => network.id());
 
-export const profileEnabledNetworkIds = (profile: Contracts.IProfile) => uniq(
+export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
+	uniq(
 		profile
 			.wallets()
 			.values()
@@ -166,4 +167,8 @@ export const findNetworkFromSearchParameters = (profile: Contracts.IProfile, sea
 	if (networkId) {
 		return profileAllEnabledNetworks(profile).find((network) => network.id() === networkId);
 	}
+};
+
+export const isMainsailNetwork = (network: Networks.Network) => {
+	return network.id().startsWith("mainsail");
 };
