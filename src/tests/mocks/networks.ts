@@ -1,5 +1,7 @@
 import { Coins, Networks } from "@ardenthq/sdk";
+
 import { ARK } from "@ardenthq/sdk-ark";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 
 const createNetwork = (coin: Coins.CoinBundle, network: string) =>
 	new Networks.Network(coin.manifest, coin.manifest.networks[network]);
@@ -13,6 +15,7 @@ export const availableNetworksMock: Networks.Network[] = [
 	createNetwork(ARK, "bind.testnet"),
 	createNetwork(ARK, "xqr.mainnet"),
 	createNetwork(ARK, "xqr.testnet"),
+	createNetwork(Mainsail, "mainsail.devnet"),
 	// createNetwork(ATOM, "atom.mainnet"),
 	// createNetwork(ATOM, "atom.testnet"),
 	// createNetwork(BTC, "btc.livenet"),
