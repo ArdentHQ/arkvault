@@ -20,7 +20,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const { delegateRegistration, validatorRegistration } = useValidation();
 
-	const { getValues, register, setValue } = useFormContext();
+	const { register, setValue, getValues } = useFormContext();
 	const { username, publicKey } = getValues(["username", "publicKey"]);
 	const [usernames, setUsernames] = useState<string[]>([]);
 
@@ -72,9 +72,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				)}
 
 				{isMainsailNetwork(wallet.network()) && (
-					<FormField name="public_key">
+					<FormField name="publicKey">
 						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
 						<InputDefault
+							ref={register(validatorRegistration.publicKey())}
 							data-testid="Input__public_key"
 							defaultValue={publicKey}
 							onChange={(event: ChangeEvent<HTMLInputElement>) =>
