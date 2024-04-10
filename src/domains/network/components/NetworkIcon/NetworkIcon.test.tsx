@@ -1,10 +1,10 @@
-import { Networks } from "@ardenthq/sdk";
-import userEvent from "@testing-library/user-event";
-import React from "react";
+import { render, screen } from "@/utils/testing-library";
 
 import { NetworkIcon } from "./NetworkIcon";
+import { Networks } from "@ardenthq/sdk";
+import React from "react";
 import { availableNetworksMock } from "@/tests/mocks/networks";
-import { render, screen } from "@/utils/testing-library";
+import userEvent from "@testing-library/user-event";
 
 let network: Networks.Network;
 
@@ -72,6 +72,17 @@ describe("NetworkIcon", () => {
 	});
 
 	it("should render network with custom classname", () => {
+		render(<NetworkIcon size="lg" network={network} className="test" />, {});
+
+		expect(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
+			"aria-label",
+			network.displayName(),
+		);
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
+	});
+
+	it("should handle Mainsail as non-ARK icon", () => {
+		network = availableNetworksMock[6]; // Mainsail network
 		render(<NetworkIcon size="lg" network={network} className="test" />, {});
 
 		expect(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(

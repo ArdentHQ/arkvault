@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
 
-import { Checkbox } from "@/app/components/Checkbox";
-import { Icon } from "@/app/components/Icon";
 import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
+import { Checkbox } from "@/app/components/Checkbox";
 import { networkDisplayName } from "@/utils/network-utils";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 const NetworksListNetwork: React.VFC<{
 	network: Networks.Network;
@@ -27,14 +27,16 @@ const NetworksListNetwork: React.VFC<{
 			)}
 		>
 			<div className="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200">
-				<div className="shrink-0">
-					<Icon
-						name={network.ticker()}
-						size="md"
+				<div className="flex shrink-0 items-center">
+					<NetworkIcon
+						network={network}
+						iconSize="md"
 						className={cn({
 							"dark:text-theme-secondary-200": isChecked,
 							"dark:text-theme-secondary-600": !isChecked,
 						})}
+						noShadow
+						isCompact
 					/>
 				</div>
 				<div className="font-semibold">{networkDisplayName(network)}</div>
