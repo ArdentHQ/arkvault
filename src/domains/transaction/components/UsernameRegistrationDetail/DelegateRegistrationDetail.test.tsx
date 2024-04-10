@@ -1,17 +1,17 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { DelegateRegistrationDetail } from "./DelegateRegistrationDetail";
+import { UsernameRegistrationDetail } from "./UsernameRegistrationDetail";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 const fixtureProfileId = getDefaultProfileId();
 
-describe("DelegateRegistrationDetail", () => {
+describe("UsernameRegistrationDetail", () => {
 	it("should not render if not open", () => {
 		const { asFragment } = render(
-			<DelegateRegistrationDetail
+			<UsernameRegistrationDetail
 				isOpen={false}
 				transaction={{ ...TransactionFixture, username: () => "Ark Wallet" }}
 			/>,
@@ -24,7 +24,7 @@ describe("DelegateRegistrationDetail", () => {
 	it("should render a modal", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
-				<DelegateRegistrationDetail
+				<UsernameRegistrationDetail
 					isOpen={true}
 					transaction={{ ...TransactionFixture, username: () => "Ark Wallet" }}
 				/>
@@ -35,7 +35,7 @@ describe("DelegateRegistrationDetail", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
-			translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE,
+			translations.MODAL_USERNAME_REGISTRATION_DETAIL.TITLE,
 		);
 		expect(asFragment()).toMatchSnapshot();
 	});

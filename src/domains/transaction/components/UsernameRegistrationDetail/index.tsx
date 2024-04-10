@@ -1,1 +1,1 @@
-export * from "./DelegateRegistrationDetail";
+export * from "./UsernameRegistrationDetail";

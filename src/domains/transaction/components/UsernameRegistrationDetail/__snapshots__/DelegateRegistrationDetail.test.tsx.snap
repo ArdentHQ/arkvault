@@ -1,8 +1,8 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DelegateRegistrationDetail > should not render if not open 1`] = `<DocumentFragment />`;
+exports[`UsernameRegistrationDetail > should not render if not open 1`] = `<DocumentFragment />`;
 
-exports[`DelegateRegistrationDetail > should render a modal 1`] = `
+exports[`UsernameRegistrationDetail > should render a modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"

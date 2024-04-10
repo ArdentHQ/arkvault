@@ -13,6 +13,7 @@ import { TransferDetail } from "@/domains/transaction/components/TransferDetail"
 import { UnlockTokenDetail } from "@/domains/transaction/components/UnlockTokenDetail";
 import { VoteDetail } from "@/domains/transaction/components/VoteDetail";
 import {UsernameResignationDetail} from "@/domains/transaction/components/UsernameResignationDetail";
+import {UsernameRegistrationDetail} from "@/domains/transaction/components/UsernameRegistrationDetail";
 
 export const TransactionDetailModal = ({
 	isOpen,
@@ -60,7 +61,7 @@ export const TransactionDetailModal = ({
 		default: () => void 0,
 		delegateRegistration: () => DelegateRegistrationDetail,
 		delegateResignation: () => DelegateResignationDetail,
-		usernameRegistration: () => DelegateRegistrationDetail,
+		usernameRegistration: () => UsernameRegistrationDetail,
 		usernameResignation: () => UsernameResignationDetail,
 		ipfs: () => IpfsDetail,
 		magistrate: () => LegacyMagistrateDetail,
