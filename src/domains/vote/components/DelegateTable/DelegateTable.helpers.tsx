@@ -29,7 +29,7 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 					network: network,
 					validatorStr: t("VOTE.DELEGATE_TABLE.NAME"),
 				}),
-				accessor: (delegate) => isLoading || delegate.username(),
+				accessor: (delegate) => isLoading || delegate.username() || delegate.address(),
 				className: "justify-start",
 				headerClassName: "w-3/4 sm:w-auto",
 			},

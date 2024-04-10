@@ -131,6 +131,8 @@ export const Votes: FC = () => {
 
 	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
 
+	const voteWallet = currentVotes.find(({ wallet }) => wallet!.isResignedDelegate())?.wallet;
+
 	return (
 		<Page pageTitle={isSelectDelegateStep ? t("VOTE.DELEGATE_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
 			<VotesHeader
@@ -189,9 +191,7 @@ export const Votes: FC = () => {
 												delegateStr: <Trans
 												i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE_DELEGATE"
 												values={{
-													name: currentVotes
-														.find(({ wallet }) => wallet!.isResignedDelegate())
-														?.wallet!.username(),
+													name: voteWallet?.username() || voteWallet?.address(),
 												}}
 												components={{ bold: <strong /> }}
 											/>,
@@ -199,9 +199,7 @@ export const Votes: FC = () => {
 											validatorStr: <Trans
 													i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
 													values={{
-														name: currentVotes
-															.find(({ wallet }) => wallet!.isResignedDelegate())
-															?.wallet!.username(),
+														name: voteWallet?.username() || voteWallet?.address(),
 													}}
 													components={{ bold: <strong /> }}
 												/>,

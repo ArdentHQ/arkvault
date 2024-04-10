@@ -8,6 +8,14 @@ import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
 
+// When you run the command pnpm dev, you can optionally pass the parameter
+// `-- --no-optimize` (Notice the double `-- --`) to exclude a specific package
+// from optimization. This is useful to ensure that changes made to a package
+// linked with a symlink are reflected immediately.
+// Example usage: `pnpm dev -- --no-optimize=@ardenthq/sdk-profiles,@ardenthq/sdk-mainsail`
+const noOptimize =
+	(process.env.npm_lifecycle_script ?? "").match(/--no-optimize=([^\s"]+)(?=")/)?.[1]?.split(",") ?? [];
+
 // https://vitejs.dev/config/
 export default defineConfig({
 	build: {
@@ -138,4 +146,57 @@ export default defineConfig({
 			},
 		}),
 	],
+	optimizeDeps: {
+		exclude: noOptimize,
+		include: [
+			"@emotion/cache",
+			"@emotion/react",
+			"@emotion/styled",
+			"@faustbrian/node-haveibeenpwned",
+			"@ardenthq/arkvault-url",
+			"@tippyjs/react",
+			"assert",
+			"browser-fs-access",
+			"classnames",
+			"cross-fetch",
+			"downshift",
+			"focus-visible",
+			"framer-motion",
+			"i18next",
+			"locale-currency",
+			"multiformats",
+			"p-retry",
+			"qr-scanner",
+			"react",
+			"react-datepicker",
+			"react-dom",
+			"react-error-boundary",
+			"react-hook-form",
+			"react-i18next",
+			"react-idle-timer",
+			"react-linkify",
+			"react-loading-skeleton",
+			"react-qr-reader",
+			"react-resize-detector",
+			"react-responsive",
+			"react-router",
+			"react-router-dom",
+			"react-table",
+			"react-toastify",
+			"react-visibility-sensor",
+			"semver",
+			"socks-proxy-agent",
+			"string-hash",
+			"twin.macro",
+			"yup",
+			"react-zendesk",
+			"@ardenthq/sdk",
+			"@ardenthq/sdk-ark",
+			"@ardenthq/sdk-cryptography",
+			"@ardenthq/sdk-helpers",
+			"@ardenthq/sdk-intl",
+			"@ardenthq/sdk-ledger",
+			"@ardenthq/sdk-profiles",
+		].filter((pkg) => !noOptimize.includes(pkg)),
+	},
 });

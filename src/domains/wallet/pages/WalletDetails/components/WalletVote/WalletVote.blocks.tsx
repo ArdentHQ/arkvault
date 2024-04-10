@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { useResizeDetector } from "react-resize-detector";
 import { DelegateStatusProperties, EmptyVotesProperties, VotesProperties } from "./WalletVote.contracts";
 import { Amount } from "@/app/components/Amount";
 import { Circle } from "@/app/components/Circle";
@@ -8,6 +9,7 @@ import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { Tooltip } from "@/app/components/Tooltip";
 import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 
 const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 
@@ -186,6 +188,8 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 	const delegate = votes[0].wallet!;
 	const maxVotes = wallet.network().maximumVotesPerWallet();
 
+	const { ref, width } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
+
 	return (
 		<div className="flex w-full flex-grow flex-col overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800 md:w-auto md:flex-row md:rounded-none md:border-0">
 			<div className="hidden md:block">
@@ -198,14 +202,23 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 				</Circle>
 			</div>
 
-			<div className="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0">
-				<div className="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0">
+			<div className="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0">
+				<div
+					className="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
+					ref={ref}
+				>
 					<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 					</span>
 
 					{votes.length === 1 ? (
-						<span>{delegate.username()}</span>
+						<>
+							{delegate.username() ? (
+								<span>{delegate.username()}</span>
+							) : (
+								<TruncateMiddleDynamic value={delegate.address()} availableWidth={width} />
+							)}
+						</>
 					) : (
 						<span
 							className="cursor-pointer text-theme-primary-600 transition-colors duration-200 hover:text-theme-primary-700 active:text-theme-primary-500"
@@ -217,7 +230,7 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 				</div>
 
 				{maxVotes === 1 && (
-					<div className="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800">
+					<div className="mx-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800 ">
 						<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
 							{t("COMMON.RANK")}
 						</span>
