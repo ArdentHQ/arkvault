@@ -85,7 +85,6 @@ export const translations = {
 		YEARS_AGO_other: "{{count}} years ago",
 	},
 	DEFAULT_CHOSEN_FEE: "Default fee type",
-	USERNAME: "Username",
 	DELEGATE: "Delegate",
 	DELEGATES: "Delegates",
 	DELEGATE_ADDRESS: "Delegate Address",
@@ -366,6 +365,7 @@ export const translations = {
 	UPDATE_NOW: "Update Now",
 	UPDATING: "Updating...",
 	URL: "URL",
+	USERNAME: "Username",
 	VALIDATING_URI: "Validating URI. Please wait ...",
 	VALIDATION: {
 		CONFIRM_PASSWORD_REQUIRED: "Password confirmation is required",

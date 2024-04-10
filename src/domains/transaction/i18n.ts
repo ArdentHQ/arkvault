@@ -24,7 +24,6 @@ export const translations = {
 	},
 	CORE: "CORE",
 	CRYPTOASSET: "Cryptoasset",
-	USERNAME: "Username",
 	DELEGATE: "Delegate",
 	DELEGATE_NAME: "Delegate Name",
 	DELEGATE_PUBLICKEY: "Delegate PublicKey",

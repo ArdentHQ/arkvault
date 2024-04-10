@@ -15,7 +15,6 @@ import { StepHeader } from "@/app/components/StepHeader";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
-	const { env } = useEnvironmentContext();
 
 	const { usernameRegistration } = useValidation();
 
