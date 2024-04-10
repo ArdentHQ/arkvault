@@ -213,7 +213,7 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 				</div>
 
 				{maxVotes === 1 && (
-					<div className="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800">
+					<div className="mx-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800 ">
 						<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
 							{t("COMMON.RANK")}
 						</span>
