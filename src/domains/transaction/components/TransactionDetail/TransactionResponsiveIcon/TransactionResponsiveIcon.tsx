@@ -24,5 +24,5 @@ export const TransactionResponsiveIcon = ({ icon }: { icon: string }) => {
 	);
 };
 
-export const TransactionDelegateIcon = () => <TransactionResponsiveIcon icon="UsernameRegistration" />;
-export const TransactionDelegateResignationIcon = () => <TransactionResponsiveIcon icon="UsernameResignation" />;
+export const TransactionDelegateIcon = () => <TransactionResponsiveIcon icon="Delegate" />;
+export const TransactionDelegateResignationIcon = () => <TransactionResponsiveIcon icon="DelegateResignation" />;
