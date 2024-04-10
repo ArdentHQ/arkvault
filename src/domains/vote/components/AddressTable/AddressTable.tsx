@@ -61,7 +61,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 
 					const [first] = votes;
 
-					return first?.wallet?.username();
+					return first?.wallet?.username() ?? first?.wallet?.address();
 				},
 				cellWidth: "w-60",
 				className: maxVotes === 1 ? "ml-15" : "",
