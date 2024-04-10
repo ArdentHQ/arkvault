@@ -125,6 +125,16 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			});
 		}
 
+		if (
+			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameResignation) &&
+			!wallet.isDelegate()
+		) {
+			registrationOptions.options.push({
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_USERNAME"),
+				value: "username-resignation",
+			});
+		}
+
 		if (allowsSecondSignature()) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE"),

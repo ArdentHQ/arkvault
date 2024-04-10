@@ -71,6 +71,7 @@ export const signUsernameRegistration = async ({ env, form, profile, signatory }
 	});
 
 	const response = await senderWallet.transaction().broadcast(transactionId);
+	console.log(response);
 
 	handleBroadcastError(response);
 

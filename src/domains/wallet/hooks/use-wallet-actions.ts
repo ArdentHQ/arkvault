@@ -140,6 +140,15 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 				);
 			}
 
+			if (option.value === "username-resignation") {
+				history.push(
+					generatePath(ProfilePaths.SendUsernameResignation, {
+						profileId: profile.id(),
+						walletId: wallet.id(),
+					}),
+				);
+			}
+
 			if (option.value === "store-hash") {
 				history.push(generatePath(ProfilePaths.SendIpfs, { profileId: profile.id(), walletId: wallet.id() }));
 			}
