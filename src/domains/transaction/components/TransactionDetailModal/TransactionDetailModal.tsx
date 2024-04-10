@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
-
 import { TransactionAliases, TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
-import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
+import { WalletAliasResult, useWalletAlias } from "@/app/hooks/use-wallet-alias";
+
 import { DelegateRegistrationDetail } from "@/domains/transaction/components/DelegateRegistrationDetail";
 import { DelegateResignationDetail } from "@/domains/transaction/components/DelegateResignationDetail";
 import { IpfsDetail } from "@/domains/transaction/components/IpfsDetail";
@@ -11,6 +11,8 @@ import { MultiSignatureRegistrationDetail } from "@/domains/transaction/componen
 import { SecondSignatureDetail } from "@/domains/transaction/components/SecondSignatureDetail";
 import { TransferDetail } from "@/domains/transaction/components/TransferDetail";
 import { UnlockTokenDetail } from "@/domains/transaction/components/UnlockTokenDetail";
+import { UsernameRegistrationDetail } from "@/domains/transaction/components/UsernameRegistrationDetail";
+import { UsernameResignationDetail } from "@/domains/transaction/components/UsernameResignationDetail";
 import { VoteDetail } from "@/domains/transaction/components/VoteDetail";
 import {UsernameResignationDetail} from "@/domains/transaction/components/UsernameResignationDetail";
 import {UsernameRegistrationDetail} from "@/domains/transaction/components/UsernameRegistrationDetail";

@@ -27,6 +27,8 @@ export const UsernameRegistrationDetail = ({ isOpen, transaction, onClose }: Tra
 		>
 			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
+			{/* @TODO: Use new icons for username registration & resignation types when available.
+				@see https://app.clickup.com/t/86dt6ymku */}
 			<TransactionDetail label={t("TRANSACTION.USERNAME")} extra={<TransactionDelegateIcon />}>
 				{transaction.username()}
 			</TransactionDetail>
