@@ -11,7 +11,6 @@ describe("Register Delegate validator validation", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
-		vi;
 		translationMock = vi.fn((index18nString: string) => index18nString);
 	});
 
