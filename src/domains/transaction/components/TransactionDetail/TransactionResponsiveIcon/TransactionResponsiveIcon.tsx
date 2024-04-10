@@ -26,3 +26,4 @@ export const TransactionResponsiveIcon = ({ icon }: { icon: string }) => {
 
 export const TransactionDelegateIcon = () => <TransactionResponsiveIcon icon="Delegate" />;
 export const TransactionDelegateResignationIcon = () => <TransactionResponsiveIcon icon="DelegateResignation" />;
+export const TransactionUsernameRegistrationIcon = () => <TransactionResponsiveIcon icon="UsernameRegistration" />;

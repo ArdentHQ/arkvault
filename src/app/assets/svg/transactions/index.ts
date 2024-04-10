@@ -1,5 +1,7 @@
 import { ReactComponent as DelegateRegistration } from "./delegate-registration.svg";
 import { ReactComponent as DelegateResignation } from "./delegate-resignation.svg";
+import { ReactComponent as UsernameResignation } from "./username-resignation.svg";
+import { ReactComponent as UsernameRegistration } from "./username-registration.svg";
 import { ReactComponent as Ipfs } from "./ipfs.svg";
 import { ReactComponent as Magistrate } from "./magistrate.svg";
 import { ReactComponent as Multipayment } from "./multipayment.svg";
@@ -30,6 +32,8 @@ export const TransactionIcons: any = {
 	Transfer,
 	UnlockToken,
 	Unvote,
+	UsernameRegistration,
+	UsernameResignation,
 	Vote,
 	VoteCombination,
 };

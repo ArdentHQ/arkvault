@@ -65,14 +65,12 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 			icon: "Unvote",
 			label: t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),
 		},
-		// @TODO: Use new icons for username registration & resignation types when available.
-		// @see https://app.clickup.com/t/86dt6ymku
 		usernameRegistration: {
-			icon: "DelegateRegistration",
+			icon: "UsernameRegistration",
 			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
 		},
 		usernameResignation: {
-			icon: "DelegateResignation",
+			icon: "UsernameResignation",
 			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION"),
 		},
 		vote: {
