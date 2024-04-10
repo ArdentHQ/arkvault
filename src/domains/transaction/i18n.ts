@@ -146,6 +146,9 @@ export const translations = {
 	MODAL_DELEGATE_RESIGNATION_DETAIL: {
 		TITLE: "Delegate Resignation",
 	},
+	MODAL_USERNAME_RESIGNATION_DETAIL: {
+		TITLE: "Username Resignation",
+	},
 	MODAL_FEE_WARNING: {
 		DESCRIPTION: {
 			TOO_HIGH:
