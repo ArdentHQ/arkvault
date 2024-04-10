@@ -14,8 +14,6 @@ import { UnlockTokenDetail } from "@/domains/transaction/components/UnlockTokenD
 import { UsernameRegistrationDetail } from "@/domains/transaction/components/UsernameRegistrationDetail";
 import { UsernameResignationDetail } from "@/domains/transaction/components/UsernameResignationDetail";
 import { VoteDetail } from "@/domains/transaction/components/VoteDetail";
-import {UsernameResignationDetail} from "@/domains/transaction/components/UsernameResignationDetail";
-import {UsernameRegistrationDetail} from "@/domains/transaction/components/UsernameRegistrationDetail";
 
 export const TransactionDetailModal = ({
 	isOpen,
