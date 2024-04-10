@@ -6,6 +6,7 @@ import { Column } from "react-table";
 import { DelegateTableColumnsProperties, VoteDelegateProperties } from "./DelegateTable.contracts";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableColumnsProperties) => {
 	const { t } = useTranslation();
@@ -23,7 +24,11 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 				minimumWidth: true,
 			},
 			{
-				Header: t("VOTE.DELEGATE_TABLE.NAME"),
+				Header: selectDelegateValidatorTranslation({
+					delegateStr: t("VOTE.DELEGATE_TABLE.NAME_DELEGATE"),
+					network: network,
+					validatorStr: t("VOTE.DELEGATE_TABLE.NAME"),
+				}),
 				accessor: (delegate) => isLoading || delegate.username(),
 				className: "justify-start",
 				headerClassName: "w-3/4 sm:w-auto",

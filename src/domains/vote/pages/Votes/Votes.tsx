@@ -166,6 +166,7 @@ export const Votes: FC = () => {
 			{isSelectDelegateStep && (
 				<Section innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18">
 					<DelegateTable
+						activeWallet={activeWallet}
 						searchQuery={searchQuery}
 						delegates={filteredDelegates}
 						isLoading={isLoadingDelegates}

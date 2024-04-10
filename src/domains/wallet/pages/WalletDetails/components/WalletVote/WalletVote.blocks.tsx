@@ -7,6 +7,7 @@ import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { Tooltip } from "@/app/components/Tooltip";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 
@@ -42,7 +43,11 @@ const EmptyVotes = ({ wallet }: EmptyVotesProperties) => {
 
 				<span className="flex flex-col space-y-2 leading-none md:flex-row md:space-y-0">
 					<span className="mr-1 text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
-						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}
+						{selectDelegateValidatorTranslation({
+							delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION_DELEGATE"),
+							network: wallet.network(),
+							validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")
+						})}
 					</span>
 					<Link to={votesHelpLink} isExternal>
 						<span className="text-sm">{t("COMMON.LEARN_MORE")}</span>
@@ -71,7 +76,7 @@ const EmptyVotes = ({ wallet }: EmptyVotesProperties) => {
 	);
 };
 
-const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) => {
+const DelegateStatus = ({ votes, activeDelegates, wallet }: DelegateStatusProperties) => {
 	const { t } = useTranslation();
 
 	// @ts-ignore
@@ -127,9 +132,17 @@ const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) =>
 		return (
 			<>
 				<HintIcon
-					tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING_COUNT", {
-						count: standbyCount + resignedCount,
-					})}
+					tooltipContent={
+						selectDelegateValidatorTranslation({
+							delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING_COUNT_DELEGATE", {
+								count: standbyCount + resignedCount,
+							}),
+							network: wallet.network(),
+							validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING_COUNT", {
+								count: standbyCount + resignedCount,
+							})
+						})
+						}
 				/>
 
 				<span className="font-semibold">
@@ -156,7 +169,11 @@ const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) =>
 	return (
 		<div className="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6">
 			<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
-				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.DELEGATE_STATUS")}
+			{selectDelegateValidatorTranslation({
+							delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.DELEGATE_STATUS"),
+							network: wallet.network(),
+							validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VALIDATOR_STATUS")
+						})}
 			</span>
 			<div className="flex items-center justify-end space-x-2">{renderStatuses()}</div>
 		</div>
@@ -242,7 +259,7 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 				)}
 			</div>
 
-			<DelegateStatus votes={votes} activeDelegates={activeDelegates} />
+			<DelegateStatus votes={votes} activeDelegates={activeDelegates} wallet={wallet} />
 		</div>
 	);
 };

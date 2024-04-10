@@ -2,11 +2,12 @@ export const translations = {
 	DELEGATE_TABLE: {
 		COMMISSION: "Comm.",
 		COMMISSION_BY_PERIOD: "Commission ({{period}})",
-		DELEGATES_NOT_FOUND: "Delegates not found",
 		MIN: "Min.",
-		NAME: "Delegate Name",
+		NAME: "Validator Name",
+		NAME_DELEGATE: "Delegate Name",
 		PAYOUT_INTERVAL: "Payout",
-		TITLE: "Select a Delegate",
+		TITLE: "Select a Validator",
+		TITLE_DELEGATE: "Select a Delegate",
 		TOOLTIP: {
 			DELEGATE_IN_FORGING_POSITION: "Delegate in forging position",
 			DELEGATE_IN_STANDY_POSITION: "Delegate in standby position",
