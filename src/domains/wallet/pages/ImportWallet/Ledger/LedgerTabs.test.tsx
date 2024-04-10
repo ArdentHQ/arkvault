@@ -159,6 +159,25 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
+	it("should not render networks that don't support ledger", async () => {
+		const availableNetworks = profile
+			.wallets()
+			.values()
+			.map((wallet) => wallet.network());
+
+		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(availableNetworks);
+		const ledgerSpy = vi.spyOn(availableNetworks.at(0), "allows").mockReturnValue(false);
+
+		const ledgerTransportMock = mockNanoXTransport();
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
+
+		await expect(screen.findByTestId("NetworkOption")).rejects.toThrow(/Unable to find/);
+
+		networkSpy.mockRestore();
+		ledgerSpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
+
 	it("should load more address", async () => {
 		const scanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
