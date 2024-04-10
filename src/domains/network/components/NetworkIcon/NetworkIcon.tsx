@@ -1,12 +1,12 @@
-import { Networks } from "@ardenthq/sdk";
-import cn from "classnames";
-import React from "react";
-
 import { Circle, CircleProperties } from "@/app/components/Circle";
+import { isMainsailNetwork, networkDisplayName } from "@/utils/network-utils";
+
 import { Icon } from "@/app/components/Icon";
-import { Tooltip } from "@/app/components/Tooltip";
+import { Networks } from "@ardenthq/sdk";
+import React from "react";
 import { Size } from "@/types";
-import { networkDisplayName } from "@/utils/network-utils";
+import { Tooltip } from "@/app/components/Tooltip";
+import cn from "classnames";
 
 interface NetworkIconProperties {
 	network?: Networks.Network;
@@ -61,7 +61,7 @@ export const NetworkIcon: React.VFC<NetworkIconProperties> = ({
 			<Icon
 				className={iconClassName}
 				data-testid="NetworkIcon__icon"
-				name={network.ticker()}
+				name={isMainsailNetwork(network) ? network.coinName() : network.ticker()}
 				fallback={
 					<span className={isCompact ? "inline-flex w-5 justify-center text-sm" : undefined}>
 						{networkDisplayName(network).slice(0, 2).toUpperCase()}
