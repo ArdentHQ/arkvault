@@ -146,6 +146,9 @@ export const translations = {
 	MODAL_DELEGATE_RESIGNATION_DETAIL: {
 		TITLE: "Delegate Resignation",
 	},
+	MODAL_USERNAME_REGISTRATION_DETAIL: {
+		TITLE: "Username Registration",
+	},
 	MODAL_USERNAME_RESIGNATION_DETAIL: {
 		TITLE: "Username Resignation",
 	},
@@ -249,6 +252,13 @@ export const translations = {
 		FORM_STEP: {
 			DESCRIPTION: "Register a new username for an address on the network below.",
 			TITLE: "Register Username",
+			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
+		},
+	},
+	PAGE_USERNAME_RESIGNATION: {
+		FORM_STEP: {
+			DESCRIPTION: "This transaction type permanently retires the username of an address.",
+			TITLE: "Resign Username",
 			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
 		},
 	},

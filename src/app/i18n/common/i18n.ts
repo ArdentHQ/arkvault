@@ -85,6 +85,7 @@ export const translations = {
 		YEARS_AGO_other: "{{count}} years ago",
 	},
 	DEFAULT_CHOSEN_FEE: "Default fee type",
+	USERNAME: "Username",
 	DELEGATE: "Delegate",
 	DELEGATES: "Delegates",
 	DELEGATE_ADDRESS: "Delegate Address",

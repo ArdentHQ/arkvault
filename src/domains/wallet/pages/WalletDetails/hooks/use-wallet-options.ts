@@ -106,15 +106,6 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 		}
 
 		if (
-			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration)
-		) {
-			registrationOptions.options.push({
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_USERNAME"),
-				value: "username-registration",
-			});
-		}
-
-		if (
 			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateResignation) &&
 			wallet.isDelegate() &&
 			!wallet.isResignedDelegate()
@@ -126,8 +117,17 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 		}
 
 		if (
+			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration)
+		) {
+			registrationOptions.options.push({
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_USERNAME"),
+				value: "username-registration",
+			});
+		}
+
+		if (
 			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameResignation) &&
-			!wallet.isDelegate()
+			wallet.username()
 		) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_USERNAME"),
