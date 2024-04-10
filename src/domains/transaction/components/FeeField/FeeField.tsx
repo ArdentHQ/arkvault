@@ -89,7 +89,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			return true;
 		}
 
-		if (type === "usernameRegistration" && !data.mnemonic) {
+		if (type === "usernameRegistration" && !data.username) {
 			resetFees();
 			return true;
 		}

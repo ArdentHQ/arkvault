@@ -15,8 +15,6 @@ export const SummaryStep = ({ senderWallet, transaction }: SummaryStepProperties
 
 	return (
 		<TransactionSuccessful transaction={transaction} senderWallet={senderWallet}>
-			<TransactionDetail label={t("TRANSACTION.USERNAME")}>{senderWallet.username()}</TransactionDetail>
-
 			<TransactionFee currency={senderWallet.currency()} value={transaction.fee()} paddingPosition="top" />
 		</TransactionSuccessful>
 	);
