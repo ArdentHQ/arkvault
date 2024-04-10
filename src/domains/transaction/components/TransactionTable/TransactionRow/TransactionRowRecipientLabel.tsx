@@ -85,7 +85,7 @@ const DelegateLabel = ({ username, address, count }: { username?: string; addres
 };
 
 const VoteLabel = ({ delegates, isUnvote }: { delegates: Contracts.IReadOnlyWallet[]; isUnvote?: boolean }) => (
-	<span data-testid="TransactionRowVoteLabel">
+	<span data-testid="TransactionRowVoteLabel" className="flex">
 		<RecipientLabel type={isUnvote ? "unvote" : "vote"} />
 		{delegates.length > 0 && (
 			<DelegateLabel
