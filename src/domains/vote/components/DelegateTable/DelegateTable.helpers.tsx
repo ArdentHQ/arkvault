@@ -57,8 +57,14 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 					<div className="flex items-center space-x-3 px-3">
 						<p>{t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TITLE")}</p>
 						<Tooltip
-							content={t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TOOLTIP", {
-								coinId: network.coin(),
+							content={selectDelegateValidatorTranslation({
+								delegateStr: t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TOOLTIP_DELEGATE", {
+									coinId: network.coin(),
+								}),
+								network,
+								validatorStr: t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TOOLTIP", {
+									coinId: network.coin(),
+								})
 							})}
 						>
 							<span className="rounded-full bg-theme-primary-100 p-1 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200">

@@ -13,6 +13,7 @@ import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { useNavigationContext } from "@/app/contexts";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 interface FooterContentProperties {
 	label: string;
@@ -82,7 +83,11 @@ export const DelegateFooter = ({
 
 	useEffect(() => {
 		if (totalVotes < 1) {
-			setTooltipContent(t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE"));
+			setTooltipContent(selectDelegateValidatorTranslation<string>({
+				delegateStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE"),
+				network: selectedWallet.network(),
+				validatorStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_VALIDATOR"),
+			}));
 			setIsContinueDisabled(true);
 			return;
 		}

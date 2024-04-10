@@ -12,6 +12,7 @@ import { FilterWallets } from "@/domains/dashboard/components/FilterWallets";
 import { FilterOption, VotesFilter } from "@/domains/vote/components/VotesFilter";
 import { Divider } from "@/app/components/Divider";
 import { useBreakpoint } from "@/app/hooks";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 interface VotesHeaderProperties {
 	profile: Contracts.IProfile;
@@ -23,6 +24,7 @@ interface VotesHeaderProperties {
 	totalCurrentVotes: number;
 	selectedFilter?: FilterOption;
 	setSelectedFilter?: (selected: FilterOption) => void;
+	activeWallet?: Contracts.IReadWriteWallet;
 }
 
 export const VotesHeader = ({
@@ -35,6 +37,7 @@ export const VotesHeader = ({
 	selectedFilter,
 	setSelectedFilter,
 	isSelectDelegateStep,
+	activeWallet
 }: VotesHeaderProperties) => {
 	const { t } = useTranslation();
 
@@ -42,7 +45,11 @@ export const VotesHeader = ({
 
 	const renderPlaceholder = () => {
 		if (selectedAddress) {
-			return t("VOTE.VOTES_PAGE.SEARCH_DELEGATE_PLACEHOLDER");
+			return selectDelegateValidatorTranslation({
+				delegateStr: t("VOTE.VOTES_PAGE.SEARCH_DELEGATE_PLACEHOLDER"),
+				network: activeWallet!.network(),
+				validatorStr: t("VOTE.VOTES_PAGE.SEARCH_VALIDATOR_PLACEHOLDER"),
+			})
 		}
 
 		return t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER");

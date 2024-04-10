@@ -17,6 +17,7 @@ import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { assertWallet } from "@/utils/assertions";
 import { getErroredNetworks } from "@/utils/profile-utils";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 export const Votes: FC = () => {
 	const history = useHistory();
@@ -142,6 +143,7 @@ export const Votes: FC = () => {
 				totalCurrentVotes={currentVotes.length}
 				selectedFilter={voteFilter}
 				setSelectedFilter={setVoteFilter}
+				activeWallet={activeWallet}
 			/>
 
 			{!hasWallets && (
@@ -182,15 +184,29 @@ export const Votes: FC = () => {
 							resignedDelegateVotes.length > 0 ? (
 								<Alert className="mb-6">
 									<div data-testid="Votes__resigned-vote">
-										<Trans
-											i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
-											values={{
-												name: currentVotes
-													.find(({ wallet }) => wallet!.isResignedDelegate())
-													?.wallet!.username(),
-											}}
-											components={{ bold: <strong /> }}
-										/>
+										{
+											selectDelegateValidatorTranslation({
+												delegateStr: <Trans
+												i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE_DELEGATE"
+												values={{
+													name: currentVotes
+														.find(({ wallet }) => wallet!.isResignedDelegate())
+														?.wallet!.username(),
+												}}
+												components={{ bold: <strong /> }}
+											/>,
+												network: selectedWallet.network(),
+											validatorStr: <Trans
+													i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
+													values={{
+														name: currentVotes
+															.find(({ wallet }) => wallet!.isResignedDelegate())
+															?.wallet!.username(),
+													}}
+													components={{ bold: <strong /> }}
+												/>,
+											})
+										}
 									</div>
 								</Alert>
 							) : undefined

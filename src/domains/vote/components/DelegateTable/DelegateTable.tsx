@@ -232,7 +232,11 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			<EmptyResults
 				className="mt-16"
 				title={t("COMMON.EMPTY_RESULTS.TITLE")}
-				subtitle={t("VOTE.VOTES_PAGE.NO_RESULTS")}
+				subtitle={selectDelegateValidatorTranslation({
+					delegateStr: t("VOTE.VOTES_PAGE.NO_RESULTS_DELEGATE"),
+					network: activeWallet!.network(),
+					validatorStr: t("VOTE.VOTES_PAGE.NO_RESULTS")
+				})}
 			/>
 		);
 	}

@@ -1,12 +1,12 @@
 import { Networks } from "@ardenthq/sdk";
 
-interface Properties {
+interface Properties<T extends string | React.ReactNode> {
 	network: Networks.Network;
-	validatorStr: string;
-	delegateStr: string;
+	validatorStr: T;
+	delegateStr: T;
 }
 
-export const selectDelegateValidatorTranslation = ({ network, validatorStr, delegateStr }: Properties): string => network.coinName() === "Mainsail" ? validatorStr : delegateStr;
+export const selectDelegateValidatorTranslation = <T extends string | React.ReactNode>({ network, validatorStr, delegateStr }: Properties<T>): T => network.coinName() === "Mainsail" ? validatorStr : delegateStr;
 
 
 

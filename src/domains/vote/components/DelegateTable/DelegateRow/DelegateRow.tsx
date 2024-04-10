@@ -15,6 +15,7 @@ import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/
 import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 interface DelegateRowProperties {
 	index: number;
@@ -113,6 +114,7 @@ export const DelegateRow = ({
 				<DelegateVoteButton
 					index={index}
 					variant="warning"
+					selectedWallet={selectedWallet}
 					compactClassName="text-theme-warning-700 hover:text-theme-warning-800"
 					isCompact={isCompact}
 					onClick={() => {
@@ -136,6 +138,7 @@ export const DelegateRow = ({
 						variant="danger"
 						compactClassName="text-theme-danger-400 hover:text-theme-danger-500"
 						isCompact={isCompact}
+						selectedWallet={selectedWallet}
 						onClick={() => toggleUnvotesSelected?.(delegate.address())}
 					>
 						{t("COMMON.UNSELECTED")}
@@ -149,6 +152,7 @@ export const DelegateRow = ({
 					variant="primary"
 					compactClassName="text-theme-primary-600 hover:text-theme-primary-700"
 					isCompact={isCompact}
+					selectedWallet={selectedWallet}
 					onClick={() => toggleUnvotesSelected?.(delegate.address())}
 				>
 					{t("COMMON.CURRENT")}
@@ -158,7 +162,7 @@ export const DelegateRow = ({
 
 		if (isVoteDisabled && !isSelectedVote) {
 			return (
-				<DelegateVoteButton index={index} disabled compactClassName="text-black" isCompact={isCompact}>
+				<DelegateVoteButton index={index} disabled compactClassName="text-black" isCompact={isCompact} selectedWallet={selectedWallet}>
 					{t("COMMON.SELECT")}
 				</DelegateVoteButton>
 			);
@@ -172,6 +176,7 @@ export const DelegateRow = ({
 					compactClassName="text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700"
 					isCompact={isCompact}
 					onClick={() => toggleVotesSelected?.(delegate.address())}
+					selectedWallet={selectedWallet}
 				>
 					{t("COMMON.SELECTED")}
 				</DelegateVoteButton>
@@ -185,6 +190,7 @@ export const DelegateRow = ({
 				compactClassName="text-theme-primary-600 hover:text-theme-primary-700"
 				isCompact={isCompact}
 				onClick={() => toggleVotesSelected?.(delegate.address())}
+				selectedWallet={selectedWallet}
 			>
 				{t("COMMON.SELECT")}
 			</DelegateVoteButton>
@@ -241,13 +247,21 @@ export const DelegateRow = ({
 				})}
 			>
 				{isActive ? (
-					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_FORGING_POSITION")}>
+					<Tooltip content={selectDelegateValidatorTranslation({
+						delegateStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_FORGING_POSITION"),
+						network: selectedWallet.network(),
+						validatorStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.VALIDATOR_IN_FORGING_POSITION"),
+					})}>
 						<div>
 							<Icon name="StatusOk" className="text-theme-success-500" size="lg" />
 						</div>
 					</Tooltip>
 				) : (
-					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_STANDY_POSITION")}>
+					<Tooltip content={selectDelegateValidatorTranslation({
+						delegateStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_STANDY_POSITION"),
+						network: selectedWallet.network(),
+						validatorStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.VALIDATOR_IN_STANDY_POSITION"),
+					})}>
 						<div>
 							<Icon name="StatusStandby" className="text-theme-warning-500" size="lg" />
 						</div>
