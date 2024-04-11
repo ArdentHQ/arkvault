@@ -4,6 +4,7 @@ import { Networks } from "@ardenthq/sdk";
 import {
 	authentication,
 	common,
+	delegateRegistration,
 	multiSignatureRegistration,
 	sendIpfs,
 	sendTransfer,
@@ -47,9 +48,9 @@ export const useValidation = ({
 			usernameRegistration: usernameRegistration(t),
 			validatorRegistration: validatorRegistration(t),
 			verifyMessage: verifyMessage(t),
-			...(currentNetwork ? {
-				delegateRegistration(t, currentNetwork)
-			}: {})
+			...(currentNetwork == undefined ? {}: {
+				delegateRegistration: delegateRegistration(t, currentNetwork)
+			})
 		}),
 		[t, env, currentNetwork],
 	);
