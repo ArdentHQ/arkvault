@@ -27,9 +27,20 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Tra
 		>
 			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
-			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} extra={<TransactionDelegateIcon />}>
-				{transaction.username()}
-			</TransactionDetail>
+			{!!transaction.asset()?.validatorPublicKey && (
+				<TransactionSender
+					label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}
+					address={transaction.asset()?.validatorPublicKey as string}
+					network={transaction.wallet().network()}
+					border={false}
+				/>
+			)}
+
+			{transaction.username() && (
+				<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} extra={<TransactionDelegateIcon />}>
+					{transaction.username()}
+				</TransactionDetail>
+			)}
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
 
