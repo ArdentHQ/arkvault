@@ -36,11 +36,13 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		);
 	}, [env, wallet]);
 
-	useEffect(() => {
-		if (!username) {
-			register("username", delegateRegistration.username(usernames));
-		}
-	}, [delegateRegistration, usernames, register, username]);
+	if (!isMainsailNetwork(network)) {
+		useEffect(() => {
+			if (!username) {
+				register("username", delegateRegistration.username(usernames));
+			}
+		}, [delegateRegistration, usernames, register, username]);
+	}
 
 	return (
 		<section data-testid="DelegateRegistrationForm__form-step">
@@ -49,16 +51,16 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				subtitle={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.DESCRIPTION")}
 			/>
 
-			{!isMainsailNetwork(wallet.network()) && (
+			{!isMainsailNetwork(network) && (
 				<Alert className="mt-6">{t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.WARNING")}</Alert>
 			)}
 
-			<TransactionNetwork network={wallet.network()} border={false} />
+			<TransactionNetwork network={network} border={false} />
 
-			<TransactionSender address={wallet.address()} network={wallet.network()} borderPosition="both" />
+			<TransactionSender address={wallet.address()} network={network} borderPosition="both" />
 
 			<div className="space-y-6 pt-6">
-				{!isMainsailNetwork(wallet.network()) && (
+				{!isMainsailNetwork(network) && (
 					<FormField name="username">
 						<FormLabel label={t("TRANSACTION.DELEGATE_NAME")} />
 						<InputDefault
@@ -71,7 +73,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					</FormField>
 				)}
 
-				{isMainsailNetwork(wallet.network()) && (
+				{isMainsailNetwork(network) && (
 					<FormField name="publicKey">
 						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
 						<InputDefault
