@@ -11,14 +11,8 @@ interface SummaryStepProperties {
 }
 
 export const SummaryStep = ({ senderWallet, transaction }: SummaryStepProperties) => {
-	const { t } = useTranslation();
-
 	return (
 		<TransactionSuccessful transaction={transaction} senderWallet={senderWallet}>
-			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")}>
-				{senderWallet.username()}
-			</TransactionDetail>
-
 			<TransactionFee currency={senderWallet.currency()} value={transaction.fee()} paddingPosition="top" />
 		</TransactionSuccessful>
 	);

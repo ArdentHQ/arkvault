@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
 import {
 	TransactionDetail,
 	TransactionExplorerLink,
@@ -10,8 +9,9 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 
 import { Modal } from "@/app/components/Modal";
-import { TransactionUsernameRegistrationIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
+import { TransactionUsernameRegistrationIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
+import { useTranslation } from "react-i18next";
 
 export const UsernameRegistrationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();

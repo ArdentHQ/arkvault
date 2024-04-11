@@ -1,10 +1,10 @@
-import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
 import React from "react";
 import { Route } from "react-router-dom";
-import { TransactionFixture } from "@/tests/fixtures/transactions";
+
 import { UsernameResignationDetail } from "./UsernameResignationDetail";
 import { translations } from "@/domains/transaction/i18n";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -47,7 +47,7 @@ describe("UsernameResignationDetail", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
-			translations.MODAL_Username_RESIGNATION_DETAIL.TITLE,
+			translations.MODAL_USERNAME_RESIGNATION_DETAIL.TITLE,
 		);
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -1,15 +1,17 @@
 import React, { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+
+import { Modal } from "@/app/components/Modal";
 import {
+	TransactionDetail,
 	TransactionExplorerLink,
 	TransactionFee,
 	TransactionSender,
 	TransactionStatus,
 	TransactionTimestamp,
 } from "@/domains/transaction/components/TransactionDetail";
-
-import { Modal } from "@/app/components/Modal";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
-import { useTranslation } from "react-i18next";
+import { TransactionDelegateResignationIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
 
 export const UsernameResignationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
