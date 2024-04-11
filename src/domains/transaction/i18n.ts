@@ -25,8 +25,6 @@ export const translations = {
 	CORE: "CORE",
 	CRYPTOASSET: "Cryptoasset",
 	DELEGATE_NAME: "Delegate Name",
-	DELEGATE_PUBLICKEY: "Delegate PublicKey",
-	VALIDATOR_NAME: "Validator Name",
 	DESCRIPTION: "Description",
 	DISPLAY_NAME: "Display Name",
 	ENCRYPTION_PASSWORD: "Encryption Password",
@@ -200,8 +198,15 @@ export const translations = {
 	MODAL_USERNAME_RESIGNATION_DETAIL: {
 		TITLE: "Username Resignation",
 	},
+	MODAL_VALIDATOR_REGISTRATION_DETAIL: {
+		TITLE: "Validator Registration",
+	},
+	MODAL_VALIDATOR_RESIGNATION_DETAIL: {
+		TITLE: "Validator Resignation",
+	},
 	MODAL_VOTE_DETAIL: {
-		TITLE: "Delegate Vote",
+		TITLE: "Validator Vote",
+		TITLE_DELEGATE: "Delegate Vote",
 	},
 	MULTIPLE: "Multiple",
 	MULTISIGNATURE: {
@@ -305,11 +310,12 @@ export const translations = {
 			TITLE: "Select a Cryptoasset",
 		},
 	},
+	VALIDATOR_NAME: "Validator Name",
 	PAGE_USERNAME_REGISTRATION: {
 		FORM_STEP: {
 			DESCRIPTION: "Register a new username for an address on the network below.",
-			TITLE: "Register Username",
 			INFO: "Username registrations are stored on-chain and publicly visible.",
+			TITLE: "Register Username",
 		},
 	},
 	PAGE_USERNAME_RESIGNATION: {

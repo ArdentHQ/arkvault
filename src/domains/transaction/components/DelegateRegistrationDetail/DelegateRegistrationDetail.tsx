@@ -21,7 +21,11 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Tra
 
 	return (
 		<Modal
-			title={t("TRANSACTION.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE")}
+			title={selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE"),
+				network: wallet.network(),
+				validatorStr: t("TRANSACTION.MODAL_VALIDATOR_REGISTRATION_DETAIL.TITLE"),
+			})}
 			isOpen={isOpen}
 			onClose={onClose}
 			noButtons
