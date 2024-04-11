@@ -2,6 +2,8 @@ import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import { Networks } from '@ardenthq/sdk';
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 interface TransactionTypeProperties {
 	wallets?: Contracts.IReadWriteWallet[];
@@ -11,15 +13,23 @@ const MagistrateTransactionType = "magistrate";
 
 export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties = {}) => {
 	const { t } = useTranslation();
-
-	const transactionTypes: Record<string, { icon: string; label: string }> = {
+	
+	const transactionTypes: Record<string, { icon: string; label: string | ((network: Networks.Network) => string) }> = {
 		delegateRegistration: {
 			icon: "DelegateRegistration",
-			label: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
+			label: (network) => selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
+				network,
+				validatorStr: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
+			}),
 		},
 		delegateResignation: {
 			icon: "DelegateResignation",
-			label: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_RESIGNATION"),
+			label: (network) => selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_RESIGNATION"),
+				network,
+				validatorStr: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION"),
+			}),
 		},
 		htlcClaim: {
 			icon: "Timelock",
@@ -83,6 +93,16 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		},
 	};
 
+	const getLabel = (type: string, network: Networks.Network): string => {
+		const label = transactionTypes[type].label;
+
+		if (typeof label === "function") {
+			return label(network);
+		}
+
+		return label;
+	} ;
+
 	return {
 		canViewMagistrate: useMemo(
 			() =>
@@ -92,7 +112,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 			[wallets],
 		),
 		getIcon: (type: string): string => transactionTypes[type].icon,
-		getLabel: (type: string): string => transactionTypes[type].label,
+		getLabel,
 		types: {
 			core: useMemo(() => {
 				const allSupportedTypes: string[] = [];

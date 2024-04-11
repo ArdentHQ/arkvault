@@ -259,20 +259,6 @@ export const translations = {
 			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
 		},
 	},
-	PAGE_VALIDATOR_REGISTRATION: {
-		FORM_STEP: {
-			DESCRIPTION: "Register a new Validator address on the network below.",
-			TITLE: "Register Validator",
-			WARNING: "The Validator name is permanent and cannot be modified later. It is registered on the network.",
-		},
-	},
-	PAGE_VALIDATOR_RESIGNATION: {
-		FORM_STEP: {
-			DESCRIPTION: "This transaction type permanently retires a Validator address.",
-			TITLE: "Resign Validator",
-			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
-		},
-	},
 	PAGE_IPFS: {
 		FIRST_STEP: {
 			DESCRIPTION: "Store an IPFS hash on the network.",
@@ -324,7 +310,6 @@ export const translations = {
 			TITLE: "Select a Cryptoasset",
 		},
 	},
-	VALIDATOR_NAME: "Validator Name",
 	PAGE_USERNAME_REGISTRATION: {
 		FORM_STEP: {
 			DESCRIPTION: "Register a new username for an address on the network below.",
@@ -336,6 +321,20 @@ export const translations = {
 		FORM_STEP: {
 			DESCRIPTION: "Remove your existing username from the address.",
 			TITLE: "Resign Username",
+		},
+	},
+	PAGE_VALIDATOR_REGISTRATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Register a new Validator address on the network below.",
+			TITLE: "Register Validator",
+			WARNING: "The Validator name is permanent and cannot be modified later. It is registered on the network.",
+		},
+	},
+	PAGE_VALIDATOR_RESIGNATION: {
+		FORM_STEP: {
+			DESCRIPTION: "This transaction type permanently retires a Validator address.",
+			TITLE: "Resign Validator",
+			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
 		},
 	},
 	PAGE_VOTE: {
@@ -412,10 +411,11 @@ export const translations = {
 		UNVOTE: "Unvote",
 		USERNAME_REGISTRATION: "Username Registration",
 		USERNAME_RESIGNATION: "Username Resignation",
+		VALIDATOR_REGISTRATION: "Validator Registration",
+		VALIDATOR_RESIGNATION: "Validator Resignation",
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Switch Vote",
 	},
-
 	TYPE: "Type",
 
 	UNLOCK_TOKENS: {
@@ -439,6 +439,7 @@ export const translations = {
 		UNLOCK: "Unlock",
 		UNLOCKABLE: "Unlockable",
 	},
+
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",
@@ -474,6 +475,7 @@ export const translations = {
 		SIGNATORY_MISSING: "signatory is missing",
 		SIGNATURE_MISSING: "signature is missing",
 	},
+	VALIDATOR_NAME: "Validator Name",
 	VALIDATOR_PUBLIC_KEY: "Validator Public Key",
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",

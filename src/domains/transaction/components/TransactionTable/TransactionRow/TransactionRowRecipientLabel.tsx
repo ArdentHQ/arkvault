@@ -2,6 +2,7 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 
 import { useResizeDetector } from "react-resize-detector";
+import { Networks } from "@ardenthq/sdk";
 import { Address } from "@/app/components/Address";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
@@ -15,22 +16,25 @@ interface Properties {
 	recipient: string;
 	walletName?: string;
 	addressClass?: string;
+	network: Networks.Network;
 }
 
-const RecipientLabel = ({ type }: { type: string }) => {
+const RecipientLabel = ({ type, network }: { type: string, network: Networks.Network }) => {
 	const { getLabel } = useTransactionTypes();
 	return (
 		<span data-testid="TransactionRowRecipientLabel" className="font-semibold text-theme-text">
-			{getLabel(type)}
+			{getLabel(type, network)}
 		</span>
 	);
 };
 
 const VoteCombinationLabel = ({
+	network,
 	delegate,
 	votes,
 	unvotes,
 }: {
+	network: Networks.Network;
 	delegate?: Contracts.IReadOnlyWallet;
 	votes: string[];
 	unvotes: string[];
@@ -38,13 +42,13 @@ const VoteCombinationLabel = ({
 	<span data-testid="TransactionRowVoteCombinationLabel" className="overflow-auto´ flex max-w-full flex-1">
 		{votes.length === 1 && unvotes.length === 1 ? (
 			<>
-				<RecipientLabel type="voteCombination" />
+				<RecipientLabel type="voteCombination" network={network} />
 				<DelegateLabel username={delegate?.username()} address={delegate?.address()} />
 			</>
 		) : (
 			<div className="space-x-1">
 				<span className="inline-flex max-w-72">
-					<RecipientLabel type="vote" />
+					<RecipientLabel type="vote" network={network} />
 					{votes.length > 1 && (
 						<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 							{votes.length}
@@ -55,7 +59,7 @@ const VoteCombinationLabel = ({
 				<span>/</span>
 
 				<span>
-					<RecipientLabel type="unvote" />
+					<RecipientLabel type="unvote" network={network} />
 					{unvotes.length > 1 && (
 						<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 							{unvotes.length}
@@ -84,9 +88,9 @@ const DelegateLabel = ({ username, address, count }: { username?: string; addres
 	);
 };
 
-const VoteLabel = ({ delegates, isUnvote }: { delegates: Contracts.IReadOnlyWallet[]; isUnvote?: boolean }) => (
+const VoteLabel = ({ delegates, isUnvote, network }: { delegates: Contracts.IReadOnlyWallet[]; isUnvote?: boolean, network: Networks.Network }) => (
 	<span data-testid="TransactionRowVoteLabel" className="flex">
-		<RecipientLabel type={isUnvote ? "unvote" : "vote"} />
+		<RecipientLabel type={isUnvote ? "unvote" : "vote"} network={network} />
 		{delegates.length > 0 && (
 			<DelegateLabel
 				username={delegates[0]?.username()}
@@ -103,6 +107,7 @@ export const BaseTransactionRowRecipientLabel = ({
 	recipient,
 	walletName,
 	addressClass,
+	network
 }: Properties) => {
 	const { env } = useEnvironmentContext();
 
@@ -139,7 +144,7 @@ export const BaseTransactionRowRecipientLabel = ({
 	if (transaction?.isMultiPayment()) {
 		return (
 			<span>
-				<RecipientLabel type="multiPayment" />
+				<RecipientLabel type="multiPayment" network={network} />
 				<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 					{transaction.recipients().length}
 				</span>
@@ -150,9 +155,10 @@ export const BaseTransactionRowRecipientLabel = ({
 	if (transaction?.isVoteCombination()) {
 		return (
 			<VoteCombinationLabel
-				delegate={delegates.votes[0]}
+				delegate={delegates.votes[0]!}
 				votes={transaction.votes()}
 				unvotes={transaction.unvotes()}
+				network={network}
 			/>
 		);
 	}
@@ -162,11 +168,12 @@ export const BaseTransactionRowRecipientLabel = ({
 			<VoteLabel
 				delegates={delegates[transaction.isVote() ? "votes" : "unvotes"]}
 				isUnvote={transaction.isUnvote()}
+				network={network}
 			/>
 		);
 	}
 
-	return <RecipientLabel type={type} />;
+	return <RecipientLabel type={type} network={network} />;
 };
 
 export const TransactionRowRecipientLabel = ({
@@ -184,5 +191,6 @@ export const TransactionRowRecipientLabel = ({
 		recipient={transaction.recipient()}
 		walletName={walletName}
 		addressClass={addressClass}
+		network={transaction.wallet().network()}
 	/>
 );

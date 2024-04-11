@@ -193,7 +193,7 @@ export const SignedTransactionRow = ({
 					isCompact={isCompact}
 				/>
 
-				<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} />
+				<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} network={wallet.network()}  />
 			</TableCell>
 
 			<TableCell className="w-16" innerClassName="justify-center truncate" isCompact={isCompact}>
