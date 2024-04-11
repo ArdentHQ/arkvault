@@ -12,7 +12,7 @@ describe("Network utils", () => {
 			.map((wallet) => wallet.network());
 
 		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(networks);
-		const ledgerSpy = vi.spyOn(networks.at(0), "allows").mockReturnValue(true);
+		const ledgerSpy = vi.spyOn(networks.at(0), "allowsLedger").mockReturnValue(true);
 
 		const withLedgerSupport = hasNetworksWithLedgerSupport(profile);
 		expect(withLedgerSupport).toBe(true);
@@ -30,7 +30,7 @@ describe("Network utils", () => {
 			.map((wallet) => wallet.network());
 
 		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(networks);
-		const ledgerSpy = vi.spyOn(networks.at(0), "allows").mockReturnValue(false);
+		const ledgerSpy = vi.spyOn(networks.at(0), "allowsLedger").mockReturnValue(false);
 
 		const withLedgerSupport = hasNetworksWithLedgerSupport(profile);
 		expect(withLedgerSupport).toBe(false);
