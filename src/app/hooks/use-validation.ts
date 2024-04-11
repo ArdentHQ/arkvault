@@ -46,7 +46,11 @@ export const useValidation = (properties?: {
 			usernameRegistration: usernameRegistration(t),
 			validatorRegistration: validatorRegistration(t),
 			verifyMessage: verifyMessage(t),
-			...(properties?.network == undefined ? {}: {
+			...(properties?.network == undefined ? {
+				delegateRegistration: () => {
+					throw new Error("Network is required for delegate registration validation")
+				}
+			}: {
 				delegateRegistration: delegateRegistration(t, properties?.network)
 			})
 		}),
