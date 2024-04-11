@@ -24,8 +24,16 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 	return (
 		<section data-testid="SendDelegateResignation__form-step">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.TITLE")}
-				subtitle={t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.DESCRIPTION")}
+				title={selectDelegateValidatorTranslation({
+					delegateStr: t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.TITLE"),
+					network: senderWallet.network(),
+					validatorStr: t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE"),
+				})}
+				subtitle={selectDelegateValidatorTranslation({
+					delegateStr: t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.DESCRIPTION"),
+					network: senderWallet.network(),
+					validatorStr: t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.DESCRIPTION"),
+				})}
 			/>
 
 			<Alert className="mt-6">{t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.WARNING")}</Alert>

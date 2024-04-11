@@ -259,6 +259,20 @@ export const translations = {
 			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
 		},
 	},
+	PAGE_VALIDATOR_REGISTRATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Register a new Validator address on the network below.",
+			TITLE: "Register Validator",
+			WARNING: "The Validator name is permanent and cannot be modified later. It is registered on the network.",
+		},
+	},
+	PAGE_VALIDATOR_RESIGNATION: {
+		FORM_STEP: {
+			DESCRIPTION: "This transaction type permanently retires a Validator address.",
+			TITLE: "Resign Validator",
+			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
+		},
+	},
 	PAGE_IPFS: {
 		FIRST_STEP: {
 			DESCRIPTION: "Store an IPFS hash on the network.",
