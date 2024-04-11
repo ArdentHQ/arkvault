@@ -11,6 +11,7 @@ import {
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 interface FormStepProperties {
 	senderWallet: ProfilesContracts.IReadWriteWallet;
@@ -33,7 +34,11 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 
 			<TransactionSender address={senderWallet.address()} network={senderWallet.network()} />
 
-			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} borderPosition="both">
+			<TransactionDetail label={selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.DELEGATE_NAME"),
+				network: senderWallet.network(),
+				validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
+			})} borderPosition="both">
 				{senderWallet.username()}
 			</TransactionDetail>
 

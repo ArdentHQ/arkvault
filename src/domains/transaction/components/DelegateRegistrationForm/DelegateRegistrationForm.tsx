@@ -8,6 +8,7 @@ import { ReviewStep } from "./ReviewStep";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { isMainsailNetwork } from "@/utils/network-utils";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 const component = ({
 	activeTab,
@@ -38,7 +39,11 @@ const transactionDetails = ({
 	wallet: Contracts.IReadWriteWallet;
 }) => (
 	<>
-		<TransactionDetail label={translations("TRANSACTION.DELEGATE_NAME")}>
+		<TransactionDetail label={selectDelegateValidatorTranslation({
+				delegateStr: translations("TRANSACTION.DELEGATE_NAME"),
+				network: wallet.network(),
+				validatorStr: translations("TRANSACTION.VALIDATOR_NAME"),
+			})}>
 			{transaction.username()}
 		</TransactionDetail>
 

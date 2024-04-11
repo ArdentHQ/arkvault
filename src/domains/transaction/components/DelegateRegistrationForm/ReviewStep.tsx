@@ -10,6 +10,7 @@ import {
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();
@@ -35,7 +36,11 @@ export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 
 			<TransactionSender address={wallet.address()} network={wallet.network()} />
 
-			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")}>{username}</TransactionDetail>
+			<TransactionDetail label={selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.DELEGATE_NAME"),
+				network: wallet.network(),
+				validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
+			})}>{username}</TransactionDetail>
 
 			<div className="mt-2">
 				<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />

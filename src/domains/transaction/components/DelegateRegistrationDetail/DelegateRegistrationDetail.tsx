@@ -12,6 +12,7 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
@@ -27,7 +28,11 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Tra
 		>
 			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
-			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} extra={<TransactionDelegateIcon />}>
+			<TransactionDetail label={selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.DELEGATE_NAME"),
+				network: wallet.network(),
+				validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
+			})} extra={<TransactionDelegateIcon />}>
 				{transaction.username()}
 			</TransactionDetail>
 
