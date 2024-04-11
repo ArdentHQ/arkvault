@@ -145,12 +145,6 @@ export const translations = {
 	MODAL_DELEGATE_RESIGNATION_DETAIL: {
 		TITLE: "Delegate Resignation",
 	},
-	MODAL_USERNAME_REGISTRATION_DETAIL: {
-		TITLE: "Username Registration",
-	},
-	MODAL_USERNAME_RESIGNATION_DETAIL: {
-		TITLE: "Username Resignation",
-	},
 	MODAL_FEE_WARNING: {
 		DESCRIPTION: {
 			TOO_HIGH:
@@ -253,20 +247,6 @@ export const translations = {
 			WARNING: "The Delegate name is permanent and cannot be modified later. It is registered on the network.",
 		},
 	},
-	PAGE_USERNAME_REGISTRATION: {
-		FORM_STEP: {
-			DESCRIPTION: "Register a new username for an address on the network below.",
-			TITLE: "Register Username",
-			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
-		},
-	},
-	PAGE_USERNAME_RESIGNATION: {
-		FORM_STEP: {
-			DESCRIPTION: "This transaction type permanently retires the username of an address.",
-			TITLE: "Resign Username",
-			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
-		},
-	},
 	PAGE_DELEGATE_RESIGNATION: {
 		FORM_STEP: {
 			DESCRIPTION: "This transaction type permanently retires a Delegate address.",
@@ -323,6 +303,19 @@ export const translations = {
 		NETWORK_STEP: {
 			SUBTITLE: "Select a cryptoasset to send funds from.",
 			TITLE: "Select a Cryptoasset",
+		},
+	},
+	PAGE_USERNAME_REGISTRATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Register a new username for an address on the network below.",
+			TITLE: "Register Username",
+			INFO: "Username registrations are stored on-chain and publicly visible.",
+		},
+	},
+	PAGE_USERNAME_RESIGNATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Remove your existing username from the address.",
+			TITLE: "Resign Username",
 		},
 	},
 	PAGE_VOTE: {

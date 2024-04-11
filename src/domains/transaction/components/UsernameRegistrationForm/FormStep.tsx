@@ -1,17 +1,17 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { FormField, FormLabel } from "@/app/components/Form";
 import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 
 import { Alert } from "@/app/components/Alert";
-import { FormField, FormLabel } from "@/app/components/Form";
-import { InputDefault } from "@/app/components/Input";
-import { useEnvironmentContext } from "@/app/contexts";
-import { useValidation } from "@/app/hooks";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import { useValidation } from "@/app/hooks";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -37,7 +37,9 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				subtitle={t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.DESCRIPTION")}
 			/>
 
-			<Alert className="mt-6">{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.WARNING")}</Alert>
+			<Alert variant="info" className="mt-6">
+				{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO")}
+			</Alert>
 
 			<TransactionNetwork network={wallet.network()} border={false} />
 

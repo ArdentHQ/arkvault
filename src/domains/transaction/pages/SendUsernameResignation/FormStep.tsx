@@ -1,16 +1,15 @@
-import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
-import React from "react";
-import { useTranslation } from "react-i18next";
-
-import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { FeeField } from "@/domains/transaction/components/FeeField";
 import {
 	TransactionDetail,
 	TransactionNetwork,
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
+
+import { FeeField } from "@/domains/transaction/components/FeeField";
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
+import React from "react";
 import { StepHeader } from "@/app/components/StepHeader";
+import { useTranslation } from "react-i18next";
 
 interface FormStepProperties {
 	senderWallet: ProfilesContracts.IReadWriteWallet;
@@ -26,8 +25,6 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 				title={t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.TITLE")}
 				subtitle={t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.DESCRIPTION")}
 			/>
-
-			<Alert className="mt-6">{t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.WARNING")}</Alert>
 
 			<TransactionNetwork network={senderWallet.network()} border={false} />
 
