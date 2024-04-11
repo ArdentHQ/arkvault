@@ -169,7 +169,6 @@ export const findNetworkFromSearchParameters = (profile: Contracts.IProfile, sea
 	}
 };
 
-
 export const hasNetworksWithLedgerSupport = (profile: Contracts.IProfile) => {
 	const enabledNetworks = profileAllEnabledNetworks(profile);
 	return enabledNetworks.length > 0 && enabledNetworks.some((network) => network.allows("Ledger"));
