@@ -18,7 +18,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
-	const { delegateRegistration, validatorRegistration } = useValidation();
+	const { delegateRegistration, validatorRegistration } = useValidation({ network: wallet.network() });
 
 	const { register, setValue, getValues } = useFormContext();
 	const { username, publicKey } = getValues(["username", "publicKey"]);

@@ -1,16 +1,26 @@
+import { Networks } from "@ardenthq/sdk";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 import { validatePattern } from "@/utils/validations";
 
-export const delegateRegistration = (t: any) => ({
+export const delegateRegistration = (t: any, currentNetwork: Networks.Network) => ({
 	username: (usernames: string[]) => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
-				field: t("COMMON.DELEGATE_NAME"),
+				field: selectDelegateValidatorTranslation({
+					delegateStr: t("COMMON.VALIDATOR_NAME"),
+					network: currentNetwork,
+					validatorStr: t("COMMON.DELEGATE_NAME"),
+				}),
 				maxLength: 20,
 			}),
 			value: 20,
 		},
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-			field: t("COMMON.DELEGATE_NAME"),
+			field: selectDelegateValidatorTranslation({
+				delegateStr: t("COMMON.VALIDATOR_NAME"),
+				network: currentNetwork,
+				validatorStr: t("COMMON.DELEGATE_NAME"),
+			}),
 		}),
 		validate: {
 			pattern: (value: string) => validatePattern(t, value, /[\d!$&.@_a-z]+/),
