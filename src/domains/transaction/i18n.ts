@@ -305,6 +305,19 @@ export const translations = {
 			TITLE: "Select a Cryptoasset",
 		},
 	},
+	PAGE_USERNAME_REGISTRATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Register a new username for an address on the network below.",
+			TITLE: "Register Username",
+			INFO: "Username registrations are stored on-chain and publicly visible.",
+		},
+	},
+	PAGE_USERNAME_RESIGNATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Remove your existing username from the address.",
+			TITLE: "Resign Username",
+		},
+	},
 	PAGE_VOTE: {
 		FORM_STEP: {
 			DESCRIPTION: "Select a fee to continue.",

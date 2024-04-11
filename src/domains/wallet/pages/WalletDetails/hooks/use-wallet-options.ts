@@ -116,6 +116,25 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			});
 		}
 
+		if (
+			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration)
+		) {
+			registrationOptions.options.push({
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_USERNAME"),
+				value: "username-registration",
+			});
+		}
+
+		if (
+			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameResignation) &&
+			wallet.username()
+		) {
+			registrationOptions.options.push({
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_USERNAME"),
+				value: "username-resignation",
+			});
+		}
+
 		if (allowsSecondSignature()) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE"),

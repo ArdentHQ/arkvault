@@ -27,6 +27,10 @@ import {
 	signSecondSignatureRegistration,
 } from "@/domains/transaction/components/SecondSignatureRegistrationForm";
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
+import {
+	signUsernameRegistration,
+	UsernameRegistrationForm
+} from "@/domains/transaction/components/UsernameRegistrationForm";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -93,6 +97,7 @@ export const SendRegistration = () => {
 	useLayoutEffect(() => {
 		const registrations = {
 			default: () => setRegistrationForm(DelegateRegistrationForm),
+			usernameRegistration: () => setRegistrationForm(UsernameRegistrationForm),
 			multiSignature: () => setRegistrationForm(MultiSignatureRegistrationForm),
 			secondSignature: () => setRegistrationForm(SecondSignatureRegistrationForm),
 		};
@@ -190,6 +195,18 @@ export const SendRegistration = () => {
 				setTransaction(transaction);
 				handleNext();
 			}
+
+			if (registrationType === "usernameRegistration") {
+				const transaction = await signUsernameRegistration({
+					env,
+					form,
+					profile: activeProfile,
+					signatory,
+				});
+
+				setTransaction(transaction);
+				handleNext();
+			}
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(10);
@@ -232,6 +249,7 @@ export const SendRegistration = () => {
 	const getPageTitle = () =>
 		({
 			default: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
+			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
 			secondSignature: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
 		}[registrationType]);

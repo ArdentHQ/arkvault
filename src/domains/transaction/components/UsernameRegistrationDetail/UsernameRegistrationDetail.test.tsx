@@ -35,7 +35,7 @@ describe("UsernameRegistrationDetail", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
-			translations.MODAL_Username_REGISTRATION_DETAIL.TITLE,
+			translations.MODAL_USERNAME_REGISTRATION_DETAIL.TITLE,
 		);
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -6,6 +6,7 @@ import {
 	sendIpfs,
 	sendTransfer,
 	sendVote,
+	usernameRegistration,
 	validatorRegistration,
 } from "@/domains/transaction/validations";
 import { network, server, settings } from "@/domains/setting/validations";
@@ -40,6 +41,7 @@ export const useValidation = () => {
 			server: server(t),
 			settings: settings(t, env),
 			signMessage: signMessage(t),
+			usernameRegistration: usernameRegistration(t),
 			validatorRegistration: validatorRegistration(t),
 			verifyMessage: verifyMessage(t),
 		}),

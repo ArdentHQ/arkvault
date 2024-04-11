@@ -4,6 +4,7 @@ import { RouteItem } from "@/router/router.types";
 import preloadLazy from "@/utils/preload-lazy";
 
 const SendDelegateResignation = preloadLazy(() => import("./pages/SendDelegateResignation"));
+const SendUsernameResignation = preloadLazy(() => import("./pages/SendUsernameResignation"));
 const SendIpfs = preloadLazy(() => import("./pages/SendIpfs"));
 const SendRegistration = preloadLazy(() => import("./pages/SendRegistration"));
 const SendTransfer = preloadLazy(() => import("./pages/SendTransfer") as Promise<{ default: ComponentType<unknown> }>);
@@ -19,6 +20,11 @@ export const TransactionRoutes: RouteItem[] = [
 		component: SendDelegateResignation,
 		exact: true,
 		path: ProfilePaths.SendDelegateResignation,
+	},
+	{
+		component: SendUsernameResignation,
+		exact: true,
+		path: ProfilePaths.SendUsernameResignation,
 	},
 	{
 		component: SendTransfer,
