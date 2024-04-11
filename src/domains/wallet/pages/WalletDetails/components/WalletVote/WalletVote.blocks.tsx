@@ -94,7 +94,7 @@ const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) =>
 			return (
 				<>
 					<HintIcon
-						tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING", {
+						tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING_COUNT", {
 							count: standbyCount,
 						})}
 					/>
@@ -112,7 +112,7 @@ const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) =>
 			return (
 				<>
 					<HintIcon
-						tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING", {
+						tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING_COUNT", {
 							count: resignedCount,
 						})}
 					/>
