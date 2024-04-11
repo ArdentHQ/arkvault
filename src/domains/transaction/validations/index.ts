@@ -6,3 +6,4 @@ export * from "./MultiSignatureRegistration";
 export * from "./SendIpfs";
 export * from "./SendTransfer";
 export * from "./SendVote";
+export * from "./ValidatorRegistration";

@@ -7,6 +7,7 @@ import React from "react";
 import { ReviewStep } from "./ReviewStep";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
+import { isMainsailNetwork } from "@/utils/network-utils";
 
 const component = ({
 	activeTab,
@@ -50,7 +51,7 @@ transactionDetails.displayName = "DelegateRegistrationFormTransactionDetails";
 
 export const DelegateRegistrationForm: SendRegistrationForm = {
 	component,
-	formFields: ["username"],
+	formFields: ["username", "publicKey"],
 	tabSteps: 2,
 	transactionDetails,
 };
@@ -59,13 +60,13 @@ export const signDelegateRegistration = async ({ env, form, profile, signatory }
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
-	const { fee, network, senderAddress, username } = getValues();
+	const { fee, network, senderAddress, username, publicKey } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
+	const data = isMainsailNetwork(network) ? { publicKey } : { username };
+
 	const transactionId = await senderWallet.transaction().signDelegateRegistration({
-		data: {
-			username,
-		},
+		data,
 		fee: +fee,
 		signatory,
 	});

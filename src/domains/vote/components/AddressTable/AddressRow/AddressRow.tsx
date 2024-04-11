@@ -43,7 +43,7 @@ export const WalletAvatar = ({ wallet, useCompact }: { useCompact?: boolean; wal
 	}
 
 	return (
-		<Tooltip content={wallet.username()}>
+		<Tooltip content={wallet.username() ?? wallet.address()}>
 			<Link to={wallet.explorerLink()} isExternal className="flex">
 				<Avatar
 					className={cn({ "ring-2 ring-theme-background": useCompact })}

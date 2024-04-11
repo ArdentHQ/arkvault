@@ -33,7 +33,7 @@ export const TransactionRowRecipient = ({ transaction, profile, isCompact, label
 				type={transaction.type()}
 				isCompact={isCompact}
 			/>
-			<div className={cn("w-0 flex-1", labelClass)}>
+			<div className={cn("w-0 flex-1 overflow-auto", labelClass)}>
 				<TransactionRowRecipientLabel transaction={transaction} walletName={alias} />
 			</div>
 		</>

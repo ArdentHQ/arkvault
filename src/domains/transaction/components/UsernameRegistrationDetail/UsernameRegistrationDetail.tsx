@@ -1,7 +1,4 @@
 import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
-
-import { Modal } from "@/app/components/Modal";
 import {
 	TransactionDetail,
 	TransactionExplorerLink,
@@ -10,8 +7,11 @@ import {
 	TransactionStatus,
 	TransactionTimestamp,
 } from "@/domains/transaction/components/TransactionDetail";
+
+import { Modal } from "@/app/components/Modal";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
-import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
+import { TransactionUsernameRegistrationIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
+import { useTranslation } from "react-i18next";
 
 export const UsernameRegistrationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
@@ -27,9 +27,7 @@ export const UsernameRegistrationDetail = ({ isOpen, transaction, onClose }: Tra
 		>
 			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
-			{/* @TODO: Use new icons for username registration & resignation types when available.
-				@see https://app.clickup.com/t/86dt6ymku */}
-			<TransactionDetail label={t("TRANSACTION.USERNAME")} extra={<TransactionDelegateIcon />}>
+			<TransactionDetail label={t("TRANSACTION.USERNAME")} extra={<TransactionUsernameRegistrationIcon />}>
 				{transaction.username()}
 			</TransactionDetail>
 

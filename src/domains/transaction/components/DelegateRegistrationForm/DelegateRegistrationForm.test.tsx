@@ -120,6 +120,26 @@ describe("DelegateRegistrationForm", () => {
 		await waitFor(() => expect(form?.getValues("username")).toBe("test_delegate"));
 	});
 
+	it("should render and set public key for mainsail networks", async () => {
+		const delegates = env.delegates().all(wallet.coinId(), wallet.networkId());
+		const delegatesSpy = vi.spyOn(env.delegates(), "all").mockReturnValue(delegates);
+		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
+
+		const { form } = renderComponent();
+
+		const publicKey = "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de";
+
+		await expect(screen.findByTestId("Input__username")).rejects.toThrow(/Unable to find/);
+
+		userEvent.paste(screen.getByTestId("Input__public_key"), publicKey);
+
+		await waitFor(() => expect(screen.getByTestId("Input__public_key")).toHaveValue(publicKey));
+		await waitFor(() => expect(form?.getValues("publicKey")).toBe(publicKey));
+
+		mainsailSpy.mockRestore();
+		delegatesSpy.mockRestore();
+	});
+
 	it("should set fee", async () => {
 		const { asFragment } = renderComponent({
 			defaultValues: {
