@@ -171,11 +171,11 @@ const DelegateStatus = ({ votes, activeDelegates, wallet }: DelegateStatusProper
 	return (
 		<div className="flex flex-col items-center justify-between border-theme-secondary-300 px-6 py-4 font-semibold dark:border-theme-secondary-800 md:mr-6 md:items-end md:border-r md:py-0 md:pl-0 md:pr-6">
 			<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
-			{selectDelegateValidatorTranslation({
-							delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.DELEGATE_STATUS"),
-							network: wallet.network(),
-							validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VALIDATOR_STATUS")
-						})}
+				{selectDelegateValidatorTranslation({
+					delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.DELEGATE_STATUS"),
+					network: wallet.network(),
+					validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VALIDATOR_STATUS")
+				})}
 			</span>
 			<div className="flex items-center justify-end space-x-2">{renderStatuses()}</div>
 		</div>
