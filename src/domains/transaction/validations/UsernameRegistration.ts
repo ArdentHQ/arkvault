@@ -1,6 +1,6 @@
-import { validatePattern } from "@/utils/validations";
 import { Networks } from "@ardenthq/sdk";
-import {debounceAsync} from "@/utils/debounce";
+import { debounceAsync } from "@/utils/debounce";
+import { validatePattern } from "@/utils/validations";
 
 export const usernameRegistration = (t: any) => ({
 	username: (network: Networks.Network) => ({
@@ -20,18 +20,18 @@ export const usernameRegistration = (t: any) => ({
 				try {
 					await usernameExists(network, value);
 				} catch (_e) {
-					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") })
+					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
 				}
 			}, 500),
 		},
 	}),
 });
 
-const usernameExists = async (network: Networks.Network, username: string,) => {
+const usernameExists = async (network: Networks.Network, username: string) => {
 	const endpoints = {
-		"mainsail.devnet": 'https://dwallets.mainsailhq.com/api/wallets/',
-		"mainsail.mainnet": 'https://wallets.mainsailhq.com/api/wallets/',
-	}
+		"mainsail.devnet": "https://dwallets.mainsailhq.com/api/wallets/",
+		"mainsail.mainnet": "https://wallets.mainsailhq.com/api/wallets/",
+	};
 
 	if (username.length === 0) return;
 
@@ -40,4 +40,4 @@ const usernameExists = async (network: Networks.Network, username: string,) => {
 	if (response.ok) {
 		throw Error("Username is occupied!");
 	}
-}
+};
