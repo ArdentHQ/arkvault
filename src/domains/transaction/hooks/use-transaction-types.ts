@@ -87,7 +87,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		canViewMagistrate: useMemo(
 			() =>
 				wallets.some((wallet) =>
-					(wallet.transactionTypes() as string[]).filter((type) => type === MagistrateTransactionType),
+					wallet.transactionTypes().some((type) => (type as string) === MagistrateTransactionType),
 				),
 			[wallets],
 		),
