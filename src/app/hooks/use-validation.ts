@@ -21,9 +21,7 @@ import { password } from "@/app/validations/password";
 import { receiveFunds } from "@/domains/wallet/validations";
 import { useEnvironmentContext } from "@/app/contexts";
 
-export const useValidation = ({
-	network: currentNetwork,
-}: {
+export const useValidation = (properties?: {
 	network?: Networks.Network;
 }) => {
 	const { t } = useTranslation();
@@ -48,10 +46,10 @@ export const useValidation = ({
 			usernameRegistration: usernameRegistration(t),
 			validatorRegistration: validatorRegistration(t),
 			verifyMessage: verifyMessage(t),
-			...(currentNetwork == undefined ? {}: {
-				delegateRegistration: delegateRegistration(t, currentNetwork)
+			...(properties?.network == undefined ? {}: {
+				delegateRegistration: delegateRegistration(t, properties?.network)
 			})
 		}),
-		[t, env, currentNetwork],
+		[t, env, properties?.network],
 	);
 };

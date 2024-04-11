@@ -133,6 +133,7 @@ export const Votes: FC = () => {
 
 	const voteWallet = currentVotes.find(({ wallet }) => wallet!.isResignedDelegate())?.wallet;
 
+	
 	return (
 		<Page pageTitle={isSelectDelegateStep ? t("VOTE.DELEGATE_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
 			<VotesHeader
@@ -145,9 +146,9 @@ export const Votes: FC = () => {
 				totalCurrentVotes={currentVotes.length}
 				selectedFilter={voteFilter}
 				setSelectedFilter={setVoteFilter}
-				activeWallet={activeWallet}
+				wallet={selectedWallet}
 			/>
-
+			
 			{!hasWallets && (
 				<Section>
 					<VotesEmpty
@@ -170,7 +171,7 @@ export const Votes: FC = () => {
 			{isSelectDelegateStep && (
 				<Section innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18">
 					<DelegateTable
-						activeWallet={activeWallet}
+						wallet={selectedWallet}
 						searchQuery={searchQuery}
 						delegates={filteredDelegates}
 						isLoading={isLoadingDelegates}

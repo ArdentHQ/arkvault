@@ -24,7 +24,7 @@ interface VotesHeaderProperties {
 	totalCurrentVotes: number;
 	selectedFilter?: FilterOption;
 	setSelectedFilter?: (selected: FilterOption) => void;
-	activeWallet?: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 }
 
 export const VotesHeader = ({
@@ -37,7 +37,7 @@ export const VotesHeader = ({
 	selectedFilter,
 	setSelectedFilter,
 	isSelectDelegateStep,
-	activeWallet
+	wallet
 }: VotesHeaderProperties) => {
 	const { t } = useTranslation();
 
@@ -47,7 +47,7 @@ export const VotesHeader = ({
 		if (selectedAddress) {
 			return selectDelegateValidatorTranslation({
 				delegateStr: t("VOTE.VOTES_PAGE.SEARCH_DELEGATE_PLACEHOLDER"),
-				network: activeWallet!.network(),
+				network: wallet!.network(),
 				validatorStr: t("VOTE.VOTES_PAGE.SEARCH_VALIDATOR_PLACEHOLDER"),
 			})
 		}
