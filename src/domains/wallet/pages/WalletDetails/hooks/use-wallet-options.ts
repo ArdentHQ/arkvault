@@ -8,6 +8,7 @@ import { DropdownOptionGroup } from "@/app/components/Dropdown";
 import { isCustomNetwork } from "@/utils/network-utils";
 import { hasAvailableMusigServer } from "@/utils/server-utils";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
 	try {
@@ -100,7 +101,11 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			!wallet.isResignedDelegate()
 		) {
 			registrationOptions.options.push({
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE"),
+				label: selectDelegateValidatorTranslation({
+					delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE"),
+					network: wallet.network(),
+					validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR"),
+				}),
 				value: "delegate-registration",
 			});
 		}
@@ -111,7 +116,11 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			!wallet.isResignedDelegate()
 		) {
 			registrationOptions.options.push({
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE"),
+				label: selectDelegateValidatorTranslation({
+					delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE"),
+					network: wallet.network(),
+					validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_VALIDATOR"),
+				}),
 				value: "delegate-resignation",
 			});
 		}

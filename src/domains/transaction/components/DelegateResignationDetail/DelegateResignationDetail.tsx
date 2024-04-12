@@ -12,6 +12,7 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 import { TransactionDelegateResignationIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
@@ -20,14 +21,22 @@ export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: Tran
 
 	return (
 		<Modal
-			title={t("TRANSACTION.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE")}
+			title={selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE"),
+				network: wallet.network(),
+				validatorStr: t("TRANSACTION.MODAL_VALIDATOR_RESIGNATION_DETAIL.TITLE"),
+			})}
 			isOpen={isOpen}
 			onClose={onClose}
 			noButtons
 		>
 			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
-			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} extra={<TransactionDelegateResignationIcon />}>
+			<TransactionDetail label={selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.DELEGATE_NAME"),
+				network: wallet.network(),
+				validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
+			})} extra={<TransactionDelegateResignationIcon />}>
 				{wallet.username()}
 			</TransactionDetail>
 

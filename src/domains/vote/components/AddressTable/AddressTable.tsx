@@ -14,6 +14,7 @@ import { useAccordion, useBreakpoint } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 import { networkDisplayName } from "@/utils/network-utils";
 import { assertNetwork } from "@/utils/assertions";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false, profile }) => {
 	const { t } = useTranslation();
@@ -49,7 +50,11 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				headerClassName: "hidden xl:table-cell",
 			},
 			{
-				Header: maxVotes === 1 ? t("COMMON.DELEGATE") : t("COMMON.DELEGATES"),
+				Header: selectDelegateValidatorTranslation({
+					delegateStr: maxVotes === 1 ? t("COMMON.DELEGATE") : t("COMMON.DELEGATES"),
+					network: network,
+					validatorStr: maxVotes === 1 ? t("COMMON.VALIDATOR") : t("COMMON.VALIDATORS")
+				}),
 				accessor: (wallet) => {
 					let votes: Contracts.VoteRegistryItem[];
 

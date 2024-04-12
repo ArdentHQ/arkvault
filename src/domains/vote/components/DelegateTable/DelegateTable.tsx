@@ -10,6 +10,7 @@ import { Table } from "@/app/components/Table";
 import { Pagination } from "@/app/components/Pagination";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { useBreakpoint } from "@/app/hooks";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 const DELEGATES_PER_PAGE = 50;
 
@@ -26,6 +27,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 	isCompact: isCompactOption,
 	subtitle,
 	searchQuery,
+	wallet
 }) => {
 	const { t } = useTranslation();
 	const [currentPage, setCurrentPage] = useState(1);
@@ -230,14 +232,25 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			<EmptyResults
 				className="mt-16"
 				title={t("COMMON.EMPTY_RESULTS.TITLE")}
-				subtitle={t("VOTE.VOTES_PAGE.NO_RESULTS")}
+				subtitle={selectDelegateValidatorTranslation({
+					delegateStr: t("VOTE.VOTES_PAGE.NO_RESULTS_DELEGATE"),
+					network: wallet!.network(),
+					validatorStr: t("VOTE.VOTES_PAGE.NO_RESULTS")
+				})}
 			/>
 		);
 	}
 
 	return (
 		<div data-testid="DelegateTable">
-			<h2 className="mb-6 hidden text-lg font-bold md:block">{t("VOTE.DELEGATE_TABLE.TITLE")}</h2>
+			<h2 className="mb-6 hidden text-lg font-bold md:block">{
+				selectDelegateValidatorTranslation({
+					delegateStr: t("VOTE.DELEGATE_TABLE.TITLE_DELEGATE"),
+					network: wallet!.network(),
+					validatorStr: t("VOTE.DELEGATE_TABLE.TITLE")
+				})
+			
+		}</h2>
 
 			{!!subtitle && subtitle}
 

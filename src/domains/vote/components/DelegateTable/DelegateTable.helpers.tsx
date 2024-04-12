@@ -6,6 +6,7 @@ import { Column } from "react-table";
 import { DelegateTableColumnsProperties, VoteDelegateProperties } from "./DelegateTable.contracts";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableColumnsProperties) => {
 	const { t } = useTranslation();
@@ -23,7 +24,11 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 				minimumWidth: true,
 			},
 			{
-				Header: t("VOTE.DELEGATE_TABLE.NAME"),
+				Header: selectDelegateValidatorTranslation({
+					delegateStr: t("VOTE.DELEGATE_TABLE.NAME_DELEGATE"),
+					network: network,
+					validatorStr: t("VOTE.DELEGATE_TABLE.NAME"),
+				}),
 				accessor: (delegate) => isLoading || delegate.username() || delegate.address(),
 				className: "justify-start",
 				headerClassName: "w-3/4 sm:w-auto",
@@ -52,8 +57,14 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 					<div className="flex items-center space-x-3 px-3">
 						<p>{t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TITLE")}</p>
 						<Tooltip
-							content={t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TOOLTIP", {
-								coinId: network.coin(),
+							content={selectDelegateValidatorTranslation({
+								delegateStr: t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TOOLTIP_DELEGATE", {
+									coinId: network.coin(),
+								}),
+								network,
+								validatorStr: t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TOOLTIP", {
+									coinId: network.coin(),
+								})
 							})}
 						>
 							<span className="rounded-full bg-theme-primary-100 p-1 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200">

@@ -12,6 +12,7 @@ import { Modal } from "@/app/components/Modal";
 import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 import { isMainsailNetwork } from "@/utils/network-utils";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 import { useTranslation } from "react-i18next";
 
 export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
@@ -21,7 +22,11 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Tra
 
 	return (
 		<Modal
-			title={t("TRANSACTION.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE")}
+			title={selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE"),
+				network: wallet.network(),
+				validatorStr: t("TRANSACTION.MODAL_VALIDATOR_REGISTRATION_DETAIL.TITLE"),
+			})}
 			isOpen={isOpen}
 			onClose={onClose}
 			noButtons
@@ -36,7 +41,7 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Tra
 
 			{!isMainsailNetwork(wallet.network()) && (
 				<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} extra={<TransactionDelegateIcon />}>
-					{transaction.username}
+					{transaction.username()}
 				</TransactionDetail>
 			)}
 

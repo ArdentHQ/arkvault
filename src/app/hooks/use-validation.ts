@@ -1,3 +1,6 @@
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { Networks } from "@ardenthq/sdk";
 import {
 	authentication,
 	common,
@@ -9,7 +12,7 @@ import {
 	usernameRegistration,
 	validatorRegistration,
 } from "@/domains/transaction/validations";
-import { network, server, settings } from "@/domains/setting/validations";
+import { server, settings, network } from "@/domains/setting/validations";
 import { signMessage, verifyMessage } from "@/domains/message/validations";
 
 import { createProfile } from "@/domains/profile/validations";
@@ -17,10 +20,10 @@ import { exchangeOrder } from "@/domains/exchange/validations";
 import { password } from "@/app/validations/password";
 import { receiveFunds } from "@/domains/wallet/validations";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
 
-export const useValidation = () => {
+export const useValidation = (properties?: {
+	network?: Networks.Network;
+}) => {
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
@@ -29,7 +32,6 @@ export const useValidation = () => {
 			authentication: authentication(t),
 			common: common(t),
 			createProfile: createProfile(t, env),
-			delegateRegistration: delegateRegistration(t),
 			exchangeOrder: exchangeOrder(t),
 			multiSignatureRegistration: multiSignatureRegistration(t),
 			network: network(t),
@@ -44,7 +46,14 @@ export const useValidation = () => {
 			usernameRegistration: usernameRegistration(t),
 			validatorRegistration: validatorRegistration(t),
 			verifyMessage: verifyMessage(t),
+			...(properties?.network == undefined ? {
+				delegateRegistration: () => {
+					throw new Error("Network is required for delegate registration validation")
+				}
+			}: {
+				delegateRegistration: delegateRegistration(t, properties?.network)
+			})
 		}),
-		[t, env],
+		[t, env, properties?.network],
 	);
 };

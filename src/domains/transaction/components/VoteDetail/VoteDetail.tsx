@@ -13,6 +13,7 @@ import {
 	TransactionVotes,
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 export const VoteDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
@@ -50,7 +51,16 @@ export const VoteDetail = ({ isOpen, transaction, onClose }: TransactionDetailPr
 	}, [env, wallet, transaction, isOpen]);
 
 	return (
-		<Modal title={t("TRANSACTION.MODAL_VOTE_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
+		<Modal
+			title={selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.MODAL_VOTE_DETAIL.TITLE_DELEGATE"),
+				network: wallet.network(),
+				validatorStr: t("TRANSACTION.MODAL_VOTE_DETAIL.TITLE"),
+			})}
+			isOpen={isOpen}
+			onClose={onClose}
+			noButtons
+		>
 			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
 			<TransactionVotes isLoading={isLoadingDelegates} {...delegates} currency={wallet.currency()} />

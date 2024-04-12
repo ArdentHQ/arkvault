@@ -14,4 +14,5 @@ export interface VotesProperties {
 export interface DelegateStatusProperties {
 	votes: Contracts.VoteRegistryItem[];
 	activeDelegates: number;
+	wallet: Contracts.IReadWriteWallet;
 }

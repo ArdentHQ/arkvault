@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { TransactionDetail, TransactionFee } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 interface SummaryStepProperties {
 	senderWallet: Contracts.IReadWriteWallet;
@@ -15,7 +16,11 @@ export const SummaryStep = ({ senderWallet, transaction }: SummaryStepProperties
 
 	return (
 		<TransactionSuccessful transaction={transaction} senderWallet={senderWallet}>
-			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")}>
+			<TransactionDetail label={selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.DELEGATE_NAME"),
+				network: senderWallet.network(),
+				validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
+			})}>
 				{senderWallet.username()}
 			</TransactionDetail>
 

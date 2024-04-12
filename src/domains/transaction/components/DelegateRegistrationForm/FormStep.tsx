@@ -13,12 +13,13 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
-	const { delegateRegistration, validatorRegistration } = useValidation();
+	const { delegateRegistration, validatorRegistration } = useValidation({ network: wallet.network() });
 
 	const { register, setValue, getValues } = useFormContext();
 	const { username, validatorPublicKey } = getValues(["username", "validatorPublicKey"]);
@@ -50,8 +51,16 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	return (
 		<section data-testid="DelegateRegistrationForm__form-step">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.TITLE")}
-				subtitle={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.DESCRIPTION")}
+				title={selectDelegateValidatorTranslation({
+					delegateStr: t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.TITLE"),
+					network: network,
+					validatorStr: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE"),
+				})}
+				subtitle={selectDelegateValidatorTranslation({
+					delegateStr: t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.DESCRIPTION"),
+					network: network,
+					validatorStr: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION"),
+				})}
 			/>
 
 			{!isMainsailNetwork(network) && (

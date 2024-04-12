@@ -129,7 +129,7 @@ export const MultiSignatureSuccessful = ({
 							isDisabled
 						/>
 
-						<TransactionType type={transaction.type()} />
+						<TransactionType type={transaction.type()} network={senderWallet.network()} />
 
 						<TransactionNetwork network={senderWallet.network()} />
 

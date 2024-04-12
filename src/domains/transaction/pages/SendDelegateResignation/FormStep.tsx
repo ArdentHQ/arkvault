@@ -11,6 +11,7 @@ import {
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 interface FormStepProperties {
 	senderWallet: ProfilesContracts.IReadWriteWallet;
@@ -23,8 +24,16 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 	return (
 		<section data-testid="SendDelegateResignation__form-step">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.TITLE")}
-				subtitle={t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.DESCRIPTION")}
+				title={selectDelegateValidatorTranslation({
+					delegateStr: t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.TITLE"),
+					network: senderWallet.network(),
+					validatorStr: t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE"),
+				})}
+				subtitle={selectDelegateValidatorTranslation({
+					delegateStr: t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.DESCRIPTION"),
+					network: senderWallet.network(),
+					validatorStr: t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.DESCRIPTION"),
+				})}
 			/>
 
 			<Alert className="mt-6">{t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.WARNING")}</Alert>
@@ -33,7 +42,11 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 
 			<TransactionSender address={senderWallet.address()} network={senderWallet.network()} />
 
-			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} borderPosition="both">
+			<TransactionDetail label={selectDelegateValidatorTranslation({
+				delegateStr: t("TRANSACTION.DELEGATE_NAME"),
+				network: senderWallet.network(),
+				validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
+			})} borderPosition="both">
 				{senderWallet.username()}
 			</TransactionDetail>
 
