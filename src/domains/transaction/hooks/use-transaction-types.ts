@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Networks } from '@ardenthq/sdk';
 import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
+import { isMainsailNetwork } from "@/utils/network-utils";
 
 interface TransactionTypeProperties {
 	wallets?: Contracts.IReadWriteWallet[];
@@ -104,13 +105,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 	} ;
 
 	return {
-		canViewMagistrate: useMemo(
-			() =>
-				wallets.some((wallet) =>
-					wallet.transactionTypes().some((type) => (type as string) === MagistrateTransactionType),
-				),
-			[wallets],
-		),
+		canViewMagistrate: wallets.some((wallet) => ! isMainsailNetwork(wallet.network())),
 		getIcon: (type: string): string => transactionTypes[type].icon,
 		getLabel,
 		types: {
