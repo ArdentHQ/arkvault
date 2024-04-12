@@ -40,7 +40,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	useEffect(() => {
 		if (!isMainsailNetwork(network)) {
 			if (!username) {
-				// @ts-ignore - can be undefined when no network is passed to useValidation
 				register("username", delegateRegistration.username(usernames));
 			}
 			return;
