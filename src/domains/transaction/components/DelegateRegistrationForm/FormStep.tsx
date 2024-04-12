@@ -9,11 +9,11 @@ import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration
 import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
 import { isMainsailNetwork } from "@/utils/network-utils";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
-import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -40,6 +40,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	useEffect(() => {
 		if (!isMainsailNetwork(network)) {
 			if (!username) {
+				// @ts-ignore - can be undefined when no network is passed to useValidation
 				register("username", delegateRegistration.username(usernames));
 			}
 			return;
