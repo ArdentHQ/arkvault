@@ -182,7 +182,11 @@ const ImportInputField = ({
 					findAddress={findAddress}
 					network={network}
 				/>
-				<Alert title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.TITLE")} variant="info" collapsible>
+				<Alert
+					title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.TITLE")}
+					variant="info"
+					collapsible
+				>
 					<p>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_TITLE")}</p>
 					<ol className="list-disc pl-5">
 						<li>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_1")}</li>

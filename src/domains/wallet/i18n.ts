@@ -146,17 +146,18 @@ export const translations = {
 				NOT_AVAILABLE: "Encryption not available for this import type",
 				TITLE: "Use Wallet Encryption",
 			},
+			MNEMONIC_TIP: {
+				GUIDELINES_1: "Ensure all words are in lowercase.",
+				GUIDELINES_2: "Insert a space between each word.",
+				GUIDELINES_3: "Verify that all words are spelled correctly.",
+				GUIDELINES_4:
+					"If copying and pasting, ensure no extra whitespace is added at the end of the copied text.",
+				GUIDELINES_TITLE: "Please follow these guidelines when inputting your mnemonic into ARKVault:",
+				TITLE: "Need help with importing?",
+			},
 			SUBTITLE: "Select the import method by which you want to import the address to your Profile.",
 			TITLE: "Import Wallet",
 			TYPE: "Import Type",
-			MNEMONIC_TIP: {
-				TITLE: 'Need help with importing?',
-				GUIDELINES_TITLE: 'Please follow these guidelines when inputting your mnemonic into ARKVault:',
-				GUIDELINES_1: 'Ensure all words are in lowercase.',
-				GUIDELINES_2: 'Insert a space between each word.',
-				GUIDELINES_3: 'Verify that all words are spelled correctly.',
-				GUIDELINES_4: 'If copying and pasting, ensure no extra whitespace is added at the end of the copied text.',
-			}
 		},
 
 		NETWORK_STEP: {

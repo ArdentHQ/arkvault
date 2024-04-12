@@ -30,31 +30,42 @@ const TypeIcon = ({ variant }: { variant: Color }) => {
 
 const AlertHeader = styled.div<AlertProperties>(getHeaderStyles);
 const AlertBody = styled.div<AlertProperties>(getBodyStyles);
-const AlertChevron = styled.span<AlertProperties & {
-	collapsed: boolean
-}>(getChevronProperties);
+const AlertChevron = styled.span<
+	AlertProperties & {
+		collapsed: boolean;
+	}
+>(getChevronProperties);
 
-export const Alert = ({ variant = "warning", collapsible = false, children, className, title, ...attributes }: AlertProperties) => {
+export const Alert = ({
+	variant = "warning",
+	collapsible = false,
+	children,
+	className,
+	title,
+	...attributes
+}: AlertProperties) => {
 	const { t } = useTranslation();
 
 	const [collapsed, setCollapsed] = useState(collapsible);
 
 	return (
 		<div className={cn("flex flex-col overflow-hidden rounded-xl", className)} {...attributes}>
-			<AlertHeader variant={variant} onClick={() => setCollapsed((current) => !current)} collapsible={collapsible}>
+			<AlertHeader
+				variant={variant}
+				onClick={() => setCollapsed((current) => !current)}
+				collapsible={collapsible}
+			>
 				<TypeIcon variant={variant} />
 				<span>{title || t(`COMMON.ALERT.${variant.toUpperCase()}`)}</span>
-				
+
 				{collapsible && (
 					<AlertChevron collapsed={collapsed} variant={variant} data-testid="Alert__chevron">
 						<Icon name="ChevronDownSmall" size="sm" />
 					</AlertChevron>
-					)}
+				)}
 			</AlertHeader>
 
-			{!collapsed && (
-				<AlertBody variant={variant}>{children}</AlertBody>
-			)}
+			{!collapsed && <AlertBody variant={variant}>{children}</AlertBody>}
 		</div>
 	);
 };

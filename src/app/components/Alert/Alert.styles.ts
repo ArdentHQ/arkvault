@@ -43,16 +43,16 @@ const getChevronVariant = (variant?: Color) => {
 	return (variants[variant as keyof typeof variants] || variants.warning)();
 };
 
-const getHeaderStyles = ({ variant, collapsible }: { variant?: Color, collapsible?: boolean }) => [
+const getHeaderStyles = ({ variant, collapsible }: { variant?: Color; collapsible?: boolean }) => [
 	headerBaseStyle,
 	getHeaderVariant(variant),
 	collapsible === true && tw`cursor-pointer`,
 ];
 const getBodyStyles = ({ variant }: { variant?: Color }) => [bodyBaseStyle, getBodyVariant(variant)];
-const getChevronProperties = ({ variant, collapsed }: { variant?: Color, collapsed: boolean }) => [
+const getChevronProperties = ({ variant, collapsed }: { variant?: Color; collapsed: boolean }) => [
 	chevronBaseStyle,
 	collapsed ? tw`rotate-0` : tw`rotate-180`,
-	getChevronVariant(variant)
+	getChevronVariant(variant),
 ];
 
 export { getBodyStyles, getHeaderStyles, getChevronProperties };
