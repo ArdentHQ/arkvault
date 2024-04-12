@@ -29,7 +29,7 @@ import {
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import {
 	signUsernameRegistration,
-	UsernameRegistrationForm
+	UsernameRegistrationForm,
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 
 export const SendRegistration = () => {
@@ -56,12 +56,39 @@ export const SendRegistration = () => {
 		supportedModels: [Contracts.WalletLedgerModel.NanoX],
 	});
 
-	const form = useForm({ mode: "onChange" });
+	const form = useForm({
+		mode: "onChange",
+		defaultValues: {
+			fee: "0",
+			fees: {
+				avg: 0,
+				isDynamic: true,
+				max: 0,
+				min: 0,
+				static: 0,
+			},
+			inputFeeSettings: undefined,
+			isLoading: undefined,
+			network: undefined,
+			senderAddress: undefined,
+			suppressWarning: undefined,
+			mnemonic: undefined,
+			secondMnemonic: undefined,
+			encryptionPassword: undefined,
+			wif: undefined,
+			privateKey: undefined,
+			secret: undefined,
+			secondSecret: undefined,
+			participants: undefined,
+			minParticipants: undefined,
+		},
+	});
 
 	const { formState, register, setValue, watch, getValues } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const { fee, fees, isLoading } = watch();
+	const { fee, fees, isLoading, network, senderAddress, suppressWarning, inputFeeSettings } = watch();
+	console.log({ fee, fees, isLoading, network, senderAddress, suppressWarning, inputFeeSettings });
 
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
 	const authenticationStep = stepCount - 1;
