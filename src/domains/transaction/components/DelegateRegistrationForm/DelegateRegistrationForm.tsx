@@ -40,7 +40,7 @@ const transactionDetails = ({
 	<>
 		{isMainsailNetwork(wallet.network()) && (
 			<TransactionDetail label={translations("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
-				{transaction.asset()?.validatorPublicKey as string}
+				{transaction.data().data().asset.validatorPublicKey as string}
 			</TransactionDetail>
 		)}
 
