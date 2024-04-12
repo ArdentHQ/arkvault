@@ -11,6 +11,7 @@ import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox"
 import { isMainsailNetwork } from "@/utils/network-utils";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { TransactionPublicKey } from "../TransactionDetail/TransactionPublicKey";
 
 export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();
@@ -36,11 +37,7 @@ export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 
 			<TransactionSender address={wallet.address()} network={wallet.network()} />
 
-			{isMainsailNetwork(wallet.network()) && (
-				<TransactionDetail label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
-					{validatorPublicKey}
-				</TransactionDetail>
-			)}
+			{isMainsailNetwork(wallet.network()) && <TransactionPublicKey publicKey={validatorPublicKey} />}
 
 			{!isMainsailNetwork(wallet.network()) && (
 				<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")}>{username}</TransactionDetail>
