@@ -36,13 +36,16 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		);
 	}, [env, wallet]);
 
-	if (!isMainsailNetwork(network)) {
-		useEffect(() => {
+	useEffect(() => {
+		if (!isMainsailNetwork(network)) {
 			if (!username) {
 				register("username", delegateRegistration.username(usernames));
 			}
-		}, [delegateRegistration, usernames, register, username]);
-	}
+			return;
+		}
+
+		register("validatorPublicKey", validatorRegistration.validatorPublicKey(wallet));
+	}, [delegateRegistration, usernames, register, username]);
 
 	return (
 		<section data-testid="DelegateRegistrationForm__form-step">
@@ -77,7 +80,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					<FormField name="validatorPublicKey">
 						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
 						<InputDefault
-							ref={register(validatorRegistration.validatorPublicKey(wallet))}
 							data-testid="Input__validator_public_key"
 							defaultValue={validatorPublicKey}
 							onChange={(event: ChangeEvent<HTMLInputElement>) =>
