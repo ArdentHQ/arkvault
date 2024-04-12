@@ -88,7 +88,6 @@ export const SendRegistration = () => {
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fee, fees, isLoading, network, senderAddress, suppressWarning, inputFeeSettings } = watch();
-	console.log({ fee, fees, isLoading, network, senderAddress, suppressWarning, inputFeeSettings });
 
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
 	const authenticationStep = stepCount - 1;
