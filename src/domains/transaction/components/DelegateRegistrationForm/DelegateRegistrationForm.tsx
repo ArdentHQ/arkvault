@@ -71,23 +71,19 @@ export const signDelegateRegistration = async ({ env, form, profile, signatory }
 	const { fee, network, senderAddress, username, validatorPublicKey } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
-	const data = isMainsailNetwork(network) ? { data: { validatorPublicKey } } : { data: { username } };
+	const data = isMainsailNetwork(network) ? { validatorPublicKey } : { username };
 
-	try {
-		const transactionId = await senderWallet.transaction().signDelegateRegistration({
-			data,
-			fee: +fee,
-			signatory,
-		});
+	const transactionId = await senderWallet.transaction().signDelegateRegistration({
+		data,
+		fee: +fee,
+		signatory,
+	});
 
-		const response = await senderWallet.transaction().broadcast(transactionId);
+	const response = await senderWallet.transaction().broadcast(transactionId);
 
-		handleBroadcastError(response);
+	handleBroadcastError(response);
 
-		await env.persist();
+	await env.persist();
 
-		return senderWallet.transaction().transaction(transactionId);
-	} catch (e) {
-		console.log(e);
-	}
+	return senderWallet.transaction().transaction(transactionId);
 };
