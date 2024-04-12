@@ -28,12 +28,11 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Tra
 		>
 			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
-			{/* TODO: handle mainsail */}
-			{/* {isMainsailNetwork(wallet.network()) && (
+			{isMainsailNetwork(wallet.network()) && (
 				<TransactionDetail label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
-					{validatorPublicKey}
+					{transaction.asset()?.validatorPublicKey as string}
 				</TransactionDetail>
-			)} */}
+			)}
 
 			{!isMainsailNetwork(wallet.network()) && (
 				<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} extra={<TransactionDelegateIcon />}>
