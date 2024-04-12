@@ -1,7 +1,4 @@
 import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
-
-import { Modal } from "@/app/components/Modal";
 import {
 	TransactionDetail,
 	TransactionExplorerLink,
@@ -10,8 +7,12 @@ import {
 	TransactionStatus,
 	TransactionTimestamp,
 } from "@/domains/transaction/components/TransactionDetail";
-import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
+
+import { Modal } from "@/app/components/Modal";
 import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
+import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
+import { isMainsailNetwork } from "@/utils/network-utils";
+import { useTranslation } from "react-i18next";
 
 export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
@@ -27,9 +28,17 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Tra
 		>
 			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
-			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} extra={<TransactionDelegateIcon />}>
-				{transaction.username()}
-			</TransactionDetail>
+			{isMainsailNetwork(wallet.network()) && (
+				<TransactionDetail label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
+					{transaction.asset()?.validatorPublicKey as string}
+				</TransactionDetail>
+			)}
+
+			{!isMainsailNetwork(wallet.network()) && (
+				<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} extra={<TransactionDelegateIcon />}>
+					{transaction.username}
+				</TransactionDetail>
+			)}
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
 

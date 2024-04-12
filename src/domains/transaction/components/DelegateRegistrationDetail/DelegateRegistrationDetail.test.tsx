@@ -1,10 +1,10 @@
-import React from "react";
-import { Route } from "react-router-dom";
+import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { DelegateRegistrationDetail } from "./DelegateRegistrationDetail";
-import { translations } from "@/domains/transaction/i18n";
+import React from "react";
+import { Route } from "react-router-dom";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { translations } from "@/domains/transaction/i18n";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -38,5 +38,39 @@ describe("DelegateRegistrationDetail", () => {
 			translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE,
 		);
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render a modal with validator public key when available", () => {
+		render(
+			<Route path="/profiles/:profileId">
+				<DelegateRegistrationDetail
+					isOpen={true}
+					transaction={{
+						...TransactionFixture,
+						username: () => undefined,
+						asset: () => {
+							return {
+								validatorPublicKey: "123",
+							};
+						},
+						wallet: () => ({
+							currency: () => "ARK",
+							network: () => ({
+								id: () => "mainsail.devnet",
+							}),
+						}),
+					}}
+				/>
+			</Route>,
+			{
+				route: `/profiles/${fixtureProfileId}`,
+			},
+		);
+
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
+			translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE,
+		);
+
+		expect(screen.getAllByTestId("TransactionDetail").at(0)).toHaveTextContent("123");
 	});
 });
