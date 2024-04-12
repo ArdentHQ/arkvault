@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { CollapseToggleButton } from "@/app/components/Collapse";
 import { Dropdown, DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
+import { Networks } from "@ardenthq/sdk";
 
 interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 	className?: string;
@@ -12,10 +13,11 @@ interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 	wallets?: Contracts.IReadWriteWallet[];
 	onSelect?: (selectedOption: DropdownOption, types: any) => void;
 	isDisabled?: boolean;
+	network: Networks.Network;
 }
 
 export const FilterTransactions = memo(
-	({ className, onSelect, defaultSelected, wallets, isDisabled, ...properties }: FilterTransactionsProperties) => {
+	({ className, network, onSelect, defaultSelected, wallets, isDisabled, ...properties }: FilterTransactionsProperties) => {
 		const { t } = useTranslation();
 		const { types, getLabel, canViewMagistrate } = useTransactionTypes({ wallets });
 
@@ -28,7 +30,7 @@ export const FilterTransactions = memo(
 				{
 					hasDivider: true,
 					key: "core",
-					options: types.core.map((type) => ({ label: getLabel(type), value: type })),
+					options: types.core.map((type) => ({ label: getLabel(type, network), value: type })),
 					title: t("TRANSACTION.CORE"),
 				},
 			];

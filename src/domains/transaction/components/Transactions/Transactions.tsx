@@ -163,6 +163,7 @@ export const Transactions = memo(function Transactions({
 								wallets={wallets}
 								onSelect={filterChangeHandler}
 								isDisabled={wallets.length === 0 || isLoadingTransactions}
+								network={wallets[0]?.network()}
 							/>
 						</TabList>
 					</Tabs>
@@ -191,6 +192,7 @@ export const Transactions = memo(function Transactions({
 								wallets={wallets}
 								onSelect={filterChangeHandler}
 								isDisabled={wallets.length === 0 || isLoadingTransactions}
+								network={wallets[0]?.network()}
 							/>
 						</div>
 					</div>

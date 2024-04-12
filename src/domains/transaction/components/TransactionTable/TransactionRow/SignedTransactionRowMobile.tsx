@@ -79,7 +79,7 @@ export const SignedTransactionRowMobile = ({
 						/>
 
 						<div className="ml-2 overflow-hidden">
-							<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} />
+							<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} network={wallet.network()}  />
 						</div>
 					</ResponsiveAddressWrapper>
 				</RowWrapper>

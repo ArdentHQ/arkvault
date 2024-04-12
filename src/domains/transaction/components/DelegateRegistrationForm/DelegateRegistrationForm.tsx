@@ -38,9 +38,17 @@ const transactionDetails = ({
 	wallet: Contracts.IReadWriteWallet;
 }) => (
 	<>
-		<TransactionDetail label={translations("TRANSACTION.DELEGATE_NAME")}>
-			{transaction.username()}
-		</TransactionDetail>
+		{isMainsailNetwork(wallet.network()) && (
+			<TransactionDetail label={translations("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
+				{transaction.data().data().asset.validatorPublicKey as string}
+			</TransactionDetail>
+		)}
+
+		{!isMainsailNetwork(wallet.network()) && (
+			<TransactionDetail label={translations("TRANSACTION.DELEGATE_NAME")}>
+				{transaction.username()}
+			</TransactionDetail>
+		)}
 
 		<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
 	</>
@@ -51,7 +59,7 @@ transactionDetails.displayName = "DelegateRegistrationFormTransactionDetails";
 
 export const DelegateRegistrationForm: SendRegistrationForm = {
 	component,
-	formFields: ["username", "publicKey"],
+	formFields: ["username", "validatorPublicKey"],
 	tabSteps: 2,
 	transactionDetails,
 };
@@ -60,10 +68,10 @@ export const signDelegateRegistration = async ({ env, form, profile, signatory }
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
-	const { fee, network, senderAddress, username, publicKey } = getValues();
+	const { fee, network, senderAddress, username, validatorPublicKey } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
-	const data = isMainsailNetwork(network) ? { publicKey } : { username };
+	const data = isMainsailNetwork(network) ? { validatorPublicKey } : { username };
 
 	const transactionId = await senderWallet.transaction().signDelegateRegistration({
 		data,

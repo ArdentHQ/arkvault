@@ -1,10 +1,11 @@
-import cn from "classnames";
-import React from "react";
-import { useTranslation } from "react-i18next";
-
 import { Button } from "@/app/components/Button";
-import { Tooltip } from "@/app/components/Tooltip";
 import { ButtonVariant } from "@/types";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import React from "react";
+import { Tooltip } from "@/app/components/Tooltip";
+import cn from "classnames";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
+import { useTranslation } from "react-i18next";
 
 interface VoteButtonProperties {
 	index: number;
@@ -15,6 +16,8 @@ interface VoteButtonProperties {
 	isCompact?: boolean;
 	children: React.ReactNode;
 }
+
+type DelegateVoteButtonProperties = VoteButtonProperties & { selectedWallet: Contracts.IReadWriteWallet };
 
 const CompactButton = ({ index, disabled, compactClassName, onClick, children }: VoteButtonProperties) => (
 	<Button
@@ -37,12 +40,20 @@ export const DelegateVoteButton = ({
 	onClick,
 	isCompact,
 	children,
-}: VoteButtonProperties) => {
+	selectedWallet,
+}: DelegateVoteButtonProperties) => {
 	const { t } = useTranslation();
 
 	if (disabled) {
 		return (
-			<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.MAX_VOTES")} className={cn({ "-mr-3": isCompact })}>
+			<Tooltip
+				content={selectDelegateValidatorTranslation({
+					delegateStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.MAX_VOTES_DELEGATE"),
+					network: selectedWallet.network(),
+					validatorStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.MAX_VOTES"),
+				})}
+				className={cn({ "-mr-3": isCompact })}
+			>
 				<span>
 					{isCompact ? (
 						<CompactButton disabled index={index} compactClassName={cn("relative", compactClassName)}>

@@ -1,22 +1,23 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Page, Section } from "@/app/components/Layout";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/app/hooks";
 import { useHistory, useParams } from "react-router-dom";
 
 import { Alert } from "@/app/components/Alert";
-import { Page, Section } from "@/app/components/Layout";
-import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/app/hooks";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DelegateTable } from "@/domains/vote/components/DelegateTable";
 import { VotesEmpty } from "@/domains/vote/components/VotesEmpty";
 import { VotesHeader } from "@/domains/vote/components/VotesHeader";
 import { VotingWallets } from "@/domains/vote/components/VotingWallets/VotingWallets";
+import { assertWallet } from "@/utils/assertions";
+import { getErroredNetworks } from "@/utils/profile-utils";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 import { useDelegates } from "@/domains/vote/hooks/use-delegates";
+import { useEnvironmentContext } from "@/app/contexts";
 import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
-import { assertWallet } from "@/utils/assertions";
-import { getErroredNetworks } from "@/utils/profile-utils";
 
 export const Votes: FC = () => {
 	const history = useHistory();
@@ -144,6 +145,7 @@ export const Votes: FC = () => {
 				totalCurrentVotes={currentVotes.length}
 				selectedFilter={voteFilter}
 				setSelectedFilter={setVoteFilter}
+				wallet={selectedWallet}
 			/>
 
 			{!hasWallets && (
@@ -168,6 +170,7 @@ export const Votes: FC = () => {
 			{isSelectDelegateStep && (
 				<Section innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18">
 					<DelegateTable
+						wallet={selectedWallet}
 						searchQuery={searchQuery}
 						delegates={filteredDelegates}
 						isLoading={isLoadingDelegates}
@@ -183,13 +186,27 @@ export const Votes: FC = () => {
 							resignedDelegateVotes.length > 0 ? (
 								<Alert className="mb-6">
 									<div data-testid="Votes__resigned-vote">
-										<Trans
-											i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
-											values={{
-												name: voteWallet?.username() || voteWallet?.address(),
-											}}
-											components={{ bold: <strong /> }}
-										/>
+										{selectDelegateValidatorTranslation({
+											delegateStr: (
+												<Trans
+													i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE_DELEGATE"
+													values={{
+														name: voteWallet?.username() || voteWallet?.address(),
+													}}
+													components={{ bold: <strong /> }}
+												/>
+											),
+											network: selectedWallet!.network(),
+											validatorStr: (
+												<Trans
+													i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
+													values={{
+														name: voteWallet?.username() || voteWallet?.address(),
+													}}
+													components={{ bold: <strong /> }}
+												/>
+											),
+										})}
 									</div>
 								</Alert>
 							) : undefined

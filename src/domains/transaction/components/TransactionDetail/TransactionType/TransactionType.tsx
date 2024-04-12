@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { Networks } from "@ardenthq/sdk";
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
@@ -10,9 +11,10 @@ import { TransactionResponsiveIcon } from "@/domains/transaction/components/Tran
 
 type TransactionSenderProperties = {
 	type: string;
+	network: Networks.Network;
 } & TransactionDetailProperties;
 
-export const TransactionType = ({ type, ...properties }: TransactionSenderProperties) => {
+export const TransactionType = ({ type, network, ...properties }: TransactionSenderProperties) => {
 	const { t } = useTranslation();
 
 	const { getIcon, getLabel } = useTransactionTypes();
@@ -24,7 +26,7 @@ export const TransactionType = ({ type, ...properties }: TransactionSenderProper
 			extra={<TransactionResponsiveIcon icon={getIcon(type)} />}
 			{...properties}
 		>
-			{getLabel(type)}
+			{getLabel(type, network)}
 		</TransactionDetail>
 	);
 };

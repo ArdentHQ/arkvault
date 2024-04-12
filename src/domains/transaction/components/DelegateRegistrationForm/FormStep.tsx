@@ -9,6 +9,7 @@ import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration
 import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
 import { isMainsailNetwork } from "@/utils/network-utils";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -18,10 +19,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
-	const { delegateRegistration, validatorRegistration } = useValidation();
+	const { delegateRegistration, validatorRegistration } = useValidation({ network: wallet.network() });
 
 	const { register, setValue, getValues } = useFormContext();
-	const { username, publicKey } = getValues(["username", "publicKey"]);
+	const { username, validatorPublicKey } = getValues(["username", "validatorPublicKey"]);
 	const [usernames, setUsernames] = useState<string[]>([]);
 
 	const network = useMemo(() => wallet.network(), [wallet]);
@@ -36,19 +37,31 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		);
 	}, [env, wallet]);
 
-	if (!isMainsailNetwork(network)) {
-		useEffect(() => {
+	useEffect(() => {
+		if (!isMainsailNetwork(network)) {
 			if (!username) {
+				// @ts-ignore - can be undefined when no network is passed to useValidation
 				register("username", delegateRegistration.username(usernames));
 			}
-		}, [delegateRegistration, usernames, register, username]);
-	}
+			return;
+		}
+
+		register("validatorPublicKey", validatorRegistration.validatorPublicKey(wallet));
+	}, [delegateRegistration, usernames, register, username]);
 
 	return (
 		<section data-testid="DelegateRegistrationForm__form-step">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.TITLE")}
-				subtitle={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.DESCRIPTION")}
+				title={selectDelegateValidatorTranslation({
+					delegateStr: t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.TITLE"),
+					network: network,
+					validatorStr: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE"),
+				})}
+				subtitle={selectDelegateValidatorTranslation({
+					delegateStr: t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.DESCRIPTION"),
+					network: network,
+					validatorStr: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION"),
+				})}
 			/>
 
 			{!isMainsailNetwork(network) && (
@@ -74,14 +87,16 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				)}
 
 				{isMainsailNetwork(network) && (
-					<FormField name="publicKey">
+					<FormField name="validatorPublicKey">
 						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
 						<InputDefault
-							ref={register(validatorRegistration.publicKey(wallet))}
-							data-testid="Input__public_key"
-							defaultValue={publicKey}
+							data-testid="Input__validator_public_key"
+							defaultValue={validatorPublicKey}
 							onChange={(event: ChangeEvent<HTMLInputElement>) =>
-								setValue("publicKey", event.target.value, { shouldDirty: true, shouldValidate: true })
+								setValue("validatorPublicKey", event.target.value, {
+									shouldDirty: true,
+									shouldValidate: true,
+								})
 							}
 						/>
 					</FormField>

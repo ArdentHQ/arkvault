@@ -57,7 +57,7 @@ export const ConfirmRemovePendingTransaction = ({
 		return <></>;
 	}
 
-	const typeLabel = getLabel(transaction.type());
+	const typeLabel = getLabel(transaction.type(), wallet.network());
 	const typeSuffix = transaction.isMultiSignatureRegistration()
 		? t("TRANSACTION.REGISTRATION")
 		: t("TRANSACTION.TRANSACTION");
