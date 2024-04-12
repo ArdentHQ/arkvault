@@ -51,7 +51,7 @@ transactionDetails.displayName = "DelegateRegistrationFormTransactionDetails";
 
 export const DelegateRegistrationForm: SendRegistrationForm = {
 	component,
-	formFields: ["username", "publicKey"],
+	formFields: ["username", "validatorPublicKey"],
 	tabSteps: 2,
 	transactionDetails,
 };
@@ -60,10 +60,10 @@ export const signDelegateRegistration = async ({ env, form, profile, signatory }
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
-	const { fee, network, senderAddress, username, publicKey } = getValues();
+	const { fee, network, senderAddress, username, validatorPublicKey } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
-	const data = isMainsailNetwork(network) ? { publicKey } : { username };
+	const data = isMainsailNetwork(network) ? { data: { validatorPublicKey } } : { data: { username } };
 
 	const transactionId = await senderWallet.transaction().signDelegateRegistration({
 		data,

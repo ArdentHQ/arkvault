@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 export const validatorRegistration = (t: any) => ({
-	publicKey: (wallet: Contracts.IReadWriteWallet) => ({
+	validatorPublicKey: (wallet: Contracts.IReadWriteWallet) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("TRANSACTION.VALIDATOR_PUBLIC_KEY"),
 		}),
