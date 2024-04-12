@@ -26,7 +26,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	useEffect(() => {
 		if (!username) {
-			// @ts-ignore @TODO: fix - async type
 			register("username", usernameRegistration.username(network));
 		}
 	}, [usernameRegistration, register, network, username]);

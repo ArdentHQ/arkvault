@@ -1,8 +1,8 @@
-export const debounceAsync = (callback: Function, delay: number) => {
+export const debounceAsync =  <T>(callback: Function, delay: number): (...arguments_: any[]) => Promise<T> => {
 	let timeout: any;
 
 	return async function (...arguments_: any) {
-		return new Promise((resolve) => {
+		return new Promise<T>((resolve) => {
 			clearTimeout(timeout);
 			timeout = setTimeout(async () => {
 				// @ts-ignore
@@ -12,3 +12,4 @@ export const debounceAsync = (callback: Function, delay: number) => {
 		});
 	};
 };
+
