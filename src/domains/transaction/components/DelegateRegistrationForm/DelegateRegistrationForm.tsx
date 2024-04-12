@@ -38,9 +38,17 @@ const transactionDetails = ({
 	wallet: Contracts.IReadWriteWallet;
 }) => (
 	<>
-		<TransactionDetail label={translations("TRANSACTION.DELEGATE_NAME")}>
-			{transaction.username()}
-		</TransactionDetail>
+		{isMainsailNetwork(wallet.network()) && (
+			<TransactionDetail label={translations("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
+				{transaction.asset()?.validatorPublicKey as string}
+			</TransactionDetail>
+		)}
+
+		{!isMainsailNetwork(wallet.network()) && (
+			<TransactionDetail label={translations("TRANSACTION.DELEGATE_NAME")}>
+				{transaction.username()}
+			</TransactionDetail>
+		)}
 
 		<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
 	</>
