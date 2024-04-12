@@ -1,25 +1,26 @@
-/* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@ardenthq/sdk";
-import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import React, { useEffect } from "react";
-import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
-import { Route } from "react-router-dom";
+import * as useFeesHook from "@/app/hooks/use-fees";
 
 import { DelegateRegistrationForm, signDelegateRegistration } from "./DelegateRegistrationForm";
-import * as useFeesHook from "@/app/hooks/use-fees";
-import { translations } from "@/domains/transaction/i18n";
-import delegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
+import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
 import {
+	MNEMONICS,
+	RenderResult,
 	env,
 	getDefaultProfileId,
-	MNEMONICS,
 	render,
-	RenderResult,
 	screen,
 	syncDelegates,
 	waitFor,
 } from "@/utils/testing-library";
+import React, { useEffect } from "react";
+
+/* eslint-disable @typescript-eslint/require-await */
+import { Contracts } from "@ardenthq/sdk";
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
+import { Route } from "react-router-dom";
+import delegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
+import { translations } from "@/domains/transaction/i18n";
+import userEvent from "@testing-library/user-event";
 
 let profile: ProfilesContracts.IProfile;
 let wallet: ProfilesContracts.IReadWriteWallet;
@@ -131,10 +132,10 @@ describe("DelegateRegistrationForm", () => {
 
 		await expect(screen.findByTestId("Input__username")).rejects.toThrow(/Unable to find/);
 
-		userEvent.paste(screen.getByTestId("Input__public_key"), publicKey);
+		userEvent.paste(screen.getByTestId("Input__validator_public_key"), publicKey);
 
-		await waitFor(() => expect(screen.getByTestId("Input__public_key")).toHaveValue(publicKey));
-		await waitFor(() => expect(form?.getValues("publicKey")).toBe(publicKey));
+		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(publicKey));
+		await waitFor(() => expect(form?.getValues("validatorPublicKey")).toBe(publicKey));
 
 		mainsailSpy.mockRestore();
 		delegatesSpy.mockRestore();
