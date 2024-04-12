@@ -15,6 +15,7 @@ import { Toggle } from "@/app/components/Toggle";
 import { Tooltip } from "@/app/components/Tooltip";
 import { OptionsValue, useImportOptions } from "@/domains/wallet/hooks/use-import-options";
 import { assertNetwork, assertString } from "@/utils/assertions";
+import { Alert } from "@/app/components/Alert";
 
 const validateAddress = async ({
 	findAddress,
@@ -173,13 +174,24 @@ const ImportInputField = ({
 		};
 
 		return (
-			<MnemonicField
-				profile={profile}
-				label={t(`COMMON.MNEMONIC_TYPE.${(type as "bip39" | "bip44" | "bip49" | "bip84").toUpperCase()}`)}
-				data-testid="ImportWallet__mnemonic-input"
-				findAddress={findAddress}
-				network={network}
-			/>
+			<>
+				<MnemonicField
+					profile={profile}
+					label={t(`COMMON.MNEMONIC_TYPE.${(type as "bip39" | "bip44" | "bip49" | "bip84").toUpperCase()}`)}
+					data-testid="ImportWallet__mnemonic-input"
+					findAddress={findAddress}
+					network={network}
+				/>
+				<Alert title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.TITLE")} variant="info">
+					<p>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_TITLE")}</p>
+					<ol className="list-disc pl-5">
+						<li>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_1")}</li>
+						<li>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_2")}</li>
+						<li>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_3")}</li>
+						<li>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TIP.GUIDELINES_4")}</li>
+					</ol>
+				</Alert>
+			</>
 		);
 	}
 
