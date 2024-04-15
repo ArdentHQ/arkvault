@@ -32,16 +32,18 @@ export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: Tran
 		>
 			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
-			<TransactionDetail
-				label={selectDelegateValidatorTranslation({
-					delegateStr: t("TRANSACTION.DELEGATE_NAME"),
-					network: wallet.network(),
-					validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
-				})}
-				extra={<TransactionDelegateResignationIcon />}
-			>
-				{wallet.username()}
-			</TransactionDetail>
+			{wallet.username() && (
+				<TransactionDetail
+					label={selectDelegateValidatorTranslation({
+						delegateStr: t("TRANSACTION.DELEGATE_NAME"),
+						network: wallet.network(),
+						validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
+					})}
+					extra={<TransactionDelegateResignationIcon />}
+				>
+					{wallet.username()}
+				</TransactionDetail>
+			)}
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
 
