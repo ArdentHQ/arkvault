@@ -1,6 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useCallback, useEffect, useMemo, useRef, useState, VFC } from "react";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import tw, { css, styled } from "twin.macro";
@@ -120,9 +121,9 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	}, [addedRecipients, wallet, isSingle]);
 
 	const remainingNetBalance = useMemo(() => {
-		const netBalance = +(remainingBalance - (+fee || 0)).toFixed(10);
+		const netBalance = BigNumber.make(remainingBalance).minus(fee || 0);
 
-		return Math.sign(netBalance) ? netBalance : undefined;
+		return netBalance.isGreaterThan(0) ? netBalance.toFixed(10) : "0";
 	}, [fee, remainingBalance]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
@@ -145,7 +146,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	}, [remainingBalance, setValue, amount, recipientAddress, fee, senderAddress]);
 
 	useEffect(() => {
-		register("amount", sendTransfer.amount(network, remainingNetBalance!, addedRecipients, isSingle));
+		register("amount", sendTransfer.amount(network, remainingNetBalance, addedRecipients, isSingle));
 		register("recipientAddress", sendTransfer.recipientAddress(profile, network, addedRecipients, isSingle));
 	}, [register, network, sendTransfer, addedRecipients, isSingle, profile, remainingNetBalance]);
 
@@ -224,7 +225,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 			return;
 		}
 
-		const remaining = remainingBalance > fee ? remainingNetBalance : remainingBalance;
+		const remaining = BigNumber.make(remainingBalance).isGreaterThan(fee) ? +remainingNetBalance : remainingBalance;
 
 		setValue("amount", remaining, {
 			shouldDirty: true,
@@ -352,9 +353,12 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 						<FormLabel>
 							<span>{t("COMMON.AMOUNT")}</span>
 							{isSenderFilled && !!remainingNetBalance && (
-								<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700">
+								<span
+									data-testid="AddRecipient__available"
+									className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+								>
 									({t("COMMON.AVAILABLE")}{" "}
-									<Amount value={remainingNetBalance} ticker={ticker} showTicker={false} />)
+									<Amount value={+remainingNetBalance} ticker={ticker} showTicker={false} />)
 								</span>
 							)}
 						</FormLabel>
