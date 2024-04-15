@@ -196,42 +196,6 @@ describe("Use Ledger Scanner", () => {
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
 	});
 
-	it.each([
-		["m/44'/1'/0'/0/3", "m/44'/1'/0'/0/1"],
-		["m/44'/1'/0'/0/2", "m/44'/1'/0'/0/3"],
-	])("should load with last import path", async (path1, path2) => {
-		const ledgerScanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
-
-		const profileWallets = profile.wallets().values();
-		const walletSpy1 = vi.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
-		const walletSpy2 = vi.spyOn(profileWallets[1].data(), "get").mockImplementation(() => path2);
-
-		const Component = () => {
-			const { scan } = useLedgerScanner(wallet.coinId(), wallet.networkId());
-
-			return (
-				<div>
-					<button onClick={() => scan(profile, path1)}>Scan</button>
-				</div>
-			);
-		};
-
-		render(<Component />);
-
-		userEvent.click(screen.getByRole("button"));
-
-		await waitFor(() =>
-			expect(ledgerScanSpy).toHaveBeenCalledWith({
-				onProgress: expect.any(Function),
-				startPath: path1,
-			}),
-		);
-
-		walletSpy1.mockRestore();
-		walletSpy2.mockRestore();
-		ledgerScanSpy.mockRestore();
-	});
-
 	it("should load more wallets", async () => {
 		const Component = () => {
 			const { scan, wallets, isScanningMore } = useLedgerScanner(wallet.coinId(), wallet.networkId());
@@ -330,5 +294,41 @@ describe("Use Ledger Scanner", () => {
 		userEvent.click(screen.getByTestId("abort"));
 
 		await expect(screen.findByText("Idle")).resolves.toBeVisible();
+	});
+
+	it.each([
+		["m/44'/1'/0'/0/3", "m/44'/1'/0'/0/1"],
+		["m/44'/1'/0'/0/2", "m/44'/1'/0'/0/3"],
+	])("should load with last import path", async (path1, path2) => {
+		const ledgerScanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
+
+		const profileWallets = profile.wallets().values();
+		const walletSpy1 = vi.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
+		const walletSpy2 = vi.spyOn(profileWallets[1].data(), "get").mockImplementation(() => path2);
+
+		const Component = () => {
+			const { scan } = useLedgerScanner(wallet.coinId(), wallet.networkId());
+
+			return (
+				<div>
+					<button onClick={() => scan(profile, path1)}>Scan</button>
+				</div>
+			);
+		};
+
+		render(<Component />);
+
+		userEvent.click(screen.getByRole("button"));
+
+		await waitFor(() =>
+			expect(ledgerScanSpy).toHaveBeenCalledWith({
+				onProgress: expect.any(Function),
+				startPath: path1,
+			}),
+		);
+
+		walletSpy1.mockRestore();
+		walletSpy2.mockRestore();
+		ledgerScanSpy.mockRestore();
 	});
 });
