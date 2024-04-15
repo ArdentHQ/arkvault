@@ -26,12 +26,13 @@ export const useValidation = (properties?: {
 }) => {
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
-
+	
 	return useMemo(
 		() => ({
 			authentication: authentication(t),
 			common: common(t),
 			createProfile: createProfile(t, env),
+			delegateRegistration: delegateRegistration(t, properties?.network),
 			exchangeOrder: exchangeOrder(t),
 			multiSignatureRegistration: multiSignatureRegistration(t),
 			network: network(t),
@@ -46,13 +47,7 @@ export const useValidation = (properties?: {
 			usernameRegistration: usernameRegistration(t),
 			validatorRegistration: validatorRegistration(t),
 			verifyMessage: verifyMessage(t),
-			...(properties?.network == undefined ? {
-				delegateRegistration: () => {
-					throw new Error("Network is required for delegate registration validation")
-				}
-			}: {
-				delegateRegistration: delegateRegistration(t, properties?.network)
-			})
+			
 		}),
 		[t, env, properties?.network],
 	);
