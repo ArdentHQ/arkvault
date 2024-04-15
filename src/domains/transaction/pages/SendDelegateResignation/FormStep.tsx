@@ -42,16 +42,18 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 
 			<TransactionSender address={senderWallet.address()} network={senderWallet.network()} />
 
-			{
-				senderWallet.username() && (<TransactionDetail label={selectDelegateValidatorTranslation({
-				delegateStr: t("TRANSACTION.DELEGATE_NAME"),
-				network: senderWallet.network(),
-				validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
-			})} borderPosition="both">
-				{senderWallet.username()}
-			</TransactionDetail>)
-			}
-
+			{senderWallet.username() && (
+				<TransactionDetail
+					label={selectDelegateValidatorTranslation({
+						delegateStr: t("TRANSACTION.DELEGATE_NAME"),
+						network: senderWallet.network(),
+						validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
+					})}
+					borderPosition="both"
+				>
+					{senderWallet.username()}
+				</TransactionDetail>
+			)}
 
 			<div className="pt-6">
 				<FormField name="fee">
