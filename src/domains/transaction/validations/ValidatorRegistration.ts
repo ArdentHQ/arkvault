@@ -12,10 +12,8 @@ export const validatorRegistration = (t: any) => ({
 			}),
 			value: 96,
 		},
-		validate: async () => {
-			// @TODO: need to add BLS validation here from "@mainsail/crypto-key-pair-bls12-381";
-			return true;
-			//return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.INVALID_BLS_PUBLIC_KEY");
+		validate: async (publicKey?: string) => {
+			return await wallet.coin().publicKey().verifyPublicKeyWithBLS(publicKey);
 		},
 	}),
 });
