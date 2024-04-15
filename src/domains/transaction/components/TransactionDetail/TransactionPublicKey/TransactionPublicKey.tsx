@@ -1,19 +1,19 @@
-import cn from "classnames";
 import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
-
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
 } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
-import { useBreakpoint } from "@/app/hooks";
+
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import cn from "classnames";
+import { useBreakpoint } from "@/app/hooks";
+import { useTranslation } from "react-i18next";
 
 type Properties = { publicKey?: string | unknown } & TransactionDetailProperties;
 
 export const TransactionPublicKey = ({ borderPosition = "top", publicKey, ...properties }: Properties) => {
 	const { t } = useTranslation();
-	const { isMdAndAbove, isXs, isSm } = useBreakpoint();
+	const { isMdAndAbove, isXs } = useBreakpoint();
 
 	const maxChars = useMemo(() => {
 		if (isMdAndAbove) {

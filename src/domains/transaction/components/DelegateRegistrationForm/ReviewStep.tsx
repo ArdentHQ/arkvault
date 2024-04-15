@@ -8,10 +8,10 @@ import {
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { StepHeader } from "@/app/components/StepHeader";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
+import { TransactionPublicKey } from "@/domains/transaction/components/TransactionDetail/TransactionPublicKey";
 import { isMainsailNetwork } from "@/utils/network-utils";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { TransactionPublicKey } from "../TransactionDetail/TransactionPublicKey";
 
 export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();

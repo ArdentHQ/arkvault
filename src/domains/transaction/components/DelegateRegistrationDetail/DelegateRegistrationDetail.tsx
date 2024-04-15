@@ -11,10 +11,10 @@ import {
 import { Modal } from "@/app/components/Modal";
 import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
+import { TransactionPublicKey } from "@/domains/transaction/components/TransactionDetail/TransactionPublicKey";
 import { isMainsailNetwork } from "@/utils/network-utils";
 import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 import { useTranslation } from "react-i18next";
-import { TransactionPublicKey } from "../TransactionDetail/TransactionPublicKey";
 
 export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
