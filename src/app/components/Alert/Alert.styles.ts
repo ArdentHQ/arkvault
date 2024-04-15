@@ -1,6 +1,7 @@
 import tw from "twin.macro";
 import { Color } from "@/types";
 
+const chevronBaseStyle = tw`transform !ml-auto duration-100 transition-transform`;
 const headerBaseStyle = tw`flex items-center py-2 px-4 space-x-2 text-sm font-semibold dark:text-white`;
 const bodyBaseStyle = tw`w-full p-4 text-sm leading-relaxed break-words text-left dark:bg-theme-secondary-800`;
 
@@ -29,8 +30,29 @@ const getBodyVariant = (variant?: Color) => {
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 	return (variants[variant as keyof typeof variants] || variants.warning)();
 };
+const getChevronVariant = (variant?: Color) => {
+	const variants = {
+		danger: () => tw`text-theme-danger-700`,
+		hint: () => tw`text-theme-hint-700`,
+		info: () => tw`text-theme-info-700`,
+		success: () => tw`text-theme-success-700`,
+		warning: () => tw`text-theme-warning-700`,
+	};
 
-const getHeaderStyles = ({ variant }: { variant?: Color }) => [headerBaseStyle, getHeaderVariant(variant)];
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	return (variants[variant as keyof typeof variants] || variants.warning)();
+};
+
+const getHeaderStyles = ({ variant, collapsible }: { variant?: Color; collapsible?: boolean }) => [
+	headerBaseStyle,
+	getHeaderVariant(variant),
+	collapsible === true && tw`cursor-pointer`,
+];
 const getBodyStyles = ({ variant }: { variant?: Color }) => [bodyBaseStyle, getBodyVariant(variant)];
+const getChevronProperties = ({ variant, collapsed }: { variant?: Color; collapsed: boolean }) => [
+	chevronBaseStyle,
+	collapsed ? tw`rotate-0` : tw`rotate-180`,
+	getChevronVariant(variant),
+];
 
-export { getBodyStyles, getHeaderStyles };
+export { getBodyStyles, getHeaderStyles, getChevronProperties };
