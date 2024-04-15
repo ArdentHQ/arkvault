@@ -14,6 +14,10 @@ import { AppRouter, GlobalStyles, Main } from "@/app/App.blocks";
 import { initializeEnvironment } from "@/utils/environment";
 import { ApplicationError } from "@/domains/error/pages";
 
+const logError = (error: Error, { componentStack }: { componentStack: string }) => {
+	console.error(error, componentStack);
+};
+
 export const App: React.VFC = () => {
 	/**
 	 * Ensure that the Environment object will not be recreated when the state changes,
@@ -31,7 +35,7 @@ export const App: React.VFC = () => {
 					<ConfigurationProvider defaultConfiguration={{ profileIsSyncingExchangeRates: true }}>
 						<NavigationProvider>
 							<ExchangeProvider>
-								<ErrorBoundary FallbackComponent={ApplicationError}>
+								<ErrorBoundary FallbackComponent={ApplicationError} onError={logError}>
 									<LedgerProvider>
 										<CacheProvider value={emotionCache}>
 											<AppRouter>
