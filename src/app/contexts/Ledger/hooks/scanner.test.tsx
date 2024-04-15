@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { HDKey } from "@ardenthq/sdk-cryptography";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-
 import { useLedgerScanner } from "./scanner";
 import { useLedgerContext } from "@/app/contexts/Ledger";
 import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
@@ -91,6 +91,12 @@ describe("Use Ledger Scanner", () => {
 		getExtendedPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getExtendedPublicKey")
 			.mockResolvedValue(wallet.publicKey()!);
+
+		vi.spyOn(HDKey, "fromExtendedPublicKey").mockImplementation(() => ({
+			derive: () => ({
+				publicKey: legacyPublicKeyPaths.get("m/44'/1'/0'/0/0")!,
+			}),
+		}));
 	});
 
 	afterEach(() => {
