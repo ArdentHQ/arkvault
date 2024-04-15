@@ -15,7 +15,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	step,
 	value,
 }: InputFeeAdvancedProperties) => {
-	const { decrement, increment } = useStepMath(step, +value);
+	const { decrement, increment } = useStepMath(step, value);
 
 	const formField = useFormField();
 	const hasError = formField?.isInvalid;
@@ -35,12 +35,12 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 
 		const decrementedValue = decrement();
 
-		if (decrementedValue <= 0) {
+		if (+decrementedValue <= 0) {
 			onChange("0");
 			return;
 		}
 
-		onChange(`${decrementedValue}`);
+		onChange(decrementedValue);
 	};
 
 	const convertedValue = useMemo(() => convert(+value), [convert, value]);
