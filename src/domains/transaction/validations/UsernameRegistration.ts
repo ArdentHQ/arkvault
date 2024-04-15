@@ -1,6 +1,7 @@
 import { validatePattern } from "@/utils/validations";
 import { Networks } from "@ardenthq/sdk";
 import {debounceAsync} from "@/utils/debounce";
+import { ValidateResult } from "react-hook-form";
 
 export const usernameRegistration = (t: any) => ({
 	username: (network: Networks.Network) => ({
@@ -16,7 +17,7 @@ export const usernameRegistration = (t: any) => ({
 		}),
 		validate: {
 			pattern: (value: string) => validatePattern(t, value, /[\d!$&.@_a-z]+/),
-			unique: debounceAsync(async (value) => {
+			unique: debounceAsync<ValidateResult>(async (value) => {
 				try {
 					await usernameExists(network, value);
 				} catch (_e) {
