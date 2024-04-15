@@ -32,11 +32,11 @@ const getBodyVariant = (variant?: Color) => {
 };
 const getChevronVariant = (variant?: Color) => {
 	const variants = {
-		danger: () => tw`text-theme-danger-700`,
-		hint: () => tw`text-theme-hint-700`,
-		info: () => tw`text-theme-info-700`,
-		success: () => tw`text-theme-success-700`,
-		warning: () => tw`text-theme-warning-700`,
+		danger: () => tw`text-theme-danger-700 dark:text-white`,
+		hint: () => tw`text-theme-hint-700 dark:text-white`,
+		info: () => tw`text-theme-info-700 dark:text-white`,
+		success: () => tw`text-theme-success-700 dark:text-white`,
+		warning: () => tw`text-theme-warning-700 dark:text-white`,
 	};
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
