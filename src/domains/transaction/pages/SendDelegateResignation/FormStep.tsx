@@ -43,7 +43,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 			<TransactionSender address={senderWallet.address()} network={senderWallet.network()} />
 
 			{
-				if(senderWallet.username()) && (<TransactionDetail label={selectDelegateValidatorTranslation({
+				senderWallet.username() && (<TransactionDetail label={selectDelegateValidatorTranslation({
 				delegateStr: t("TRANSACTION.DELEGATE_NAME"),
 				network: senderWallet.network(),
 				validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
