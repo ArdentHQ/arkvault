@@ -6,7 +6,7 @@ exports[`Alert > should render 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-pra96q"
+      class="css-1ecv4eg"
     >
       <div
         class="css-v0ob3f"
@@ -60,13 +60,94 @@ exports[`Alert > should render 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Alert > should render as collapsible 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col overflow-hidden rounded-xl"
+  >
+    <div
+      class="css-17zcefl"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg
+          id="circle-exclamation-mark"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              r="9"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M10 10.5v-5"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M10 14h0"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+        </svg>
+      </div>
+      <span>
+        Warning
+      </span>
+      <span
+        class="css-1j8xkwl"
+        data-testid="Alert__chevron"
+      >
+        <div
+          class="css-15txs7d"
+          height="10"
+          width="10"
+        >
+          <svg
+            id="chevron-down-small"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Alert > should render as danger alert 1`] = `
 <DocumentFragment>
   <div
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-ic0qlc"
+      class="css-uae86w"
     >
       <div
         class="css-v0ob3f"
@@ -121,7 +202,7 @@ exports[`Alert > should render as hint alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-1is67az"
+      class="css-1uzc1nx"
     >
       <div
         class="css-v0ob3f"
@@ -175,7 +256,7 @@ exports[`Alert > should render as info alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-1mvrtw8"
+      class="css-1v20fba"
     >
       <div
         class="css-v0ob3f"
@@ -235,7 +316,7 @@ exports[`Alert > should render as success alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-1dwg83m"
+      class="css-1qh812f"
     >
       <div
         class="css-v0ob3f"
@@ -290,7 +371,7 @@ exports[`Alert > should render as warning alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="css-pra96q"
+      class="css-1ecv4eg"
     >
       <div
         class="css-v0ob3f"

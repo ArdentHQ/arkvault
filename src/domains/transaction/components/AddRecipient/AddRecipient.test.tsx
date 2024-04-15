@@ -238,6 +238,40 @@ describe("AddRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should show available balance after fee", async () => {
+		vi.spyOn(wallet, "balance").mockReturnValue(12);
+		vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
+
+		const { container } = renderWithFormProvider(
+			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
+			{
+				fee: 8,
+			},
+		);
+
+		expect(screen.getByTestId("AddRecipient__available")).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__available")).toHaveTextContent("4"));
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it("should hide available balance if fee > balance", async () => {
+		vi.spyOn(wallet, "balance").mockReturnValue(12);
+		vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
+
+		const { container } = renderWithFormProvider(
+			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
+			{
+				fee: 12.1,
+			},
+		);
+
+		expect(screen.queryByTestId("AddRecipient__available")).not.toBeInTheDocument();
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it("should toggle between single and multiple recipients", async () => {
 		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
 
