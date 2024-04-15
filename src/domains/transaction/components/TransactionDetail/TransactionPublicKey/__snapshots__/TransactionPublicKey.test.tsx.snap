@@ -1,0 +1,85 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TransactionPublicKey > should render 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Validator Public Key
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="flex w-full items-center space-x-3 overflow-hidden"
+        >
+          <span
+            class="overflow-hidden"
+          >
+            <div
+              class="flex items-center"
+            >
+              <span
+                class="no-ligatures css-0"
+                data-testid="TruncateMiddle"
+              >
+                034cc5de0e7d78bd56706e787c…4c8296d0ee40379d1f0529975f
+              </span>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionPublicKey > should render responsive 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Validator Public Key
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="flex w-full items-center space-x-3 overflow-hidden"
+        >
+          <span
+            class="overflow-hidden"
+          >
+            <div
+              class="flex items-center"
+            >
+              <span
+                class="no-ligatures css-0"
+                data-testid="TruncateMiddle"
+              >
+                034cc5de0e7d78bd56706e787c…4c8296d0ee40379d1f0529975f
+              </span>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
