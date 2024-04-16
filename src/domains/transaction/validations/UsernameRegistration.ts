@@ -1,7 +1,7 @@
-import { validatePattern } from "@/utils/validations";
 import { Networks } from "@ardenthq/sdk";
-import {debounceAsync} from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
+import { validatePattern } from "@/utils/validations";
+import {debounceAsync} from "@/utils/debounce";
 
 export const usernameRegistration = (t: any) => ({
 	username: (network: Networks.Network) => ({
@@ -20,7 +20,7 @@ export const usernameRegistration = (t: any) => ({
 			unique: debounceAsync<ValidateResult>(async (value) => {
 				try {
 					await usernameExists(network, value);
-				} catch (_e) {
+				} catch {
 					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") })
 				}
 			}, 500),
@@ -34,11 +34,11 @@ const usernameExists = async (network: Networks.Network, username: string,) => {
 		"mainsail.mainnet": 'https://wallets.mainsailhq.com/api/wallets/',
 	}
 
-	if (username.length === 0) return;
+	if (username.length === 0) {return;}
 
 	const response = await fetch(endpoints[network.id()] + username);
 
 	if (response.ok) {
-		throw Error("Username is occupied!");
+		throw new Error("Username is occupied!");
 	}
 }

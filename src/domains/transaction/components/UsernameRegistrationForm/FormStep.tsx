@@ -1,16 +1,14 @@
+import React, { ChangeEvent, useEffect, useMemo } from "react";
+import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
-import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 
 import { Alert } from "@/app/components/Alert";
-import { Contracts } from "@ardenthq/sdk-profiles";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
-import { useEnvironmentContext } from "@/app/contexts";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {

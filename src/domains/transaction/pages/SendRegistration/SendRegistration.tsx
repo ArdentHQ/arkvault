@@ -97,9 +97,9 @@ export const SendRegistration = () => {
 	useLayoutEffect(() => {
 		const registrations = {
 			default: () => setRegistrationForm(DelegateRegistrationForm),
-			usernameRegistration: () => setRegistrationForm(UsernameRegistrationForm),
 			multiSignature: () => setRegistrationForm(MultiSignatureRegistrationForm),
 			secondSignature: () => setRegistrationForm(SecondSignatureRegistrationForm),
+			usernameRegistration: () => setRegistrationForm(UsernameRegistrationForm),
 		};
 
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
@@ -249,9 +249,9 @@ export const SendRegistration = () => {
 	const getPageTitle = () =>
 		({
 			default: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
-			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
 			secondSignature: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
+			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
 		}[registrationType]);
 
 	return (

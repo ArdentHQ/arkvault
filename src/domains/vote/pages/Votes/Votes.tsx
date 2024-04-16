@@ -1,11 +1,11 @@
-import { Page, Section } from "@/app/components/Layout";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/app/hooks";
 import { useHistory, useParams } from "react-router-dom";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/app/hooks";
 
 import { Alert } from "@/app/components/Alert";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Page, Section } from "@/app/components/Layout";
 import { DelegateTable } from "@/domains/vote/components/DelegateTable";
 import { VotesEmpty } from "@/domains/vote/components/VotesEmpty";
 import { VotesHeader } from "@/domains/vote/components/VotesHeader";

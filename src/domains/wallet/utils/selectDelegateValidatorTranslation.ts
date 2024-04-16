@@ -1,5 +1,5 @@
-import { isMainsailNetwork } from "@/utils/network-utils";
 import { Networks } from "@ardenthq/sdk";
+import { isMainsailNetwork } from "@/utils/network-utils";
 
 interface Properties<T extends string | React.ReactNode> {
 	network: Networks.Network;

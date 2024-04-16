@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import {
 	TransactionDetail,
 	TransactionExplorerLink,
@@ -14,7 +15,6 @@ import { TransactionDetailProperties } from "@/domains/transaction/components/Tr
 import { TransactionPublicKey } from "@/domains/transaction/components/TransactionDetail/TransactionPublicKey";
 import { isMainsailNetwork } from "@/utils/network-utils";
 import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
-import { useTranslation } from "react-i18next";
 
 export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();

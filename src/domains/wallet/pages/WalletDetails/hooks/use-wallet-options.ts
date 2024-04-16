@@ -1,12 +1,12 @@
-import { Enums } from "@ardenthq/sdk";
+/* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { Enums } from "@ardenthq/sdk";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { TFunction } from "@/app/i18n/react-i18next.contracts";
-
 import { DropdownOptionGroup } from "@/app/components/Dropdown";
-import { isCustomNetwork } from "@/utils/network-utils";
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { hasAvailableMusigServer } from "@/utils/server-utils";
+import { isCustomNetwork } from "@/utils/network-utils";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
@@ -125,19 +125,14 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			});
 		}
 
-		if (
-			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration)
-		) {
+		if (wallet.network().allows(Enums.FeatureFlag.TransactionUsernameRegistration)) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_USERNAME"),
 				value: "username-registration",
 			});
 		}
 
-		if (
-			wallet.network().allows(Enums.FeatureFlag.TransactionUsernameResignation) &&
-			wallet.username()
-		) {
+		if (wallet.network().allows(Enums.FeatureFlag.TransactionUsernameResignation) && wallet.username()) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_USERNAME"),
 				value: "username-resignation",

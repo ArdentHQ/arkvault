@@ -1,7 +1,15 @@
-import * as useFeesHook from "@/app/hooks/use-fees";
 
-import { DelegateRegistrationForm, signDelegateRegistration } from "./DelegateRegistrationForm";
 import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
+import React, { useEffect } from "react";
+
+/* eslint-disable @typescript-eslint/require-await */
+import { Contracts } from "@ardenthq/sdk";
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
+import { Route } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
+import { DelegateRegistrationForm, signDelegateRegistration } from "./DelegateRegistrationForm";
+import delegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
+import { translations } from "@/domains/transaction/i18n";
 import {
 	MNEMONICS,
 	RenderResult,
@@ -12,15 +20,7 @@ import {
 	syncDelegates,
 	waitFor,
 } from "@/utils/testing-library";
-import React, { useEffect } from "react";
-
-/* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@ardenthq/sdk";
-import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
-import { Route } from "react-router-dom";
-import delegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
-import { translations } from "@/domains/transaction/i18n";
-import userEvent from "@testing-library/user-event";
+import * as useFeesHook from "@/app/hooks/use-fees";
 
 let profile: ProfilesContracts.IProfile;
 let wallet: ProfilesContracts.IReadWriteWallet;

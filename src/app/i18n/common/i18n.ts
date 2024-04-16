@@ -88,9 +88,6 @@ export const translations = {
 	DELEGATE: "Delegate",
 	DELEGATES: "Delegates",
 	DELEGATE_NAME: "Delegate Name",
-	VALIDATOR: "Validator",
-	VALIDATORS: "Validators",
-	VALIDATOR_NAME: "Validator Name",
 	DELETE: "Delete",
 	DESCRIPTION: "Description",
 	DETAILS: "Details",
@@ -173,8 +170,8 @@ export const translations = {
 	},
 	INPUT_PUBLIC_KEY: {
 		VALIDATION: {
-			PUBLIC_KEY_ALREADY_EXISTS: "Public Key {{publicKey}} already exists",
 			INVALID_BLS_PUBLIC_KEY: "Invalid BLS Public Key",
+			PUBLIC_KEY_ALREADY_EXISTS: "Public Key {{publicKey}} already exists",
 		},
 	},
 	INPUT_VALIDATOR_PUBLIC_KEY: {
@@ -197,9 +194,9 @@ export const translations = {
 	LEDGER_COMPATIBILITY_ERROR: "ARKVault requires the use of a chromium based browser when using a Ledger.",
 	LEDGER_COMPATIBILITY_ERROR_LONG:
 		"Your portfolio contains 1 or more Ledger wallets. ARKVault requires the use of a chromium based browser such as Chrome, Brave or Edge when using a Ledger device.",
-	LEDGER_MAINSAIL_NOT_SUPPORTED: "Ledger is not yet supported in Mainsail.",
 	LEDGER_CONNECTED: "{{device}} connected",
 	LEDGER_DISCONNECTED: "{{device}} disconnected",
+	LEDGER_MAINSAIL_NOT_SUPPORTED: "Ledger is not yet supported in Mainsail.",
 	LEDGER_WALLET: "This is a Ledger wallet",
 	LINK: "Link",
 	LOAD: "Load",
@@ -406,6 +403,9 @@ export const translations = {
 		RECIPIENT_INVALID: "Recipient address is invalid",
 		SUBJECT_MISMATCH: "The {{subject}} do not match",
 	},
+	VALIDATOR: "Validator",
+	VALIDATORS: "Validators",
+	VALIDATOR_NAME: "Validator Name",
 	VALUE: "Value",
 	VERIFIED: "Verified Address: {{value}}",
 	VERSION: "Version",
