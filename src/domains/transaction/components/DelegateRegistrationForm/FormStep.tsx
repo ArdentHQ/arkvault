@@ -1,9 +1,11 @@
-import { FormField, FormLabel } from "@/app/components/Form";
 import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import { FormField, FormLabel } from "@/app/components/Form";
 import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 
 import { Alert } from "@/app/components/Alert";
-import { Contracts } from "@ardenthq/sdk-profiles";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
@@ -11,15 +13,13 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { isMainsailNetwork } from "@/utils/network-utils";
 import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
-	const { delegateRegistration, validatorRegistration } = useValidation({ network: wallet.network() });
+	const { delegateRegistration, validatorRegistration } = useValidation();
 
 	const { register, setValue, getValues } = useFormContext();
 	const { username, validatorPublicKey } = getValues(["username", "validatorPublicKey"]);
