@@ -144,9 +144,7 @@ exports[`DelegateRegistrationDetail > should render a modal 1`] = `
                 </div>
                 <div
                   class="flex items-center font-semibold"
-                >
-                  Ark Wallet
-                </div>
+                />
               </div>
               <div
                 class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
