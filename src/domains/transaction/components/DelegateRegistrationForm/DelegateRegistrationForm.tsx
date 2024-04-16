@@ -8,6 +8,7 @@ import { ReviewStep } from "./ReviewStep";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { isMainsailNetwork } from "@/utils/network-utils";
+import { TransactionPublicKey } from "../TransactionDetail/TransactionPublicKey";
 
 const component = ({
 	activeTab,
@@ -39,9 +40,7 @@ const transactionDetails = ({
 }) => (
 	<>
 		{isMainsailNetwork(wallet.network()) && (
-			<TransactionDetail label={translations("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
-				{transaction.data().data().asset.validatorPublicKey as string}
-			</TransactionDetail>
+			<TransactionPublicKey publicKey={transaction.data().data().asset.validatorPublicKey} />
 		)}
 
 		{!isMainsailNetwork(wallet.network()) && (
