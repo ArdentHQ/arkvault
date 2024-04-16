@@ -1,22 +1,22 @@
-import tw, { css } from "twin.macro";
+import tw, { TwStyle, css } from "twin.macro";
 
 import { Color, Size, Theme } from "@/types";
 
 const baseStyle = tw`animate-spin rounded-full border border-width[5px] flex-shrink-0`;
 
 const getColor = (color: Color | "warning-alt", theme?: Theme) => {
-	const baseColors: Record<Color | "warning-alt", string> = {
-		danger: "danger-400",
-		hint: "hint-500",
-		info: "primary-600",
-		success: "success-600",
-		warning: "warning-600",
-		"warning-alt": "warning-900",
+	const baseColors: Record<Color | "warning-alt", TwStyle> = {
+		danger: tw`border-l-theme-danger-400 dark:border-l-theme-danger-400`,
+		hint: tw`border-l-theme-hint-500 dark:border-l-theme-hint-500`,
+		info: tw`border-l-theme-primary-600 dark:border-l-theme-primary-600`,
+		success: tw`border-l-theme-success-600 dark:border-l-theme-success-600`,
+		warning: tw`border-l-theme-warning-600 dark:border-l-theme-warning-600`,
+		"warning-alt": tw`border-l-theme-warning-900 dark:border-l-theme-warning-600`,
 	};
 
 	let styles =
 		color === "warning-alt"
-			? [tw`border-theme-warning-200 dark:border-white`]
+			? [tw`border-theme-warning-200 dark:border-theme-secondary-800`]
 			: [tw`border-theme-secondary-200 dark:border-black`];
 
 	if (theme === "dark") {
@@ -27,12 +27,7 @@ const getColor = (color: Color | "warning-alt", theme?: Theme) => {
 		styles = [tw`border-theme-primary-100 dark:border-theme-secondary-800`];
 	}
 
-	return [
-		...styles,
-		css`
-			border-left-color: var(--theme-color-${baseColors[color]}) !important;
-		`,
-	];
+	return [...styles, baseColors[color]];
 };
 
 const getSize = (size?: Size) => {

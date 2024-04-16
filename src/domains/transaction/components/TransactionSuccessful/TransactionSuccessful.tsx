@@ -35,7 +35,6 @@ export const TransactionSuccessful = ({
 
 	const isTransactionConfirmed = useConfirmedTransaction({ transactionId: transaction.id(), wallet: senderWallet });
 
-
 	if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
 		return (
 			<MultiSignatureSuccessful transaction={transaction} senderWallet={senderWallet}>
@@ -85,7 +84,7 @@ export const TransactionSuccessful = ({
 				{children}
 
 				{!isTransactionConfirmed && (
-					<div className="mt-8 flex space-x-2 rounded bg-theme-warning-50 px-3 py-2 text-theme-warning-900 dark:bg-theme-warning-700 dark:text-white">
+					<div className="mt-8  flex space-x-2 rounded border border-transparent bg-theme-warning-50 px-3 py-2 text-theme-warning-900 dark:border-theme-warning-600 dark:bg-transparent dark:text-theme-warning-600">
 						<Spinner size="sm" width={3} color="warning-alt" />
 
 						<span className="font-semibold">{t("TRANSACTION.PENDING.STATUS_TEXT")}</span>
