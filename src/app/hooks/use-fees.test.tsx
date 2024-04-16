@@ -124,6 +124,10 @@ describe("useFees", () => {
 
 		await env.wallets().syncByProfile(profile);
 
+		const coin = profile.coins().get("ARK", "ark.devnet");
+		const conTransactionSpy = vi.spyOn(coin.transaction(), "multiSignature").mockResolvedValue({});
+		const feeCalculateSpy = vi.spyOn(coin.fee(), "calculate").mockResolvedValue(BigNumber.make(10));
+
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 		const {
 			result: { current },
@@ -133,9 +137,9 @@ describe("useFees", () => {
 
 		await expect(
 			current.calculate({
-				coin: "ARK",
+				coin: wallet.network().coin(),
 				data: {},
-				network: ARKDevnet,
+				network: wallet.network().id(),
 				type: "multiSignature",
 			}),
 		).resolves.toStrictEqual({
@@ -145,6 +149,9 @@ describe("useFees", () => {
 			min: 10,
 			static: 10,
 		});
+
+		conTransactionSpy.mockRestore();
+		feeCalculateSpy.mockRestore();
 	});
 
 	it("should calculate and return multisignature fees with two participants", async () => {
