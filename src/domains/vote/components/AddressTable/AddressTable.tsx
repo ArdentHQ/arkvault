@@ -53,7 +53,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				Header: selectDelegateValidatorTranslation({
 					delegateStr: maxVotes === 1 ? t("COMMON.DELEGATE") : t("COMMON.DELEGATES"),
 					network: network,
-					validatorStr: maxVotes === 1 ? t("COMMON.VALIDATOR") : t("COMMON.VALIDATORS")
+					validatorStr: maxVotes === 1 ? t("COMMON.VALIDATOR") : t("COMMON.VALIDATORS"),
 				}),
 				accessor: (wallet) => {
 					let votes: Contracts.VoteRegistryItem[];

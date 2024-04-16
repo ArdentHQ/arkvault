@@ -17,7 +17,15 @@ interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 }
 
 export const FilterTransactions = memo(
-	({ className, network, onSelect, defaultSelected, wallets, isDisabled, ...properties }: FilterTransactionsProperties) => {
+	({
+		className,
+		network,
+		onSelect,
+		defaultSelected,
+		wallets,
+		isDisabled,
+		...properties
+	}: FilterTransactionsProperties) => {
 		const { t } = useTranslation();
 		const { types, getLabel, canViewMagistrate } = useTransactionTypes({ wallets });
 

@@ -10,7 +10,7 @@ interface SummaryStepProperties {
 }
 
 export const SummaryStep = ({ senderWallet, transaction }: SummaryStepProperties) => (
-		<TransactionSuccessful transaction={transaction} senderWallet={senderWallet}>
-			<TransactionFee currency={senderWallet.currency()} value={transaction.fee()} paddingPosition="top" />
-		</TransactionSuccessful>
-	);
+	<TransactionSuccessful transaction={transaction} senderWallet={senderWallet}>
+		<TransactionFee currency={senderWallet.currency()} value={transaction.fee()} paddingPosition="top" />
+	</TransactionSuccessful>
+);

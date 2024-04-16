@@ -7,7 +7,8 @@ interface Properties<T extends string | React.ReactNode> {
 	delegateStr: T;
 }
 
-export const selectDelegateValidatorTranslation = <T extends string | React.ReactNode>({ network, validatorStr, delegateStr }: Properties<T>): T => isMainsailNetwork(network) ? validatorStr : delegateStr;
-
-
-
+export const selectDelegateValidatorTranslation = <T extends string | React.ReactNode>({
+	network,
+	validatorStr,
+	delegateStr,
+}: Properties<T>): T => (isMainsailNetwork(network) ? validatorStr : delegateStr);

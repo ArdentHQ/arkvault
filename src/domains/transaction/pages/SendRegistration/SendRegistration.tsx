@@ -29,7 +29,7 @@ import {
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import {
 	signUsernameRegistration,
-	UsernameRegistrationForm
+	UsernameRegistrationForm,
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 
 export const SendRegistration = () => {

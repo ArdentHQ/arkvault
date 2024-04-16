@@ -62,7 +62,7 @@ export const PendingTransferRowMobile = ({
 							<BaseTransactionRowRecipientLabel
 								type={transaction.type()}
 								recipient={transaction.recipient()}
-								network={wallet.network()} 
+								network={wallet.network()}
 							/>
 						</div>
 					</ResponsiveAddressWrapper>
