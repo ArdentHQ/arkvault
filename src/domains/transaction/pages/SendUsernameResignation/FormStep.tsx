@@ -1,3 +1,6 @@
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
 import {
 	TransactionDetail,
@@ -6,10 +9,7 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
-import React from "react";
 import { StepHeader } from "@/app/components/StepHeader";
-import { useTranslation } from "react-i18next";
 
 interface FormStepProperties {
 	senderWallet: ProfilesContracts.IReadWriteWallet;

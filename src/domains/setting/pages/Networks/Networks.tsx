@@ -1,28 +1,28 @@
-import { Form, FormButtons } from "@/app/components/Form";
 import React, { useEffect, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Prompt } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import NetworkFormModal from "./blocks/NetworkFormModal";
+import UpdateNetworkFormModal from "./blocks/UpdateNetworkFormModal";
+import { Form, FormButtons } from "@/app/components/Form";
 import { isCustomNetwork, profileEnabledNetworkIds } from "@/utils/network-utils";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 
 import { Button } from "@/app/components/Button";
-import { Contracts } from "@ardenthq/sdk-profiles";
 import CustomNetworkDetailsModal from "@/domains/setting/pages/Networks/blocks/CustomNetworkDetailsModal";
 import CustomNetworksList from "@/domains/setting/pages/Networks/blocks/CustomNetworksList";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import DeleteCustomNetworkModal from "@/domains/setting/pages/Networks/blocks/DeleteCustomNetworkModal";
 import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
-import NetworkFormModal from "./blocks/NetworkFormModal";
-import { Networks } from "@ardenthq/sdk";
 import NetworksList from "@/domains/setting/pages/Networks/blocks/NetworksList";
-import { Prompt } from "react-router-dom";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { Toggle } from "@/app/components/Toggle";
-import UpdateNetworkFormModal from "./blocks/UpdateNetworkFormModal";
 import { getProfileStoredPassword } from "@/utils/profile-utils";
 import { toasts } from "@/app/services";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useForm } from "react-hook-form";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { useWalletConfig } from "@/domains/wallet/hooks";
 

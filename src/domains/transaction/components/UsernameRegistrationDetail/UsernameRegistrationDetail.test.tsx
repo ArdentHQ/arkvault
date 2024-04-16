@@ -1,9 +1,8 @@
-import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
 import React from "react";
 import { Route } from "react-router-dom";
-import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { UsernameRegistrationDetail } from "./UsernameRegistrationDetail";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
 import { translations } from "@/domains/transaction/i18n";
 
 const fixtureProfileId = getDefaultProfileId();

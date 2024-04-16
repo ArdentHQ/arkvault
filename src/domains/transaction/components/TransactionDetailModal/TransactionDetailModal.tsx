@@ -61,8 +61,6 @@ export const TransactionDetailModal = ({
 		default: () => void 0,
 		delegateRegistration: () => DelegateRegistrationDetail,
 		delegateResignation: () => DelegateResignationDetail,
-		usernameRegistration: () => UsernameRegistrationDetail,
-		usernameResignation: () => UsernameResignationDetail,
 		ipfs: () => IpfsDetail,
 		magistrate: () => LegacyMagistrateDetail,
 		multiPayment: () => MultiPaymentDetail,
@@ -71,6 +69,8 @@ export const TransactionDetailModal = ({
 		transfer: () => TransferDetail,
 		unlockToken: () => UnlockTokenDetail,
 		unvote: () => VoteDetail,
+		usernameRegistration: () => UsernameRegistrationDetail,
+		usernameResignation: () => UsernameResignationDetail,
 		vote: () => VoteDetail,
 		voteCombination: () => VoteDetail,
 	};

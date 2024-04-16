@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import {
 	TransactionDetail,
 	TransactionNetwork,
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
 import { StepHeader } from "@/app/components/StepHeader";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransactionPublicKey } from "@/domains/transaction/components/TransactionDetail/TransactionPublicKey";
 import { isMainsailNetwork } from "@/utils/network-utils";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 
 export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();

@@ -1,13 +1,13 @@
 import React, { useMemo } from "react";
+import cn from "classnames";
+import { useTranslation } from "react-i18next";
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
 } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
-import cn from "classnames";
 import { useBreakpoint } from "@/app/hooks";
-import { useTranslation } from "react-i18next";
 
 type Properties = { publicKey?: string | unknown } & TransactionDetailProperties;
 

@@ -19,7 +19,7 @@ interface Properties {
 	network: Networks.Network;
 }
 
-const RecipientLabel = ({ type, network }: { type: string, network: Networks.Network }) => {
+const RecipientLabel = ({ type, network }: { type: string; network: Networks.Network }) => {
 	const { getLabel } = useTransactionTypes();
 	return (
 		<span data-testid="TransactionRowRecipientLabel" className="font-semibold text-theme-text">
@@ -88,7 +88,15 @@ const DelegateLabel = ({ username, address, count }: { username?: string; addres
 	);
 };
 
-const VoteLabel = ({ delegates, isUnvote, network }: { delegates: Contracts.IReadOnlyWallet[]; isUnvote?: boolean, network: Networks.Network }) => (
+const VoteLabel = ({
+	delegates,
+	isUnvote,
+	network,
+}: {
+	delegates: Contracts.IReadOnlyWallet[];
+	isUnvote?: boolean;
+	network: Networks.Network;
+}) => (
 	<span data-testid="TransactionRowVoteLabel" className="flex">
 		<RecipientLabel type={isUnvote ? "unvote" : "vote"} network={network} />
 		{delegates.length > 0 && (
@@ -107,7 +115,7 @@ export const BaseTransactionRowRecipientLabel = ({
 	recipient,
 	walletName,
 	addressClass,
-	network
+	network,
 }: Properties) => {
 	const { env } = useEnvironmentContext();
 

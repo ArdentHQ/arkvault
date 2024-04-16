@@ -162,7 +162,13 @@ export const DelegateRow = ({
 
 		if (isVoteDisabled && !isSelectedVote) {
 			return (
-				<DelegateVoteButton index={index} disabled compactClassName="text-black" isCompact={isCompact} selectedWallet={selectedWallet}>
+				<DelegateVoteButton
+					index={index}
+					disabled
+					compactClassName="text-black"
+					isCompact={isCompact}
+					selectedWallet={selectedWallet}
+				>
 					{t("COMMON.SELECT")}
 				</DelegateVoteButton>
 			);
@@ -204,7 +210,7 @@ export const DelegateRow = ({
 				isCompact={isCompact}
 				innerClassName={cn("font-bold border-2 border-r-0 border-transparent", rowColor, { "h-12": isCompact })}
 			>
-				<span>{delegate.rank() ?? '0'}</span>
+				<span>{delegate.rank() ?? "0"}</span>
 			</TableCell>
 
 			<TableCell
@@ -221,10 +227,10 @@ export const DelegateRow = ({
 					<span className="absolute flex w-full items-center whitespace-nowrap" ref={ref}>
 						{delegate.username() ? (
 							<div className="overflow-hidden text-ellipsis">{delegate.username()}</div>
-						): (
+						) : (
 							<TruncateMiddleDynamic value={delegate.address()} availableWidth={width} />
-						)} 
-						
+						)}
+
 						<Link
 							className="ml-2 block sm:hidden"
 							to={delegate.explorerLink()}
@@ -247,21 +253,25 @@ export const DelegateRow = ({
 				})}
 			>
 				{isActive ? (
-					<Tooltip content={selectDelegateValidatorTranslation({
-						delegateStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_FORGING_POSITION"),
-						network: selectedWallet.network(),
-						validatorStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.VALIDATOR_IN_FORGING_POSITION"),
-					})}>
+					<Tooltip
+						content={selectDelegateValidatorTranslation({
+							delegateStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_FORGING_POSITION"),
+							network: selectedWallet.network(),
+							validatorStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.VALIDATOR_IN_FORGING_POSITION"),
+						})}
+					>
 						<div>
 							<Icon name="StatusOk" className="text-theme-success-500" size="lg" />
 						</div>
 					</Tooltip>
 				) : (
-					<Tooltip content={selectDelegateValidatorTranslation({
-						delegateStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_STANDY_POSITION"),
-						network: selectedWallet.network(),
-						validatorStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.VALIDATOR_IN_STANDY_POSITION"),
-					})}>
+					<Tooltip
+						content={selectDelegateValidatorTranslation({
+							delegateStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_STANDY_POSITION"),
+							network: selectedWallet.network(),
+							validatorStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.VALIDATOR_IN_STANDY_POSITION"),
+						})}
+					>
 						<div>
 							<Icon name="StatusStandby" className="text-theme-warning-500" size="lg" />
 						</div>

@@ -1,11 +1,11 @@
-import { Button } from "@/app/components/Button";
-import { ButtonVariant } from "@/types";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
-import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
-import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 import { useTranslation } from "react-i18next";
+import { Button } from "@/app/components/Button";
+import { ButtonVariant } from "@/types";
+import { Tooltip } from "@/app/components/Tooltip";
+import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
 interface VoteButtonProperties {
 	index: number;

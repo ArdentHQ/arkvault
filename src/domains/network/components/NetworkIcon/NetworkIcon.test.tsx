@@ -1,10 +1,11 @@
-import { render, screen } from "@/utils/testing-library";
+/* eslint-disable sonarjs/no-duplicate-string */
 
-import { NetworkIcon } from "./NetworkIcon";
 import { Networks } from "@ardenthq/sdk";
 import React from "react";
-import { availableNetworksMock } from "@/tests/mocks/networks";
 import userEvent from "@testing-library/user-event";
+import { NetworkIcon } from "./NetworkIcon";
+import { availableNetworksMock } from "@/tests/mocks/networks";
+import { render, screen } from "@/utils/testing-library";
 
 let network: Networks.Network;
 

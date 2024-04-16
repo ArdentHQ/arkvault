@@ -1,10 +1,10 @@
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
-import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
 import { UUID } from "@ardenthq/sdk-cryptography";
-import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { uniq } from "@ardenthq/sdk-helpers";
+import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
+import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 
 export const networkName = (network: Networks.NetworkManifest) => `${network.name}`;
 
@@ -129,9 +129,7 @@ export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
 			.wallets()
 			.values()
 			.filter((wallet) => profileAllEnabledNetworkIds(profile).includes(wallet.network().id()))
-			.map((wallet) => {
-				return wallet.network().id();
-			}),
+			.map((wallet) => wallet.network().id()),
 	);
 
 export const enabledNetworksCount = (profile: Contracts.IProfile) => profileAllEnabledNetworkIds(profile).length;
@@ -171,9 +169,7 @@ export const findNetworkFromSearchParameters = (profile: Contracts.IProfile, sea
 
 export const hasNetworksWithLedgerSupport = (profile: Contracts.IProfile) => {
 	const enabledNetworks = profileAllEnabledNetworks(profile);
-	return enabledNetworks.length > 0 && enabledNetworks.some((network) => network.allowsLedger());
+	return enabledNetworks.some((network) => network.allowsLedger());
 };
 
-export const isMainsailNetwork = (network: Networks.Network) => {
-	return network.id().startsWith("mainsail");
-};
+export const isMainsailNetwork = (network: Networks.Network) => network.id().startsWith("mainsail");

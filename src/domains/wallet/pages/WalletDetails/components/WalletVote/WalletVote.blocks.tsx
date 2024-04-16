@@ -48,7 +48,7 @@ const EmptyVotes = ({ wallet }: EmptyVotesProperties) => {
 						{selectDelegateValidatorTranslation({
 							delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION_DELEGATE"),
 							network: wallet.network(),
-							validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")
+							validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION"),
 						})}
 					</span>
 					<Link to={votesHelpLink} isExternal>
@@ -134,17 +134,15 @@ const DelegateStatus = ({ votes, activeDelegates, wallet }: DelegateStatusProper
 		return (
 			<>
 				<HintIcon
-					tooltipContent={
-						selectDelegateValidatorTranslation({
-							delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING_COUNT_DELEGATE", {
-								count: standbyCount + resignedCount,
-							}),
-							network: wallet.network(),
-							validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING_COUNT", {
-								count: standbyCount + resignedCount,
-							})
-						})
-						}
+					tooltipContent={selectDelegateValidatorTranslation({
+						delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING_COUNT_DELEGATE", {
+							count: standbyCount + resignedCount,
+						}),
+						network: wallet.network(),
+						validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING_COUNT", {
+							count: standbyCount + resignedCount,
+						}),
+					})}
 				/>
 
 				<span className="font-semibold">
@@ -174,7 +172,7 @@ const DelegateStatus = ({ votes, activeDelegates, wallet }: DelegateStatusProper
 				{selectDelegateValidatorTranslation({
 					delegateStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.DELEGATE_STATUS"),
 					network: wallet.network(),
-					validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VALIDATOR_STATUS")
+					validatorStr: t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VALIDATOR_STATUS"),
 				})}
 			</span>
 			<div className="flex items-center justify-end space-x-2">{renderStatuses()}</div>
