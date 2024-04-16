@@ -7,9 +7,7 @@ export const useConfirmedTransaction = ({
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	transactionId: string;
-}): {
-	isConfirmed: boolean;
-} => {
+}): boolean => {
 	const [isConfirmed, setIsConfirmed] = useState(false);
 
 	useEffect(() => {
