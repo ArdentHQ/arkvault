@@ -7,19 +7,16 @@ describe("useConfirmedTransaction", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
-	beforeEach(async () => {
+	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
-
-		await env.profiles().restore(profile);
-		await profile.sync();
 	});
 
 	afterEach(() => {
 		vi.clearAllMocks();
 	});
 
-	it("should initially set isConfirmed to false", async () => {
+	it("should initially set isConfirmed to false", () => {
 		const { result } = renderHook(() =>
 			useConfirmedTransaction({
 				transactionId: "123",
