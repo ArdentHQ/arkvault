@@ -108,7 +108,7 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
               class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-pra96q"
+                class="css-1ecv4eg"
               >
                 <div
                   class="css-v0ob3f"
@@ -321,7 +321,7 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
               class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="css-pra96q"
+                class="css-1ecv4eg"
               >
                 <div
                   class="css-v0ob3f"
