@@ -8,7 +8,7 @@ import { ReviewStep } from "./ReviewStep";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { isMainsailNetwork } from "@/utils/network-utils";
-import { TransactionPublicKey } from "../TransactionDetail/TransactionPublicKey";
+import { TransactionPublicKey } from "@/domains/transaction/components/TransactionDetail/TransactionPublicKey";
 
 const component = ({
 	activeTab,
