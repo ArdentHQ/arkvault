@@ -35,7 +35,6 @@ export const TransactionSuccessful = ({
 
 	const isTransactionConfirmed = useConfirmedTransaction({ transactionId: transaction.id(), wallet: senderWallet });
 
-
 	if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
 		return (
 			<MultiSignatureSuccessful transaction={transaction} senderWallet={senderWallet}>
