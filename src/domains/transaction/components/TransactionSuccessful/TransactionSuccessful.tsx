@@ -35,6 +35,7 @@ export const TransactionSuccessful = ({
 
 	const isTransactionConfirmed = useConfirmedTransaction({ transactionId: transaction.id(), wallet: senderWallet });
 
+
 	if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
 		return (
 			<MultiSignatureSuccessful transaction={transaction} senderWallet={senderWallet}>
@@ -51,7 +52,10 @@ export const TransactionSuccessful = ({
 		title ?? (isTransactionConfirmed ? t("TRANSACTION.SUCCESS.TITLE") : t("TRANSACTION.PENDING.TITLE"));
 
 	return (
-		<section data-testid="TransactionSuccessful" className="space-y-8">
+		<section
+			data-testid={isTransactionConfirmed ? "TransactionSuccessful" : "TransactionPending"}
+			className="space-y-8"
+		>
 			<StepHeader title={titleText} />
 
 			<Image name="TransactionSuccessBanner" domain="transaction" className="hidden w-full md:block" />
