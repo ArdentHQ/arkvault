@@ -17,7 +17,11 @@ export default mergeConfig(
 			sourcemapIgnoreList: false,
 		},
 		test: {
-			logHeapUsage: true,
+			browser: {
+				enabled: false,
+			},
+			css: false,
+			useAtomics: true,
 			maxConcurrency: 3,
 			globals: true,
 			environment: "jsdom",
