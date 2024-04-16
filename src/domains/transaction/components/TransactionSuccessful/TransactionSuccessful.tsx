@@ -3,6 +3,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
+import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
 import { Image } from "@/app/components/Image";
 import {
 	TransactionExplorerLink,
@@ -31,6 +32,8 @@ export const TransactionSuccessful = ({
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
+	const isTransactionConfirmed = useConfirmedTransaction({ transactionId: transaction.id(), wallet: senderWallet });
+
 	if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
 		return (
 			<MultiSignatureSuccessful transaction={transaction} senderWallet={senderWallet}>
@@ -39,27 +42,34 @@ export const TransactionSuccessful = ({
 		);
 	}
 
+	const descriptionText =
+		description ?? isTransactionConfirmed
+			? t("TRANSACTION.SUCCESS.DESCRIPTION")
+			: t("TRANSACTION.PENDING.DESCRIPTION");
+
+	const titleText = title ?? isTransactionConfirmed ? t("TRANSACTION.SUCCESS.TITLE") : t("TRANSACTION.PENDING.TITLE");
+
 	return (
 		<section data-testid="TransactionSuccessful" className="space-y-8">
-			<StepHeader title={title ?? t("TRANSACTION.SUCCESS.TITLE")} />
+			<StepHeader title={titleText} />
 
 			<Image name="TransactionSuccessBanner" domain="transaction" className="hidden w-full md:block" />
 
-			<p className="hidden text-theme-secondary-text md:block">
-				{description ?? t("TRANSACTION.SUCCESS.DESCRIPTION")}
-			</p>
+			<p className="hidden text-theme-secondary-text md:block">{descriptionText}</p>
 
 			<Alert variant="success" className="md:hidden">
-				{description ?? t("TRANSACTION.SUCCESS.DESCRIPTION")}
+				{descriptionText}
 			</Alert>
 
 			<div>
-				<TransactionExplorerLink
-					transaction={transaction}
-					border={false}
-					paddingPosition="bottom"
-					borderPosition="bottom"
-				/>
+				{isTransactionConfirmed && (
+					<TransactionExplorerLink
+						transaction={transaction}
+						border={false}
+						paddingPosition="bottom"
+						borderPosition="bottom"
+					/>
+				)}
 
 				<TransactionType type={transaction.type()} />
 
