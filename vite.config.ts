@@ -8,8 +8,7 @@ import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
 
-export default defineConfig(({ mode }) => {
-	console.log({ mode });
+export default defineConfig(() => {
 	return {
 		define: {
 			"process.env": {
