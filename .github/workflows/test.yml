@@ -275,7 +275,7 @@ jobs:
                 node-version:
                     - 18.12.1
         concurrency:
-            group: ${{ github.head_ref }}-test-app-components-al
+            group: ${{ github.head_ref }}-test-app-components
             cancel-in-progress: true
         steps:
             - uses: actions/checkout@v3
@@ -649,115 +649,117 @@ jobs:
                   timeout_minutes: 20
                   max_attempts: 1
                   command: pnpm test:coverage src/domains/message
-    # domains-network:
-    #     runs-on: ubuntu-latest
-    #     env:
-    #         COVERAGE_INCLUDE_PATH: src/domains/network
-    #     strategy:
-    #         matrix:
-    #             node-version:
-    #                 - 18.12.1
-    #     concurrency:
-    #         group: ${{ github.head_ref }}-test-domains-network
-    #         cancel-in-progress: true
-    #     steps:
-    #         - uses: actions/checkout@v3
-    #           with:
-    #               ref: ${{ github.head_ref }}
-    #         - uses: pnpm/action-setup@v2
-    #           with:
-    #               version: 8
-    #         - uses: actions/setup-node@v3
-    #           with:
-    #               node-version: ${{ matrix.node-version }}
-    #               cache: pnpm
-    #         - name: Update System
-    #           run: sudo apt-get update
-    #         - name: Install (Ledger Requirements)
-    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-    #         - name: Install (pnpm)
-    #           run: pnpm install --frozen-lockfile
-    #         - name: Rebuild
-    #           run: pnpm rebuild
-    #         - name: Test
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/network
-    # domains-profile:
-    #     runs-on: ubuntu-latest
-    #     env:
-    #         COVERAGE_INCLUDE_PATH: src/domains/profile
-    #     strategy:
-    #         matrix:
-    #             node-version:
-    #                 - 18.12.1
-    #     concurrency:
-    #         group: ${{ github.head_ref }}-test-domains-profile
-    #         cancel-in-progress: true
-    #     steps:
-    #         - uses: actions/checkout@v3
-    #           with:
-    #               ref: ${{ github.head_ref }}
-    #         - uses: pnpm/action-setup@v2
-    #           with:
-    #               version: 8
-    #         - uses: actions/setup-node@v3
-    #           with:
-    #               node-version: ${{ matrix.node-version }}
-    #               cache: pnpm
-    #         - name: Update System
-    #           run: sudo apt-get update
-    #         - name: Install (Ledger Requirements)
-    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-    #         - name: Install (pnpm)
-    #           run: pnpm install --frozen-lockfile
-    #         - name: Rebuild
-    #           run: pnpm rebuild
-    #         - name: Test
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/profile
-    # domains-setting:
-    #     runs-on: ubuntu-latest
-    #     env:
-    #         COVERAGE_INCLUDE_PATH: src/domains/setting
-    #     strategy:
-    #         matrix:
-    #             node-version:
-    #                 - 18.12.1
-    #     concurrency:
-    #         group: ${{ github.head_ref }}-test-domains-setting
-    #         cancel-in-progress: true
-    #     steps:
-    #         - uses: actions/checkout@v3
-    #           with:
-    #               ref: ${{ github.head_ref }}
-    #         - uses: pnpm/action-setup@v2
-    #           with:
-    #               version: 8
-    #         - uses: actions/setup-node@v3
-    #           with:
-    #               node-version: ${{ matrix.node-version }}
-    #               cache: pnpm
-    #         - name: Update System
-    #           run: sudo apt-get update
-    #         - name: Install (Ledger Requirements)
-    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-    #         - name: Install (pnpm)
-    #           run: pnpm install --frozen-lockfile
-    #         - name: Rebuild
-    #           run: pnpm rebuild
-    #         - name: Test
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/setting
-    #
+    domains-network:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/network
+        strategy:
+            matrix:
+                node-version:
+                    - 18.12.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-network
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/network
+
+    domains-profile:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/profile
+        strategy:
+            matrix:
+                node-version:
+                    - 18.12.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-profile
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/profile
+
+    domains-setting:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/setting
+        strategy:
+            matrix:
+                node-version:
+                    - 18.12.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-setting
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/setting
+
     # domains-transaction:
     #     runs-on: ubuntu-latest
     #     env:
