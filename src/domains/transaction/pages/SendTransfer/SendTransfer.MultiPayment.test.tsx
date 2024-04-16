@@ -29,6 +29,8 @@ vi.mock("@/utils/delay", () => ({
 }));
 
 describe("SendTransfer MultiPayment", () => {
+	const recipientAddButton = "AddRecipient__add-button"
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
@@ -67,24 +69,24 @@ describe("SendTransfer MultiPayment", () => {
 		// Select multiple type
 		userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
 
-		await expect(screen.findByTestId("AddRecipient__add-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
 
 		// 1st recipient.
 		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().first().address());
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__add-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId(recipientAddButton)).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
+		userEvent.click(screen.getByTestId(recipientAddButton));
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
 
 		// 2nd recipient.
 		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().last().address());
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__add-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
+		await waitFor(() => expect(screen.getByTestId(recipientAddButton)).toBeEnabled());
+		userEvent.click(screen.getByTestId(recipientAddButton));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
 
