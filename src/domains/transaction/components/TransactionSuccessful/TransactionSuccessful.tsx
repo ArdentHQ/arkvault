@@ -44,11 +44,11 @@ export const TransactionSuccessful = ({
 	}
 
 	const descriptionText =
-		description ?? isTransactionConfirmed
-			? t("TRANSACTION.SUCCESS.DESCRIPTION")
-			: t("TRANSACTION.PENDING.DESCRIPTION");
+		description ??
+		(isTransactionConfirmed ? t("TRANSACTION.SUCCESS.DESCRIPTION") : t("TRANSACTION.PENDING.DESCRIPTION"));
 
-	const titleText = title ?? isTransactionConfirmed ? t("TRANSACTION.SUCCESS.TITLE") : t("TRANSACTION.PENDING.TITLE");
+	const titleText =
+		title ?? (isTransactionConfirmed ? t("TRANSACTION.SUCCESS.TITLE") : t("TRANSACTION.PENDING.TITLE"));
 
 	return (
 		<section data-testid="TransactionSuccessful" className="space-y-8">
