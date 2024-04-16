@@ -29,7 +29,7 @@ vi.mock("@/utils/delay", () => ({
 }));
 
 describe("SendTransfer MultiPayment", () => {
-	const recipientAddButton = "AddRecipient__add-button"
+	const recipientAddButton = "AddRecipient__add-button";
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
