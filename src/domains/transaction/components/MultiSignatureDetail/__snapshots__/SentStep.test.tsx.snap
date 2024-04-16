@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
 <div>
@@ -305,7 +305,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
