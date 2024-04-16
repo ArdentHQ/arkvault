@@ -266,7 +266,7 @@ jobs:
                   max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[t-z]*test*
 
-    application-components-[a-l]:
+    application-components-al:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app/components
@@ -375,7 +375,7 @@ jobs:
                   max_attempts: 2
                   command: pnpm test:coverage src/app/components/[G-L]**/**test*
 
-    application-components-[m-z]:
+    application-components-mz:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app/components
