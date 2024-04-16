@@ -11,7 +11,7 @@ export const useConfirmedTransaction = ({
 	const [isConfirmed, setIsConfirmed] = useState(false);
 
 	useEffect(() => {
-		const checkConfirmed = async () => {
+		const checkConfirmed = (): void => {
 			const id = setInterval(async () => {
 				try {
 					await wallet.coin().client().transaction(transactionId);
