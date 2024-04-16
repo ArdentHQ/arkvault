@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TransactionExportForm > should render in lg 1`] = `
 <DocumentFragment>
@@ -48,7 +48,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -170,7 +170,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -292,7 +292,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -414,7 +414,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -536,7 +536,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -654,7 +654,7 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-pra96q"
+        class="css-1ecv4eg"
       >
         <div
           class="css-v0ob3f"

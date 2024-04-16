@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TransactionExportProgress > should render with progress count 1`] = `
 <DocumentFragment>
@@ -39,7 +39,7 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1mvrtw8"
+        class="css-1v20fba"
       >
         <div
           class="css-v0ob3f"
