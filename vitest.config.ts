@@ -17,12 +17,10 @@ export default mergeConfig(
 			sourcemapIgnoreList: false,
 		},
 		test: {
-			browser: {
-				enabled: false,
-			},
 			css: false,
-			useAtomics: true,
 			maxConcurrency: 3,
+			minThreads: 1,
+			maxThreads: 1,
 			globals: true,
 			environment: "jsdom",
 			isolate: true,
