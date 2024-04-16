@@ -57,7 +57,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					validatorStr: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE"),
 				})}
 				subtitle={selectDelegateValidatorTranslation({
-					delegateStr: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION"),
+					delegateStr: t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.DESCRIPTION"),
 					network: network,
 					validatorStr: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION"),
 				})}
