@@ -37,7 +37,7 @@ export const VotesHeader = ({
 	selectedFilter,
 	setSelectedFilter,
 	isSelectDelegateStep,
-	wallet
+	wallet,
 }: VotesHeaderProperties) => {
 	const { t } = useTranslation();
 
@@ -49,7 +49,7 @@ export const VotesHeader = ({
 				delegateStr: t("VOTE.VOTES_PAGE.SEARCH_DELEGATE_PLACEHOLDER"),
 				network: wallet!.network(),
 				validatorStr: t("VOTE.VOTES_PAGE.SEARCH_VALIDATOR_PLACEHOLDER"),
-			})
+			});
 		}
 
 		return t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER");

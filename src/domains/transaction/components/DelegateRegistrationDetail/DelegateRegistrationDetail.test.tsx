@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Route } from "react-router-dom";
 import { DelegateRegistrationDetail } from "./DelegateRegistrationDetail";
@@ -48,8 +47,8 @@ describe("DelegateRegistrationDetail", () => {
 					transaction={{
 						...TransactionFixture,
 						asset: () => ({
-								validatorPublicKey: "123",
-							}),
+							validatorPublicKey: "123",
+						}),
 						username: () => {},
 						wallet: () => ({
 							currency: () => "ARK",

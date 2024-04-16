@@ -83,11 +83,13 @@ export const DelegateFooter = ({
 
 	useEffect(() => {
 		if (totalVotes < 1) {
-			setTooltipContent(selectDelegateValidatorTranslation<string>({
-				delegateStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE"),
-				network: selectedWallet.network(),
-				validatorStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_VALIDATOR"),
-			}));
+			setTooltipContent(
+				selectDelegateValidatorTranslation<string>({
+					delegateStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE"),
+					network: selectedWallet.network(),
+					validatorStr: t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_VALIDATOR"),
+				}),
+			);
 			setIsContinueDisabled(true);
 			return;
 		}

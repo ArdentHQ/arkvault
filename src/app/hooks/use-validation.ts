@@ -21,12 +21,10 @@ import { password } from "@/app/validations/password";
 import { receiveFunds } from "@/domains/wallet/validations";
 import { useEnvironmentContext } from "@/app/contexts";
 
-export const useValidation = (properties?: {
-	network?: Networks.Network;
-}) => {
+export const useValidation = (properties?: { network?: Networks.Network }) => {
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
-	
+
 	return useMemo(
 		() => ({
 			authentication: authentication(t),
@@ -47,7 +45,6 @@ export const useValidation = (properties?: {
 			usernameRegistration: usernameRegistration(t),
 			validatorRegistration: validatorRegistration(t),
 			verifyMessage: verifyMessage(t),
-			
 		}),
 		[t, env, properties?.network],
 	);

@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { validatorRegistration } from "./ValidatorRegistration";
 import { env, getDefaultProfileId } from "@/utils/testing-library";

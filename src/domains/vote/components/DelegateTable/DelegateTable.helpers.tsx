@@ -64,7 +64,7 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 								network,
 								validatorStr: t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TOOLTIP", {
 									coinId: network.coin(),
-								})
+								}),
 							})}
 						>
 							<span className="rounded-full bg-theme-primary-100 p-1 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200">

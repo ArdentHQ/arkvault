@@ -2,7 +2,6 @@ import { vi } from "vitest";
 import { hasNetworksWithLedgerSupport } from "./network-utils";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
-
 describe("Network utils", () => {
 	it("should have available networks with ledger support", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
