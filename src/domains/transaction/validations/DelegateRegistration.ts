@@ -5,16 +5,18 @@ import { validatePattern } from "@/utils/validations";
 export const delegateRegistration = (t: any, currentNetwork?: Networks.Network) => ({
 	username: (usernames: string[]) => {
 		if (currentNetwork === undefined) {
-			throw new Error("You need to provide a network to the `useValidation` hook to use the delegateRegistration.username validation.");
+			throw new Error(
+				"You need to provide a network to the `useValidation` hook to use the delegateRegistration.username validation.",
+			);
 		}
-	
+
 		return {
 			maxLength: {
 				message: t("COMMON.VALIDATION.MAX_LENGTH", {
 					field: selectDelegateValidatorTranslation({
-						delegateStr: t("COMMON.VALIDATOR_NAME"),
+						delegateStr: t("COMMON.DELEGATE_NAME"),
 						network: currentNetwork,
-						validatorStr: t("COMMON.DELEGATE_NAME"),
+						validatorStr: t("COMMON.VALIDATOR_NAME"),
 					}),
 					maxLength: 20,
 				}),
@@ -22,9 +24,9 @@ export const delegateRegistration = (t: any, currentNetwork?: Networks.Network) 
 			},
 			required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 				field: selectDelegateValidatorTranslation({
-					delegateStr: t("COMMON.VALIDATOR_NAME"),
+					delegateStr: t("COMMON.DELEGATE_NAME"),
 					network: currentNetwork,
-					validatorStr: t("COMMON.DELEGATE_NAME"),
+					validatorStr: t("COMMON.VALIDATOR_NAME"),
 				}),
 			}),
 			validate: {
@@ -32,6 +34,6 @@ export const delegateRegistration = (t: any, currentNetwork?: Networks.Network) 
 				unique: (value: string) =>
 					!usernames.includes(value) || t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.DELEGATE_NAME") }),
 			},
-		}
+		};
 	},
 });
