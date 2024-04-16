@@ -149,7 +149,7 @@ jobs:
             - name: Rebuild
               run: pnpm rebuild
 
-            - name: Test hooks (a-f)
+            - name: Test hooks ^a-f
               env:
                   COVERAGE_THRESHOLD_LINES: 100
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
@@ -162,7 +162,7 @@ jobs:
                   max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[a-f]*test*
 
-            - name: Test hooks (h-o)
+            - name: Test hooks ^h-o
               env:
                   COVERAGE_THRESHOLD_LINES: 100
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
@@ -175,7 +175,7 @@ jobs:
                   max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[h-o]*test*
 
-            - name: Test hooks (p-s)
+            - name: Test hooks ^p-s
               env:
                   COVERAGE_THRESHOLD_LINES: 100
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
@@ -188,7 +188,7 @@ jobs:
                   max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[p-s]*test*
 
-            - name: Test hooks (t-z)
+            - name: Test hooks ^t-z
               env:
                   COVERAGE_THRESHOLD_LINES: 100
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
