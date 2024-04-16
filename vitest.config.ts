@@ -12,8 +12,11 @@ const coverageThresholdBranches = Number(process.env.COVERAGE_THRESHOLD_BRANCHES
 export default mergeConfig(
 	viteConfig,
 	defineConfig({
+		server: {
+			watch: false,
+			sourcemapIgnoreList: false,
+		},
 		test: {
-			threads: 1,
 			logHeapUsage: true,
 			maxConcurrency: 3,
 			globals: true,
