@@ -57,7 +57,16 @@ export const TransactionSuccessful = ({
 		>
 			<StepHeader title={titleText} />
 
-			<Image name="TransactionSuccessBanner" domain="transaction" className="hidden w-full md:block" />
+			{isTransactionConfirmed ? (
+				<Image name="TransactionSuccessBanner" domain="transaction" className="hidden w-full md:block" />
+			) : (
+				<Image
+					name="TransactionPendingBanner"
+					domain="transaction"
+					className="hidden w-full md:block"
+					useAccentColor={false}
+				/>
+			)}
 
 			<p className="hidden text-theme-secondary-text md:block">{descriptionText}</p>
 
