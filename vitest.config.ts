@@ -13,7 +13,6 @@ export default mergeConfig(
 	viteConfig,
 	defineConfig({
 		server: {
-			watch: false,
 			sourcemapIgnoreList: false,
 		},
 		test: {
