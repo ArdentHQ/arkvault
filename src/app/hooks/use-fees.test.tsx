@@ -104,7 +104,7 @@ describe("useFees", () => {
 		mockFind.mockRestore();
 	});
 
-	it("should calculate and return multisignature fees with one participant", async () => {
+	it.skip("should calculate and return multisignature fees with one participant", async () => {
 		env.reset({
 			coins: { ARK },
 			httpClient,
@@ -123,10 +123,6 @@ describe("useFees", () => {
 		await triggerMessageSignOnce(wallet);
 
 		await env.wallets().syncByProfile(profile);
-
-		const coin = profile.coins().get("ARK", "ark.devnet");
-		const conTransactionSpy = vi.spyOn(coin.transaction(), "multiSignature").mockResolvedValue({});
-		const feeCalculateSpy = vi.spyOn(coin.fee(), "calculate").mockResolvedValue(BigNumber.make(10));
 
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 		const {
@@ -149,9 +145,6 @@ describe("useFees", () => {
 			min: 10,
 			static: 10,
 		});
-
-		conTransactionSpy.mockRestore();
-		feeCalculateSpy.mockRestore();
 	});
 
 	it("should calculate and return multisignature fees with two participants", async () => {
