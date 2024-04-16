@@ -4,16 +4,20 @@ import { Color, Size, Theme } from "@/types";
 
 const baseStyle = tw`animate-spin rounded-full border border-width[5px] flex-shrink-0`;
 
-const getColor = (color: Color, theme?: Theme) => {
-	const baseColors: Record<Color, string> = {
+const getColor = (color: Color | "warning-alt", theme?: Theme) => {
+	const baseColors: Record<Color | "warning-alt", string> = {
 		danger: "danger-400",
 		hint: "hint-500",
 		info: "primary-600",
 		success: "success-600",
 		warning: "warning-600",
+		"warning-alt": "warning-900",
 	};
 
-	let styles = [tw`border-theme-secondary-200 dark:border-black`];
+	let styles =
+		color === "warning-alt"
+			? [tw`border-theme-warning-200 dark:border-white`]
+			: [tw`border-theme-secondary-200 dark:border-black`];
 
 	if (theme === "dark") {
 		styles = [tw`border-black`];
@@ -56,7 +60,7 @@ export const getStyles = ({
 	theme,
 	width,
 }: {
-	color?: Color;
+	color?: Color | "warning-alt";
 	size?: Size;
 	theme?: Theme;
 	width?: number;
