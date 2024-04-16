@@ -760,273 +760,273 @@ jobs:
                   max_attempts: 1
                   command: pnpm test:coverage src/domains/setting
 
-    # domains-transaction:
-    #     runs-on: ubuntu-latest
-    #     env:
-    #         COVERAGE_INCLUDE_PATH: src/domains/transaction
-    #     strategy:
-    #         matrix:
-    #             node-version:
-    #                 - 18.12.1
-    #     concurrency:
-    #         group: ${{ github.head_ref }}-test-domains-transaction
-    #         cancel-in-progress: true
-    #     steps:
-    #         - uses: actions/checkout@v3
-    #           with:
-    #               ref: ${{ github.head_ref }}
-    #         - uses: pnpm/action-setup@v2
-    #           with:
-    #               version: 8
-    #         - uses: actions/setup-node@v3
-    #           with:
-    #               node-version: ${{ matrix.node-version }}
-    #               cache: pnpm
-    #         - name: Update System
-    #           run: sudo apt-get update
-    #         - name: Install (Ledger Requirements)
-    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-    #         - name: Install (pnpm)
-    #           run: pnpm install --frozen-lockfile
-    #         - name: Rebuild
-    #           run: pnpm rebuild
-    #
-    #         - name: Test Utils
-    #           env:
-    #               COVERAGE_THRESHOLD_LINES: 75
-    #               COVERAGE_THRESHOLD_FUNCTIONS: 69.23
-    #               COVERAGE_THRESHOLD_STATEMENTS: 79.41
-    #               COVERAGE_THRESHOLD_BRANCHES: 83.33
-    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/utils.ts,src/domains/transaction/routing.ts
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/transaction/utils.test.ts src/domains/transaction/routing.test.ts
-    #
-    #         - name: Test Components ^A-O
-    #           env:
-    #               COVERAGE_THRESHOLD_LINES: 99.58
-    #               COVERAGE_THRESHOLD_FUNCTIONS: 100
-    #               COVERAGE_THRESHOLD_STATEMENTS: 99.6
-    #               COVERAGE_THRESHOLD_BRANCHES: 99.73
-    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[A-O]*
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/transaction/components/[A-O]*
-    #
-    #         - name: Test Components ^P-S
-    #           env:
-    #               COVERAGE_THRESHOLD_LINES: 98.48
-    #               COVERAGE_THRESHOLD_FUNCTIONS: 97.61
-    #               COVERAGE_THRESHOLD_STATEMENTS: 98.59
-    #               COVERAGE_THRESHOLD_BRANCHES: 96.72
-    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[P-S]*
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/transaction/components/[P-S]*
-    #
-    #         - name: Test Components ^T-Z
-    #           env:
-    #               COVERAGE_THRESHOLD_LINES: 99.41
-    #               COVERAGE_THRESHOLD_FUNCTIONS: 99.32
-    #               COVERAGE_THRESHOLD_STATEMENTS: 99.43
-    #               COVERAGE_THRESHOLD_BRANCHES: 98.72
-    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/transaction/components/[T-Z]*
-    #
-    #         - name: Test Hooks
-    #           env:
-    #               COVERAGE_THRESHOLD_LINES: 93.61
-    #               COVERAGE_THRESHOLD_FUNCTIONS: 89.79
-    #               COVERAGE_THRESHOLD_STATEMENTS: 91.61
-    #               COVERAGE_THRESHOLD_BRANCHES: 83.72
-    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/transaction/hooks
-    #
-    #         - name: Test Pages
-    #           env:
-    #               COVERAGE_THRESHOLD_LINES: 98.9
-    #               COVERAGE_THRESHOLD_FUNCTIONS: 100
-    #               COVERAGE_THRESHOLD_STATEMENTS: 98.93
-    #               COVERAGE_THRESHOLD_BRANCHES: 98.43
-    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/transaction/pages
-    #
-    #         - name: Test Validations
-    #           env:
-    #               COVERAGE_THRESHOLD_LINES: 88.03
-    #               COVERAGE_THRESHOLD_FUNCTIONS: 82.85
-    #               COVERAGE_THRESHOLD_STATEMENTS: 88.52
-    #               COVERAGE_THRESHOLD_BRANCHES: 87.03
-    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/validations
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/transaction/validations
-    #
-    # domains-vote:
-    #     runs-on: ubuntu-latest
-    #     env:
-    #         COVERAGE_INCLUDE_PATH: src/domains/vote
-    #     strategy:
-    #         matrix:
-    #             node-version:
-    #                 - 18.12.1
-    #     concurrency:
-    #         group: ${{ github.head_ref }}-test-domains-vote
-    #         cancel-in-progress: true
-    #     steps:
-    #         - uses: actions/checkout@v3
-    #           with:
-    #               ref: ${{ github.head_ref }}
-    #         - uses: pnpm/action-setup@v2
-    #           with:
-    #               version: 8
-    #         - uses: actions/setup-node@v3
-    #           with:
-    #               node-version: ${{ matrix.node-version }}
-    #               cache: pnpm
-    #         - name: Update System
-    #           run: sudo apt-get update
-    #         - name: Install (Ledger Requirements)
-    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-    #         - name: Install (pnpm)
-    #           run: pnpm install --frozen-lockfile
-    #         - name: Rebuild
-    #           run: pnpm rebuild
-    #         - name: Test
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/vote
-    # domains-wallet:
-    #     runs-on: ubuntu-latest
-    #     env:
-    #         COVERAGE_INCLUDE_PATH: src/domains/wallet
-    #     strategy:
-    #         matrix:
-    #             node-version:
-    #                 - 18.12.1
-    #     concurrency:
-    #         group: ${{ github.head_ref }}-test-domains-wallet
-    #         cancel-in-progress: true
-    #     steps:
-    #         - uses: actions/checkout@v3
-    #           with:
-    #               ref: ${{ github.head_ref }}
-    #         - uses: pnpm/action-setup@v2
-    #           with:
-    #               version: 8
-    #         - uses: actions/setup-node@v3
-    #           with:
-    #               node-version: ${{ matrix.node-version }}
-    #               cache: pnpm
-    #         - name: Update System
-    #           run: sudo apt-get update
-    #         - name: Install (Ledger Requirements)
-    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-    #         - name: Install (pnpm)
-    #           run: pnpm install --frozen-lockfile
-    #         - name: Rebuild
-    #           run: pnpm rebuild
-    #         - name: Test
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/wallet
-    # router:
-    #     runs-on: ubuntu-latest
-    #     env:
-    #         COVERAGE_INCLUDE_PATH: src/router
-    #     strategy:
-    #         matrix:
-    #             node-version:
-    #                 - 18.12.1
-    #     concurrency:
-    #         group: ${{ github.head_ref }}-test-router
-    #         cancel-in-progress: true
-    #     steps:
-    #         - uses: actions/checkout@v3
-    #           with:
-    #               ref: ${{ github.head_ref }}
-    #         - uses: pnpm/action-setup@v2
-    #           with:
-    #               version: 8
-    #         - uses: actions/setup-node@v3
-    #           with:
-    #               node-version: ${{ matrix.node-version }}
-    #               cache: pnpm
-    #         - name: Update System
-    #           run: sudo apt-get update
-    #         - name: Install (Ledger Requirements)
-    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-    #         - name: Install (pnpm)
-    #           run: pnpm install --frozen-lockfile
-    #         - name: Rebuild
-    #           run: pnpm rebuild
-    #         - name: Test
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/router
-    # utils:
-    #     runs-on: ubuntu-latest
-    #     env:
-    #         COVERAGE_INCLUDE_PATH: src/utils
-    #         COVERAGE_THRESHOLD_LINES: 49.13
-    #         COVERAGE_THRESHOLD_BRANCHES: 26.27
-    #         COVERAGE_THRESHOLD_FUNCTIONS: 24.5
-    #         COVERAGE_THRESHOLD_STATEMENTS: 45.61
-    #     strategy:
-    #         matrix:
-    #             node-version:
-    #                 - 18.12.1
-    #     concurrency:
-    #         group: ${{ github.head_ref }}-test-utils
-    #         cancel-in-progress: true
-    #     steps:
-    #         - uses: actions/checkout@v3
-    #           with:
-    #               ref: ${{ github.head_ref }}
-    #         - uses: pnpm/action-setup@v2
-    #           with:
-    #               version: 8
-    #         - uses: actions/setup-node@v3
-    #           with:
-    #               node-version: ${{ matrix.node-version }}
-    #               cache: pnpm
-    #         - name: Update System
-    #           run: sudo apt-get update
-    #         - name: Install (Ledger Requirements)
-    #           run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-    #         - name: Install (pnpm)
-    #           run: pnpm install --frozen-lockfile
-    #         - name: Rebuild
-    #           run: pnpm rebuild
-    #         - name: Test
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 20
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/utils
+    domains-transaction:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/transaction
+        strategy:
+            matrix:
+                node-version:
+                    - 18.12.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-transaction
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+
+            - name: Test Utils
+              env:
+                  COVERAGE_THRESHOLD_LINES: 75
+                  COVERAGE_THRESHOLD_FUNCTIONS: 69.23
+                  COVERAGE_THRESHOLD_STATEMENTS: 79.41
+                  COVERAGE_THRESHOLD_BRANCHES: 83.33
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/utils.ts,src/domains/transaction/routing.ts
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/utils.test.ts src/domains/transaction/routing.test.ts
+
+            - name: Test Components ^A-O
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.58
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.6
+                  COVERAGE_THRESHOLD_BRANCHES: 99.73
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[A-O]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/components/[A-O]*
+
+            - name: Test Components ^P-S
+              env:
+                  COVERAGE_THRESHOLD_LINES: 98.48
+                  COVERAGE_THRESHOLD_FUNCTIONS: 97.61
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.59
+                  COVERAGE_THRESHOLD_BRANCHES: 96.72
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[P-S]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/components/[P-S]*
+
+            - name: Test Components ^T-Z
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.41
+                  COVERAGE_THRESHOLD_FUNCTIONS: 99.32
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.43
+                  COVERAGE_THRESHOLD_BRANCHES: 98.72
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/components/[T-Z]*
+
+            - name: Test Hooks
+              env:
+                  COVERAGE_THRESHOLD_LINES: 93.61
+                  COVERAGE_THRESHOLD_FUNCTIONS: 89.79
+                  COVERAGE_THRESHOLD_STATEMENTS: 91.61
+                  COVERAGE_THRESHOLD_BRANCHES: 83.72
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/hooks
+
+            - name: Test Pages
+              env:
+                  COVERAGE_THRESHOLD_LINES: 98.9
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.93
+                  COVERAGE_THRESHOLD_BRANCHES: 98.43
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/pages
+
+            - name: Test Validations
+              env:
+                  COVERAGE_THRESHOLD_LINES: 88.03
+                  COVERAGE_THRESHOLD_FUNCTIONS: 82.85
+                  COVERAGE_THRESHOLD_STATEMENTS: 88.52
+                  COVERAGE_THRESHOLD_BRANCHES: 87.03
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/validations
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/validations
+
+    domains-vote:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/vote
+        strategy:
+            matrix:
+                node-version:
+                    - 18.12.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-vote
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/vote
+    domains-wallet:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/wallet
+        strategy:
+            matrix:
+                node-version:
+                    - 18.12.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-wallet
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/wallet
+    router:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/router
+        strategy:
+            matrix:
+                node-version:
+                    - 18.12.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-router
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/router
+    utils:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/utils
+            COVERAGE_THRESHOLD_LINES: 49.13
+            COVERAGE_THRESHOLD_BRANCHES: 26.27
+            COVERAGE_THRESHOLD_FUNCTIONS: 24.5
+            COVERAGE_THRESHOLD_STATEMENTS: 45.61
+        strategy:
+            matrix:
+                node-version:
+                    - 18.12.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-utils
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/utils
