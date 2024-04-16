@@ -266,7 +266,7 @@ jobs:
                   max_attempts: 2
                   command: pnpm test:coverage src/app/hooks/use-[t-z]*test*
 
-    application-components:
+    application-components-[a-l]:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app/components
@@ -275,7 +275,7 @@ jobs:
                 node-version:
                     - 18.12.1
         concurrency:
-            group: ${{ github.head_ref }}-test-app-components
+            group: ${{ github.head_ref }}-test-app-components-al
             cancel-in-progress: true
         steps:
             - uses: actions/checkout@v3
@@ -323,7 +323,7 @@ jobs:
                   max_attempts: 2
                   command: pnpm test:coverage src/app/components/[B]**/**test**
 
-            - name: Test Components C
+            - name: Test Components ^C
               env:
                   COVERAGE_THRESHOLD_LINES: 100
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
@@ -374,6 +374,37 @@ jobs:
                   timeout_minutes: 20
                   max_attempts: 2
                   command: pnpm test:coverage src/app/components/[G-L]**/**test*
+
+    application-components-[m-z]:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/app/components
+        strategy:
+            matrix:
+                node-version:
+                    - 18.12.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-app-components-mz
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
 
             - name: Test Components ^M-O
               env:
