@@ -51,7 +51,11 @@ export const PendingTransferRow = ({
 					address={transaction.recipient()}
 				/>
 
-				<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={transaction.recipient()} network={wallet.network()} />
+				<BaseTransactionRowRecipientLabel
+					type={transaction.type()}
+					recipient={transaction.recipient()}
+					network={wallet.network()}
+				/>
 			</TableCell>
 
 			<TableCell className="w-16" innerClassName="justify-center truncate" isCompact={isCompact}>

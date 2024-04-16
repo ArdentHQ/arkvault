@@ -16,13 +16,17 @@ export const SummaryStep = ({ senderWallet, transaction }: SummaryStepProperties
 
 	return (
 		<TransactionSuccessful transaction={transaction} senderWallet={senderWallet}>
-			<TransactionDetail label={selectDelegateValidatorTranslation({
-				delegateStr: t("TRANSACTION.DELEGATE_NAME"),
-				network: senderWallet.network(),
-				validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
-			})}>
-				{senderWallet.username()}
-			</TransactionDetail>
+			{senderWallet.username() && (
+				<TransactionDetail
+					label={selectDelegateValidatorTranslation({
+						delegateStr: t("TRANSACTION.DELEGATE_NAME"),
+						network: senderWallet.network(),
+						validatorStr: t("TRANSACTION.VALIDATOR_NAME"),
+					})}
+				>
+					{senderWallet.username()}
+				</TransactionDetail>
+			)}
 
 			<TransactionFee currency={senderWallet.currency()} value={transaction.fee()} paddingPosition="top" />
 		</TransactionSuccessful>

@@ -1,6 +1,6 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { Networks, Services } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DefaultValues } from "react-hook-form/dist/types/form";
 import { useForm } from "react-hook-form";
 import { getTransferType, handleBroadcastError } from "@/domains/transaction/utils";
@@ -83,8 +83,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secret,
 				secondSecret,
 			} = getValues();
-
-			const transferType = getTransferType({ recipients });
 
 			const signatory = await wallet.signatoryFactory().make({
 				encryptionPassword,

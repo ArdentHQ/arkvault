@@ -1450,7 +1450,7 @@ exports[`SendIpfs > should render summary step 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -2690,7 +2690,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -3974,7 +3974,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -5260,7 +5260,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -7408,7 +7408,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="css-ic0qlc"
+                          class="css-uae86w"
                         >
                           <div
                             class="css-v0ob3f"

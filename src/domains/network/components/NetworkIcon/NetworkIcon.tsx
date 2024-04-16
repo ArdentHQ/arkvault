@@ -1,12 +1,12 @@
+import { Networks } from "@ardenthq/sdk";
+import React from "react";
+import cn from "classnames";
 import { Circle, CircleProperties } from "@/app/components/Circle";
 import { isMainsailNetwork, networkDisplayName } from "@/utils/network-utils";
 
 import { Icon } from "@/app/components/Icon";
-import { Networks } from "@ardenthq/sdk";
-import React from "react";
 import { Size } from "@/types";
 import { Tooltip } from "@/app/components/Tooltip";
-import cn from "classnames";
 
 interface NetworkIconProperties {
 	network?: Networks.Network;

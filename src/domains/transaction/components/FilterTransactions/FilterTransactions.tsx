@@ -2,10 +2,10 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { memo, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Networks } from "@ardenthq/sdk";
 import { CollapseToggleButton } from "@/app/components/Collapse";
 import { Dropdown, DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { Networks } from "@ardenthq/sdk";
 
 interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 	className?: string;
@@ -17,7 +17,15 @@ interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 }
 
 export const FilterTransactions = memo(
-	({ className, network, onSelect, defaultSelected, wallets, isDisabled, ...properties }: FilterTransactionsProperties) => {
+	({
+		className,
+		network,
+		onSelect,
+		defaultSelected,
+		wallets,
+		isDisabled,
+		...properties
+	}: FilterTransactionsProperties) => {
 		const { t } = useTranslation();
 		const { types, getLabel, canViewMagistrate } = useTransactionTypes({ wallets });
 

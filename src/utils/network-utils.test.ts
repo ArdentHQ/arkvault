@@ -1,9 +1,9 @@
 import { vi } from "vitest";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { hasNetworksWithLedgerSupport } from "./network-utils";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("Network utils", () => {
-	it("should have available networks with ledger support", async () => {
+	it("should have available networks with ledger support", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		const networks = profile
@@ -21,7 +21,7 @@ describe("Network utils", () => {
 		ledgerSpy.mockRestore();
 	});
 
-	it("should not have available networks with ledger support", async () => {
+	it("should not have available networks with ledger support", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		const networks = profile

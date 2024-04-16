@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Networks } from "@ardenthq/sdk";
 import {
 	authentication,
 	common,
@@ -21,18 +20,16 @@ import { password } from "@/app/validations/password";
 import { receiveFunds } from "@/domains/wallet/validations";
 import { useEnvironmentContext } from "@/app/contexts";
 
-export const useValidation = (properties?: {
-	network?: Networks.Network;
-}) => {
+export const useValidation = () => {
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
-	
+
 	return useMemo(
 		() => ({
 			authentication: authentication(t),
 			common: common(t),
 			createProfile: createProfile(t, env),
-			delegateRegistration: delegateRegistration(t, properties?.network),
+			delegateRegistration: delegateRegistration(t),
 			exchangeOrder: exchangeOrder(t),
 			multiSignatureRegistration: multiSignatureRegistration(t),
 			network: network(t),
@@ -47,8 +44,7 @@ export const useValidation = (properties?: {
 			usernameRegistration: usernameRegistration(t),
 			validatorRegistration: validatorRegistration(t),
 			verifyMessage: verifyMessage(t),
-			
 		}),
-		[t, env, properties?.network],
+		[t, env],
 	);
 };

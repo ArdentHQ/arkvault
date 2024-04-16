@@ -1,13 +1,14 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import React from "react";
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { TransactionDetail, TransactionFee } from "@/domains/transaction/components/TransactionDetail";
 
-import { FormStep } from "./FormStep";
-import React from "react";
-import { ReviewStep } from "./ReviewStep";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { isMainsailNetwork } from "@/utils/network-utils";
+import { TransactionPublicKey } from "@/domains/transaction/components/TransactionDetail/TransactionPublicKey";
 
 const component = ({
 	activeTab,
@@ -39,9 +40,7 @@ const transactionDetails = ({
 }) => (
 	<>
 		{isMainsailNetwork(wallet.network()) && (
-			<TransactionDetail label={translations("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
-				{transaction.data().data().asset.validatorPublicKey as string}
-			</TransactionDetail>
+			<TransactionPublicKey publicKey={transaction.data().data().asset.validatorPublicKey} />
 		)}
 
 		{!isMainsailNetwork(wallet.network()) && (

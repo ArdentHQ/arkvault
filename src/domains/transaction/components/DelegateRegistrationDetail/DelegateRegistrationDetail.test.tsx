@@ -1,8 +1,7 @@
-import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
-import { DelegateRegistrationDetail } from "./DelegateRegistrationDetail";
 import React from "react";
 import { Route } from "react-router-dom";
+import { DelegateRegistrationDetail } from "./DelegateRegistrationDetail";
+import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { translations } from "@/domains/transaction/i18n";
 
@@ -47,12 +46,10 @@ describe("DelegateRegistrationDetail", () => {
 					isOpen={true}
 					transaction={{
 						...TransactionFixture,
-						username: () => undefined,
-						asset: () => {
-							return {
-								validatorPublicKey: "123",
-							};
-						},
+						asset: () => ({
+							validatorPublicKey: "123",
+						}),
+						username: () => {},
 						wallet: () => ({
 							currency: () => "ARK",
 							network: () => ({

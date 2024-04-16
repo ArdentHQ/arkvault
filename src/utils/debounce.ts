@@ -1,4 +1,4 @@
-export const debounceAsync =  <T>(callback: Function, delay: number): (...arguments_: any[]) => Promise<T> => {
+export const debounceAsync = <T>(callback: Function, delay: number): ((...arguments_: any[]) => Promise<T>) => {
 	let timeout: any;
 
 	return async function (...arguments_: any) {
@@ -12,4 +12,3 @@ export const debounceAsync =  <T>(callback: Function, delay: number): (...argume
 		});
 	};
 };
-
