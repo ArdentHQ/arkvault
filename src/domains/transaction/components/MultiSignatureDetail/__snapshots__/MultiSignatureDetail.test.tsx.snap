@@ -5714,7 +5714,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                         class="inline-flex w-full items-center justify-center space-x-3"
                       >
                         <div
-                          class="css-1b3vlxq"
+                          class="css-qed8fm"
                           color="info"
                         />
                         <span
@@ -7489,7 +7489,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                       class="inline-flex w-full items-center justify-center space-x-3"
                     >
                       <div
-                        class="css-1b3vlxq"
+                        class="css-qed8fm"
                         color="info"
                       />
                       <span
