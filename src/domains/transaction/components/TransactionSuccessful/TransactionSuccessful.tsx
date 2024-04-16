@@ -14,6 +14,7 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { Alert } from "@/app/components/Alert";
 import { StepHeader } from "@/app/components/StepHeader";
+import { Spinner } from "@/app/components/Spinner";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -78,6 +79,14 @@ export const TransactionSuccessful = ({
 				<TransactionSender address={senderWallet.address()} network={senderWallet.network()} />
 
 				{children}
+
+				{!isTransactionConfirmed && (
+					<div className="mt-8 flex space-x-2 rounded bg-theme-warning-50 px-3 py-2 text-theme-warning-900 dark:bg-theme-warning-700 dark:text-white">
+						<Spinner size="sm" width={3} color="warning-alt" />
+
+						<span className="font-semibold">{t("TRANSACTION.PENDING.STATUS_TEXT")}</span>
+					</div>
+				)}
 			</div>
 		</section>
 	);

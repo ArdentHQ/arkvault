@@ -308,6 +308,7 @@ export const translations = {
 	PENDING: {
 		DESCRIPTION:
 			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following  is the relevant information for your transaction:",
+		STATUS_TEXT: "This transaction is pending confirmation",
 		TITLE: "Pending Confirmation",
 	},
 	PHOTO_VIDEO: {
