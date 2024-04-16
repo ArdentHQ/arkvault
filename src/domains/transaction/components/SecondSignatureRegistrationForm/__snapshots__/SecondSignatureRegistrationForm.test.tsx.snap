@@ -30,7 +30,7 @@ exports[`SecondSignatureRegistrationForm > backup step > should render 1`] = `
             class="flex flex-col overflow-hidden rounded-xl"
           >
             <div
-              class="css-pra96q"
+              class="css-1ecv4eg"
             >
               <div
                 class="css-v0ob3f"
@@ -260,7 +260,7 @@ exports[`SecondSignatureRegistrationForm > should not generate mnemonic if alrea
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-pra96q"
+            class="css-1ecv4eg"
           >
             <div
               class="css-v0ob3f"
@@ -524,7 +524,7 @@ exports[`SecondSignatureRegistrationForm > should render generation step 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-pra96q"
+            class="css-1ecv4eg"
           >
             <div
               class="css-v0ob3f"

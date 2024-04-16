@@ -267,7 +267,7 @@ describe("AddRecipient", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("AddRecipient__available")).not.toBeInTheDocument();
+		await waitFor(() => expect(screen.queryByText("AddRecipient__available")).not.toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 	});
