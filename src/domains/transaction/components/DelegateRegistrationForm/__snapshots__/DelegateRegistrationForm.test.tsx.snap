@@ -33,7 +33,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-pra96q"
+            class="css-1ecv4eg"
           >
             <div
               class="css-v0ob3f"
@@ -431,7 +431,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-pra96q"
+            class="css-1ecv4eg"
           >
             <div
               class="css-v0ob3f"
@@ -1024,7 +1024,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-pra96q"
+            class="css-1ecv4eg"
           >
             <div
               class="css-v0ob3f"
@@ -1397,7 +1397,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-pra96q"
+            class="css-1ecv4eg"
           >
             <div
               class="css-v0ob3f"
@@ -1795,7 +1795,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-pra96q"
+            class="css-1ecv4eg"
           >
             <div
               class="css-v0ob3f"

@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`MultiSignatureSuccessful > should handle empty wallet and transation props 1`] = `
 <DocumentFragment>
@@ -125,7 +125,7 @@ exports[`MultiSignatureSuccessful > should handle empty wallet and transation pr
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -301,7 +301,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -1168,7 +1168,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -2035,7 +2035,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -2832,7 +2832,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -3699,7 +3699,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -4496,7 +4496,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -5363,7 +5363,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -6050,7 +6050,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"

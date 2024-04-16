@@ -229,6 +229,21 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             <span>
               Amount
             </span>
+            <span
+              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="AddRecipient__available"
+            >
+              (
+              Available
+               
+              <span
+                class="whitespace-nowrap"
+                data-testid="Amount"
+              >
+                0
+              </span>
+              )
+            </span>
           </label>
           <div
             class="flex space-x-2"
@@ -2523,6 +2538,21 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
           >
             <span>
               Amount
+            </span>
+            <span
+              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="AddRecipient__available"
+            >
+              (
+              Available
+               
+              <span
+                class="whitespace-nowrap"
+                data-testid="Amount"
+              >
+                0
+              </span>
+              )
             </span>
           </label>
           <div
