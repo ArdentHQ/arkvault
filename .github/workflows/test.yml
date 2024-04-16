@@ -303,12 +303,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
                   COVERAGE_THRESHOLD_STATEMENTS: 100
                   COVERAGE_THRESHOLD_BRANCHES: 100
-                  COVERAGE_INCLUDE_PATH: src/app/components/[A-B]**/**test**(ts|tsx)
+                  COVERAGE_INCLUDE_PATH: src/app/components/[A-B]**/**test**
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 2
-                  command: pnpm test:coverage src/app/components/[A-B]**/**test**(ts|tsx)
+                  command: pnpm test:coverage src/app/components/[A-B]**/**test**
 
     domains-contact:
         runs-on: ubuntu-latest
