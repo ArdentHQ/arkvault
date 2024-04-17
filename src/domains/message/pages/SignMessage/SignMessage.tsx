@@ -217,7 +217,7 @@ export const SignMessage: React.VFC = () => {
 								<ErrorStep
 									title={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE")}
 									description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
-									onBack={handleBack}
+									onClose={handleBack}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>

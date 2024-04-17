@@ -13,9 +13,9 @@ import { TextArea } from "@/app/components/TextArea";
 interface Properties {
 	title?: string;
 	description?: string;
-	isRepeatDisabled?: boolean;
+	isBackDisabled?: boolean;
+	onClose?: () => void;
 	onBack?: () => void;
-	onRepeat?: () => void;
 	errorMessage?: string;
 }
 
@@ -23,8 +23,8 @@ export const ErrorStep = ({
 	title,
 	description,
 	onBack,
-	onRepeat,
-	isRepeatDisabled = false,
+	onClose,
+	isBackDisabled = false,
 	errorMessage = "test",
 }: Properties) => {
 	const { t } = useTranslation();
@@ -69,19 +69,15 @@ export const ErrorStep = ({
 					</div>
 				)}
 
-				{!!onBack && (
-					<Button onClick={onBack} data-testid="ErrorStep__wallet-button" variant="secondary">
-						<div className="whitespace-nowrap">{t("COMMON.BACK_TO_WALLET")}</div>
+				{!!onClose && (
+					<Button onClick={onClose} data-testid="ErrorStep__wallet-button" variant="secondary">
+						<div className="whitespace-nowrap">{t("COMMON.CLOSE")}</div>
 					</Button>
 				)}
 
-				{!!onRepeat && (
-					<Button
-						data-testid="ErrorStep__repeat-button"
-						disabled={isRepeatDisabled}
-						onClick={() => onRepeat()}
-					>
-						<div className="whitespace-nowrap">{t("COMMON.RETRY")}</div>
+				{!!onBack && (
+					<Button data-testid="ErrorStep__back-button" disabled={isBackDisabled} onClick={() => onBack()}>
+						<div className="whitespace-nowrap">{t("COMMON.BACK")}</div>
 					</Button>
 				)}
 			</FormButtons>

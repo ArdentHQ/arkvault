@@ -321,12 +321,12 @@ export const SendTransfer = () => {
 
 			<TabPanel tabId={SendTransferStep.ErrorStep}>
 				<ErrorStep
-					onBack={() => {
+					onClose={() => {
 						assertWallet(wallet);
 						history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
 					}}
-					isRepeatDisabled={isSubmitting}
-					onRepeat={handleSubmit(() => submit())}
+					isBackDisabled={isSubmitting}
+					onBack={handleSubmit(() => submit())}
 					errorMessage={errorMessage}
 				/>
 			</TabPanel>

@@ -249,11 +249,11 @@ export const SendRegistration = () => {
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={10}>
 								<ErrorStep
-									onBack={() =>
+									onClose={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
-									isRepeatDisabled={isSubmitting}
-									onRepeat={form.handleSubmit(handleSubmit)}
+									isBackDisabled={isSubmitting}
+									onBack={form.handleSubmit(handleSubmit)}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>

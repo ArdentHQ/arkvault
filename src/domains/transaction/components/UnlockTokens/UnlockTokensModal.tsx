@@ -120,8 +120,8 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 				{step === Step.ErrorStep && (
 					<ErrorStep
 						errorMessage={errorMessage}
-						onRepeat={/* istanbul ignore next -- @preserve */ () => handleSubmit(submit)}
-						isRepeatDisabled={formState.isSubmitting}
+						onBack={/* istanbul ignore next -- @preserve */ () => handleSubmit(submit)}
+						isBackDisabled={formState.isSubmitting}
 					/>
 				)}
 			</Form>
