@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { DropdownOptionGroup } from "@/app/components/Dropdown";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { hasAvailableMusigServer } from "@/utils/server-utils";
-import { isCustomNetwork } from "@/utils/network-utils";
+import { isCustomNetwork, isMainsailNetwork } from "@/utils/network-utils";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
@@ -39,6 +39,9 @@ const walletSignatures = (wallet: Contracts.IReadWriteWallet, profile?: Contract
 	};
 
 	const allowsMultiSignature = () => {
+		if (isMainsailNetwork(wallet.network())) {
+			return false;
+		}
 		const networkAllowsMuSig = wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature);
 		const allowsMusig =
 			wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerS) ||
