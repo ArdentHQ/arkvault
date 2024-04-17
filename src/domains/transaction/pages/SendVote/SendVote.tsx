@@ -507,7 +507,9 @@ export const SendVote = () => {
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
 									}
 									isBackDisabled={isSubmitting}
-									onBack={handleSubmit(submitForm)}
+									onBack={() => {
+										setActiveTab(Step.FormStep);
+									}}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>
