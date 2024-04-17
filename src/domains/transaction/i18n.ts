@@ -361,6 +361,7 @@ export const translations = {
 		DESCRIPTION: "Show your projects through your repository",
 		TITLE: "Repository",
 	},
+	NEW_USERNAME: "New Username",
 	RETURN: "Return",
 	REVIEW_STEP: {
 		DESCRIPTION: "Review the transaction details below.",
@@ -418,6 +419,7 @@ export const translations = {
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Switch Vote",
 	},
+
 	TYPE: "Type",
 
 	UNLOCK_TOKENS: {
@@ -441,7 +443,6 @@ export const translations = {
 		UNLOCK: "Unlock",
 		UNLOCKABLE: "Unlockable",
 	},
-
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",

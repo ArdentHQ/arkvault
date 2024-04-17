@@ -56,7 +56,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 			<div className="space-y-6 pt-6">
 				<FormField name="username">
-					<FormLabel label={t("TRANSACTION.USERNAME")} />
+					<FormLabel label={previousUsername ? t("TRANSACTION.NEW_USERNAME") : t("TRANSACTION.USERNAME")} />
 					<InputDefault
 						data-testid="Input__username"
 						defaultValue={username}
