@@ -219,6 +219,9 @@ export const SignMessage: React.VFC = () => {
 									description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
 									onClose={handleBack}
 									errorMessage={errorMessage}
+									onBack={() => {
+										setActiveTab(Step.FormStep);
+									}}
 								/>
 							</TabPanel>
 
