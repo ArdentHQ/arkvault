@@ -326,7 +326,9 @@ export const SendTransfer = () => {
 						history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
 					}}
 					isBackDisabled={isSubmitting}
-					onBack={handleSubmit(() => submit())}
+					onBack={() => {
+						setActiveTab(SendTransferStep.FormStep);
+					}}
 					errorMessage={errorMessage}
 				/>
 			</TabPanel>
