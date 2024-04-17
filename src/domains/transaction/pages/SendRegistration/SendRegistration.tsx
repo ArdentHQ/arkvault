@@ -253,7 +253,9 @@ export const SendRegistration = () => {
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
 									isBackDisabled={isSubmitting}
-									onBack={form.handleSubmit(handleSubmit)}
+									onBack={() => {
+										setActiveTab(1);
+									}}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>

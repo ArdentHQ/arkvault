@@ -215,7 +215,9 @@ export const SendIpfs = () => {
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
 									isBackDisabled={isSubmitting}
-									onBack={form.handleSubmit(submitForm)}
+									onBack={() => {
+										setActiveTab(Step.FormStep);
+									}}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>
