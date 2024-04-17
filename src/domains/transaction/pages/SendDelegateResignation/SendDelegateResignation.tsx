@@ -153,7 +153,9 @@ export const SendDelegateResignation = () => {
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
 									isBackDisabled={isSubmitting || !isValid}
-									onBack={form.handleSubmit(handleSubmit)}
+									onBack={() => {
+										setActiveTab(Step.FormStep);
+									}}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>

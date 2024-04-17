@@ -173,7 +173,9 @@ export const MultiSignatureDetail = ({
 						<ErrorStep
 							onClose={onClose}
 							isBackDisabled={isSubmitting}
-							onBack={broadcastMultiSignature}
+							onBack={() => {
+								setActiveStep(MultiSignatureDetailStep.SummaryStep);
+							}}
 							errorMessage={errorMessage}
 						/>
 					</TabPanel>
