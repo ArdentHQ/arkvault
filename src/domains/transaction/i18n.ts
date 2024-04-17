@@ -315,6 +315,8 @@ export const translations = {
 			DESCRIPTION: "Register a new username for an address on the network below.",
 			INFO: "Username registrations are stored on-chain and publicly visible.",
 			TITLE: "Register Username",
+			USERNAME_REGISTERED:
+				"This address is currently registered to the username '<strong>{{username}}</strong>'. Registering a new username will overwrite the existing one, as only one username is allowed per address.",
 		},
 	},
 	PAGE_USERNAME_RESIGNATION: {
