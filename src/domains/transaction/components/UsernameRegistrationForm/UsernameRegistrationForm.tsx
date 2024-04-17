@@ -35,13 +35,29 @@ const transactionDetails = ({
 	transaction: DTO.ExtendedSignedTransactionData;
 	translations: any;
 	wallet: Contracts.IReadWriteWallet;
-}) => (
-	<>
-		<TransactionDetail label={translations("TRANSACTION.USERNAME")}>{transaction.username()}</TransactionDetail>
+}) => {
+	const previousUsername = wallet.username();
 
-		<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
-	</>
-);
+	return (
+		<>
+			{previousUsername && (
+				<TransactionDetail label={translations("TRANSACTION.OLD_USERNAME")}>
+					{previousUsername}
+				</TransactionDetail>
+			)}
+
+			<TransactionDetail
+				label={
+					previousUsername ? translations("TRANSACTION.NEW_USERNAME") : translations("TRANSACTION.USERNAME")
+				}
+			>
+				{transaction.username()}
+			</TransactionDetail>
+
+			<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
+		</>
+	);
+};
 
 component.displayName = "UsernameRegistrationForm";
 transactionDetails.displayName = "UsernameRegistrationFormTransactionDetails";

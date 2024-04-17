@@ -242,6 +242,7 @@ export const translations = {
 	},
 	NAME: "Name",
 	NETWORK: "Network",
+	NEW_USERNAME: "New Username",
 	NOT_FOUND: "Unable to find transaction for [{{transactionId}}]",
 	NOT_YET_CONFIRMED: "Not yet confirmed",
 	OUTGOING: "Outgoing",
@@ -361,7 +362,7 @@ export const translations = {
 		DESCRIPTION: "Show your projects through your repository",
 		TITLE: "Repository",
 	},
-	NEW_USERNAME: "New Username",
+	OLD_USERNAME: "Old Username",
 	RETURN: "Return",
 	REVIEW_STEP: {
 		DESCRIPTION: "Review the transaction details below.",
@@ -398,6 +399,7 @@ export const translations = {
 	TRANSACTION_REMOVED: "Transaction successfully removed",
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
+
 	TRANSACTION_TYPES: {
 		DELEGATE_REGISTRATION: "Delegate Registration",
 		DELEGATE_RESIGNATION: "Delegate Resignation",
@@ -421,7 +423,6 @@ export const translations = {
 	},
 
 	TYPE: "Type",
-
 	UNLOCK_TOKENS: {
 		EMPTY_MESSAGE: "Your wallet doesn’t have any locked balance.",
 		ERROR_MESSAGE: "Unable to retrieve unlockable balances. Click <RetryLink/> to retry.",

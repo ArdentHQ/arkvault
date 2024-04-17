@@ -17,6 +17,8 @@ export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 	const { getValues, unregister, watch } = useFormContext();
 	const username = getValues("username");
 
+	const previousUsername = wallet.username();
+
 	const [defaultFee] = useState(() => watch("fee"));
 	const fee = getValues("fee") ?? defaultFee;
 
@@ -35,7 +37,13 @@ export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 
 			<TransactionSender address={wallet.address()} network={wallet.network()} />
 
-			<TransactionDetail label={t("TRANSACTION.USERNAME")}>{username}</TransactionDetail>
+			{previousUsername && (
+				<TransactionDetail label={t("TRANSACTION.OLD_USERNAME")}>{previousUsername}</TransactionDetail>
+			)}
+
+			<TransactionDetail label={previousUsername ? t("TRANSACTION.NEW_USERNAME") : t("TRANSACTION.USERNAME")}>
+				{username}
+			</TransactionDetail>
 
 			<div className="mt-2">
 				<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />
