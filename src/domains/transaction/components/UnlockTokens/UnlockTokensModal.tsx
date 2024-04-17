@@ -37,7 +37,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 		mode: "onChange",
 	});
 
-	const { register, handleSubmit, formState } = form;
+	const { register, formState } = form;
 
 	useEffect(() => {
 		register("amount");
