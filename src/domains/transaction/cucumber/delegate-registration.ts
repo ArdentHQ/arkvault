@@ -56,6 +56,15 @@ cucumber(
 				},
 			},
 		),
+		mockRequest(
+			{
+				method: "POST",
+				url: "https://ark-test.arkvault.io/api/transactions/*",
+			},
+			{
+				"data": {}
+			}
+		),
 	],
 );
 cucumber("@delegateRegistration-invalidName", {
