@@ -45,6 +45,7 @@ export const CreateWallet = () => {
 	const form = useForm<any>({
 		defaultValues: {
 			network: onlyHasOneNetwork ? profileAllEnabledNetworks(activeProfile)[0] : undefined,
+			passphraseDisclaimer: false,
 		},
 		mode: "onChange",
 	});
@@ -62,6 +63,7 @@ export const CreateWallet = () => {
 		register("wallet");
 		register("mnemonic");
 		register("useEncryption");
+		register("passphraseDisclaimer");
 	}, [register]);
 
 	useEffect(() => {

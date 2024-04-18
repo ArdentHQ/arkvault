@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -9,13 +9,15 @@ import { Checkbox } from "@/app/components/Checkbox";
 
 export const ConfirmPassphraseStep = () => {
 	const { getValues, register, setValue, watch } = useFormContext();
+	const [mnemonicValidated, setMnemonicValidated] = useState(false);
 	const isVerified: boolean = getValues("verification");
+	const passphraseDisclaimer: boolean = getValues("passphraseDisclaimer");
 	const mnemonic = watch("mnemonic");
 
 	const { t } = useTranslation();
 
 	const handleComplete = (isComplete: boolean) => {
-		setValue("verification", isComplete, { shouldDirty: true, shouldValidate: true });
+		setMnemonicValidated(isComplete);
 	};
 
 	useEffect(() => {
@@ -23,6 +25,13 @@ export const ConfirmPassphraseStep = () => {
 			register("verification", { required: true });
 		}
 	}, [isVerified, register]);
+
+	useEffect(() => {
+		setValue("verification", passphraseDisclaimer && mnemonicValidated, {
+			shouldDirty: true,
+			shouldValidate: true,
+		});
+	}, [mnemonicValidated, passphraseDisclaimer]);
 
 	return (
 		<section data-testid="CreateWallet__ConfirmPassphraseStep">
@@ -37,8 +46,12 @@ export const ConfirmPassphraseStep = () => {
 			<Divider />
 
 			<label className="inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text">
-				<Checkbox />
-				<span>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.PASSPHRASE_DISCLOSURE")}</span>
+				<Checkbox
+					checked={passphraseDisclaimer}
+					onChange={(event) => setValue("passphraseDisclaimer", event.target.checked)}
+				/>
+
+				<span>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.PASSPHRASE_DISCLAIMER")}</span>
 			</label>
 		</section>
 	);
