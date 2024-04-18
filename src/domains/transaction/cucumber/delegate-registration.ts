@@ -62,8 +62,8 @@ cucumber(
 				url: "https://ark-test.arkvault.io/api/transactions/*",
 			},
 			{
-				data: {}
-			}
+				data: {},
+			},
 		),
 	],
 );
