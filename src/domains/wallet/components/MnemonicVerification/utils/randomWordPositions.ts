@@ -1,3 +1,5 @@
+import { sample } from "@ardenthq/sdk-helpers";
+
 const randomWordPositions = (length: number): number[] => {
 	const positions: number[] = [...Array.from({ length }).keys()];
 	const result: number[] = [];
