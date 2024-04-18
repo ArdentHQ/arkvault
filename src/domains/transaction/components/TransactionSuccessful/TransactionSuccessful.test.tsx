@@ -3,8 +3,11 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { TransactionSuccessful } from "./TransactionSuccessful";
+import * as useConfirmedTransactionMock from "./hooks/useConfirmedTransaction";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+
+console.log(useConfirmedTransactionMock);
 
 describe("TransactionSuccessful", () => {
 	let profile: Contracts.IProfile;
@@ -16,6 +19,8 @@ describe("TransactionSuccessful", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
+
+		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(true);
 	});
 
 	const transactionMockImplementation = (attribute, transaction) => {
@@ -29,7 +34,7 @@ describe("TransactionSuccessful", () => {
 		return transaction[attribute]();
 	};
 
-	it("should render", () => {
+	it("should render", async () => {
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,
@@ -51,7 +56,38 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
+		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
+
 		expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render as pending", () => {
+		const transaction = {
+			...TransactionFixture,
+			wallet: () => wallet,
+		};
+
+		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
+			transactionMockImplementation(attribute, transaction),
+		);
+
+		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
+		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
+
+		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(false);
+
+		render(
+			<Route path="/profiles/:profileId">
+				<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		expect(screen.getByTestId("TransactionPending")).toBeInTheDocument();
 
 		vi.restoreAllMocks();
 	});
