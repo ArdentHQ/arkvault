@@ -59,7 +59,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: "https://ark-test.arkvault.io/api/transactions/*",
+				url: /^https:\/\/ark-test\.arkvault\.io\/api\/transactions\/*/,
 			},
 			{
 				data: {}
