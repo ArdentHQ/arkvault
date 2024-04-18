@@ -85,7 +85,6 @@ describe("UnlockTokensModal", () => {
 	});
 
 	it("should render", async () => {
-
 		const onClose = vi.fn();
 
 		render(
