@@ -25,6 +25,7 @@ describe("UnlockTokensSummary", () => {
 								isTest: () => true,
 								ticker: () => "DARK",
 							}),
+							id: () => "wallet-id",
 						}),
 					}}
 				/>
