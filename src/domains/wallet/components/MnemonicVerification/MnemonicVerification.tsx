@@ -1,29 +1,12 @@
-import { sample } from "@ardenthq/sdk-helpers";
 import React, { useEffect, useState } from "react";
 
 import { MnemonicVerificationInput } from "./MnemonicVerificationInput";
+import { randomWordPositions } from "./utils/randomWordPositions";
 
 interface Properties {
 	mnemonic: string;
 	handleComplete: (isComplete: boolean) => void;
 }
-
-const randomWordPositions = (length: number): number[] => {
-	const positions: number[] = [...Array.from({ length }).keys()];
-	const result: number[] = [];
-
-	while (result.length < 3) {
-		const randomNumber = sample(positions) + 1;
-
-		if (result.includes(randomNumber)) {
-			continue;
-		}
-
-		result.push(randomNumber);
-	}
-
-	return result.sort((a, b) => a - b);
-};
 
 export function MnemonicVerification({ mnemonic, handleComplete }: Properties) {
 	const [mnemonicWords, setMnemonicWords] = useState([] as string[]);

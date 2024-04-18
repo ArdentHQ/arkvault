@@ -220,6 +220,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 
 							{isValid && (
 								<Icon
+									data-testid="Input__valid"
 									name="CircleCheckMark"
 									size="lg"
 									className="pointer-events-none text-theme-primary-600 focus:outline-none"

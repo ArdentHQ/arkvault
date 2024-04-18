@@ -20,7 +20,7 @@ export const MnemonicVerificationInput = ({ handleChange, answer, position, isVa
 	const [updated, setUpdated] = useState(false);
 
 	return (
-		<FormField name="name">
+		<FormField name="name" data-testid="MnemonicVerificationInput">
 			<FormLabel
 				label={t("WALLETS.MNEMONIC_VERIFICATION.WORD_NUMBER", {
 					ordinalIndicator: getOrdinalIndicator(position),
@@ -29,6 +29,7 @@ export const MnemonicVerificationInput = ({ handleChange, answer, position, isVa
 			/>
 
 			<Input
+				data-testid="MnemonicVerificationInput__input"
 				isValid={isValid}
 				isInvalid={updated && !isValid}
 				value={value}
