@@ -12,6 +12,6 @@ export const validatorRegistration = (t: any) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("TRANSACTION.VALIDATOR_PUBLIC_KEY"),
 		}),
-		validate: async (publicKey?: string) => await wallet.coin().publicKey().verifyPublicKeyWithBLS(publicKey),
+		validate: async (publicKey: string) => await wallet.coin().publicKey().verifyPublicKeyWithBLS(publicKey),
 	}),
 });
