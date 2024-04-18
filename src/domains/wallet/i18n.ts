@@ -80,7 +80,8 @@ export const translations = {
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {
-			SUBTITLE: "Confirm your mnemonic passphrase to continue.",
+			SUBTITLE:
+				"Confirm that you’ve saved your secret passphrase by correctly entering the word in the designated input field below.",
 			TITLE: "Confirm Your Passphrase",
 		},
 
