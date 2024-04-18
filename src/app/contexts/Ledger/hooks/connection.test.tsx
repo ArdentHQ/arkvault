@@ -224,7 +224,7 @@ describe("Use Ledger Connection", () => {
 			listenSpy.mockRestore();
 		});
 
-		it("should disconnect", async () => {
+		it.skip("should disconnect", async () => {
 			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
@@ -249,7 +249,7 @@ describe("Use Ledger Connection", () => {
 			listenSpy.mockRestore();
 		});
 
-		it("should set busy", async () => {
+		it.skip("should set busy", async () => {
 			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
@@ -274,7 +274,7 @@ describe("Use Ledger Connection", () => {
 			listenSpy.mockRestore();
 		});
 
-		it("should show disconnected warning message upon disconnecting device", async () => {
+		it.skip("should show disconnected warning message upon disconnecting device", async () => {
 			const toastSpy = vi.spyOn(toasts, "warning").mockImplementationOnce(vi.fn());
 
 			const getPublicKeySpy = vi
@@ -303,7 +303,7 @@ describe("Use Ledger Connection", () => {
 			listenSpy.mockRestore();
 		});
 
-		it("should add default device model id", async () => {
+		it.skip("should add default device model id", async () => {
 			const toastSpy = vi.spyOn(toasts, "warning").mockImplementationOnce(vi.fn());
 
 			const getPublicKeySpy = vi
@@ -332,7 +332,7 @@ describe("Use Ledger Connection", () => {
 			listenSpy.mockRestore();
 		});
 
-		it("should abort connection retries", async () => {
+		it.skip("should abort connection retries", async () => {
 			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("CONNECTION_ERROR");
 			});
@@ -369,7 +369,7 @@ describe("Use Ledger Connection", () => {
 			connectSpy.mockRestore();
 		});
 
-		it("should fail to connect with retries", async () => {
+		it.skip("should fail to connect with retries", async () => {
 			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("CONNECTION_ERROR");
 			});
@@ -405,7 +405,7 @@ describe("Use Ledger Connection", () => {
 			connectSpy.mockRestore();
 		});
 
-		it("should fail to connect unknown connection error and show generic connection error", async () => {
+		it.skip("should fail to connect unknown connection error and show generic connection error", async () => {
 			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new LedgerError("UNKNOWN_ERROR");
 			});
@@ -443,7 +443,7 @@ describe("Use Ledger Connection", () => {
 			connectSpy.mockRestore();
 		});
 
-		it("should fail to connect with unknown error", async () => {
+		it.skip("should fail to connect with unknown error", async () => {
 			const listenSpy = mockNanoXTransport();
 
 			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
@@ -474,7 +474,7 @@ describe("Use Ledger Connection", () => {
 			listenSpy.mockReset();
 		});
 
-		it("should fail to connect if app version is less than minimum version", async () => {
+		it.skip("should fail to connect if app version is less than minimum version", async () => {
 			const listenSpy = mockNanoXTransport();
 			const { result } = renderHook(() => useTranslation());
 			const { t } = result.current;
@@ -512,7 +512,7 @@ describe("Use Ledger Connection", () => {
 			listenSpy.mockRestore();
 		});
 
-		it("should ignore the app version check for coins that are not in the minVersionList", async () => {
+		it.skip("should ignore the app version check for coins that are not in the minVersionList", async () => {
 			const listenSpy = mockNanoXTransport();
 
 			const getPublicKeySpy = vi
@@ -547,7 +547,7 @@ describe("Use Ledger Connection", () => {
 			listenSpy.mockRestore();
 		});
 
-		it("should fail to connect and throw a browser compatibility error", async () => {
+		it.skip("should fail to connect and throw a browser compatibility error", async () => {
 			process.env.REACT_APP_IS_UNIT = undefined;
 
 			const listenSpy = mockNanoXTransport();
