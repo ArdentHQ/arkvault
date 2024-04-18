@@ -1,7 +1,6 @@
 import { sample } from "@ardenthq/sdk-helpers";
 import { useEffect, useState } from "react";
 
-import { MnemonicVerificationProgress } from "./MnemonicVerificationProgress";
 import { MnemonicVerificationInput } from "./MnemonicVerificationInput";
 import { Tabs } from "@/app/components/Tabs";
 
@@ -71,20 +70,16 @@ export function MnemonicVerification({
 
 	return (
 		<Tabs className={className} activeId={activeTab}>
-			<MnemonicVerificationProgress activeTab={activeTab} wordPositions={positions} />
-
-			{!isCompleted && (
-				<div className="mt-8 grid gap-3 sm:grid-cols-3">
-					{positions.map((position, index) => (
-						<MnemonicVerificationInput
-							key={position}
-							position={position}
-							answer={mnemonicWords[position - 1]}
-							handleChange={handleChange}
-						/>
-					))}
-				</div>
-			)}
+			<div className="mt-8 grid gap-3 sm:grid-cols-3">
+				{positions.map((position, index) => (
+					<MnemonicVerificationInput
+						key={position}
+						position={position}
+						answer={mnemonicWords[position - 1]}
+						handleChange={handleChange}
+					/>
+				))}
+			</div>
 		</Tabs>
 	);
 }
