@@ -28,7 +28,7 @@ const randomWordPositions = (length: number): number[] => {
 		result.push(randomNumber);
 	}
 
-	return result;
+	return result.sort((a, b) => a - b);
 };
 
 const defaultProps = {
