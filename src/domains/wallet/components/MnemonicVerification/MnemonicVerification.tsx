@@ -1,16 +1,15 @@
 import { sample } from "@ardenthq/sdk-helpers";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { MnemonicVerificationOptions } from "./MnemonicVerificationOptions";
 import { MnemonicVerificationProgress } from "./MnemonicVerificationProgress";
-import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { MnemonicVerificationInput } from "./MnemonicVerificationInput";
+import { Tabs } from "@/app/components/Tabs";
 
 interface Properties {
 	className?: string;
 	mnemonic: string;
 	wordPositions?: number[];
-	optionsLimit: number;
-	handleComplete: () => void;
+	handleComplete: (isComplete: boolean) => void;
 	isCompleted?: boolean;
 }
 
@@ -39,12 +38,14 @@ export function MnemonicVerification({
 	className,
 	mnemonic,
 	wordPositions = defaultProps.wordPositions,
-	optionsLimit,
 	handleComplete,
 	isCompleted = false,
 }: Properties) {
 	const [activeTab, setActiveTab] = useState(0);
 	const [positions, setPositions] = useState([] as number[]);
+	const [validatedPositions, setValidatedPositions] = useState<{
+		[key: number]: boolean;
+	}>({});
 
 	let mnemonicWords: string[];
 
@@ -57,40 +58,30 @@ export function MnemonicVerification({
 		setPositions(wordPositions);
 	}
 
-	useEffect(() => {
-		if (isCompleted) {
-			setActiveTab(positions.length);
-		}
-	}, [isCompleted, positions, setActiveTab]);
-
-	const currentAnswer = useMemo(() => mnemonicWords[positions[activeTab] - 1], [activeTab, positions, mnemonicWords]);
-
-	const handleChange = (value: string) => {
-		if (value === currentAnswer) {
-			if (activeTab === positions.length - 1) {
-				handleComplete();
-			}
-
-			setActiveTab(activeTab + 1);
-		}
+	const handleChange = (position: number, isValid: boolean): void => {
+		setValidatedPositions((previousState) => ({ ...previousState, [position]: isValid }));
 	};
+
+	useEffect(() => {
+		const results = Object.values(validatedPositions);
+		const isCompleted = results.length === positions.length && results.every(Boolean);
+
+		handleComplete(isCompleted);
+	}, [validatedPositions, handleComplete]);
 
 	return (
 		<Tabs className={className} activeId={activeTab}>
 			<MnemonicVerificationProgress activeTab={activeTab} wordPositions={positions} />
 
 			{!isCompleted && (
-				<div className="mt-8">
+				<div className="mt-8 grid gap-3 sm:grid-cols-3">
 					{positions.map((position, index) => (
-						<TabPanel key={position} tabId={index}>
-							<MnemonicVerificationOptions
-								limit={optionsLimit}
-								answer={currentAnswer}
-								options={mnemonicWords}
-								handleChange={handleChange}
-								position={position}
-							/>
-						</TabPanel>
+						<MnemonicVerificationInput
+							key={position}
+							position={position}
+							answer={mnemonicWords[position - 1]}
+							handleChange={handleChange}
+						/>
 					))}
 				</div>
 			)}

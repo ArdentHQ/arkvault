@@ -15,8 +15,8 @@ export const VerificationStep = () => {
 
 	const { t } = useTranslation();
 
-	const handleComplete = () => {
-		setValue("verification", true, { shouldDirty: true, shouldValidate: true });
+	const handleComplete = (isComplete: boolean) => {
+		setValue("verification", isComplete, { shouldDirty: true, shouldValidate: true });
 	};
 
 	useEffect(() => {
@@ -30,12 +30,7 @@ export const VerificationStep = () => {
 				subtitle={t("TRANSACTION.PAGE_SECOND_SIGNATURE.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
 			/>
 
-			<MnemonicVerification
-				mnemonic={mnemonic}
-				optionsLimit={6}
-				handleComplete={handleComplete}
-				isCompleted={isVerified}
-			/>
+			<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} isCompleted={isVerified} />
 		</section>
 	);
 };

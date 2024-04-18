@@ -13,8 +13,8 @@ export const ConfirmPassphraseStep = () => {
 
 	const { t } = useTranslation();
 
-	const handleComplete = () => {
-		setValue("verification", true, { shouldDirty: true, shouldValidate: true });
+	const handleComplete = (isComplete: boolean) => {
+		setValue("verification", isComplete, { shouldDirty: true, shouldValidate: true });
 	};
 
 	useEffect(() => {
@@ -34,7 +34,6 @@ export const ConfirmPassphraseStep = () => {
 			<MnemonicVerification
 				className="mb-8 mt-6"
 				mnemonic={mnemonic}
-				optionsLimit={6}
 				handleComplete={handleComplete}
 				isCompleted={isVerified}
 			/>
