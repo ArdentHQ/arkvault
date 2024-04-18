@@ -5,8 +5,8 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-
 import { CreateWallet } from "./CreateWallet";
+import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
@@ -33,6 +33,8 @@ describe("CreateWallet", () => {
 
 	beforeAll(() => {
 		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+
+		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
 	});
 
 	afterAll(() => {
@@ -124,15 +126,14 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
-		const walletMnemonic = passphrase.split(" ");
-		for (let index = 0; index < 3; index++) {
-			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 
-			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
-			if (index < 2) {
-				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
-			}
-		}
+		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+
+		userEvent.paste(firstInput, "power");
+		userEvent.paste(secondInput, "return");
+		userEvent.paste(thirdInput, "attend");
+
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		expect(profile.wallets().values()).toHaveLength(0);

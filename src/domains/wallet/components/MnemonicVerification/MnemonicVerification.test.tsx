@@ -22,7 +22,7 @@ describe("MnemonicVerification", () => {
 		expect(screen.getAllByTestId("MnemonicVerificationInput")).toHaveLength(3);
 	});
 
-	it.only("should verify mnemonic", async () => {
+	it("should verify mnemonic", async () => {
 		const wordPositions = [1, 2, 3];
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue(wordPositions);
