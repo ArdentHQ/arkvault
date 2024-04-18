@@ -308,7 +308,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -888,7 +888,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -1468,7 +1468,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -2022,7 +2022,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -2508,7 +2508,7 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -3252,7 +3252,7 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -3693,7 +3693,7 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -4235,7 +4235,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -4731,7 +4731,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -5227,7 +5227,7 @@ exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -5699,11 +5699,11 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                         <div
                           class="css-6o9bco"
                         >
-                          A 
+                          A
                           <strong>
                             Ledger Nano S
                           </strong>
-                           is connected, but his operation requires a 
+                           is connected, but his operation requires a
                           <strong>
                             Ledger Nano X
                           </strong>
@@ -5714,7 +5714,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                         class="inline-flex w-full items-center justify-center space-x-3"
                       >
                         <div
-                          class="css-qed8fm"
+                          class="css-1b3vlxq"
                           color="info"
                         />
                         <span
@@ -6087,7 +6087,7 @@ exports[`MultiSignatureDetail > should show send button when able to add final s
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -6655,7 +6655,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -7489,7 +7489,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                       class="inline-flex w-full items-center justify-center space-x-3"
                     >
                       <div
-                        class="css-qed8fm"
+                        class="css-1b3vlxq"
                         color="info"
                       />
                       <span
