@@ -59,6 +59,7 @@ export function MnemonicVerification({ mnemonic, handleComplete }: Properties) {
 					position={position}
 					answer={mnemonicWords[position - 1]}
 					handleChange={handleChange}
+					isValid={validatedPositions[position]}
 				/>
 			))}
 		</div>

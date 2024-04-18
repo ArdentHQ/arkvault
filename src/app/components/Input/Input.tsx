@@ -193,7 +193,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 						/>
 					</div>
 
-					{(isInvalidValue || addons?.end) && (
+					{(isInvalidValue || isValid || addons?.end) && (
 						<div
 							data-testid="Input__addon-end"
 							className={cn(
@@ -216,6 +216,14 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 										/>
 									</span>
 								</Tooltip>
+							)}
+
+							{isValid && (
+								<Icon
+									name="CircleCheckMark"
+									size="lg"
+									className="pointer-events-none text-theme-primary-600 focus:outline-none"
+								/>
 							)}
 
 							{addons?.end && (
