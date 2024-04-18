@@ -363,7 +363,6 @@ export const translations = {
 		DESCRIPTION: "Show your projects through your repository",
 		TITLE: "Repository",
 	},
-	OLD_USERNAME: "Old Username",
 	RETURN: "Return",
 	REVIEW_STEP: {
 		DESCRIPTION: "Review the transaction details below.",
