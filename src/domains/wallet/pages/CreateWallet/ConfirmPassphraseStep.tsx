@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Header } from "@/app/components/Header";
 import { MnemonicVerification } from "@/domains/wallet/components/MnemonicVerification";
 import { Divider } from "@/app/components/Divider";
+import { Checkbox } from "@/app/components/Checkbox";
 
 export const ConfirmPassphraseStep = () => {
 	const { getValues, register, setValue, watch } = useFormContext();
@@ -31,9 +32,14 @@ export const ConfirmPassphraseStep = () => {
 				className="hidden sm:block"
 			/>
 
-			<MnemonicVerification className="mb-8 mt-6" mnemonic={mnemonic} handleComplete={handleComplete} />
+			<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />
 
 			<Divider />
+
+			<label className="inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text">
+				<Checkbox />
+				<span>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.PASSPHRASE_DISCLOSURE")}</span>
+			</label>
 		</section>
 	);
 };

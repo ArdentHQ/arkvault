@@ -1,11 +1,9 @@
 import { sample } from "@ardenthq/sdk-helpers";
 import React, { useEffect, useState } from "react";
 
-import classNames from "classnames";
 import { MnemonicVerificationInput } from "./MnemonicVerificationInput";
 
 interface Properties {
-	className?: string;
 	mnemonic: string;
 	handleComplete: (isComplete: boolean) => void;
 }
@@ -27,7 +25,7 @@ const randomWordPositions = (length: number): number[] => {
 	return result.sort((a, b) => a - b);
 };
 
-export function MnemonicVerification({ className, mnemonic, handleComplete }: Properties) {
+export function MnemonicVerification({ mnemonic, handleComplete }: Properties) {
 	const [mnemonicWords, setMnemonicWords] = useState([] as string[]);
 	const [positions, setPositions] = useState([] as number[]);
 	const [validatedPositions, setValidatedPositions] = useState<{
@@ -54,7 +52,7 @@ export function MnemonicVerification({ className, mnemonic, handleComplete }: Pr
 	}, [validatedPositions]);
 
 	return (
-		<div className={classNames("mt-8 grid gap-3 sm:grid-cols-3", className)}>
+		<div className="mt-8 grid gap-3 sm:grid-cols-3">
 			{positions.map((position) => (
 				<MnemonicVerificationInput
 					key={position}

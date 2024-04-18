@@ -80,6 +80,7 @@ export const translations = {
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {
+			PASSPHRASE_DISCLOSURE: "I am aware that if I lose my passphrase, I will lose access to my funds.",
 			SUBTITLE:
 				"Confirm that you’ve saved your secret passphrase by correctly entering the word in the designated input field below.",
 			TITLE: "Confirm Your Passphrase",
