@@ -1,5 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`ConfirmationStep > should not render without exchange transaction 1`] = `<div />`;
+
 exports[`ConfirmationStep > should render 1`] = `
 <div>
   <div
@@ -1758,7 +1760,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 class="text-xs font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
               >
                 Transaction ID
-                : 
+                :
                 id
               </span>
               <span
@@ -1889,7 +1891,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   data-testid="StatusIcon__spinner"
                 >
                   <div
-                    class="css-1b3vlxq"
+                    class="css-qed8fm"
                     color="info"
                   />
                 </span>
@@ -1956,7 +1958,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 </span>
                 <span>
                   ≈
-                   
+
                   <span
                     class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
@@ -2027,7 +2029,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
             <div
               class="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-sm dark:bg-theme-secondary-800"
             >
-              If you have any question about your exchange, please contact ChangeNOW support team via email at 
+              If you have any question about your exchange, please contact ChangeNOW support team via email at
               <a
                 class="ring-focus group inline-block css-15tcy38"
                 data-ring-focus-margin="-m-1"
@@ -2074,6 +2076,525 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
 </div>
 `;
 
+exports[`FormStep > should render 1`] = `
+<div>
+  <div
+    class="flex flex-col"
+    data-testid="ExchangeForm__form-step"
+  >
+    <div
+      class="relative flex space-x-3"
+    >
+      <div
+        class="w-1/2 sm:w-2/5"
+      >
+        <fieldset
+          class="flex min-w-0 flex-col css-1bcidjh"
+        >
+          <label
+            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            data-testid="FormLabel"
+            for="fromCurrency"
+          >
+            Cryptoasset
+          </label>
+          <div
+            class="static sm:relative"
+            data-testid="SelectDropdown"
+          >
+            <div
+              class="sr-only css-1psxlcd"
+            >
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  autocomplete="off"
+                  class="no-ligatures w-full border-none css-1nupw50"
+                  data-testid="select-list__input"
+                  name="fromCurrency"
+                  readonly=""
+                  tabindex="-1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="w-full"
+            >
+              <div
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="fromCurrency-menu"
+                role="combobox"
+              >
+                <div>
+                  <label
+                    for="fromCurrency-input"
+                    id="fromCurrency-label"
+                  />
+                  <div
+                    class="css-n29l73"
+                    disabled=""
+                  >
+                    <div
+                      class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+                    />
+                    <div
+                      class="relative flex h-full flex-1"
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        aria-controls="fromCurrency-menu"
+                        aria-labelledby="fromCurrency-label"
+                        autocomplete="off"
+                        class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
+                        data-testid="SelectDropdown__input"
+                        disabled=""
+                        id="fromCurrency-input"
+                        name="fromCurrency"
+                        placeholder="Select"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                      data-testid="Input__addon-end"
+                    >
+                      <div
+                        class=""
+                      >
+                        <div
+                          class="flex items-center"
+                        >
+                          <div
+                            class="flex items-center justify-center px-1 py-2"
+                            data-testid="SelectDropdown__caret"
+                          >
+                            <div
+                              class="absolute inset-0 block cursor-pointer md:hidden"
+                            />
+                            <div
+                              class="transition-transform text-theme-secondary-500 css-15txs7d"
+                              height="10"
+                              width="10"
+                            >
+                              <svg
+                                id="caret-down"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-labelledby="fromCurrency-label"
+                  id="fromCurrency-menu"
+                  role="listbox"
+                />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div
+        class="w-1/2 sm:w-3/5"
+      >
+        <fieldset
+          class="flex min-w-0 flex-col css-1bcidjh"
+        >
+          <label
+            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            data-testid="FormLabel"
+            for="payinAmount"
+          >
+            You Send
+          </label>
+          <div
+            class="relative"
+          >
+            <div
+              class="css-1psxlcd"
+            >
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  autocomplete="off"
+                  class="no-ligatures w-full border-none css-1nupw50"
+                  data-testid="InputCurrency"
+                  name="payinAmount"
+                  placeholder="Enter an amount"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div
+      class="flex space-x-4 sm:ml-8 sm:space-x-8"
+    >
+      <div
+        class="relative my-1 h-20 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
+      >
+        <div
+          class="absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800"
+        />
+      </div>
+      <div
+        class="flex flex-1 items-center"
+      >
+        <div
+          class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
+        >
+          <span
+            class="mr-auto mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+          >
+            Estimated Rate
+            :
+          </span>
+          <span>
+            N/A
+          </span>
+        </div>
+        <button
+          class="ml-auto css-j822yf"
+          data-testid="ExchangeForm__swap-button"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg
+                id="arrow-down-up"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M5 2v17m4-4l-4 4-4-4m14 3V1m-4 4l4-4 4 4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="space-y-6"
+    >
+      <div
+        class="relative flex space-x-3"
+      >
+        <div
+          class="w-1/2 sm:w-2/5"
+        >
+          <fieldset
+            class="flex min-w-0 flex-col css-1bcidjh"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="toCurrency"
+            >
+              Cryptoasset
+            </label>
+            <div
+              class="static sm:relative"
+              data-testid="SelectDropdown"
+            >
+              <div
+                class="sr-only css-1psxlcd"
+              >
+                <div
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    autocomplete="off"
+                    class="no-ligatures w-full border-none css-1nupw50"
+                    data-testid="select-list__input"
+                    name="toCurrency"
+                    readonly=""
+                    tabindex="-1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="w-full"
+              >
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-owns="toCurrency-menu"
+                  role="combobox"
+                >
+                  <div>
+                    <label
+                      for="toCurrency-input"
+                      id="toCurrency-label"
+                    />
+                    <div
+                      class="css-n29l73"
+                      disabled=""
+                    >
+                      <div
+                        class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+                      />
+                      <div
+                        class="relative flex h-full flex-1"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-controls="toCurrency-menu"
+                          aria-labelledby="toCurrency-label"
+                          autocomplete="off"
+                          class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
+                          data-testid="SelectDropdown__input"
+                          disabled=""
+                          id="toCurrency-input"
+                          name="toCurrency"
+                          placeholder="Select"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                        data-testid="Input__addon-end"
+                      >
+                        <div
+                          class=""
+                        >
+                          <div
+                            class="flex items-center"
+                          >
+                            <div
+                              class="flex items-center justify-center px-1 py-2"
+                              data-testid="SelectDropdown__caret"
+                            >
+                              <div
+                                class="absolute inset-0 block cursor-pointer md:hidden"
+                              />
+                              <div
+                                class="transition-transform text-theme-secondary-500 css-15txs7d"
+                                height="10"
+                                width="10"
+                              >
+                                <svg
+                                  id="caret-down"
+                                  viewBox="0 0 10 10"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-labelledby="toCurrency-label"
+                    id="toCurrency-menu"
+                    role="listbox"
+                  />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div
+          class="w-1/2 sm:w-3/5"
+        >
+          <fieldset
+            class="flex min-w-0 flex-col css-1bcidjh"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="payoutAmount"
+            >
+              You Get
+            </label>
+            <div
+              class="relative"
+            >
+              <div
+                class="css-1psxlcd"
+              >
+                <div
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    autocomplete="off"
+                    class="no-ligatures w-full border-none css-1nupw50"
+                    data-testid="InputCurrency"
+                    name="payoutAmount"
+                    placeholder="Enter an amount"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div
+        data-testid="ExchangeForm__recipient-address"
+      >
+        <fieldset
+          class="flex min-w-0 flex-col css-1bcidjh"
+        >
+          <label
+            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            data-testid="FormLabel"
+            for="recipientWallet"
+          >
+            <div
+              class="flex w-full justify-between"
+            >
+              Recipient Wallet
+              <button
+                class="link text-sm font-semibold"
+                data-testid="ExchangeForm__add-refund-address"
+                type="button"
+              >
+                +
+                Add Refund Wallet
+              </button>
+            </div>
+          </label>
+          <div>
+            <div
+              class="relative flex w-full items-center text-left"
+              data-testid="SelectRecipient__wrapper"
+            >
+              <div
+                class="relative w-full"
+                data-testid="SelectDropdown"
+              >
+                <div
+                  class="sr-only css-1psxlcd"
+                >
+                  <div
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-invalid="false"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none css-1nupw50"
+                      data-testid="select-list__input"
+                      name="recipientWallet"
+                      readonly=""
+                      tabindex="-1"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="w-full"
+                >
+                  <div
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-owns="SelectRecipient__dropdown-menu"
+                    role="combobox"
+                  >
+                    <div>
+                      <label
+                        for="SelectRecipient__dropdown-input"
+                        id="SelectRecipient__dropdown-label"
+                      />
+                      <div
+                        class="css-n29l73"
+                        disabled=""
+                      >
+                        <div
+                          class="flex items-center"
+                        >
+                          <div
+                            class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+                          />
+                        </div>
+                        <div
+                          class="relative flex h-full flex-1"
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            aria-controls="SelectRecipient__dropdown-menu"
+                            aria-invalid="false"
+                            aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
+                            class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
+                            data-testid="SelectDropdown__input"
+                            disabled=""
+                            id="SelectRecipient__dropdown-input"
+                            name="recipientWallet"
+                            placeholder="Enter the payout address"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      aria-labelledby="SelectRecipient__dropdown-label"
+                      id="SelectRecipient__dropdown-menu"
+                      role="listbox"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ReviewStep > should render 1`] = `
 <div>
   <div
@@ -2100,9 +2621,9 @@ exports[`ReviewStep > should render 1`] = `
         <span
           class="text-xs font-semibold"
         >
-          1 
+          1
           BTC
-           ≈ 
+           ≈
           <span
             class="whitespace-nowrap"
             data-testid="Amount"
@@ -2176,7 +2697,7 @@ exports[`ReviewStep > should render 1`] = `
           type="checkbox"
         />
         <span>
-          I've read and agree to the ChangeNOW 
+          I've read and agree to the ChangeNOW
           <a
             class="ring-focus group inline-block css-15tcy38"
             data-ring-focus-margin="-m-1"
@@ -2214,7 +2735,7 @@ exports[`ReviewStep > should render 1`] = `
               </svg>
             </div>
           </a>
-           and 
+           and
           <a
             class="ring-focus group inline-block css-15tcy38"
             data-ring-focus-margin="-m-1"
@@ -2272,7 +2793,7 @@ exports[`StatusStep > should render 1`] = `
         class="text-xs font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
       >
         Transaction ID
-        : 
+        :
         id
       </span>
       <span
@@ -2403,7 +2924,7 @@ exports[`StatusStep > should render 1`] = `
           data-testid="StatusIcon__spinner"
         >
           <div
-            class="css-1b3vlxq"
+            class="css-qed8fm"
             color="info"
           />
         </span>
@@ -2470,7 +2991,7 @@ exports[`StatusStep > should render 1`] = `
         </span>
         <span>
           ≈
-           
+
           <span
             class="whitespace-nowrap font-semibold"
             data-testid="Amount"
@@ -2541,7 +3062,7 @@ exports[`StatusStep > should render 1`] = `
     <div
       class="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-sm dark:bg-theme-secondary-800"
     >
-      If you have any question about your exchange, please contact ChangeNOW support team via email at 
+      If you have any question about your exchange, please contact ChangeNOW support team via email at
       <a
         class="ring-focus group inline-block css-15tcy38"
         data-ring-focus-margin="-m-1"
