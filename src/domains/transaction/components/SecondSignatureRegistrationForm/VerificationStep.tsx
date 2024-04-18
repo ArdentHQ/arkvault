@@ -7,7 +7,6 @@ import { StepHeader } from "@/app/components/StepHeader";
 
 export const VerificationStep = () => {
 	const { getValues, register, setValue, watch } = useFormContext();
-	const isVerified: boolean = getValues("verification");
 
 	// getValues does not get the value of `defaultValues` on first render
 	const [defaultMnemonic] = useState(() => watch("secondMnemonic"));
@@ -30,7 +29,7 @@ export const VerificationStep = () => {
 				subtitle={t("TRANSACTION.PAGE_SECOND_SIGNATURE.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
 			/>
 
-			<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} isCompleted={isVerified} />
+			<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />
 		</section>
 	);
 };

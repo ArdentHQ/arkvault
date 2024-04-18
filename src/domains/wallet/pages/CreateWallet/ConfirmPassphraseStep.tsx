@@ -31,12 +31,7 @@ export const ConfirmPassphraseStep = () => {
 				className="hidden sm:block"
 			/>
 
-			<MnemonicVerification
-				className="mb-8 mt-6"
-				mnemonic={mnemonic}
-				handleComplete={handleComplete}
-				isCompleted={isVerified}
-			/>
+			<MnemonicVerification className="mb-8 mt-6" mnemonic={mnemonic} handleComplete={handleComplete} />
 
 			<Divider />
 		</section>
