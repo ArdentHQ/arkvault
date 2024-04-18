@@ -71,3 +71,12 @@ exports[`Spinner > should render a warning color 1`] = `
   />
 </div>
 `;
+
+exports[`Spinner > should render a warning-alt color 1`] = `
+<div>
+  <div
+    class="css-65ztrr"
+    color="warning-alt"
+  />
+</div>
+`;
