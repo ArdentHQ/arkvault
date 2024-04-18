@@ -79,8 +79,12 @@ export const TransactionRowMode: VFC<TransactionRowModeProperties> = ({
 }) => (
 	<BaseTransactionRowMode
 		isCompact={isCompact}
-		isSent={transaction.isSent()}
-		isReturn={transaction.sender() === transaction.wallet().address() && transaction.isReturn()}
+		isSent={transaction.isSent() || transaction.isMultiPayment()}
+		isReturn={
+			transaction.sender() === transaction.wallet().address() &&
+			transaction.isReturn() &&
+			!transaction.isMultiPayment()
+		}
 		type={transactionType || transaction.type()}
 		address={address || transaction.sender()}
 		{...properties}
