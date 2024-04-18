@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 
@@ -19,6 +19,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { getValues, register, setValue } = useFormContext();
 	const username = getValues("username");
 
+	const previousUsername = wallet.username();
+
 	const network = useMemo(() => wallet.network(), [wallet]);
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
@@ -35,9 +37,18 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				subtitle={t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.DESCRIPTION")}
 			/>
 
-			<Alert variant="info" className="mt-6">
-				{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO")}
-			</Alert>
+			{previousUsername ? (
+				<Alert variant="warning" className="mt-6">
+					<Trans
+						i18nKey="TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.USERNAME_REGISTERED"
+						values={{ username: previousUsername }}
+					/>
+				</Alert>
+			) : (
+				<Alert variant="info" className="mt-6">
+					{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO")}
+				</Alert>
+			)}
 
 			<TransactionNetwork network={wallet.network()} border={false} />
 
@@ -45,7 +56,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 			<div className="space-y-6 pt-6">
 				<FormField name="username">
-					<FormLabel label={t("TRANSACTION.USERNAME")} />
+					<FormLabel label={previousUsername ? t("TRANSACTION.NEW_USERNAME") : t("TRANSACTION.USERNAME")} />
 					<InputDefault
 						data-testid="Input__username"
 						defaultValue={username}

@@ -242,8 +242,10 @@ export const translations = {
 	},
 	NAME: "Name",
 	NETWORK: "Network",
+	NEW_USERNAME: "New Username",
 	NOT_FOUND: "Unable to find transaction for [{{transactionId}}]",
 	NOT_YET_CONFIRMED: "Not yet confirmed",
+	OLD_USERNAME: "Old Username",
 	OUTGOING: "Outgoing",
 	PAGE_DELEGATE_REGISTRATION: {
 		FORM_STEP: {
@@ -315,6 +317,8 @@ export const translations = {
 			DESCRIPTION: "Register a new username for an address on the network below.",
 			INFO: "Username registrations are stored on-chain and publicly visible.",
 			TITLE: "Register Username",
+			USERNAME_REGISTERED:
+				"This address is currently registered to the username '<strong>{{username}}</strong>'. Registering a new username will overwrite the existing one, as only one username is allowed per address.",
 		},
 	},
 	PAGE_USERNAME_RESIGNATION: {
@@ -395,6 +399,7 @@ export const translations = {
 	TRANSACTION_REMOVED: "Transaction successfully removed",
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
+
 	TRANSACTION_TYPES: {
 		DELEGATE_REGISTRATION: "Delegate Registration",
 		DELEGATE_RESIGNATION: "Delegate Resignation",
@@ -416,8 +421,8 @@ export const translations = {
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Switch Vote",
 	},
-	TYPE: "Type",
 
+	TYPE: "Type",
 	UNLOCK_TOKENS: {
 		EMPTY_MESSAGE: "Your wallet doesn’t have any locked balance.",
 		ERROR_MESSAGE: "Unable to retrieve unlockable balances. Click <RetryLink/> to retry.",
@@ -439,7 +444,6 @@ export const translations = {
 		UNLOCK: "Unlock",
 		UNLOCKABLE: "Unlockable",
 	},
-
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",
