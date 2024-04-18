@@ -35,7 +35,6 @@ export function MnemonicVerification({ className, mnemonic, handleComplete }: Pr
 	}>({});
 
 	useEffect(() => {
-		console.log("mnemonic", mnemonic);
 		// Check for Japanese "space"
 		const words = /\u3000/.test(mnemonic) ? mnemonic.split("\u3000") : mnemonic.split(" ");
 		setMnemonicWords(words);
@@ -44,12 +43,10 @@ export function MnemonicVerification({ className, mnemonic, handleComplete }: Pr
 	}, []);
 
 	const handleChange = (position: number, isValid: boolean): void => {
-		console.log("handle change");
 		setValidatedPositions((previousState) => ({ ...previousState, [position]: isValid }));
 	};
 
 	useEffect(() => {
-		console.log("mnemonic2", mnemonic);
 		const results = Object.values(validatedPositions);
 		const isCompleted = results.length === positions.length && results.every(Boolean);
 
