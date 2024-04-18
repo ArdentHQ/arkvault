@@ -54,6 +54,7 @@ describe("UnlockTokensModal", () => {
 
 		// wallet mocks
 
+		vi.spyOn(wallet, "id").mockReturnValue("wallet-id");
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
 		vi.spyOn(wallet, "isDelegate").mockReturnValue(false);
@@ -79,13 +80,10 @@ describe("UnlockTokensModal", () => {
 	});
 
 	beforeEach(() => {
-		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(true);
-
 		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
 	it("should render", async () => {
-
 		const onClose = vi.fn();
 
 		render(
@@ -105,6 +103,8 @@ describe("UnlockTokensModal", () => {
 	});
 
 	it.each(["success", "error"])("should handle unlock token transaction with %s", async (expectedOutcome) => {
+		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(true);
+
 		render(
 			<Route path="/profiles/:profileId">
 				<UnlockTokensModal wallet={wallet} onClose={vi.fn()} profile={profile} />
