@@ -12,7 +12,6 @@ import { buildTranslations } from "@/app/i18n/helpers";
 import transactionFixture from "@/tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
 import { env, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
-import { act } from "react-test-renderer";
 import * as useConfirmedTransactionMock from "../TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const translations = buildTranslations();
@@ -84,6 +83,8 @@ describe("UnlockTokensModal", () => {
 	});
 
 	it("should render", async () => {
+		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(true);
+
 		const onClose = vi.fn();
 
 		render(
@@ -134,17 +135,13 @@ describe("UnlockTokensModal", () => {
 
 		// continue to review step
 
-		act(() => {
-			userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
-		});
+		userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
 
 		// back to select step
 
-		act(() => {
-			userEvent.click(screen.getByText(translations.COMMON.BACK));
-		});
+		userEvent.click(screen.getByText(translations.COMMON.BACK));
 
 		await waitFor(() => {
 			expect(within(screen.getAllByTestId("UnlockTokensTotal")[1]).getByTestId("Amount")).toHaveTextContent(
@@ -154,41 +151,31 @@ describe("UnlockTokensModal", () => {
 
 		// continue to review step
 
-		act(() => {
-			userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
-		});
+		userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
 
 		// continue to auth step
 
-		act(() => {
-			userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
-		});
+		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		// back to review step
 
-		act(() => {
-			userEvent.click(screen.getByText(translations.COMMON.BACK));
-		});
+		userEvent.click(screen.getByText(translations.COMMON.BACK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
 
 		// continue to auth step
 
-		act(() => {
-			userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
-		});
+		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		// enter signing key
 
-		act(() => {
-			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), mnemonic);
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), mnemonic);
 
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(mnemonic));
 
@@ -216,9 +203,7 @@ describe("UnlockTokensModal", () => {
 			expect(screen.getByTestId("UnlockTokensAuthentication__send")).toBeEnabled();
 		});
 
-		act(() => {
-			userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
-		});
+		userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
 
 		if (expectedOutcome === "success") {
 			await waitFor(() => {
