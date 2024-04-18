@@ -127,9 +127,7 @@ describe("CreateWallet", () => {
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
-
 		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
-
 		userEvent.paste(firstInput, "power");
 		userEvent.paste(secondInput, "return");
 		userEvent.paste(thirdInput, "attend");
@@ -283,15 +281,12 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
-		const walletMnemonic = passphrase.split(" ");
-		for (let index = 0; index < 3; index++) {
-			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
+		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+		userEvent.paste(firstInput, "power");
+		userEvent.paste(secondInput, "return");
+		userEvent.paste(thirdInput, "attend");
 
-			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
-			if (index < 2) {
-				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
-			}
-		}
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		userEvent.click(continueButton());
@@ -483,15 +478,12 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
-		const walletMnemonic = passphrase.split(" ");
-		for (let index = 0; index < 3; index++) {
-			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
+		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+		userEvent.paste(firstInput, "power");
+		userEvent.paste(secondInput, "return");
+		userEvent.paste(thirdInput, "attend");
 
-			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
-			if (index < 2) {
-				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
-			}
-		}
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		userEvent.click(continueButton());
