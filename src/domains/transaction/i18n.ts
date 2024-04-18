@@ -245,6 +245,7 @@ export const translations = {
 	NEW_USERNAME: "New Username",
 	NOT_FOUND: "Unable to find transaction for [{{transactionId}}]",
 	NOT_YET_CONFIRMED: "Not yet confirmed",
+	OLD_USERNAME: "Old Username",
 	OUTGOING: "Outgoing",
 	PAGE_DELEGATE_REGISTRATION: {
 		FORM_STEP: {
