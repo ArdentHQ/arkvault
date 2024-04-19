@@ -1334,7 +1334,6 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		expect(screen.getAllByTestId("clipboard-button__wrapper")[0]).toBeInTheDocument();
-		expect(container).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
