@@ -19,6 +19,7 @@ import {
 	within,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -27,7 +28,6 @@ let resignationUrl: string;
 
 const passphrase = MNEMONICS[0];
 const history = createHashHistory();
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),

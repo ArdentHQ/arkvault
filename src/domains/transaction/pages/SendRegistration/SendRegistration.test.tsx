@@ -27,6 +27,7 @@ import {
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -112,7 +113,6 @@ const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 const reviewStepID = "DelegateRegistrationForm__review-step";
 const multisignatureTitle = "Multisignature Registration";
 const withKeyboard = "with keyboard";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 describe("Registration", () => {
 	beforeAll(async () => {
