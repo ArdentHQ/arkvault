@@ -6408,7 +6408,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                           name="amount"
                                           placeholder="Enter an amount"
                                           type="text"
-                                          value="0"
+                                          value=""
                                         />
                                       </div>
                                     </div>

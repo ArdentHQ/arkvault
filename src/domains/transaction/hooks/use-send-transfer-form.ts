@@ -36,7 +36,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 	const formDefaultValues = useMemo<DefaultValues<SendTransferForm>>(
 		() => ({
-			amount: "0",
+			amount: "",
 			recipients: [],
 			remainingBalance: wallet?.balance(),
 		}),
