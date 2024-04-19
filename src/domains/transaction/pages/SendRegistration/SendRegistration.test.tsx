@@ -27,12 +27,14 @@ import {
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 const history = createHashHistory();
 const passphrase = getDefaultWalletMnemonic();
+let confirmedTransactionMock: SpyInstance;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -143,6 +145,14 @@ describe("Registration", () => {
 
 		await syncDelegates(profile);
 		await syncFees(profile);
+
+		confirmedTransactionMock = vi
+			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
+			.mockReturnValue(true);
+	});
+
+	afterAll(() => {
+		confirmedTransactionMock.mockRestore();
 	});
 
 	beforeEach(() => {
