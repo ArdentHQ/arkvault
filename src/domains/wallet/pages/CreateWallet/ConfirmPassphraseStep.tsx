@@ -26,6 +26,10 @@ export const ConfirmPassphraseStep = () => {
 		});
 	}, [mnemonicValidated, passphraseDisclaimer]);
 
+	useEffect(() => {
+		setValue("passphraseDisclaimer", false);
+	}, []);
+
 	return (
 		<section data-testid="CreateWallet__ConfirmPassphraseStep">
 			<Header
