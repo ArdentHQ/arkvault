@@ -70,7 +70,6 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let confirmedTransactionMock: SpyInstance;
 
-
 const votingMockImplementation = () => [
 	{
 		amount: 10,
