@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 import { MnemonicVerificationInput } from "./MnemonicVerificationInput";
 import { randomWordPositions } from "./utils/randomWordPositions";
@@ -27,12 +27,14 @@ export function MnemonicVerification({ mnemonic, handleComplete }: Properties) {
 		setValidatedPositions((previousState) => ({ ...previousState, [position]: isValid }));
 	};
 
-	useEffect(() => {
+	const isCompleted = useMemo(() => {
 		const results = Object.values(validatedPositions);
-		const isCompleted = results.length === positions.length && results.every(Boolean);
+		return positions.length > 0 && results.length === positions.length && results.every(Boolean);
+	}, [validatedPositions, positions]);
 
+	useEffect(() => {
 		handleComplete(isCompleted);
-	}, [validatedPositions]);
+	}, [isCompleted]);
 
 	return (
 		<div className="mt-8 grid gap-3 sm:grid-cols-3">
