@@ -112,6 +112,7 @@ const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 const reviewStepID = "DelegateRegistrationForm__review-step";
 const multisignatureTitle = "Multisignature Registration";
 const withKeyboard = "with keyboard";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 describe("Registration", () => {
 	beforeAll(async () => {
@@ -155,6 +156,10 @@ describe("Registration", () => {
 				"https://ark-test-musig.arkvault.io",
 				{ result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } },
 				{ method: "post" },
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/a73433448863755929beca76c84a80006c6efb14c905c2c53f3c89e33233d4ac",
+				transactionsFixture,
 			),
 		);
 	});

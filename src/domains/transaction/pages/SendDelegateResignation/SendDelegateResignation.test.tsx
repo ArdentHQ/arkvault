@@ -18,6 +18,7 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -26,6 +27,7 @@ let resignationUrl: string;
 
 const passphrase = MNEMONICS[0];
 const history = createHashHistory();
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -103,6 +105,13 @@ describe("SendDelegateResignation", () => {
 			secondMnemonicMock = vi
 				.spyOn(wallet.coin().publicKey(), "fromMnemonic")
 				.mockResolvedValue({ publicKey: wallet.publicKey() });
+
+			server.use(
+				requestMock(
+					"https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
+					transactionsFixture,
+				),
+			);
 		});
 
 		it("should show mnemonic authentication error", async () => {
