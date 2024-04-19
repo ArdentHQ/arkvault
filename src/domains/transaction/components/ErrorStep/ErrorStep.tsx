@@ -70,7 +70,7 @@ export const ErrorStep = ({
 				)}
 
 				{!!onClose && (
-					<Button onClick={onClose} data-testid="ErrorStep__wallet-button" variant="secondary">
+					<Button onClick={() => onClose()} data-testid="ErrorStep__close-button" variant="secondary">
 						<div className="whitespace-nowrap">{t("COMMON.CLOSE")}</div>
 					</Button>
 				)}
