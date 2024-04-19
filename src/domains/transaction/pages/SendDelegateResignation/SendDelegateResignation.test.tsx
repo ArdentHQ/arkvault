@@ -18,6 +18,7 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -90,6 +91,14 @@ describe("SendDelegateResignation", () => {
 
 		await syncDelegates(profile);
 		await syncFees(profile);
+
+		confirmedTransactionMock = vi
+			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
+			.mockReturnValue(true);
+	});
+
+	afterAll(() => {
+		confirmedTransactionMock.mockRestore();
 	});
 
 	describe("Delegate Resignation", () => {

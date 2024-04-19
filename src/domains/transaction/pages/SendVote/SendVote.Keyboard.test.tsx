@@ -113,6 +113,10 @@ describe("SendVote", () => {
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
 
+		const confirmedTransactionMock = vi
+			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
+			.mockReturnValue(true);
+
 		const votes: VoteDelegateProperties[] = [
 			{
 				amount: 10,
@@ -218,5 +222,6 @@ describe("SendVote", () => {
 		transactionMock.mockRestore();
 		walletVoteSyncMock.mockRestore();
 		mnemonicMock.mockRestore();
+		confirmedTransactionMock.mockRestore();
 	});
 });

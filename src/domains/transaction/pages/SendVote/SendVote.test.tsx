@@ -31,6 +31,7 @@ import {
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -118,6 +119,14 @@ describe("SendVote", () => {
 		}
 
 		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
+
+		confirmedTransactionMock = vi
+			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
+			.mockReturnValue(true);
+	});
+
+	afterAll(() => {
+		confirmedTransactionMock.mockRestore();
 	});
 
 	beforeEach(() => {

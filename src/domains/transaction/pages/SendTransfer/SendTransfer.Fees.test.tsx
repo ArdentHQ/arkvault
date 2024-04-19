@@ -25,6 +25,7 @@ import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/t
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
 import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
@@ -49,6 +50,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let resetProfileNetworksMock: () => void;
+let confirmedTransactionMock: SpyInstance;
 
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
@@ -90,6 +92,14 @@ describe("SendTransfer Fee Handling", () => {
 			requestMock("https://ark-live.arkvault.io/api/transactions/fees", transactionFeesFixture),
 		);
 		await syncFees(profile);
+
+		confirmedTransactionMock = vi
+			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
+			.mockReturnValue(true);
+	});
+
+	afterAll(() => {
+		confirmedTransactionMock.mockRestore();
 	});
 
 	beforeEach(() => {
