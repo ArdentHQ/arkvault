@@ -8,9 +8,8 @@ import { Divider } from "@/app/components/Divider";
 import { Checkbox } from "@/app/components/Checkbox";
 
 export const ConfirmPassphraseStep = () => {
-	const { getValues, register, setValue, watch } = useFormContext();
+	const { getValues, setValue, watch } = useFormContext();
 	const [mnemonicValidated, setMnemonicValidated] = useState(false);
-	const isVerified: boolean = getValues("verification");
 	const passphraseDisclaimer: boolean = getValues("passphraseDisclaimer");
 	const mnemonic = watch("mnemonic");
 
@@ -19,12 +18,6 @@ export const ConfirmPassphraseStep = () => {
 	const handleComplete = (isComplete: boolean) => {
 		setMnemonicValidated(isComplete);
 	};
-
-	useEffect(() => {
-		if (!isVerified) {
-			register("verification", { required: true });
-		}
-	}, [isVerified, register]);
 
 	useEffect(() => {
 		setValue("verification", passphraseDisclaimer && mnemonicValidated, {

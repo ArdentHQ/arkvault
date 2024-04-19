@@ -49,7 +49,7 @@ export const CreateWallet = () => {
 		},
 		mode: "onChange",
 	});
-	const { getValues, formState, register, setValue, watch } = form;
+	const { getValues, formState, register, unregister, setValue, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
@@ -134,6 +134,12 @@ export const CreateWallet = () => {
 			handleGenerateWallet();
 
 			return;
+		}
+
+		if (newIndex === Step.ConfirmPassphraseStep) {
+			register("verification", { required: true });
+		} else if (activeTab === Step.ConfirmPassphraseStep) {
+			unregister("verification");
 		}
 
 		if (newIndex === Step.SuccessStep) {
