@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { getOrdinalIndicator } from "./utils/evaluateOrdinalIndicator";
@@ -19,6 +19,20 @@ export const MnemonicVerificationInput = ({ handleChange, answer, position, isVa
 
 	const [updated, setUpdated] = useState(false);
 
+	const isInvalid = updated && !isValid;
+
+	const errorMessage = useMemo(() => {
+		if (!isInvalid) {
+			return;
+		}
+
+		if (value === "") {
+			return t("WALLETS.MNEMONIC_VERIFICATION.WORD_REQUIRED");
+		}
+
+		return t("WALLETS.MNEMONIC_VERIFICATION.WRONG_WORD");
+	}, [isInvalid, value]);
+
 	return (
 		<FormField name="name" data-testid="MnemonicVerificationInput">
 			<FormLabel
@@ -31,7 +45,8 @@ export const MnemonicVerificationInput = ({ handleChange, answer, position, isVa
 			<Input
 				data-testid="MnemonicVerificationInput__input"
 				isValid={isValid}
-				isInvalid={updated && !isValid}
+				isInvalid={isInvalid}
+				errorMessage={errorMessage}
 				value={value}
 				onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
 					setValue(event.target.value);

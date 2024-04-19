@@ -11,6 +11,8 @@ export const translations = {
 	MNEMONIC_VERIFICATION: {
 		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} Word",
 		WORD_NUMBER: "The {{position}}{{ordinalIndicator}} Word",
+		WORD_REQUIRED: "Word required",
+		WRONG_WORD: "Wrong word",
 	},
 
 	MODAL_DELETE_WALLET: {
