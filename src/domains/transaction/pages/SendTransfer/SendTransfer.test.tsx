@@ -38,6 +38,7 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -175,6 +176,9 @@ describe("SendTransfer", () => {
 
 		vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
+			.mockReturnValue(true);
 	});
 
 	afterEach(() => {

@@ -199,5 +199,6 @@ describe("SendIpfs", () => {
 		wifGetMock.mockRestore();
 		bip39ValidateMock.mockRestore();
 		fromMnemonicMock.mockRestore();
+		confirmedTransactionMock.mockRestore();
 	});
 });
