@@ -12,6 +12,7 @@ import { buildTranslations } from "@/app/i18n/helpers";
 import transactionFixture from "@/tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
 import { env, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 const translations = buildTranslations();
 
@@ -80,6 +81,12 @@ describe("UnlockTokensModal", () => {
 
 	beforeEach(() => {
 		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/adaf8f61b332611c6d4bd6ac3e75bafc7c82eeee8a4bee14ded471f1373cd23a",
+				transactionsFixture,
+			),
+		);
 	});
 
 	it("should render", async () => {
