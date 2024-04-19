@@ -20,7 +20,7 @@ export const useConfirmedTransaction = ({
 				} catch {
 					// transaction is not forged yet, ignore the error
 				}
-			}, 1000);
+			}, 400);
 		};
 
 		void checkConfirmed();
