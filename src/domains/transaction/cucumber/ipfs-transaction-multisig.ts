@@ -58,5 +58,14 @@ cucumber(
 				id: "transaction-id",
 			},
 		}),
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://ark-test.arkvault.io/api/transactions/d828d245f7bce9a98e289a8f11d8ea4155714e92f9a8b306eb701c18b0ca9ce3",
+			},
+			{
+				data: {},
+			},
+		),
 	],
 );
