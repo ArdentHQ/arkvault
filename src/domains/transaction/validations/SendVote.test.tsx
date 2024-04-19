@@ -4,12 +4,10 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { sendVote } from "./SendVote";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 let profile: Contracts.IProfile;
 let translationMock: any;
 let network: any;
-let confirmedTransactionMock: SpyInstance;
 
 const votes = [
 	{
@@ -32,13 +30,6 @@ describe("Send Vote Validation", () => {
 
 		translationMock = vi.fn((index18nString: string) => index18nString);
 		network = env.profiles().first().wallets().first().network();
-
-		confirmedTransactionMock = vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
-	});
-
-	afterAll(() => {
-		confirmedTransactionMock.mockRestore();
 	});
 
 	it("senderAddress", async () => {
