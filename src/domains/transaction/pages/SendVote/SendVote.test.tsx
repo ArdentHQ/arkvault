@@ -67,7 +67,6 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let confirmedTransactionMock: SpyInstance;
 
 const votingMockImplementation = () => [
 	{

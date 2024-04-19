@@ -69,7 +69,6 @@ const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 let mnemonicMock;
 let secondMnemonicMock;
-let confirmedTransactionMock;
 
 describe("SendDelegateResignation", () => {
 	beforeAll(async () => {
