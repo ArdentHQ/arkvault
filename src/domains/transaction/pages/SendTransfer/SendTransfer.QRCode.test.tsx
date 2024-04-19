@@ -132,7 +132,7 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0");
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
 
 		userEvent.click(screen.getByTestId(QRCodeModalButton));
 
@@ -142,7 +142,7 @@ describe("SendTransfer QRModal", () => {
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
 
-		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0");
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});
