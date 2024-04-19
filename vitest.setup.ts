@@ -15,6 +15,10 @@ vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
 }));
 
+vi.mock("@/utils/interval", () => ({
+	interval: (callback: () => void) => callback(),
+}));
+
 vi.mock(
 	"virtual:pwa-register/react",
 	() => {

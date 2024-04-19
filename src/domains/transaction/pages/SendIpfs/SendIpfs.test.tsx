@@ -30,7 +30,6 @@ import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -68,7 +67,6 @@ vi.mock("@/utils/delay", () => ({
 
 describe("SendIpfs", () => {
 	let resetProfileNetworksMock: () => void;
-	let confirmedTransactionMock: SpyInstance;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -81,10 +79,6 @@ describe("SendIpfs", () => {
 		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
-
-		confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
 
 		await wallet.synchroniser().identity();
 
@@ -112,7 +106,6 @@ describe("SendIpfs", () => {
 
 	afterAll(() => {
 		getVersionSpy.mockRestore();
-		confirmedTransactionMock.mockRestore();
 	});
 
 	it("should render form step", async () => {

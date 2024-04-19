@@ -11,7 +11,6 @@ import { SendVote } from "./SendVote";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 import {
 	act,
@@ -113,10 +112,6 @@ describe("SendVote", () => {
 		const mnemonicMock = vi
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
-
-		const confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -223,6 +218,5 @@ describe("SendVote", () => {
 		transactionMock.mockRestore();
 		walletVoteSyncMock.mockRestore();
 		mnemonicMock.mockRestore();
-		confirmedTransactionMock.mockRestore();
 	});
 });

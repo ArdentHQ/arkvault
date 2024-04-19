@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { interval } from "@/utils/interval";
 
 export const useConfirmedTransaction = ({
 	wallet,
@@ -12,15 +13,15 @@ export const useConfirmedTransaction = ({
 
 	useEffect(() => {
 		const checkConfirmed = (): void => {
-			const id = setInterval(async () => {
+			const id = interval(async () => {
 				try {
 					await wallet.coin().client().transaction(transactionId);
 					setIsConfirmed(true);
 					clearInterval(id);
-				} catch {
+				} catch (error) {
 					// transaction is not forged yet, ignore the error
 				}
-			}, 400);
+			}, 1000);
 		};
 
 		void checkConfirmed();
