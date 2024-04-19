@@ -33,7 +33,8 @@ describe("Send Vote Validation", () => {
 		translationMock = vi.fn((index18nString: string) => index18nString);
 		network = env.profiles().first().wallets().first().network();
 
-		confirmedTransactionMock = vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
+		confirmedTransactionMock = vi
+			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
 			.mockReturnValue(true);
 	});
 
