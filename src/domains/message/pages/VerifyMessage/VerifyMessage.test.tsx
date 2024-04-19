@@ -6,7 +6,6 @@ import { Route } from "react-router-dom";
 
 import { createHashHistory } from "history";
 import { VerifyMessage } from "./VerifyMessage";
-import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
@@ -384,7 +383,7 @@ describe("VerifyMessage", () => {
 
 		const historySpy = vi.spyOn(history, "push");
 
-		userEvent.click(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET }));
+		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
