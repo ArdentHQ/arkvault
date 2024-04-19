@@ -17,6 +17,7 @@ describe("UnlockTokensSummary", () => {
 						wallet: () => ({
 							...TransactionFixture.wallet(),
 							currency: () => "ARK",
+							id: () => "wallet-id",
 							network: () => ({
 								coin: () => "ARK",
 								displayName: () => "ARK Devnet",

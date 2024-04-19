@@ -4,7 +4,7 @@ import { getStyles } from "./Spinner.styles";
 import { Color, Size, Theme } from "@/types";
 
 interface SpinnerType {
-	color?: Color;
+	color?: Color | "warning-alt";
 	size?: Size;
 	theme?: Theme;
 	width?: number;

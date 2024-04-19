@@ -1891,7 +1891,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   data-testid="StatusIcon__spinner"
                 >
                   <div
-                    class="css-qed8fm"
+                    class="css-1b3vlxq"
                     color="info"
                   />
                 </span>
@@ -2924,7 +2924,7 @@ exports[`StatusStep > should render 1`] = `
           data-testid="StatusIcon__spinner"
         >
           <div
-            class="css-qed8fm"
+            class="css-1b3vlxq"
             color="info"
           />
         </span>
