@@ -20,6 +20,7 @@ import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -110,6 +111,10 @@ describe("SendIpfs", () => {
 		const fromMnemonicMock = vi
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
+
+		const confirmedTransactionMock = vi
+			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
+			.mockReturnValue(true);
 
 		const wifGetMock = vi.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(passphrase);
 
