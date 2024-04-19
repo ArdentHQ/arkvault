@@ -76,7 +76,7 @@ const confirmMnemonicStep = {
 			);
 		}
 
-		await t.click(Selector("[data-testid=CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer]]"));
+		await t.click(Selector("[data-testid=CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer]"));
 
 		await t.hover(Selector("button").withExactText(translations.COMMON.CONTINUE));
 		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
