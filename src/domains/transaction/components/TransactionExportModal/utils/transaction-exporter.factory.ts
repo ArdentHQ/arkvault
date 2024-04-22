@@ -94,13 +94,13 @@ export const TransactionExporter = ({
 
 		let nextDateRange: Services.RangeCriteria = {
 			to: fetchedTransactions[fetchedTransactionsCount - 1].timestamp()?.subMillisecond().toUNIX(),
-		}
+		};
 
 		if (dateRange?.from) {
 			nextDateRange = {
 				...nextDateRange,
 				from: dateRange.from,
-			}
+			};
 		}
 
 		return sync({ dateRange: nextDateRange, reset: false, type });
