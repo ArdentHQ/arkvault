@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`DelegateTable > loading state for base > should render when isCompact = false 1`] = `
 <DocumentFragment>
@@ -28589,7 +28589,9 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -28611,10 +28613,10 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -28776,7 +28778,9 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -28798,10 +28802,10 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -28963,7 +28967,9 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -28985,10 +28991,10 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -29737,7 +29743,9 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -29759,10 +29767,10 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -29924,7 +29932,9 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -29946,10 +29956,10 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -30111,7 +30121,9 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -30133,10 +30145,10 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -30885,7 +30897,9 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -30907,10 +30921,10 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -31072,7 +31086,9 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -31094,10 +31110,10 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -31259,7 +31275,9 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -31281,10 +31299,10 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -32033,7 +32051,9 @@ exports[`DelegateTable > should render 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -32055,10 +32075,10 @@ exports[`DelegateTable > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -32220,7 +32240,9 @@ exports[`DelegateTable > should render 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -32242,10 +32264,10 @@ exports[`DelegateTable > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -32407,7 +32429,9 @@ exports[`DelegateTable > should render 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -32429,10 +32453,10 @@ exports[`DelegateTable > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -33236,7 +33260,9 @@ exports[`DelegateTable > should render vote amount column 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -33258,10 +33284,10 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -33470,7 +33496,9 @@ exports[`DelegateTable > should render vote amount column 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -33492,10 +33520,10 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -33704,7 +33732,9 @@ exports[`DelegateTable > should render vote amount column 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -33726,10 +33756,10 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -34548,7 +34578,9 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -34570,10 +34602,10 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -34735,7 +34767,9 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -34757,10 +34791,10 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -34922,7 +34956,9 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -34944,10 +34980,10 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -35696,7 +35732,9 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -35718,10 +35756,10 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -35883,7 +35921,9 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -35905,10 +35945,10 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -36070,7 +36110,9 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -36092,10 +36134,10 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -36845,7 +36887,9 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -36867,10 +36911,10 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -37032,7 +37076,9 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -37054,10 +37100,10 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -37219,7 +37265,9 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -37241,10 +37289,10 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -38494,7 +38542,9 @@ exports[`DelegateTable > should render with subtitle 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -38516,10 +38566,10 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -38681,7 +38731,9 @@ exports[`DelegateTable > should render with subtitle 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -38703,10 +38755,10 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -38868,7 +38920,9 @@ exports[`DelegateTable > should render with subtitle 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -38890,10 +38944,10 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -39697,7 +39751,9 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -39719,10 +39775,10 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -39929,7 +39985,9 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -39951,10 +40009,10 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -40163,7 +40221,9 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -40185,10 +40245,10 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -41007,7 +41067,9 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -41029,10 +41091,10 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -41194,7 +41256,9 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -41216,10 +41280,10 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -41381,7 +41445,9 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -41403,10 +41469,10 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -42158,7 +42224,9 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -42180,10 +42248,10 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -42345,7 +42413,9 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -42367,10 +42437,10 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -42532,7 +42602,9 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -42554,10 +42626,10 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -43307,7 +43379,9 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -43329,10 +43403,10 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -43494,7 +43568,9 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -43516,10 +43592,10 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -43681,7 +43757,9 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -43703,10 +43781,10 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -44510,7 +44588,9 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -44532,10 +44612,10 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -44742,7 +44822,9 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -44764,10 +44846,10 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -44976,7 +45058,9 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -44998,10 +45082,10 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -45820,7 +45904,9 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -45842,10 +45928,10 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -46007,7 +46093,9 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -46029,10 +46117,10 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -46194,7 +46282,9 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -46216,10 +46306,10 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -46966,7 +47056,9 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -46988,10 +47080,10 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -47153,7 +47245,9 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -47175,10 +47269,10 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -47340,7 +47434,9 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -47362,10 +47458,10 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -48117,7 +48213,9 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -48139,10 +48237,10 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -48304,7 +48402,9 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -48326,10 +48426,10 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"
@@ -48491,7 +48591,9 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
               <div
                 class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
               >
-                <span />
+                <span>
+                  0
+                </span>
               </div>
             </td>
             <td>
@@ -48513,10 +48615,10 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                   </div>
                 </div>
                 <div
-                  class="relative grow"
+                  class="relative grow "
                 >
                   <span
-                    class="absolute flex w-full items-center"
+                    class="absolute flex w-full items-center whitespace-nowrap"
                   >
                     <div
                       class="overflow-hidden text-ellipsis"

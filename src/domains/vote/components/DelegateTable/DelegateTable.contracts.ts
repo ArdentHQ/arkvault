@@ -15,7 +15,6 @@ export interface DelegateTableProperties {
 	isCompact?: boolean;
 	subtitle?: React.ReactNode;
 	searchQuery?: string;
-	wallet?: Contracts.IReadWriteWallet;
 }
 
 export interface VoteDelegateProperties {
