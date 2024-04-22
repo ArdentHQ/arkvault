@@ -74,7 +74,6 @@ export const TransactionExporter = ({
 			timestamp: dateRange,
 		});
 
-
 		const fetchedTransactions = page.items();
 		const fetchedTransactionsCount = fetchedTransactions.length;
 
