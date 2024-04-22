@@ -92,7 +92,6 @@ export const TransactionExporter = ({
 			return transactions.length;
 		}
 
-		console.log('running sub')
 		let nextDateRange: Services.RangeCriteria = {
 			to: fetchedTransactions[fetchedTransactionsCount - 1].timestamp()?.subMillisecond().toUNIX(),
 		};
