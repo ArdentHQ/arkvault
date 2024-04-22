@@ -74,12 +74,13 @@ export const TransactionExporter = ({
 			timestamp: dateRange,
 		});
 
-		count = transactions.length;
 
 		const fetchedTransactions = page.items();
 		const fetchedTransactionsCount = fetchedTransactions.length;
 
 		transactions.push(...fetchedTransactions);
+
+		count = transactions.length;
 
 		// Last page.
 		// TODO: Not relying on totalCount because it is an estimate
@@ -88,10 +89,10 @@ export const TransactionExporter = ({
 			if (type === "received") {
 				transactions = filterTransactions(transactions);
 			}
-
 			return transactions.length;
 		}
 
+		console.log('running sub')
 		let nextDateRange: Services.RangeCriteria = {
 			to: fetchedTransactions[fetchedTransactionsCount - 1].timestamp()?.subMillisecond().toUNIX(),
 		}
