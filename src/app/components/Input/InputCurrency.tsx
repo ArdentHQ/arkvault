@@ -25,20 +25,22 @@ export const InputCurrency = React.forwardRef<HTMLInputElement, InputCurrencyPro
 			setAmount(sanitize(value?.toString()));
 		}, [value]);
 
-		const parseValue = (value: string, limitLength = true) => {
-			const sanitizedValue = sanitize(value, limitLength ? undefined : 999);
+		const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+			const sanitizedValue = sanitize(event.target.value, 999);
 
 			setAmount(sanitizedValue);
 
 			onChange?.(sanitizedValue);
 		};
 
-		const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-			parseValue(event.target.value, false);
-		};
-
 		const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-			parseValue(event.target.value);
+			const sanitizedValue = sanitize(event.target.value);
+
+			setAmount(sanitizedValue);
+
+			if (value !== sanitizedValue) {
+				onChange?.(sanitizedValue);
+			}
 
 			onBlur?.(event);
 		};
