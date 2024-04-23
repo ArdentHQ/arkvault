@@ -38,7 +38,7 @@ export const InputCurrency = React.forwardRef<HTMLInputElement, InputCurrencyPro
 		};
 
 		const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-			// parseValue(event.target.value);
+			parseValue(event.target.value);
 
 			onBlur?.(event);
 		};
