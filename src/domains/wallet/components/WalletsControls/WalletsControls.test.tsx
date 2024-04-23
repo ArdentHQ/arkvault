@@ -7,6 +7,7 @@ import { render, renderResponsive, screen, getDefaultProfileId } from "@/utils/t
 import { createHashHistory } from "history";
 import { renderResponsiveWithRoute, waitFor } from "../../../../utils/testing-library";
 const history = createHashHistory();
+import { Route } from "react-router-dom";
 
 describe("WalletsControls", () => {
 	const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -70,11 +71,16 @@ describe("WalletsControls", () => {
 	it("should execute onCreateWallet callback", async () => {
 		const onCreateWallet = vi.fn();
 
-		render(<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={{}} />, {
-			history,
-			withProviders: true,
-			withProfileSynchronizer: true,
-		});
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={{}} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProviders: true,
+			},
+		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletControls__create-wallet")).toBeInTheDocument();
@@ -85,17 +91,23 @@ describe("WalletsControls", () => {
 		expect(onCreateWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should execute onCreateWallet callback when responsive", () => {
+	it("should execute onCreateWallet callback when responsive", async () => {
 		const onCreateWallet = vi.fn();
 
-		renderResponsiveWithRoute(
-			<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={{}} />,
-			"xs",
+		render(
+			<Route path="/profiles/:profileId/">
+				<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={{}} />
+			</Route>,
 			{
+				route: dashboardURL,
 				history,
 				withProfileSynchronizer: true,
 			},
 		);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("dropdown__toggle")[1]).toBeInTheDocument();
+		});
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
 
@@ -106,12 +118,23 @@ describe("WalletsControls", () => {
 		expect(onCreateWallet).toHaveBeenCalledWith();
 	});
 
-	it("should execute onImportWallet callback", () => {
+	it("should execute onImportWallet callback", async () => {
 		const onImportWallet = vi.fn();
 
-		render(<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />, {
-			history,
-			withProfileSynchronizer: true,
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/">
+				<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />
+			</Route>,
+			"xs",
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletControls__create-wallet")).toBeInTheDocument();
 		});
 
 		userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
@@ -119,17 +142,23 @@ describe("WalletsControls", () => {
 		expect(onImportWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should execute onImportWallet callback when responsive", () => {
+	it("should execute onImportWallet callback when responsive", async () => {
 		const onImportWallet = vi.fn();
 
-		renderResponsive(
-			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />,
-			"xs",
+		render(
+			<Route path="/profiles/:profileId/">
+				<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />
+			</Route>,
 			{
 				history,
+				route: dashboardURL,
 				withProfileSynchronizer: true,
 			},
 		);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("dropdown__toggle")[1]).toBeInTheDocument();
+		});
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
 
