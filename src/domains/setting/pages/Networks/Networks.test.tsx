@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 import { UUID } from "@ardenthq/sdk-cryptography";
+import { Trans } from "react-i18next";
 import { vi } from "vitest";
 import NetworksSettings from "@/domains/setting/pages/Networks";
 import {
@@ -752,6 +753,7 @@ describe("Network Settings", () => {
 				const addressNetworkSpy = vi.spyOn(firstContactAddress, "network").mockReturnValue("test.custom");
 				const forgetAddressSpy = vi.spyOn(firstContact.addresses(), "forget");
 				const forgetContactSpy = vi.spyOn(profile.contacts(), "forget");
+				const profileRestoreMock = vi.spyOn(env.profiles(), "restore").mockResolvedValue(undefined);
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -795,15 +797,17 @@ describe("Network Settings", () => {
 				networksForgetSpy.mockRestore();
 				addressNetworkSpy.mockRestore();
 				forgetAddressSpy.mockRestore();
+				profileRestoreMock.mockRestore();
 			});
 
 			it("removes deleted custom network wallets", async () => {
 				const toastSpy = vi.spyOn(toasts, "success");
-				const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation(vi.fn());
 
 				const firstWallet = profile.wallets().values()[0];
 				const walletNetworkSpy = vi.spyOn(firstWallet.network(), "id").mockReturnValue("test.custom");
-				const forgetWalletSpy = vi.spyOn(profile.wallets(), "forget");
+				const forgetWalletSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(vi.fn());
+				const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation(vi.fn());
+				const profileRestoreMock = vi.spyOn(env.profiles(), "restore").mockResolvedValue(undefined);
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -840,12 +844,15 @@ describe("Network Settings", () => {
 
 				await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.GENERAL.SUCCESS));
 
-				expect(forgetWalletSpy).toHaveBeenCalledWith(firstWallet.id());
+				await waitFor(() => {
+					expect(forgetWalletSpy).toHaveBeenCalledWith(firstWallet.id());
+				});
 
 				toastSpy.mockRestore();
 				networksForgetSpy.mockRestore();
 				forgetWalletSpy.mockRestore();
 				walletNetworkSpy.mockRestore();
+				profileRestoreMock.mockRestore();
 			});
 
 			it("cancels removing a custom network", async () => {
