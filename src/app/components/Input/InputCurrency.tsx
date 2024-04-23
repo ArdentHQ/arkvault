@@ -30,9 +30,7 @@ export const InputCurrency = React.forwardRef<HTMLInputElement, InputCurrencyPro
 
 			setAmount(sanitizedValue);
 
-			if (value !== sanitizedValue) {
-				onChange?.(sanitizedValue);
-			}
+			onChange?.(sanitizedValue);
 		};
 
 		const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,7 +38,7 @@ export const InputCurrency = React.forwardRef<HTMLInputElement, InputCurrencyPro
 		};
 
 		const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-			parseValue(event.target.value);
+			// parseValue(event.target.value);
 
 			onBlur?.(event);
 		};
