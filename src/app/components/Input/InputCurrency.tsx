@@ -22,7 +22,7 @@ export const InputCurrency = React.forwardRef<HTMLInputElement, InputCurrencyPro
 
 		useEffect(() => {
 			// when value is changed outside, update amount as well
-			setAmount(sanitize(value?.toString()));
+			setAmount(sanitize(value?.toString(), 999));
 		}, [value]);
 
 		const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
