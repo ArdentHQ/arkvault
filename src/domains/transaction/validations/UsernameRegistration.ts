@@ -4,23 +4,23 @@ import { debounceAsync } from "@/utils/debounce";
 
 const validateUsername = (t: any, value: string): string | undefined => {
 	if (value.startsWith("_")) {
-		return "cannot start with _";
+		return t("COMMON.VALIDATION.LEADING_UNDERSCORE");
 	}
 
 	if (value.endsWith("_")) {
-		return "cannot end with _";
+		return t("COMMON.VALIDATION.TRAILING_UNDERSCORE");
 	}
 
 	const multipleUnderscoresRegex = /.*_{2,}.*/;
 
 	if (multipleUnderscoresRegex.test(value)) {
-		return "cannot contain two or more consecutive underscores";
+		return t("COMMON.VALIDATION.MULTIPLE_UNDERSCORES");
 	}
 
 	const allowedChars = /^[\d_a-z]+$/;
 
 	if (!allowedChars.test(value)) {
-		return "only lowercase letters, numbers and underscores are allowed";
+		return t("COMMON.VALIDATION.USERNAME_ALLOWED_CHARS");
 	}
 };
 
