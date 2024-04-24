@@ -1,8 +1,7 @@
-import { ARK } from "@ardenthq/sdk-ark";
-import { isE2E, isPreview } from "@/utils/test-helpers";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 
 export const initializeArkNetworks = ({ data }) => {
-	if (typeof data.networks === "object" && !!data.networks.ark) {
+	if (typeof data.networks === "object" && !!data.networks.mainsail) {
 		// Networks already assigned to profile, skipping migration
 		return;
 	}
@@ -11,11 +10,9 @@ export const initializeArkNetworks = ({ data }) => {
 		data.networks = {};
 	}
 
-	data.networks.ark = {
-		mainnet: ARK.manifest.networks["ark.mainnet"],
+	// @TODO: once mainnet is available, add the devnet network only for E2E and preview
+	// `if (isE2E() || isPreview())`
+	data.networks.mainsail = {
+		devnet: Mainsail.manifest.networks["mainsail.devnet"],
 	};
-
-	if (isE2E() || isPreview()) {
-		data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
-	}
 };
