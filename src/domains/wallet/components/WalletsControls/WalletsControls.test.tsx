@@ -3,9 +3,8 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { WalletsControls } from "./WalletsControls";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
-import { render, renderResponsive, screen, getDefaultProfileId } from "@/utils/testing-library";
+import { render, screen, getDefaultProfileId, renderResponsiveWithRoute, waitFor } from "@/utils/testing-library";
 import { createHashHistory } from "history";
-import { renderResponsiveWithRoute, waitFor } from "../../../../utils/testing-library";
 const history = createHashHistory();
 import { Route } from "react-router-dom";
 
@@ -41,7 +40,7 @@ describe("WalletsControls", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render for incompatible ledger wallet", async () => {
+	it("should render for incompatible ledger wallet", () => {
 		process.env.REACT_APP_IS_UNIT = undefined;
 
 		const { container } = render(
