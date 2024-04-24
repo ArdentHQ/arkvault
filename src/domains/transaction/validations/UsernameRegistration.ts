@@ -1,10 +1,32 @@
 import { Networks } from "@ardenthq/sdk";
-import { ValidateResult } from "react-hook-form";
-import { validatePattern } from "@/utils/validations";
+import {FieldErrors, ValidateResult} from "react-hook-form";
 import { debounceAsync } from "@/utils/debounce";
 
+const validateUsername = (t: any, value: string): string|undefined => {
+	console.log(value)
+	if (value.startsWith('_')) {
+		return "cannot start with _";
+	}
+
+	if (value.endsWith('_')) {
+		return "cannot end with _";
+	}
+
+	const multipleUnderscoresRegex = /.*_{2,}.*/;
+
+	if (multipleUnderscoresRegex.test(value)) {
+		return "cannot contain two or more consecutive underscores";
+	}
+
+	const allowedChars = /^[\d_a-z]+$/;
+
+	if (!allowedChars.test(value)) {
+		return "only lowercase letters, numbers and underscores are allowed";
+	}
+}
+
 export const usernameRegistration = (t: any) => ({
-	username: (network: Networks.Network) => ({
+	username: (network: Networks.Network, errors: FieldErrors) => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
 				field: t("COMMON.USERNAME"),
@@ -16,8 +38,13 @@ export const usernameRegistration = (t: any) => ({
 			field: t("COMMON.USERNAME"),
 		}),
 		validate: {
-			pattern: (value: string) => validatePattern(t, value, /[\d!$&.@_a-z]+/),
+			pattern: (value: string) => validateUsername(t, value),
 			unique: debounceAsync<ValidateResult>(async (value) => {
+				// if there is an error from other groups, exit early
+				if (errors.username && errors.username.type !== "unique") {
+					return;
+				}
+
 				try {
 					await usernameExists(network, value);
 				} catch {

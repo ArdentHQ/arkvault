@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useMemo } from "react";
-import { useFormContext } from "react-hook-form";
+import {FieldError, useFormContext} from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
@@ -16,7 +16,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const { usernameRegistration } = useValidation();
 
-	const { getValues, register, setValue } = useFormContext();
+	const { getValues, register, setValue, errors  } = useFormContext();
 	const username = getValues("username");
 
 	const previousUsername = wallet.username();
@@ -24,11 +24,13 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const network = useMemo(() => wallet.network(), [wallet]);
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
+	const usernameErrors: FieldError | undefined = "username" in errors ? errors.username as FieldError : undefined;
+
 	useEffect(() => {
 		if (!username) {
-			register("username", usernameRegistration.username(network));
+			register("username", usernameRegistration.username(network, errors));
 		}
-	}, [usernameRegistration, register, network, username]);
+	}, [usernameRegistration, register, network, username, usernameErrors]);
 
 	return (
 		<section data-testid="UsernameRegistrationForm__form-step">
