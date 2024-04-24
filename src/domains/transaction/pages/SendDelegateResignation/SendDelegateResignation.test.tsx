@@ -18,6 +18,7 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -69,6 +70,7 @@ const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 let mnemonicMock;
 let secondMnemonicMock;
+let confirmedTransactionMock;
 
 describe("SendDelegateResignation", () => {
 	beforeAll(async () => {
@@ -89,6 +91,14 @@ describe("SendDelegateResignation", () => {
 
 		await syncDelegates(profile);
 		await syncFees(profile);
+
+		confirmedTransactionMock = vi
+			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
+			.mockReturnValue(true);
+	});
+
+	afterAll(() => {
+		confirmedTransactionMock.mockRestore();
 	});
 
 	describe("Delegate Resignation", () => {
@@ -350,7 +360,7 @@ describe("SendDelegateResignation", () => {
 
 			const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
-			userEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
+			userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 			const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}`;
 			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));

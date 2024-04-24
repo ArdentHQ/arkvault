@@ -8,7 +8,7 @@ import { assertString } from "@/utils/assertions";
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";
 	dateRange?: Services.RangeCriteria;
-	cursor?: number;
+	reset?: boolean;
 }
 
 const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]) =>
@@ -56,10 +56,10 @@ export const TransactionExporter = ({
 	const sync = async ({
 		type = "all",
 		dateRange,
-		cursor = 1,
+		reset = true,
 	}: TransactionExporterFetchProperties): Promise<number | undefined> => {
 		// Clear cache.
-		if (cursor === 1) {
+		if (reset) {
 			transactions = [];
 			requestedSyncAbort = false;
 		}
@@ -68,25 +68,41 @@ export const TransactionExporter = ({
 			return;
 		}
 
-		const page = await wallet.transactionIndex()[type]({ cursor, limit, timestamp: dateRange });
+		const page = await wallet.transactionIndex()[type]({
+			limit,
+			orderBy: "timestamp:desc,sequence:desc",
+			timestamp: dateRange,
+		});
 
-		transactions.push(...page.items());
-		cursor = cursor + 1;
+		const fetchedTransactions = page.items();
+		const fetchedTransactionsCount = fetchedTransactions.length;
+
+		transactions.push(...fetchedTransactions);
 
 		count = transactions.length;
 
 		// Last page.
 		// TODO: Not relying on totalCount because it is an estimate
 		//        and is not giving accurate pagination info. Address this issue after initial implementation.
-		if (page.items().length < limit) {
+		if (fetchedTransactionsCount < limit) {
 			if (type === "received") {
 				transactions = filterTransactions(transactions);
 			}
-
 			return transactions.length;
 		}
 
-		return sync({ cursor, dateRange, type });
+		let nextDateRange: Services.RangeCriteria = {
+			to: fetchedTransactions[fetchedTransactionsCount - 1].timestamp()?.subMillisecond().toUNIX(),
+		};
+
+		if (dateRange?.from) {
+			nextDateRange = {
+				...nextDateRange,
+				from: dateRange.from,
+			};
+		}
+
+		return sync({ dateRange: nextDateRange, reset: false, type });
 	};
 
 	return {

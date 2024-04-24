@@ -31,6 +31,7 @@ import {
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -67,6 +68,7 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+let confirmedTransactionMock: SpyInstance;
 
 const votingMockImplementation = () => [
 	{
@@ -117,6 +119,14 @@ describe("SendVote", () => {
 		}
 
 		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
+
+		confirmedTransactionMock = vi
+			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
+			.mockReturnValue(true);
+	});
+
+	afterAll(() => {
+		confirmedTransactionMock.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -1055,10 +1065,10 @@ describe("SendVote", () => {
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-		expect(screen.getByTestId("ErrorStep__wallet-button")).toBeInTheDocument();
+		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
+		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));

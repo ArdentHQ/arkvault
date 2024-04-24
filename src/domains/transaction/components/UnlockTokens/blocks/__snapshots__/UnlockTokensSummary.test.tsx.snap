@@ -4,7 +4,7 @@ exports[`UnlockTokensSummary > should render 1`] = `
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="TransactionSuccessful"
+    data-testid="TransactionPending"
   >
     <div
       class="flex items-end justify-between bg-theme-background"
@@ -22,279 +22,134 @@ exports[`UnlockTokensSummary > should render 1`] = `
     </div>
     <svg
       class="hidden w-full md:block"
+      fill="none"
       height="142"
-      viewBox="0 0 550 142"
-      width="550"
+      viewBox="0 0 548 142"
+      width="548"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g
-        id="images"
-        transform="translate(-404 -340)"
+        clip-path="url(#clip0_13239_45001)"
       >
-        <g
-          data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 4 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
-          id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_4_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
-        >
-          <path
-            d="M454.184,476.9a52.5,52.5,0,1,1,55.6-57.241c.146,1.595,1.488,4.344,7.22,4.344h97"
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4"
-            stroke="#dbdee5"
-            stroke-width="2"
-          />
-          <g
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
-            stroke="#dbdee5"
-            stroke-width="2"
-            transform="translate(453 472)"
-          >
-            <circle
-              cx="5"
-              cy="5"
-              r="5"
-              stroke="none"
-            />
-            <circle
-              cx="5"
-              cy="5"
-              fill="none"
-              r="4"
-            />
-          </g>
-          <g
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
-            stroke="#dbdee5"
-            stroke-width="2"
-            transform="translate(425 392)"
-          >
-            <circle
-              cx="32.5"
-              cy="32.5"
-              r="32.5"
-              stroke="none"
-            />
-            <circle
-              cx="32.5"
-              cy="32.5"
-              fill="none"
-              r="31.5"
-            />
-          </g>
-          <path
-            d="M484,407s-17.041,12.613-19,14-6,4.6-6,9v26"
-            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1007"
-            fill="none"
-            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1007"
-            stroke="#dbdee5"
-            stroke-width="2"
-          />
-          <path
-            d="M478,401s-15.94,11.4-18,13-7.1,2.131-11-1-13-11-13-11"
-            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1008"
-            fill="none"
-            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1008"
-            stroke="#dbdee5"
-            stroke-width="2"
-          />
-        </g>
-        <g
-          data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 4 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
-          id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_4_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4"
-        >
-          <path
-            d="M903.816,372.1a52.5,52.5,0,1,1-55.6,57.241c-.146-1.6-1.488-4.344-7.221-4.344H748"
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4-2"
-            stroke="#dbdee5"
-            stroke-width="2"
-          />
-          <g
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050-2"
-            stroke="#dbdee5"
-            stroke-width="2"
-            transform="translate(895 367)"
-          >
-            <circle
-              cx="5"
-              cy="5"
-              r="5"
-              stroke="none"
-            />
-            <circle
-              cx="5"
-              cy="5"
-              fill="none"
-              r="4"
-            />
-          </g>
-          <g
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F-2"
-            stroke="#dbdee5"
-            stroke-width="2"
-            transform="translate(868 392)"
-          >
-            <circle
-              cx="32.5"
-              cy="32.5"
-              r="32.5"
-              stroke="none"
-            />
-            <circle
-              cx="32.5"
-              cy="32.5"
-              fill="none"
-              r="31.5"
-            />
-          </g>
-          <path
-            d="M874,442s17.041-12.613,19-14,6-4.6,6-9V393"
-            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1007"
-            fill="none"
-            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1007-2"
-            stroke="#dbdee5"
-            stroke-width="2"
-          />
-          <path
-            d="M880,448s15.94-11.4,18-13,7.1-2.131,11,1,13,11,13,11"
-            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1008"
-            fill="none"
-            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1008-2"
-            stroke="#dbdee5"
-            stroke-width="2"
-          />
-        </g>
-        <g
-          data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 4"
-          id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_4"
-        >
-          <path
-            d="M631.179,442.532a52.513,52.513,0,0,0,101.469-11.917c.233-2.006,4.1-5.615,7.352-5.615h8"
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
-            stroke="#dbdee5"
-            stroke-width="2"
-          />
-          <path
-            d="M730.129,406.468a52.681,52.681,0,0,0-101.736,11.917c-.233,2.006-4.107,5.615-7.372,5.615H613"
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 6"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_6"
-            stroke="#dbdee5"
-            stroke-width="2"
-          />
-          <g
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
-            stroke="#dbdee5"
-            stroke-width="2"
-            transform="translate(726 406)"
-          >
-            <circle
-              cx="5"
-              cy="5"
-              r="5"
-              stroke="none"
-            />
-            <circle
-              cx="5"
-              cy="5"
-              fill="none"
-              r="4"
-            />
-          </g>
-          <g
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
-            stroke="#dbdee5"
-            stroke-width="2"
-            transform="translate(625 434)"
-          >
-            <circle
-              cx="5"
-              cy="5"
-              r="5"
-              stroke="none"
-            />
-            <circle
-              cx="5"
-              cy="5"
-              fill="none"
-              r="4"
-            />
-          </g>
-          <g
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
-            stroke="#289548"
-            stroke-width="2"
-            transform="translate(649.168 392.5)"
-          >
-            <circle
-              cx="32.5"
-              cy="32.5"
-              r="32.5"
-              stroke="none"
-            />
-            <circle
-              cx="32.5"
-              cy="32.5"
-              fill="none"
-              r="31.5"
-            />
-          </g>
-          <path
-            d="M746.937,732l-12.187,12-5.687-5.6-4.063,4,9.75,9.6L751,736Z"
-            data-name="check  \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 6"
-            fill="#edf7f0"
-            id="check_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_6"
-            stroke="#289548"
-            stroke-linejoin="round"
-            stroke-width="2"
-            transform="translate(-54.832 -315.5)"
-          />
-          <g
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
-            fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3-2"
-            stroke="#289548"
-            stroke-width="2"
-            transform="translate(653.168 396.5)"
-          >
-            <circle
-              cx="28.5"
-              cy="28.5"
-              r="28.5"
-              stroke="none"
-            />
-            <circle
-              cx="28.5"
-              cy="28.5"
-              fill="none"
-              r="27.5"
-            />
-          </g>
-        </g>
         <path
-          d="M815,475v-7H777v7h-2v-7H760v-2h15V448h2v18h38v-8h2v8h10v2H817v7Zm-240,0v-7H537v7h-2v-7H525v-2h10V454h2v12h38V456h2v10h18v2H577v7Zm-40-31v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm280-45V388H805v-2h10V348H777v11h-2V348H764v-2h11v-6h2v6h38v-6h2v6h38v-6h2v6h8v2h-8v21h-2V348H817v38h16v2H817v11Zm-280,0V388H521v-2h14V348H497v11h-2V348H477v-2h18v-6h2v6h38v-6h2v6h11v2H537v38h9v2h-9v11Zm80-33V348H597v-2h18v-6h2v6h16v2H617v18Zm265-14v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm-230,0v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-          data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 21"
-          fill="#dbdee5"
-          id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_21"
+          d="M49.1837 136.897C21.7338 135.186 0 112.381 0 84.5C0 55.5051 23.5051 32 52.5 32C79.8618 32 102.335 52.9318 104.78 79.6563C104.925 81.2512 106.268 83.9999 112 83.9999C117.732 83.9999 209 83.9999 209 83.9999"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <circle
+          cx="53"
+          cy="137"
+          r="4"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <circle
+          cx="52.5"
+          cy="84.5"
+          r="31.5"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <path
+          d="M79.0001 67C79.0001 67 61.9587 79.6126 60 81C58.0413 82.3873 54 85.596 54 90C54 94.4039 54 116 54 116"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <path
+          d="M72.9999 61C72.9999 61 57.0596 72.3982 54.9999 74C52.9402 75.6018 47.8967 76.1308 43.9999 72.9999C40.1032 69.8692 31 62.0001 31 62.0001"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <path
+          d="M498.816 32.1025C526.266 33.8135 548 56.6184 548 84.4995C548 113.494 524.495 137 495.5 137C468.138 137 445.665 116.068 443.221 89.3433C443.075 87.7483 441.732 84.9995 436 84.9995C430.268 84.9995 343 84.9995 343 84.9995"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <circle
+          cx="495"
+          cy="32"
+          r="4"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <circle
+          cx="495.5"
+          cy="84.5"
+          r="31.5"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <path
+          d="M469 102C469 102 486.041 89.3873 488 88C489.959 86.6126 494 83.4039 494 79C494 74.596 494 53 494 53"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <path
+          d="M475 108C475 108 490.94 96.6015 493 94.9999C495.06 93.3981 500.103 92.869 504 95.9998C507.897 99.1306 517 107 517 107"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <path
+          d="M226.18 102.532C233.535 122.644 252.841 137 275.501 137C302.428 137 324.62 116.729 327.649 90.6148C327.881 88.6088 331.745 85 335.001 85C338.257 85 343.001 85 343.001 85"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <path
+          d="M325.129 66.4682C317.755 46.3556 298.397 32 275.678 32C248.68 32 226.43 52.2711 223.393 78.3852C223.159 80.3911 219.286 83.9999 216.021 83.9999C212.756 83.9999 208 83.9999 208 83.9999"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <circle
+          cx="326"
+          cy="71"
+          r="4"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <circle
+          cx="225"
+          cy="99"
+          r="4"
+          stroke="#DBDEE5"
+          stroke-width="2"
+        />
+        <circle
+          cx="276.668"
+          cy="85"
+          r="31.5"
+          stroke="#289548"
+          stroke-width="2"
+        />
+        <path
+          d="M281.403 86.0899L281.402 86.0894C280.912 85.6263 280.795 85.3522 280.795 84.9749C280.795 84.6041 280.905 84.3444 281.412 83.851C281.697 83.5754 282.064 83.2473 282.479 82.876C283.468 81.9912 284.732 80.8613 285.809 79.6113C287.371 77.7986 288.78 75.4908 288.78 72.7371V72.3354C288.78 71.2455 288.469 70.2704 287.757 69.5712C287.048 68.8751 286.083 68.5898 285.052 68.5898H268.796C267.776 68.5898 266.84 68.8786 266.162 69.5603C265.484 70.2413 265.201 71.1753 265.201 72.1847V72.7371C265.201 75.4909 266.611 77.7988 268.175 79.6118C269.263 80.873 270.538 82.0077 271.535 82.8954C271.943 83.2584 272.304 83.5801 272.588 83.8523C273.094 84.3448 273.203 84.6044 273.203 84.9749C273.203 85.3522 273.086 85.6264 272.596 86.0894L272.596 86.0899C272.347 86.3254 272.045 86.5966 271.709 86.8991C270.683 87.8216 269.335 89.0345 268.169 90.4095C266.614 92.2439 265.201 94.5646 265.201 97.2293V97.8153C265.201 98.8247 265.484 99.7587 266.162 100.44C266.84 101.121 267.776 101.41 268.796 101.41H285.052C286.083 101.41 287.048 101.125 287.757 100.429C288.469 99.7296 288.78 98.7546 288.78 97.6646V97.2314C288.789 94.5658 287.38 92.2445 285.828 90.41C284.663 89.0337 283.313 87.8199 282.287 86.897C281.952 86.5954 281.651 86.3248 281.403 86.0899Z"
+          stroke="#289548"
+          stroke-width="2"
+        />
+        <path
+          d="M269.57 73H284.43C285.054 73 285.152 73.4868 284.791 74.1522C283.315 76.7809 278.345 81 277 81C275.655 81 270.685 76.8134 269.209 74.1522C268.848 73.4868 268.946 73 269.57 73Z"
+          fill="#E2F0E6"
+          stroke="#289548"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+        <path
+          clip-rule="evenodd"
+          d="M410.001 135V128H372V135H370V128H355V126H370V108H372V126H410.001V118H412.001V126H422V128H412.001V135H410.001ZM170 135V127.999H132.001V135H130V127.999H120V126H130V113.999H132.001V126H170V116H172V126H190V127.999H172V135H170ZM130 104V100H126V98.0005H130V94H132V98.0005H136V100H132V104H130ZM410 58.9995V47.9997H400V45.9999H410V8.00009H372V18.9999H370V8.00009H359V5.99939H370V0H372V5.99939H410V0H412V5.99939H450V0H452V5.99939H460V8.00009H452V28.9998H450V8.00009H412V45.9999H428V47.9997H412V58.9995H410ZM130 58.9995V47.9997H116V45.9999H130V8.00009H91.9998V18.9999H90V8.00009H72V5.99939H90V0H91.9998V5.99939H130V0H132V5.99939H143V8.00009H132V45.9999H141V47.9997H132V58.9995H130ZM210 26.0001V8.00009H192V5.99939H210V0H212.001V5.99939H228V8.00009H212.001V26.0001H210ZM475.001 11.9999V8.0003H471V5.9996H475.001V2H477V5.9996H481V8.0003H477V11.9999H475.001ZM245 11.9999V8.0003H241V5.9996H245V2H246.999V5.9996H251V8.0003H246.999V11.9999H245Z"
+          fill="#DBDEE5"
+          fill-rule="evenodd"
         />
       </g>
+      <defs>
+        <clippath
+          id="clip0_13239_45001"
+        >
+          <rect
+            fill="white"
+            height="142"
+            width="548"
+          />
+        </clippath>
+      </defs>
     </svg>
     <p
       class="hidden text-theme-secondary-text md:block"
@@ -350,115 +205,6 @@ exports[`UnlockTokensSummary > should render 1`] = `
       </div>
     </div>
     <div>
-      <div
-        class="no-ligatures css-1v497ib"
-        data-testid="TransactionDetail"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            ID
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            <div
-              class="flex w-full items-center space-x-3 overflow-hidden"
-            >
-              <span
-                class="overflow-hidden"
-              >
-                <a
-                  class="ring-focus group inline-block flex items-center css-15tcy38"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="Link"
-                  href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
-                  rel="noopener noreferrer"
-                >
-                  <span
-                    class="css-1y2194z"
-                  >
-                    <span
-                      class="no-ligatures css-0"
-                      data-testid="TruncateMiddle"
-                    >
-                      ea63bf9a4b3eaf75a1dfff7219…7facf1aef29461868681b5c79b
-                    </span>
-                  </span>
-                  <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                    data-testid="Link__external"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="arrow-external"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-                </a>
-              </span>
-              <span
-                class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-              >
-                <button
-                  class="ring-focus relative focus:outline-none"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="clipboard-icon__wrapper"
-                  type="button"
-                >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </button>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
       <div
         class="no-ligatures css-19rivvh"
         data-testid="TransactionType"
@@ -724,6 +470,20 @@ exports[`UnlockTokensSummary > should render 1`] = `
             31.07.2020 4:34 PM
           </div>
         </div>
+      </div>
+      <div
+        class="mt-8  flex space-x-2 rounded border border-transparent bg-theme-warning-50 px-3 py-2 text-theme-warning-900 dark:border-theme-warning-600 dark:bg-transparent dark:text-theme-warning-600"
+      >
+        <div
+          class="css-t7w2ab"
+          color="warning-alt"
+          width="3"
+        />
+        <span
+          class="font-semibold"
+        >
+          This transaction is pending confirmation
+        </span>
       </div>
     </div>
   </section>
