@@ -3,7 +3,6 @@ import {FieldErrors, ValidateResult} from "react-hook-form";
 import { debounceAsync } from "@/utils/debounce";
 
 const validateUsername = (t: any, value: string): string|undefined => {
-	console.log(value)
 	if (value.startsWith('_')) {
 		return "cannot start with _";
 	}
