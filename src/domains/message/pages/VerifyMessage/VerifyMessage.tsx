@@ -172,7 +172,7 @@ export const VerifyMessage = () => {
 								<ErrorStep
 									title={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE")}
 									description={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.DESCRIPTION")}
-									onBack={handleBack}
+									onClose={handleBack}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>

@@ -722,12 +722,12 @@ describe("SendIpfs", () => {
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-		expect(screen.getByTestId("ErrorStep__wallet-button")).toBeInTheDocument();
+		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
-		userEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
+		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		expect(historyMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`);
 
