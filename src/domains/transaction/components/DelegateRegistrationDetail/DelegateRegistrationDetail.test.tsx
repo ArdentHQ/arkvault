@@ -65,7 +65,7 @@ describe("DelegateRegistrationDetail", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
-			translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE,
+			translations.TRANSACTION_TYPES.VALIDATOR_REGISTRATION,
 		);
 
 		expect(screen.getAllByTestId("TransactionDetail").at(0)).toHaveTextContent("123");

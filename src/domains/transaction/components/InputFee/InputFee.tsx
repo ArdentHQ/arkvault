@@ -34,7 +34,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const viewType = properties.viewType ?? DEFAULT_VIEW_TYPE;
 		const simpleValue = properties.simpleValue ?? DEFAULT_SIMPLE_VALUE;
-		const [advancedValue, setAdvancedValue] = useState(value?.toString() ?? "0");
+		const [advancedValue, setAdvancedValue] = useState(value?.toString() ?? avg?.toString() ?? "0");
 
 		useEffect(() => {
 			if (value && value !== advancedValue) {
