@@ -48,7 +48,7 @@ export const SendTransfer = () => {
 	});
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
-	const { hasDeviceAvailable, isConnected, connect, error } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
 	const {
 		hasAnyParameters: hasDeepLinkParameters,
