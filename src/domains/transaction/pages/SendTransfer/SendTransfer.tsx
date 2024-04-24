@@ -48,7 +48,8 @@ export const SendTransfer = () => {
 	});
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
-	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, error } = useLedgerContext();
+
 	const {
 		hasAnyParameters: hasDeepLinkParameters,
 		hasReset: shouldResetForm,
@@ -312,6 +313,16 @@ export const SendTransfer = () => {
 					}
 					ledgerIsAwaitingDevice={!hasDeviceAvailable}
 					ledgerIsAwaitingApp={!isConnected}
+					onDeviceNotAvailable={() => {
+						setErrorMessage(
+							JSON.stringify({
+								message: t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"),
+								type: "failed",
+							}),
+						);
+
+						setActiveTab(SendTransferStep.ErrorStep);
+					}}
 				/>
 			</TabPanel>
 
