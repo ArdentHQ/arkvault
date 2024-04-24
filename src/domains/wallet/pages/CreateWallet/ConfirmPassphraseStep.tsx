@@ -1,27 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { Header } from "@/app/components/Header";
 import { MnemonicVerification } from "@/domains/wallet/components/MnemonicVerification";
 import { Divider } from "@/app/components/Divider";
+import { Checkbox } from "@/app/components/Checkbox";
 
 export const ConfirmPassphraseStep = () => {
-	const { getValues, register, setValue, watch } = useFormContext();
-	const isVerified: boolean = getValues("verification");
+	const { getValues, setValue, watch } = useFormContext();
+	const [mnemonicValidated, setMnemonicValidated] = useState(false);
+	const passphraseDisclaimer: boolean = getValues("passphraseDisclaimer");
 	const mnemonic = watch("mnemonic");
 
 	const { t } = useTranslation();
 
-	const handleComplete = () => {
-		setValue("verification", true, { shouldDirty: true, shouldValidate: true });
+	const handleComplete = (isComplete: boolean) => {
+		setMnemonicValidated(isComplete);
 	};
 
 	useEffect(() => {
-		if (!isVerified) {
-			register("verification", { required: true });
-		}
-	}, [isVerified, register]);
+		setValue("verification", passphraseDisclaimer && mnemonicValidated, {
+			shouldDirty: true,
+			shouldValidate: true,
+		});
+	}, [mnemonicValidated, passphraseDisclaimer]);
+
+	useEffect(() => {
+		setValue("passphraseDisclaimer", false);
+	}, []);
 
 	return (
 		<section data-testid="CreateWallet__ConfirmPassphraseStep">
@@ -31,15 +38,19 @@ export const ConfirmPassphraseStep = () => {
 				className="hidden sm:block"
 			/>
 
-			<MnemonicVerification
-				className="mb-8 mt-6"
-				mnemonic={mnemonic}
-				optionsLimit={6}
-				handleComplete={handleComplete}
-				isCompleted={isVerified}
-			/>
+			<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />
 
 			<Divider />
+
+			<label className="inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text">
+				<Checkbox
+					data-testid="CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"
+					checked={passphraseDisclaimer}
+					onChange={(event) => setValue("passphraseDisclaimer", event.target.checked)}
+				/>
+
+				<span>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.PASSPHRASE_DISCLAIMER")}</span>
+			</label>
 		</section>
 	);
 };

@@ -64,6 +64,15 @@ cucumber(
 				publicKey: "03d3fdad9c5b25bf8880e6b519eb3611a5c0b31adebc8455f0e096175b28321aff",
 			},
 		}),
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://ark-test.arkvault.io/api/transactions/cb5b0aee8240c965984d7fc5c4a4b637f127f6c356ee4b70363679011cd5291a",
+			},
+			{
+				data: {},
+			},
+		),
 	],
 );
 cucumber(

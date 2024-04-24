@@ -24,6 +24,7 @@ type InputProperties = {
 	innerClassName?: string;
 	isFocused?: boolean;
 	isInvalid?: boolean;
+	isValid?: boolean;
 	isTextArea?: boolean;
 	isCompact?: boolean;
 	noBorder?: boolean;
@@ -34,6 +35,7 @@ type InputProperties = {
 export const InputWrapperStyled = styled.div<{
 	disabled?: boolean;
 	invalid?: boolean;
+	valid?: boolean;
 	isTextArea?: boolean;
 	isCompact?: boolean;
 	noBorder?: boolean;
@@ -53,7 +55,7 @@ export const InputWrapperStyled = styled.div<{
 		}
 	}}
 
-	${({ disabled, invalid }) => {
+	${({ disabled, invalid, valid }) => {
 		if (disabled && invalid) {
 			return tw`border-theme-danger-500 bg-theme-secondary-100 dark:bg-theme-secondary-800`;
 		}
@@ -64,6 +66,10 @@ export const InputWrapperStyled = styled.div<{
 
 		if (invalid) {
 			return tw`bg-theme-background border-theme-danger-500 focus-within:ring-theme-danger-500`;
+		}
+
+		if (valid) {
+			return tw`bg-theme-background border-theme-primary-600 focus-within:(border-theme-primary-600 ring-theme-primary-600)`;
 		}
 
 		return tw`bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:(border-theme-primary-600 ring-theme-primary-600)`;
@@ -110,6 +116,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 			innerClassName,
 			isFocused,
 			isInvalid,
+			isValid,
 			isTextArea,
 			isCompact,
 			noBorder,
@@ -155,6 +162,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 					className={className}
 					disabled={disabled}
 					invalid={isInvalidValue}
+					valid={isValid}
 					noBorder={noBorder}
 					noShadow={noShadow}
 					isTextArea={isTextArea}
@@ -185,7 +193,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 						/>
 					</div>
 
-					{(isInvalidValue || addons?.end) && (
+					{(isInvalidValue || isValid || addons?.end) && (
 						<div
 							data-testid="Input__addon-end"
 							className={cn(
@@ -208,6 +216,15 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 										/>
 									</span>
 								</Tooltip>
+							)}
+
+							{isValid && (
+								<Icon
+									data-testid="Input__valid"
+									name="CircleCheckMark"
+									size="lg"
+									className="pointer-events-none text-theme-primary-600 focus:outline-none"
+								/>
 							)}
 
 							{addons?.end && (
