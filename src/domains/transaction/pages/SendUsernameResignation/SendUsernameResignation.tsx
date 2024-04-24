@@ -152,8 +152,7 @@ export const SendUsernameResignation = () => {
 									onBack={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
-									isRepeatDisabled={isSubmitting || !isValid}
-									onRepeat={form.handleSubmit(handleSubmit)}
+									isBackDisabled={isSubmitting || !isValid}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>
