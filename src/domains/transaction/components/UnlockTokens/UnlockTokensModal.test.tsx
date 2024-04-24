@@ -12,6 +12,7 @@ import { buildTranslations } from "@/app/i18n/helpers";
 import transactionFixture from "@/tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
 import { env, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const translations = buildTranslations();
 
@@ -53,6 +54,7 @@ describe("UnlockTokensModal", () => {
 
 		// wallet mocks
 
+		vi.spyOn(wallet, "id").mockReturnValue("wallet-id");
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
 		vi.spyOn(wallet, "isDelegate").mockReturnValue(false);
@@ -101,6 +103,8 @@ describe("UnlockTokensModal", () => {
 	});
 
 	it.each(["success", "error"])("should handle unlock token transaction with %s", async (expectedOutcome) => {
+		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(true);
+
 		render(
 			<Route path="/profiles/:profileId">
 				<UnlockTokensModal wallet={wallet} onClose={vi.fn()} profile={profile} />

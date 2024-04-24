@@ -56,6 +56,15 @@ cucumber(
 				},
 			},
 		),
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://ark-test.arkvault.io/api/transactions/2a6c1da3f63b5f01c99a7aa46ecf646eb8c33ca1801cc53cdfb2b984ad4f411e",
+			},
+			{
+				data: {},
+			},
+		),
 	],
 );
 cucumber("@ipfsTransaction-invalidHash", {

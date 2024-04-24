@@ -12567,7 +12567,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -12575,24 +12575,21 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -12834,7 +12831,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -12842,24 +12839,21 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -13101,7 +13095,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -13109,24 +13103,21 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -13368,7 +13359,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -13376,24 +13367,21 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -20975,7 +20963,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -20983,24 +20971,21 @@ exports[`Transactions > should hide view more button when there are no next page
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -21242,7 +21227,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -21250,24 +21235,21 @@ exports[`Transactions > should hide view more button when there are no next page
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -28423,7 +28405,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -28431,24 +28413,21 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -28690,7 +28669,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -28698,24 +28677,21 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -35851,7 +35827,7 @@ exports[`Transactions > should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -35859,24 +35835,21 @@ exports[`Transactions > should render 1`] = `
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -36118,7 +36091,7 @@ exports[`Transactions > should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -36126,24 +36099,21 @@ exports[`Transactions > should render 1`] = `
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -43292,7 +43262,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -43300,24 +43270,21 @@ exports[`Transactions > should render with custom title 1`] = `
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>
@@ -43559,7 +43526,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -43567,24 +43534,21 @@ exports[`Transactions > should render with custom title 1`] = `
                       width="20"
                     >
                       <svg
-                        id="received"
+                        id="sent"
                         viewBox="0 0 20 20"
                         x="0"
                         xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg"
                         y="0"
                       >
-                        <g
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                           fill="none"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                        >
-                          <path
-                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                          />
-                        </g>
+                        />
                       </svg>
                     </div>
                   </span>

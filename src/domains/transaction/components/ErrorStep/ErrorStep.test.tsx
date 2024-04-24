@@ -29,21 +29,19 @@ describe("ErrorStep", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
+		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
 
-		await waitFor(() =>
-			expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) })),
-		);
+		await waitFor(() => expect(onBack).toHaveBeenCalledWith());
 	});
 
-	it("should emit onRepeat", async () => {
-		const onRepeat = vi.fn();
-		const { asFragment } = render(<ErrorStep title="Custom error title" onRepeat={onRepeat} />);
+	it("should emit onClose", async () => {
+		const onClose = vi.fn();
+		const { asFragment } = render(<ErrorStep title="Custom error title" onClose={onClose} />);
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("ErrorStep__repeat-button"));
+		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		await waitFor(() => expect(onRepeat).toHaveBeenCalledWith());
+		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 	});
 });

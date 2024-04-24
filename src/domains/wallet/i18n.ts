@@ -11,6 +11,8 @@ export const translations = {
 	MNEMONIC_VERIFICATION: {
 		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} Word",
 		WORD_NUMBER: "The {{position}}{{ordinalIndicator}} Word",
+		WORD_REQUIRED: "Word required",
+		WRONG_WORD: "Incorrect word entered",
 	},
 
 	MODAL_DELETE_WALLET: {
@@ -80,7 +82,9 @@ export const translations = {
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {
-			SUBTITLE: "Confirm your mnemonic passphrase to continue.",
+			PASSPHRASE_DISCLAIMER: "I am aware that if I lose my passphrase, I will lose access to my funds.",
+			SUBTITLE:
+				"Confirm that you’ve saved your secret passphrase by correctly entering the word in the designated input field below.",
 			TITLE: "Confirm Your Passphrase",
 		},
 

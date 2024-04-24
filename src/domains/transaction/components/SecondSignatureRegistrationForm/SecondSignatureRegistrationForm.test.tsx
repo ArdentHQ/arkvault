@@ -8,7 +8,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { Route, Router } from "react-router-dom";
 import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
 import * as useFilesHook from "@/app/hooks/use-files";
-
+import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import { toasts } from "@/app/services";
 import { translations } from "@/domains/transaction/i18n";
 import secondSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
@@ -332,6 +332,8 @@ describe("SecondSignatureRegistrationForm", () => {
 	});
 
 	it("should render verification step", async () => {
+		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
+
 		const { form } = renderWithForm(
 			<SecondSignatureRegistrationForm.component profile={profile} activeTab={3} wallet={wallet} />,
 			{
@@ -347,17 +349,10 @@ describe("SecondSignatureRegistrationForm", () => {
 
 		expect(form()?.getValues("verification")).toBeUndefined();
 
-		const walletMnemonic = passphrase.split(" ");
-
-		for (let index = 0; index < 3; index++) {
-			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
-
-			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
-
-			if (index < 2) {
-				await waitFor(() => expect(screen.queryAllByText(/The (\d+)/).length === 2 - index));
-			}
-		}
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
+		userEvent.paste(firstInput, "power");
+		userEvent.paste(secondInput, "return");
+		userEvent.paste(thirdInput, "attend");
 
 		await waitFor(() => expect(form()?.getValues("verification")).toBe(true));
 	});
