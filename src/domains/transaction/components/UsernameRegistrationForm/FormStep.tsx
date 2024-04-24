@@ -24,13 +24,11 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const network = useMemo(() => wallet.network(), [wallet]);
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
-	const usernameErrors: FieldError | undefined = "username" in errors ? errors.username as FieldError : undefined;
-
 	useEffect(() => {
 		if (!username) {
 			register("username", usernameRegistration.username(network, errors));
 		}
-	}, [usernameRegistration, register, network, username, usernameErrors]);
+	}, [usernameRegistration, register, network, username, errors]);
 
 	return (
 		<section data-testid="UsernameRegistrationForm__form-step">
