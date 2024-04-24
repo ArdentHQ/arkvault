@@ -1,12 +1,12 @@
 import React from "react";
 
 import userEvent from "@testing-library/user-event";
+import { createHashHistory } from "history";
+import { Route } from "react-router-dom";
 import { WalletsControls } from "./WalletsControls";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import { render, screen, getDefaultProfileId, renderResponsiveWithRoute, waitFor } from "@/utils/testing-library";
-import { createHashHistory } from "history";
 const history = createHashHistory();
-import { Route } from "react-router-dom";
 
 describe("WalletsControls", () => {
 	const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -98,8 +98,8 @@ describe("WalletsControls", () => {
 				<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={{}} />
 			</Route>,
 			{
-				route: dashboardURL,
 				history,
+				route: dashboardURL,
 				withProfileSynchronizer: true,
 			},
 		);
