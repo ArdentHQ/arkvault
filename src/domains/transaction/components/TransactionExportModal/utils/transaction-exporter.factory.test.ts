@@ -128,7 +128,7 @@ describe("CsvFormatter", () => {
 		await exporter
 			.transactions()
 			//@ts-ignore
-			.sync({ cursor: 2, dateRange: { from: Date.now(), to: Date.now() } });
+			.sync({ dateRange: { from: Date.now(), to: Date.now() }, reset: false });
 
 		expect(exporter.transactions().items()).toHaveLength(0);
 	});
