@@ -12,7 +12,7 @@ export const translations = {
 		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} Word",
 		WORD_NUMBER: "The {{position}}{{ordinalIndicator}} Word",
 		WORD_REQUIRED: "Word required",
-		WRONG_WORD: "Wrong word",
+		WRONG_WORD: "Incorrect word entered",
 	},
 
 	MODAL_DELETE_WALLET: {
