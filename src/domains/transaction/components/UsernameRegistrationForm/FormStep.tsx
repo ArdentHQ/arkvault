@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useMemo } from "react";
-import {FieldError, useFormContext} from "react-hook-form";
+import { FieldError, useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
@@ -16,7 +16,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const { usernameRegistration } = useValidation();
 
-	const { getValues, register, setValue, errors  } = useFormContext();
+	const { getValues, register, setValue, errors } = useFormContext();
 	const username = getValues("username");
 
 	const previousUsername = wallet.username();

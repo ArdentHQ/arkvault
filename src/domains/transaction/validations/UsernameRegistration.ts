@@ -1,13 +1,13 @@
 import { Networks } from "@ardenthq/sdk";
-import {FieldErrors, ValidateResult} from "react-hook-form";
+import { FieldErrors, ValidateResult } from "react-hook-form";
 import { debounceAsync } from "@/utils/debounce";
 
-const validateUsername = (t: any, value: string): string|undefined => {
-	if (value.startsWith('_')) {
+const validateUsername = (t: any, value: string): string | undefined => {
+	if (value.startsWith("_")) {
 		return "cannot start with _";
 	}
 
-	if (value.endsWith('_')) {
+	if (value.endsWith("_")) {
 		return "cannot end with _";
 	}
 
@@ -22,7 +22,7 @@ const validateUsername = (t: any, value: string): string|undefined => {
 	if (!allowedChars.test(value)) {
 		return "only lowercase letters, numbers and underscores are allowed";
 	}
-}
+};
 
 export const usernameRegistration = (t: any) => ({
 	username: (network: Networks.Network, errors: FieldErrors) => ({
