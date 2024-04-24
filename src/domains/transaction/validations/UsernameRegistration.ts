@@ -1,6 +1,7 @@
 import { Networks } from "@ardenthq/sdk";
-import { FieldErrors, ValidateResult } from "react-hook-form";
+import { ValidateResult } from "react-hook-form";
 import { debounceAsync } from "@/utils/debounce";
+import { MutableRefObject } from "react";
 
 const validateUsername = (t: any, value: string): string | undefined => {
 	if (value.startsWith("_")) {
@@ -25,7 +26,7 @@ const validateUsername = (t: any, value: string): string | undefined => {
 };
 
 export const usernameRegistration = (t: any) => ({
-	username: (network: Networks.Network, errors: FieldErrors) => ({
+	username: (network: Networks.Network, controller: MutableRefObject<AbortController | undefined>) => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
 				field: t("COMMON.USERNAME"),
@@ -39,22 +40,21 @@ export const usernameRegistration = (t: any) => ({
 		validate: {
 			pattern: (value: string) => validateUsername(t, value),
 			unique: debounceAsync<ValidateResult>(async (value) => {
-				// if there is an error from other groups, exit early
-				if (errors.username && errors.username.type !== "unique") {
-					return;
-				}
-
 				try {
-					await usernameExists(network, value);
+					await usernameExists(network, value, controller);
 				} catch {
 					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
 				}
-			}, 500),
+			}, 300),
 		},
 	}),
 });
 
-const usernameExists = async (network: Networks.Network, username: string) => {
+const usernameExists = async (
+	network: Networks.Network,
+	username: string,
+	controller: MutableRefObject<AbortController | undefined>,
+) => {
 	const endpoints = {
 		"mainsail.devnet": "https://dwallets.mainsailhq.com/api/wallets/",
 		"mainsail.mainnet": "https://wallets.mainsailhq.com/api/wallets/",
@@ -64,7 +64,7 @@ const usernameExists = async (network: Networks.Network, username: string) => {
 		return;
 	}
 
-	const response = await fetch(endpoints[network.id()] + username);
+	const response = await fetch(endpoints[network.id()] + username, { signal: controller.current?.signal });
 
 	if (response.ok) {
 		throw new Error("Username is occupied!");

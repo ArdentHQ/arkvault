@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useMemo } from "react";
+import React, { ChangeEvent, useEffect, useMemo, useRef } from "react";
 import { FieldError, useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -24,11 +24,21 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const network = useMemo(() => wallet.network(), [wallet]);
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
+	const userExistsController = useRef<AbortController | undefined>(undefined);
+
 	useEffect(() => {
 		if (!username) {
-			register("username", usernameRegistration.username(network, errors));
+			register("username", usernameRegistration.username(network, userExistsController));
 		}
-	}, [usernameRegistration, register, network, username, errors]);
+	}, [usernameRegistration, register, network, username]);
+
+	const hasUsernameErrors = "username" in errors;
+
+	useEffect(() => {
+		if (hasUsernameErrors) {
+			userExistsController.current?.abort();
+		}
+	}, [hasUsernameErrors]);
 
 	return (
 		<section data-testid="UsernameRegistrationForm__form-step">
@@ -60,9 +70,11 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					<InputDefault
 						data-testid="Input__username"
 						defaultValue={username}
-						onChange={(event: ChangeEvent<HTMLInputElement>) =>
-							setValue("username", event.target.value, { shouldDirty: true, shouldValidate: true })
-						}
+						onChange={(event: ChangeEvent<HTMLInputElement>) => {
+							userExistsController.current?.abort();
+							userExistsController.current = new AbortController();
+							setValue("username", event.target.value, { shouldDirty: true, shouldValidate: true });
+						}}
 					/>
 				</FormField>
 
