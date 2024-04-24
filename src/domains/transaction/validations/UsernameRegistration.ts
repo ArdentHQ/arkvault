@@ -1,7 +1,7 @@
 import { Networks } from "@ardenthq/sdk";
 import { ValidateResult } from "react-hook-form";
-import { debounceAsync } from "@/utils/debounce";
 import { MutableRefObject } from "react";
+import { debounceAsync } from "@/utils/debounce";
 
 const validateUsername = (t: any, value: string): string | undefined => {
 	if (value.startsWith("_")) {

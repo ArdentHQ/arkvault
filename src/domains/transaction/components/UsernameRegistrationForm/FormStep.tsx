@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useMemo, useRef } from "react";
-import { FieldError, useFormContext } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
