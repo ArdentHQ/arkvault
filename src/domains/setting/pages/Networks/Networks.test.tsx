@@ -3,7 +3,6 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 import { UUID } from "@ardenthq/sdk-cryptography";
-import { Trans } from "react-i18next";
 import { vi } from "vitest";
 import NetworksSettings from "@/domains/setting/pages/Networks";
 import {
