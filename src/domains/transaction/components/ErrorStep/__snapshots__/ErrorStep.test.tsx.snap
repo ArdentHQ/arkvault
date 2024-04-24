@@ -888,8 +888,8 @@ exports[`ErrorStep > should emit onBack 1`] = `
         </div>
       </div>
       <button
-        class="css-1jhy6v9"
-        data-testid="ErrorStep__wallet-button"
+        class="css-1bx0hyc"
+        data-testid="ErrorStep__back-button"
         type="button"
       >
         <div
@@ -898,7 +898,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
           <div
             class="whitespace-nowrap"
           >
-            Back to Wallet
+            Back
           </div>
         </div>
       </button>
@@ -907,7 +907,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ErrorStep > should emit onRepeat 1`] = `
+exports[`ErrorStep > should emit onClose 1`] = `
 <DocumentFragment>
   <div
     data-testid="ErrorStep"
@@ -1349,8 +1349,8 @@ exports[`ErrorStep > should emit onRepeat 1`] = `
         </div>
       </div>
       <button
-        class="css-1bx0hyc"
-        data-testid="ErrorStep__repeat-button"
+        class="css-1jhy6v9"
+        data-testid="ErrorStep__close-button"
         type="button"
       >
         <div
@@ -1359,7 +1359,7 @@ exports[`ErrorStep > should emit onRepeat 1`] = `
           <div
             class="whitespace-nowrap"
           >
-            Retry
+            Close
           </div>
         </div>
       </button>

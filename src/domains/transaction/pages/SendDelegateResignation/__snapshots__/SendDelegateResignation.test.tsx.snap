@@ -4657,7 +4657,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                     </div>
                     <button
                       class="css-1jhy6v9"
-                      data-testid="ErrorStep__wallet-button"
+                      data-testid="ErrorStep__close-button"
                       type="button"
                     >
                       <div
@@ -4666,13 +4666,13 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         <div
                           class="whitespace-nowrap"
                         >
-                          Back to Wallet
+                          Close
                         </div>
                       </div>
                     </button>
                     <button
                       class="css-1bx0hyc"
-                      data-testid="ErrorStep__repeat-button"
+                      data-testid="ErrorStep__back-button"
                       type="button"
                     >
                       <div
@@ -4681,7 +4681,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         <div
                           class="whitespace-nowrap"
                         >
-                          Retry
+                          Back
                         </div>
                       </div>
                     </button>

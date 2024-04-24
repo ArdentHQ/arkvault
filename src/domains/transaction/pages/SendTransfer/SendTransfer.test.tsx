@@ -38,6 +38,7 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -175,6 +176,8 @@ describe("SendTransfer", () => {
 
 		vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(true);
 	});
 
 	afterEach(() => {
@@ -1259,7 +1262,7 @@ describe("SendTransfer", () => {
 
 		history.push(transferURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,
@@ -1329,15 +1332,10 @@ describe("SendTransfer", () => {
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-		expect(screen.getByTestId("ErrorStep__wallet-button")).toBeInTheDocument();
+		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		expect(screen.getAllByTestId("clipboard-button__wrapper")[0]).toBeInTheDocument();
-		expect(container).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("ErrorStep__repeat-button"));
-
-		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
+		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));

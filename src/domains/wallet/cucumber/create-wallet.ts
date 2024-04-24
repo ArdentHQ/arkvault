@@ -61,15 +61,22 @@ const confirmMnemonicStep = {
 		// Confirm your password
 		await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
 
+		Selector("label").withText(translations.WALLETS.MNEMONIC_VERIFICATION.WORD_NUMBER);
+
+		const labels = await Selector(`[data-testid=MnemonicVerificationInput] label`);
+
 		for (let index = 0; index < 3; index++) {
-			const selectWordPhrase = await Selector("[data-testid=MnemonicVerificationOptions__title]").textContent;
+			const selectWordPhrase = await labels.nth(index).textContent;
 			const wordNumber = selectWordPhrase.match(/\d+/)?.[0];
-			await t.click(
-				Selector("[data-testid=MnemonicVerificationOptions__button]").withText(
-					new RegExp(`^${mnemonicWords[Number(wordNumber) - 1]}$`),
-				),
+
+			await t.typeText(
+				Selector("[data-testid=MnemonicVerificationInput__input]").nth(index),
+				mnemonicWords[Number(wordNumber) - 1],
+				{ replace: true },
 			);
 		}
+
+		await t.click(Selector("[data-testid=CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer]"));
 
 		await t.hover(Selector("button").withExactText(translations.COMMON.CONTINUE));
 		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));

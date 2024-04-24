@@ -347,6 +347,12 @@ export const translations = {
 			TITLE: "Vote Transaction",
 		},
 	},
+	PENDING: {
+		DESCRIPTION:
+			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following  is the relevant information for your transaction:",
+		STATUS_TEXT: "This transaction is pending confirmation",
+		TITLE: "Pending Confirmation",
+	},
 	PHOTO_VIDEO: {
 		DESCRIPTION: "Get more users and add more information about yourself",
 		TITLE: "Photo and Video",

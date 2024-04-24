@@ -80,6 +80,15 @@ cucumber(
 				},
 			},
 		),
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://ark-test.arkvault.io/api/transactions/fddbb51bdc077b2c8fad8d86032f3af03f1462dd84493c871450c643377e984a",
+			},
+			{
+				data: {},
+			},
+		),
 	],
 );
 cucumber(
