@@ -149,11 +149,13 @@ export const SendUsernameResignation = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									onBack={() =>
+									onClose={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
-									isRepeatDisabled={isSubmitting || !isValid}
-									onRepeat={form.handleSubmit(handleSubmit)}
+									isBackDisabled={isSubmitting || !isValid}
+									onBack={() => {
+										setActiveTab(Step.FormStep);
+									}}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>
