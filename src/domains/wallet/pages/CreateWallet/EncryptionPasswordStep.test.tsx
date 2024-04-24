@@ -16,7 +16,7 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-
+import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
 
@@ -36,6 +36,8 @@ describe("EncryptionPasswordStep", () => {
 		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
 	});
 
 	afterEach(() => {
@@ -112,15 +114,12 @@ describe("EncryptionPasswordStep", () => {
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
-		const walletMnemonic = passphrase.split(" ");
-		for (let index = 0; index < 3; index++) {
-			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
+		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+		userEvent.paste(firstInput, "power");
+		userEvent.paste(secondInput, "return");
+		userEvent.paste(thirdInput, "attend");
 
-			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
-			if (index < 2) {
-				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
-			}
-		}
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
 		userEvent.click(continueButton);
@@ -227,15 +226,11 @@ describe("EncryptionPasswordStep", () => {
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
-		const walletMnemonic = passphrase.split(" ");
-		for (let index = 0; index < 3; index++) {
-			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
-
-			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
-			if (index < 2) {
-				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
-			}
-		}
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
+		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
+		userEvent.paste(firstInput, "power");
+		userEvent.paste(secondInput, "return");
+		userEvent.paste(thirdInput, "attend");
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
 		userEvent.click(continueButton);
