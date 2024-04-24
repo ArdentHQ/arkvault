@@ -149,9 +149,9 @@ export const SendUsernameResignation = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
-									}
+									onClose={() => {
+										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+									}}
 									isBackDisabled={isSubmitting || !isValid}
 									onBack={() => {
 										setActiveTab(Step.FormStep);
