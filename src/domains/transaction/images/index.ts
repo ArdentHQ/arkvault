@@ -18,6 +18,8 @@ import { ReactComponent as TransactionSuccessBannerDarkNavy } from "./transactio
 import { ReactComponent as TransactionSuccessBannerDarkGreen } from "./transaction-success-banner-dark-green.svg";
 import { ReactComponent as TransactionSuccessBannerLightNavy } from "./transaction-success-banner-light-navy.svg";
 import { ReactComponent as TransactionSuccessBannerLightGreen } from "./transaction-success-banner-light-green.svg";
+import { ReactComponent as TransactionPendingBannerLight } from "./transaction-pending-banner-light.svg";
+import { ReactComponent as TransactionPendingBannerDark } from "./transaction-pending-banner-dark.svg";
 
 export const transaction = {
 	ConfirmTransactionLedgerBannerDarkGreen,
@@ -32,6 +34,8 @@ export const transaction = {
 	TransactionErrorBannerDarkNavy,
 	TransactionErrorBannerLightGreen,
 	TransactionErrorBannerLightNavy,
+	TransactionPendingBannerDark,
+	TransactionPendingBannerLight,
 	TransactionSignedBannerDarkGreen,
 	TransactionSignedBannerDarkNavy,
 	TransactionSignedBannerLightGreen,

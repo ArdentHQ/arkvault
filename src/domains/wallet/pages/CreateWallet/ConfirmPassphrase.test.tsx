@@ -33,8 +33,8 @@ describe("ConfirmPassphraseStep", () => {
 		);
 
 		expect(screen.getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeInTheDocument();
-		expect(screen.getAllByTestId("MnemonicVerificationOptions__button")).toHaveLength(6);
+		expect(screen.getAllByTestId("MnemonicVerificationInput__input")).toHaveLength(3);
 
-		expect(form.current.getValues()).toStrictEqual({ verification: undefined });
+		expect(form.current.getValues()).toStrictEqual({});
 	});
 });

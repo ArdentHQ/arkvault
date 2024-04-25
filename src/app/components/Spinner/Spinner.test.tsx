@@ -20,7 +20,7 @@ describe("Spinner", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it.each(["info", "success", "warning", "danger", "hint"])("should render a %s color", (color) => {
+	it.each(["info", "success", "warning", "danger", "hint", "warning-alt"])("should render a %s color", (color) => {
 		const { container } = render(<Spinner color={color} />);
 
 		expect(container).toMatchSnapshot();

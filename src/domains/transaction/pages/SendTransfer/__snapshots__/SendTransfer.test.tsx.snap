@@ -790,7 +790,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -3471,6 +3471,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                 </span>
                                 <span
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                                  data-testid="AddRecipient__available"
                                 >
                                   (Available 
                                   <span
@@ -4927,6 +4928,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                 </span>
                                 <span
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                                  data-testid="AddRecipient__available"
                                 >
                                   (Available 
                                   <span
@@ -6372,6 +6374,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                 </span>
                                 <span
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                                  data-testid="AddRecipient__available"
                                 >
                                   (Available 
                                   <span
@@ -6405,7 +6408,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                           name="amount"
                                           placeholder="Enter an amount"
                                           type="text"
-                                          value="0"
+                                          value=""
                                         />
                                       </div>
                                     </div>
@@ -8866,6 +8869,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                   </span>
                   <span
                     class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                    data-testid="AddRecipient__available"
                   >
                     (Available 
                     <span
@@ -9714,6 +9718,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                   </span>
                   <span
                     class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                    data-testid="AddRecipient__available"
                   >
                     (Available 
                     <span
@@ -15064,7 +15069,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -16329,7 +16334,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -18147,7 +18152,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -19412,7 +19417,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -20677,7 +20682,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -21155,12 +21160,16 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
 exports[`SendTransfer > should show error step and go back 1`] = `
 <div>
   <div
-    class="css-kmmje1"
+    class="css-w3nefz"
   >
     <div
-      class="css-1mnbipv"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
+      <div
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+        data-testid="NavigationBar__buttons-separator"
+      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
@@ -22070,7 +22079,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="css-ic0qlc"
+                          class="css-uae86w"
                         >
                           <div
                             class="css-v0ob3f"
@@ -22199,7 +22208,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                     </div>
                     <button
                       class="css-1jhy6v9"
-                      data-testid="ErrorStep__wallet-button"
+                      data-testid="ErrorStep__close-button"
                       type="button"
                     >
                       <div
@@ -22208,13 +22217,13 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                         <div
                           class="whitespace-nowrap"
                         >
-                          Back to Wallet
+                          Close
                         </div>
                       </div>
                     </button>
                     <button
                       class="css-1bx0hyc"
-                      data-testid="ErrorStep__repeat-button"
+                      data-testid="ErrorStep__back-button"
                       type="button"
                     >
                       <div
@@ -22223,7 +22232,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                         <div
                           class="whitespace-nowrap"
                         >
-                          Retry
+                          Back
                         </div>
                       </div>
                     </button>

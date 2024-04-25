@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ErrorStep > should display error details 1`] = `
 <DocumentFragment>
@@ -314,7 +314,7 @@ exports[`ErrorStep > should display error details 1`] = `
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
         >
           <div
-            class="css-ic0qlc"
+            class="css-uae86w"
           >
             <div
               class="css-v0ob3f"
@@ -760,7 +760,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
         >
           <div
-            class="css-ic0qlc"
+            class="css-uae86w"
           >
             <div
               class="css-v0ob3f"
@@ -888,8 +888,8 @@ exports[`ErrorStep > should emit onBack 1`] = `
         </div>
       </div>
       <button
-        class="css-1jhy6v9"
-        data-testid="ErrorStep__wallet-button"
+        class="css-1bx0hyc"
+        data-testid="ErrorStep__back-button"
         type="button"
       >
         <div
@@ -898,7 +898,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
           <div
             class="whitespace-nowrap"
           >
-            Back to Wallet
+            Back
           </div>
         </div>
       </button>
@@ -907,7 +907,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ErrorStep > should emit onRepeat 1`] = `
+exports[`ErrorStep > should emit onClose 1`] = `
 <DocumentFragment>
   <div
     data-testid="ErrorStep"
@@ -1221,7 +1221,7 @@ exports[`ErrorStep > should emit onRepeat 1`] = `
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
         >
           <div
-            class="css-ic0qlc"
+            class="css-uae86w"
           >
             <div
               class="css-v0ob3f"
@@ -1349,8 +1349,8 @@ exports[`ErrorStep > should emit onRepeat 1`] = `
         </div>
       </div>
       <button
-        class="css-1bx0hyc"
-        data-testid="ErrorStep__repeat-button"
+        class="css-1jhy6v9"
+        data-testid="ErrorStep__close-button"
         type="button"
       >
         <div
@@ -1359,7 +1359,7 @@ exports[`ErrorStep > should emit onRepeat 1`] = `
           <div
             class="whitespace-nowrap"
           >
-            Retry
+            Close
           </div>
         </div>
       </button>
@@ -1682,7 +1682,7 @@ exports[`ErrorStep > should render with custom title 1`] = `
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
         >
           <div
-            class="css-ic0qlc"
+            class="css-uae86w"
           >
             <div
               class="css-v0ob3f"
@@ -2128,7 +2128,7 @@ exports[`ErrorStep > should render with default texts 1`] = `
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
         >
           <div
-            class="css-ic0qlc"
+            class="css-uae86w"
           >
             <div
               class="css-v0ob3f"

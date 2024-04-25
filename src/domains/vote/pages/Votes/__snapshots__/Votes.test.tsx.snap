@@ -2269,7 +2269,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
               class="flex flex-col overflow-hidden rounded-xl mb-6"
             >
               <div
-                class="css-pra96q"
+                class="css-1ecv4eg"
               >
                 <div
                   class="css-v0ob3f"
@@ -13342,7 +13342,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
               class="flex flex-col overflow-hidden rounded-xl mb-6"
             >
               <div
-                class="css-pra96q"
+                class="css-1ecv4eg"
               >
                 <div
                   class="css-v0ob3f"
@@ -16783,7 +16783,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               class="flex flex-col overflow-hidden rounded-xl mb-6"
             >
               <div
-                class="css-pra96q"
+                class="css-1ecv4eg"
               >
                 <div
                   class="css-v0ob3f"

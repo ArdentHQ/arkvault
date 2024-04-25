@@ -6,7 +6,7 @@ exports[`ExchangeStatus > should show expired status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-ic0qlc"
+      class="css-uae86w"
     >
       <div
         class="css-v0ob3f"
@@ -59,7 +59,7 @@ exports[`ExchangeStatus > should show failed status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-ic0qlc"
+      class="css-uae86w"
     >
       <div
         class="css-v0ob3f"
@@ -112,7 +112,7 @@ exports[`ExchangeStatus > should show refunded status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-pra96q"
+      class="css-1ecv4eg"
     >
       <div
         class="css-v0ob3f"
@@ -170,7 +170,7 @@ exports[`ExchangeStatus > should show verifying status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-pra96q"
+      class="css-1ecv4eg"
     >
       <div
         class="css-v0ob3f"

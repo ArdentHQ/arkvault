@@ -516,7 +516,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                     class="flex flex-col overflow-hidden rounded-xl mt-6"
                   >
                     <div
-                      class="css-pra96q"
+                      class="css-1ecv4eg"
                     >
                       <div
                         class="css-v0ob3f"
@@ -1521,7 +1521,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                     class="flex flex-col overflow-hidden rounded-xl mt-6"
                   >
                     <div
-                      class="css-pra96q"
+                      class="css-1ecv4eg"
                     >
                       <div
                         class="css-v0ob3f"
@@ -4528,7 +4528,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="css-ic0qlc"
+                          class="css-uae86w"
                         >
                           <div
                             class="css-v0ob3f"
@@ -4657,7 +4657,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                     </div>
                     <button
                       class="css-1jhy6v9"
-                      data-testid="ErrorStep__wallet-button"
+                      data-testid="ErrorStep__close-button"
                       type="button"
                     >
                       <div
@@ -4666,13 +4666,13 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         <div
                           class="whitespace-nowrap"
                         >
-                          Back to Wallet
+                          Close
                         </div>
                       </div>
                     </button>
                     <button
                       class="css-1bx0hyc"
-                      data-testid="ErrorStep__repeat-button"
+                      data-testid="ErrorStep__back-button"
                       type="button"
                     >
                       <div
@@ -4681,7 +4681,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         <div
                           class="whitespace-nowrap"
                         >
-                          Retry
+                          Back
                         </div>
                       </div>
                     </button>
@@ -6377,7 +6377,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -7684,7 +7684,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -8866,7 +8866,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"

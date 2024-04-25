@@ -11,6 +11,8 @@ export const translations = {
 	MNEMONIC_VERIFICATION: {
 		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} Word",
 		WORD_NUMBER: "The {{position}}{{ordinalIndicator}} Word",
+		WORD_REQUIRED: "Word required",
+		WRONG_WORD: "Incorrect word entered",
 	},
 
 	MODAL_DELETE_WALLET: {
@@ -26,6 +28,7 @@ export const translations = {
 		CONNECT_DEVICE: "Connect your Ledger and confirm input.",
 		CONNECT_DEVICE_MODEL: "Connect your {{model}} and confirm input.",
 		CONNECT_SUCCESS: "Successfully connected",
+		DEVICE_NOT_AVAILABLE: "Unable to detect Ledger device",
 		DEVICE_NOT_SUPPORTED:
 			"A <bold>{{connectedModel}}</bold> is connected, but his operation requires a <bold>{{supportedModel}}</bold>. Connect the appropriate device to continue.",
 		GENERIC_CONNECTION_ERROR:
@@ -80,7 +83,9 @@ export const translations = {
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {
-			SUBTITLE: "Confirm your mnemonic passphrase to continue.",
+			PASSPHRASE_DISCLAIMER: "I am aware that if I lose my passphrase, I will lose access to my funds.",
+			SUBTITLE:
+				"Confirm that you’ve saved your secret passphrase by correctly entering the word in the designated input field below.",
 			TITLE: "Confirm Your Passphrase",
 		},
 
@@ -145,6 +150,15 @@ export const translations = {
 					"Set an encryption password to use in place of your mnemonic passphrase. Note that you must still record and keep your mnemonic passphrase safe as losing this will result in you losing all access to your funds.",
 				NOT_AVAILABLE: "Encryption not available for this import type",
 				TITLE: "Use Wallet Encryption",
+			},
+			MNEMONIC_TIP: {
+				GUIDELINES_1: "Ensure all words are in lowercase.",
+				GUIDELINES_2: "Insert a space between each word.",
+				GUIDELINES_3: "Verify that all words are spelled correctly.",
+				GUIDELINES_4:
+					"If copying and pasting, ensure no extra whitespace is added at the end of the copied text.",
+				GUIDELINES_TITLE: "Please follow these guidelines when inputting your mnemonic into ARKVault:",
+				TITLE: "Need help with importing?",
 			},
 			SUBTITLE: "Select the import method by which you want to import the address to your Profile.",
 			TITLE: "Import Wallet",

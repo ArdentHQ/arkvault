@@ -917,7 +917,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1dwg83m"
+                      class="css-1qh812f"
                     >
                       <div
                         class="css-v0ob3f"
@@ -3017,7 +3017,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="css-ic0qlc"
+                          class="css-uae86w"
                         >
                           <div
                             class="css-v0ob3f"
@@ -3146,7 +3146,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                     </div>
                     <button
                       class="css-1jhy6v9"
-                      data-testid="ErrorStep__wallet-button"
+                      data-testid="ErrorStep__close-button"
                       type="button"
                     >
                       <div
@@ -3155,13 +3155,13 @@ exports[`SendVote > should show error step and go back 1`] = `
                         <div
                           class="whitespace-nowrap"
                         >
-                          Back to Wallet
+                          Close
                         </div>
                       </div>
                     </button>
                     <button
                       class="css-1bx0hyc"
-                      data-testid="ErrorStep__repeat-button"
+                      data-testid="ErrorStep__back-button"
                       type="button"
                     >
                       <div
@@ -3170,7 +3170,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                         <div
                           class="whitespace-nowrap"
                         >
-                          Retry
+                          Back
                         </div>
                       </div>
                     </button>

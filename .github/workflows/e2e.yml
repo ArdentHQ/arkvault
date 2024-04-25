@@ -15,7 +15,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.17.1]
+                node-version: [18.12.1]
 
         concurrency:
             group: ${{ github.head_ref }}-build-and-upload
@@ -28,7 +28,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
 
             - uses: actions/setup-node@v3
               with:
@@ -62,7 +62,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.17.1]
+                node-version: [18.12.1]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-vote
@@ -75,7 +75,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
 
             - uses: actions/setup-node@v3
               with:
@@ -104,9 +104,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/vote/cucumber
@@ -131,7 +128,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.17.1]
+                node-version: [18.12.1]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-transaction
@@ -144,7 +141,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
 
             - uses: actions/setup-node@v3
               with:
@@ -173,9 +170,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/transaction/cucumber
@@ -200,7 +194,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.17.1]
+                node-version: [18.12.1]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-contact
@@ -213,7 +207,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
 
             - uses: actions/setup-node@v3
               with:
@@ -242,9 +236,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/contact/cucumber
@@ -269,7 +260,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.17.1]
+                node-version: [18.12.1]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-dashboard
@@ -282,7 +273,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
 
             - uses: actions/setup-node@v3
               with:
@@ -311,9 +302,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/dashboard/cucumber
@@ -338,7 +326,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.17.1]
+                node-version: [18.12.1]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-profile
@@ -351,7 +339,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
 
             - uses: actions/setup-node@v3
               with:
@@ -380,9 +368,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/profile/cucumber
@@ -407,7 +392,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.17.1]
+                node-version: [18.12.1]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-message
@@ -420,7 +405,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
 
             - uses: actions/setup-node@v3
               with:
@@ -449,9 +434,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/message/cucumber
@@ -476,7 +458,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.17.1]
+                node-version: [18.12.1]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-wallet
@@ -489,7 +471,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
 
             - uses: actions/setup-node@v3
               with:
@@ -518,9 +500,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/wallet/cucumber
@@ -545,7 +524,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.17.1]
+                node-version: [18.12.1]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-settings
@@ -558,7 +537,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 7
+                  version: 8
 
             - uses: actions/setup-node@v3
               with:
@@ -587,9 +566,6 @@ jobs:
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
-
-            - name: Start Server
-              run: pnpm serve &
 
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/setting/cucumber

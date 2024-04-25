@@ -195,7 +195,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
       class="flex flex-col overflow-hidden rounded-xl"
     >
       <div
-        class="css-1dwg83m"
+        class="css-1qh812f"
       >
         <div
           class="css-v0ob3f"
@@ -350,7 +350,7 @@ exports[`LedgerConnectionStep > should render cancel screen 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-qed8fm"
+        class="css-1b3vlxq"
         color="info"
       />
       <span

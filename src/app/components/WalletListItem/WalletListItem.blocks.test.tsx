@@ -18,15 +18,16 @@ import {
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
-const history = createHashHistory();
-
 vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions", () => ({
 	useWalletTransactions: () => ({
 		hasUnsignedPendingTransaction: true,
 		syncPending: () => {},
 	}),
 }));
+
+const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const history = createHashHistory();
+
 describe("WalletListItem.blocks", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
