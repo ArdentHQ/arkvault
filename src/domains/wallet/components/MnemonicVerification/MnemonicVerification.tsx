@@ -1,99 +1,52 @@
-import { sample } from "@ardenthq/sdk-helpers";
 import React, { useEffect, useMemo, useState } from "react";
 
-import { MnemonicVerificationOptions } from "./MnemonicVerificationOptions";
-import { MnemonicVerificationProgress } from "./MnemonicVerificationProgress";
-import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { MnemonicVerificationInput } from "./MnemonicVerificationInput";
+import { randomWordPositions } from "./utils/randomWordPositions";
 
 interface Properties {
-	className?: string;
 	mnemonic: string;
-	wordPositions?: number[];
-	optionsLimit: number;
-	handleComplete: () => void;
-	isCompleted?: boolean;
+	handleComplete: (isComplete: boolean) => void;
 }
 
-const randomWordPositions = (length: number): number[] => {
-	const positions: number[] = [...Array.from({ length }).keys()];
-	const result: number[] = [];
-
-	while (result.length < 3) {
-		const randomNumber = sample(positions) + 1;
-
-		if (result.includes(randomNumber)) {
-			continue;
-		}
-
-		result.push(randomNumber);
-	}
-
-	return result;
-};
-
-const defaultProps = {
-	wordPositions: [],
-};
-
-export function MnemonicVerification({
-	className,
-	mnemonic,
-	wordPositions = defaultProps.wordPositions,
-	optionsLimit,
-	handleComplete,
-	isCompleted = false,
-}: Properties) {
-	const [activeTab, setActiveTab] = useState(0);
+export function MnemonicVerification({ mnemonic, handleComplete }: Properties) {
+	const [mnemonicWords, setMnemonicWords] = useState([] as string[]);
 	const [positions, setPositions] = useState([] as number[]);
-
-	let mnemonicWords: string[];
-
-	// Check for Japanese "space"
-	mnemonicWords = /\u3000/.test(mnemonic) ? mnemonic.split("\u3000") : mnemonic.split(" ");
-
-	if (!wordPositions?.length && activeTab === 0 && positions.length === 0) {
-		setPositions(randomWordPositions(mnemonicWords.length));
-	} else if (activeTab === 0 && positions.length === 0) {
-		setPositions(wordPositions);
-	}
+	const [validatedPositions, setValidatedPositions] = useState<{
+		[key: number]: boolean;
+	}>({});
 
 	useEffect(() => {
-		if (isCompleted) {
-			setActiveTab(positions.length);
-		}
-	}, [isCompleted, positions, setActiveTab]);
+		// Check for Japanese "space"
+		const words = /\u3000/.test(mnemonic) ? mnemonic.split("\u3000") : mnemonic.split(" ");
+		setMnemonicWords(words);
 
-	const currentAnswer = useMemo(() => mnemonicWords[positions[activeTab] - 1], [activeTab, positions, mnemonicWords]);
+		setPositions(randomWordPositions(words.length));
+	}, []);
 
-	const handleChange = (value: string) => {
-		if (value === currentAnswer) {
-			if (activeTab === positions.length - 1) {
-				handleComplete();
-			}
-
-			setActiveTab(activeTab + 1);
-		}
+	const handleChange = (position: number, isValid: boolean): void => {
+		setValidatedPositions((previousState) => ({ ...previousState, [position]: isValid }));
 	};
 
-	return (
-		<Tabs className={className} activeId={activeTab}>
-			<MnemonicVerificationProgress activeTab={activeTab} wordPositions={positions} />
+	const isCompleted = useMemo(() => {
+		const results = Object.values(validatedPositions);
+		return positions.length > 0 && results.length === positions.length && results.every(Boolean);
+	}, [validatedPositions, positions]);
 
-			{!isCompleted && (
-				<div className="mt-8">
-					{positions.map((position, index) => (
-						<TabPanel key={position} tabId={index}>
-							<MnemonicVerificationOptions
-								limit={optionsLimit}
-								answer={currentAnswer}
-								options={mnemonicWords}
-								handleChange={handleChange}
-								position={position}
-							/>
-						</TabPanel>
-					))}
-				</div>
-			)}
-		</Tabs>
+	useEffect(() => {
+		handleComplete(isCompleted);
+	}, [isCompleted]);
+
+	return (
+		<div className="mt-8 grid gap-3 sm:grid-cols-3">
+			{positions.map((position) => (
+				<MnemonicVerificationInput
+					key={position}
+					position={position}
+					answer={mnemonicWords[position - 1]}
+					handleChange={handleChange}
+					isValid={validatedPositions[position]}
+				/>
+			))}
+		</div>
 	);
 }

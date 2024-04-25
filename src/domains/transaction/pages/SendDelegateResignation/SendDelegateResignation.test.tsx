@@ -360,7 +360,7 @@ describe("SendDelegateResignation", () => {
 
 			const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
-			userEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
+			userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 			const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}`;
 			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
