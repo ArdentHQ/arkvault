@@ -9,29 +9,29 @@ dependencies:
     specifier: ^1.2.0
     version: 1.2.0
   '@ardenthq/sdk':
-    specifier: 2.0.0-beta.6
-    version: 2.0.0-beta.6
+    specifier: 2.0.0-beta.7
+    version: 2.0.0-beta.7
   '@ardenthq/sdk-ark':
-    specifier: 2.0.0-beta.6
-    version: 2.0.0-beta.6
+    specifier: 2.0.0-beta.7
+    version: 2.0.0-beta.7
   '@ardenthq/sdk-cryptography':
-    specifier: 2.0.0-beta.6
-    version: 2.0.0-beta.6
+    specifier: 2.0.0-beta.7
+    version: 2.0.0-beta.7
   '@ardenthq/sdk-helpers':
-    specifier: 2.0.0-beta.6
-    version: 2.0.0-beta.6
+    specifier: 2.0.0-beta.7
+    version: 2.0.0-beta.7
   '@ardenthq/sdk-intl':
-    specifier: 2.0.0-beta.6
-    version: 2.0.0-beta.6
+    specifier: 2.0.0-beta.7
+    version: 2.0.0-beta.7
   '@ardenthq/sdk-ledger':
-    specifier: 2.0.0-beta.6
-    version: 2.0.0-beta.6
+    specifier: 2.0.0-beta.7
+    version: 2.0.0-beta.7
   '@ardenthq/sdk-mainsail':
-    specifier: 2.0.0-beta.6
-    version: 2.0.0-beta.6
+    specifier: 2.0.0-beta.7
+    version: 2.0.0-beta.7
   '@ardenthq/sdk-profiles':
-    specifier: 2.0.0-beta.6
-    version: 2.0.0-beta.6
+    specifier: 2.0.0-beta.7
+    version: 2.0.0-beta.7
   '@emotion/cache':
     specifier: ^11.10.5
     version: 11.10.5
@@ -419,14 +419,14 @@ packages:
     requiresBuild: true
     dev: false
 
-  /@ardenthq/sdk-ark@2.0.0-beta.6:
-    resolution: {integrity: sha512-9FLQjHpqpQaIbPmHBcnPqLh7Dxrkd3VweQSW0Y+pylwAm8+ekyUbklcalhSSDCtIrxdfmEb1aLsLCZXqiL387Q==}
+  /@ardenthq/sdk-ark@2.0.0-beta.7:
+    resolution: {integrity: sha512-rRR582fx66dkcQt0k85Pj+swKDF9tSVdgFEnZkn4rLtzPi7Mc25V/Y4v2o+x4moHy6473svj9d7OuFo12PsiNA==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 2.0.0-beta.6
-      '@ardenthq/sdk-cryptography': 2.0.0-beta.6
-      '@ardenthq/sdk-helpers': 2.0.0-beta.6
-      '@ardenthq/sdk-intl': 2.0.0-beta.6
+      '@ardenthq/sdk': 2.0.0-beta.7
+      '@ardenthq/sdk-cryptography': 2.0.0-beta.7
+      '@ardenthq/sdk-helpers': 2.0.0-beta.7
+      '@ardenthq/sdk-intl': 2.0.0-beta.7
       '@arkecosystem/ledger-transport': 2.0.0
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
@@ -441,8 +441,8 @@ packages:
       node-dotify: 1.1.0
     dev: false
 
-  /@ardenthq/sdk-cryptography@2.0.0-beta.6:
-    resolution: {integrity: sha512-H4fDfHEA6zyQLKHra9Ja53+D6P4q710/XYIGO0VOj1Nx8ymYlMkx+9YiOwSaF+nc6n+IjTpt+yQfuwwomoSTjw==}
+  /@ardenthq/sdk-cryptography@2.0.0-beta.7:
+    resolution: {integrity: sha512-QFKGDrcWmE8nD5Gq0Oud+T8cwr46itYQEEzWi0nXKRyOe8Rew+mRt36PZad4SNakFxXp6al5KlWkF7UVJvvXvw==}
     engines: {node: '>=16.0.0'}
     dependencies:
       '@noble/hashes': 0.5.9
@@ -462,8 +462,8 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /@ardenthq/sdk-helpers@2.0.0-beta.6:
-    resolution: {integrity: sha512-J3MfuZwMgxHRnABNG2tDFLppEjySE47M3Y9+VZITGSTaReUqoXUNhC3vJZM6FYL90rl6puNPP2480lalBmxEOA==}
+  /@ardenthq/sdk-helpers@2.0.0-beta.7:
+    resolution: {integrity: sha512-37t2lJsFRz8ZVduAUibx1qntHHr+hPU59+58RIEv+RFR7vY/5wXK1runkndDklosiV+ZyvC716MEq82EUEMv0g==}
     engines: {node: '>=16.0.0'}
     dependencies:
       '@hapi/bourne': 2.1.0
@@ -479,33 +479,32 @@ packages:
       query-string: 7.1.3
     dev: false
 
-  /@ardenthq/sdk-intl@2.0.0-beta.6:
-    resolution: {integrity: sha512-F6hpEWX78LqiUnLrgxXf+jxqeRNgqz0s9EujXhba3v3UrBbt8gxNJ00hx/sAji3LXCCgyFEf5xI2Tw69jnWptQ==}
+  /@ardenthq/sdk-intl@2.0.0-beta.7:
+    resolution: {integrity: sha512-6DRJYASYRAywrvd4gBHkStn5jXGzwWy7eSh1aenfy3usL4kJAb9k4U03gSPYVkF+8vfzvMN00eAp9sgaYmxGRg==}
     engines: {node: '>=16.0.0'}
     dependencies:
       dayjs: 1.11.10
       dinero.js: 1.9.1
     dev: false
 
-  /@ardenthq/sdk-ledger@2.0.0-beta.6:
-    resolution: {integrity: sha512-75fdc5TrrfLwlaoPSI5kS36b+gFKY4u37RgzwtbzLGI7KHVgzOFK+VEqtkkgOTNSjvZNcjEWz2nRMgj08aipOA==}
+  /@ardenthq/sdk-ledger@2.0.0-beta.7:
+    resolution: {integrity: sha512-wBcvyhDcGdJ8i9VdQqdci6G3u92w/6DJXWG1j1ugFmFObWRnNnf2NxIsa6g2PAeQpwwQNH+Wx29629t6aJGEPQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 2.0.0-beta.6
-      '@ledgerhq/hw-transport-u2f': 5.36.0-deprecated
+      '@ardenthq/sdk': 2.0.0-beta.7
       '@ledgerhq/hw-transport-webhid': 6.28.5
       '@ledgerhq/hw-transport-webusb': 6.28.5
       platform: 1.3.6
     dev: false
 
-  /@ardenthq/sdk-mainsail@2.0.0-beta.6:
-    resolution: {integrity: sha512-6udBOo5R5Ef1vU5S+MZUK5pVL09jvhVfVjZxAeJHcc3ZbpA78feXZykFTpPXv1+jTdOdMR3Ted04Y64iOw+cyw==}
+  /@ardenthq/sdk-mainsail@2.0.0-beta.7:
+    resolution: {integrity: sha512-Ie5S0JlMSIGpvVcRoVIVc5hXPwnaqUUad7CqDdALSLuFYUtTAxTCB+oHNc7h/zmi5M6ryk6kyRQBE0z7P0Lqfg==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 2.0.0-beta.6
-      '@ardenthq/sdk-cryptography': 2.0.0-beta.6
-      '@ardenthq/sdk-helpers': 2.0.0-beta.6
-      '@ardenthq/sdk-intl': 2.0.0-beta.6
+      '@ardenthq/sdk': 2.0.0-beta.7
+      '@ardenthq/sdk-cryptography': 2.0.0-beta.7
+      '@ardenthq/sdk-helpers': 2.0.0-beta.7
+      '@ardenthq/sdk-intl': 2.0.0-beta.7
       '@arkecosystem/ledger-transport': 2.0.0
       '@mainsail/container': 0.0.1-alpha.15
       '@mainsail/contracts': 0.0.1-alpha.15
@@ -545,23 +544,23 @@ packages:
       - supports-color
     dev: false
 
-  /@ardenthq/sdk-markets@2.0.0-beta.6:
-    resolution: {integrity: sha512-xMbdXP190rs5KJMkp+ET9W/t+UnDIsnCzUWI01mTPe6RnNLE8v9mOkOKWkKGFnZxMOe4d1nczbcemX58t0+xmg==}
+  /@ardenthq/sdk-markets@2.0.0-beta.7:
+    resolution: {integrity: sha512-ghaUmZfJNL8bwsgsziIMXl1GnxAzxomfTyqrUbNZbixGyM44PL8Zc1getyMeKFqijM33n0HuVzH/5WBCo06F9Q==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 2.0.0-beta.6
-      '@ardenthq/sdk-intl': 2.0.0-beta.6
+      '@ardenthq/sdk': 2.0.0-beta.7
+      '@ardenthq/sdk-intl': 2.0.0-beta.7
     dev: false
 
-  /@ardenthq/sdk-profiles@2.0.0-beta.6:
-    resolution: {integrity: sha512-cR4zdjhGi9m+5XmbMWmMWAoo0P+HVZJlgZSarNOqWKOKzro9vWRYV/Ajxqk4cGBpbD6uL0rN/KgNedZh4Qv8WQ==}
+  /@ardenthq/sdk-profiles@2.0.0-beta.7:
+    resolution: {integrity: sha512-3z0UHxsTaKS6Aj1wx7UIzcMxrislHnfGpFjsjQ9e2CFmdxZNet4uUHF0IEyIXdcBVyozDsr40X0K2WkdxRtPpA==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 2.0.0-beta.6
-      '@ardenthq/sdk-cryptography': 2.0.0-beta.6
-      '@ardenthq/sdk-helpers': 2.0.0-beta.6
-      '@ardenthq/sdk-intl': 2.0.0-beta.6
-      '@ardenthq/sdk-markets': 2.0.0-beta.6
+      '@ardenthq/sdk': 2.0.0-beta.7
+      '@ardenthq/sdk-cryptography': 2.0.0-beta.7
+      '@ardenthq/sdk-helpers': 2.0.0-beta.7
+      '@ardenthq/sdk-intl': 2.0.0-beta.7
+      '@ardenthq/sdk-markets': 2.0.0-beta.7
       '@vechain/picasso': 2.1.1
       joi: 17.12.3
       localforage: 1.10.0
@@ -572,12 +571,12 @@ packages:
       type-fest: 2.19.0
     dev: false
 
-  /@ardenthq/sdk@2.0.0-beta.6:
-    resolution: {integrity: sha512-x+rvhk0iQ9+yjzLNGumpSxLKDy0KF1bOXHV5eomq3xOpnP1v0xoLQHapY3UGz3AzrBDe0moXHiTkU3h53QOLXg==}
+  /@ardenthq/sdk@2.0.0-beta.7:
+    resolution: {integrity: sha512-aZYlnqRqm7MCvimYxYNbHHLYaMPMmfghbUhgA8nO3DDu5iCJCDiTe2Rl6pIvR/2UixmIADTPIiaG5Qe/h60EfA==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk-helpers': 2.0.0-beta.6
-      '@ardenthq/sdk-intl': 2.0.0-beta.6
+      '@ardenthq/sdk-helpers': 2.0.0-beta.7
+      '@ardenthq/sdk-intl': 2.0.0-beta.7
       bad-words: 3.0.4
       bent: 7.3.12
       bip39: 3.1.0
@@ -4401,16 +4400,6 @@ packages:
       '@ledgerhq/hw-transport': 6.28.6
       '@ledgerhq/logs': 6.10.1
     dev: true
-
-  /@ledgerhq/hw-transport-u2f@5.36.0-deprecated:
-    resolution: {integrity: sha512-T/+mGHIiUK/ZQATad6DMDmobCMZ1mVST952009jKzhaE1Et2Uy2secU+QhRkx3BfEAkvwa0zSRSYCL9d20Iqjg==}
-    deprecated: '@ledgerhq/hw-transport-u2f is deprecated. Please use @ledgerhq/hw-transport-webusb or @ledgerhq/hw-transport-webhid. https://github.com/LedgerHQ/ledgerjs/blob/master/docs/migrate_webusb.md'
-    dependencies:
-      '@ledgerhq/errors': 5.50.0
-      '@ledgerhq/hw-transport': 5.51.1
-      '@ledgerhq/logs': 5.50.0
-      u2f-api: 0.2.7
-    dev: false
 
   /@ledgerhq/hw-transport-webhid@6.28.5:
     resolution: {integrity: sha512-swRq9xhOQ2w7YCRnBd7pOnniPQOnhSV23dLUKBiQHYbOAGyPRDdNnZSCu0nPmGI+o9VUKAuH953R7z9LIFWegg==}
@@ -10091,6 +10080,7 @@ packages:
 
   /is-jquery-obj@0.1.1:
     resolution: {integrity: sha512-18toSebUVF7y717dgw/Dzn6djOCqrkiDp3MhB8P6TdKyCVkbD1ZwE7Uz8Hwx6hUPTvKjbyYH9ncXT4ts4qLaSA==}
+    deprecated: The is-jquery-obj package has reached end-of-life and will not receive further updates.
     dev: false
 
   /is-lambda@1.0.1:
@@ -14488,6 +14478,7 @@ packages:
 
   /testcafe-safe-storage@1.1.6:
     resolution: {integrity: sha512-WFm1UcmO3uZs+uW8lYtBBJpnrvgTKkMQMKG9BvTEKbjeqhonEXVTxOkGEs3DM1ZB/ylPuwh7Jux7qUtjcM/D2Q==}
+    deprecated: The testcafe-safe-storage package has reached end-of-life and will not receive further updates.
     dev: false
 
   /testcafe-selector-generator@0.1.0:
@@ -14990,10 +14981,6 @@ packages:
     engines: {node: '>=12.20'}
     hasBin: true
     dev: true
-
-  /u2f-api@0.2.7:
-    resolution: {integrity: sha512-fqLNg8vpvLOD5J/z4B6wpPg4Lvowz1nJ9xdHcCzdUPKcFE/qNCceV2gNZxSJd5vhAZemHr/K/hbzVA0zxB5mkg==}
-    dev: false
 
   /uc.micro@1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
