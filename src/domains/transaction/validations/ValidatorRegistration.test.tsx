@@ -5,6 +5,8 @@ import { env, getDefaultProfileId } from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 let translationMock: any;
 
+// @TODO: enable tests once mainsail networks are ready in tests.
+// @see https://app.clickup.com/t/86dtaccqj
 describe("Register validator validation", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -13,7 +15,7 @@ describe("Register validator validation", () => {
 		translationMock = vi.fn((index18nString: string) => index18nString);
 	});
 
-	it("should validate BLS public key", async () => {
+	it.skip("should validate BLS public key", async () => {
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile.wallets().first());
 
 		await expect(
