@@ -125,7 +125,7 @@ describe("DelegateRegistrationForm", () => {
 		const delegatesSpy = vi.spyOn(env.delegates(), "all").mockReturnValue(delegates);
 		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
 
-		// @TODO Remove mock once mainsail networks are properly setup in tests.
+		// @TODO Remove mock once mainsail wallets are properly setup in tests.
 		// @see https://app.clickup.com/t/86dtaccqj
 		const verifyPublicKeyWithBLSSpy = vi
 			.spyOn(wallet.coin().publicKey(), "verifyPublicKeyWithBLS")
