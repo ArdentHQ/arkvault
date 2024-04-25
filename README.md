@@ -15,8 +15,6 @@ ARKVault is a custom web-based wallet designed for ARK Core-based blockchains. I
 
 To download, head over to [here](https://nodejs.org/en/) and download Node 20.12.2.
 
-Could be possible to use 18.17.0, though some e2e tests fail due to memory leak errors.
-
 If you already have npm installed, you can run
 
 ```
