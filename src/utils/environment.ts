@@ -25,11 +25,12 @@ export const initializeEnvironment = (): Environment => {
 
 	env.setMigrations(
 		{
-			"0.0.9": isE2E() ? initializeArkNetworks : initializeMainsailNetworks,
+			"0.0.9": initializeArkNetworks,
 			"1.1.0": updateArkConstants,
 			"1.2.0": updateArkNethashes,
+			"1.2.1": initializeMainsailNetworks,
 		},
-		"1.2.0",
+		"1.2.1",
 	);
 
 	return env;
