@@ -297,6 +297,9 @@ export const requestMocks = {
 
 		// mainnet
 		mockRequest("https://ark-live.arkvault.io/api/delegates", "coins/ark/mainnet/delegates"),
+
+		// Mainsail Devnet
+		mockRequest("https://dwallets.mainsailhq.com/api/delegates", "coins/mainsail/devnet/delegates"),
 	],
 	exchange: [
 		mockRequest(
