@@ -443,6 +443,9 @@ export const requestMocks = {
 		// mainnet
 		mockRequest("https://ark-live.arkvault.io/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
 
+		// Mainsail Devnet
+		mockRequest("https://dwallets.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
+
 		...searchAddressesMocks(),
 	],
 	wallets: [
