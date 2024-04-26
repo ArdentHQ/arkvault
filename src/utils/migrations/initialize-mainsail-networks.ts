@@ -1,4 +1,5 @@
 import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { isE2E, isPreview } from "../test-helpers";
 
 export const initializeMainsailNetworks = ({ data }) => {
 	if (typeof data.networks === "object" && !!data.networks.mainsail) {
@@ -10,8 +11,12 @@ export const initializeMainsailNetworks = ({ data }) => {
 		data.networks = {};
 	}
 
-	// @TODO: once mainnet is available, add the devnet network only for E2E and preview
-	// `if (isE2E() || isPreview())`
+	// @TODO: add mainsail network once network mocks, fixtures & wallet will be implemented for tests.
+	// @see https://app.clickup.com/t/86dtaccqj
+	if (isE2E()) {
+		return;
+	}
+
 	data.networks.mainsail = {
 		devnet: Mainsail.manifest.networks["mainsail.devnet"],
 	};
