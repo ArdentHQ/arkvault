@@ -24,7 +24,8 @@ export const initializeEnvironment = (): Environment => {
 
 	env.setMigrations(
 		{
-			"0.0.9": initializeMainsailNetworks,
+			// @TODO: initialize mainsail networks once mainsail is setup in tests.
+			"0.0.9": isE2E() ? () => undefined : initializeMainsailNetworks,
 			"1.1.0": updateArkConstants,
 			"1.2.0": updateArkNethashes,
 		},
