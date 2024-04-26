@@ -68,7 +68,7 @@ describe("Transaction utils", () => {
 			await expect(resultPromise).resolves.toBe("Success");
 		});
 
-		it.only("should reject with 'ERR_ABORT' if aborted", async () => {
+		it("should reject with 'ERR_ABORT' if aborted", async () => {
 			const abortController = new AbortController();
 			const resultPromise = withAbortPromise(abortController.signal)(
 				new Promise((resolve) => setTimeout(() => resolve("Success"), 100)),
@@ -81,7 +81,7 @@ describe("Transaction utils", () => {
 
 		it("should call the callback function when aborted", async () => {
 			const abortController = new AbortController();
-			const mockCallback = jest.fn();
+			const mockCallback = vi.fn();
 			const resultPromise = withAbortPromise(
 				abortController.signal,
 				mockCallback,
