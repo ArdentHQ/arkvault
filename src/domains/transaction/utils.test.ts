@@ -1,4 +1,4 @@
-import { handleBroadcastError, isNoDeviceError, isRejectionError, getTransferType } from "./utils";
+import { handleBroadcastError, isNoDeviceError, isRejectionError, getTransferType, withAbortPromise } from "./utils";
 
 describe("Transaction utils", () => {
 	describe("isNoDeviceError", () => {
@@ -59,6 +59,52 @@ describe("Transaction utils", () => {
 					recipients: [{ address: "1", amount: 0 }],
 				}),
 			).toBe("transfer");
+		});
+	});
+
+	describe("withAbortPromise", () => {
+		it("should resolve the promise normally if not aborted", async () => {
+			const resultPromise = withAbortPromise()(new Promise((resolve) => resolve("Success")));
+			await expect(resultPromise).resolves.toBe("Success");
+		});
+
+		it.only("should reject with 'ERR_ABORT' if aborted", async () => {
+			const abortController = new AbortController();
+			const resultPromise = withAbortPromise(abortController.signal)(
+				new Promise((resolve) => setTimeout(() => resolve("Success"), 100)),
+			);
+
+			abortController.abort();
+
+			await expect(resultPromise).rejects.toBe("ERR_ABORT");
+		});
+
+		it("should call the callback function when aborted", async () => {
+			const abortController = new AbortController();
+			const mockCallback = jest.fn();
+			const resultPromise = withAbortPromise(
+				abortController.signal,
+				mockCallback,
+			)(new Promise((resolve) => setTimeout(() => resolve("Success"), 100)));
+
+			abortController.abort();
+
+			await expect(resultPromise).rejects.toBe("ERR_ABORT");
+			expect(mockCallback).toHaveBeenCalled();
+		});
+
+		it("should not affect the rejection of the original promise", async () => {
+			const errorPromise = withAbortPromise()(new Promise((_, reject) => reject("Original error")));
+			await expect(errorPromise).rejects.toBe("Original error");
+		});
+
+		it("should not abort if the abort signal is never triggered", async () => {
+			const abortController = new AbortController();
+			const resultPromise = withAbortPromise(abortController.signal)(
+				new Promise((resolve) => setTimeout(() => resolve("Success"), 100)),
+			);
+
+			await expect(resultPromise).resolves.toBe("Success");
 		});
 	});
 });
