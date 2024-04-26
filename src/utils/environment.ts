@@ -2,13 +2,13 @@ import { ARK } from "@ardenthq/sdk-ark";
 import { Environment } from "@ardenthq/sdk-profiles";
 import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { initializeMainsailNetworks } from "./migrations/initialize-mainsail-networks";
+import { initializeArkNetworks } from "./migrations/initialize-ark-networks";
 import { isE2E, isUnit } from "@/utils/test-helpers";
 import { StubStorage } from "@/tests/mocks";
 import { httpClient } from "@/app/services";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 import { updateArkConstants } from "@/utils/migrations/update-ark-constants";
 import { updateArkNethashes } from "@/utils/migrations/update-ark-nethashes";
-import { initializeArkNetworks } from "./migrations/initialize-ark-networks";
 
 export const initializeEnvironment = (): Environment => {
 	const storage = isE2E() || isUnit() ? new StubStorage() : "indexeddb";
