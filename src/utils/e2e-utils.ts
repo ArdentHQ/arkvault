@@ -44,11 +44,6 @@ const pingServerUrls = new Set([
 	"https://ark-live.arkvault.io",
 	"https://ark-test.arkvault.io/",
 	"https://ark-test.arkvault.io",
-	"https://explorer.blockpool.io:19031",
-	"https://apis.compendia.org",
-	"https://apis-testnet.compendia.org",
-	"https://qredit.cloud",
-	"https://qredit.dev",
 	"https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0",
 	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
 ]);
@@ -290,34 +285,6 @@ export const requestMocks = {
 		mockRequest("https://dwallets.mainsailhq.com/api/node/fees", "coins/mainsail/devnet/node-fees"),
 		mockRequest("https://dwallets.mainsailhq.com/api/node/syncing", "coins/mainsail/devnet/syncing"),
 		mockRequest("https://dwallets.mainsailhq.com/api/peers", "coins/mainsail/devnet/peers"),
-
-		// Compendia
-		mockRequest("https://apis.compendia.org/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://apis.compendia.org/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://apis.compendia.org/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://apis-testnet.compendia.org/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest(
-			"https://apis-testnet.compendia.org/api/node/configuration/crypto",
-			"coins/ark/devnet/cryptoConfiguration",
-		),
-		mockRequest("https://apis-testnet.compendia.org/api/node/syncing", "coins/ark/devnet/syncing"),
-
-		// Blockpool
-		mockRequest("https://explorer.blockpool.io:19031/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest(
-			"https://explorer.blockpool.io:19031/api/node/configuration/crypto",
-			"coins/ark/devnet/cryptoConfiguration",
-		),
-		mockRequest("https://explorer.blockpool.io:19031/api/node/syncing", "coins/ark/devnet/syncing"),
-
-		// Qredit
-		mockRequest("https://qredit.cloud/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://qredit.cloud/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://qredit.cloud/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://qredit.dev/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://qredit.dev/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://qredit.dev/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://static.zdassets.com/ekr/snippet.js?key=0e4c4d37-9d38-4be4-925d-e659dd4d12bd", () => ""),
 	],
 	delegates: [
 		// devnet
