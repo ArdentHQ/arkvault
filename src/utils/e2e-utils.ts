@@ -280,6 +280,17 @@ export const requestMocks = {
 		mockRequest("https://ark-live.arkvault.io/api/node/syncing", "coins/ark/mainnet/syncing"),
 		mockRequest("https://ark-live.arkvault.io/api/node/fees", "coins/ark/mainnet/node-fees"),
 
+		// Mainsail devnet
+		mockRequest("https://dwallets.mainsailhq.com/api/blockchain", "coins/mainsail/devnet/blockchain"),
+		mockRequest("https://dwallets.mainsailhq.com/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/node/configuration/crypto",
+			"coins/mainsail/devnet/cryptoConfiguration",
+		),
+		mockRequest("https://dwallets.mainsailhq.com/api/node/fees", "coins/mainsail/devnet/node-fees"),
+		mockRequest("https://dwallets.mainsailhq.com/api/node/syncing", "coins/mainsail/devnet/syncing"),
+		mockRequest("https://dwallets.mainsailhq.com/api/peers", "coins/mainsail/devnet/peers"),
+
 		// Compendia
 		mockRequest("https://apis.compendia.org/api/node/configuration", "coins/ark/devnet/configuration"),
 		mockRequest("https://apis.compendia.org/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
