@@ -8,6 +8,7 @@ import { httpClient } from "@/app/services";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 import { updateArkConstants } from "@/utils/migrations/update-ark-constants";
 import { updateArkNethashes } from "@/utils/migrations/update-ark-nethashes";
+import { initializeArkNetworks } from "./migrations/initialize-ark-networks";
 
 export const initializeEnvironment = (): Environment => {
 	const storage = isE2E() || isUnit() ? new StubStorage() : "indexeddb";
@@ -24,7 +25,7 @@ export const initializeEnvironment = (): Environment => {
 
 	env.setMigrations(
 		{
-			"0.0.9": initializeMainsailNetworks,
+			"0.0.9": isE2E() ? initializeArkNetworks : initializeMainsailNetworks,
 			"1.1.0": updateArkConstants,
 			"1.2.0": updateArkNethashes,
 		},
