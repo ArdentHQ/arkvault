@@ -46,6 +46,7 @@ const pingServerUrls = new Set([
 	"https://ark-test.arkvault.io",
 	"https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0",
 	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
+	"https://dwallets.mainsailhq.com/",
 ]);
 
 const pingMusigServerUrls = new Set(["https://ark-live-musig.arkvault.io", "https://ark-test-musig.arkvault.io"]);
