@@ -428,40 +428,10 @@ describe("Exchange", () => {
 		});
 	});
 
-	it("should show exchange transaction history", async () => {
-		profile.exchangeTransactions().create(stubData);
-		mockExchangeTransaction(profile);
-
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
-			{
-				history,
-				route: exchangeURL,
-			},
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
-		});
-
-		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
-
-		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
-
-		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
-		expect(screen.getAllByTestId("TableRemoveButton--compact")).toHaveLength(
-			profile.exchangeTransactions().count(),
-		);
-	});
-
 	it("should update exchange transaction status", async () => {
+		profile.exchangeTransactions().create(stubData);
+		const { restoreExchangeMocks } = mockExchangeTransaction(profile);
+
 		const updateSpy = vi.spyOn(profile.exchangeTransactions(), "update");
 		const exchangeTransaction = profile.exchangeTransactions().values()[0];
 
@@ -506,5 +476,39 @@ describe("Exchange", () => {
 		});
 
 		updateSpy.mockReset();
+		restoreExchangeMocks();
+	});
+
+	it("should show exchange transaction history", async () => {
+		profile.exchangeTransactions().create(stubData);
+		mockExchangeTransaction(profile);
+
+		render(
+			<Route path="/profiles/:profileId/exchange">
+				<ExchangeProvider>
+					<Wrapper>
+						<Exchange />
+					</Wrapper>
+				</ExchangeProvider>
+			</Route>,
+			{
+				history,
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
+		});
+
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
+
+		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
+
+		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
+		expect(screen.getAllByTestId("TableRemoveButton--compact")).toHaveLength(
+			profile.exchangeTransactions().count(),
+		);
 	});
 });
