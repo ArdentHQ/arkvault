@@ -1,101 +1,57 @@
-import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import userEvent from "@testing-library/user-event";
 import { MnemonicVerification } from "./MnemonicVerification";
-import { render, screen } from "@/utils/testing-library";
-
+import * as randomWordPositionsMock from "./utils/randomWordPositions";
+import { render, screen, fireEvent } from "@/utils/testing-library";
 const mnemonic = "ark btc usd bnb eth ltc";
-const mnemonicWords = mnemonic.split(" ");
-const limit = 6;
 const handleComplete = vi.fn();
 
 describe("MnemonicVerification", () => {
 	it("should render", () => {
-		const wordPositions = [1, 2, 3];
+		render(<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />);
 
-		render(
-			<MnemonicVerification
-				mnemonic={mnemonic}
-				optionsLimit={limit}
-				wordPositions={wordPositions}
-				handleComplete={handleComplete}
-			/>,
-		);
-
-		expect(screen.getAllByTestId("MnemonicVerificationOptions__button")).toHaveLength(mnemonic.split(" ").length);
+		expect(screen.getAllByTestId("MnemonicVerificationInput")).toHaveLength(3);
 	});
 
 	it("should render with special delimiter", () => {
-		const mnemonic = "てまきずし　くわしい　うけもつ　ないす　にっけい　おつり";
+		const mnemonic = "てまきずし くわしい うけもつ ないす にっけい おつり";
 
-		const wordPositions = [1, 2, 3];
+		render(<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />);
 
-		render(
-			<MnemonicVerification
-				mnemonic={mnemonic}
-				optionsLimit={limit}
-				wordPositions={wordPositions}
-				handleComplete={handleComplete}
-			/>,
-		);
-
-		expect(screen.getAllByTestId("MnemonicVerificationOptions__button")).toHaveLength(
-			mnemonic.split("\u3000").length,
-		);
+		expect(screen.getAllByTestId("MnemonicVerificationInput")).toHaveLength(3);
 	});
 
 	it("should verify mnemonic", () => {
 		const wordPositions = [1, 2, 3];
 
-		const { asFragment } = render(
-			<MnemonicVerification
-				mnemonic={mnemonic}
-				optionsLimit={limit}
-				wordPositions={wordPositions}
-				handleComplete={handleComplete}
-			/>,
-		);
+		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue(wordPositions);
 
-		const firstTab = asFragment();
-		const wrongButton = screen.getByText(mnemonicWords[4]);
-		userEvent.click(wrongButton);
+		render(<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />);
 
-		expect(firstTab).toStrictEqual(asFragment());
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 
-		const firstButton = screen.getByText(mnemonicWords[wordPositions[0] - 1]);
-		userEvent.click(firstButton);
+		expect(screen.queryByTestId("Input__valid")).not.toBeInTheDocument();
 
-		expect(firstTab).not.toStrictEqual(asFragment());
+		userEvent.paste(firstInput, "ark");
 
-		const secondButton = screen.getByText(mnemonicWords[wordPositions[1] - 1]);
-		userEvent.click(secondButton);
+		expect(screen.getAllByTestId("Input__valid")).toHaveLength(1);
 
-		const thirdButton = screen.getByText(mnemonicWords[wordPositions[2] - 1]);
-		userEvent.click(thirdButton);
+		userEvent.paste(secondInput, "btc");
 
-		expect(handleComplete).toHaveBeenCalledWith();
-	});
+		expect(screen.getAllByTestId("Input__valid")).toHaveLength(2);
 
-	it("should ask for random words", () => {
-		render(
-			<>
-				<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />
-				<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />
-			</>,
-		);
+		handleComplete.mockClear();
 
-		const options = screen
-			.getAllByTestId("MnemonicVerificationProgress__Tab")
-			.map((element: any) => element.innerHTML);
+		userEvent.paste(thirdInput, "usd");
 
-		const length = options.length / 2;
+		expect(screen.getAllByTestId("Input__valid")).toHaveLength(3);
 
-		const firstOptions = options;
-		const secondOptions = firstOptions.splice(length);
+		expect(handleComplete).toHaveBeenCalledWith(true);
 
-		expect(firstOptions).toHaveLength(length);
-		expect(secondOptions).toHaveLength(length);
+		userEvent.paste(thirdInput, "btc");
+		fireEvent.blur(thirdInput);
 
-		expect(firstOptions).not.toStrictEqual(secondOptions);
+		expect(screen.getAllByTestId("Input__valid")).toHaveLength(2);
 	});
 });

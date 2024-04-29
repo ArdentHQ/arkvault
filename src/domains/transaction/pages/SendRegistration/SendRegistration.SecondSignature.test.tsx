@@ -6,8 +6,8 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-
 import { SendRegistration } from "./SendRegistration";
+import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import { minVersionList } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import SecondSignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
@@ -137,6 +137,8 @@ describe("Second Signature Registration", () => {
 	});
 
 	it("should register second signature", async () => {
+		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
+
 		const nanoXTransportMock = mockNanoXTransport();
 		const bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
@@ -165,17 +167,10 @@ describe("Second Signature Registration", () => {
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__verification-step")).resolves.toBeVisible();
 
-		const words = passphrase.split(" ");
-
-		for (let index = 0; index < 3; index++) {
-			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
-
-			userEvent.click(screen.getByText(words[wordNumber - 1]));
-
-			if (index < 2) {
-				await waitFor(() => expect(screen.queryAllByText(/The (\d+)/).length === 2 - index));
-			}
-		}
+		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
+		userEvent.paste(firstInput, "master");
+		userEvent.paste(secondInput, "dizzy");
+		userEvent.paste(thirdInput, "era");
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 

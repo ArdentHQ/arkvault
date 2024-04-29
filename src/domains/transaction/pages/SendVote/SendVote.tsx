@@ -503,11 +503,13 @@ export const SendVote = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									onBack={() =>
+									onClose={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
 									}
-									isRepeatDisabled={isSubmitting}
-									onRepeat={handleSubmit(submitForm)}
+									isBackDisabled={isSubmitting}
+									onBack={() => {
+										setActiveTab(Step.FormStep);
+									}}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>

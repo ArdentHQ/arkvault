@@ -37,7 +37,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 		mode: "onChange",
 	});
 
-	const { register, handleSubmit, formState } = form;
+	const { register, formState } = form;
 
 	useEffect(() => {
 		register("amount");
@@ -120,8 +120,10 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 				{step === Step.ErrorStep && (
 					<ErrorStep
 						errorMessage={errorMessage}
-						onRepeat={/* istanbul ignore next -- @preserve */ () => handleSubmit(submit)}
-						isRepeatDisabled={formState.isSubmitting}
+						onBack={() => {
+							setStep(Step.SelectStep);
+						}}
+						isBackDisabled={formState.isSubmitting}
 					/>
 				)}
 			</Form>

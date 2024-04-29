@@ -6,7 +6,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { SignMessage } from "./SignMessage";
-import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
@@ -98,10 +97,10 @@ describe("SignMessage with ledger", () => {
 		const historySpy = vi.spyOn(history, "push");
 
 		await waitFor(() => {
-			expect(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET })).toBeInTheDocument();
+			expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET }));
+		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 

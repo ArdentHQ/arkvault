@@ -1055,10 +1055,10 @@ describe("SendVote", () => {
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-		expect(screen.getByTestId("ErrorStep__wallet-button")).toBeInTheDocument();
+		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
+		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
