@@ -79,6 +79,7 @@ describe("ContactForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should clear errors when changing network", async () => {
 		render(
 			<ContactForm
 				profile={profile}
