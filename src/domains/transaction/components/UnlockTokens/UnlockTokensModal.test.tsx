@@ -5,12 +5,13 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
+import { vi } from "vitest";
 
 import { UnlockTokensModal } from "./UnlockTokensModal";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { buildTranslations } from "@/app/i18n/helpers";
 import transactionFixture from "@/tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
-import { env, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
+import { env, MNEMONICS, render, screen, waitFor, within, act } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
@@ -32,6 +33,11 @@ describe("UnlockTokensModal", () => {
 	};
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			toFake: ["setInterval", "clearInterval", "Date"],
+			shouldAdvanceTime: true,
+		});
+
 		profile = await env.profiles().create("empty");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -87,6 +93,10 @@ describe("UnlockTokensModal", () => {
 				transactionsFixture,
 			),
 		);
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	it("should render", async () => {
@@ -207,6 +217,8 @@ describe("UnlockTokensModal", () => {
 		});
 
 		userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		if (expectedOutcome === "success") {
 			await waitFor(() => {
