@@ -79,7 +79,6 @@ describe("ContactForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should clear errors when changing network", async () => {
 		render(
 			<ContactForm
 				profile={profile}
@@ -265,6 +264,43 @@ describe("ContactForm", () => {
 
 		await waitFor(() => {
 			expect(addressInput()).toHaveValue(contactAddress);
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
+		});
+
+		userEvent.click(screen.getByTestId(addAddressID));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toBeVisible();
+		});
+
+		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
+	});
+
+	it("should not accept an invalid address", async () => {
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
+
+		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
+
+		userEvent.paste(nameInput(), "name");
+
+		await waitFor(() => {
+			expect(nameInput()).toHaveValue("name");
+		});
+
+		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
+
+		userEvent.paste(selectNetworkInput, "ARK D");
+		userEvent.keyboard("{enter}");
+
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
+
+		userEvent.paste(addressInput(), "0xInvalidAddress");
+
+		await waitFor(() => {
+			expect(addressInput()).toHaveValue("0xInvalidAddress");
 		});
 
 		await waitFor(() => {
