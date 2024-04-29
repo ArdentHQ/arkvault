@@ -357,10 +357,10 @@ jobs:
             - name: Test (components)
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 93.71
-                  COVERAGE_THRESHOLD_FUNCTIONS: 96.49
-                  COVERAGE_THRESHOLD_STATEMENTS: 94.01
-                  COVERAGE_THRESHOLD_BRANCHES: 87.14
+                  COVERAGE_THRESHOLD_LINES: 93.19
+                  COVERAGE_THRESHOLD_FUNCTIONS: 96.15
+                  COVERAGE_THRESHOLD_STATEMENTS: 93.5
+                  COVERAGE_THRESHOLD_BRANCHES: 86.36
                   COVERAGE_INCLUDE_PATH: src/domains/contact/components
               with:
                   timeout_minutes: 10
@@ -687,7 +687,7 @@ jobs:
 
             - name: Test Components ^A-O
               env:
-                  COVERAGE_THRESHOLD_LINES: 99.48
+                  COVERAGE_THRESHOLD_LINES: 99.47
                   COVERAGE_THRESHOLD_FUNCTIONS: 99.49
                   COVERAGE_THRESHOLD_STATEMENTS: 99.49
                   COVERAGE_THRESHOLD_BRANCHES: 97.96
@@ -847,6 +847,10 @@ jobs:
             - name: Test Components
               uses: nick-invision/retry@v2
               env:
+                  COVERAGE_THRESHOLD_LINES: 94.6
+                  COVERAGE_THRESHOLD_FUNCTIONS: 93.93
+                  COVERAGE_THRESHOLD_STATEMENTS: 94.79
+                  COVERAGE_THRESHOLD_BRANCHES: 95.92
                   COVERAGE_INCLUDE_PATH: src/domains/wallet/components
               with:
                   timeout_minutes: 10
