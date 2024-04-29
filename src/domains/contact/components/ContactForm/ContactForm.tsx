@@ -65,12 +65,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 		register("network");
 	}, [register]);
 
-	useEffect(() => {
-		for (const [field, message] of Object.entries(errors) as [keyof ContactFormState, string][]) {
-			setError(field, { message, type: "manual" });
-		}
-	}, [errors, setError]);
-
 	const filteredNetworks = useMemo(() => {
 		const usedNetworks = new Set(addresses.map((address) => address.network));
 		return networks.filter((network) => !usedNetworks.has(network.id()));
@@ -136,6 +130,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 			<SubForm>
 				<FormField name="network">
 					<FormLabel>{t("CONTACTS.CONTACT_FORM.CRYPTOASSET")}</FormLabel>
+
 					<SelectNetworkDropdown
 						profile={profile}
 						networks={filteredNetworks}
