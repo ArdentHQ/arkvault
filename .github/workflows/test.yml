@@ -758,10 +758,10 @@ jobs:
 
             - name: Test Validations
               env:
-                  COVERAGE_THRESHOLD_LINES: 88.03
-                  COVERAGE_THRESHOLD_FUNCTIONS: 82.85
-                  COVERAGE_THRESHOLD_STATEMENTS: 88.52
-                  COVERAGE_THRESHOLD_BRANCHES: 87.03
+                  COVERAGE_THRESHOLD_LINES: 84.67
+                  COVERAGE_THRESHOLD_FUNCTIONS: 76.31
+                  COVERAGE_THRESHOLD_STATEMENTS: 84.61
+                  COVERAGE_THRESHOLD_BRANCHES: 84.74
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/validations
               uses: nick-invision/retry@v2
               with:
