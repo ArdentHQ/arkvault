@@ -219,6 +219,7 @@ describe("Exchange", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
 		profile.exchangeTransactions().create(stubData);
+		const { restoreExchangeMocks } = mockExchangeTransaction(profile);
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -244,12 +245,15 @@ describe("Exchange", () => {
 		expect(screen.getAllByTestId("TableRemoveButton")).toHaveLength(profile.exchangeTransactions().count());
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
+		await restoreExchangeMocks();
 	});
 
 	it("should show exchange transaction history as compact on md screen even if user uses expanded tables", async () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
 		profile.exchangeTransactions().create(stubData);
+
+		const { restoreExchangeMocks } = mockExchangeTransaction(profile);
 
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/exchange">
@@ -278,6 +282,8 @@ describe("Exchange", () => {
 		);
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
+
+		await restoreExchangeMocks();
 	});
 
 	it("should navigate to exchange transaction", async () => {
@@ -476,12 +482,12 @@ describe("Exchange", () => {
 		});
 
 		updateSpy.mockReset();
-		restoreExchangeMocks();
+		await restoreExchangeMocks();
 	});
 
 	it("should show exchange transaction history", async () => {
 		profile.exchangeTransactions().create(stubData);
-		mockExchangeTransaction(profile);
+		const { restoreExchangeMocks } = mockExchangeTransaction(profile);
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -510,5 +516,7 @@ describe("Exchange", () => {
 		expect(screen.getAllByTestId("TableRemoveButton--compact")).toHaveLength(
 			profile.exchangeTransactions().count(),
 		);
+
+		await restoreExchangeMocks();
 	});
 });

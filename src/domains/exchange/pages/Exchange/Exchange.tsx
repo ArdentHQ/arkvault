@@ -42,7 +42,6 @@ export const Exchange = () => {
 		let timeout: NodeJS.Timeout;
 
 		const handleStatusChange = (orderStatus: OrderStatusResponse) => {
-			console.log("handle status change");
 			const exchangeTransaction = activeProfile
 				.exchangeTransactions()
 				.values()
@@ -51,8 +50,6 @@ export const Exchange = () => {
 						exchangeTransaction.provider() === orderStatus.providerId &&
 						exchangeTransaction.orderId() === orderStatus.id,
 				);
-
-			console.log({ exchangeTransaction });
 
 			assertExchangeTransaction(exchangeTransaction);
 
