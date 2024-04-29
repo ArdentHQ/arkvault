@@ -34,8 +34,8 @@ describe("UnlockTokensModal", () => {
 
 	beforeAll(async () => {
 		vi.useFakeTimers({
-			toFake: ["setInterval", "clearInterval", "Date"],
 			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
 		});
 
 		profile = await env.profiles().create("empty");
