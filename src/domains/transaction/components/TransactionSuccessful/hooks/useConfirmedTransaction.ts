@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { interval } from "@/utils/interval";
 
 export const useConfirmedTransaction = ({
 	wallet,
@@ -13,7 +12,7 @@ export const useConfirmedTransaction = ({
 
 	useEffect(() => {
 		const checkConfirmed = (): void => {
-			const id = interval(async () => {
+			const id = setInterval(async () => {
 				try {
 					await wallet.coin().client().transaction(transactionId);
 					setIsConfirmed(true);
