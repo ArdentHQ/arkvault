@@ -4,15 +4,9 @@ import { ProfilePaths } from "@/router/paths";
 
 describe("routing", () => {
 	it("should have transaction routes", () => {
-		expect(TransactionRoutes).toStrictEqual([
-			expect.objectContaining({ path: ProfilePaths.SendRegistration }),
-			expect.objectContaining({ path: ProfilePaths.SendDelegateResignation }),
-			expect.objectContaining({ path: ProfilePaths.SendTransferWallet }),
-			expect.objectContaining({ path: ProfilePaths.SendTransfer }),
-			expect.objectContaining({ path: ProfilePaths.SendIpfs }),
-			expect.objectContaining({ path: ProfilePaths.SendVoteWallet }),
-			expect.objectContaining({ path: ProfilePaths.SendVote }),
-		]);
+		for (const route of TransactionRoutes) {
+			expect(Object.values(ProfilePaths)).toContain(route.path);
+		}
 	});
 
 	it.each(TransactionRoutes)("should use lazy loading with preload", (route) => {

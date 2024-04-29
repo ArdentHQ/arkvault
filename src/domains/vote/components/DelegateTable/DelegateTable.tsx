@@ -27,7 +27,6 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 	isCompact: isCompactOption,
 	subtitle,
 	searchQuery,
-	wallet,
 }) => {
 	const { t } = useTranslation();
 	const [currentPage, setCurrentPage] = useState(1);
@@ -234,7 +233,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				title={t("COMMON.EMPTY_RESULTS.TITLE")}
 				subtitle={selectDelegateValidatorTranslation({
 					delegateStr: t("VOTE.VOTES_PAGE.NO_RESULTS_DELEGATE"),
-					network: wallet!.network(),
+					network: selectedWallet.network(),
 					validatorStr: t("VOTE.VOTES_PAGE.NO_RESULTS"),
 				})}
 			/>
@@ -246,7 +245,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			<h2 className="mb-6 hidden text-lg font-bold md:block">
 				{selectDelegateValidatorTranslation({
 					delegateStr: t("VOTE.DELEGATE_TABLE.TITLE_DELEGATE"),
-					network: wallet!.network(),
+					network: selectedWallet.network(),
 					validatorStr: t("VOTE.DELEGATE_TABLE.TITLE"),
 				})}
 			</h2>

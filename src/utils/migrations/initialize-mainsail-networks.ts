@@ -1,6 +1,13 @@
 import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { isE2E } from "@/utils/test-helpers";
 
 export const initializeMainsailNetworks = ({ data }) => {
+	// @TODO: add mainsail network once network mocks, fixtures & wallet will be implemented for tests.
+	// @see https://app.clickup.com/t/86dtaccqj
+	if (isE2E()) {
+		return;
+	}
+
 	if (typeof data.networks === "object" && !!data.networks.mainsail) {
 		// Networks already assigned to profile, skipping migration
 		return;
@@ -10,8 +17,6 @@ export const initializeMainsailNetworks = ({ data }) => {
 		data.networks = {};
 	}
 
-	// @TODO: once mainnet is available, add the devnet network only for E2E and preview
-	// `if (isE2E() || isPreview())`
 	data.networks.mainsail = {
 		devnet: Mainsail.manifest.networks["mainsail.devnet"],
 	};

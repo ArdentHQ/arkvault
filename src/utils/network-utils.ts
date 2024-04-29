@@ -172,4 +172,10 @@ export const hasNetworksWithLedgerSupport = (profile: Contracts.IProfile) => {
 	return enabledNetworks.some((network) => network.allowsLedger());
 };
 
-export const isMainsailNetwork = (network: Networks.Network) => network.id().startsWith("mainsail");
+export const isMainsailNetwork = (network?: Networks.Network): boolean => {
+	if (!network) {
+		return false;
+	}
+
+	return network.id().startsWith("mainsail");
+};

@@ -125,6 +125,12 @@ describe("DelegateRegistrationForm", () => {
 		const delegatesSpy = vi.spyOn(env.delegates(), "all").mockReturnValue(delegates);
 		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
 
+		// @TODO Remove mock once mainsail wallets are properly setup in tests.
+		// @see https://app.clickup.com/t/86dtaccqj
+		const verifyPublicKeyWithBLSSpy = vi
+			.spyOn(wallet.coin().publicKey(), "verifyPublicKeyWithBLS")
+			.mockReturnValue(true);
+
 		const { form } = renderComponent();
 
 		const publicKey = "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de";
@@ -138,6 +144,7 @@ describe("DelegateRegistrationForm", () => {
 
 		mainsailSpy.mockRestore();
 		delegatesSpy.mockRestore();
+		verifyPublicKeyWithBLSSpy.mockRestore();
 	});
 
 	it("should set fee", async () => {

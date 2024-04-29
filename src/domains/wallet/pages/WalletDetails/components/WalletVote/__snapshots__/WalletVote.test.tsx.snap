@@ -47,10 +47,10 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         </div>
       </div>
       <div
-        class="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
+        class="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
       >
         <div
-          class="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0"
+          class="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -233,10 +233,10 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         </div>
       </div>
       <div
-        class="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
+        class="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
       >
         <div
-          class="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0"
+          class="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -419,10 +419,10 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         </div>
       </div>
       <div
-        class="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
+        class="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
       >
         <div
-          class="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0"
+          class="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -610,10 +610,10 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple st
         </div>
       </div>
       <div
-        class="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
+        class="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
       >
         <div
-          class="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0"
+          class="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -800,10 +800,10 @@ exports[`WalletVote > multi vote networks > should render votes when all delegat
         </div>
       </div>
       <div
-        class="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
+        class="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
       >
         <div
-          class="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0"
+          class="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -948,10 +948,10 @@ exports[`WalletVote > multi vote networks > should render votes when all delegat
         </div>
       </div>
       <div
-        class="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
+        class="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
       >
         <div
-          class="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0"
+          class="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -1482,10 +1482,10 @@ exports[`WalletVote > should render as all resigned 1`] = `
         </div>
       </div>
       <div
-        class="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
+        class="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
       >
         <div
-          class="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0"
+          class="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -1499,7 +1499,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
           </span>
         </div>
         <div
-          class="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800"
+          class="mx-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800 "
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2408,10 +2408,10 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
         </div>
       </div>
       <div
-        class="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
+        class="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
       >
         <div
-          class="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0"
+          class="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2423,7 +2423,7 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
           </span>
         </div>
         <div
-          class="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800"
+          class="mx-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800 "
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2582,10 +2582,10 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
         </div>
       </div>
       <div
-        class="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
+        class="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
       >
         <div
-          class="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0"
+          class="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2597,7 +2597,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
           </span>
         </div>
         <div
-          class="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800"
+          class="mx-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800 "
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2756,10 +2756,10 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         </div>
       </div>
       <div
-        class="flex flex-1 border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
+        class="flex flex-1 overflow-auto border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-4 dark:border-theme-secondary-800 dark:bg-black md:ml-4 md:border-none md:bg-transparent md:p-0"
       >
         <div
-          class="flex flex-grow flex-col justify-between font-semibold md:flex-grow-0"
+          class="flex flex-grow flex-col justify-between overflow-auto font-semibold md:flex-grow-0"
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2771,7 +2771,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
           </span>
         </div>
         <div
-          class="ml-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800"
+          class="mx-6 flex flex-col justify-between border-l border-theme-secondary-300 pl-6 font-semibold dark:border-theme-secondary-800 "
         >
           <span
             class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"

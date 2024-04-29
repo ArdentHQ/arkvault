@@ -1,0 +1,14 @@
+{
+	"data": {
+		"1": {
+			"transfer": "10000000",
+			"validatorRegistration": "2500000000",
+			"vote": "100000000",
+			"multiSignature": "500000000",
+			"multiPayment": "10000000",
+			"validatorResignation": "2500000000",
+			"usernameRegistration": "2500000000",
+			"usernameResignation": "2500000000"
+		}
+	}
+}

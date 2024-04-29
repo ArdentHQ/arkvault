@@ -1006,26 +1006,33 @@ exports[`Network Settings > should check the main network by default 1`] = `
                                 class="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200"
                               >
                                 <div
-                                  class="shrink-0"
+                                  class="flex shrink-0 items-center"
                                 >
                                   <div
-                                    class="dark:text-theme-secondary-200 css-v0ob3f"
-                                    height="16"
-                                    width="16"
+                                    aria-label="ARK"
+                                    class="inline-flex h-5 w-5 items-center justify-center dark:text-theme-secondary-200"
+                                    data-testid="NetworkIcon-ARK-ark.mainnet"
                                   >
-                                    <svg
-                                      id="ark"
-                                      viewBox="0 0 36.3 30.6"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      class="css-v0ob3f"
+                                      data-testid="NetworkIcon__icon"
+                                      height="16"
+                                      width="16"
                                     >
-                                      <path
-                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                        fill="currentColor"
-                                      />
-                                    </svg>
+                                      <svg
+                                        id="ark"
+                                        viewBox="0 0 36.3 30.6"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                          fill="currentColor"
+                                        />
+                                      </svg>
+                                    </div>
                                   </div>
                                 </div>
                                 <div
@@ -1057,26 +1064,33 @@ exports[`Network Settings > should check the main network by default 1`] = `
                                 class="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200"
                               >
                                 <div
-                                  class="shrink-0"
+                                  class="flex shrink-0 items-center"
                                 >
                                   <div
-                                    class="dark:text-theme-secondary-600 css-v0ob3f"
-                                    height="16"
-                                    width="16"
+                                    aria-label="ARK Devnet"
+                                    class="inline-flex h-5 w-5 items-center justify-center dark:text-theme-secondary-600"
+                                    data-testid="NetworkIcon-ARK-ark.devnet"
                                   >
-                                    <svg
-                                      id="ark"
-                                      viewBox="0 0 36.3 30.6"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      class="css-v0ob3f"
+                                      data-testid="NetworkIcon__icon"
+                                      height="16"
+                                      width="16"
                                     >
-                                      <path
-                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                        fill="currentColor"
-                                      />
-                                    </svg>
+                                      <svg
+                                        id="ark"
+                                        viewBox="0 0 36.3 30.6"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                          fill="currentColor"
+                                        />
+                                      </svg>
+                                    </div>
                                   </div>
                                 </div>
                                 <div
@@ -2185,26 +2199,33 @@ exports[`Network Settings > should render networks settings section 1`] = `
                                 class="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200"
                               >
                                 <div
-                                  class="shrink-0"
+                                  class="flex shrink-0 items-center"
                                 >
                                   <div
-                                    class="dark:text-theme-secondary-200 css-v0ob3f"
-                                    height="16"
-                                    width="16"
+                                    aria-label="ARK"
+                                    class="inline-flex h-5 w-5 items-center justify-center dark:text-theme-secondary-200"
+                                    data-testid="NetworkIcon-ARK-ark.mainnet"
                                   >
-                                    <svg
-                                      id="ark"
-                                      viewBox="0 0 36.3 30.6"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      class="css-v0ob3f"
+                                      data-testid="NetworkIcon__icon"
+                                      height="16"
+                                      width="16"
                                     >
-                                      <path
-                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                        fill="currentColor"
-                                      />
-                                    </svg>
+                                      <svg
+                                        id="ark"
+                                        viewBox="0 0 36.3 30.6"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                          fill="currentColor"
+                                        />
+                                      </svg>
+                                    </div>
                                   </div>
                                 </div>
                                 <div
@@ -2236,26 +2257,33 @@ exports[`Network Settings > should render networks settings section 1`] = `
                                 class="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200"
                               >
                                 <div
-                                  class="shrink-0"
+                                  class="flex shrink-0 items-center"
                                 >
                                   <div
-                                    class="dark:text-theme-secondary-600 css-v0ob3f"
-                                    height="16"
-                                    width="16"
+                                    aria-label="ARK Devnet"
+                                    class="inline-flex h-5 w-5 items-center justify-center dark:text-theme-secondary-600"
+                                    data-testid="NetworkIcon-ARK-ark.devnet"
                                   >
-                                    <svg
-                                      id="ark"
-                                      viewBox="0 0 36.3 30.6"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      class="css-v0ob3f"
+                                      data-testid="NetworkIcon__icon"
+                                      height="16"
+                                      width="16"
                                     >
-                                      <path
-                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                        fill="currentColor"
-                                      />
-                                    </svg>
+                                      <svg
+                                        id="ark"
+                                        viewBox="0 0 36.3 30.6"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                          fill="currentColor"
+                                        />
+                                      </svg>
+                                    </div>
                                   </div>
                                 </div>
                                 <div

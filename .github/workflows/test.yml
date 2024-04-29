@@ -818,12 +818,42 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
-            - name: Test
+
+            - name: Test Utils
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_INCLUDE_PATH: src/domains/wallet/utils
               with:
                   timeout_minutes: 10
                   max_attempts: 1
-                  command: pnpm test:coverage src/domains/wallet
+                  command: pnpm test:coverage src/domains/wallet/utils
+
+            - name: Test Components
+              uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_INCLUDE_PATH: src/domains/wallet/components
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/wallet/components
+
+            - name: Test Hooks
+              uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_INCLUDE_PATH: src/domains/wallet/hooks
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/wallet/hooks
+
+            - name: Test Pages
+              uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_INCLUDE_PATH: src/domains/wallet/pages
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/wallet/pages
     router:
         runs-on: ubuntu-latest
         env:

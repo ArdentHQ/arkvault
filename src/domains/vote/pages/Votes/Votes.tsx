@@ -170,7 +170,7 @@ export const Votes: FC = () => {
 			{isSelectDelegateStep && (
 				<Section innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18">
 					<DelegateTable
-						wallet={selectedWallet}
+						selectedWallet={selectedWallet!}
 						searchQuery={searchQuery}
 						delegates={filteredDelegates}
 						isLoading={isLoadingDelegates}
@@ -179,7 +179,6 @@ export const Votes: FC = () => {
 						resignedDelegateVotes={resignedDelegateVotes}
 						unvoteDelegates={unvoteDelegates}
 						voteDelegates={voteDelegates}
-						selectedWallet={selectedWallet!}
 						onContinue={navigateToSendVote}
 						isCompact={useCompactTables}
 						subtitle={

@@ -83,8 +83,9 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
         >
           <div>
             <button
-              class="css-1oyl9hh"
+              class="css-z3ze4c"
               data-testid="WalletControls__import-ledger"
+              disabled=""
               type="button"
             >
               <div

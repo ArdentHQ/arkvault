@@ -599,9 +599,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -850,9 +851,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -1104,9 +1106,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -1116,7 +1119,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       Vote
                     </span>
                     <span
-                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                      class="ml-2 flex flex-1 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
                     >
                       arkx
                     </span>
@@ -1360,9 +1363,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -1372,7 +1376,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       Vote
                     </span>
                     <span
-                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                      class="ml-2 flex flex-1 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
                     >
                       arkx
                     </span>
@@ -1616,9 +1620,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -1864,9 +1869,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -2115,9 +2121,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -2127,7 +2134,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       Unvote
                     </span>
                     <span
-                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                      class="ml-2 flex flex-1 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
                     >
                       arkx
                     </span>
@@ -2368,9 +2375,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -2380,7 +2388,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       Unvote
                     </span>
                     <span
-                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                      class="ml-2 flex flex-1 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
                     >
                       arkx
                     </span>
@@ -2629,7 +2637,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -2884,7 +2892,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -3136,7 +3144,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -3391,7 +3399,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -3610,7 +3618,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3833,7 +3841,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4056,7 +4064,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4279,7 +4287,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4502,7 +4510,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4725,7 +4733,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4948,7 +4956,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5171,7 +5179,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5394,7 +5402,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5617,7 +5625,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5840,7 +5848,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6063,7 +6071,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6286,7 +6294,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6509,7 +6517,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6732,7 +6740,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6955,7 +6963,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7178,7 +7186,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7401,7 +7409,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7624,7 +7632,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7847,7 +7855,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -8070,7 +8078,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -8304,7 +8312,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -8538,7 +8546,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -8772,7 +8780,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -9006,7 +9014,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -9229,7 +9237,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -9452,7 +9460,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -9675,7 +9683,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -9898,7 +9906,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -10121,7 +10129,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -10344,7 +10352,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -10567,7 +10575,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -10812,7 +10820,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -11053,7 +11061,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -11294,7 +11302,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -11535,7 +11543,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -11754,7 +11762,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -11977,7 +11985,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -12200,7 +12208,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -12423,7 +12431,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -12684,7 +12692,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -12948,7 +12956,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -13212,7 +13220,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -13476,7 +13484,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -13702,7 +13710,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -13925,7 +13933,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -14148,7 +14156,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -14371,7 +14379,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -15044,9 +15052,10 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -15295,9 +15304,10 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -15546,9 +15556,10 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -15794,9 +15805,10 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -16050,7 +16062,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -16305,7 +16317,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -16524,7 +16536,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -16747,7 +16759,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -16970,7 +16982,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -17193,7 +17205,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -17416,7 +17428,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -17639,7 +17651,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -17862,7 +17874,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -18085,7 +18097,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -18308,7 +18320,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -18531,7 +18543,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -18754,7 +18766,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -18988,7 +19000,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -19222,7 +19234,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -19445,7 +19457,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -19668,7 +19680,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -19891,7 +19903,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -20136,7 +20148,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -20377,7 +20389,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -20596,7 +20608,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -20819,7 +20831,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -21080,7 +21092,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -21344,7 +21356,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -21570,7 +21582,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -21793,7 +21805,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -22466,9 +22478,10 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -22478,7 +22491,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       Vote
                     </span>
                     <span
-                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                      class="ml-2 flex flex-1 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
                     >
                       arkx
                     </span>
@@ -22722,9 +22735,10 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -22734,7 +22748,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       Vote
                     </span>
                     <span
-                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                      class="ml-2 flex flex-1 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
                     >
                       arkx
                     </span>
@@ -22978,9 +22992,10 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -22990,7 +23005,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       Unvote
                     </span>
                     <span
-                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                      class="ml-2 flex flex-1 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
                     >
                       arkx
                     </span>
@@ -23231,9 +23246,10 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -23243,7 +23259,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       Unvote
                     </span>
                     <span
-                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                      class="ml-2 flex flex-1 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
                     >
                       arkx
                     </span>
@@ -23492,7 +23508,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -23747,7 +23763,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -23966,7 +23982,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -24189,7 +24205,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -24412,7 +24428,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -24635,7 +24651,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -24858,7 +24874,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -25081,7 +25097,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -25304,7 +25320,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -25527,7 +25543,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -25750,7 +25766,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -25973,7 +25989,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -26196,7 +26212,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -26430,7 +26446,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -26664,7 +26680,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -26887,7 +26903,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -27110,7 +27126,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -27333,7 +27349,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -27578,7 +27594,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -27819,7 +27835,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -28038,7 +28054,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -28261,7 +28277,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -28522,7 +28538,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -28786,7 +28802,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -29012,7 +29028,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -29235,7 +29251,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -29908,9 +29924,10 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -30159,9 +30176,10 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -30410,9 +30428,10 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -30658,9 +30677,10 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -30914,7 +30934,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -31169,7 +31189,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -31388,7 +31408,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -31611,7 +31631,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -31834,7 +31854,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -32057,7 +32077,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -32280,7 +32300,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -32503,7 +32523,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -32726,7 +32746,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -32949,7 +32969,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -33172,7 +33192,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -33395,7 +33415,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -33618,7 +33638,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -33852,7 +33872,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -34086,7 +34106,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -34309,7 +34329,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -34532,7 +34552,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -34755,7 +34775,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -35000,7 +35020,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -35241,7 +35261,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -35460,7 +35480,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -35683,7 +35703,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -35944,7 +35964,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -36208,7 +36228,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -36434,7 +36454,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -36657,7 +36677,7 @@ exports[`Transactions > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -37343,9 +37363,10 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -37594,9 +37615,10 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -37845,9 +37867,10 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -38093,9 +38116,10 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
+                    class="flex"
                     data-testid="TransactionRowVoteLabel"
                   >
                     <span
@@ -38349,7 +38373,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -38604,7 +38628,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -38823,7 +38847,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -39046,7 +39070,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -39269,7 +39293,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -39492,7 +39516,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -39715,7 +39739,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -39938,7 +39962,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -40161,7 +40185,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -40384,7 +40408,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -40607,7 +40631,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -40830,7 +40854,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -41053,7 +41077,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -41287,7 +41311,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -41521,7 +41545,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -41744,7 +41768,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -41967,7 +41991,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -42190,7 +42214,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -42435,7 +42459,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -42676,7 +42700,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span
                     class="font-semibold text-theme-text"
@@ -42895,7 +42919,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -43118,7 +43142,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -43379,7 +43403,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -43643,7 +43667,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -43869,7 +43893,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -44092,7 +44116,7 @@ exports[`Transactions > should render with custom title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"

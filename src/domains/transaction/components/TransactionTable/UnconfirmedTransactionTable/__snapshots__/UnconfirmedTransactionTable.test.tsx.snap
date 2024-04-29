@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Unconfirmed transaction table > should not render in lg 1`] = `
 <DocumentFragment>
@@ -166,7 +166,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -289,7 +289,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -502,7 +502,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -625,7 +625,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -723,7 +723,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                     </div>
                   </div>
                   <div
-                    class="w-0 flex-1"
+                    class="w-0 flex-1 overflow-auto"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -868,7 +868,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                     </div>
                   </span>
                   <div
-                    class="w-0 flex-1"
+                    class="w-0 flex-1 overflow-auto"
                   >
                     <span>
                       <span
@@ -1103,7 +1103,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1226,7 +1226,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                   </div>
                 </span>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <span>
                     <span
@@ -1324,7 +1324,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                     </div>
                   </div>
                   <div
-                    class="w-0 flex-1"
+                    class="w-0 flex-1 overflow-auto"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -1469,7 +1469,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                     </div>
                   </span>
                   <div
-                    class="w-0 flex-1"
+                    class="w-0 flex-1 overflow-auto"
                   >
                     <span>
                       <span
