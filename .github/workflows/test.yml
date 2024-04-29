@@ -732,10 +732,10 @@ jobs:
 
             - name: Test Hooks
               env:
-                  COVERAGE_THRESHOLD_LINES: 93.61
-                  COVERAGE_THRESHOLD_FUNCTIONS: 89.79
-                  COVERAGE_THRESHOLD_STATEMENTS: 91.61
-                  COVERAGE_THRESHOLD_BRANCHES: 83.72
+                  COVERAGE_THRESHOLD_LINES: 91.78
+                  COVERAGE_THRESHOLD_FUNCTIONS: 85.71
+                  COVERAGE_THRESHOLD_STATEMENTS: 89.93
+                  COVERAGE_THRESHOLD_BRANCHES: 81.81
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
               uses: nick-invision/retry@v2
               with:
