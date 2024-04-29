@@ -55,6 +55,27 @@ describe("ContactListItem", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render compact", () => {
+		render(
+			<table>
+				<tbody>
+					<ContactListItem
+						profile={profile}
+						options={options}
+						onAction={vi.fn()}
+						onSend={vi.fn()}
+						item={contact}
+						availableNetworks={[{ hasBalance: true, id: devnet }]}
+						isCompact
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("ContactListItem__name")).toBeInTheDocument();
+		expect(screen.queryByTestId("ContactListItem__user--avatar")).not.toBeInTheDocument();
+	});
+
 	const renderContactList = ({ options, onAction = vi.fn(), onSend = vi.fn(), item = contact }) =>
 		render(
 			<table>
