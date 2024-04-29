@@ -11,6 +11,8 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
+import * as TooltipMock from "@/app/components/Tooltip";
+import { translations as contactTranslations } from "@/domains/contact/i18n";
 const options = [
 	{ label: "Option 1", value: "option_1" },
 	{ label: "Option 2", value: "option_2" },
@@ -173,5 +175,33 @@ describe("ContactListItem", () => {
 		userEvent.click(screen.getAllByTestId("ContactListItem__send-button")[0]);
 
 		expect(onSend).toHaveBeenCalledWith(contact);
+	});
+
+	it("should show no wallets tooltip if no network available", () => {
+		const tooltipMock = vi.spyOn(TooltipMock, "Tooltip");
+
+		render(
+			<table>
+				<tbody>
+					<ContactListItem
+						profile={profile}
+						options={options}
+						onAction={vi.fn()}
+						onSend={vi.fn()}
+						item={contact}
+						availableNetworks={[]}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(tooltipMock).toHaveBeenCalledWith(
+			expect.objectContaining({
+				content: contactTranslations.VALIDATION.NO_WALLETS,
+			}),
+			expect.anything(),
+		);
+
+		tooltipMock.mockRestore();
 	});
 });
