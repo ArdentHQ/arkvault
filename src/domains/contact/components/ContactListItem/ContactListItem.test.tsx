@@ -9,6 +9,7 @@ import {
 	render,
 	screen,
 	mockProfileWithPublicAndTestNetworks,
+	waitFor,
 } from "@/utils/testing-library";
 
 import * as TooltipMock from "@/app/components/Tooltip";
@@ -122,13 +123,13 @@ describe("ContactListItem", () => {
 	});
 
 	it("should render with multiple addresses", () => {
-		contact.addresses().create({
+		const newAddress1 = contact.addresses().create({
 			address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
 			coin: "ARK",
 			network: "ark.devnet",
 		});
 
-		contact.addresses().create({
+		const newAddress2 = contact.addresses().create({
 			address: "DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu",
 			coin: "ARK",
 			network: "ark.devnet",
@@ -137,6 +138,9 @@ describe("ContactListItem", () => {
 		const { asFragment } = renderContactList({ options });
 
 		expect(asFragment()).toMatchSnapshot();
+
+		contact.addresses().forget(newAddress1.id());
+		contact.addresses().forget(newAddress2.id());
 	});
 
 	it("should render options", () => {
@@ -205,7 +209,7 @@ describe("ContactListItem", () => {
 		tooltipMock.mockRestore();
 	});
 
-	it("should show no balance tooltip", () => {
+	it("should show no balance tooltip and disable send button", async () => {
 		const tooltipMock = vi.spyOn(TooltipMock, "Tooltip");
 
 		render(
@@ -222,6 +226,8 @@ describe("ContactListItem", () => {
 				</tbody>
 			</table>,
 		);
+
+		await waitFor(() => expect(screen.getByTestId("ContactListItem__send-button")).toBeDisabled());
 
 		expect(tooltipMock).toHaveBeenCalledWith(
 			expect.objectContaining({
