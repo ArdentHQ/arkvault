@@ -204,4 +204,32 @@ describe("ContactListItem", () => {
 
 		tooltipMock.mockRestore();
 	});
+
+	it("should show no balance tooltip", () => {
+		const tooltipMock = vi.spyOn(TooltipMock, "Tooltip");
+
+		render(
+			<table>
+				<tbody>
+					<ContactListItem
+						profile={profile}
+						options={options}
+						onAction={vi.fn()}
+						onSend={vi.fn()}
+						item={contact}
+						availableNetworks={[{ hasBalance: false, id: devnet }]}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(tooltipMock).toHaveBeenCalledWith(
+			expect.objectContaining({
+				content: contactTranslations.VALIDATION.NO_BALANCE,
+			}),
+			expect.anything(),
+		);
+
+		tooltipMock.mockRestore();
+	});
 });
