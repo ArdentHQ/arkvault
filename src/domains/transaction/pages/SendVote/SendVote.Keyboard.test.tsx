@@ -61,6 +61,11 @@ describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -102,6 +107,10 @@ describe("SendVote", () => {
 	afterEach(() => {
 		vi.useRealTimers();
 		resetProfileNetworksMock();
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	it.each(["with keyboard", "without keyboard"])("should send a vote transaction %s", async (inputMethod) => {
@@ -210,6 +219,10 @@ describe("SendVote", () => {
 				userEvent.click(sendButton());
 			}
 		});
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 

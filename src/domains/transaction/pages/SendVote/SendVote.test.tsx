@@ -98,6 +98,11 @@ describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -139,6 +144,10 @@ describe("SendVote", () => {
 	afterEach(() => {
 		vi.useRealTimers();
 		resetProfileNetworksMock();
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	it("should return to the select a delegate page to unvote", async () => {
@@ -268,9 +277,9 @@ describe("SendVote", () => {
 		votesMock.mockRestore();
 		const votingMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 
-		act(() => {
-			vi.advanceTimersByTime(1000);
-		});
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -478,6 +487,10 @@ describe("SendVote", () => {
 		);
 
 		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(2, voteFixture.data.id));
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 

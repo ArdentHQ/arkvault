@@ -116,6 +116,11 @@ const withKeyboard = "with keyboard";
 
 describe("Registration", () => {
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -144,6 +149,10 @@ describe("Registration", () => {
 
 		await syncDelegates(profile);
 		await syncFees(profile);
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	beforeEach(() => {
@@ -280,6 +289,7 @@ describe("Registration", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 
+		await act(() => vi.runOnlyPendingTimers());
 		// Step 4 - summary screen
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -359,6 +369,7 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Ledger Wallet"));
 
+		await act(() => vi.runOnlyPendingTimers());
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		isLedgerMock.mockRestore();
@@ -482,6 +493,10 @@ describe("Registration", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		// Step 4 - success screen
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();

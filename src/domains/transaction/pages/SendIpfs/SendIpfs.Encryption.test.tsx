@@ -15,6 +15,7 @@ import {
 	syncFees,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
+	act,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -69,6 +70,11 @@ describe("SendIpfs", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
+
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
@@ -97,6 +103,10 @@ describe("SendIpfs", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	it("should send an IPFS transaction using encryption password", async () => {
@@ -183,7 +193,11 @@ describe("SendIpfs", () => {
 
 		userEvent.click(sendButton());
 
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
 		expect(asFragment()).toMatchSnapshot();
 
 		signMock.mockRestore();

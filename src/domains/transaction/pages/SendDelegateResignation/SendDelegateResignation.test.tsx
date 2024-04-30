@@ -423,6 +423,8 @@ describe("SendDelegateResignation", () => {
 
 			userEvent.click(sendButton());
 
+			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
 			await act(() => vi.runOnlyPendingTimers());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
@@ -474,6 +476,8 @@ describe("SendDelegateResignation", () => {
 
 			userEvent.keyboard("{enter}");
 			userEvent.click(sendButton());
+
+			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 			await act(() => vi.runOnlyPendingTimers());
 
@@ -539,6 +543,8 @@ describe("SendDelegateResignation", () => {
 			});
 
 			userEvent.click(sendButton());
+
+			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 			await act(() => vi.runOnlyPendingTimers());
 
@@ -606,6 +612,8 @@ describe("SendDelegateResignation", () => {
 			await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 			userEvent.click(sendButton());
+
+			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 			await act(() => vi.runOnlyPendingTimers());
 
