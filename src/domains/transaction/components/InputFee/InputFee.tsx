@@ -70,7 +70,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 			const changeFee = {
 				[InputFeeViewType.Simple]: () => onChange(options[simpleValue].displayValue.toString()),
-				[InputFeeViewType.Advanced]: () => onChange(advancedValue ? `${advancedValue}` : "0"),
+				[InputFeeViewType.Advanced]: () => onChange(advancedValue),
 			};
 
 			changeFee[newValue]();
@@ -96,7 +96,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 				onChange={onChangeAdvancedValue}
 				showConvertedValue={showConvertedValues}
 				step={step}
-				value={advancedValue ?? ""}
+				value={advancedValue}
 			/>
 		);
 
