@@ -6,8 +6,8 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { renderHook } from "@testing-library/react-hooks";
 import { Trans, useTranslation } from "react-i18next";
-
 import { SendTransfer } from "./SendTransfer";
+import * as useTransactionUrlMock from "@/domains/transaction/hooks/use-transaction-url";
 import {
 	env,
 	screen,
@@ -24,8 +24,16 @@ import { server, requestMock } from "@/tests/mocks/server";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
+let mockQrResult = false;
 vi.mock("react-qr-reader", () => ({
-	QrReader: vi.fn().mockImplementation(() => null),
+	QrReader: vi.fn().mockImplementation(({ onResult }) => {
+		if (mockQrResult) {
+			onResult({
+				text: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+			});
+		}
+		return null;
+	}),
 }));
 
 const QRCodeModalButton = "QRCodeModalButton";
@@ -145,6 +153,53 @@ describe("SendTransfer QRModal", () => {
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
 
 		mockProfileWithOnlyPublicNetworksReset();
+	});
+
+	it("handles invalid qr code url", async () => {
+		mockQrResult = true;
+
+		const urlSearchParametersSpy = vi.spyOn(useTransactionUrlMock, "useTransactionURL").mockReturnValue({
+			generateSendTransferPath: vi.fn(),
+			urlSearchParameters: () => {
+				throw new Error("");
+			},
+		});
+
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = vi.spyOn(toasts, "error");
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
+
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		await waitFor(() =>
+			expect(toastSpy).toHaveBeenCalledWith(
+				t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }),
+			),
+		);
+
+		mockProfileWithOnlyPublicNetworksReset();
+
+		urlSearchParametersSpy.mockRestore();
+		toastSpy.mockRestore();
+
+		mockQrResult = false;
 	});
 
 	it("should read QR and error for invalid url", async () => {
