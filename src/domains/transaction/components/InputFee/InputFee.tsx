@@ -1,4 +1,3 @@
-import { isNil } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -41,12 +40,6 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 				setAdvancedValue(value.toString());
 			}
 		}, [value]); // eslint-disable-line react-hooks/exhaustive-deps
-
-		useEffect(() => {
-			if (avg && isNil(advancedValue)) {
-				onChangeAdvancedValue(avg.toString());
-			}
-		}, [avg, advancedValue]); // eslint-disable-line react-hooks/exhaustive-deps
 
 		const ticker = network.ticker();
 		const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
