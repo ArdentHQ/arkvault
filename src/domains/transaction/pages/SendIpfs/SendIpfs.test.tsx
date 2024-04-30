@@ -742,7 +742,7 @@ describe("SendIpfs", () => {
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
 
-		const { asFragment, history } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<SendIpfs />
 			</Route>,
