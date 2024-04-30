@@ -34,12 +34,12 @@ describe("SearchRecipient", () => {
 		}));
 	});
 
-	it("should not render if not open", () => {
+	it("should not render if not open", async () => {
 		const { asFragment } = render(
 			<SearchRecipient profile={profile} isOpen={false} recipients={recipients} onAction={vi.fn} />,
 		);
 
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+		await expect(screen.findByTestId("Modal__inner")).rejects.toThrow(/Unable to find/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -57,7 +57,7 @@ describe("SearchRecipient", () => {
 
 		render(<SearchRecipient profile={profile} isOpen recipients={searchRecipients} onAction={vi.fn} />);
 
-		expect(screen.queryByTestId("Modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(screen.getAllByText(commonTranslations.COMMON.CONTACT)).toHaveLength(searchRecipients.length);
 	});
 
