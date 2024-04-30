@@ -129,39 +129,47 @@ describe("FeeField", () => {
 			toastSpy.mockRestore();
 			useFeesSpy.mockRestore();
 		});
-		it.each(["transfer", "multiPayment", "vote", "delegateRegistration", "secondSignature"])(
-			"should show 0 when %s data is undefined",
-			async (transactionType) => {
-				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
+		it.each([
+			"transfer",
+			"multiPayment",
+			"vote",
+			"delegateRegistration",
+			"secondSignature",
+			"usernameRegistration",
+		])("should show 0 when %s data is undefined", async (transactionType) => {
+			const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
 
-				render(<Component type={transactionType} network={networks} data={undefined} />);
+			render(<Component type={transactionType} network={networks} data={undefined} />);
 
-				await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
+			await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
-				expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 DARK");
-				expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("0 DARK");
-				expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0 DARK");
+			expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 DARK");
+			expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("0 DARK");
+			expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0 DARK");
 
-				feeTypeSpy.mockRestore();
-			},
-		);
+			feeTypeSpy.mockRestore();
+		});
 
-		it.each(["transfer", "multiPayment", "vote", "delegateRegistration", "secondSignature"])(
-			"should show 0 %s data is not available yet",
-			async (transactionType) => {
-				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
+		it.each([
+			"transfer",
+			"multiPayment",
+			"vote",
+			"delegateRegistration",
+			"secondSignature",
+			"usernameRegistration",
+		])("should show 0 %s data is not available yet", async (transactionType) => {
+			const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
 
-				render(<Component type={transactionType} network={networks} data={{}} />);
+			render(<Component type={transactionType} network={networks} data={{}} />);
 
-				await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
+			await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
-				expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 DARK");
-				expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("0 DARK");
-				expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0 DARK");
+			expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 DARK");
+			expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("0 DARK");
+			expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0 DARK");
 
-				feeTypeSpy.mockRestore();
-			},
-		);
+			feeTypeSpy.mockRestore();
+		});
 
 		it("should recalculate fees on data changes", async () => {
 			const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
