@@ -49,6 +49,7 @@ export const SendTransfer = () => {
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
+
 	const {
 		hasAnyParameters: hasDeepLinkParameters,
 		hasReset: shouldResetForm,
@@ -312,6 +313,16 @@ export const SendTransfer = () => {
 					}
 					ledgerIsAwaitingDevice={!hasDeviceAvailable}
 					ledgerIsAwaitingApp={!isConnected}
+					onDeviceNotAvailable={() => {
+						setErrorMessage(
+							JSON.stringify({
+								message: t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"),
+								type: "failed",
+							}),
+						);
+
+						setActiveTab(SendTransferStep.ErrorStep);
+					}}
 				/>
 			</TabPanel>
 
@@ -321,12 +332,14 @@ export const SendTransfer = () => {
 
 			<TabPanel tabId={SendTransferStep.ErrorStep}>
 				<ErrorStep
-					onBack={() => {
+					onClose={() => {
 						assertWallet(wallet);
 						history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
 					}}
-					isRepeatDisabled={isSubmitting}
-					onRepeat={handleSubmit(() => submit())}
+					isBackDisabled={isSubmitting}
+					onBack={() => {
+						setActiveTab(SendTransferStep.FormStep);
+					}}
 					errorMessage={errorMessage}
 				/>
 			</TabPanel>

@@ -11,6 +11,8 @@ export const translations = {
 	MNEMONIC_VERIFICATION: {
 		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} Word",
 		WORD_NUMBER: "The {{position}}{{ordinalIndicator}} Word",
+		WORD_REQUIRED: "Word required",
+		WRONG_WORD: "Incorrect word entered",
 	},
 
 	MODAL_DELETE_WALLET: {
@@ -26,6 +28,7 @@ export const translations = {
 		CONNECT_DEVICE: "Connect your Ledger and confirm input.",
 		CONNECT_DEVICE_MODEL: "Connect your {{model}} and confirm input.",
 		CONNECT_SUCCESS: "Successfully connected",
+		DEVICE_NOT_AVAILABLE: "Unable to detect Ledger device",
 		DEVICE_NOT_SUPPORTED:
 			"A <bold>{{connectedModel}}</bold> is connected, but his operation requires a <bold>{{supportedModel}}</bold>. Connect the appropriate device to continue.",
 		GENERIC_CONNECTION_ERROR:
@@ -80,7 +83,9 @@ export const translations = {
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {
-			SUBTITLE: "Confirm your mnemonic passphrase to continue.",
+			PASSPHRASE_DISCLAIMER: "I am aware that if I lose my passphrase, I will lose access to my funds.",
+			SUBTITLE:
+				"Confirm that you’ve saved your secret passphrase by correctly entering the word in the designated input field below.",
 			TITLE: "Confirm Your Passphrase",
 		},
 
