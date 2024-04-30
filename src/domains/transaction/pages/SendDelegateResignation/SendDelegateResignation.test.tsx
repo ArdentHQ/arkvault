@@ -393,7 +393,7 @@ describe("SendDelegateResignation", () => {
 			broadcastMock.mockRestore();
 		});
 
-		it.only("should show error step and go back", async () => {
+		it("should show error step and go back", async () => {
 			// Run signDelegate once to prevent assertion error (sdk).
 			try {
 				await wallet.transaction().signDelegateResignation({
