@@ -109,6 +109,20 @@ describe("DelegateRegistrationForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render review step for mainsail", async () => {
+		// @TODO Remove mock once mainsail wallets are properly setup in tests.
+		// @see https://app.clickup.com/t/86dtaccqj
+		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
+
+		renderComponent({ activeTab: 2 });
+
+		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("TransactionPublicKey")).toBeInTheDocument();
+
+		mainsailSpy.mockRestore();
+	});
+
 	it("should set username", async () => {
 		const { form } = renderComponent();
 
