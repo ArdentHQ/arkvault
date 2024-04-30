@@ -76,6 +76,26 @@ describe("RecipientList", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render condensed variant and show amounts", () => {
+		const { container } = render(
+			<Route path="/profiles/:profileId">
+				<RecipientList
+					isEditable={true}
+					recipients={recipients}
+					showAmount={true}
+					showExchangeAmount={false}
+					ticker="ARK"
+					variant="condensed"
+				/>
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it("should render non-editable", () => {
 		const { container } = render(
 			<Route path="/profiles/:profileId">
