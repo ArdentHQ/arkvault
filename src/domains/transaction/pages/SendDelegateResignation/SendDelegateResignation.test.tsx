@@ -17,6 +17,7 @@ import {
 	syncFees,
 	waitFor,
 	within,
+	act,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
@@ -74,6 +75,11 @@ let secondMnemonicMock;
 
 describe("SendDelegateResignation", () => {
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -91,6 +97,10 @@ describe("SendDelegateResignation", () => {
 
 		await syncDelegates(profile);
 		await syncFees(profile);
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	describe("Delegate Resignation", () => {
@@ -413,6 +423,8 @@ describe("SendDelegateResignation", () => {
 
 			userEvent.click(sendButton());
 
+			await act(() => vi.runOnlyPendingTimers());
+
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 			expect(asFragment()).toMatchSnapshot();
@@ -462,6 +474,8 @@ describe("SendDelegateResignation", () => {
 
 			userEvent.keyboard("{enter}");
 			userEvent.click(sendButton());
+
+			await act(() => vi.runOnlyPendingTimers());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -526,9 +540,9 @@ describe("SendDelegateResignation", () => {
 
 			userEvent.click(sendButton());
 
-			await waitFor(() => {
-				expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
-			});
+			await act(() => vi.runOnlyPendingTimers());
+
+			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 			const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
@@ -592,6 +606,8 @@ describe("SendDelegateResignation", () => {
 			await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 			userEvent.click(sendButton());
+
+			await act(() => vi.runOnlyPendingTimers());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
