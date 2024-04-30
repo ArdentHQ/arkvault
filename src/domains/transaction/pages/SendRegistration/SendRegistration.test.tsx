@@ -10,6 +10,7 @@ import { Route } from "react-router-dom";
 import { SendRegistration } from "./SendRegistration";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import DelegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
+import UsernameRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/username-registration.json";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
 import {
@@ -28,7 +29,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
-
+import * as useFeesMock from "@/app/hooks/use-fees";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
@@ -79,6 +80,22 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 		sender: () => DelegateRegistrationFixture.data.sender,
 		type: () => "delegateRegistration",
 		username: () => DelegateRegistrationFixture.data.asset.delegate.username,
+		usesMultiSignature: () => false,
+	});
+
+const createUsernameRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
+	// @ts-ignore
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		amount: () => +UsernameRegistrationFixture.data.amount / 1e8,
+		data: () => ({ data: () => UsernameRegistrationFixture.data }),
+		explorerLink: () => `https://test.arkscan.io/transaction/${UsernameRegistrationFixture.data.id}`,
+		fee: () => +UsernameRegistrationFixture.data.fee / 1e8,
+		id: () => UsernameRegistrationFixture.data.id,
+		isMultiSignatureRegistration: () => false,
+		recipient: () => UsernameRegistrationFixture.data.recipient,
+		sender: () => UsernameRegistrationFixture.data.sender,
+		type: () => "usernameRegistration",
+		username: () => UsernameRegistrationFixture.data.asset.username,
 		usesMultiSignature: () => false,
 	});
 
@@ -173,6 +190,7 @@ describe("Registration", () => {
 		["delegateRegistration", "Register Delegate"],
 		["secondSignature", "Register Second Signature"],
 		["multiSignature", multisignatureTitle],
+		["usernameRegistration", "Register Username"],
 	])("should handle registrationType param (%s)", async (type, label) => {
 		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
 		history.push(registrationPath);
@@ -299,6 +317,102 @@ describe("Registration", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		nanoXTransportMock.mockRestore();
+	});
+
+	it.each([withKeyboard, "without keyboard"])("should register username %s", async (inputMethod) => {
+		// Emulate not found username
+		server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
+
+		// @TODO Remove mock once mainsail wallets are properly setup in tests.
+		// @see https://app.clickup.com/t/86dtaccqj
+		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
+		const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
+
+		const feesMock = vi.spyOn(useFeesMock, "useFees").mockImplementation(() => ({
+			calculate: vi.fn().mockResolvedValue({ avg: 25, max: 25, min: 25, static: 25 }),
+		}));
+		const nanoXTransportMock = mockNanoXTransport();
+		const { history } = await renderPage(wallet, "usernameRegistration");
+
+		// Step 1
+		await expect(screen.findByTestId("UsernameRegistrationForm__form-step")).resolves.toBeVisible();
+
+		screen.getByTestId("Input__username").focus();
+		userEvent.paste(screen.getByTestId("Input__username"), "test_username");
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
+
+		await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		if (inputMethod === withKeyboard) {
+			userEvent.keyboard("{enter}");
+		} else {
+			userEvent.click(continueButton());
+		}
+
+		await expect(screen.findByTestId("UsernameRegistrationForm__review-step")).resolves.toBeVisible();
+
+		if (inputMethod === withKeyboard) {
+			userEvent.keyboard("{enter}");
+		} else {
+			userEvent.click(continueButton());
+		}
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		userEvent.paste(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).toBeEnabled());
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signUsernameRegistration")
+			.mockReturnValue(Promise.resolve(UsernameRegistrationFixture.data.id));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [UsernameRegistrationFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createUsernameRegistrationMock(wallet);
+
+		if (inputMethod === withKeyboard) {
+			userEvent.keyboard("{enter}");
+		} else {
+			userEvent.click(sendButton());
+		}
+
+		await waitFor(() => {
+			expect(signMock).toHaveBeenCalledWith({
+				data: { username: "test_username" },
+				fee: 25,
+				signatory: expect.any(Signatories.Signatory),
+			});
+		});
+
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(UsernameRegistrationFixture.data.id));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(UsernameRegistrationFixture.data.id));
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+
+		// Step 4 - summary screen
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
+		// Go back to wallet
+		const historySpy = vi.spyOn(history, "push");
+		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+
+		historySpy.mockRestore();
+
+		nanoXTransportMock.mockRestore();
+		feesMock.mockRestore();
+		mainsailSpy.mockRestore();
+		envAvailableNetworksMock.mockRestore();
 	});
 
 	it.skip("should reset authentication when a supported Nano X is added", async () => {

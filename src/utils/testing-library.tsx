@@ -1,5 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import { ARK } from "@ardenthq/sdk-ark";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
 import { createHashHistory, HashHistory, To } from "history";
@@ -170,7 +171,7 @@ export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordPro
 
 const environmentWithMocks = () =>
 	new Environment({
-		coins: { ARK },
+		coins: { ARK, Mainsail },
 		httpClient,
 		ledgerTransportFactory,
 		storage: new StubStorage(),
