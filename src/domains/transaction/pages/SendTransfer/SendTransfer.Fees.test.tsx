@@ -18,6 +18,7 @@ import {
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
+	act,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -72,6 +73,11 @@ vi.mock("@/utils/delay", () => ({
 
 describe("SendTransfer Fee Handling", () => {
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
@@ -120,6 +126,10 @@ describe("SendTransfer Fee Handling", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	it("should update available amount after sender address changed", async () => {
@@ -758,6 +768,8 @@ describe("SendTransfer Fee Handling", () => {
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 		userEvent.click(sendButton());
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("8f913b6b71"));
 
