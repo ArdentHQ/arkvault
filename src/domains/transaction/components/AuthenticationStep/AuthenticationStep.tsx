@@ -136,7 +136,7 @@ const LedgerAuthentication = ({
 					)}
 
 					{!requireLedgerConfirmation && (
-						<div className="space-y-8">
+						<div className="space-y-8" data-testid="AuthenticationStep--waitingledger">
 							<Image
 								name="WaitingLedgerDevice"
 								domain="wallet"

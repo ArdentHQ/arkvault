@@ -1,6 +1,6 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Vitest Snapshot v1
 
-exports[`MultiSignatureDetail > should fail to broadcast transaction and show error step 1`] = `
+exports[`MultiSignatureDetail > should fail to broadcast transaction, show error step and handle back 1`] = `
 <div>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -68,7 +68,9 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -648,7 +650,9 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -1228,7 +1232,9 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -1782,7 +1788,9 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -2324,7 +2332,9 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -2810,7 +2820,9 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -3554,7 +3566,9 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -3995,7 +4009,9 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -4537,7 +4553,9 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -5033,7 +5051,9 @@ exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -5847,7 +5867,9 @@ exports[`MultiSignatureDetail > should show send button when able to add final s
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >
@@ -6415,7 +6437,9 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <section
+                    data-testid="MultiSignatureDetail--summaryStep"
+                  >
                     <div
                       class="flex items-end justify-between bg-theme-background"
                     >

@@ -330,6 +330,24 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
+	it("shouldnt show ledger confirmation if does not require confirmation", async () => {
+		mockNanoXTransport();
+		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+
+		renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} requireLedgerConfirmation={false} />, {
+			withProviders: true,
+		});
+
+		await expect(screen.findByTestId("AuthenticationStep--waitingledger")).resolves.toBeVisible();
+
+		expect(screen.queryByTestId("LedgerConfirmation-description")).not.toBeInTheDocument();
+
+		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
+		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
+
+		vi.clearAllMocks();
+	});
+
 	it("should specify ledger supported model", async () => {
 		mockNanoXTransport();
 		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);

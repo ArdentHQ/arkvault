@@ -109,6 +109,20 @@ describe("DelegateRegistrationForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render review step for mainsail", async () => {
+		// @TODO Remove mock once mainsail wallets are properly setup in tests.
+		// @see https://app.clickup.com/t/86dtaccqj
+		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
+
+		renderComponent({ activeTab: 2 });
+
+		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("TransactionPublicKey")).toBeInTheDocument();
+
+		mainsailSpy.mockRestore();
+	});
+
 	it("should set username", async () => {
 		const { form } = renderComponent();
 
@@ -272,6 +286,35 @@ describe("DelegateRegistrationForm", () => {
 		expect(screen.getByText("test_delegate")).toBeInTheDocument();
 	});
 
+	it("should output transaction details for mainsail", () => {
+		// @TODO Remove mock once mainsail wallets are properly setup in tests.
+		// @see https://app.clickup.com/t/86dtaccqj
+		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
+
+		const translations = vi.fn((translation) => translation);
+		const transaction = {
+			amount: () => delegateRegistrationFixture.data.amount / 1e8,
+			data: () => ({ data: () => delegateRegistrationFixture.data }),
+			fee: () => delegateRegistrationFixture.data.fee / 1e8,
+			id: () => delegateRegistrationFixture.data.id,
+			recipient: () => delegateRegistrationFixture.data.recipient,
+			sender: () => delegateRegistrationFixture.data.sender,
+			username: () => delegateRegistrationFixture.data.asset.delegate.username,
+		} as Contracts.SignedTransactionData;
+
+		render(
+			<DelegateRegistrationForm.transactionDetails
+				transaction={transaction}
+				translations={translations}
+				wallet={wallet}
+			/>,
+		);
+
+		expect(screen.getByTestId("TransactionPublicKey")).toBeInTheDocument();
+
+		mainsailSpy.mockRestore();
+	});
+
 	it("should sign transaction using password encryption", async () => {
 		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
 		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
@@ -314,5 +357,55 @@ describe("DelegateRegistrationForm", () => {
 		transactionMock.mockRestore();
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
+	});
+
+	it("should sign transaction with validator public key for mainsail", async () => {
+		// @TODO Remove mock once mainsail wallets are properly setup in tests.
+		// @see https://app.clickup.com/t/86dtaccqj
+		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
+
+		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
+
+		const form = {
+			clearErrors: vi.fn(),
+			getValues: () => ({
+				encryptionPassword: "password",
+				fee: "1",
+				mnemonic: MNEMONICS[0],
+				network: wallet.network(),
+				senderAddress: wallet.address(),
+				username: "test_delegate",
+				validatorPublicKey: "public_key",
+			}),
+			setError: vi.fn(),
+			setValue: vi.fn(),
+		};
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signDelegateRegistration")
+			.mockReturnValue(Promise.resolve(delegateRegistrationFixture.data.id));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [delegateRegistrationFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createTransactionMock(wallet);
+
+		await signDelegateRegistration({
+			env,
+			form,
+			profile,
+		});
+
+		expect(signMock).toHaveBeenCalledWith({ data: { validatorPublicKey: "public_key" }, fee: 1 });
+		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		walletUsesWIFMock.mockRestore();
+		walletWifMock.mockRestore();
+		mainsailSpy.mockRestore();
 	});
 });
