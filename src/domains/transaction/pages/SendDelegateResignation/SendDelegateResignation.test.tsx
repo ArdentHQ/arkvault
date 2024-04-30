@@ -228,6 +228,28 @@ describe("SendDelegateResignation", () => {
 			await expect(formStep()).resolves.toBeVisible();
 		});
 
+		it("should navigate with enter key", async () => {
+			renderPage();
+
+			await expect(formStep()).resolves.toBeVisible();
+
+			userEvent.keyboard("{enter}");
+
+			await expect(reviewStep()).resolves.toBeVisible();
+		});
+
+		it("shouldnt navigate to next step twice with enter key on button", async () => {
+			renderPage();
+
+			await expect(formStep()).resolves.toBeVisible();
+
+			continueButton().focus();
+
+			userEvent.keyboard("{enter}");
+
+			await expect(reviewStep()).resolves.toBeVisible();
+		});
+
 		it("should render 3rd step", async () => {
 			const { asFragment } = renderPage();
 
