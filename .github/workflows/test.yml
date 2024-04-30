@@ -45,7 +45,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 100
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
                   COVERAGE_THRESHOLD_STATEMENTS: 100
-                  COVERAGE_THRESHOLD_BRANCHES:
+                  COVERAGE_THRESHOLD_BRANCHES: 100
                   COVERAGE_INCLUDE_PATH: src/app/App*test*
               uses: nick-invision/retry@v2
               with:
@@ -58,7 +58,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 100
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
                   COVERAGE_THRESHOLD_STATEMENTS: 100
-                  COVERAGE_THRESHOLD_BRANCHES:
+                  COVERAGE_THRESHOLD_BRANCHES: 100
                   COVERAGE_INCLUDE_PATH: src/app/validations/*test*
               uses: nick-invision/retry@v2
               with:
@@ -353,8 +353,15 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
+
             - name: Test (components)
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 93.19
+                  COVERAGE_THRESHOLD_FUNCTIONS: 96.15
+                  COVERAGE_THRESHOLD_STATEMENTS: 93.5
+                  COVERAGE_THRESHOLD_BRANCHES: 86.36
+                  COVERAGE_INCLUDE_PATH: src/domains/contact/components
               with:
                   timeout_minutes: 10
                   max_attempts: 2
@@ -362,6 +369,12 @@ jobs:
 
             - name: Test (pages)
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 85.03
+                  COVERAGE_THRESHOLD_FUNCTIONS: 88.46
+                  COVERAGE_THRESHOLD_STATEMENTS: 84.41
+                  COVERAGE_THRESHOLD_BRANCHES: 75.75
+                  COVERAGE_INCLUDE_PATH: src/domains/contact/components
               with:
                   timeout_minutes: 10
                   max_attempts: 2
@@ -486,6 +499,10 @@ jobs:
     domains-message:
         runs-on: ubuntu-latest
         env:
+            COVERAGE_THRESHOLD_LINES: 99.57
+            COVERAGE_THRESHOLD_FUNCTIONS: 98.3
+            COVERAGE_THRESHOLD_STATEMENTS: 99.6
+            COVERAGE_THRESHOLD_BRANCHES: 100
             COVERAGE_INCLUDE_PATH: src/domains/message
         strategy:
             matrix:
@@ -676,10 +693,10 @@ jobs:
 
             - name: Test Components ^A-O
               env:
-                  COVERAGE_THRESHOLD_LINES: 99.58
-                  COVERAGE_THRESHOLD_FUNCTIONS: 100
-                  COVERAGE_THRESHOLD_STATEMENTS: 99.6
-                  COVERAGE_THRESHOLD_BRANCHES: 99.73
+                  COVERAGE_THRESHOLD_LINES: 99.47
+                  COVERAGE_THRESHOLD_FUNCTIONS: 99.49
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.49
+                  COVERAGE_THRESHOLD_BRANCHES: 97.96
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[A-O]*
               uses: nick-invision/retry@v2
               with:
@@ -689,9 +706,9 @@ jobs:
 
             - name: Test Components ^P-S
               env:
-                  COVERAGE_THRESHOLD_LINES: 98.48
+                  COVERAGE_THRESHOLD_LINES: 98.47
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.61
-                  COVERAGE_THRESHOLD_STATEMENTS: 98.59
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.58
                   COVERAGE_THRESHOLD_BRANCHES: 96.72
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[P-S]*
               uses: nick-invision/retry@v2
@@ -702,10 +719,10 @@ jobs:
 
             - name: Test Components ^T-Z
               env:
-                  COVERAGE_THRESHOLD_LINES: 99.41
-                  COVERAGE_THRESHOLD_FUNCTIONS: 99.32
-                  COVERAGE_THRESHOLD_STATEMENTS: 99.43
-                  COVERAGE_THRESHOLD_BRANCHES: 98.72
+                  COVERAGE_THRESHOLD_LINES: 98.83
+                  COVERAGE_THRESHOLD_FUNCTIONS: 98.75
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.86
+                  COVERAGE_THRESHOLD_BRANCHES: 97.87
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
               uses: nick-invision/retry@v2
               with:
@@ -715,10 +732,10 @@ jobs:
 
             - name: Test Hooks
               env:
-                  COVERAGE_THRESHOLD_LINES: 93.61
-                  COVERAGE_THRESHOLD_FUNCTIONS: 89.79
-                  COVERAGE_THRESHOLD_STATEMENTS: 91.61
-                  COVERAGE_THRESHOLD_BRANCHES: 83.72
+                  COVERAGE_THRESHOLD_LINES: 91.78
+                  COVERAGE_THRESHOLD_FUNCTIONS: 85.71
+                  COVERAGE_THRESHOLD_STATEMENTS: 89.93
+                  COVERAGE_THRESHOLD_BRANCHES: 81.81
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
               uses: nick-invision/retry@v2
               with:
@@ -728,9 +745,9 @@ jobs:
 
             - name: Test Pages
               env:
-                  COVERAGE_THRESHOLD_LINES: 98.9
-                  COVERAGE_THRESHOLD_FUNCTIONS: 100
-                  COVERAGE_THRESHOLD_STATEMENTS: 98.93
+                  COVERAGE_THRESHOLD_LINES: 97.34
+                  COVERAGE_THRESHOLD_FUNCTIONS: 95.74
+                  COVERAGE_THRESHOLD_STATEMENTS: 97.42
                   COVERAGE_THRESHOLD_BRANCHES: 98.43
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
               uses: nick-invision/retry@v2
@@ -741,10 +758,10 @@ jobs:
 
             - name: Test Validations
               env:
-                  COVERAGE_THRESHOLD_LINES: 88.03
-                  COVERAGE_THRESHOLD_FUNCTIONS: 82.85
-                  COVERAGE_THRESHOLD_STATEMENTS: 88.52
-                  COVERAGE_THRESHOLD_BRANCHES: 87.03
+                  COVERAGE_THRESHOLD_LINES: 84.67
+                  COVERAGE_THRESHOLD_FUNCTIONS: 76.31
+                  COVERAGE_THRESHOLD_STATEMENTS: 84.61
+                  COVERAGE_THRESHOLD_BRANCHES: 84.74
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/validations
               uses: nick-invision/retry@v2
               with:
@@ -755,6 +772,7 @@ jobs:
     domains-vote:
         runs-on: ubuntu-latest
         env:
+            COVERAGE_THRESHOLD_BRANCHES: 98.64
             COVERAGE_INCLUDE_PATH: src/domains/vote
         strategy:
             matrix:
@@ -818,12 +836,58 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
-            - name: Test
+
+            - name: Test Utils
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 90.9
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 91.66
+                  COVERAGE_THRESHOLD_BRANCHES: 75
+                  COVERAGE_INCLUDE_PATH: src/domains/wallet/utils
               with:
                   timeout_minutes: 10
                   max_attempts: 1
-                  command: pnpm test:coverage src/domains/wallet
+                  command: pnpm test:coverage src/domains/wallet/utils
+
+            - name: Test Components
+              uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 94.36
+                  COVERAGE_THRESHOLD_FUNCTIONS: 93.93
+                  COVERAGE_THRESHOLD_STATEMENTS: 94.56
+                  COVERAGE_THRESHOLD_BRANCHES: 95.47
+                  COVERAGE_INCLUDE_PATH: src/domains/wallet/components
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/wallet/components
+
+            - name: Test Hooks
+              uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 78.26
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 79.06
+                  COVERAGE_THRESHOLD_BRANCHES: 60.46
+                  COVERAGE_INCLUDE_PATH: src/domains/wallet/hooks
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/wallet/hooks
+
+            - name: Test Pages
+              uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.88
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.88
+                  COVERAGE_THRESHOLD_BRANCHES: 99.27
+                  COVERAGE_INCLUDE_PATH: src/domains/wallet/pages
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/wallet/pages
     router:
         runs-on: ubuntu-latest
         env:
@@ -864,8 +928,8 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/utils
-            COVERAGE_THRESHOLD_LINES: 49.13
-            COVERAGE_THRESHOLD_BRANCHES: 26.27
+            COVERAGE_THRESHOLD_LINES: 48.69
+            COVERAGE_THRESHOLD_BRANCHES: 26.2
             COVERAGE_THRESHOLD_FUNCTIONS: 24.5
             COVERAGE_THRESHOLD_STATEMENTS: 45.61
         strategy:

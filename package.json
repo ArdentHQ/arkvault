@@ -1,8 +1,8 @@
 {
 	"name": "arkvault",
-	"version": "1.14.0",
+	"version": "1.15.0",
 	"engines": {
-		"node": ">=18.12.1"
+		"node": "18.x"
 	},
 	"private": true,
 	"description": "ARKVault",
@@ -42,14 +42,14 @@
 	},
 	"dependencies": {
 		"@ardenthq/arkvault-url": "^1.2.0",
-		"@ardenthq/sdk": "2.0.0-beta.6",
-		"@ardenthq/sdk-ark": "2.0.0-beta.6",
-		"@ardenthq/sdk-cryptography": "2.0.0-beta.6",
-		"@ardenthq/sdk-helpers": "2.0.0-beta.6",
-		"@ardenthq/sdk-intl": "2.0.0-beta.6",
-		"@ardenthq/sdk-ledger": "2.0.0-beta.6",
-		"@ardenthq/sdk-mainsail": "2.0.0-beta.6",
-		"@ardenthq/sdk-profiles": "2.0.0-beta.6",
+		"@ardenthq/sdk": "2.0.0-beta.7",
+		"@ardenthq/sdk-ark": "2.0.0-beta.7",
+		"@ardenthq/sdk-cryptography": "2.0.0-beta.7",
+		"@ardenthq/sdk-helpers": "2.0.0-beta.7",
+		"@ardenthq/sdk-intl": "2.0.0-beta.7",
+		"@ardenthq/sdk-ledger": "2.0.0-beta.7",
+		"@ardenthq/sdk-mainsail": "2.0.0-beta.7",
+		"@ardenthq/sdk-profiles": "2.0.0-beta.7",
 		"@emotion/cache": "^11.10.5",
 		"@emotion/react": "^11.10.6",
 		"@emotion/styled": "^11.10.6",
@@ -120,7 +120,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.55.0",
 		"@typescript-eslint/parser": "^5.55.0",
 		"@vitejs/plugin-react": "^4.0.0",
-		"@vitest/coverage-istanbul": "0.24.5",
+		"@vitest/coverage-istanbul": "^0.24.0",
 		"autoprefixer": "^10.4.14",
 		"babel-plugin-macros": "^3.1.0",
 		"cross-fetch": "^3.1.5",
@@ -162,7 +162,7 @@
 		"vite-plugin-pwa": "^0.15.1",
 		"vite-plugin-svgr": "^3.2.0",
 		"vite-tsconfig-paths": "^4.0.7",
-		"vitest": "^0.29.8",
+		"vitest": "^0.24.0",
 		"workbox-window": "^6.6.0"
 	},
 	"babelMacros": {

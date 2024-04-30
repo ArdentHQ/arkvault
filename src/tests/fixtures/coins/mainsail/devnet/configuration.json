@@ -1,0 +1,60 @@
+{
+	"data": {
+		"constants": {
+			"fees": {
+				"staticFees": {
+					"vote": 100000000,
+					"transfer": 10000000,
+					"multiPayment": 10000000,
+					"multiSignature": 500000000,
+					"usernameResignation": 2500000000,
+					"usernameRegistration": 2500000000,
+					"validatorResignation": 2500000000,
+					"validatorRegistration": 2500000000
+				}
+			},
+			"block": {
+				"version": 1,
+				"maxPayload": 2097152,
+				"maxTransactions": 150
+			},
+			"epoch": "2023-12-21T00:00:00.000Z",
+			"height": 75600,
+			"reward": "200000000",
+			"address": {
+				"base58": 30
+			},
+			"satoshi": {
+				"decimals": 8,
+				"denomination": 100000000
+			},
+			"blockTime": 8000,
+			"stageTimeout": 2000,
+			"activeValidators": 53,
+			"multiPaymentLimit": 256,
+			"vendorFieldLength": 255,
+			"stageTimeoutIncrease": 2000
+		},
+		"core": {
+			"version": "0.0.1-alpha.13"
+		},
+		"explorer": "",
+		"nethash": "7b9a7c6a14d3f8fb3f47c434b8c6ef0843d5622f6c209ffeec5411aabbf4bf1c",
+		"ports": {},
+		"slip44": 1,
+		"symbol": "TѦ",
+		"token": "ARK",
+		"transactionPool": {
+			"dynamicFees": {
+				"enabled": false
+			},
+			"maxTransactionAge": 2700,
+			"maxTransactionBytes": 9000,
+			"maxTransactionsInPool": 15000,
+			"maxTransactionsPerRequest": 40,
+			"maxTransactionsPerSender": 150
+		},
+		"version": 30,
+		"wif": 186
+	}
+}

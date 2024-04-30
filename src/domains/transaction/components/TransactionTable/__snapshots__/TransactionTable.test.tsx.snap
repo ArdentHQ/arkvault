@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TransactionTable > loading state > should render 1`] = `
 <DocumentFragment>
@@ -3920,7 +3920,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4157,7 +4157,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4375,7 +4375,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4604,7 +4604,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4833,7 +4833,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5062,7 +5062,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5291,7 +5291,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5520,7 +5520,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5749,7 +5749,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5986,7 +5986,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6185,7 +6185,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -6392,7 +6392,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -6577,7 +6577,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -6773,7 +6773,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -6969,7 +6969,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -7165,7 +7165,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -7361,7 +7361,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -7557,7 +7557,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -7753,7 +7753,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -7960,7 +7960,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -8169,7 +8169,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -8376,7 +8376,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -8561,7 +8561,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -8757,7 +8757,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -8953,7 +8953,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -9149,7 +9149,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -9345,7 +9345,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -9541,7 +9541,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -9737,7 +9737,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -9944,7 +9944,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       </div>
                     </div>
                     <div
-                      class="w-0 flex-1"
+                      class="w-0 flex-1 overflow-auto"
                     >
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -10343,7 +10343,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -10580,7 +10580,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -10798,7 +10798,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -11027,7 +11027,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -11256,7 +11256,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -11485,7 +11485,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -11714,7 +11714,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -11943,7 +11943,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -12172,7 +12172,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -12409,7 +12409,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -12798,7 +12798,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -13035,7 +13035,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -13253,7 +13253,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -13482,7 +13482,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -13711,7 +13711,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -13940,7 +13940,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -14169,7 +14169,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -14398,7 +14398,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -14627,7 +14627,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -14864,7 +14864,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -15253,7 +15253,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -15490,7 +15490,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -15708,7 +15708,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -15937,7 +15937,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -16166,7 +16166,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -16395,7 +16395,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -16624,7 +16624,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -16853,7 +16853,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -17082,7 +17082,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -17319,7 +17319,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   </div>
                 </div>
                 <div
-                  class="w-0 flex-1"
+                  class="w-0 flex-1 overflow-auto"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"

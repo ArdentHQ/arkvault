@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`DelegateRow > should emit action on select button 1`] = `
 <DocumentFragment>
@@ -12,7 +12,9 @@ exports[`DelegateRow > should emit action on select button 1`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -34,10 +36,10 @@ exports[`DelegateRow > should emit action on select button 1`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -208,7 +210,9 @@ exports[`DelegateRow > should render 1`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -230,10 +234,10 @@ exports[`DelegateRow > should render 1`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -404,7 +408,9 @@ exports[`DelegateRow > should render changed style when network requires vote am
           <div
             class="font-bold border-2 border-r-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-14huxtf"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -426,10 +432,10 @@ exports[`DelegateRow > should render changed style when network requires vote am
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -645,7 +651,9 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-14huxtf"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -667,10 +675,10 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -841,7 +849,9 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-mx19qq"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -863,10 +873,10 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -1028,7 +1038,9 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent h-12 css-mx19qq"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -1050,10 +1062,10 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -1215,7 +1227,9 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent h-12 css-mx19qq"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -1237,10 +1251,10 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -1414,7 +1428,9 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-14huxtf"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -1436,10 +1452,10 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -1601,7 +1617,9 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -1623,10 +1641,10 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -1788,7 +1806,9 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -1810,10 +1830,10 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -1987,7 +2007,9 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-14huxtf"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -2009,10 +2031,10 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"
@@ -2183,7 +2205,9 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           <div
             class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
           >
-            <span />
+            <span>
+              0
+            </span>
           </div>
         </td>
         <td>
@@ -2205,10 +2229,10 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
               </div>
             </div>
             <div
-              class="relative grow"
+              class="relative grow "
             >
               <span
-                class="absolute flex w-full items-center"
+                class="absolute flex w-full items-center whitespace-nowrap"
               >
                 <div
                   class="overflow-hidden text-ellipsis"

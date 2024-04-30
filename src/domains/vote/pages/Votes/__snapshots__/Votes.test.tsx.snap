@@ -973,10 +973,10 @@ exports[`Votes > should filter current delegates 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -2322,7 +2322,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                   <strong>
                     arkx
                   </strong>
-                  ", the Delegate you are voting for has resigned. Press continue to unvote or select a new Delegate below.
+                  ", the Validator you are voting for has resigned. Press continue to unvote or select a new Validator below.
                 </div>
               </div>
             </div>
@@ -2525,10 +2525,10 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -2718,10 +2718,10 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -2911,10 +2911,10 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -4410,10 +4410,10 @@ exports[`Votes > should render 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -4603,10 +4603,10 @@ exports[`Votes > should render 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -4796,10 +4796,10 @@ exports[`Votes > should render 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -6291,10 +6291,10 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -6484,10 +6484,10 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -6677,10 +6677,10 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -8889,10 +8889,10 @@ exports[`Votes > should select a delegate 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -9082,10 +9082,10 @@ exports[`Votes > should select a delegate 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -9275,10 +9275,10 @@ exports[`Votes > should select a delegate 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -13395,7 +13395,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                   <strong>
                     arkx
                   </strong>
-                  ", the Delegate you are voting for has resigned. Press continue to unvote or select a new Delegate below.
+                  ", the Validator you are voting for has resigned. Press continue to unvote or select a new Validator below.
                 </div>
               </div>
             </div>
@@ -13598,10 +13598,10 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -13791,10 +13791,10 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -13984,10 +13984,10 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -16836,7 +16836,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   <strong>
                     arkx
                   </strong>
-                  ", the Delegate you are voting for has resigned. Press continue to unvote or select a new Delegate below.
+                  ", the Validator you are voting for has resigned. Press continue to unvote or select a new Validator below.
                 </div>
               </div>
             </div>
@@ -17039,10 +17039,10 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -17232,10 +17232,10 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
@@ -17428,10 +17428,10 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           </div>
                         </div>
                         <div
-                          class="relative grow"
+                          class="relative grow "
                         >
                           <span
-                            class="absolute flex w-full items-center"
+                            class="absolute flex w-full items-center whitespace-nowrap"
                           >
                             <div
                               class="overflow-hidden text-ellipsis"
