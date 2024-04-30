@@ -1,4 +1,3 @@
-import { isNil } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -42,12 +41,6 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 			}
 		}, [value]); // eslint-disable-line react-hooks/exhaustive-deps
 
-		useEffect(() => {
-			if (avg && isNil(advancedValue)) {
-				onChangeAdvancedValue(avg.toString());
-			}
-		}, [avg, advancedValue]); // eslint-disable-line react-hooks/exhaustive-deps
-
 		const ticker = network.ticker();
 		const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 		const { convert } = useExchangeRate({ exchangeTicker, ticker });
@@ -77,7 +70,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 			const changeFee = {
 				[InputFeeViewType.Simple]: () => onChange(options[simpleValue].displayValue.toString()),
-				[InputFeeViewType.Advanced]: () => onChange(advancedValue ? `${advancedValue}` : "0"),
+				[InputFeeViewType.Advanced]: () => onChange(advancedValue),
 			};
 
 			changeFee[newValue]();
@@ -103,7 +96,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 				onChange={onChangeAdvancedValue}
 				showConvertedValue={showConvertedValues}
 				step={step}
-				value={advancedValue ?? ""}
+				value={advancedValue}
 			/>
 		);
 

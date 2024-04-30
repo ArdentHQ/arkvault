@@ -33,7 +33,7 @@ export const TransactionPublicKey = ({ borderPosition = "top", publicKey, ...pro
 			borderPosition={borderPosition}
 			{...properties}
 		>
-			<div className="flex w-full items-center space-x-3 overflow-hidden">
+			<div data-testid="TransactionPublicKey" className="flex w-full items-center space-x-3 overflow-hidden">
 				<span className={cn("overflow-hidden", { "w-full": !isMdAndAbove })}>
 					<div className={cn("flex items-center", { "justify-end": !isMdAndAbove })}>
 						{typeof publicKey === "string" && <TruncateMiddle text={publicKey} maxChars={maxChars} />}
