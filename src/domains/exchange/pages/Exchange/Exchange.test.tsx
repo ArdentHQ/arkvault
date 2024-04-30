@@ -219,6 +219,7 @@ describe("Exchange", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
 		profile.exchangeTransactions().create(stubData);
+		const { restoreExchangeMocks } = mockExchangeTransaction(profile);
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -244,12 +245,15 @@ describe("Exchange", () => {
 		expect(screen.getAllByTestId("TableRemoveButton")).toHaveLength(profile.exchangeTransactions().count());
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
+		await restoreExchangeMocks();
 	});
 
 	it("should show exchange transaction history as compact on md screen even if user uses expanded tables", async () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
 		profile.exchangeTransactions().create(stubData);
+
+		const { restoreExchangeMocks } = mockExchangeTransaction(profile);
 
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/exchange">
@@ -278,6 +282,8 @@ describe("Exchange", () => {
 		);
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
+
+		await restoreExchangeMocks();
 	});
 
 	it("should navigate to exchange transaction", async () => {
@@ -428,40 +434,10 @@ describe("Exchange", () => {
 		});
 	});
 
-	it("should show exchange transaction history", async () => {
-		profile.exchangeTransactions().create(stubData);
-		mockExchangeTransaction(profile);
-
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
-			{
-				history,
-				route: exchangeURL,
-			},
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
-		});
-
-		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
-
-		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
-
-		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
-		expect(screen.getAllByTestId("TableRemoveButton--compact")).toHaveLength(
-			profile.exchangeTransactions().count(),
-		);
-	});
-
 	it("should update exchange transaction status", async () => {
+		profile.exchangeTransactions().create(stubData);
+		const { restoreExchangeMocks } = mockExchangeTransaction(profile);
+
 		const updateSpy = vi.spyOn(profile.exchangeTransactions(), "update");
 		const exchangeTransaction = profile.exchangeTransactions().values()[0];
 
@@ -506,5 +482,41 @@ describe("Exchange", () => {
 		});
 
 		updateSpy.mockReset();
+		await restoreExchangeMocks();
+	});
+
+	it("should show exchange transaction history", async () => {
+		profile.exchangeTransactions().create(stubData);
+		const { restoreExchangeMocks } = mockExchangeTransaction(profile);
+
+		render(
+			<Route path="/profiles/:profileId/exchange">
+				<ExchangeProvider>
+					<Wrapper>
+						<Exchange />
+					</Wrapper>
+				</ExchangeProvider>
+			</Route>,
+			{
+				history,
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
+		});
+
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
+
+		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
+
+		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
+		expect(screen.getAllByTestId("TableRemoveButton--compact")).toHaveLength(
+			profile.exchangeTransactions().count(),
+		);
+
+		await restoreExchangeMocks();
 	});
 });
