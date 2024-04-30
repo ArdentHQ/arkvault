@@ -272,6 +272,35 @@ describe("DelegateRegistrationForm", () => {
 		expect(screen.getByText("test_delegate")).toBeInTheDocument();
 	});
 
+	it("should output transaction details for mainsail", () => {
+		// @TODO Remove mock once mainsail wallets are properly setup in tests.
+		// @see https://app.clickup.com/t/86dtaccqj
+		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
+
+		const translations = vi.fn((translation) => translation);
+		const transaction = {
+			amount: () => delegateRegistrationFixture.data.amount / 1e8,
+			data: () => ({ data: () => delegateRegistrationFixture.data }),
+			fee: () => delegateRegistrationFixture.data.fee / 1e8,
+			id: () => delegateRegistrationFixture.data.id,
+			recipient: () => delegateRegistrationFixture.data.recipient,
+			sender: () => delegateRegistrationFixture.data.sender,
+			username: () => delegateRegistrationFixture.data.asset.delegate.username,
+		} as Contracts.SignedTransactionData;
+
+		render(
+			<DelegateRegistrationForm.transactionDetails
+				transaction={transaction}
+				translations={translations}
+				wallet={wallet}
+			/>,
+		);
+
+		expect(screen.getByTestId("TransactionPublicKey")).toBeInTheDocument();
+
+		mainsailSpy.mockRestore();
+	});
+
 	it("should sign transaction using password encryption", async () => {
 		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
 		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
