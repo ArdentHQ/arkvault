@@ -628,7 +628,7 @@ describe("Registration", () => {
 		nanoXTransportMock.mockRestore();
 	});
 
-	it("should show error step and go back", async () => {
+	it("should show error step and close", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const { asFragment } = await renderPage(secondWallet);
 
@@ -694,6 +694,80 @@ describe("Registration", () => {
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+
+		historyMock.mockRestore();
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		actsWithMnemonicMock.mockRestore();
+		secondPublicKeyMock.mockRestore();
+		nanoXTransportMock.mockRestore();
+	});
+
+	it("should show error step and go back", async () => {
+		const nanoXTransportMock = mockNanoXTransport();
+		const { asFragment } = await renderPage(secondWallet);
+
+		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
+
+		const { publicKey } = await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+		const secondPublicKeyMock = vi.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		userEvent.paste(screen.getByTestId("Input__username"), "delegate");
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("delegate"));
+
+		await waitFor(() => {
+			expect(continueButton()).toBeEnabled();
+		});
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
+		const secondMnemonic = screen.getByTestId("AuthenticationStep__second-mnemonic");
+
+		userEvent.paste(mnemonic, MNEMONICS[0]);
+		await waitFor(() => expect(mnemonic).toHaveValue(MNEMONICS[0]));
+
+		await waitFor(() => {
+			expect(secondMnemonic).toBeEnabled();
+		});
+
+		userEvent.paste(secondMnemonic, MNEMONICS[1]);
+		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[1]));
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		const signMock = vi
+			.spyOn(secondWallet.transaction(), "signDelegateRegistration")
+			.mockReturnValue(Promise.resolve(DelegateRegistrationFixture.data.id));
+
+		const broadcastMock = vi.spyOn(secondWallet.transaction(), "broadcast").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		const historyMock = vi.spyOn(history, "push").mockReturnValue();
+
+		await waitFor(() => expect(sendButton()).toBeEnabled());
+		userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+		expect(asFragment()).toMatchSnapshot();
+
+		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		await waitFor(() => expect(formStep()).resolves.toBeVisible());
 
 		historyMock.mockRestore();
 		signMock.mockRestore();
