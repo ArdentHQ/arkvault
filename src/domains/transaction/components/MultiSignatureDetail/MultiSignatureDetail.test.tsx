@@ -589,7 +589,7 @@ describe("MultiSignatureDetail", () => {
 		isMultisignatureReadyMock.mockRestore();
 	});
 
-	it("should fail to broadcast transaction and show error step", async () => {
+	it("should fail to broadcast transaction, show error step and handle back", async () => {
 		mockPendingTransfers(wallet);
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(true);
@@ -617,6 +617,10 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("ErrorStep")));
 		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(fixtures.transfer.id()));
+
+		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		await waitFor(() => expect(screen.getByTestId("MultiSignatureDetail--summaryStep")));
 
 		broadcastMock.mockRestore();
 

@@ -75,7 +75,7 @@ export const SummaryStep = ({
 	const { publicKeys, min } = getMultiSignatureInfo(transaction);
 
 	return (
-		<section>
+		<section data-testid="MultiSignatureDetail--summaryStep">
 			<Header title={getLabel(type, wallet.network())} />
 
 			<TransactionSender address={transaction.sender()} network={wallet.network()} border={false} />
