@@ -17,8 +17,10 @@ import {
 	syncFees,
 	waitFor,
 	within,
+	act,
 } from "@/utils/testing-library";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { server, requestMock } from "@/tests/mocks/server";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -70,10 +72,14 @@ const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 let mnemonicMock;
 let secondMnemonicMock;
-let confirmedTransactionMock;
 
 describe("SendDelegateResignation", () => {
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -91,14 +97,10 @@ describe("SendDelegateResignation", () => {
 
 		await syncDelegates(profile);
 		await syncFees(profile);
-
-		confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
 	});
 
 	afterAll(() => {
-		confirmedTransactionMock.mockRestore();
+		vi.useRealTimers();
 	});
 
 	describe("Delegate Resignation", () => {
@@ -113,6 +115,13 @@ describe("SendDelegateResignation", () => {
 			secondMnemonicMock = vi
 				.spyOn(wallet.coin().publicKey(), "fromMnemonic")
 				.mockResolvedValue({ publicKey: wallet.publicKey() });
+
+			server.use(
+				requestMock(
+					"https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
+					transactionsFixture,
+				),
+			);
 		});
 
 		it("should show mnemonic authentication error", async () => {
@@ -414,6 +423,10 @@ describe("SendDelegateResignation", () => {
 
 			userEvent.click(sendButton());
 
+			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+			await act(() => vi.runOnlyPendingTimers());
+
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 			expect(asFragment()).toMatchSnapshot();
@@ -463,6 +476,10 @@ describe("SendDelegateResignation", () => {
 
 			userEvent.keyboard("{enter}");
 			userEvent.click(sendButton());
+
+			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+			await act(() => vi.runOnlyPendingTimers());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -527,9 +544,11 @@ describe("SendDelegateResignation", () => {
 
 			userEvent.click(sendButton());
 
-			await waitFor(() => {
-				expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
-			});
+			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+			await act(() => vi.runOnlyPendingTimers());
+
+			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 			const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
@@ -593,6 +612,10 @@ describe("SendDelegateResignation", () => {
 			await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 			userEvent.click(sendButton());
+
+			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+			await act(() => vi.runOnlyPendingTimers());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 

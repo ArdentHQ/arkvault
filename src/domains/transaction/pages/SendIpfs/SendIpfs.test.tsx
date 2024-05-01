@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
@@ -25,12 +26,12 @@ import {
 	within,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
+	act,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -68,9 +69,12 @@ vi.mock("@/utils/delay", () => ({
 
 describe("SendIpfs", () => {
 	let resetProfileNetworksMock: () => void;
-	let confirmedTransactionMock: SpyInstance;
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
@@ -81,10 +85,6 @@ describe("SendIpfs", () => {
 		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
-
-		confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
 
 		await wallet.synchroniser().identity();
 
@@ -112,7 +112,7 @@ describe("SendIpfs", () => {
 
 	afterAll(() => {
 		getVersionSpy.mockRestore();
-		confirmedTransactionMock.mockRestore();
+		vi.useRealTimers();
 	});
 
 	it("should render form step", async () => {
@@ -213,6 +213,8 @@ describe("SendIpfs", () => {
 				withProviders: true,
 			},
 		);
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -346,6 +348,9 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		userEvent.click(sendButton());
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -444,6 +449,10 @@ describe("SendIpfs", () => {
 
 		userEvent.keyboard("{enter}");
 		userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -823,6 +832,10 @@ describe("SendIpfs", () => {
 
 		userEvent.click(continueButton());
 
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
+
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("1e9b975eff");
@@ -943,6 +956,9 @@ describe("SendIpfs", () => {
 			userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 		// Auto broadcast
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
