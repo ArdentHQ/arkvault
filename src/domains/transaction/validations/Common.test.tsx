@@ -22,6 +22,15 @@ describe("Common", () => {
 		expect(commonValidation.validate.valid("1234")).toBeTrue();
 	});
 
+	it("should default balance to 0", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const commonValidation = common(t).fee();
+
+		expect(commonValidation.validate.valid("0")).toBeTrue();
+	});
+
 	it("should validate low balance", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
