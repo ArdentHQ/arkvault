@@ -1247,7 +1247,9 @@ describe("SendTransfer", () => {
 	});
 
 	it("should error if no ledger transport is supported", async () => {
-		vi.spyOn(transportMock, "isLedgerTransportSupported").mockReturnValue(false);
+		const isLedgerTransportSupportedSpy = vi
+			.spyOn(transportMock, "isLedgerTransportSupported")
+			.mockReturnValue(false);
 
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
@@ -1341,6 +1343,10 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent(
 			"ARKVault requires the use of a chromium based browser when using a Ledger",
 		);
+
+		isLedgerTransportSupportedSpy.mockRestore();
+
+		vi.restoreAllMocks();
 	});
 
 	it("should error if wrong mnemonic", async () => {
