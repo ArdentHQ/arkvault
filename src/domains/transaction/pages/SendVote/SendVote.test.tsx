@@ -261,7 +261,7 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
-		// expect(screen.getAllByRole("radio")[1]).toBeChecked();
+		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		userEvent.click(continueButton());
