@@ -161,8 +161,6 @@ describe("useProfileTransactions", () => {
 		const responseEmpty = await current.fetchTransactions({});
 		await waitFor(() => expect(responseEmpty.hasMorePages()).toBe(false));
 		await waitFor(() => expect(responseEmpty.items()).toHaveLength(0));
-
-		waitFor(() => expect(responseEmpty.items()).toHaveLength(0));
 	});
 
 	it("#updateFilters", async () => {
