@@ -1143,7 +1143,7 @@ describe("SendVote", () => {
 
 		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toBeInTheDocument());
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		signMock.mockRestore();
 	});
