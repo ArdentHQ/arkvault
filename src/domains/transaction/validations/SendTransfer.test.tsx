@@ -19,6 +19,16 @@ describe("Send transfer validations", () => {
 		network = env.profiles().first().wallets().first().network();
 	});
 
+	it("recipients", () => {
+		const withRecipients = sendTransfer(translationMock).recipients();
+
+		expect(withRecipients.validate.valid([{}])).toBe(true);
+
+		const withoutRecipients = sendTransfer(translationMock).recipients();
+
+		expect(withoutRecipients.validate.valid([])).toBe(false);
+	});
+
 	it("recipientAddress", async () => {
 		const withoutNetwork = sendTransfer(translationMock).recipientAddress(profile, undefined, [], false);
 
