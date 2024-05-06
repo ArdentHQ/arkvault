@@ -1074,6 +1074,7 @@ describe("SendVote", () => {
 
 		signMock.mockRestore();
 	});
+
 	it("should show error step and go back", async () => {
 		vi.useRealTimers();
 
@@ -1142,7 +1143,7 @@ describe("SendVote", () => {
 
 		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
 
-		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toBeInTheDocument());
 
 		signMock.mockRestore();
 	});
