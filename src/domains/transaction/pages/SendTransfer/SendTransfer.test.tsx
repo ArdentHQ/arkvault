@@ -800,9 +800,9 @@ describe("SendTransfer", () => {
 
 		const useLedgerContextSpy = vi.spyOn(useLedgerContextMock, "useLedgerContext").mockReturnValue({
 			connect: vi.fn(),
-			listenDevice: vi.fn(),
-			hasDeviceAvailable: false,
 			error: "Access denied to use Ledger device",
+			hasDeviceAvailable: false,
+			listenDevice: vi.fn(),
 			resetConnectionState: vi.fn(),
 		});
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
