@@ -13,6 +13,15 @@ describe("Common", () => {
 		network = env.profiles().first().wallets().first().network();
 	});
 
+	it("should validate", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const commonValidation = common(t).fee(1234, network);
+
+		expect(commonValidation.validate.valid("1234")).toBeTrue();
+	});
+
 	it("should validate low balance", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
@@ -38,6 +47,13 @@ describe("Common", () => {
 
 		expect(common(t).fee(0, network).validate.valid(1234)).toBe(error);
 		expect(common(t).fee(-1, network).validate.valid(1234)).toBe(error);
+	});
+
+	it("should validate no network", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		expect(common(t).fee(0, undefined).validate.valid(1234)).toBe(true);
 	});
 
 	it("should require a fee", () => {
