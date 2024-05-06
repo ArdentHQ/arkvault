@@ -90,4 +90,10 @@ describe("Send transfer validations", () => {
 
 		expect(emptyMemo.required).toBe("COMMON.VALIDATION.FIELD_REQUIRED");
 	});
+
+	it("senderAddress", () => {
+		const emptyMemo = sendTransfer(translationMock).senderAddress();
+
+		expect(emptyMemo.required).toBe("COMMON.VALIDATION.FIELD_REQUIRED");
+	});
 });
