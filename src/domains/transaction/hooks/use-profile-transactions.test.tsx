@@ -136,7 +136,7 @@ describe("useProfileTransactions", () => {
 		vi.clearAllTimers();
 	});
 
-	it("#fetchTransactions", async () => {
+	it.each([undefined, "all", "sent"])("#fetchTransactions", async (transactionType) => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncDelegates(profile);
@@ -152,14 +152,17 @@ describe("useProfileTransactions", () => {
 			cursor: 1,
 			flush: true,
 			mode: "all",
+			transactionType,
 			wallets: profile.wallets().values(),
 		});
-		await waitFor(() => expect(response.items()).toHaveLength(30));
+		await waitFor(() => expect(response.items()).toHaveLength(transactionType === "sent" ? 0 : 30));
 
 		//@ts-ignore
 		const responseEmpty = await current.fetchTransactions({});
 		await waitFor(() => expect(responseEmpty.hasMorePages()).toBe(false));
 		await waitFor(() => expect(responseEmpty.items()).toHaveLength(0));
+
+		waitFor(() => expect(responseEmpty.items()).toHaveLength(0));
 	});
 
 	it("#updateFilters", async () => {

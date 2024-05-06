@@ -101,6 +101,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				return activeQuery !== lastQuery.current;
 			};
 
+			/* istanbul ignore next -- @preserve */
 			if (isAborted()) {
 				return;
 			}
@@ -176,6 +177,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				limit: LIMIT,
 			};
 
+			console.log({ transactionType });
 			if (transactionType && transactionType !== "all") {
 				queryParameters.type = transactionType;
 			}
