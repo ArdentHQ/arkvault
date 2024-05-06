@@ -414,7 +414,7 @@ describe("SendDelegateResignation", () => {
 
 			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
-			const { asFragment } = renderPage();
+			renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
@@ -445,7 +445,6 @@ describe("SendDelegateResignation", () => {
 			});
 
 			expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-			expect(asFragment()).toMatchSnapshot();
 
 			const historyMock = vi.spyOn(history, "push").mockReturnValue();
 

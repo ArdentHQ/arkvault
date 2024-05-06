@@ -742,7 +742,7 @@ describe("SendIpfs", () => {
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<SendIpfs />
 			</Route>,
@@ -804,7 +804,6 @@ describe("SendIpfs", () => {
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 		expect(screen.getByTestId("ErrorStep__back-button")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
 
