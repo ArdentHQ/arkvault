@@ -176,8 +176,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				})),
 				limit: LIMIT,
 			};
-
-			console.log({ transactionType });
 			if (transactionType && transactionType !== "all") {
 				queryParameters.type = transactionType;
 			}
