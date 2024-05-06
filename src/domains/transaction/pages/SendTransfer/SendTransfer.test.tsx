@@ -39,6 +39,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import * as useLedgerContextMock from "@/app/contexts/Ledger";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -792,6 +793,77 @@ describe("SendTransfer", () => {
 
 		goSpy.mockRestore();
 		pushSpy.mockRestore();
+	});
+
+	it("should error if device not available", async () => {
+		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+
+		const useLedgerContextSpy = vi.spyOn(useLedgerContextMock, "useLedgerContext").mockReturnValue({
+			connect: vi.fn(),
+			listenDevice: vi.fn(),
+			hasDeviceAvailable: false,
+			error: "Access denied to use Ledger device",
+			resetConnectionState: vi.fn(),
+		});
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
+
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+
+		selectRecipient();
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		selectFirstRecipient();
+
+		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
+
+		// Amount
+		userEvent.click(screen.getByTestId(sendAllID));
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
+
+		// Memo
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+
+		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
+
+		// Fee
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+
+		await waitFor(() => {
+			expect(continueButton()).not.toBeDisabled();
+		});
+
+		userEvent.click(continueButton());
+
+		// Review Step
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		expect(continueButton()).not.toBeDisabled();
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("Unable to detect Ledger device");
+
+		useLedgerContextSpy.mockRestore();
 	});
 
 	it("should fail sending a single transfer", async () => {
