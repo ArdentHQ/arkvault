@@ -161,7 +161,7 @@ describe("SendTransfer QRModal", () => {
 		const urlSearchParametersSpy = vi.spyOn(useTransactionUrlMock, "useTransactionURL").mockReturnValue({
 			generateSendTransferPath: vi.fn(),
 			urlSearchParameters: () => {
-				throw new Error("");
+				throw new Error("Invalid URL");
 			},
 		});
 
