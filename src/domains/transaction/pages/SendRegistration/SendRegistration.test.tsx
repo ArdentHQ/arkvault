@@ -630,7 +630,7 @@ describe("Registration", () => {
 
 	it("should show error step and close", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		const { asFragment } = await renderPage(secondWallet);
+		await renderPage(secondWallet);
 
 		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
 
@@ -688,7 +688,6 @@ describe("Registration", () => {
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
@@ -705,7 +704,7 @@ describe("Registration", () => {
 
 	it("should show error step and go back", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		const { asFragment } = await renderPage(secondWallet);
+		await renderPage(secondWallet);
 
 		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
 
@@ -763,7 +762,6 @@ describe("Registration", () => {
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
 

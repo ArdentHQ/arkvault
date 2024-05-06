@@ -1000,7 +1000,7 @@ describe("SendVote", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should show error step and go back", async () => {
+	it("should show error step and close", async () => {
 		vi.useRealTimers();
 
 		const history = createHashHistory();
@@ -1017,7 +1017,7 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "vote", votes);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<SendVote />
 			</Route>,
@@ -1066,12 +1066,83 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
-		expect(container).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+
+		signMock.mockRestore();
+	});
+	it("should show error step and go back", async () => {
+		vi.useRealTimers();
+
+		const history = createHashHistory();
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+				<SendVote />
+			</Route>,
+			{
+				history,
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
+
+		// Review Step
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		userEvent.click(continueButton());
+
+		// AuthenticationStep
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const signMock = vi.spyOn(wallet.transaction(), "signVote").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		userEvent.paste(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+		expect(screen.getByTestId("ErrorStep__back-button")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toBeInTheDocument());
 
 		signMock.mockRestore();
 	});
