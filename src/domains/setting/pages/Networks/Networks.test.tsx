@@ -104,11 +104,11 @@ describe("Network Settings", () => {
 
 		expect(screen.getAllByTestId("NetworksList")).toHaveLength(1);
 
-		expect(screen.getAllByTestId("NetworksListNetwork")).toHaveLength(2);
+		expect(screen.getAllByTestId("NetworksListNetwork")).toHaveLength(3);
 
 		const checkboxes = screen.getAllByTestId(networkListItemCheckboxTestId);
 
-		expect(checkboxes).toHaveLength(2);
+		expect(checkboxes).toHaveLength(3);
 
 		expect(checkboxes[0]).toBeChecked();
 		expect(checkboxes[1]).not.toBeChecked();
