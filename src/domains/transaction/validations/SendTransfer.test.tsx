@@ -70,6 +70,10 @@ describe("Send transfer validations", () => {
 
 		expect(noBalance.validate.valid("1")).toBe("TRANSACTION.VALIDATION.LOW_BALANCE");
 
+		const noBalanceDefault = sendTransfer(translationMock).amount(network, undefined, [], false);
+
+		expect(noBalanceDefault.validate.valid("0")).toBe("TRANSACTION.VALIDATION.LOW_BALANCE");
+
 		const noAmount = sendTransfer(translationMock).amount(network, BigNumber.ONE, [], false);
 
 		expect(noAmount.validate.valid("")).toBe("COMMON.VALIDATION.FIELD_REQUIRED");
