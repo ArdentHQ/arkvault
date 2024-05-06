@@ -136,7 +136,7 @@ describe("useProfileTransactions", () => {
 		vi.clearAllTimers();
 	});
 
-	it.each([undefined, "all"])("#fetchTransactions", async (transactionType) => {
+	it.each([undefined, "all", "sent"])("#fetchTransactions", async (transactionType) => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncDelegates(profile);
