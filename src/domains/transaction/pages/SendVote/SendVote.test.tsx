@@ -225,12 +225,10 @@ describe("SendVote", () => {
 
 		await wallet.synchroniser().votes();
 
-		confirmedTransactionMock.mockRestore();
-
 		confirmedTransactionMock = vi
 			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
 			.mockReturnValueOnce(false)
-			.mockReturnValueOnce(true);
+			.mockReturnValue(true);
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
