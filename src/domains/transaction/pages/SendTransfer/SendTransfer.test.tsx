@@ -1426,7 +1426,7 @@ describe("SendTransfer", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should show error step and go back", async () => {
+	it("should show error step and close", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
 		history.push(transferURL);
@@ -1508,6 +1508,89 @@ describe("SendTransfer", () => {
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+
+		signMock.mockRestore();
+	});
+
+	it("should show error step and go back", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
+
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+
+		selectRecipient();
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		selectFirstRecipient();
+
+		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
+
+		// Amount
+		userEvent.click(screen.getByTestId(sendAllID));
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
+
+		// Memo
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+
+		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
+
+		// Fee
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+
+		// Step 2
+		expect(continueButton()).not.toBeDisabled();
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Step 3
+		expect(continueButton()).not.toBeDisabled();
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		// Step 5 (skip step 4 for now - ledger confirmation)
+		const signMock = vi.spyOn(wallet.transaction(), "signTransfer").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		await waitFor(() => {
+			expect(sendButton()).toBeEnabled();
+		});
+
+		userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
+		expect(screen.getAllByTestId("clipboard-button__wrapper")[0]).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		signMock.mockRestore();
 	});
