@@ -16,4 +16,14 @@ describe("useTransactionURL", () => {
 			`/profiles/${profile.id()}/send-transfer?${searchParameters}`,
 		);
 	});
+
+	it("returns url search parameters", (suffix) => {
+		const { result } = renderHook(() => useTransactionURL());
+		const profile = env.profiles().findById(getDefaultProfileId());
+
+		expect(result.current.urlSearchParameters(`${prefix}?${searchParameters}`)).toBeInstanceOf(URLSearchParams);
+		expect(result.current.urlSearchParameters(`${prefix}?${searchParameters}`).toString()).toEqual(
+			searchParameters,
+		);
+	});
 });
