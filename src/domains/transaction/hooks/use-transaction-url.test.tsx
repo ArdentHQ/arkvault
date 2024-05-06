@@ -17,9 +17,8 @@ describe("useTransactionURL", () => {
 		);
 	});
 
-	it("returns url search parameters", (suffix) => {
+	it("returns url search parameters", () => {
 		const { result } = renderHook(() => useTransactionURL());
-		const profile = env.profiles().findById(getDefaultProfileId());
 
 		expect(result.current.urlSearchParameters(`${prefix}?${searchParameters}`)).toBeInstanceOf(URLSearchParams);
 		expect(result.current.urlSearchParameters(`${prefix}?${searchParameters}`).toString()).toEqual(
