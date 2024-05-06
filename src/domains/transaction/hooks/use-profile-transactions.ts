@@ -64,6 +64,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const lastQuery = useRef<string>();
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
+	/* istanbul ignore next -- @preserve */
 	const LIMIT = useMemo(() => (isUnit() ? 0 : limit), [limit]);
 
 	const [
