@@ -52,7 +52,7 @@ describe("EncryptPasswordStep", () => {
 		actsWithMnemonicSpy.mockRestore();
 	});
 
-	it("should render with second input for second signature when does not act with mnemonic", () => {
+	it("should render with second input for second signature when does not act with mnemonic and validate field", async () => {
 		const wallet = env.profiles().findById(getDefaultProfileId()).wallets().first();
 
 		const hasSyncedWithNetworkSpy = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
@@ -61,9 +61,36 @@ describe("EncryptPasswordStep", () => {
 
 		renderWithForm(<EncryptPasswordStep importedWallet={wallet} />);
 
+		const field = () => screen.getByTestId("EncryptPassword__second-secret");
 		expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
-		expect(screen.getByTestId("EncryptPassword__second-secret")).toBeInTheDocument();
+		expect(field()).toBeInTheDocument();
 
+		const walletFromSecretSpy = vi.spyOn(wallet.coin().address(), "fromSecret").mockImplementation((value) => {
+			console.log({ value });
+			if (value !== "valid") {
+				throw new Error("Invalid secret");
+			}
+
+			return Promise.resolve();
+		});
+
+		userEvent.paste(field(), "invalid");
+
+		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("Input__error")).toHaveAttribute(
+			"data-errortext",
+			"The given value is BIP39 compliant. Please change Import Type to 'Mnemonic'",
+		);
+
+		userEvent.clear(field());
+		userEvent.paste(field(), "valid");
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument();
+		});
+
+		walletFromSecretSpy.mockRestore();
 		hasSyncedWithNetworkSpy.mockRestore();
 		walletSpy.mockRestore();
 		actsWithMnemonicSpy.mockRestore();
