@@ -294,6 +294,10 @@ describe("SendVote", () => {
 		votesMock.mockRestore();
 		const votingMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 
+		act(() => {
+			vi.advanceTimersByTime(1000);
+		});
+
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 		act(() => {
