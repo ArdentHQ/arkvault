@@ -1,17 +1,3 @@
 // Vitest Snapshot v1
 
-exports[`WalletsControls > should render 1`] = `<div />`;
-
-exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `<div />`;
-
-exports[`WalletsControls > should render responsive 1`] = `<div />`;
-
-exports[`WalletsControls > should render responsive 2`] = `<div />`;
-
-exports[`WalletsControls > should render responsive 3`] = `<div />`;
-
-exports[`WalletsControls > should render responsive 4`] = `<div />`;
-
-exports[`WalletsControls > should render responsive 5`] = `<div />`;
-
 exports[`WalletsControls > should render with networks selection 1`] = `<div />`;
