@@ -61,6 +61,20 @@ describe("Authentication", () => {
 		);
 	});
 
+	it("should fail mnemonic validation exception", async () => {
+		const fromMnemonicSpy = vi.spyOn(wallet.coin().address(), "fromMnemonic").mockImplementation(() => {
+			throw new Error("failed");
+		});
+
+		const mnemonic = authentication(translationMock).mnemonic(wallet);
+
+		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[1])).resolves.toBe(
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+		);
+
+		fromMnemonicSpy.mockRestore();
+	});
+
 	it("should validate secret", async () => {
 		const fromWifMock = vi
 			.spyOn(wallet.coin().address(), "fromSecret")
