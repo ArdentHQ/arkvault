@@ -31,8 +31,8 @@ import {
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import * as transportMock from "@/app/contexts/Ledger/transport";
+
 const fixtureProfileId = getDefaultProfileId();
 
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -68,7 +68,6 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let confirmedTransactionMock: SpyInstance;
 
 const votingMockImplementation = () => [
 	{
@@ -100,6 +99,11 @@ describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -122,16 +126,6 @@ describe("SendVote", () => {
 	});
 
 	beforeEach(() => {
-		confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
-	});
-
-	afterAll(() => {
-		confirmedTransactionMock.mockRestore();
-	});
-
-	beforeEach(() => {
 		server.use(
 			requestMock(
 				"https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493",
@@ -151,6 +145,10 @@ describe("SendVote", () => {
 	afterEach(() => {
 		vi.useRealTimers();
 		resetProfileNetworksMock();
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	it("should return to the select a delegate page to unvote", async () => {
@@ -212,23 +210,9 @@ describe("SendVote", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should send a vote transaction and confirm", async () => {
-		const votesMock = vi
-			.spyOn(wallet.voting(), "current")
-			.mockReturnValueOnce([])
-			.mockReturnValueOnce([
-				{
-					amount: 10,
-					wallet: wallet,
-				},
-			]);
-
+	it("should send a vote transaction", async () => {
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([]);
 		await wallet.synchroniser().votes();
-
-		confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValueOnce(false)
-			.mockReturnValue(true);
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
@@ -294,15 +278,9 @@ describe("SendVote", () => {
 		votesMock.mockRestore();
 		const votingMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 
-		act(() => {
-			vi.advanceTimersByTime(1000);
-		});
-
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
-		act(() => {
-			vi.advanceTimersByTime(1000);
-		});
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -510,6 +488,10 @@ describe("SendVote", () => {
 		);
 
 		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(2, voteFixture.data.id));
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
