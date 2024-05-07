@@ -1,4 +1,4 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Vitest Snapshot v1
 
 exports[`CreateWallet > should create a wallet 1`] = `
 <DocumentFragment>
@@ -764,6 +764,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                     </fieldset>
                     <div
                       class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                      data-testid="Divider"
                       type="horizontal"
                     />
                   </section>
@@ -2479,6 +2480,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                     </fieldset>
                     <div
                       class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                      data-testid="Divider"
                       type="horizontal"
                     />
                   </section>
@@ -3286,6 +3288,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                     </fieldset>
                     <div
                       class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                      data-testid="Divider"
                       type="horizontal"
                     />
                   </section>
@@ -4089,6 +4092,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                     </fieldset>
                     <div
                       class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                      data-testid="Divider"
                       type="horizontal"
                     />
                   </section>
@@ -4946,6 +4950,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                     </fieldset>
                     <div
                       class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                      data-testid="Divider"
                       type="horizontal"
                     />
                   </section>
