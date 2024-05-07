@@ -27,7 +27,7 @@ let profile: Contracts.IProfile;
 
 const walletAlias = "Sample Wallet";
 
-describe.each([true, false])("SearchWallet uses fiat value = %s", (showConvertedValue) => {
+describe.each([true, false, undefined])("SearchWallet uses fiat value = %s", (showConvertedValue) => {
 	beforeAll(() => {
 		// mockProfileWithPublicAndTestNetworks(profile);
 		history.push(dashboardURL);
