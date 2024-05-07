@@ -16,6 +16,8 @@ const wrapper = ({ children }) => (
 	</EnvironmentProvider>
 );
 
+const arkDevnetId = "ark.devnet";
+
 describe("useWalletConfig", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -66,7 +68,7 @@ describe("useWalletConfig", () => {
 		const { result } = renderHook(
 			() =>
 				useWalletConfig({
-					defaults: { selectedNetworkIds: ["ark.devnet"], walletsDisplayType: "ledger" },
+					defaults: { selectedNetworkIds: [arkDevnetId], walletsDisplayType: "ledger" },
 					profile,
 				}),
 			{
@@ -91,7 +93,7 @@ describe("useWalletConfig", () => {
 		const { result } = renderHook(
 			() =>
 				useWalletConfig({
-					defaults: { selectedNetworkIds: ["ark.devnet"], walletsDisplayType: "starred" },
+					defaults: { selectedNetworkIds: [arkDevnetId], walletsDisplayType: "starred" },
 					profile,
 				}),
 			{
@@ -128,7 +130,7 @@ describe("useWalletConfig", () => {
 		const { result, waitForNextUpdate } = renderHook(
 			() =>
 				useWalletConfig({
-					defaults: { selectedNetworkIds: ["ark.devnet", "ark.mainnet"], walletsDisplayType: "all" },
+					defaults: { selectedNetworkIds: [arkDevnetId, "ark.mainnet"], walletsDisplayType: "all" },
 					profile,
 				}),
 			{
@@ -137,13 +139,13 @@ describe("useWalletConfig", () => {
 		);
 
 		act(() => {
-			result.current.setValue("selectedNetworkIds", ["ark.devnet"]);
+			result.current.setValue("selectedNetworkIds", [arkDevnetId]);
 		});
 
 		await waitForNextUpdate();
 
 		await waitFor(() => {
-			expect(result.current.selectedNetworkIds).toStrictEqual(["ark.devnet"]);
+			expect(result.current.selectedNetworkIds).toStrictEqual([arkDevnetId]);
 		});
 		starredSpy.mockRestore();
 	});
