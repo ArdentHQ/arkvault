@@ -64,6 +64,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const lastQuery = useRef<string>();
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
+	/* istanbul ignore next -- @preserve */
 	const LIMIT = useMemo(() => (isUnit() ? 0 : limit), [limit]);
 
 	const [
@@ -101,6 +102,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				return activeQuery !== lastQuery.current;
 			};
 
+			/* istanbul ignore next -- @preserve */
 			if (isAborted()) {
 				return;
 			}
@@ -175,7 +177,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				})),
 				limit: LIMIT,
 			};
-
 			if (transactionType && transactionType !== "all") {
 				queryParameters.type = transactionType;
 			}

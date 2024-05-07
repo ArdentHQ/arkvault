@@ -18,7 +18,7 @@ describe("useProfileTransactions", () => {
 	});
 
 	// TODO: Inspect timeout issue and restore this test. It works locally but timetouts in CI
-	it.skip("should hide unconfirmed transactions", async () => {
+	it("should hide unconfirmed transactions", async () => {
 		vi.useRealTimers();
 		vi.useFakeTimers();
 
@@ -60,7 +60,7 @@ describe("useProfileTransactions", () => {
 	});
 
 	// TODO: Inspect timeout issue and restore this test. It works locally but timetouts in CI
-	it.skip("should run updates periodically", async () => {
+	it("should run updates periodically", async () => {
 		let hook: any;
 
 		const profile = env.profiles().findById(getDefaultProfileId());
@@ -136,7 +136,7 @@ describe("useProfileTransactions", () => {
 		vi.clearAllTimers();
 	});
 
-	it("#fetchTransactions", async () => {
+	it.each([undefined, "all", "sent"])("#fetchTransactions", async (transactionType) => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncDelegates(profile);
@@ -152,6 +152,7 @@ describe("useProfileTransactions", () => {
 			cursor: 1,
 			flush: true,
 			mode: "all",
+			transactionType,
 			wallets: profile.wallets().values(),
 		});
 		await waitFor(() => expect(response.items()).toHaveLength(30));
