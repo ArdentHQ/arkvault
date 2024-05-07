@@ -51,4 +51,19 @@ describe("getDefaultAlias", () => {
 
 		expect(result).toBe("ARK Devnet #2");
 	});
+
+	it("should return a default alias when profile has no wallets", async () => {
+		const unasignedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: MNEMONICS[0],
+			network: "ark.devnet",
+		});
+
+		const result = getDefaultAlias({
+			network: unasignedWallet.network(),
+			profile,
+		});
+
+		expect(result).toBe("ARK Devnet #1");
+	});
 });
