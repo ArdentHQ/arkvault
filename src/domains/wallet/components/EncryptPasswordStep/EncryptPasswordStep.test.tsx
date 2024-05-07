@@ -66,7 +66,6 @@ describe("EncryptPasswordStep", () => {
 		expect(field()).toBeInTheDocument();
 
 		const walletFromSecretSpy = vi.spyOn(wallet.coin().address(), "fromSecret").mockImplementation((value) => {
-			console.log({ value });
 			if (value !== "valid") {
 				throw new Error("Invalid secret");
 			}
