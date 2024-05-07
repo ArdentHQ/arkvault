@@ -2,12 +2,14 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { createHashHistory } from "history";
 import React from "react";
+import { generatePath } from "react-router";
 import { Router } from "react-router-dom";
 import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
+import { ProfilePaths } from "@/router/paths";
 describe("useWalletActions", () => {
 	const history = createHashHistory();
 
@@ -98,5 +100,45 @@ describe("useWalletActions", () => {
 		});
 
 		historyPushSpy.mockRestore();
+	});
+
+	it("should toggle star", () => {
+		const toggleSpy = vi.spyOn(wallet, "toggleStarred");
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions(wallet), { wrapper });
+
+		expect(current.handleToggleStar());
+
+		expect(toggleSpy).toHaveBeenCalled();
+		toggleSpy.mockRestore();
+	});
+
+	it.each([
+		["sign-message", ProfilePaths.SignMessageWallet],
+		["verify-message", ProfilePaths.VerifyMessageWallet],
+		["multi-signature", ProfilePaths.SendMultiSignature],
+		["second-signature", ProfilePaths.SendSecondSignature],
+		["delegate-registration", ProfilePaths.SendDelegateRegistration],
+		["delegate-resignation", ProfilePaths.SendDelegateResignation],
+		["username-registration", ProfilePaths.SendUsernameRegistration],
+		["username-resignation", ProfilePaths.SendUsernameResignation],
+		["store-hash", ProfilePaths.SendIpfs],
+	])("should open url for selected option %s", async (value, url) => {
+		const historyPushSpy = vi.spyOn(history, "push");
+
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions(wallet), { wrapper });
+
+		current.handleSelectOption({
+			value,
+		});
+
+		await waitFor(() => {
+			expect(historyPushSpy).toHaveBeenCalledWith(
+				generatePath(url, { profileId: profile.id(), walletId: wallet.id() }),
+			);
+		});
 	});
 });
