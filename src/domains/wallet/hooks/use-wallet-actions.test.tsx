@@ -3,12 +3,11 @@ import { renderHook } from "@testing-library/react-hooks";
 import { createHashHistory } from "history";
 import React from "react";
 import { Router } from "react-router-dom";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
-
 describe("useWalletActions", () => {
 	const history = createHashHistory();
 
@@ -52,6 +51,14 @@ describe("useWalletActions", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/create`);
 
+		current.handleOpen();
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+
+		current.handleSend();
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-transfer`);
+
 		current.handleImport();
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/import`);
@@ -65,5 +72,31 @@ describe("useWalletActions", () => {
 		expect(history.location.pathname).toBe(
 			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`,
 		);
+	});
+
+	it("should return true on delete if location is not wallet details", () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions(wallet), { wrapper });
+
+		expect(current.handleDelete()).resolves.toBeTrue();
+	});
+
+	it("should return true on delete if location is not wallet details", async () => {
+		const historyPushSpy = vi.spyOn(history, "push");
+
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions(wallet), { wrapper });
+
+		history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+
+		current.handleDelete();
+
+		await waitFor(() => {
+			expect(historyPushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+		});
+
+		historyPushSpy.mockRestore();
 	});
 });
