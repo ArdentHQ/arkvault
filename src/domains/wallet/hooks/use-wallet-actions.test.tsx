@@ -140,5 +140,25 @@ describe("useWalletActions", () => {
 				generatePath(url, { profileId: profile.id(), walletId: wallet.id() }),
 			);
 		});
+
+		historyPushSpy.mockRestore();
+	});
+
+	it("should open explorer", async () => {
+		const explorerLinkSpy = vi.spyOn(wallet, "explorerLink");
+
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions(wallet), { wrapper });
+
+		current.handleSelectOption({
+			value: "open-explorer",
+		});
+
+		await waitFor(() => {
+			expect(explorerLinkSpy).toHaveBeenCalled();
+		});
+
+		explorerLinkSpy.mockRestore();
 	});
 });
