@@ -7,14 +7,18 @@ import {
 	findNetworkFromSearchParameters,
 	hasNetworksWithLedgerSupport,
 	isCustomNetwork,
+	isMainsailNetwork,
 	isValidKnownWalletUrlResponse,
 	networkDisplayName,
 	networkInitials,
+	networksAsOptions,
+	profileEnabledNetworkIds,
 } from "./network-utils";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
 import { ARK } from "@ardenthq/sdk-ark";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 
 let profile: Contracts.IProfile;
 
@@ -268,6 +272,58 @@ describe("Network utils", () => {
 			expect(networkDisplayName(network)).toBe("ARK");
 
 			restoreMock();
+		});
+	});
+
+	describe("profileEnabledNetworkIds", () => {
+		it("returns enabled network ids", () => {
+			const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
+
+			const networkIds = profileEnabledNetworkIds(profile);
+
+			expect(networkIds).toEqual(["ark.devnet"]);
+
+			restoreMock();
+		});
+	});
+	describe("networksAsOptions", () => {
+		it("returns networks as optons", () => {
+			const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
+
+			const options = networksAsOptions(profile.availableNetworks());
+
+			expect(options).toEqual([
+				{
+					isTestNetwork: false,
+					label: "ARK",
+					value: "ark.mainnet",
+				},
+				{
+					isTestNetwork: true,
+					label: "ARK Devnet",
+					value: "ark.devnet",
+				},
+				{
+					isTestNetwork: true,
+					label: "ARK",
+					value: "random.custom",
+				},
+			]);
+
+			restoreMock();
+		});
+	});
+
+	describe("isMainsailNetwork", () => {
+		it("determines if a network is a mainsail network", () => {
+			const network = new Networks.Network(Mainsail.manifest, Mainsail.manifest.networks["mainsail.devnet"]);
+
+			expect(isMainsailNetwork(network)).toBe(true);
+		});
+		it("determines if a network is a not a mainsail network", () => {
+			const network = new Networks.Network(ARK.manifest, ARK.manifest.networks["ark.devnet"]);
+
+			expect(isMainsailNetwork(network)).toBe(false);
 		});
 	});
 });
