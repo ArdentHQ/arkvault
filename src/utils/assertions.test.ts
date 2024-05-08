@@ -1,7 +1,6 @@
 /* eslint-disable unicorn/no-null */
 import { Coins, Networks } from "@ardenthq/sdk";
-import { Profile, Wallet } from "@ardenthq/sdk-profiles";
-
+import { Profile, Wallet, DTO } from "@ardenthq/sdk-profiles";
 import {
 	assertArray,
 	assertCoin,
@@ -9,6 +8,7 @@ import {
 	assertNumber,
 	assertProfile,
 	assertReadOnlyWallet,
+	assertSignedTransaction,
 	assertString,
 	assertWallet,
 } from "./assertions";
@@ -145,6 +145,43 @@ describe("#assertNetwork", () => {
 			"Expected 'network' to be Networks.Network, but received [object Object]",
 		);
 		expect(() => assertNetwork([])).toThrow("Expected 'network' to be Networks.Network, but received ");
+	});
+});
+
+describe.only("#assertSignedTransaction", () => {
+	it("should pass with a signed transaction instance", () => {
+		// @ts-ignore
+		expect(() => assertSignedTransaction(new DTO.ExtendedSignedTransactionData())).not.toThrow();
+	});
+
+	it("should fail without a signed transaction instance", () => {
+		expect(() => assertSignedTransaction(undefined)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received undefined",
+		);
+		expect(() => assertSignedTransaction(null)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received null",
+		);
+		expect(() => assertSignedTransaction(true)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received true",
+		);
+		expect(() => assertSignedTransaction(false)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received false",
+		);
+		expect(() => assertSignedTransaction("")).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received ",
+		);
+		expect(() => assertSignedTransaction("a")).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received a",
+		);
+		expect(() => assertSignedTransaction(1)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received 1",
+		);
+		expect(() => assertSignedTransaction({})).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received [object Object]",
+		);
+		expect(() => assertSignedTransaction([])).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received ",
+		);
 	});
 });
 
