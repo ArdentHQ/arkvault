@@ -123,6 +123,20 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render if wallet has no username", async () => {
+		const walletSpy = vi.spyOn(wallet, "username").mockReturnValue(undefined);
+
+		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
+		const { container } = renderPage(route);
+
+		expect(container).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+
+		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
+
+		walletSpy.mockRestore();
+	});
+
 	it("should render and handle wallet current voting exception", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		const currentMock = vi.spyOn(currentWallet.voting(), "current").mockImplementation(() => {
