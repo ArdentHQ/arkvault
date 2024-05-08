@@ -77,8 +77,9 @@ describe("Network utils", () => {
 
 		expect(network.coin).toBe("Custom Network");
 	});
+
 	it("builds network with explorer", () => {
-		const network = buildNetwork(customNetwork, customResponse);
+		const network = buildNetwork({ ...customNetwork, explorer: "https://custom.network/explorer" }, customResponse);
 
 		expect(network.hosts).toEqual([
 			{
