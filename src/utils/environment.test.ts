@@ -7,9 +7,15 @@ describe("initializeEnvironment", () => {
 		env.reset();
 	});
 
-	it("initializes the environment", () => {
+	it("initializes the environment in unit environment", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
+		const environment = initializeEnvironment();
+
+		expect(environment).toBeInstanceOf(Environment);
+	});
+
+	it("initializes the environment with indexeddb", () => {
 		const environment = initializeEnvironment();
 
 		expect(environment).toBeInstanceOf(Environment);
