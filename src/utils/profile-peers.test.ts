@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/await-async-query */
 import { Profile } from "@ardenthq/sdk-profiles";
 import { ProfilePeers } from "./profile-peers";
