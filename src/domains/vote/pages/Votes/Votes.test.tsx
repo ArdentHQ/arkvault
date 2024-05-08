@@ -123,20 +123,6 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render if wallet has no username", async () => {
-		const walletSpy = vi.spyOn(wallet, "username").mockReturnValue(undefined);
-
-		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { container } = renderPage(route);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
-
-		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
-
-		walletSpy.mockRestore();
-	});
-
 	it("should render and handle wallet current voting exception", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		const currentMock = vi.spyOn(currentWallet.voting(), "current").mockImplementation(() => {
@@ -687,6 +673,35 @@ describe("Votes", () => {
 					publicKey: currentWallet.publicKey(),
 					rank: 52,
 					username: "arkx",
+				}),
+			},
+		]);
+		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
+		const { container } = renderPage(route);
+
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+
+		await expect(screen.findByTestId("Votes__resigned-vote")).resolves.toBeVisible();
+
+		expect(container).toMatchSnapshot();
+
+		walletSpy.mockRestore();
+	});
+
+	it("should show resigned delegate notice with delegate without username", async () => {
+		const currentWallet = profile.wallets().first();
+		const walletSpy = vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: true,
+					publicKey: currentWallet.publicKey(),
+					rank: 52,
+					username: undefined,
 				}),
 			},
 		]);
