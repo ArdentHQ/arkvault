@@ -312,6 +312,16 @@ describe("Network utils", () => {
 
 			restoreMock();
 		});
+
+		it("returns empty if no networks", () => {
+			const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
+
+			const options = networksAsOptions(undefined);
+
+			expect(options).toEqual([]);
+
+			restoreMock();
+		});
 	});
 
 	describe("isMainsailNetwork", () => {
@@ -320,10 +330,15 @@ describe("Network utils", () => {
 
 			expect(isMainsailNetwork(network)).toBe(true);
 		});
+
 		it("determines if a network is a not a mainsail network", () => {
 			const network = new Networks.Network(ARK.manifest, ARK.manifest.networks["ark.devnet"]);
 
 			expect(isMainsailNetwork(network)).toBe(false);
+		});
+
+		it("determines if a network is a not a mainsail network if undefined", () => {
+			expect(isMainsailNetwork(undefined)).toBe(false);
 		});
 	});
 });
