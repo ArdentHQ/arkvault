@@ -224,7 +224,27 @@ describe("Network utils", () => {
 			expect(isValidKnownWalletUrlResponse(response)).toBe(false);
 		});
 
-		it("determines known wallet url response is valid", () => {
+		it("determines known wallet url response is valid for valid array", () => {
+			const response: PromiseSettledResult<any> = {
+				status: "fulfilled",
+				value: {
+					body: () => {
+						const knownWallets = [
+							{
+								name: "name",
+								address: "address",
+								type: "type",
+							},
+						];
+
+						return JSON.stringify(knownWallets);
+					},
+				},
+			};
+
+			expect(isValidKnownWalletUrlResponse(response)).toBe(true);
+		});
+		it("determines known wallet url response is valid for empty array", () => {
 			const response: PromiseSettledResult<any> = {
 				status: "fulfilled",
 				value: {
