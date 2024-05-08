@@ -11,6 +11,26 @@ describe("initializeArkNetworks", () => {
 		expect(data.networks.ark.mainnet).toEqual(ARK.manifest.networks["ark.mainnet"]);
 	});
 
+	it("should initialize the ARK mainnet network if no networks property defined", () => {
+		const data = {};
+
+		initializeArkNetworks({ data });
+
+		expect(data.networks.ark.mainnet).toEqual(ARK.manifest.networks["ark.mainnet"]);
+	});
+
+	it("should not initialize the ARK mainnet network if already defined", () => {
+		const data = {
+			networks: {
+				ark: {},
+			},
+		};
+
+		initializeArkNetworks({ data });
+
+		expect(data.networks.ark).toEqual({});
+	});
+
 	it("should not initialize the ARK devnet network ", () => {
 		const data = { networks: {} };
 
