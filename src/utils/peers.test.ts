@@ -60,6 +60,16 @@ describe("pingServerAddress", () => {
 		httpClientMock.mockRestore();
 	});
 
+	it("should return true if the server responds correctly for musig", async () => {
+		const httpClientMock = vi.spyOn(HttpClientMock, "HttpClient").mockImplementation(() => ({
+			get: () => Promise.resolve({ body: () => JSON.stringify({ name: "test-musig-server" }) }),
+		}));
+
+		await expect(pingServerAddress("http://www.example.com", "other")).resolves.toBe(true);
+
+		httpClientMock.mockRestore();
+	});
+
 	it("should return false if the server does not respond correctly", async () => {
 		const httpClientMock = vi.spyOn(HttpClientMock, "HttpClient").mockImplementation(() => ({
 			get: () => Promise.reject(new Error("Failed")),
