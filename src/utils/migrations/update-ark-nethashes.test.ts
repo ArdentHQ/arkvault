@@ -1,6 +1,8 @@
 import { ARK } from "@ardenthq/sdk-ark";
 import { updateArkNethashes } from "./update-ark-nethashes";
 
+const arkMainnet = "ark.mainnet";
+const arkDevnet = "ark.devnet";
 describe("updateArkNethashes", () => {
 	let data;
 	const mockNethash = "1234567890abcdef";
@@ -8,12 +10,12 @@ describe("updateArkNethashes", () => {
 	beforeEach(() => {
 		ARK.manifest = {
 			networks: {
-				"ark.devnet": {
+				[arkDevnet]: {
 					meta: {
 						nethash: mockNethash,
 					},
 				},
-				"ark.mainnet": {
+				[arkMainnet]: {
 					meta: {
 						nethash: mockNethash,
 					},
@@ -24,10 +26,10 @@ describe("updateArkNethashes", () => {
 		data = {
 			networks: {
 				ark: {
-					"ark.devnet": {
+					[arkDevnet]: {
 						id: "ark.devnet",
 					},
-					"ark.mainnet": {
+					[arkMainnet]: {
 						id: "ark.mainnet",
 					},
 				},
@@ -43,15 +45,15 @@ describe("updateArkNethashes", () => {
 
 	it("should set the nethash for ark.devnet and ark.mainnet", () => {
 		updateArkNethashes({ data });
-		expect(data.networks.ark["ark.devnet"].meta.nethash).toEqual(mockNethash);
-		expect(data.networks.ark["ark.mainnet"].meta.nethash).toEqual(mockNethash);
+		expect(data.networks.ark[arkDevnet].meta.nethash).toEqual(mockNethash);
+		expect(data.networks.ark[arkMainnet].meta.nethash).toEqual(mockNethash);
 	});
 
 	it("should initialize meta if it does not exist", () => {
-		delete data.networks.ark["ark.devnet"].meta;
+		delete data.networks.ark[arkDevnet].meta;
 		updateArkNethashes({ data });
-		expect(data.networks.ark["ark.devnet"].meta).toBeDefined();
-		expect(data.networks.ark["ark.devnet"].meta.nethash).toEqual(mockNethash);
+		expect(data.networks.ark[arkDevnet].meta).toBeDefined();
+		expect(data.networks.ark[arkDevnet].meta.nethash).toEqual(mockNethash);
 	});
 
 	it("should not modify other networks", () => {

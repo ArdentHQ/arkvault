@@ -58,7 +58,7 @@ describe("Server utils", () => {
 			.network();
 	});
 
-	it("#sortByName", async () => {
+	it("#sortByName", () => {
 		const normalizedNetwork = {
 			address: "https://test-address.com",
 			enabled: true,

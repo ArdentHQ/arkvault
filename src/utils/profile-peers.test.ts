@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/await-async-query */
 import { Profile } from "@ardenthq/sdk-profiles";
 import { ProfilePeers } from "./profile-peers";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";

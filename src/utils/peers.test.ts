@@ -13,9 +13,11 @@ import {
 import * as HttpClientMock from "@/app/services/HttpClient";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 
+const exampleUrl = "http://www.example.com";
+
 describe("addressIsValid", () => {
 	it("should return true for a valid domain", () => {
-		expect(addressIsValid("http://www.example.com")).toBe(true);
+		expect(addressIsValid(exampleUrl)).toBe(true);
 	});
 
 	it("should return true for a valid IP address", () => {
@@ -33,7 +35,7 @@ describe("addressIsValid", () => {
 
 describe("getBaseUrl", () => {
 	it("should extract the base URL without path", () => {
-		expect(getBaseUrl("http://www.example.com/path")).toEqual("http://www.example.com");
+		expect(getBaseUrl("http://www.example.com/path")).toEqual(exampleUrl);
 	});
 });
 
@@ -57,7 +59,7 @@ describe("pingServerAddress", () => {
 			get: () => Promise.resolve({ body: () => JSON.stringify({ data: "Hello World" }) }),
 		}));
 
-		await expect(pingServerAddress("http://www.example.com", "full")).resolves.toBe(true);
+		await expect(pingServerAddress(exampleUrl, "full")).resolves.toBe(true);
 
 		httpClientMock.mockRestore();
 	});
@@ -67,7 +69,7 @@ describe("pingServerAddress", () => {
 			get: () => Promise.resolve({ body: () => JSON.stringify({ name: "test-musig-server" }) }),
 		}));
 
-		await expect(pingServerAddress("http://www.example.com", "other")).resolves.toBe(true);
+		await expect(pingServerAddress(exampleUrl, "other")).resolves.toBe(true);
 
 		httpClientMock.mockRestore();
 	});
@@ -76,7 +78,7 @@ describe("pingServerAddress", () => {
 		const httpClientMock = vi.spyOn(HttpClientMock, "HttpClient").mockImplementation(() => ({
 			get: () => Promise.reject(new Error("Failed")),
 		}));
-		await expect(pingServerAddress("http://www.example.com", "full")).resolves.toBe(false);
+		await expect(pingServerAddress(exampleUrl, "full")).resolves.toBe(false);
 		httpClientMock.mockRestore();
 	});
 });
@@ -86,7 +88,7 @@ describe("getServerHeight", () => {
 		const httpClientMock = vi.spyOn(HttpClientMock, "HttpClient").mockImplementation(() => ({
 			get: () => Promise.resolve({ body: () => JSON.stringify({ data: { block: { height: 1000 } } }) }),
 		}));
-		await expect(getServerHeight("http://www.example.com")).resolves.toBe(1000);
+		await expect(getServerHeight(exampleUrl)).resolves.toBe(1000);
 		httpClientMock.mockRestore();
 	});
 
@@ -94,7 +96,7 @@ describe("getServerHeight", () => {
 		const httpClientMock = vi.spyOn(HttpClientMock, "HttpClient").mockImplementation(() => ({
 			get: () => Promise.reject(new Error("Failed")),
 		}));
-		await expect(getServerHeight("http://www.example.com")).resolves.toBeUndefined();
+		await expect(getServerHeight(exampleUrl)).resolves.toBeUndefined();
 		httpClientMock.mockRestore();
 	});
 });
@@ -120,6 +122,7 @@ describe("urlBelongsToNetwork", () => {
 		const network = profile.availableNetworks()[0];
 
 		const proberMock = vi.spyOn(profile.coins(), "makeInstance").mockReturnValue({
+			// eslint-disable-next-line @typescript-eslint/require-await
 			__construct: async () => true,
 			prober: () => ({
 				evaluate: () => Promise.resolve(result),
@@ -142,6 +145,6 @@ describe("hasPath", () => {
 describe("endsWithSlash", () => {
 	it("determine if url ends with slash", () => {
 		expect(endsWithSlash("http://www.example.com/")).toBe(true);
-		expect(endsWithSlash("http://www.example.com")).toBe(false);
+		expect(endsWithSlash(exampleUrl)).toBe(false);
 	});
 });

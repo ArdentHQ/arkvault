@@ -1,6 +1,8 @@
-import { NodeConfigurationResponse } from "./../domains/setting/pages/Networks/Networks.contracts";
-import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { vi } from "vitest";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { ARK } from "@ardenthq/sdk-ark";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 import {
 	buildNetwork,
 	enabledNetworksCount,
@@ -15,12 +17,23 @@ import {
 	profileEnabledNetworkIds,
 } from "./network-utils";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { Networks } from "@ardenthq/sdk";
-import { ARK } from "@ardenthq/sdk-ark";
-import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
 
 let profile: Contracts.IProfile;
+
+const customNetwork: UserCustomNetwork = {
+	address: "https://custom.network",
+	name: "Custom Network",
+	slip44: "0",
+};
+
+const customResponse: NodeConfigurationResponse = {
+	nethash: "custom-nethash",
+	slip44: 0,
+	version: 1,
+	wif: 1,
+};
 
 describe("Network utils", () => {
 	beforeAll(() => {
@@ -60,38 +73,11 @@ describe("Network utils", () => {
 	});
 
 	it("builds network", () => {
-		const customNetwork: UserCustomNetwork = {
-			address: "https://custom.network",
-			name: "Custom Network",
-			slip44: "0",
-		};
-
-		const customResponse: NodeConfigurationResponse = {
-			nethash: "custom-nethash",
-			slip44: 0,
-			version: 1,
-			wif: 1,
-		};
-
 		const network = buildNetwork(customNetwork, customResponse);
 
 		expect(network.coin).toBe("Custom Network");
 	});
 	it("builds network with explorer", () => {
-		const customNetwork: UserCustomNetwork = {
-			address: "https://custom.network",
-			name: "Custom Network",
-			slip44: "0",
-			explorer: "https://custom.network/explorer",
-		};
-
-		const customResponse: NodeConfigurationResponse = {
-			nethash: "custom-nethash",
-			slip44: 0,
-			version: 1,
-			wif: 1,
-		};
-
 		const network = buildNetwork(customNetwork, customResponse);
 
 		expect(network.hosts).toEqual([
@@ -124,12 +110,12 @@ describe("Network utils", () => {
 	it("find network by nethash", () => {
 		const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
 
-		const searchParams = new URLSearchParams({ nethash: profile.availableNetworks()[1].meta().nethash });
-		const network = findNetworkFromSearchParameters(profile, searchParams);
+		const searchParameters = new URLSearchParams({ nethash: profile.availableNetworks()[1].meta().nethash });
+		const network = findNetworkFromSearchParameters(profile, searchParameters);
 		expect(network).toEqual(profile.availableNetworks()[1]);
 
-		const searchParams2 = new URLSearchParams({ nethash: "none" });
-		expect(findNetworkFromSearchParameters(profile, searchParams2)).toBeUndefined();
+		const searchParameters2 = new URLSearchParams({ nethash: "none" });
+		expect(findNetworkFromSearchParameters(profile, searchParameters2)).toBeUndefined();
 
 		restoreMock();
 	});
@@ -137,12 +123,12 @@ describe("Network utils", () => {
 	it("find network by network id", () => {
 		const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
 
-		const searchParams = new URLSearchParams({ network: profile.availableNetworks()[1].id() });
-		const network = findNetworkFromSearchParameters(profile, searchParams);
+		const searchParameters = new URLSearchParams({ network: profile.availableNetworks()[1].id() });
+		const network = findNetworkFromSearchParameters(profile, searchParameters);
 		expect(network).toEqual(profile.availableNetworks()[1]);
 
-		const searchParams2 = new URLSearchParams({ network: "none" });
-		expect(findNetworkFromSearchParameters(profile, searchParams2)).toBeUndefined();
+		const searchParameters2 = new URLSearchParams({ network: "none" });
+		expect(findNetworkFromSearchParameters(profile, searchParameters2)).toBeUndefined();
 
 		restoreMock();
 	});
@@ -170,19 +156,6 @@ describe("Network utils", () => {
 	});
 
 	it("determines if a network is custom", () => {
-		const customNetwork: UserCustomNetwork = {
-			address: "https://custom.network",
-			name,
-			slip44: "0",
-		};
-
-		const customResponse: NodeConfigurationResponse = {
-			nethash: "custom-nethash",
-			slip44: 0,
-			version: 1,
-			wif: 1,
-		};
-
 		const network = buildNetwork(customNetwork, customResponse);
 
 		expect(isCustomNetwork(network)).toBe(true);
@@ -191,8 +164,8 @@ describe("Network utils", () => {
 	describe("isValidKnownWalletUrlResponse", () => {
 		it("determines known wallet url response is not valid for rejected", () => {
 			const response: PromiseSettledResult<any> = {
-				status: "rejected",
 				reason: "error",
+				status: "rejected",
 			};
 
 			expect(isValidKnownWalletUrlResponse(response)).toBe(false);
@@ -202,9 +175,7 @@ describe("Network utils", () => {
 			const response: PromiseSettledResult<any> = {
 				status: "fulfilled",
 				value: {
-					body: () => {
-						return "invalid";
-					},
+					body: () => "invalid",
 				},
 			};
 
@@ -231,8 +202,8 @@ describe("Network utils", () => {
 					body: () => {
 						const knownWallets = [
 							{
-								name: "name",
 								address: "address",
+								name: "name",
 								type: "type",
 							},
 						];
@@ -248,9 +219,7 @@ describe("Network utils", () => {
 			const response: PromiseSettledResult<any> = {
 				status: "fulfilled",
 				value: {
-					body: () => {
-						return JSON.stringify([]);
-					},
+					body: () => JSON.stringify([]),
 				},
 			};
 
@@ -263,20 +232,7 @@ describe("Network utils", () => {
 			expect(networkDisplayName(empty)).toBe("");
 		});
 
-		it("returns the coin name if is custom network", (empty) => {
-			const customNetwork: UserCustomNetwork = {
-				address: "https://custom.network",
-				name: "Custom Network",
-				slip44: "0",
-			};
-
-			const customResponse: NodeConfigurationResponse = {
-				nethash: "custom-nethash",
-				slip44: 0,
-				version: 1,
-				wif: 1,
-			};
-
+		it("returns the coin name if is custom network", () => {
 			const manifest = buildNetwork(customNetwork, customResponse);
 
 			const network = new Networks.Network(ARK.manifest, manifest);
@@ -284,7 +240,7 @@ describe("Network utils", () => {
 			expect(networkDisplayName(network)).toBe("Custom Network");
 		});
 
-		it("returns the display name", (empty) => {
+		it("returns the display name", () => {
 			const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
 
 			const network = profile.availableNetworks()[0];
