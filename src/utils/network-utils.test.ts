@@ -8,10 +8,13 @@ import {
 	hasNetworksWithLedgerSupport,
 	isCustomNetwork,
 	isValidKnownWalletUrlResponse,
+	networkDisplayName,
 	networkInitials,
 } from "./network-utils";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { ARK } from "@ardenthq/sdk-ark";
 
 let profile: Contracts.IProfile;
 
@@ -181,51 +184,90 @@ describe("Network utils", () => {
 		expect(isCustomNetwork(network)).toBe(true);
 	});
 
-	it("determines known wallet url response is not valid for rejected", () => {
-		const response: PromiseSettledResult<any> = {
-			status: "rejected",
-			reason: "error",
-		};
+	describe("isValidKnownWalletUrlResponse", () => {
+		it("determines known wallet url response is not valid for rejected", () => {
+			const response: PromiseSettledResult<any> = {
+				status: "rejected",
+				reason: "error",
+			};
 
-		expect(isValidKnownWalletUrlResponse(response)).toBe(false);
+			expect(isValidKnownWalletUrlResponse(response)).toBe(false);
+		});
+
+		it("determines known wallet url response is not valid for invalid json", () => {
+			const response: PromiseSettledResult<any> = {
+				status: "fulfilled",
+				value: {
+					body: () => {
+						return "invalid";
+					},
+				},
+			};
+
+			expect(isValidKnownWalletUrlResponse(response)).toBe(false);
+		});
+
+		it("determines known wallet url response is not valid for exceptions", () => {
+			const response: PromiseSettledResult<any> = {
+				status: "fulfilled",
+				value: {
+					body: () => {
+						throw new Error("error");
+					},
+				},
+			};
+
+			expect(isValidKnownWalletUrlResponse(response)).toBe(false);
+		});
+
+		it("determines known wallet url response is valid", () => {
+			const response: PromiseSettledResult<any> = {
+				status: "fulfilled",
+				value: {
+					body: () => {
+						return JSON.stringify([]);
+					},
+				},
+			};
+
+			expect(isValidKnownWalletUrlResponse(response)).toBe(true);
+		});
 	});
 
-	it("determines known wallet url response is not valid for invalid json", () => {
-		const response: PromiseSettledResult<any> = {
-			status: "fulfilled",
-			value: {
-				body: () => {
-					return "invalid";
-				},
-			},
-		};
+	describe("networkDisplayName", () => {
+		it.each([undefined, null])("returns empty if no network", (empty) => {
+			expect(networkDisplayName(empty)).toBe("");
+		});
 
-		expect(isValidKnownWalletUrlResponse(response)).toBe(false);
-	});
+		it("returns the coin name if is custom network", (empty) => {
+			const customNetwork: UserCustomNetwork = {
+				address: "https://custom.network",
+				name: "Custom Network",
+				slip44: "0",
+			};
 
-	it("determines known wallet url response is not valid for exceptions", () => {
-		const response: PromiseSettledResult<any> = {
-			status: "fulfilled",
-			value: {
-				body: () => {
-					throw new Error("error");
-				},
-			},
-		};
+			const customResponse: NodeConfigurationResponse = {
+				nethash: "custom-nethash",
+				slip44: 0,
+				version: 1,
+				wif: 1,
+			};
 
-		expect(isValidKnownWalletUrlResponse(response)).toBe(false);
-	});
+			const manifest = buildNetwork(customNetwork, customResponse);
 
-	it("determines known wallet url response is valid", () => {
-		const response: PromiseSettledResult<any> = {
-			status: "fulfilled",
-			value: {
-				body: () => {
-					return JSON.stringify([]);
-				},
-			},
-		};
+			const network = new Networks.Network(ARK.manifest, manifest);
 
-		expect(isValidKnownWalletUrlResponse(response)).toBe(true);
+			expect(networkDisplayName(network)).toBe("Custom Network");
+		});
+
+		it("returns the display name", (empty) => {
+			const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
+
+			const network = profile.availableNetworks()[0];
+
+			expect(networkDisplayName(network)).toBe("ARK");
+
+			restoreMock();
+		});
 	});
 });
