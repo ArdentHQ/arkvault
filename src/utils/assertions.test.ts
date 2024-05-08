@@ -4,6 +4,7 @@ import { Profile, Wallet, DTO } from "@ardenthq/sdk-profiles";
 import {
 	assertArray,
 	assertCoin,
+	assertConfirmedTransaction,
 	assertNetwork,
 	assertNumber,
 	assertProfile,
@@ -181,6 +182,43 @@ describe("#assertSignedTransaction", () => {
 		);
 		expect(() => assertSignedTransaction([])).toThrow(
 			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received ",
+		);
+	});
+});
+
+describe("#assertConfirmedTransaction", () => {
+	it("should pass with a signed transaction instance", () => {
+		// @ts-ignore
+		expect(() => assertConfirmedTransaction(new DTO.ExtendedConfirmedTransactionData(new Wallet()))).not.toThrow();
+	});
+
+	it("should fail without a signed transaction instance", () => {
+		expect(() => assertConfirmedTransaction(undefined)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received undefined",
+		);
+		expect(() => assertConfirmedTransaction(null)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received null",
+		);
+		expect(() => assertConfirmedTransaction(true)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received true",
+		);
+		expect(() => assertConfirmedTransaction(false)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received false",
+		);
+		expect(() => assertConfirmedTransaction("")).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received ",
+		);
+		expect(() => assertConfirmedTransaction("a")).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received a",
+		);
+		expect(() => assertConfirmedTransaction(1)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received 1",
+		);
+		expect(() => assertConfirmedTransaction({})).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received [object Object]",
+		);
+		expect(() => assertConfirmedTransaction([])).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received ",
 		);
 	});
 });
