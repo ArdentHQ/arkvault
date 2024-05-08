@@ -280,6 +280,7 @@ export const LedgerTabs = ({
 								return false;
 							}
 
+							console.log("AAAAA");
 							return (
 								network.allows(Enums.FeatureFlag.TransactionTransferLedgerS) ||
 								network.allows(Enums.FeatureFlag.TransactionTransferLedgerX)
