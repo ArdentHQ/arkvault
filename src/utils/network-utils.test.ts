@@ -6,6 +6,8 @@ import {
 	enabledNetworksCount,
 	findNetworkFromSearchParameters,
 	hasNetworksWithLedgerSupport,
+	isCustomNetwork,
+	isValidKnownWalletUrlResponse,
 	networkInitials,
 } from "./network-utils";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
@@ -158,5 +160,72 @@ describe("Network utils", () => {
 		const network = buildNetwork(customNetwork, customResponse);
 
 		expect(networkInitials(network)).toBe(initials);
+	});
+
+	it("determines if a network is custom", () => {
+		const customNetwork: UserCustomNetwork = {
+			address: "https://custom.network",
+			name,
+			slip44: "0",
+		};
+
+		const customResponse: NodeConfigurationResponse = {
+			nethash: "custom-nethash",
+			slip44: 0,
+			version: 1,
+			wif: 1,
+		};
+
+		const network = buildNetwork(customNetwork, customResponse);
+
+		expect(isCustomNetwork(network)).toBe(true);
+	});
+
+	it("determines known wallet url response is not valid for rejected", () => {
+		const response: PromiseSettledResult<any> = {
+			status: "rejected",
+			reason: "error",
+		};
+
+		expect(isValidKnownWalletUrlResponse(response)).toBe(false);
+	});
+
+	it("determines known wallet url response is not valid for invalid json", () => {
+		const response: PromiseSettledResult<any> = {
+			status: "fulfilled",
+			value: {
+				body: () => {
+					return "invalid";
+				},
+			},
+		};
+
+		expect(isValidKnownWalletUrlResponse(response)).toBe(false);
+	});
+
+	it("determines known wallet url response is not valid for exceptions", () => {
+		const response: PromiseSettledResult<any> = {
+			status: "fulfilled",
+			value: {
+				body: () => {
+					throw new Error("error");
+				},
+			},
+		};
+
+		expect(isValidKnownWalletUrlResponse(response)).toBe(false);
+	});
+
+	it("determines known wallet url response is valid", () => {
+		const response: PromiseSettledResult<any> = {
+			status: "fulfilled",
+			value: {
+				body: () => {
+					return JSON.stringify([]);
+				},
+			},
+		};
+
+		expect(isValidKnownWalletUrlResponse(response)).toBe(true);
 	});
 });
