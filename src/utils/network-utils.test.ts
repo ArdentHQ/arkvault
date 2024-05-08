@@ -1,7 +1,12 @@
 import { NodeConfigurationResponse } from "./../domains/setting/pages/Networks/Networks.contracts";
 import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { vi } from "vitest";
-import { buildNetwork, enabledNetworksCount, hasNetworksWithLedgerSupport } from "./network-utils";
+import {
+	buildNetwork,
+	enabledNetworksCount,
+	findNetworkFromSearchParameters,
+	hasNetworksWithLedgerSupport,
+} from "./network-utils";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
@@ -73,6 +78,32 @@ describe("Network utils", () => {
 		const countWithNetworks = enabledNetworksCount(profile);
 
 		expect(countWithNetworks).toBe(2);
+
+		restoreMock();
+	});
+
+	it("find network by nethash", () => {
+		const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		const searchParams = new URLSearchParams({ nethash: profile.availableNetworks()[1].meta().nethash });
+		const network = findNetworkFromSearchParameters(profile, searchParams);
+		expect(network).toEqual(profile.availableNetworks()[1]);
+
+		const searchParams2 = new URLSearchParams({ nethash: "none" });
+		expect(findNetworkFromSearchParameters(profile, searchParams2)).toBeUndefined();
+
+		restoreMock();
+	});
+
+	it("find network by network id", () => {
+		const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		const searchParams = new URLSearchParams({ network: profile.availableNetworks()[1].id() });
+		const network = findNetworkFromSearchParameters(profile, searchParams);
+		expect(network).toEqual(profile.availableNetworks()[1]);
+
+		const searchParams2 = new URLSearchParams({ network: "none" });
+		expect(findNetworkFromSearchParameters(profile, searchParams2)).toBeUndefined();
 
 		restoreMock();
 	});
