@@ -77,6 +77,34 @@ describe("Profile utils", () => {
 		resetProfileNetworksMock();
 	});
 
+	it("should ignore cold wallets", async () => {
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		const walletRestoreMock = vi.spyOn(profile.wallets().first(), "isCold").mockReturnValue(true);
+
+		expect(getErroredNetworks(profile).hasErroredNetworks).toBe(false);
+		expect(getErroredNetworks(profile).erroredNetworks).toHaveLength(0);
+
+		walletRestoreMock.mockRestore();
+		resetProfileNetworksMock();
+	});
+
+	it("should ignore wallets that has been fully restored and has synced with network", async () => {
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		const walletRestoreMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(true);
+		const walletRestoreMock2 = vi.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(true);
+
+		expect(getErroredNetworks(profile).hasErroredNetworks).toBe(false);
+		expect(getErroredNetworks(profile).erroredNetworks).toHaveLength(0);
+
+		walletRestoreMock.mockRestore();
+		walletRestoreMock2.mockRestore();
+		resetProfileNetworksMock();
+	});
+
 	it("#isValidProfileUrl", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
