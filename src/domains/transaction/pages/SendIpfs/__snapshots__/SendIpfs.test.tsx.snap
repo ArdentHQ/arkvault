@@ -1,4 +1,4 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Vitest Snapshot v1
 
 exports[`SendIpfs > should error if wrong mnemonic 1`] = `
 <DocumentFragment>
@@ -6490,7 +6490,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
 </DocumentFragment>
 `;
 
-exports[`SendIpfs > should show error step and go back 1`] = `
+exports[`SendIpfs > should show error step and close 1`] = `
 <DocumentFragment>
   <div
     class="css-kmmje1"

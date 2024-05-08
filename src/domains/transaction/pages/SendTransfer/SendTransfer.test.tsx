@@ -19,7 +19,7 @@ import { translations as transactionTranslations } from "@/domains/transaction/i
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
-
+import * as transportMock from "@/app/contexts/Ledger/transport";
 import {
 	env,
 	getDefaultProfileId,
@@ -39,6 +39,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import * as useLedgerContextMock from "@/app/contexts/Ledger";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -794,6 +795,77 @@ describe("SendTransfer", () => {
 		pushSpy.mockRestore();
 	});
 
+	it("should error if device not available", async () => {
+		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+
+		const useLedgerContextSpy = vi.spyOn(useLedgerContextMock, "useLedgerContext").mockReturnValue({
+			connect: vi.fn(),
+			error: "Access denied to use Ledger device",
+			hasDeviceAvailable: false,
+			listenDevice: vi.fn(),
+			resetConnectionState: vi.fn(),
+		});
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
+
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+
+		selectRecipient();
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		selectFirstRecipient();
+
+		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
+
+		// Amount
+		userEvent.click(screen.getByTestId(sendAllID));
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
+
+		// Memo
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+
+		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
+
+		// Fee
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+
+		await waitFor(() => {
+			expect(continueButton()).not.toBeDisabled();
+		});
+
+		userEvent.click(continueButton());
+
+		// Review Step
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		expect(continueButton()).not.toBeDisabled();
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("Unable to detect Ledger device");
+
+		useLedgerContextSpy.mockRestore();
+	});
+
 	it("should fail sending a single transfer", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
@@ -1174,6 +1246,109 @@ describe("SendTransfer", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should error if no ledger transport is supported", async () => {
+		const isLedgerTransportSupportedSpy = vi
+			.spyOn(transportMock, "isLedgerTransportSupported")
+			.mockReturnValue(false);
+
+		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
+		vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
+
+		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
+			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
+		);
+
+		vi.spyOn(wallet.transaction(), "signTransfer").mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+		createTransactionMock(wallet);
+
+		vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [transactionFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		const transferURL = `/profiles/${fixtureProfileId}/transactions/${wallet.id()}/transfer`;
+
+		history.push(transferURL);
+
+		mockNanoXTransport();
+
+		render(
+			<Route path="/profiles/:profileId/transactions/:walletId/transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+
+		selectRecipient();
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+
+		// Amount
+		userEvent.click(screen.getByTestId(sendAllID));
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
+
+		// Memo
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+
+		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
+
+		// Fee
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+
+		const address = wallet.address();
+		const balance = wallet.balance();
+		const derivationPath = "m/44'/1'/1'/0/0";
+
+		vi.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+			if (key == Contracts.WalletData.Balance) {
+				return balance;
+			}
+
+			if (key == Contracts.WalletData.DerivationPath) {
+				return derivationPath;
+			}
+		});
+
+		// Step 2
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Step 3
+		expect(continueButton()).not.toBeDisabled();
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent(
+			"ARKVault requires the use of a chromium based browser when using a Ledger",
+		);
+
+		isLedgerTransportSupportedSpy.mockRestore();
+
+		vi.restoreAllMocks();
+	});
+
 	it("should error if wrong mnemonic", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
@@ -1257,7 +1432,7 @@ describe("SendTransfer", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should show error step and go back", async () => {
+	it("should show error step and close", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
 		history.push(transferURL);
@@ -1339,6 +1514,89 @@ describe("SendTransfer", () => {
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+
+		signMock.mockRestore();
+	});
+
+	it("should show error step and go back", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
+
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+
+		selectRecipient();
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		selectFirstRecipient();
+
+		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
+
+		// Amount
+		userEvent.click(screen.getByTestId(sendAllID));
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
+
+		// Memo
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+
+		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
+
+		// Fee
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+
+		// Step 2
+		expect(continueButton()).not.toBeDisabled();
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Step 3
+		expect(continueButton()).not.toBeDisabled();
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		// Step 5 (skip step 4 for now - ledger confirmation)
+		const signMock = vi.spyOn(wallet.transaction(), "signTransfer").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		await waitFor(() => {
+			expect(sendButton()).toBeEnabled();
+		});
+
+		userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
+		expect(screen.getAllByTestId("clipboard-button__wrapper")[0]).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		signMock.mockRestore();
 	});

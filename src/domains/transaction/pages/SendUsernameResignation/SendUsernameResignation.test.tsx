@@ -354,7 +354,7 @@ describe("SendUsernameResignation", () => {
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 	});
 
-	it("should show error step and go back", async () => {
+	it("should show error step and close", async () => {
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signUsernameResignation")
 			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
@@ -367,7 +367,7 @@ describe("SendUsernameResignation", () => {
 
 		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
-		const { asFragment } = renderPage();
+		renderPage();
 		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
 
 		await expect(formStep()).resolves.toBeVisible();
@@ -417,15 +417,88 @@ describe("SendUsernameResignation", () => {
 		});
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-		expect(asFragment()).toMatchSnapshot();
 
 		const historyMock = vi.spyOn(history, "push").mockReturnValue();
+
+		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+
+		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}`;
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+
+		historyMock.mockRestore();
+
+		secondPublicKeyMock.mockRestore();
+		broadcastMock.mockRestore();
+		signMock.mockRestore();
+	});
+
+	it("should show error step and go back", async () => {
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signUsernameResignation")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+
+		renderPage();
+		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		// Fee
+		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "30");
+
+		await waitFor(() => expect(inputElement).toHaveValue("30"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+
+		userEvent.click(continueButton());
+
+		await expect(reviewStep()).resolves.toBeVisible();
+
+		userEvent.click(continueButton());
+
+		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
+
+			userEvent.click(screen.getByTestId(feeWarningContinueID));
+		}
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		await waitFor(() => expect(secondMnemonic()).toBeEnabled());
+
+		userEvent.type(secondMnemonic(), MNEMONICS[1]);
+		await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
+
+		await waitFor(() => {
+			expect(sendButton()).toBeEnabled();
+		});
+
+		userEvent.click(sendButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ErrorStep")).toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 
 		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
 
 		await expect(formStep()).resolves.toBeVisible();
-
-		historyMock.mockRestore();
 
 		secondPublicKeyMock.mockRestore();
 		broadcastMock.mockRestore();

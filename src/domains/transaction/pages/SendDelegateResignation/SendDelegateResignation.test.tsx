@@ -228,6 +228,28 @@ describe("SendDelegateResignation", () => {
 			await expect(formStep()).resolves.toBeVisible();
 		});
 
+		it("should navigate with enter key", async () => {
+			renderPage();
+
+			await expect(formStep()).resolves.toBeVisible();
+
+			userEvent.keyboard("{enter}");
+
+			await expect(reviewStep()).resolves.toBeVisible();
+		});
+
+		it("shouldnt navigate to next step twice with enter key on button", async () => {
+			renderPage();
+
+			await expect(formStep()).resolves.toBeVisible();
+
+			continueButton().focus();
+
+			userEvent.keyboard("{enter}");
+
+			await expect(reviewStep()).resolves.toBeVisible();
+		});
+
 		it("should render 3rd step", async () => {
 			const { asFragment } = renderPage();
 
@@ -304,7 +326,7 @@ describe("SendDelegateResignation", () => {
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 		});
 
-		it("should show error step and go back", async () => {
+		it("should show error step and close", async () => {
 			// Run signDelegate once to prevent assertion error (sdk).
 			try {
 				await wallet.transaction().signDelegateResignation({
@@ -364,6 +386,71 @@ describe("SendDelegateResignation", () => {
 
 			const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}`;
 			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+
+			historyMock.mockRestore();
+
+			secondPublicKeyMock.mockRestore();
+			broadcastMock.mockRestore();
+		});
+
+		it("should show error step and go back", async () => {
+			// Run signDelegate once to prevent assertion error (sdk).
+			try {
+				await wallet.transaction().signDelegateResignation({
+					fee: 4,
+					signatory: await wallet.signatoryFactory().make({
+						mnemonic: MNEMONICS[1],
+					}),
+				});
+			} catch {
+				//
+			}
+
+			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
+				throw new Error("broadcast error");
+			});
+
+			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+
+			renderPage();
+
+			await expect(formStep()).resolves.toBeVisible();
+
+			userEvent.click(continueButton());
+
+			await expect(reviewStep()).resolves.toBeVisible();
+
+			userEvent.click(continueButton());
+
+			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+			userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+			await waitFor(() => expect(secondMnemonic()).toBeEnabled());
+
+			userEvent.type(secondMnemonic(), MNEMONICS[1]);
+			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
+
+			await waitFor(() => {
+				expect(sendButton()).toBeEnabled();
+			});
+
+			userEvent.click(sendButton());
+
+			await waitFor(() => {
+				expect(screen.getByTestId("ErrorStep")).toBeInTheDocument();
+			});
+
+			expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+
+			const historyMock = vi.spyOn(history, "push").mockReturnValue();
+
+			userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeInTheDocument();
 
 			historyMock.mockRestore();
 
