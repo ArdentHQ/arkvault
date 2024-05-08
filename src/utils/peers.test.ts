@@ -8,6 +8,7 @@ import {
 	isSameNetwork,
 	urlBelongsToNetwork,
 	hasPath,
+	endsWithSlash,
 } from "@/utils/peers";
 import * as HttpClientMock from "@/app/services/HttpClient";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
@@ -136,5 +137,11 @@ describe("hasPath", () => {
 	it("determine if url has path", () => {
 		expect(hasPath("http://www.example.com/test/test2", "/test/test2")).toBe(true);
 		expect(hasPath("http://www.example.com/test/test3", "/test/test2")).toBe(false);
+	});
+});
+describe("endsWithSlash", () => {
+	it("determine if url ends with slash", () => {
+		expect(endsWithSlash("http://www.example.com/")).toBe(true);
+		expect(endsWithSlash("http://www.example.com")).toBe(false);
 	});
 });
