@@ -148,7 +148,7 @@ describe("#assertNetwork", () => {
 	});
 });
 
-describe.only("#assertSignedTransaction", () => {
+describe("#assertSignedTransaction", () => {
 	it("should pass with a signed transaction instance", () => {
 		// @ts-ignore
 		expect(() => assertSignedTransaction(new DTO.ExtendedSignedTransactionData())).not.toThrow();
