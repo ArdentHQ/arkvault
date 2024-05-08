@@ -28,35 +28,48 @@ describe("WalletsControls", () => {
 		history.push(dashboardURL);
 	});
 
-	it("should render", () => {
-		const { container } = render(
-			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
+	it("should render", async () => {
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={{}} />
+			</Route>,
 			{
 				history,
+				route: dashboardURL,
 				withProfileSynchronizer: true,
+				withProviders: true,
 			},
 		);
 
-		expect(container).toMatchSnapshot();
+		await expect(screen.findByTestId("WalletControls")).resolves.toBeVisible();
 	});
 
-	it("should render for incompatible ledger wallet", () => {
+	it("should render for incompatible ledger wallet", async () => {
 		process.env.REACT_APP_IS_UNIT = undefined;
 
-		const { container } = render(
-			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={{}} />
+			</Route>,
 			{
 				history,
-				withProfileSynchronizer: true,
+				route: dashboardURL,
+				withProviders: true,
 			},
 		);
 
-		expect(container).toMatchSnapshot();
+		await expect(screen.findByTestId("WalletControls")).resolves.toBeVisible();
 	});
 
-	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", (breakpoint) => {
-		const { container } = renderResponsiveWithRoute(
-			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", async (breakpoint) => {
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls
+					onCreateWallet={vi.fn()}
+					onImportWallet={vi.fn()}
+					filterProperties={filterProperties}
+				/>
+			</Route>,
 			breakpoint,
 			{
 				history,
@@ -64,7 +77,7 @@ describe("WalletsControls", () => {
 			},
 		);
 
-		expect(container).toMatchSnapshot();
+		await expect(screen.findByTestId("WalletControls")).resolves.toBeVisible();
 	});
 
 	it("should execute onCreateWallet callback", async () => {

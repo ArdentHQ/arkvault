@@ -56,7 +56,7 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 				/>
 			</FormField>
 
-			{networks.length === 2 && <Divider />}
+			{networks.length === 2 && <Divider data-testid="Divider" />}
 		</section>
 	);
 };
