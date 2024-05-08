@@ -16,6 +16,8 @@ const wrapper = ({ children }) => (
 	</EnvironmentProvider>
 );
 
+const arkDevnetId = "ark.devnet";
+
 describe("useWalletConfig", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -47,14 +49,26 @@ describe("useWalletConfig", () => {
 		expect(current.walletsDisplayType).toBe("all");
 	});
 
+	it("should hide wallets that are not part of the available networks", () => {
+		const availableNetworksSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue([]);
+
+		const {
+			result: { current },
+		} = renderHook(() => useWalletConfig({ profile }), { wrapper });
+
+		expect(current.selectedWallets).toHaveLength(0);
+
+		availableNetworksSpy.mockRestore();
+	});
+
 	it("should render with ledger wallet display type", async () => {
 		const walletIsLedgerSpy = vi.spyOn(profile.wallets().first(), "isLedger").mockReturnValue(true);
-		profile.wallets().first().toggleStarred();
+		const starredSpy = vi.spyOn(profile.wallets().first(), "isStarred").mockReturnValue(true);
 
 		const { result } = renderHook(
 			() =>
 				useWalletConfig({
-					defaults: { selectedNetworkIds: ["ark.devnet"], walletsDisplayType: "ledger" },
+					defaults: { selectedNetworkIds: [arkDevnetId], walletsDisplayType: "ledger" },
 					profile,
 				}),
 			{
@@ -70,13 +84,18 @@ describe("useWalletConfig", () => {
 		expect(result.current.selectedWallets[0].alias()).toBe(profile.wallets().first().alias());
 
 		walletIsLedgerSpy.mockRestore();
+		starredSpy.mockRestore();
 	});
 
 	it("should render with star wallet display type", async () => {
-		profile.wallets().first().toggleStarred();
+		const starredSpy = vi.spyOn(profile.wallets().first(), "isStarred").mockReturnValue(true);
 
 		const { result } = renderHook(
-			() => useWalletConfig({ defaults: { selectedNetworkIds: [], walletsDisplayType: "starred" }, profile }),
+			() =>
+				useWalletConfig({
+					defaults: { selectedNetworkIds: [arkDevnetId], walletsDisplayType: "starred" },
+					profile,
+				}),
 			{
 				wrapper,
 			},
@@ -85,10 +104,15 @@ describe("useWalletConfig", () => {
 		await waitFor(() => {
 			expect(result.current.walletsDisplayType).toBe("starred");
 		});
+
+		expect(result.current.selectedWallets).toHaveLength(1);
+		expect(result.current.selectedWallets[0].alias()).toBe(profile.wallets().first().alias());
+
+		starredSpy.mockRestore();
 	});
 
 	it.each([undefined, []])("should render with no networks selected (%s)", async (selectedNetworkIds) => {
-		profile.wallets().first().toggleStarred();
+		const starredSpy = vi.spyOn(profile.wallets().first(), "isStarred").mockReturnValue(true);
 
 		const { result } = renderHook(() => useWalletConfig({ defaults: { selectedNetworkIds } as any, profile }), {
 			wrapper,
@@ -97,26 +121,32 @@ describe("useWalletConfig", () => {
 		await waitFor(() => {
 			expect(result.current.selectedNetworkIds).toStrictEqual([]);
 		});
+		starredSpy.mockRestore();
 	});
 
 	it("should set value", async () => {
-		profile.wallets().first().toggleStarred();
+		const starredSpy = vi.spyOn(profile.wallets().first(), "isStarred").mockReturnValue(true);
 
 		const { result, waitForNextUpdate } = renderHook(
-			() => useWalletConfig({ defaults: { selectedNetworkIds: [], walletsDisplayType: "all" }, profile }),
+			() =>
+				useWalletConfig({
+					defaults: { selectedNetworkIds: [arkDevnetId, "ark.mainnet"], walletsDisplayType: "all" },
+					profile,
+				}),
 			{
 				wrapper,
 			},
 		);
 
 		act(() => {
-			result.current.setValue("selectedNetworkIds", ["ark.devnet"]);
+			result.current.setValue("selectedNetworkIds", [arkDevnetId]);
 		});
 
 		await waitForNextUpdate();
 
 		await waitFor(() => {
-			expect(result.current.selectedNetworkIds).toStrictEqual(["ark.devnet"]);
+			expect(result.current.selectedNetworkIds).toStrictEqual([arkDevnetId]);
 		});
+		starredSpy.mockRestore();
 	});
 });
