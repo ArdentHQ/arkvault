@@ -6,6 +6,7 @@ import {
 	enabledNetworksCount,
 	findNetworkFromSearchParameters,
 	hasNetworksWithLedgerSupport,
+	networkInitials,
 } from "./network-utils";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 import { Contracts } from "@ardenthq/sdk-profiles";
@@ -106,5 +107,27 @@ describe("Network utils", () => {
 		expect(findNetworkFromSearchParameters(profile, searchParams2)).toBeUndefined();
 
 		restoreMock();
+	});
+
+	it.each([
+		["Custom Network", "CU"],
+		["ARK Devnet", "AR"],
+	])("gets network initials", (name, initials) => {
+		const customNetwork: UserCustomNetwork = {
+			address: "https://custom.network",
+			name,
+			slip44: "0",
+		};
+
+		const customResponse: NodeConfigurationResponse = {
+			nethash: "custom-nethash",
+			slip44: 0,
+			version: 1,
+			wif: 1,
+		};
+
+		const network = buildNetwork(customNetwork, customResponse);
+
+		expect(networkInitials(network)).toBe(initials);
 	});
 });
