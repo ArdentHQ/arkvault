@@ -68,6 +68,35 @@ describe("Network utils", () => {
 
 		expect(network.coin).toBe("Custom Network");
 	});
+	it("builds network with explorer", () => {
+		const customNetwork: UserCustomNetwork = {
+			address: "https://custom.network",
+			name: "Custom Network",
+			slip44: "0",
+			explorer: "https://custom.network/explorer",
+		};
+
+		const customResponse: NodeConfigurationResponse = {
+			nethash: "custom-nethash",
+			slip44: 0,
+			version: 1,
+			wif: 1,
+		};
+
+		const network = buildNetwork(customNetwork, customResponse);
+
+		expect(network.hosts).toEqual([
+			{
+				failedCount: 0,
+				host: "https://custom.network",
+				type: "full",
+			},
+			{
+				host: "https://custom.network/explorer",
+				type: "explorer",
+			},
+		]);
+	});
 
 	it("get enabled networks count", () => {
 		const count = enabledNetworksCount(profile);
