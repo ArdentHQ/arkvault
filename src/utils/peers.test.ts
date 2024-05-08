@@ -1,5 +1,14 @@
-import { addressIsValid, getBaseUrl, isPeer, isMusig, pingServerAddress } from "@/utils/peers";
+import {
+	addressIsValid,
+	getBaseUrl,
+	isPeer,
+	isMusig,
+	pingServerAddress,
+	getServerHeight,
+	isSameNetwork,
+} from "@/utils/peers";
 import * as HttpClientMock from "@/app/services/HttpClient";
+
 describe("addressIsValid", () => {
 	it("should return true for a valid domain", () => {
 		expect(addressIsValid("http://www.example.com")).toBe(true);
@@ -49,5 +58,35 @@ describe("pingServerAddress", () => {
 		}));
 		await expect(pingServerAddress("http://www.example.com", "full")).resolves.toBe(false);
 		httpClientMock.mockRestore();
+	});
+});
+
+describe("getServerHeight", () => {
+	it("should return the height if the server responds with valid data", async () => {
+		const httpClientMock = vi.spyOn(HttpClientMock, "HttpClient").mockImplementation(() => ({
+			get: () => Promise.resolve({ body: () => JSON.stringify({ data: { block: { height: 1000 } } }) }),
+		}));
+		await expect(getServerHeight("http://www.example.com")).resolves.toBe(1000);
+	});
+
+	it("should handle errors and return undefined", async () => {
+		const httpClientMock = vi.spyOn(HttpClientMock, "HttpClient").mockImplementation(() => ({
+			get: () => Promise.reject(new Error("Failed")),
+		}));
+		await expect(getServerHeight("http://www.example.com")).resolves.toBeUndefined();
+	});
+});
+
+describe("isSameNetwork", () => {
+	it("should return true if networks are the same", () => {
+		const networkA = { network: { id: () => "net1" }, address: "addr1", serverType: "full" };
+		const networkB = { network: { id: () => "net1" }, address: "addr1", serverType: "full" };
+		expect(isSameNetwork(networkA, networkB)).toBe(true);
+	});
+
+	it("should return false if networks are different", () => {
+		const networkA = { network: { id: () => "net1" }, address: "addr1", serverType: "full" };
+		const networkB = { network: { id: () => "net2" }, address: "addr1", serverType: "full" };
+		expect(isSameNetwork(networkA, networkB)).toBe(false);
 	});
 });
