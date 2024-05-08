@@ -67,6 +67,7 @@ describe("getServerHeight", () => {
 			get: () => Promise.resolve({ body: () => JSON.stringify({ data: { block: { height: 1000 } } }) }),
 		}));
 		await expect(getServerHeight("http://www.example.com")).resolves.toBe(1000);
+		httpClientMock.mockRestore();
 	});
 
 	it("should handle errors and return undefined", async () => {
@@ -74,19 +75,20 @@ describe("getServerHeight", () => {
 			get: () => Promise.reject(new Error("Failed")),
 		}));
 		await expect(getServerHeight("http://www.example.com")).resolves.toBeUndefined();
+		httpClientMock.mockRestore();
 	});
 });
 
 describe("isSameNetwork", () => {
 	it("should return true if networks are the same", () => {
-		const networkA = { network: { id: () => "net1" }, address: "addr1", serverType: "full" };
-		const networkB = { network: { id: () => "net1" }, address: "addr1", serverType: "full" };
+		const networkA = { address: "addr1", network: { id: () => "net1" }, serverType: "full" };
+		const networkB = { address: "addr1", network: { id: () => "net1" }, serverType: "full" };
 		expect(isSameNetwork(networkA, networkB)).toBe(true);
 	});
 
 	it("should return false if networks are different", () => {
-		const networkA = { network: { id: () => "net1" }, address: "addr1", serverType: "full" };
-		const networkB = { network: { id: () => "net2" }, address: "addr1", serverType: "full" };
+		const networkA = { address: "addr1", network: { id: () => "net1" }, serverType: "full" };
+		const networkB = { address: "addr1", network: { id: () => "net2" }, serverType: "full" };
 		expect(isSameNetwork(networkA, networkB)).toBe(false);
 	});
 });
