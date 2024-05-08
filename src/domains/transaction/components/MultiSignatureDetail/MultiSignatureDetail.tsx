@@ -69,8 +69,10 @@ export const MultiSignatureDetail = ({
 	}, [profile]);
 
 	const broadcastMultiSignature = useCallback(async () => {
+		console.log("arkvault - broadcastMultiSignature ", transaction.id())
 		try {
 			const broadcastedTransaction = await broadcast({ transactionId: transaction.id(), wallet });
+			console.log("arkvault - broadcastMultiSignature - set active tx", transaction.id())
 			setActiveTransaction(broadcastedTransaction);
 
 			await updatePendingWallets();
@@ -79,7 +81,7 @@ export const MultiSignatureDetail = ({
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveStep(MultiSignatureDetailStep.ErrorStep);
 		}
-	}, [wallet, transaction, persist, broadcast]);
+	}, [broadcast, transaction, wallet, updatePendingWallets]);
 
 	const sendSignature = useCallback(
 		async ({
@@ -106,8 +108,14 @@ export const MultiSignatureDetail = ({
 					wif,
 				});
 
-				await addSignature({ signatory, transactionId: transaction.id(), wallet });
+				const broadcastResponse = await addSignature({ signatory, transactionId: transaction.id(), wallet });
+
+				const freshTransaction = wallet.transaction().transaction(broadcastResponse.accepted[0]);
+				console.log("broadcastResponse", broadcastResponse, freshTransaction.data().toObject())
+
 				await wallet.transaction().sync();
+
+				setActiveTransaction(freshTransaction);
 
 				const { publicKeys, min } = getMultiSignatureInfo(transaction);
 
@@ -118,6 +126,7 @@ export const MultiSignatureDetail = ({
 					return broadcastMultiSignature();
 				}
 
+				console.log("arkvault - sendSignature - set active tx", transaction.id())
 				setActiveTransaction(transaction);
 
 				setActiveStep(MultiSignatureDetailStep.SentStep);
