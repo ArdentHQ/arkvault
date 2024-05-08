@@ -28998,6 +28998,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -30152,6 +30153,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -31306,6 +31308,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -32460,6 +32463,7 @@ exports[`DelegateTable > should render 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -33763,6 +33767,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -34987,6 +34992,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -36141,6 +36147,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -37296,6 +37303,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -38951,6 +38959,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -40252,6 +40261,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -41476,6 +41486,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -42633,6 +42644,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -43788,6 +43800,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -45089,6 +45102,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -46313,6 +46327,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -47465,6 +47480,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>
@@ -48622,6 +48638,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden"
+                      data-testid="DelegateRow__address"
                     >
                       DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                     </span>

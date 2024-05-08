@@ -228,7 +228,11 @@ export const DelegateRow = ({
 						{delegate.username() ? (
 							<div className="overflow-hidden text-ellipsis">{delegate.username()}</div>
 						) : (
-							<TruncateMiddleDynamic value={delegate.address()} availableWidth={width} />
+							<TruncateMiddleDynamic
+								data-testid="DelegateRow__address"
+								value={delegate.address()}
+								availableWidth={width}
+							/>
 						)}
 
 						<Link
