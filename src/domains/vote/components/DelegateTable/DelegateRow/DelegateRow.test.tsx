@@ -52,6 +52,39 @@ describe("DelegateRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render with address if no username", () => {
+		delegate = new ReadOnlyWallet({
+			address: data[0].address,
+			explorerLink: "",
+			governanceIdentifier: "address",
+			isDelegate: true,
+			isResignedDelegate: false,
+			publicKey: data[0].publicKey,
+			username: undefined,
+		});
+
+		const { container } = render(
+			<table>
+				<tbody>
+					<DelegateRow
+						index={0}
+						delegate={delegate}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
+						selectedWallet={wallet}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(container).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateRow__address")).toBeInTheDocument();
+	});
+
 	it("should emit action on select button", () => {
 		const toggleVotesSelected = vi.fn();
 		const { container, asFragment } = render(

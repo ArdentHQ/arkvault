@@ -53,8 +53,8 @@ export const DelegateRow = ({
 
 	const isSelectedUnvote = useMemo(
 		() =>
-			!!selectedUnvotes?.find((unvote) => {
-				const isEqualToDelegate = unvote.delegateAddress === delegate?.address?.();
+			!!selectedUnvotes.find((unvote) => {
+				const isEqualToDelegate = unvote.delegateAddress === delegate.address();
 
 				if (isEqualToDelegate && requiresStakeAmount) {
 					return unvote.amount === voted?.amount;
@@ -66,12 +66,12 @@ export const DelegateRow = ({
 	);
 
 	const isSelectedVote = useMemo(
-		() => !!voted || !!delegateExistsInVotes(selectedVotes, delegate?.address?.()),
+		() => !!voted || !!delegateExistsInVotes(selectedVotes, delegate.address()),
 		[delegate, voted, selectedVotes],
 	);
 
 	const isActive = useMemo(() => {
-		const rank = delegate?.rank?.();
+		const rank = delegate.rank();
 		if (rank !== undefined) {
 			return rank <= selectedWallet.network().delegateCount();
 		}
@@ -79,9 +79,9 @@ export const DelegateRow = ({
 	}, [delegate, selectedWallet]);
 
 	const isChanged = useMemo(() => {
-		const alreadyExistsInVotes = !!delegateExistsInVotes(selectedVotes, delegate?.address?.());
+		const alreadyExistsInVotes = !!delegateExistsInVotes(selectedVotes, delegate.address());
 		const alreadyExistsInUnvotes =
-			!!delegateExistsInVotes(selectedUnvotes, delegate?.address?.()) && !isSelectedUnvote;
+			!!delegateExistsInVotes(selectedUnvotes, delegate.address()) && !isSelectedUnvote;
 
 		return !!voted && (alreadyExistsInVotes || alreadyExistsInUnvotes);
 	}, [selectedVotes, selectedUnvotes, isSelectedUnvote, voted, delegate]);
@@ -118,11 +118,11 @@ export const DelegateRow = ({
 					compactClassName="text-theme-warning-700 hover:text-theme-warning-800"
 					isCompact={isCompact}
 					onClick={() => {
-						if (delegateExistsInVotes(selectedVotes, delegate?.address?.())) {
-							toggleVotesSelected?.(delegate.address());
+						if (delegateExistsInVotes(selectedVotes, delegate.address())) {
+							toggleVotesSelected(delegate.address());
 						}
 
-						toggleUnvotesSelected?.(delegate.address(), voted!.amount);
+						toggleUnvotesSelected(delegate.address(), voted!.amount);
 					}}
 				>
 					{t("COMMON.CHANGED")}
@@ -139,7 +139,7 @@ export const DelegateRow = ({
 						compactClassName="text-theme-danger-400 hover:text-theme-danger-500"
 						isCompact={isCompact}
 						selectedWallet={selectedWallet}
-						onClick={() => toggleUnvotesSelected?.(delegate.address())}
+						onClick={() => toggleUnvotesSelected(delegate.address())}
 					>
 						{t("COMMON.UNSELECTED")}
 					</DelegateVoteButton>
@@ -153,7 +153,7 @@ export const DelegateRow = ({
 					compactClassName="text-theme-primary-600 hover:text-theme-primary-700"
 					isCompact={isCompact}
 					selectedWallet={selectedWallet}
-					onClick={() => toggleUnvotesSelected?.(delegate.address())}
+					onClick={() => toggleUnvotesSelected(delegate.address())}
 				>
 					{t("COMMON.CURRENT")}
 				</DelegateVoteButton>
@@ -181,7 +181,7 @@ export const DelegateRow = ({
 					variant="reverse"
 					compactClassName="text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700"
 					isCompact={isCompact}
-					onClick={() => toggleVotesSelected?.(delegate.address())}
+					onClick={() => toggleVotesSelected(delegate.address())}
 					selectedWallet={selectedWallet}
 				>
 					{t("COMMON.SELECTED")}
@@ -195,7 +195,7 @@ export const DelegateRow = ({
 				variant="secondary"
 				compactClassName="text-theme-primary-600 hover:text-theme-primary-700"
 				isCompact={isCompact}
-				onClick={() => toggleVotesSelected?.(delegate.address())}
+				onClick={() => toggleVotesSelected(delegate.address())}
 				selectedWallet={selectedWallet}
 			>
 				{t("COMMON.SELECT")}
@@ -228,7 +228,11 @@ export const DelegateRow = ({
 						{delegate.username() ? (
 							<div className="overflow-hidden text-ellipsis">{delegate.username()}</div>
 						) : (
-							<TruncateMiddleDynamic value={delegate.address()} availableWidth={width} />
+							<TruncateMiddleDynamic
+								data-testid="DelegateRow__address"
+								value={delegate.address()}
+								availableWidth={width}
+							/>
 						)}
 
 						<Link

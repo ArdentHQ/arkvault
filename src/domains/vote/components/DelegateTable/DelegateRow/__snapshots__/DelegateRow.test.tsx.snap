@@ -41,11 +41,12 @@ exports[`DelegateRow > should emit action on select button 1`] = `
               <span
                 class="absolute flex w-full items-center whitespace-nowrap"
               >
-                <div
-                  class="overflow-hidden text-ellipsis"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden"
+                  data-testid="DelegateRow__address"
                 >
-                  arkx
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
                 <a
                   class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                   data-ring-focus-margin="-m-1"
@@ -437,11 +438,12 @@ exports[`DelegateRow > should render changed style when network requires vote am
               <span
                 class="absolute flex w-full items-center whitespace-nowrap"
               >
-                <div
-                  class="overflow-hidden text-ellipsis"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden"
+                  data-testid="DelegateRow__address"
                 >
-                  arkx
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
                 <a
                   class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                   data-ring-focus-margin="-m-1"
@@ -680,11 +682,12 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
               <span
                 class="absolute flex w-full items-center whitespace-nowrap"
               >
-                <div
-                  class="overflow-hidden text-ellipsis"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden"
+                  data-testid="DelegateRow__address"
                 >
-                  arkx
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
                 <a
                   class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                   data-ring-focus-margin="-m-1"
@@ -878,11 +881,12 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               <span
                 class="absolute flex w-full items-center whitespace-nowrap"
               >
-                <div
-                  class="overflow-hidden text-ellipsis"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden"
+                  data-testid="DelegateRow__address"
                 >
-                  arkx
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
                 <a
                   class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                   data-ring-focus-margin="-m-1"
@@ -1457,11 +1461,12 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               <span
                 class="absolute flex w-full items-center whitespace-nowrap"
               >
-                <div
-                  class="overflow-hidden text-ellipsis"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden"
+                  data-testid="DelegateRow__address"
                 >
-                  arkx
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
                 <a
                   class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                   data-ring-focus-margin="-m-1"
@@ -2036,11 +2041,12 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
               <span
                 class="absolute flex w-full items-center whitespace-nowrap"
               >
-                <div
-                  class="overflow-hidden text-ellipsis"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden"
+                  data-testid="DelegateRow__address"
                 >
-                  arkx
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
                 <a
                   class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                   data-ring-focus-margin="-m-1"
@@ -2234,11 +2240,12 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
               <span
                 class="absolute flex w-full items-center whitespace-nowrap"
               >
-                <div
-                  class="overflow-hidden text-ellipsis"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden"
+                  data-testid="DelegateRow__address"
                 >
-                  arkx
-                </div>
+                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                </span>
                 <a
                   class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                   data-ring-focus-margin="-m-1"
