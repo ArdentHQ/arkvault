@@ -138,8 +138,8 @@ describe("Server utils", () => {
 			expect(hasAvailableMusigServer({ network })).toBe(false);
 		});
 
-		it("temporary should return true if profile provided", () => {
-			expect(hasAvailableMusigServer({ network, profile })).toBe(true);
+		it("temporary should return false if profile provided", () => {
+			expect(hasAvailableMusigServer({ network, profile })).toBe(false);
 		});
 	});
 });
