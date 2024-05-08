@@ -28996,11 +28996,11 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -30150,11 +30150,11 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -31304,11 +31304,11 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -32458,11 +32458,11 @@ exports[`DelegateTable > should render 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -33761,11 +33761,11 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -34985,11 +34985,11 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -36139,11 +36139,11 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -37294,11 +37294,11 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -38949,11 +38949,11 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -40250,11 +40250,11 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -41474,11 +41474,11 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -42631,11 +42631,11 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -43786,11 +43786,11 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -45087,11 +45087,11 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -46311,11 +46311,11 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -47463,11 +47463,11 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
@@ -48620,11 +48620,11 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                   <span
                     class="absolute flex w-full items-center whitespace-nowrap"
                   >
-                    <div
-                      class="overflow-hidden text-ellipsis"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden"
                     >
-                      genesis_17
-                    </div>
+                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    </span>
                     <a
                       class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                       data-ring-focus-margin="-m-1"
