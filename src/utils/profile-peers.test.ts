@@ -54,4 +54,33 @@ describe("ProfilePeers", () => {
 			customNetworksMock.mockRestore();
 		},
 	);
+
+	it("use empty addres if host is not provided", async () => {
+		const pingServerAdressMock = vi.spyOn(peersMock, "pingServerAddress").mockImplementation(async () => true);
+
+		const network = profile.availableNetworks()[0];
+
+		const host = network.toObject().hosts[0];
+
+		const networkWithoutHostSpy = vi.spyOn(network.toObject(), "hosts", "get").mockReturnValue([
+			{
+				...host,
+				host: undefined,
+			},
+		]);
+
+		const { healthStatusByNetwork } = ProfilePeers(env, profile);
+
+		const health = await healthStatusByNetwork();
+
+		expect(health).toEqual({
+			"ark.devnet": { "https://ark-live.arkvault.io/api": true },
+			"ark.mainnet": {
+				"": true,
+			},
+		});
+
+		pingServerAdressMock.mockRestore();
+		networkWithoutHostSpy.mockRestore();
+	});
 });
