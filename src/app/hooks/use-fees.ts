@@ -134,8 +134,8 @@ export const useFees = (profile: Contracts.IProfile) => {
 			}
 
 			if (
-				!isMainsailNetwork(coinInstance.network()) &&
 				!!data &&
+				!isMainsailNetwork(coinInstance.network()) &&
 				(coinInstance.network().feeType() === "size" || type === "multiSignature")
 			) {
 				const feesBySize = await calculateBySize({ coin: coinInstance, data, type });
