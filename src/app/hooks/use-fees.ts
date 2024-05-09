@@ -5,6 +5,7 @@ import { useCallback } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
 import { TransactionFees } from "@/types";
 import { assertString } from "@/utils/assertions";
+import { isMainsailNetwork } from "@/utils/network-utils";
 
 interface CreateStubTransactionProperties {
 	coin: Coins.Coin;
@@ -132,7 +133,11 @@ export const useFees = (profile: Contracts.IProfile) => {
 				transactionFees = env.fees().findByType(coin, network, type);
 			}
 
-			if (!!data && (coinInstance.network().feeType() === "size" || type === "multiSignature")) {
+			if (
+				!isMainsailNetwork(coinInstance.network()) &&
+				!!data &&
+				(coinInstance.network().feeType() === "size" || type === "multiSignature")
+			) {
 				const feesBySize = await calculateBySize({ coin: coinInstance, data, type });
 
 				return {
