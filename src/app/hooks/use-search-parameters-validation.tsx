@@ -249,7 +249,7 @@ export const useSearchParametersValidation = () => {
 
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
 
-		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
+		const coin = parameters.get("coin") || "ARK";
 		const method = parameters.get("method")?.toLowerCase() as string;
 		const networkId = parameters.get("network")?.toLowerCase() as string;
 		const nethash = parameters.get("nethash");
@@ -266,7 +266,7 @@ export const useSearchParametersValidation = () => {
 			return { error: { type: SearchParametersError.CoinMismatch } };
 		}
 
-		if (!allEnabledNetworks.some((item) => item.coin().toUpperCase() === coin)) {
+		if (!allEnabledNetworks.some((item) => item.coin() === coin)) {
 			return { error: { type: SearchParametersError.CoinNotSupported, value: coin } };
 		}
 
