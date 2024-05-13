@@ -79,7 +79,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should validate url with errors", async () => {
-		history.push("/?method=transfer&coin=doge&network=ark.devnet");
+		history.push("/?method=transfer&coin=DOGE&network=ark.devnet");
 
 		render(
 			<Route>
@@ -100,7 +100,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should validate url without errors", async () => {
-		history.push("/?method=transfer&coin=ark&network=ark.devnet");
+		history.push("/?method=transfer&coin=ARK&network=ark.devnet");
 
 		render(
 			<Route>
