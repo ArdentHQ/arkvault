@@ -442,6 +442,26 @@ describe("AddressRow", () => {
 		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
 	});
 
+	it("should render wallet avatar without username", async () => {
+		render(
+			<WalletAvatar
+				wallet={
+					new ReadOnlyWallet({
+						address: data[0].address,
+						explorerLink: `https://test.arkscan.io/wallets/${data[0].address}`,
+						governanceIdentifier: "address",
+						isDelegate: true,
+						isResignedDelegate: false,
+						publicKey: data[0].publicKey,
+						username: undefined,
+					})
+				}
+			/>,
+		);
+
+		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
+	});
+
 	it("should render wallet avatar in compact mode", async () => {
 		render(
 			<WalletAvatar
