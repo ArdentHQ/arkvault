@@ -132,7 +132,11 @@ export const useFees = (profile: Contracts.IProfile) => {
 				transactionFees = env.fees().findByType(coin, network, type);
 			}
 
-			if (!!data && coinInstance.network().feeType() === "size") {
+			if (
+				!!data &&
+				(coinInstance.network().feeType() === "size" ||
+					(type === "multiSignature" && coinInstance.network().feeType() !== "static"))
+			) {
 				const feesBySize = await calculateBySize({ coin: coinInstance, data, type });
 
 				return {
