@@ -266,7 +266,7 @@ export const useSearchParametersValidation = () => {
 			return { error: { type: SearchParametersError.CoinMismatch } };
 		}
 
-		if (!allEnabledNetworks.some((item) => item.coin() === coin)) {
+		if (!allEnabledNetworks.some((item) => item.coin().toUpperCase() === coin)) {
 			return { error: { type: SearchParametersError.CoinNotSupported, value: coin } };
 		}
 
