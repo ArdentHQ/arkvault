@@ -688,6 +688,35 @@ describe("Votes", () => {
 		walletSpy.mockRestore();
 	});
 
+	it("should show resigned delegate notice with delegate without username", async () => {
+		const currentWallet = profile.wallets().first();
+		const walletSpy = vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: true,
+					publicKey: currentWallet.publicKey(),
+					rank: 52,
+					username: undefined,
+				}),
+			},
+		]);
+		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
+		const { container } = renderPage(route);
+
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
+
+		await expect(screen.findByTestId("Votes__resigned-vote")).resolves.toBeVisible();
+
+		expect(container).toMatchSnapshot();
+
+		walletSpy.mockRestore();
+	});
+
 	it("should filter delegates by address", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		renderPage(route);
