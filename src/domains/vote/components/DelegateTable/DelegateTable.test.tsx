@@ -36,7 +36,7 @@ describe("DelegateTable", () => {
 					isDelegate: true,
 					isResignedDelegate: false,
 					publicKey: data[index].publicKey,
-					username: data[index].username,
+					username: index === 2 ? undefined : data[index].username,
 				}),
 		);
 

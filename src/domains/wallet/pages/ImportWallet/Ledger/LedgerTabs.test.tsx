@@ -1,3 +1,4 @@
+import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
@@ -433,6 +434,44 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
+	});
+
+	it("should render network step if network allows ledger x", async () => {
+		const mainNetwork = profile.availableNetworks()[0];
+
+		const allowsSpy = vi.spyOn(mainNetwork, "allows").mockImplementation((key) => {
+			if (key === Enums.FeatureFlag.TransactionMultiSignatureLedgerX) {
+				return true;
+			}
+
+			return false;
+		});
+
+		const availableNetworksSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue([mainNetwork]);
+
+		const getPublicKeySpy = vi
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
+
+		const ledgerTransportMock = mockNanoXTransport();
+
+		render(<Component activeIndex={2} />, {
+			route: `/profiles/${profile.id()}`,
+		});
+
+		expect(screen.getByTestId("NetworkStep")).toBeVisible();
+
+		userEvent.click(nextSelector());
+
+		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
+
+		// Auto redirect to next step
+		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
+
+		allowsSpy.mockRestore();
+		getPublicKeySpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+		availableNetworksSpy.mockRestore();
 	});
 
 	it("should skip network step if only one available network", async () => {

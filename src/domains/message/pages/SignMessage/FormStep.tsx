@@ -53,7 +53,7 @@ export const FormStep = ({
 	};
 
 	return (
-		<section className="space-y-5">
+		<section data-testid="SignMessage--form-step" className="space-y-5">
 			<StepHeader title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE")} subtitle={getSubtitle()} />
 
 			<FormField name="signatory-address">

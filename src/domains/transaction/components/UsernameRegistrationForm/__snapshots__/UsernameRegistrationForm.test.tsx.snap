@@ -1588,7 +1588,7 @@ exports[`UsernameRegistrationForm > should show error if username contains illeg
                 data-testid="Input__addon-end"
               >
                 <span
-                  data-errortext="The following characters are not allowed: '<', '>'"
+                  data-errortext="Only lowercase letters, numbers and underscores are allowed"
                   data-testid="Input__error"
                 >
                   <div
