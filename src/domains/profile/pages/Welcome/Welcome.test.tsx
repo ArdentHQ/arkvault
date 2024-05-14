@@ -56,7 +56,7 @@ const expectToast = async (text: string) => {
 describe("Welcome with deeplink", () => {
 	const history = createHashHistory();
 	const mainnetDeepLink =
-		"/?method=transfer&coin=ARK&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
+		"/?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
 
 	let resetProfileNetworksMock: () => void;
 	let profile: Contracts.IProfile;
@@ -98,7 +98,7 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				// Using transfer page as an example
-				route: "/?method=transfer&coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 			},
 		);
 
@@ -127,7 +127,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=vote&coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
 			},
 		);
 
@@ -147,7 +147,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=verify&coin=ARK&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature",
+				route: "/?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature",
 			},
 		);
 
@@ -174,7 +174,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=vote&coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
 			},
 		);
 
@@ -203,7 +203,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=transfer&coin=DOGE&network=ark.mainnet",
+				route: "/?method=transfer&coin=doge&network=ark.mainnet",
 			},
 		);
 
@@ -223,7 +223,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=transfer&coin=ARK",
+				route: "/?method=transfer&coin=ark",
 			},
 		);
 
@@ -261,7 +261,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=nuke&coin=ARK&network=ark.mainnet",
+				route: "/?method=nuke&coin=ark&network=ark.mainnet",
 			},
 		);
 
@@ -281,7 +281,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=transfer&coin=ARK",
+				route: "/?method=transfer&coin=ark",
 			},
 		);
 
@@ -301,7 +301,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=transfer&coin=ARK&network=custom",
+				route: "/?method=transfer&coin=ark&network=custom",
 			},
 		);
 
@@ -342,7 +342,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: `/?method=transfer&coin=ARK&nethash=${nethash}`,
+				route: `/?method=transfer&coin=ark&nethash=${nethash}`,
 			},
 		);
 
@@ -368,7 +368,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: `/?method=transfer&coin=ARK&nethash=${nethash}`,
+				route: `/?method=transfer&coin=ark&nethash=${nethash}`,
 			},
 		);
 
@@ -388,7 +388,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=transfer&coin=ARK&network=ark.devnet",
+				route: "/?method=transfer&coin=ark&network=ark.devnet",
 			},
 		);
 
@@ -406,7 +406,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=transfer&coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 			},
 		);
 
@@ -432,7 +432,7 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				// Using transfer page as an example
-				route: "/?method=transfer&coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 			},
 		);
 
@@ -519,7 +519,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=sign&coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message%20to%20sign",
+				route: "/?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message%20to%20sign",
 			},
 		);
 

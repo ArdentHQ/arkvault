@@ -22,7 +22,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should validate search parameters without errors (with network)", async () => {
 		const parameters = new URLSearchParams(
-			"amount=10&coin=ARK&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+			"amount=10&coin=ark&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -32,7 +32,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should validate search parameters without errors (with nethash)", async () => {
 		const parameters = new URLSearchParams(
-			"coin=ARK&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+			"coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -49,7 +49,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error for invalid coin", async () => {
-		const parameters = new URLSearchParams("coin=CUSTOM&network=ark.devnet&method=transfer");
+		const parameters = new URLSearchParams("coin=custom&network=ark.devnet&method=transfer");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -138,7 +138,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error for network mismatch", async () => {
-		const parameters = new URLSearchParams("coin=ARK&method=transfer&network=ark.devnet");
+		const parameters = new URLSearchParams("coin=ark&method=transfer&network=ark.devnet");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -407,7 +407,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should generate send transfer path", () => {
 		const parameters = new URLSearchParams(
-			"coin=ARK&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+			"coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -420,7 +420,7 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/send-transfer?coin=ARK&method=transfer&nethash=${
+			`/profiles/${profile.id()}/send-transfer?coin=ark&method=transfer&nethash=${
 				profile.wallets().first().network().meta().nethash
 			}`,
 		);
@@ -428,7 +428,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should generate send vote path", () => {
 		const parameters = new URLSearchParams(
-			"coin=ARK&method=vote&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+			"coin=ark&method=vote&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -441,7 +441,7 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/send-vote?coin=ARK&method=vote&nethash=${
+			`/profiles/${profile.id()}/send-vote?coin=ark&method=vote&nethash=${
 				profile.wallets().first().network().meta().nethash
 			}&delegate=test&vote=undefined`,
 		);
@@ -451,7 +451,7 @@ describe("useSearchParametersValidation", () => {
 		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
-			"amount=10&coin=ARK&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+			"amount=10&coin=ark&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -467,7 +467,7 @@ describe("useSearchParametersValidation", () => {
 		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNethash").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
-			"coin=ARK&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+			"coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
