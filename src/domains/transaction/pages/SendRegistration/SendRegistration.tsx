@@ -12,7 +12,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWallet, useLedgerModelStatus, useValidation } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useLedgerModelStatus, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
@@ -45,7 +45,8 @@ export const SendRegistration = () => {
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWallet();
+	const { walletId } = useParams<{ walletId?: string }>();
+	const activeWallet = useActiveWalletWhenNeeded(walletId !== undefined);
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
