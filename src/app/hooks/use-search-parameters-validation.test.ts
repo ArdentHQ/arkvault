@@ -350,6 +350,20 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
+	it("should fail to find valiadtor by public key", async () => {
+		const isMainsailNetworkSpy = vi.spyOn(networkUtils, "isMainsailNetwork").mockReturnValue(true);
+
+		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&validator=1");
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "VALIDATOR_NOT_FOUND", value: "1" },
+		});
+
+		isMainsailNetworkSpy.mockRestore();
+	});
+
 	it("should not allow both delegate name and public keys in the url", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&publicKey=1&delegate=test");
 
@@ -390,6 +404,20 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
+	it("should require validator parameter if it is a vote link for mainsail", async () => {
+		const isMainsailNetworkSpy = vi.spyOn(networkUtils, "isMainsailNetwork").mockReturnValue(true);
+
+		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote");
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "VALIDATOR_MISSING" },
+		});
+
+		isMainsailNetworkSpy.mockRestore();
+	});
+
 	it("should fail if delegate is resigned", async () => {
 		const delegateWallet = new ReadOnlyWallet({
 			address: profile.wallets().first().address(),
@@ -422,6 +450,41 @@ describe("useSearchParametersValidation", () => {
 
 		mockFindDelegateByPublicKey.mockRestore();
 		resignedMock.mockRestore();
+	});
+
+	it("should fail if validator is resigned", async () => {
+		const validatorWallet = new ReadOnlyWallet({
+			address: profile.wallets().first().address(),
+			explorerLink: "",
+			governanceIdentifier: "address",
+			isDelegate: true,
+			isResignedDelegate: false,
+			publicKey: profile.wallets().first().publicKey(),
+			rank: 52,
+			username: "testi",
+		});
+		const isMainsailNetworkSpy = vi.spyOn(networkUtils, "isMainsailNetwork").mockReturnValue(true);
+		const mockFindValidatorByPublicKey = vi
+			.spyOn(env.delegates(), "findByPublicKey")
+			.mockReturnValue(validatorWallet);
+
+		const resignedMock = vi.spyOn(validatorWallet, "isResignedDelegate").mockReturnValue(true);
+
+		const parameters = new URLSearchParams(
+			`coin=ARK&network=ark.devnet&method=vote&publicKey=${validatorWallet.publicKey()}`,
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: {
+				type: "VALIDATOR_MISSING",
+			},
+		});
+
+		mockFindValidatorByPublicKey.mockRestore();
+		resignedMock.mockRestore();
+		isMainsailNetworkSpy.mockRestore();
 	});
 
 	it("should generate send transfer path", () => {
