@@ -484,6 +484,7 @@ export const translations = {
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
 		SIGNATORY_MISSING: "signatory is missing",
 		SIGNATURE_MISSING: "signature is missing",
+		USERNAME_MISSING: "username is missing.",
 	},
 	VALIDATOR_NAME: "Validator Name",
 	VALIDATOR_PUBLIC_KEY: "Validator Public Key",

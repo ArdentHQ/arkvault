@@ -49,6 +49,7 @@ enum SearchParametersError {
 	NetworkNoWallets = "NETWORK_NO_WALLETS",
 	MessageMissing = "MESSAGE_MISSING",
 	InvalidAddress = "INVALID_ADDRESS_OR_NETWORK_MISMATCH",
+	UsernameMissing = "USERNAME_MISSING",
 }
 
 const defaultNetworks = {
@@ -176,6 +177,13 @@ const validateSign = async ({ parameters, profile, network }: ValidateParameters
 		}
 	}
 };
+const validateUsername = async ({ parameters, profile, network }: ValidateParameters) => {
+	const username = parameters.get("username");
+
+	if (!username) {
+		return { error: { type: SearchParametersError.UsernameMissing } };
+	}
+};
 
 /* istanbul ignore next -- @preserve */
 const WrapperQR = ({ children }) => {
@@ -236,6 +244,14 @@ export const useSearchParametersValidation = () => {
 				})}?${searchParameters.toString()}`;
 			},
 			validate: validateVote,
+		},
+		username: {
+			path: ({ profile, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SendRegistrationWithoutWallet, {
+					profileId: profile.id(),
+					registrationType: "usernameRegistration",
+				})}?${searchParameters.toString()}`,
+			validate: validateUsername,
 		},
 	};
 
