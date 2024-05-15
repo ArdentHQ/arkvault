@@ -267,9 +267,11 @@ export const useSearchParametersValidation = () => {
 				const network = findNetworkFromSearchParameters(profile, searchParameters);
 				assertNetwork(network);
 
-				const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters });
+				const subject = isMainsailNetwork(network)
+					? validatorFromSearchParameters({ env, network, profile, searchParameters })
+					: delegateFromSearchParameters({ env, network, profile, searchParameters });
 
-				searchParameters.set("vote", delegate?.address() as string);
+				searchParameters.set("vote", subject?.address() as string);
 
 				return `${generatePath(ProfilePaths.SendVote, {
 					profileId: profile.id(),
