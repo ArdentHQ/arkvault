@@ -4,6 +4,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { useSearchParametersValidation } from "./use-search-parameters-validation";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
+import * as networkUtils from "@/utils/network-utils";
 
 let profile: Contracts.IProfile;
 
@@ -307,6 +308,24 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
 
 		mockFindDelegateByPublicKey.mockRestore();
+	});
+
+	it("should find validator by public key on mainsail network", async () => {
+		const mockFindValidatorByPublicKey = vi
+			.spyOn(env.delegates(), "findByPublicKey")
+			.mockReturnValue(profile.wallets().first());
+
+		const isMainsailNetworkSpy = vi.spyOn(networkUtils, "isMainsailNetwork").mockReturnValue(true);
+
+		const parameters = new URLSearchParams("coin=ark&network=ark.devnet&method=vote&validator=1");
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
+
+		mockFindValidatorByPublicKey.mockRestore();
+
+		isMainsailNetworkSpy.mockRestore();
 	});
 
 	it("should throw for invalid address if sign with invalid address", async () => {
