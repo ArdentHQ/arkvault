@@ -223,6 +223,14 @@ export const useSearchParametersValidation = () => {
 				})}?${searchParameters.toString()}`,
 			validate: validateTransfer,
 		},
+		username: {
+			path: ({ profile, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SendRegistrationWithoutWallet, {
+					profileId: profile.id(),
+					registrationType: "usernameRegistration",
+				})}?${searchParameters.toString()}`,
+			validate: validateUsername,
+		},
 		verify: {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.VerifyMessage, {
@@ -244,14 +252,6 @@ export const useSearchParametersValidation = () => {
 				})}?${searchParameters.toString()}`;
 			},
 			validate: validateVote,
-		},
-		username: {
-			path: ({ profile, searchParameters }: PathProperties) =>
-				`${generatePath(ProfilePaths.SendRegistrationWithoutWallet, {
-					profileId: profile.id(),
-					registrationType: "usernameRegistration",
-				})}?${searchParameters.toString()}`,
-			validate: validateUsername,
 		},
 	};
 
