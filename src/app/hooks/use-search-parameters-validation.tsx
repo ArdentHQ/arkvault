@@ -371,16 +371,21 @@ export const useSearchParametersValidation = () => {
 
 			return await methods[method].validate({ env, network, parameters, profile });
 		} catch (error) {
-			const result: {
-				error: { type: string; value?: string };
-			} = { error: { type: error.message } };
-
-			if (error.cause) {
-				result.error.value = error.cause;
-			}
-
-			return result;
+			return { error: parseError(error) };
 		}
+	};
+
+	const parseError = (error: {
+		message: SearchParametersError;
+		cause?: string;
+	}): { type: SearchParametersError; value?: string } => {
+		const result: { type: SearchParametersError; value?: string } = { type: error.message };
+
+		if (error.cause) {
+			result.value = error.cause;
+		}
+
+		return result;
 	};
 
 	/* istanbul ignore next -- @preserve */
@@ -517,5 +522,5 @@ export const useSearchParametersValidation = () => {
 		return <WrapperURI />;
 	};
 
-	return { buildSearchParametersError, methods, validateSearchParameters };
+	return { buildSearchParametersError, methods, validateSearchParameters, extractNetworkFromParameters, parseError };
 };
