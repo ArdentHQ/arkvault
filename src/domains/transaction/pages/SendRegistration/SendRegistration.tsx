@@ -46,7 +46,11 @@ export const SendRegistration = () => {
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	const { walletId } = useParams<{ walletId?: string }>();
-	const activeWallet = useActiveWalletWhenNeeded(walletId !== undefined);
+
+	const urlWallet = useActiveWalletWhenNeeded(walletId !== undefined);
+
+	const [activeWallet, setActiveWallet] = useState<Contracts.IReadWriteWallet | undefined>(urlWallet);
+
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
@@ -70,7 +74,9 @@ export const SendRegistration = () => {
 
 	useEffect(() => {
 		register("fees");
-		register("fee", common.fee(activeWallet.balance(), activeWallet.network(), fees));
+
+		register("fee", common.fee(activeWallet?.balance(), activeWallet?.network(), fees));
+
 		register("inputFeeSettings");
 
 		register("network", { required: true });
@@ -84,6 +90,10 @@ export const SendRegistration = () => {
 		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
+		if (!activeWallet) {
+			return;
+		}
+
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
 
 		const network = env
@@ -109,7 +119,7 @@ export const SendRegistration = () => {
 
 	// Reset ledger authentication steps after reconnecting supported ledger
 	useEffect(() => {
-		if (registrationType !== "multiSignature") {
+		if (!activeWallet || registrationType !== "multiSignature") {
 			return;
 		}
 
@@ -130,6 +140,10 @@ export const SendRegistration = () => {
 
 	const handleSubmit = async () => {
 		try {
+			if (!activeWallet) {
+				return;
+			}
+
 			const {
 				mnemonic,
 				secondMnemonic,
@@ -219,6 +233,10 @@ export const SendRegistration = () => {
 		abortReference.current.abort();
 
 		if (activeTab === 1) {
+			if (!activeWallet) {
+				return history.push(`/profiles/${activeProfile.id()}`);
+			}
+
 			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
 		}
 
@@ -236,14 +254,14 @@ export const SendRegistration = () => {
 		}
 
 		// Skip authentication step
-		if (isNextStepAuthentication && activeWallet.isLedger() && isLedgerModelSupported) {
+		if (isNextStepAuthentication && activeWallet!.isLedger() && isLedgerModelSupported) {
 			handleSubmit();
 		}
 
 		setActiveTab(nextStep);
 	};
 
-	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet.isLedger());
+	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet!.isLedger());
 
 	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
 
@@ -269,7 +287,7 @@ export const SendRegistration = () => {
 							<TabPanel tabId={10}>
 								<ErrorStep
 									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet!.id()}`)
 									}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
@@ -285,11 +303,15 @@ export const SendRegistration = () => {
 										activeTab={activeTab}
 										wallet={activeWallet}
 										profile={activeProfile}
+										onSelectedWallet={(wallet) => {
+											setActiveWallet(wallet);
+										}}
+										showWalletSelector={urlWallet === undefined}
 									/>
 
 									<TabPanel tabId={authenticationStep}>
 										<AuthenticationStep
-											wallet={activeWallet}
+											wallet={activeWallet!}
 											ledgerIsAwaitingDevice={!hasDeviceAvailable}
 											ledgerIsAwaitingApp={!isConnected}
 											ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
@@ -301,7 +323,7 @@ export const SendRegistration = () => {
 										<SummaryStep
 											transaction={transaction}
 											registrationForm={registrationForm}
-											senderWallet={activeWallet}
+											senderWallet={activeWallet!}
 										/>
 									</TabPanel>
 								</>
@@ -310,9 +332,9 @@ export const SendRegistration = () => {
 							{!hideStepNavigation && (
 								<StepNavigation
 									onBackClick={handleBack}
-									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
-									}
+									onBackToWalletClick={() => {
+										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet!.id()}`);
+									}}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}
 									isNextDisabled={isNextDisabled}
