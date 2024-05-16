@@ -255,73 +255,62 @@ export const useSearchParametersValidation = () => {
 		},
 	};
 
-	const validateSearchParameters = async (
-		profile: Contracts.IProfile,
-		env: Environment,
-		parameters: URLSearchParams,
-		requiredParameters?: RequiredParameters,
-	) => {
-		assertProfile(profile);
-
+	const extractNetworkFromParameters = ({
+		profile,
+		parameters,
+		requiredParameters,
+	}: {
+		profile: Contracts.IProfile;
+		parameters: URLSearchParams;
+		requiredParameters?: RequiredParameters;
+	}) => {
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
 
 		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
-		const method = parameters.get("method")?.toLowerCase() as string;
 		const networkId = parameters.get("network")?.toLowerCase() as string;
 		const nethash = parameters.get("nethash");
 
 		if (!networkId && !nethash) {
-			return { error: { type: SearchParametersError.MissingNetworkOrNethash } };
-		}
-
-		if (!method) {
-			return { error: { type: SearchParametersError.MissingMethod } };
-		}
-
-		if (requiredParameters?.coin && coin !== requiredParameters?.coin) {
-			return { error: { type: SearchParametersError.CoinMismatch } };
-		}
-
-		if (!allEnabledNetworks.some((item) => item.coin().toLowerCase() === coin.toLowerCase())) {
-			return { error: { type: SearchParametersError.CoinNotSupported, value: coin } };
-		}
-
-		if (!Object.keys(methods).includes(method)) {
-			return { error: { type: SearchParametersError.MethodNotSupported, value: method } };
+			throw new Error(SearchParametersError.MissingNetworkOrNethash);
 		}
 
 		let network: Networks.Network | undefined;
 
+		if (requiredParameters?.coin && coin !== requiredParameters?.coin) {
+			throw new Error(SearchParametersError.CoinMismatch);
+		}
+
+		if (!allEnabledNetworks.some((item) => item.coin().toLowerCase() === coin.toLowerCase())) {
+			throw new Error(SearchParametersError.CoinNotSupported, { cause: coin });
+		}
+
 		if (networkId) {
 			if (requiredParameters?.network && networkId !== requiredParameters?.network) {
-				return { error: { type: SearchParametersError.NetworkMismatch } };
+				throw new Error(SearchParametersError.NetworkMismatch);
 			}
 
 			if (!defaultNetworks[networkId]) {
-				return { error: { type: SearchParametersError.NetworkInvalid, value: networkId } };
+				throw new Error(SearchParametersError.NetworkInvalid, { cause: networkId });
 			}
 
 			network = allEnabledNetworks.find((item) => item.id() === networkId);
 
 			if (!network) {
-				return {
-					error: {
-						type: SearchParametersError.NetworkNotEnabled,
-						value: defaultNetworks[networkId].displayName,
-					},
-				};
+				throw new Error(SearchParametersError.NetworkNotEnabled, {
+					cause: defaultNetworks[networkId].displayName,
+				});
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNetwork(coin, networkId);
 
 			if (availableWallets.length === 0) {
-				return { error: { type: SearchParametersError.NetworkNoWallets, value: network.displayName() } };
+				throw new Error(SearchParametersError.NetworkNoWallets, { cause: network.displayName() });
 			}
 		}
 
 		if (nethash) {
 			if (requiredParameters?.nethash && nethash !== requiredParameters?.nethash) {
-				return { error: { type: SearchParametersError.NetworkMismatch } };
+				throw new Error(SearchParametersError.NetworkMismatch);
 			}
 
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
@@ -330,37 +319,68 @@ export const useSearchParametersValidation = () => {
 				/* istanbul ignore next -- @preserve */
 				for (let { displayName, nethash: defaultNethash } of Object.values(defaultNetworks)) {
 					if (defaultNethash === nethash) {
-						return { error: { type: SearchParametersError.NetworkNotEnabled, value: displayName } };
+						throw new Error(SearchParametersError.NetworkNotEnabled, { cause: displayName });
 					}
 				}
 			}
 
 			/* istanbul ignore next -- @preserve */
 			if (network && !defaultNetworks[network.id()] && !network.meta().enabled) {
-				return { error: { type: SearchParametersError.NetworkNotEnabled, value: network.displayName() } };
+				throw new Error(SearchParametersError.NetworkNotEnabled, { cause: network.displayName() });
 			}
 
 			if (!network) {
-				return {
-					error: {
-						type: SearchParametersError.NethashNotEnabled,
-						value: truncate(nethash, {
-							length: 20,
-							omissionPosition: "middle",
-						}),
-					},
-				};
+				throw new Error(SearchParametersError.NethashNotEnabled, {
+					cause: truncate(nethash, {
+						length: 20,
+						omissionPosition: "middle",
+					}),
+				});
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
 
 			if (availableWallets.length === 0) {
-				return { error: { type: SearchParametersError.NetworkNoWallets, value: network.displayName() } };
+				throw new Error(SearchParametersError.NetworkNoWallets, { cause: network.displayName() });
 			}
 		}
 
-		// method specific validation
-		return await methods[method].validate({ env, network, parameters, profile });
+		return network;
+	};
+
+	const validateSearchParameters = async (
+		profile: Contracts.IProfile,
+		env: Environment,
+		parameters: URLSearchParams,
+		requiredParameters?: RequiredParameters,
+	) => {
+		assertProfile(profile);
+
+		const method = parameters.get("method")?.toLowerCase() as string;
+
+		if (!method) {
+			return { error: { type: SearchParametersError.MissingMethod } };
+		}
+
+		if (!Object.keys(methods).includes(method)) {
+			return { error: { type: SearchParametersError.MethodNotSupported, value: method } };
+		}
+
+		try {
+			const network = extractNetworkFromParameters({ profile, parameters, requiredParameters });
+
+			return await methods[method].validate({ env, network, parameters, profile });
+		} catch (error) {
+			const result: {
+				error: { type: string; value?: string };
+			} = { error: { type: error.message } };
+
+			if (error.cause) {
+				result.error.value = error.cause;
+			}
+
+			return result;
+		}
 	};
 
 	/* istanbul ignore next -- @preserve */
