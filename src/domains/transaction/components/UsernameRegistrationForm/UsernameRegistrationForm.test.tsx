@@ -102,6 +102,19 @@ describe("UsernameRegistrationForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render form step for a wallet with previous username", async () => {
+		const walletWithUsername = vi.spyOn(wallet, "username").mockReturnValue("test_username");
+
+		renderComponent();
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		expect(screen.getByText("New Username")).toBeInTheDocument();
+		expect(screen.getByText(/This address is currently registered to the username/)).toBeInTheDocument();
+
+		walletWithUsername.mockRestore();
+	});
+
 	it("should render review step", async () => {
 		const { asFragment } = renderComponent({ activeTab: 2 });
 
