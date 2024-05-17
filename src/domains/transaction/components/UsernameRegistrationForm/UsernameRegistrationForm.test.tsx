@@ -7,6 +7,7 @@ import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { Route } from "react-router-dom";
 
 import { UsernameRegistrationForm, signUsernameRegistration } from "./UsernameRegistrationForm";
+import * as useSearchParametersValidationHook from "@/app/hooks/use-search-parameters-validation";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { translations } from "@/domains/transaction/i18n";
 import usernameRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/username-registration.json";
@@ -26,42 +27,6 @@ let wallet: ProfilesContracts.IReadWriteWallet;
 
 const fees = { avg: 1.354, isDynamic: true, max: 10, min: 0, static: 0 };
 
-const renderComponent = (properties?: any) => {
-	let form: UseFormMethods | undefined;
-
-	const defaultValues = properties?.defaultValues ?? { fee: "2" };
-	const activeTab = properties?.activeTab ?? 1;
-
-	const Component = () => {
-		form = useForm<any>({ defaultValues, mode: "onChange" });
-
-		const { register } = form;
-
-		useEffect(() => {
-			register("fee");
-			register("fees");
-			register("inputFeeSettings");
-		}, [register]);
-
-		return (
-			<FormProvider {...form}>
-				<UsernameRegistrationForm.component profile={profile} activeTab={activeTab} wallet={wallet} />
-			</FormProvider>
-		);
-	};
-
-	const utils: RenderResult = render(
-		<Route path="/profiles/:profileId">
-			<Component />
-		</Route>,
-		{
-			route: `/profiles/${profile.id()}`,
-		},
-	);
-
-	return { ...utils, form };
-};
-
 const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
@@ -78,6 +43,42 @@ const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 const formStepID = "UsernameRegistrationForm__form-step";
 
 describe("UsernameRegistrationForm", () => {
+	const renderComponent = (properties?: any) => {
+		let form: UseFormMethods | undefined;
+
+		const defaultValues = properties?.defaultValues ?? { fee: "2" };
+		const activeTab = properties?.activeTab ?? 1;
+
+		const Component = () => {
+			form = useForm<any>({ defaultValues, mode: "onChange" });
+
+			const { register } = form;
+
+			useEffect(() => {
+				register("fee");
+				register("fees");
+				register("inputFeeSettings");
+			}, [register]);
+
+			return (
+				<FormProvider {...form}>
+					<UsernameRegistrationForm.component profile={profile} activeTab={activeTab} wallet={wallet} />
+				</FormProvider>
+			);
+		};
+
+		const utils: RenderResult = render(
+			<Route path="/profiles/:profileId">
+				<Component />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		return { ...utils, form };
+	};
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
@@ -287,5 +288,82 @@ describe("UsernameRegistrationForm", () => {
 		transactionMock.mockRestore();
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
+	});
+});
+
+describe("UsernameRegistrationForm without wallet", () => {
+	const renderComponent = (properties?: any) => {
+		let form: UseFormMethods | undefined;
+
+		const defaultValues = properties?.defaultValues ?? { fee: "2" };
+		const activeTab = properties?.activeTab ?? 1;
+
+		const Component = () => {
+			form = useForm<any>({ defaultValues, mode: "onChange" });
+
+			const { register } = form;
+
+			useEffect(() => {
+				register("fee");
+				register("fees");
+				register("inputFeeSettings");
+			}, [register]);
+
+			return (
+				<FormProvider {...form}>
+					<UsernameRegistrationForm.component
+						profile={profile}
+						activeTab={activeTab}
+						showWalletSelector={true}
+					/>
+				</FormProvider>
+			);
+		};
+
+		const utils: RenderResult = render(
+			<Route path="/profiles/:profileId">
+				<Component />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		return { ...utils, form };
+	};
+
+	beforeAll(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		wallet = profile.wallets().first();
+
+		await syncDelegates(profile);
+
+		vi.spyOn(useFeesHook, "useFees").mockReturnValue({
+			calculate: () => Promise.resolve(fees),
+		});
+	});
+
+	let extractNetworkFromParametersMock: any;
+
+	beforeEach(() => {
+		extractNetworkFromParametersMock = vi.spyOn(useSearchParametersValidationHook, "extractNetworkFromParameters");
+	});
+
+	afterEach(() => {
+		extractNetworkFromParametersMock.mockRestore();
+	});
+
+	it("should render form step with address select", async () => {
+		extractNetworkFromParametersMock.mockReturnValue(wallet.network());
+
+		renderComponent();
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		expect(screen.getByTestId("SelectAddress__wrapper")).toBeInTheDocument();
 	});
 });
