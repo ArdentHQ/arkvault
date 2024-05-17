@@ -1,3 +1,11 @@
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { Observer } from "@ledgerhq/hw-transport";
+import React from "react";
+import { Route } from "react-router-dom";
+import { Signatories } from "@ardenthq/sdk";
+import { createHashHistory } from "history";
+import userEvent from "@testing-library/user-event";
+import { SendRegistration } from "./SendRegistration";
 import * as useFeesMock from "@/app/hooks/use-fees";
 
 import {
@@ -16,20 +24,12 @@ import {
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
 import DelegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 /* eslint-disable @typescript-eslint/require-await */
-import { Observer } from "@ledgerhq/hw-transport";
-import React from "react";
-import { Route } from "react-router-dom";
-import { SendRegistration } from "./SendRegistration";
-import { Signatories } from "@ardenthq/sdk";
 import UsernameRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/username-registration.json";
-import { createHashHistory } from "history";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import userEvent from "@testing-library/user-event";
 import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
 
 let profile: Contracts.IProfile;
