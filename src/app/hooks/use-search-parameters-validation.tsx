@@ -300,7 +300,7 @@ export const extractNetworkFromParameters = ({
 	return network;
 };
 
-export const normalizeSearchParametersValidatioError = (error: {
+export const normalizeSearchParametersValidationError = (error: {
 	message: SearchParametersError;
 	cause?: string;
 }): { type: SearchParametersError; value?: string } => {
@@ -384,7 +384,7 @@ export const useSearchParametersValidation = () => {
 
 			return await methods[method].validate({ env, network, parameters, profile });
 		} catch (error) {
-			return { error: normalizeSearchParametersValidatioError(error) };
+			return { error: normalizeSearchParametersValidationError(error) };
 		}
 	};
 
