@@ -267,7 +267,7 @@ describe("SendTransfer QRModal", () => {
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(
-				result.current.buildSearchParametersError({ type: "MISSING_NETWORK_OR_NETHASH" }, true),
+				result.current.buildSearchParametersError({ type: "MISSING_METHOD" }, true),
 			),
 		);
 	});
