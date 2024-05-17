@@ -315,6 +315,7 @@ describe("UsernameRegistrationForm without wallet", () => {
 						profile={profile}
 						activeTab={activeTab}
 						showWalletSelector={true}
+						onSelectedWallet={properties?.onSelectedWallet}
 					/>
 				</FormProvider>
 			);
@@ -360,7 +361,10 @@ describe("UsernameRegistrationForm without wallet", () => {
 	it("should render form step and select address", async () => {
 		extractNetworkFromParametersMock.mockReturnValue(wallet.network());
 
-		renderComponent();
+		const onSelectedWallet = vi.fn();
+		renderComponent({
+			onSelectedWallet,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -381,5 +385,7 @@ describe("UsernameRegistrationForm without wallet", () => {
 		userEvent.paste(screen.getByTestId("Input__username"), "test_username");
 
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
+
+		expect(onSelectedWallet).toHaveBeenCalledWith(wallet);
 	});
 });
