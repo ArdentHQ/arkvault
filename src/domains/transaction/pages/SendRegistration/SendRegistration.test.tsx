@@ -549,6 +549,31 @@ describe("Registration", () => {
 		},
 	);
 
+	it("should go back to profile if no url walelt", async () => {
+		const extractNetworkFromParametersMock = vi
+			.spyOn(useSearchParametersValidationHook, "extractNetworkFromParameters")
+			.mockReturnValue(wallet.network());
+
+		const noWalletPath = "/profiles/:profileId/send-registration/:registrationType";
+		const noWalletRoute = `/profiles/${profile.id()}/send-registration/usernameRegistration`;
+
+		const nanoXTransportMock = mockNanoXTransport();
+		const { history } = await renderPage(wallet, "usernameRegistration", noWalletPath, noWalletRoute);
+
+		// Step 1
+		await expect(screen.findByTestId("UsernameRegistrationForm__form-step")).resolves.toBeVisible();
+
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+
+		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}`);
+
+		historySpy.mockRestore();
+		nanoXTransportMock.mockRestore();
+		extractNetworkFromParametersMock.mockRestore();
+	});
+
 	it.skip("should reset authentication when a supported Nano X is added", async () => {
 		const unsubscribe = vi.fn();
 		let observer: Observer<any>;
