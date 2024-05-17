@@ -311,7 +311,7 @@ describe("Registration", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 		// Step 4 - summary screen
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 		// Go back to wallet
 		const historySpy = vi.spyOn(history, "push");
@@ -406,7 +406,7 @@ describe("Registration", () => {
 		transactionMock.mockRestore();
 
 		// Step 4 - summary screen
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 		// Go back to wallet
 		const historySpy = vi.spyOn(history, "push");
