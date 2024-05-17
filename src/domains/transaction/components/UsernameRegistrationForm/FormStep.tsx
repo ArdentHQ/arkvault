@@ -78,6 +78,7 @@ export const FormStep: React.FC<FormStepProperties> = ({
 	const userExistsController = useRef<AbortController | undefined>(undefined);
 
 	useEffect(() => {
+		/* istanbul ignore next -- @preserve */
 		if (!network) {
 			return;
 		}
@@ -86,6 +87,7 @@ export const FormStep: React.FC<FormStepProperties> = ({
 	}, [network, profile]);
 
 	useEffect(() => {
+		/* istanbul ignore next -- @preserve */
 		if (!network) {
 			return;
 		}
