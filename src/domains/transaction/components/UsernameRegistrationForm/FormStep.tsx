@@ -11,7 +11,10 @@ import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration
 import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useQueryParameters, useValidation } from "@/app/hooks";
-import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
+import {
+	extractNetworkFromParameters,
+	useSearchParametersValidation,
+} from "@/app/hooks/use-search-parameters-validation";
 import { toasts } from "@/app/services";
 import { ProfilePaths } from "@/router/paths";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
@@ -28,7 +31,7 @@ export const FormStep: React.FC<FormStepProperties> = ({
 
 	const { usernameRegistration } = useValidation();
 
-	const { extractNetworkFromParameters, buildSearchParametersError, parseError } = useSearchParametersValidation();
+	const { buildSearchParametersError, parseError } = useSearchParametersValidation();
 
 	const { getValues, register, setValue, errors } = useFormContext();
 
@@ -58,12 +61,8 @@ export const FormStep: React.FC<FormStepProperties> = ({
 		}
 	}, [wallet, parameters]);
 
-	if (network === undefined) {
-		return <></>;
-	}
-
 	const handleSelectSender = (address: any) => {
-		const newActiveWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
+		const newActiveWallet = profile.wallets().findByAddressWithNetwork(address, network!.id());
 		const isFullyRestoredAndSynced =
 			newActiveWallet?.hasBeenFullyRestored() && newActiveWallet.hasSyncedWithNetwork();
 		if (!isFullyRestoredAndSynced) {
@@ -78,10 +77,18 @@ export const FormStep: React.FC<FormStepProperties> = ({
 	const userExistsController = useRef<AbortController | undefined>(undefined);
 
 	useEffect(() => {
+		if (!network) {
+			return;
+		}
+
 		setWallets(profile.wallets().findByCoinWithNetwork(network.coin(), network.id()));
 	}, [network, profile]);
 
 	useEffect(() => {
+		if (!network) {
+			return;
+		}
+
 		if (!username) {
 			register("username", usernameRegistration.username(network, userExistsController));
 		}
@@ -94,6 +101,10 @@ export const FormStep: React.FC<FormStepProperties> = ({
 			userExistsController.current?.abort();
 		}
 	}, [hasUsernameErrors]);
+
+	if (network === undefined) {
+		return <></>;
+	}
 
 	return (
 		<section data-testid="UsernameRegistrationForm__form-step">

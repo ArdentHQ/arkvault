@@ -73,7 +73,7 @@ const delegateFromSearchParameters = ({ env, network, searchParameters }: PathPr
 
 	if (delegateName) {
 		try {
-			return env.delegates().findByUsername(network?.coin(), network?.id(), delegateName);
+			return env.delegates().findByUsername(network.coin(), network.id(), delegateName);
 		} catch {
 			//
 		}
@@ -81,7 +81,7 @@ const delegateFromSearchParameters = ({ env, network, searchParameters }: PathPr
 
 	if (delegatePublicKey) {
 		try {
-			return env.delegates().findByPublicKey(network?.coin(), network?.id(), delegatePublicKey);
+			return env.delegates().findByPublicKey(network.coin(), network.id(), delegatePublicKey);
 		} catch {
 			//
 		}
@@ -177,7 +177,7 @@ const validateSign = async ({ parameters, profile, network }: ValidateParameters
 		}
 	}
 };
-const validateUsername = async ({ parameters, profile, network }: ValidateParameters) => {
+const validateUsername = ({ parameters }: ValidateParameters) => {
 	const username = parameters.get("username");
 
 	if (!username) {
@@ -205,6 +205,99 @@ const WrapperURI = ({ children }: { children?: React.ReactNode }) => {
 			{t("TRANSACTION.VALIDATION.INVALID_URI")}: {children ?? t("COMMON.ERRORS.UNKNOWN")}
 		</span>
 	);
+};
+
+export const extractNetworkFromParameters = ({
+	profile,
+	parameters,
+	requiredParameters,
+}: {
+	profile: Contracts.IProfile;
+	parameters: URLSearchParams;
+	requiredParameters?: RequiredParameters;
+}) => {
+	const allEnabledNetworks = profileAllEnabledNetworks(profile);
+
+	const coin = parameters.get("coin")?.toUpperCase() || "ARK";
+	const networkId = parameters.get("network")?.toLowerCase() as string;
+	const nethash = parameters.get("nethash");
+
+	if (!networkId && !nethash) {
+		throw new Error(SearchParametersError.MissingNetworkOrNethash);
+	}
+
+	let network: Networks.Network | undefined;
+
+	if (requiredParameters?.coin && coin !== requiredParameters.coin) {
+		throw new Error(SearchParametersError.CoinMismatch);
+	}
+
+	if (!allEnabledNetworks.some((item) => item.coin().toLowerCase() === coin.toLowerCase())) {
+		throw new Error(SearchParametersError.CoinNotSupported, { cause: coin });
+	}
+
+	if (networkId) {
+		if (requiredParameters?.network && networkId !== requiredParameters.network) {
+			throw new Error(SearchParametersError.NetworkMismatch);
+		}
+
+		if (!defaultNetworks[networkId]) {
+			throw new Error(SearchParametersError.NetworkInvalid, { cause: networkId });
+		}
+
+		network = allEnabledNetworks.find((item) => item.id() === networkId);
+
+		if (!network) {
+			throw new Error(SearchParametersError.NetworkNotEnabled, {
+				cause: defaultNetworks[networkId].displayName,
+			});
+		}
+
+		const availableWallets = profile.wallets().findByCoinWithNetwork(coin, networkId);
+
+		if (availableWallets.length === 0) {
+			throw new Error(SearchParametersError.NetworkNoWallets, { cause: network.displayName() });
+		}
+	}
+
+	if (nethash) {
+		if (requiredParameters?.nethash && nethash !== requiredParameters.nethash) {
+			throw new Error(SearchParametersError.NetworkMismatch);
+		}
+
+		network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
+
+		if (!network) {
+			/* istanbul ignore next -- @preserve */
+			for (const { displayName, nethash: defaultNethash } of Object.values(defaultNetworks)) {
+				if (defaultNethash === nethash) {
+					throw new Error(SearchParametersError.NetworkNotEnabled, { cause: displayName });
+				}
+			}
+		}
+
+		/* istanbul ignore next -- @preserve */
+		if (network && !defaultNetworks[network.id()] && !network.meta().enabled) {
+			throw new Error(SearchParametersError.NetworkNotEnabled, { cause: network.displayName() });
+		}
+
+		if (!network) {
+			throw new Error(SearchParametersError.NethashNotEnabled, {
+				cause: truncate(nethash, {
+					length: 20,
+					omissionPosition: "middle",
+				}),
+			});
+		}
+
+		const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
+
+		if (availableWallets.length === 0) {
+			throw new Error(SearchParametersError.NetworkNoWallets, { cause: network.displayName() });
+		}
+	}
+
+	return network;
 };
 
 export const useSearchParametersValidation = () => {
@@ -255,99 +348,6 @@ export const useSearchParametersValidation = () => {
 		},
 	};
 
-	const extractNetworkFromParameters = ({
-		profile,
-		parameters,
-		requiredParameters,
-	}: {
-		profile: Contracts.IProfile;
-		parameters: URLSearchParams;
-		requiredParameters?: RequiredParameters;
-	}) => {
-		const allEnabledNetworks = profileAllEnabledNetworks(profile);
-
-		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
-		const networkId = parameters.get("network")?.toLowerCase() as string;
-		const nethash = parameters.get("nethash");
-
-		if (!networkId && !nethash) {
-			throw new Error(SearchParametersError.MissingNetworkOrNethash);
-		}
-
-		let network: Networks.Network | undefined;
-
-		if (requiredParameters?.coin && coin !== requiredParameters?.coin) {
-			throw new Error(SearchParametersError.CoinMismatch);
-		}
-
-		if (!allEnabledNetworks.some((item) => item.coin().toLowerCase() === coin.toLowerCase())) {
-			throw new Error(SearchParametersError.CoinNotSupported, { cause: coin });
-		}
-
-		if (networkId) {
-			if (requiredParameters?.network && networkId !== requiredParameters?.network) {
-				throw new Error(SearchParametersError.NetworkMismatch);
-			}
-
-			if (!defaultNetworks[networkId]) {
-				throw new Error(SearchParametersError.NetworkInvalid, { cause: networkId });
-			}
-
-			network = allEnabledNetworks.find((item) => item.id() === networkId);
-
-			if (!network) {
-				throw new Error(SearchParametersError.NetworkNotEnabled, {
-					cause: defaultNetworks[networkId].displayName,
-				});
-			}
-
-			const availableWallets = profile.wallets().findByCoinWithNetwork(coin, networkId);
-
-			if (availableWallets.length === 0) {
-				throw new Error(SearchParametersError.NetworkNoWallets, { cause: network.displayName() });
-			}
-		}
-
-		if (nethash) {
-			if (requiredParameters?.nethash && nethash !== requiredParameters?.nethash) {
-				throw new Error(SearchParametersError.NetworkMismatch);
-			}
-
-			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
-
-			if (!network) {
-				/* istanbul ignore next -- @preserve */
-				for (let { displayName, nethash: defaultNethash } of Object.values(defaultNetworks)) {
-					if (defaultNethash === nethash) {
-						throw new Error(SearchParametersError.NetworkNotEnabled, { cause: displayName });
-					}
-				}
-			}
-
-			/* istanbul ignore next -- @preserve */
-			if (network && !defaultNetworks[network.id()] && !network.meta().enabled) {
-				throw new Error(SearchParametersError.NetworkNotEnabled, { cause: network.displayName() });
-			}
-
-			if (!network) {
-				throw new Error(SearchParametersError.NethashNotEnabled, {
-					cause: truncate(nethash, {
-						length: 20,
-						omissionPosition: "middle",
-					}),
-				});
-			}
-
-			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
-
-			if (availableWallets.length === 0) {
-				throw new Error(SearchParametersError.NetworkNoWallets, { cause: network.displayName() });
-			}
-		}
-
-		return network;
-	};
-
 	const validateSearchParameters = async (
 		profile: Contracts.IProfile,
 		env: Environment,
@@ -367,7 +367,7 @@ export const useSearchParametersValidation = () => {
 		}
 
 		try {
-			const network = extractNetworkFromParameters({ profile, parameters, requiredParameters });
+			const network = extractNetworkFromParameters({ parameters, profile, requiredParameters });
 
 			return await methods[method].validate({ env, network, parameters, profile });
 		} catch (error) {
@@ -522,5 +522,5 @@ export const useSearchParametersValidation = () => {
 		return <WrapperURI />;
 	};
 
-	return { buildSearchParametersError, methods, validateSearchParameters, extractNetworkFromParameters, parseError };
+	return { buildSearchParametersError, methods, parseError, validateSearchParameters };
 };
