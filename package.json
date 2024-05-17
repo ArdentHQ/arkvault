@@ -2,7 +2,7 @@
 	"name": "arkvault",
 	"version": "1.15.0",
 	"engines": {
-		"node": ">=20.12.2"
+		"node": "18.x"
 	},
 	"private": true,
 	"description": "ARKVault",
@@ -42,14 +42,14 @@
 	},
 	"dependencies": {
 		"@ardenthq/arkvault-url": "^1.2.0",
-		"@ardenthq/sdk": "2.0.0-beta.7",
-		"@ardenthq/sdk-ark": "2.0.0-beta.7",
-		"@ardenthq/sdk-cryptography": "2.0.0-beta.7",
-		"@ardenthq/sdk-helpers": "2.0.0-beta.7",
-		"@ardenthq/sdk-intl": "2.0.0-beta.7",
-		"@ardenthq/sdk-ledger": "2.0.0-beta.7",
-		"@ardenthq/sdk-mainsail": "2.0.0-beta.7",
-		"@ardenthq/sdk-profiles": "2.0.0-beta.7",
+		"@ardenthq/sdk": "2.0.0-beta.8",
+		"@ardenthq/sdk-ark": "2.0.0-beta.8",
+		"@ardenthq/sdk-cryptography": "2.0.0-beta.8",
+		"@ardenthq/sdk-helpers": "2.0.0-beta.8",
+		"@ardenthq/sdk-intl": "2.0.0-beta.8",
+		"@ardenthq/sdk-ledger": "2.0.0-beta.8",
+		"@ardenthq/sdk-mainsail": "2.0.0-beta.8",
+		"@ardenthq/sdk-profiles": "2.0.0-beta.8",
 		"@emotion/cache": "^11.10.5",
 		"@emotion/react": "^11.10.6",
 		"@emotion/styled": "^11.10.6",

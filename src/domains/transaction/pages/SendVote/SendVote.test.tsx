@@ -1,9 +1,15 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 
+import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import React from "react";
+import { Route } from "react-router-dom";
+import { Signatories } from "@ardenthq/sdk";
+import { createHashHistory } from "history";
+import userEvent from "@testing-library/user-event";
+import { SendVote } from "./SendVote";
 import * as transportMock from "@/app/contexts/Ledger/transport";
 
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import {
 	act,
 	env,
@@ -21,18 +27,12 @@ import {
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
-import React from "react";
-import { Route } from "react-router-dom";
-import { SendVote } from "./SendVote";
-import { Signatories } from "@ardenthq/sdk";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { createHashHistory } from "history";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
-import userEvent from "@testing-library/user-event";
 import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
 
 const fixtureProfileId = getDefaultProfileId();

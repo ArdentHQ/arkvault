@@ -17,7 +17,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-app
             cancel-in-progress: true
@@ -125,7 +125,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-app-hooks
             cancel-in-progress: true
@@ -208,7 +208,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-app-components
             cancel-in-progress: true
@@ -330,7 +330,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-contact
             cancel-in-progress: true
@@ -394,7 +394,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-dashboard
             cancel-in-progress: true
@@ -431,7 +431,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-error
             cancel-in-progress: true
@@ -467,7 +467,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-exchange
             cancel-in-progress: true
@@ -507,7 +507,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-message
             cancel-in-progress: true
@@ -543,7 +543,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-network
             cancel-in-progress: true
@@ -580,7 +580,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-profile
             cancel-in-progress: true
@@ -617,7 +617,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-setting
             cancel-in-progress: true
@@ -654,7 +654,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-transaction
             cancel-in-progress: true
@@ -780,7 +780,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-vote
             cancel-in-progress: true
@@ -816,7 +816,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-wallet
             cancel-in-progress: true
@@ -898,7 +898,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-router
             cancel-in-progress: true
@@ -938,7 +938,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 20.12.2
+                    - 18.12.1
         concurrency:
             group: ${{ github.head_ref }}-test-utils
             cancel-in-progress: true
