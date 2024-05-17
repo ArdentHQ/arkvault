@@ -300,6 +300,19 @@ export const extractNetworkFromParameters = ({
 	return network;
 };
 
+export const normalizeSearchParametersValidatioError = (error: {
+	message: SearchParametersError;
+	cause?: string;
+}): { type: SearchParametersError; value?: string } => {
+	const result: { type: SearchParametersError; value?: string } = { type: error.message };
+
+	if (error.cause) {
+		result.value = error.cause;
+	}
+
+	return result;
+};
+
 export const useSearchParametersValidation = () => {
 	const methods = {
 		sign: {
@@ -371,21 +384,8 @@ export const useSearchParametersValidation = () => {
 
 			return await methods[method].validate({ env, network, parameters, profile });
 		} catch (error) {
-			return { error: parseError(error) };
+			return { error: normalizeSearchParametersValidatioError(error) };
 		}
-	};
-
-	const parseError = (error: {
-		message: SearchParametersError;
-		cause?: string;
-	}): { type: SearchParametersError; value?: string } => {
-		const result: { type: SearchParametersError; value?: string } = { type: error.message };
-
-		if (error.cause) {
-			result.value = error.cause;
-		}
-
-		return result;
 	};
 
 	/* istanbul ignore next -- @preserve */
@@ -522,5 +522,5 @@ export const useSearchParametersValidation = () => {
 		return <WrapperURI />;
 	};
 
-	return { buildSearchParametersError, methods, parseError, validateSearchParameters };
+	return { buildSearchParametersError, methods, validateSearchParameters };
 };

@@ -13,6 +13,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { useQueryParameters, useValidation } from "@/app/hooks";
 import {
 	extractNetworkFromParameters,
+	normalizeSearchParametersValidatioError,
 	useSearchParametersValidation,
 } from "@/app/hooks/use-search-parameters-validation";
 import { toasts } from "@/app/services";
@@ -31,7 +32,7 @@ export const FormStep: React.FC<FormStepProperties> = ({
 
 	const { usernameRegistration } = useValidation();
 
-	const { buildSearchParametersError, parseError } = useSearchParametersValidation();
+	const { buildSearchParametersError } = useSearchParametersValidation();
 
 	const { getValues, register, setValue, errors } = useFormContext();
 
@@ -51,7 +52,7 @@ export const FormStep: React.FC<FormStepProperties> = ({
 		try {
 			return extractNetworkFromParameters({ parameters, profile });
 		} catch (error) {
-			toasts.error(buildSearchParametersError(parseError(error)));
+			toasts.error(buildSearchParametersError(normalizeSearchParametersValidatioError(error)));
 
 			history.push(
 				generatePath(ProfilePaths.Dashboard, {
