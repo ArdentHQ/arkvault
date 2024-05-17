@@ -357,7 +357,7 @@ describe("UsernameRegistrationForm without wallet", () => {
 		extractNetworkFromParametersMock.mockRestore();
 	});
 
-	it("should render form step with address select", async () => {
+	it("should render form step and select address", async () => {
 		extractNetworkFromParametersMock.mockReturnValue(wallet.network());
 
 		renderComponent();
@@ -365,5 +365,21 @@ describe("UsernameRegistrationForm without wallet", () => {
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		expect(screen.getByTestId("SelectAddress__wrapper")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		});
+
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+
+		userEvent.click(firstAddress);
+
+		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+
+		userEvent.paste(screen.getByTestId("Input__username"), "test_username");
+
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
 	});
 });
