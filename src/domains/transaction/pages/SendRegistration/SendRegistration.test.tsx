@@ -425,7 +425,7 @@ describe("Registration", () => {
 		envAvailableNetworksMock.mockRestore();
 	});
 
-	it.only.each([withKeyboard, "without keyboard"])(
+	it.each([withKeyboard, "without keyboard"])(
 		"should register username without url wallet %s",
 		async (inputMethod) => {
 			const extractNetworkFromParametersMock = vi
