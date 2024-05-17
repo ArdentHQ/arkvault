@@ -42,10 +42,12 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+const defaultPath = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
+
 const renderPage = async (
 	wallet: Contracts.IReadWriteWallet,
 	type = "delegateRegistration",
-	path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType",
+	path = defaultPath,
 	route?: string,
 ) => {
 	const registrationURL = route ?? `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
@@ -205,7 +207,7 @@ describe("Registration", () => {
 		history.push(registrationPath);
 
 		render(
-			<Route path={path}>
+			<Route path={defaultPath}>
 				<SendRegistration />
 			</Route>,
 			{
