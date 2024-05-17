@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { Route } from "react-router-dom";
-
+import { createHashHistory } from "history";
 import { UsernameRegistrationForm, signUsernameRegistration } from "./UsernameRegistrationForm";
 import * as useSearchParametersValidationHook from "@/app/hooks/use-search-parameters-validation";
 import * as useFeesHook from "@/app/hooks/use-fees";
@@ -292,6 +292,8 @@ describe("UsernameRegistrationForm", () => {
 });
 
 describe("UsernameRegistrationForm without wallet", () => {
+	const history = createHashHistory();
+
 	const renderComponent = (properties?: any) => {
 		let form: UseFormMethods | undefined;
 
@@ -326,6 +328,7 @@ describe("UsernameRegistrationForm without wallet", () => {
 				<Component />
 			</Route>,
 			{
+				history,
 				route: `/profiles/${profile.id()}`,
 			},
 		);
@@ -387,6 +390,22 @@ describe("UsernameRegistrationForm without wallet", () => {
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
 
 		expect(onSelectedWallet).toHaveBeenCalledWith(wallet);
+	});
+
+	it("redirects to dashboard if parameters are invalid", async () => {
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+
+		extractNetworkFromParametersMock.mockImplementation(() => {
+			throw new Error("NETWORK_MISMATCH");
+		});
+
+		renderComponent();
+
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+		});
+
+		historySpy.mockRestore();
 	});
 
 	it("synchronize if not full restored", async () => {
