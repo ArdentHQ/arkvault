@@ -31,6 +31,7 @@ import {
 	signUsernameRegistration,
 	UsernameRegistrationForm,
 } from "@/domains/transaction/components/UsernameRegistrationForm";
+import { assertWallet } from "@/utils/assertions";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -140,9 +141,7 @@ export const SendRegistration = () => {
 
 	const handleSubmit = async () => {
 		try {
-			if (!activeWallet) {
-				return;
-			}
+			assertWallet(activeWallet);
 
 			const {
 				mnemonic,
