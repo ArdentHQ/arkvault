@@ -388,4 +388,43 @@ describe("UsernameRegistrationForm without wallet", () => {
 
 		expect(onSelectedWallet).toHaveBeenCalledWith(wallet);
 	});
+
+	it("synchronize if not full restored", async () => {
+		extractNetworkFromParametersMock.mockReturnValue(wallet.network());
+
+		const hasBeenFullyRestoredSpy = vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+		const identitySpy = vi.spyOn(wallet.synchroniser(), "identity").mockImplementation();
+
+		const onSelectedWallet = vi.fn();
+		renderComponent({
+			onSelectedWallet,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		expect(screen.getByTestId("SelectAddress__wrapper")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		});
+
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+
+		userEvent.click(firstAddress);
+
+		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+
+		userEvent.paste(screen.getByTestId("Input__username"), "test_username");
+
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
+
+		expect(onSelectedWallet).toHaveBeenCalledWith(wallet);
+
+		expect(identitySpy).toHaveBeenCalled();
+
+		hasBeenFullyRestoredSpy.mockRestore();
+		identitySpy.mockRestore();
+	});
 });
