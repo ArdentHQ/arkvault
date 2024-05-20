@@ -9,9 +9,9 @@ import { fireEvent, render, screen, waitFor, MockFile } from "@/utils/testing-li
 
 const browseFiles = () => screen.getByTestId("SelectFile__browse-files");
 
-const file = new MockFile([""], { name: "sample", type: "text/plain" });
+const file = new MockFile(["sample"], { name: "sample-export.json" });
 
-const sampleFiles = [file, "sample-export.json"];
+const sampleFiles = [file];
 
 describe("SelectFile", () => {
 	it("should render with wwe file format", () => {
