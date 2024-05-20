@@ -8,7 +8,7 @@ describe("useFiles", () => {
 	it("should read file as text", async () => {
 		const { result } = renderHook(() => useFiles());
 
-		const file = new MockFile(["test mnemonic"], { type: "text/plain", name: "fileName.wwe" });
+		const file = new MockFile(["test mnemonic"], { name: "fileName.wwe", type: "text/plain" });
 
 		const { content, extension, name } = await result.current.readFileAsText(file);
 
@@ -20,7 +20,7 @@ describe("useFiles", () => {
 	it("should read file as data uri", async () => {
 		const { result } = renderHook(() => useFiles());
 
-		const file = new MockFile(["test mnemonic"], { type: "application/octet-stream", name: "fileName.wwe" });
+		const file = new MockFile(["test mnemonic"], { name: "fileName.wwe", type: "application/octet-stream" });
 
 		const { content, extension, name } = await result.current.readFileAsDataUri(file);
 
