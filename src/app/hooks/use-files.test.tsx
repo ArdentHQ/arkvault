@@ -2,15 +2,7 @@ import * as browserAccess from "browser-fs-access";
 import { renderHook } from "@testing-library/react-hooks";
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
 import { requestMock, server } from "@/tests/mocks/server";
-
-class MockFile extends Blob {
-	name: string;
-
-	constructor(chunks, options) {
-		super(chunks, options);
-		this.name = options.name;
-	}
-}
+import { MockFile } from "@/utils/testing-library";
 
 describe("useFiles", () => {
 	it("should read file as text", async () => {
