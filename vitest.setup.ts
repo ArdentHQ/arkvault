@@ -72,6 +72,15 @@ vi.mock("p-retry", async () => {
 
 vi.mock("browser-fs-access");
 
+vi.mock("crypto", async () => {
+	const crypto = await vi.importActual("crypto");
+
+	return {
+		...crypto,
+		getRandomValues: crypto.randomFillSync,
+	};
+});
+
 const originalTippyRender = Tippy.render;
 let tippyMock;
 
@@ -167,11 +176,6 @@ vi.stubGlobal("BroadcastChannel", BroadcastChannelMock);
 
 vi.stubGlobal("CSS", {
 	supports: () => true,
-});
-
-vi.stubGlobal("crypto", {
-	...crypto,
-	getRandomValues: crypto.randomFillSync,
 });
 
 // Zendesk
