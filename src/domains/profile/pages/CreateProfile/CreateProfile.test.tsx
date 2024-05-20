@@ -75,7 +75,7 @@ describe("CreateProfile", () => {
 	beforeEach(() => {
 		browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
-			.mockResolvedValue(new MockFile(["123"], { name: "image.png", type: "text/png" }));
+			.mockResolvedValue(new MockFile([], { name: "picture.png", type: "image/png" }));
 	});
 
 	afterEach(() => {
