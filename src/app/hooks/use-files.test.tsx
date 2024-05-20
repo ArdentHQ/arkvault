@@ -3,13 +3,22 @@ import { renderHook } from "@testing-library/react-hooks";
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
 import { requestMock, server } from "@/tests/mocks/server";
 
+class MockFile extends Blob {
+	name: string;
+
+	constructor(chunks, options) {
+		super(chunks, options);
+		this.name = options.name;
+	}
+}
+
 describe("useFiles", () => {
 	it("should read file as text", async () => {
 		const { result } = renderHook(() => useFiles());
 
-		const { content, extension, name } = await result.current.readFileAsText(
-			new File([new Blob(["test mnemonic"])], "fileName.wwe"),
-		);
+		const file = new MockFile(["test mnemonic"], { type: "text/plain", name: "fileName.wwe" });
+
+		const { content, extension, name } = await result.current.readFileAsText(file);
 
 		expect(content).toBe("test mnemonic");
 		expect(extension).toBe("wwe");
@@ -19,9 +28,9 @@ describe("useFiles", () => {
 	it("should read file as data uri", async () => {
 		const { result } = renderHook(() => useFiles());
 
-		const { content, extension, name } = await result.current.readFileAsDataUri(
-			new File([new Blob(["test mnemonic"])], "fileName.wwe"),
-		);
+		const file = new MockFile(["test mnemonic"], { type: "application/octet-stream", name: "fileName.wwe" });
+
+		const { content, extension, name } = await result.current.readFileAsDataUri(file);
 
 		expect(content).toBe(`data:application/octet-stream;base64,${btoa("test mnemonic")}`);
 		expect(extension).toBe("wwe");
