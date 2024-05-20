@@ -33,7 +33,7 @@ describe("useFiles", () => {
 		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			// @ts-ignore
-			.mockResolvedValue(new MockFile([""], { name: "test.png", type: "image/png" }));
+			.mockResolvedValue(new File([], "test.png"));
 
 		const { result } = renderHook(() => useFiles());
 
