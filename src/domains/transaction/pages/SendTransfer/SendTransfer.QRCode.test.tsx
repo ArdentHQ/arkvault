@@ -16,6 +16,7 @@ import {
 	getDefaultProfileId,
 	getDefaultWalletId,
 	mockProfileWithPublicAndTestNetworks,
+	MockFile
 } from "@/utils/testing-library";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { toasts } from "@/app/services";
@@ -48,7 +49,7 @@ let qrScannerMock;
 describe("SendTransfer QRModal", () => {
 	beforeAll(() => {
 		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
-		vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+		vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new MockFile([], { name: "test.png", type: "image/png" })));
 
 		const profile = env.profiles().findById("b999d134-7a24-481e-a95d-bc47c543bfc9");
 

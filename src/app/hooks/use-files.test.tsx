@@ -33,7 +33,7 @@ describe("useFiles", () => {
 		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			// @ts-ignore
-			.mockResolvedValue(new File([], "test.png"));
+			.mockResolvedValue(new MockFile([""], { name: "test.png", type: "image/png" }));
 
 		const { result } = renderHook(() => useFiles());
 
@@ -135,7 +135,7 @@ describe("useFiles", () => {
 	it("should handle openImage errors", async () => {
 		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
-			.mockResolvedValue(new File(["123"], "not-an-image.png"));
+			.mockResolvedValue(new MockFile(["123"], { name: "not-an-image.png", type: "text/plain" }));
 
 		Object.defineProperty(global.FileReader.prototype, "addEventListener", {
 			value: (type, listener) => {

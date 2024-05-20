@@ -5,11 +5,13 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { SelectFile } from "./SelectFile";
-import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { fireEvent, render, screen, waitFor, MockFile } from "@/utils/testing-library";
 
 const browseFiles = () => screen.getByTestId("SelectFile__browse-files");
 
-const sampleFiles = [new File(["sample"], "sample-export.json")];
+const file = new MockFile([""], { name: "sample", type: "text/plain" });
+
+const sampleFiles = [file, "sample-export.json"];
 
 describe("SelectFile", () => {
 	it("should render with wwe file format", () => {
@@ -46,7 +48,7 @@ describe("SelectFile", () => {
 	});
 
 	it("should not select the corrupted file", async () => {
-		const corruptedFile = new File([""], "sample.json");
+		const corruptedFile = new MockFile([""], { name: "sample.json", type: "text/plain" });
 
 		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(corruptedFile);
 

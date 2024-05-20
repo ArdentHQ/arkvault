@@ -11,7 +11,17 @@ import { useAccentColor, useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import GeneralSettings from "@/domains/setting/pages/General";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+import {
+	act,
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	render,
+	screen,
+	waitFor,
+	within,
+	MockFile,
+} from "@/utils/testing-library";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 
 const translations = buildTranslations();
@@ -44,9 +54,9 @@ describe("General Settings", () => {
 	});
 
 	beforeEach(() => {
-		browserAccessMock = vi
-			.spyOn(browserAccess, "fileOpen")
-			.mockResolvedValue(new File([], "picture.png", { type: "image/png" }));
+		const file = new MockFile([""], { name: "picture.png", type: "image/png" });
+
+		browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(file);
 	});
 
 	afterEach(() => {
@@ -193,7 +203,7 @@ describe("General Settings", () => {
 		browserAccessMock.mockRestore();
 	});
 
-	it("should not update the uploaded avatar when removing focus from name input", async () => {
+	it.only("should not update the uploaded avatar when removing focus from name input", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />

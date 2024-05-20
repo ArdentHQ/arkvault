@@ -74,9 +74,9 @@ describe("SelectProfileImage", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		const browserAccessMock = vi
-			.spyOn(browserAccess, "fileOpen")
-			.mockResolvedValue(new File(["123"], "not-an-image.png"));
+		const file = new MockFile(["123"], { name: "not-an-image.png", type: "text/plain" });
+
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(file);
 
 		uploadButton().addEventListener("click", browserAccessMock as any);
 		userEvent.click(uploadButton());

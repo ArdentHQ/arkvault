@@ -6,7 +6,7 @@ import React from "react";
 
 import { EnvironmentProvider } from "@/app/contexts";
 import { ImportProfile } from "@/domains/profile/pages/ImportProfile/ImportProfile";
-import { env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { env, fireEvent, render, screen, waitFor, MockFile } from "@/utils/testing-library";
 
 const passwordProtectedWwe = fs.readFileSync("src/tests/fixtures/profile/import/password-protected-profile.wwe");
 const corruptedWwe = fs.readFileSync("src/tests/fixtures/profile/import/corrupted-profile.wwe");
@@ -25,7 +25,7 @@ const validPassword = "S3cUrePa$sword";
 const wrongPassword = "wrong password";
 
 const createBlob = (fileContents: string | Buffer, fileName?: string) =>
-	new File([new Blob([fileContents])], fileName || "fileName.wwe");
+	new MockFile([fileContents], { name: fileName });
 
 describe("ImportProfile", () => {
 	beforeEach(() => {
