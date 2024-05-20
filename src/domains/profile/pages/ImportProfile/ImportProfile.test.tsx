@@ -25,7 +25,7 @@ const validPassword = "S3cUrePa$sword";
 const wrongPassword = "wrong password";
 
 const createBlob = (fileContents: string | Buffer, fileName?: string) =>
-	new MockFile([fileContents], { name: fileName });
+	new MockFile([fileContents], { name: fileName || "fileName.wwe" });
 
 describe("ImportProfile", () => {
 	beforeEach(() => {
