@@ -4,7 +4,6 @@ import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
 import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
-import crypto from "crypto";
 
 import { server } from "./src/tests/mocks/server";
 
@@ -59,6 +58,8 @@ vi.mock("react-idle-timer", () => {
 		},
 	};
 });
+
+vi.mock("focus-visible", () => ({}));
 
 // Reduce ledger connection retries to 2 in all tests.
 vi.mock("p-retry", async () => {
