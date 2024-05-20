@@ -203,7 +203,7 @@ describe("General Settings", () => {
 		browserAccessMock.mockRestore();
 	});
 
-	it.only("should not update the uploaded avatar when removing focus from name input", async () => {
+	it("should not update the uploaded avatar when removing focus from name input", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
