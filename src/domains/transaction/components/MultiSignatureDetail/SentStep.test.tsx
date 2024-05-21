@@ -29,12 +29,10 @@ describe("Multisignature Detail Sent Step", () => {
 					wallet={wallet}
 					transaction={{
 						...TransactionFixture,
-						data: () => ({
-							toSignedData: () => ({}),
-						}),
 						get: () => ({ min: 2, publicKeys: [] }),
 						min: () => 2,
 						publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						wallet: () => wallet,
 					}}
 				/>
 				,
