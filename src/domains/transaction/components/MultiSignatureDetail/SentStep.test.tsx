@@ -35,7 +35,6 @@ describe("Multisignature Detail Sent Step", () => {
 						get: () => ({ min: 2, publicKeys: [] }),
 						min: () => 2,
 						publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						toSignedData: () => ({}),
 					}}
 				/>
 				,
