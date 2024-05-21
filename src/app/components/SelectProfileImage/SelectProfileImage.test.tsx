@@ -7,7 +7,7 @@ import { SelectProfileImage } from "./SelectProfileImage";
 import { useFiles } from "@/app/hooks/use-files";
 import { translations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
-import { render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor, MockFile } from "@/utils/testing-library";
 
 const uploadButton = () => screen.getByTestId("SelectProfileImage__upload-button");
 
@@ -43,7 +43,7 @@ describe("SelectProfileImage", () => {
 	it("should handle upload file", async () => {
 		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
-			.mockResolvedValue(new File([""], "test.png", { type: "image/png" }));
+			.mockResolvedValue(new MockFile([""], { name: "test.png", type: "image/png" }));
 
 		const onSelect = vi.fn();
 
@@ -74,9 +74,9 @@ describe("SelectProfileImage", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		const browserAccessMock = vi
-			.spyOn(browserAccess, "fileOpen")
-			.mockResolvedValue(new File(["123"], "not-an-image.png"));
+		const file = new MockFile(["123"], { name: "not-an-image.png", type: "text/plain" });
+
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(file);
 
 		uploadButton().addEventListener("click", browserAccessMock as any);
 		userEvent.click(uploadButton());

@@ -7,7 +7,7 @@ import QRScanner from "qr-scanner";
 import * as reactQrReaderMock from "react-qr-reader";
 import { QRModal } from "./QRModal";
 import { toasts } from "@/app/services";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, MockFile } from "@/utils/testing-library";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 
 const qrCodeUrl =
@@ -48,7 +48,8 @@ describe("QRModal", () => {
 	it("should render invalid qr error from file upload", async () => {
 		const toastSpy = vi.spyOn(toasts, "error");
 
-		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+		const file = new MockFile([""], { name: "test.png", type: "image/png" });
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(file);
 		reactQrReaderMock.QrReader.mockImplementation(() => null);
 		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockImplementation(() => {
 			throw new Error("InvalidQR");
@@ -69,7 +70,8 @@ describe("QRModal", () => {
 
 	it("should handle read", async () => {
 		const onRead = vi.fn();
-		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+		const file = new MockFile([""], { name: "test.png", type: "image/png" });
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(file);
 		reactQrReaderMock.QrReader.mockImplementation(() => null);
 		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockReturnValue({ data: qrCodeUrl });
 
