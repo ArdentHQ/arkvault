@@ -2,7 +2,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Address } from "@/app/components/Address";
 import { Alert } from "@/app/components/Alert";
 import { Avatar } from "@/app/components/Avatar";
@@ -140,7 +139,7 @@ export const MultiSignatureSuccessful = ({
 		if (isVote) {
 			return voteAddresses.map((address) => ({
 				address,
-				amount: BigNumber.ZERO,
+				amount: 0,
 			}));
 		}
 
