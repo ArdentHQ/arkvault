@@ -4,7 +4,6 @@ import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
 import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
-import crypto from "crypto";
 
 import { server } from "./src/tests/mocks/server";
 
@@ -60,6 +59,8 @@ vi.mock("react-idle-timer", () => {
 	};
 });
 
+vi.mock("focus-visible", () => ({}));
+
 // Reduce ledger connection retries to 2 in all tests.
 vi.mock("p-retry", async () => {
 	const retry = await vi.importActual("p-retry");
@@ -71,6 +72,15 @@ vi.mock("p-retry", async () => {
 });
 
 vi.mock("browser-fs-access");
+
+vi.mock("crypto", async () => {
+	const crypto = await vi.importActual("crypto");
+
+	return {
+		...crypto,
+		getRandomValues: crypto.randomFillSync,
+	};
+});
 
 const originalTippyRender = Tippy.render;
 let tippyMock;
@@ -167,11 +177,6 @@ vi.stubGlobal("BroadcastChannel", BroadcastChannelMock);
 
 vi.stubGlobal("CSS", {
 	supports: () => true,
-});
-
-vi.stubGlobal("crypto", {
-	...crypto,
-	getRandomValues: crypto.randomFillSync,
 });
 
 // Zendesk
