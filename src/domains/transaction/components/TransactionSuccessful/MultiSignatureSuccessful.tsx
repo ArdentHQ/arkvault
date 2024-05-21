@@ -130,7 +130,7 @@ export const MultiSignatureSuccessful = ({
 		fetchData();
 	}, [votesPublicKeys, isVote]);
 
-	const recipientes = useMemo<
+	const recipients = useMemo<
 		| {
 				address: string;
 				amount: number;
@@ -211,9 +211,9 @@ export const MultiSignatureSuccessful = ({
 						{!transaction.isMultiSignatureRegistration() && (
 							<TransactionRecipients
 								label={t("TRANSACTION.RECIPIENTS_COUNT", {
-									count: recipientes.length,
+									count: recipients.length,
 								})}
-								recipients={recipientes}
+								recipients={recipients}
 								currency={senderWallet.currency()}
 							/>
 						)}
@@ -246,7 +246,7 @@ export const MultiSignatureSuccessful = ({
 							<TransactionAmount
 								amount={transaction.amount()}
 								currency={senderWallet.currency()}
-								isTotalAmount={recipientes.length > 1}
+								isTotalAmount={recipients.length > 1}
 								isSent={true}
 							/>
 						)}
