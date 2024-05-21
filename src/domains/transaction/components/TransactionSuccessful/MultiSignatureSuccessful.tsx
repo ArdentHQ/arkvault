@@ -77,9 +77,9 @@ export const MultiSignatureSuccessful = ({
 				return;
 			}
 
-			const { min, publicKeys, votes } = getMultiSignatureInfo(transaction);
+			const { min, publicKeys, votesPublicKeys } = getMultiSignatureInfo(transaction);
 
-			setVotesPublicKeys(votes);
+			setVotesPublicKeys(votesPublicKeys);
 
 			try {
 				const { address } = await senderWallet
