@@ -1,7 +1,8 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Address } from "@/app/components/Address";
 import { Alert } from "@/app/components/Alert";
 import { Avatar } from "@/app/components/Avatar";
@@ -65,9 +66,11 @@ export const MultiSignatureSuccessful = ({
 
 	const [generatedAddress, setGeneratedAddress] = useState<string>();
 	const [participantAddresses, setParticipantAddresses] = useState<RecipientItem[]>([]);
+	const [voteAddresses, setVoteAddresses] = useState<string[]>([]);
 
 	const [minParticipants, setMinParticipants] = useState<number>();
 	const [publicKeys, setPublicKeys] = useState<string[]>();
+	const [votesPublicKeys, setVotesPublicKeys] = useState<string[]>([]);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -75,7 +78,9 @@ export const MultiSignatureSuccessful = ({
 				return;
 			}
 
-			const { min, publicKeys } = getMultiSignatureInfo(transaction);
+			const { min, publicKeys, votes } = getMultiSignatureInfo(transaction);
+
+			setVotesPublicKeys(votes);
 
 			try {
 				const { address } = await senderWallet
@@ -104,6 +109,43 @@ export const MultiSignatureSuccessful = ({
 
 		fetchData();
 	}, [transaction, senderWallet]);
+
+	const isVote = transaction?.isVote() || transaction?.isUnvote();
+
+	useEffect(() => {
+		if (!isVote) {
+			return;
+		}
+
+		const fetchData = async () => {
+			const addresses: string[] = [];
+			for (const publicKey of votesPublicKeys) {
+				const address = await addressFromPublicKey(senderWallet, publicKey.replace(/[^\dA-Za-z]/, ""));
+
+				addresses.push(address);
+			}
+
+			setVoteAddresses(addresses);
+		};
+
+		fetchData();
+	}, [votesPublicKeys, isVote]);
+
+	const recipientes = useMemo<
+		| {
+				address: string;
+				amount: number;
+		  }[]
+	>(() => {
+		if (isVote) {
+			return voteAddresses.map((address) => ({
+				address,
+				amount: BigNumber.ZERO,
+			}));
+		}
+
+		return transaction?.recipients() ?? [];
+	}, [transaction, voteAddresses]);
 
 	return (
 		<section data-testid="TransactionSuccessful" className="space-y-8">
@@ -170,9 +212,9 @@ export const MultiSignatureSuccessful = ({
 						{!transaction.isMultiSignatureRegistration() && (
 							<TransactionRecipients
 								label={t("TRANSACTION.RECIPIENTS_COUNT", {
-									count: transaction.recipients().length,
+									count: recipientes.length,
 								})}
-								recipients={transaction.recipients()}
+								recipients={recipientes}
 								currency={senderWallet.currency()}
 							/>
 						)}
@@ -205,7 +247,7 @@ export const MultiSignatureSuccessful = ({
 							<TransactionAmount
 								amount={transaction.amount()}
 								currency={senderWallet.currency()}
-								isTotalAmount={transaction.recipients().length > 1}
+								isTotalAmount={recipientes.length > 1}
 								isSent={true}
 							/>
 						)}

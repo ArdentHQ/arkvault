@@ -110,8 +110,13 @@ export const getMultiSignatureInfo = (transaction: DTO.ExtendedSignedTransaction
 		numberOfSignatures: number;
 	}>("multiSignature");
 
+	const { votes } = transaction.get<{
+		votes?: string[];
+	}>("asset");
+
 	return {
 		min: min ?? numberOfSignatures,
 		publicKeys: publicKeys || mandatoryKeys,
+		votes: votes || [],
 	};
 };
