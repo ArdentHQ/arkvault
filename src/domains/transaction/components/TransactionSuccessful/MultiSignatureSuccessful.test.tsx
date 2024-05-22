@@ -96,6 +96,13 @@ describe("MultiSignatureSuccessful", () => {
 	it("should render for vote with address", async () => {
 		const transaction = {
 			...TransactionFixture,
+			data: () => ({
+				toSignedData: () => ({
+					asset: {
+						votes: ["+022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd"],
+					},
+				}),
+			}),
 			isVote: () => true,
 			wallet: () => wallet,
 		};
@@ -115,9 +122,9 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("TransactionRecipients")).resolves.toBeVisible();
+		await expect(screen.findAllByTestId("TransactionRecipients")).resolves.toHaveLength(2);
 
-		expect(screen.getByText("D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb")).toBeInTheDocument();
+		expect(screen.getByText("DArvWfH5nMDT38tWmo5k461vMQpRXHQWX9")).toBeInTheDocument();
 
 		vi.restoreAllMocks();
 	});
