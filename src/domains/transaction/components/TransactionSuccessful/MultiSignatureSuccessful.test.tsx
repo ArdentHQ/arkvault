@@ -93,6 +93,35 @@ describe("MultiSignatureSuccessful", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should render for vote with address", async () => {
+		const transaction = {
+			...TransactionFixture,
+			isVote: () => true,
+			wallet: () => wallet,
+		};
+
+		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
+			transactionMockImplementation(attribute, transaction),
+		);
+
+		render(
+			<Route path="/profiles/:profileId">
+				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
+					<div />
+				</MultiSignatureSuccessful>
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		await expect(screen.findByTestId("TransactionRecipients")).resolves.toBeVisible();
+
+		expect(screen.getByText("D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb")).toBeInTheDocument();
+
+		vi.restoreAllMocks();
+	});
+
 	it("should handle empty wallet and transation props", async () => {
 		const { asFragment } = render(
 			<MultiSignatureSuccessful senderWallet={undefined} transaction={undefined}>
