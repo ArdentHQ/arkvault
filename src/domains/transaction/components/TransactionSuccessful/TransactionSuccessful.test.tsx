@@ -62,7 +62,7 @@ describe("TransactionSuccessful", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
 	});
@@ -121,7 +121,7 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 		await expect(screen.findByText("Title")).resolves.toBeInTheDocument();
 		await expect(screen.findAllByText("Description")).resolves.toHaveLength(2);
@@ -129,7 +129,7 @@ describe("TransactionSuccessful", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should render successfull screen if it's a multisignature registration", () => {
+	it("should render successful screen if it's a multisignature registration", () => {
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,
@@ -150,12 +150,12 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+		expect(screen.getByTestId("MultisignatureSuccessful")).toBeInTheDocument();
 
 		vi.restoreAllMocks();
 	});
 
-	it("should render successfull screen if it uses multisignature", () => {
+	it("should render successful screen if it uses multisignature", () => {
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,
@@ -176,7 +176,7 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+		expect(screen.getByTestId("MultisignatureSuccessful")).toBeInTheDocument();
 
 		vi.restoreAllMocks();
 	});
