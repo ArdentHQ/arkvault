@@ -97,6 +97,7 @@ describe("MultiSignatureSuccessful", () => {
 		const transaction = {
 			...TransactionFixture,
 			data: () => ({
+				data: () => {},
 				toSignedData: () => ({
 					asset: {
 						votes: ["+022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd"],

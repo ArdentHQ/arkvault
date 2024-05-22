@@ -211,7 +211,7 @@ describe("Multisignature Registration", () => {
 
 		userEvent.click(sendButton());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("MultisignatureSuccessful")).resolves.toBeVisible();
 
 		signTransactionMock.mockRestore();
 		multiSignatureRegistrationMock.mockRestore();
