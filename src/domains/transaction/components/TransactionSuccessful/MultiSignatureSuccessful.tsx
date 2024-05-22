@@ -147,7 +147,7 @@ export const MultiSignatureSuccessful = ({
 	}, [transaction, voteAddresses]);
 
 	return (
-		<section data-testid="TransactionSuccessful" className="space-y-8">
+		<section data-testid="MultisignatureSuccessful" className="space-y-8">
 			<StepHeader title={title || t("TRANSACTION.SUCCESS.CREATED")} />
 
 			<Image name={banner || "TransactionSignedBanner"} domain="transaction" className="hidden w-full md:block" />
