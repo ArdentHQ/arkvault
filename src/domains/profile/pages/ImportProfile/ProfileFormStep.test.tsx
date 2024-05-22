@@ -8,7 +8,7 @@ import * as browserAccess from "browser-fs-access";
 import { EnvironmentProvider } from "@/app/contexts";
 import { ImportProfileForm } from "@/domains/profile/pages/ImportProfile/ProfileFormStep";
 import * as themeUtils from "@/utils/theme";
-import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { act, env, fireEvent, render, screen, waitFor, MockFile } from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 
 let browserAccessMock: vi.SpyInstance;
@@ -27,7 +27,7 @@ describe("Import Profile - Profile Form Step", () => {
 		// @ts-ignore
 		browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
-			.mockResolvedValue(new File([], "picture.png", { type: "image/png" }));
+			.mockResolvedValue(new MockFile([], { name: "picture.png", type: "image/png" }));
 	});
 
 	afterEach(() => {
