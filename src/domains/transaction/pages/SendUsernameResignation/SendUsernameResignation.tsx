@@ -32,7 +32,7 @@ export const SendUsernameResignation = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, getValues, register, watch } = form;
+	const { formState, getValues, register } = form;
 	const { isValid, isSubmitting } = formState;
 
 	const { common } = useValidation();
@@ -50,8 +50,6 @@ export const SendUsernameResignation = () => {
 		register("fees");
 		register("fee", common.fee(activeWallet.balance(), activeWallet.network()));
 		register("inputFeeSettings");
-
-		register("suppressWarning");
 	}, [activeWallet, common, register]);
 
 	useKeydown("Enter", () => {
@@ -72,7 +70,7 @@ export const SendUsernameResignation = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = (suppressWarning?: boolean) => {
+	const handleNext = () => {
 		const newIndex = activeTab + 1;
 
 		setActiveTab(newIndex);
