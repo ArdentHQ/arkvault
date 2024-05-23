@@ -351,3 +351,12 @@ export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet)
 };
 
 export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
+
+export class MockFile extends Blob {
+	name: string;
+
+	constructor(chunks, options) {
+		super(chunks, options);
+		this.name = options.name;
+	}
+}

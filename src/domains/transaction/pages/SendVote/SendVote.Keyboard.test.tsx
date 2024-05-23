@@ -11,7 +11,6 @@ import { SendVote } from "./SendVote";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 import {
 	act,
@@ -62,6 +61,11 @@ describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -105,6 +109,10 @@ describe("SendVote", () => {
 		resetProfileNetworksMock();
 	});
 
+	afterAll(() => {
+		vi.useRealTimers();
+	});
+
 	it.each(["with keyboard", "without keyboard"])("should send a vote transaction %s", async (inputMethod) => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
@@ -113,10 +121,6 @@ describe("SendVote", () => {
 		const mnemonicMock = vi
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
-
-		const confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -216,6 +220,10 @@ describe("SendVote", () => {
 			}
 		});
 
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
+
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		signMock.mockRestore();
@@ -223,6 +231,5 @@ describe("SendVote", () => {
 		transactionMock.mockRestore();
 		walletVoteSyncMock.mockRestore();
 		mnemonicMock.mockRestore();
-		confirmedTransactionMock.mockRestore();
 	});
 });
