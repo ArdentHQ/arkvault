@@ -19,14 +19,14 @@ describe("initializeMainsailNetworks", () => {
 		expect(data.networks.mainsail.devnet).toEqual(Mainsail.manifest.networks["mainsail.devnet"]);
 	});
 
-	it("should initialize the mainsail devnet network if is e2e", () => {
+	it("should not initialize the mainsail devnet network if is e2e", () => {
 		const isE2EMock = vi.spyOn(testHelpers, "isE2E").mockReturnValue(true);
 
 		const data = { networks: {} };
 
 		initializeMainsailNetworks({ data });
 
-		expect(data.networks.mainsail.devnet).toEqual(Mainsail.manifest.networks["mainsail.devnet"]);
+		expect(data.networks.mainsail).toBeUndefined();
 
 		isE2EMock.mockRestore();
 	});
