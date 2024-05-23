@@ -164,6 +164,7 @@ export { renderWithRouter as render, customRender as renderWithoutRouter };
 
 export const getDefaultProfileId = () => Object.keys(fixtureData.profiles)[0];
 export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profiles)[1];
+export const getMainsailProfileId = () => Object.keys(fixtureData.profiles)[2];
 export const getDefaultWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
 export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew run manage better flame tree prevent";
 
