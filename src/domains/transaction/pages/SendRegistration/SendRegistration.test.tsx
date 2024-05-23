@@ -13,7 +13,9 @@ import {
 	act,
 	env,
 	getDefaultProfileId,
+	getMainsailProfileId,
 	getDefaultWalletMnemonic,
+	getMainsailDefaultWalletMnemonic,
 	mockNanoXTransport,
 	render,
 	screen,
@@ -326,13 +328,18 @@ describe("Registration", () => {
 		nanoXTransportMock.mockRestore();
 	});
 
-	it.each([withKeyboard, "without keyboard"])("should register username %s", async (inputMethod) => {
+	it.each([withKeyboard, "without keyboard"])("should register username for mainsail %s", async (inputMethod) => {
 		// Emulate not found username
 		server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
 
-		// @TODO Remove mock once mainsail wallets are properly setup in tests.
-		// @see https://app.clickup.com/t/86dtaccqj
-		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
+		// Use Mainsail profile
+		profile = env.profiles().findById(getMainsailProfileId());
+
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		wallet = profile.wallets().first();
+
 		const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
 
 		const feesMock = vi.spyOn(useFeesMock, "useFees").mockImplementation(() => ({
@@ -369,8 +376,10 @@ describe("Registration", () => {
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
-		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		userEvent.paste(passwordInput, getMainsailDefaultWalletMnemonic());
+
+		await waitFor(() => expect(passwordInput).toHaveValue(getMainsailDefaultWalletMnemonic()));
 
 		await waitFor(() => expect(sendButton()).toBeEnabled());
 
@@ -418,7 +427,6 @@ describe("Registration", () => {
 
 		nanoXTransportMock.mockRestore();
 		feesMock.mockRestore();
-		mainsailSpy.mockRestore();
 		envAvailableNetworksMock.mockRestore();
 	});
 

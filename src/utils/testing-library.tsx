@@ -70,7 +70,7 @@ export function renderWithForm(
 	let responsiveRenderFunction: any;
 
 	if (options?.breakpoint) {
-		responsiveRenderFunction = options?.withProviders ?? true ? renderResponsiveWithRoute : renderResponsive;
+		responsiveRenderFunction = options.withProviders ?? true ? renderResponsiveWithRoute : renderResponsive;
 	} else {
 		renderFunction = options?.withProviders ?? true ? renderWithRouter : render;
 	}
@@ -167,6 +167,8 @@ export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profi
 export const getMainsailProfileId = () => Object.keys(fixtureData.profiles)[2];
 export const getDefaultWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
 export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew run manage better flame tree prevent";
+export const getMainsailDefaultWalletMnemonic = () =>
+	"affair dress crucial smile doll stable legend caught convince erase reject throw doctor phrase trade tray remain nut spy erupt steel luggage first tattoo";
 
 export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordProtectedProfileId()]?.password;
 
