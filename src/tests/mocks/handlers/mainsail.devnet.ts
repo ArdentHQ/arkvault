@@ -9,6 +9,7 @@ const endpoints = [
 		path: "/node/configuration/crypto",
 		data: require("../../fixtures/coins/mainsail/devnet/cryptoConfiguration.json"),
 	},
+	{ path: "/delegates", data: require("../../fixtures/coins/mainsail/devnet/delegates.json") },
 	{ path: "/node/syncing", data: require("../../fixtures/coins/mainsail/devnet/syncing.json") },
 	{ path: "/transactions/fees", data: require("../../fixtures/coins/mainsail/devnet/transaction-fees.json") },
 ];
