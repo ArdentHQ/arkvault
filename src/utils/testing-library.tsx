@@ -199,6 +199,12 @@ export const MNEMONICS = [
 	"subway cradle salad cake toddler sausage neglect eight cruel fault mammal cannon south interest theory sadness pass move outside segment curtain toddler save banner",
 ];
 
+export const MNEMONICS_MAINSAIL = [
+	"boring response announce text spare angle scene dirt supply boil drink elbow cram tube hurry upgrade hamster also cabbage fabric bike radar umbrella alley",
+	"property scheme cross involve drip canal wall suspect ripple alone sheriff battle husband prison sudden lady critic garage share virus water lounge latin limb",
+	"antique broken slice multiply seek wool wheel table quick veteran seat plunge oven hamster change ordinary milk quick leg ride abandon vicious olympic cram",
+];
+
 export const breakpoints: {
 	[key in LayoutBreakpoint | "xs"]: number;
 } = {
