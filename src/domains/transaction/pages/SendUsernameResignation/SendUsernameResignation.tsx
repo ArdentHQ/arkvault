@@ -16,8 +16,6 @@ import { useActiveProfile, useActiveWallet, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
-import { useFeeConfirmation } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 
 enum Step {
@@ -37,7 +35,6 @@ export const SendUsernameResignation = () => {
 	const { formState, getValues, register, watch } = form;
 	const { isValid, isSubmitting } = formState;
 
-	const { fee, fees } = watch();
 	const { common } = useValidation();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
@@ -56,9 +53,6 @@ export const SendUsernameResignation = () => {
 
 		register("suppressWarning");
 	}, [activeWallet, common, register]);
-
-	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-		useFeeConfirmation(fee, fees);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -80,10 +74,6 @@ export const SendUsernameResignation = () => {
 
 	const handleNext = (suppressWarning?: boolean) => {
 		const newIndex = activeTab + 1;
-
-		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
-			return setShowFeeWarning(true);
-		}
 
 		setActiveTab(newIndex);
 	};
@@ -174,15 +164,6 @@ export const SendUsernameResignation = () => {
 								/>
 							)}
 						</Tabs>
-
-						<FeeWarning
-							isOpen={showFeeWarning}
-							variant={feeWarningVariant}
-							onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}
-							onConfirm={(suppressWarning: boolean) =>
-								dismissFeeWarning(() => handleNext(true), suppressWarning)
-							}
-						/>
 					</Form>
 				</StepsProvider>
 			</Section>
