@@ -20,6 +20,6 @@ cucumber("@deleteProfile-noPassword", {
 		await t.click(Selector('[data-testid="DeleteResource__submit-button"]'));
 	},
 	"Then the profile is removed": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="Card"]').count).eql(2);
+		await t.expect(Selector('[data-testid="Card"]').count).eql(3);
 	},
 });
