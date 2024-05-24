@@ -4308,6 +4308,1063 @@ exports[`SendUsernameResignation > should show mnemonic authentication error 1`]
 </DocumentFragment>
 `;
 
+exports[`SendUsernameResignation > should successfully sign and submit musig resignation transaction 1`] = `
+<DocumentFragment>
+  <div
+    class="css-w3nefz"
+  >
+    <div
+      class="css-tbczne"
+      data-testid="NavigationBarMobile"
+    >
+      <div
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+        data-testid="NavigationBar__buttons-separator"
+      />
+      <div
+        class="flex h-14 items-center justify-center space-x-4"
+      >
+        <button
+          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          data-testid="NavigationBar__buttons__mobile--receive"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-1i4b0eq"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          type="vertical"
+        />
+        <button
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          data-testid="NavigationBar__buttons__mobile--home"
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-1i4b0eq"
+              height="20"
+              width="20"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          type="vertical"
+        />
+        <button
+          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          data-testid="NavigationBar__buttons__mobile--send"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-1i4b0eq"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="sent"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+    <nav
+      aria-labelledby="main menu"
+      class="css-1ovuwx0"
+    >
+      <div
+        class="relative flex h-21"
+      >
+        <div
+          class="hidden w-12 sm:flex"
+        >
+          <button
+            class="css-1v0i3m7"
+          >
+            <div
+              class="mx-auto css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg
+                id="chevron-left-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div
+          class="flex flex-1 items-center px-8"
+        >
+          <div
+            class="my-auto flex items-center"
+          >
+            <button
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              data-testid="NavigationBarLogo--button"
+              type="button"
+            >
+              <span
+                class="relative"
+              >
+                <svg
+                  fill="none"
+                  height="28"
+                  viewBox="0 0 363 363"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    clip-path="url(#clip0_434_4442)"
+                  >
+                    <path
+                      d="M174.182 352.325a279.256 279.256 0 0 1-25.627-20.536c-8.518-7.525-17.006-15.66-25.229-24.178a470.15 470.15 0 0 1-29.234-33.315 449.417 449.417 0 0 1-57.68-93.623 420.933 420.933 0 0 1-22.044-60.102A416.702 416.702 0 0 1 1.126 51.749c-.512-4.803-.303-10.73 5.9-13.842a393.077 393.077 0 0 1 54.42-19.94 459.697 459.697 0 0 1 52.646-12.195A374.409 374.409 0 0 1 176.15.333h11.6a374.406 374.406 0 0 1 62.057 5.44 459.723 459.723 0 0 1 52.646 12.195 393.328 393.328 0 0 1 54.422 19.939c6.203 3.115 6.41 9.034 5.898 13.842a416.672 416.672 0 0 1-13.242 68.822 421.133 421.133 0 0 1-22.044 60.102 449.395 449.395 0 0 1-57.68 93.623 470 470 0 0 1-29.234 33.315c-8.223 8.518-16.711 16.653-25.229 24.178a279.73 279.73 0 0 1-25.627 20.536 17.811 17.811 0 0 1-15.528 0h-.007zm6.769-230.087c-.412.547-28.363 29.571-48.772 50.764-7.035 7.318-13.229 13.736-17.187 17.853a49.345 49.345 0 0 0-14.37 29.355 42.981 42.981 0 0 0 2.034 17.531 59.295 59.295 0 0 0 10.41 18.547 369.34 369.34 0 0 0 42.811 44.915 223.324 223.324 0 0 0 20.072 16.051 13.364 13.364 0 0 0 12.005 0 223.333 223.333 0 0 0 20.07-16.051 369.191 369.191 0 0 0 42.811-44.915 59.297 59.297 0 0 0 10.411-18.547 42.98 42.98 0 0 0 2.033-17.531 49.34 49.34 0 0 0-14.377-29.358l-14.811-15.385-1.779-1.848c-20.66-21.451-48.955-50.832-49.371-51.383a1.179 1.179 0 0 0-.995-.548 1.184 1.184 0 0 0-.995.548v.002zm1.408-69.483c.136.215.321.505.582.869.391.544 6.257 9.93 14.382 22.92 19.488 31.162 52.102 83.315 60.679 96.014 6.342 9.377 14.353 14.77 21.974 14.772 7.402 0 18.108-5.031 27.079-29.067a332.382 332.382 0 0 0 19.124-81.095c.409-3.84.243-8.568-4.713-11.056a314.32 314.32 0 0 0-43.468-15.926 367.237 367.237 0 0 0-42.052-9.743 299.13 299.13 0 0 0-49.568-4.345h-8.871a299.13 299.13 0 0 0-49.568 4.345 367.225 367.225 0 0 0-42.051 9.743 314.427 314.427 0 0 0-43.469 15.926c-4.951 2.486-5.12 7.213-4.712 11.056a332.313 332.313 0 0 0 19.124 81.095c4.952 13.265 13.67 29.067 27.078 29.067 7.624 0 15.63-5.384 21.974-14.772 8.57-12.687 41.169-64.811 60.643-95.955l.032-.053c8.124-12.993 13.995-22.38 14.384-22.921.259-.364.455-.657.58-.87.209-.327.311-.491.416-.491.105 0 .214.16.421.487zm-55.455 149.533l19.652-20.614h69.159l19.649 20.614h-108.46zm34.197-35.377l20.162-20.871 20.159 20.871h-40.321z"
+                      fill="currentColor"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </div>
+          <ul
+            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            data-testid="NavigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
+              </a>
+            </li>
+          </ul>
+          <div
+            class="ml-2 mr-auto flex content-center items-center lg:hidden"
+            data-testid="NavigationBar__menu-toggle"
+          >
+            <div
+              class="static sm:relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <button
+                  class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+                  type="button"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="mr-4 flex items-center space-x-2 sm:space-x-4"
+          >
+            <div>
+              <div
+                class="static sm:relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group css-1ietn6u"
+                  >
+                    <button
+                      class="css-12xyeiw"
+                      data-testid="NavigationBar__buttons--server-status"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg
+                            fill="none"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        >
+                          <div
+                            class="h-2 w-2 rounded-full bg-theme-success-700"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div>
+              <div
+                class="static sm:relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group css-1ietn6u"
+                  >
+                    <button
+                      class="css-12xyeiw"
+                      data-testid="NavigationBar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg
+                            id="bell"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        >
+                          <div
+                            class="h-2 w-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="hidden items-center space-x-4 sm:flex"
+            >
+              <div
+                class="flex items-center"
+              >
+                <div
+                  class="css-1ietn6u"
+                >
+                  <button
+                    class="css-127bt7l"
+                    data-testid="NavigationBar__buttons--receive"
+                    disabled=""
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <div
+                        class="p-1 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+              />
+              <div
+                class="flex items-center"
+              >
+                <div
+                  class="css-1ietn6u"
+                >
+                  <button
+                    class="css-127bt7l"
+                    data-testid="NavigationBar__buttons--send"
+                    disabled=""
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <div
+                        class="p-1 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="sent"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+              />
+            </div>
+          </div>
+          <div
+            class="mx-4 my-auto hidden items-center md:flex"
+            data-testid="NavigationBar__balance"
+          >
+            <div
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            >
+              <div
+                class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 md:text-theme-secondary-text md:dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="static sm:relative"
+          >
+            <span
+              data-testid="dropdown__toggle"
+            >
+              <div
+                class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                data-testid="UserMenu"
+              >
+                <div
+                  class="shrink-0 css-8d0u1i"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  >
+                    <img
+                      alt="Profile Avatar"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    />
+                    <span
+                      class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                    >
+                      JO
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-1 flex-col"
+    >
+      <div
+        class="flex-1 css-ycib48"
+      >
+        <div
+          class="mx-auto px-8 lg:container md:px-10"
+        >
+          <form
+            class="mx-auto max-w-xl"
+            data-testid="Form"
+          >
+            <div>
+              <div
+                data-testid="tab-pabel__active-panel"
+              >
+                <section
+                  class="space-y-8"
+                  data-testid="TransactionPending"
+                >
+                  <div
+                    class="sm:mt-8"
+                  >
+                    <div
+                      class="flex flex-col"
+                    >
+                      <span
+                        class="css-3qwsx5"
+                      >
+                        Pending Confirmation
+                      </span>
+                      <ul
+                        class="css-xa5o6q"
+                      >
+                        <li
+                          class="css-47028"
+                        />
+                        <li
+                          class="css-47028"
+                        />
+                        <li
+                          class="css-47028"
+                        />
+                        <li
+                          class="css-47028"
+                        />
+                      </ul>
+                    </div>
+                    <div
+                      class="flex flex-col justify-between sm:flex-row"
+                    >
+                      <div
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      >
+                        <div
+                          class="space-y-4"
+                        >
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Pending Confirmation
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <svg
+                    class="hidden w-full md:block"
+                    fill="none"
+                    height="142"
+                    viewBox="0 0 548 142"
+                    width="548"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_13239_45001)"
+                    >
+                      <path
+                        d="M49.1837 136.897C21.7338 135.186 0 112.381 0 84.5C0 55.5051 23.5051 32 52.5 32C79.8618 32 102.335 52.9318 104.78 79.6563C104.925 81.2512 106.268 83.9999 112 83.9999C117.732 83.9999 209 83.9999 209 83.9999"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="53"
+                        cy="137"
+                        r="4"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="52.5"
+                        cy="84.5"
+                        r="31.5"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M79.0001 67C79.0001 67 61.9587 79.6126 60 81C58.0413 82.3873 54 85.596 54 90C54 94.4039 54 116 54 116"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M72.9999 61C72.9999 61 57.0596 72.3982 54.9999 74C52.9402 75.6018 47.8967 76.1308 43.9999 72.9999C40.1032 69.8692 31 62.0001 31 62.0001"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M498.816 32.1025C526.266 33.8135 548 56.6184 548 84.4995C548 113.494 524.495 137 495.5 137C468.138 137 445.665 116.068 443.221 89.3433C443.075 87.7483 441.732 84.9995 436 84.9995C430.268 84.9995 343 84.9995 343 84.9995"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="495"
+                        cy="32"
+                        r="4"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="495.5"
+                        cy="84.5"
+                        r="31.5"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M469 102C469 102 486.041 89.3873 488 88C489.959 86.6126 494 83.4039 494 79C494 74.596 494 53 494 53"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M475 108C475 108 490.94 96.6015 493 94.9999C495.06 93.3981 500.103 92.869 504 95.9998C507.897 99.1306 517 107 517 107"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M226.18 102.532C233.535 122.644 252.841 137 275.501 137C302.428 137 324.62 116.729 327.649 90.6148C327.881 88.6088 331.745 85 335.001 85C338.257 85 343.001 85 343.001 85"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M325.129 66.4682C317.755 46.3556 298.397 32 275.678 32C248.68 32 226.43 52.2711 223.393 78.3852C223.159 80.3911 219.286 83.9999 216.021 83.9999C212.756 83.9999 208 83.9999 208 83.9999"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="326"
+                        cy="71"
+                        r="4"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="225"
+                        cy="99"
+                        r="4"
+                        stroke="#DBDEE5"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="276.668"
+                        cy="85"
+                        r="31.5"
+                        stroke="#289548"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M281.403 86.0899L281.402 86.0894C280.912 85.6263 280.795 85.3522 280.795 84.9749C280.795 84.6041 280.905 84.3444 281.412 83.851C281.697 83.5754 282.064 83.2473 282.479 82.876C283.468 81.9912 284.732 80.8613 285.809 79.6113C287.371 77.7986 288.78 75.4908 288.78 72.7371V72.3354C288.78 71.2455 288.469 70.2704 287.757 69.5712C287.048 68.8751 286.083 68.5898 285.052 68.5898H268.796C267.776 68.5898 266.84 68.8786 266.162 69.5603C265.484 70.2413 265.201 71.1753 265.201 72.1847V72.7371C265.201 75.4909 266.611 77.7988 268.175 79.6118C269.263 80.873 270.538 82.0077 271.535 82.8954C271.943 83.2584 272.304 83.5801 272.588 83.8523C273.094 84.3448 273.203 84.6044 273.203 84.9749C273.203 85.3522 273.086 85.6264 272.596 86.0894L272.596 86.0899C272.347 86.3254 272.045 86.5966 271.709 86.8991C270.683 87.8216 269.335 89.0345 268.169 90.4095C266.614 92.2439 265.201 94.5646 265.201 97.2293V97.8153C265.201 98.8247 265.484 99.7587 266.162 100.44C266.84 101.121 267.776 101.41 268.796 101.41H285.052C286.083 101.41 287.048 101.125 287.757 100.429C288.469 99.7296 288.78 98.7546 288.78 97.6646V97.2314C288.789 94.5658 287.38 92.2445 285.828 90.41C284.663 89.0337 283.313 87.8199 282.287 86.897C281.952 86.5954 281.651 86.3248 281.403 86.0899Z"
+                        stroke="#289548"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M269.57 73H284.43C285.054 73 285.152 73.4868 284.791 74.1522C283.315 76.7809 278.345 81 277 81C275.655 81 270.685 76.8134 269.209 74.1522C268.848 73.4868 268.946 73 269.57 73Z"
+                        fill="#E2F0E6"
+                        stroke="#289548"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        clip-rule="evenodd"
+                        d="M410.001 135V128H372V135H370V128H355V126H370V108H372V126H410.001V118H412.001V126H422V128H412.001V135H410.001ZM170 135V127.999H132.001V135H130V127.999H120V126H130V113.999H132.001V126H170V116H172V126H190V127.999H172V135H170ZM130 104V100H126V98.0005H130V94H132V98.0005H136V100H132V104H130ZM410 58.9995V47.9997H400V45.9999H410V8.00009H372V18.9999H370V8.00009H359V5.99939H370V0H372V5.99939H410V0H412V5.99939H450V0H452V5.99939H460V8.00009H452V28.9998H450V8.00009H412V45.9999H428V47.9997H412V58.9995H410ZM130 58.9995V47.9997H116V45.9999H130V8.00009H91.9998V18.9999H90V8.00009H72V5.99939H90V0H91.9998V5.99939H130V0H132V5.99939H143V8.00009H132V45.9999H141V47.9997H132V58.9995H130ZM210 26.0001V8.00009H192V5.99939H210V0H212.001V5.99939H228V8.00009H212.001V26.0001H210ZM475.001 11.9999V8.0003H471V5.9996H475.001V2H477V5.9996H481V8.0003H477V11.9999H475.001ZM245 11.9999V8.0003H241V5.9996H245V2H246.999V5.9996H251V8.0003H246.999V11.9999H245Z"
+                        fill="#DBDEE5"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_13239_45001"
+                      >
+                        <rect
+                          fill="white"
+                          height="142"
+                          width="548"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <p
+                    class="hidden text-theme-secondary-text md:block"
+                  >
+                    Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following  is the relevant information for your transaction:
+                  </p>
+                  <div
+                    class="flex flex-col overflow-hidden rounded-xl md:hidden"
+                  >
+                    <div
+                      class="css-1qh812f"
+                    >
+                      <div
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="circle-check-mark"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                      <span>
+                        Success
+                      </span>
+                    </div>
+                    <div
+                      class="css-k5jr4t"
+                    >
+                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following  is the relevant information for your transaction:
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="no-ligatures css-19rivvh"
+                      data-testid="TransactionType"
+                    >
+                      <div
+                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
+                        data-testid="TransactionDetail--desktop"
+                      >
+                        <div
+                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Transaction Type
+                        </div>
+                        <div
+                          class="flex items-center font-semibold"
+                        >
+                          Username Resignation
+                        </div>
+                      </div>
+                      <div
+                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.5 4.99219H2.2C1.53726 4.99219 1 5.52945 1 6.19219V16.1922C1 16.8549 1.53726 17.3922 2.2 17.3922H15.8C16.4627 17.3922 17 16.8549 17 16.1922V13"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M3.64844 12.8016L7.3092 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M7.45178 12.8016L3.79102 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <path
+                              clip-rule="evenodd"
+                              d="M12.1338 12.6953L10 13L10.3047 10.8662L15.792 5.37885C16.1188 5.05211 16.595 4.9245 17.0413 5.0441C17.4877 5.1637 17.8363 5.51232 17.9559 5.95866C18.0755 6.405 17.9479 6.88123 17.6211 7.20797L12.1338 12.6953Z"
+                              fill-rule="evenodd"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="no-ligatures css-19rivvh"
+                      data-testid="TransactionNetwork"
+                    >
+                      <div
+                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
+                        data-testid="TransactionDetail--desktop"
+                      >
+                        <div
+                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Cryptoasset
+                        </div>
+                        <div
+                          class="flex items-center font-semibold"
+                        >
+                          ARK Devnet
+                        </div>
+                      </div>
+                      <div
+                        aria-label="ARK Devnet"
+                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                        data-testid="NetworkIcon-ARK-ark.devnet"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          data-testid="NetworkIcon__icon"
+                          height="20"
+                          width="20"
+                        >
+                          <svg
+                            id="ark"
+                            viewBox="0 0 36.3 30.6"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="no-ligatures css-19rivvh"
+                      data-testid="TransactionSender"
+                    >
+                      <div
+                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
+                        data-testid="TransactionDetail--desktop"
+                      >
+                        <div
+                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Sender
+                        </div>
+                        <div
+                          class="flex items-center font-semibold"
+                        >
+                          <div
+                            class="w-0 flex-1 overflow-auto text-right md:text-left"
+                          >
+                            <div
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            >
+                              <span
+                                class="font-semibold text-base text-theme-text"
+                                data-testid="Address__alias"
+                              >
+                                <span
+                                  class="no-ligatures css-u3jrna"
+                                  data-testid="TruncateEnd"
+                                >
+                                  testwallet2
+                                </span>
+                              </span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex items-center -space-x-1"
+                      >
+                        <div
+                          class="shrink-0 css-8d0u1i"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="no-ligatures css-fezbvb"
+                      data-testid="TransactionFee"
+                    >
+                      <div
+                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
+                        data-testid="TransactionDetail--desktop"
+                      >
+                        <div
+                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Transaction Fee
+                        </div>
+                        <div
+                          class="flex items-center font-semibold"
+                        >
+                          <span
+                            class="whitespace-nowrap"
+                            data-testid="Amount"
+                          >
+                            0.1 DARK
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="mt-8  flex space-x-2 rounded border border-transparent bg-theme-warning-50 px-3 py-2 text-theme-warning-900 dark:border-theme-warning-600 dark:bg-transparent dark:text-theme-warning-600"
+                    >
+                      <div
+                        class="css-t7w2ab"
+                        color="warning-alt"
+                        width="3"
+                      />
+                      <span
+                        class="font-semibold"
+                      >
+                        This transaction is pending confirmation
+                      </span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div
+                class="css-2wyvkd"
+              >
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="StepNavigation__back-to-wallet-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Back to Wallet
+                  </div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`SendUsernameResignation > should successfully sign and submit resignation transaction 1`] = `
 <DocumentFragment>
   <div
