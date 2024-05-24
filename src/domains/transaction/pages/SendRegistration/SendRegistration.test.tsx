@@ -1,41 +1,42 @@
-/* eslint-disable @typescript-eslint/require-await */
-import { Observer } from "@ledgerhq/hw-transport";
-import { Signatories } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
+import { Observer } from "@ledgerhq/hw-transport";
 import React from "react";
 import { Route } from "react-router-dom";
-
+import { Signatories } from "@ardenthq/sdk";
+import { createHashHistory } from "history";
+import userEvent from "@testing-library/user-event";
 import { SendRegistration } from "./SendRegistration";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import DelegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
-import UsernameRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/username-registration.json";
-import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
-import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
+import * as useFeesMock from "@/app/hooks/use-fees";
+
 import {
+	MNEMONICS,
 	act,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
-	MNEMONICS,
+	mockNanoXTransport,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
 	within,
-	mockNanoXTransport,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
-import * as useFeesMock from "@/app/hooks/use-fees";
+import { requestMock, server } from "@/tests/mocks/server";
+
+import DelegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
+import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+/* eslint-disable @typescript-eslint/require-await */
+import UsernameRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/username-registration.json";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
+
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 const history = createHashHistory();
 const passphrase = getDefaultWalletMnemonic();
-let confirmedTransactionMock: SpyInstance;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -134,6 +135,11 @@ const withKeyboard = "with keyboard";
 
 describe("Registration", () => {
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -162,14 +168,10 @@ describe("Registration", () => {
 
 		await syncDelegates(profile);
 		await syncFees(profile);
-
-		confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
 	});
 
 	afterAll(() => {
-		confirmedTransactionMock.mockRestore();
+		vi.useRealTimers();
 	});
 
 	beforeEach(() => {
@@ -182,6 +184,10 @@ describe("Registration", () => {
 				"https://ark-test-musig.arkvault.io",
 				{ result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } },
 				{ method: "post" },
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/a73433448863755929beca76c84a80006c6efb14c905c2c53f3c89e33233d4ac",
+				transactionsFixture,
 			),
 		);
 	});
@@ -303,8 +309,9 @@ describe("Registration", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 
+		await act(() => vi.runOnlyPendingTimers());
 		// Step 4 - summary screen
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 		// Go back to wallet
 		const historySpy = vi.spyOn(history, "push");
@@ -399,7 +406,7 @@ describe("Registration", () => {
 		transactionMock.mockRestore();
 
 		// Step 4 - summary screen
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 		// Go back to wallet
 		const historySpy = vi.spyOn(history, "push");
@@ -562,6 +569,7 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Ledger Wallet"));
 
+		await act(() => vi.runOnlyPendingTimers());
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		isLedgerMock.mockRestore();
@@ -685,6 +693,10 @@ describe("Registration", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		// Step 4 - success screen
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();

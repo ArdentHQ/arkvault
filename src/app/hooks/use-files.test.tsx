@@ -2,14 +2,15 @@ import * as browserAccess from "browser-fs-access";
 import { renderHook } from "@testing-library/react-hooks";
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
 import { requestMock, server } from "@/tests/mocks/server";
+import { MockFile } from "@/utils/testing-library";
 
 describe("useFiles", () => {
 	it("should read file as text", async () => {
 		const { result } = renderHook(() => useFiles());
 
-		const { content, extension, name } = await result.current.readFileAsText(
-			new File([new Blob(["test mnemonic"])], "fileName.wwe"),
-		);
+		const file = new MockFile(["test mnemonic"], { name: "fileName.wwe", type: "text/plain" });
+
+		const { content, extension, name } = await result.current.readFileAsText(file);
 
 		expect(content).toBe("test mnemonic");
 		expect(extension).toBe("wwe");
@@ -19,9 +20,9 @@ describe("useFiles", () => {
 	it("should read file as data uri", async () => {
 		const { result } = renderHook(() => useFiles());
 
-		const { content, extension, name } = await result.current.readFileAsDataUri(
-			new File([new Blob(["test mnemonic"])], "fileName.wwe"),
-		);
+		const file = new MockFile(["test mnemonic"], { name: "fileName.wwe", type: "application/octet-stream" });
+
+		const { content, extension, name } = await result.current.readFileAsDataUri(file);
 
 		expect(content).toBe(`data:application/octet-stream;base64,${btoa("test mnemonic")}`);
 		expect(extension).toBe("wwe");
@@ -134,7 +135,7 @@ describe("useFiles", () => {
 	it("should handle openImage errors", async () => {
 		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
-			.mockResolvedValue(new File(["123"], "not-an-image.png"));
+			.mockResolvedValue(new MockFile(["123"], { name: "not-an-image.png", type: "text/plain" }));
 
 		Object.defineProperty(global.FileReader.prototype, "addEventListener", {
 			value: (type, listener) => {

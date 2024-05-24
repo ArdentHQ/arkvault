@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 
 import QRScanner from "qr-scanner";
 import { QRFileUpload } from "./QRFileUpload";
-import { render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor, MockFile } from "@/utils/testing-library";
 
 const qrCodeUrl =
 	"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o";
@@ -18,7 +18,10 @@ describe("QRFileUpload", () => {
 
 	it("should read qr code", async () => {
 		const onRead = vi.fn();
-		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+
+		const file = new MockFile([""], { name: "test.png", type: "image/png" });
+
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(file);
 
 		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 
@@ -70,7 +73,8 @@ describe("QRFileUpload", () => {
 
 	it("should emit error if qr code read fails", async () => {
 		const onError = vi.fn();
-		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+		const file = new MockFile([""], { name: "test.png", type: "image/png" });
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(file);
 		const errorMessage = "InvalidQR";
 
 		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockImplementation(() => {
