@@ -36,11 +36,10 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 
 	const columns = useDelegateTableColumns({ isLoading, network: selectedWallet.network() });
 
+	const delegatesPerPage = useMemo(() => selectedWallet.network().delegateCount(), [selectedWallet]);
 	const totalDelegates = useMemo(() => delegates.length, [delegates.length]);
 	const hasMoreDelegates = useMemo(() => totalDelegates > delegatesPerPage, [totalDelegates]);
 	const hasVotes = votes.length > 0;
-
-	const delegatesPerPage = useMemo(() => selectedWallet.network().delegateCount(), [selectedWallet]);
 
 	useEffect(() => {
 		if (voteDelegates.length === 0) {
