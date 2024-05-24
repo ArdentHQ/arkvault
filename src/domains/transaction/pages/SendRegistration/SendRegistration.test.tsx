@@ -480,7 +480,7 @@ describe("Registration", () => {
 			type: () => "usernameRegistration",
 			username: () => UsernameRegistrationFixture.data.asset.username,
 			usesMultiSignature: () => true,
-		})
+		});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
