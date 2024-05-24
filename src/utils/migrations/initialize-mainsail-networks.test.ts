@@ -1,5 +1,6 @@
 import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { initializeMainsailNetworks } from "./initialize-mainsail-networks";
+import * as testHelpers from "@/utils/test-helpers";
 
 describe("initializeMainsailNetworks", () => {
 	it("should initialize the mainsail devnet network", () => {
