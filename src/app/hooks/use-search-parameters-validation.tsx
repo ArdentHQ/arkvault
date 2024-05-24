@@ -60,6 +60,10 @@ const defaultNetworks = {
 		displayName: "ARK",
 		nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
 	},
+	"mainsail.devnet": {
+		displayName: "Mainsail Devnet",
+		nethash: "7b9a7c6a14d3f8fb3f47c434b8c6ef0843d5622f6c209ffeec5411aabbf4bf1c",
+	},
 };
 
 const delegateFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
@@ -262,7 +266,7 @@ export const useSearchParametersValidation = () => {
 			return { error: { type: SearchParametersError.CoinMismatch } };
 		}
 
-		if (!allEnabledNetworks.some((item) => item.coin() === coin)) {
+		if (!allEnabledNetworks.some((item) => item.coin().toLowerCase() === coin.toLowerCase())) {
 			return { error: { type: SearchParametersError.CoinNotSupported, value: coin } };
 		}
 
