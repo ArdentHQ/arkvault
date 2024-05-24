@@ -11,8 +11,6 @@ import { Pagination } from "@/app/components/Pagination";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { useBreakpoint } from "@/app/hooks";
 
-const DELEGATES_PER_PAGE = 50;
-
 export const DelegateTable: FC<DelegateTableProperties> = ({
 	delegates,
 	isLoading = false,
@@ -39,8 +37,10 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 	const columns = useDelegateTableColumns({ isLoading, network: selectedWallet.network() });
 
 	const totalDelegates = useMemo(() => delegates.length, [delegates.length]);
-	const hasMoreDelegates = useMemo(() => totalDelegates > DELEGATES_PER_PAGE, [totalDelegates]);
+	const hasMoreDelegates = useMemo(() => totalDelegates > delegatesPerPage, [totalDelegates]);
 	const hasVotes = votes.length > 0;
+
+	const delegatesPerPage = useMemo(() => selectedWallet.network().delegateCount(), [selectedWallet]);
 
 	useEffect(() => {
 		if (voteDelegates.length === 0) {
@@ -177,7 +177,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			return delegates;
 		}
 
-		return Array.from<Contracts.IReadOnlyWallet>({ length: DELEGATES_PER_PAGE }).fill(
+		return Array.from<Contracts.IReadOnlyWallet>({ length: delegatesPerPage }).fill(
 			{} as Contracts.IReadOnlyWallet,
 		);
 	}, [delegates, showSkeleton]);
@@ -241,7 +241,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 
 			{!!subtitle && subtitle}
 
-			<Table columns={columns} data={tableData} rowsPerPage={DELEGATES_PER_PAGE} currentPage={currentPage}>
+			<Table columns={columns} data={tableData} rowsPerPage={delegatesPerPage} currentPage={currentPage}>
 				{renderTableRow}
 			</Table>
 
@@ -249,7 +249,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				{hasMoreDelegates && (
 					<Pagination
 						totalCount={totalDelegates}
-						itemsPerPage={DELEGATES_PER_PAGE}
+						itemsPerPage={delegatesPerPage}
 						currentPage={currentPage}
 						onSelectPage={handleSelectPage}
 					/>
