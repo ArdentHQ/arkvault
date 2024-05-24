@@ -422,7 +422,7 @@ describe("Registration", () => {
 		envAvailableNetworksMock.mockRestore();
 	});
 
-	it.each([withKeyboard])("should register username", async (inputMethod) => {
+	it("should create musig username transaction", async () => {
 		// Emulate not found username
 		server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
 
@@ -434,6 +434,7 @@ describe("Registration", () => {
 		const feesMock = vi.spyOn(useFeesMock, "useFees").mockImplementation(() => ({
 			calculate: vi.fn().mockResolvedValue({ avg: 25, max: 25, min: 25, static: 25 }),
 		}));
+
 		const nanoXTransportMock = mockNanoXTransport();
 		const { history } = await renderPage(wallet, "usernameRegistration");
 
@@ -448,19 +449,11 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		if (inputMethod === withKeyboard) {
-			userEvent.keyboard("{enter}");
-		} else {
-			userEvent.click(continueButton());
-		}
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("UsernameRegistrationForm__review-step")).resolves.toBeVisible();
 
-		if (inputMethod === withKeyboard) {
-			userEvent.keyboard("{enter}");
-		} else {
-			userEvent.click(continueButton());
-		}
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -480,11 +473,7 @@ describe("Registration", () => {
 		});
 		const transactionMock = createUsernameRegistrationMock(wallet);
 
-		if (inputMethod === withKeyboard) {
-			userEvent.keyboard("{enter}");
-		} else {
-			userEvent.click(sendButton());
-		}
+		userEvent.click(sendButton());
 
 		await waitFor(() => {
 			expect(signMock).toHaveBeenCalledWith({
