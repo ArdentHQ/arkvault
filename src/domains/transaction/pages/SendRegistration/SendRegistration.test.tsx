@@ -422,12 +422,7 @@ describe("Registration", () => {
 		envAvailableNetworksMock.mockRestore();
 	});
 
-	it("should create a musig username transaction", async () => {
-		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-		const multisignatureSpy = vi
-			.spyOn(wallet.multiSignature(), "all")
-			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
-
+	it.each([withKeyboard])("should register username", async (inputMethod) => {
 		// Emulate not found username
 		server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
 
@@ -439,7 +434,7 @@ describe("Registration", () => {
 		const feesMock = vi.spyOn(useFeesMock, "useFees").mockImplementation(() => ({
 			calculate: vi.fn().mockResolvedValue({ avg: 25, max: 25, min: 25, static: 25 }),
 		}));
-
+		const nanoXTransportMock = mockNanoXTransport();
 		const { history } = await renderPage(wallet, "usernameRegistration");
 
 		// Step 1
@@ -453,16 +448,31 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		if (inputMethod === withKeyboard) {
+			userEvent.keyboard("{enter}");
+		} else {
+			userEvent.click(continueButton());
+		}
 
 		await expect(screen.findByTestId("UsernameRegistrationForm__review-step")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		if (inputMethod === withKeyboard) {
+			userEvent.keyboard("{enter}");
+		} else {
+			userEvent.click(continueButton());
+		}
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		userEvent.paste(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).toBeEnabled());
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signUsernameRegistration")
 			.mockReturnValue(Promise.resolve(UsernameRegistrationFixture.data.id));
-
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [UsernameRegistrationFixture.data.id],
 			errors: {},
@@ -470,7 +480,11 @@ describe("Registration", () => {
 		});
 		const transactionMock = createUsernameRegistrationMock(wallet);
 
-		userEvent.click(sendButton());
+		if (inputMethod === withKeyboard) {
+			userEvent.keyboard("{enter}");
+		} else {
+			userEvent.click(sendButton());
+		}
 
 		await waitFor(() => {
 			expect(signMock).toHaveBeenCalledWith({
@@ -488,7 +502,7 @@ describe("Registration", () => {
 		transactionMock.mockRestore();
 
 		// Step 4 - summary screen
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 		// Go back to wallet
 		const historySpy = vi.spyOn(history, "push");
@@ -498,12 +512,10 @@ describe("Registration", () => {
 
 		historySpy.mockRestore();
 
+		nanoXTransportMock.mockRestore();
 		feesMock.mockRestore();
 		mainsailSpy.mockRestore();
 		envAvailableNetworksMock.mockRestore();
-
-		isMultiSignatureSpy.mockRestore();
-		multisignatureSpy.mockRestore();
 	});
 
 	it.skip("should reset authentication when a supported Nano X is added", async () => {
