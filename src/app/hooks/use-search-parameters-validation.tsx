@@ -6,7 +6,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { generatePath } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { assertNetwork, assertProfile } from "@/utils/assertions";
-import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
+import { findNetworkFromSearchParameters, isMainsailNetwork, profileAllEnabledNetworks } from "@/utils/network-utils";
 import { ProfilePaths } from "@/router/paths";
 
 interface RequiredParameters {
@@ -34,7 +34,9 @@ enum SearchParametersError {
 	CoinMismatch = "COIN_MISMATCH",
 	CoinNotSupported = "COIN_NOT_SUPPORTED",
 	DelegateNotFound = "DELEGATE_NOT_FOUND",
+	ValidatorNotFound = "VALIDATOR_NOT_FOUND",
 	DelegateResigned = "DELEGATE_RESIGNED",
+	ValidatorResigned = "VALIDATOR_RESIGNED",
 	MethodNotSupported = "METHOD_NOT_SUPPORTED",
 	MissingDelegate = "MISSING_DELEGATE",
 	MissingMessage = "MISSING_MESSAGE",
@@ -49,6 +51,7 @@ enum SearchParametersError {
 	NetworkNoWallets = "NETWORK_NO_WALLETS",
 	MessageMissing = "MESSAGE_MISSING",
 	InvalidAddress = "INVALID_ADDRESS_OR_NETWORK_MISMATCH",
+	MissingValidator = "VALIDATOR_MISSING",
 }
 
 const defaultNetworks = {
@@ -87,6 +90,16 @@ const delegateFromSearchParameters = ({ env, network, searchParameters }: PathPr
 	}
 };
 
+const validatorFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
+	const validatorPublicKey = searchParameters.get("validator")!;
+
+	try {
+		return env.delegates().findByPublicKey(network?.coin(), network?.id(), validatorPublicKey);
+	} catch {
+		//
+	}
+};
+
 const validateVerify = ({ parameters }: ValidateParameters) => {
 	const message = parameters.get("message");
 	const signatory = parameters.get("signatory");
@@ -105,7 +118,34 @@ const validateVerify = ({ parameters }: ValidateParameters) => {
 	}
 };
 
+const validateVoteForMainsail = async ({ parameters, profile, network, env }: ValidateParameters) => {
+	const validatorPublicKey = parameters.get("validator");
+
+	if (!validatorPublicKey) {
+		return { error: { type: SearchParametersError.MissingValidator } };
+	}
+
+	const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+	await coin.__construct();
+
+	await env.delegates().sync(profile, network.coin(), network.id());
+
+	const validator = validatorFromSearchParameters({ env, network, profile, searchParameters: parameters });
+
+	if (!validator) {
+		return { error: { type: SearchParametersError.ValidatorNotFound, value: validatorPublicKey } };
+	}
+
+	if (validator.isResignedDelegate()) {
+		return { error: { type: SearchParametersError.ValidatorResigned, value: validatorPublicKey } };
+	}
+};
+
 const validateVote = async ({ parameters, profile, network, env }: ValidateParameters) => {
+	if (isMainsailNetwork(network)) {
+		return validateVoteForMainsail({ env, network, parameters, profile });
+	}
+
 	const delegateName = parameters.get("delegate");
 	const publicKey = parameters.get("publicKey");
 
@@ -227,9 +267,11 @@ export const useSearchParametersValidation = () => {
 				const network = findNetworkFromSearchParameters(profile, searchParameters);
 				assertNetwork(network);
 
-				const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters });
+				const subject = isMainsailNetwork(network)
+					? validatorFromSearchParameters({ env, network, profile, searchParameters })
+					: delegateFromSearchParameters({ env, network, profile, searchParameters });
 
-				searchParameters.set("vote", delegate?.address() as string);
+				searchParameters.set("vote", subject?.address() as string);
 
 				return `${generatePath(ProfilePaths.SendVote, {
 					profileId: profile.id(),
@@ -382,12 +424,32 @@ export const useSearchParametersValidation = () => {
 			);
 		}
 
+		if (type === SearchParametersError.ValidatorNotFound) {
+			return (
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.VALIDATOR_NOT_FOUND"
+					values={{ validator: value }}
+				/>
+			);
+		}
+
 		if (type === SearchParametersError.DelegateResigned) {
 			return (
 				<Trans
 					parent={ErrorWrapper}
 					i18nKey="TRANSACTION.VALIDATION.DELEGATE_RESIGNED"
 					values={{ delegate: value }}
+				/>
+			);
+		}
+
+		if (type === SearchParametersError.ValidatorResigned) {
+			return (
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.VALIDATOR_RESIGNED"
+					values={{ validator: value }}
 				/>
 			);
 		}
@@ -400,6 +462,10 @@ export const useSearchParametersValidation = () => {
 					values={{ method: value }}
 				/>
 			);
+		}
+
+		if (type === SearchParametersError.MissingValidator) {
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.VALIDATOR_MISSING" />;
 		}
 
 		if (type === SearchParametersError.MissingDelegate) {
