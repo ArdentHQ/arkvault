@@ -193,7 +193,8 @@ export const SendRegistration = () => {
 				});
 
 				setTransaction(transaction);
-				handleNext();
+
+				activeWallet.isMultiSignature() ? setActiveTab(activeTab + 2) : handleNext();
 			}
 
 			if (registrationType === "usernameRegistration") {

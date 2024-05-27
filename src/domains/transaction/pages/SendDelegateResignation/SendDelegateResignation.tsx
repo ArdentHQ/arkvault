@@ -116,7 +116,7 @@ export const SendDelegateResignation = () => {
 
 			setTransaction(activeWallet.transaction().transaction(signedTransactionId));
 
-			handleNext();
+			activeWallet.isMultiSignature() ? setActiveTab(Step.SummaryStep) : handleNext();
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(Step.ErrorStep);
