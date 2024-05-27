@@ -350,7 +350,7 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it("should fail to find valiadtor by public key", async () => {
+	it("should fail to find validator by public key", async () => {
 		const isMainsailNetworkSpy = vi.spyOn(networkUtils, "isMainsailNetwork").mockReturnValue(true);
 
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&validator=1");
