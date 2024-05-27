@@ -331,8 +331,6 @@ describe("Registration", () => {
 			nanoXTransportMock.mockRestore();
 		});
 
-
-
 		it.skip("should reset authentication when a supported Nano X is added", async () => {
 			const unsubscribe = vi.fn();
 			let observer: Observer<any>;
@@ -817,9 +815,6 @@ describe("Registration", () => {
 			// Emulate not found username
 			server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
 
-			// @TODO Remove mock once mainsail wallets are properly setup in tests.
-			// @see https://app.clickup.com/t/86dtaccqj
-			const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
 			const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
 
 			const feesMock = vi.spyOn(useFeesMock, "useFees").mockImplementation(() => ({
@@ -888,7 +883,6 @@ describe("Registration", () => {
 
 			nanoXTransportMock.mockRestore();
 			feesMock.mockRestore();
-			mainsailSpy.mockRestore();
 			envAvailableNetworksMock.mockRestore();
 
 			isMultiSignatureSpy.mockRestore();
