@@ -190,8 +190,11 @@ const originalError = console.error;
 
 // this is here to silence a warning temporarily
 beforeAll(() => {
-	vi.spyOn(console, 'error').mockImplementation((...args) => {
-		if (typeof args[0] === 'string' && args[0].includes('code that causes React state updates should be wrapped into act')) {
+	vi.spyOn(console, "error").mockImplementation((...args) => {
+		if (
+			typeof args[0] === "string" &&
+			args[0].includes("code that causes React state updates should be wrapped into act")
+		) {
 			return;
 		}
 		return originalError.call(console, ...args);
