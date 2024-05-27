@@ -630,7 +630,7 @@ describe("SendUsernameResignation", () => {
 		transactionMock.mockRestore();
 		multisignatureSpy.mockRestore();
 		isMultiSignatureSpy.mockRestore();
-	})
+	});
 
 	it("should successfully sign and submit resignation transaction with keyboard", async () => {
 		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
