@@ -331,96 +331,11 @@ describe("Registration", () => {
 			nanoXTransportMock.mockRestore();
 		});
 
-		it("should create musig username transaction", async () => {
-		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-		const multisignatureSpy = vi
-			.spyOn(wallet.multiSignature(), "all")
-			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
 
-		// Emulate not found username
-		server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
 
-		// @TODO Remove mock once mainsail wallets are properly setup in tests.
-		// @see https://app.clickup.com/t/86dtaccqj
-		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
-		const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
-
-		const feesMock = vi.spyOn(useFeesMock, "useFees").mockImplementation(() => ({
-			calculate: vi.fn().mockResolvedValue({ avg: 25, max: 25, min: 25, static: 25 }),
-		}));
-
-		const nanoXTransportMock = mockNanoXTransport();
-		await renderPage(wallet, "usernameRegistration");
-
-		// Step 1
-		await expect(screen.findByTestId("UsernameRegistrationForm__form-step")).resolves.toBeVisible();
-
-		screen.getByTestId("Input__username").focus();
-		userEvent.paste(screen.getByTestId("Input__username"), "test_username");
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
-
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("UsernameRegistrationForm__review-step")).resolves.toBeVisible();
-
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signUsernameRegistration")
-			.mockReturnValue(Promise.resolve(UsernameRegistrationFixture.data.id));
-
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [UsernameRegistrationFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-
-		const transactionMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-			amount: () => +UsernameRegistrationFixture.data.amount / 1e8,
-			data: () => ({ data: () => UsernameRegistrationFixture.data }),
-			explorerLink: () => `https://test.arkscan.io/transaction/${UsernameRegistrationFixture.data.id}`,
-			fee: () => +UsernameRegistrationFixture.data.fee / 1e8,
-			id: () => UsernameRegistrationFixture.data.id,
-			isMultiSignatureRegistration: () => false,
-			recipient: () => UsernameRegistrationFixture.data.recipient,
-			sender: () => UsernameRegistrationFixture.data.sender,
-			type: () => "usernameRegistration",
-			username: () => UsernameRegistrationFixture.data.asset.username,
-			usesMultiSignature: () => true,
-		});
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(signMock).toHaveBeenCalledWith({
-				data: { username: "test_username" },
-				fee: 25,
-				signatory: expect.any(Signatories.Signatory),
-			});
-		});
-
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(UsernameRegistrationFixture.data.id));
-		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(UsernameRegistrationFixture.data.id));
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-
-		nanoXTransportMock.mockRestore();
-		feesMock.mockRestore();
-		mainsailSpy.mockRestore();
-		envAvailableNetworksMock.mockRestore();
-
-		isMultiSignatureSpy.mockRestore();
-		multisignatureSpy.mockRestore();
-	});
-
-	it.skip("should reset authentication when a supported Nano X is added", async () => {
-		const unsubscribe = vi.fn();
-		let observer: Observer<any>;
+		it.skip("should reset authentication when a supported Nano X is added", async () => {
+			const unsubscribe = vi.fn();
+			let observer: Observer<any>;
 
 			const listenSpy = vi.spyOn(ledgerTransport, "listen").mockImplementationOnce((obv) => {
 				observer = obv;
@@ -891,6 +806,93 @@ describe("Registration", () => {
 			nanoXTransportMock.mockRestore();
 			feesMock.mockRestore();
 			envAvailableNetworksMock.mockRestore();
+		});
+
+		it("should create musig username transaction", async () => {
+			const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+			const multisignatureSpy = vi
+				.spyOn(wallet.multiSignature(), "all")
+				.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
+
+			// Emulate not found username
+			server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
+
+			// @TODO Remove mock once mainsail wallets are properly setup in tests.
+			// @see https://app.clickup.com/t/86dtaccqj
+			const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
+			const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
+
+			const feesMock = vi.spyOn(useFeesMock, "useFees").mockImplementation(() => ({
+				calculate: vi.fn().mockResolvedValue({ avg: 25, max: 25, min: 25, static: 25 }),
+			}));
+
+			const nanoXTransportMock = mockNanoXTransport();
+			await renderPage(wallet, "usernameRegistration");
+
+			// Step 1
+			await expect(screen.findByTestId("UsernameRegistrationForm__form-step")).resolves.toBeVisible();
+
+			screen.getByTestId("Input__username").focus();
+			userEvent.paste(screen.getByTestId("Input__username"), "test_username");
+			await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
+
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
+
+			await waitFor(() => expect(continueButton()).toBeEnabled());
+
+			userEvent.click(continueButton());
+
+			await expect(screen.findByTestId("UsernameRegistrationForm__review-step")).resolves.toBeVisible();
+
+			const signMock = vi
+				.spyOn(wallet.transaction(), "signUsernameRegistration")
+				.mockReturnValue(Promise.resolve(UsernameRegistrationFixture.data.id));
+
+			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+				accepted: [UsernameRegistrationFixture.data.id],
+				errors: {},
+				rejected: [],
+			});
+
+			const transactionMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+				amount: () => +UsernameRegistrationFixture.data.amount / 1e8,
+				data: () => ({ data: () => UsernameRegistrationFixture.data }),
+				explorerLink: () => `https://test.arkscan.io/transaction/${UsernameRegistrationFixture.data.id}`,
+				fee: () => +UsernameRegistrationFixture.data.fee / 1e8,
+				id: () => UsernameRegistrationFixture.data.id,
+				isMultiSignatureRegistration: () => false,
+				recipient: () => UsernameRegistrationFixture.data.recipient,
+				sender: () => UsernameRegistrationFixture.data.sender,
+				type: () => "usernameRegistration",
+				username: () => UsernameRegistrationFixture.data.asset.username,
+				usesMultiSignature: () => true,
+			});
+
+			await waitFor(() => expect(continueButton()).toBeEnabled());
+			userEvent.click(continueButton());
+
+			await waitFor(() => {
+				expect(signMock).toHaveBeenCalledWith({
+					data: { username: "test_username" },
+					fee: 25,
+					signatory: expect.any(Signatories.Signatory),
+				});
+			});
+
+			await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(UsernameRegistrationFixture.data.id));
+			await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(UsernameRegistrationFixture.data.id));
+
+			signMock.mockRestore();
+			broadcastMock.mockRestore();
+			transactionMock.mockRestore();
+
+			nanoXTransportMock.mockRestore();
+			feesMock.mockRestore();
+			mainsailSpy.mockRestore();
+			envAvailableNetworksMock.mockRestore();
+
+			isMultiSignatureSpy.mockRestore();
+			multisignatureSpy.mockRestore();
 		});
 	});
 });
