@@ -62,6 +62,37 @@ describe("TransactionSuccessful", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render success", async () => {
+		const transaction = {
+			...TransactionFixture,
+			wallet: () => wallet,
+		};
+
+		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
+			transactionMockImplementation(attribute, transaction),
+		);
+
+		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
+		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
+
+		vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue({});
+
+		render(
+			<Route path="/profiles/:profileId">
+				<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
+
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
