@@ -8,7 +8,7 @@ const translations = buildTranslations();
 cucumber("@createProfileRouting", {
 	"Given Alice is on the welcome screen": async (t: TestController) => {
 		await visitWelcomeScreen(t);
-		await t.expect(Selector('[data-testid="Card"]').count).eql(3);
+		await t.expect(Selector('[data-testid="Card"]').count).eql(4);
 	},
 	"When she selects create profile": async (t: TestController) => {
 		await t

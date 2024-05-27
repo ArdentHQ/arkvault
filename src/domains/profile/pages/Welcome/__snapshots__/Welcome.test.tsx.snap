@@ -1,4 +1,4 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Vitest Snapshot v1
 
 exports[`Welcome > should change route to create profile 1`] = `
 <DocumentFragment>
@@ -253,7 +253,7 @@ exports[`Welcome > should change route to create profile 1`] = `
               class="mt-6 flex justify-center md:mt-8"
             >
               <div
-                class="gap-5 flex w-full justify-center"
+                class="gap-5 md:grid-cols-3 grid grid-cols-2"
               >
                 <div
                   class="h-40 w-36 leading-tight sm:w-40"
@@ -325,6 +325,103 @@ exports[`Welcome > should change route to create profile 1`] = `
                         class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
                       >
                         Jane Doe
+                      </span>
+                    </div>
+                    <div
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+                    >
+                      <div
+                        class="static sm:relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="flex w-4 justify-center overflow-hidden"
+                          >
+                            <div
+                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="ellipsis-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="16.994"
+                                    r="2.006"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="3"
+                                    r="2"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="2"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="h-40 w-36 leading-tight sm:w-40"
+                >
+                  <button
+                    class="css-116zvw2"
+                    data-testid="Card"
+                    type="button"
+                  >
+                    <div
+                      class="mx-auto flex h-full flex-col items-center justify-center"
+                    >
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="shrink-0 css-11ohc3q"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="Foo Bar"
+                              data-testid="ProfileAvatar__svg"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="Foo Bar"
+                            />
+                            <span
+                              class="absolute font-semibold text-white"
+                            >
+                              FO
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
+                      >
+                        Foo Bar
                       </span>
                     </div>
                     <div
@@ -719,7 +816,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
               class="mt-6 flex justify-center md:mt-8"
             >
               <div
-                class="gap-5 md:grid-cols-3 grid grid-cols-2"
+                class="gap-5 md:grid-cols-4 grid grid-cols-2"
               >
                 <div
                   class="h-40 w-36 leading-tight sm:w-40"
@@ -888,6 +985,103 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                         class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
                       >
                         Jane Doe
+                      </span>
+                    </div>
+                    <div
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+                    >
+                      <div
+                        class="static sm:relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="flex w-4 justify-center overflow-hidden"
+                          >
+                            <div
+                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="ellipsis-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="16.994"
+                                    r="2.006"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="3"
+                                    r="2"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="2"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="h-40 w-36 leading-tight sm:w-40"
+                >
+                  <button
+                    class="css-116zvw2"
+                    data-testid="Card"
+                    type="button"
+                  >
+                    <div
+                      class="mx-auto flex h-full flex-col items-center justify-center"
+                    >
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="shrink-0 css-11ohc3q"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="Foo Bar"
+                              data-testid="ProfileAvatar__svg"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="Foo Bar"
+                            />
+                            <span
+                              class="absolute font-semibold text-white"
+                            >
+                              FO
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
+                      >
+                        Foo Bar
                       </span>
                     </div>
                     <div
@@ -1282,7 +1476,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
               class="mt-6 flex justify-center md:mt-8"
             >
               <div
-                class="gap-5 md:grid-cols-3 grid grid-cols-2"
+                class="gap-5 md:grid-cols-4 grid grid-cols-2"
               >
                 <div
                   class="h-40 w-36 leading-tight sm:w-40"
@@ -1451,6 +1645,103 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                         class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
                       >
                         Jane Doe
+                      </span>
+                    </div>
+                    <div
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+                    >
+                      <div
+                        class="static sm:relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="flex w-4 justify-center overflow-hidden"
+                          >
+                            <div
+                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="ellipsis-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="16.994"
+                                    r="2.006"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="3"
+                                    r="2"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="2"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="h-40 w-36 leading-tight sm:w-40"
+                >
+                  <button
+                    class="css-116zvw2"
+                    data-testid="Card"
+                    type="button"
+                  >
+                    <div
+                      class="mx-auto flex h-full flex-col items-center justify-center"
+                    >
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="shrink-0 css-11ohc3q"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="Foo Bar"
+                              data-testid="ProfileAvatar__svg"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="Foo Bar"
+                            />
+                            <span
+                              class="absolute font-semibold text-white"
+                            >
+                              FO
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
+                      >
+                        Foo Bar
                       </span>
                     </div>
                     <div
@@ -1845,7 +2136,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
               class="mt-6 flex justify-center md:mt-8"
             >
               <div
-                class="gap-5 md:grid-cols-3 grid grid-cols-2"
+                class="gap-5 md:grid-cols-4 grid grid-cols-2"
               >
                 <div
                   class="h-40 w-36 leading-tight sm:w-40"
@@ -2014,6 +2305,103 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                         class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
                       >
                         Jane Doe
+                      </span>
+                    </div>
+                    <div
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+                    >
+                      <div
+                        class="static sm:relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="flex w-4 justify-center overflow-hidden"
+                          >
+                            <div
+                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="ellipsis-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="16.994"
+                                    r="2.006"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="3"
+                                    r="2"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="2"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="h-40 w-36 leading-tight sm:w-40"
+                >
+                  <button
+                    class="css-116zvw2"
+                    data-testid="Card"
+                    type="button"
+                  >
+                    <div
+                      class="mx-auto flex h-full flex-col items-center justify-center"
+                    >
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="shrink-0 css-11ohc3q"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="Foo Bar"
+                              data-testid="ProfileAvatar__svg"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="Foo Bar"
+                            />
+                            <span
+                              class="absolute font-semibold text-white"
+                            >
+                              FO
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
+                      >
+                        Foo Bar
                       </span>
                     </div>
                     <div
@@ -2408,7 +2796,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
               class="mt-6 flex justify-center md:mt-8"
             >
               <div
-                class="gap-5 md:grid-cols-3 grid grid-cols-2"
+                class="gap-5 md:grid-cols-4 grid grid-cols-2"
               >
                 <div
                   class="h-40 w-36 leading-tight sm:w-40"
@@ -2577,6 +2965,103 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                         class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
                       >
                         Jane Doe
+                      </span>
+                    </div>
+                    <div
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+                    >
+                      <div
+                        class="static sm:relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="flex w-4 justify-center overflow-hidden"
+                          >
+                            <div
+                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="ellipsis-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="16.994"
+                                    r="2.006"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="3"
+                                    r="2"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="2"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="h-40 w-36 leading-tight sm:w-40"
+                >
+                  <button
+                    class="css-116zvw2"
+                    data-testid="Card"
+                    type="button"
+                  >
+                    <div
+                      class="mx-auto flex h-full flex-col items-center justify-center"
+                    >
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="shrink-0 css-11ohc3q"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="Foo Bar"
+                              data-testid="ProfileAvatar__svg"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="Foo Bar"
+                            />
+                            <span
+                              class="absolute font-semibold text-white"
+                            >
+                              FO
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
+                      >
+                        Foo Bar
                       </span>
                     </div>
                     <div
@@ -2971,7 +3456,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
               class="mt-6 flex justify-center md:mt-8"
             >
               <div
-                class="gap-5 md:grid-cols-3 grid grid-cols-2"
+                class="gap-5 md:grid-cols-4 grid grid-cols-2"
               >
                 <div
                   class="h-40 w-36 leading-tight sm:w-40"
@@ -3140,6 +3625,103 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                         class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
                       >
                         Jane Doe
+                      </span>
+                    </div>
+                    <div
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+                    >
+                      <div
+                        class="static sm:relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="flex w-4 justify-center overflow-hidden"
+                          >
+                            <div
+                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="ellipsis-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="16.994"
+                                    r="2.006"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="3"
+                                    r="2"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="2"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="h-40 w-36 leading-tight sm:w-40"
+                >
+                  <button
+                    class="css-116zvw2"
+                    data-testid="Card"
+                    type="button"
+                  >
+                    <div
+                      class="mx-auto flex h-full flex-col items-center justify-center"
+                    >
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="shrink-0 css-11ohc3q"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="Foo Bar"
+                              data-testid="ProfileAvatar__svg"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="Foo Bar"
+                            />
+                            <span
+                              class="absolute font-semibold text-white"
+                            >
+                              FO
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
+                      >
+                        Foo Bar
                       </span>
                     </div>
                     <div
@@ -3534,7 +4116,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
               class="mt-6 flex justify-center md:mt-8"
             >
               <div
-                class="gap-5 flex w-full justify-center"
+                class="gap-5 md:grid-cols-3 grid grid-cols-2"
               >
                 <div
                   class="h-40 w-36 leading-tight sm:w-40"
@@ -3606,6 +4188,103 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                         class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
                       >
                         Jane Doe
+                      </span>
+                    </div>
+                    <div
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+                    >
+                      <div
+                        class="static sm:relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="flex w-4 justify-center overflow-hidden"
+                          >
+                            <div
+                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="ellipsis-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="16.994"
+                                    r="2.006"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="3"
+                                    r="2"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="2"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="h-40 w-36 leading-tight sm:w-40"
+                >
+                  <button
+                    class="css-116zvw2"
+                    data-testid="Card"
+                    type="button"
+                  >
+                    <div
+                      class="mx-auto flex h-full flex-col items-center justify-center"
+                    >
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="shrink-0 css-11ohc3q"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="Foo Bar"
+                              data-testid="ProfileAvatar__svg"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="Foo Bar"
+                            />
+                            <span
+                              class="absolute font-semibold text-white"
+                            >
+                              FO
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
+                      >
+                        Foo Bar
                       </span>
                     </div>
                     <div
@@ -4000,7 +4679,7 @@ exports[`Welcome > should render with profiles 1`] = `
               class="mt-6 flex justify-center md:mt-8"
             >
               <div
-                class="gap-5 md:grid-cols-3 grid grid-cols-2"
+                class="gap-5 md:grid-cols-4 grid grid-cols-2"
               >
                 <div
                   class="h-40 w-36 leading-tight sm:w-40"
@@ -4169,6 +4848,103 @@ exports[`Welcome > should render with profiles 1`] = `
                         class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
                       >
                         Jane Doe
+                      </span>
+                    </div>
+                    <div
+                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+                    >
+                      <div
+                        class="static sm:relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="flex w-4 justify-center overflow-hidden"
+                          >
+                            <div
+                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="ellipsis-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="16.994"
+                                    r="2.006"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="3"
+                                    r="2"
+                                  />
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="2"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="h-40 w-36 leading-tight sm:w-40"
+                >
+                  <button
+                    class="css-116zvw2"
+                    data-testid="Card"
+                    type="button"
+                  >
+                    <div
+                      class="mx-auto flex h-full flex-col items-center justify-center"
+                    >
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="shrink-0 css-11ohc3q"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="Foo Bar"
+                              data-testid="ProfileAvatar__svg"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"60\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="Foo Bar"
+                            />
+                            <span
+                              class="absolute font-semibold text-white"
+                            >
+                              FO
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
+                      >
+                        Foo Bar
                       </span>
                     </div>
                     <div

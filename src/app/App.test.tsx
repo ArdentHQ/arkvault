@@ -97,9 +97,11 @@ describe("App", () => {
 		});
 
 		const verifyPasswordMock = vi.spyOn(Bcrypt, "verify").mockReturnValue(true);
-		const memoryPasswordMock = vi.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
-			throw new Error("password not found");
-		});
+		const memoryPasswordMock = vi
+			.spyOn(env.profiles().findById(getPasswordProtectedProfileId()).password(), "get")
+			.mockImplementation(() => {
+				throw new Error("password not found");
+			});
 
 		userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
