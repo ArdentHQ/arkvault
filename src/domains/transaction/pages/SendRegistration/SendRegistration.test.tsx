@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Observer } from "@ledgerhq/hw-transport";
 import React from "react";
