@@ -5,19 +5,18 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendUsernameResignation } from "./SendUsernameResignation";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import {
 	env,
-	getDefaultProfileId,
-	MNEMONICS,
+	getMainsailProfileId,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
-	within,
+	MNEMONICS_MAINSAIL as MNEMONICS,
 } from "@/utils/testing-library";
+import * as useFeesHook from "@/app/hooks/use-fees";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -26,7 +25,6 @@ let resignationUrl: string;
 
 const passphrase = MNEMONICS[0];
 const history = createHashHistory();
-const feeWarningContinueID = "FeeWarning__continue-button";
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -70,31 +68,35 @@ const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 let mnemonicMock;
 let secondMnemonicMock;
+const fees = { avg: 25, isDynamic: false, max: 25, min: 25, static: 25 };
 
 describe("SendUsernameResignation", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		// @TODO: use proper mainsail wallet once mainsail network is setup.
-		// @see https://app.clickup.com/t/86dtaccqj
 		wallet = profile.wallets().push(
 			await profile.walletFactory().fromMnemonicWithBIP39({
-				coin: "ARK",
+				coin: "Mainsail",
 				mnemonic: passphrase,
-				network: "ark.devnet",
+				network: "mainsail.devnet",
 			}),
 		);
+
 		await wallet.synchroniser().identity();
 
 		await syncDelegates(profile);
 		await syncFees(profile);
+
+		vi.spyOn(useFeesHook, "useFees").mockReturnValue({
+			calculate: () => Promise.resolve(fees),
+		});
 	});
 
 	beforeEach(() => {
-		resignationUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-username-resignation`;
+		resignationUrl = `/profiles/${getMainsailProfileId()}/wallets/${wallet.id()}/send-username-resignation`;
 		history.push(resignationUrl);
 
 		mnemonicMock = vi
@@ -113,20 +115,11 @@ describe("SendUsernameResignation", () => {
 		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
 
 		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+		const isSecondSignatureMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
 		const { asFragment } = renderPage();
 
 		await expect(formStep()).resolves.toBeVisible();
-
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		// Fee(advanced);
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "1");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -136,12 +129,6 @@ describe("SendUsernameResignation", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
-
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -164,6 +151,7 @@ describe("SendUsernameResignation", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		secondPublicKeyMock.mockRestore();
+		isSecondSignatureMock.mockRestore();
 	});
 
 	it("should render 1st step", async () => {
@@ -174,45 +162,10 @@ describe("SendUsernameResignation", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should change fee", async () => {
-		const { asFragment } = renderPage();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		// Fee (simple)
-		expect(screen.getAllByRole("radio")[1]).toBeChecked();
-
-		userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
-		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
-
-		// Fee(advanced);
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "1");
-
-		await waitFor(() => expect(inputElement).toHaveValue("1"));
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should render 2nd step", async () => {
 		const { asFragment } = renderPage();
 
 		await expect(formStep()).resolves.toBeVisible();
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		// Fee(advanced);
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "1");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -242,14 +195,6 @@ describe("SendUsernameResignation", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		// Fee(advanced);
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "1");
-
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
 
@@ -264,172 +209,20 @@ describe("SendUsernameResignation", () => {
 		const { asFragment } = renderPage();
 
 		await expect(formStep()).resolves.toBeVisible();
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "1");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
+
 		userEvent.click(continueButton());
 
 		await expect(reviewStep()).resolves.toBeVisible();
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
+
 		userEvent.click(continueButton());
-
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should return to form step by cancelling fee warning", async () => {
-		renderPage();
-
-		await expect(formStep()).resolves.toBeVisible();
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		// Fee
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "30");
-
-		await waitFor(() => expect(inputElement).toHaveValue("30"));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("FeeWarning__cancel-button")).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
-
-		await expect(formStep()).resolves.toBeVisible();
-	});
-
-	it("should proceed to authentication step by confirming fee warning", async () => {
-		renderPage();
-
-		await expect(formStep()).resolves.toBeVisible();
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		// Fee
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "30");
-
-		await waitFor(() => expect(inputElement).toHaveValue("30"));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-	});
-
-	it("should show error step and close", async () => {
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signUsernameResignation")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
-			throw new Error("broadcast error");
-		});
-
-		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
-		renderPage();
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		// Fee
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "30");
-
-		await waitFor(() => expect(inputElement).toHaveValue("30"));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-		await waitFor(() => expect(secondMnemonic()).toBeEnabled());
-
-		userEvent.type(secondMnemonic(), MNEMONICS[1]);
-		await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
-
-		await waitFor(() => {
-			expect(sendButton()).toBeEnabled();
-		});
-
-		userEvent.click(sendButton());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("ErrorStep")).toBeInTheDocument();
-		});
-
-		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
-		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
-
-		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}`;
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
-
-		historyMock.mockRestore();
-
-		secondPublicKeyMock.mockRestore();
-		broadcastMock.mockRestore();
-		signMock.mockRestore();
 	});
 
 	it("should show error step and go back", async () => {
@@ -446,21 +239,10 @@ describe("SendUsernameResignation", () => {
 		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
 		renderPage();
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
 
-		await expect(formStep()).resolves.toBeVisible();
+		await waitFor(() => expect(continueButton()).toBeDisabled());
 
-		// Fee
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "30");
-
-		await waitFor(() => expect(inputElement).toHaveValue("30"));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		userEvent.click(continueButton());
 
@@ -468,21 +250,10 @@ describe("SendUsernameResignation", () => {
 
 		userEvent.click(continueButton());
 
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
-
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-		await waitFor(() => expect(secondMnemonic()).toBeEnabled());
-
-		userEvent.type(secondMnemonic(), MNEMONICS[1]);
-		await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
 
 		await waitFor(() => {
 			expect(sendButton()).toBeEnabled();
@@ -505,6 +276,62 @@ describe("SendUsernameResignation", () => {
 		signMock.mockRestore();
 	});
 
+	it("should show error step and close", async () => {
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signUsernameResignation")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+
+		renderPage();
+
+		await waitFor(() => expect(continueButton()).toBeDisabled());
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		userEvent.click(continueButton());
+
+		await expect(reviewStep()).resolves.toBeVisible();
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		await waitFor(() => {
+			expect(sendButton()).toBeEnabled();
+		});
+
+		userEvent.click(sendButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ErrorStep")).toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+
+		const historyMock = vi.spyOn(history, "push").mockReturnValue();
+
+		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+
+		const walletDetailPage = `/profiles/${getMainsailProfileId()}/wallets/${wallet.id()}`;
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+
+		historyMock.mockRestore();
+
+		secondPublicKeyMock.mockRestore();
+		broadcastMock.mockRestore();
+		signMock.mockRestore();
+	});
+
 	it("should successfully sign and submit resignation transaction", async () => {
 		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
 
@@ -521,17 +348,6 @@ describe("SendUsernameResignation", () => {
 		const transactionMock = createTransactionMock(wallet);
 
 		const { asFragment } = renderPage();
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		// Fee
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "30");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -543,22 +359,10 @@ describe("SendUsernameResignation", () => {
 
 		userEvent.click(continueButton());
 
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-		await waitFor(() => {
-			expect(secondMnemonic()).toBeEnabled();
-		});
-
-		userEvent.paste(secondMnemonic(), MNEMONICS[1]);
-		await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
 
 		await waitFor(() => {
 			expect(sendButton()).toBeEnabled();
@@ -649,18 +453,6 @@ describe("SendUsernameResignation", () => {
 
 		const { asFragment } = renderPage();
 
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		// Fee
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "30");
-
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		await expect(formStep()).resolves.toBeVisible();
@@ -671,23 +463,10 @@ describe("SendUsernameResignation", () => {
 
 		userEvent.keyboard("{enter}");
 
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
-
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-		await waitFor(() => {
-			expect(secondMnemonic()).toBeEnabled();
-		});
-
-		userEvent.paste(secondMnemonic(), MNEMONICS[1]);
-		await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
 
 		userEvent.keyboard("{enter}");
 		userEvent.click(sendButton());
@@ -719,18 +498,6 @@ describe("SendUsernameResignation", () => {
 
 		renderPage();
 
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		// Fee
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "30");
-
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		await expect(formStep()).resolves.toBeVisible();
@@ -741,32 +508,12 @@ describe("SendUsernameResignation", () => {
 
 		userEvent.click(continueButton());
 
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
-
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase);
-		});
-
-		await waitFor(() => {
-			expect(secondMnemonic()).toBeInTheDocument();
-		});
-
-		await waitFor(() => {
-			expect(secondMnemonic()).toBeEnabled();
-		});
-
-		userEvent.type(secondMnemonic(), MNEMONICS[1]);
-
-		await waitFor(() => {
-			expect(secondMnemonic()).toHaveValue(MNEMONICS[1]);
 		});
 
 		await waitFor(() => {
@@ -783,7 +530,7 @@ describe("SendUsernameResignation", () => {
 
 		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
-		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}`;
+		const walletDetailPage = `/profiles/${getMainsailProfileId()}/wallets/${wallet.id()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
 
 		historyMock.mockRestore();
@@ -810,7 +557,7 @@ describe("SendUsernameResignation", () => {
 		});
 		const transactionMock = createTransactionMock(wallet);
 
-		const resignationEncryptedUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
+		const resignationEncryptedUrl = `/profiles/${getMainsailProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
 		history.push(resignationEncryptedUrl);
 
 		const { asFragment } = render(
@@ -823,18 +570,6 @@ describe("SendUsernameResignation", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		// Fee
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "30");
-
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		await expect(formStep()).resolves.toBeVisible();
@@ -844,12 +579,6 @@ describe("SendUsernameResignation", () => {
 		await expect(reviewStep()).resolves.toBeVisible();
 
 		userEvent.click(continueButton());
-
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 

@@ -16,8 +16,6 @@ import { useActiveProfile, useActiveWallet, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
-import { useFeeConfirmation } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 
 enum Step {
@@ -34,10 +32,9 @@ export const SendUsernameResignation = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, getValues, register, watch } = form;
+	const { formState, getValues, register } = form;
 	const { isValid, isSubmitting } = formState;
 
-	const { fee, fees } = watch();
 	const { common } = useValidation();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
@@ -53,12 +50,7 @@ export const SendUsernameResignation = () => {
 		register("fees");
 		register("fee", common.fee(activeWallet.balance(), activeWallet.network()));
 		register("inputFeeSettings");
-
-		register("suppressWarning");
 	}, [activeWallet, common, register]);
-
-	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-		useFeeConfirmation(fee, fees);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -78,12 +70,8 @@ export const SendUsernameResignation = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = (suppressWarning?: boolean) => {
+	const handleNext = () => {
 		const newIndex = activeTab + 1;
-
-		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
-			return setShowFeeWarning(true);
-		}
 
 		if (newIndex === Step.AuthenticationStep && activeWallet.isMultiSignature()) {
 			void handleSubmit();
@@ -179,15 +167,6 @@ export const SendUsernameResignation = () => {
 								/>
 							)}
 						</Tabs>
-
-						<FeeWarning
-							isOpen={showFeeWarning}
-							variant={feeWarningVariant}
-							onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}
-							onConfirm={(suppressWarning: boolean) =>
-								dismissFeeWarning(() => handleNext(true), suppressWarning)
-							}
-						/>
 					</Form>
 				</StepsProvider>
 			</Section>
