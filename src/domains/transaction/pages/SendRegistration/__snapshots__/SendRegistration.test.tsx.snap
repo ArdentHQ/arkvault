@@ -1,10 +1,10 @@
 // Vitest Snapshot v1
 
-exports[`Registration > should register delegate with keyboard 1`] = `<DocumentFragment />`;
+exports[`Registration > ARK network > should register delegate with keyboard 1`] = `<DocumentFragment />`;
 
-exports[`Registration > should register delegate without keyboard 1`] = `<DocumentFragment />`;
+exports[`Registration > ARK network > should register delegate without keyboard 1`] = `<DocumentFragment />`;
 
-exports[`Registration > should show mnemonic error 1`] = `
+exports[`Registration > ARK network > should show mnemonic error 1`] = `
 <div>
   <div
     class="css-w3nefz"
