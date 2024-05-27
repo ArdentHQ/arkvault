@@ -331,8 +331,6 @@ describe("Registration", () => {
 			nanoXTransportMock.mockRestore();
 		});
 
-
-
 		it.skip("should reset authentication when a supported Nano X is added", async () => {
 			const unsubscribe = vi.fn();
 			let observer: Observer<any>;
