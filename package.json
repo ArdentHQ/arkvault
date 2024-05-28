@@ -163,7 +163,7 @@
 		"vite-plugin-pwa": "^0.19.8",
 		"vite-plugin-svgr": "^3.2.0",
 		"vite-tsconfig-paths": "^4.0.7",
-		"vitest": "^1.4.0",
+		"vitest": "^1.6.0",
 		"workbox-window": "^6.6.0"
 	},
 	"babelMacros": {
