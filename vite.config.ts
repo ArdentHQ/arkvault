@@ -197,6 +197,7 @@ export default defineConfig({
 			"@ardenthq/sdk-intl",
 			"@ardenthq/sdk-ledger",
 			"@ardenthq/sdk-profiles",
+			"@ardenthq/sdk-mainsail",
 		].filter((pkg) => !noOptimize.includes(pkg)),
 	},
 });
