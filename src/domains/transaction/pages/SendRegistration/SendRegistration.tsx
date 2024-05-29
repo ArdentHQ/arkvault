@@ -206,6 +206,7 @@ export const SendRegistration = () => {
 
 				setTransaction(transaction);
 
+				console.log("set transaction", { transaction })
 				activeWallet.isMultiSignature() ? setActiveTab(activeTab + 2): handleNext();
 			}
 		} catch (error) {
