@@ -206,8 +206,8 @@ export const SendRegistration = () => {
 
 				setTransaction(transaction);
 
-				console.log("set transaction", { transaction })
-				activeWallet.isMultiSignature() ? setActiveTab(activeTab + 2): handleNext();
+				console.log("set transaction", { transaction });
+				activeWallet.isMultiSignature() ? setActiveTab(activeTab + 2) : handleNext();
 			}
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
