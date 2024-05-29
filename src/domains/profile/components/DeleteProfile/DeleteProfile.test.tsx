@@ -26,8 +26,10 @@ describe("DeleteProfile", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
+		await waitFor(() => expect(env.profiles().values()).toHaveLength(3));
+
 		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
-		await waitFor(() => expect(env.profiles().values()).toHaveLength(1));
+		await waitFor(() => expect(env.profiles().values()).toHaveLength(2));
 	});
 });

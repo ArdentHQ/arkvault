@@ -627,7 +627,7 @@ describe("Welcome", () => {
 		const { asFragment, container } = render(<Welcome />, { history });
 
 		expect(container).toBeInTheDocument();
-		await expect(screen.findAllByTestId("Card")).resolves.toHaveLength(3);
+		await expect(screen.findAllByTestId("Card")).resolves.toHaveLength(4);
 
 		await env.profiles().restore(profile, getDefaultPassword());
 
@@ -714,7 +714,7 @@ describe("Welcome", () => {
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(4));
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 
@@ -728,7 +728,7 @@ describe("Welcome", () => {
 
 		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
-		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(3));
 	});
 
 	it("should not select profile on wrong last location", () => {

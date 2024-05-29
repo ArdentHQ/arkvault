@@ -74,6 +74,7 @@ export const TransactionFixture = {
 	data: () => {
 		return {
 			data: () => {},
+			toSignedData: () => ({}),
 		};
 	},
 	get: () => "",

@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
@@ -65,9 +65,11 @@ export const MultiSignatureSuccessful = ({
 
 	const [generatedAddress, setGeneratedAddress] = useState<string>();
 	const [participantAddresses, setParticipantAddresses] = useState<RecipientItem[]>([]);
+	const [voteAddresses, setVoteAddresses] = useState<string[]>([]);
 
 	const [minParticipants, setMinParticipants] = useState<number>();
 	const [publicKeys, setPublicKeys] = useState<string[]>();
+	const [votesPublicKeys, setVotesPublicKeys] = useState<string[]>([]);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -75,7 +77,9 @@ export const MultiSignatureSuccessful = ({
 				return;
 			}
 
-			const { min, publicKeys } = getMultiSignatureInfo(transaction);
+			const { min, publicKeys, votesPublicKeys } = getMultiSignatureInfo(transaction);
+
+			setVotesPublicKeys(votesPublicKeys);
 
 			try {
 				const { address } = await senderWallet
@@ -105,8 +109,45 @@ export const MultiSignatureSuccessful = ({
 		fetchData();
 	}, [transaction, senderWallet]);
 
+	const isVote = transaction?.isVote() || transaction?.isUnvote();
+
+	useEffect(() => {
+		if (!isVote) {
+			return;
+		}
+
+		const fetchData = async () => {
+			const addresses: string[] = [];
+			for (const publicKey of votesPublicKeys) {
+				const address = await addressFromPublicKey(senderWallet, publicKey.replace(/[^\dA-Za-z]/, ""));
+
+				addresses.push(address);
+			}
+
+			setVoteAddresses(addresses);
+		};
+
+		fetchData();
+	}, [votesPublicKeys, isVote]);
+
+	const recipients = useMemo<
+		| {
+				address: string;
+				amount: number;
+		  }[]
+	>(() => {
+		if (isVote) {
+			return voteAddresses.map((address) => ({
+				address,
+				amount: 0,
+			}));
+		}
+
+		return transaction?.recipients() ?? [];
+	}, [transaction, voteAddresses]);
+
 	return (
-		<section data-testid="TransactionSuccessful" className="space-y-8">
+		<section data-testid="MultisignatureSuccessful" className="space-y-8">
 			<StepHeader title={title || t("TRANSACTION.SUCCESS.CREATED")} />
 
 			<Image name={banner || "TransactionSignedBanner"} domain="transaction" className="hidden w-full md:block" />
@@ -170,9 +211,9 @@ export const MultiSignatureSuccessful = ({
 						{!transaction.isMultiSignatureRegistration() && (
 							<TransactionRecipients
 								label={t("TRANSACTION.RECIPIENTS_COUNT", {
-									count: transaction.recipients().length,
+									count: recipients.length,
 								})}
-								recipients={transaction.recipients()}
+								recipients={recipients}
 								currency={senderWallet.currency()}
 							/>
 						)}
@@ -205,7 +246,7 @@ export const MultiSignatureSuccessful = ({
 							<TransactionAmount
 								amount={transaction.amount()}
 								currency={senderWallet.currency()}
-								isTotalAmount={transaction.recipients().length > 1}
+								isTotalAmount={recipients.length > 1}
 								isSent={true}
 							/>
 						)}

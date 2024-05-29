@@ -12,7 +12,7 @@ import { CreateProfile } from "./CreateProfile";
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import * as themeUtils from "@/utils/theme";
-import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { act, env, fireEvent, render, screen, waitFor, MockFile } from "@/utils/testing-library";
 
 let browserAccessMock: vi.SpyInstance;
 
@@ -75,7 +75,7 @@ describe("CreateProfile", () => {
 	beforeEach(() => {
 		browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
-			.mockResolvedValue(new File([], "picture.png", { type: "image/png" }));
+			.mockResolvedValue(new MockFile([], { name: "picture.png", type: "image/png" }));
 	});
 
 	afterEach(() => {

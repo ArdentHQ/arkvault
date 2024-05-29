@@ -70,7 +70,7 @@ export function renderWithForm(
 	let responsiveRenderFunction: any;
 
 	if (options?.breakpoint) {
-		responsiveRenderFunction = options?.withProviders ?? true ? renderResponsiveWithRoute : renderResponsive;
+		responsiveRenderFunction = options.withProviders ?? true ? renderResponsiveWithRoute : renderResponsive;
 	} else {
 		renderFunction = options?.withProviders ?? true ? renderWithRouter : render;
 	}
@@ -164,8 +164,11 @@ export { renderWithRouter as render, customRender as renderWithoutRouter };
 
 export const getDefaultProfileId = () => Object.keys(fixtureData.profiles)[0];
 export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profiles)[1];
+export const getMainsailProfileId = () => Object.keys(fixtureData.profiles)[2];
 export const getDefaultWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
 export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew run manage better flame tree prevent";
+export const getMainsailDefaultWalletMnemonic = () =>
+	"affair dress crucial smile doll stable legend caught convince erase reject throw doctor phrase trade tray remain nut spy erupt steel luggage first tattoo";
 
 export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordProtectedProfileId()]?.password;
 
@@ -194,6 +197,12 @@ export const MNEMONICS = [
 	"tray analyst bulk topple night swing list execute walk bronze invite title silent loud cash apology sibling wheel thumb dragon black soccer mixed curious",
 	"cool path congress harbor position ready embody hunt face field boil brown rubber toss arrange later convince anxiety foam urban monster endless essay melt",
 	"subway cradle salad cake toddler sausage neglect eight cruel fault mammal cannon south interest theory sadness pass move outside segment curtain toddler save banner",
+];
+
+export const MNEMONICS_MAINSAIL = [
+	"boring response announce text spare angle scene dirt supply boil drink elbow cram tube hurry upgrade hamster also cabbage fabric bike radar umbrella alley",
+	"property scheme cross involve drip canal wall suspect ripple alone sheriff battle husband prison sudden lady critic garage share virus water lounge latin limb",
+	"antique broken slice multiply seek wool wheel table quick veteran seat plunge oven hamster change ordinary milk quick leg ride abandon vicious olympic cram",
 ];
 
 export const breakpoints: {
@@ -351,3 +360,12 @@ export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet)
 };
 
 export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
+
+export class MockFile extends Blob {
+	name: string;
+
+	constructor(chunks, options) {
+		super(chunks, options);
+		this.name = options.name;
+	}
+}
