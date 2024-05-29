@@ -9,6 +9,7 @@ import { createHashHistory } from "history";
 import { UsernameRegistrationForm, signUsernameRegistration } from "./UsernameRegistrationForm";
 import * as useSearchParametersValidationHook from "@/app/hooks/use-search-parameters-validation";
 import * as useFeesHook from "@/app/hooks/use-fees";
+import * as hooksMock from "@/app/hooks";
 import { translations } from "@/domains/transaction/i18n";
 import usernameRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/username-registration.json";
 import {
@@ -417,6 +418,25 @@ describe("UsernameRegistrationForm without wallet", () => {
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
 
 		expect(onSelectedWallet).toHaveBeenCalledWith(wallet);
+	});
+
+	it("should populate username from deeplink", async () => {
+		extractNetworkFromParametersMock.mockReturnValue(wallet.network());
+
+		const useQueryParametersMock = vi.spyOn(hooksMock, "useQueryParameters").mockReturnValue({
+			get: vi.fn().mockReturnValue("alfy"),
+		});
+
+		const onSelectedWallet = vi.fn();
+		renderComponent({
+			onSelectedWallet,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("alfy"));
+
+		useQueryParametersMock.mockRestore();
 	});
 
 	it("redirects to dashboard if parameters are invalid", async () => {
