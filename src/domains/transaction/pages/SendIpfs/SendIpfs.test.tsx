@@ -216,7 +216,7 @@ describe("SendIpfs", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("MultisignatureSuccessful")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

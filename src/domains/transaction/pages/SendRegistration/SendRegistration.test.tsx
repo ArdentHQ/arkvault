@@ -34,6 +34,7 @@ import UsernameRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/trans
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -109,8 +110,9 @@ const createUsernameRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		...TransactionFixture,
 		amount: () => 0,
-		data: () => ({ toSignedData: () => MultisignatureRegistrationFixture.data }),
+		data: () => ({ data: () => {}, toSignedData: () => MultisignatureRegistrationFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
 		fee: () => +MultisignatureRegistrationFixture.data.fee / 1e8,
 		get: (attribute: string) => {

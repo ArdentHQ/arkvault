@@ -1296,7 +1296,7 @@ exports[`SendIpfs > should render summary step 1`] = `
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="TransactionSuccessful"
+    data-testid="MultisignatureSuccessful"
   >
     <div
       class="sm:mt-8"
