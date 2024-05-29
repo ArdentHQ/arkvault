@@ -36,9 +36,9 @@ export const FormStep: React.FC<FormStepProperties> = ({
 
 	const { getValues, register, setValue, errors } = useFormContext();
 
-	const username = getValues("username");
-
 	const parameters = useQueryParameters();
+
+	const username = getValues("username") ?? parameters.get("username");
 
 	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
