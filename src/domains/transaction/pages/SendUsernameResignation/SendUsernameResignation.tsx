@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -73,10 +74,6 @@ export const SendUsernameResignation = () => {
 	const handleNext = () => {
 		const newIndex = activeTab + 1;
 
-		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
-			return setShowFeeWarning(true);
-		}
-
 		if (newIndex === Step.AuthenticationStep && activeWallet.isMultiSignature()) {
 			void handleSubmit();
 			return;
@@ -113,7 +110,12 @@ export const SendUsernameResignation = () => {
 
 			setTransaction(activeWallet.transaction().transaction(signedTransactionId));
 
-			activeWallet.isMultiSignature() ? setActiveTab(Step.SummaryStep) : handleNext();
+			if (activeWallet.isMultiSignature()) {
+				setActiveTab(Step.SummaryStep);
+				return;
+			}
+
+			handleNext();
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(Step.ErrorStep);
