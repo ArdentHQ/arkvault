@@ -4,7 +4,6 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 
 import { SendUsernameResignation } from "./SendUsernameResignation";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
