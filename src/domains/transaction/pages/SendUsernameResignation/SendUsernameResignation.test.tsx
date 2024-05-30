@@ -1,8 +1,10 @@
+/* eslint-disable max-lines-per-function */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 
 import { SendUsernameResignation } from "./SendUsernameResignation";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
@@ -378,6 +380,52 @@ describe("SendUsernameResignation", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+	});
+
+	it("should successfully sign and submit musig resignation transaction", async () => {
+		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+
+		const multisignatureSpy = vi
+			.spyOn(wallet.multiSignature(), "all")
+			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signUsernameResignation")
+			.mockResolvedValue(transactionFixture.data.id);
+
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [transactionFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		const signatory = await wallet.signatoryFactory().make({
+			mnemonic: passphrase,
+		});
+
+		const transactionMock = createTransactionMock(wallet);
+
+		const signatoryMock = vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
+
+		renderPage();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		userEvent.click(continueButton());
+
+		await expect(reviewStep()).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("TransactionFee")).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		multisignatureSpy.mockRestore();
+		isMultiSignatureSpy.mockRestore();
+		signatoryMock.mockRestore();
 	});
 
 	it("should successfully sign and submit resignation transaction with keyboard", async () => {
