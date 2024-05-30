@@ -97,7 +97,9 @@ export const FormStep: React.FC<FormStepProperties> = ({
 
 			const queryUsername = parameters.get("username");
 
-			setValue("username", queryUsername, { shouldDirty: true, shouldValidate: true });
+			if (queryUsername != undefined) {
+				setValue("username", queryUsername, { shouldDirty: true, shouldValidate: true });
+			}
 		}
 	}, [usernameRegistration, register, network, username]);
 
@@ -147,6 +149,14 @@ export const FormStep: React.FC<FormStepProperties> = ({
 							profile={profile}
 							disabled={wallets.length === 0}
 							onChange={handleSelectSender}
+							wallet={
+								wallet
+									? {
+											address: wallet.address(),
+											network: wallet.network(),
+									  }
+									: undefined
+							}
 						/>
 					</div>
 				</FormField>
