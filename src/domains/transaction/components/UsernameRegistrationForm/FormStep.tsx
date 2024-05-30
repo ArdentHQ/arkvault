@@ -38,7 +38,7 @@ export const FormStep: React.FC<FormStepProperties> = ({
 
 	const parameters = useQueryParameters();
 
-	const username = getValues("username") ?? parameters.get("username");
+	const username = getValues("username");
 
 	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
@@ -94,6 +94,10 @@ export const FormStep: React.FC<FormStepProperties> = ({
 
 		if (!username) {
 			register("username", usernameRegistration.username(network, userExistsController));
+
+			const queryUsername = parameters.get("username");
+
+			setValue("username", queryUsername, { shouldDirty: true, shouldValidate: true });
 		}
 	}, [usernameRegistration, register, network, username]);
 
@@ -153,6 +157,7 @@ export const FormStep: React.FC<FormStepProperties> = ({
 					<FormLabel label={previousUsername ? t("TRANSACTION.NEW_USERNAME") : t("TRANSACTION.USERNAME")} />
 					<InputDefault
 						data-testid="Input__username"
+						value={username}
 						defaultValue={username}
 						onChange={(event: ChangeEvent<HTMLInputElement>) => {
 							userExistsController.current?.abort();
