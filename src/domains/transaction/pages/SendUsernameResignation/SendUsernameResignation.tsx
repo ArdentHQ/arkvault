@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -40,6 +41,7 @@ export const SendUsernameResignation = () => {
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	console.log({ errorMessage });
 
 	const { persist } = useEnvironmentContext();
 
@@ -73,6 +75,11 @@ export const SendUsernameResignation = () => {
 	const handleNext = () => {
 		const newIndex = activeTab + 1;
 
+		if (newIndex === Step.AuthenticationStep && activeWallet.isMultiSignature()) {
+			void handleSubmit();
+			return;
+		}
+
 		setActiveTab(newIndex);
 	};
 
@@ -103,6 +110,11 @@ export const SendUsernameResignation = () => {
 			await persist();
 
 			setTransaction(activeWallet.transaction().transaction(signedTransactionId));
+
+			if (activeWallet.isMultiSignature()) {
+				setActiveTab(Step.SummaryStep);
+				return;
+			}
 
 			handleNext();
 		} catch (error) {
