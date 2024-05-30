@@ -81,6 +81,11 @@ export const SendDelegateResignation = () => {
 	const handleNext = (suppressWarning?: boolean) => {
 		const newIndex = activeTab + 1;
 
+		if (newIndex === Step.AuthenticationStep && activeWallet.isMultiSignature()) {
+			void handleSubmit();
+			return;
+		}
+
 		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
 			return setShowFeeWarning(true);
 		}
