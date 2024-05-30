@@ -107,7 +107,6 @@ describe("useProfileTransactions", () => {
 
 		expect(mockTransactionsAggregate).toHaveBeenCalledWith({
 			identifiers: distinctAddresses.map((address) => ({
-				networkId: "ark.devnet",
 				type: "address",
 				value: address,
 			})),

@@ -172,7 +172,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 			const queryParameters: TransactionAggregateQueryParameters = {
 				identifiers: wallets.map((wallet) => ({
-					networkId: wallet.networkId(),
 					type: "address",
 					value: wallet.address(),
 				})),

@@ -536,7 +536,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("MultisignatureSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 	});
 
 	it("should render network selection without selected wallet", async () => {

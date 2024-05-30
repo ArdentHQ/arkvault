@@ -10,7 +10,6 @@ import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
-import { TransactionFixture } from "@/tests/fixtures/transactions";
 import {
 	env,
 	getDefaultProfileId,
@@ -72,9 +71,8 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		...TransactionFixture,
 		amount: () => 0,
-		data: () => ({ data: () => {}, toSignedData: () => MultisignatureRegistrationFixture.data }),
+		data: () => ({ toSignedData: () => MultisignatureRegistrationFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
 		fee: () => +MultisignatureRegistrationFixture.data.fee / 1e8,
 		get: (attribute: string) => {
@@ -260,7 +258,7 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Ledger Wallet"));
 
-		await expect(screen.findByTestId("MultisignatureSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		multiSignatureRegistrationMock.mockRestore();
 		getPublicKeyMock.mockRestore();

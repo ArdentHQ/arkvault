@@ -1,10 +1,10 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`MultiSignatureSuccessful > should handle empty wallet and transation props 1`] = `
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="MultisignatureSuccessful"
+    data-testid="TransactionSuccessful"
   >
     <div
       class="flex items-end justify-between bg-theme-background"
@@ -180,7 +180,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="MultisignatureSuccessful"
+    data-testid="TransactionSuccessful"
   >
     <div
       class="flex items-end justify-between bg-theme-background"
@@ -1047,7 +1047,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="MultisignatureSuccessful"
+    data-testid="TransactionSuccessful"
   >
     <div
       class="flex items-end justify-between bg-theme-background"
@@ -1914,7 +1914,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="MultisignatureSuccessful"
+    data-testid="TransactionSuccessful"
   >
     <div
       class="flex items-end justify-between bg-theme-background"
@@ -2711,7 +2711,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="MultisignatureSuccessful"
+    data-testid="TransactionSuccessful"
   >
     <div
       class="flex items-end justify-between bg-theme-background"
@@ -3578,7 +3578,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="MultisignatureSuccessful"
+    data-testid="TransactionSuccessful"
   >
     <div
       class="flex items-end justify-between bg-theme-background"
@@ -4375,7 +4375,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="MultisignatureSuccessful"
+    data-testid="TransactionSuccessful"
   >
     <div
       class="flex items-end justify-between bg-theme-background"
@@ -5242,7 +5242,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="MultisignatureSuccessful"
+    data-testid="TransactionSuccessful"
   >
     <div
       class="flex items-end justify-between bg-theme-background"
@@ -5929,7 +5929,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
 <DocumentFragment>
   <section
     class="space-y-8"
-    data-testid="MultisignatureSuccessful"
+    data-testid="TransactionSuccessful"
   >
     <div
       class="flex items-end justify-between bg-theme-background"

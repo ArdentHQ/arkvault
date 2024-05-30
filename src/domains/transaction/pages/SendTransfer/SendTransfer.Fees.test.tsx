@@ -771,7 +771,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 
-		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+		await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("8f913b6b71"));
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

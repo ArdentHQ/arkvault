@@ -4,7 +4,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
 <div>
   <section
     class="space-y-8"
-    data-testid="MultisignatureSuccessful"
+    data-testid="TransactionSuccessful"
   >
     <div
       class="flex items-end justify-between bg-theme-background"

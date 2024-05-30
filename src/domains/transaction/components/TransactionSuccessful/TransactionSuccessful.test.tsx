@@ -152,7 +152,7 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		await expect(screen.findByText("Title")).resolves.toBeInTheDocument();
 		await expect(screen.findAllByText("Description")).resolves.toHaveLength(2);
@@ -181,7 +181,7 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		expect(screen.getByTestId("MultisignatureSuccessful")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
 
 		vi.restoreAllMocks();
 	});
@@ -207,7 +207,7 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		expect(screen.getByTestId("MultisignatureSuccessful")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
 
 		vi.restoreAllMocks();
 	});

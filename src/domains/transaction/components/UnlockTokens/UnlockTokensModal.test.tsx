@@ -222,7 +222,7 @@ describe("UnlockTokensModal", () => {
 
 		if (expectedOutcome === "success") {
 			await waitFor(() => {
-				expect(screen.getByTestId("TransactionPending")).toBeInTheDocument();
+				expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
 			});
 		} else {
 			await waitFor(() => {

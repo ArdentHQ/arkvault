@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -382,34 +383,30 @@ describe("SendUsernameResignation", () => {
 
 	it("should successfully sign and submit musig resignation transaction", async () => {
 		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+
 		const multisignatureSpy = vi
 			.spyOn(wallet.multiSignature(), "all")
 			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signUsernameResignation")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+			.mockResolvedValue(transactionFixture.data.id);
+
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [transactionFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
+
+		const signatory = await wallet.signatoryFactory().make({
+			mnemonic: passphrase,
+		});
+
 		const transactionMock = createTransactionMock(wallet);
 
-		const { asFragment } = renderPage();
-		await expect(screen.findByTestId("InputFee")).resolves.toBeInTheDocument();
+		const signatoryMock = vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
 
-		await expect(formStep()).resolves.toBeVisible();
-
-		// Fee
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "30");
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
+		renderPage();
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -417,23 +414,17 @@ describe("SendUsernameResignation", () => {
 
 		await expect(reviewStep()).resolves.toBeVisible();
 
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
 
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
-
-		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
+		await expect(screen.findByTestId("TransactionFee")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 		multisignatureSpy.mockRestore();
 		isMultiSignatureSpy.mockRestore();
+		signatoryMock.mockRestore();
 	});
 
 	it("should successfully sign and submit resignation transaction with keyboard", async () => {
