@@ -81,6 +81,11 @@ export const SendDelegateResignation = () => {
 	const handleNext = (suppressWarning?: boolean) => {
 		const newIndex = activeTab + 1;
 
+		if (newIndex === Step.AuthenticationStep && activeWallet.isMultiSignature()) {
+			void handleSubmit();
+			return;
+		}
+
 		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
 			return setShowFeeWarning(true);
 		}
@@ -116,7 +121,7 @@ export const SendDelegateResignation = () => {
 
 			setTransaction(activeWallet.transaction().transaction(signedTransactionId));
 
-			handleNext();
+			activeWallet.isMultiSignature() ? setActiveTab(Step.SummaryStep) : handleNext();
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(Step.ErrorStep);
