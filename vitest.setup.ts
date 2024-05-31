@@ -88,6 +88,8 @@ let tippyMock;
 const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
 
+const originalError = console.error;
+
 beforeAll(async () => {
 	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
 	process.env.REACT_APP_IS_UNIT = "1";
@@ -96,6 +98,17 @@ beforeAll(async () => {
 	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
+
+	// this is here to silence act warning temporarily
+	vi.spyOn(console, "error").mockImplementation((...args) => {
+		if (
+			typeof args[0] === "string" &&
+			args[0].includes("code that causes React state updates should be wrapped into act")
+		) {
+			return;
+		}
+		return originalError.call(console, ...args);
+	});
 
 	return;
 });
@@ -131,6 +144,8 @@ afterAll(() => {
 	if (global.gc) {
 		global.gc();
 	}
+
+	console.error.mockRestore();
 });
 
 Object.defineProperty(HTMLImageElement.prototype, "decode", {
