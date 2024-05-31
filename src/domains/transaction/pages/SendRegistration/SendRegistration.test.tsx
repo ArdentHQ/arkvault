@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable max-lines-per-function */
+/* eslint-disable max-lines */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Observer } from "@ledgerhq/hw-transport";
 import React from "react";
@@ -28,16 +31,12 @@ import { requestMock, server } from "@/tests/mocks/server";
 
 import DelegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
-/* eslint-disable @typescript-eslint/require-await */
 import UsernameRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/username-registration.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 
-let profile: Contracts.IProfile;
-let wallet: Contracts.IReadWriteWallet;
-let secondWallet: Contracts.IReadWriteWallet;
 const history = createHashHistory();
 const passphrase = getDefaultWalletMnemonic();
 
@@ -47,7 +46,11 @@ vi.mock("@/utils/delay", () => ({
 
 const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
 
-const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRegistration") => {
+const renderPage = async (
+	profile: Contracts.IProfile,
+	wallet: Contracts.IReadWriteWallet,
+	type = "delegateRegistration",
+) => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
 
 	history.push(registrationURL);
@@ -150,6 +153,10 @@ describe("Registration", () => {
 	});
 
 	describe("ARK network", () => {
+		let profile: Contracts.IProfile;
+		let wallet: Contracts.IReadWriteWallet;
+		let secondWallet: Contracts.IReadWriteWallet;
+
 		beforeAll(async () => {
 			profile = env.profiles().findById(getDefaultProfileId());
 
@@ -225,7 +232,7 @@ describe("Registration", () => {
 
 		it.each([withKeyboard, "without keyboard"])("should register delegate %s", async (inputMethod) => {
 			const nanoXTransportMock = mockNanoXTransport();
-			const { asFragment, history } = await renderPage(wallet);
+			const { asFragment, history } = await renderPage(profile, wallet);
 
 			// Step 1
 			await expect(formStep()).resolves.toBeVisible();
@@ -342,7 +349,7 @@ describe("Registration", () => {
 				return { unsubscribe };
 			});
 
-			await renderPage(wallet, "multiSignature");
+			await renderPage(profile, wallet, "multiSignature");
 
 			act(() => {
 				observer!.next({ descriptor: "", deviceModel: { id: "nanoS" }, type: "add" });
@@ -410,7 +417,7 @@ describe("Registration", () => {
 
 		it("should show mnemonic error", async () => {
 			const nanoXTransportMock = mockNanoXTransport();
-			const { container } = await renderPage(secondWallet);
+			const { container } = await renderPage(profile, secondWallet);
 
 			const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
 
@@ -466,7 +473,7 @@ describe("Registration", () => {
 
 		it("should prevent going to the next step with enter on the success step", async () => {
 			const nanoXTransportMock = mockNanoXTransport();
-			await renderPage(wallet);
+			await renderPage(profile, wallet);
 
 			await expect(formStep()).resolves.toBeVisible();
 
@@ -537,7 +544,7 @@ describe("Registration", () => {
 
 		it("should go back to wallet details", async () => {
 			const nanoXTransportMock = mockNanoXTransport();
-			await renderPage(wallet);
+			await renderPage(profile, wallet);
 
 			const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
@@ -553,7 +560,7 @@ describe("Registration", () => {
 
 		it("should show error step and close", async () => {
 			const nanoXTransportMock = mockNanoXTransport();
-			await renderPage(secondWallet);
+			await renderPage(profile, secondWallet);
 
 			const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
 
@@ -627,7 +634,7 @@ describe("Registration", () => {
 
 		it("should show error step and go back", async () => {
 			const nanoXTransportMock = mockNanoXTransport();
-			await renderPage(secondWallet);
+			await renderPage(profile, secondWallet);
 
 			const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
 
@@ -700,6 +707,9 @@ describe("Registration", () => {
 	});
 
 	describe("Mainsail Network", () => {
+		let profile: Contracts.IProfile;
+		let wallet: Contracts.IReadWriteWallet;
+
 		beforeAll(async () => {
 			profile = env.profiles().findById(getMainsailProfileId());
 
@@ -742,7 +752,7 @@ describe("Registration", () => {
 				calculate: vi.fn().mockResolvedValue({ avg: 25, max: 25, min: 25, static: 25 }),
 			}));
 			const nanoXTransportMock = mockNanoXTransport();
-			const { history } = await renderPage(wallet, "usernameRegistration");
+			const { history } = await renderPage(profile, wallet, "usernameRegistration");
 
 			// Step 1
 			await expect(screen.findByTestId("UsernameRegistrationForm__form-step")).resolves.toBeVisible();
@@ -828,9 +838,10 @@ describe("Registration", () => {
 
 		it("should create musig username transaction", async () => {
 			const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-			const multisignatureSpy = vi
-				.spyOn(wallet.multiSignature(), "all")
-				.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
+			const multisignatureSpy = vi.spyOn(wallet.multiSignature(), "all").mockReturnValue({
+				min: 2,
+				publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+			});
 
 			// Emulate not found username
 			server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
@@ -842,15 +853,15 @@ describe("Registration", () => {
 			}));
 
 			const nanoXTransportMock = mockNanoXTransport();
-			await renderPage(wallet, "usernameRegistration");
+			await renderPage(profile, wallet, "usernameRegistration");
 
 			// Step 1
 			await expect(screen.findByTestId("UsernameRegistrationForm__form-step")).resolves.toBeVisible();
 
 			screen.getByTestId("Input__username").focus();
 			userEvent.paste(screen.getByTestId("Input__username"), "test_username");
-			await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
 
+			await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
 			await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());

@@ -41,7 +41,6 @@ export const SendUsernameResignation = () => {
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
-	console.log({ errorMessage });
 
 	const { persist } = useEnvironmentContext();
 
