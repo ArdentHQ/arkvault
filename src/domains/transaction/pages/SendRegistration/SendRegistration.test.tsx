@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable max-lines-per-function */
+/* eslint-disable max-lines */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Observer } from "@ledgerhq/hw-transport";
 import React from "react";
