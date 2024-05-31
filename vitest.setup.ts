@@ -103,7 +103,7 @@ beforeAll(async () => {
 	vi.spyOn(console, "error").mockImplementation((...args) => {
 		if (
 			typeof args[0] === "string" &&
-			args[0].includes("code that causes React state updates should be wrapped into act")
+			args[0].includes("React state updates should be wrapped into act")
 		) {
 			return;
 		}
