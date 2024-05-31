@@ -101,10 +101,7 @@ beforeAll(async () => {
 
 	// this is here to silence act warning temporarily
 	vi.spyOn(console, "error").mockImplementation((...args) => {
-		if (
-			typeof args[0] === "string" &&
-			args[0].includes("React state updates should be wrapped into act")
-		) {
+		if (typeof args[0] === "string" && args[0].includes("React state updates should be wrapped into act")) {
 			return;
 		}
 		return originalError.call(console, ...args);
