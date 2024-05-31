@@ -939,7 +939,8 @@ describe("Registration", () => {
 			// Step 1
 			await expect(formStep()).resolves.toBeVisible();
 
-			const blsPublicKey = "84c48b1f7388d582a042718c35d9f57dcb9c4314be8b44807a14f329a3bb3853796882756d32e8e11e034f1e7e072cc2";
+			const blsPublicKey =
+				"84c48b1f7388d582a042718c35d9f57dcb9c4314be8b44807a14f329a3bb3853796882756d32e8e11e034f1e7e072cc2";
 
 			screen.getByTestId("Input__validator_public_key").focus();
 			userEvent.paste(screen.getByTestId("Input__validator_public_key"), blsPublicKey);
