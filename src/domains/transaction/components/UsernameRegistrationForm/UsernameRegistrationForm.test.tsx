@@ -5,9 +5,11 @@ import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { Route } from "react-router-dom";
-
+import { createHashHistory } from "history";
 import { UsernameRegistrationForm, signUsernameRegistration } from "./UsernameRegistrationForm";
+import * as useSearchParametersValidationHook from "@/app/hooks/use-search-parameters-validation";
 import * as useFeesHook from "@/app/hooks/use-fees";
+import * as hooksMock from "@/app/hooks";
 import { translations } from "@/domains/transaction/i18n";
 import usernameRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/username-registration.json";
 import {
@@ -26,42 +28,6 @@ let wallet: ProfilesContracts.IReadWriteWallet;
 
 const fees = { avg: 1.354, isDynamic: true, max: 10, min: 0, static: 0 };
 
-const renderComponent = (properties?: any) => {
-	let form: UseFormMethods | undefined;
-
-	const defaultValues = properties?.defaultValues ?? { fee: "2" };
-	const activeTab = properties?.activeTab ?? 1;
-
-	const Component = () => {
-		form = useForm<any>({ defaultValues, mode: "onChange" });
-
-		const { register } = form;
-
-		useEffect(() => {
-			register("fee");
-			register("fees");
-			register("inputFeeSettings");
-		}, [register]);
-
-		return (
-			<FormProvider {...form}>
-				<UsernameRegistrationForm.component profile={profile} activeTab={activeTab} wallet={wallet} />
-			</FormProvider>
-		);
-	};
-
-	const utils: RenderResult = render(
-		<Route path="/profiles/:profileId">
-			<Component />
-		</Route>,
-		{
-			route: `/profiles/${profile.id()}`,
-		},
-	);
-
-	return { ...utils, form };
-};
-
 const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
@@ -78,6 +44,42 @@ const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 const formStepID = "UsernameRegistrationForm__form-step";
 
 describe("UsernameRegistrationForm", () => {
+	const renderComponent = (properties?: any) => {
+		let form: UseFormMethods | undefined;
+
+		const defaultValues = properties?.defaultValues ?? { fee: "2" };
+		const activeTab = properties?.activeTab ?? 1;
+
+		const Component = () => {
+			form = useForm<any>({ defaultValues, mode: "onChange" });
+
+			const { register } = form;
+
+			useEffect(() => {
+				register("fee");
+				register("fees");
+				register("inputFeeSettings");
+			}, [register]);
+
+			return (
+				<FormProvider {...form}>
+					<UsernameRegistrationForm.component profile={profile} activeTab={activeTab} wallet={wallet} />
+				</FormProvider>
+			);
+		};
+
+		const utils: RenderResult = render(
+			<Route path="/profiles/:profileId">
+				<Component />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		return { ...utils, form };
+	};
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
@@ -101,12 +103,39 @@ describe("UsernameRegistrationForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render form step for a wallet with previous username", async () => {
+		const walletWithUsername = vi.spyOn(wallet, "username").mockReturnValue("test_username");
+
+		renderComponent();
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		expect(screen.getByText("New Username")).toBeInTheDocument();
+		expect(screen.getByText(/This address is currently registered to the username/)).toBeInTheDocument();
+
+		walletWithUsername.mockRestore();
+	});
+
 	it("should render review step", async () => {
 		const { asFragment } = renderComponent({ activeTab: 2 });
 
 		await expect(screen.findByTestId("UsernameRegistrationForm__review-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render review step for a wallet with previous username", async () => {
+		const walletWithUsername = vi.spyOn(wallet, "username").mockReturnValue("test_username");
+
+		renderComponent({ activeTab: 2 });
+
+		await expect(screen.findByTestId("UsernameRegistrationForm__review-step")).resolves.toBeVisible();
+
+		expect(screen.getByText("test_username")).toBeInTheDocument();
+
+		expect(screen.getByText("Old Username")).toBeInTheDocument();
+
+		walletWithUsername.mockRestore();
 	});
 
 	it("should set username", async () => {
@@ -287,5 +316,181 @@ describe("UsernameRegistrationForm", () => {
 		transactionMock.mockRestore();
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
+	});
+});
+
+describe("UsernameRegistrationForm without wallet", () => {
+	const history = createHashHistory();
+
+	const renderComponent = (properties?: any) => {
+		let form: UseFormMethods | undefined;
+
+		const defaultValues = properties?.defaultValues ?? { fee: "2" };
+		const activeTab = properties?.activeTab ?? 1;
+
+		const Component = () => {
+			form = useForm<any>({ defaultValues, mode: "onChange" });
+
+			const { register } = form;
+
+			useEffect(() => {
+				register("fee");
+				register("fees");
+				register("inputFeeSettings");
+			}, [register]);
+
+			return (
+				<FormProvider {...form}>
+					<UsernameRegistrationForm.component
+						profile={profile}
+						activeTab={activeTab}
+						showWalletSelector={true}
+						onSelectedWallet={properties?.onSelectedWallet}
+					/>
+				</FormProvider>
+			);
+		};
+
+		const utils: RenderResult = render(
+			<Route path="/profiles/:profileId">
+				<Component />
+			</Route>,
+			{
+				history,
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		return { ...utils, form };
+	};
+
+	beforeAll(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		wallet = profile.wallets().first();
+
+		await syncDelegates(profile);
+
+		vi.spyOn(useFeesHook, "useFees").mockReturnValue({
+			calculate: () => Promise.resolve(fees),
+		});
+	});
+
+	let extractNetworkFromParametersMock: any;
+
+	beforeEach(() => {
+		extractNetworkFromParametersMock = vi.spyOn(useSearchParametersValidationHook, "extractNetworkFromParameters");
+	});
+
+	afterEach(() => {
+		extractNetworkFromParametersMock.mockRestore();
+	});
+
+	it("should render form step and select address", async () => {
+		extractNetworkFromParametersMock.mockReturnValue(wallet.network());
+
+		const onSelectedWallet = vi.fn();
+		renderComponent({
+			onSelectedWallet,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		expect(screen.getByTestId("SelectAddress__wrapper")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		});
+
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+
+		userEvent.click(firstAddress);
+
+		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+
+		userEvent.paste(screen.getByTestId("Input__username"), "test_username");
+
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
+
+		expect(onSelectedWallet).toHaveBeenCalledWith(wallet);
+	});
+
+	it("should populate username from deeplink", async () => {
+		extractNetworkFromParametersMock.mockReturnValue(wallet.network());
+
+		const useQueryParametersMock = vi.spyOn(hooksMock, "useQueryParameters").mockReturnValue({
+			get: vi.fn().mockReturnValue("alfy"),
+		});
+
+		const onSelectedWallet = vi.fn();
+		renderComponent({
+			onSelectedWallet,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("alfy"));
+
+		useQueryParametersMock.mockRestore();
+	});
+
+	it("redirects to dashboard if parameters are invalid", async () => {
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+
+		extractNetworkFromParametersMock.mockImplementation(() => {
+			throw new Error("NETWORK_MISMATCH");
+		});
+
+		renderComponent();
+
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+		});
+
+		historySpy.mockRestore();
+	});
+
+	it("synchronize if not full restored", async () => {
+		extractNetworkFromParametersMock.mockReturnValue(wallet.network());
+
+		const hasBeenFullyRestoredSpy = vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+		const identitySpy = vi.spyOn(wallet.synchroniser(), "identity").mockImplementation();
+
+		const onSelectedWallet = vi.fn();
+		renderComponent({
+			onSelectedWallet,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		expect(screen.getByTestId("SelectAddress__wrapper")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		});
+
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+
+		userEvent.click(firstAddress);
+
+		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+
+		userEvent.paste(screen.getByTestId("Input__username"), "test_username");
+
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_username"));
+
+		expect(onSelectedWallet).toHaveBeenCalledWith(wallet);
+
+		expect(identitySpy).toHaveBeenCalled();
+
+		hasBeenFullyRestoredSpy.mockRestore();
+		identitySpy.mockRestore();
 	});
 });
