@@ -6,11 +6,6 @@ export const initializeMainsailNetworks = ({ data }) => {
 		return;
 	}
 
-	if (typeof data.networks === "object" && !!data.networks.mainsail) {
-		// Networks already assigned to profile, skipping migration
-		return;
-	}
-
 	if (!data.networks) {
 		data.networks = {};
 	}
@@ -18,4 +13,6 @@ export const initializeMainsailNetworks = ({ data }) => {
 	data.networks.mainsail = {
 		devnet: Mainsail.manifest.networks["mainsail.devnet"],
 	};
+
+	console.log("initializeMainsailNetworks");
 };
