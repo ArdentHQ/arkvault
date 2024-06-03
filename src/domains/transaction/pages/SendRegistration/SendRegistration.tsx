@@ -253,7 +253,7 @@ export const SendRegistration = () => {
 			return setShowFeeWarning(true);
 		}
 
-		if (isNextStepAuthentication && activeWallet.isMultiSignature()) {
+		if (isNextStepAuthentication && activeWallet!.isMultiSignature()) {
 			void handleSubmit();
 			return;
 		}
