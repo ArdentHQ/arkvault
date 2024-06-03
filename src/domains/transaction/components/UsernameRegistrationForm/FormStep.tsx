@@ -1,34 +1,105 @@
-import React, { ChangeEvent, useEffect, useMemo, useRef } from "react";
+import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
+import { generatePath, useHistory } from "react-router-dom";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
-
 import { Alert } from "@/app/components/Alert";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
-import { useValidation } from "@/app/hooks";
+import { useQueryParameters, useValidation } from "@/app/hooks";
+import {
+	extractNetworkFromParameters,
+	normalizeSearchParametersValidationError,
+	useSearchParametersValidation,
+} from "@/app/hooks/use-search-parameters-validation";
+import { toasts } from "@/app/services";
+import { ProfilePaths } from "@/router/paths";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 
-export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
+export const FormStep: React.FC<FormStepProperties> = ({
+	wallet,
+	profile,
+	onSelectedWallet,
+	showWalletSelector = false,
+}: FormStepProperties) => {
+	const history = useHistory();
+
 	const { t } = useTranslation();
 
 	const { usernameRegistration } = useValidation();
 
+	const { buildSearchParametersError } = useSearchParametersValidation();
+
 	const { getValues, register, setValue, errors } = useFormContext();
+
+	const parameters = useQueryParameters();
+
 	const username = getValues("username");
 
-	const previousUsername = wallet.username();
+	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
-	const network = useMemo(() => wallet.network(), [wallet]);
+	const previousUsername = wallet?.username();
+
+	const network = useMemo(() => {
+		if (wallet) {
+			return wallet.network();
+		}
+
+		try {
+			return extractNetworkFromParameters({ parameters, profile });
+		} catch (error) {
+			toasts.error(buildSearchParametersError(normalizeSearchParametersValidationError(error)));
+
+			history.push(
+				generatePath(ProfilePaths.Dashboard, {
+					profileId: profile.id(),
+				}),
+			);
+		}
+	}, [wallet, parameters]);
+
+	const handleSelectSender = (address: any) => {
+		const newActiveWallet = profile.wallets().findByAddressWithNetwork(address, network!.id());
+		const isFullyRestoredAndSynced =
+			newActiveWallet?.hasBeenFullyRestored() && newActiveWallet.hasSyncedWithNetwork();
+		if (!isFullyRestoredAndSynced) {
+			newActiveWallet?.synchroniser().identity();
+		}
+
+		onSelectedWallet?.(newActiveWallet);
+	};
+
 	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
 	const userExistsController = useRef<AbortController | undefined>(undefined);
 
 	useEffect(() => {
+		/* istanbul ignore next -- @preserve */
+		if (!network) {
+			return;
+		}
+
+		setWallets(profile.wallets().findByCoinWithNetwork(network.coin(), network.id()));
+	}, [network, profile]);
+
+	useEffect(() => {
+		/* istanbul ignore next -- @preserve */
+		if (!network) {
+			return;
+		}
+
 		if (!username) {
 			register("username", usernameRegistration.username(network, userExistsController));
+
+			const queryUsername = parameters.get("username");
+
+			if (queryUsername != undefined) {
+				setValue("username", queryUsername, { shouldDirty: true, shouldValidate: true });
+			}
 		}
 	}, [usernameRegistration, register, network, username]);
 
@@ -39,6 +110,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 			userExistsController.current?.abort();
 		}
 	}, [hasUsernameErrors]);
+
+	if (network === undefined) {
+		return <></>;
+	}
 
 	return (
 		<section data-testid="UsernameRegistrationForm__form-step">
@@ -60,15 +135,39 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				</Alert>
 			)}
 
-			<TransactionNetwork network={wallet.network()} border={false} />
+			<TransactionNetwork network={network} border={false} />
 
-			<TransactionSender address={wallet.address()} network={wallet.network()} borderPosition="both" />
+			{wallet && !showWalletSelector ? (
+				<TransactionSender address={wallet.address()} network={wallet.network()} borderPosition="both" />
+			) : (
+				<FormField name="senderAddress">
+					<FormLabel label={t("TRANSACTION.SENDER")} />
+
+					<div data-testid="sender-address">
+						<SelectAddress
+							wallets={wallets}
+							profile={profile}
+							disabled={wallets.length === 0}
+							onChange={handleSelectSender}
+							wallet={
+								wallet
+									? {
+											address: wallet.address(),
+											network: wallet.network(),
+									  }
+									: undefined
+							}
+						/>
+					</div>
+				</FormField>
+			)}
 
 			<div className="space-y-6 pt-6">
 				<FormField name="username">
 					<FormLabel label={previousUsername ? t("TRANSACTION.NEW_USERNAME") : t("TRANSACTION.USERNAME")} />
 					<InputDefault
 						data-testid="Input__username"
+						value={username}
 						defaultValue={username}
 						onChange={(event: ChangeEvent<HTMLInputElement>) => {
 							userExistsController.current?.abort();

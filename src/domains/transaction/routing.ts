@@ -17,6 +17,11 @@ export const TransactionRoutes: RouteItem[] = [
 		path: ProfilePaths.SendRegistration,
 	},
 	{
+		component: SendRegistration,
+		exact: true,
+		path: ProfilePaths.SendRegistrationWithoutWallet,
+	},
+	{
 		component: SendDelegateResignation,
 		exact: true,
 		path: ProfilePaths.SendDelegateResignation,

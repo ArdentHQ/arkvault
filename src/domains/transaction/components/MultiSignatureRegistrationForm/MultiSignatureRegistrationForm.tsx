@@ -9,17 +9,22 @@ import {
 	SendRegistrationDetailsOptions,
 	SendRegistrationForm,
 } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { assertWallet } from "@/utils/assertions";
 
-const StepsComponent = ({ activeTab, wallet, profile }: SendRegistrationComponent) => (
-	<Tabs activeId={activeTab}>
-		<TabPanel tabId={1}>
-			<FormStep wallet={wallet} profile={profile} />
-		</TabPanel>
-		<TabPanel tabId={2}>
-			<ReviewStep wallet={wallet} />
-		</TabPanel>
-	</Tabs>
-);
+const StepsComponent = ({ activeTab, wallet, profile }: SendRegistrationComponent) => {
+	assertWallet(wallet);
+
+	return (
+		<Tabs activeId={activeTab}>
+			<TabPanel tabId={1}>
+				<FormStep wallet={wallet} profile={profile} />
+			</TabPanel>
+			<TabPanel tabId={2}>
+				<ReviewStep wallet={wallet} />
+			</TabPanel>
+		</Tabs>
+	);
+};
 
 const transactionDetails = ({ transaction, wallet }: SendRegistrationDetailsOptions) => (
 	<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />

@@ -11,8 +11,11 @@ import { FeeField } from "@/domains/transaction/components/FeeField";
 import { TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
+import { assertWallet } from "@/utils/assertions";
 
 export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
+	assertWallet(wallet);
+
 	const { t } = useTranslation();
 
 	const { common } = useValidation();

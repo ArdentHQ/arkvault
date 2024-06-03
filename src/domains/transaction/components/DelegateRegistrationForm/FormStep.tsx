@@ -14,8 +14,11 @@ import { isMainsailNetwork } from "@/utils/network-utils";
 import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useValidation } from "@/app/hooks";
+import { assertWallet } from "@/utils/assertions";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
+	assertWallet(wallet);
+
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
