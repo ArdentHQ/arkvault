@@ -12,17 +12,28 @@ const component = ({
 	activeTab,
 	wallet,
 	profile,
+	onSelectedWallet,
+	showWalletSelector,
 }: {
 	activeTab: number;
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
+	onSelectedWallet?: (wallet?: Contracts.IReadWriteWallet) => void;
+	showWalletSelector?: boolean;
 }) => (
 	<Tabs activeId={activeTab}>
 		<TabPanel tabId={1}>
-			<FormStep wallet={wallet} profile={profile} />
+			<FormStep
+				wallet={wallet}
+				profile={profile}
+				onSelectedWallet={onSelectedWallet}
+				showWalletSelector={showWalletSelector}
+			/>
 		</TabPanel>
 		<TabPanel tabId={2}>
-			<ReviewStep wallet={wallet} />
+			{/* On review step you must have a wallet */}
+			{/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
+			<ReviewStep wallet={wallet!} />
 		</TabPanel>
 	</Tabs>
 );
