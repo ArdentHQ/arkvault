@@ -1030,7 +1030,13 @@ describe("Registration", () => {
 					calculate: vi.fn().mockResolvedValue({ avg: 25, max: 25, min: 25, static: 25 }),
 				}));
 				const nanoXTransportMock = mockNanoXTransport();
-				const { history } = await renderPage(profile, wallet, "usernameRegistration", noWalletPath, noWalletRoute);
+				const { history } = await renderPage(
+					profile,
+					wallet,
+					"usernameRegistration",
+					noWalletPath,
+					noWalletRoute,
+				);
 
 				// Step 1
 				await expect(screen.findByTestId("UsernameRegistrationForm__form-step")).resolves.toBeVisible();
