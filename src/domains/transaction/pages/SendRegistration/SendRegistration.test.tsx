@@ -947,7 +947,7 @@ describe("Registration", () => {
 					calculate: vi.fn().mockResolvedValue({ avg: 25, max: 25, min: 25, static: 25 }),
 				}));
 				const nanoXTransportMock = mockNanoXTransport();
-				const { history } = await renderPage(wallet, "usernameRegistration", noWalletPath, noWalletRoute);
+				const { history } = await renderPage(profile, wallet, "usernameRegistration", noWalletPath, noWalletRoute);
 
 				// Step 1
 				await expect(screen.findByTestId("UsernameRegistrationForm__form-step")).resolves.toBeVisible();
@@ -1046,7 +1046,7 @@ describe("Registration", () => {
 			},
 		);
 
-		it("should go back to profile if no url walelt", async () => {
+		it("should go back to profile if no url wallet", async () => {
 			const extractNetworkFromParametersMock = vi
 				.spyOn(useSearchParametersValidationHook, "extractNetworkFromParameters")
 				.mockReturnValue(wallet.network());
@@ -1055,7 +1055,7 @@ describe("Registration", () => {
 			const noWalletRoute = `/profiles/${profile.id()}/send-registration/usernameRegistration`;
 
 			const nanoXTransportMock = mockNanoXTransport();
-			const { history } = await renderPage(wallet, "usernameRegistration", noWalletPath, noWalletRoute);
+			const { history } = await renderPage(profile, wallet, "usernameRegistration", noWalletPath, noWalletRoute);
 
 			// Step 1
 			await expect(screen.findByTestId("UsernameRegistrationForm__form-step")).resolves.toBeVisible();
