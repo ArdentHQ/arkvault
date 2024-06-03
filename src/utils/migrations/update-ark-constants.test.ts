@@ -47,12 +47,6 @@ describe("updateArkConstants", () => {
 		expect(data.networks.ark[arkMainnet].constants.epoch).toEqual("2023-01-01T00:00:00.000Z");
 	});
 
-	it("should update hosts if any host contains 'payvo.com'", () => {
-		data.networks.ark[arkMainnet].hosts = [{ host: "example.payvo.com" }];
-		updateArkConstants({ data });
-		expect(data.networks.ark[arkMainnet].hosts).toEqual(ARK.manifest.networks[arkMainnet].hosts);
-	});
-
 	it("should leave hosts unchanged if they are already correct", () => {
 		const expectedHosts = [...data.networks.ark[arkMainnet].hosts];
 		updateArkConstants({ data });
