@@ -10,10 +10,13 @@ import { useValidation } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
+import { assertWallet } from "@/utils/assertions";
 
 const MINIMUM_PARTICIPANTS = 2;
 
 export const FormStep = ({ profile, wallet }: FormStepProperties) => {
+	assertWallet(wallet);
+
 	const { t } = useTranslation();
 	const { errors, setValue, register, watch } = useFormContext();
 	const { participants, minParticipants } = watch();
@@ -81,7 +84,7 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 									<span
 										className={cn("pointer-events-none text-sm font-semibold", {
 											"text-theme-secondary-500 dark:text-theme-secondary-700":
-												!errors?.minParticipants,
+												!errors.minParticipants,
 										})}
 									>
 										{t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", {
