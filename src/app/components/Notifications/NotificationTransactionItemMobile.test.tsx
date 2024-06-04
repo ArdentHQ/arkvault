@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NotificationTransactionItemMobileSkeleton } from "./NotificationTransactionItemMobileSkeleton";
 import { render, screen, waitFor } from "@/utils/testing-library";
+
+vi.mock("react-visibility-sensor", () => ({
+	default: ({ children, onChange }) => {
+		useEffect(() => {
+			if (onChange) {
+				onChange(false);
+			}
+		}, [onChange]);
+
+		return <div>{children}</div>;
+	},
+}));
 
 describe("Notification Transaction", () => {
 	it("should render skeleton", async () => {
