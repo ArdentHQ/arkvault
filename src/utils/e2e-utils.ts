@@ -463,7 +463,6 @@ export const requestMocks = {
 			"https://dwallets.mainsailhq.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			transactionsFixture,
 		),
-		a
 
 		mockRequest(
 			"https://dwallets.mainsailhq.com/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
