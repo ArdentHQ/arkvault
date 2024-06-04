@@ -14,7 +14,8 @@ const preSteps = {
 		await t
 			.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists)
 			.ok();
-		await t.click(Selector('[data-testid="NetworkOption-ARK-ark.devnet"]'));
+		await t.click(Selector('[data-testid="SelectNetwork"]'));
+		await t.click(Selector(".select-list-option__label").withText("ARK Devnet"));
 
 		await t
 			.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
@@ -188,7 +189,10 @@ cucumber("@importWallet-duplicateAddress", {
 		await t
 			.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists)
 			.ok();
-		await t.click(Selector('[data-testid="NetworkOption-ARK-ark.devnet"]'));
+		
+		await t.click(Selector('[data-testid="SelectNetwork"]'));
+		await t.click(Selector(".select-list-option__label").withText("ARK Devnet"));
+
 		await t
 			.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
 			.notOk("Cryptoasset selected", { timeout: 5000 });
