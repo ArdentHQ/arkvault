@@ -6,6 +6,11 @@ import { goToProfile } from "../../profile/e2e/common";
 
 const translations = buildTranslations();
 
+const selectNetwork = async (t: TestController)=> = {
+	await t.click(Selector('[data-testid="SelectNetwork"]'));
+	await t.click(Selector(".select-list-option__label").withText("ARK Devnet"));
+}
+
 const preSteps = {
 	"Given Alice is on the import wallet page": async (t: TestController) => {
 		await visitWelcomeScreen(t);
@@ -14,8 +19,8 @@ const preSteps = {
 		await t
 			.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists)
 			.ok();
-		await t.click(Selector('[data-testid="SelectNetwork"]'));
-		await t.click(Selector(".select-list-option__label").withText("ARK Devnet"));
+
+		await selectNetwork(t);
 
 		await t
 			.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
@@ -190,8 +195,7 @@ cucumber("@importWallet-duplicateAddress", {
 			.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists)
 			.ok();
 
-		await t.click(Selector('[data-testid="SelectNetwork"]'));
-		await t.click(Selector(".select-list-option__label").withText("ARK Devnet"));
+		await selectNetwork(t);
 
 		await t
 			.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
