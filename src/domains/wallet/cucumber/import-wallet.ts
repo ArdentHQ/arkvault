@@ -6,10 +6,10 @@ import { goToProfile } from "../../profile/e2e/common";
 
 const translations = buildTranslations();
 
-const selectNetwork = async (t: TestController)=> {
+const selectNetwork = async (t: TestController) => {
 	await t.click(Selector('[data-testid="SelectNetwork"]'));
 	await t.click(Selector(".select-list-option__label").withText("ARK Devnet"));
-}
+};
 
 const preSteps = {
 	"Given Alice is on the import wallet page": async (t: TestController) => {
