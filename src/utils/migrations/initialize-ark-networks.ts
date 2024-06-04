@@ -9,6 +9,4 @@ export const initializeArkNetworks = ({ data }) => {
 		devnet: ARK.manifest.networks["ark.devnet"],
 		mainnet: ARK.manifest.networks["ark.mainnet"],
 	};
-
-	console.log("initializeArkNetworks");
 };

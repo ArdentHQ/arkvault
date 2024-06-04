@@ -13,6 +13,4 @@ export const initializeMainsailNetworks = ({ data }) => {
 	data.networks.mainsail = {
 		devnet: Mainsail.manifest.networks["mainsail.devnet"],
 	};
-
-	console.log("initializeMainsailNetworks");
 };
