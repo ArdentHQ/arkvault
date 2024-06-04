@@ -1,5 +1,469 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Notifications > should emit transactionClick event 1`] = `
+<div>
+  <div
+    class="css-80avit"
+    data-testid="NotificationsWrapper"
+  >
+    <div
+      class="space-y-2"
+    >
+      <div
+        class="text-base font-semibold text-theme-secondary-500"
+      >
+        Plugins
+      </div>
+      <div
+        class=" css-1m6rt2i"
+        role="table"
+      >
+        <table
+          cellpadding="0"
+          class="table-auto"
+        >
+          <tbody
+            role="rowgroup"
+          >
+            <tr
+              data-testid="NotificationItem"
+            >
+              <td
+                class="h-8 w-8"
+              >
+                <div
+                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
+                />
+              </td>
+              <td>
+                <div>
+                  <div>
+                    <span
+                      class="text-md font-bold text-theme-secondary-600"
+                    >
+                      ARKVault
+                    </span>
+                    <span
+                      class="text-md text-theme-secondary-600"
+                    >
+                       
+                      - update v2.5.6
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
+                  data-testid="NotificationItem__action"
+                >
+                  Update
+                </div>
+              </td>
+            </tr>
+            <tr
+              data-testid="NotificationItem"
+            >
+              <td
+                class="h-8 w-8"
+              >
+                <div
+                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
+                />
+              </td>
+              <td>
+                <div>
+                  <div>
+                    <span
+                      class="text-md font-bold text-theme-secondary-600"
+                    >
+                      Wallet update
+                    </span>
+                    <span
+                      class="text-md text-theme-secondary-600"
+                    >
+                       
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
+                  data-testid="NotificationItem__action"
+                >
+                  Update
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div
+        class="space-y-2"
+      >
+        <div
+          class="text-base font-semibold text-theme-secondary-500"
+        >
+          Transactions
+        </div>
+        <div>
+          <div
+            class=" css-1m6rt2i"
+            role="table"
+          >
+            <table
+              cellpadding="0"
+              class="table-auto"
+            >
+              <tbody
+                role="rowgroup"
+              >
+                <div>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td
+                      class="w-3/5"
+                    >
+                      <div
+                        class="flex space-x-3 css-mx19qq"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="return"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M11.223 3.994c-1.8 0-3.39 1.548-3.39 3.406v.619"
+                                  />
+                                  <path
+                                    d="M7.834 11.115v2.168h2.436c.21 0 .317.103.106.31l-3.887 5.283a.302.302 0 0 1-.487 0l-3.887-5.283c-.211-.207-.105-.31.106-.31h2.436v-5.78C4.657 3.89 7.62 1 11.327 1S18 3.787 18 7.504v7.74"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
+                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-20 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 2
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <div
+                          class="css-fbeerz"
+                          color="danger"
+                        >
+                          <div
+                            class="flex space-x-1 items-stretch"
+                          >
+                            <span
+                              class="whitespace-nowrap"
+                              data-testid="Amount"
+                            >
+                              - 1.28629325 DARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
+                <div>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td
+                      class="w-3/5"
+                    >
+                      <div
+                        class="flex space-x-3 css-mx19qq"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="received"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-20 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 1
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <div
+                          class="css-1vb1527"
+                          color="success"
+                        >
+                          <div
+                            class="flex space-x-1 items-stretch"
+                          >
+                            <span
+                              class="whitespace-nowrap"
+                              data-testid="Amount"
+                            >
+                              + 20 DARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
+                <div>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td
+                      class="w-3/5"
+                    >
+                      <div
+                        class="flex space-x-3 css-mx19qq"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="received"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-20 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 1
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <div
+                          class="css-1vb1527"
+                          color="success"
+                        >
+                          <div
+                            class="flex space-x-1 items-stretch"
+                          >
+                            <span
+                              class="whitespace-nowrap"
+                              data-testid="Amount"
+                            >
+                              + 0.0000001 DARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Notifications > should render with empty notifications 1`] = `
 <div>
   <div
@@ -84,6 +548,934 @@ exports[`Notifications > should render with empty notifications 1`] = `
         </g>
       </g>
     </svg>
+  </div>
+</div>
+`;
+
+exports[`Notifications > should render with plugins 1`] = `
+<div>
+  <div
+    class="css-80avit"
+    data-testid="NotificationsWrapper"
+  >
+    <div
+      class="space-y-2"
+    >
+      <div
+        class="text-base font-semibold text-theme-secondary-500"
+      >
+        Plugins
+      </div>
+      <div
+        class=" css-1m6rt2i"
+        role="table"
+      >
+        <table
+          cellpadding="0"
+          class="table-auto"
+        >
+          <tbody
+            role="rowgroup"
+          >
+            <tr
+              data-testid="NotificationItem"
+            >
+              <td
+                class="h-8 w-8"
+              >
+                <div
+                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
+                />
+              </td>
+              <td>
+                <div>
+                  <div>
+                    <span
+                      class="text-md font-bold text-theme-secondary-600"
+                    >
+                      ARKVault
+                    </span>
+                    <span
+                      class="text-md text-theme-secondary-600"
+                    >
+                       
+                      - update v2.5.6
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
+                  data-testid="NotificationItem__action"
+                >
+                  Update
+                </div>
+              </td>
+            </tr>
+            <tr
+              data-testid="NotificationItem"
+            >
+              <td
+                class="h-8 w-8"
+              >
+                <div
+                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
+                />
+              </td>
+              <td>
+                <div>
+                  <div>
+                    <span
+                      class="text-md font-bold text-theme-secondary-600"
+                    >
+                      Wallet update
+                    </span>
+                    <span
+                      class="text-md text-theme-secondary-600"
+                    >
+                       
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
+                  data-testid="NotificationItem__action"
+                >
+                  Update
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div
+        class="space-y-2"
+      >
+        <div
+          class="text-base font-semibold text-theme-secondary-500"
+        >
+          Transactions
+        </div>
+        <div>
+          <div
+            class=" css-1m6rt2i"
+            role="table"
+          >
+            <table
+              cellpadding="0"
+              class="table-auto"
+            >
+              <tbody
+                role="rowgroup"
+              >
+                <div>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td
+                      class="w-3/5"
+                    >
+                      <div
+                        class="flex space-x-3 css-mx19qq"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="return"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M11.223 3.994c-1.8 0-3.39 1.548-3.39 3.406v.619"
+                                  />
+                                  <path
+                                    d="M7.834 11.115v2.168h2.436c.21 0 .317.103.106.31l-3.887 5.283a.302.302 0 0 1-.487 0l-3.887-5.283c-.211-.207-.105-.31.106-.31h2.436v-5.78C4.657 3.89 7.62 1 11.327 1S18 3.787 18 7.504v7.74"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
+                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-20 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 2
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <div
+                          class="css-fbeerz"
+                          color="danger"
+                        >
+                          <div
+                            class="flex space-x-1 items-stretch"
+                          >
+                            <span
+                              class="whitespace-nowrap"
+                              data-testid="Amount"
+                            >
+                              - 1.28629325 DARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
+                <div>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td
+                      class="w-3/5"
+                    >
+                      <div
+                        class="flex space-x-3 css-mx19qq"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="received"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-20 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 1
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <div
+                          class="css-1vb1527"
+                          color="success"
+                        >
+                          <div
+                            class="flex space-x-1 items-stretch"
+                          >
+                            <span
+                              class="whitespace-nowrap"
+                              data-testid="Amount"
+                            >
+                              + 20 DARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
+                <div>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td
+                      class="w-3/5"
+                    >
+                      <div
+                        class="flex space-x-3 css-mx19qq"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="received"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-20 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 1
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <div
+                          class="css-1vb1527"
+                          color="success"
+                        >
+                          <div
+                            class="flex space-x-1 items-stretch"
+                          >
+                            <span
+                              class="whitespace-nowrap"
+                              data-testid="Amount"
+                            >
+                              + 0.0000001 DARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Notifications > should render with transactions and plugins 1`] = `
+<div>
+  <div
+    class="css-80avit"
+    data-testid="NotificationsWrapper"
+  >
+    <div
+      class="space-y-2"
+    >
+      <div
+        class="text-base font-semibold text-theme-secondary-500"
+      >
+        Plugins
+      </div>
+      <div
+        class=" css-1m6rt2i"
+        role="table"
+      >
+        <table
+          cellpadding="0"
+          class="table-auto"
+        >
+          <tbody
+            role="rowgroup"
+          >
+            <tr
+              data-testid="NotificationItem"
+            >
+              <td
+                class="h-8 w-8"
+              >
+                <div
+                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
+                />
+              </td>
+              <td>
+                <div>
+                  <div>
+                    <span
+                      class="text-md font-bold text-theme-secondary-600"
+                    >
+                      ARKVault
+                    </span>
+                    <span
+                      class="text-md text-theme-secondary-600"
+                    >
+                       
+                      - update v2.5.6
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
+                  data-testid="NotificationItem__action"
+                >
+                  Update
+                </div>
+              </td>
+            </tr>
+            <tr
+              data-testid="NotificationItem"
+            >
+              <td
+                class="h-8 w-8"
+              >
+                <div
+                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
+                />
+              </td>
+              <td>
+                <div>
+                  <div>
+                    <span
+                      class="text-md font-bold text-theme-secondary-600"
+                    >
+                      Wallet update
+                    </span>
+                    <span
+                      class="text-md text-theme-secondary-600"
+                    >
+                       
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
+                  data-testid="NotificationItem__action"
+                >
+                  Update
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div
+        class="space-y-2"
+      >
+        <div
+          class="text-base font-semibold text-theme-secondary-500"
+        >
+          Transactions
+        </div>
+        <div>
+          <div
+            class=" css-1m6rt2i"
+            role="table"
+          >
+            <table
+              cellpadding="0"
+              class="table-auto"
+            >
+              <tbody
+                role="rowgroup"
+              >
+                <div>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td
+                      class="w-3/5"
+                    >
+                      <div
+                        class="flex space-x-3 css-mx19qq"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="return"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M11.223 3.994c-1.8 0-3.39 1.548-3.39 3.406v.619"
+                                  />
+                                  <path
+                                    d="M7.834 11.115v2.168h2.436c.21 0 .317.103.106.31l-3.887 5.283a.302.302 0 0 1-.487 0l-3.887-5.283c-.211-.207-.105-.31.106-.31h2.436v-5.78C4.657 3.89 7.62 1 11.327 1S18 3.787 18 7.504v7.74"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
+                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-20 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 2
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <div
+                          class="css-fbeerz"
+                          color="danger"
+                        >
+                          <div
+                            class="flex space-x-1 items-stretch"
+                          >
+                            <span
+                              class="whitespace-nowrap"
+                              data-testid="Amount"
+                            >
+                              - 1.28629325 DARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
+                <div>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td
+                      class="w-3/5"
+                    >
+                      <div
+                        class="flex space-x-3 css-mx19qq"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="received"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-20 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 1
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <div
+                          class="css-1vb1527"
+                          color="success"
+                        >
+                          <div
+                            class="flex space-x-1 items-stretch"
+                          >
+                            <span
+                              class="whitespace-nowrap"
+                              data-testid="Amount"
+                            >
+                              + 20 DARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
+                <div>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td
+                      class="w-3/5"
+                    >
+                      <div
+                        class="flex space-x-3 css-mx19qq"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="received"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-20 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 1
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <div
+                          class="css-1vb1527"
+                          color="success"
+                        >
+                          <div
+                            class="flex space-x-1 items-stretch"
+                          >
+                            <span
+                              class="whitespace-nowrap"
+                              data-testid="Amount"
+                            >
+                              + 0.0000001 DARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
