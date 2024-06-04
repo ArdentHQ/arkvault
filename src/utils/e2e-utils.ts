@@ -96,6 +96,14 @@ const walletMocks = () => {
 		),
 	);
 
+	devnetMocks.push(
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"coins/ark/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr-basic",
+		),
+	);
+
+
 	return [...devnetMocks, ...mainnetMocks];
 };
 
@@ -445,6 +453,36 @@ export const requestMocks = {
 
 		// Mainsail Devnet
 		mockRequest("https://dwallets.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?limit=10&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			{ data: [], meta: {} },
+		),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
 
 		...searchAddressesMocks(),
 	],

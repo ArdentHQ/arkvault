@@ -44,6 +44,19 @@ export const goToDelegateRegistrationPage = async (t: any) => {
 		.ok();
 };
 
+export const goToUsernameRegistrationPage = async (t: any) => {
+	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
+	await t.click(
+		Selector('[data-testid="WalletHeader__more-button"] li').withText(
+			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_USERNAME,
+		),
+	);
+
+	await t
+		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE).exists)
+		.ok();
+};
+
 export const goToDelegateResignationPage = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 	await t.click(
