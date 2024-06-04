@@ -1,5 +1,4 @@
 import { Mainsail } from "@ardenthq/sdk-mainsail";
-import { isE2E } from "@/utils/test-helpers";
 
 export const initializeMainsailNetworks = ({ data }) => {
 	// if (isE2E()) {
