@@ -39,10 +39,11 @@ export const importWalletByAddress = async (t: any, address: string, alias = "Te
 	await t.click(Selector("button").withExactText(translations.COMMON.IMPORT));
 	await t.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists).ok();
 
+	await t.click(Selector('[data-testid="SelectNetwork"]'));
 	if (isMainnet) {
-		await t.click(Selector(`[data-testid="NetworkOption-ARK-ark.mainnet"]`));
+		await t.click(Selector(".select-list-option__label").withText("ARK"));
 	} else {
-		await t.click(Selector(`[data-testid="NetworkOption-ARK-ark.devnet"]`));
+		await t.click(Selector(".select-list-option__label").withText("ARK Devnet"));
 	}
 
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));

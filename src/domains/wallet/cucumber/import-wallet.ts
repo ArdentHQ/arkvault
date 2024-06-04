@@ -189,7 +189,7 @@ cucumber("@importWallet-duplicateAddress", {
 		await t
 			.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists)
 			.ok();
-		
+
 		await t.click(Selector('[data-testid="SelectNetwork"]'));
 		await t.click(Selector(".select-list-option__label").withText("ARK Devnet"));
 
