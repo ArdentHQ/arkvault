@@ -98,7 +98,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.22.1",
-		"@babel/plugin-transform-react-jsx": "^7.22.3",
+		"@babel/plugin-transform-react-jsx": "^7.24.6",
 		"@babel/preset-env": "^7.22.2",
 		"@babel/preset-react": "^7.22.3",
 		"@babel/preset-typescript": "^7.21.0",
@@ -120,7 +120,7 @@
 		"@types/testing-library__jest-dom": "^5.14.5",
 		"@typescript-eslint/eslint-plugin": "^5.55.0",
 		"@typescript-eslint/parser": "^5.55.0",
-		"@vitejs/plugin-react": "^4.0.0",
+		"@vitejs/plugin-react": "^4.3.0",
 		"@vitest/coverage-istanbul": "0.24.5",
 		"autoprefixer": "^10.4.14",
 		"babel-plugin-macros": "^3.1.0",
