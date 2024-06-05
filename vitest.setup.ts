@@ -88,7 +88,10 @@ let tippyMock;
 const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
 
+const originalError = console.error;
+
 beforeAll(async () => {
+	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
 	process.env.REACT_APP_IS_UNIT = "1";
 	server.listen({ onUnhandledRequest: "error" });
 
@@ -96,12 +99,18 @@ beforeAll(async () => {
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 
+	// this is here to silence act warning temporarily
+	vi.spyOn(console, "error").mockImplementation((...args) => {
+		if (typeof args[0] === "string" && args[0].includes("inside a test was not wrapped in act")) {
+			return;
+		}
+		return originalError.call(console, ...args);
+	});
+
 	return;
 });
 
 beforeEach(() => {
-	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
-
 	localstorageSpy = vi
 		.spyOn(Storage.prototype, "getItem")
 		.mockImplementation((key) => originalLocalStorageGetItem.call(localStorage, key));
@@ -120,19 +129,20 @@ beforeEach(() => {
 afterEach(() => {
 	server.resetHandlers();
 
-	MockDate.reset();
-
 	tippyMock.mockRestore();
 
 	localstorageSpy.mockRestore();
 });
 
 afterAll(() => {
+	MockDate.reset();
 	server.close();
 
 	if (global.gc) {
 		global.gc();
 	}
+
+	console.error.mockRestore();
 });
 
 Object.defineProperty(HTMLImageElement.prototype, "decode", {
