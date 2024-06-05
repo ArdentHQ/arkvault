@@ -10,8 +10,9 @@ export const initializeArkNetworks = ({ data }) => {
 		mainnet: ARK.manifest.networks["ark.mainnet"],
 	};
 
-	// Avoid enabling ark denvet network by default on production.
 	if (isE2E() || isPreview()) {
 		data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
 	}
+
+	console.log("initializeArkNetworks");
 };
