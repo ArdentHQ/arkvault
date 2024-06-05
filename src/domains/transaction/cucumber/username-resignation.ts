@@ -4,7 +4,7 @@ import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 import { importWallet } from "../../wallet/e2e/common";
-import {goToDelegateResignationPage, goToUsernameResignationPage} from "../e2e/common";
+import { goToUsernameResignationPage } from "../e2e/common";
 
 const translations = buildTranslations();
 const sendButton = Selector("button").withText(translations.COMMON.SEND);
