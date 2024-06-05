@@ -84,7 +84,8 @@ const confirmMnemonicStep = {
 };
 const selectNetworkStep = {
 	"And selects a network": async (t: TestController) => {
-		await t.click(Selector('[data-testid="NetworkOption-ARK-ark.devnet"]'));
+		await t.click(Selector('[data-testid="SelectNetwork"]'));
+		await t.click(Selector(".select-list-option__label").withText("ARK Devnet"));
 
 		await t
 			.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
