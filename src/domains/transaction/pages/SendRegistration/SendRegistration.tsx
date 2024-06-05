@@ -219,7 +219,8 @@ export const SendRegistration = () => {
 				});
 
 				setTransaction(transaction);
-				handleNext();
+
+				activeWallet.isMultiSignature() ? setActiveTab(activeTab + 2) : handleNext();
 			}
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
@@ -252,9 +253,14 @@ export const SendRegistration = () => {
 			return setShowFeeWarning(true);
 		}
 
+		if (isNextStepAuthentication && activeWallet!.isMultiSignature()) {
+			void handleSubmit();
+			return;
+		}
+
 		// Skip authentication step
 		if (isNextStepAuthentication && activeWallet!.isLedger() && isLedgerModelSupported) {
-			handleSubmit();
+			void handleSubmit();
 		}
 
 		setActiveTab(nextStep);

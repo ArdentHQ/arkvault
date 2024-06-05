@@ -1,4 +1,4 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Vitest Snapshot v1
 
 exports[`TransactionExportModal > should render 1`] = `
 <DocumentFragment>
@@ -2356,7 +2356,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                       <div
                         class="css-k5jr4t"
                       >
-                        1 transactions have been retrieved and are ready to be exported.
+                        10 transactions have been retrieved and are ready to be exported.
                       </div>
                     </div>
                     <div
