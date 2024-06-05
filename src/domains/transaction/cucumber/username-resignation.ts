@@ -68,18 +68,18 @@ cucumber(
 				url: "https://dwallets.mainsailhq.com/api/transactions/9fad315c27412ce529575fb50f11383a482d0258c22772d653736fd1a880d346",
 			},
 			{
-				"data": {
-					"address": "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-					"publicKey": "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
-					"balance": "45000000000",
-					"nonce": "2",
-					"attributes": {
-						"nonce": "2",
-						"balance": "10000000000",
-						"publicKey": "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac"
+				data: {
+					address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+					publicKey: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
+					balance: "45000000000",
+					nonce: "2",
+					attributes: {
+						nonce: "2",
+						balance: "10000000000",
+						publicKey: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
 					},
-					"updated_at": "987836"
-				}
+					updated_at: "987836",
+				},
 			},
 		),
 	],
