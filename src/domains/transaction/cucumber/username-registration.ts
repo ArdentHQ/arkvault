@@ -12,7 +12,7 @@ const preSteps = {
 	"Given Alice has navigated to the username registration form for a wallet": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
-		await importWallet(t, MNEMONICS[0], 'Mainsail Test Wallet', "Mainsail Devnet");
+		await importWallet(t, MNEMONICS[0], "Mainsail Test Wallet", "Mainsail Devnet");
 		await goToUsernameRegistrationPage(t);
 	},
 };
@@ -24,7 +24,9 @@ cucumber(
 			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
 			await t.typeText(Selector("[data-testid=Input__username]"), "test_username");
 
-			await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).notOk({ timeout: 5000 });
+			await t
+				.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
+				.notOk({ timeout: 5000 });
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 
 			await t.expect(Selector("h1").withText(translations.TRANSACTION.REVIEW_STEP.TITLE).exists).ok();
@@ -55,7 +57,7 @@ cucumber(
 			{
 				data: {},
 			},
-			404
+			404,
 		),
 		mockRequest(
 			{
@@ -83,29 +85,45 @@ cucumber(
 	],
 );
 
-// cucumber("@delegateRegistration-invalidName", {
-// 	...preSteps,
-// 	"When she enters an invalid delegate name": async (t: TestController) => {
-// 		await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
-// 		await t.typeText(Selector("[data-testid=Input__username]"), "TEST DELEGATE");
-// 	},
-// 	"Then an error is displayed on the name field": async (t: TestController) => {
-// 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
-// 	},
-// 	"And the continue button is disabled": async (t: TestController) => {
-// 		await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
-// 	},
-// });
-// cucumber("@delegateRegistration-nameLength", {
-// 	...preSteps,
-// 	"When she enters a delegate name that exceeds the character limit": async (t: TestController) => {
-// 		await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
-// 		await t.typeText(Selector("[data-testid=Input__username]"), "123456789012345678901");
-// 	},
-// 	"Then an error is displayed on the name field": async (t: TestController) => {
-// 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
-// 	},
-// 	"And the continue button is disabled": async (t: TestController) => {
-// 		await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
-// 	},
-// });
+cucumber("@usernameRegistration-invalidName", {
+	...preSteps,
+	"When she enters an invalid username": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
+		await t.typeText(Selector("[data-testid=Input__username]"), "TEST___DELEGATE");
+	},
+	"Then an error is displayed on the name field": async (t: TestController) => {
+		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
+	},
+	"And the continue button is disabled": async (t: TestController) => {
+		await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
+	},
+});
+
+cucumber(
+	"@usernameRegistration-occupied",
+	{
+		...preSteps,
+		"When she enters an occupied username": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
+			await t.typeText(Selector("[data-testid=Input__username]"), "occupied_username");
+		},
+		"Then an error is displayed on the name field": async (t: TestController) => {
+			await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
+		},
+		"And the continue button is disabled": async (t: TestController) => {
+			await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
+		},
+	},
+	[
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://dwallets.mainsailhq.com/api/wallets/occupied_username",
+			},
+			{
+				data: {},
+			},
+			200,
+		),
+	],
+);

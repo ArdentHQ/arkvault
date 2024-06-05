@@ -15,7 +15,7 @@ export const importWallet = async (
 	t: any,
 	passphrase = MNEMONICS[0],
 	alias = "Test Wallet",
-	network = "ARK Devnet"
+	network = "ARK Devnet",
 ) => {
 	await t.click(Selector("a").withText(translations.COMMON.PORTFOLIO));
 	await t.click(Selector("button").withExactText(translations.COMMON.IMPORT));
