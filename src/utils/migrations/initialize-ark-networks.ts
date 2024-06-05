@@ -13,6 +13,4 @@ export const initializeArkNetworks = ({ data }) => {
 	if (isE2E() || isPreview()) {
 		data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
 	}
-
-	console.log("initializeArkNetworks");
 };
