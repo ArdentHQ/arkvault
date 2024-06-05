@@ -94,15 +94,11 @@ const walletMocks = () => {
 			"https://ark-test.arkvault.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr-basic",
 		),
-	);
-
-	devnetMocks.push(
 		mockRequest(
 			"https://dwallets.mainsailhq.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr-basic",
 		),
 	);
-
 
 	return [...devnetMocks, ...mainnetMocks];
 };
