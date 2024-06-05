@@ -10,7 +10,7 @@ const coverageThresholdStatements = Number(process.env.COVERAGE_THRESHOLD_STATEM
 const coverageThresholdBranches = Number(process.env.COVERAGE_THRESHOLD_BRANCHES || 100);
 
 export default mergeConfig(
-	viteConfig,
+	viteConfig(),
 	defineConfig({
 		server: {
 			sourcemapIgnoreList: false,
