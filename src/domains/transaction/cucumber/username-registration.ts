@@ -12,7 +12,7 @@ const preSteps = {
 	"Given Alice has navigated to the username registration form for a wallet": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
-		await importWallet(t, MNEMONICS[0], 'Mainsail Test Wallet', "Mainsail Devnet");
+		await importWallet(t, MNEMONICS[0], "Mainsail Test Wallet", "Mainsail Devnet");
 		await goToUsernameRegistrationPage(t);
 	},
 };
@@ -24,7 +24,9 @@ cucumber(
 			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
 			await t.typeText(Selector("[data-testid=Input__username]"), "test_username");
 
-			await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).notOk({ timeout: 5000 });
+			await t
+				.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
+				.notOk({ timeout: 5000 });
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 
 			await t.expect(Selector("h1").withText(translations.TRANSACTION.REVIEW_STEP.TITLE).exists).ok();
@@ -55,7 +57,7 @@ cucumber(
 			{
 				data: {},
 			},
-			404
+			404,
 		),
 		mockRequest(
 			{
