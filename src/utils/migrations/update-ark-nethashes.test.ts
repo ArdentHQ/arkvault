@@ -37,6 +37,12 @@ describe("updateArkNethashes", () => {
 		};
 	});
 
+	it("should not modify anything if the ark property is not defined", () => {
+		const emptyData = { networks: {} };
+		updateArkNethashes({ data: emptyData });
+		expect(emptyData.networks.ark).toBeUndefined();
+	});
+
 	it("should set the nethash for ark.devnet and ark.mainnet", () => {
 		updateArkNethashes({ data });
 		expect(data.networks.ark[arkDevnet].meta.nethash).toEqual(mockNethash);

@@ -42,9 +42,27 @@ describe("updateArkConstants", () => {
 		};
 	});
 
+	it("should not modify networks if ark property is not defined", () => {
+		const emptyData = { networks: {} };
+		updateArkConstants({ data: emptyData });
+		expect(emptyData.networks.ark).toBeUndefined();
+	});
+
 	it("should set the epoch constant if undefined", () => {
 		updateArkConstants({ data });
 		expect(data.networks.ark[arkMainnet].constants.epoch).toEqual("2023-01-01T00:00:00.000Z");
+	});
+
+	it("should update hosts if any host contains 'payvo.com'", () => {
+		data.networks.ark[arkMainnet].hosts = [{ host: "example.payvo.com" }];
+		updateArkConstants({ data });
+		expect(data.networks.ark[arkMainnet].hosts).toEqual(ARK.manifest.networks[arkMainnet].hosts);
+	});
+
+	it("should not update hosts if no host contains 'payvo.com'", () => {
+		data.networks.ark[arkMainnet].hosts = [{ host: "safehost.com" }];
+		updateArkConstants({ data });
+		expect(data.networks.ark[arkMainnet].hosts).toEqual([{ host: "safehost.com" }]);
 	});
 
 	it("should leave hosts unchanged if they are already correct", () => {
