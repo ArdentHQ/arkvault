@@ -76,7 +76,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: "https://dwallets.mainsailhq.com/api/transactions/9fe946a99190e93ddb7d5defc183db8f65502b89957f6f4d9ae05fd394cbd01f",
+				url: "https://dwallets.mainsailhq.com/api/transactions/9fe946a99190e93ddb7d5defc183db8f65502b89957f6f4d9ae05fd394cbd01f"
 			},
 			{
 				data: {},
