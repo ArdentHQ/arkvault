@@ -84,54 +84,52 @@ cucumber(
 		),
 	],
 );
-// cucumber(
-// 	"@delegateResignation-invalidMnemonic",
-// 	{
-// 		...preSteps,
-// 		"When she attempts to complete the process with an invalid mnemonic": async (t: TestController) => {
-// 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
-// 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
-// 			await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), "wrong mnemonic", {
-// 				replace: true,
-// 			});
-// 			await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).ok();
-// 		},
-// 		"Then an error is displayed on the mnemonic field": async (t: TestController) => {
-// 			await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
-// 		},
-// 		"And the send button is disabled": async (t: TestController) => {
-// 			await t.expect(sendButton.hasAttribute("disabled")).ok();
-// 		},
-// 	},
-// 	[
-// 		mockRequest(
-// 			{
-// 				method: "POST",
-// 				url: "https://ark-test.arkvault.io/api/transactions",
-// 			},
-// 			{
-// 				data: {
-// 					accept: ["transaction-id"],
-// 					broadcast: ["transaction-id"],
-// 					excess: [],
-// 					invalid: [],
-// 				},
-// 			},
-// 		),
-// 		mockRequest("https://ark-test.arkvault.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
-// 			data: {
-// 				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-// 				attributes: {
-// 					delegate: {
-// 						username: "testwallet",
-// 					},
-// 				},
-// 				balance: "10000000000",
-// 				isDelegate: true,
-// 				isResigned: false,
-// 				nonce: "1",
-// 				publicKey: "03d3fdad9c5b25bf8880e6b519eb3611a5c0b31adebc8455f0e096175b28321aff",
-// 			},
-// 		}),
-// 	],
-// );
+cucumber(
+	"@usernameResignation-invalidMnemonic",
+	{
+		...preSteps,
+		"When she attempts to complete the process with an invalid mnemonic": async (t: TestController) => {
+			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
+			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
+			await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), "wrong mnemonic", {
+				replace: true,
+			});
+			await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).ok();
+		},
+		"Then an error is displayed on the mnemonic field": async (t: TestController) => {
+			await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
+		},
+		"And the send button is disabled": async (t: TestController) => {
+			await t.expect(sendButton.hasAttribute("disabled")).ok();
+		},
+	},
+	[
+		mockRequest(
+			{
+				method: "POST",
+				url: "https://dwallets.mainsailhq.com/tx/api/transaction-pool",
+			},
+			{
+				data: {
+					accept: ["transaction-id"],
+					broadcast: ["transaction-id"],
+					excess: [],
+					invalid: [],
+				},
+			},
+		),
+		mockRequest("https://dwallets.mainsailhq.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
+			data: {
+				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+				attributes: {
+					username: "testwallet",
+				},
+				balance: "10000000000",
+				isDelegate: true,
+				isResigned: false,
+				nonce: "1",
+				publicKey: "03d3fdad9c5b25bf8880e6b519eb3611a5c0b31adebc8455f0e096175b28321aff",
+			},
+		}),
+	],
+);
