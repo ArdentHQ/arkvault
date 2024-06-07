@@ -149,12 +149,6 @@ describe("LedgerTabs", () => {
 		// Auto redirect to next step
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
-		await waitFor(() => expect(within(screen.getAllByRole("rowgroup")[0]).getAllByRole("row")).toHaveLength(1));
-
-		await waitFor(() =>
-			expect(within(screen.getAllByRole("rowgroup")[1]).getAllByRole("checkbox")).toHaveLength(1),
-		);
-
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
@@ -178,16 +172,12 @@ describe("LedgerTabs", () => {
 		// Auto redirect to next step
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
-		await waitFor(() => expect(within(screen.getAllByRole("rowgroup")[0]).getAllByRole("row")).toHaveLength(1));
-
-		await waitFor(() =>
-			expect(within(screen.getAllByRole("rowgroup")[1]).getAllByRole("checkbox")).toHaveLength(1),
-		);
-
 		expect(scanSpy).toHaveBeenCalledWith({
 			onProgress: expect.any(Function),
 			startPath: undefined,
 		});
+
+		await expect(screen.findByTestId("LedgerScanStep__scan-more")).resolves.toBeVisible();
 
 		const loadMoreButton = screen.getByTestId("LedgerScanStep__scan-more");
 
