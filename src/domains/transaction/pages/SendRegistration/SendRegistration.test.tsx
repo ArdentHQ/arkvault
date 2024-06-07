@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable max-lines-per-function */
+/* eslint-disable max-lines */
 /* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable max-lines-per-function */
@@ -842,7 +845,7 @@ describe("Registration", () => {
 			envAvailableNetworksMock.mockRestore();
 		});
 
-		it("should create musig username transaction", async () => {
+		it("should create musig username registration transaction", async () => {
 			const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
 			const multisignatureSpy = vi.spyOn(wallet.multiSignature(), "all").mockReturnValue({
 				min: 2,
@@ -906,6 +909,89 @@ describe("Registration", () => {
 			await waitFor(() => {
 				expect(signMock).toHaveBeenCalledWith({
 					data: { username: "test_username" },
+					fee: 25,
+					signatory: expect.any(Signatories.Signatory),
+				});
+			});
+
+			await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(UsernameRegistrationFixture.data.id));
+			await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(UsernameRegistrationFixture.data.id));
+
+			signMock.mockRestore();
+			broadcastMock.mockRestore();
+			transactionMock.mockRestore();
+
+			nanoXTransportMock.mockRestore();
+			feesMock.mockRestore();
+			envAvailableNetworksMock.mockRestore();
+
+			isMultiSignatureSpy.mockRestore();
+			multisignatureSpy.mockRestore();
+		});
+
+		it("should create musig validator registration transaction", async () => {
+			const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+			const multisignatureSpy = vi.spyOn(wallet.multiSignature(), "all").mockReturnValue({
+				min: 2,
+				publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+			});
+
+			const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
+
+			const feesMock = vi.spyOn(useFeesMock, "useFees").mockImplementation(() => ({
+				calculate: vi.fn().mockResolvedValue({ avg: 25, max: 25, min: 25, static: 25 }),
+			}));
+
+			const nanoXTransportMock = mockNanoXTransport();
+			await renderPage(profile, wallet, "delegateRegistration");
+
+			// Step 1
+			await expect(formStep()).resolves.toBeVisible();
+
+			const blsPublicKey =
+				"84c48b1f7388d582a042718c35d9f57dcb9c4314be8b44807a14f329a3bb3853796882756d32e8e11e034f1e7e072cc2";
+
+			screen.getByTestId("Input__validator_public_key").focus();
+			userEvent.paste(screen.getByTestId("Input__validator_public_key"), blsPublicKey);
+
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
+
+			await waitFor(() => expect(continueButton()).toBeEnabled());
+
+			userEvent.click(continueButton());
+
+			await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+			const signMock = vi
+				.spyOn(wallet.transaction(), "signDelegateRegistration")
+				.mockReturnValue(Promise.resolve(DelegateRegistrationFixture.data.id));
+
+			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+				accepted: [DelegateRegistrationFixture.data.id],
+				errors: {},
+				rejected: [],
+			});
+
+			const transactionMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+				amount: () => +DelegateRegistrationFixture.data.amount / 1e8,
+				data: () => ({ data: () => DelegateRegistrationFixture.data }),
+				explorerLink: () => `https://test.arkscan.io/transaction/${DelegateRegistrationFixture.data.id}`,
+				fee: () => +DelegateRegistrationFixture.data.fee / 1e8,
+				id: () => DelegateRegistrationFixture.data.id,
+				isMultiSignatureRegistration: () => false,
+				recipient: () => DelegateRegistrationFixture.data.recipient,
+				sender: () => DelegateRegistrationFixture.data.sender,
+				type: () => "delegateRegistration",
+				username: () => DelegateRegistrationFixture.data.asset.username,
+				usesMultiSignature: () => true,
+			});
+
+			await waitFor(() => expect(continueButton()).toBeEnabled());
+			userEvent.click(continueButton());
+
+			await waitFor(() => {
+				expect(signMock).toHaveBeenCalledWith({
+					data: { validatorPublicKey: blsPublicKey },
 					fee: 25,
 					signatory: expect.any(Signatories.Signatory),
 				});
