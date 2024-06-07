@@ -37,7 +37,9 @@ const messageInput = () => screen.getByTestId("SignMessage__message-input");
 const signMessage = "Hello World";
 
 const expectHeading = async (text: string) => {
-	await expect(screen.findAllByText(text)).resolves.toHaveLength(2);
+	await waitFor(() => {
+		expect(screen.getByTestId("header__title")).toHaveTextContent(text);
+	});
 };
 
 describe("SignMessage", () => {
