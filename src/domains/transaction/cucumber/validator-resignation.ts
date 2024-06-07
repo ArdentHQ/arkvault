@@ -59,20 +59,21 @@ cucumber(
 			},
 		),
 		mockRequest("https://dwallets.mainsailhq.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
-			"data": {
-				"address": "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-				"publicKey": "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
-				"balance": "37390000000",
-				"nonce": "6",
-				"attributes": {
-					"nonce": "6",
-					"balance": "37390000000",
-					"publicKey": "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
-					"validatorPublicKey": "af3e0e72eb49432d10143ac9f22184c147c64a9a1dd41cc83fbdb42c427341f0c094cd40ab61b16b630ee0e191403938",
-					"validatorVoteBalance": "0"
+			data: {
+				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+				publicKey: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
+				balance: "37390000000",
+				nonce: "6",
+				attributes: {
+					nonce: "6",
+					balance: "37390000000",
+					publicKey: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
+					validatorPublicKey:
+						"af3e0e72eb49432d10143ac9f22184c147c64a9a1dd41cc83fbdb42c427341f0c094cd40ab61b16b630ee0e191403938",
+					validatorVoteBalance: "0",
 				},
-				"updated_at": "1006355"
-			}
+				updated_at: "1006355",
+			},
 		}),
 	],
 );
@@ -112,20 +113,21 @@ cucumber(
 			},
 		),
 		mockRequest("https://dwallets.mainsailhq.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
-			"data": {
-				"address": "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-				"publicKey": "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
-				"balance": "37390000000",
-				"nonce": "6",
-				"attributes": {
-					"nonce": "6",
-					"balance": "37390000000",
-					"publicKey": "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
-					"validatorPublicKey": "af3e0e72eb49432d10143ac9f22184c147c64a9a1dd41cc83fbdb42c427341f0c094cd40ab61b16b630ee0e191403938",
-					"validatorVoteBalance": "0"
+			data: {
+				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+				publicKey: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
+				balance: "37390000000",
+				nonce: "6",
+				attributes: {
+					nonce: "6",
+					balance: "37390000000",
+					publicKey: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
+					validatorPublicKey:
+						"af3e0e72eb49432d10143ac9f22184c147c64a9a1dd41cc83fbdb42c427341f0c094cd40ab61b16b630ee0e191403938",
+					validatorVoteBalance: "0",
 				},
-				"updated_at": "1006355"
-			}
+				updated_at: "1006355",
+			},
 		}),
 	],
 );

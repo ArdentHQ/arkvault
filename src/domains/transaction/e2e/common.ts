@@ -6,10 +6,8 @@ const translations = buildTranslations();
 
 const goToPage = async (t: any, pageText: string) => {
 	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
-	await t.click(
-		Selector('[data-testid="WalletHeader__more-button"] li').withText(pageText),
-	);
-}
+	await t.click(Selector('[data-testid="WalletHeader__more-button"] li').withText(pageText));
+};
 
 export const goToTransferPage = async (t: any) => {
 	await t.click(Selector("[data-testid=WalletHeader__send-button]"));
@@ -76,7 +74,7 @@ export const goToValidatorRegistrationPage = async (t: any) => {
 	await t
 		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE).exists)
 		.ok();
-}
+};
 
 export const goToValidatorResignationPage = async (t: any) => {
 	await goToPage(t, translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_VALIDATOR);
@@ -84,5 +82,4 @@ export const goToValidatorResignationPage = async (t: any) => {
 	await t
 		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE).exists)
 		.ok();
-}
-
+};
