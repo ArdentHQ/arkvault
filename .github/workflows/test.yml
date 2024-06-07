@@ -368,6 +368,7 @@ jobs:
 
             - name: Test (pages)
               uses: nick-invision/retry@v2
+              env:
                   COVERAGE_INCLUDE_PATH: src/domains/contact/pages
               with:
                   timeout_minutes: 10
