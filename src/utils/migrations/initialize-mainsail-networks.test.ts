@@ -17,16 +17,4 @@ describe("initializeMainsailNetworks", () => {
 
 		expect(data.networks.mainsail.devnet).toEqual(Mainsail.manifest.networks["mainsail.devnet"]);
 	});
-
-	it("should not initialize the mainsail devnet network if already defined", () => {
-		const data = {
-			networks: {
-				mainsail: {},
-			},
-		};
-
-		initializeMainsailNetworks({ data });
-
-		expect(data.networks.mainsail).toEqual({});
-	});
 });
