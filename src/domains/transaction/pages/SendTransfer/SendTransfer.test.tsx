@@ -510,7 +510,7 @@ describe("SendTransfer", () => {
 						.signatory()
 						.multiSignature({
 							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+							publicKeys: [wallet.publicKey()!, secondWallet.publicKey()!],
 						}),
 				}),
 			wallet,
@@ -1076,7 +1076,7 @@ describe("SendTransfer", () => {
 		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
 		const multisignatureSpy = vi
 			.spyOn(wallet.multiSignature(), "all")
-			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
+			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, secondWallet.publicKey()!] });
 
 		const transferURL = `/profiles/${fixtureProfileId}/transactions/${wallet.id()}/transfer`;
 
