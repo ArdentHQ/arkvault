@@ -4,7 +4,7 @@ Feature: Validator Registration Transaction
 	Scenario: Successfully send validator registration transaction
 		Given Alice has navigated to the validator registration form for a wallet
 		When she enters a validator public key
-		And sends the delegate registration transaction
+		And sends the validator registration transaction
 		Then the transaction is sent successfully
 
 	@validatorRegistration-invalidPublicKey

@@ -31,7 +31,7 @@ cucumber(
 			await t.expect(Selector("[data-testid=TransactionDetail]").withText("84c48b1f7388d582a042718c35…756d32e8e11e034f1e7e072cc2").exists).ok();
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 		},
-		"And sends the delegate registration transaction": async (t: TestController) => {
+		"And sends the validator registration transaction": async (t: TestController) => {
 			await t.expect(Selector("h1").withText(translations.TRANSACTION.AUTHENTICATION_STEP.TITLE).exists).ok();
 			await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), MNEMONICS[0]);
 			await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).notOk();
