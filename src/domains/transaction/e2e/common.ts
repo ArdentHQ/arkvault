@@ -4,6 +4,13 @@ import { buildTranslations } from "../../../app/i18n/helpers";
 
 const translations = buildTranslations();
 
+const goToPage = async (t: any, pageText: string) => {
+	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
+	await t.click(
+		Selector('[data-testid="WalletHeader__more-button"] li').withText(pageText),
+	);
+}
+
 export const goToTransferPage = async (t: any) => {
 	await t.click(Selector("[data-testid=WalletHeader__send-button]"));
 	await t
@@ -32,12 +39,7 @@ export const goToRegistrationPage = async (t: any) => {
 };
 
 export const goToDelegateRegistrationPage = async (t: any) => {
-	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
-	await t.click(
-		Selector('[data-testid="WalletHeader__more-button"] li').withText(
-			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE,
-		),
-	);
+	await goToPage(t, translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE);
 
 	await t
 		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.TITLE).exists)
@@ -45,12 +47,7 @@ export const goToDelegateRegistrationPage = async (t: any) => {
 };
 
 export const goToDelegateResignationPage = async (t: any) => {
-	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
-	await t.click(
-		Selector('[data-testid="WalletHeader__more-button"] li').withText(
-			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE,
-		),
-	);
+	await goToPage(t, translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE);
 
 	await t
 		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.TITLE).exists)
@@ -58,12 +55,7 @@ export const goToDelegateResignationPage = async (t: any) => {
 };
 
 export const goToUsernameRegistrationPage = async (t: any) => {
-	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
-	await t.click(
-		Selector('[data-testid="WalletHeader__more-button"] li').withText(
-			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_USERNAME,
-		),
-	);
+	await goToPage(t, translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_USERNAME);
 
 	await t
 		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE).exists)
@@ -71,12 +63,7 @@ export const goToUsernameRegistrationPage = async (t: any) => {
 };
 
 export const goToUsernameResignationPage = async (t: any) => {
-	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
-	await t.click(
-		Selector('[data-testid="WalletHeader__more-button"] li').withText(
-			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_USERNAME,
-		),
-	);
+	await goToPage(t, translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_USERNAME);
 
 	await t
 		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.TITLE).exists)
@@ -84,14 +71,18 @@ export const goToUsernameResignationPage = async (t: any) => {
 };
 
 export const goToValidatorRegistrationPage = async (t: any) => {
-	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
-	await t.click(
-		Selector('[data-testid="WalletHeader__more-button"] li').withText(
-			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR,
-		),
-	);
+	await goToPage(t, translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR);
 
 	await t
 		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE).exists)
 		.ok();
 }
+
+export const goToValidatorResignationPage = async (t: any) => {
+	await goToPage(t, translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_VALIDATOR);
+
+	await t
+		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE).exists)
+		.ok();
+}
+

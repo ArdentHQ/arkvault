@@ -4,7 +4,7 @@ import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 import { importWallet } from "../../wallet/e2e/common";
-import {goToDelegateRegistrationPage, goToValidatorRegistrationPage} from "../e2e/common";
+import { goToValidatorRegistrationPage } from "../e2e/common";
 
 const translations = buildTranslations();
 
