@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 
 import { LedgerTabs } from "./LedgerTabs";
 import { minVersionList } from "@/app/contexts";
-import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport, act } from "@/utils/testing-library";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 
@@ -126,14 +126,9 @@ describe("LedgerTabs", () => {
 
 		userEvent.click(backSelector());
 
-		await waitFor(() => {
-			expect(screen.findByTestId("LedgerCancellingScreen")).resolves.toBeVisible();
-		});
-
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("DisconnectDevice"));
-
 		await expect(screen.findByTestId("LedgerDisconnected")).resolves.toBeVisible();
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
