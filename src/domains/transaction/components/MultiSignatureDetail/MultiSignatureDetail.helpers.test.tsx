@@ -48,7 +48,13 @@ describe("MultiSignatureDetail Helpers", () => {
 					},
 					fee: 1,
 					nonce: "1",
-					signatory: await wallet.coin().signatory().stub(getDefaultWalletMnemonic()),
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
 				}),
 			wallet,
 		);
@@ -58,7 +64,7 @@ describe("MultiSignatureDetail Helpers", () => {
 		const { min, publicKeys } = getMultiSignatureInfo(transaction);
 
 		expect(min).toBe(2);
-		expect(publicKeys).toHaveLength(0);
+		expect(publicKeys).toHaveLength(2);
 	});
 
 	it("should extract multisignature info mapping mandatoryKeys and numberOfSignatures to min and publicKeys", () => {
