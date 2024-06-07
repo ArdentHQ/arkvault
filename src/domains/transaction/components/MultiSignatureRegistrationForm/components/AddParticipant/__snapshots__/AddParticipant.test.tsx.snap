@@ -120,7 +120,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                           >
                             <img
                               alt="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"10\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="35" cx="10" cy="50" fill="rgb(0, 188, 212)"/><circle r="60" cx="20" cy="30" fill="rgb(33, 150, 243)"/><circle r="50" cx="60" cy="60" fill="rgb(205, 220, 57)"/></svg>"
                               title="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20"
                             />
                           </div>
@@ -274,7 +274,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                 title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
               />
             </div>
@@ -325,7 +325,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -508,7 +508,7 @@ exports[`Add Participant > should fail to find 1`] = `
                           >
                             <img
                               alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="45" cx="100" cy="60" fill="rgb(255, 87, 34)"/><circle r="35" cx="80" cy="50" fill="rgb(156, 39, 176)"/><circle r="40" cx="10" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                               title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
                             />
                           </div>
@@ -662,7 +662,7 @@ exports[`Add Participant > should fail to find 1`] = `
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                 title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
               />
             </div>
@@ -713,7 +713,7 @@ exports[`Add Participant > should fail to find 1`] = `
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -901,7 +901,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -1071,7 +1071,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                 title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
               />
             </div>
@@ -1111,7 +1111,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -1294,7 +1294,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                           >
                             <img
                               alt="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"70\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(33, 150, 243)" width="100" height="100"/><circle r="55" cx="70" cy="40" fill="rgb(3, 169, 244)"/><circle r="40" cx="90" cy="50" fill="rgb(0, 188, 212)"/><circle r="35" cx="80" cy="60" fill="rgb(205, 220, 57)"/></svg>"
                               title="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P"
                             />
                           </div>
@@ -1448,7 +1448,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                 title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
               />
             </div>
@@ -1499,7 +1499,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -1682,7 +1682,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                           >
                             <img
                               alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="45" cx="100" cy="60" fill="rgb(255, 87, 34)"/><circle r="35" cx="80" cy="50" fill="rgb(156, 39, 176)"/><circle r="40" cx="10" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                               title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
                             />
                           </div>
@@ -1836,7 +1836,7 @@ exports[`Add Participant > should handle exception on find and show address not 
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                 title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
               />
             </div>
@@ -1887,7 +1887,7 @@ exports[`Add Participant > should handle exception on find and show address not 
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -2125,7 +2125,7 @@ exports[`Add Participant > should render custom participants 1`] = `
             >
               <img
                 alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                 title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
               />
             </div>
@@ -2165,7 +2165,7 @@ exports[`Add Participant > should render custom participants 1`] = `
               >
                 <img
                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                   title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                 />
               </div>
@@ -2305,7 +2305,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -2433,7 +2433,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                 title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
               />
             </div>
@@ -2484,7 +2484,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -2562,7 +2562,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
             >
               <img
                 alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                 title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
               />
             </div>
@@ -2613,7 +2613,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
               >
                 <img
                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                   title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                 />
               </div>
