@@ -1077,7 +1077,7 @@ describe("SendTransfer", () => {
 		const multisignatureSpy = vi
 			.spyOn(wallet.multiSignature(), "all")
 			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, secondWallet.publicKey()!] });
-		
+
 		const transferURL = `/profiles/${fixtureProfileId}/transactions/${wallet.id()}/transfer`;
 
 		history.push(transferURL);
