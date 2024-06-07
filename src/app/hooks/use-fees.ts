@@ -57,7 +57,8 @@ export const useFees = (profile: Contracts.IProfile) => {
 	};
 
 	const getWallet = useCallback(
-		async (coin: string, network: string) => profile.walletFactory().generate({ coin, network, withPublicKey: true }),
+		async (coin: string, network: string) =>
+			profile.walletFactory().generate({ coin, network, withPublicKey: true }),
 		[profile],
 	);
 
