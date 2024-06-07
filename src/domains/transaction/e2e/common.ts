@@ -82,3 +82,16 @@ export const goToUsernameResignationPage = async (t: any) => {
 		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.TITLE).exists)
 		.ok();
 };
+
+export const goToValidatorRegistrationPage = async (t: any) => {
+	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
+	await t.click(
+		Selector('[data-testid="WalletHeader__more-button"] li').withText(
+			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR,
+		),
+	);
+
+	await t
+		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE).exists)
+		.ok();
+}
