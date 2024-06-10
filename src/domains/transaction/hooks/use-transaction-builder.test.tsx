@@ -31,6 +31,23 @@ describe("Use Transaction Builder Hook", () => {
 		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
+	it("should fail sign transfer if invalid data", async () => {
+		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
+
+		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
+		const input: Services.TransferInput = {
+			data: {
+				amount: 1,
+				to: wallet.address(),
+			},
+			signatory,
+		};
+
+		await expect(async () => {
+			await builder.current.build("transfer", input, wallet);
+		}).rejects.toThrow();
+	});
+
 	it("should sign transfer", async () => {
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
