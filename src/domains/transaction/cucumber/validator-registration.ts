@@ -103,17 +103,4 @@ cucumber("@validatorRegistration-invalidPublicKey", {
 			await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
 		},
 	},
-	[
-		mockRequest(
-			{
-				method: "GET",
-				url: "https://dwallets.mainsailhq.com/api/wallets/",
-			},
-			{
-				meta: {
-					count: 0
-				},
-			},
-		),
-	],
 );
