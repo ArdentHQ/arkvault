@@ -43,7 +43,7 @@ describe("Register validator validation", () => {
 			validate.unique(
 				"a08058db53e2665c84a40f5152e76dd2b652125a6079130d4c315e728bcf4dd1dfb44ac26e82302331d61977d3141118",
 			),
-		).resolves.toBeFalsy()
+		).resolves.toBeFalsy();
 	});
 
 	it("should pass if public key hasn't used", async () => {
@@ -56,6 +56,6 @@ describe("Register validator validation", () => {
 			validate.unique(
 				"a08058db53e2665c84a40f5152e76dd2b652125a6079130d4c315e728bcf4dd1dfb44ac26e82302331d61977d3141118",
 			),
-		).resolves.toBe('COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS');
+		).resolves.toBe("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS");
 	});
 });
