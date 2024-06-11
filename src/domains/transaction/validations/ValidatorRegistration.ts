@@ -1,8 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import {Networks} from "@ardenthq/sdk";
-import {validatePattern} from "@/utils/validations";
-import {debounceAsync} from "@/utils/debounce";
-import {ValidateResult} from "react-hook-form";
+import { Networks } from "@ardenthq/sdk";
+import { ValidateResult } from "react-hook-form";
+import { debounceAsync } from "@/utils/debounce";
 
 export const validatorRegistration = (t: any) => ({
 	validatorPublicKey: (wallet: Contracts.IReadWriteWallet) => ({
@@ -37,7 +36,6 @@ export const validatorRegistration = (t: any) => ({
 		},
 	}),
 });
-
 
 const publicKeyExists = async (network: Networks.Network, publicKey: string) => {
 	const endpoints = {
