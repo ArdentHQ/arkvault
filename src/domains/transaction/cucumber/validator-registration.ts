@@ -1,10 +1,10 @@
-import {Selector} from "testcafe";
+import { Selector } from "testcafe";
 
-import {buildTranslations} from "../../../app/i18n/helpers";
-import {cucumber, MNEMONICS, mockRequest, visitWelcomeScreen} from "../../../utils/e2e-utils";
-import {goToProfile} from "../../profile/e2e/common";
-import {importWallet} from "../../wallet/e2e/common";
-import {goToValidatorRegistrationPage} from "../e2e/common";
+import { buildTranslations } from "../../../app/i18n/helpers";
+import { cucumber, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
+import { goToProfile } from "../../profile/e2e/common";
+import { importWallet } from "../../wallet/e2e/common";
+import { goToValidatorRegistrationPage } from "../e2e/common";
 
 const translations = buildTranslations();
 
@@ -49,7 +49,7 @@ cucumber(
 		"Then the transaction is sent successfully": async (t: TestController) => {
 			await t
 				.expect(Selector("h1").withText(translations.TRANSACTION.SUCCESS.TITLE).exists)
-				.ok({timeout: 5000});
+				.ok({ timeout: 5000 });
 		},
 	},
 	[
@@ -74,7 +74,7 @@ cucumber(
 			},
 			{
 				meta: {
-					count: 0
+					count: 0,
 				},
 			},
 		),
@@ -91,16 +91,15 @@ cucumber(
 );
 
 cucumber("@validatorRegistration-invalidPublicKey", {
-		...preSteps,
-		"When she enters an invalid public key": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
-			await t.typeText(Selector("[data-testid=Input__validator_public_key]"), "invalid-pub-key");
-		},
-		"Then an error is displayed on the name field": async (t: TestController) => {
-			await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
-		},
-		"And the continue button is disabled": async (t: TestController) => {
-			await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
-		},
+	...preSteps,
+	"When she enters an invalid public key": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
+		await t.typeText(Selector("[data-testid=Input__validator_public_key]"), "invalid-pub-key");
 	},
-);
+	"Then an error is displayed on the name field": async (t: TestController) => {
+		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
+	},
+	"And the continue button is disabled": async (t: TestController) => {
+		await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
+	},
+});
