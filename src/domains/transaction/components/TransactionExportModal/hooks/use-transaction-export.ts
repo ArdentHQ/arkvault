@@ -102,7 +102,7 @@ export const useTransactionExport = ({
 				console.log(transactionCount);
 
 				if (transactionCount > 0) {
-					setError(t('TRANSACTION.EXPORT.PROGRESS.FETCHED_PARTIALLY'));
+					setError(t("TRANSACTION.EXPORT.PROGRESS.FETCHED_PARTIALLY"));
 					setFinalCount(exporter.transactions().count());
 
 					file.content = exporter.transactions().toCsv(settings);
