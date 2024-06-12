@@ -75,7 +75,19 @@ export const TransactionExportModal = ({ wallet, isOpen, onClose }: TransactionE
 					</TabPanel>
 
 					<TabPanel tabId={ExportProgressStatus.Error}>
-						<TransactionExportError error={error} file={file} onBack={resetStatus} onRetry={handleSubmit} />
+						<TransactionExportError
+							error={error}
+							count={finalCount}
+							onDownload={(filename: string) => {
+								toasts.success(
+									<Trans i18nKey="COMMON.SAVE_FILE.SUCCESS" values={{ filePath: filename }} />,
+								);
+								onClose();
+							}}
+							file={file}
+							onBack={resetStatus}
+							onRetry={handleSubmit}
+						/>
 					</TabPanel>
 				</Tabs>
 			</Form>
