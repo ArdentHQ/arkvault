@@ -5,7 +5,7 @@ import { rest } from "msw";
 import { useTransactionExport } from "./use-transaction-export";
 import { ExportProgressStatus } from "@/domains/transaction/components/TransactionExportModal";
 import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
+import { server } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import { DateTime } from "@ardenthq/sdk-intl";
 
