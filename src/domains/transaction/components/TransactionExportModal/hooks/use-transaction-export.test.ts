@@ -5,8 +5,9 @@ import { rest } from "msw";
 import { useTransactionExport } from "./use-transaction-export";
 import { ExportProgressStatus } from "@/domains/transaction/components/TransactionExportModal";
 import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
-import { server } from "@/tests/mocks/server";
+import { server, requestMock } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 describe("useTransactionExport hook", () => {
 	let profile: Contracts.IProfile;
@@ -34,14 +35,14 @@ describe("useTransactionExport hook", () => {
 			await result.current.startExport({
 				dateRange: "custom",
 				delimiter: "comma",
-				from: Date.now(),
+				from: DateTime.make().toDate(),
 				includeCryptoAmount: true,
 				includeDate: true,
 				includeFiatAmount: true,
 				includeHeaderRow: true,
 				includeSenderRecipient: true,
 				includeTransactionId: true,
-				to: Date.now(),
+				to: DateTime.make().addDay(1).toDate(),
 				transactionType: "all",
 			});
 		});
@@ -144,7 +145,7 @@ describe("useTransactionExport hook", () => {
 		transactionIndexMock.mockRestore();
 	});
 
-	it("should set idle status on resetStatus", async () => {
+	it("should set idle status on eesetStatus", async () => {
 		const { result } = renderExportHook();
 
 		act(() => {
