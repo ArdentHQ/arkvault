@@ -6,9 +6,7 @@ import { Button } from "@/app/components/Button";
 import { Image } from "@/app/components/Image";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { TransactionExportErrorProperties } from "@/domains/transaction/components/TransactionExportModal";
-import {
-	useFileDownload
-} from "@/domains/transaction/components/TransactionExportModal/TransactionExportSuccess/hooks/use-file-download";
+import { useFileDownload } from "@/domains/transaction/components/TransactionExportModal/TransactionExportSuccess/hooks/use-file-download";
 
 export const TransactionExportError = ({
 	error,
