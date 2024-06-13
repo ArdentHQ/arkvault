@@ -35,7 +35,7 @@ describe("TransactionExportError", () => {
 			name: "name"
 		};
 
-		const { asFragment } = render(<TransactionExportError
+		render(<TransactionExportError
 			count={1}
 			file={file}
 			onDownload={function_}
