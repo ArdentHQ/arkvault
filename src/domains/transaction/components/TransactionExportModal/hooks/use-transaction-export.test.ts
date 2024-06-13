@@ -1,9 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook, act } from "@testing-library/react-hooks";
+import { rest } from "msw";
 import { useTransactionExport } from "./use-transaction-export";
 import { ExportProgressStatus } from "@/domains/transaction/components/TransactionExportModal";
 import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
+import { server } from "@/tests/mocks/server";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 describe("useTransactionExport hook", () => {
 	let profile: Contracts.IProfile;
@@ -159,5 +162,50 @@ describe("useTransactionExport hook", () => {
 		});
 
 		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Idle));
+	});
+
+	it("should properly handle errors", async () => {
+		const { result } = renderExportHook();
+
+		const handler = rest.get(`https://ark-test.arkvault.io/api/transactions`, (request, response, context) => {
+			const searchParameters = request.url.searchParams;
+
+			// return OK response for the first request
+			if (searchParameters.get('timestamp.to') === '0') {
+				return response(context.status(200), context.json({
+					data: Array.from({ length: 100 }).fill(transactionsFixture.data[0]),
+					meta: {
+						...transactionsFixture.meta,
+					}
+				}));
+			}
+
+			return response(context.status(500), context.json([]));
+		})
+
+		server.use(handler);
+
+		await act(async () => {
+			await result.current.startExport({
+				dateRange: "custom",
+				delimiter: "comma",
+				from: Date.now(),
+				includeCryptoAmount: true,
+				includeDate: true,
+				includeFiatAmount: true,
+				includeHeaderRow: true,
+				includeSenderRecipient: true,
+				includeTransactionId: true,
+				to: Date.now(),
+				transactionType: "all",
+			});
+		});
+
+		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Error));
+		await waitFor(() => expect(result.current.file.content.length).toBeGreaterThan(1));
+		await waitFor(() => expect(result.current.count).toBe(100));
+
+
+		server.resetHandlers();
 	});
 });
