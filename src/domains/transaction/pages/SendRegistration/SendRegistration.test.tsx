@@ -942,6 +942,9 @@ describe("Registration", () => {
 				calculate: vi.fn().mockResolvedValue({ avg: 25, max: 25, min: 25, static: 25 }),
 			}));
 
+			// Emulate public key hasn't used
+			server.use(requestMock(`https://dwallets.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }));
+
 			const nanoXTransportMock = mockNanoXTransport();
 			await renderPage(profile, wallet, "delegateRegistration");
 
