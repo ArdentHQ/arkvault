@@ -145,7 +145,7 @@ describe("useTransactionExport hook", () => {
 		transactionIndexMock.mockRestore();
 	});
 
-	it("should set idle status on eesetStatus", async () => {
+	it("should set idle status on resetStatus", async () => {
 		const { result } = renderExportHook();
 
 		act(() => {
