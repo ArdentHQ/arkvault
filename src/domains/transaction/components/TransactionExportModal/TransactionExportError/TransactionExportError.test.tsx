@@ -32,15 +32,10 @@ describe("TransactionExportError", () => {
 		const file = {
 			content: "",
 			extension: "csv",
-			name: "name"
+			name: "name",
 		};
 
-		const { asFragment } = render(<TransactionExportError
-			count={1}
-			file={file}
-			onDownload={function_}
-			onBack={function_}
-		/>);
+		render(<TransactionExportError count={1} file={file} onDownload={function_} onBack={function_} />);
 
 		expect(downloadButton()).toBeInTheDocument();
 	});
