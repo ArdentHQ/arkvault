@@ -354,6 +354,10 @@ describe("SignMessage", () => {
 
 			userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "secret");
 
+			await waitFor(() => {
+				expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue("secret")
+			})
+
 			await waitFor(() => expect(signButton()).toBeEnabled());
 
 			userEvent.click(signButton());
