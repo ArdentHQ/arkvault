@@ -27,6 +27,11 @@ cucumber(
 
 			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
 			await t.typeText(Selector("[data-testid=Input__validator_public_key]"), publicKey);
+
+			await t
+				.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
+				.notOk({ timeout: 5000 });
+
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 
 			await t
@@ -64,6 +69,17 @@ cucumber(
 					broadcast: ["transaction-id"],
 					excess: [],
 					invalid: [],
+				},
+			},
+		),
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://dwallets.mainsailhq.com/api/wallets/?attributes.validatorPublicKey=84c48b1f7388d582a042718c35d9f57dcb9c4314be8b44807a14f329a3bb3853796882756d32e8e11e034f1e7e072cc2",
+			},
+			{
+				meta: {
+					count: 0,
 				},
 			},
 		),
