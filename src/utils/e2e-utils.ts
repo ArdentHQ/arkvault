@@ -50,7 +50,7 @@ const pingServerUrls = new Set([
 	"https://dwallets.mainsailhq.com",
 ]);
 
-const pingMusigServerUrls = new Set(["https://ark-live-musig.arkvault.io", "https://ark-test-musig.arkvault.io"]);
+const pingMusigServerUrls = new Set(["https://ark-live-musig.arkvault.io", "https://ark-test-musig.arkvault.io", "https://musig-demo.mainsailhq.com", "https://musig-demo.mainsailhq.com/"]);
 
 const knownWallets: any[] = [];
 
