@@ -42,6 +42,15 @@ const expectHeading = async (text: string) => {
 	});
 };
 
+// Mock implementation of TextEncoder to always return Uint8Array.
+// Used in /src/domains/message/pages/SignMessage/SignMessage.test.tsx on message signing.
+vi.stubGlobal('TextEncoder', class MockTextEncoder {
+  encode(text) {
+    return new Uint8Array(text.split('').map(character => character.charCodeAt(0)));
+  }
+});
+
+
 describe("SignMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
