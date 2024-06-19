@@ -16,7 +16,8 @@ let profile: Contracts.IProfile;
 let notificationTransaction: DTO.ExtendedConfirmedTransactionData;
 
 vi.mock("react-visibility-sensor", () => ({
-	DefaultComponent: ({ children, onChange }) => {
+	/* eslint-disable react-hooks/rules-of-hooks */
+	default: ({ children, onChange }) => {
 		useEffect(() => {
 			if (onChange) {
 				onChange(false);

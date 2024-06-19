@@ -13,7 +13,8 @@ let profile: Contracts.IProfile;
 let notification: any;
 
 vi.mock("react-visibility-sensor", () => ({
-	DefaultComponent: ({ children, onChange }) => {
+	/* eslint-disable react-hooks/rules-of-hooks */
+	default: ({ children, onChange }) => {
 		useEffect(() => {
 			if (onChange) {
 				onChange(false);

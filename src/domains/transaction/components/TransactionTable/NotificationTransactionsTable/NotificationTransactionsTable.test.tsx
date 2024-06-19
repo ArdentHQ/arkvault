@@ -15,7 +15,8 @@ import {
 } from "@/utils/testing-library";
 
 vi.mock("react-visibility-sensor", () => ({
-	DefaultComponent: ({ children, onChange }) => {
+	/* eslint-disable react-hooks/rules-of-hooks */
+	default: ({ children, onChange }) => {
 		useEffect(() => {
 			if (onChange) {
 				onChange(false);
