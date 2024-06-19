@@ -162,29 +162,7 @@ describe("LedgerTabs", () => {
 		);
 	};
 
-	it("should render scan step", async () => {
-		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
-			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
-
-		const ledgerTransportMock = mockNanoXTransport();
-		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-
-		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
-
-		userEvent.click(nextSelector());
-
-		expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
-
-		// Auto redirect to next step
-		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
-
-		getPublicKeySpy.mockRestore();
-		ledgerTransportMock.mockRestore();
-	});
-
-	// @TODO: restore test
-	it.skip("should load more address", async () => {
+	it("should load more address", async () => {
 		const scanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
 		const getPublicKeySpy = vi
@@ -216,15 +194,37 @@ describe("LedgerTabs", () => {
 
 		userEvent.click(loadMoreButton);
 
+
 		expect(scanSpy).toHaveBeenCalledWith({
 			onProgress: expect.any(Function),
-			startPath: "m/44'/1'/0'/0/0",
 		});
 
 		scanSpy.mockRestore();
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
+
+	it("should render scan step", async () => {
+		const getPublicKeySpy = vi
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
+
+		const ledgerTransportMock = mockNanoXTransport();
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
+
+		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
+
+		userEvent.click(nextSelector());
+
+		expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+
+		// Auto redirect to next step
+		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
+
+		getPublicKeySpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
+
 
 	it("should filter unallowed network", async () => {
 		const getPublicKeySpy = vi
@@ -342,7 +342,7 @@ describe("LedgerTabs", () => {
 
 		mockFindWallet.mockRestore()
 
-	 vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn())
+		 vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn())
 
 		userEvent.click(nextSelector());
 
@@ -364,8 +364,7 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
-	// @TODO: restore test
-	it.skip("should render finish step multiple", async () => {
+	it("should render finish step multiple", async () => {
 		mockFindWallet = vi.spyOn(profile.wallets(), 'findByAddressWithNetwork').mockImplementation(() => {
 			return undefined
 		})
@@ -483,24 +482,24 @@ describe("LedgerTabs", () => {
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
-	//
-	// it("redirects user to dashboard if device not available", async () => {
-	// 	const getPublicKeySpy = vi
-	// 		.spyOn(wallet.coin().ledger(), "getPublicKey")
-	// 		.mockResolvedValue(publicKeyPaths.values().next().value);
-	//
-	// 	const ledgerTransportMock = mockLedgerTransportError("Access denied to use Ledger device");
-	//
-	// 	const { history } = render(<Component activeIndex={1} />, {
-	// 		route: `/profiles/${profile.id()}`,
-	// 	});
-	//
-	// 	await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`));
-	//
-	// 	getPublicKeySpy.mockRestore();
-	// 	ledgerTransportMock.mockRestore();
-	// });
-	//
+
+	it("redirects user to dashboard if device not available", async () => {
+		const getPublicKeySpy = vi
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockResolvedValue(publicKeyPaths.values().next().value);
+
+		const ledgerTransportMock = mockLedgerTransportError("Access denied to use Ledger device");
+
+		const { history } = render(<Component activeIndex={1} />, {
+			route: `/profiles/${profile.id()}`,
+		});
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`));
+
+		getPublicKeySpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
+
 	describe("Enter key handling", () => {
 		it("should go to the next step", async () => {
 			const getPublicKeySpy = vi
