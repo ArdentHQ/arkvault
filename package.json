@@ -2,7 +2,7 @@
 	"name": "arkvault",
 	"version": "1.15.0",
 	"engines": {
-		"node": "20.x"
+		"node": ">=20.12.2"
 	},
 	"private": true,
 	"description": "ARKVault",
@@ -97,7 +97,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.22.1",
-		"@babel/plugin-transform-react-jsx": "^7.22.3",
+		"@babel/plugin-transform-react-jsx": "^7.24.6",
 		"@babel/preset-env": "^7.22.2",
 		"@babel/preset-react": "^7.22.3",
 		"@babel/preset-typescript": "^7.21.0",
@@ -119,8 +119,8 @@
 		"@types/testing-library__jest-dom": "^5.14.5",
 		"@typescript-eslint/eslint-plugin": "^5.55.0",
 		"@typescript-eslint/parser": "^5.55.0",
-		"@vitejs/plugin-react": "^4.0.0",
-		"@vitest/coverage-istanbul": "^0.24.0",
+		"@vitejs/plugin-react": "^4.3.0",
+		"@vitest/coverage-istanbul": "0.24.5",
 		"autoprefixer": "^10.4.14",
 		"babel-plugin-macros": "^3.1.0",
 		"cross-fetch": "^3.1.5",
@@ -151,18 +151,18 @@
 		"prop-types": "^15.8.1",
 		"react-router-config": "^5.1.1",
 		"rollup": "^3.19.1",
-		"rollup-plugin-visualizer": "^5.9.0",
+		"rollup-plugin-visualizer": "^5.12.0",
 		"tailwindcss": "3.3.2",
 		"twin.macro": "2.8.2",
 		"typescript": "^5.0.4",
-		"vite": "4.4.7",
+		"vite": "5.2.12",
 		"vite-plugin-babel-macros": "^1.0.6",
 		"vite-plugin-optimize-persist": "^0.1.2",
 		"vite-plugin-package-config": "^0.1.1",
-		"vite-plugin-pwa": "^0.15.1",
+		"vite-plugin-pwa": "^0.20.0",
 		"vite-plugin-svgr": "^3.2.0",
-		"vite-tsconfig-paths": "^4.0.7",
-		"vitest": "^0.24.0",
+		"vite-tsconfig-paths": "^4.3.2",
+		"vitest": "^0.29.8",
 		"workbox-window": "^6.6.0"
 	},
 	"babelMacros": {
