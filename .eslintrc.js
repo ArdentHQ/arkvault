@@ -96,7 +96,7 @@ module.exports = {
 		"import/no-useless-path-segments": "error",
 		"import/no-webpack-loader-syntax": "error",
 		"max-lines": ["warn", { max: 300, skipBlankLines: true, skipComments: true }],
-		"max-lines-per-function": ["warn", { max: 400, skipBlankLines: true, skipComments: true }],
+		"max-lines-per-function": ["warn", { max: 40, skipBlankLines: true, skipComments: true }],
 		"no-negated-condition": "error",
 		"no-nested-ternary": "error",
 		"no-unneeded-ternary": "error",
