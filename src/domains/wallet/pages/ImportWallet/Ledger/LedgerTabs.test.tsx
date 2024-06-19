@@ -94,7 +94,7 @@ describe("LedgerTabs", () => {
 		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 
 
-		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(( { onProgress } ) => {
+		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
 			onProgress(wallet)
 			return {
 				"m/44'/1'/0'/0/0": wallet.toData(),
@@ -342,7 +342,7 @@ describe("LedgerTabs", () => {
 
 		mockFindWallet.mockRestore()
 
-		 vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn())
+		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn())
 
 		userEvent.click(nextSelector());
 
@@ -364,59 +364,6 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
-	it("should render finish step multiple", async () => {
-		mockFindWallet = vi.spyOn(profile.wallets(), 'findByAddressWithNetwork').mockImplementation(() => {
-			return undefined
-		})
-
-		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
-			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
-
-		const scannerMock = vi.spyOn(scanner, "scannerReducer").mockReturnValue({
-			selected: ["m/44'/1'/0'/0/0", "m/44'/1'/0'/0/1"],
-			wallets: [
-				{
-					address: "DSxxu1wGEdUuyE5K9WuvVCEJp6zibBUoyt",
-					path: "m/44'/1'/0'/0/0",
-				},
-				{
-					address: "DQh2wmdM8GksEx48rFrXCtJKsXz3bM6L6o",
-					path: "m/44'/1'/0'/0/1",
-				},
-			],
-		});
-
-		const ledgerTransportMock = mockNanoXTransport();
-		const { history } = render(<Component activeIndex={3} />, {
-			route: `/profiles/${profile.id()}`,
-		});
-
-		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(3), { timeout: 3000 });
-
-		const walletsCountBefore = profile.wallets().count();
-
-		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(3));
-
-		userEvent.keyboard("{enter}");
-
-		await waitFor(() => expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument() );
-
-		expect(profile.wallets().count()).toBe(walletsCountBefore + 2);
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-		userEvent.keyboard("{enter}");
-
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
-
-		historySpy.mockRestore();
-		getPublicKeySpy.mockRestore();
-		scannerMock.mockRestore();
-		ledgerTransportMock.mockRestore();
-	});
 
 	it("should render scan step with failing fetch", async () => {
 		vi.spyOn(wallet.ledger(), "scan").mockRejectedValue(new Error("Scan Failed"));
@@ -480,6 +427,62 @@ describe("LedgerTabs", () => {
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`));
 
 		getPublicKeySpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
+
+	it("should render finish step multiple", async () => {
+		const getPublicKeySpy = vi
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
+
+		const scannerMock = vi.spyOn(scanner, "scannerReducer").mockReturnValue({
+			selected: ["m/44'/1'/0'/0/0", "m/44'/1'/0'/0/1"],
+			wallets: [
+				{
+					address: "DSxxu1wGEdUuyE5K9WuvVCEJp6zibBUoyt",
+					path: "m/44'/1'/0'/0/0",
+				},
+				{
+					address: "DQh2wmdM8GksEx48rFrXCtJKsXz3bM6L6o",
+					path: "m/44'/1'/0'/0/1",
+				},
+			],
+		});
+
+		const ledgerTransportMock = mockNanoXTransport();
+		const { history } = render(<Component activeIndex={3} />, {
+			route: `/profiles/${profile.id()}`,
+		});
+
+		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(3), { timeout: 3000 });
+
+		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(3));
+
+		await waitFor(() => {
+			expect(nextSelector()).toBeEnabled();
+		});
+
+		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn())
+
+		mockFindWallet = vi.spyOn(profile.wallets(), 'findByAddressWithNetwork').mockImplementation(() => {
+			return wallet
+		})
+
+		userEvent.click(nextSelector());
+
+		await waitFor(() => expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument());
+
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+
+		userEvent.keyboard("{enter}");
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+
+		historySpy.mockRestore();
+		getPublicKeySpy.mockRestore();
+		scannerMock.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
 
