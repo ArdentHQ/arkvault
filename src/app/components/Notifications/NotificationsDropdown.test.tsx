@@ -16,7 +16,7 @@ const history = createHashHistory();
 let profile: Contracts.IProfile;
 
 vi.mock("react-visibility-sensor", () => ({
-	default: ({ children, onChange }) => {
+	DefaultComponent: ({ children, onChange }) => {
 		useEffect(() => {
 			if (onChange) {
 				onChange(false);

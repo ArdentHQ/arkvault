@@ -174,7 +174,6 @@ vi.stubGlobal("crypto", {
 	getRandomValues: crypto.randomFillSync,
 });
 
-
 // Zendesk
 vi.mock("react-zendesk", () => ({
 	__esModule: true,

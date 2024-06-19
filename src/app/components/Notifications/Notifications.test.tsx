@@ -13,7 +13,7 @@ import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.
 let profile: Contracts.IProfile;
 
 vi.mock("react-visibility-sensor", () => ({
-	default: ({ children, onChange }) => {
+	DefaultComponent: ({ children, onChange }) => {
 		useEffect(() => {
 			if (onChange) {
 				onChange(false);

@@ -14,7 +14,6 @@ import {
 	render,
 	screen,
 	waitFor,
-	within,
 	mockNanoXTransport,
 	mockLedgerTransportError,
 	mockProfileWithPublicAndTestNetworks,
@@ -57,7 +56,6 @@ describe("LedgerTabs", () => {
 			path: "m/44'/1'/0'/0/0",
 		});
 
-
 		ledgerWallet.mutator().alias(
 			getDefaultAlias({
 				network: wallet.network(),
@@ -65,9 +63,11 @@ describe("LedgerTabs", () => {
 			}),
 		);
 
-		vi.spyOn(ledgerWallet, 'publicKey').mockReturnValue("025d7298a7a472b1435e40df13491e98609b9b555bf3ef452b2afea27061d11235")
+		vi.spyOn(ledgerWallet, "publicKey").mockReturnValue(
+			"025d7298a7a472b1435e40df13491e98609b9b555bf3ef452b2afea27061d11235",
+		);
 
-		await ledgerWallet.synchroniser().identity()
+		await ledgerWallet.synchroniser().identity();
 
 		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
@@ -93,13 +93,12 @@ describe("LedgerTabs", () => {
 		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 
-
 		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
-			onProgress(wallet)
+			onProgress(wallet);
 			return {
 				"m/44'/1'/0'/0/0": wallet.toData(),
-			}
-		})
+			};
+		});
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -194,7 +193,6 @@ describe("LedgerTabs", () => {
 
 		userEvent.click(loadMoreButton);
 
-
 		expect(scanSpy).toHaveBeenCalledWith({
 			onProgress: expect.any(Function),
 		});
@@ -224,7 +222,6 @@ describe("LedgerTabs", () => {
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
-
 
 	it("should filter unallowed network", async () => {
 		const getPublicKeySpy = vi
@@ -313,9 +310,7 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render finish step", async () => {
-		mockFindWallet = vi.spyOn(profile.wallets(), 'findByAddressWithNetwork').mockImplementation(() => {
-			return undefined
-		})
+		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
 
 		const ledgerTransportMock = mockNanoXTransport();
 
@@ -335,14 +330,16 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
 
+		await waitFor(
+			() => {
+				expect(nextSelector()).toBeEnabled();
+			},
+			{ timeout: 4000 },
+		);
 
-		await waitFor(() => {
-			expect(nextSelector()).toBeEnabled();
-		}, { timeout: 4000 });
+		mockFindWallet.mockRestore();
 
-		mockFindWallet.mockRestore()
-
-		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn())
+		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn());
 
 		userEvent.click(nextSelector());
 
@@ -363,7 +360,6 @@ describe("LedgerTabs", () => {
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
-
 
 	it("should render scan step with failing fetch", async () => {
 		vi.spyOn(wallet.ledger(), "scan").mockRejectedValue(new Error("Scan Failed"));
@@ -464,15 +460,13 @@ describe("LedgerTabs", () => {
 			expect(nextSelector()).toBeEnabled();
 		});
 
-		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn())
+		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn());
 
-		mockFindWallet = vi.spyOn(profile.wallets(), 'findByAddressWithNetwork').mockImplementation(() => {
-			return wallet
-		})
+		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => wallet);
 
 		userEvent.click(nextSelector());
 
-		await waitFor(() => expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument());
+		await expect(screen.findByTestId("LedgerImportStep")).resolves.toBeVisible();
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 

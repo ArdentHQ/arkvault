@@ -44,11 +44,14 @@ const jsonInput = () => screen.getByTestId("VerifyMessage__json-jsonString");
 const verifyButton = () => screen.getByTestId("VerifyMessage__verify-button");
 
 // Mock implementation of TextEncoder to always return Uint8Array.
-vi.stubGlobal('TextEncoder', class MockTextEncoder {
-  encode(text) {
-    return new Uint8Array(text.split('').map(character => character.charCodeAt(0)));
-  }
-});
+vi.stubGlobal(
+	"TextEncoder",
+	class MockTextEncoder {
+		encode(text) {
+			return new Uint8Array([...text].map((character) => character.codePointAt(0)));
+		}
+	},
+);
 
 describe("VerifyMessage", () => {
 	beforeAll(async () => {

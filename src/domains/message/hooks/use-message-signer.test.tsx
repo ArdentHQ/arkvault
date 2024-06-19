@@ -11,11 +11,14 @@ import {
 } from "@/utils/testing-library";
 
 // Mock implementation of TextEncoder to always return Uint8Array.
-vi.stubGlobal('TextEncoder', class MockTextEncoder {
-  encode(text) {
-    return new Uint8Array(text.split('').map(character => character.charCodeAt(0)));
-  }
-});
+vi.stubGlobal(
+	"TextEncoder",
+	class MockTextEncoder {
+		encode(text: string) {
+			return new Uint8Array([...text].map((character) => character.codePointAt(0)));
+		}
+	},
+);
 
 describe("Use Message Signer Hook", () => {
 	let profile: Contracts.IProfile;

@@ -16,21 +16,19 @@ export const NotificationItem = ({
 	const { mapActionName } = useActionNameMap();
 	const action = mapActionName(actionName as string);
 
-	const renderVisibilitySensor = () => {
-		return (
-			<VisibilitySensor
-				onChange={(isVisible) => onVisibilityChange?.(isVisible)}
-				scrollCheck
-				delayedCall
-				containment={containmentRef?.current}
-			>
-				<div>
-					<span className="text-md font-bold text-theme-secondary-600">{name}</span>
-					<span className="text-md text-theme-secondary-600"> {body}</span>
-				</div>
-			</VisibilitySensor>
-		);
-	};
+	const renderVisibilitySensor = () => (
+		<VisibilitySensor
+			onChange={(isVisible) => onVisibilityChange?.(isVisible)}
+			scrollCheck
+			delayedCall
+			containment={containmentRef?.current}
+		>
+			<div>
+				<span className="text-md font-bold text-theme-secondary-600">{name}</span>
+				<span className="text-md text-theme-secondary-600"> {body}</span>
+			</div>
+		</VisibilitySensor>
+	);
 
 	return (
 		<tr data-testid="NotificationItem">

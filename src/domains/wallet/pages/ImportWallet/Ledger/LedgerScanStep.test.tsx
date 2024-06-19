@@ -69,17 +69,14 @@ describe("LedgerScanStep", () => {
 
 		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 
-		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(( { onProgress } ) => {
-			onProgress(wallet)
+		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
+			onProgress(wallet);
 			return {
-				"m/44'/1'/0'/0/0": wallet.toData()
-			}
-		})
+				"m/44'/1'/0'/0/0": wallet.toData(),
+			};
+		});
 
-		vi.spyOn(profile.wallets(), 'findByAddressWithNetwork').mockImplementation(() => {
-			return undefined
-		})
-
+		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
 	});
 
 	const Component = ({ isCancelling = false }: { isCancelling?: boolean }) => {
@@ -144,7 +141,6 @@ describe("LedgerScanStep", () => {
 		userEvent.click(screen.getAllByRole("checkbox")[1]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
-
 	});
 
 	it.each(["xs", "lg"])("should render responsive (%s)", async (breakpoint) => {

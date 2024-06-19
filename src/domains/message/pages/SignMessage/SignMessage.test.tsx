@@ -43,12 +43,14 @@ const expectHeading = async (text: string) => {
 };
 
 // Mock implementation of TextEncoder to always return Uint8Array.
-vi.stubGlobal('TextEncoder', class MockTextEncoder {
-  encode(text) {
-    return new Uint8Array(text.split('').map(character => character.charCodeAt(0)));
-  }
-});
-
+vi.stubGlobal(
+	"TextEncoder",
+	class MockTextEncoder {
+		encode(text) {
+			return new Uint8Array([...text].map((character) => character.codePointAt(0)));
+		}
+	},
+);
 
 describe("SignMessage", () => {
 	beforeAll(async () => {
@@ -363,8 +365,8 @@ describe("SignMessage", () => {
 			userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "secret");
 
 			await waitFor(() => {
-				expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue("secret")
-			})
+				expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue("secret");
+			});
 
 			await waitFor(() => expect(signButton()).toBeEnabled());
 

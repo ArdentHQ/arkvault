@@ -15,7 +15,7 @@ import {
 } from "@/utils/testing-library";
 
 vi.mock("react-visibility-sensor", () => ({
-	default: ({ children, onChange }) => {
+	DefaultComponent: ({ children, onChange }) => {
 		useEffect(() => {
 			if (onChange) {
 				onChange(false);

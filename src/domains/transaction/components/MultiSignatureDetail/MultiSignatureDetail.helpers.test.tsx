@@ -5,7 +5,6 @@ import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator } from "./Mu
 import {
 	env,
 	getDefaultProfileId,
-	getDefaultWalletMnemonic,
 	render,
 	screen,
 	syncDelegates,

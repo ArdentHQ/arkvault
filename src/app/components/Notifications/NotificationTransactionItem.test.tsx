@@ -16,7 +16,7 @@ let profile: Contracts.IProfile;
 let notificationTransaction: DTO.ExtendedConfirmedTransactionData;
 
 vi.mock("react-visibility-sensor", () => ({
-	default: ({ children, onChange }) => {
+	DefaultComponent: ({ children, onChange }) => {
 		useEffect(() => {
 			if (onChange) {
 				onChange(false);
