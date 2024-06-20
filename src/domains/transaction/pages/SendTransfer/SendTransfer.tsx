@@ -298,7 +298,7 @@ export const SendTransfer = () => {
 			}
 
 			if (formHasValues) {
-				newValues = { ...newValues, [formKey]:  value};
+				newValues = { ...newValues, [formKey]: value };
 			} else {
 				form.setValue(formKey, value, { shouldDirty: true, shouldValidate: true });
 			}

@@ -27,7 +27,7 @@ const OverwriteDetail = ({ currentValue, newValue }: { currentValue: string | nu
 	return (
 		<div className="flex rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 			<div className="flex-1 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
-				<div className="border-b border-theme-secondary-300 px-3 py-2.5 dark:border-theme-secondary-800">
+				<div className="border-b border-theme-secondary-300 px-3 py-2.5 dark:border-theme-secondary-800" data-testid="OverwriteDetail__Current">
 					<DetailLabel label="Current value" />
 					{currentValue ? (
 						<div className="font-medium text-theme-secondary-900">{currentValue}</div>
@@ -35,7 +35,7 @@ const OverwriteDetail = ({ currentValue, newValue }: { currentValue: string | nu
 						<div className="font-medium text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</div>
 					)}
 				</div>
-				<div className="px-3 py-2.5">
+				<div className="px-3 py-2.5" data-testid="OverwriteDetail__New">
 					<DetailLabel label="New value" />
 					{newValue ? (
 						<div className="font-medium text-theme-secondary-900">{newValue}</div>
@@ -74,7 +74,7 @@ export const TransferOverwriteModal = ({
 
 			<div className="space-y-6 pt-6">
 				{(currentData.recipientAddress || newData.recipientAddress) && (
-					<div>
+					<div data-testid="OverwriteModal__Recipient">
 						<DetailLabel label={t("COMMON.RECIPIENT")} />
 						<OverwriteDetail
 							currentValue={currentData.recipientAddress}
@@ -84,14 +84,14 @@ export const TransferOverwriteModal = ({
 				)}
 
 				{(currentData.amount || newData.amount) && (
-					<div>
+					<div data-testid="OverwriteModal__Amount">
 						<DetailLabel label={t("COMMON.AMOUNT")} />
 						<OverwriteDetail currentValue={currentData.amount} newValue={newData.amount} />
 					</div>
 				)}
 
 				{(currentData.memo || newData.memo) && (
-					<div>
+					<div data-testid="OverwriteModal__Memo">
 						<DetailLabel label={t("COMMON.MEMO")} />
 						<OverwriteDetail currentValue={currentData.memo} newValue={newData.memo} />
 					</div>
@@ -100,7 +100,7 @@ export const TransferOverwriteModal = ({
 
 			<label className="mt-4 inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text">
 				<Checkbox
-					data-testid="FilterNetwork__select-all-checkbox"
+					data-testid="OverwriteModal__clear_prefilled"
 					checked={clearPrefilled}
 					onChange={() => setClearPrefilled(!clearPrefilled)}
 				/>
@@ -108,12 +108,12 @@ export const TransferOverwriteModal = ({
 			</label>
 
 			<FormButtons>
-				<Button variant="secondary" onClick={onCancel} data-testid="FeeWarning__cancel-button">
+				<Button variant="secondary" onClick={onCancel} data-testid="OverwriteModal__cancel-button">
 					{t("COMMON.CANCEL")}
 				</Button>
 
-				<Button data-testid="FeeWarning__continue-button" onClick={() => onConfirm(clearPrefilled)}>
-					{t("COMMON.CONTINUE")}
+				<Button data-testid="OverwriteModal__confirm-button" onClick={() => onConfirm(clearPrefilled)}>
+					{t("COMMON.CONFIRM")}
 				</Button>
 			</FormButtons>
 		</Modal>
