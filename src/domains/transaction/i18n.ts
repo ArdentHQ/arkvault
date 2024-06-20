@@ -384,7 +384,7 @@ export const translations = {
 		UNLOCK_TOKEN: "Unlock Balance",
 		UNVOTE: "Unvote",
 		VOTE: "Vote",
-		VOTE_COMBINATION: "Switch Vote",
+		VOTE_COMBINATION: "Vote Swap",
 	},
 
 	TYPE: "Type",
