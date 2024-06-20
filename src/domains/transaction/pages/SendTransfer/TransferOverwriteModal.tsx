@@ -27,7 +27,10 @@ const OverwriteDetail = ({ currentValue, newValue }: { currentValue: string | nu
 	return (
 		<div className="flex rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 			<div className="flex-1 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
-				<div className="border-b border-theme-secondary-300 px-3 py-2.5 dark:border-theme-secondary-800" data-testid="OverwriteDetail__Current">
+				<div
+					className="border-b border-theme-secondary-300 px-3 py-2.5 dark:border-theme-secondary-800"
+					data-testid="OverwriteDetail__Current"
+				>
 					<DetailLabel label="Current value" />
 					{currentValue ? (
 						<div className="font-medium text-theme-secondary-900">{currentValue}</div>

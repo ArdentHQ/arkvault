@@ -1,6 +1,6 @@
 import React from "react";
-import {screen, within} from "@testing-library/react";
-import {expect} from "vitest";
+import { screen, within } from "@testing-library/react";
+import { expect } from "vitest";
 import userEvent from "@testing-library/user-event";
 import { TransferOverwriteModal } from "./TransferOverwriteModal";
 import { render } from "@/utils/testing-library";
@@ -18,10 +18,9 @@ const renderComponent = (properties = {}) => {
 			{...properties}
 		/>,
 	);
-}
+};
 
 describe("TransferOverwriteModal", () => {
-
 	it("should render the component", () => {
 		renderComponent();
 
@@ -44,7 +43,7 @@ describe("TransferOverwriteModal", () => {
 	it("should show the current and new values", () => {
 		renderComponent({
 			currentData: { amount: "7", recipientAddress: "address 1" },
-			newData: { amount: "6", recipientAddress: "address 2" }
+			newData: { amount: "6", recipientAddress: "address 2" },
 		});
 
 		const recipientContainer = screen.getByTestId("OverwriteModal__Recipient");
@@ -55,7 +54,7 @@ describe("TransferOverwriteModal", () => {
 	it("should show N/A if the current or new value is not present", () => {
 		renderComponent({
 			currentData: { amount: "7", recipientAddress: null },
-			newData: { amount: null, recipientAddress: "address 2" }
+			newData: { amount: null, recipientAddress: "address 2" },
 		});
 
 		const recipientContainer = screen.getByTestId("OverwriteModal__Recipient");
@@ -70,25 +69,25 @@ describe("TransferOverwriteModal", () => {
 	it("should init the `onCancel` callback when the `Cancel` button is clicked", () => {
 		const cancelMock = vi.fn();
 
-		renderComponent({onCancel: cancelMock})
+		renderComponent({ onCancel: cancelMock });
 
 		userEvent.click(screen.getByTestId("OverwriteModal__cancel-button"));
 		expect(cancelMock).toHaveBeenCalledOnce();
 	});
 
 	it("should init the `onConfirm` callback when the `Confirm` button is clicked", () => {
-		const confirmMock= vi.fn();
+		const confirmMock = vi.fn();
 
-		renderComponent({onConfirm: confirmMock})
+		renderComponent({ onConfirm: confirmMock });
 
 		userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
 		expect(confirmMock).toHaveBeenCalledOnce();
 	});
 
 	it("should init the `onConfirm` callback with clear prefilled value", () => {
-		const confirmMock= vi.fn();
+		const confirmMock = vi.fn();
 
-		renderComponent({onConfirm: confirmMock})
+		renderComponent({ onConfirm: confirmMock });
 
 		// click on the clear prefilled checkbox
 		userEvent.click(screen.getByTestId("OverwriteModal__clear_prefilled"));
