@@ -54,8 +54,6 @@ const pingServerUrls = new Set([
 ]);
 
 const pingMusigServerUrls = new Set([
-	"https://ark-live-musig.arkvault.io/",
-	"https://ark-test-musig.arkvault.io/",
 	"https://ark-live-musig.arkvault.io",
 	"https://ark-test-musig.arkvault.io",
 ]);
