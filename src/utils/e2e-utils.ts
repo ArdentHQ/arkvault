@@ -213,7 +213,6 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 						return require(`../tests/fixtures/${PING_RESPONSE_PATH}.json`);
 					}
 
-
 					if (pingMusigServerUrls.has(request.url) && request.method === "GET") {
 						return require(`../tests/fixtures/${PING_MUSIG_RESPONSE_PATH}.json`);
 					}
