@@ -291,10 +291,16 @@ export const SendTransfer = () => {
 			memo: "memo",
 			recipient: "recipientAddress",
 		})) {
+			const value = qrData.get(qrKey);
+
+			if (!value) {
+				continue;
+			}
+
 			if (formHasValues) {
-				newValues = { ...newValues, [formKey]: qrData.get(qrKey) };
+				newValues = { ...newValues, [formKey]:  value};
 			} else {
-				form.setValue(formKey, qrData.get(qrKey), { shouldDirty: true, shouldValidate: true });
+				form.setValue(formKey, value, { shouldDirty: true, shouldValidate: true });
 			}
 		}
 
@@ -406,9 +412,7 @@ export const SendTransfer = () => {
 							}
 
 							for (const [key, value] of Object.entries(overwriteData)) {
-								if (value) {
-									form.setValue(key, value, { shouldDirty: true, shouldValidate: true });
-								}
+								form.setValue(key, value, { shouldDirty: true, shouldValidate: true });
 							}
 
 							setShowOverwriteModal(false);
