@@ -38,6 +38,13 @@ const qrCodeUrl =
 const history = createHashHistory();
 let qrScannerMock;
 
+const expectSuccessToast = async (toastSpy) => {
+	const { result } = renderHook(() => useTranslation());
+	const { t } = result.current;
+
+	await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+}
+
 describe("SendTransfer QRModal", () => {
 	beforeAll(() => {
 		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
@@ -83,8 +90,6 @@ describe("SendTransfer QRModal", () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = vi.spyOn(toasts, "success");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
 		history.push(transferURL);
@@ -105,7 +110,8 @@ describe("SendTransfer QRModal", () => {
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+		await expectSuccessToast(toastSpy);
+
 		mockProfileWithOnlyPublicNetworksReset();
 	});
 
@@ -117,8 +123,6 @@ describe("SendTransfer QRModal", () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = vi.spyOn(toasts, "success");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
 		history.push(transferURL);
@@ -141,7 +145,7 @@ describe("SendTransfer QRModal", () => {
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+		await expectSuccessToast(toastSpy);
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
 
@@ -245,8 +249,6 @@ describe("SendTransfer QRModal", () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = vi.spyOn(toasts, "success");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 		history.push(transferURL);
@@ -299,7 +301,7 @@ describe("SendTransfer QRModal", () => {
 		// confirm the Overwrite modal
 		userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+		await expectSuccessToast(toastSpy);
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("10");
 		expect(recipientInput).toHaveValue("DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o");
@@ -316,8 +318,6 @@ describe("SendTransfer QRModal", () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = vi.spyOn(toasts, "success");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 		history.push(transferURL);
@@ -364,7 +364,7 @@ describe("SendTransfer QRModal", () => {
 		// confirm the Overwrite modal
 		userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+		await expectSuccessToast(toastSpy);
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("10");
 
@@ -383,8 +383,6 @@ describe("SendTransfer QRModal", () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = vi.spyOn(toasts, "success");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 		history.push(transferURL);
@@ -417,7 +415,7 @@ describe("SendTransfer QRModal", () => {
 		// ensure overwrite modal is not visible
 		expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument();
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+		await expectSuccessToast(toastSpy);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("10");
