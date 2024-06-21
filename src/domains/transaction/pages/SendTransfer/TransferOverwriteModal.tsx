@@ -33,7 +33,7 @@ const OverwriteDetail = ({ currentValue, newValue }: { currentValue: string | nu
 				>
 					<DetailLabel label="Current value" />
 					{currentValue ? (
-						<div className="font-medium text-theme-secondary-900">{currentValue}</div>
+						<div className="font-medium text-theme-secondary-900 dark:text-theme-secondary-200">{currentValue}</div>
 					) : (
 						<div className="font-medium text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</div>
 					)}
@@ -41,7 +41,7 @@ const OverwriteDetail = ({ currentValue, newValue }: { currentValue: string | nu
 				<div className="px-3 py-2.5" data-testid="OverwriteDetail__New">
 					<DetailLabel label="New value" />
 					{newValue ? (
-						<div className="font-medium text-theme-secondary-900">{newValue}</div>
+						<div className="font-medium text-theme-secondary-900 dark:text-theme-secondary-200">{newValue}</div>
 					) : (
 						<div className="font-medium text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</div>
 					)}
