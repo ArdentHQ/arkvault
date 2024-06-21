@@ -69,6 +69,7 @@ export const TransferOverwriteModal = ({
 			size="2xl"
 			noButtons
 			onClose={onCancel}
+			data-testid="TransferOverwriteModal"
 		>
 			<Alert>{t("TRANSACTION.MODAL_OVERWRITE_VALUES.WARNING")}</Alert>
 

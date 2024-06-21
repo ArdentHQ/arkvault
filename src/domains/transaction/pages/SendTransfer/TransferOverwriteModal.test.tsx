@@ -28,7 +28,7 @@ describe("TransferOverwriteModal", () => {
 		expect(screen.getByText("Overwrite Data")).toBeInTheDocument();
 	});
 
-	it("should show changed blocks", () => {
+	it("should show the changed blocks", () => {
 		renderComponent();
 
 		expect(screen.getByText("Amount")).toBeInTheDocument();
