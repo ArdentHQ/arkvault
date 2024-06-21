@@ -7,6 +7,7 @@ import { createHashHistory } from "history";
 import { renderHook } from "@testing-library/react-hooks";
 import { Trans, useTranslation } from "react-i18next";
 
+import { within } from "@testing-library/react";
 import { SendTransfer } from "./SendTransfer";
 import {
 	env,
@@ -23,7 +24,6 @@ import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import { within } from "@testing-library/react";
 
 vi.mock("react-qr-reader", () => ({
 	QrReader: vi.fn().mockImplementation(() => null),
@@ -43,7 +43,7 @@ const expectSuccessToast = async (toastSpy) => {
 	const { t } = result.current;
 
 	await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
-}
+};
 
 describe("SendTransfer QRModal", () => {
 	beforeAll(() => {
@@ -263,13 +263,13 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		qrScannerMock = vi
-			.spyOn(QRScanner, "scanImage")
-			.mockResolvedValue({
-				data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o"
-			});
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+		});
 
-		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId("SelectDropdown__input");
+		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId(
+			"SelectDropdown__input",
+		);
 
 		// input address value
 		userEvent.paste(recipientInput, "address 1");
@@ -290,7 +290,9 @@ describe("SendTransfer QRModal", () => {
 
 		expect(recipientContainer).toBeInTheDocument();
 		expect(within(recipientContainer).getByTestId("OverwriteDetail__Current")).toHaveTextContent("address 1");
-		expect(within(recipientContainer).getByTestId("OverwriteDetail__New")).toHaveTextContent("DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o");
+		expect(within(recipientContainer).getByTestId("OverwriteDetail__New")).toHaveTextContent(
+			"DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+		);
 
 		const amountContainer = screen.getByTestId("OverwriteModal__Amount");
 
@@ -309,7 +311,7 @@ describe("SendTransfer QRModal", () => {
 		// ensure overwrite modal is no longer visible
 		await waitFor(() => {
 			expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument();
-		})
+		});
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});
@@ -332,13 +334,13 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		qrScannerMock = vi
-			.spyOn(QRScanner, "scanImage")
-			.mockResolvedValue({
-				data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet"
-			});
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet",
+		});
 
-		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId("SelectDropdown__input");
+		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId(
+			"SelectDropdown__input",
+		);
 
 		// input address value
 		userEvent.paste(recipientInput, "address 1");
@@ -374,7 +376,7 @@ describe("SendTransfer QRModal", () => {
 		// ensure overwrite modal is no longer visible
 		await waitFor(() => {
 			expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument();
-		})
+		});
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});
@@ -397,11 +399,9 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		qrScannerMock = vi
-			.spyOn(QRScanner, "scanImage")
-			.mockResolvedValue({
-				data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet"
-			});
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet",
+		});
 
 		// open up a QR scan modal
 		userEvent.click(screen.getByTestId(QRCodeModalButton));
@@ -419,7 +419,7 @@ describe("SendTransfer QRModal", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("10");
-		})
+		});
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});
