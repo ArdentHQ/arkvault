@@ -96,7 +96,6 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 
 	if (wallet.balance() > 0 && !wallet.isLedger() && isRestoredAndSynced(wallet)) {
 		if (
-			!isMultiSignature(wallet) &&
 			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateRegistration) &&
 			!wallet.isDelegate() &&
 			!wallet.isResignedDelegate()
@@ -112,7 +111,6 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 		}
 
 		if (
-			!isMultiSignature(wallet) &&
 			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateResignation) &&
 			wallet.isDelegate() &&
 			!wallet.isResignedDelegate()
