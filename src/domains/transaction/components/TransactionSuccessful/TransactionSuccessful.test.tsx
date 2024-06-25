@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 
 import { TransactionSuccessful } from "./TransactionSuccessful";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, act, waitFor } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
@@ -25,7 +25,13 @@ describe("TransactionSuccessful", () => {
 				transactionsFixture,
 			),
 		);
+
+		vi.useFakeTimers()
 	});
+
+	afterEach(() => {
+		vi.useRealTimers()
+	})
 
 	const transactionMockImplementation = (attribute, transaction) => {
 		if (attribute === "multiSignature") {
@@ -79,6 +85,7 @@ describe("TransactionSuccessful", () => {
 
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
 		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
 		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(transaction);
 
 		vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue({});
@@ -92,6 +99,10 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
+		act(() => {
+			vi.advanceTimersByTime(2000);
+		})
+
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
@@ -99,7 +110,7 @@ describe("TransactionSuccessful", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should not check transaction confirrmation for musig wallets or transactions", () => {
+	it("should render success for multisignature registration", async () => {
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,
@@ -110,8 +121,11 @@ describe("TransactionSuccessful", () => {
 		);
 
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(true);
+		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-		const mockTransactionQuery = vi.spyOn(wallet.coin().client(), "transaction").mockReturnValue([]);
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(transaction);
+
+		vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue({});
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -122,7 +136,12 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		expect(mockTransactionQuery).not.toHaveBeenCalled();
+		act(() => {
+			vi.advanceTimersByTime(2000);
+		})
+
+		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
+		await expect(screen.findByTestId("MultisignatureSuccessful")).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
 	});
@@ -192,6 +211,7 @@ describe("TransactionSuccessful", () => {
 	});
 
 	it("should render successfull screen if it's a multisignature registration", () => {
+		vi.useFakeTimers();
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,
