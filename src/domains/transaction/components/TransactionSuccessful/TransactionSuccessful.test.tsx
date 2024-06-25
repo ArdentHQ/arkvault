@@ -111,7 +111,7 @@ describe("TransactionSuccessful", () => {
 
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(true);
 		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-		const mockTransactionQuery = vi.spyOn(wallet.coin().client(), "transaction").mockReturnValue([])
+		const mockTransactionQuery = vi.spyOn(wallet.coin().client(), "transaction").mockReturnValue([]);
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -139,7 +139,7 @@ describe("TransactionSuccessful", () => {
 
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
 		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-		const mockTransactionQuery = vi.spyOn(wallet.coin().client(), "transaction").mockReturnValue([])
+		const mockTransactionQuery = vi.spyOn(wallet.coin().client(), "transaction").mockReturnValue([]);
 
 		const { unmount } = render(
 			<Route path="/profiles/:profileId">
@@ -150,7 +150,7 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		unmount()
+		unmount();
 		expect(mockTransactionQuery).not.toHaveBeenCalled();
 
 		vi.restoreAllMocks();
