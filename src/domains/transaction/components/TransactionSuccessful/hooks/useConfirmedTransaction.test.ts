@@ -18,14 +18,12 @@ describe("useConfirmedTransaction", () => {
 	});
 
 	it("should initially set isConfirmed to false", () => {
-
 		const { result } = renderHook(() =>
 			useConfirmedTransaction({
 				transactionId: "123",
 				wallet: wallet,
 			}),
 		);
-
 
 		expect(result.current).toBe(false);
 	});
