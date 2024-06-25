@@ -479,6 +479,7 @@ describe("Registration", () => {
 		});
 
 		it("should prevent going to the next step with enter on the success step", async () => {
+			const mockTransactionFind = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(TransactionFixture)
 			const nanoXTransportMock = mockNanoXTransport();
 			await renderPage(profile, wallet);
 
@@ -547,6 +548,7 @@ describe("Registration", () => {
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 			nanoXTransportMock.mockRestore();
+			mockTransactionFind.mockRestore()
 		});
 
 		it("should go back to wallet details", async () => {
