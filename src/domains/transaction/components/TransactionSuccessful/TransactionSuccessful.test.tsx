@@ -79,6 +79,7 @@ describe("TransactionSuccessful", () => {
 
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
 		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(transaction);
 
 		vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue({});
 
@@ -98,6 +99,34 @@ describe("TransactionSuccessful", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should not check transaction confirrmation for musig wallets or transactions", async () => {
+		const transaction = {
+			...TransactionFixture,
+			wallet: () => wallet,
+		};
+
+		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
+			transactionMockImplementation(attribute, transaction),
+		);
+
+		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(true);
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+		const mockTransactionQuery = vi.spyOn(wallet.coin().client(), "transaction").mockReturnValue([])
+
+		render(
+			<Route path="/profiles/:profileId">
+				<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		expect(mockTransactionQuery).not.toHaveBeenCalled();
+
+		vi.restoreAllMocks();
+	});
+
 	it("should render as pending", () => {
 		const transaction = {
 			...TransactionFixture,
@@ -109,9 +138,10 @@ describe("TransactionSuccessful", () => {
 		);
 
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
-		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+		const mockTransactionQuery = vi.spyOn(wallet.coin().client(), "transaction").mockReturnValue([])
 
-		render(
+		const { unmount } = render(
 			<Route path="/profiles/:profileId">
 				<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
 			</Route>,
@@ -120,7 +150,8 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		expect(screen.getByTestId("TransactionPending")).toBeInTheDocument();
+		unmount()
+		expect(mockTransactionQuery).not.toHaveBeenCalled();
 
 		vi.restoreAllMocks();
 	});
