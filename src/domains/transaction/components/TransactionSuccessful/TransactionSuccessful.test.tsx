@@ -99,7 +99,7 @@ describe("TransactionSuccessful", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should not check transaction confirrmation for musig wallets or transactions", async () => {
+	it("should not check transaction confirrmation for musig wallets or transactions", () => {
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,
