@@ -26,12 +26,12 @@ describe("TransactionSuccessful", () => {
 			),
 		);
 
-		vi.useFakeTimers()
+		vi.useFakeTimers();
 	});
 
 	afterEach(() => {
-		vi.useRealTimers()
-	})
+		vi.useRealTimers();
+	});
 
 	const transactionMockImplementation = (attribute, transaction) => {
 		if (attribute === "multiSignature") {
@@ -101,7 +101,7 @@ describe("TransactionSuccessful", () => {
 
 		act(() => {
 			vi.advanceTimersByTime(2000);
-		})
+		});
 
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
@@ -138,7 +138,7 @@ describe("TransactionSuccessful", () => {
 
 		act(() => {
 			vi.advanceTimersByTime(2000);
-		})
+		});
 
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 		await expect(screen.findByTestId("MultisignatureSuccessful")).resolves.toBeVisible();
