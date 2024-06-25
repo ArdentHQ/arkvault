@@ -11,9 +11,15 @@ export const useConfirmedTransaction = ({
 	const [isConfirmed, setIsConfirmed] = useState(false);
 
 	useEffect(() => {
-		const checkConfirmed = (): void => {
-			const id = setInterval(async () => {
+		const checkConfirmed = (): number => {
+			return setInterval(async () => {
 				try {
+					const transaction = wallet.transaction().transaction(transactionId)
+
+					if(transaction.isMultiSignatureRegistration() || wallet.isMultiSignature()) {
+						return
+					}
+
 					await wallet.coin().client().transaction(transactionId);
 					setIsConfirmed(true);
 					clearInterval(id);
@@ -23,7 +29,11 @@ export const useConfirmedTransaction = ({
 			}, 1000);
 		};
 
-		void checkConfirmed();
+		const id = checkConfirmed();
+
+		return () => {
+			clearInterval(id)
+		}
 	}, [wallet.id(), transactionId]);
 
 	return isConfirmed;
