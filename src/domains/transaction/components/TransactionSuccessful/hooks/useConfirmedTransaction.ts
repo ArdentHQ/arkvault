@@ -17,6 +17,7 @@ export const useConfirmedTransaction = ({
 					const transaction = wallet.transaction().transaction(transactionId);
 
 					if (transaction.isMultiSignatureRegistration() || wallet.isMultiSignature()) {
+						setIsConfirmed(true);
 						return;
 					}
 
