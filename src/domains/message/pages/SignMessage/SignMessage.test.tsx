@@ -38,9 +38,19 @@ const signMessage = "Hello World";
 
 const expectHeading = async (text: string) => {
 	await waitFor(() => {
-		expect(screen.findByRole("heading", { name: text })).resolves.toBeDefined();
+		expect(screen.getByTestId("header__title")).toHaveTextContent(text);
 	});
 };
+
+// Mock implementation of TextEncoder to always return Uint8Array.
+vi.stubGlobal(
+	"TextEncoder",
+	class MockTextEncoder {
+		encode(text) {
+			return new Uint8Array([...text].map((character) => character.codePointAt(0)));
+		}
+	},
+);
 
 describe("SignMessage", () => {
 	beforeAll(async () => {
@@ -353,6 +363,10 @@ describe("SignMessage", () => {
 			userEvent.click(continueButton());
 
 			userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "secret");
+
+			await waitFor(() => {
+				expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue("secret");
+			});
 
 			await waitFor(() => expect(signButton()).toBeEnabled());
 

@@ -1,6 +1,6 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
@@ -13,6 +13,19 @@ import {
 	waitFor,
 	renderResponsive,
 } from "@/utils/testing-library";
+
+vi.mock("react-visibility-sensor", () => ({
+	/* eslint-disable react-hooks/rules-of-hooks */
+	default: ({ children, onChange }) => {
+		useEffect(() => {
+			if (onChange) {
+				onChange(false);
+			}
+		}, [onChange]);
+
+		return <div>{children}</div>;
+	},
+}));
 
 describe("NotificationsTransactionTable", () => {
 	let profile: Contracts.IProfile;

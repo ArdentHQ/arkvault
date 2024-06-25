@@ -121,7 +121,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.55.0",
 		"@typescript-eslint/parser": "^5.55.0",
 		"@vitejs/plugin-react": "^4.3.0",
-		"@vitest/coverage-istanbul": "0.24.5",
+		"@vitest/coverage-istanbul": "1.6.0",
 		"autoprefixer": "^10.4.14",
 		"babel-plugin-macros": "^3.1.0",
 		"cross-fetch": "^3.1.5",
@@ -163,7 +163,7 @@
 		"vite-plugin-pwa": "^0.20.0",
 		"vite-plugin-svgr": "^3.2.0",
 		"vite-tsconfig-paths": "^4.3.2",
-		"vitest": "^0.29.8",
+		"vitest": "^1.6.0",
 		"workbox-window": "^6.6.0"
 	},
 	"babelMacros": {
