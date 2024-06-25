@@ -14,10 +14,10 @@ export const useConfirmedTransaction = ({
 		const checkConfirmed = (): NodeJS.Timer =>
 			setInterval(async () => {
 				try {
-					const transaction = wallet.transaction().transaction(transactionId)
+					const transaction = wallet.transaction().transaction(transactionId);
 
 					if (transaction.isMultiSignatureRegistration() || wallet.isMultiSignature()) {
-						return
+						return;
 					}
 
 					await wallet.coin().client().transaction(transactionId);
@@ -27,13 +27,11 @@ export const useConfirmedTransaction = ({
 					// transaction is not forged yet, ignore the error
 				}
 			}, 1000);
-		;
-
 		const id = checkConfirmed();
 
 		return () => {
-			clearInterval(id)
-		}
+			clearInterval(id);
+		};
 	}, [wallet.id(), transactionId]);
 
 	return isConfirmed;
