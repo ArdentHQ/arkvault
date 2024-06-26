@@ -119,28 +119,27 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should handle url", async () => {
-        const url = "/some-initial-url";
-        history.push(url);
+		history.push(url);
 
-        const historySpy = vi.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
-        render(
-            <Route>
-                <TestComponent />
-            </Route>,
-            {
-                history,
-            },
-        );
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
 
-        expect(screen.getByTestId("DeeplinkHandle")).toBeInTheDocument();
+		expect(screen.getByTestId("DeeplinkHandle")).toBeInTheDocument();
 
-        await userEvent.click(screen.getByTestId("DeeplinkHandle"));
+		await userEvent.click(screen.getByTestId("DeeplinkHandle"));
 
-        expect(historySpy).toHaveBeenCalledWith(
-            "/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer?method=transfer&coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK",
-        );
+		expect(historySpy).toHaveBeenCalledWith(
+			"/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer?method=transfer&coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK",
+		);
 
-        historySpy.mockRestore();
-    });
+		historySpy.mockRestore();
+	});
 });
