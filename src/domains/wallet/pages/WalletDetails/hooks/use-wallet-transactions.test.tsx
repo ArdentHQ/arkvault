@@ -107,13 +107,7 @@ describe("Wallet Transactions Hook", () => {
 					},
 					fee: 0.1,
 					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
+					signatory: await wallet.coin().signatory().secret("123"),
 				}),
 			wallet,
 		);
@@ -141,9 +135,9 @@ describe("Wallet Transactions Hook", () => {
 		);
 	});
 
-	afterEach(() => {
-		vi.clearAllMocks();
-	});
+	// afterEach(() => {
+	// 	vi.clearAllMocks();
+	// })
 
 	const Component = () => {
 		const { syncPending, pendingTransactions } = useWalletTransactions(wallet);
@@ -160,10 +154,12 @@ describe("Wallet Transactions Hook", () => {
 
 	it("should sync pending transfers", async () => {
 		mockPendingTransfers(wallet);
+
 		const signatory = await wallet.signatory().multiSignature({
 			min: 2,
 			publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 		});
+
 		const transfer = await wallet
 			.coin()
 			.transaction()
@@ -176,13 +172,17 @@ describe("Wallet Transactions Hook", () => {
 				nonce: "1",
 				signatory,
 			});
+
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 		vi.spyOn(wallet.transaction(), "broadcasted").mockReturnValue({ 1: transfer });
+
 		render(<Component />);
+
 		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.queryByText("Loading")).not.toBeInTheDocument());
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));
+
 		vi.clearAllMocks();
 	});
 

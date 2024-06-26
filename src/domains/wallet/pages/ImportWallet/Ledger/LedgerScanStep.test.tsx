@@ -11,7 +11,7 @@ import { server, requestMockOnce, requestMock } from "@/tests/mocks/server";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
 const validLedgerWallet = () =>
-	expect(formReference.getValues("wallets")).toMatchObject([{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }]);
+	expect(formReference.getValues("wallets")).toMatchObject([{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" }]);
 
 describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;
@@ -68,15 +68,6 @@ describe("LedgerScanStep", () => {
 		);
 
 		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
-
-		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
-			onProgress(wallet);
-			return {
-				"m/44'/1'/0'/0/0": wallet.toData(),
-			};
-		});
-
-		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
 	});
 
 	const Component = ({ isCancelling = false }: { isCancelling?: boolean }) => {
@@ -148,11 +139,17 @@ describe("LedgerScanStep", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
 
+		await waitFor(() => {
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+		});
+
+		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
+
 		await waitFor(() =>
 			expect(formReference.getValues("wallets")).toMatchObject([
 				{
-					address: wallet.address(),
-					balance: wallet.balance(),
+					address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG",
+					balance: 0,
 					path: "m/44'/1'/0'/0/0",
 				},
 			]),
@@ -207,7 +204,7 @@ describe("LedgerScanStep", () => {
 			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
 		});
 
-		await expect(screen.findByText("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).resolves.toBeVisible();
+		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
 
 		expect(toastUpdateSpy).toHaveBeenCalledTimes(1);
 

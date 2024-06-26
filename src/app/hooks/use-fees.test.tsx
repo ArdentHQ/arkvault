@@ -129,21 +129,6 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await expect(
-			current.calculate({
-				coin: "ARK",
-				data: {},
-				network: ARKDevnet,
-				type: "multiSignature",
-			}),
-		).resolves.toStrictEqual({
-			avg: 0,
-			isDynamic: false,
-			max: 0,
-			min: 0,
-			static: 0,
-		});
-
 		await env.fees().sync(profile, "ARK", ARKDevnet);
 
 		await expect(

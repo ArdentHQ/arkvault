@@ -17,7 +17,7 @@ exports[`VoteList > should render in lg 1`] = `
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
           />
         </div>
@@ -60,7 +60,7 @@ exports[`VoteList > should render in lg 1`] = `
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
           />
         </div>
@@ -103,7 +103,7 @@ exports[`VoteList > should render in lg 1`] = `
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
           />
         </div>
@@ -155,7 +155,7 @@ exports[`VoteList > should render in md 1`] = `
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
           />
         </div>
@@ -198,7 +198,7 @@ exports[`VoteList > should render in md 1`] = `
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
           />
         </div>
@@ -241,7 +241,7 @@ exports[`VoteList > should render in md 1`] = `
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
           />
         </div>
@@ -318,7 +318,7 @@ exports[`VoteList > should render in sm 1`] = `
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
           />
         </div>
@@ -361,7 +361,7 @@ exports[`VoteList > should render in sm 1`] = `
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
           />
         </div>
@@ -404,7 +404,7 @@ exports[`VoteList > should render in sm 1`] = `
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
           />
         </div>
@@ -431,7 +431,7 @@ exports[`VoteList > should render in xl 1`] = `
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
           />
         </div>
@@ -474,7 +474,7 @@ exports[`VoteList > should render in xl 1`] = `
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
           />
         </div>
@@ -517,7 +517,7 @@ exports[`VoteList > should render in xl 1`] = `
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
           />
         </div>
@@ -594,7 +594,7 @@ exports[`VoteList > should render in xs 1`] = `
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
           />
         </div>
@@ -637,7 +637,7 @@ exports[`VoteList > should render in xs 1`] = `
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
           />
         </div>
@@ -680,7 +680,7 @@ exports[`VoteList > should render in xs 1`] = `
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
           />
         </div>
@@ -707,7 +707,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
           />
         </div>
@@ -760,7 +760,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
           />
         </div>
@@ -813,7 +813,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
           />
         </div>
@@ -875,7 +875,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
           />
         </div>
@@ -928,7 +928,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
           />
         </div>
@@ -981,7 +981,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
           />
         </div>
@@ -1078,7 +1078,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
           />
         </div>
@@ -1131,7 +1131,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
           />
         </div>
@@ -1184,7 +1184,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
           />
         </div>
@@ -1211,7 +1211,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
           />
         </div>
@@ -1264,7 +1264,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
           />
         </div>
@@ -1317,7 +1317,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
           />
         </div>
@@ -1414,7 +1414,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         >
           <img
             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
           />
         </div>
@@ -1467,7 +1467,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         >
           <img
             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
           />
         </div>
@@ -1520,7 +1520,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         >
           <img
             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
           />
         </div>

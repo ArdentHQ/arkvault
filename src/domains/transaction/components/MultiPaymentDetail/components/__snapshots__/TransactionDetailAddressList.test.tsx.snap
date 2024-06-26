@@ -1,4 +1,4 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Vitest Snapshot v1
 
 exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
 <div>
@@ -136,7 +136,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
             >
               <img
                 alt="test-address1"
-                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="55" cx="90" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="100" cy="60" fill="rgb(0, 188, 212)"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
                 title="test-address1"
               />
             </div>
@@ -284,7 +284,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
             >
               <img
                 alt="test-address1"
-                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="55" cx="90" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="100" cy="60" fill="rgb(0, 188, 212)"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
                 title="test-address1"
               />
             </div>
@@ -430,7 +430,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
         >
           <img
             alt="test-address1"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="55" cx="90" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="100" cy="60" fill="rgb(0, 188, 212)"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
             title="test-address1"
           />
         </div>
@@ -574,7 +574,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
         >
           <img
             alt="test-address1"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="55" cx="90" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="100" cy="60" fill="rgb(0, 188, 212)"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
             title="test-address1"
           />
         </div>
@@ -718,7 +718,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
         >
           <img
             alt="test-address1"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="55" cx="90" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="100" cy="60" fill="rgb(0, 188, 212)"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
             title="test-address1"
           />
         </div>

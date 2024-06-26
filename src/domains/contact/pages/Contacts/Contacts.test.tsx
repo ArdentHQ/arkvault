@@ -87,38 +87,38 @@ describe("Contacts", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should render with contacts", async () => {
+	it("should render with contacts", () => {
 		const { asFragment } = renderComponent();
 
 		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
-		await expect(screen.findByTestId("ContactList")).resolves.toBeInTheDocument();
+		expect(screen.getByTestId("ContactList")).toBeInTheDocument();
 
 		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render compact on md screen", async () => {
+	it("should render compact on md screen", () => {
 		const { asFragment } = renderResponsiveComponent("md");
 
 		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
-		await expect(screen.findByTestId("ContactList")).resolves.toBeInTheDocument();
+		expect(screen.getByTestId("ContactList")).toBeInTheDocument();
 
 		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render compact on md screen if uses expanded tables", async () => {
+	it("should render compact on md screen if uses expanded tables", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
 		const { asFragment } = renderResponsiveComponent("md");
 
 		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
-		await expect(screen.findByTestId("ContactList")).resolves.toBeInTheDocument();
+		expect(screen.getByTestId("ContactList")).toBeInTheDocument();
 
 		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
 
@@ -542,8 +542,6 @@ describe("Contacts", () => {
 
 		searchInput().select();
 		userEvent.paste(searchInput(), contact1.name());
-
-		await expect(screen.findByTestId("ContactListItem__name")).resolves.toBeInTheDocument();
 
 		await waitFor(() => expect(screen.getAllByTestId("ContactListItem__name")).toHaveLength(1));
 

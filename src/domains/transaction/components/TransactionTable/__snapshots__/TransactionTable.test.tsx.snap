@@ -1,4 +1,4 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Vitest Snapshot v1
 
 exports[`TransactionTable > loading state > should render 1`] = `
 <DocumentFragment>
@@ -3879,7 +3879,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     >
                       <img
                         alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="40" cx="40" cy="60" fill="rgb(205, 220, 57)"/><circle r="45" cx="70" cy="50" fill="rgb(33, 150, 243)"/><circle r="35" cx="0" cy="40" fill="rgb(156, 39, 176)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                         title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
                       />
                     </div>
@@ -3914,7 +3914,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -4105,7 +4105,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                       />
                     </div>
@@ -4151,7 +4151,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   >
                     <img
                       alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="20" cy="70" fill="rgb(255, 87, 34)"/><circle r="60" cx="10" cy="40" fill="rgb(33, 150, 243)"/><circle r="50" cx="50" cy="30" fill="rgb(156, 39, 176)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                       title="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
                     />
                   </div>
@@ -4334,7 +4334,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -4369,7 +4369,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -4563,7 +4563,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -4598,7 +4598,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -4792,7 +4792,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -4827,7 +4827,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -5021,7 +5021,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -5056,7 +5056,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -5250,7 +5250,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -5285,7 +5285,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -5479,7 +5479,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -5514,7 +5514,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -5708,7 +5708,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -5743,7 +5743,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -5934,7 +5934,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                       />
                     </div>
@@ -5980,7 +5980,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   >
                     <img
                       alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                     />
                   </div>
@@ -6148,7 +6148,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="40" cx="40" cy="60" fill="rgb(205, 220, 57)"/><circle r="45" cx="70" cy="50" fill="rgb(33, 150, 243)"/><circle r="35" cx="0" cy="40" fill="rgb(156, 39, 176)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                           title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
                         />
                       </div>
@@ -6179,7 +6179,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -6355,7 +6355,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -6386,7 +6386,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="20" cy="70" fill="rgb(255, 87, 34)"/><circle r="60" cx="10" cy="40" fill="rgb(33, 150, 243)"/><circle r="50" cx="50" cy="30" fill="rgb(156, 39, 176)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                           title="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
                         />
                       </div>
@@ -6540,7 +6540,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -6571,7 +6571,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -6736,7 +6736,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -6767,7 +6767,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -6932,7 +6932,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -6963,7 +6963,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -7128,7 +7128,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -7159,7 +7159,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -7324,7 +7324,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -7355,7 +7355,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -7520,7 +7520,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -7551,7 +7551,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -7716,7 +7716,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -7747,7 +7747,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -7923,7 +7923,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -7954,7 +7954,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -8132,7 +8132,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="40" cx="40" cy="60" fill="rgb(205, 220, 57)"/><circle r="45" cx="70" cy="50" fill="rgb(33, 150, 243)"/><circle r="35" cx="0" cy="40" fill="rgb(156, 39, 176)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                           title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
                         />
                       </div>
@@ -8163,7 +8163,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -8339,7 +8339,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -8370,7 +8370,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="20" cy="70" fill="rgb(255, 87, 34)"/><circle r="60" cx="10" cy="40" fill="rgb(33, 150, 243)"/><circle r="50" cx="50" cy="30" fill="rgb(156, 39, 176)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                           title="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
                         />
                       </div>
@@ -8524,7 +8524,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -8555,7 +8555,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -8720,7 +8720,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -8751,7 +8751,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -8916,7 +8916,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -8947,7 +8947,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -9112,7 +9112,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -9143,7 +9143,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -9308,7 +9308,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -9339,7 +9339,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -9504,7 +9504,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -9535,7 +9535,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -9700,7 +9700,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -9731,7 +9731,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -9907,7 +9907,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -9938,7 +9938,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                           title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                         />
                       </div>
@@ -10302,7 +10302,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     >
                       <img
                         alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="40" cx="40" cy="60" fill="rgb(205, 220, 57)"/><circle r="45" cx="70" cy="50" fill="rgb(33, 150, 243)"/><circle r="35" cx="0" cy="40" fill="rgb(156, 39, 176)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                         title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
                       />
                     </div>
@@ -10337,7 +10337,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -10528,7 +10528,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                       />
                     </div>
@@ -10574,7 +10574,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   >
                     <img
                       alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="20" cy="70" fill="rgb(255, 87, 34)"/><circle r="60" cx="10" cy="40" fill="rgb(33, 150, 243)"/><circle r="50" cx="50" cy="30" fill="rgb(156, 39, 176)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                       title="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
                     />
                   </div>
@@ -10757,7 +10757,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -10792,7 +10792,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -10986,7 +10986,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -11021,7 +11021,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -11215,7 +11215,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -11250,7 +11250,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -11444,7 +11444,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -11479,7 +11479,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -11673,7 +11673,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -11708,7 +11708,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -11902,7 +11902,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -11937,7 +11937,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -12131,7 +12131,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -12166,7 +12166,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -12357,7 +12357,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                       />
                     </div>
@@ -12403,7 +12403,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   >
                     <img
                       alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                     />
                   </div>
@@ -12757,7 +12757,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     >
                       <img
                         alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="40" cx="40" cy="60" fill="rgb(205, 220, 57)"/><circle r="45" cx="70" cy="50" fill="rgb(33, 150, 243)"/><circle r="35" cx="0" cy="40" fill="rgb(156, 39, 176)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                         title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
                       />
                     </div>
@@ -12792,7 +12792,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -12983,7 +12983,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                       />
                     </div>
@@ -13029,7 +13029,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   >
                     <img
                       alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="20" cy="70" fill="rgb(255, 87, 34)"/><circle r="60" cx="10" cy="40" fill="rgb(33, 150, 243)"/><circle r="50" cx="50" cy="30" fill="rgb(156, 39, 176)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                       title="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
                     />
                   </div>
@@ -13212,7 +13212,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -13247,7 +13247,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -13441,7 +13441,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -13476,7 +13476,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -13670,7 +13670,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -13705,7 +13705,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -13899,7 +13899,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -13934,7 +13934,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -14128,7 +14128,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -14163,7 +14163,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -14357,7 +14357,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -14392,7 +14392,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -14586,7 +14586,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -14621,7 +14621,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -14812,7 +14812,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                       />
                     </div>
@@ -14858,7 +14858,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   >
                     <img
                       alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                     />
                   </div>
@@ -15212,7 +15212,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     >
                       <img
                         alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="40" cx="40" cy="60" fill="rgb(205, 220, 57)"/><circle r="45" cx="70" cy="50" fill="rgb(33, 150, 243)"/><circle r="35" cx="0" cy="40" fill="rgb(156, 39, 176)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                         title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
                       />
                     </div>
@@ -15247,7 +15247,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -15438,7 +15438,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                       />
                     </div>
@@ -15484,7 +15484,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   >
                     <img
                       alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="20" cy="70" fill="rgb(255, 87, 34)"/><circle r="60" cx="10" cy="40" fill="rgb(33, 150, 243)"/><circle r="50" cx="50" cy="30" fill="rgb(156, 39, 176)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
                       title="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
                     />
                   </div>
@@ -15667,7 +15667,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -15702,7 +15702,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -15896,7 +15896,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -15931,7 +15931,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -16125,7 +16125,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -16160,7 +16160,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -16354,7 +16354,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -16389,7 +16389,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -16583,7 +16583,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -16618,7 +16618,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -16812,7 +16812,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -16847,7 +16847,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -17041,7 +17041,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                       />
                     </div>
@@ -17076,7 +17076,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -17267,7 +17267,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                       />
                     </div>
@@ -17313,7 +17313,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   >
                     <img
                       alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="90" cy="60" fill="rgb(0, 188, 212)"/><circle r="50" cx="100" cy="30" fill="rgb(63, 81, 181)"/><circle r="40" cx="0" cy="40" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
                     />
                   </div>

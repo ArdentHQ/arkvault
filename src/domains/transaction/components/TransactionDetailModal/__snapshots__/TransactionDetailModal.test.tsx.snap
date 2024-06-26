@@ -122,7 +122,7 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -523,7 +523,7 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -927,7 +927,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -1351,7 +1351,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -1699,7 +1699,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -1838,7 +1838,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -2301,7 +2301,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -2744,7 +2744,7 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -3092,7 +3092,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -3143,7 +3143,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -3606,7 +3606,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -3644,7 +3644,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(33, 150, 243)" width="100" height="100"/><circle r="55" cx="30" cy="30" fill="rgb(244, 67, 54)"/><circle r="35" cx="40" cy="60" fill="rgb(76, 175, 80)"/><circle r="45" cx="100" cy="50" fill="rgb(0, 188, 212)"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/></svg>"
                             title="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
                           />
                         </div>
@@ -3710,7 +3710,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(33, 150, 243)" width="100" height="100"/><circle r="55" cx="30" cy="30" fill="rgb(244, 67, 54)"/><circle r="35" cx="40" cy="60" fill="rgb(76, 175, 80)"/><circle r="45" cx="100" cy="50" fill="rgb(0, 188, 212)"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/></svg>"
                             title="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
                           />
                         </div>
@@ -4086,7 +4086,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -4124,7 +4124,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(33, 150, 243)" width="100" height="100"/><circle r="55" cx="30" cy="30" fill="rgb(244, 67, 54)"/><circle r="35" cx="40" cy="60" fill="rgb(76, 175, 80)"/><circle r="45" cx="100" cy="50" fill="rgb(0, 188, 212)"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/></svg>"
                             title="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
                           />
                         </div>
@@ -4190,7 +4190,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(33, 150, 243)" width="100" height="100"/><circle r="55" cx="30" cy="30" fill="rgb(244, 67, 54)"/><circle r="35" cx="40" cy="60" fill="rgb(76, 175, 80)"/><circle r="45" cx="100" cy="50" fill="rgb(0, 188, 212)"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/></svg>"
                             title="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
                           />
                         </div>
@@ -4566,7 +4566,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -4604,7 +4604,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(33, 150, 243)" width="100" height="100"/><circle r="55" cx="30" cy="30" fill="rgb(244, 67, 54)"/><circle r="35" cx="40" cy="60" fill="rgb(76, 175, 80)"/><circle r="45" cx="100" cy="50" fill="rgb(0, 188, 212)"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/></svg>"
                             title="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
                           />
                         </div>
@@ -4670,7 +4670,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(33, 150, 243)" width="100" height="100"/><circle r="55" cx="30" cy="30" fill="rgb(244, 67, 54)"/><circle r="35" cx="40" cy="60" fill="rgb(76, 175, 80)"/><circle r="45" cx="100" cy="50" fill="rgb(0, 188, 212)"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/></svg>"
                             title="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
                           />
                         </div>
@@ -5046,7 +5046,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>

@@ -4,7 +4,8 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { SuccessStep } from "./SuccessStep";
-import { env, getDefaultProfileId, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
+import { translations as messageTranslations } from "@/domains/message/i18n";
+import { env, getDefaultProfileId, renderResponsiveWithRoute, screen, waitFor } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
@@ -25,6 +26,12 @@ describe("SignMessage success step", () => {
 				route: `/profiles/${getDefaultProfileId()}/wallets/${profile.wallets().first().id()}/sign-message`,
 			},
 		);
+
+		await waitFor(() => {
+			expect(
+				screen.findByRole("heading", { name: messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE }),
+			).resolves.toBeDefined();
+		});
 
 		expect(screen.getByText("Test Message")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
