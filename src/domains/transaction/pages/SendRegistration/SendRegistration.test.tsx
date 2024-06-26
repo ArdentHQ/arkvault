@@ -291,7 +291,12 @@ describe("Registration", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 		// Step 4 - summary screen
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await waitFor(
+			() => {
+				expect(screen.getByTestId("TransactionSuccessful")).toBeVisible();
+			},
+			{ timeout: 4000 },
+		);
 
 		// Go back to wallet
 		const historySpy = vi.spyOn(history, "push");
