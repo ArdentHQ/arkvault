@@ -22,13 +22,13 @@ jobs:
             group: ${{ github.head_ref }}-test-app
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -130,13 +130,13 @@ jobs:
             group: ${{ github.head_ref }}-test-app-hooks
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -213,13 +213,13 @@ jobs:
             group: ${{ github.head_ref }}-test-app-components
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -335,13 +335,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-contact
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -386,13 +386,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-dashboard
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -423,13 +423,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-error
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -459,13 +459,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-exchange
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -495,13 +495,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-message
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -531,13 +531,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-network
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -568,13 +568,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-profile
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -605,13 +605,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-setting
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -642,13 +642,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-transaction
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -764,13 +764,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-vote
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -800,13 +800,13 @@ jobs:
             group: ${{ github.head_ref }}-test-domains-wallet
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -836,13 +836,13 @@ jobs:
             group: ${{ github.head_ref }}-test-router
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -876,13 +876,13 @@ jobs:
             group: ${{ github.head_ref }}-test-utils
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 9
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
