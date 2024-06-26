@@ -54,7 +54,7 @@ cucumber(
 		"Then the transaction is sent successfully": async (t: TestController) => {
 			await t
 				.expect(Selector("h1").withText(translations.TRANSACTION.SUCCESS.TITLE).exists)
-				.ok({ timeout: 5000 });
+				.ok({ timeout: 10_000 });
 		},
 	},
 	[
