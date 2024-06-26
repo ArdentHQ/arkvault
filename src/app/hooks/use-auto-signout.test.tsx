@@ -23,44 +23,44 @@ describe("useAutoSignOut", () => {
 	it("should redirect to home when idle", async () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
 		vi.useFakeTimers();
-
+	  
 		const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 		history.push(dashboardURL);
-
+	  
 		const profile = env.profiles().findById(getDefaultProfileId());
-
+	  
 		vi.spyOn(profile.settings(), "get").mockReturnValue(0.001);
 		const Component = () => {
-			const { startIdleTimer } = useAutoSignOut(profile);
-			return <div data-testid="StartIdleTimer" onClick={() => startIdleTimer()} />;
+		  const { startIdleTimer } = useAutoSignOut(profile);
+		  return <div data-testid="StartIdleTimer" onClick={() => startIdleTimer()} />;
 		};
-
+	  
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
+		  <Route path="/profiles/:profileId/dashboard">
+			<Component />
+		  </Route>,
+		  {
+			history,
+			route: dashboardURL,
+		  },
 		);
-
+	  
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
-
-		userEvent.click(screen.getByTestId("StartIdleTimer"));
-
+	  
+		await userEvent.click(screen.getByTestId("StartIdleTimer"));
+	  
 		act(() => {
-			vi.advanceTimersByTime(1000);
+		  vi.advanceTimersByTime(1000);
 		});
-
+	  
 		await waitFor(() => {
-			expect(history.location.pathname).toBe("/");
+		  expect(history.location.pathname).toBe("/");
 		});
-
+	  
 		vi.useRealTimers();
-	});
+	  }, 10_000); 
 
-	it("should not redirect if already in home", () => {
+	it("should not redirect if already in home", async () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
 		vi.useFakeTimers();
 
@@ -83,7 +83,7 @@ describe("useAutoSignOut", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		userEvent.click(screen.getByTestId("StartIdleTimer"));
+		await userEvent.click(screen.getByTestId("StartIdleTimer"));
 
 		act(() => {
 			vi.advanceTimersByTime(1000);

@@ -1,7 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`AddressRowMobile > should emit action on select button 1`] = `<DocumentFragment />`;
-
 exports[`AddressRowMobile > should not render delegate name if name is not provided 1`] = `<DocumentFragment />`;
 
 exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `

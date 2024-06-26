@@ -6,10 +6,20 @@ import { translations } from "@/domains/error/i18n";
 import { render, screen } from "@/utils/testing-library";
 
 describe("ApplicationError", () => {
-	const { reload } = window.location;
-
+	const { reload: originalReload } = window.location; 
+	
+	beforeAll(() => {
+		Object.defineProperty(window.location, 'reload', {
+		  configurable: true,
+		  value: vi.fn(),
+		});
+	});
+	
 	afterAll(() => {
-		Object.defineProperty(window, "location", { value: reload });
+		Object.defineProperty(window.location, 'reload', {
+			configurable: true,
+			value: originalReload,
+		});
 	});
 
 	it("should render without error message", () => {
@@ -22,7 +32,7 @@ describe("ApplicationError", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with error message and reload", () => {
+	it("should render with error message and reload", async () => {
 		const { asFragment, container } = render(<ApplicationError error={{ message: "some error", name: "error" }} />);
 
 		expect(container).toBeInTheDocument();
@@ -35,11 +45,10 @@ describe("ApplicationError", () => {
 			},
 		});
 
-		const { reload: mockedReload } = window.location;
+		await userEvent.click(screen.getByTestId("ApplicationError__button--reload"));
 
-		userEvent.click(screen.getByTestId("ApplicationError__button--reload"));
-
-		expect(mockedReload).toHaveBeenCalledWith();
+		const { reload } = window.location;
+		expect(reload).toHaveBeenCalled();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -12,8 +12,6 @@ exports[`WalletListItem.blocks > should render Currency in small screen 1`] = `[
 
 exports[`WalletListItem.blocks > should render Info in small screen 1`] = `[Function]`;
 
-exports[`WalletListItem.blocks > should render StarredCell 1`] = `[Function]`;
-
 exports[`WalletListItem.blocks > should render StarredCell in small screen 1`] = `[Function]`;
 
 exports[`WalletListItem.blocks > should render WalletCell 1`] = `[Function]`;
