@@ -46,7 +46,7 @@ jobs:
 
             - name: Build
               env:
-                  NODE_OPTIONS: "--max_old_space_size=8192"
+                  NODE_OPTIONS: "--max_old_space_size=8192 --defaultMaxListeners=20"
               run: 
                 pnpm build:e2e
 
@@ -173,9 +173,7 @@ jobs:
                   path: ${{ github.workspace }}/dist
 
             - name: Chromium
-              run: |
-                node -e "require('events').EventEmitter.defaultMaxListeners = 11"
-                pnpm test:e2e:ci src/domains/transaction/cucumber
+              run: pnpm test:e2e:ci src/domains/transaction/cucumber
 
             - name: Firefox
               run: pnpm test:e2e:ci:firefox src/domains/transaction/cucumber
