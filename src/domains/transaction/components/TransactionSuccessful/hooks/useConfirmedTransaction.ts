@@ -11,9 +11,16 @@ export const useConfirmedTransaction = ({
 	const [isConfirmed, setIsConfirmed] = useState(false);
 
 	useEffect(() => {
-		const checkConfirmed = (): void => {
-			const id = setInterval(async () => {
+		const checkConfirmed = (): NodeJS.Timer =>
+			setInterval(async () => {
 				try {
+					const transaction = wallet.transaction().transaction(transactionId);
+
+					if (transaction.isMultiSignatureRegistration() || wallet.isMultiSignature()) {
+						setIsConfirmed(true);
+						return;
+					}
+
 					await wallet.coin().client().transaction(transactionId);
 					setIsConfirmed(true);
 					clearInterval(id);
@@ -21,9 +28,11 @@ export const useConfirmedTransaction = ({
 					// transaction is not forged yet, ignore the error
 				}
 			}, 1000);
-		};
+		const id = checkConfirmed();
 
-		void checkConfirmed();
+		return () => {
+			clearInterval(id);
+		};
 	}, [wallet.id(), transactionId]);
 
 	return isConfirmed;
