@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook, act } from "@testing-library/react-hooks";
+import { act, renderHook } from "@testing-library/react";
 import { rest } from "msw";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { useTransactionExport } from "./use-transaction-export";

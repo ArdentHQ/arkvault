@@ -1,4 +1,4 @@
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 import { useTransactionURL } from "./use-transaction-url";
 import { env, getDefaultProfileId } from "@/utils/testing-library";

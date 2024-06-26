@@ -1,6 +1,6 @@
 import { Services } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { act as actHook, renderHook } from "@testing-library/react-hooks";
+import { act as actHook, renderHook } from "@testing-library/react";
 import React from "react";
 
 import { useTransactionBuilder } from "./use-transaction-builder";

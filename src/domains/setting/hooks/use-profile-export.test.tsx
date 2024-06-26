@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 import { useProfileExport } from "@/domains/setting/hooks/use-profile-export";
 import { env, getDefaultPassword, getDefaultProfileId, getPasswordProtectedProfileId } from "@/utils/testing-library";

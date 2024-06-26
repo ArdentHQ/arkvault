@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import { usePlatform } from "./use-platform";
 
 describe("usePlatform", () => {

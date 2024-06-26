@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { act, renderHook } from "@testing-library/react-hooks";
+import { renderHook, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
@@ -386,7 +386,7 @@ describe("useProfileSynchronizer", () => {
 
 		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(false));
 
-		userEvent.click(screen.getByTestId("ResetSyncProfile"));
+		await userEvent.click(screen.getByTestId("ResetSyncProfile"));
 
 		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(true));
 	});
@@ -439,7 +439,7 @@ describe("useProfileSynchronizer", () => {
 
 		await expect(screen.findByTestId("SyncProfile")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SyncProfile"));
+		await userEvent.click(screen.getByTestId("SyncProfile"));
 
 		await waitFor(() =>
 			expect(profileNotificationsSyncSpy).toHaveBeenCalledWith({
@@ -489,7 +489,7 @@ describe("useProfileSynchronizer", () => {
 
 		expect(onProfileUpdated).not.toHaveBeenCalled();
 
-		userEvent.click(screen.getByTestId("Test"));
+		await userEvent.click(screen.getByTestId("Test"));
 
 		expect(onProfileUpdated).toHaveBeenCalledWith();
 	});
@@ -523,7 +523,7 @@ describe("useProfileSynchronizer", () => {
 
 		expect(onProfileUpdated).not.toHaveBeenCalled();
 
-		userEvent.click(screen.getByTestId("Test"));
+		await userEvent.click(screen.getByTestId("Test"));
 
 		expect(onProfileUpdated).not.toHaveBeenCalled();
 	});

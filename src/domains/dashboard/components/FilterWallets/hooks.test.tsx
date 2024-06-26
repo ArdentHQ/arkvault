@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { act, renderHook } from "@testing-library/react";
 import React from "react";
 
 import { useWalletFilters } from "./hooks";
@@ -29,29 +29,25 @@ describe("useWalletFilters", () => {
 
 	it("should toggle network selection", async () => {
 		const resetProfileNetworksMock2 = mockProfileWithPublicAndTestNetworks(profile);
-		const { result, waitForNextUpdate } = renderHook(() => useWalletFilters({ profile }), { wrapper });
+		const { result } = renderHook(() => useWalletFilters({ profile }), { wrapper });
 
 		act(() => {
 			result.current.update("selectedNetworkIds", []);
 		});
 
-		await waitForNextUpdate();
-
-		expect(result.current.isFilterChanged).toBe(true);
+		await waitFor(() => expect(result.current.isFilterChanged).toBe(true));
 
 		resetProfileNetworksMock2();
 	});
 
 	it("should toggle wallet display type filter", async () => {
-		const { result, waitForNextUpdate } = renderHook(() => useWalletFilters({ profile }), { wrapper });
+		const { result } = renderHook(() => useWalletFilters({ profile }), { wrapper });
 
 		act(() => {
 			result.current.update("walletsDisplayType", "starred");
 		});
 
-		await waitForNextUpdate();
-
-		expect(result.current.isFilterChanged).toBe(true);
+		await waitFor(() => expect(result.current.isFilterChanged).toBe(true));
 
 		await waitFor(() => expect(result.current.walletsDisplayType).toBe("starred"));
 	});
