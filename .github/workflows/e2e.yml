@@ -49,7 +49,7 @@ jobs:
                   NODE_OPTIONS: "--max_old_space_size=8192"
                   NODE_MAX_LISTENERS: 12
               run: |
-                node -e "require('events').EventEmitter.defaultMaxListeners = process.env.NODE_MAX_LISTENERS"
+                node -e "require('events').EventEmitter.defaultMaxListeners = Number(process.env.NODE_MAX_LISTENERS)"
                 pnpm build:e2e
 
             - name: Upload Build Artifacts
