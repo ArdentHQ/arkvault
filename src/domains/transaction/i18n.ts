@@ -71,6 +71,8 @@ export const translations = {
 		PROGRESS: {
 			DESCRIPTION: "{{count}} transactions have been retrieved so far, please wait.",
 			DESCRIPTION_START: "The data is being prepared. This might take a while, please wait.",
+			FETCHED_PARTIALLY:
+				"We've successfully retrieved some transactions, but encountered an issue along the way. You can download the partial file or retry.",
 		},
 		SUCCESS: {
 			DESCRIPTION: "{{count}} transactions have been retrieved and are ready to be exported.",
@@ -425,7 +427,7 @@ export const translations = {
 		VALIDATOR_REGISTRATION: "Validator Registration",
 		VALIDATOR_RESIGNATION: "Validator Resignation",
 		VOTE: "Vote",
-		VOTE_COMBINATION: "Switch Vote",
+		VOTE_COMBINATION: "Vote Swap",
 	},
 
 	TYPE: "Type",
