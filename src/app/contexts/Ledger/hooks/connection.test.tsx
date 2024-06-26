@@ -1,8 +1,8 @@
+import React, { useEffect } from "react";
 import { Options } from "p-retry";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useLedgerConnection } from "./connection";
@@ -125,7 +125,7 @@ describe("Use Ledger Connection", () => {
 
 		listenSpy.mockReset();
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(profile.wallets().count()).toBe(3);
@@ -211,7 +211,7 @@ describe("Use Ledger Connection", () => {
 
 			render(<Component />);
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
@@ -233,7 +233,7 @@ describe("Use Ledger Connection", () => {
 
 			render(<Component retryOptions={{ retries: 2 }} />);
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
@@ -241,7 +241,7 @@ describe("Use Ledger Connection", () => {
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(1);
 
-			userEvent.click(screen.getByText("Disconnect"));
+			await userEvent.click(screen.getByText("Disconnect"));
 
 			await expect(screen.findByText("Disconnected")).resolves.toBeVisible();
 
@@ -258,7 +258,7 @@ describe("Use Ledger Connection", () => {
 
 			render(<Component retryOptions={{ retries: 2 }} />);
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
@@ -266,7 +266,7 @@ describe("Use Ledger Connection", () => {
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(1);
 
-			userEvent.click(screen.getByText("Set Busy"));
+			await userEvent.click(screen.getByText("Set Busy"));
 
 			await expect(screen.findByText("Busy")).resolves.toBeVisible();
 
@@ -285,7 +285,7 @@ describe("Use Ledger Connection", () => {
 
 			render(<Component retryOptions={{ retries: 2 }} />);
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
@@ -293,7 +293,7 @@ describe("Use Ledger Connection", () => {
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(1);
 
-			userEvent.click(screen.getByText("Reset"));
+			await userEvent.click(screen.getByText("Reset"));
 
 			await expect(screen.findByText("Disconnected")).resolves.toBeVisible();
 
@@ -314,7 +314,7 @@ describe("Use Ledger Connection", () => {
 
 			render(<Component retryOptions={{ retries: 2 }} />);
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
@@ -322,7 +322,7 @@ describe("Use Ledger Connection", () => {
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(1);
 
-			userEvent.click(screen.getByText("Reset"));
+			await userEvent.click(screen.getByText("Reset"));
 
 			await expect(screen.findByText("Disconnected")).resolves.toBeVisible();
 
@@ -350,10 +350,10 @@ describe("Use Ledger Connection", () => {
 				/>,
 			);
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
-			userEvent.click(screen.getByText("Abort"));
+			await userEvent.click(screen.getByText("Abort"));
 
 			await expect(
 				screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
@@ -389,7 +389,7 @@ describe("Use Ledger Connection", () => {
 
 			expect(screen.getByText("Connect")).toBeInTheDocument();
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument(), {
 				timeout: 4000,
@@ -425,7 +425,7 @@ describe("Use Ledger Connection", () => {
 
 			expect(screen.getByText("Connect")).toBeInTheDocument();
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
@@ -461,7 +461,7 @@ describe("Use Ledger Connection", () => {
 				/>,
 			);
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument(), {
 				timeout: 4000,
 			});
@@ -492,7 +492,7 @@ describe("Use Ledger Connection", () => {
 
 			await expect(screen.findByText("Connect")).resolves.toBeVisible();
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
@@ -534,7 +534,7 @@ describe("Use Ledger Connection", () => {
 				/>,
 			);
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
@@ -567,7 +567,7 @@ describe("Use Ledger Connection", () => {
 				/>,
 			);
 
-			userEvent.click(screen.getByText("Connect"));
+			await userEvent.click(screen.getByText("Connect"));
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument(), {
 				timeout: 4000,
 			});
