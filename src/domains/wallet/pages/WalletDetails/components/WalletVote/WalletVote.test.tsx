@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -574,7 +574,7 @@ describe("WalletVote", () => {
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(t(multivote)));
+		await userEvent.click(screen.getByText(t(multivote)));
 
 		expect(onButtonClick).toHaveBeenCalledWith("current");
 	});
@@ -597,7 +597,7 @@ describe("WalletVote", () => {
 
 		await waitFor(() => expect(screen.getByTestId("WalletVote")).not.toBeDisabled());
 
-		userEvent.click(screen.getByText(t("COMMON.VOTE")));
+		await userEvent.click(screen.getByText(t("COMMON.VOTE")));
 
 		expect(onButtonClick).toHaveBeenCalledWith();
 	});

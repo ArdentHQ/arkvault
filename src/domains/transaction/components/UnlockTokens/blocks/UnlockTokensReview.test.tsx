@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -24,7 +24,7 @@ describe("UnlockTokensReview", () => {
 		vi.spyOn(wallet, "alias").mockReturnValue("LSK Wallet 1");
 	});
 
-	it("should render", () => {
+	it("should render", async () => {
 		const onBack = vi.fn();
 		const onConfirm = vi.fn();
 
@@ -58,11 +58,11 @@ describe("UnlockTokensReview", () => {
 		expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("+ 10 LSK");
 		expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("5 LSK");
 
-		userEvent.click(screen.getByText(translations.COMMON.BACK));
+		await userEvent.click(screen.getByText(translations.COMMON.BACK));
 
 		expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 
-		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
+		await userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
 		expect(onConfirm).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 

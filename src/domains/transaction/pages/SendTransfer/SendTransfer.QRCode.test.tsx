@@ -4,7 +4,7 @@ import QRScanner from "qr-scanner";
 import * as browserAccess from "browser-fs-access";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { SendTransfer } from "./SendTransfer";
@@ -98,11 +98,11 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId(QRCodeModalButton));
+		await userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
 		mockProfileWithOnlyPublicNetworksReset();
@@ -134,11 +134,11 @@ describe("SendTransfer QRModal", () => {
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
 
-		userEvent.click(screen.getByTestId(QRCodeModalButton));
+		await userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
 
@@ -165,11 +165,11 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId(QRCodeModalButton));
+		await userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(
@@ -204,11 +204,11 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId(QRCodeModalButton));
+		await userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(
@@ -231,11 +231,11 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId(QRCodeModalButton));
+		await userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await expect(screen.findByTestId("Modal__inner")).rejects.toThrow(/Unable to find/);
 	});
