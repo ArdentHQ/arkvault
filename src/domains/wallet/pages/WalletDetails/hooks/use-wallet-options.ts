@@ -1,15 +1,14 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import {Coins, Enums} from "@ardenthq/sdk";
+import { Enums } from "@ardenthq/sdk";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { DropdownOptionGroup } from "@/app/components/Dropdown";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { hasAvailableMusigServer } from "@/utils/server-utils";
-import {isCustomNetwork, isMainsailNetwork} from "@/utils/network-utils";
+import { isCustomNetwork, isMainsailNetwork } from "@/utils/network-utils";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
-import {Network} from "@ardenthq/sdk/distribution/esm/network";
 
 const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
 	try {
