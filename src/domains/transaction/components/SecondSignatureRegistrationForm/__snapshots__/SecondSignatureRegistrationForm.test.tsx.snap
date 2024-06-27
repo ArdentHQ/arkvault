@@ -76,7 +76,7 @@ exports[`SecondSignatureRegistrationForm > backup step > should render 1`] = `
             <div
               class="css-1pvpof3"
             >
-              You are responsible for storing and protecting this mnemonic passphrase offline. ARKVault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.
+              You are responsible for storing and protecting this mnemonic passphrase offline. ARK Vault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.
             </div>
           </div>
           <ul
