@@ -41,7 +41,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     <span
                       class="text-md font-bold text-theme-secondary-600"
                     >
-                      ARKVault
+                      ARK Vault
                     </span>
                     <span
                       class="text-md text-theme-secondary-600"
@@ -593,7 +593,7 @@ exports[`Notifications > should render with plugins 1`] = `
                     <span
                       class="text-md font-bold text-theme-secondary-600"
                     >
-                      ARKVault
+                      ARK Vault
                     </span>
                     <span
                       class="text-md text-theme-secondary-600"
@@ -1057,7 +1057,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     <span
                       class="text-md font-bold text-theme-secondary-600"
                     >
-                      ARKVault
+                      ARK Vault
                     </span>
                     <span
                       class="text-md text-theme-secondary-600"

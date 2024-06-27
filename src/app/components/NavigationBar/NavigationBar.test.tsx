@@ -105,7 +105,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should render with title if variant is logo-only", () => {
-		const title = "ARKVAULT";
+		const title = "ARK VAULT";
 
 		const { container, asFragment } = render(<NavigationBar variant="logo-only" title={title} />);
 
@@ -115,7 +115,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should not render with title if variant is full", () => {
-		const title = "ARKVAULT";
+		const title = "ARK VAULT";
 
 		const { container, asFragment } = render(<NavigationBar variant="full" title={title} />);
 
@@ -149,41 +149,41 @@ describe("NavigationBar", () => {
 
 		await expect(screen.findByTestId("NavigationBar__menu-toggle")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("NavigationBar__menu-toggle"));
+		await userEvent.click(screen.getByTestId("NavigationBar__menu-toggle"));
 
 		expect(screen.getByText("Portfolio")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle logo click", () => {
+	it("should handle logo click", async () => {
 		const { history } = render(<NavigationBar />);
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
+		await userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/dashboard`);
 
 		historySpy.mockRestore();
 	});
 
-	it("should redirect to home by default on logo click", () => {
+	it("should redirect to home by default on logo click", async () => {
 		const { history } = render(<NavigationBar variant="logo-only" />);
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
+		await userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
 
 		expect(historySpy).toHaveBeenCalledWith("/");
 
 		historySpy.mockRestore();
 	});
 
-	it("should handle menu click", () => {
+	it("should handle menu click", async () => {
 		const { history } = render(<NavigationBar />);
 
-		userEvent.click(screen.getByText("test"));
+		await userEvent.click(screen.getByText("test"));
 
 		expect(history.location.pathname).toBe("/test");
 	});
@@ -194,16 +194,16 @@ describe("NavigationBar", () => {
 
 		const { history } = render(<NavigationBar />);
 
-		userEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
 
 		expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--1"));
+		await userEvent.click(screen.getByTestId("dropdown__option--1"));
 
 		expect(history.location.pathname).toBe("/test");
 	});
 
-	it("should open user actions dropdown on click", () => {
+	it("should open user actions dropdown on click", async () => {
 		const getUserMenuActionsMock = vi.spyOn(navigation, "getUserMenuActions").mockReturnValue([
 			{ label: "Option 1", mountPath: () => "/test", title: "test", value: "/test" },
 			{ label: "Option 2", mountPath: () => "/test2", title: "test2", value: "/test2" },
@@ -212,11 +212,11 @@ describe("NavigationBar", () => {
 		const { history } = render(<NavigationBar />);
 		const toggle = screen.getByTestId("UserMenu");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByText("Option 1")).toBeInTheDocument();
 
-		userEvent.click(screen.getByText("Option 1"));
+		await userEvent.click(screen.getByText("Option 1"));
 
 		expect(history.location.pathname).toBe("/test");
 
@@ -250,11 +250,11 @@ describe("NavigationBar", () => {
 		const { history } = render(<NavigationBar />);
 		const toggle = screen.getByTestId("UserMenu");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByText("Option 1")).toBeInTheDocument();
 
-		userEvent.click(screen.getByText("Option 1"));
+		await userEvent.click(screen.getByText("Option 1"));
 
 		expect(history.location.pathname).toBe("/");
 
@@ -265,24 +265,24 @@ describe("NavigationBar", () => {
 		widgetMock.mockRestore();
 	});
 
-	it("should handle click to send button", () => {
+	it("should handle click to send button", async () => {
 		const mockProfile = environmentHooks.useActiveProfile();
 		const { history } = render(<NavigationBar />);
 
 		const sendButton = screen.getByTestId("NavigationBar__buttons--send");
 
-		userEvent.click(sendButton);
+		await userEvent.click(sendButton);
 
 		expect(history.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
 
-	it("should handle click to send button from mobile menu", () => {
+	it("should handle click to send button from mobile menu", async () => {
 		const mockProfile = environmentHooks.useActiveProfile();
 		const { history } = renderResponsiveWithRoute(<NavigationBar />, "xs");
 
 		const sendButton = screen.getByTestId("NavigationBar__buttons__mobile--send");
 
-		userEvent.click(sendButton);
+		await userEvent.click(sendButton);
 
 		expect(history.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
@@ -298,18 +298,18 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("NavigationBar__buttons--receive"));
+		await userEvent.click(screen.getByTestId("NavigationBar__buttons--receive"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toHaveTextContent("Select Address");
 
-		userEvent.click(screen.getAllByText("Select")[0]);
+		await userEvent.click(screen.getAllByText("Select")[0]);
 
 		await expect(screen.findByTestId("ReceiveFunds__name")).resolves.toBeVisible();
 		await expect(screen.findByTestId("ReceiveFunds__address")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
@@ -326,18 +326,18 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--receive"));
+		await userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--receive"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toHaveTextContent("Select Address");
 
-		userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
+		await userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
 
 		await expect(screen.findByTestId("ReceiveFunds__name")).resolves.toBeVisible();
 		await expect(screen.findByTestId("ReceiveFunds__address")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
@@ -393,7 +393,7 @@ describe("NavigationBar", () => {
 		await waitFor(() => expect(screen.queryByTestId("NavigationBarMobile")).not.toBeInTheDocument());
 	});
 
-	it("should handle mobile menu home button", () => {
+	it("should handle mobile menu home button", async () => {
 		const { history: renderHistory } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/send-transfer">
 				<NavigationBar />
@@ -405,7 +405,7 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--home"));
+		await userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--home"));
 
 		expect(renderHistory.location.pathname).toBe(dashboardURL);
 	});
@@ -423,11 +423,11 @@ describe("NavigationBar", () => {
 
 		const receiveFundsButton = screen.getByTestId("NavigationBar__buttons--receive");
 
-		userEvent.click(receiveFundsButton);
+		await userEvent.click(receiveFundsButton);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toHaveTextContent("Select Address");
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
@@ -470,7 +470,7 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		userEvent.type(screen.getByTestId("input"), "text");
+		await userEvent.type(screen.getByTestId("input"), "text");
 
 		await expect(screen.findByTestId("NavigationBarMobile")).rejects.toThrow(/Unable to find/);
 	});
