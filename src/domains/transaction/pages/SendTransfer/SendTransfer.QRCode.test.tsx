@@ -7,6 +7,7 @@ import { createHashHistory } from "history";
 import { renderHook } from "@testing-library/react-hooks";
 import { Trans, useTranslation } from "react-i18next";
 
+import { within } from "@testing-library/react";
 import { SendTransfer } from "./SendTransfer";
 import {
 	env,
@@ -36,6 +37,13 @@ const qrCodeUrl =
 
 const history = createHashHistory();
 let qrScannerMock;
+
+const expectSuccessToast = async (toastSpy) => {
+	const { result } = renderHook(() => useTranslation());
+	const { t } = result.current;
+
+	await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+};
 
 describe("SendTransfer QRModal", () => {
 	beforeAll(() => {
@@ -82,8 +90,6 @@ describe("SendTransfer QRModal", () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = vi.spyOn(toasts, "success");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
 		history.push(transferURL);
@@ -104,7 +110,8 @@ describe("SendTransfer QRModal", () => {
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+		await expectSuccessToast(toastSpy);
+
 		mockProfileWithOnlyPublicNetworksReset();
 	});
 
@@ -116,8 +123,6 @@ describe("SendTransfer QRModal", () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = vi.spyOn(toasts, "success");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
 		history.push(transferURL);
@@ -140,7 +145,7 @@ describe("SendTransfer QRModal", () => {
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+		await expectSuccessToast(toastSpy);
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
 
@@ -238,5 +243,240 @@ describe("SendTransfer QRModal", () => {
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await expect(screen.findByTestId("Modal__inner")).rejects.toThrow(/Unable to find/);
+	});
+
+	it("should show the overwrite modal and fill values when confirmed", async () => {
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = vi.spyOn(toasts, "success");
+
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+		});
+
+		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId(
+			"SelectDropdown__input",
+		);
+
+		// input address value
+		userEvent.paste(recipientInput, "address 1");
+
+		// open up a QR scan modal
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		// ensure scan modal is visible
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+
+		// upload QR image
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		// ensure overwrite modal is visible
+		await expect(screen.findByTestId("TransferOverwriteModal")).resolves.toBeInTheDocument();
+
+		const recipientContainer = screen.getByTestId("OverwriteModal__Recipient");
+
+		expect(recipientContainer).toBeInTheDocument();
+		expect(within(recipientContainer).getByTestId("OverwriteDetail__Current")).toHaveTextContent("address 1");
+		expect(within(recipientContainer).getByTestId("OverwriteDetail__New")).toHaveTextContent(
+			"DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+		);
+
+		const amountContainer = screen.getByTestId("OverwriteModal__Amount");
+
+		expect(amountContainer).toBeInTheDocument();
+		expect(within(amountContainer).getByTestId("OverwriteDetail__Current")).toHaveTextContent("N/A");
+		expect(within(amountContainer).getByTestId("OverwriteDetail__New")).toHaveTextContent("10");
+
+		// confirm the Overwrite modal
+		userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
+
+		await expectSuccessToast(toastSpy);
+
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("10");
+		expect(recipientInput).toHaveValue("DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o");
+
+		// ensure overwrite modal is no longer visible
+		await waitFor(() => {
+			expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument();
+		});
+
+		mockProfileWithOnlyPublicNetworksReset();
+	});
+
+	it("should clear the prefilled values", async () => {
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = vi.spyOn(toasts, "success");
+
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet",
+		});
+
+		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId(
+			"SelectDropdown__input",
+		);
+
+		// input address value
+		userEvent.paste(recipientInput, "address 1");
+
+		// open up a QR scan modal
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		// ensure scan modal is visible
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+
+		// upload QR image
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		// ensure overwrite modal is visible
+		await expect(screen.findByTestId("TransferOverwriteModal")).resolves.toBeInTheDocument();
+
+		const recipientContainer = screen.getByTestId("OverwriteModal__Recipient");
+
+		expect(recipientContainer).toBeInTheDocument();
+		expect(within(recipientContainer).getByTestId("OverwriteDetail__Current")).toHaveTextContent("address 1");
+		expect(within(recipientContainer).getByTestId("OverwriteDetail__New")).toHaveTextContent("N/A");
+
+		// confirm the Overwrite modal
+		userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
+
+		await expectSuccessToast(toastSpy);
+
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("10");
+
+		// ensure recipient input value has cleared
+		expect(recipientInput).toHaveValue("");
+
+		// ensure overwrite modal is no longer visible
+		await waitFor(() => {
+			expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument();
+		});
+
+		mockProfileWithOnlyPublicNetworksReset();
+	});
+
+	it("should not show the overwrite modal if the transfer form hasn't filled", async () => {
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = vi.spyOn(toasts, "success");
+
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet",
+		});
+
+		// open up a QR scan modal
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		// ensure scan modal is visible
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+
+		// upload QR image
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		// ensure overwrite modal is not visible
+		expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument();
+
+		await expectSuccessToast(toastSpy);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("10");
+		});
+
+		mockProfileWithOnlyPublicNetworksReset();
+	});
+
+	it("should close the overwrite modal when canceled", async () => {
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
+
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet",
+		});
+
+		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId(
+			"SelectDropdown__input",
+		);
+
+		// input address value
+		userEvent.paste(recipientInput, "address 1");
+
+		// open up a QR scan modal
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		// ensure scan modal is visible
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+
+		// upload QR image
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		// ensure overwrite modal is visible
+		await expect(screen.findByTestId("TransferOverwriteModal")).resolves.toBeInTheDocument();
+
+		// cancel the Overwrite modal
+		userEvent.click(screen.getByTestId("OverwriteModal__cancel-button"));
+
+		// ensure overwrite modal is no longer visible
+		await waitFor(() => {
+			expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
+
+		// ensure recipient input value has cleared
+		expect(recipientInput).toHaveValue("address 1");
+
+		mockProfileWithOnlyPublicNetworksReset();
 	});
 });
