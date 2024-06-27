@@ -14,6 +14,7 @@ export default defineConfig((env) => {
 		viteConfig(env),
 		defineConfig({
 			test: {
+				css: false,
 				logHeapUsage: true,
 				maxConcurrency: 4,
 				maxWorkers: 1,
@@ -22,7 +23,6 @@ export default defineConfig((env) => {
 				environment: "jsdom",
 				isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
-				css: false,
 				server: {
 					deps: {
 						fallbackCJS: true,
