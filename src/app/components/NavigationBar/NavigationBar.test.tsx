@@ -149,7 +149,7 @@ describe("NavigationBar", () => {
 
 		await expect(screen.findByTestId("NavigationBar__menu-toggle")).resolves.toBeVisible();
 
-		user.click(screen.getByTestId("NavigationBar__menu-toggle"));
+		userEvent.click(screen.getByTestId("NavigationBar__menu-toggle"));
 
 		expect(screen.getByText("Portfolio")).toBeInTheDocument();
 
@@ -161,7 +161,7 @@ describe("NavigationBar", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		user.click(screen.getByTestId("NavigationBarLogo--button"));
+		userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/dashboard`);
 
@@ -173,7 +173,7 @@ describe("NavigationBar", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		user.click(screen.getByTestId("NavigationBarLogo--button"));
+		userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
 
 		expect(historySpy).toHaveBeenCalledWith("/");
 
@@ -183,7 +183,7 @@ describe("NavigationBar", () => {
 	it("should handle menu click", async () => {
 		const { history } = render(<NavigationBar />);
 
-		user.click(screen.getByText("test"));
+		userEvent.click(screen.getByText("test"));
 
 		expect(history.location.pathname).toBe("/test");
 	});
@@ -194,11 +194,11 @@ describe("NavigationBar", () => {
 
 		const { history } = render(<NavigationBar />);
 
-		user.click(screen.queryAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
 
 		expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
 
-		user.click(screen.getByTestId("dropdown__option--1"));
+		userEvent.click(screen.getByTestId("dropdown__option--1"));
 
 		expect(history.location.pathname).toBe("/test");
 	});
@@ -212,11 +212,11 @@ describe("NavigationBar", () => {
 		const { history } = render(<NavigationBar />);
 		const toggle = screen.getByTestId("UserMenu");
 
-		user.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByText("Option 1")).toBeInTheDocument();
 
-		user.click(screen.getByText("Option 1"));
+		userEvent.click(screen.getByText("Option 1"));
 
 		expect(history.location.pathname).toBe("/test");
 
@@ -250,11 +250,11 @@ describe("NavigationBar", () => {
 		const { history } = render(<NavigationBar />);
 		const toggle = screen.getByTestId("UserMenu");
 
-		user.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByText("Option 1")).toBeInTheDocument();
 
-		user.click(screen.getByText("Option 1"));
+		userEvent.click(screen.getByText("Option 1"));
 
 		expect(history.location.pathname).toBe("/");
 
@@ -271,7 +271,7 @@ describe("NavigationBar", () => {
 
 		const sendButton = screen.getByTestId("NavigationBar__buttons--send");
 
-		user.click(sendButton);
+		userEvent.click(sendButton);
 
 		expect(history.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
@@ -282,7 +282,7 @@ describe("NavigationBar", () => {
 
 		const sendButton = screen.getByTestId("NavigationBar__buttons__mobile--send");
 
-		user.click(sendButton);
+		userEvent.click(sendButton);
 
 		expect(history.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
@@ -298,18 +298,18 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		user.click(screen.getByTestId("NavigationBar__buttons--receive"));
+		userEvent.click(screen.getByTestId("NavigationBar__buttons--receive"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toHaveTextContent("Select Address");
 
-		user.click(screen.getAllByText("Select")[0]);
+		userEvent.click(screen.getAllByText("Select")[0]);
 
 		await expect(screen.findByTestId("ReceiveFunds__name")).resolves.toBeVisible();
 		await expect(screen.findByTestId("ReceiveFunds__address")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		user.click(screen.getByTestId("Modal__close-button"));
+		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
@@ -326,18 +326,18 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		user.click(screen.getByTestId("NavigationBar__buttons__mobile--receive"));
+		userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--receive"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toHaveTextContent("Select Address");
 
-		user.click(screen.getAllByTestId("WalletListItemMobile")[0]);
+		userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
 
 		await expect(screen.findByTestId("ReceiveFunds__name")).resolves.toBeVisible();
 		await expect(screen.findByTestId("ReceiveFunds__address")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		user.click(screen.getByTestId("Modal__close-button"));
+		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
@@ -405,7 +405,7 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		user.click(screen.getByTestId("NavigationBar__buttons__mobile--home"));
+		userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--home"));
 
 		expect(renderHistory.location.pathname).toBe(dashboardURL);
 	});
@@ -423,11 +423,11 @@ describe("NavigationBar", () => {
 
 		const receiveFundsButton = screen.getByTestId("NavigationBar__buttons--receive");
 
-		user.click(receiveFundsButton);
+		userEvent.click(receiveFundsButton);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toHaveTextContent("Select Address");
 
-		user.click(screen.getByTestId("Modal__close-button"));
+		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
