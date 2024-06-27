@@ -1888,7 +1888,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
     <p
       class="text-theme-secondary-text"
     >
-      Connect your Ledger device, open the ARK app, and authorize the connection with ARKVault.
+      Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.
     </p>
     <div
       class="inline-flex w-full items-center justify-center space-x-3"
@@ -4144,7 +4144,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
     <p
       class="text-theme-secondary-text"
     >
-      Connect your Ledger device, open the ARK app, and authorize the connection with ARKVault.
+      Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.
     </p>
     <div
       class="inline-flex w-full items-center justify-center space-x-3"
