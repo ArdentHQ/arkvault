@@ -44,7 +44,7 @@ const OverwriteDetail = ({ currentNode, newNode }: { currentNode: ReactNode; new
 );
 
 const AvailableValue = ({ value }: { value: string }) => (
-	<div className="font-medium text-theme-secondary-900 dark:text-theme-secondary-200 truncate">{value}</div>
+	<div className="truncate font-medium text-theme-secondary-900 dark:text-theme-secondary-200">{value}</div>
 );
 
 const UnavailableValue = () => {
