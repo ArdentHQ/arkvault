@@ -9,13 +9,8 @@ exports[`InputDate > should render 1`] = `
       class="react-datepicker-wrapper"
     >
       <div
-        class="react-datepicker__input-container "
+        class="react-datepicker__input-container"
       >
-        <span
-          aria-live="polite"
-          class="react-datepicker__aria-live"
-          role="alert"
-        />
         <div
           class="react-datepicker-ignore-onclickoutside css-1psxlcd"
         >
@@ -88,7 +83,9 @@ exports[`InputDate > should render 1`] = `
         data-placement="bottom-start"
         style="position: absolute; left: 0px; top: 0px;"
       >
-        <div>
+        <div
+          style="display: contents;"
+        >
           <div
             class="react-datepicker bg-theme-background"
           >
@@ -181,6 +178,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--weekend react-datepicker__day--outside-month"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     28
                   </div>
@@ -191,6 +189,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--outside-month"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     29
                   </div>
@@ -201,6 +200,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--outside-month"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     30
                   </div>
@@ -212,6 +212,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--keyboard-selected react-datepicker__day--today"
                     role="option"
                     tabindex="0"
+                    title=""
                   >
                     1
                   </div>
@@ -222,6 +223,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     2
                   </div>
@@ -232,6 +234,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     3
                   </div>
@@ -242,6 +245,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--disabled react-datepicker__day--weekend"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     4
                   </div>
@@ -256,6 +260,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--disabled react-datepicker__day--weekend"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     5
                   </div>
@@ -266,6 +271,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     6
                   </div>
@@ -276,6 +282,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     7
                   </div>
@@ -286,6 +293,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--008 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     8
                   </div>
@@ -296,6 +304,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     9
                   </div>
@@ -306,6 +315,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     10
                   </div>
@@ -316,6 +326,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--011 react-datepicker__day--disabled react-datepicker__day--weekend"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     11
                   </div>
@@ -330,6 +341,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--012 react-datepicker__day--disabled react-datepicker__day--weekend"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     12
                   </div>
@@ -340,6 +352,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--013 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     13
                   </div>
@@ -350,6 +363,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--014 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     14
                   </div>
@@ -360,6 +374,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--015 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     15
                   </div>
@@ -370,6 +385,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     16
                   </div>
@@ -380,6 +396,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     17
                   </div>
@@ -390,6 +407,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--018 react-datepicker__day--disabled react-datepicker__day--weekend"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     18
                   </div>
@@ -404,6 +422,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--019 react-datepicker__day--disabled react-datepicker__day--weekend"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     19
                   </div>
@@ -414,6 +433,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--020 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     20
                   </div>
@@ -424,6 +444,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--021 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     21
                   </div>
@@ -434,6 +455,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--022 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     22
                   </div>
@@ -444,6 +466,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     23
                   </div>
@@ -454,6 +477,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     24
                   </div>
@@ -464,6 +488,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--025 react-datepicker__day--disabled react-datepicker__day--weekend"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     25
                   </div>
@@ -478,6 +503,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--026 react-datepicker__day--disabled react-datepicker__day--weekend"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     26
                   </div>
@@ -488,6 +514,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--027 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     27
                   </div>
@@ -498,6 +525,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     28
                   </div>
@@ -508,6 +536,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     29
                   </div>
@@ -518,6 +547,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     30
                   </div>
@@ -528,6 +558,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     31
                   </div>
@@ -538,6 +569,7 @@ exports[`InputDate > should render 1`] = `
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--disabled react-datepicker__day--weekend react-datepicker__day--outside-month"
                     role="option"
                     tabindex="-1"
+                    title=""
                   >
                     1
                   </div>
