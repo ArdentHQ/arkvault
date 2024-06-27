@@ -62,7 +62,7 @@ const CustomNetworksListNetwork: React.VFC<{
 						{networkInitials(network)}
 					</div>
 				</div>
-				<div className="min-h-7 flex items-center break-all font-semibold leading-tight">
+				<div className="flex min-h-7 items-center break-all font-semibold leading-tight">
 					{networkName(network)}
 				</div>
 			</div>
