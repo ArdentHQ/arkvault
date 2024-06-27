@@ -478,5 +478,5 @@ describe("SendTransfer QRModal", () => {
 		expect(recipientInput).toHaveValue("address 1");
 
 		mockProfileWithOnlyPublicNetworksReset();
-	})
+	});
 });
