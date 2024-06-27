@@ -423,4 +423,61 @@ describe("SendTransfer QRModal", () => {
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});
+
+	it("should close the overwrite modal when canceled", async () => {
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = vi.spyOn(toasts, "success");
+
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<SendTransfer />
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet",
+		});
+
+		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId(
+			"SelectDropdown__input",
+		);
+
+		// input address value
+		userEvent.paste(recipientInput, "address 1");
+
+		// open up a QR scan modal
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		// ensure scan modal is visible
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+
+		// upload QR image
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		// ensure overwrite modal is visible
+		await expect(screen.findByTestId("TransferOverwriteModal")).resolves.toBeInTheDocument();
+
+		// cancel the Overwrite modal
+		userEvent.click(screen.getByTestId("OverwriteModal__cancel-button"));
+
+		// ensure overwrite modal is no longer visible
+		await waitFor(() => {
+			expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
+
+		// ensure recipient input value has cleared
+		expect(recipientInput).toHaveValue("address 1");
+
+		mockProfileWithOnlyPublicNetworksReset();
+	})
 });
