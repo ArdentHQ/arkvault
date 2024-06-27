@@ -174,6 +174,12 @@ export const translations = {
 		},
 		WAITING_FOR_SIGNATURES: "Waiting for Signatures",
 	},
+	MODAL_OVERWRITE_VALUES: {
+		CLEAR_PREFILLED_LABEL: "Remove prefilled data not included in QR",
+		TITLE: "Overwrite Data",
+		WARNING:
+			"The data scanned via QR conflicts with pre-filled input fields. Please confirm if you wish to overwrite the following data.",
+	},
 	MODAL_QR_CODE: {
 		DESCRIPTION: "Hold a compatible QR Code in front of your device's camera",
 		ERROR: "Something went wrong.",
