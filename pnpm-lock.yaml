@@ -165,27 +165,9 @@ importers:
         specifier: ^1.2.0
         version: 1.4.0
     devDependencies:
-      '@babel/core':
-        specifier: ^7.22.1
-        version: 7.24.6
-      '@babel/plugin-transform-react-jsx':
-        specifier: ^7.24.6
-        version: 7.24.6(@babel/core@7.24.6)
-      '@babel/preset-env':
-        specifier: ^7.22.2
-        version: 7.24.6(@babel/core@7.24.6)
-      '@babel/preset-react':
-        specifier: ^7.22.3
-        version: 7.24.6(@babel/core@7.24.6)
-      '@babel/preset-typescript':
-        specifier: ^7.21.0
-        version: 7.24.6(@babel/core@7.24.6)
       '@cucumber/cucumber':
         specifier: ^9.3.0
         version: 9.6.0
-      '@emotion/babel-plugin-jsx-pragmatic':
-        specifier: ^0.2.0
-        version: 0.2.1(@babel/core@7.24.6)
       '@ledgerhq/hw-transport-mocker':
         specifier: ^6.27.15
         version: 6.28.6
@@ -243,9 +225,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.14
         version: 10.4.19(postcss@8.4.38)
-      babel-plugin-macros:
-        specifier: ^3.1.0
-        version: 3.1.0
       cross-fetch:
         specifier: ^3.1.5
         version: 3.1.8
@@ -1071,12 +1050,6 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/plugin-transform-typescript@7.24.6':
-    resolution: {integrity: sha512-H0i+hDLmaYYSt6KU9cZE0gb3Cbssa/oxWis7PX4ofQzbvsfix9Lbh8SRk7LCPDlLWJHUiFeHU0qRRpF/4Zv7mQ==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
   '@babel/plugin-transform-unicode-escapes@7.24.6':
     resolution: {integrity: sha512-bKl3xxcPbkQQo5eX9LjjDpU2xYHeEeNQbOhj0iPvetSzA+Tu9q/o5lujF4Sek60CM6MgYvOS/DJuwGbiEYAnLw==}
     engines: {node: '>=6.9.0'}
@@ -1120,12 +1093,6 @@ packages:
 
   '@babel/preset-react@7.24.6':
     resolution: {integrity: sha512-8mpzh1bWvmINmwM3xpz6ahu57mNaWavMm+wBNjQ4AFu1nghKBiIRET7l/Wmj4drXany/BBGjJZngICcD98F1iw==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
-  '@babel/preset-typescript@7.24.6':
-    resolution: {integrity: sha512-U10aHPDnokCFRXgyT/MaIRTivUu2K/mu0vJlwRS9LxJmJet+PFQNKpggPyFCUtC6zWSBPjvxjnpNkAn3Uw2m5w==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -1220,11 +1187,6 @@ packages:
     resolution: {integrity: sha512-mvBSwIBUeiRscrCeJE1LwctAriBj65eUDm0Pc11iE5gRwzkmsdbS7FnZ1XUWjpSeQWL1L5g12Fc/SchPM9DUOw==}
     engines: {node: '>=10.12.0'}
     hasBin: true
-
-  '@emotion/babel-plugin-jsx-pragmatic@0.2.1':
-    resolution: {integrity: sha512-xy1SlgEJygAAIvIuC2idkGKJYa6v5iwoyILkvNKgk347bV+IImXrUat5Z86EmLGyWhEoTplVT9EHqTnHZG4HFw==}
-    peerDependencies:
-      '@babel/core': ^7.0.0
 
   '@emotion/babel-plugin@11.11.0':
     resolution: {integrity: sha512-m4HEDZleaaCH+XgDDsPF15Ht6wTLsgDTeR3WYj9Q/k76JtWhrJjcP4+/XlG8LGT/Rol9qUfOIztXeA84ATpqPQ==}
@@ -7544,14 +7506,6 @@ snapshots:
       '@babel/core': 7.24.6
       '@babel/helper-plugin-utils': 7.24.6
 
-  '@babel/plugin-transform-typescript@7.24.6(@babel/core@7.24.6)':
-    dependencies:
-      '@babel/core': 7.24.6
-      '@babel/helper-annotate-as-pure': 7.24.6
-      '@babel/helper-create-class-features-plugin': 7.24.6(@babel/core@7.24.6)
-      '@babel/helper-plugin-utils': 7.24.6
-      '@babel/plugin-syntax-typescript': 7.24.6(@babel/core@7.24.6)
-
   '@babel/plugin-transform-unicode-escapes@7.24.6(@babel/core@7.24.6)':
     dependencies:
       '@babel/core': 7.24.6
@@ -7685,15 +7639,6 @@ snapshots:
       '@babel/plugin-transform-react-jsx': 7.24.6(@babel/core@7.24.6)
       '@babel/plugin-transform-react-jsx-development': 7.24.6(@babel/core@7.24.6)
       '@babel/plugin-transform-react-pure-annotations': 7.24.6(@babel/core@7.24.6)
-
-  '@babel/preset-typescript@7.24.6(@babel/core@7.24.6)':
-    dependencies:
-      '@babel/core': 7.24.6
-      '@babel/helper-plugin-utils': 7.24.6
-      '@babel/helper-validator-option': 7.24.6
-      '@babel/plugin-syntax-jsx': 7.24.6(@babel/core@7.24.6)
-      '@babel/plugin-transform-modules-commonjs': 7.24.6(@babel/core@7.24.6)
-      '@babel/plugin-transform-typescript': 7.24.6(@babel/core@7.24.6)
 
   '@babel/regjsgen@0.8.0': {}
 
@@ -7870,11 +7815,6 @@ snapshots:
       commander: 5.1.0
       glob: 7.2.3
       minimatch: 3.1.2
-
-  '@emotion/babel-plugin-jsx-pragmatic@0.2.1(@babel/core@7.24.6)':
-    dependencies:
-      '@babel/core': 7.24.6
-      '@babel/plugin-syntax-jsx': 7.24.6(@babel/core@7.24.6)
 
   '@emotion/babel-plugin@11.11.0':
     dependencies:
