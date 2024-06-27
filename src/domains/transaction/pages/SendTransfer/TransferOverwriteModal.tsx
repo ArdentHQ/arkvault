@@ -22,28 +22,26 @@ const DetailLabel = ({ label }: { label: string }) => (
 	<div className="mb-2 text-sm font-semibold text-theme-secondary-text">{label}</div>
 );
 
-const OverwriteDetail = ({ currentNode, newNode }: { currentNode: ReactNode; newNode: ReactNode }) => {
-	return (
-		<div className="flex rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-			<div className="min-w-0 flex-1 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
-				<div
-					className="border-b border-theme-secondary-300 px-3 py-2.5 dark:border-theme-secondary-800"
-					data-testid="OverwriteDetail__Current"
-				>
-					<DetailLabel label="Current value" />
-					<div className="flex w-full flex-1">{currentNode}</div>
-				</div>
-				<div className="px-3 py-2.5" data-testid="OverwriteDetail__New">
-					<DetailLabel label="New value" />
-					<div className="flex w-full flex-1">{newNode}</div>
-				</div>
+const OverwriteDetail = ({ currentNode, newNode }: { currentNode: ReactNode; newNode: ReactNode }) => (
+	<div className="flex rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
+		<div className="min-w-0 flex-1 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
+			<div
+				className="border-b border-theme-secondary-300 px-3 py-2.5 dark:border-theme-secondary-800"
+				data-testid="OverwriteDetail__Current"
+			>
+				<DetailLabel label="Current value" />
+				<div className="flex w-full flex-1">{currentNode}</div>
 			</div>
-			<div className="flex items-center px-3.5">
-				<Icon name="ArrowDown" size="lg" />
+			<div className="px-3 py-2.5" data-testid="OverwriteDetail__New">
+				<DetailLabel label="New value" />
+				<div className="flex w-full flex-1">{newNode}</div>
 			</div>
 		</div>
-	);
-};
+		<div className="flex items-center px-3.5">
+			<Icon name="ArrowDown" size="lg" />
+		</div>
+	</div>
+);
 
 const AvailableValue = ({ value }: { value: string }) => (
 	<div className="font-medium text-theme-secondary-900 dark:text-theme-secondary-200">{value}</div>
@@ -55,9 +53,8 @@ const UnavailableValue = () => {
 	return <div className="font-medium text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</div>;
 };
 
-const DetailText = ({ value }: { value: string | null }) => {
-	return value ? <AvailableValue value={value} /> : <UnavailableValue />;
-};
+const DetailText = ({ value }: { value: string | null }) =>
+	value ? <AvailableValue value={value} /> : <UnavailableValue />;
 
 export const TransferOverwriteModal = ({
 	isOpen,
