@@ -20,7 +20,7 @@ describe("InstallPWA", () => {
 		expect(screen.getByTestId("InstallPWA")).toBeInTheDocument();
 	});
 
-	it("should close the banner if press the close button", () => {
+	it("should close the banner if press the close button", async () => {
 		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
 
 		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
@@ -30,7 +30,7 @@ describe("InstallPWA", () => {
 			window.dispatchEvent(new Event("beforeinstallprompt"));
 		});
 
-		userEvent.click(screen.getByTestId("InstallPWA__close"));
+		await userEvent.click(screen.getByTestId("InstallPWA__close"));
 
 		expect(screen.queryByTestId("InstallPWA")).not.toBeInTheDocument();
 
@@ -57,7 +57,7 @@ describe("InstallPWA", () => {
 			window.dispatchEvent(event);
 		});
 
-		userEvent.click(screen.getByTestId("InstallPWA__install"));
+		await userEvent.click(screen.getByTestId("InstallPWA__install"));
 
 		expect(promptFunction).toHaveBeenCalledWith();
 
