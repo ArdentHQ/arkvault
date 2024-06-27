@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Modal } from "@/app/components/Modal";
 import { Alert } from "@/app/components/Alert";
@@ -6,6 +6,7 @@ import { FormButtons } from "@/app/components/Form";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { Checkbox } from "@/app/components/Checkbox";
+import { Address } from "@/app/components/Address";
 
 export type TransferFormData = Record<string, string | null>;
 
@@ -21,34 +22,20 @@ const DetailLabel = ({ label }: { label: string }) => (
 	<div className="mb-2 text-sm font-semibold text-theme-secondary-text">{label}</div>
 );
 
-const OverwriteDetail = ({ currentValue, newValue }: { currentValue: string | null; newValue: string | null }) => {
-	const { t } = useTranslation();
-
+const OverwriteDetail = ({ currentNode, newNode }: { currentNode: ReactNode; newNode: ReactNode }) => {
 	return (
 		<div className="flex rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-			<div className="flex-1 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
+			<div className="min-w-0 flex-1 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
 				<div
 					className="border-b border-theme-secondary-300 px-3 py-2.5 dark:border-theme-secondary-800"
 					data-testid="OverwriteDetail__Current"
 				>
 					<DetailLabel label="Current value" />
-					{currentValue ? (
-						<div className="font-medium text-theme-secondary-900 dark:text-theme-secondary-200">
-							{currentValue}
-						</div>
-					) : (
-						<div className="font-medium text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</div>
-					)}
+					<div className="flex w-full flex-1">{currentNode}</div>
 				</div>
 				<div className="px-3 py-2.5" data-testid="OverwriteDetail__New">
 					<DetailLabel label="New value" />
-					{newValue ? (
-						<div className="font-medium text-theme-secondary-900 dark:text-theme-secondary-200">
-							{newValue}
-						</div>
-					) : (
-						<div className="font-medium text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</div>
-					)}
+					<div className="flex w-full flex-1">{newNode}</div>
 				</div>
 			</div>
 			<div className="flex items-center px-3.5">
@@ -56,6 +43,20 @@ const OverwriteDetail = ({ currentValue, newValue }: { currentValue: string | nu
 			</div>
 		</div>
 	);
+};
+
+const AvailableValue = ({ value }: { value: string }) => (
+	<div className="font-medium text-theme-secondary-900 dark:text-theme-secondary-200">{value}</div>
+);
+
+const UnavailableValue = () => {
+	const { t } = useTranslation();
+
+	return <div className="font-medium text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</div>;
+};
+
+const DetailText = ({ value }: { value: string | null }) => {
+	return value ? <AvailableValue value={value} /> : <UnavailableValue />;
 };
 
 export const TransferOverwriteModal = ({
@@ -69,6 +70,9 @@ export const TransferOverwriteModal = ({
 
 	const [clearPrefilled, setClearPrefilled] = useState(true);
 
+	const { recipientAddress: newRecipient, amount: newAmount, memo: newMemo } = newData;
+	const { recipientAddress: currentRecipient, amount: currentAmount, memo: currentMemo } = currentData;
+
 	return (
 		<Modal
 			isOpen={isOpen}
@@ -81,32 +85,57 @@ export const TransferOverwriteModal = ({
 			<Alert>{t("TRANSACTION.MODAL_OVERWRITE_VALUES.WARNING")}</Alert>
 
 			<div className="space-y-6 pt-6">
-				{(currentData.recipientAddress || newData.recipientAddress) && (
+				{(currentRecipient || newRecipient) && (
 					<div data-testid="OverwriteModal__Recipient">
 						<DetailLabel label={t("COMMON.RECIPIENT")} />
 						<OverwriteDetail
-							currentValue={currentData.recipientAddress}
-							newValue={newData.recipientAddress}
+							currentNode={
+								currentRecipient ? (
+									<Address
+										address={currentRecipient}
+										orientation="vertical"
+										addressClass="font-medium text-theme-secondary-900 dark:text-theme-secondary-200"
+									/>
+								) : (
+									<UnavailableValue />
+								)
+							}
+							newNode={
+								newRecipient ? (
+									<Address
+										address={newRecipient}
+										addressClass="font-medium text-theme-secondary-900 dark:text-theme-secondary-200"
+									/>
+								) : (
+									<UnavailableValue />
+								)
+							}
 						/>
 					</div>
 				)}
 
-				{(currentData.amount || newData.amount) && (
+				{(currentAmount || newAmount) && (
 					<div data-testid="OverwriteModal__Amount">
 						<DetailLabel label={t("COMMON.AMOUNT")} />
-						<OverwriteDetail currentValue={currentData.amount} newValue={newData.amount} />
+						<OverwriteDetail
+							currentNode={<DetailText value={currentAmount} />}
+							newNode={<DetailText value={newAmount} />}
+						/>
 					</div>
 				)}
 
-				{(currentData.memo || newData.memo) && (
+				{(currentMemo || newMemo) && (
 					<div data-testid="OverwriteModal__Memo">
 						<DetailLabel label={t("COMMON.MEMO")} />
-						<OverwriteDetail currentValue={currentData.memo} newValue={newData.memo} />
+						<OverwriteDetail
+							currentNode={<DetailText value={currentMemo} />}
+							newNode={<DetailText value={newMemo} />}
+						/>
 					</div>
 				)}
 			</div>
 
-			<label className="mt-4 inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text">
+			<label className="mt-4 inline-flex cursor-pointer items-center space-x-3 pb-10 text-theme-secondary-text md:pb-0">
 				<Checkbox
 					data-testid="OverwriteModal__clear_prefilled"
 					checked={clearPrefilled}
