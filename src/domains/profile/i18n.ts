@@ -84,7 +84,8 @@ export const translations = {
 			TITLE: "Fully Customizable",
 		},
 		STEP_4: {
-			DESCRIPTION: "With ARK Vault, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
+			DESCRIPTION:
+				"With ARK Vault, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
 			TITLE: "Exchange Assets On The Fly",
 		},
 	},
