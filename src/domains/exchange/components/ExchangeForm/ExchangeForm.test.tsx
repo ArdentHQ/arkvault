@@ -1,14 +1,14 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react";
+import { renderHook } from '@testing-library/react'
 import userEvent from "@testing-library/user-event";
 import { HashHistory, createHashHistory } from "history";
 import React, { useEffect } from "react";
-import { FormProvider, useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
 import { vi } from "vitest";
 import { cloneDeep } from "@ardenthq/sdk-helpers";
+import { FormProvider, useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
@@ -94,7 +94,7 @@ const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; t
 		});
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toBeInTheDocument());
-		await userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[0], from.ticker);
+		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[0], from.ticker);
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
 		await userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
@@ -114,7 +114,7 @@ const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; t
 		});
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toBeInTheDocument());
-		await userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], to.ticker);
+		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[1], to.ticker);
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
 		await userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
@@ -438,7 +438,8 @@ describe("ExchangeForm", () => {
 		});
 
 		const externalInput = within(screen.getByTestId("ExchangeForm__external-id")).getByRole("textbox");
-		await userEvent.paste(externalInput, "external-id");
+		await userEvent.clear(externalInput)
+		await userEvent.type(externalInput, "external-id");
 
 		await waitFor(() => {
 			expect(externalInput).toHaveValue("external-id");
@@ -480,7 +481,7 @@ describe("ExchangeForm", () => {
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
-		await userEvent.paste(refundDropdown, "payoutAddress");
+		await userEvent.type(refundDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(refundDropdown).toHaveValue("payoutAddress");
@@ -489,7 +490,7 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__refund-external-id")).toBeInTheDocument();
 
 		const refundExternalInput = within(screen.getByTestId("ExchangeForm__refund-external-id")).getByRole("textbox");
-		await userEvent.paste(refundExternalInput, "refund-external-id");
+		await userEvent.type(refundExternalInput, "refund-external-id");
 
 		await waitFor(() => {
 			expect(refundExternalInput).toHaveValue("refund-external-id");
@@ -551,7 +552,7 @@ describe("ExchangeForm", () => {
 		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
 
 		// amount input
-		await userEvent.paste(payinInput, "1");
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -563,11 +564,10 @@ describe("ExchangeForm", () => {
 
 		// update amount output
 		payoutInput.select();
-		await userEvent.paste(payoutInput, "1");
+		await userEvent.clear(payoutInput);
+		await userEvent.type(payoutInput, "1");
 
-		await waitFor(() => {
-			expect(payinInput).toHaveValue(payoutValue);
-		});
+		expect(payinInput).toHaveValue(payoutValue);
 
 		// remove from currency
 		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
@@ -608,7 +608,8 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		await userEvent.paste(payinInput, "1");
+		await userEvent.clear(payinInput);
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payoutInput).toHaveValue(payoutValue);
@@ -651,7 +652,8 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		await userEvent.paste(payinInput, "1");
+		await userEvent.clear(payinInput);
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -691,7 +693,8 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		await userEvent.paste(payinInput, "1");
+		await userEvent.clear(payinInput);
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -737,7 +740,8 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		await userEvent.paste(payoutInput, "1");
+		await userEvent.clear(payoutInput);
+		await userEvent.type(payoutInput, "1");
 
 		await waitFor(() => {
 			expect(payoutInput).toHaveValue("1");
@@ -776,7 +780,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		await userEvent.paste(payinInput, "1");
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -812,7 +816,7 @@ describe("ExchangeForm", () => {
 
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		await userEvent.paste(recipientDropdown, "payoutAddress");
+		await userEvent.type(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -866,7 +870,7 @@ describe("ExchangeForm", () => {
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
-		await userEvent.paste(refundDropdown, "refundAddress");
+		await userEvent.type(refundDropdown, "refundAddress");
 
 		await waitFor(() => {
 			expect(refundDropdown).toHaveValue("refundAddress");
@@ -913,7 +917,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		await userEvent.paste(recipientDropdown, "payoutAddress");
+		await userEvent.type(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -923,7 +927,8 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		await userEvent.paste(payinInput, "1");
+		await userEvent.clear(payinInput);
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -1012,7 +1017,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		await userEvent.paste(recipientDropdown, "payoutAddress");
+		await userEvent.type(recipientDropdown, "payoutAddress");
 
 		const payinInput = screen.getAllByTestId("InputCurrency")[0];
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
@@ -1022,7 +1027,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// amount input
-		await userEvent.paste(payinInput, "1");
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -1095,7 +1100,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		await userEvent.paste(recipientDropdown, "payoutAddress");
+		await userEvent.type(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1105,7 +1110,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		await userEvent.paste(payinInput, "1");
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -1123,7 +1128,7 @@ describe("ExchangeForm", () => {
 		});
 
 		const refundInput = within(screen.getByTestId(refundAddressID)).getByTestId("SelectDropdown__input");
-		await userEvent.paste(refundInput, "refundAddress");
+		await userEvent.type(refundInput, "refundAddress");
 
 		await waitFor(() => {
 			expect(refundInput).toHaveValue("refundAddress");
@@ -1426,7 +1431,6 @@ describe("FormStep", () => {
 		expect(container).toMatchSnapshot();
 	});
 });
-
 describe("ReviewStep", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -1435,6 +1439,7 @@ describe("ReviewStep", () => {
 	afterEach(() => {
 		profile.exchangeTransactions().flush();
 	});
+
 
 	it("should render", async () => {
 		const { result: form } = renderHook(() =>
