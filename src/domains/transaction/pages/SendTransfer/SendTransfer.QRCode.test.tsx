@@ -427,7 +427,6 @@ describe("SendTransfer QRModal", () => {
 	it("should close the overwrite modal when canceled", async () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
-		const toastSpy = vi.spyOn(toasts, "success");
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 		history.push(transferURL);
