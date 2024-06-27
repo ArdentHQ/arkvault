@@ -62,22 +62,7 @@ export default defineConfig(() => {
 			},
 		},
 		plugins: [
-			react({
-				babel: {
-					plugins: [
-						"babel-plugin-macros",
-						[
-							"@emotion/babel-plugin-jsx-pragmatic",
-							{
-								export: "jsx",
-								import: "__cssprop",
-								module: "@emotion/react",
-							},
-						],
-						["@babel/plugin-transform-react-jsx", { pragma: "__cssprop" }, "twin.macro"],
-					],
-				},
-			}),
+			react(),
 			tsconfigPaths(),
 			svgrPlugin(),
 			macrosPlugin(),
@@ -116,8 +101,8 @@ export default defineConfig(() => {
 					lang: "en-US",
 					orientation: "portrait-primary",
 					start_url: "/",
-					name: "ARKVault",
-					short_name: "ARKVault",
+					name: "ARK Vault",
+					short_name: "ARK Vault",
 					description: "Control Your Assets",
 					theme_color: "#235b95",
 					background_color: "#235b95",

@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-const BASE_TITLE = "ARKVault";
+const BASE_TITLE = "ARK Vault";
 
 const setTitle = (title: string) => {
 	document.title = title;
