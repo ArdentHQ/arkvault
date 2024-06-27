@@ -257,7 +257,7 @@ importers:
         version: 0.2.1
       eslint-plugin-testing-library:
         specifier: ^6.2.2
-        version: 6.2.2(eslint@8.57.0)(typescript@5.4.5)
+        version: 6.2.2(eslint@8.57.0)(typescript@5.5.2)
       eslint-plugin-unicorn:
         specifier: ^47.0.0
         version: 47.0.0(eslint@8.57.0)
@@ -10207,7 +10207,7 @@ snapshots:
 
   eslint-plugin-testcafe@0.2.1: {}
 
-  eslint-plugin-testing-library@6.2.2(eslint@8.57.0)(typescript@5.4.5):
+  eslint-plugin-testing-library@6.2.2(eslint@8.57.0)(typescript@5.5.2):
     dependencies:
       '@typescript-eslint/utils': 5.62.0(eslint@8.57.0)(typescript@5.5.2)
       eslint: 8.57.0

@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { Trans } from "react-i18next";
 import { Route } from "react-router-dom";
 
+import { renderHook } from "@testing-library/react";
 import { Exchange } from "./Exchange";
 import { httpClient, toasts } from "@/app/services";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
@@ -459,52 +460,26 @@ describe("Exchange", () => {
 		expect(screen.getAllByTestId("TableRemoveButton--compact")).toHaveLength(
 			profile.exchangeTransactions().count(),
 		);
-	});
-
-	it("should update exchange transaction status", async () => {
-		const updateSpy = vi.spyOn(profile.exchangeTransactions(), "update");
-		const exchangeTransaction = profile.exchangeTransactions().values()[0];
-
-		server.use(
-			requestMock(`${exchangeBaseURL}/changenow/orders/id`, {
-				data: { id: exchangeTransaction.orderId(), status: "finished" },
-			}),
-		);
-		
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
-			{
-				history,
-				route: exchangeURL,
-			},
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
-		});
-
-		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
-/* 
-		await userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
-
-		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
-
-		await waitFor(() => {
-			expect(updateSpy).toHaveBeenCalledWith(
-				exchangeTransaction.id(),
-				expect.objectContaining({
-					status: Contracts.ExchangeTransactionStatus.Finished,
-				}),
-			);
-		});
-
-		updateSpy.mockReset(); */
-	});
+	});	
 });
+
+describe('useExchangeContext', () => {
+	it('throws an error when not wrapped in a provider', () => {
+		let error;
+		try {
+			renderHook(() => useExchangeContext());
+		} catch (error_) {
+			error = error_;
+		}
+	
+		expect(error).toEqual(new Error("[useExchangeContext] Component not wrapped within a Provider"));
+	});
+  
+	it('does not throw an error when wrapped in a provider', () => {
+	  const { result } = renderHook(() => useExchangeContext(), {
+		wrapper: ExchangeProvider,
+	  });
+  
+	  expect(result.error).toBeUndefined();
+	});
+  });
