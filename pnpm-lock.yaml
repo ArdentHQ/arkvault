@@ -222,9 +222,6 @@ importers:
       '@types/react-router-dom':
         specifier: ^5.3.3
         version: 5.3.3
-      '@types/testing-library__jest-dom':
-        specifier: ^6.0.0
-        version: 6.0.0(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.1)(babel-plugin-macros@3.1.0))(vitest@1.6.0(@types/node@20.14.1)(jsdom@22.1.0)(terser@5.31.0))
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.55.0
         version: 5.62.0(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
@@ -368,9 +365,6 @@ importers:
         version: 6.6.1
 
 packages:
-
-  '@adobe/css-tools@4.3.3':
-    resolution: {integrity: sha512-rE0Pygv0sEZ4vBWHlAgJLGDU7Pm8xoO6p3wsEceb7GYAjScrOHpEo8KK/eVkAcnSM+slAEtXjA2JpdjLp4fJQQ==}
 
   '@adobe/css-tools@4.4.0':
     resolution: {integrity: sha512-Ff9+ksdQQB3rMncgqDK78uLznstjyfIf2Arnh22pW8kBpLs6rpKDwgnZT46hin5Hl1WzazzK64DOrhSwYpS7bQ==}
@@ -2057,10 +2051,6 @@ packages:
 
   '@types/stack-utils@2.0.3':
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
-
-  '@types/testing-library__jest-dom@6.0.0':
-    resolution: {integrity: sha512-bnreXCgus6IIadyHNlN/oI5FfX4dWgvGhOPvpr7zzCYDGAPIfvyIoAozMBINmhmsVuqV0cncejF2y5KC7ScqOg==}
-    deprecated: This is a stub types definition. @testing-library/jest-dom provides its own type definitions, so you do not need this installed.
 
   '@types/trusted-types@2.0.7':
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
@@ -6727,8 +6717,6 @@ packages:
 
 snapshots:
 
-  '@adobe/css-tools@4.3.3': {}
-
   '@adobe/css-tools@4.4.0': {}
 
   '@alloc/quick-lru@5.2.0': {}
@@ -8787,16 +8775,6 @@ snapshots:
       '@types/node': 20.14.1
 
   '@types/stack-utils@2.0.3': {}
-
-  '@types/testing-library__jest-dom@6.0.0(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.1)(babel-plugin-macros@3.1.0))(vitest@1.6.0(@types/node@20.14.1)(jsdom@22.1.0)(terser@5.31.0))':
-    dependencies:
-      '@testing-library/jest-dom': 6.4.6(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.1)(babel-plugin-macros@3.1.0))(vitest@1.6.0(@types/node@20.14.1)(jsdom@22.1.0)(terser@5.31.0))
-    transitivePeerDependencies:
-      - '@jest/globals'
-      - '@types/bun'
-      - '@types/jest'
-      - jest
-      - vitest
 
   '@types/trusted-types@2.0.7': {}
 
@@ -13254,7 +13232,7 @@ snapshots:
 
   testcafe-hammerhead@31.7.0:
     dependencies:
-      '@adobe/css-tools': 4.3.3
+      '@adobe/css-tools': 4.4.0
       '@electron/asar': 3.2.10
       acorn-hammerhead: 0.6.2
       bowser: 1.6.0
