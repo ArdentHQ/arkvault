@@ -70,8 +70,8 @@ export const translations = {
 		DONT_SHOW_CHECKBOX_LABEL: "Don't show this quick tour again.",
 		STEP_1: {
 			DESCRIPTION:
-				"Start a quick tour to learn how to get the most out of ARKVault, or skip it to go directly to your profile.",
-			TITLE: "Welcome to ARKVault",
+				"Start a quick tour to learn how to get the most out of ARK Vault, or skip it to go directly to your profile.",
+			TITLE: "Welcome to ARK Vault",
 		},
 		STEP_2: {
 			DESCRIPTION:
@@ -84,7 +84,8 @@ export const translations = {
 			TITLE: "Fully Customizable",
 		},
 		STEP_4: {
-			DESCRIPTION: "With ARKVault, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
+			DESCRIPTION:
+				"With ARK Vault, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
 			TITLE: "Exchange Assets On The Fly",
 		},
 	},
