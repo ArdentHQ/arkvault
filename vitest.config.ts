@@ -22,6 +22,7 @@ export default defineConfig((env) => {
 				environment: "jsdom",
 				isolate: true,
 				setupFiles: ["./vitest.setup.ts"],
+				css: false,
 				server: {
 					deps: {
 						fallbackCJS: true,
@@ -62,6 +63,7 @@ export default defineConfig((env) => {
 			resolve: {
 				alias: {
 					"@": path.resolve(__dirname, "./src"),
+					'identity-obj-proxy': require.resolve('identity-obj-proxy'),
 				},
 			},
 		}),
