@@ -62,7 +62,7 @@ exports[`WelcomeModal > should render a modal if user hasnt completed the tutori
           <h2
             class="mb-0 text-2xl font-bold"
           >
-            Welcome to ARKVault
+            Welcome to ARK Vault
           </h2>
           <div
             class="flex flex-1 flex-col"
@@ -333,7 +333,7 @@ exports[`WelcomeModal > should render a modal if user hasnt completed the tutori
                 class="text-base leading-7 text-theme-secondary-text"
               >
                 <p>
-                  Start a quick tour to learn how to get the most out of ARKVault, or skip it to go directly to your profile.
+                  Start a quick tour to learn how to get the most out of ARK Vault, or skip it to go directly to your profile.
                 </p>
               </div>
               <div

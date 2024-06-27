@@ -5,7 +5,7 @@
 		"node": ">=20.12.2"
 	},
 	"private": true,
-	"description": "ARKVault",
+	"description": "ARK Vault",
 	"homepage": "./",
 	"bugs": {
 		"url": "https://github.com/ArdentHQ/arkvault/issues"
@@ -15,7 +15,7 @@
 		"url": "git+https://github.com/ArdentHQ/arkvault.git"
 	},
 	"license": "CC BY-NC-ND 4.0",
-	"author": "ARKVault <info@arkvault.io>",
+	"author": "ARK Vault <info@arkvault.io>",
 	"contributors": [
 		"Alex Barnsley <alex@ark.io>",
 		"Brian Faust <brian@ark.io>",

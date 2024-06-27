@@ -24,9 +24,9 @@ describe("use-document-title", () => {
 		documentTitleSetSpy.mockRestore();
 	});
 
-	it("should set arkvault title if custom title is not provided", () => {
+	it("should set ark vault title if custom title is not provided", () => {
 		const originalTitle = "Original title";
-		const ArkVaultTitle = "ARKVault";
+		const ArkVaultTitle = "ARK Vault";
 
 		let documentTitle = originalTitle;
 		const documentTitleSetSpy = vi.spyOn(document, "title", "set").mockImplementation((value) => {

@@ -20,7 +20,7 @@ exports[`Notifications > should render notification item 1`] = `
               <span
                 class="text-md font-bold text-theme-secondary-600"
               >
-                ARKVault
+                ARK Vault
               </span>
               <span
                 class="text-md text-theme-secondary-600"
@@ -65,7 +65,7 @@ exports[`Notifications > should render with custom action name 1`] = `
               <span
                 class="text-md font-bold text-theme-secondary-600"
               >
-                ARKVault
+                ARK Vault
               </span>
               <span
                 class="text-md text-theme-secondary-600"
