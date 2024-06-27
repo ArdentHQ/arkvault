@@ -425,7 +425,7 @@ export const translations = {
 		VALIDATOR_REGISTRATION: "Validator Registration",
 		VALIDATOR_RESIGNATION: "Validator Resignation",
 		VOTE: "Vote",
-		VOTE_COMBINATION: "Switch Vote",
+		VOTE_COMBINATION: "Vote Swap",
 	},
 
 	TYPE: "Type",

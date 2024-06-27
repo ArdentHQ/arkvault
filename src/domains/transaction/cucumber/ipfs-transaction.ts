@@ -49,8 +49,8 @@ cucumber(
 			},
 			{
 				data: {
-					accept: ["transaction-id"],
-					broadcast: ["transaction-id"],
+					accept: ["2a6c1da3f63b5f01c99a7aa46ecf646eb8c33ca1801cc53cdfb2b984ad4f411e"],
+					broadcast: ["2a6c1da3f63b5f01c99a7aa46ecf646eb8c33ca1801cc53cdfb2b984ad4f411e"],
 					excess: [],
 					invalid: [],
 				},
