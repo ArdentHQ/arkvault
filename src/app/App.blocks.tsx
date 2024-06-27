@@ -97,9 +97,7 @@ const Main: React.VFC = () => {
 			history.push({
 				pathname: "/",
 				state: {
-					from:
-						history.location.pathname + history.location.search ??
-						/* istanbul ignore next -- @preserve */ "",
+					from: history.location.pathname + history.location.search,
 				},
 			}),
 		onProfileSignOut: () => {
