@@ -61,7 +61,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://dwallets.mainsailhq.com/tx/api/transaction-pool",
+				url: "https://dwallets.mainsailhq.com/tx/api/transactions",
 			},
 			{
 				data: {
