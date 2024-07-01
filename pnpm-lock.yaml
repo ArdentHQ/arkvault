@@ -259,8 +259,8 @@ importers:
         specifier: ^4.6.2
         version: 4.6.2(eslint@9.6.0)
       eslint-plugin-sonarjs:
-        specifier: ^1.0.3
-        version: 1.0.3(eslint@9.6.0)
+        specifier: ^0.19.0
+        version: 0.19.0(eslint@9.6.0)
       eslint-plugin-sort-keys-fix:
         specifier: ^1.1.2
         version: 1.1.2
@@ -3285,11 +3285,11 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
 
-  eslint-plugin-sonarjs@1.0.3:
-    resolution: {integrity: sha512-6s41HLPYPyDrp+5+7Db5yFYbod6h9pC7yx+xfcNwHRcLe1EZwbbQT/tdOAkR7ekVUkNGEvN3GmYakIoQUX7dEg==}
-    engines: {node: '>=16'}
+  eslint-plugin-sonarjs@0.19.0:
+    resolution: {integrity: sha512-6+s5oNk5TFtVlbRxqZN7FIGmjdPCYQKaTzFPmqieCmsU1kBYDzndTeQav0xtQNwZJWu5awWfTGe8Srq9xFOGnw==}
+    engines: {node: '>=14'}
     peerDependencies:
-      eslint: ^8.0.0 || ^9.0.0
+      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
 
   eslint-plugin-sort-keys-fix@1.1.2:
     resolution: {integrity: sha512-DNPHFGCA0/hZIsfODbeLZqaGY/+q3vgtshF85r+YWDNCQ2apd9PNs/zL6ttKm0nD1IFwvxyg3YOTI7FHl4unrw==}
@@ -10319,7 +10319,7 @@ snapshots:
       semver: 6.3.1
       string.prototype.matchall: 4.0.11
 
-  eslint-plugin-sonarjs@1.0.3(eslint@9.6.0):
+  eslint-plugin-sonarjs@0.19.0(eslint@9.6.0):
     dependencies:
       eslint: 9.6.0
 
