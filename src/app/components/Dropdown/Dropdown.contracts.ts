@@ -1,6 +1,6 @@
 import React from "react";
 
-import {DefaultTReturn, TOptions} from "i18next";
+import { DefaultTReturn, TOptions } from "i18next";
 import { Position, Size } from "@/types";
 
 export interface DropdownOption {
