@@ -153,8 +153,8 @@ importers:
         specifier: ^7.6.2
         version: 7.6.2
       socks-proxy-agent:
-        specifier: ^8.0.4
-        version: 8.0.4
+        specifier: ^7.0.0
+        version: 7.0.0
       string-hash:
         specifier: ^1.1.3
         version: 1.1.3
@@ -2177,10 +2177,6 @@ packages:
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
-
-  agent-base@7.1.1:
-    resolution: {integrity: sha512-H0TSyFNDMomMNJQBn8wFV5YC/2eJ+VXECwOadZJT554xP6cODZHPX3H9QMQECxvrgiSOP1pHjy1sMWQVYJOUOA==}
-    engines: {node: '>= 14'}
 
   aggregate-error@3.1.0:
     resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==}
@@ -5762,9 +5758,9 @@ packages:
   snake-case@3.0.4:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
 
-  socks-proxy-agent@8.0.4:
-    resolution: {integrity: sha512-GNAq/eg8Udq2x0eNiFkr9gRg5bA7PXEWagQdeRX4cPSG+X/8V38v637gim9bjFptMk1QWsCTr0ttrJEiXbNnRw==}
-    engines: {node: '>= 14'}
+  socks-proxy-agent@7.0.0:
+    resolution: {integrity: sha512-Fgl0YPZ902wEsAyiQ+idGd1A7rSFx/ayC1CQVMw5P+EQx2V0SgpGtf6OKFhVjPflPUl9YMmEOnmfjCdMUsygww==}
+    engines: {node: '>= 10'}
 
   socks@2.8.3:
     resolution: {integrity: sha512-l5x7VUUWbjVFbafGLxPWkYsHIhEvmF85tbIeFZWc8ZPtoMyybuEhL7Jye/ooC4/d48FgOjSJXgsF/AJPYCW8Zw==}
@@ -8972,12 +8968,6 @@ snapshots:
   acorn@8.11.3: {}
 
   agent-base@6.0.2:
-    dependencies:
-      debug: 4.3.5(supports-color@8.1.1)
-    transitivePeerDependencies:
-      - supports-color
-
-  agent-base@7.1.1:
     dependencies:
       debug: 4.3.5(supports-color@8.1.1)
     transitivePeerDependencies:
@@ -12951,9 +12941,9 @@ snapshots:
       dot-case: 3.0.4
       tslib: 2.6.2
 
-  socks-proxy-agent@8.0.4:
+  socks-proxy-agent@7.0.0:
     dependencies:
-      agent-base: 7.1.1
+      agent-base: 6.0.2
       debug: 4.3.5(supports-color@8.1.1)
       socks: 2.8.3
     transitivePeerDependencies:
