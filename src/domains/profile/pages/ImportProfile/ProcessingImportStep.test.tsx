@@ -65,11 +65,11 @@ describe("Import Profile - Processing import", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.type(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
 
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => expect(onPasswordChange).toHaveBeenCalledWith("S3cUrePa$sword"));
 
@@ -91,7 +91,7 @@ describe("Import Profile - Processing import", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(onBack).toHaveBeenCalledWith());
 
@@ -113,11 +113,11 @@ describe("Import Profile - Processing import", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), "invalid");
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), "invalid");
 
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 

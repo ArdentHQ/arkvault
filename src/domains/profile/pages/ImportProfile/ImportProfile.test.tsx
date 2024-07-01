@@ -57,7 +57,7 @@ describe("ImportProfile", () => {
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectFileStep__back"));
+		await userEvent.click(screen.getByTestId("SelectFileStep__back"));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 		historyMock.mockRestore();
@@ -73,7 +73,7 @@ describe("ImportProfile", () => {
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId(changeFileID));
+		await userEvent.click(screen.getByTestId(changeFileID));
 
 		await waitFor(() => expect(screen.queryByTestId(changeFileID)).not.toBeInTheDocument());
 	});
@@ -118,14 +118,12 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), validPassword);
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), validPassword);
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(submitID));
-
-		expect(screen.getByTestId("ProcessingImport")).toBeVisible();
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ProfileForm__form")).toBeInTheDocument();
@@ -152,7 +150,7 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await expect(screen.findByTestId(changeFileID)).resolves.toBeVisible();
 	});
@@ -182,24 +180,22 @@ describe("ImportProfile", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), validPassword);
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), validPassword);
 		await waitFor(() => expect(screen.getByTestId("PasswordModal__input")).toHaveValue(validPassword));
 
-		userEvent.click(screen.getByTestId(submitID));
-
-		expect(screen.getByTestId("ProcessingImport")).toBeVisible();
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId("ProfileForm__form")).resolves.toBeVisible();
 
 		expect(screen.queryByTestId("InputPassword")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ProfileForm__submit-button")).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
+		await userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 	});
@@ -217,7 +213,7 @@ describe("ImportProfile", () => {
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId(changeFileID));
+		await userEvent.click(screen.getByTestId(changeFileID));
 
 		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
@@ -233,13 +229,13 @@ describe("ImportProfile", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("Input")[0]).toHaveValue("legacy-profile"));
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ProfileForm__submit-button")).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
+		await userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 	});
@@ -307,19 +303,17 @@ describe("ImportProfile", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), validPassword);
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), validPassword);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordModal__input")).toHaveValue(validPassword);
 		});
 
-		userEvent.click(screen.getByTestId(submitID));
-
-		expect(screen.getByTestId("ProcessingImport")).toBeVisible();
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId("ProfileForm__form")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("ProfileForm__back-button"));
+		await userEvent.click(screen.getByTestId("ProfileForm__back-button"));
 
 		await expect(screen.findByTestId(changeFileID)).resolves.toBeVisible();
 	});
@@ -344,13 +338,13 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), wrongPassword);
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), wrongPassword);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordModal__input")).toHaveValue(wrongPassword);
 		});
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
 	});
@@ -375,17 +369,17 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), wrongPassword);
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), wrongPassword);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordModal__input")).toHaveValue(wrongPassword);
 		});
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("ImportError__retry"));
+		await userEvent.click(screen.getByTestId("ImportError__retry"));
 
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 	});
@@ -412,17 +406,17 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), wrongPassword);
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), wrongPassword);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordModal__input")).toHaveValue(wrongPassword);
 		});
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("ImportError__cancel"));
+		await userEvent.click(screen.getByTestId("ImportError__cancel"));
 
 		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
 

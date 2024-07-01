@@ -32,7 +32,7 @@ describe("ResetProfile", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("ResetProfile__submit-button"));
+		await userEvent.click(screen.getByTestId("ResetProfile__submit-button"));
 
 		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Theme)).not.toBe(theme));
 

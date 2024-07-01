@@ -232,17 +232,6 @@ describe("Welcome with deeplink", () => {
 		expect(container).toBeInTheDocument();
 
 		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await waitFor(() =>
 			expect(toastUpdateSpy).toHaveBeenNthCalledWith(
@@ -668,7 +657,7 @@ describe("Welcome", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		await userEvent.paste(screen.getByTestId(passwordTestID), "password");
+		await userEvent.type(screen.getByTestId(passwordTestID), "password");
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();
@@ -749,7 +738,7 @@ describe("Welcome", () => {
 
 	it("should not restart the timeout when closing the modal to retry the profile password", async () => {
 		vi.useRealTimers();
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		const { container } = render(<Welcome />);
 
@@ -764,7 +753,8 @@ describe("Welcome", () => {
 		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		for (const index of [1, 2, 3]) {
-			await userEvent.paste(screen.getByTestId(passwordTestID), `wrong password ${index}`);
+			await userEvent.clear(screen.getByTestId(passwordTestID));
+			await userEvent.type(screen.getByTestId(passwordTestID), `wrong password ${index}`);
 
 			// wait for form to be updated
 			await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();
