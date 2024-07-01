@@ -86,11 +86,11 @@ describe("SignMessage with ledger", () => {
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-		userEvent.paste(messageInput(), signMessage);
+		await userEvent.type(messageInput(), signMessage);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE));
 
@@ -100,7 +100,7 @@ describe("SignMessage with ledger", () => {
 			expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -151,11 +151,11 @@ describe("SignMessage with ledger", () => {
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
 		).toBeInTheDocument();
 
-		userEvent.paste(messageInput(), signMessage);
+		await userEvent.type(messageInput(), signMessage);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(getPublicKeyMock).toHaveBeenCalledWith("m/44'/1'/0'/0/0"));
 
