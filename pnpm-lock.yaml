@@ -81,8 +81,8 @@ importers:
         specifier: ^0.0.2
         version: 0.0.2
       multiformats:
-        specifier: ^11.0.2
-        version: 11.0.2
+        specifier: ^13.1.1
+        version: 13.1.1
       p-retry:
         specifier: ^5.1.2
         version: 5.1.2
@@ -4657,9 +4657,8 @@ packages:
       typescript:
         optional: true
 
-  multiformats@11.0.2:
-    resolution: {integrity: sha512-b5mYMkOkARIuVZCpvijFj9a6m5wMVLC7cf/jIPd5D/ARDOfLC5+IFkbgDXQgcU2goIsTD/O9NY4DI/Mt4OGvlg==}
-    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
+  multiformats@13.1.1:
+    resolution: {integrity: sha512-JiptvwMmlxlzIlLLwhCi/srf/nk409UL0eUBr0kioRJq15hqqKyg68iftrBvhCRjR6Rw4fkNnSc4ZJXJDuta/Q==}
 
   mustache@2.3.2:
     resolution: {integrity: sha512-KpMNwdQsYz3O/SBS1qJ/o3sqUJ5wSb8gb0pul8CO0S56b9Y2ALm8zCfsjPXsqGFfoNBkDwZuZIAjhsZI03gYVQ==}
@@ -11896,7 +11895,7 @@ snapshots:
       - encoding
       - supports-color
 
-  multiformats@11.0.2: {}
+  multiformats@13.1.1: {}
 
   mustache@2.3.2: {}
 
