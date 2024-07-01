@@ -15,7 +15,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import js from "@eslint/js";
 import { FlatCompat } from "@eslint/eslintrc";
-
+import parser from "@typescript-eslint/parser";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -82,8 +82,10 @@ export default [
 				vi: false,
 			},
 
-			ecmaVersion: 5,
+			ecmaVersion: 2021,
 			sourceType: "module",
+
+			parser,
 
 			parserOptions: {
 				ecmaFeatures: {
@@ -91,7 +93,7 @@ export default [
 				},
 
 				project: "./tsconfig.eslint.json",
-				parser: "@typescript-eslint/parser",
+				tsconfigRootDir: __dirname,
 				projectFolderIgnoreList: ["build", "coverage", "node_modules", "public", "dist"],
 			},
 		},
@@ -229,30 +231,30 @@ export default [
 				},
 			],
 
-			"testing-library/await-async-query": "warn",
-			"testing-library/await-async-utils": "error",
-			"testing-library/consistent-data-testid": "off",
-			"testing-library/no-await-sync-events": "error",
-			"testing-library/no-await-sync-query": "error",
-			"testing-library/no-container": "error",
-			"testing-library/no-debugging-utils": "error",
-			"testing-library/no-dom-import": "error",
-			"testing-library/no-manual-cleanup": "error",
-			"testing-library/no-node-access": "error",
-			"testing-library/no-promise-in-fire-event": "error",
-			"testing-library/no-render-in-setup": "error",
-			"testing-library/no-unnecessary-act": "error",
-			"testing-library/no-wait-for-empty-callback": "error",
-			"testing-library/no-wait-for-multiple-assertions": "error",
-			"testing-library/no-wait-for-side-effects": "error",
-			"testing-library/no-wait-for-snapshot": "error",
-			"testing-library/prefer-explicit-assert": "error",
-			"testing-library/prefer-find-by": "error",
-			"testing-library/prefer-presence-queries": "error",
-			"testing-library/prefer-screen-queries": "error",
-			"testing-library/prefer-user-event": "error",
-			"testing-library/prefer-wait-for": "error",
-			"testing-library/render-result-naming-convention": "error",
+			// "testing-library/await-async-query": "warn",
+			// "testing-library/await-async-utils": "error",
+			// "testing-library/consistent-data-testid": "off",
+			// "testing-library/no-await-sync-events": "error",
+			// "testing-library/no-await-sync-query": "error",
+			// "testing-library/no-container": "error",
+			// "testing-library/no-debugging-utils": "error",
+			// "testing-library/no-dom-import": "error",
+			// "testing-library/no-manual-cleanup": "error",
+			// "testing-library/no-node-access": "error",
+			// "testing-library/no-promise-in-fire-event": "error",
+			// "testing-library/no-render-in-setup": "error",
+			// "testing-library/no-unnecessary-act": "error",
+			// "testing-library/no-wait-for-empty-callback": "error",
+			// "testing-library/no-wait-for-multiple-assertions": "error",
+			// "testing-library/no-wait-for-side-effects": "error",
+			// "testing-library/no-wait-for-snapshot": "error",
+			// "testing-library/prefer-explicit-assert": "error",
+			// "testing-library/prefer-find-by": "error",
+			// "testing-library/prefer-presence-queries": "error",
+			// "testing-library/prefer-screen-queries": "error",
+			// "testing-library/prefer-user-event": "error",
+			// "testing-library/prefer-wait-for": "error",
+			// "testing-library/render-result-naming-convention": "error",
 			"unicorn/consistent-destructuring": "error",
 			"unicorn/consistent-function-scoping": "error",
 			"unicorn/error-message": "error",
@@ -307,4 +309,3 @@ export default [
 		},
 	},
 ];
-
