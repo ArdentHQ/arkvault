@@ -67,7 +67,7 @@ const SelectDropdown = ({
 			}
 
 			if (allowFreeInput) {
-				const selected = { label: inputValue!, value: inputValue! };
+				const selected = { label: inputValue as string, value: inputValue as string };
 
 				selectItem(selected);
 				onSelectedItemChange({ selected });
