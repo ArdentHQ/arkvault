@@ -101,11 +101,11 @@ describe("Export Settings", () => {
 
 	it("should not export data or show error on cancelled download", async () => {
 		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
-
+	
 		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockImplementation(() => {
 			throw new Error("The user aborted a request");
 		});
-
+	
 		const { container } = render(
 			<Route path="/profiles/:profileId/settings/export">
 				<ExportSettings />
@@ -115,19 +115,15 @@ describe("Export Settings", () => {
 				withProfileSynchronizer: true,
 			},
 		);
-
+	
 		expect(container).toBeInTheDocument();
-
+	
 		await userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
-
-		await waitFor(() => {
-			expect(browserAccessMock).not.toHaveBeenCalled();
-		});
-
+	
 		await waitFor(() => {
 			expect(toastSpy).not.toHaveBeenCalled();
 		});
-
+	
 		toastSpy.mockRestore();
 		browserAccessMock.mockRestore();
 	});

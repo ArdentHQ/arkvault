@@ -3065,7 +3065,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="flex min-w-0 flex-col css-5kz4tk"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3075,13 +3075,12 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             Profile Name
                           </label>
                           <div
-                            class=" css-px3dod"
+                            class=" css-1psxlcd"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
-                                aria-invalid="true"
                                 autocomplete="off"
                                 class="no-ligatures w-full border-none css-1nupw50"
                                 data-testid="General-settings__input--name"
@@ -3089,53 +3088,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 type="text"
                                 value="John Doe"
                               />
-                            </div>
-                            <div
-                              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
-                              data-testid="Input__addon-end"
-                            >
-                              <span
-                                data-errortext="Profile Name required"
-                                data-testid="Input__error"
-                              >
-                                <div
-                                  class="text-theme-danger-500 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
-                                >
-                                  <svg
-                                    id="circle-exclamation-mark"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                    >
-                                      <circle
-                                        cx="10"
-                                        cy="10"
-                                        r="9"
-                                        stroke-miterlimit="10"
-                                      />
-                                      <path
-                                        d="M10 10.5v-5"
-                                        stroke-linecap="round"
-                                        stroke-miterlimit="10"
-                                      />
-                                      <path
-                                        d="M10 14h0"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </span>
                             </div>
                           </div>
                         </fieldset>
@@ -4052,9 +4004,8 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     class="css-2wyvkd"
                   >
                     <button
-                      class="css-1yqe28v"
+                      class="css-1bx0hyc"
                       data-testid="General-settings__submit-button"
-                      disabled=""
                       type="submit"
                     >
                       <div
@@ -8612,9 +8563,13 @@ exports[`General Settings > should update profile 1`] = `
                   >
                     <img
                       alt="Profile Avatar"
-                      class="h-11 w-11 rounded-full bg-cover bg-center bg-no-repeat object-cover"
-                      src="data:image/png;base64,"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="40" cx="90" cy="50" fill="rgb(244, 67, 54)"/><circle r="35" cx="0" cy="30" fill="rgb(233, 30, 99)"/><circle r="50" cx="80" cy="60" fill="rgb(0, 188, 212)"/></svg>"
                     />
+                    <span
+                      class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                    >
+                      JO
+                    </span>
                   </div>
                 </div>
               </div>
@@ -12024,9 +11979,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                     class="css-2wyvkd"
                   >
                     <button
-                      class="css-1yqe28v"
+                      class="css-1bx0hyc"
                       data-testid="General-settings__submit-button"
-                      disabled=""
                       type="submit"
                     >
                       <div
