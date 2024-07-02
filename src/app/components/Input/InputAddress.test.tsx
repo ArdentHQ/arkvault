@@ -41,7 +41,7 @@ describe("InputAddress", () => {
 
 		await waitFor(() => {
 			expect(errors.address?.message).toBe(commonTranslations.INPUT_ADDRESS.VALIDATION.NOT_VALID);
-		})
+		});
 	});
 
 	it("should validate a valid address and emit event", async () => {
@@ -84,7 +84,7 @@ describe("InputAddress", () => {
 
 		await waitFor(() => {
 			expect(errors.address?.type).toBe("minLength");
-		})
+		});
 	});
 
 	it("should not use default validation", async () => {
