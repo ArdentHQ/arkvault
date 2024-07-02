@@ -23,7 +23,7 @@ describe("PasswordRemovalConfirmModal", () => {
 
 		await expect(screen.findByText(translations.SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__cancel"));
+		await userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__cancel"));
 
 		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -37,11 +37,11 @@ describe("PasswordRemovalConfirmModal", () => {
 
 		expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeDisabled();
 
-		userEvent.paste(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), "password");
+		await userEvent.type(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), "password");
 
 		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__confirm"));
+		await userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__confirm"));
 
 		await waitFor(() => expect(onConfirm).toHaveBeenCalledWith("password"));
 	});

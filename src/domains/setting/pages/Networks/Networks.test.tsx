@@ -116,7 +116,7 @@ describe("Network Settings", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("can uncheck and check an item", () => {
+	it("can uncheck and check an item", async () => {
 		const { container } = render(
 			<Route path="/profiles/:profileId/settings/networks">
 				<NetworksSettings />
@@ -130,17 +130,17 @@ describe("Network Settings", () => {
 
 		const checkboxes = screen.getAllByTestId(networkListItemCheckboxTestId);
 
-		userEvent.click(screen.getAllByTestId("NetworksListNetwork")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworksListNetwork")[1]);
 
 		expect(checkboxes[0]).toBeChecked();
 		expect(checkboxes[1]).toBeChecked();
 
-		userEvent.click(screen.getAllByTestId("NetworksListNetwork")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworksListNetwork")[1]);
 
 		expect(checkboxes[1]).not.toBeChecked();
 	});
 
-	it("shows a warning if user tries to unselect all items", () => {
+	it("shows a warning if user tries to unselect all items", async () => {
 		const toastSpy = vi.spyOn(toasts, "warning");
 
 		const { container } = render(
@@ -156,7 +156,7 @@ describe("Network Settings", () => {
 
 		expect(toastSpy).not.toHaveBeenCalled();
 
-		userEvent.click(screen.getAllByTestId("NetworksListNetwork")[0]);
+		await userEvent.click(screen.getAllByTestId("NetworksListNetwork")[0]);
 
 		expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.NETWORKS.MESSAGES.AT_LEAST_ONE_DEFAULT_NETWORK);
 
@@ -186,14 +186,14 @@ describe("Network Settings", () => {
 		const publicNetworks = mainListWrapper.getAllByTestId("NetworksListNetwork");
 
 		// select "Ark devnet"
-		userEvent.click(publicNetworks[1]);
+		await userEvent.click(publicNetworks[1]);
 
 		// Unselect "ark mainnet"
-		userEvent.click(publicNetworks[0]);
+		await userEvent.click(publicNetworks[0]);
 
 		expect(submitButton()).toBeEnabled();
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.GENERAL.SUCCESS));
 
@@ -313,7 +313,7 @@ describe("Network Settings", () => {
 			expect(customNetworksToggle()).not.toBeChecked();
 		});
 
-		it("should show the custom networks container when toggle is enabled", () => {
+		it("should show the custom networks container when toggle is enabled", async () => {
 			render(
 				<Route path="/profiles/:profileId/settings/networks">
 					<NetworksSettings />
@@ -323,7 +323,7 @@ describe("Network Settings", () => {
 				},
 			);
 
-			userEvent.click(customNetworksToggle());
+			await userEvent.click(customNetworksToggle());
 
 			expect(customNetworksToggle()).toBeChecked();
 
@@ -332,7 +332,7 @@ describe("Network Settings", () => {
 			expect(customNetworksAddButton()).toBeInTheDocument();
 		});
 
-		it("can press the add button and show the add modal", () => {
+		it("can press the add button and show the add modal", async () => {
 			render(
 				<Route path="/profiles/:profileId/settings/networks">
 					<NetworksSettings />
@@ -342,14 +342,14 @@ describe("Network Settings", () => {
 				},
 			);
 
-			userEvent.click(customNetworksToggle());
+			await userEvent.click(customNetworksToggle());
 
-			userEvent.click(customNetworksAddButton());
+			await userEvent.click(customNetworksAddButton());
 
 			expect(screen.getByTestId("NetworkFormModal")).toBeInTheDocument();
 		});
 
-		it("can cancel adding a custom network", () => {
+		it("can cancel adding a custom network", async () => {
 			render(
 				<Route path="/profiles/:profileId/settings/networks">
 					<NetworksSettings />
@@ -359,11 +359,11 @@ describe("Network Settings", () => {
 				},
 			);
 
-			userEvent.click(customNetworksToggle());
+			await userEvent.click(customNetworksToggle());
 
-			userEvent.click(customNetworksAddButton());
+			await userEvent.click(customNetworksAddButton());
 
-			userEvent.click(screen.getByTestId("NetworkFormModal--cancel"));
+			await userEvent.click(screen.getByTestId("NetworkFormModal--cancel"));
 
 			expect(screen.queryByTestId("NetworkFormModal")).not.toBeInTheDocument();
 		});
@@ -378,17 +378,19 @@ describe("Network Settings", () => {
 				},
 			);
 
-			userEvent.click(customNetworksToggle());
+			await userEvent.click(customNetworksToggle());
 
-			userEvent.click(customNetworksAddButton());
+			await userEvent.click(customNetworksAddButton());
 
 			await waitFor(() => expect(customNetworkFormSaveButton()).toBeDisabled());
 
-			userEvent.paste(customNetworkFormModalNameField(), customServerName);
+			await userEvent.clear(customNetworkFormModalNameField());
+			await userEvent.type(customNetworkFormModalNameField(), customServerName);
 
 			expect(customNetworkFormModalNameField()).toHaveValue(customServerName);
 
-			userEvent.paste(customNetworkFormModalServerField(), customServerAddress);
+			await userEvent.clear(customNetworkFormModalServerField());
+			await userEvent.type(customNetworkFormModalServerField(), customServerAddress);
 
 			expect(customNetworkFormModalServerField()).toHaveValue(customServerAddress);
 
@@ -414,20 +416,20 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworksToggle());
-				userEvent.click(customNetworksAddButton());
-				userEvent.paste(customNetworkFormModalNameField(), customServerName);
-				userEvent.paste(customNetworkFormModalServerField(), customServerAddress);
+				await userEvent.click(customNetworksToggle());
+				await userEvent.click(customNetworksAddButton());
+				await userEvent.type(customNetworkFormModalNameField(), customServerName);
+				await userEvent.type(customNetworkFormModalServerField(), customServerAddress);
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await expect(screen.findByTestId(customNetworkItemTestId)).resolves.toBeVisible();
 
 				expect(submitButton()).toBeEnabled();
 
-				userEvent.click(submitButton());
+				await userEvent.click(submitButton());
 
 				await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.GENERAL.SUCCESS));
 
@@ -458,14 +460,14 @@ describe("Network Settings", () => {
 				},
 			);
 
-			userEvent.click(customNetworksToggle());
-			userEvent.click(customNetworksAddButton());
-			userEvent.paste(customNetworkFormModalNameField(), customServerName);
-			userEvent.paste(customNetworkFormModalServerField(), customServerAddress);
+			await userEvent.click(customNetworksToggle());
+			await userEvent.click(customNetworksAddButton());
+			await userEvent.type(customNetworkFormModalNameField(), customServerName);
+			await userEvent.type(customNetworkFormModalServerField(), customServerAddress);
 
 			await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-			userEvent.click(customNetworkFormSaveButton());
+			await userEvent.click(customNetworkFormSaveButton());
 
 			await expect(screen.findByTestId(networkFormModalAlertTestId)).resolves.toBeVisible();
 		});
@@ -485,14 +487,14 @@ describe("Network Settings", () => {
 				},
 			);
 
-			userEvent.click(customNetworksToggle());
-			userEvent.click(customNetworksAddButton());
-			userEvent.paste(customNetworkFormModalNameField(), customServerName);
-			userEvent.paste(customNetworkFormModalServerField(), customServerAddress);
+			await userEvent.click(customNetworksToggle());
+			await userEvent.click(customNetworksAddButton());
+			await userEvent.type(customNetworkFormModalNameField(), customServerName);
+			await userEvent.type(customNetworkFormModalServerField(), customServerAddress);
 
 			await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-			userEvent.click(customNetworkFormSaveButton());
+			await userEvent.click(customNetworkFormSaveButton());
 
 			await expect(screen.findByTestId(networkFormModalAlertTestId)).resolves.toBeVisible();
 		});
@@ -507,9 +509,9 @@ describe("Network Settings", () => {
 				},
 			);
 
-			userEvent.click(customNetworksToggle());
-			userEvent.click(customNetworksAddButton());
-			userEvent.paste(customNetworkFormModalNameField(), "a".repeat(43));
+			await userEvent.click(customNetworksToggle());
+			await userEvent.click(customNetworksAddButton());
+			await userEvent.type(customNetworkFormModalNameField(), "a".repeat(43));
 
 			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 
@@ -526,9 +528,9 @@ describe("Network Settings", () => {
 				},
 			);
 
-			userEvent.click(customNetworksToggle());
-			userEvent.click(customNetworksAddButton());
-			userEvent.paste(customNetworkFormModalServerField(), "/invalid-addres");
+			await userEvent.click(customNetworksToggle());
+			await userEvent.click(customNetworksAddButton());
+			await userEvent.type(customNetworkFormModalServerField(), "/invalid-addres");
 
 			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 
@@ -632,7 +634,7 @@ describe("Network Settings", () => {
 				).not.toBeChecked();
 			});
 
-			it("select/unselect a custom network", () => {
+			it("select/unselect a custom network", async () => {
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
 						<NetworksSettings />
@@ -646,18 +648,18 @@ describe("Network Settings", () => {
 
 				expect(customNetworksWrapper()).toBeInTheDocument();
 
-				userEvent.click(customNetworkFirstNetwork());
+				await userEvent.click(customNetworkFirstNetwork());
 
 				expect(
 					within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId),
 				).not.toBeChecked();
 
-				userEvent.click(customNetworkFirstNetwork());
+				await userEvent.click(customNetworkFirstNetwork());
 
 				expect(within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId)).toBeChecked();
 			});
 
-			it("keeps the state of selected network if custom networks are enabled/disabled", () => {
+			it("keeps the state of selected network if custom networks are enabled/disabled", async () => {
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
 						<NetworksSettings />
@@ -672,10 +674,10 @@ describe("Network Settings", () => {
 				expect(customNetworksWrapper()).toBeInTheDocument();
 
 				// Disable custom networks
-				userEvent.click(customNetworksToggle());
+				await userEvent.click(customNetworksToggle());
 
 				// Enable custom networks again
-				userEvent.click(customNetworksToggle());
+				await userEvent.click(customNetworksToggle());
 
 				// Network 1 should still be selected
 				expect(within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId)).toBeChecked();
@@ -696,17 +698,17 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkFirstNetworkMenu());
 
 				expect(screen.getByTestId("dropdown__option--1")).toBeInTheDocument();
 
-				userEvent.click(screen.getByTestId("dropdown__option--1"));
+				await userEvent.click(screen.getByTestId("dropdown__option--1"));
 
 				await expect(
 					screen.findByText(settingsTranslations.NETWORKS.DETAILS_MODAL.TITLE),
 				).resolves.toBeVisible();
 
-				userEvent.click(screen.getByTestId("Modal__close-button"));
+				await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 				expect(screen.queryByText(settingsTranslations.NETWORKS.DETAILS_MODAL.TITLE)).not.toBeInTheDocument();
 			});
@@ -721,11 +723,11 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkFirstNetworkMenu());
 
 				expect(screen.getByTestId(removeCustomNetworkOptionTestId)).toBeInTheDocument();
 
-				userEvent.click(screen.getByTestId(removeCustomNetworkOptionTestId));
+				await userEvent.click(screen.getByTestId(removeCustomNetworkOptionTestId));
 
 				await expect(
 					screen.findByText(settingsTranslations.NETWORKS.DELETE_MODAL.TITLE),
@@ -733,11 +735,11 @@ describe("Network Settings", () => {
 
 				expect(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId)).toBeDisabled();
 
-				userEvent.paste(screen.getByTestId("NetworksSettings--confirmName"), customServerName);
+				await userEvent.type(screen.getByTestId("NetworksSettings--confirmName"), customServerName);
 
 				expect(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId)).toBeEnabled();
 
-				userEvent.click(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId));
+				await userEvent.click(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId));
 
 				expect(screen.getAllByTestId(customNetworkItemTestId)).toHaveLength(1);
 			});
@@ -762,11 +764,11 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkFirstNetworkMenu());
 
 				expect(screen.getByTestId(removeCustomNetworkOptionTestId)).toBeInTheDocument();
 
-				userEvent.click(screen.getByTestId(removeCustomNetworkOptionTestId));
+				await userEvent.click(screen.getByTestId(removeCustomNetworkOptionTestId));
 
 				await expect(
 					screen.findByText(settingsTranslations.NETWORKS.DELETE_MODAL.TITLE),
@@ -774,17 +776,17 @@ describe("Network Settings", () => {
 
 				expect(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId)).toBeDisabled();
 
-				userEvent.paste(screen.getByTestId("NetworksSettings--confirmName"), customServerName);
+				await userEvent.type(screen.getByTestId("NetworksSettings--confirmName"), customServerName);
 
 				expect(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId)).toBeEnabled();
 
-				userEvent.click(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId));
+				await userEvent.click(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId));
 
 				expect(screen.getAllByTestId(customNetworkItemTestId)).toHaveLength(1);
 
 				expect(submitButton()).toBeEnabled();
 
-				userEvent.click(submitButton());
+				await userEvent.click(submitButton());
 
 				await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.GENERAL.SUCCESS));
 
@@ -814,11 +816,11 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkFirstNetworkMenu());
 
 				expect(screen.getByTestId(removeCustomNetworkOptionTestId)).toBeInTheDocument();
 
-				userEvent.click(screen.getByTestId(removeCustomNetworkOptionTestId));
+				await userEvent.click(screen.getByTestId(removeCustomNetworkOptionTestId));
 
 				await expect(
 					screen.findByText(settingsTranslations.NETWORKS.DELETE_MODAL.TITLE),
@@ -826,17 +828,17 @@ describe("Network Settings", () => {
 
 				expect(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId)).toBeDisabled();
 
-				userEvent.paste(screen.getByTestId("NetworksSettings--confirmName"), customServerName);
+				await userEvent.type(screen.getByTestId("NetworksSettings--confirmName"), customServerName);
 
 				expect(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId)).toBeEnabled();
 
-				userEvent.click(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId));
+				await userEvent.click(screen.getByTestId(deleteCustomNetworkSubmitButtonTestId));
 
 				expect(screen.getAllByTestId(customNetworkItemTestId)).toHaveLength(1);
 
 				expect(submitButton()).toBeEnabled();
 
-				userEvent.click(submitButton());
+				await userEvent.click(submitButton());
 
 				await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.GENERAL.SUCCESS));
 
@@ -858,17 +860,17 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkFirstNetworkMenu());
 
 				expect(screen.getByTestId(removeCustomNetworkOptionTestId)).toBeInTheDocument();
 
-				userEvent.click(screen.getByTestId(removeCustomNetworkOptionTestId));
+				await userEvent.click(screen.getByTestId(removeCustomNetworkOptionTestId));
 
 				await expect(
 					screen.findByText(settingsTranslations.NETWORKS.DELETE_MODAL.TITLE),
 				).resolves.toBeVisible();
 
-				userEvent.click(screen.getByTestId("DeleteResource__cancel-button"));
+				await userEvent.click(screen.getByTestId("DeleteResource__cancel-button"));
 
 				expect(screen.getAllByTestId(customNetworkItemTestId)).toHaveLength(2);
 			});
@@ -885,13 +887,13 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworksAddButton());
-				userEvent.paste(customNetworkFormModalNameField(), "new name");
-				userEvent.paste(customNetworkFormModalServerField(), "https://new-address1.test");
+				await userEvent.click(customNetworksAddButton());
+				await userEvent.type(customNetworkFormModalNameField(), "new name");
+				await userEvent.type(customNetworkFormModalServerField(), "https://new-address1.test");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() => expect(screen.getAllByTestId(customNetworkItemTestId)).toHaveLength(3));
 			});
@@ -908,8 +910,8 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
@@ -917,8 +919,8 @@ describe("Network Settings", () => {
 
 				expect(customNetworkFormModalServerField()).toHaveValue(customServerAddress);
 
-				userEvent.clear(customNetworkFormModalServerField());
-				userEvent.paste(customNetworkFormModalServerField(), "https://new-address.test");
+				await userEvent.clear(customNetworkFormModalServerField());
+				await userEvent.type(customNetworkFormModalServerField(), "https://new-address.test");
 
 				expect(customNetworkFormModalServerField()).toHaveValue("https://new-address.test");
 
@@ -928,7 +930,7 @@ describe("Network Settings", () => {
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() => expect(customNetworkFirstNetwork()).toHaveTextContent(customServerName));
 			});
@@ -945,21 +947,21 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkSecondNetworkMenu());
+				await userEvent.click(customNetworkSecondNetworkMenu());
 
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
-				userEvent.clear(customNetworkFormModalNameField());
+				await userEvent.clear(customNetworkFormModalNameField());
 
-				userEvent.paste(customNetworkFormModalNameField(), "New name");
+				await userEvent.type(customNetworkFormModalNameField(), "New name");
 
 				expect(customNetworkFormModalNameField()).toHaveValue("New name");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() => expect(customNetworkSecondNetwork()).toHaveTextContent("New name"));
 			});
@@ -988,16 +990,16 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
-				userEvent.paste(screen.getByTestId("NetworkFormModal--knownWallets"), "https://know-wallets.test");
+				await userEvent.type(screen.getByTestId("NetworkFormModal--knownWallets"), "https://know-wallets.test");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() => expect(screen.queryByTestId("UpdateNetworkFormModal")).not.toBeInTheDocument());
 			});
@@ -1020,16 +1022,16 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
-				userEvent.paste(screen.getByTestId("NetworkFormModal--knownWallets"), "https://know-wallets.test");
+				await userEvent.type(screen.getByTestId("NetworkFormModal--knownWallets"), "https://know-wallets.test");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() =>
 					expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -1053,8 +1055,8 @@ describe("Network Settings", () => {
 
 				expect(within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId)).toBeChecked();
 
-				userEvent.click(customNetworkFirstNetworkMenu());
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
@@ -1066,14 +1068,14 @@ describe("Network Settings", () => {
 
 				expect(screen.getByTestId("NetworkFormModal--explorer")).toHaveValue(explorerUrl);
 
-				userEvent.clear(customNetworkFormModalNameField());
-				userEvent.paste(customNetworkFormModalNameField(), "New name");
+				await userEvent.clear(customNetworkFormModalNameField());
+				await userEvent.type(customNetworkFormModalNameField(), "New name");
 
 				expect(customNetworkFormModalNameField()).toHaveValue("New name");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() => {
 					expect(
@@ -1095,14 +1097,14 @@ describe("Network Settings", () => {
 				);
 
 				// Mark first network as not selected
-				userEvent.click(within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId));
+				await userEvent.click(within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId));
 
 				expect(
 					within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId),
 				).not.toBeChecked();
 
-				userEvent.click(customNetworkFirstNetworkMenu());
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
@@ -1114,14 +1116,14 @@ describe("Network Settings", () => {
 
 				expect(screen.getByTestId("NetworkFormModal--explorer")).toHaveValue(explorerUrl);
 
-				userEvent.clear(customNetworkFormModalNameField());
-				userEvent.paste(customNetworkFormModalNameField(), "New name");
+				await userEvent.clear(customNetworkFormModalNameField());
+				await userEvent.type(customNetworkFormModalNameField(), "New name");
 
 				expect(customNetworkFormModalNameField()).toHaveValue("New name");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() => {
 					expect(
@@ -1158,8 +1160,8 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
@@ -1178,12 +1180,12 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
-				userEvent.click(screen.getByTestId("NetworkFormModal--cancel"));
+				await userEvent.click(screen.getByTestId("NetworkFormModal--cancel"));
 
 				expect(screen.queryByTestId("UpdateNetworkFormModal")).not.toBeInTheDocument();
 			});
@@ -1200,21 +1202,21 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkFirstNetworkMenu());
 
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
-				userEvent.clear(customNetworkFormModalNameField());
+				await userEvent.clear(customNetworkFormModalNameField());
 
-				userEvent.paste(customNetworkFormModalNameField(), "New name");
+				await userEvent.type(customNetworkFormModalNameField(), "New name");
 
 				expect(customNetworkFormModalNameField()).toHaveValue("New name");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await expect(screen.findByTestId(networkFormModalAlertTestId)).resolves.toBeVisible();
 			});
@@ -1245,19 +1247,19 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
-				userEvent.clear(customNetworkFormModalNameField());
-				userEvent.paste(customNetworkFormModalNameField(), "New name");
+				await userEvent.clear(customNetworkFormModalNameField());
+				await userEvent.type(customNetworkFormModalNameField(), "New name");
 
 				expect(customNetworkFormModalNameField()).toHaveValue("New name");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await expect(
 					screen.findByText(settingsTranslations.NETWORKS.FORM.NETWORK_HASH_MISMATCH),
@@ -1279,19 +1281,19 @@ describe("Network Settings", () => {
 					},
 				);
 
-				userEvent.click(customNetworkFirstNetworkMenu());
-				userEvent.click(customNetworkMenuEditOption());
+				await userEvent.click(customNetworkFirstNetworkMenu());
+				await userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
-				userEvent.clear(customNetworkFormModalNameField());
-				userEvent.paste(customNetworkFormModalNameField(), "New name");
+				await userEvent.clear(customNetworkFormModalNameField());
+				await userEvent.type(customNetworkFormModalNameField(), "New name");
 
 				expect(customNetworkFormModalNameField()).toHaveValue("New name");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
-				userEvent.click(customNetworkFormSaveButton());
+				await userEvent.click(customNetworkFormSaveButton());
 
 				await expect(screen.findByTestId(networkFormModalAlertTestId)).resolves.toBeVisible();
 			});
