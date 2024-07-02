@@ -10,11 +10,11 @@ describe("IOsInstructions", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should handle close", () => {
+	it("should handle close", async () => {
 		const onClose = vi.fn();
 		render(<IOsInstructions onClose={onClose} />);
 
-		userEvent.click(screen.getByTestId("IOsInstructions__close-button"));
+		await userEvent.click(screen.getByTestId("IOsInstructions__close-button"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.anything());
 	});
