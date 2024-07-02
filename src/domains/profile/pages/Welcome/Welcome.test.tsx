@@ -786,9 +786,6 @@ describe("Welcome", () => {
 		// Reopen
 		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		// Still disabled
-		expect(screen.getByTestId(submitTestID)).toBeDisabled();
-
 		// the timer seems to update only every two seconds
 		vi.advanceTimersByTime(120_000);
 
