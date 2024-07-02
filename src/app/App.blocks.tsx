@@ -150,7 +150,7 @@ const Main: React.VFC = () => {
 		};
 
 		boot();
-	}, [env, handleError]);
+	}, [env, showBoundary]);
 
 	const Skeleton = history.location.pathname.startsWith("/profiles") ? ProfilePageSkeleton : PageSkeleton;
 
