@@ -43,7 +43,6 @@ export default [
 			"src/resources/*",
 			"src/tailwind.config.js",
 			"src/tests",
-			"react-app-env.d.ts",
 			"*.d.ts",
 		],
 	},
@@ -116,6 +115,7 @@ export default [
 			"@typescript-eslint/no-unsafe-call": "warn",
 			"@typescript-eslint/no-unsafe-member-access": "warn",
 			"@typescript-eslint/no-unsafe-return": "warn",
+			"@typescript-eslint/no-unsafe-enum-comparison": "warn",
 			"@typescript-eslint/no-unused-expressions": "warn",
 			"@typescript-eslint/await-thenable": "off",
 			"@typescript-eslint/no-unused-vars": [
@@ -260,6 +260,13 @@ export default [
 		files: ["**/e2e/*.ts", "**/cucumber/*.ts", "**/cucumber/*.feature"],
 		rules: {
 			"sort-keys-fix/sort-keys-fix": "off",
+		},
+	},
+	{
+		files: ["**/*.d.ts"],
+		rules: {
+			"@typescript-eslint/no-unused-vars": "off",
+			"unicorn/no-empty-file": "off",
 		},
 	},
 ];
