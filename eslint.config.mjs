@@ -15,7 +15,6 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import js from "@eslint/js";
 import { FlatCompat } from "@eslint/eslintrc";
-import parser from "@typescript-eslint/parser";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,6 +25,23 @@ const compat = new FlatCompat({
 });
 
 export default [
+	{
+		ignores: [
+			"build/",
+			"config-overrides.js",
+			"coverage/",
+			"dist/",
+			"vitest.setup.ts",
+			"public/",
+			"scripts/",
+			"src/i18n",
+			"src/resources/*",
+			"src/tailwind.config.js",
+			"src/tests",
+			"react-app-env.d.ts",
+			"*.d.ts",
+		],
+	},
 	...fixupConfigRules(
 		compat.extends(
 			"eslint:recommended",
@@ -67,11 +83,6 @@ export default [
 				vi: false,
 			},
 
-			ecmaVersion: 2021,
-			sourceType: "module",
-
-			parser,
-
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: true,
@@ -79,7 +90,7 @@ export default [
 
 				project: "./tsconfig.eslint.json",
 				tsconfigRootDir: __dirname,
-				projectFolderIgnoreList: ["build", "coverage", "node_modules", "public", "dist"],
+				projectFolderIgnoreList: ["build", "coverage", "node_modules", "public", "dist", "src/tests/mocks"],
 			},
 		},
 
