@@ -96,8 +96,8 @@ importers:
         specifier: ^4.0.13
         version: 4.0.13(react@18.3.1)
       react-hook-form:
-        specifier: ^7.51.1
-        version: 7.52.1(react@18.3.1)
+        specifier: 6.15.8
+        version: 6.15.8(react@18.3.1)
       react-i18next:
         specifier: ^14.1.2
         version: 14.1.2(i18next@23.11.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -5369,11 +5369,10 @@ packages:
     peerDependencies:
       react: '>=16.13.1'
 
-  react-hook-form@7.52.1:
-    resolution: {integrity: sha512-uNKIhaoICJ5KQALYZ4TOaOLElyM+xipord+Ha3crEFhTntdLvWZqVY49Wqd/0GiVCA/f9NjemLeiNPjG7Hpurg==}
-    engines: {node: '>=12.22.0'}
+  react-hook-form@6.15.8:
+    resolution: {integrity: sha512-prq82ofMbnRyj5wqDe8hsTRcdR25jQ+B8KtCS7BLCzjFHAwNuCjRwzPuP4eYLsEBjEIeYd6try+pdLdw0kPkpg==}
     peerDependencies:
-      react: ^16.8.0 || ^17 || ^18 || ^19
+      react: ^16.8.0 || ^17
 
   react-i18next@14.1.2:
     resolution: {integrity: sha512-FSIcJy6oauJbGEXfhUgVeLzvWBhIBIS+/9c6Lj4niwKZyGaGb4V4vUbATXSlsHJDXXB+ociNxqFNiFuV1gmoqg==}
@@ -12698,7 +12697,7 @@ snapshots:
       '@babel/runtime': 7.24.6
       react: 18.3.1
 
-  react-hook-form@7.52.1(react@18.3.1):
+  react-hook-form@6.15.8(react@18.3.1):
     dependencies:
       react: 18.3.1
 
