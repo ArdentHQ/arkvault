@@ -26,7 +26,7 @@ describe("DeleteProfile", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(env.profiles().values()).toHaveLength(1));
 	});
