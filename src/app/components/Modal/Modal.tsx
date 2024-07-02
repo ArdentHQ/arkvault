@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-import { DefaultTFuncReturn } from "i18next";
+import { DefaultTReturn, TOptions } from "i18next";
 import { useModal } from "./hooks";
 import { ModalContainer, ModalContent } from "./Modal.blocks";
 import { Size } from "@/types";
@@ -10,7 +10,7 @@ interface ModalProperties extends JSX.IntrinsicAttributes {
 	children: React.ReactNode;
 	title: string | React.ReactNode;
 	titleClass?: string;
-	description?: string | JSX.Element | DefaultTFuncReturn;
+	description?: string | JSX.Element | DefaultTReturn<TOptions>;
 	banner?: React.ReactNode;
 	image?: React.ReactNode;
 	noButtons?: boolean;
