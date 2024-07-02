@@ -1,5 +1,6 @@
-import retry, { AbortError, Options } from "p-retry";
 import { Coins } from "@ardenthq/sdk";
+import retry, { AbortError, Options } from "p-retry";
+
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
 import { hasRequiredAppVersion } from "./validation";
 

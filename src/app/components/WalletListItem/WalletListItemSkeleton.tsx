@@ -1,12 +1,12 @@
 import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
-import { WalletListItemSkeletonProperties } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { Skeleton } from "@/app/components/Skeleton";
-
 import { TableCell, TableRow } from "@/app/components/Table";
+import { WalletListItemSkeletonProperties } from "@/app/components/WalletListItem/WalletListItem.contracts";
 
 export const WalletListItemSkeleton: React.VFC<WalletListItemSkeletonProperties> = ({ isCompact }) => {
 	const { t } = useTranslation();

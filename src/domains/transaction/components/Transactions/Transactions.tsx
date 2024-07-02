@@ -3,15 +3,15 @@ import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
+import { Dropdown } from "@/app/components/Dropdown";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Icon } from "@/app/components/Icon";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
+import { TabId } from "@/app/components/Tabs/useTab";
 import { FilterTransactions } from "@/domains/transaction/components/FilterTransactions";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
 import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
-import { Dropdown } from "@/app/components/Dropdown";
-import { TabId } from "@/app/components/Tabs/useTab";
-import { Icon } from "@/app/components/Icon";
 
 interface TransactionsProperties {
 	emptyText?: string;

@@ -2,11 +2,12 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { DelegateRow } from "./DelegateRow";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { DelegateRow } from "./DelegateRow";
 
 let wallet: Contracts.IReadWriteWallet;
 let delegate: Contracts.IReadOnlyWallet;
@@ -52,7 +53,7 @@ describe("DelegateRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should emit action on select button", () => {
+	it("should emit action on select button", async () => {
 		const toggleVotesSelected = vi.fn();
 		const { container, asFragment } = render(
 			<table>
@@ -72,7 +73,7 @@ describe("DelegateRow", () => {
 			</table>,
 		);
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(container).toBeInTheDocument();
 		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());

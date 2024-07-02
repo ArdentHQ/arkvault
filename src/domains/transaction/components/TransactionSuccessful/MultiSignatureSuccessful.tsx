@@ -8,21 +8,21 @@ import { Avatar } from "@/app/components/Avatar";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
+import { StepHeader } from "@/app/components/StepHeader";
+import { useBreakpoint } from "@/app/hooks";
 import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
+	TransactionAmount,
 	TransactionDetail,
 	TransactionExplorerLink,
 	TransactionNetwork,
+	TransactionRecipients,
 	TransactionSender,
 	TransactionType,
-	TransactionRecipients,
-	TransactionAmount,
 } from "@/domains/transaction/components/TransactionDetail";
 import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { assertString } from "@/utils/assertions";
-import { StepHeader } from "@/app/components/StepHeader";
-import { useBreakpoint } from "@/app/hooks";
 
 interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;

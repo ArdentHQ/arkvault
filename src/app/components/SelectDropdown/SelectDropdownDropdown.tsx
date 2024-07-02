@@ -1,5 +1,5 @@
-import React, { useMemo } from "react";
 import Tippy from "@tippyjs/react";
+import React, { useMemo } from "react";
 
 import { SelectDropdownDropdownProperties } from "./SelectDropdown.contracts";
 import { SelectDropdownRenderOptions as RenderOptions } from "./SelectDropdownRenderOptions";

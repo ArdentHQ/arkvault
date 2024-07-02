@@ -3,10 +3,11 @@ import React, { ChangeEvent, FC, useCallback, useEffect, useRef, useState } from
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 
-import { HeaderSearchInputProperties } from "./HeaderSearchInput.contracts";
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 import { useDebounce } from "@/app/hooks";
+
+import { HeaderSearchInputProperties } from "./HeaderSearchInput.contracts";
 
 const SearchBarInputWrapper = styled.div`
 	${tw`min-width[300px] sm:min-width[448px] dark:border dark:border-theme-secondary-800`}

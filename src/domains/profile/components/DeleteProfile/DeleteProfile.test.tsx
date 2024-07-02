@@ -2,8 +2,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { DeleteProfile } from "./DeleteProfile";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+
+import { DeleteProfile } from "./DeleteProfile";
 
 let profile: Contracts.IProfile;
 
@@ -26,7 +27,7 @@ describe("DeleteProfile", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(env.profiles().values()).toHaveLength(1));
 	});

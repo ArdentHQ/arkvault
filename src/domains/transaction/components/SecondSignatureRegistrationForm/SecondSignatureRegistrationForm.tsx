@@ -1,14 +1,15 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { BackupStep } from "./BackupStep";
-import { GenerationStep } from "./GenerationStep";
-import { ReviewStep } from "./ReviewStep";
-import { VerificationStep } from "./VerificationStep";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { TransactionFee } from "@/domains/transaction/components/TransactionDetail";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
+
+import { BackupStep } from "./BackupStep";
+import { GenerationStep } from "./GenerationStep";
+import { ReviewStep } from "./ReviewStep";
+import { VerificationStep } from "./VerificationStep";
 
 const component = ({
 	activeTab,

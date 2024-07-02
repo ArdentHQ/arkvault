@@ -1,8 +1,10 @@
 import React from "react";
-import { VoteItemProperties } from "./VoteList.contracts";
+
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
+
+import { VoteItemProperties } from "./VoteList.contracts";
 
 export const VoteItemMobile = ({
 	wallet,

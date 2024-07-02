@@ -1,9 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
+import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
 
 export const WalletDetailAddress = ({ address }: { address: string }) => {
 	const { t } = useTranslation();

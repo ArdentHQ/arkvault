@@ -2,8 +2,8 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-
 import { useTranslation } from "react-i18next";
+
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
 import { Circle } from "@/app/components/Circle";

@@ -2,9 +2,10 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { SearchBar } from "./SearchBar";
 import { translations } from "@/app/i18n/common/i18n";
 import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { SearchBar } from "./SearchBar";
 
 describe("SearchBar", () => {
 	it("should render", () => {
@@ -25,9 +26,9 @@ describe("SearchBar", () => {
 
 		render(<SearchBar onSearch={onSearch} />);
 
-		userEvent.type(screen.getByTestId("Input"), "test query");
+		await userEvent.type(screen.getByTestId("Input"), "test query");
 
-		userEvent.click(screen.getByTestId("SearchBar__button"));
+		await userEvent.click(screen.getByTestId("SearchBar__button"));
 
 		await waitFor(() => expect(onSearch).toHaveBeenCalledWith("test query"));
 	});

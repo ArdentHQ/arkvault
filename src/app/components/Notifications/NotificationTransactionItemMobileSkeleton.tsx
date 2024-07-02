@@ -1,10 +1,10 @@
 import React from "react";
-
 import { useTranslation } from "react-i18next";
+
 import { Skeleton } from "@/app/components/Skeleton";
 import { TableRow } from "@/app/components/Table";
+import { RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
 import { useRandomNumber } from "@/app/hooks";
-import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
 
 export const NotificationTransactionItemMobileSkeleton = () => {
 	const senderWidth = useRandomNumber(80, 120);

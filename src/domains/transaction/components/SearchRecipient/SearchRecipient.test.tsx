@@ -2,10 +2,11 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { translations } from "@/domains/transaction/i18n";
+import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor, within } from "@/utils/testing-library";
+
 import { SearchRecipient } from "./SearchRecipient";
 import { RecipientProperties } from "./SearchRecipient.contracts";
-import { translations } from "@/domains/transaction/i18n";
-import { env, getDefaultProfileId, render, screen, waitFor, within, renderResponsive } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let recipients: RecipientProperties[];
@@ -49,7 +50,7 @@ describe("SearchRecipient", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle close", () => {
+	it("should handle close", async () => {
 		const onClose = vi.fn();
 
 		render(
@@ -62,7 +63,7 @@ describe("SearchRecipient", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -86,7 +87,7 @@ describe("SearchRecipient", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with selected address", () => {
+	it("should render with selected address", async () => {
 		const onAction = vi.fn();
 
 		const { asFragment } = render(
@@ -101,14 +102,14 @@ describe("SearchRecipient", () => {
 
 		expect(firstAddress()).toBeInTheDocument();
 
-		userEvent.click(firstAddress());
+		await userEvent.click(firstAddress());
 
 		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with selected address when no compact", () => {
+	it("should render with selected address when no compact", async () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
 		const onAction = vi.fn();
@@ -125,7 +126,7 @@ describe("SearchRecipient", () => {
 
 		expect(firstAddress()).toBeInTheDocument();
 
-		userEvent.click(firstAddress());
+		await userEvent.click(firstAddress());
 
 		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
 
@@ -156,7 +157,7 @@ describe("SearchRecipient", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with selected address on mobile", () => {
+	it("should render with selected address on mobile", async () => {
 		const onAction = vi.fn();
 
 		const { asFragment } = renderResponsive(
@@ -176,7 +177,7 @@ describe("SearchRecipient", () => {
 
 		expect(selected).toBeInTheDocument();
 
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("SearchRecipientListItemResponsive--item-1")).getByTestId("WalletListItemMobile"),
 		);
 
@@ -185,7 +186,7 @@ describe("SearchRecipient", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with selected address on md screen", () => {
+	it("should render with selected address on md screen", async () => {
 		const onAction = vi.fn();
 
 		const { asFragment } = renderResponsive(
@@ -200,7 +201,7 @@ describe("SearchRecipient", () => {
 
 		expect(firstAddress()).toBeInTheDocument();
 
-		userEvent.click(firstAddress());
+		await userEvent.click(firstAddress());
 
 		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
 
@@ -217,14 +218,14 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
 
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
+		await userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -239,14 +240,14 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
 
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(searchInput, "Ark Wallet 1");
+		await userEvent.paste(searchInput, "Ark Wallet 1");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -261,19 +262,19 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
 
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(searchInput, "Ark Wallet 1");
+		await userEvent.paste(searchInput, "Ark Wallet 1");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 
 		// Reset search
-		userEvent.click(screen.getByTestId("header-search-bar__reset"));
+		await userEvent.click(screen.getByTestId("header-search-bar__reset"));
 
 		await waitFor(() => expect(searchInput).not.toHaveValue());
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
@@ -289,14 +290,14 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
 
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(searchInput, "non-existent recipient address");
+		await userEvent.paste(searchInput, "non-existent recipient address");
 
 		await waitFor(() => expect(screen.getByTestId("Input")).toHaveValue("non-existent recipient address"));
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
@@ -304,7 +305,7 @@ describe("SearchRecipient", () => {
 		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 	});
 
-	it.each(["xs", "sm"])("has a search input on responsive screen", (breakpoint) => {
+	it.each(["xs", "sm"])("has a search input on responsive screen", async (breakpoint) => {
 		renderResponsive(
 			<SearchRecipient
 				profile={profile}
@@ -320,7 +321,7 @@ describe("SearchRecipient", () => {
 		expect(searchInput).toBeInTheDocument();
 		expect(searchInput).toHaveValue("");
 
-		userEvent.paste(searchInput, "something");
+		await userEvent.paste(searchInput, "something");
 
 		expect(searchInput).toHaveValue("something");
 
@@ -328,7 +329,7 @@ describe("SearchRecipient", () => {
 
 		expect(resetSearchButton).toBeInTheDocument();
 
-		userEvent.click(resetSearchButton);
+		await userEvent.click(resetSearchButton);
 
 		expect(searchInput).toHaveValue("");
 	});

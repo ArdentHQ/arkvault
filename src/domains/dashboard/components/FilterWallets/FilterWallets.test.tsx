@@ -2,10 +2,11 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { FilterWallets } from "./FilterWallets";
 import { FilterOption } from "@/app/components/FilterNetwork";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { FilterWallets } from "./FilterWallets";
 
 let profile: Contracts.IProfile;
 let networkOptions: FilterOption[];
@@ -55,7 +56,7 @@ describe("FilterWallets", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should emit onChange for network selection", () => {
+	it("should emit onChange for network selection", async () => {
 		const onChange = vi.fn();
 
 		render(
@@ -67,12 +68,12 @@ describe("FilterWallets", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		await userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith("selectedNetworkIds", [networkOptions[0].network.id()]);
 	});
 
-	it("should emit onChange for wallets display type change", () => {
+	it("should emit onChange for wallets display type change", async () => {
 		const onChange = vi.fn();
 
 		render(
@@ -84,14 +85,14 @@ describe("FilterWallets", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		await userEvent.click(screen.getByTestId("filter-wallets__wallets"));
 
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onChange).toHaveBeenCalledWith("walletsDisplayType", "all");
 	});
 
-	it("should not emit onChange for wallet display type change", () => {
+	it("should not emit onChange for wallet display type change", async () => {
 		const onChange = vi.fn();
 
 		render(
@@ -102,9 +103,9 @@ describe("FilterWallets", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		await userEvent.click(screen.getByTestId("filter-wallets__wallets"));
 
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onChange).not.toHaveBeenCalled();
 	});

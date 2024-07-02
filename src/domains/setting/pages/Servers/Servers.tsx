@@ -1,26 +1,28 @@
-import React, { useEffect, useMemo, useState } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useTranslation, Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Prompt } from "react-router-dom";
-import { NormalizedNetwork } from "./Servers.contracts";
-import { useHosts } from "./hooks/use-hosts";
-import { useCustomNetworks } from "./hooks/use-custom-networks";
-import { FallbackToDefaultNodesToggle } from "@/domains/setting/pages/Servers/blocks/FallbackToDefaultNodesToggle";
+
 import { Button } from "@/app/components/Button";
+import { DeleteResource } from "@/app/components/DeleteResource";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
-import { useActiveProfile, useBreakpoint, useNetworks, useProfileJobs } from "@/app/hooks";
-import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
-import NodesStatus from "@/domains/setting/pages/Servers/blocks/NodesStatus";
-import CustomPeers from "@/domains/setting/pages/Servers/blocks/CustomPeers";
-import ServerFormModal from "@/domains/setting/pages/Servers/blocks/ServerFormModal";
-import { toasts } from "@/app/services";
 import { useEnvironmentContext } from "@/app/contexts";
-import { DeleteResource } from "@/app/components/DeleteResource";
+import { useActiveProfile, useBreakpoint, useNetworks, useProfileJobs } from "@/app/hooks";
+import { toasts } from "@/app/services";
+import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
+import CustomPeers from "@/domains/setting/pages/Servers/blocks/CustomPeers";
+import { FallbackToDefaultNodesToggle } from "@/domains/setting/pages/Servers/blocks/FallbackToDefaultNodesToggle";
+import NodesStatus from "@/domains/setting/pages/Servers/blocks/NodesStatus";
+import ServerFormModal from "@/domains/setting/pages/Servers/blocks/ServerFormModal";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
+
+import { useCustomNetworks } from "./hooks/use-custom-networks";
+import { useHosts } from "./hooks/use-hosts";
+import { NormalizedNetwork } from "./Servers.contracts";
 
 export const ServersSettings = () => {
 	const { t } = useTranslation();

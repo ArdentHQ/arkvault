@@ -1,8 +1,9 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useCallback, useMemo, useState } from "react";
 
-import { useWalletAlias } from "./use-wallet-alias";
 import { RecipientProperties } from "@/domains/transaction/components/SearchRecipient/SearchRecipient.contracts";
+
+import { useWalletAlias } from "./use-wallet-alias";
 
 interface SearchWalletProperties {
 	profile?: Contracts.IProfile;

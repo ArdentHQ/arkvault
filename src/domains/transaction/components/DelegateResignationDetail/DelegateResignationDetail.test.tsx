@@ -1,10 +1,11 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { DelegateResignationDetail } from "./DelegateResignationDetail";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { DelegateResignationDetail } from "./DelegateResignationDetail";
 
 const fixtureProfileId = getDefaultProfileId();
 

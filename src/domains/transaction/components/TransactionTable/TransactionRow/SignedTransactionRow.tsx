@@ -3,19 +3,20 @@ import cn from "classnames";
 import React, { MouseEvent, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import { BaseTransactionRowAmount } from "./TransactionRowAmount";
-import { BaseTransactionRowMode } from "./TransactionRowMode";
-import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 import { Button } from "@/app/components/Button";
+import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
-import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
+import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { assertString } from "@/utils/assertions";
+
+import { BaseTransactionRowAmount } from "./TransactionRowAmount";
+import { BaseTransactionRowMode } from "./TransactionRowMode";
+import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 
 interface SignedTransactionRowProperties {
 	transaction: DTO.ExtendedSignedTransactionData;

@@ -1,8 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { ExchangeGrid } from "./ExchangeGrid";
 import { render, screen } from "@/utils/testing-library";
+
+import { ExchangeGrid } from "./ExchangeGrid";
 
 const exchange = {
 	emailAddress: "support@changenow.io",
@@ -33,12 +34,12 @@ describe("ExchangeGrid", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should execute onClick callback", () => {
+	it("should execute onClick callback", async () => {
 		const onClick = vi.fn();
 
 		render(<ExchangeGrid exchanges={[exchange]} onClick={onClick} />);
 
-		userEvent.click(screen.getByTestId("Card"));
+		await userEvent.click(screen.getByTestId("Card"));
 
 		expect(onClick).toHaveBeenCalledWith(exchange.slug);
 	});

@@ -4,12 +4,13 @@ import { Options } from "p-retry";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { connectionReducer, defaultConnectionState } from "./connection.state";
-import { openTransport, closeDevices, isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { useEnvironmentContext } from "@/app/contexts/Environment";
-import { toasts } from "@/app/services";
 import { useLedgerImport } from "@/app/contexts/Ledger/hooks/import";
+import { closeDevices, isLedgerTransportSupported, openTransport } from "@/app/contexts/Ledger/transport";
 import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
+import { toasts } from "@/app/services";
+
+import { connectionReducer, defaultConnectionState } from "./connection.state";
 
 export const useLedgerConnection = () => {
 	const { t } = useTranslation();

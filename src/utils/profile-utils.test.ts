@@ -1,14 +1,15 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { env, getDefaultProfileId } from "@/utils/testing-library";
+
 import {
+	getErroredNetworks,
 	getProfileById,
 	getProfileFromUrl,
 	getProfileStoredPassword,
-	getErroredNetworks,
-	isValidProfileUrl,
 	hasIncompatibleLedgerWallets,
+	isValidProfileUrl,
 } from "./profile-utils";
 import { mockProfileWithPublicAndTestNetworks } from "./testing-library";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("Profile utils", () => {
 	it("#getProfileById", async () => {

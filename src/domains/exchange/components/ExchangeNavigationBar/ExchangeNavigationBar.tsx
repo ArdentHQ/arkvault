@@ -2,8 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { styled } from "twin.macro";
 
-import { defaultStyle } from "./styles";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
+
+import { defaultStyle } from "./styles";
 
 enum ExchangeView {
 	Exchanges = "EXCHANGES",

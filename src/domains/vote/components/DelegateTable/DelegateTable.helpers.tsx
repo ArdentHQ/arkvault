@@ -3,9 +3,10 @@ import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
-import { DelegateTableColumnsProperties, VoteDelegateProperties } from "./DelegateTable.contracts";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+
+import { DelegateTableColumnsProperties, VoteDelegateProperties } from "./DelegateTable.contracts";
 
 export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableColumnsProperties) => {
 	const { t } = useTranslation();

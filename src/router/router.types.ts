@@ -1,7 +1,8 @@
-import { ComponentType, FC, LazyExoticComponent } from "react";
-import { RouteProps } from "react-router";
 import { Environment } from "@ardenthq/sdk-profiles";
 import { History, Location } from "history";
+import { ComponentType, FC, LazyExoticComponent } from "react";
+import { RouteProps } from "react-router";
+
 import { PreloadableComponent } from "@/utils/preload-lazy";
 
 interface RouteItem {
@@ -24,4 +25,4 @@ interface Middleware {
 	handler(parameters: MiddlewareParameters): boolean;
 }
 
-export type { RouteItem, Middleware, MiddlewareParameters, LocationState };
+export type { LocationState, Middleware, MiddlewareParameters, RouteItem };

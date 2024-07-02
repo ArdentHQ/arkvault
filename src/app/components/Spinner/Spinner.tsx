@@ -1,7 +1,8 @@
 import { styled } from "twin.macro";
 
-import { getStyles } from "./Spinner.styles";
 import { Color, Size, Theme } from "@/types";
+
+import { getStyles } from "./Spinner.styles";
 
 interface SpinnerType {
 	color?: Color | "warning-alt";

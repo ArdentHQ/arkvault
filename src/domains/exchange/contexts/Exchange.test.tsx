@@ -1,12 +1,13 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
-
 import { vi } from "vitest";
-import { useExchangeContext } from "./Exchange";
+
 import { httpClient } from "@/app/services";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import { render, screen, waitFor } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
+import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { useExchangeContext } from "./Exchange";
 
 const Test = () => {
 	const { exchangeProviders, fetchProviders } = useExchangeContext();
@@ -41,7 +42,7 @@ describe("Exchange Context", () => {
 			</ExchangeProvider>,
 		);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(container).toHaveTextContent("provider count: 2");
@@ -57,7 +58,7 @@ describe("Exchange Context", () => {
 			</ExchangeProvider>,
 		);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(container).toHaveTextContent("provider count: 0");
@@ -84,7 +85,7 @@ describe("Exchange Context", () => {
 
 		expect(container).toHaveTextContent("exchangeService is undefined");
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(container).toHaveTextContent("exchangeService is set");

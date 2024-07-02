@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
 import { Trans, useTranslation } from "react-i18next";
+
+import { AccordionWrapper } from "@/app/components/Accordion";
+import { MdAndAbove } from "@/app/components/Breakpoint";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Link } from "@/app/components/Link";
 import { useConfiguration } from "@/app/contexts";
@@ -8,8 +11,6 @@ import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets/h
 import { WalletsGroup } from "@/domains/wallet/components/WalletsGroup/WalletsGroup";
 import { WalletsGroupHeaderSkeleton } from "@/domains/wallet/components/WalletsGroup/WalletsGroupHeader";
 import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
-import { MdAndAbove } from "@/app/components/Breakpoint";
-import { AccordionWrapper } from "@/app/components/Accordion";
 
 export const WalletsGroupsList = () => {
 	const { t } = useTranslation();

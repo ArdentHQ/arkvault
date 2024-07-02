@@ -2,14 +2,15 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { ContactListItem } from "./ContactListItem";
 import {
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { ContactListItem } from "./ContactListItem";
 
 const options = [
 	{ label: "Option 1", value: "option_1" },
@@ -122,34 +123,34 @@ describe("ContactListItem", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should call onAction callback", () => {
+	it("should call onAction callback", async () => {
 		const onAction = vi.fn();
 
 		renderContactList({ onAction, options });
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onAction).toHaveBeenCalledWith(options[0]);
 	});
 
-	it("should not call onAction callback", () => {
+	it("should not call onAction callback", async () => {
 		const onAction = vi.fn();
 
 		renderContactList({ options });
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onAction).not.toHaveBeenCalled();
 	});
 
-	it("should call send", () => {
+	it("should call send", async () => {
 		const onSend = vi.fn();
 
 		renderContactList({ onSend: onSend, options });
 
-		userEvent.click(screen.getAllByTestId("ContactListItem__send-button")[0]);
+		await userEvent.click(screen.getAllByTestId("ContactListItem__send-button")[0]);
 
 		expect(onSend).toHaveBeenCalledWith(contact);
 	});

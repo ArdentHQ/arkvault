@@ -7,28 +7,27 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import { SendVote } from "./SendVote";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-
+import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
+import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	act,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
 
-import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
-import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import { SendVote } from "./SendVote";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -162,28 +161,28 @@ describe("SendVote", () => {
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();
 		});
 
-		userEvent.click(within(screen.getAllByTestId("InputFee")[0]).getAllByRole("radio")[2]);
+		await userEvent.click(within(screen.getAllByTestId("InputFee")[0]).getAllByRole("radio")[2]);
 
 		expect(screen.getAllByRole("radio")[2]).toBeChecked();
 
 		// remove focus from fee button
-		userEvent.click(document.body);
+		await userEvent.click(document.body);
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { timeout: 3000 });
 
 		if (inputMethod === "with keyboard") {
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		}
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		if (inputMethod === "with keyboard") {
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		}
 
 		// AuthenticationStep
@@ -200,7 +199,7 @@ describe("SendVote", () => {
 		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.paste(passwordInput, passphrase);
 
 		await waitFor(() => {
 			expect(passwordInput).toHaveValue(passphrase);
@@ -214,9 +213,9 @@ describe("SendVote", () => {
 
 		await act(async () => {
 			if (inputMethod === "with keyboard") {
-				userEvent.keyboard("{enter}");
+				await userEvent.keyboard("{enter}");
 			} else {
-				userEvent.click(sendButton());
+				await userEvent.click(sendButton());
 			}
 		});
 

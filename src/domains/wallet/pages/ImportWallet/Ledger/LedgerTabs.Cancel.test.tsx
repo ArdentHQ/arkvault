@@ -4,11 +4,12 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import { LedgerTabs } from "./LedgerTabs";
 import { minVersionList } from "@/app/contexts";
-import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
-import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
+import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, mockNanoXTransport, render, screen, waitFor } from "@/utils/testing-library";
+
+import { LedgerTabs } from "./LedgerTabs";
 
 const nextSelector = () => screen.getByTestId("Paginator__continue-button");
 const backSelector = () => screen.getByTestId("Paginator__back-button");
@@ -124,15 +125,15 @@ describe("LedgerTabs", () => {
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 		await expect(screen.findByTestId("LedgerConnected")).resolves.toBeVisible();
 
-		userEvent.click(backSelector());
+		await userEvent.click(backSelector());
 
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("DisconnectDevice"));
+		await userEvent.click(screen.getByTestId("DisconnectDevice"));
 		await expect(screen.findByTestId("LedgerDisconnected")).resolves.toBeVisible();
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
@@ -149,7 +150,7 @@ describe("LedgerTabs", () => {
 
 		render(<Component activeIndex={1} />, { route: `/profiles/${profile.id()}` });
 
-		userEvent.click(backSelector());
+		await userEvent.click(backSelector());
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 

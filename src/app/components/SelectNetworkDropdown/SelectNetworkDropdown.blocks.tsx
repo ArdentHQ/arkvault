@@ -1,10 +1,11 @@
-import React from "react";
 import { Networks } from "@ardenthq/sdk";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { Tooltip } from "@/app/components/Tooltip";
+
 import { Icon } from "@/app/components/Icon";
-import { networkDisplayName } from "@/utils/network-utils";
+import { Tooltip } from "@/app/components/Tooltip";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { networkDisplayName } from "@/utils/network-utils";
 
 export const NetworkTestnetCodeIcon = () => {
 	const { t } = useTranslation();

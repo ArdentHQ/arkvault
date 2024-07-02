@@ -1,7 +1,7 @@
+import { URLBuilder } from "@ardenthq/arkvault-url";
 import { QRCode } from "@ardenthq/sdk-helpers";
 import { useCallback, useEffect, useState } from "react";
 
-import { URLBuilder } from "@ardenthq/arkvault-url";
 import { shouldUseDarkColors } from "@/utils/theme";
 
 interface QRCodeProperties {

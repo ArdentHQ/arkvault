@@ -1,6 +1,7 @@
-import { UrlValidationMiddleware } from "./UrlValidationMiddleware";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { Middleware } from "@/router/router.types";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { UrlValidationMiddleware } from "./UrlValidationMiddleware";
 
 let subject: Middleware;
 

@@ -4,13 +4,12 @@ import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
-import { NotificationsDropdown } from "./NotificationsDropdown";
-import { env, getDefaultProfileId, renderResponsive, render, screen, waitFor } from "@/utils/testing-library";
-
-import { server, requestMock } from "@/tests/mocks/server";
-
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
 import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+
+import { NotificationsDropdown } from "./NotificationsDropdown";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -59,7 +58,7 @@ describe("Notifications", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render with transactions in %s", async (breakpoint) => {
 		const { container } = renderResponsive(<NotificationsDropdown profile={profile} />, breakpoint);
 
-		userEvent.click(screen.getAllByRole("button")[0]);
+		await userEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
@@ -80,12 +79,12 @@ describe("Notifications", () => {
 			},
 		);
 
-		userEvent.click(screen.getAllByRole("button")[0]);
+		await userEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
 
-		userEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
+		await userEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
@@ -93,7 +92,7 @@ describe("Notifications", () => {
 
 		expect(container).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 	});

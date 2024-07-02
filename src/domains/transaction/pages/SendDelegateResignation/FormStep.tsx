@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
+import { StepHeader } from "@/app/components/StepHeader";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import {
 	TransactionDetail,
 	TransactionNetwork,
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
-import { StepHeader } from "@/app/components/StepHeader";
 
 interface FormStepProperties {
 	senderWallet: ProfilesContracts.IReadWriteWallet;

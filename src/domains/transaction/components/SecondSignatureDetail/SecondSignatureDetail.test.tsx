@@ -1,10 +1,11 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SecondSignatureDetail } from "./SecondSignatureDetail";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { SecondSignatureDetail } from "./SecondSignatureDetail";
 
 const fixtureProfileId = getDefaultProfileId();
 

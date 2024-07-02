@@ -1,16 +1,17 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { LedgerWaitingApp } from "./LedgerWaitingApp";
 import { render, screen } from "@/utils/testing-library";
 
+import { LedgerWaitingApp } from "./LedgerWaitingApp";
+
 describe("LedgerWaitingApp", () => {
-	it("should call the onClose callback if given", () => {
+	it("should call the onClose callback if given", async () => {
 		const onClose = vi.fn();
 
 		render(<LedgerWaitingApp isOpen={true} coinName="ARK" onClose={onClose} />);
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});

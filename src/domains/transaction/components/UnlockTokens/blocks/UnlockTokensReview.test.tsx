@@ -5,10 +5,11 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import { UnlockTokensReview } from "./UnlockTokensReview";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { UnlockTokensFormState } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { UnlockTokensReview } from "./UnlockTokensReview";
 
 const translations = buildTranslations();
 
@@ -24,7 +25,7 @@ describe("UnlockTokensReview", () => {
 		vi.spyOn(wallet, "alias").mockReturnValue("LSK Wallet 1");
 	});
 
-	it("should render", () => {
+	it("should render", async () => {
 		const onBack = vi.fn();
 		const onConfirm = vi.fn();
 
@@ -58,11 +59,11 @@ describe("UnlockTokensReview", () => {
 		expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("+ 10 LSK");
 		expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("5 LSK");
 
-		userEvent.click(screen.getByText(translations.COMMON.BACK));
+		await userEvent.click(screen.getByText(translations.COMMON.BACK));
 
 		expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 
-		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
+		await userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
 		expect(onConfirm).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 

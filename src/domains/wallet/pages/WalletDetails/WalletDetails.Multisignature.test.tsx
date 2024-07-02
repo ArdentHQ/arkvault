@@ -5,21 +5,22 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { WalletDetails } from "./WalletDetails";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
-	getDefaultWalletMnemonic,
 	getDefaultProfileId,
+	getDefaultWalletMnemonic,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
+
+import { WalletDetails } from "./WalletDetails";
 
 const translations = buildTranslations();
 
@@ -129,11 +130,11 @@ describe("WalletDetails", () => {
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
+		await userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 		vi.restoreAllMocks();
@@ -147,11 +148,11 @@ describe("WalletDetails", () => {
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
+		await userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
@@ -171,11 +172,11 @@ describe("WalletDetails", () => {
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
+		await userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("TableRemoveButton--compact")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("TableRemoveButton--compact"));
+		await userEvent.click(screen.getByTestId("TableRemoveButton--compact"));
 
 		await expect(
 			screen.findByTestId("ConfirmRemovePendingTransaction__Transfer-Transaction"),
@@ -187,13 +188,13 @@ describe("WalletDetails", () => {
 
 		expect(screen.getByTestId("DeleteResource__submit-button")).toBeDisabled();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+		await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("DeleteResource__submit-button")).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("PendingTransactions")).not.toBeInTheDocument());
 

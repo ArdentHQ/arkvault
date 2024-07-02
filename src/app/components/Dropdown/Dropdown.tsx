@@ -2,12 +2,13 @@ import cn from "classnames";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { styled } from "twin.macro";
 
-import { DropdownOption, DropdownProperties, DropdownVariantType } from "./Dropdown.contracts";
-import { defaultClasses, getStyles } from "./Dropdown.styles";
-import { renderOptions } from "./Dropdown.helpers";
 import { Icon } from "@/app/components/Icon";
 import { clickOutsideHandler } from "@/app/hooks";
 import { Position } from "@/types";
+
+import { DropdownOption, DropdownProperties, DropdownVariantType } from "./Dropdown.contracts";
+import { renderOptions } from "./Dropdown.helpers";
+import { defaultClasses, getStyles } from "./Dropdown.styles";
 
 export const Wrapper = styled.div<{ position?: Position; variant: DropdownVariantType }>(getStyles);
 

@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Circle } from "./Circle";
 import { render } from "@/utils/testing-library";
+
+import { Circle } from "./Circle";
 
 describe("Circle", () => {
 	it("should render", () => {

@@ -1,15 +1,16 @@
-import { useCallback, useEffect, useState } from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { useCallback, useEffect, useState } from "react";
+
 import { HttpClient } from "@/app/services/HttpClient";
 import { NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
 import {
 	addressIsValid as checkIfAddressIsValid,
 	getBaseUrl,
-	isPeer,
-	isMusig,
-	urlBelongsToNetwork,
 	getServerHeight,
+	isMusig,
+	isPeer,
+	urlBelongsToNetwork,
 } from "@/utils/peers";
 
 const useHandleServers = ({

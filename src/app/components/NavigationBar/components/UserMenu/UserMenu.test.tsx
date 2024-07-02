@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
-
 import { Route } from "react-router-dom";
+
 import { UserMenu } from "@/app/components/NavigationBar/components/UserMenu/UserMenu";
 import { env, getDefaultProfileId, render } from "@/utils/testing-library";
 let profile: Contracts.IProfile;

@@ -1,5 +1,4 @@
 import { DashboardRoutes } from "@/domains/dashboard/routing";
-
 import { ProfilePaths } from "@/router/paths";
 
 describe("routing", () => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+
 import { useActiveProfile } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets/hooks";
 import { WalletsControls } from "@/domains/wallet/components/WalletsControls";

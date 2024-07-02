@@ -1,8 +1,9 @@
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import Zendesk, { ZendeskAPI } from "react-zendesk";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { delay } from "@/utils/delay";
+
 import ZendeskStyles from "@/styles/zendesk-widget.css?inline";
+import { delay } from "@/utils/delay";
 
 const ZendeskContext = React.createContext<any>(undefined);
 

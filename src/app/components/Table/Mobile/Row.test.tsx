@@ -1,7 +1,8 @@
 import React from "react";
 
-import { RowWrapper, RowLabel, ResponsiveAddressWrapper } from "./Row";
 import { render } from "@/utils/testing-library";
+
+import { ResponsiveAddressWrapper, RowLabel, RowWrapper } from "./Row";
 
 describe("Row", () => {
 	it("should render", () => {

@@ -1,9 +1,10 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import userEvent from "@testing-library/user-event";
+import { fireEvent, render, screen } from "@/utils/testing-library";
+
 import { MnemonicVerification } from "./MnemonicVerification";
 import * as randomWordPositionsMock from "./utils/randomWordPositions";
-import { render, screen, fireEvent } from "@/utils/testing-library";
 const mnemonic = "ark btc usd bnb eth ltc";
 const handleComplete = vi.fn();
 
@@ -22,7 +23,7 @@ describe("MnemonicVerification", () => {
 		expect(screen.getAllByTestId("MnemonicVerificationInput")).toHaveLength(3);
 	});
 
-	it("should verify mnemonic", () => {
+	it("should verify mnemonic", async () => {
 		const wordPositions = [1, 2, 3];
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue(wordPositions);
@@ -33,23 +34,23 @@ describe("MnemonicVerification", () => {
 
 		expect(screen.queryByTestId("Input__valid")).not.toBeInTheDocument();
 
-		userEvent.paste(firstInput, "ark");
+		await userEvent.paste(firstInput, "ark");
 
 		expect(screen.getAllByTestId("Input__valid")).toHaveLength(1);
 
-		userEvent.paste(secondInput, "btc");
+		await userEvent.paste(secondInput, "btc");
 
 		expect(screen.getAllByTestId("Input__valid")).toHaveLength(2);
 
 		handleComplete.mockClear();
 
-		userEvent.paste(thirdInput, "usd");
+		await userEvent.paste(thirdInput, "usd");
 
 		expect(screen.getAllByTestId("Input__valid")).toHaveLength(3);
 
 		expect(handleComplete).toHaveBeenCalledWith(true);
 
-		userEvent.paste(thirdInput, "btc");
+		await userEvent.paste(thirdInput, "btc");
 		fireEvent.blur(thirdInput);
 
 		expect(screen.getAllByTestId("Input__valid")).toHaveLength(2);

@@ -1,8 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { useFormField } from "./useFormField";
 import { Tooltip } from "@/app/components/Tooltip";
+
+import { useFormField } from "./useFormField";
 
 type FormLabelProperties = {
 	label?: string;

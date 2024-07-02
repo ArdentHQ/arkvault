@@ -1,7 +1,8 @@
 import React from "react";
 
-import { ListDividedItem } from "./ListDividedItem";
 import { render, screen } from "@/utils/testing-library";
+
+import { ListDividedItem } from "./ListDividedItem";
 
 describe("ListDividedItem", () => {
 	it("should render an ListDividedItem", () => {

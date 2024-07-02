@@ -4,11 +4,12 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { DelegateVoteAmount } from "./DelegateVoteAmount";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+
+import { DelegateVoteAmount } from "./DelegateVoteAmount";
 
 let wallet: Contracts.IReadWriteWallet;
 let delegate: Contracts.IReadOnlyWallet;
@@ -77,7 +78,7 @@ describe("DelegateVoteAmount", () => {
 		votesAmountStepMock.mockRestore();
 	});
 
-	it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
+	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
 		const { asFragment } = render(
 			<Wrapper>
 				<DelegateVoteAmount
@@ -100,12 +101,12 @@ describe("DelegateVoteAmount", () => {
 
 		// focusIn/focusOut need to be called manually, see https://github.com/testing-library/user-event/issues/592
 
-		userEvent.click(inputElement);
+		await userEvent.click(inputElement);
 		fireEvent.focusIn(inputElement);
 
 		expect(inputElement).toHaveFocus();
 
-		userEvent.tab();
+		await userEvent.tab();
 		fireEvent.focusOut(inputElement);
 
 		expect(inputElement).not.toHaveFocus();
@@ -133,7 +134,7 @@ describe("DelegateVoteAmount", () => {
 
 		const amountField = screen.getByTestId("InputCurrency");
 
-		userEvent.click(screen.getByTestId("DelegateVoteAmount__ticker"));
+		await userEvent.click(screen.getByTestId("DelegateVoteAmount__ticker"));
 
 		await waitFor(() => expect(amountField).toHaveFocus());
 	});
@@ -158,7 +159,7 @@ describe("DelegateVoteAmount", () => {
 
 		const amountField = screen.getByTestId("InputCurrency");
 
-		userEvent.click(screen.getByTestId("DelegateVoteAmount__ticker"));
+		await userEvent.click(screen.getByTestId("DelegateVoteAmount__ticker"));
 
 		await waitFor(() => expect(amountField).not.toHaveFocus());
 	});
@@ -172,7 +173,7 @@ describe("DelegateVoteAmount", () => {
 			} = renderHook(() => useTranslation());
 			render(<Component />);
 
-			userEvent.paste(screen.getByTestId("InputCurrency"), "3");
+			await userEvent.paste(screen.getByTestId("InputCurrency"), "3");
 
 			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
@@ -193,7 +194,7 @@ describe("DelegateVoteAmount", () => {
 			} = renderHook(() => useTranslation());
 			render(<Component />);
 
-			userEvent.paste(screen.getByTestId("InputCurrency"), "12");
+			await userEvent.paste(screen.getByTestId("InputCurrency"), "12");
 
 			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
@@ -209,7 +210,7 @@ describe("DelegateVoteAmount", () => {
 		it("should show error if value is more than the available balance", async () => {
 			render(<Component />);
 
-			userEvent.paste(screen.getByTestId("InputCurrency"), "100");
+			await userEvent.paste(screen.getByTestId("InputCurrency"), "100");
 
 			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
@@ -227,7 +228,7 @@ describe("DelegateVoteAmount", () => {
 			} = renderHook(() => useTranslation());
 			render(<Component />);
 
-			userEvent.paste(screen.getByTestId("InputCurrency"), "test");
+			await userEvent.paste(screen.getByTestId("InputCurrency"), "test");
 
 			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
@@ -246,12 +247,12 @@ describe("DelegateVoteAmount", () => {
 
 		const amountField: HTMLInputElement = screen.getByTestId("InputCurrency");
 
-		userEvent.paste(amountField, "3");
+		await userEvent.paste(amountField, "3");
 
 		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
 		amountField.select();
-		userEvent.paste(amountField, "10");
+		await userEvent.paste(amountField, "10");
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 	});
@@ -450,7 +451,7 @@ describe("DelegateVoteAmount", () => {
 
 		const amountField: HTMLInputElement = screen.getByTestId("InputCurrency");
 
-		userEvent.paste(amountField, "10");
+		await userEvent.paste(amountField, "10");
 
 		await waitFor(() => expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10));
 
@@ -459,7 +460,7 @@ describe("DelegateVoteAmount", () => {
 		rerender(<VoteAmount />);
 
 		amountField.select();
-		userEvent.paste(amountField, "20");
+		await userEvent.paste(amountField, "20");
 
 		await waitFor(() => expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20));
 
@@ -491,21 +492,21 @@ describe("DelegateVoteAmount", () => {
 
 		const amountField: HTMLInputElement = screen.getByTestId("InputCurrency");
 
-		userEvent.paste(amountField, "10");
+		await userEvent.paste(amountField, "10");
 
 		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(80));
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
-		userEvent.paste(amountField, "20");
+		await userEvent.paste(amountField, "20");
 
 		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(70));
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
-		userEvent.paste(amountField, "10");
+		await userEvent.paste(amountField, "10");
 
 		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(80));
 	});
@@ -547,7 +548,7 @@ describe("DelegateVoteAmount", () => {
 		expect(amountField).toHaveValue("30");
 
 		amountField.select();
-		userEvent.paste(amountField, "40");
+		await userEvent.paste(amountField, "40");
 
 		await waitFor(() => expect(toggleUnvotesSelected).not.toHaveBeenCalled());
 
@@ -559,7 +560,7 @@ describe("DelegateVoteAmount", () => {
 		rerender(<VoteAmount />);
 
 		amountField.select();
-		userEvent.paste(amountField, "50");
+		await userEvent.paste(amountField, "50");
 
 		await waitFor(() => expect(toggleUnvotesSelected).not.toHaveBeenCalled());
 
@@ -572,7 +573,7 @@ describe("DelegateVoteAmount", () => {
 		rerender(<VoteAmount />);
 
 		amountField.select();
-		userEvent.paste(amountField, "0");
+		await userEvent.paste(amountField, "0");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 0));
 
@@ -582,7 +583,7 @@ describe("DelegateVoteAmount", () => {
 		rerender(<VoteAmount />);
 
 		amountField.select();
-		userEvent.paste(amountField, "10");
+		await userEvent.paste(amountField, "10");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20));
 
@@ -591,7 +592,7 @@ describe("DelegateVoteAmount", () => {
 		rerender(<VoteAmount />);
 
 		amountField.select();
-		userEvent.paste(amountField, "30");
+		await userEvent.paste(amountField, "30");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address()));
 
@@ -600,7 +601,7 @@ describe("DelegateVoteAmount", () => {
 		rerender(<VoteAmount />);
 
 		amountField.select();
-		userEvent.paste(amountField, "20");
+		await userEvent.paste(amountField, "20");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10));
 
@@ -609,7 +610,7 @@ describe("DelegateVoteAmount", () => {
 		rerender(<VoteAmount />);
 
 		amountField.select();
-		userEvent.paste(amountField, "60");
+		await userEvent.paste(amountField, "60");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address()));
 
@@ -619,7 +620,7 @@ describe("DelegateVoteAmount", () => {
 		rerender(<VoteAmount />);
 
 		amountField.select();
-		userEvent.paste(amountField, "30");
+		await userEvent.paste(amountField, "30");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address()));
 
@@ -670,7 +671,7 @@ describe("DelegateVoteAmount", () => {
 
 			const { rerender } = render(<VoteAmount isSelectedVote />);
 
-			userEvent.paste(screen.getByTestId("InputCurrency"), "3");
+			await userEvent.paste(screen.getByTestId("InputCurrency"), "3");
 
 			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
@@ -703,7 +704,7 @@ describe("DelegateVoteAmount", () => {
 
 			const { rerender } = render(<VoteAmount isSelectedVote />);
 
-			userEvent.paste(screen.getByTestId("InputCurrency"), "10");
+			await userEvent.paste(screen.getByTestId("InputCurrency"), "10");
 
 			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(80));
 
@@ -751,7 +752,7 @@ describe("DelegateVoteAmount", () => {
 			expect(amountField).toHaveValue("30");
 
 			amountField.select();
-			userEvent.paste(amountField, "20");
+			await userEvent.paste(amountField, "20");
 
 			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(90));
 
@@ -763,8 +764,8 @@ describe("DelegateVoteAmount", () => {
 
 			rerender(<VoteAmount isSelectedUnvote={false} />);
 
-			userEvent.clear(amountField);
-			userEvent.paste(amountField, "50");
+			await userEvent.clear(amountField);
+			await userEvent.paste(amountField, "50");
 
 			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(70));
 

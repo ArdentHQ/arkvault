@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { useEffect, useState } from "react";
 
 export const useConfirmedTransaction = ({
 	wallet,

@@ -5,18 +5,19 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SignMessage } from "./SignMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
 	getDefaultProfileId,
 	MNEMONICS,
+	mockNanoXTransport,
 	render,
 	screen,
-	waitFor,
-	mockNanoXTransport,
 	triggerMessageSignOnce,
+	waitFor,
 } from "@/utils/testing-library";
+
+import { SignMessage } from "./SignMessage";
 
 const history = createHashHistory();
 
@@ -86,11 +87,11 @@ describe("SignMessage with ledger", () => {
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-		userEvent.paste(messageInput(), signMessage);
+		await userEvent.paste(messageInput(), signMessage);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE));
 
@@ -100,7 +101,7 @@ describe("SignMessage with ledger", () => {
 			expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -151,11 +152,11 @@ describe("SignMessage with ledger", () => {
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
 		).toBeInTheDocument();
 
-		userEvent.paste(messageInput(), signMessage);
+		await userEvent.paste(messageInput(), signMessage);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(getPublicKeyMock).toHaveBeenCalledWith("m/44'/1'/0'/0/0"));
 

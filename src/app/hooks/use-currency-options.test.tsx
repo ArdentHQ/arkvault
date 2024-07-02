@@ -1,8 +1,9 @@
 import { renderHook } from "@testing-library/react-hooks";
 
-import { useCurrencyOptions } from "./use-currency-options";
 import { PlatformSdkChoices } from "@/data";
 import { WithProviders } from "@/utils/testing-library";
+
+import { useCurrencyOptions } from "./use-currency-options";
 
 describe("useCurrencyOptions", () => {
 	it("returns all currency options if no market provider is specified", () => {

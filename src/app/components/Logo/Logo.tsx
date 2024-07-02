@@ -1,4 +1,5 @@
 import React from "react";
+
 import { images } from "@/app/assets/images";
 
 const { ARKVaultLogo } = images.common;

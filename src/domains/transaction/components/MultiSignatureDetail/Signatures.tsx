@@ -2,11 +2,12 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { getMultiSignatureInfo } from "./MultiSignatureDetail.helpers";
 import { Avatar } from "@/app/components/Avatar";
 import { Badge } from "@/app/components/Badge";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
+
+import { getMultiSignatureInfo } from "./MultiSignatureDetail.helpers";
 
 const WaitingBadge = () => {
 	const { t } = useTranslation();

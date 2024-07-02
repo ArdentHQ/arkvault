@@ -1,5 +1,6 @@
-import React from "react";
 import cn from "classnames";
+import React from "react";
+
 import { ListDividedItemProperties } from "./ListDivided.contracts";
 
 export const ListDividedItem: React.VFC<ListDividedItemProperties> = ({

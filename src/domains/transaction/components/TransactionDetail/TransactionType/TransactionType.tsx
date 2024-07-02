@@ -5,8 +5,8 @@ import {
 	TransactionDetail,
 	TransactionDetailProperties,
 } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
-import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionResponsiveIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
+import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 
 type TransactionSenderProperties = {
 	type: string;

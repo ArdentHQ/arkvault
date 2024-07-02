@@ -1,14 +1,15 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import userEvent from "@testing-library/user-event";
-import {
-	AccordionWrapper,
-	AccordionHeader,
-	AccordionContent,
-	AccordionHeaderSkeletonWrapper,
-} from "./Accordion.blocks";
-import { render, screen } from "@/utils/testing-library";
 import { useAccordion } from "@/app/hooks";
+import { render, screen } from "@/utils/testing-library";
+
+import {
+	AccordionContent,
+	AccordionHeader,
+	AccordionHeaderSkeletonWrapper,
+	AccordionWrapper,
+} from "./Accordion.blocks";
 
 describe("Button", () => {
 	it("should render", () => {
@@ -96,7 +97,7 @@ describe("Button", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should toggle the accordion on click", () => {
+	it("should toggle the accordion on click", async () => {
 		const Accordion = () => {
 			useAccordion();
 
@@ -118,7 +119,7 @@ describe("Button", () => {
 		expect(screen.queryByTestId("AccordionContent")).not.toBeInTheDocument();
 		expect(screen.getByTestId("Accordion__toggle")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("AccordionHeader"));
+		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		expect(screen.getByTestId("AccordionContent")).toBeInTheDocument();
 

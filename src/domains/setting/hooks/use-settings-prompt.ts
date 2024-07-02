@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { FieldNamesMarkedBoolean } from "react-hook-form";
 import { matchPath } from "react-router-dom";
+
 import { ProfilePaths } from "@/router/paths";
 
 interface UseSettingsPromptInput<TFieldValues> {

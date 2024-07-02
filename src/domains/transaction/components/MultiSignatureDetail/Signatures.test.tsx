@@ -1,8 +1,9 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { Signatures } from "./Signatures";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+
+import { Signatures } from "./Signatures";
 
 describe("Signatures", () => {
 	let profile: Contracts.IProfile;

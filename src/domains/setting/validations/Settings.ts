@@ -1,6 +1,6 @@
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
-import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { lowerCaseEquals } from "@/utils/equals";
 
 export const settings = (t: TFunction, environment: Environment) => ({

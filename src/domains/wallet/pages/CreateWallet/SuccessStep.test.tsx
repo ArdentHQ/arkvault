@@ -5,8 +5,9 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
-import { SuccessStep } from "./SuccessStep";
 import { env, getDefaultProfileId, renderResponsive, screen } from "@/utils/testing-library";
+
+import { SuccessStep } from "./SuccessStep";
 
 describe("SuccessStep", () => {
 	let profile: Contracts.IProfile;
@@ -43,7 +44,7 @@ describe("SuccessStep", () => {
 		expect(screen.getAllByText("ARK Devnet")[0]).toBeInTheDocument();
 		expect(screen.getAllByText(wallet.address())[0]).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
 
 		expect(onClickEditAlias).toHaveBeenCalledTimes(1);
 	});

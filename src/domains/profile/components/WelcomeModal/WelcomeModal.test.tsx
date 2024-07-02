@@ -2,11 +2,12 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { WelcomeModal } from "./WelcomeModal";
 import { ConfigurationProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations } from "@/domains/profile/i18n";
 import { env, getDefaultProfileId, render, screen, within } from "@/utils/testing-library";
+
+import { WelcomeModal } from "./WelcomeModal";
 
 let profile: Contracts.IProfile;
 let mockHasCompletedTutorial: vi.SpyInstance<boolean, []>;
@@ -54,7 +55,7 @@ describe("WelcomeModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show navigation buttons according to the step", () => {
+	it("should show navigation buttons according to the step", async () => {
 		mockHasCompletedTutorial.mockReturnValue(false);
 
 		render(<Wrapper />);
@@ -67,7 +68,7 @@ describe("WelcomeModal", () => {
 
 		// Intermediate steps
 		for (const _ of [1, 2]) {
-			userEvent.click(screen.getByTestId(nextButtonID));
+			await userEvent.click(screen.getByTestId(nextButtonID));
 
 			expect(screen.getByTestId(nextButtonID)).toBeDefined();
 			expect(screen.getByTestId("WelcomeModal-prev")).toBeDefined();
@@ -77,7 +78,7 @@ describe("WelcomeModal", () => {
 		}
 
 		// Final step
-		userEvent.click(screen.getByTestId(nextButtonID));
+		await userEvent.click(screen.getByTestId(nextButtonID));
 
 		expect(screen.getByTestId("WelcomeModal-finish")).toBeDefined();
 		expect(screen.getByTestId("WelcomeModal-prev")).toBeDefined();
@@ -86,17 +87,17 @@ describe("WelcomeModal", () => {
 		expect(screen.queryByTestId("WelcomeModal-skip")).not.toBeInTheDocument();
 	});
 
-	it("can change the current step with the navigation dots", () => {
+	it("can change the current step with the navigation dots", async () => {
 		mockHasCompletedTutorial.mockReturnValue(false);
 
 		render(<Wrapper />);
 
 		// Got to first step (to show the navigation dots)
-		userEvent.click(screen.getByTestId(nextButtonID));
+		await userEvent.click(screen.getByTestId(nextButtonID));
 
 		// Go to final step
 		const count = within(screen.getByTestId("DotNavigation")).getAllByRole("listitem").length;
-		userEvent.click(screen.getByTestId(`DotNavigation-Step-${count - 1}`));
+		await userEvent.click(screen.getByTestId(`DotNavigation-Step-${count - 1}`));
 
 		expect(screen.getByTestId("WelcomeModal-finish")).toBeDefined();
 		expect(screen.getByTestId("WelcomeModal-prev")).toBeDefined();

@@ -1,11 +1,12 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 
-import userEvent from "@testing-library/user-event";
-import { WalletHeaderMobile } from "./WalletHeaderMobile";
 import * as envHooks from "@/app/hooks/env";
-import { env, getDefaultProfileId, renderResponsiveWithRoute, screen, within, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, renderResponsiveWithRoute, screen, waitFor, within } from "@/utils/testing-library";
+
+import { WalletHeaderMobile } from "./WalletHeaderMobile";
 
 const history = createHashHistory();
 
@@ -93,24 +94,26 @@ describe("WalletHeaderMobile", () => {
 
 		expect(screen.getByTestId("WalletHeaderMobile__more-button")).toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("WalletHeaderMobile__more-button")).getByTestId("dropdown__toggle"));
+		await userEvent.click(
+			within(screen.getByTestId("WalletHeaderMobile__more-button")).getByTestId("dropdown__toggle"),
+		);
 
 		await expect(screen.findByText("Wallet Name")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText("Wallet Name"));
+		await userEvent.click(screen.getByText("Wallet Name"));
 
 		await expect(screen.findByTestId("UpdateWalletName__input")).resolves.toBeVisible();
 
 		const input = screen.getByTestId("UpdateWalletName__input");
 		const submitButton = screen.getByTestId("UpdateWalletName__submit");
 
-		userEvent.clear(input);
-		userEvent.paste(input, "New name");
+		await userEvent.clear(input);
+		await userEvent.paste(input, "New name");
 
 		expect(input).toHaveValue("New name");
 
 		await waitFor(() => expect(submitButton).toBeEnabled());
-		userEvent.click(submitButton);
+		await userEvent.click(submitButton);
 
 		await waitFor(() => expect(onUpdateSpy).toHaveBeenCalledWith(true));
 

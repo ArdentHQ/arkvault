@@ -3,9 +3,10 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 
+import { env, MNEMONICS } from "@/utils/testing-library";
+
 import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";
-import { env, MNEMONICS } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;

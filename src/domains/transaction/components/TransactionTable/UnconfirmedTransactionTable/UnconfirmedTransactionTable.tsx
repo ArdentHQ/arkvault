@@ -3,9 +3,10 @@ import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
-import { UnconfirmedTransactionRow } from "./UnconfirmedTransactionRow";
 import { Table } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
+
+import { UnconfirmedTransactionRow } from "./UnconfirmedTransactionRow";
 
 interface Properties {
 	transactions: DTO.ExtendedConfirmedTransactionData[];

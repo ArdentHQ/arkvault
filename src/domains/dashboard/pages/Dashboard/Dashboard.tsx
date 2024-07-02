@@ -2,19 +2,19 @@ import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { EmptyBlock } from "@/app/components/EmptyBlock";
-import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
-import { PortfolioBreakdown } from "@/domains/dashboard/components/PortfolioBreakdown";
-import { PortfolioHeader } from "@/domains/wallet/components/PortfolioHeader";
-import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup";
-import { useLatestTransactions } from "@/domains/dashboard/hooks/use-latest-transactions";
-import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
 
+import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
+import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
+import { PortfolioBreakdown } from "@/domains/dashboard/components/PortfolioBreakdown";
+import { useLatestTransactions } from "@/domains/dashboard/hooks/use-latest-transactions";
 import { WelcomeModal } from "@/domains/profile/components/WelcomeModal";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
+import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
+import { PortfolioHeader } from "@/domains/wallet/components/PortfolioHeader";
+import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup";
 
 export const Dashboard: React.VFC = () => {
 	const activeProfile = useActiveProfile();

@@ -1,8 +1,9 @@
 import React from "react";
 import { styled } from "twin.macro";
 
-import { getStyles } from "./RadioButton.styles";
 import { Color } from "@/types";
+
+import { getStyles } from "./RadioButton.styles";
 
 type RadioButtonProperties = {
 	color?: Color;

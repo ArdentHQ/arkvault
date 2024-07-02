@@ -1,16 +1,16 @@
-import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
+import { Divider } from "@/app/components/Divider";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
-import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
-import { Divider } from "@/app/components/Divider";
 import { useNetworks } from "@/app/hooks";
+import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 
 interface NetworkStepProperties {
 	profile: Contracts.IProfile;

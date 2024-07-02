@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import DatePicker from "react-datepicker";
-
 import { Controller, RegisterOptions, useFormContext } from "react-hook-form";
-import { Input } from "./Input";
-import { Icon } from "@/app/components/Icon";
+
 import { useFormField } from "@/app/components/Form/useFormField";
+import { Icon } from "@/app/components/Icon";
+
+import { Input } from "./Input";
 
 type InputDateProperties = {
 	rules?: RegisterOptions;

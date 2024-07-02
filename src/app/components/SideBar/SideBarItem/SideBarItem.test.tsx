@@ -1,8 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { SideBarItem } from "./SideBarItem";
 import { render, screen } from "@/utils/testing-library";
+
+import { SideBarItem } from "./SideBarItem";
 
 const item = {
 	icon: "Plugin",
@@ -27,13 +28,13 @@ describe("SideBarItem", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should fire click event", () => {
+	it("should fire click event", async () => {
 		const handleActiveItem = vi.fn();
 
 		render(<SideBarItem {...item} handleActiveItem={handleActiveItem} />);
 		const menuItem = screen.getByTestId("side-menu__item--plugin");
 
-		userEvent.click(menuItem);
+		await userEvent.click(menuItem);
 
 		expect(handleActiveItem).toHaveBeenCalledWith("plugin");
 	});

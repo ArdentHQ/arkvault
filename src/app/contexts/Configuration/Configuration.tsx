@@ -1,6 +1,5 @@
-import React from "react";
-
 import { ARK } from "@ardenthq/sdk-ark";
+import React from "react";
 
 interface ConfigurationContextType {
 	configuration: Record<string, any>;

@@ -1,6 +1,6 @@
-import { isValidProfileUrl } from "@/utils/profile-utils";
 import { ProfilePaths } from "@/router/paths";
 import { Middleware, MiddlewareParameters } from "@/router/router.types";
+import { isValidProfileUrl } from "@/utils/profile-utils";
 import { isAllowedUrl, isKnownPath } from "@/utils/url-validation";
 
 export class UrlValidationMiddleware implements Middleware {

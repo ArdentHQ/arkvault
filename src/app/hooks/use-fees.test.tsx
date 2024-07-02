@@ -3,11 +3,12 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
-import { useFees } from "./use-fees";
 import { EnvironmentProvider } from "@/app/contexts";
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import { env, getDefaultProfileId, triggerMessageSignOnce } from "@/utils/testing-library";
+
+import { useFees } from "./use-fees";
 
 const ARKDevnet = "ark.devnet";
 

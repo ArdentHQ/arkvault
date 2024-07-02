@@ -1,7 +1,8 @@
 import React from "react";
 
-import { QRCameraReader } from "./QRCameraReader";
 import { render } from "@/utils/testing-library";
+
+import { QRCameraReader } from "./QRCameraReader";
 
 vi.mock("react-qr-reader", () => ({
 	QrReader: ({ onResult }: { onResult: (result: any, error?: Error) => void }) => {

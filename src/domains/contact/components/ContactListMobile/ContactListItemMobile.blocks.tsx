@@ -1,14 +1,15 @@
-import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
-import { Avatar } from "@/app/components/Avatar";
+import React, { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+
 import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
-import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useNetworkOptions, useNetworks } from "@/app/hooks";
+import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { networkDisplayName } from "@/utils/network-utils";
 interface ContactListItemMobileAddressProperties {
 	profile: Contracts.IProfile;

@@ -2,15 +2,14 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
-import { NotificationTransactionItem } from "./NotificationTransactionItem";
 import { httpClient } from "@/app/services";
-import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen, waitFor, renderResponsive } from "@/utils/testing-library";
-
-import { server, requestMock } from "@/tests/mocks/server";
-
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
 import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+
+import { NotificationTransactionItem } from "./NotificationTransactionItem";
 
 let profile: Contracts.IProfile;
 let notificationTransaction: DTO.ExtendedConfirmedTransactionData;
@@ -104,7 +103,7 @@ describe("Notifications", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("TableRow"));
+		await userEvent.click(screen.getByTestId("TableRow"));
 
 		await waitFor(() => expect(onTransactionClick).toHaveBeenCalledWith(notificationTransaction));
 	});

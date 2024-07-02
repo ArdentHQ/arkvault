@@ -1,10 +1,10 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { VFC, useMemo } from "react";
-
+import React, { useMemo, VFC } from "react";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/app/components/Button";
-import { Avatar } from "@/app/components/Avatar";
+
 import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 

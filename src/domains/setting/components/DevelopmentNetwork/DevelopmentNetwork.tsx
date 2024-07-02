@@ -1,10 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { DevelopmentNetworkProperties } from "./DevelopmentNetwork.contracts";
 import { Button } from "@/app/components/Button";
-import { Modal } from "@/app/components/Modal";
 import { FormButtons } from "@/app/components/Form";
+import { Modal } from "@/app/components/Modal";
+
+import { DevelopmentNetworkProperties } from "./DevelopmentNetwork.contracts";
 
 export const DevelopmentNetwork: React.FC<DevelopmentNetworkProperties> = ({
 	isOpen,

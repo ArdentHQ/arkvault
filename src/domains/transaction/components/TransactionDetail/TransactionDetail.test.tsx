@@ -1,7 +1,8 @@
 import React from "react";
 
+import { render, renderResponsive, screen } from "@/utils/testing-library";
+
 import { TransactionDetail } from "./TransactionDetail";
-import { render, screen, renderResponsive } from "@/utils/testing-library";
 
 describe("TransactionDetail", () => {
 	it.each(["md", "lg", "xl"])("should render in %s desktop screen", (breakpoint) => {

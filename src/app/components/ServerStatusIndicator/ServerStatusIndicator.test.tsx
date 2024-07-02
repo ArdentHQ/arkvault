@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
-import React, { useEffect } from "react";
 import { createHashHistory } from "history";
+import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-import { useConfiguration, ConfigurationProvider } from "@/app/contexts";
+
 import { ServerStatusIndicator } from "@/app/components/ServerStatusIndicator";
+import { ConfigurationProvider, useConfiguration } from "@/app/contexts";
 import { ServerStatus } from "@/utils/peers";
-import { render, renderResponsiveWithRoute, getDefaultProfileId, env } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsiveWithRoute } from "@/utils/testing-library";
 
 const history = createHashHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;

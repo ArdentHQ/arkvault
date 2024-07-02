@@ -1,8 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { ErrorStep } from "./ErrorStep";
 import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { ErrorStep } from "./ErrorStep";
 
 describe("ErrorStep", () => {
 	it("should render with default texts", () => {
@@ -29,7 +30,7 @@ describe("ErrorStep", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+		await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
 
 		await waitFor(() => expect(onBack).toHaveBeenCalledWith());
 	});
@@ -40,7 +41,7 @@ describe("ErrorStep", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 	});

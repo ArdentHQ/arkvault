@@ -2,8 +2,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { ConfirmSendTransaction } from "./ConfirmSendTransaction";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { ConfirmSendTransaction } from "./ConfirmSendTransaction";
 
 let profile: Contracts.IProfile;
 
@@ -30,7 +31,7 @@ describe("ConfirmSendTransaction", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should confirm", () => {
+	it("should confirm", async () => {
 		const onConfirm = vi.fn();
 		render(
 			<ConfirmSendTransaction
@@ -43,12 +44,12 @@ describe("ConfirmSendTransaction", () => {
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
+		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 
 		expect(onConfirm).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should cancel", () => {
+	it("should cancel", async () => {
 		const onCancel = vi.fn();
 		render(
 			<ConfirmSendTransaction isOpen={true} profile={profile} unconfirmedTransactions={[]} onClose={onCancel} />,
@@ -56,7 +57,7 @@ describe("ConfirmSendTransaction", () => {
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
+		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
 
 		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

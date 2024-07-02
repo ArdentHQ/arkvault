@@ -1,9 +1,10 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import userEvent from "@testing-library/user-event";
-import { WalletsControls } from "./WalletsControls";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import { render, renderResponsive, screen } from "@/utils/testing-library";
+
+import { WalletsControls } from "./WalletsControls";
 
 describe("WalletsControls", () => {
 	const filterProperties: FilterWalletsHookProperties = {
@@ -46,17 +47,17 @@ describe("WalletsControls", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should execute onCreateWallet callback", () => {
+	it("should execute onCreateWallet callback", async () => {
 		const onCreateWallet = vi.fn();
 
 		render(<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={{}} />);
 
-		userEvent.click(screen.getByTestId("WalletControls__create-wallet"));
+		await userEvent.click(screen.getByTestId("WalletControls__create-wallet"));
 
 		expect(onCreateWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should execute onCreateWallet callback when responsive", () => {
+	it("should execute onCreateWallet callback when responsive", async () => {
 		const onCreateWallet = vi.fn();
 
 		renderResponsive(
@@ -64,26 +65,26 @@ describe("WalletsControls", () => {
 			"xs",
 		);
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onCreateWallet).toHaveBeenCalledWith();
 	});
 
-	it("should execute onImportWallet callback", () => {
+	it("should execute onImportWallet callback", async () => {
 		const onImportWallet = vi.fn();
 
 		render(<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />);
 
-		userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
+		await userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
 
 		expect(onImportWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should execute onImportWallet callback when responsive", () => {
+	it("should execute onImportWallet callback when responsive", async () => {
 		const onImportWallet = vi.fn();
 
 		renderResponsive(
@@ -91,11 +92,11 @@ describe("WalletsControls", () => {
 			"xs",
 		);
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--1"));
+		await userEvent.click(screen.getByTestId("dropdown__option--1"));
 
 		expect(onImportWallet).toHaveBeenCalledWith();
 	});

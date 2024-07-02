@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Amount } from "./Amount";
 import { render, screen } from "@/utils/testing-library";
+
+import { Amount } from "./Amount";
 
 describe("Amount", () => {
 	it("should format crypto or fiat depending on the ticker", () => {

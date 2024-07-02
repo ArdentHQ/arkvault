@@ -1,11 +1,11 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 
-import { useTransaction } from "./use-transaction";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
-
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { useTransaction } from "./use-transaction";
 
 describe("useTransaction", () => {
 	let profile: Contracts.IProfile;

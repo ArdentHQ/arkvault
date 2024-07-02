@@ -3,8 +3,9 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { TransactionTable } from "./TransactionTable";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
@@ -14,9 +15,8 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-import { requestMock, server } from "@/tests/mocks/server";
 
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10.json";
+import { TransactionTable } from "./TransactionTable";
 
 describe("TransactionTable", () => {
 	let profile: Contracts.IProfile;
@@ -101,13 +101,13 @@ describe("TransactionTable", () => {
 		});
 	});
 
-	it("should emit action on the row click", () => {
+	it("should emit action on the row click", async () => {
 		const onClick = vi.fn();
 		const sortedByDateDesc = sortByDesc(transactions, (transaction) => transaction.timestamp());
 
 		render(<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} profile={profile} />);
 
-		userEvent.click(screen.getAllByTestId("TableRow")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		expect(onClick).toHaveBeenCalledWith(sortedByDateDesc[0]);
 	});
@@ -117,7 +117,7 @@ describe("TransactionTable", () => {
 
 		render(<TransactionTable transactions={transactions} onRowClick={onClick} isCompact profile={profile} />);
 
-		userEvent.click(screen.getAllByTestId("TableRow")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(transactions[1]));
 	});

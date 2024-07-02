@@ -1,15 +1,15 @@
-import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
+import { Divider } from "@/app/components/Divider";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useNetworks } from "@/app/hooks";
-import { Divider } from "@/app/components/Divider";
+import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 
 export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile; networks: Networks.Network[] }) => {
 	const { t } = useTranslation();

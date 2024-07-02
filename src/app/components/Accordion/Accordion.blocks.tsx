@@ -1,13 +1,14 @@
 import cn from "classnames";
 import React from "react";
 import tw, { css, styled } from "twin.macro";
-import { useTheme } from "@/app/hooks";
+
 import {
-	AccordionHeaderProperties,
 	AccordionContentProperties,
+	AccordionHeaderProperties,
 	AccordionHeaderSkeletonWrapperProperties,
 } from "@/app/components/Accordion";
 import { Icon } from "@/app/components/Icon";
+import { useTheme } from "@/app/hooks";
 
 export const AccordionWrapper = styled.div<{ isInactive?: boolean; isCollapsed?: boolean }>`
 	${tw`

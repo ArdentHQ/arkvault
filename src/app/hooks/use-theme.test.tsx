@@ -3,9 +3,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { useTheme } from "@/app/hooks/use-theme";
 import { Theme } from "@/types";
-import * as themeUtils from "@/utils/theme";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { browser } from "@/utils/platform";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
+import * as themeUtils from "@/utils/theme";
 
 describe("useTheme", () => {
 	describe("theme", () => {

@@ -5,11 +5,11 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
+import { useBreakpoint } from "@/app/hooks";
 import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
 import { WalletDetailAddress } from "@/domains/wallet/components/WalletDetailAddress";
 import { WalletDetailNetwork } from "@/domains/wallet/components/WalletDetailNetwork";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
-import { useBreakpoint } from "@/app/hooks";
 
 export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void }) => {
 	const { t } = useTranslation();

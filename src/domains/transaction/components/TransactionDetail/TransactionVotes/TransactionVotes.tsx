@@ -1,8 +1,8 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Skeleton } from "@/app/components/Skeleton";
 
+import { Skeleton } from "@/app/components/Skeleton";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
 

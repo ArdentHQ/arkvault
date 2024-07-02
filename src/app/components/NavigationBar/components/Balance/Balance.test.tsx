@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Balance } from "./Balance";
 import { env, render } from "@/utils/testing-library";
+
+import { Balance } from "./Balance";
 
 describe("Balance", () => {
 	it("should render", () => {

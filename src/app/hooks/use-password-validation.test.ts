@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import * as haveibeenpwnedMock from "@faustbrian/node-haveibeenpwned";
 import { renderHook } from "@testing-library/react-hooks";
-import { usePasswordValidation, defaultState } from "./use-password-validation";
+
 import { ValidationRule } from ".";
+import { defaultState, usePasswordValidation } from "./use-password-validation";
 
 const validPassword = "S3cUr3!Pas#w0rd";
 

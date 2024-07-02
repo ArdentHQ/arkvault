@@ -5,6 +5,21 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { ConfigurationProvider, EnvironmentProvider, useConfiguration } from "@/app/contexts";
+import { toasts } from "@/app/services";
+import * as profileUtils from "@/utils/profile-utils";
+import {
+	act as renderAct,
+	env,
+	getDefaultProfileId,
+	MNEMONICS,
+	mockProfileWithPublicAndTestNetworks,
+	render,
+	screen,
+	syncDelegates,
+	waitFor,
+} from "@/utils/testing-library";
+
 import {
 	useProfileJobs,
 	useProfileRestore,
@@ -12,20 +27,6 @@ import {
 	useProfileSynchronizer,
 	useProfileSyncStatus,
 } from "./use-profile-synchronizer";
-import * as profileUtils from "@/utils/profile-utils";
-import { ConfigurationProvider, EnvironmentProvider, useConfiguration } from "@/app/contexts";
-import { toasts } from "@/app/services";
-import {
-	act as renderAct,
-	env,
-	getDefaultProfileId,
-	MNEMONICS,
-	render,
-	screen,
-	syncDelegates,
-	waitFor,
-	mockProfileWithPublicAndTestNetworks,
-} from "@/utils/testing-library";
 
 const history = createHashHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -386,7 +387,7 @@ describe("useProfileSynchronizer", () => {
 
 		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(false));
 
-		userEvent.click(screen.getByTestId("ResetSyncProfile"));
+		await userEvent.click(screen.getByTestId("ResetSyncProfile"));
 
 		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(true));
 	});
@@ -439,7 +440,7 @@ describe("useProfileSynchronizer", () => {
 
 		await expect(screen.findByTestId("SyncProfile")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SyncProfile"));
+		await userEvent.click(screen.getByTestId("SyncProfile"));
 
 		await waitFor(() =>
 			expect(profileNotificationsSyncSpy).toHaveBeenCalledWith({
@@ -489,7 +490,7 @@ describe("useProfileSynchronizer", () => {
 
 		expect(onProfileUpdated).not.toHaveBeenCalled();
 
-		userEvent.click(screen.getByTestId("Test"));
+		await userEvent.click(screen.getByTestId("Test"));
 
 		expect(onProfileUpdated).toHaveBeenCalledWith();
 	});
@@ -523,7 +524,7 @@ describe("useProfileSynchronizer", () => {
 
 		expect(onProfileUpdated).not.toHaveBeenCalled();
 
-		userEvent.click(screen.getByTestId("Test"));
+		await userEvent.click(screen.getByTestId("Test"));
 
 		expect(onProfileUpdated).not.toHaveBeenCalled();
 	});

@@ -1,16 +1,17 @@
-import React, { useCallback, useEffect, useState } from "react";
 import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
+import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Icon } from "@/app/components/Icon";
+
 import { Divider } from "@/app/components/Divider";
-import { Tooltip } from "@/app/components/Tooltip";
+import { Icon } from "@/app/components/Icon";
 import { Spinner } from "@/app/components/Spinner";
-import { networkDisplayName } from "@/utils/network-utils";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { Tooltip } from "@/app/components/Tooltip";
 import { useConfiguration } from "@/app/contexts";
-import { pingServerAddress } from "@/utils/peers";
 import { useBreakpoint } from "@/app/hooks";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { networkDisplayName } from "@/utils/network-utils";
+import { pingServerAddress } from "@/utils/peers";
 
 const NodeStatusNode: React.VFC<{
 	network: Networks.Network;

@@ -1,7 +1,8 @@
 import tw from "twin.macro";
 
-import { DropdownVariantType } from "./Dropdown.contracts";
 import { Position } from "@/types";
+
+import { DropdownVariantType } from "./Dropdown.contracts";
 
 export const defaultClasses = "mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl";
 

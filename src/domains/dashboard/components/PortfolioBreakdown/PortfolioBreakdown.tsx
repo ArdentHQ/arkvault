@@ -1,10 +1,7 @@
 import cn from "classnames";
 import React, { useCallback, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { LabelledText, Legend, PortfolioBreakdownSkeleton, Tooltip } from "./PortfolioBreakdown.blocks";
-import { PortfolioBreakdownProperties } from "./PortfolioBreakdown.contracts";
-import { formatAmount, formatPercentage, getColor, getOtherGroupColor } from "./PortfolioBreakdown.helpers";
-import { assertNumber } from "@/utils/assertions";
+
 import { Amount } from "@/app/components/Amount";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import {
@@ -17,6 +14,11 @@ import { LineGraph } from "@/app/components/Graphs/LineGraph";
 import { useTheme } from "@/app/hooks";
 import { PortfolioBreakdownDetails } from "@/domains/dashboard/components/PortfolioBreakdownDetails";
 import { usePortfolioBreakdown } from "@/domains/dashboard/hooks/use-portfolio-breakdown";
+import { assertNumber } from "@/utils/assertions";
+
+import { LabelledText, Legend, PortfolioBreakdownSkeleton, Tooltip } from "./PortfolioBreakdown.blocks";
+import { PortfolioBreakdownProperties } from "./PortfolioBreakdown.contracts";
+import { formatAmount, formatPercentage, getColor, getOtherGroupColor } from "./PortfolioBreakdown.helpers";
 
 export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 	profile,

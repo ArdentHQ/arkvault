@@ -5,10 +5,9 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { WalletDetails } from "./WalletDetails";
-import { requestMock, server } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
@@ -20,6 +19,8 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
+
+import { WalletDetails } from "./WalletDetails";
 
 const history = createHashHistory();
 let walletUrl: string;
@@ -185,11 +186,11 @@ describe("WalletDetails", () => {
 			withProfileSynchronizer: true,
 		});
 
-		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
+		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 	});
@@ -205,7 +206,7 @@ describe("WalletDetails", () => {
 
 		const fetchMoreTransactionsButton = screen.getByTestId("transactions__fetch-more-button");
 
-		userEvent.click(fetchMoreTransactionsButton);
+		await userEvent.click(fetchMoreTransactionsButton);
 
 		await waitFor(() => {
 			expect(within(screen.getAllByTestId("TransactionTable")[0]).queryAllByTestId("TableRow")).toHaveLength(2);

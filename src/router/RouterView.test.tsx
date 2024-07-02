@@ -3,9 +3,10 @@ import { createHashHistory } from "history";
 import React from "react";
 import { MemoryRouter, Router, withRouter } from "react-router-dom";
 
-import { RouterView } from "./RouterView";
-import { MiddlewareParameters, Middleware } from "./router.types";
 import { render, screen } from "@/utils/testing-library";
+
+import { Middleware, MiddlewareParameters } from "./router.types";
+import { RouterView } from "./RouterView";
 
 describe("RouterView", () => {
 	const LocationDisplay = withRouter(({ location }) => (

@@ -4,9 +4,10 @@ import React, { useMemo } from "react";
 import { HeaderGroup, useSortBy, useTable } from "react-table";
 import { styled } from "twin.macro";
 
+import { Icon } from "@/app/components/Icon";
+
 import { TableProperties } from "./Table.contracts";
 import { defaultTableStyle } from "./Table.styles";
-import { Icon } from "@/app/components/Icon";
 
 const TableWrapper = styled.div`
 	${defaultTableStyle}

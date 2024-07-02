@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Spinner } from "./Spinner";
 import { render } from "@/utils/testing-library";
+
+import { Spinner } from "./Spinner";
 
 describe("Spinner", () => {
 	let consoleSpy: vi.SpyInstance;

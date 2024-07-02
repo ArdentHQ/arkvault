@@ -3,10 +3,11 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { UnlockTokensRow } from "./UnlockTokensRow";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { UnlockableBalance } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import { render, screen } from "@/utils/testing-library";
+
+import { UnlockTokensRow } from "./UnlockTokensRow";
 
 const translations = buildTranslations();
 
@@ -32,7 +33,7 @@ describe("UnlockTokensRow", () => {
 		expect(screen.queryByTestId("Amount")).toBeNull();
 	});
 
-	it.each([true, false])("should render with isReady = %s", (isReady) => {
+	it.each([true, false])("should render with isReady = %s", async (isReady) => {
 		const onToggle = vi.fn();
 
 		const { asFragment } = render(
@@ -59,7 +60,7 @@ describe("UnlockTokensRow", () => {
 
 		expect(screen.getAllByRole("checkbox")).toHaveLength(1);
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		expect(onToggle).toHaveBeenCalledTimes(isReady ? 1 : 0);
 	});

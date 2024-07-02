@@ -1,15 +1,16 @@
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { useNetworkOptions } from "./use-network-options";
 import { EnvironmentProvider } from "@/app/contexts";
 import {
 	env,
+	getDefaultProfileId,
 	mockProfileWithOnlyPublicNetworks,
 	mockProfileWithPublicAndTestNetworks,
-	getDefaultProfileId,
 } from "@/utils/testing-library";
+
+import { useNetworkOptions } from "./use-network-options";
 const fixtureProfileId = getDefaultProfileId();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;

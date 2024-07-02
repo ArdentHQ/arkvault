@@ -1,9 +1,10 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 
-import { useOrderStatus } from "./use-order-status";
-import { env, getDefaultProfileId, render, waitFor } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, render, waitFor } from "@/utils/testing-library";
+
+import { useOrderStatus } from "./use-order-status";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;

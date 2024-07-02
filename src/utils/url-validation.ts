@@ -1,4 +1,5 @@
 import { matchPath } from "react-router-dom";
+
 import { ProfilePaths } from "@/router/paths";
 
 export const isKnownPath = (url: string) =>

@@ -2,16 +2,16 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
+import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-import { createHashHistory } from "history";
 
+import { useConfiguration } from "@/app/contexts";
 import { AddressRow, WalletAvatar } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
-import { useConfiguration } from "@/app/contexts";
-import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -370,7 +370,7 @@ describe("AddressRow", () => {
 
 		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
 
-		userEvent.click(selectButton);
+		await userEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
 		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());
@@ -417,7 +417,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("AddressRow__wallet"));
+		await userEvent.click(screen.getByTestId("AddressRow__wallet"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 	});

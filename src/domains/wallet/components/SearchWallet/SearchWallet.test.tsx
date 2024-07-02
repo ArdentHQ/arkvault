@@ -6,19 +6,20 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SearchWallet } from "./SearchWallet";
 import { translations } from "@/domains/wallet/i18n";
 import {
 	act,
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
+	renderResponsiveWithRoute,
 	screen,
 	waitFor,
 	within,
-	renderResponsiveWithRoute,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { SearchWallet } from "./SearchWallet";
 
 const history = createHashHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -199,7 +200,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		expect(searchInput).toBeInTheDocument();
 		expect(searchInput).toHaveValue("");
 
-		userEvent.paste(searchInput, "something");
+		await userEvent.paste(searchInput, "something");
 
 		expect(searchInput).toHaveValue("something");
 
@@ -207,7 +208,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		expect(resetSearchButton).toBeInTheDocument();
 
-		userEvent.click(resetSearchButton);
+		await userEvent.click(resetSearchButton);
 
 		expect(searchInput).toHaveValue("");
 	});
@@ -259,7 +260,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
+		await userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
 
 		expect(onSelectWalletMock).toHaveBeenCalledTimes(1);
 
@@ -326,7 +327,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		expect(screen.getByTestId("SearchWalletListItem__selected-0")).toBeInTheDocument();
 		expect(screen.getByTestId("SearchWalletListItem__select-1")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
+		await userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
 
 		expect(onSelectWallet).toHaveBeenNthCalledWith(
 			1,
@@ -337,7 +338,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			}),
 		);
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
+		await userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
 
 		expect(onSelectWallet).toHaveBeenNthCalledWith(
 			2,
@@ -377,7 +378,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		expect(screen.getByTestId("SearchWalletListItem__selected-0")).toBeInTheDocument();
 		expect(screen.getByTestId("SearchWalletListItem__select-1")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
+		await userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
 
 		expect(onSelectWallet).toHaveBeenNthCalledWith(
 			1,
@@ -388,7 +389,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			}),
 		);
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
+		await userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
 
 		expect(onSelectWallet).toHaveBeenNthCalledWith(
 			2,
@@ -432,7 +433,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle close", () => {
+	it("should handle close", async () => {
 		const onClose = vi.fn();
 
 		render(
@@ -453,7 +454,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -488,14 +489,14 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
 
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
+		await userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
 
 		act(() => {
 			vi.advanceTimersByTime(100);
@@ -535,14 +536,14 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
 
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(searchInput, walletAlias);
+		await userEvent.paste(searchInput, walletAlias);
 
 		act(() => {
 			vi.advanceTimersByTime(100);
@@ -583,7 +584,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
 
@@ -591,7 +592,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		// Search by wallet alias
-		userEvent.paste(searchInput, walletAlias);
+		await userEvent.paste(searchInput, walletAlias);
 
 		act(() => {
 			vi.advanceTimersByTime(100);
@@ -600,7 +601,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 
 		// Reset search
-		userEvent.click(screen.getByTestId("header-search-bar__reset"));
+		await userEvent.click(screen.getByTestId("header-search-bar__reset"));
 
 		await waitFor(() => expect(searchInput).not.toHaveValue());
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
@@ -638,14 +639,14 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
 
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(screen.getByTestId("Input"), "non existent wallet name");
+		await userEvent.paste(screen.getByTestId("Input"), "non existent wallet name");
 
 		act(() => {
 			vi.advanceTimersByTime(100);

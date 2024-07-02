@@ -2,16 +2,17 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Column, TableState } from "react-table";
+
+import { AccordionContent } from "@/app/components/Accordion";
+import { Icon } from "@/app/components/Icon";
+import { Pagination } from "@/app/components/Pagination";
 import { Table } from "@/app/components/Table";
+import { Tooltip } from "@/app/components/Tooltip";
 import { WalletListItem, WalletListItemProperties } from "@/app/components/WalletListItem";
 import { WalletListItemSkeleton } from "@/app/components/WalletListItem/WalletListItemSkeleton";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { WalletsListProperties } from "@/domains/wallet/components/WalletsList/WalletsList.contracts";
-import { Pagination } from "@/app/components/Pagination";
-import { Tooltip } from "@/app/components/Tooltip";
-import { Icon } from "@/app/components/Icon";
-import { AccordionContent } from "@/app/components/Accordion";
 
 const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => void }) => {
 	const { t } = useTranslation();

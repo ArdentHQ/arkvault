@@ -2,7 +2,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
-import { ExchangeStatus } from "./StatusStep.blocks";
 import { Amount } from "@/app/components/Amount";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
@@ -11,6 +10,8 @@ import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 import { delay } from "@/utils/delay";
+
+import { ExchangeStatus } from "./StatusStep.blocks";
 
 interface StatusStepProperties {
 	exchangeTransaction: Contracts.IExchangeTransaction;

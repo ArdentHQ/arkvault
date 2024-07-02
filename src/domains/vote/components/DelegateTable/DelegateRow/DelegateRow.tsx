@@ -3,16 +3,17 @@ import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import { DelegateRowSkeleton } from "./DelegateRowSkeleton";
-import { DelegateVoteAmount } from "./DelegateVoteAmount";
-import { DelegateVoteButton } from "./DelegateVoteButton";
 import { Avatar } from "@/app/components/Avatar";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { TableCell, TableRow } from "@/app/components/Table";
+import { Tooltip } from "@/app/components/Tooltip";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
-import { Tooltip } from "@/app/components/Tooltip";
+
+import { DelegateRowSkeleton } from "./DelegateRowSkeleton";
+import { DelegateVoteAmount } from "./DelegateVoteAmount";
+import { DelegateVoteButton } from "./DelegateVoteButton";
 
 interface DelegateRowProperties {
 	index: number;

@@ -4,12 +4,12 @@ import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components//Icon";
 import { Button } from "@/app/components/Button";
 import { ControlButton } from "@/app/components/ControlButton";
+import { Divider } from "@/app/components/Divider";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Tooltip } from "@/app/components/Tooltip";
-import { FilterWallets, FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
-import { Divider } from "@/app/components/Divider";
-import { useBreakpoint } from "@/app/hooks";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
+import { useBreakpoint } from "@/app/hooks";
+import { FilterWallets, FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 
 enum NewWalletOption {
 	Create,

@@ -2,12 +2,11 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
-import { NotificationItem } from "./NotificationItem";
+import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
-import { server, requestMock } from "@/tests/mocks/server";
-
-import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { NotificationItem } from "./NotificationItem";
 
 let profile: Contracts.IProfile;
 let notification: any;
@@ -55,7 +54,7 @@ describe("Notifications", () => {
 			</table>,
 		);
 
-		userEvent.click(screen.getByTestId("NotificationItem__action"));
+		await userEvent.click(screen.getByTestId("NotificationItem__action"));
 
 		await waitFor(() => expect(onAction).toHaveBeenCalledWith("29fdd62d-1c28-4d2c-b46f-667868c5afe1"));
 	});

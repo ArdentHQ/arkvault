@@ -1,5 +1,5 @@
-import { ARK } from "@ardenthq/sdk-ark";
 import { Networks } from "@ardenthq/sdk";
+import { ARK } from "@ardenthq/sdk-ark";
 
 export const updateArkNethashes = ({ data }) => {
 	for (const manifest of Object.values<Networks.NetworkManifest>(data.networks.ark)) {

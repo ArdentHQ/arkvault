@@ -5,33 +5,34 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
-import { FormStep } from "./FormStep";
-import { VoteLedgerReview } from "./LedgerReview";
-import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import {
 	useActiveProfile,
-	useValidation,
-	useNetworkFromQueryParameters,
 	useActiveWalletWhenNeeded,
+	useNetworkFromQueryParameters,
 	useProfileJobs,
+	useValidation,
 } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
+import { toasts } from "@/app/services";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
+import { useDelegatesFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
-import { useDelegatesFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
-import { toasts } from "@/app/services";
-import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
+
+import { FormStep } from "./FormStep";
+import { VoteLedgerReview } from "./LedgerReview";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 
 enum Step {
 	FormStep = 1,

@@ -1,12 +1,13 @@
 import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+
+import { AccordionWrapper } from "@/app/components/Accordion";
 import { Button } from "@/app/components/Button";
-import { useActiveProfile, useAccordion } from "@/app/hooks";
+import { useAccordion, useActiveProfile } from "@/app/hooks";
 import { WalletsGroupProperties } from "@/domains/wallet/components/WalletsGroup/WalletsGroup.contracts";
 import { WalletsGroupHeader } from "@/domains/wallet/components/WalletsGroup/WalletsGroupHeader";
 import { WalletsList } from "@/domains/wallet/components/WalletsList";
-import { AccordionWrapper } from "@/app/components/Accordion";
 
 const MAX_WALLETS_ON_DASHBOARD_LIST = 10;
 

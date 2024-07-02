@@ -1,8 +1,9 @@
 import React from "react";
-import { Toast } from "./Toast";
-import { Color } from "@/types";
 
+import { Color } from "@/types";
 import { render, screen } from "@/utils/testing-library";
+
+import { Toast } from "./Toast";
 
 describe("Toast", () => {
 	it("should render", () => {

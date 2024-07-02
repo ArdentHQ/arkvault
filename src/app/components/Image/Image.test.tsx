@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Image } from "./Image";
 import { renderWithoutRouter } from "@/utils/testing-library";
 import * as theme from "@/utils/theme";
+
+import { Image } from "./Image";
 
 describe("Image", () => {
 	it("should render", () => {

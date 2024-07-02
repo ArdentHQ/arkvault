@@ -1,4 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 
 export interface WalletListItemSkeletonProperties {

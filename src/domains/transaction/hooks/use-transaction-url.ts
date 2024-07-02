@@ -1,5 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { generatePath } from "react-router";
+
 import { ProfilePaths } from "@/router/paths";
 
 const generateSendTransferPath = (profile: Contracts.IProfile, url: string) => {

@@ -1,6 +1,8 @@
 import React from "react";
-import { ProfilePageSkeleton } from "./ProfilePageSkeleton";
+
 import { render } from "@/utils/testing-library";
+
+import { ProfilePageSkeleton } from "./ProfilePageSkeleton";
 
 describe("ProfilePageSkeleton", () => {
 	it("should render without profile", () => {

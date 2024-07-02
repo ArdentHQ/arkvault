@@ -1,5 +1,4 @@
 import { VoteRoutes } from "@/domains/vote/routing";
-
 import { ProfilePaths } from "@/router/paths";
 
 describe("routing", () => {

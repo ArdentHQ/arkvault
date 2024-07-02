@@ -2,15 +2,15 @@ import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { ReadableFile } from "@/app/hooks/use-files";
-import { FilePreview } from "@/domains/profile/components/FilePreview";
-import { PasswordModal } from "@/domains/profile/components/PasswordModal";
-import { useProfileImport } from "@/domains/profile/hooks/use-profile-import";
 import { Alert } from "@/app/components/Alert";
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useNavigationContext } from "@/app/contexts";
+import { ReadableFile } from "@/app/hooks/use-files";
+import { FilePreview } from "@/domains/profile/components/FilePreview";
+import { PasswordModal } from "@/domains/profile/components/PasswordModal";
+import { useProfileImport } from "@/domains/profile/hooks/use-profile-import";
 
 interface ImportErrorProperties {
 	file: ReadableFile;

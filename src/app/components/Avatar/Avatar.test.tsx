@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Avatar } from "./Avatar";
 import { Size } from "@/types";
 import { render, screen } from "@/utils/testing-library";
+
+import { Avatar } from "./Avatar";
 
 describe("Avatar", () => {
 	it("should render", () => {

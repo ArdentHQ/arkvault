@@ -1,17 +1,18 @@
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
-import { LedgerWaitingDevice } from "./LedgerWaitingDevice";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { mockNanoXTransport, render, screen, waitFor } from "@/utils/testing-library";
 
+import { LedgerWaitingDevice } from "./LedgerWaitingDevice";
+
 describe("LedgerWaitingDevice", () => {
-	it("should call the onClose callback if given", () => {
+	it("should call the onClose callback if given", async () => {
 		const onClose = vi.fn();
 
 		render(<LedgerWaitingDevice isOpen={true} onClose={onClose} />);
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});

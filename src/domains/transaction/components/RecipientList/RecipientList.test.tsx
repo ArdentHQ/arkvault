@@ -4,9 +4,10 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { RecipientList } from "./RecipientList";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { RecipientList } from "./RecipientList";
 
 const recipients: RecipientItem[] = [
 	{
@@ -167,7 +168,7 @@ describe("RecipientList", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		userEvent.click(removeButton[0]);
+		await userEvent.click(removeButton[0]);
 
 		expect(onRemove).toHaveBeenCalledWith(0);
 	});
@@ -194,7 +195,7 @@ describe("RecipientList", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		userEvent.click(removeButton[0]);
+		await userEvent.click(removeButton[0]);
 
 		expect(onRemove).not.toHaveBeenCalled();
 	});

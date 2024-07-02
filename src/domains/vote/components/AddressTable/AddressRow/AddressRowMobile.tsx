@@ -1,23 +1,23 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { generatePath } from "react-router";
-import { useHistory } from "react-router-dom";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-
 import { useMediaQuery } from "react-responsive";
+import { generatePath } from "react-router";
+import { useHistory } from "react-router-dom";
+
+import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
 import { Circle } from "@/app/components/Circle";
+import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
+import { Link } from "@/app/components/Link";
 import { Tooltip } from "@/app/components/Tooltip";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
-import { assertReadOnlyWallet } from "@/utils/assertions";
-import { Address } from "@/app/components/Address";
-import { Button } from "@/app/components/Button";
-import { Divider } from "@/app/components/Divider";
-import { Link } from "@/app/components/Link";
 import { ProfilePaths } from "@/router/paths";
-import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { assertReadOnlyWallet } from "@/utils/assertions";
 
 interface AddressRowMobileProperties {
 	index: number;

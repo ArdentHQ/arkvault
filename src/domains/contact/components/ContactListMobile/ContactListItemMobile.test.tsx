@@ -1,15 +1,17 @@
-import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { ContactListItemMobile } from "./ContactListItemMobile";
+import React from "react";
+
 import {
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { ContactListItemMobile } from "./ContactListItemMobile";
 
 const options = [
 	{ label: "Option 1", value: "option_1" },
@@ -61,7 +63,7 @@ describe("ContactListItemMobile", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("AccordionHeader"));
+		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
@@ -84,7 +86,7 @@ describe("ContactListItemMobile", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("AccordionHeader"));
+		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
@@ -94,7 +96,7 @@ describe("ContactListItemMobile", () => {
 
 		expect(sendButton).toBeEnabled();
 
-		userEvent.click(sendButton);
+		await userEvent.click(sendButton);
 
 		expect(onSend).toHaveBeenCalledWith(contact.addresses().first());
 	});
@@ -113,7 +115,7 @@ describe("ContactListItemMobile", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("AccordionHeader"));
+		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
@@ -123,12 +125,12 @@ describe("ContactListItemMobile", () => {
 
 		expect(sendButton).toBeDisabled();
 
-		userEvent.click(sendButton);
+		await userEvent.click(sendButton);
 
 		expect(onSend).not.toHaveBeenCalled();
 	});
 
-	it("should execute onAction callback", () => {
+	it("should execute onAction callback", async () => {
 		const onAction = vi.fn();
 
 		render(
@@ -142,11 +144,11 @@ describe("ContactListItemMobile", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onAction).toHaveBeenCalledWith(options[0]);
 	});

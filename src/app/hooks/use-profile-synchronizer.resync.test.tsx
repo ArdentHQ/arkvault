@@ -1,20 +1,21 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { useProfileSynchronizer } from "./use-profile-synchronizer";
 import { useConfiguration } from "@/app/contexts";
 import {
 	act as renderAct,
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { useProfileSynchronizer } from "./use-profile-synchronizer";
 
 const history = createHashHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;

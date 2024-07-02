@@ -1,30 +1,31 @@
+import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
-
 import { Prompt } from "react-router-dom";
-import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import NetworkFormModal from "./blocks/NetworkFormModal";
-import UpdateNetworkFormModal from "./blocks/UpdateNetworkFormModal";
-import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
+
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
-import { useActiveProfile, useBreakpoint } from "@/app/hooks";
-import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
-import { toasts } from "@/app/services";
 import { Toggle } from "@/app/components/Toggle";
 import { useEnvironmentContext } from "@/app/contexts";
-import NetworksList from "@/domains/setting/pages/Networks/blocks/NetworksList";
+import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+import { toasts } from "@/app/services";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
+import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
+import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
+import CustomNetworkDetailsModal from "@/domains/setting/pages/Networks/blocks/CustomNetworkDetailsModal";
 import CustomNetworksList from "@/domains/setting/pages/Networks/blocks/CustomNetworksList";
 import DeleteCustomNetworkModal from "@/domains/setting/pages/Networks/blocks/DeleteCustomNetworkModal";
-import CustomNetworkDetailsModal from "@/domains/setting/pages/Networks/blocks/CustomNetworkDetailsModal";
-import { isCustomNetwork, profileEnabledNetworkIds } from "@/utils/network-utils";
-import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
+import NetworksList from "@/domains/setting/pages/Networks/blocks/NetworksList";
 import { useWalletConfig } from "@/domains/wallet/hooks";
+import { isCustomNetwork, profileEnabledNetworkIds } from "@/utils/network-utils";
 import { getProfileStoredPassword } from "@/utils/profile-utils";
+
+import NetworkFormModal from "./blocks/NetworkFormModal";
+import UpdateNetworkFormModal from "./blocks/UpdateNetworkFormModal";
 
 export const NetworksSettings = () => {
 	const { t } = useTranslation();

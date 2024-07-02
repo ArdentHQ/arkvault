@@ -2,9 +2,10 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
-import { useWalletAlias } from "./use-wallet-alias";
 import { EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, getDefaultWalletId, syncDelegates } from "@/utils/testing-library";
+
+import { useWalletAlias } from "./use-wallet-alias";
 
 describe("useWalletAlias", () => {
 	let profile: Contracts.IProfile;

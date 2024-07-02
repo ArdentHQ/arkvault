@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import React from "react";
-import { Route } from "react-router-dom";
-import * as browserAccess from "browser-fs-access";
-
 import { renderHook } from "@testing-library/react-hooks";
-import { useTranslation, Trans } from "react-i18next";
+import userEvent from "@testing-library/user-event";
+import * as browserAccess from "browser-fs-access";
+import React from "react";
+import { Trans, useTranslation } from "react-i18next";
+import { Route } from "react-router-dom";
+
+import { toasts } from "@/app/services";
 import ExportSettings from "@/domains/setting/pages/Export";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-import { toasts } from "@/app/services";
 
 let profile: Contracts.IProfile;
 
@@ -52,7 +52,7 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
+		await userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
 
 		await waitFor(() =>
 			expect(browserAccessMock).toHaveBeenCalledWith(expect.any(Blob), {
@@ -87,7 +87,7 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
+		await userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(
@@ -118,7 +118,7 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
+		await userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
 
 		await waitFor(() => {
 			expect(browserAccessMock).not.toHaveBeenCalled();
@@ -154,7 +154,7 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
+		await userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("COMMON.SAVE_FILE.ERROR", { error: "unexpected error" }));

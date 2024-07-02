@@ -1,8 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { TruncateMiddle } from "./TruncateMiddle";
 import { render, screen } from "@/utils/testing-library";
+
+import { TruncateMiddle } from "./TruncateMiddle";
 
 describe("TruncateMiddle", () => {
 	it("should truncate with default maxChars", () => {
@@ -23,10 +24,10 @@ describe("TruncateMiddle", () => {
 		expect(container).toHaveTextContent("1234");
 	});
 
-	it("should show tooltip", () => {
+	it("should show tooltip", async () => {
 		const { baseElement } = render(<TruncateMiddle text="ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT" />);
 
-		userEvent.hover(screen.getByTestId("TruncateMiddle"));
+		await userEvent.hover(screen.getByTestId("TruncateMiddle"));
 
 		expect(baseElement).toHaveTextContent("ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT");
 	});

@@ -2,9 +2,10 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 
-import { FilterWalletsHookProperties } from "./FilterWallets.contracts";
-import { useWalletConfig } from "@/domains/wallet/hooks";
 import { useNetworks } from "@/app/hooks";
+import { useWalletConfig } from "@/domains/wallet/hooks";
+
+import { FilterWalletsHookProperties } from "./FilterWallets.contracts";
 
 export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { defaultConfiguration, setValue, walletsDisplayType, selectedNetworkIds, viewType } = useWalletConfig({

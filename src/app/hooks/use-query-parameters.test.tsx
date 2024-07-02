@@ -1,19 +1,18 @@
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
-
-import { useNetworkFromQueryParameters, useQueryParameters } from "./use-query-parameters";
-
 import {
-	render,
-	screen,
 	env,
 	getDefaultProfileId,
 	mockProfileWithPublicAndTestNetworks,
+	render,
+	screen,
 } from "@/utils/testing-library";
+
+import { useNetworkFromQueryParameters, useQueryParameters } from "./use-query-parameters";
 
 const history = createHashHistory();
 
@@ -36,7 +35,7 @@ describe("useQueryParameters hook", () => {
 		);
 	};
 
-	it("should render useQueryParameters", () => {
+	it("should render useQueryParameters", async () => {
 		render(
 			<Route pathname="/">
 				<TestComponent />
@@ -45,7 +44,7 @@ describe("useQueryParameters hook", () => {
 
 		expect(screen.getByTestId("header_test")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("header_test"));
+		await userEvent.click(screen.getByTestId("header_test"));
 
 		expect(screen.getByText("useQueryParameters Test Component")).toBeInTheDocument();
 	});

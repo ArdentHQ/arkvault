@@ -1,6 +1,7 @@
 import { BigNumber } from "@ardenthq/sdk-helpers";
-import { DTO } from "@ardenthq/sdk-profiles";
 import { CURRENCIES } from "@ardenthq/sdk-intl";
+import { DTO } from "@ardenthq/sdk-profiles";
+
 import { buildTranslations } from "@/app/i18n/helpers";
 
 const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {

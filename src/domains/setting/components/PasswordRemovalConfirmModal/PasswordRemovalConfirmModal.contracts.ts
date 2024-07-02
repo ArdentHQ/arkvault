@@ -7,4 +7,4 @@ interface PasswordRemovalFormState {
 	currentPassword: string;
 }
 
-export type { PasswordRemovalProperties, PasswordRemovalFormState };
+export type { PasswordRemovalFormState, PasswordRemovalProperties };

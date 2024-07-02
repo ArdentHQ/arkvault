@@ -1,11 +1,12 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as reactHookForm from "react-hook-form";
-
 import { UseFormMethods } from "react-hook-form";
-import { AppearanceAccentColor } from "./AppearanceAccentColor";
+
 import { translations } from "@/domains/setting/i18n";
 import { render, screen } from "@/utils/testing-library";
+
+import { AppearanceAccentColor } from "./AppearanceAccentColor";
 
 vi.mock("react-hook-form");
 
@@ -24,7 +25,7 @@ describe("AppearanceAccentColor", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["navy", "green"])("should allow to change the value", (color: string) => {
+	it.each(["navy", "green"])("should allow to change the value", async (color: string) => {
 		const watch = vi.fn();
 		const setValue = vi.fn();
 
@@ -38,7 +39,7 @@ describe("AppearanceAccentColor", () => {
 
 		const ariaLabel = translations.APPEARANCE.OPTIONS.ACCENT_COLOR.COLORS[color.toUpperCase()];
 
-		userEvent.click(screen.getByLabelText(ariaLabel));
+		await userEvent.click(screen.getByLabelText(ariaLabel));
 
 		expect(setValue).toHaveBeenCalledWith("accentColor", color, {
 			shouldDirty: true,

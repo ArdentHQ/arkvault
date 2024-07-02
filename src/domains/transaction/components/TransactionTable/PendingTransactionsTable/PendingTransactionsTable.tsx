@@ -2,15 +2,16 @@ import { DTO } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { PendingTransaction, Properties } from "./PendingTransactionsTable.contracts";
-import { SignedTransactionRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRowMobile";
 import { Table } from "@/app/components/Table";
+import { useBreakpoint } from "@/app/hooks";
 import { ConfirmRemovePendingTransaction } from "@/domains/transaction/components/ConfirmRemovePendingTransaction";
 import { PendingTransferRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRow";
 import { PendingTransferRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRowMobile";
 import { SignedTransactionRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRow";
+import { SignedTransactionRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRowMobile";
 import { usePendingTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
-import { useBreakpoint } from "@/app/hooks";
+
+import { PendingTransaction, Properties } from "./PendingTransactionsTable.contracts";
 
 export const PendingTransactions = ({
 	profile,

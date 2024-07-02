@@ -2,10 +2,11 @@ import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { SendVoteStepProperties } from "./SendVote.contracts";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
+
+import { SendVoteStepProperties } from "./SendVote.contracts";
 
 export const VoteLedgerReview = ({ wallet, votes, unvotes }: SendVoteStepProperties) => {
 	const { getValues } = useFormContext();

@@ -2,24 +2,24 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-
 import { generatePath } from "react-router";
 import { useHistory } from "react-router-dom";
+
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
+import { Link } from "@/app/components/Link";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
+import { ProfilePaths } from "@/router/paths";
 import { assertReadOnlyWallet } from "@/utils/assertions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
-import { ProfilePaths } from "@/router/paths";
-import { Link } from "@/app/components/Link";
 
 interface AddressRowProperties {
 	index: number;

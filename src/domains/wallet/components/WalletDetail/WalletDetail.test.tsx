@@ -1,7 +1,8 @@
 import React from "react";
 
-import { WalletDetail } from "./WalletDetail";
 import { render, screen } from "@/utils/testing-library";
+
+import { WalletDetail } from "./WalletDetail";
 
 describe("WalletDetail", () => {
 	it("should render", () => {

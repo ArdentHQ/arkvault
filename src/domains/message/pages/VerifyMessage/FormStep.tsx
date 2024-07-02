@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { useFormContext } from "react-hook-form";
-import { StepHeader } from "@/app/components/StepHeader";
-import { VerificationMethod } from "@/domains/message/pages/VerifyMessage/VerifyMessage";
+import { useTranslation } from "react-i18next";
+
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputDefault } from "@/app/components/Input";
+import { StepHeader } from "@/app/components/StepHeader";
+import { Switch } from "@/app/components/Switch";
 import { TextArea } from "@/app/components/TextArea";
 import { useValidation } from "@/app/hooks";
-import { Switch } from "@/app/components/Switch";
+import { VerificationMethod } from "@/domains/message/pages/VerifyMessage/VerifyMessage";
 
 const JsonForm = () => {
 	const { t } = useTranslation();

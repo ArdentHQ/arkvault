@@ -1,15 +1,15 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { generatePath, NavLink, useHistory } from "react-router-dom";
 import tw, { css, styled } from "twin.macro";
-import cn from "classnames";
-import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
-import { defaultStyle } from "./NavigationBar.styles";
+
 import { Button } from "@/app/components/Button";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Divider } from "@/app/components/Divider";
+import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
+import { Logo } from "@/app/components/Logo";
 import { BackButton } from "@/app/components/NavigationBar/components/BackButton";
 import { Balance } from "@/app/components/NavigationBar/components/Balance";
 import { UserMenu } from "@/app/components/NavigationBar/components/UserMenu/UserMenu";
@@ -18,17 +18,19 @@ import { ServerStatusIndicator } from "@/app/components/ServerStatusIndicator";
 import { Tooltip } from "@/app/components/Tooltip";
 import { getNavigationMenu } from "@/app/constants/navigation";
 import { useConfiguration, useNavigationContext } from "@/app/contexts";
+import { useZendesk } from "@/app/contexts/Zendesk";
 import { useActiveProfile, useBreakpoint, useInputFocus, useScroll } from "@/app/hooks";
+import { useLink } from "@/app/hooks/use-link";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
-import { assertString } from "@/utils/assertions";
-import { useLink } from "@/app/hooks/use-link";
 import { ProfilePaths } from "@/router/paths";
 import { Size } from "@/types";
-import { Logo } from "@/app/components/Logo";
+import { assertString } from "@/utils/assertions";
 import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
-import { useZendesk } from "@/app/contexts/Zendesk";
+
+import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
+import { defaultStyle } from "./NavigationBar.styles";
 
 const NavWrapper = styled.nav<{ noBorder?: boolean; noShadow?: boolean; scroll?: number }>`
 	${defaultStyle}

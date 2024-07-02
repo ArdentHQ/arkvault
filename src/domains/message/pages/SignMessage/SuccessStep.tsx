@@ -8,8 +8,8 @@ import { Avatar } from "@/app/components/Avatar";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { TextArea } from "@/app/components/TextArea";
-import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { useBreakpoint } from "@/app/hooks";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 
 export const SuccessStep = ({
 	signedMessage,

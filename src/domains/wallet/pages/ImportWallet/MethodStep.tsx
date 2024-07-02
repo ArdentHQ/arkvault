@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
+import { Alert } from "@/app/components/Alert";
 import { Divider } from "@/app/components/Divider";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
@@ -15,7 +16,6 @@ import { Toggle } from "@/app/components/Toggle";
 import { Tooltip } from "@/app/components/Tooltip";
 import { OptionsValue, useImportOptions } from "@/domains/wallet/hooks/use-import-options";
 import { assertNetwork, assertString } from "@/utils/assertions";
-import { Alert } from "@/app/components/Alert";
 
 const validateAddress = async ({
 	findAddress,

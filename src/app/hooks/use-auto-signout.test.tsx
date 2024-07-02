@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
+
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { act, env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
@@ -47,7 +48,7 @@ describe("useAutoSignOut", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		userEvent.click(screen.getByTestId("StartIdleTimer"));
+		await userEvent.click(screen.getByTestId("StartIdleTimer"));
 
 		act(() => {
 			vi.advanceTimersByTime(1000);
@@ -60,7 +61,7 @@ describe("useAutoSignOut", () => {
 		vi.useRealTimers();
 	});
 
-	it("should not redirect if already in home", () => {
+	it("should not redirect if already in home", async () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
 		vi.useFakeTimers();
 
@@ -83,7 +84,7 @@ describe("useAutoSignOut", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		userEvent.click(screen.getByTestId("StartIdleTimer"));
+		await userEvent.click(screen.getByTestId("StartIdleTimer"));
 
 		act(() => {
 			vi.advanceTimersByTime(1000);

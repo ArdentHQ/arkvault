@@ -1,13 +1,13 @@
+import { Contracts, Environment, Helpers } from "@ardenthq/sdk-profiles";
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Contracts, Environment, Helpers } from "@ardenthq/sdk-profiles";
 import { Divider } from "@/app/components/Divider";
-import { FilePreview } from "@/domains/profile/components/FilePreview";
-import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
-import { ReadableFile } from "@/app/hooks/use-files";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useAccentColor } from "@/app/hooks";
+import { ReadableFile } from "@/app/hooks/use-files";
+import { FilePreview } from "@/domains/profile/components/FilePreview";
+import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 
 interface ImportProfileFormProperties {
 	file?: ReadableFile;

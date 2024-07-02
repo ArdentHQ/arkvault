@@ -5,7 +5,6 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SignMessage } from "./SignMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
@@ -13,9 +12,11 @@ import {
 	MNEMONICS,
 	render,
 	screen,
-	waitFor,
 	triggerMessageSignOnce,
+	waitFor,
 } from "@/utils/testing-library";
+
+import { SignMessage } from "./SignMessage";
 
 const history = createHashHistory();
 
@@ -87,13 +88,13 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
 		).toBeInTheDocument();
 
-		userEvent.paste(messageInput(), signMessage);
+		await userEvent.paste(messageInput(), signMessage);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+		await userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
 		await waitFor(() =>
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
@@ -101,7 +102,7 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 
 		await waitFor(() => expect(signButton()).toBeEnabled());
 
-		userEvent.click(signButton());
+		await userEvent.click(signButton());
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
@@ -143,13 +144,13 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
 		).toBeInTheDocument();
 
-		userEvent.paste(messageInput(), signMessage);
+		await userEvent.paste(messageInput(), signMessage);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+		await userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
 		await waitFor(() =>
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
@@ -157,7 +158,7 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 
 		await waitFor(() => expect(signButton()).toBeEnabled());
 
-		userEvent.click(signButton());
+		await userEvent.click(signButton());
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 

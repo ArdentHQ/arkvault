@@ -1,13 +1,14 @@
 import React, { useMemo } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
-import { NotificationTransactionItemProperties } from "./Notifications.contracts";
-import { NotificationTransactionItemMobile } from "./NotificationTransactionItemMobile";
 import { TableCell, TableRow } from "@/app/components/Table";
-import { useWalletAlias, useBreakpoint } from "@/app/hooks";
+import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { TransactionRowAmount } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowAmount";
 import { TransactionRowMode } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMode";
 import { TransactionRowRecipientLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipientLabel";
+
+import { NotificationTransactionItemProperties } from "./Notifications.contracts";
+import { NotificationTransactionItemMobile } from "./NotificationTransactionItemMobile";
 
 export const NotificationTransactionItem = ({
 	transaction,

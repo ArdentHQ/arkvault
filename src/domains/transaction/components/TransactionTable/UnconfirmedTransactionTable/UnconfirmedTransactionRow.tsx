@@ -1,13 +1,13 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
-
 import { useTranslation } from "react-i18next";
+
 import { TableCell, TableRow } from "@/app/components/Table";
+import { RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
 import { TimeAgo } from "@/app/components/TimeAgo";
+import { useBreakpoint } from "@/app/hooks";
 import { TransactionRowAmount } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowAmount";
 import { TransactionRowRecipient } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipient";
-import { useBreakpoint } from "@/app/hooks";
-import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
 
 type Properties = {
 	transaction: DTO.ExtendedConfirmedTransactionData;

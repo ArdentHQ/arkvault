@@ -1,7 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 
-import { useMessageSigner } from "./use-message-signer";
 import {
 	env,
 	getDefaultProfileId,
@@ -9,6 +8,8 @@ import {
 	mockNanoXTransport,
 	triggerMessageSignOnce,
 } from "@/utils/testing-library";
+
+import { useMessageSigner } from "./use-message-signer";
 
 // Mock implementation of TextEncoder to always return Uint8Array.
 vi.stubGlobal(

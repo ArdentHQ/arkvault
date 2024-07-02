@@ -1,13 +1,16 @@
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { css, styled } from "twin.macro";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+
 import { Amount } from "@/app/components/Amount";
+import { Skeleton } from "@/app/components/Skeleton";
 import { WalletIcon } from "@/app/components/WalletIcons";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useTheme } from "@/app/hooks";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import {
 	LabelledTextProperties,
 	WalletsGroupNetworkIconProperties,
@@ -15,8 +18,6 @@ import {
 	WalletsGroupNetworkTotalProperties,
 	WalletsGroupSkeletonProperties,
 } from "@/domains/wallet/components/WalletsGroup/WalletsGroup.contracts";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { Skeleton } from "@/app/components/Skeleton";
 import { networkDisplayName } from "@/utils/network-utils";
 
 export const LabelledText: React.FC<LabelledTextProperties> = ({ label, children, maxWidthReference, className }) => {

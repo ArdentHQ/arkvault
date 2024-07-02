@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { AssetList, AssetListMobile, Balance, Tooltip } from "./PortfolioBreakdownDetails.blocks";
-import { GRAPH_HEIGHT, PortfolioBreakdownDetailsProperties } from "./PortfolioBreakdownDetails.contracts";
+
+import { SmAndAbove, Xs } from "@/app/components/Breakpoint";
 import { DonutGraph } from "@/app/components/Graphs/DonutGraph";
 import { AddToOtherGroupFunction, GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
 import { useGraphData } from "@/app/components/Graphs/Graphs.shared";
@@ -12,7 +12,9 @@ import {
 	getColor,
 	getOtherGroupColor,
 } from "@/domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
-import { SmAndAbove, Xs } from "@/app/components/Breakpoint";
+
+import { AssetList, AssetListMobile, Balance, Tooltip } from "./PortfolioBreakdownDetails.blocks";
+import { GRAPH_HEIGHT, PortfolioBreakdownDetailsProperties } from "./PortfolioBreakdownDetails.contracts";
 
 export const PortfolioBreakdownDetails: React.VFC<PortfolioBreakdownDetailsProperties> = ({
 	isOpen,

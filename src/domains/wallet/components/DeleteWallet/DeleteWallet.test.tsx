@@ -1,8 +1,9 @@
 import React from "react";
 
-import { DeleteWallet } from "./DeleteWallet";
 import { translations } from "@/domains/wallet/i18n";
-import { render, screen, getDefaultProfileId, env } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { DeleteWallet } from "./DeleteWallet";
 
 const onDelete = vi.fn();
 

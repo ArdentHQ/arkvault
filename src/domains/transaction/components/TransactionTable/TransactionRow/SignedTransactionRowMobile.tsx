@@ -1,19 +1,21 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
-import cn from "classnames";
+
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
+import { Link } from "@/app/components/Link";
+import { TableRow } from "@/app/components/Table";
+import { ResponsiveAddressWrapper, RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { useTimeFormat } from "@/app/hooks/use-time-format";
+import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
+
+import { SignButton } from "./SignedTransactionRow";
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";
 import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
-import { SignButton } from "./SignedTransactionRow";
-import { TableRow } from "@/app/components/Table";
-import { useTimeFormat } from "@/app/hooks/use-time-format";
-import { ResponsiveAddressWrapper, RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
-import { Link } from "@/app/components/Link";
-import { TruncateMiddle } from "@/app/components/TruncateMiddle";
-import { Icon } from "@/app/components/Icon";
-import { Button } from "@/app/components/Button";
-import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 interface SignedTransactionRowMobileProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	onSign?: (transaction: DTO.ExtendedSignedTransactionData) => void;
@@ -62,7 +64,7 @@ export const SignedTransactionRowMobile = ({
 				<RowWrapper>
 					<RowLabel>{t("COMMON.TIMESTAMP")}</RowLabel>
 					<div data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
-						{transaction.timestamp()!.format(timeFormat)}
+						{transaction.timestamp().format(timeFormat)}
 					</div>
 				</RowWrapper>
 

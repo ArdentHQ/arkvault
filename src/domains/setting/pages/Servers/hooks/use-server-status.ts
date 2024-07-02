@@ -1,9 +1,10 @@
-import { useCallback, useState } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { pingServerAddress, getServerHeight } from "@/utils/peers";
-import { useHosts } from "@/domains/setting/pages/Servers/hooks/use-hosts";
+import { useCallback, useState } from "react";
+
 import { useConfiguration } from "@/app/contexts";
+import { useHosts } from "@/domains/setting/pages/Servers/hooks/use-hosts";
+import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { getServerHeight, pingServerAddress } from "@/utils/peers";
 
 export const useServerStatus = ({ profile, network }: { profile: Contracts.IProfile; network: NormalizedNetwork }) => {
 	const [serverStatus, setServerStatus] = useState<boolean | undefined>(undefined);

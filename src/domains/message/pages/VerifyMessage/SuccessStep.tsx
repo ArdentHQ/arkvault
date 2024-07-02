@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
+import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { useFormContext } from "react-hook-form";
-import { FormField, FormLabel } from "@/app/components/Form";
-import { StepHeader } from "@/app/components/StepHeader";
-import { TextArea } from "@/app/components/TextArea";
 import { Alert } from "@/app/components/Alert";
 import { SmAndAbove } from "@/app/components/Breakpoint";
+import { FormField, FormLabel } from "@/app/components/Form";
 import { Image } from "@/app/components/Image";
+import { StepHeader } from "@/app/components/StepHeader";
+import { TextArea } from "@/app/components/TextArea";
 import { VerificationResult } from "@/domains/message/pages/VerifyMessage/VerifyMessage";
 
 export const SuccessStep = ({ verificationResult }: { verificationResult?: VerificationResult }) => {

@@ -5,11 +5,11 @@ import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+import { useBreakpoint } from "@/app/hooks";
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
 } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
-import { useBreakpoint } from "@/app/hooks";
 
 type TransactionAmountProperties = {
 	amount: number;

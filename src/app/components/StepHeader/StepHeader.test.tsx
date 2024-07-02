@@ -1,7 +1,9 @@
 import React from "react";
-import { StepHeader } from "./StepHeader";
-import { render, screen } from "@/utils/testing-library";
+
 import { StepsProvider } from "@/app/contexts";
+import { render, screen } from "@/utils/testing-library";
+
+import { StepHeader } from "./StepHeader";
 
 describe("StepHeader", () => {
 	it("should render", () => {

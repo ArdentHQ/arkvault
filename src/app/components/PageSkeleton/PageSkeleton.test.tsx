@@ -1,6 +1,8 @@
 import React from "react";
-import { PageSkeleton } from "./PageSkeleton";
+
 import { render } from "@/utils/testing-library";
+
+import { PageSkeleton } from "./PageSkeleton";
 
 describe("PageSkeleton", () => {
 	it("should render without profile", () => {

@@ -1,9 +1,10 @@
 import React from "react";
 
-import { WalletDetailNetwork } from "./WalletDetailNetwork";
 import { translations } from "@/domains/transaction/i18n";
 import { availableNetworksMock } from "@/tests/mocks/networks";
 import { render, screen } from "@/utils/testing-library";
+
+import { WalletDetailNetwork } from "./WalletDetailNetwork";
 
 describe("WalletDetailNetwork", () => {
 	it("should render", () => {

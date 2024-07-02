@@ -4,17 +4,18 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { AddressList } from "./ContactForm.blocks";
-import { AddressItem, ContactFormProperties, ContactFormState } from "./ContactForm.contracts";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel, SubForm } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { InputAddress, InputDefault } from "@/app/components/Input";
+import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown";
 import { useBreakpoint, useNetworkOptions } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
 import { assertNetwork } from "@/utils/assertions";
-import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown";
 import { enabledNetworksCount } from "@/utils/network-utils";
+
+import { AddressList } from "./ContactForm.blocks";
+import { AddressItem, ContactFormProperties, ContactFormState } from "./ContactForm.contracts";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,

@@ -1,9 +1,10 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { VotesHeader } from "./VotesHeader";
 import { translations } from "@/domains/vote/i18n";
 import { env, getDefaultProfileId, renderResponsive, screen } from "@/utils/testing-library";
+
+import { VotesHeader } from "./VotesHeader";
 
 let profile: Contracts.IProfile;
 

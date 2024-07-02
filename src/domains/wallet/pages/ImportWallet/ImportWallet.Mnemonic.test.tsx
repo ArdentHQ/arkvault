@@ -5,18 +5,19 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { ImportWallet } from "./ImportWallet";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
 	getDefaultProfileId,
 	MNEMONICS,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { ImportWallet } from "./ImportWallet";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -70,38 +71,38 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(() => mnemonicInput()).not.toThrow());
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), mnemonic);
+		await userEvent.paste(mnemonicInput(), mnemonic);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), "test alias");
+		await userEvent.paste(screen.getByTestId("UpdateWalletName__input"), "test alias");
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
 
-		userEvent.keyboard("{enter}");
-		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+		await userEvent.keyboard("{enter}");
+		await userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
-		userEvent.click(finishButton());
+		await userEvent.click(finishButton());
 
 		await waitFor(() => {
 			expect(profile.wallets().findByAddressWithNetwork(identityAddress, testNetwork)).toBeInstanceOf(Wallet);
@@ -120,10 +121,10 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -131,28 +132,28 @@ describe("ImportWallet", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), MNEMONICS[3]);
+		await userEvent.paste(mnemonicInput(), MNEMONICS[3]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
 		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
 
-		userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
 		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
 			password,
 		);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
@@ -171,10 +172,10 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -182,22 +183,22 @@ describe("ImportWallet", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), MNEMONICS[0]);
+		await userEvent.paste(mnemonicInput(), MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		expect(screen.getByTestId("ImportWallet__encryption-toggle")).not.toBeChecked();
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
 
 		expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeChecked();
 
 		// Select address that doesnt accept encryption
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
 		await expect(addressInput()).resolves.toBeVisible();
 
@@ -216,10 +217,10 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -227,25 +228,25 @@ describe("ImportWallet", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), MNEMONICS[0]);
+		await userEvent.paste(mnemonicInput(), MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		userEvent.paste(screen.getByTestId("EncryptPassword__second-mnemonic"), MNEMONICS[5]);
+		await userEvent.paste(screen.getByTestId("EncryptPassword__second-mnemonic"), MNEMONICS[5]);
 
-		userEvent.paste(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
-		userEvent.paste(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await userEvent.paste(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		await userEvent.paste(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
@@ -273,26 +274,26 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		userEvent.paste(mnemonicInput(), MNEMONICS[0]);
+		await userEvent.paste(mnemonicInput(), MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		userEvent.paste(
+		await userEvent.paste(
 			screen.getByTestId("EncryptPassword__second-mnemonic"),
 			"invalid second mnemonic fjdkfjdkjfkdjf",
 		);

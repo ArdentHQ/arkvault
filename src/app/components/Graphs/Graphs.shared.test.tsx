@@ -3,9 +3,10 @@ import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { act, render } from "@/utils/testing-library";
+
 import { AddToOtherGroupFunction, GRAPH_MIN_VALUE, GraphType } from "./Graphs.contracts";
 import { useGraphData, useGraphTooltip, useGraphWidth } from "./Graphs.shared";
-import { act, render } from "@/utils/testing-library";
 
 const addToOtherGroup: AddToOtherGroupFunction = (otherGroup, entry) => ({
 	color: "",
@@ -96,18 +97,18 @@ describe("Graphs shared hooks", () => {
 			expect(screen.getByTestId("Rect1")).toBeInTheDocument();
 			expect(screen.getByTestId("Rect2")).toBeInTheDocument();
 
-			userEvent.hover(screen.getByTestId("Rect1"));
+			await userEvent.hover(screen.getByTestId("Rect1"));
 
 			await waitFor(() => expect(screen.getByTestId("TooltipContent")).toHaveTextContent("value is: 85"));
 
-			userEvent.unhover(screen.getByTestId("Rect1"));
-			userEvent.hover(screen.getByTestId("Rect2"));
+			await userEvent.unhover(screen.getByTestId("Rect1"));
+			await userEvent.hover(screen.getByTestId("Rect2"));
 
 			await waitFor(() => expect(screen.getByTestId("TooltipContent")).toHaveTextContent("value is: 15"));
 
 			expect(screen.getByTestId("TooltipContainer")).not.toHaveClass("hidden");
 
-			userEvent.unhover(screen.getByTestId("Rect2"));
+			await userEvent.unhover(screen.getByTestId("Rect2"));
 
 			// Wait for the tooltip to fade out completely.
 			await waitFor(() => expect(screen.getByTestId("TooltipContainer")).toHaveClass("hidden"));
@@ -157,18 +158,18 @@ describe("Graphs shared hooks", () => {
 			expect(screen.getByTestId("Circle1")).toBeInTheDocument();
 			expect(screen.getByTestId("Circle2")).toBeInTheDocument();
 
-			userEvent.hover(screen.getByTestId("Circle1"));
+			await userEvent.hover(screen.getByTestId("Circle1"));
 
 			await waitFor(() => expect(screen.getByTestId("TooltipContent")).toHaveTextContent("value is: 85"));
 
-			userEvent.unhover(screen.getByTestId("Circle1"));
-			userEvent.hover(screen.getByTestId("Circle2"));
+			await userEvent.unhover(screen.getByTestId("Circle1"));
+			await userEvent.hover(screen.getByTestId("Circle2"));
 
 			await waitFor(() => expect(screen.getByTestId("TooltipContent")).toHaveTextContent("value is: 15"));
 
 			expect(screen.getByTestId("TooltipContainer")).not.toHaveClass("hidden");
 
-			userEvent.unhover(screen.getByTestId("Circle2"));
+			await userEvent.unhover(screen.getByTestId("Circle2"));
 
 			// Wait for the tooltip to fade out completely.
 			await waitFor(() => expect(screen.getByTestId("TooltipContainer")).toHaveClass("hidden"));

@@ -1,10 +1,11 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { LineGraph } from "./LineGraph";
+
+import { GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
+import * as sharedGraphUtils from "@/app/components/Graphs/Graphs.shared";
 import { render, screen, waitFor } from "@/utils/testing-library";
 
-import * as sharedGraphUtils from "@/app/components/Graphs/Graphs.shared";
-import { GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
+import { LineGraph } from "./LineGraph";
 
 const itemArea = () => screen.getAllByTestId("LineGraph__item-hover-area");
 
@@ -63,17 +64,17 @@ describe("LineGraph", () => {
 
 		expect(screen.queryByTestId("TooltipContent")).not.toBeInTheDocument();
 
-		userEvent.hover(itemArea()[0]);
+		await userEvent.hover(itemArea()[0]);
 
 		expect(screen.getByTestId("TooltipContent")).toBeInTheDocument();
 		expect(screen.getByTestId("TooltipContent")).toHaveTextContent("item 1 value: 50");
 
-		userEvent.unhover(itemArea()[0]);
-		userEvent.hover(itemArea()[1]);
+		await userEvent.unhover(itemArea()[0]);
+		await userEvent.hover(itemArea()[1]);
 
 		expect(screen.getByTestId("TooltipContent")).toHaveTextContent("item 2 value: 30");
 
-		userEvent.unhover(itemArea()[1]);
+		await userEvent.unhover(itemArea()[1]);
 
 		await waitFor(() => expect(screen.getByTestId("TooltipContainer")).toHaveClass("hidden"));
 

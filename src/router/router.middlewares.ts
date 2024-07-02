@@ -1,7 +1,8 @@
-import { Middleware } from "./router.types";
+import { WalletMiddleware } from "@/domains/wallet/middleware";
 import { PreloadMiddleware } from "@/router/PreloadMiddleware";
 import { UrlValidationMiddleware } from "@/router/UrlValidationMiddleware";
-import { WalletMiddleware } from "@/domains/wallet/middleware";
+
+import { Middleware } from "./router.types";
 
 export const middlewares: Middleware[] = [
 	new UrlValidationMiddleware(),

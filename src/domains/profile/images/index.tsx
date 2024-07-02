@@ -1,5 +1,5 @@
-import { ReactComponent as WelcomeModalBannerDarkNavy } from "./welcome-modal-banner-dark-navy.svg";
 import { ReactComponent as WelcomeModalBannerDarkGreen } from "./welcome-modal-banner-dark-green.svg";
+import { ReactComponent as WelcomeModalBannerDarkNavy } from "./welcome-modal-banner-dark-navy.svg";
 import { ReactComponent as WelcomeModalBannerLightGreen } from "./welcome-modal-banner-light-green.svg";
 import { ReactComponent as WelcomeModalBannerLightNavy } from "./welcome-modal-banner-light-navy.svg";
 import WelcomeModalStep1DarkGreen from "./welcome-modal-step-1-banner-dark-green.png";

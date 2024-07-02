@@ -1,7 +1,8 @@
 import React from "react";
 
-import { LineGraphEmptyProperties } from "./LineGraph.contracts";
 import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK } from "@/app/components/Graphs/Graphs.contracts";
+
+import { LineGraphEmptyProperties } from "./LineGraph.contracts";
 
 const LineGraphEmpty: React.VFC<LineGraphEmptyProperties> = ({ config, dataTestid = "LineGraph__empty" }) => (
 	<rect

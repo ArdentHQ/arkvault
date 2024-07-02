@@ -2,14 +2,15 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { Link } from "@/app/components/Link";
+import { TableRow } from "@/app/components/Table";
+import { ResponsiveAddressWrapper, RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { useTimeFormat } from "@/app/hooks/use-time-format";
+
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";
 import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
-import { TableRow } from "@/app/components/Table";
-import { useTimeFormat } from "@/app/hooks/use-time-format";
-import { ResponsiveAddressWrapper, RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
-import { Link } from "@/app/components/Link";
-import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
 export const PendingTransferRowMobile = ({
 	transaction,

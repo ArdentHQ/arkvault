@@ -2,13 +2,13 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
+
+import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import * as envHooks from "@/app/hooks/env";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import * as filterWalletsHooks from "@/domains/dashboard/components/FilterWallets/hooks";
 import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
-
-import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, syncDelegates, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
+import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks, syncDelegates } from "@/utils/testing-library";
 
 const mainNetwork = "ark.mainnet";
 const testNetwork = "ark.devnet";

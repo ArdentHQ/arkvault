@@ -1,4 +1,5 @@
 import { TFunction as TFunctionI18n } from "i18next";
+
 import { buildTranslations } from "./helpers";
 
 export type TranslationSet = ReturnType<typeof buildTranslations>;

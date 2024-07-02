@@ -2,13 +2,12 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 
-import { useNotifications } from "./use-notifications";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
-
-import { server, requestMock } from "@/tests/mocks/server";
-
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
 import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { useNotifications } from "./use-notifications";
 
 let profile: Contracts.IProfile;
 

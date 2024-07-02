@@ -1,7 +1,8 @@
 import React from "react";
 
-import { ListDivided } from "./ListDivided";
 import { render, screen } from "@/utils/testing-library";
+
+import { ListDivided } from "./ListDivided";
 
 describe("ListDivided", () => {
 	it("should render an empty list divided", () => {

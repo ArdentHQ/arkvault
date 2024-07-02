@@ -1,7 +1,9 @@
-import * as browserAccess from "browser-fs-access";
 import { renderHook } from "@testing-library/react-hooks";
-import { isValidImage, ReadableFile, useFiles } from "./use-files";
+import * as browserAccess from "browser-fs-access";
+
 import { requestMock, server } from "@/tests/mocks/server";
+
+import { isValidImage, ReadableFile, useFiles } from "./use-files";
 
 describe("useFiles", () => {
 	it("should read file as text", async () => {

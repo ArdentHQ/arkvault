@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/cognitive-complexity */
+import { SerializedStyles } from "@emotion/react";
 import tw, { css, TwStyle } from "twin.macro";
 
-import { SerializedStyles } from "@emotion/react";
 import {
 	ButtonVariant,
 	LayoutBreakpoint,
@@ -213,7 +213,7 @@ const getVariant = (
 			continue;
 		}
 
-		const breakpointVariantStyle = variants[breakpointVariant as keyof typeof variants]!(breakpoint);
+		const breakpointVariantStyle = variants[breakpointVariant as keyof typeof variants](breakpoint);
 		variantStyle.push(breakpointVariantStyle);
 	}
 

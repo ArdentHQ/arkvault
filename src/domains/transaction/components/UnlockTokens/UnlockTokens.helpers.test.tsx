@@ -4,11 +4,12 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
-import { POLLING_INTERVAL } from "./UnlockTokens.contracts";
-import { useUnlockableBalances, useUnlockTokensSelectTableColumns } from "./UnlockTokens.helpers";
 import { toasts } from "@/app/services";
 import { UnlockTokensFetchError } from "@/domains/transaction/components/UnlockTokens/blocks/UnlockTokensFetchError";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { POLLING_INTERVAL } from "./UnlockTokens.contracts";
+import { useUnlockableBalances, useUnlockTokensSelectTableColumns } from "./UnlockTokens.helpers";
 
 describe("useUnlockableBalances", () => {
 	let wallet: Contracts.IReadWriteWallet;

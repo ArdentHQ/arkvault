@@ -1,5 +1,6 @@
-import { ContactRoutes } from "./routing";
 import { ProfilePaths } from "@/router/paths";
+
+import { ContactRoutes } from "./routing";
 
 describe("routing", () => {
 	it("should have contact routes", () => {

@@ -1,9 +1,10 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { TransactionRowSender } from "./TransactionRowSender";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { TransactionRowSender } from "./TransactionRowSender";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
 import tw, { styled } from "twin.macro";
 
-import { TabContext, TabId, useTab } from "./useTab";
 import { useTheme } from "@/app/hooks";
+
+import { TabContext, TabId, useTab } from "./useTab";
 
 interface TabsProperties {
 	id?: string;

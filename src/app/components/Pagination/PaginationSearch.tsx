@@ -4,12 +4,13 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { styled } from "twin.macro";
 
-import { PaginationSearchFormProperties, PaginationSearchProperties } from "./Pagination.contracts";
-import { PaginationSearchToggleButton, PaginationSearchWrapper, SearchInput } from "./Pagination.styles";
 import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { clickOutsideHandler } from "@/app/hooks";
+
+import { PaginationSearchFormProperties, PaginationSearchProperties } from "./Pagination.contracts";
+import { PaginationSearchToggleButton, PaginationSearchWrapper, SearchInput } from "./Pagination.styles";
 
 const PaginationSearchWrapperStyled = styled.span`
 	${PaginationSearchWrapper}

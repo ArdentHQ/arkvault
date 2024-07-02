@@ -3,8 +3,8 @@ import { Contracts, Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-pro
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useSynchronizer } from "@/app/hooks";
-import { isUnit } from "@/utils/test-helpers";
 import { delay } from "@/utils/delay";
+import { isUnit } from "@/utils/test-helpers";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];

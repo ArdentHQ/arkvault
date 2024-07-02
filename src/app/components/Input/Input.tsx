@@ -2,10 +2,11 @@ import cn from "classnames";
 import React, { useEffect, useRef } from "react";
 import tw, { styled } from "twin.macro";
 
-import { InputSuggestion } from "./InputSuggestion";
 import { useFormField } from "@/app/components/Form/useFormField";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+
+import { InputSuggestion } from "./InputSuggestion";
 
 interface AddonProperties {
 	wrapperClassName?: string;

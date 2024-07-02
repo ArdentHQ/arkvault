@@ -3,8 +3,9 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { UnconfirmedTransactionTable } from "./UnconfirmedTransactionTable";
 import { env, getDefaultProfileId, renderResponsive } from "@/utils/testing-library";
+
+import { UnconfirmedTransactionTable } from "./UnconfirmedTransactionTable";
 
 let transactions: DTO.ExtendedConfirmedTransactionData[];
 let profile: Contracts.IProfile;

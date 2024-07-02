@@ -1,7 +1,9 @@
-import { renderHook } from "@testing-library/react-hooks";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useConfirmedTransaction } from "./useConfirmedTransaction";
+import { renderHook } from "@testing-library/react-hooks";
+
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { useConfirmedTransaction } from "./useConfirmedTransaction";
 
 describe("useConfirmedTransaction", () => {
 	let profile: Contracts.IProfile;

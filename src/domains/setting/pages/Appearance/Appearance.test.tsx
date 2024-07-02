@@ -5,18 +5,19 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { AppearanceSettings } from "./Appearance";
 import { toasts } from "@/app/services";
 import { translations } from "@/domains/setting/i18n";
 import {
 	env,
 	getDefaultProfileId,
 	render,
+	renderResponsiveWithRoute,
 	screen,
 	waitFor,
 	within,
-	renderResponsiveWithRoute,
 } from "@/utils/testing-library";
+
+import { AppearanceSettings } from "./Appearance";
 
 describe("Appearance Settings", () => {
 	let profile: Contracts.IProfile;
@@ -53,7 +54,7 @@ describe("Appearance Settings", () => {
 
 		const darkButton = within(screen.getAllByRole("radiogroup")[1]).getAllByRole("radio")[1];
 
-		userEvent.click(darkButton);
+		await userEvent.click(darkButton);
 
 		await waitFor(() => {
 			expect(darkButton).toBeChecked();
@@ -63,7 +64,7 @@ describe("Appearance Settings", () => {
 			expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+		await userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
 		await waitFor(() => {
 			expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("light");
@@ -100,7 +101,7 @@ describe("Appearance Settings", () => {
 
 		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeDisabled();
 
-		userEvent.click(navyRadioButton);
+		await userEvent.click(navyRadioButton);
 
 		await waitFor(() => {
 			expect(navyRadioButton).toBeChecked();
@@ -110,7 +111,7 @@ describe("Appearance Settings", () => {
 
 		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
 
-		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+		await userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
 		await waitFor(() => {
 			expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).toBe("navy");
@@ -138,7 +139,7 @@ describe("Appearance Settings", () => {
 
 		expect(profile.settings().get(Contracts.ProfileSetting.Theme)).not.toBe("dark");
 
-		userEvent.click(darkButton);
+		await userEvent.click(darkButton);
 
 		await waitFor(() => {
 			expect(darkButton).toBeChecked();
@@ -148,7 +149,7 @@ describe("Appearance Settings", () => {
 
 		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
 
-		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+		await userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
 		await waitFor(() => {
 			expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("dark");
@@ -175,7 +176,7 @@ describe("Appearance Settings", () => {
 		expect(screen.getByTestId(toggleTestId)).toBeChecked();
 		expect(profile.settings().get(key)).toBe(true);
 
-		userEvent.click(screen.getByTestId(toggleTestId));
+		await userEvent.click(screen.getByTestId(toggleTestId));
 
 		await waitFor(() => {
 			expect(screen.getByTestId(toggleTestId)).not.toBeChecked();
@@ -185,7 +186,7 @@ describe("Appearance Settings", () => {
 
 		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
 
-		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+		await userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
 		await waitFor(() => {
 			expect(profile.settings().get(key)).toBe(false);

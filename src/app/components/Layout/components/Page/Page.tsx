@@ -1,10 +1,11 @@
 import React, { FC } from "react";
+import tw, { css, styled } from "twin.macro";
 
-import tw, { styled, css } from "twin.macro";
-import { PageProperties } from "./Page.contracts";
 import { NavigationBar } from "@/app/components/NavigationBar";
-import { useDocumentTitle } from "@/app/hooks/use-document-title";
 import { useNavigationContext } from "@/app/contexts";
+import { useDocumentTitle } from "@/app/hooks/use-document-title";
+
+import { PageProperties } from "./Page.contracts";
 
 export const PageWrapper = styled.div<{ showMobileNavigation: boolean; hasFixedFormButtons: boolean }>`
 	${css`

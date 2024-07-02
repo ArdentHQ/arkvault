@@ -1,5 +1,4 @@
 import { SettingRoutes } from "@/domains/setting/routing";
-
 import { ProfilePaths } from "@/router/paths";
 
 describe("routing", () => {

@@ -1,6 +1,7 @@
-import { WalletMiddleware } from "./middleware";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { Middleware } from "@/router/router.types";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { WalletMiddleware } from "./middleware";
 
 let subject: Middleware;
 

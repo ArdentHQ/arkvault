@@ -3,11 +3,12 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { WalletListItem } from "./WalletListItem";
-import * as useWalletActionsModule from "@/domains/wallet/hooks/use-wallet-actions";
 
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import * as useWalletActionsModule from "@/domains/wallet/hooks/use-wallet-actions";
 import * as isFullySyncedModule from "@/domains/wallet/utils/is-fully-synced";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { WalletListItem } from "./WalletListItem";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
@@ -53,7 +54,7 @@ describe("WalletListItem", () => {
 		</table>
 	);
 
-	it.each([true, false])("should render when isLargeScreen = %s", (isLargeScreen: boolean) => {
+	it.each([true, false])("should render when isLargeScreen = %s", async (isLargeScreen: boolean) => {
 		const Wrapper = isLargeScreen ? TableWrapper : React.Fragment;
 
 		const { container } = render(
@@ -71,7 +72,7 @@ describe("WalletListItem", () => {
 		expect(screen.getByText(wallet.alias()!)).toBeInTheDocument();
 
 		if (!isLargeScreen) {
-			userEvent.click(screen.getByTestId("WalletListItemMobile"));
+			await userEvent.click(screen.getByTestId("WalletListItemMobile"));
 		}
 
 		expect(container).toMatchSnapshot();
@@ -79,7 +80,7 @@ describe("WalletListItem", () => {
 
 	it.each([true, false])(
 		"should render when isLargeScreen = %s and wallet is not fully synced",
-		(isLargeScreen: boolean) => {
+		async (isLargeScreen: boolean) => {
 			const Wrapper = isLargeScreen ? TableWrapper : React.Fragment;
 
 			const syncMock = vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
@@ -99,7 +100,7 @@ describe("WalletListItem", () => {
 			expect(screen.getByText(wallet.alias()!)).toBeInTheDocument();
 
 			if (!isLargeScreen) {
-				userEvent.click(screen.getByTestId("WalletListItemMobile"));
+				await userEvent.click(screen.getByTestId("WalletListItemMobile"));
 			}
 
 			expect(container).toMatchSnapshot();
@@ -198,7 +199,7 @@ describe("WalletListItem", () => {
 		mockExchangeCurrency.mockRestore();
 	});
 
-	it("should avoid click on TableRow when syncing", () => {
+	it("should avoid click on TableRow when syncing", async () => {
 		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(false);
 
 		const { asFragment } = render(
@@ -219,14 +220,14 @@ describe("WalletListItem", () => {
 
 		expect(screen.getByTestId("UpdateWalletName__submit")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("TableRow"));
+		await userEvent.click(screen.getByTestId("TableRow"));
 
 		expect(useWalletActionsReturn.handleOpen).not.toHaveBeenCalled();
 
 		isFullySyncedSpy.mockRestore();
 	});
 
-	it("should handle click on responsive item", () => {
+	it("should handle click on responsive item", async () => {
 		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(true);
 
 		const { asFragment } = render(
@@ -243,7 +244,7 @@ describe("WalletListItem", () => {
 
 		expect(screen.getByTestId("WalletListItemMobile")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("WalletListItemMobile"));
+		await userEvent.click(screen.getByTestId("WalletListItemMobile"));
 
 		expect(useWalletActionsReturn.handleOpen).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
@@ -252,7 +253,7 @@ describe("WalletListItem", () => {
 		isFullySyncedSpy.mockRestore();
 	});
 
-	it("should avoid click on responsive item when syncing", () => {
+	it("should avoid click on responsive item when syncing", async () => {
 		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(false);
 
 		const { asFragment } = render(
@@ -269,7 +270,7 @@ describe("WalletListItem", () => {
 
 		expect(screen.getByTestId("WalletListItemMobile")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("WalletListItemMobile"));
+		await userEvent.click(screen.getByTestId("WalletListItemMobile"));
 
 		expect(useWalletActionsReturn.handleOpen).not.toHaveBeenCalled();
 
@@ -296,7 +297,7 @@ describe("WalletListItem", () => {
 		balanceMock.mockRestore();
 	});
 
-	it("should handle click on send button", () => {
+	it("should handle click on send button", async () => {
 		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(true);
 
 		render(
@@ -317,7 +318,7 @@ describe("WalletListItem", () => {
 
 		expect(button).toBeInTheDocument();
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		expect(useWalletActionsReturn.handleSend).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
@@ -326,7 +327,7 @@ describe("WalletListItem", () => {
 		isFullySyncedSpy.mockRestore();
 	});
 
-	it("should handle click on responsive send button", () => {
+	it("should handle click on responsive send button", async () => {
 		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(true);
 
 		render(
@@ -343,7 +344,7 @@ describe("WalletListItem", () => {
 
 		expect(button).toBeInTheDocument();
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		expect(useWalletActionsReturn.handleSend).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),

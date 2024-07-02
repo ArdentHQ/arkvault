@@ -3,16 +3,17 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { MultiSignatureDetail } from "./MultiSignatureDetail";
 import {
 	env,
 	getDefaultProfileId,
+	mockNanoXTransport,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
-	mockNanoXTransport,
 } from "@/utils/testing-library";
+
+import { MultiSignatureDetail } from "./MultiSignatureDetail";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -122,7 +123,7 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
-		userEvent.click(screen.getByTestId("Paginator__sign"));
+		await userEvent.click(screen.getByTestId("Paginator__sign"));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 

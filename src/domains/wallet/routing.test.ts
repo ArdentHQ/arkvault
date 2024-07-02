@@ -1,5 +1,4 @@
 import { WalletRoutes } from "@/domains/wallet/routing";
-
 import { ProfilePaths } from "@/router/paths";
 
 describe("routing", () => {

@@ -1,6 +1,8 @@
 import React from "react";
-import { RouteSuspense } from "./RouteSuspense";
+
 import { render, screen } from "@/utils/testing-library";
+
+import { RouteSuspense } from "./RouteSuspense";
 
 describe("RouteSuspense", () => {
 	let LazyComponent;

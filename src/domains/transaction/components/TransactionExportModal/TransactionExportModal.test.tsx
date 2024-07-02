@@ -1,14 +1,15 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import userEvent from "@testing-library/user-event";
+import * as browserAccess from "browser-fs-access";
 import { createHashHistory } from "history";
 import React from "react";
-import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
-import * as browserAccess from "browser-fs-access";
-import { TransactionExportModal } from ".";
-import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
-import { requestMock, server } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
+
+import { TransactionExportModal } from ".";
 
 const history = createHashHistory();
 
@@ -108,7 +109,7 @@ describe("TransactionExportModal", () => {
 
 		expect(exportButton()).not.toBeDisabled();
 
-		userEvent.click(exportButton());
+		await userEvent.click(exportButton());
 
 		await waitFor(() => {
 			expect(dateToggle()).toBeEnabled();
@@ -138,11 +139,11 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(exportButton());
+		await userEvent.click(exportButton());
 
 		await expect(screen.findByTestId("TransactionExportError__back-button")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("TransactionExportError__back-button"));
+		await userEvent.click(screen.getByTestId("TransactionExportError__back-button"));
 
 		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
@@ -172,13 +173,13 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(exportButton());
+		await userEvent.click(exportButton());
 
 		await waitFor(() => {
 			expect(downloadButton()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExportSuccess__back-button"));
+		await userEvent.click(screen.getByTestId("TransactionExportSuccess__back-button"));
 
 		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
@@ -209,13 +210,13 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(exportButton());
+		await userEvent.click(exportButton());
 
 		await waitFor(() => {
 			expect(downloadButton()).toBeEnabled();
 		});
 
-		userEvent.click(downloadButton());
+		await userEvent.click(downloadButton());
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 
@@ -246,13 +247,13 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(exportButton());
+		await userEvent.click(exportButton());
 
 		await waitFor(() => {
 			expect(downloadButton()).toBeEnabled();
 		});
 
-		userEvent.click(downloadButton());
+		await userEvent.click(downloadButton());
 
 		await waitFor(() => expect(onClose).not.toHaveBeenCalledWith());
 
@@ -282,7 +283,7 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 	});
@@ -308,13 +309,13 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-header-row"));
+		await userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-header-row"));
 
-		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-tx-id"));
-		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-date"));
-		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-sender-recipient"));
-		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-crypto-amount"));
-		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount"));
+		await userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-tx-id"));
+		await userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-date"));
+		await userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-sender-recipient"));
+		await userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-crypto-amount"));
+		await userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount"));
 
 		await waitFor(() => {
 			expect(exportButton()).toBeDisabled();

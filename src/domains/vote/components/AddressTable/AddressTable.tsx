@@ -1,19 +1,21 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import cn from "classnames";
-import { AddressTableProperties } from "./AddressTable.contracts";
-import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
-import { AddressRowMobile } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
+
+import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
+import { Icon } from "@/app/components/Icon";
 import { Section } from "@/app/components/Layout";
 import { Table } from "@/app/components/Table";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
 import { useAccordion, useBreakpoint } from "@/app/hooks";
-import { Icon } from "@/app/components/Icon";
-import { networkDisplayName } from "@/utils/network-utils";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
+import { AddressRowMobile } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
 import { assertNetwork } from "@/utils/assertions";
+import { networkDisplayName } from "@/utils/network-utils";
+
+import { AddressTableProperties } from "./AddressTable.contracts";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false, profile }) => {
 	const { t } = useTranslation();

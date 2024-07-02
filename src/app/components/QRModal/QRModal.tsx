@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+
 import { Alert } from "@/app/components/Alert";
+import { FormButtons } from "@/app/components/Form";
 import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { QRCameraReader } from "@/app/components/QRCameraReader";
-import { Spinner } from "@/app/components/Spinner";
 import { QRFileUpload } from "@/app/components/QRFileUpload";
-import { FormButtons } from "@/app/components/Form";
+import { Spinner } from "@/app/components/Spinner";
 import { toasts } from "@/app/services";
 
 interface QRError {

@@ -1,14 +1,15 @@
-import Transport from "@ledgerhq/hw-transport";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import Transport from "@ledgerhq/hw-transport";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
-import { LedgerImportStep } from "./LedgerImportStep";
 import { LedgerData } from "@/app/contexts";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { env, getDefaultProfileId, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+
+import { LedgerImportStep } from "./LedgerImportStep";
 
 describe("LedgerImportStep", () => {
 	let profile: Contracts.IProfile;
@@ -87,10 +88,10 @@ describe("LedgerImportStep", () => {
 		};
 	};
 
-	it.each(["xs", "lg"])("should render with single import (%s)", (breakpoint) => {
+	it.each(["xs", "lg"])("should render with single import (%s)", async (breakpoint) => {
 		const { container, onClickEditWalletName } = renderComponent(breakpoint, ledgerWallets.slice(1));
 
-		userEvent.click(screen.getByTestId("LedgerImportStep__edit-alias"));
+		await userEvent.click(screen.getByTestId("LedgerImportStep__edit-alias"));
 
 		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 		expect(container).toMatchSnapshot();
@@ -101,7 +102,7 @@ describe("LedgerImportStep", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("LedgerImportStep__edit-alias")).toHaveLength(2));
 
-		userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
+		await userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
 
 		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 		expect(container).toMatchSnapshot();

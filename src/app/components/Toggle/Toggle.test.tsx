@@ -1,8 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { Toggle } from "./Toggle";
 import { render, screen } from "@/utils/testing-library";
+
+import { Toggle } from "./Toggle";
 
 describe("Toggle", () => {
 	it("should render", () => {
@@ -38,11 +39,11 @@ describe("Toggle", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should toggle checked", () => {
+	it("should toggle checked", async () => {
 		const { asFragment } = render(<Toggle />);
 		const toggle = screen.getByRole("checkbox");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(toggle.checked).toBe(true);
 		expect(asFragment()).toMatchSnapshot();

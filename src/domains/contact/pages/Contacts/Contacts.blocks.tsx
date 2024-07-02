@@ -1,12 +1,14 @@
 import React, { VFC } from "react";
 import { useTranslation } from "react-i18next";
-import { ContactsHeaderExtraProperties, ContactsHeaderProperties } from "./Contacts.contracts";
+
 import { Button } from "@/app/components/Button";
+import { Divider } from "@/app/components/Divider";
+import { PageHeader } from "@/app/components/Header";
 import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
 import { Icon } from "@/app/components/Icon";
 import { useBreakpoint } from "@/app/hooks";
-import { PageHeader } from "@/app/components/Header";
-import { Divider } from "@/app/components/Divider";
+
+import { ContactsHeaderExtraProperties, ContactsHeaderProperties } from "./Contacts.contracts";
 
 const ContactsHeader: VFC<ContactsHeaderProperties> = ({ showSearchBar, onAddContact, onSearch }) => {
 	const { t } = useTranslation();

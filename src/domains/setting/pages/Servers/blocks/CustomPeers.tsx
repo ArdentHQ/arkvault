@@ -1,28 +1,28 @@
-import React, { useEffect, useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import { Column } from "react-table";
-import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
 import { Numeral } from "@ardenthq/sdk-intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
+import React, { useEffect, useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { Column } from "react-table";
 
-import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { EmptyBlock } from "@/app/components/EmptyBlock";
-import { Button } from "@/app/components/Button";
-import { Table, TableCell, TableRow } from "@/app/components/Table";
-import { Icon } from "@/app/components/Icon";
-import { Tooltip } from "@/app/components/Tooltip";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
-import { Spinner } from "@/app/components/Spinner";
-import { useAccordion, useBreakpoint } from "@/app/hooks";
-import { Divider } from "@/app/components/Divider";
-import { TruncateEnd } from "@/app/components/TruncateEnd";
-import { Toggle } from "@/app/components/Toggle";
-import { useServerStatus } from "@/domains/setting/pages/Servers/hooks/use-server-status";
-import { useEnvironmentContext } from "@/app/contexts";
 import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
-import { networkDisplayName } from "@/utils/network-utils";
+import { Button } from "@/app/components/Button";
+import { Divider } from "@/app/components/Divider";
+import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Icon } from "@/app/components/Icon";
+import { Spinner } from "@/app/components/Spinner";
+import { Table, TableCell, TableRow } from "@/app/components/Table";
+import { Toggle } from "@/app/components/Toggle";
+import { Tooltip } from "@/app/components/Tooltip";
+import { TruncateEnd } from "@/app/components/TruncateEnd";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useAccordion, useBreakpoint } from "@/app/hooks";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { useServerStatus } from "@/domains/setting/pages/Servers/hooks/use-server-status";
+import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { networkDisplayName } from "@/utils/network-utils";
 
 interface PeerRowProperties {
 	name: string;

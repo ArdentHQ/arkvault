@@ -1,12 +1,12 @@
 import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-
 import { renderHook } from "@testing-library/react-hooks";
-import { useWalletOptions } from "./use-wallet-options";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { useWalletOptions } from "./use-wallet-options";
 
 describe("Wallet Options Hook", () => {
 	let wallet: Contracts.IReadWriteWallet;

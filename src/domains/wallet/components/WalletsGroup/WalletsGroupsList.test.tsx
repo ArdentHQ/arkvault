@@ -1,8 +1,9 @@
-import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import React from "react";
+
 import * as envHooks from "@/app/hooks/env";
 import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup/WalletsGroupsList";
+import { env, getDefaultProfileId, render } from "@/utils/testing-library";
 
 describe("WalletsGroupsList", () => {
 	let profile: Contracts.IProfile;

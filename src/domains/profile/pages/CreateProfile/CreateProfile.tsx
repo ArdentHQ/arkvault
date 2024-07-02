@@ -7,7 +7,6 @@ import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
-
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 
 export const CreateProfile = () => {

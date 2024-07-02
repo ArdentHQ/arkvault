@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+
 import { Skeleton } from "@/app/components/Skeleton";
 
 interface MnemonicListProperties {

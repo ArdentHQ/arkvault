@@ -1,13 +1,14 @@
+import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
-import { Networks } from "@ardenthq/sdk";
-import { LedgerScanStep, showLoadedLedgerWalletsMessage } from "./LedgerScanStep";
-import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
-import { server, requestMockOnce, requestMock } from "@/tests/mocks/server";
+import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+
+import { LedgerScanStep, showLoadedLedgerWalletsMessage } from "./LedgerScanStep";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
 const validLedgerWallet = () =>
@@ -120,7 +121,7 @@ describe("LedgerScanStep", () => {
 	it("should handle select", async () => {
 		render(<Component />);
 
-		userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
+		await userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
 
 		await waitFor(() => {
 			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
@@ -128,17 +129,17 @@ describe("LedgerScanStep", () => {
 
 		// Unselect All
 
-		userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
+		await userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(2));
 
 		// Select just first
 
-		userEvent.click(screen.getAllByRole("checkbox")[1]);
+		await userEvent.click(screen.getAllByRole("checkbox")[1]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
 
-		userEvent.click(screen.getAllByRole("checkbox")[1]);
+		await userEvent.click(screen.getAllByRole("checkbox")[1]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
 	});
@@ -161,19 +162,19 @@ describe("LedgerScanStep", () => {
 		const checkboxSelectAll = screen.getAllByRole("checkbox")[0];
 		const checkboxFirstItem = screen.getAllByRole("checkbox")[1];
 
-		userEvent.click(checkboxSelectAll);
+		await userEvent.click(checkboxSelectAll);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toMatchObject([]));
 
-		userEvent.click(checkboxSelectAll);
+		await userEvent.click(checkboxSelectAll);
 
 		await waitFor(validLedgerWallet);
 
-		userEvent.click(checkboxFirstItem);
+		await userEvent.click(checkboxFirstItem);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toMatchObject([]));
 
-		userEvent.click(checkboxFirstItem);
+		await userEvent.click(checkboxFirstItem);
 
 		await waitFor(validLedgerWallet);
 

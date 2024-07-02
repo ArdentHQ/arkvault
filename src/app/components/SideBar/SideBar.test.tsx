@@ -1,7 +1,9 @@
-import React from "react";
 import userEvent from "@testing-library/user-event";
+import React from "react";
+
+import { render, renderResponsiveWithRoute, screen, waitFor } from "@/utils/testing-library";
+
 import { Item, SideBar } from "./SideBar";
-import { render, screen, renderResponsiveWithRoute, waitFor } from "@/utils/testing-library";
 
 describe("SideBar", () => {
 	const items: Item[] = [
@@ -51,7 +53,7 @@ describe("SideBar", () => {
 
 		expect(dropdown).toHaveTextContent("General");
 
-		userEvent.click(dropdown);
+		await userEvent.click(dropdown);
 
 		const passwordItem = screen.getByTestId("dropdown__option--1");
 
@@ -61,7 +63,7 @@ describe("SideBar", () => {
 
 		expect(handleActiveItemMock).toHaveBeenCalledTimes(0);
 
-		userEvent.click(passwordItem);
+		await userEvent.click(passwordItem);
 
 		await waitFor(() => expect(handleActiveItemMock).toHaveBeenCalledTimes(1));
 	});

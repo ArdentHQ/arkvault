@@ -1,9 +1,10 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { DonutGraph } from "./DonutGraph";
-import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
+import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { DonutGraph } from "./DonutGraph";
 
 describe("DonutGraph", () => {
 	let data: GraphDataPoint[];
@@ -42,17 +43,17 @@ describe("DonutGraph", () => {
 
 		expect(screen.queryByTestId("TooltipContent")).not.toBeInTheDocument();
 
-		userEvent.hover(screen.getAllByTestId("DonutGraph__item-hover-area")[2]);
+		await userEvent.hover(screen.getAllByTestId("DonutGraph__item-hover-area")[2]);
 
 		expect(screen.getByTestId("TooltipContent")).toBeInTheDocument();
 		expect(screen.getByTestId("TooltipContent")).toHaveTextContent("item 1 value: 50");
 
-		userEvent.unhover(screen.getAllByTestId("DonutGraph__item-hover-area")[2]);
-		userEvent.hover(screen.getAllByTestId("DonutGraph__item-hover-area")[1]);
+		await userEvent.unhover(screen.getAllByTestId("DonutGraph__item-hover-area")[2]);
+		await userEvent.hover(screen.getAllByTestId("DonutGraph__item-hover-area")[1]);
 
 		expect(screen.getByTestId("TooltipContent")).toHaveTextContent("item 2 value: 30");
 
-		userEvent.unhover(screen.getAllByTestId("DonutGraph__item-hover-area")[1]);
+		await userEvent.unhover(screen.getAllByTestId("DonutGraph__item-hover-area")[1]);
 
 		await waitFor(() => expect(screen.getByTestId("TooltipContainer")).toHaveClass("hidden"));
 

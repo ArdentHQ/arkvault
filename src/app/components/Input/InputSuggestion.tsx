@@ -1,5 +1,5 @@
-import React, { useRef, VFC } from "react";
 import cn from "classnames";
+import React, { useRef, VFC } from "react";
 
 interface InputSuggestionProperties {
 	innerClassName?: string;

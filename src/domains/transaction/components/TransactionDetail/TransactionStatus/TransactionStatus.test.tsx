@@ -1,9 +1,10 @@
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import React from "react";
 
-import { TransactionStatus } from "./TransactionStatus";
 import { translations } from "@/domains/transaction/i18n";
 import { queryElementForSvg, render } from "@/utils/testing-library";
+
+import { TransactionStatus } from "./TransactionStatus";
 
 describe("TransactionStatus", () => {
 	it("should render when confirmed", () => {

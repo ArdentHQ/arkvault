@@ -1,22 +1,22 @@
-import { Global, css } from "@emotion/react";
+import { css, Global } from "@emotion/react";
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
-import { HashRouter, useHistory } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
+import { useTranslation } from "react-i18next";
+import { HashRouter, useHistory } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { GlobalStyles as BaseStyles } from "twin.macro";
 
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
+import { PageSkeleton } from "@/app/components/PageSkeleton";
+import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
+import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
 import { useAccentColor, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
-import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
-import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
+import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
 import { Offline } from "@/domains/error/pages";
 import { middlewares, RouterView, routes } from "@/router";
-import { PageSkeleton } from "@/app/components/PageSkeleton";
-import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
-import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
+import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
 
 const AppRouter = ({ children }: { children: React.ReactNode }) => {
 	const [isOpen, setIsOpen] = useState(false);

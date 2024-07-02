@@ -1,6 +1,6 @@
+import { SerializedStyles } from "@emotion/react";
 import React from "react";
 import tw, { css, TwStyle } from "twin.macro";
-import { SerializedStyles } from "@emotion/react";
 
 type TableRowFunction = (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
 

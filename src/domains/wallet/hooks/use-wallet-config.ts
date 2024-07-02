@@ -2,9 +2,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { useNetworks } from "@/app/hooks";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
-import { useNetworks } from "@/app/hooks";
 
 export const useWalletConfig = ({
 	profile,

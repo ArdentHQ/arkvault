@@ -2,10 +2,10 @@ import cn from "classnames";
 import React from "react";
 import { Id as ToastId, toast, ToastContent, ToastContentProps, ToastOptions, TypeOptions } from "react-toastify";
 
-import { Color } from "@/types";
-import { Toast } from "@/app/components/Toast";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
+import { Toast } from "@/app/components/Toast";
+import { Color } from "@/types";
 
 type ToastTypeOptions = Exclude<TypeOptions, "default" | "dark">;
 

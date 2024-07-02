@@ -1,10 +1,11 @@
 import React, { useMemo } from "react";
 import { useHistory, useParams } from "react-router-dom";
+
 import { Page, Section } from "@/app/components/Layout";
+import { useBreakpoint } from "@/app/hooks";
 import { WalletsGroupHeader } from "@/domains/wallet/components/WalletsGroup/WalletsGroupHeader";
 import { WalletsList } from "@/domains/wallet/components/WalletsList/WalletsList";
 import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
-import { useBreakpoint } from "@/app/hooks";
 
 const MAX_WALLETS_ON_SINGLE_PAGE_LIST = 15;
 

@@ -1,4 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+
 import { WalletActionsModalType } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 
 export interface WalletHeaderProperties {

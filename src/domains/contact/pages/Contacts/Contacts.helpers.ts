@@ -1,7 +1,9 @@
 import { useMemo } from "react";
-import { FilteredContactsProperties } from "./Contacts.contracts";
+
 import { useNetworkOptions } from "@/app/hooks";
 import { assertNetwork } from "@/utils/assertions";
+
+import { FilteredContactsProperties } from "./Contacts.contracts";
 
 export const useFilteredContacts = ({ contacts, query, profile }: FilteredContactsProperties) => {
 	const { networkById } = useNetworkOptions({ profile });

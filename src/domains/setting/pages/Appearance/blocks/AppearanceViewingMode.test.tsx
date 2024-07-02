@@ -1,11 +1,12 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as reactHookForm from "react-hook-form";
-
 import { UseFormMethods } from "react-hook-form";
-import { AppearanceViewingMode } from "./AppearanceViewingMode";
+
 import { translations } from "@/domains/setting/i18n";
 import { render, screen } from "@/utils/testing-library";
+
+import { AppearanceViewingMode } from "./AppearanceViewingMode";
 
 vi.mock("react-hook-form");
 
@@ -24,7 +25,7 @@ describe("AppearanceViewingMode", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["light", "dark"])("should allow to change the value", (viewingMode: string) => {
+	it.each(["light", "dark"])("should allow to change the value", async (viewingMode: string) => {
 		const watch = vi.fn();
 		const setValue = vi.fn();
 
@@ -38,7 +39,7 @@ describe("AppearanceViewingMode", () => {
 
 		const buttonText = translations.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES[viewingMode.toUpperCase()];
 
-		userEvent.click(screen.getByText(buttonText));
+		await userEvent.click(screen.getByText(buttonText));
 
 		expect(setValue).toHaveBeenCalledWith("viewingMode", viewingMode, {
 			shouldDirty: true,

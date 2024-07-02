@@ -4,8 +4,9 @@ import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
-import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
 import { env, getDefaultProfileId, MNEMONICS, render, screen } from "@/utils/testing-library";
+
+import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
 
 let profile: Contracts.IProfile;
 

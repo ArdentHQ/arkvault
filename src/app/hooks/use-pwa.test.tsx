@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/require-await */
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { usePwa } from "./use-pwa";
 
 import { act, render, screen, waitFor } from "@/utils/testing-library";
+
+import { usePwa } from "./use-pwa";
 
 const TestComponent: React.FC = () => {
 	const { installPrompt, showInstallBanner, hideInstallBanner, showIOSInstructions } = usePwa();
@@ -45,7 +46,7 @@ describe("usePwa", () => {
 		expect(screen.getByTestId("TestComponent")).toBeInTheDocument();
 	});
 
-	it("should close the banner if press the close button", () => {
+	it("should close the banner if press the close button", async () => {
 		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
 
 		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
@@ -55,7 +56,7 @@ describe("usePwa", () => {
 			window.dispatchEvent(new Event("beforeinstallprompt"));
 		});
 
-		userEvent.click(screen.getByTestId("TestComponent__close"));
+		await userEvent.click(screen.getByTestId("TestComponent__close"));
 
 		expect(screen.queryByTestId("TestComponent")).not.toBeInTheDocument();
 
@@ -82,7 +83,7 @@ describe("usePwa", () => {
 			window.dispatchEvent(event);
 		});
 
-		userEvent.click(screen.getByTestId("TestComponent__install"));
+		await userEvent.click(screen.getByTestId("TestComponent__install"));
 
 		expect(promptFunction).toHaveBeenCalledWith();
 
@@ -106,7 +107,7 @@ describe("usePwa", () => {
 
 		render(<TestComponent />);
 
-		userEvent.click(screen.getByTestId("TestComponent__install"));
+		await userEvent.click(screen.getByTestId("TestComponent__install"));
 
 		await expect(screen.findByTestId("IOsInstructions")).resolves.toBeVisible();
 

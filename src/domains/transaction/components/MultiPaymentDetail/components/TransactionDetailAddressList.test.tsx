@@ -1,9 +1,10 @@
 import React from "react";
 
-import { TransactionDetailAddressList } from "./TransactionDetailAddressList";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { render, screen, renderResponsive } from "@/utils/testing-library";
+import { render, renderResponsive, screen } from "@/utils/testing-library";
+
+import { TransactionDetailAddressList } from "./TransactionDetailAddressList";
 
 describe("TransactionDetailAddressList", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render addresses in xs", (breakpoint) => {

@@ -1,10 +1,11 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 
-import { AppearanceSettingsState } from "./Appearance.contracts";
-import { useAppearanceItems, useAppearanceSettings } from "./Appearance.helpers";
 import { translations } from "@/domains/setting/i18n";
 import { env } from "@/utils/testing-library";
+
+import { AppearanceSettingsState } from "./Appearance.contracts";
+import { useAppearanceItems, useAppearanceSettings } from "./Appearance.helpers";
 
 describe("Appearance.helpers", () => {
 	describe("useAppearanceItems", () => {

@@ -1,25 +1,27 @@
 import { Services } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory, useParams } from "react-router-dom";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { FormStep } from "./FormStep";
-import { SuccessStep } from "./SuccessStep";
-import { Clipboard } from "@/app/components/Clipboard";
+
 import { Button } from "@/app/components/Button";
+import { Clipboard } from "@/app/components/Clipboard";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { Page, Section } from "@/app/components/Layout";
-import { Tabs, TabPanel } from "@/app/components/Tabs";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/app/hooks";
-import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
-import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
-import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { TransactionSender, TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { useNetworkFromQueryParameters, useQueryParameters } from "@/app/hooks/use-query-parameters";
+import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
+import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
+import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
+import { TransactionDetail, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 import { ProfilePaths } from "@/router/paths";
+
+import { FormStep } from "./FormStep";
+import { SuccessStep } from "./SuccessStep";
 
 enum Step {
 	FormStep = 1,

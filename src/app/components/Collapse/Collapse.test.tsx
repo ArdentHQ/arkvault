@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Collapse } from "./Collapse";
 import { render, screen } from "@/utils/testing-library";
+
+import { Collapse } from "./Collapse";
 
 describe("Collapse", () => {
 	it("should render", () => {

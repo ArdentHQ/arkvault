@@ -3,9 +3,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
+import { FormButtons } from "@/app/components/Form";
 import { Modal } from "@/app/components/Modal";
 import { UnconfirmedTransactionTable } from "@/domains/transaction/components/TransactionTable/UnconfirmedTransactionTable/UnconfirmedTransactionTable";
-import { FormButtons } from "@/app/components/Form";
 
 interface ConfirmSendTransactionProperties {
 	profile: Contracts.IProfile;

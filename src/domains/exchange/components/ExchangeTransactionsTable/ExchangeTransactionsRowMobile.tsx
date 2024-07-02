@@ -6,11 +6,11 @@ import { useTranslation } from "react-i18next";
 import { AmountLabel } from "@/app/components/Amount";
 import { Icon } from "@/app/components/Icon";
 import { TableRow } from "@/app/components/Table";
+import { RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { TruncateMiddle } from "@/app/components/TruncateMiddle";
-import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
 
 interface ExchangeTransactionProviderProperties {
 	slug: string;

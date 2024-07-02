@@ -1,9 +1,10 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { Button } from "./Button";
 import { ButtonVariant } from "@/types";
 import { render, screen } from "@/utils/testing-library";
+
+import { Button } from "./Button";
 
 describe("Button", () => {
 	it("should render", () => {
@@ -60,11 +61,11 @@ describe("Button", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should emit event on click", () => {
+	it("should emit event on click", async () => {
 		const onClick = vi.fn();
 		render(<Button onClick={onClick}>Click Me</Button>);
 
-		userEvent.click(screen.getByText("Click Me"));
+		await userEvent.click(screen.getByText("Click Me"));
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

@@ -5,10 +5,10 @@ import { useTranslation } from "react-i18next";
 
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputDefault } from "@/app/components/Input";
+import { StepHeader } from "@/app/components/StepHeader";
 import { useFees } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
-import { StepHeader } from "@/app/components/StepHeader";
 
 const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();

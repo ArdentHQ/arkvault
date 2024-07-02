@@ -1,4 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
+
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { addressIsValid } from "@/utils/peers";
 

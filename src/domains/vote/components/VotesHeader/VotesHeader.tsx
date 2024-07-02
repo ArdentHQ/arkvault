@@ -1,17 +1,17 @@
-import cn from "classnames";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Icon } from "@/app/components//Icon";
 import { ControlButton } from "@/app/components/ControlButton";
+import { Divider } from "@/app/components/Divider";
 import { Dropdown } from "@/app/components/Dropdown";
 import { PageHeader } from "@/app/components/Header";
 import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
+import { useBreakpoint } from "@/app/hooks";
 import { FilterWallets } from "@/domains/dashboard/components/FilterWallets";
 import { FilterOption, VotesFilter } from "@/domains/vote/components/VotesFilter";
-import { Divider } from "@/app/components/Divider";
-import { useBreakpoint } from "@/app/hooks";
 
 interface VotesHeaderProperties {
 	profile: Contracts.IProfile;

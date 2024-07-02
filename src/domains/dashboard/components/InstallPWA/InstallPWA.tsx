@@ -1,9 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { usePwa } from "@/app/hooks/use-pwa";
+
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { Modal } from "@/app/components/Modal";
+import { usePwa } from "@/app/hooks/use-pwa";
 import { IOsInstructions } from "@/domains/dashboard/components/IOsInstructions";
 
 export const InstallPWA = () => {

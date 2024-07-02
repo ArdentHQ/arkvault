@@ -1,18 +1,17 @@
-import cn from "classnames";
 import { DTO } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
-
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { useBreakpoint } from "@/app/hooks";
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
 } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
-import { useBreakpoint } from "@/app/hooks";
-import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
 type TransactionExplorerLinkProperties = {
 	isDisabled?: boolean;

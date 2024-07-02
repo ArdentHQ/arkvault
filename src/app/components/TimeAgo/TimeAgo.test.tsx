@@ -2,8 +2,9 @@ import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { TimeAgo } from "./TimeAgo";
 import { render, screen } from "@/utils/testing-library";
+
+import { TimeAgo } from "./TimeAgo";
 
 describe("TimeAgo", () => {
 	it("should render", () => {

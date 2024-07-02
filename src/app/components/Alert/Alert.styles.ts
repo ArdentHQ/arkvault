@@ -1,4 +1,5 @@
 import tw from "twin.macro";
+
 import { Color } from "@/types";
 
 const chevronBaseStyle = tw`transform !ml-auto duration-100 transition-transform`;
@@ -55,4 +56,4 @@ const getChevronProperties = ({ variant, collapsed }: { variant?: Color; collaps
 	getChevronVariant(variant),
 ];
 
-export { getBodyStyles, getHeaderStyles, getChevronProperties };
+export { getBodyStyles, getChevronProperties, getHeaderStyles };

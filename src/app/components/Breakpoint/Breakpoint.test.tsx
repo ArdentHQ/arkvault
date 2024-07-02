@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Xs, Sm, Md, Lg, Xl, SmAndAbove, SmAndBelow, MdAndAbove } from "./Breakpoint";
-import { renderResponsive } from "@/utils/testing-library";
 import { LayoutBreakpoint } from "@/types";
+import { renderResponsive } from "@/utils/testing-library";
+
+import { Lg, Md, MdAndAbove, Sm, SmAndAbove, SmAndBelow, Xl, Xs } from "./Breakpoint";
 
 const SM_AND_ABOVE = "sm-and-above";
 

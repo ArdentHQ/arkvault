@@ -1,5 +1,6 @@
-import semver from "semver";
 import { Coins } from "@ardenthq/sdk";
+import semver from "semver";
+
 import { minVersionList } from "@/app/contexts/Ledger/Ledger.contracts";
 
 export const hasRequiredAppVersion = async (coin: Coins.Coin) => {

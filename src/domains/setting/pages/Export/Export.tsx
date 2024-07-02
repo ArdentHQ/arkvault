@@ -9,10 +9,10 @@ import { ListDivided } from "@/app/components/ListDivided";
 import { Toggle } from "@/app/components/Toggle";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
-import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
-import { useProfileExport } from "@/domains/setting/hooks/use-profile-export";
 import { useFiles } from "@/app/hooks/use-files";
 import { toasts } from "@/app/services";
+import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
+import { useProfileExport } from "@/domains/setting/hooks/use-profile-export";
 
 const EXTENSION = "wwe";
 

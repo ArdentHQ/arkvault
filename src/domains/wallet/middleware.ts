@@ -1,7 +1,8 @@
-import { matchPath } from "react-router-dom";
 import { generatePath } from "react-router";
-import { Middleware, MiddlewareParameters } from "@/router/router.types";
+import { matchPath } from "react-router-dom";
+
 import { ProfilePaths } from "@/router/paths";
+import { Middleware, MiddlewareParameters } from "@/router/router.types";
 
 export class WalletMiddleware implements Middleware {
 	handler({ location, redirect, env }: MiddlewareParameters): boolean {

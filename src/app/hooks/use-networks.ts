@@ -1,6 +1,7 @@
-import { useMemo } from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { useMemo } from "react";
+
 import { isCustomNetwork } from "@/utils/network-utils";
 
 const sortNetworks = (networks: Networks.Network[]) =>

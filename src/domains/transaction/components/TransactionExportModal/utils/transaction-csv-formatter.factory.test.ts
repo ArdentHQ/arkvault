@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { CsvFormatter } from "./transaction-csv-formatter.factory";
+
 import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
+
+import { CsvFormatter } from "./transaction-csv-formatter.factory";
 
 const dateTime = "23.07.2020 08";
 

@@ -5,26 +5,26 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SendVote } from "./SendVote";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
+import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	act,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
 
-import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
-import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import { SendVote } from "./SendVote";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -164,12 +164,12 @@ describe("SendVote Combined", () => {
 		});
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -195,14 +195,14 @@ describe("SendVote Combined", () => {
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.paste(passwordInput, passphrase);
 
 		expect(passwordInput).toHaveValue(passphrase);
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 		});
 
 		act(() => {
@@ -222,7 +222,7 @@ describe("SendVote Combined", () => {
 		const historySpy = vi.spyOn(history, "push");
 
 		// Go back to wallet
-		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 

@@ -1,18 +1,19 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { useForm } from "react-hook-form";
 import { Networks } from "@ardenthq/sdk";
-import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
-import { HttpClient } from "@/app/services/HttpClient";
-import { Modal } from "@/app/components/Modal";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+
+import { Alert } from "@/app/components/Alert";
+import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import { InputDefault } from "@/app/components/Input";
-import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { Button } from "@/app/components/Button";
-import { Alert } from "@/app/components/Alert";
+import { Modal } from "@/app/components/Modal";
 import { useValidation } from "@/app/hooks";
-import { getBaseUrl } from "@/utils/peers";
+import { HttpClient } from "@/app/services/HttpClient";
+import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
+import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { buildNetwork } from "@/utils/network-utils";
+import { getBaseUrl } from "@/utils/peers";
 
 const NetworkFormModal: React.VFC<{
 	onClose: () => void;

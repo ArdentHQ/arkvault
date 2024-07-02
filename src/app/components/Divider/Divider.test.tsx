@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Divider } from "./Divider";
 import { render } from "@/utils/testing-library";
+
+import { Divider } from "./Divider";
 
 describe("Divider", () => {
 	const sizes = ["sm", "md", "lg", "xl", "default"];

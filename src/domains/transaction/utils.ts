@@ -1,4 +1,5 @@
 import { Services } from "@ardenthq/sdk";
+
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export const isNoDeviceError = (error: any) => {

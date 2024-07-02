@@ -2,11 +2,9 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { useHistory, useParams } from "react-router-dom";
 
-import { useTranslation } from "react-i18next";
-import { SendRegistrationForm } from "./SendRegistration.contracts";
-import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
@@ -27,6 +25,9 @@ import {
 	signSecondSignatureRegistration,
 } from "@/domains/transaction/components/SecondSignatureRegistrationForm";
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
+
+import { SendRegistrationForm } from "./SendRegistration.contracts";
+import { SummaryStep } from "./SummaryStep";
 
 export const SendRegistration = () => {
 	const history = useHistory();

@@ -1,4 +1,5 @@
 import React, { createElement, FunctionComponent, Suspense } from "react";
+
 import { PageSkeleton } from "@/app/components/PageSkeleton";
 import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
 

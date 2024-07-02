@@ -1,10 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
-import userEvent from "@testing-library/user-event";
-import { Route, useHistory, Prompt } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
-import { AppRouter, Main } from "./App.blocks";
+import { Prompt, Route, useHistory } from "react-router-dom";
+
+import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
+import { toasts } from "@/app/services";
+import { ApplicationError } from "@/domains/error/pages";
 import {
 	env,
 	getDefaultProfileId,
@@ -13,9 +16,8 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-import { toasts } from "@/app/services";
-import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
-import { ApplicationError } from "@/domains/error/pages";
+
+import { AppRouter, Main } from "./App.blocks";
 const history = createHashHistory();
 
 vi.mock("@/utils/delay", () => ({
@@ -83,13 +85,13 @@ describe("App Router", () => {
 
 		history.push(`/profiles/${getDefaultProfileId()}/prompt`);
 
-		userEvent.click(screen.getByTestId("prompt_action"));
+		await userEvent.click(screen.getByTestId("prompt_action"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ConfirmationModal")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("ConfirmationModal__no-button"));
+		await userEvent.click(screen.getByTestId("ConfirmationModal__no-button"));
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
@@ -99,13 +101,13 @@ describe("App Router", () => {
 			expect(screen.getByTestId("prompt_action")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("prompt_action"));
+		await userEvent.click(screen.getByTestId("prompt_action"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ConfirmationModal__yes-button")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("ConfirmationModal__yes-button"));
+		await userEvent.click(screen.getByTestId("ConfirmationModal__yes-button"));
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();

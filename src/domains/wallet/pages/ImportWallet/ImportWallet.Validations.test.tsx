@@ -6,7 +6,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
-import { ImportWallet } from "./ImportWallet";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
@@ -14,12 +13,14 @@ import {
 	env,
 	getDefaultProfileId,
 	MNEMONICS,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { ImportWallet } from "./ImportWallet";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -72,18 +73,18 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.SECRET));
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -91,7 +92,7 @@ describe("ImportWallet Validations", () => {
 
 		expect(passphraseInput).toBeInTheDocument();
 
-		userEvent.paste(passphraseInput, MNEMONICS[0]);
+		await userEvent.paste(passphraseInput, MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).not.toBeEnabled());
 	});
@@ -122,18 +123,18 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.SECRET));
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -141,13 +142,13 @@ describe("ImportWallet Validations", () => {
 
 		expect(passphraseInput).toBeInTheDocument();
 
-		userEvent.paste(passphraseInput, "abc");
+		await userEvent.paste(passphraseInput, "abc");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -157,7 +158,7 @@ describe("ImportWallet Validations", () => {
 			throw new Error("test");
 		});
 
-		userEvent.paste(screen.getByTestId("EncryptPassword__second-secret"), "invalid second secret");
+		await userEvent.paste(screen.getByTestId("EncryptPassword__second-secret"), "invalid second secret");
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
@@ -188,10 +189,10 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -199,7 +200,7 @@ describe("ImportWallet Validations", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), generated.mnemonic);
+		await userEvent.paste(mnemonicInput(), generated.mnemonic);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -226,24 +227,24 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(await addressInput(), profile.wallets().first().address());
+		await userEvent.paste(await addressInput(), profile.wallets().first().address());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -270,24 +271,24 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(await addressInput(), "123");
+		await userEvent.paste(await addressInput(), "123");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -328,27 +329,27 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(await addressInput(), randomNewAddress);
+		await userEvent.paste(await addressInput(), randomNewAddress);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
@@ -356,20 +357,20 @@ describe("ImportWallet Validations", () => {
 
 		const alias = "My Wallet";
 
-		userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
 
 		await expect(screen.findByTestId("UpdateWalletName__input")).resolves.toBeVisible();
 
 		// Test cancel button
-		userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
+		await userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
 
 		expect(screen.queryByTestId("UpdateWalletName__input")).toBeNull();
 
 		// Try to edit name again
-		userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
 
-		userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), alias);
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.paste(screen.getByTestId("UpdateWalletName__input"), alias);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -396,7 +397,7 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		const coin = profile.coins().get("ARK", testNetwork);
 		const coinMock = vi.spyOn(coin, "__construct").mockImplementationOnce(() => {
@@ -404,12 +405,12 @@ describe("ImportWallet Validations", () => {
 		});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
 
 		const toastDismissMock = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-		userEvent.click(within(screen.getByTestId("SyncErrorMessage__retry")).getByRole("link"));
+		await userEvent.click(within(screen.getByTestId("SyncErrorMessage__retry")).getByRole("link"));
 
 		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
 

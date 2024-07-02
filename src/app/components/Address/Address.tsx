@@ -1,7 +1,7 @@
 import cn from "classnames";
 import React, { useMemo, useRef } from "react";
-
 import { useResizeDetector } from "react-resize-detector";
+
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Size } from "@/types";

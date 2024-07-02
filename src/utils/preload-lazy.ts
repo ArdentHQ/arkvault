@@ -1,5 +1,5 @@
-import React from "react";
 import type { ComponentType } from "react";
+import React from "react";
 
 export type PreloadableComponent<T extends ComponentType<unknown>> = T & {
 	preload: () => Promise<void>;

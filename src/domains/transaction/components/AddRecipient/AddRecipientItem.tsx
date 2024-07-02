@@ -1,13 +1,13 @@
 import React, { VFC } from "react";
-
 import { useTranslation } from "react-i18next";
-import { Button } from "@/app/components/Button";
-import { Avatar } from "@/app/components/Avatar";
+
 import { Address } from "@/app/components/Address";
-import { Icon } from "@/app/components/Icon";
-import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { Amount } from "@/app/components/Amount";
+import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export const AddRecipientItem: VFC<{
 	index: number;

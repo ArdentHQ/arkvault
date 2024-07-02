@@ -3,9 +3,11 @@ import { screen } from "@testing-library/react";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { WalletActionsModals } from "./WalletActionsModals";
+
 import * as envHooks from "@/app/hooks/env";
 import { env, getDefaultProfileId, render, syncDelegates } from "@/utils/testing-library";
+
+import { WalletActionsModals } from "./WalletActionsModals";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();

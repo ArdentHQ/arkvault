@@ -2,12 +2,13 @@
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
+
 import { Alert } from "@/app/components/Alert";
-import { toasts } from "@/app/services";
-import { MnemonicList } from "@/domains/wallet/components/MnemonicList";
-import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
 import { StepHeader } from "@/app/components/StepHeader";
+import { useFiles } from "@/app/hooks/use-files";
+import { toasts } from "@/app/services";
+import { MnemonicList } from "@/domains/wallet/components/MnemonicList";
 
 export const BackupStep = () => {
 	const { getValues, unregister, watch } = useFormContext();

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { isKnownPath, isAllowedUrl } from "./url-validation";
 import { ProfilePaths } from "@/router/paths";
+
+import { isAllowedUrl, isKnownPath } from "./url-validation";
 
 describe("Url validation", () => {
 	it("#isKnownPath", async () => {

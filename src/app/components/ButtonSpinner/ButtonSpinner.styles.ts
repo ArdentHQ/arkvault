@@ -1,6 +1,6 @@
+import { SerializedStyles } from "@emotion/react";
 import tw, { css, TwStyle } from "twin.macro";
 
-import { SerializedStyles } from "@emotion/react";
 import { ButtonVariant } from "@/types";
 import { shouldUseDarkColors } from "@/utils/theme";
 

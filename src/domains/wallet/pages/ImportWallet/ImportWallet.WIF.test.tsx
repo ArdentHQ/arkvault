@@ -7,18 +7,19 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import { MethodStep } from "./MethodStep";
 import { EnvironmentProvider } from "@/app/contexts";
 import { OptionsValue } from "@/domains/wallet/hooks/use-import-options";
 import { assertNetwork } from "@/utils/assertions";
 import {
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { MethodStep } from "./MethodStep";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
@@ -116,7 +117,7 @@ describe("ImportWallet WIF", () => {
 
 		await waitFor(() => expect(wifInput()));
 
-		userEvent.paste(wifInput(), wif);
+		await userEvent.paste(wifInput(), wif);
 
 		await testFormValues(form);
 
@@ -152,7 +153,7 @@ describe("ImportWallet WIF", () => {
 
 		await waitFor(() => expect(wifInput()));
 
-		userEvent.paste(wifInput(), wif);
+		await userEvent.paste(wifInput(), wif);
 
 		await testFormValues(form);
 

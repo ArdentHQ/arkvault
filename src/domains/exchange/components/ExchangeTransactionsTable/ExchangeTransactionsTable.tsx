@@ -3,12 +3,13 @@ import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column, TableState } from "react-table";
 
-import { ExchangeTransactionsRow } from "./ExchangeTransactionsRow";
-import { ExchangeTransactionsRowMobile } from "./ExchangeTransactionsRowMobile";
-import { ExchangeTransactionsTableProperties } from "./ExchangeTransactionsTable.contracts";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Table } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
+
+import { ExchangeTransactionsRow } from "./ExchangeTransactionsRow";
+import { ExchangeTransactionsRowMobile } from "./ExchangeTransactionsRowMobile";
+import { ExchangeTransactionsTableProperties } from "./ExchangeTransactionsTable.contracts";
 
 export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> = ({
 	exchangeTransactions,

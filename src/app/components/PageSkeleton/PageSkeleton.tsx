@@ -1,5 +1,6 @@
 import React from "react";
 import { Trans } from "react-i18next";
+
 import { Page, Section } from "@/app/components/Layout";
 import { Skeleton } from "@/app/components/Skeleton";
 

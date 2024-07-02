@@ -5,8 +5,9 @@ import { when } from "jest-when";
 import React from "react";
 import { Router } from "react-router-dom";
 
-import { useTimeFormat } from "./use-time-format";
 import { env, getDefaultProfileId, WithProviders } from "@/utils/testing-library";
+
+import { useTimeFormat } from "./use-time-format";
 
 let profile: Contracts.IProfile;
 

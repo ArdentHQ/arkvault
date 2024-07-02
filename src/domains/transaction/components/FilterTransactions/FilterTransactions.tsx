@@ -2,6 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { memo, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+
 import { CollapseToggleButton } from "@/app/components/Collapse";
 import { Dropdown, DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";

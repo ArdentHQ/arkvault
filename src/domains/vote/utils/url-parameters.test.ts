@@ -1,6 +1,7 @@
-import { appendParameters, getParameters, ParameterNameProperties } from "./url-parameters";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+
+import { appendParameters, getParameters, ParameterNameProperties } from "./url-parameters";
 
 describe("#urlParameters", () => {
 	describe.each(["vote", "unvote"])("append/get %s parameters", (parameterName) => {

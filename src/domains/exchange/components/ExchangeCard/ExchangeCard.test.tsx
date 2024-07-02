@@ -1,7 +1,8 @@
 import React from "react";
 
-import { ExchangeCard } from "./ExchangeCard";
 import { render, screen } from "@/utils/testing-library";
+
+import { ExchangeCard } from "./ExchangeCard";
 
 const exchange = {
 	emailAddress: "support@changenow.io",

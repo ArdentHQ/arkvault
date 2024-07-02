@@ -1,11 +1,12 @@
 import { Networks } from "@ardenthq/sdk";
 import React, { memo } from "react";
 
-import { wrapperClasses, optionClasses } from "./NetworkOptions.styles";
-import { NetworkOptionsProperties, NetworkOptionProperties } from "./NetworkOptions.contracts";
-import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkTestnetCodeIcon } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown.blocks";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { networkDisplayName } from "@/utils/network-utils";
+
+import { NetworkOptionProperties, NetworkOptionsProperties } from "./NetworkOptions.contracts";
+import { optionClasses, wrapperClasses } from "./NetworkOptions.styles";
 
 export const NetworkOption = memo(
 	({ disabled, network, iconSize = "lg", isSelected, onSelect, onDeselect }: NetworkOptionProperties) => {

@@ -4,9 +4,12 @@ import React, { useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { ListenLedger } from "./Ledger/ListenLedger";
+
 import { FormField, FormLabel } from "@/app/components/Form";
+import { Image } from "@/app/components/Image";
 import { InputPassword } from "@/app/components/Input";
+import { Spinner } from "@/app/components/Spinner";
+import { StepHeader } from "@/app/components/StepHeader";
 import { LedgerModel, useLedgerModelStatus, useValidation } from "@/app/hooks";
 import { LedgerConfirmation } from "@/domains/transaction/components/LedgerConfirmation";
 import {
@@ -14,9 +17,8 @@ import {
 	LedgerWaitingAppContent,
 	LedgerWaitingDeviceContent,
 } from "@/domains/wallet/components/Ledger";
-import { StepHeader } from "@/app/components/StepHeader";
-import { Spinner } from "@/app/components/Spinner";
-import { Image } from "@/app/components/Image";
+
+import { ListenLedger } from "./Ledger/ListenLedger";
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;

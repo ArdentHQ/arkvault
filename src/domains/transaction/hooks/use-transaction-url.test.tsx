@@ -1,7 +1,8 @@
 import { renderHook } from "@testing-library/react-hooks";
 
-import { useTransactionURL } from "./use-transaction-url";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { useTransactionURL } from "./use-transaction-url";
 
 const prefix = "http://localhost:3000/#/";
 const searchParameters =

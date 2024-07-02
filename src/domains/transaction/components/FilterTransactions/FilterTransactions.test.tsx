@@ -2,8 +2,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { FilterTransactions } from "./FilterTransactions";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { FilterTransactions } from "./FilterTransactions";
 
 let profile: Contracts.IProfile;
 
@@ -32,7 +33,7 @@ describe("FilterTransactions", () => {
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		userEvent.click(screen.getByRole("button", { name: /Type/ }));
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
 		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
 
@@ -46,11 +47,11 @@ describe("FilterTransactions", () => {
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		userEvent.click(screen.getByRole("button", { name: /Type/ }));
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
 		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("dropdown__option--core-0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
 		expect(onSelect).toHaveBeenCalledWith(
 			{

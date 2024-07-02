@@ -157,6 +157,6 @@ const useFiles = (): UseFilesOutput => ({
 	showSaveDialog,
 });
 
-export { useFiles, isValidImage };
+export { isValidImage, useFiles };
 
 export type { ReadableFile };

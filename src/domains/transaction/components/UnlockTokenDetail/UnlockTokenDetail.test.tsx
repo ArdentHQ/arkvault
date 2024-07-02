@@ -2,10 +2,11 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { UnlockTokenDetail } from "./UnlockTokenDetail";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { UnlockTokenDetail } from "./UnlockTokenDetail";
 
 const history = createHashHistory();
 

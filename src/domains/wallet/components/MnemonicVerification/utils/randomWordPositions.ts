@@ -2,19 +2,14 @@ import { sample } from "@ardenthq/sdk-helpers";
 
 const randomWordPositions = (length: number): number[] => {
 	const positions: number[] = [...Array.from({ length }).keys()];
-	const result: number[] = [];
+	const result: Set<number> = new Set();
 
-	while (result.length < 3) {
+	while (result.size < 3) {
 		const randomNumber = sample(positions) + 1;
-
-		if (result.includes(randomNumber)) {
-			continue;
-		}
-
-		result.push(randomNumber);
+		result.add(randomNumber);
 	}
 
-	return result.sort((a, b) => a - b);
+	return [...result].sort((a, b) => a - b);
 };
 
 export { randomWordPositions };

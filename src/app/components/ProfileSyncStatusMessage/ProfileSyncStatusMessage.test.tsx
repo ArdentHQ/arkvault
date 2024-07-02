@@ -2,8 +2,9 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SyncErrorMessage } from "./ProfileSyncStatusMessage";
 import { render, screen, waitFor, within } from "@/utils/testing-library";
+
+import { SyncErrorMessage } from "./ProfileSyncStatusMessage";
 
 describe("SyncErrorMessage", () => {
 	const failedNetworkNames = ["ARK Devnet", "ARK Mainnet", "Lisk Devnet"];
@@ -70,7 +71,7 @@ describe("SyncErrorMessage", () => {
 		await expect(screen.findByText(failedNetworkNames[1])).resolves.toBeVisible();
 		await expect(screen.findByText(failedNetworkNames[2])).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("SyncErrorMessage__retry")).getByRole("link"));
+		await userEvent.click(within(screen.getByTestId("SyncErrorMessage__retry")).getByRole("link"));
 
 		await waitFor(() => expect(onRetry).toHaveBeenCalledWith());
 

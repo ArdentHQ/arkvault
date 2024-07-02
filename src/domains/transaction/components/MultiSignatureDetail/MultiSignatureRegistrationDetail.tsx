@@ -2,7 +2,13 @@ import { Enums } from "@ardenthq/sdk";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { MdAndAbove, SmAndBelow } from "@/app/components/Breakpoint";
 import { Modal } from "@/app/components/Modal";
+import { useBreakpoint } from "@/app/hooks";
+import { TransactionDetailAddressList } from "@/domains/transaction/components/MultiPaymentDetail/components/TransactionDetailAddressList";
+import { RecipientList } from "@/domains/transaction/components/RecipientList";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
 	TransactionDetail,
@@ -13,12 +19,6 @@ import {
 	TransactionTimestamp,
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
-import { useBreakpoint } from "@/app/hooks";
-import { Address } from "@/app/components/Address";
-import { Avatar } from "@/app/components/Avatar";
-import { TransactionDetailAddressList } from "@/domains/transaction/components/MultiPaymentDetail/components/TransactionDetailAddressList";
-import { RecipientList } from "@/domains/transaction/components/RecipientList";
-import { MdAndAbove, SmAndBelow } from "@/app/components/Breakpoint";
 
 export const MultiSignatureRegistrationDetail: React.FC<TransactionDetailProperties> = ({
 	isOpen,

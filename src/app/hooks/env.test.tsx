@@ -3,8 +3,9 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded } from "./env";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded } from "./env";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

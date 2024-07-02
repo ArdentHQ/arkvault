@@ -1,8 +1,9 @@
 import React from "react";
-import { Alert } from "./Alert";
-import { Color } from "@/types";
 
+import { Color } from "@/types";
 import { render, screen } from "@/utils/testing-library";
+
+import { Alert } from "./Alert";
 
 describe("Alert", () => {
 	it("should render", () => {

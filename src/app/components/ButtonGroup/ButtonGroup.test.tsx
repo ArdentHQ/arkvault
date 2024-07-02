@@ -1,9 +1,10 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { render, screen } from "@/utils/testing-library";
+
 import { ButtonGroup, ButtonGroupOption } from "./ButtonGroup";
 import { useSelectionState } from "./useSelectionState";
-import { render, screen } from "@/utils/testing-library";
 
 describe("ButtonGroup", () => {
 	it("should render", () => {
@@ -23,7 +24,7 @@ describe("ButtonGroup", () => {
 });
 
 describe("ButtonGroupOption", () => {
-	it("should render", () => {
+	it("should render", async () => {
 		const isSelected = vi.fn((value: any) => value === 1);
 		const setSelectedValue = vi.fn();
 
@@ -43,7 +44,7 @@ describe("ButtonGroupOption", () => {
 		expect(buttons[0]).toHaveAttribute("aria-checked", "true");
 		expect(buttons[1]).toHaveAttribute("aria-checked", "false");
 
-		userEvent.click(buttons[0]);
+		await userEvent.click(buttons[0]);
 
 		expect(setSelectedValue).toHaveBeenCalledWith(1);
 
@@ -66,7 +67,7 @@ describe("ButtonGroupOption", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should work with useSelectionState", () => {
+	it("should work with useSelectionState", async () => {
 		const Component = () => {
 			const state = useSelectionState(undefined);
 
@@ -90,7 +91,7 @@ describe("ButtonGroupOption", () => {
 		expect(buttons[0]).toHaveAttribute("aria-checked", "false");
 		expect(buttons[1]).toHaveAttribute("aria-checked", "false");
 
-		userEvent.click(buttons[0]);
+		await userEvent.click(buttons[0]);
 
 		expect(screen.getByTestId("selectedValue")).toHaveTextContent("1");
 	});

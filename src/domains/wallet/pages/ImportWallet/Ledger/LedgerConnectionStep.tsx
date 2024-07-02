@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { LedgerCancelling } from "./LedgerCancelling";
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
@@ -12,6 +11,8 @@ import { Spinner } from "@/app/components/Spinner";
 import { useLedgerContext } from "@/app/contexts/Ledger";
 import { useActiveProfile } from "@/app/hooks";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
+
+import { LedgerCancelling } from "./LedgerCancelling";
 
 const ConnectionContent = ({
 	error,

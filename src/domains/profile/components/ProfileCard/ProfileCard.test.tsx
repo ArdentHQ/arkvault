@@ -2,8 +2,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { ProfileCard } from "./ProfileCard";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { ProfileCard } from "./ProfileCard";
 
 let profile: Contracts.IProfile;
 
@@ -50,21 +51,21 @@ describe("ProfileCard", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should open dropdown settings on icon click", () => {
+	it("should open dropdown settings on icon click", async () => {
 		render(<ProfileCard profile={profile} actions={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 	});
 
-	it("should select an option in the settings", () => {
+	it("should select an option in the settings", async () => {
 		const onSelect = vi.fn();
 		render(<ProfileCard profile={profile} actions={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -72,16 +73,16 @@ describe("ProfileCard", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		userEvent.click(firstOption);
+		await userEvent.click(firstOption);
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
 
-	it("should ignore triggering onSelect callback if not exists", () => {
+	it("should ignore triggering onSelect callback if not exists", async () => {
 		render(<ProfileCard profile={profile} actions={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -89,7 +90,7 @@ describe("ProfileCard", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		userEvent.click(firstOption);
+		await userEvent.click(firstOption);
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});

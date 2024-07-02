@@ -1,4 +1,4 @@
-import { handleBroadcastError, isNoDeviceError, isRejectionError, getTransferType } from "./utils";
+import { getTransferType, handleBroadcastError, isNoDeviceError, isRejectionError } from "./utils";
 
 describe("Transaction utils", () => {
 	describe("isNoDeviceError", () => {

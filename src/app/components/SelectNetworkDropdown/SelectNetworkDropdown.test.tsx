@@ -1,17 +1,19 @@
-import React from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import Tippy from "@tippyjs/react";
 import userEvent from "@testing-library/user-event";
-import { SelectNetworkDropdown } from "./SelectNetworkDropdown";
-import { NetworkOptionLabel } from "./SelectNetworkDropdown.blocks";
+import Tippy from "@tippyjs/react";
+import React from "react";
+
 import {
-	render,
 	env,
-	screen,
 	getDefaultProfileId,
 	mockProfileWithPublicAndTestNetworks,
+	render,
+	screen,
 } from "@/utils/testing-library";
+
+import { SelectNetworkDropdown } from "./SelectNetworkDropdown";
+import { NetworkOptionLabel } from "./SelectNetworkDropdown.blocks";
 
 const fixtureProfileId = getDefaultProfileId();
 let profile: Contracts.IProfile;
@@ -44,7 +46,7 @@ describe("SelectNetworkDropdown", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should change network", () => {
+	it("should change network", async () => {
 		const networks = profile.availableNetworks();
 		const onChange = vi.fn();
 
@@ -67,11 +69,11 @@ describe("SelectNetworkDropdown", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
 
 		expect(screen.getByTestId("SelectDropdown__option--1")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__option--1"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--1"));
 
 		expect(onChange).toHaveBeenCalledWith(networks[1]);
 		expect(container).toMatchSnapshot();

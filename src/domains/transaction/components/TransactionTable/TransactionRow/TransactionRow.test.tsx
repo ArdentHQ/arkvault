@@ -1,7 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { TransactionRow } from "./TransactionRow";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
@@ -10,9 +9,11 @@ import {
 	getDefaultProfileId,
 	queryElementForSvg,
 	render,
-	screen,
 	renderResponsive,
+	screen,
 } from "@/utils/testing-library";
+
+import { TransactionRow } from "./TransactionRow";
 let profile: Contracts.IProfile;
 
 describe("TransactionRow", () => {

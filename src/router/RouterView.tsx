@@ -3,7 +3,7 @@ import { Redirect, Route, Switch, useHistory, useLocation } from "react-router-d
 import { styled } from "twin.macro";
 
 import { useEnvironmentContext } from "@/app/contexts";
-import { RouteItem, Middleware } from "@/router/router.types";
+import { Middleware, RouteItem } from "@/router/router.types";
 import { RouteSuspense } from "@/router/RouteSuspense";
 import { PreloadableComponent } from "@/utils/preload-lazy";
 

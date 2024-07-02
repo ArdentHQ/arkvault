@@ -1,9 +1,10 @@
+import { Networks } from "@ardenthq/sdk";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Networks } from "@ardenthq/sdk";
+
+import { DeleteResource } from "@/app/components/DeleteResource";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Input } from "@/app/components/Input";
-import { DeleteResource } from "@/app/components/DeleteResource";
 
 const DeleteCustomNetworkModal: React.VFC<{
 	onDelete: () => void;

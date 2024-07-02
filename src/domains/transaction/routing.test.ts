@@ -1,5 +1,4 @@
 import { TransactionRoutes } from "@/domains/transaction/routing";
-
 import { ProfilePaths } from "@/router/paths";
 
 describe("routing", () => {

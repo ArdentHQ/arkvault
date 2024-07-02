@@ -1,4 +1,5 @@
 import tw from "twin.macro";
+
 import { Color } from "@/types";
 
 const iconBaseStyle = tw`flex items-center px-4 justify-center dark:text-white`;
@@ -33,4 +34,4 @@ const getBodyVariant = (variant?: Color) => {
 const getIconStyles = ({ variant }: { variant?: Color }) => [iconBaseStyle, getIconVariant(variant)];
 const getBodyStyles = ({ variant }: { variant?: Color }) => [bodyBaseStyle, getBodyVariant(variant)];
 
-export { getIconStyles, getBodyStyles };
+export { getBodyStyles, getIconStyles };

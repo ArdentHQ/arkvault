@@ -4,8 +4,9 @@ import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { ExchangeStatus } from "./StatusStep.blocks";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { ExchangeStatus } from "./StatusStep.blocks";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;

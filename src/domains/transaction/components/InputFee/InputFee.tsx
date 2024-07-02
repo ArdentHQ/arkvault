@@ -3,6 +3,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { Switch } from "@/app/components/Switch";
+import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+
 import { InputFeeAdvanced } from "./blocks/InputFeeAdvanced";
 import { InputFeeSimple } from "./blocks/InputFeeSimple";
 import {
@@ -13,8 +16,6 @@ import {
 	InputFeeSimpleValue,
 	InputFeeViewType,
 } from "./InputFee.contracts";
-import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { Switch } from "@/app/components/Switch";
 
 export const InputFee: React.FC<InputFeeProperties> = memo(
 	({

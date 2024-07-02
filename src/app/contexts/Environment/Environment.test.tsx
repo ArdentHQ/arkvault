@@ -4,10 +4,11 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 
-import { EnvironmentProvider, useEnvironmentContext } from "./Environment";
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import { env, render, screen, waitFor } from "@/utils/testing-library";
+
+import { EnvironmentProvider, useEnvironmentContext } from "./Environment";
 
 const Create = () => {
 	const { env, persist } = useEnvironmentContext();
@@ -76,7 +77,7 @@ describe("Environment Context", () => {
 	it("should rerender components when env updates", async () => {
 		render(<App database={database} />, { withProviders: false });
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.getByRole("heading")).toHaveTextContent("Counter 1"));
 
@@ -109,7 +110,7 @@ describe("Environment Context", () => {
 
 		render(<App />, { history });
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Name)).toBe("bar"));
 	});
@@ -119,7 +120,7 @@ describe("Environment Context", () => {
 
 		render(<App database={database} />, { withProviders: false });
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.getByRole("heading")).toHaveTextContent("Counter 1"));
 

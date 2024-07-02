@@ -1,9 +1,10 @@
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { VoteList } from "./VoteList";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { render, renderResponsive } from "@/utils/testing-library";
+
+import { VoteList } from "./VoteList";
 
 let votes: Contracts.IReadOnlyWallet[];
 let votesWithAmount: Contracts.VoteRegistryItem[];

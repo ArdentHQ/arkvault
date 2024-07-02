@@ -1,10 +1,11 @@
+import { Networks } from "@ardenthq/sdk";
 import React from "react";
 
-import { Networks } from "@ardenthq/sdk";
-import { TransactionNetwork } from "./TransactionNetwork";
 import { translations } from "@/domains/transaction/i18n";
 import { availableNetworksMock } from "@/tests/mocks/networks";
 import { renderResponsive, screen } from "@/utils/testing-library";
+
+import { TransactionNetwork } from "./TransactionNetwork";
 
 describe("TransactionNetwork", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {

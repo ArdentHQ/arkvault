@@ -1,8 +1,9 @@
 import React from "react";
 
-import { BaseTransactionRowMode, TransactionRowMode } from "./TransactionRowMode";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { queryElementForSvg, render, screen } from "@/utils/testing-library";
+
+import { BaseTransactionRowMode, TransactionRowMode } from "./TransactionRowMode";
 
 describe("TransactionRowMode", () => {
 	it("should render default icon", () => {

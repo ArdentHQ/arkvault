@@ -1,11 +1,12 @@
 import { sortBy } from "@ardenthq/sdk-helpers";
 import React, { useMemo } from "react";
 
+import { GraphHoverAnimation } from "@/app/components/Graphs/GraphHoverAnimation";
+import { useGraphTooltip } from "@/app/components/Graphs/Graphs.shared";
+
 import { ContentInsideCircle } from "./DonutGraph.blocks";
 import { DonutGraphProperties } from "./DonutGraph.contracts";
 import { useDonutGraph } from "./DonutGraph.helpers";
-import { useGraphTooltip } from "@/app/components/Graphs/Graphs.shared";
-import { GraphHoverAnimation } from "@/app/components/Graphs/GraphHoverAnimation";
 
 export const DonutGraph: React.VFC<DonutGraphProperties> = ({
 	data,

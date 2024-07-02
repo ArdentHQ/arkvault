@@ -1,10 +1,11 @@
-import React from "react";
-import * as browserAccess from "browser-fs-access";
 import userEvent from "@testing-library/user-event";
-
+import * as browserAccess from "browser-fs-access";
 import QRScanner from "qr-scanner";
-import { QRFileUpload } from "./QRFileUpload";
+import React from "react";
+
 import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { QRFileUpload } from "./QRFileUpload";
 
 const qrCodeUrl =
 	"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o";
@@ -24,7 +25,7 @@ describe("QRFileUpload", () => {
 
 		render(<QRFileUpload onError={vi.fn()} onRead={onRead} />);
 
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 		await waitFor(() => expect(onRead).toHaveBeenCalledWith(qrCodeUrl));
 
 		browserAccessMock.mockRestore();
@@ -39,7 +40,7 @@ describe("QRFileUpload", () => {
 
 		render(<QRFileUpload onError={vi.fn()} onRead={onRead} />);
 
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 		await waitFor(() => expect(onRead).not.toHaveBeenCalled());
 
 		browserAccessMock.mockRestore();
@@ -59,7 +60,7 @@ describe("QRFileUpload", () => {
 		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 		render(<QRFileUpload onRead={onRead} onError={onError} />);
 
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => expect(onRead).not.toHaveBeenCalled());
 		await waitFor(() => expect(onError).not.toHaveBeenCalled());
@@ -79,7 +80,7 @@ describe("QRFileUpload", () => {
 
 		render(<QRFileUpload onError={onError} onRead={vi.fn()} />);
 
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 		await waitFor(() => expect(onError).toHaveBeenCalledWith(new Error(errorMessage)));
 
 		browserAccessMock.mockRestore();

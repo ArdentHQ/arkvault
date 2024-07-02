@@ -2,26 +2,27 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
+import * as reactHookForm from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import * as reactHookForm from "react-hook-form";
-import { LedgerTabs } from "./LedgerTabs";
 import { minVersionList } from "@/app/contexts";
 import * as scanner from "@/app/contexts/Ledger/hooks/scanner.state";
+import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
+import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
+import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
+	mockLedgerTransportError,
+	mockNanoXTransport,
+	mockProfileWithOnlyPublicNetworks,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
-	mockNanoXTransport,
-	mockLedgerTransportError,
-	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
-import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
-import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
-import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
+
+import { LedgerTabs } from "./LedgerTabs";
 
 vi.mock("react-hook-form", async () => ({
 	...(await vi.importActual("react-hook-form")),
@@ -173,7 +174,7 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
 
@@ -191,7 +192,7 @@ describe("LedgerTabs", () => {
 
 		expect(loadMoreButton).toBeInTheDocument();
 
-		userEvent.click(loadMoreButton);
+		await userEvent.click(loadMoreButton);
 
 		expect(scanSpy).toHaveBeenCalledWith({
 			onProgress: expect.any(Function),
@@ -212,7 +213,7 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
 
@@ -286,7 +287,7 @@ describe("LedgerTabs", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.click(backSelector());
+		await userEvent.click(backSelector());
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
@@ -298,7 +299,7 @@ describe("LedgerTabs", () => {
 			expect(nextSelector()).toBeEnabled();
 		});
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 
@@ -341,18 +342,18 @@ describe("LedgerTabs", () => {
 
 		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn());
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		await expect(screen.findByTestId("LedgerImportStep")).resolves.toBeVisible();
 
 		// First address
-		userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
+		await userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
 
 		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.click(screen.getByTestId("Paginator__finish-button"));
+		await userEvent.click(screen.getByTestId("Paginator__finish-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -375,7 +376,7 @@ describe("LedgerTabs", () => {
 
 		expect(screen.getByTestId("NetworkStep")).toBeVisible();
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 
@@ -387,7 +388,7 @@ describe("LedgerTabs", () => {
 			expect(screen.getByTestId("Paginator__retry-button")).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("Paginator__retry-button"));
+		await userEvent.click(screen.getByTestId("Paginator__retry-button"));
 
 		await waitFor(() => expect(screen.queryAllByTestId("LedgerScanStep__amount-skeleton")).toHaveLength(0), {
 			interval: 5,
@@ -418,7 +419,7 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(backSelector()).toBeEnabled());
 
-		userEvent.click(backSelector());
+		await userEvent.click(backSelector());
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`));
 
@@ -464,13 +465,13 @@ describe("LedgerTabs", () => {
 
 		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => wallet);
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		await expect(screen.findByTestId("LedgerImportStep")).resolves.toBeVisible();
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
@@ -509,7 +510,7 @@ describe("LedgerTabs", () => {
 
 			expect(screen.getByTestId("NetworkStep")).toBeVisible();
 
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 
 			await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible());
 
@@ -528,7 +529,7 @@ describe("LedgerTabs", () => {
 
 			await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeVisible());
 
-			userEvent.keyboard("{enter}", {
+			await userEvent.keyboard("{enter}", {
 				document: { ...document, activeElement: document.createElement("button") },
 			});
 
@@ -559,7 +560,7 @@ describe("LedgerTabs", () => {
 
 			await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeVisible());
 
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 
 			expect(screen.queryByTestId("LedgerConnectionStep")).toBeNull();
 			expect(screen.getByTestId("NetworkStep")).toBeVisible();

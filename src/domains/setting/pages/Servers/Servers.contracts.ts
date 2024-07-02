@@ -1,4 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
+
 import { OptionProperties } from "@/app/components/SelectDropdown";
 
 interface ServersSettingsState {
@@ -56,11 +57,11 @@ export enum ServerHealthStatus {
 }
 
 export type {
-	ServersSettingsState,
-	SettingsOption,
-	NetworkSelectProperties,
 	CustomNetwork,
 	NetworkHostType,
+	NetworkSelectProperties,
 	NormalizedNetwork,
+	ServersSettingsState,
+	SettingsOption,
 	UserCustomNetwork,
 };

@@ -5,23 +5,23 @@ import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
-import { SendRegistration } from "./SendRegistration";
 import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
+	mockNanoXTransport,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
 	within,
-	mockNanoXTransport,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
 
-import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
+import { SendRegistration } from "./SendRegistration";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -138,12 +138,12 @@ describe("Registration Fee", () => {
 			expect(screen.getByTestId("InputFee")).toBeInTheDocument();
 		});
 
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("25"));
 
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.SIMPLE),
 		);
 
@@ -158,34 +158,34 @@ describe("Registration Fee", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
+		await userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
 
 		expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate");
 
 		// Fee
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.paste(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Fee warning
 		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
+		await userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -198,34 +198,34 @@ describe("Registration Fee", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
+		await userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
 
 		expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate");
 
 		// Fee
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.paste(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Fee warning
 		expect(screen.getByTestId("FeeWarning__continue-button")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+		await userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 

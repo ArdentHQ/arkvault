@@ -3,10 +3,11 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { VoteDetail } from "./VoteDetail";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
+
+import { VoteDetail } from "./VoteDetail";
 
 const history = createHashHistory();
 

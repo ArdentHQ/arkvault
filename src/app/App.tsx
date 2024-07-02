@@ -1,18 +1,19 @@
 import "focus-visible";
 
+import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
 import React, { useRef } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { I18nextProvider } from "react-i18next";
-import { CacheProvider } from "@emotion/react";
 
-import createCache from "@emotion/cache";
-import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "./contexts";
-import { i18n as index18n } from "./i18n";
-import { ZendeskProvider } from "./contexts/Zendesk";
-import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { AppRouter, GlobalStyles, Main } from "@/app/App.blocks";
-import { initializeEnvironment } from "@/utils/environment";
 import { ApplicationError } from "@/domains/error/pages";
+import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
+import { initializeEnvironment } from "@/utils/environment";
+
+import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "./contexts";
+import { ZendeskProvider } from "./contexts/Zendesk";
+import { i18n as index18n } from "./i18n";
 
 export const App: React.VFC = () => {
 	/**

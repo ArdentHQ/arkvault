@@ -4,9 +4,10 @@ import { createHashHistory } from "history";
 import React, { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 
-import { Page } from "./Page";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 import { useNavigationContext } from "@/app/contexts";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { Page } from "./Page";
 let profile: Contracts.IProfile;
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -99,11 +100,11 @@ describe("Page", () => {
 
 		const toggle = screen.getByTestId("UserMenu");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		await expect(screen.findByText(label)).resolves.toBeVisible();
 
-		userEvent.click(await screen.findByText(label));
+		await userEvent.click(await screen.findByText(label));
 
 		if (label === "Documentation") {
 			expect(windowSpy).toHaveBeenCalledWith("https://arkvault.io/docs", "_blank");
@@ -132,11 +133,11 @@ describe("Page", () => {
 
 		const toggle = screen.getByTestId("UserMenu");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		await expect(screen.findByText("Sign Out")).resolves.toBeVisible();
 
-		userEvent.click(await screen.findByText("Sign Out"));
+		await userEvent.click(await screen.findByText("Sign Out"));
 
 		expect(historySpy).toHaveBeenCalledWith("/");
 

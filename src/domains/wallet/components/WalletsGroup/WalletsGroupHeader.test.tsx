@@ -1,6 +1,8 @@
 import React from "react";
-import { WalletsGroupHeaderSkeleton } from "./WalletsGroupHeader";
+
 import { render, renderResponsive } from "@/utils/testing-library";
+
+import { WalletsGroupHeaderSkeleton } from "./WalletsGroupHeader";
 
 describe("WalletsGroupHeaderSkeleton", () => {
 	it("should render", () => {

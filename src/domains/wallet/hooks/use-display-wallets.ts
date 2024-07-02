@@ -2,6 +2,7 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 import hash from "string-hash";
+
 import { useActiveProfile, useNetworks } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets/hooks";
 import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";

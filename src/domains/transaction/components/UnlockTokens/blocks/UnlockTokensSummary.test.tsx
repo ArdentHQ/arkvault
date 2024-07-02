@@ -1,9 +1,10 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { UnlockTokensSummary } from "./UnlockTokensSummary";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { getDefaultProfileId, render } from "@/utils/testing-library";
+
+import { UnlockTokensSummary } from "./UnlockTokensSummary";
 
 const fixtureProfileId = getDefaultProfileId();
 
