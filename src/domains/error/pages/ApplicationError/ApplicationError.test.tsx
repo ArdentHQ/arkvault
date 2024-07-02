@@ -22,7 +22,7 @@ describe("ApplicationError", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with error message and reload", () => {
+	it("should render with error message and reload", async () => {
 		const { asFragment, container } = render(<ApplicationError error={{ message: "some error", name: "error" }} />);
 
 		expect(container).toBeInTheDocument();
@@ -37,7 +37,7 @@ describe("ApplicationError", () => {
 
 		const { reload: mockedReload } = window.location;
 
-		userEvent.click(screen.getByTestId("ApplicationError__button--reload"));
+		await userEvent.click(screen.getByTestId("ApplicationError__button--reload"));
 
 		expect(mockedReload).toHaveBeenCalledWith();
 
