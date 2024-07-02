@@ -141,11 +141,11 @@ describe("Dashboard", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
+		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 

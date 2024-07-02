@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { act as hookAct, renderHook } from "@testing-library/react-hooks";
+import { act as hookAct, renderHook } from "@testing-library/react";
 import React from "react";
 
 import { useProfileTransactions } from "./use-profile-transactions";
@@ -39,7 +39,7 @@ describe("useProfileTransactions", () => {
 			items: () => items,
 		} as any);
 
-		const { result, waitForNextUpdate } = renderHook(
+		const { result } = renderHook(
 			() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
 			{ wrapper },
 		);
@@ -170,7 +170,7 @@ describe("useProfileTransactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const { result, waitForNextUpdate } = renderHook(
+		const { result } = renderHook(
 			() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
 			{
 				wrapper,
@@ -185,15 +185,11 @@ describe("useProfileTransactions", () => {
 			result.current.updateFilters({ activeMode: "sent" });
 		});
 
-		await waitForNextUpdate();
-
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
 
 		hookAct(() => {
 			result.current.updateFilters({ activeMode: "all" });
 		});
-
-		await waitForNextUpdate();
 
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
 		await waitFor(() => expect(result.current.transactions).toHaveLength(30));
@@ -206,8 +202,6 @@ describe("useProfileTransactions", () => {
 		hookAct(() => {
 			result.current.updateFilters({ activeMode: "sent" });
 		});
-
-		await waitForNextUpdate();
 
 		await waitFor(() => expect(result.current.transactions).toHaveLength(0));
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));

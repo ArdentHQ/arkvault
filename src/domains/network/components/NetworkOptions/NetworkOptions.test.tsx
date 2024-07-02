@@ -55,7 +55,7 @@ describe("NetworkOption", () => {
 		expect(screen.getByTestId("NetworkOption-Whatever-whatever.custom")).toHaveTextContent("CU");
 	});
 
-	it("should call onSelect callback", () => {
+	it("should call onSelect callback", async () => {
 		const onSelect = vi.fn();
 
 		render(<NetworkOption network={network} onSelect={onSelect} />, {});
@@ -66,12 +66,12 @@ describe("NetworkOption", () => {
 		);
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("NetworkOption"));
+		await userEvent.click(screen.getByTestId("NetworkOption"));
 
 		expect(onSelect).toHaveBeenCalledWith();
 	});
 
-	it("should not call onSelect callback if disabled", () => {
+	it("should not call onSelect callback if disabled", async () => {
 		const onSelect = vi.fn();
 
 		render(<NetworkOption network={network} onSelect={onSelect} disabled />, {});
@@ -82,12 +82,12 @@ describe("NetworkOption", () => {
 		);
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("NetworkOption"));
+		await userEvent.click(screen.getByTestId("NetworkOption"));
 
 		expect(onSelect).not.toHaveBeenCalledWith();
 	});
 
-	it("should call onDeselect callback if is already selected", () => {
+	it("should call onDeselect callback if is already selected", async () => {
 		const onDeselect = vi.fn();
 
 		render(<NetworkOption network={network} onDeselect={onDeselect} isSelected />, {});
@@ -98,7 +98,7 @@ describe("NetworkOption", () => {
 		);
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("NetworkOption"));
+		await userEvent.click(screen.getByTestId("NetworkOption"));
 
 		expect(onDeselect).toHaveBeenCalledWith();
 	});
@@ -135,19 +135,19 @@ describe("NetworkOption", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should select network option", () => {
+	it("should select network option", async () => {
 		const onSelect = vi.fn();
 		const { asFragment } = render(<NetworkOptions networks={[networkTestnet, network]} onSelect={onSelect} />, {});
 
 		expect(screen.getAllByTestId("NetworkOption")).toHaveLength(2);
 		expect(asFragment).toMatchSnapshot();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
 
 		expect(onSelect).toHaveBeenCalledWith(networkTestnet);
 	});
 
-	it("should deselect network option", () => {
+	it("should deselect network option", async () => {
 		const onSelect = vi.fn();
 
 		const { asFragment } = render(
@@ -158,7 +158,7 @@ describe("NetworkOption", () => {
 		expect(screen.getAllByTestId("NetworkOption")).toHaveLength(2);
 		expect(asFragment).toMatchSnapshot();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
 
 		expect(onSelect).toHaveBeenCalledWith();
 	});

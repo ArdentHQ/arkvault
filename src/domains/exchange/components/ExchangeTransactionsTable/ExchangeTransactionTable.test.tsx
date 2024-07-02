@@ -104,7 +104,7 @@ describe("ExchangeTransactionsTable", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should execute onClick callback", () => {
+	it("should execute onClick callback", async () => {
 		const onClick = vi.fn();
 
 		render(
@@ -119,7 +119,7 @@ describe("ExchangeTransactionsTable", () => {
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
-		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
+		await userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
 
 		// reverse() is called because display items are sorted by creation date desc.
 		const exchangeTransaction = profile.exchangeTransactions().values().reverse()[0];
@@ -127,7 +127,7 @@ describe("ExchangeTransactionsTable", () => {
 		expect(onClick).toHaveBeenCalledWith(exchangeTransaction.provider(), exchangeTransaction.orderId());
 	});
 
-	it("should execute onRemove callback", () => {
+	it("should execute onRemove callback", async () => {
 		const onRemove = vi.fn();
 
 		render(
@@ -142,7 +142,7 @@ describe("ExchangeTransactionsTable", () => {
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
-		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
+		await userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
 
 		expect(onRemove).toHaveBeenCalledWith(profile.exchangeTransactions().values()[0]);
 	});

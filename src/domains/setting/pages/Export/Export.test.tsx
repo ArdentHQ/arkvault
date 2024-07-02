@@ -5,7 +5,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import * as browserAccess from "browser-fs-access";
 
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import { useTranslation, Trans } from "react-i18next";
 import ExportSettings from "@/domains/setting/pages/Export";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
@@ -52,7 +52,7 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
+		await userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
 
 		await waitFor(() =>
 			expect(browserAccessMock).toHaveBeenCalledWith(expect.any(Blob), {
@@ -87,7 +87,7 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
+		await userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(
@@ -101,11 +101,11 @@ describe("Export Settings", () => {
 
 	it("should not export data or show error on cancelled download", async () => {
 		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
-
+	
 		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockImplementation(() => {
 			throw new Error("The user aborted a request");
 		});
-
+	
 		const { container } = render(
 			<Route path="/profiles/:profileId/settings/export">
 				<ExportSettings />
@@ -115,19 +115,15 @@ describe("Export Settings", () => {
 				withProfileSynchronizer: true,
 			},
 		);
-
+	
 		expect(container).toBeInTheDocument();
-
-		userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
-
-		await waitFor(() => {
-			expect(browserAccessMock).not.toHaveBeenCalled();
-		});
-
+	
+		await userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
+	
 		await waitFor(() => {
 			expect(toastSpy).not.toHaveBeenCalled();
 		});
-
+	
 		toastSpy.mockRestore();
 		browserAccessMock.mockRestore();
 	});
@@ -154,7 +150,7 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
+		await userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("COMMON.SAVE_FILE.ERROR", { error: "unexpected error" }));

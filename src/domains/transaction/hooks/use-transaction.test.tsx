@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 import { useTransaction } from "./use-transaction";
 import { env, getDefaultProfileId } from "@/utils/testing-library";

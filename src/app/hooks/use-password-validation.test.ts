@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import * as haveibeenpwnedMock from "@faustbrian/node-haveibeenpwned";
-import { renderHook } from "@testing-library/react-hooks";
+import { pwned } from "@faustbrian/node-haveibeenpwned";
+import { renderHook } from "@testing-library/react";
 import { usePasswordValidation, defaultState } from "./use-password-validation";
 import { ValidationRule } from ".";
 
@@ -12,7 +12,7 @@ vi.mock("@faustbrian/node-haveibeenpwned", () => ({
 
 describe("usePasswordValidation", () => {
 	beforeEach(() => {
-		haveibeenpwnedMock.pwned.mockResolvedValue(0);
+		pwned.mockResolvedValue(0);
 	});
 
 	describe("#validationState", () => {
@@ -105,13 +105,13 @@ describe("usePasswordValidation", () => {
 
 			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(true);
 
-			haveibeenpwnedMock.pwned.mockResolvedValue(1);
+			pwned.mockResolvedValue(1);
 
 			await result.current.validatePassword(validPassword);
 
 			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(false);
 
-			haveibeenpwnedMock.pwned.mockImplementation(() => {
+			pwned.mockImplementation(() => {
 				throw new Error("Error");
 			});
 
