@@ -782,12 +782,17 @@ describe("Welcome", () => {
 
 		// Close
 		await userEvent.click(screen.getByTestId("SignIn__cancel-button"));
+		// the timer seems to update only every two seconds
+		vi.advanceTimersByTime(120_000);
 
 		// Reopen
 		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-
 		// the timer seems to update only every two seconds
 		vi.advanceTimersByTime(120_000);
+
+		// // Still disabled
+		expect(screen.getByTestId(submitTestID)).toBeDisabled();
+
 
 		// wait for form to be updated
 		await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();
