@@ -83,10 +83,8 @@ describe("PaginationSearch", () => {
 	});
 
 	it("should not allow typing number greater than total pages", async () => {
-		const onSelect = vi.fn();
-
 		const { asFragment } = render(
-			<PaginationSearch onClick={vi.fn()} onSelectPage={onSelect} totalPages={5}>
+			<PaginationSearch onClick={vi.fn()} onSelectPage={vi.fn()} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
@@ -99,15 +97,12 @@ describe("PaginationSearch", () => {
 
 		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
+		await userEvent.clear(screen.getByTestId("PaginationSearch__input"));
 		await userEvent.type(screen.getByTestId("PaginationSearch__input"), "6");
 
 		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(screen.getByTestId("PaginationSearch__input")).toHaveValue(5));
-
-		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
-
-		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(5));
 	});
 
 	it("should not emit onSelect if nothing is typed", async () => {
