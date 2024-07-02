@@ -176,7 +176,7 @@ describe("WalletHeader", () => {
 	it.each(["cancel", "close"])("should open & %s delete wallet modal", async (action) => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.DELETE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.DELETE);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE),
@@ -194,7 +194,7 @@ describe("WalletHeader", () => {
 	it.each(["cancel", "close"])("should open & %s wallet name modal", async (action) => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_NAME_WALLET.TITLE),
@@ -214,7 +214,7 @@ describe("WalletHeader", () => {
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_RECEIVE_FUNDS.TITLE),
@@ -235,7 +235,7 @@ describe("WalletHeader", () => {
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "false"));
 	});
 
-	it("should handle message signing", () => {
+	it("should handle message signing", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		history.push(walletUrl);
 
@@ -251,14 +251,14 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/sign-message`);
 
 		historySpy.mockRestore();
 	});
 
-	it("should handle message verification", () => {
+	it("should handle message verification", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		history.push(walletUrl);
 
@@ -274,14 +274,14 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/verify-message`);
 
 		historySpy.mockRestore();
 	});
 
-	it("should handle multisignature registration", () => {
+	it("should handle multisignature registration", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		history.push(walletUrl);
 
@@ -297,7 +297,7 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE);
 
 		expect(historySpy).toHaveBeenCalledWith(
 			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/multiSignature`,
@@ -306,7 +306,7 @@ describe("WalletHeader", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should handle second signature registration", () => {
+	it("should handle second signature registration", async () => {
 		history.push(walletUrl);
 
 		const historySpy = vi.spyOn(history, "push");
@@ -321,7 +321,7 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE);
 
 		expect(historySpy).toHaveBeenCalledWith(
 			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`,
@@ -330,7 +330,7 @@ describe("WalletHeader", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should handle delegate registration", () => {
+	it("should handle delegate registration", async () => {
 		history.push(walletUrl);
 
 		const historySpy = vi.spyOn(history, "push");
@@ -345,7 +345,7 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE);
 
 		expect(historySpy).toHaveBeenCalledWith(
 			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/delegateRegistration`,
@@ -354,7 +354,7 @@ describe("WalletHeader", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should handle delegate resignation", () => {
+	it("should handle delegate resignation", async () => {
 		history.push(walletUrl);
 
 		const walletSpy = vi.spyOn(wallet, "isDelegate").mockReturnValue(true);
@@ -370,7 +370,7 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE);
 
 		expect(historySpy).toHaveBeenCalledWith(
 			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-delegate-resignation`,
@@ -380,7 +380,7 @@ describe("WalletHeader", () => {
 		walletSpy.mockRestore();
 	});
 
-	it("should handle store hash option", () => {
+	it("should handle store hash option", async () => {
 		history.push(walletUrl);
 
 		const historySpy = vi.spyOn(history, "push");
@@ -395,7 +395,7 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.STORE_HASH);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.STORE_HASH);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-ipfs`);
 
