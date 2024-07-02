@@ -89,7 +89,7 @@ export default [
 				ecmaFeatures: {
 					jsx: true,
 				},
-				project: "./tsconfig.json",
+				project: "./tsconfig.eslint.json",
 				tsconfigRootDir: __dirname,
 				projectFolderIgnoreList: ["build", "coverage", "node_modules", "public", "dist", "src/tests/mocks"],
 			},

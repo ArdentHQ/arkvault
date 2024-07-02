@@ -19,16 +19,20 @@
 		"useUnknownInCatchVariables": false,
 		"noImplicitAny": false,
 		"noFallthroughCasesInSwitch": true,
-		"types": ["vite-plugin-pwa/client", "vitest/globals"],
-		"paths": {
-			"@/*": ["./*"]
-		}
+		"types": ["vite-plugin-pwa/client", "vitest/globals"]
 	},
 	"exclude": [
+		"**/*.test.ts",
+		"**/*.test.tsx",
 		"**/tests/**",
 		"**/e2e/**",
 		"**/cucumber/**",
+		"src/utils/testing-library.tsx",
+		"src/utils/e2e-utils.ts",
+		"src/utils/e2e-interfaces.ts",
+		"src/setupTests.ts",
 		"dist/**/*"
 	],
-	"include": ["src", "public", "custom.d.ts", "global.d.ts"]
+	"include": ["src", "public", "custom.d.ts", "global.d.ts"],
+	"extends": "./tsconfig.paths.json"
 }
