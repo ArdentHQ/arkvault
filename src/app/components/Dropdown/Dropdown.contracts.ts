@@ -1,6 +1,5 @@
 import React from "react";
 
-import { DefaultTReturn, TOptions } from "i18next";
 import { Position, Size } from "@/types";
 
 export interface DropdownOption {
@@ -9,7 +8,7 @@ export interface DropdownOption {
 	iconClassName?: string | ((option: DropdownOption) => string);
 	iconSize?: Size;
 	label: string;
-	secondaryLabel?: string | Function | DefaultTReturn<TOptions>;
+	secondaryLabel?: string | Function  ;
 	value: string | number;
 	active?: boolean;
 	[key: string]: any;

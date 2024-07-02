@@ -3,11 +3,11 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { AddParticipantItem } from "@/domains/transaction/components/MultiSignatureRegistrationForm/components/AddParticipant/AddParticipantItem";
 import { Button } from "@/app/components/Button";
 import { FormField, FormLabel, SubForm } from "@/app/components/Form";
 import { useWalletAlias } from "@/app/hooks";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
+import { AddParticipantItem } from "@/domains/transaction/components/MultiSignatureRegistrationForm/components/AddParticipant/AddParticipantItem";
 
 export interface Participant {
 	address: string;
@@ -36,7 +36,7 @@ export const AddParticipant = ({
 
 	const [isValidating, setIsValidating] = useState(false);
 	const [participants, setParticipants] = useState<Participant[]>(defaultParticipants);
-	const lastValidationReference = useRef<unknown | undefined>();
+	const lastValidationReference = useRef<unknown>();
 
 	const { getWalletAlias } = useWalletAlias();
 

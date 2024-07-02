@@ -3,16 +3,16 @@ import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { DefaultTReturn, TOptions } from "i18next";
-import { LabelWrapper, StyledCircle as Circle, TextWrapper } from "./DelegateFooter.styles";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { useNavigationContext } from "@/app/contexts";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+
+import { LabelWrapper, StyledCircle as Circle, TextWrapper } from "./DelegateFooter.styles";
 
 interface FooterContentProperties {
 	label: string;
@@ -62,7 +62,7 @@ export const DelegateFooter = ({
 	onContinue,
 }: DelegateFooterProperties) => {
 	const { t } = useTranslation();
-	const [tooltipContent, setTooltipContent] = useState<string | DefaultTReturn<TOptions>>("");
+	const [tooltipContent, setTooltipContent] = useState<string  >("");
 	const [isContinueDisabled, setIsContinueDisabled] = useState(true);
 	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 

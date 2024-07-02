@@ -5,10 +5,6 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
-import { DefaultTReturn, TOptions } from "i18next";
-import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
-import { SuccessStep } from "./SuccessStep";
-import { WalletOverviewStep } from "./WalletOverviewStep";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
@@ -16,13 +12,17 @@ import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
-import { useWalletConfig } from "@/domains/wallet/hooks";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
 import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
+import { useWalletConfig } from "@/domains/wallet/hooks";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { enabledNetworksCount, profileAllEnabledNetworkIds, profileAllEnabledNetworks } from "@/utils/network-utils";
+
+import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
+import { SuccessStep } from "./SuccessStep";
+import { WalletOverviewStep } from "./WalletOverviewStep";
 
 enum Step {
 	NetworkStep = 1,
@@ -55,7 +55,7 @@ export const CreateWallet = () => {
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(onlyHasOneNetwork);
-	const [generationError, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
+	const [generationError, setGenerationError] = useState<string  >("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	useEffect(() => {

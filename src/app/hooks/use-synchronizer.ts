@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useEnvironmentContext } from "@/app/contexts";
 
-type Callback = () => Promise<void | any>;
+type Callback = () => Promise<void>;
 
 interface Job {
 	callback: Callback;

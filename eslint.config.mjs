@@ -36,6 +36,8 @@ export default [
 			"dist/",
 			"vitest.setup.ts",
 			"public/",
+			"**/cucumber/**",
+			"**/e2e/**",
 			"scripts/",
 			"src/i18n",
 			"src/resources/*",
@@ -96,7 +98,7 @@ export default [
 		settings: {
 			react: {
 				version: "detect",
-			}
+			},
 		},
 		rules: {
 			"@typescript-eslint/ban-ts-comment": "warn",
@@ -182,6 +184,7 @@ export default [
 			"sonarjs/no-small-switch": "error",
 			"sonarjs/no-use-of-empty-return-value": "error",
 			"sonarjs/no-nested-template-literals": "warn",
+			"sonarjs/prefer-single-boolean-return": "off",
 			"sort-keys-fix/sort-keys-fix": [
 				"error",
 				"asc",
@@ -248,6 +251,7 @@ export default [
 					ignore: [{}, "i18n", "e2e"],
 				},
 			],
+			"unicorn/prefer-blob-reading-methods": "warn",
 			"simple-import-sort/imports": "error",
 			"simple-import-sort/exports": "error",
 		},

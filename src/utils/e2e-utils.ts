@@ -2,12 +2,13 @@
 /* eslint-disable max-lines */
 /* eslint-disable import/no-relative-parent-imports */
 /* eslint-disable sonarjs/no-duplicate-string */
-import fs from "fs";
-import { ClientFunction, RequestMock, t, Selector } from "testcafe";
 import { Before, Given, IWorld, Then, When } from "@cucumber/cucumber";
 import { TestStepFunction } from "@cucumber/cucumber/lib/support_code_library_builder/types";
 import delve from "dlv";
-import { buildTranslations } from "../app/i18n/helpers";
+import fs from "fs";
+import { ClientFunction, RequestMock, Selector,t } from "testcafe";
+
+import { buildTranslations } from "@/app/i18n/helpers";
 
 export const getPageURL = () => process.env.E2E_HOST;
 
