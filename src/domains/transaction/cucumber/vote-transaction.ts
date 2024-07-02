@@ -23,7 +23,7 @@ cucumber(
 		...preSteps,
 		"When she attempts to vote for a delegate": async (t: TestController) => {
 			await t.click(Selector('[data-testid="AddressRow__select-2"]').withText(translations.COMMON.VOTE));
-			await t.expect(Selector("h2").withText(translations.VOTE.DELEGATE_TABLE.TITLE).exists).ok();
+			await t.expect(Selector("h2").withText(translations.VOTE.DELEGATE_TABLE.TITLE_DELEGATE).exists).ok();
 			await t.click(Selector('[data-testid="DelegateRow__toggle-0"]').withText(translations.COMMON.SELECT));
 			await t.expect(Selector("[data-testid=DelegateTable__footer]").exists).ok();
 			await t.click(
@@ -49,8 +49,8 @@ cucumber(
 			},
 			{
 				data: {
-					accept: ["transaction-id"],
-					broadcast: ["transaction-id"],
+					accept: ["fddbb51bdc077b2c8fad8d86032f3af03f1462dd84493c871450c643377e984a"],
+					broadcast: ["fddbb51bdc077b2c8fad8d86032f3af03f1462dd84493c871450c643377e984a"],
 					excess: [],
 					invalid: [],
 				},
@@ -97,7 +97,7 @@ cucumber(
 		...preSteps,
 		"When she attempts to vote for a delegate with an invalid mnemonic": async (t: TestController) => {
 			await t.click(Selector('[data-testid="AddressRow__select-2"]').withText(translations.COMMON.VOTE));
-			await t.expect(Selector("h2").withText(translations.VOTE.DELEGATE_TABLE.TITLE).exists).ok();
+			await t.expect(Selector("h2").withText(translations.VOTE.DELEGATE_TABLE.TITLE_DELEGATE).exists).ok();
 			await t.click(Selector('[data-testid="DelegateRow__toggle-0"]').withText(translations.COMMON.SELECT));
 			await t.expect(Selector("[data-testid=DelegateTable__footer]").exists).ok();
 			await t.click(

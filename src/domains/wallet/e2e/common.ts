@@ -11,11 +11,17 @@ export const goToWallet = async (t: any, wallet = "D8rr7B1d6TL6pf14LgMz4sKp1VBMs
 	await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 };
 
-export const importWallet = async (t: any, passphrase = MNEMONICS[0], alias = "Test Wallet") => {
+export const importWallet = async (
+	t: any,
+	passphrase = MNEMONICS[0],
+	alias = "Test Wallet",
+	network = "ARK Devnet",
+) => {
 	await t.click(Selector("a").withText(translations.COMMON.PORTFOLIO));
 	await t.click(Selector("button").withExactText(translations.COMMON.IMPORT));
 	await t.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists).ok();
-	await t.click(Selector('[data-testid="NetworkOption-ARK-ark.devnet"]'));
+	await t.click(Selector('[data-testid="SelectNetwork"]'));
+	await t.click(Selector(".select-list-option__label").withText(network));
 
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 	await t.typeText(Selector("[data-testid=ImportWallet__mnemonic-input]"), passphrase, { paste: true });
@@ -38,10 +44,11 @@ export const importWalletByAddress = async (t: any, address: string, alias = "Te
 	await t.click(Selector("button").withExactText(translations.COMMON.IMPORT));
 	await t.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists).ok();
 
+	await t.click(Selector('[data-testid="SelectNetwork"]'));
 	if (isMainnet) {
-		await t.click(Selector(`[data-testid="NetworkOption-ARK-ark.mainnet"]`));
+		await t.click(Selector(".select-list-option__label").withText("ARK"));
 	} else {
-		await t.click(Selector(`[data-testid="NetworkOption-ARK-ark.devnet"]`));
+		await t.click(Selector(".select-list-option__label").withText("ARK Devnet"));
 	}
 
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));

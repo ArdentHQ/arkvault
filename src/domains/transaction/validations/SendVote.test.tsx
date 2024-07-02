@@ -43,10 +43,25 @@ describe("Send Vote Validation", () => {
 
 		const mockWalletVotingDelegate = vi.spyOn(profile.wallets().first().voting(), "current").mockReturnValue(votes);
 
-		expect(validator.validate(profile.wallets().first().address())).not.toBe(true);
+		expect(validator.validate(profile.wallets().first().address())).toBe("TRANSACTION.VALIDATION.ALREADY_VOTING");
+
+		const mockNoUsername = vi.spyOn(votes[0].wallet, "username").mockReturnValue(undefined);
+
+		expect(validator.validate(profile.wallets().first().address())).toBe("TRANSACTION.VALIDATION.ALREADY_VOTING");
 
 		mockWalletVotingDelegate.mockRestore();
+		mockNoUsername.mockRestore();
 
 		expect(validator.validate(profile.wallets().first().address())).toBe(true);
+
+		const validatorNoVotes = sendVote(translationMock).senderAddress({ network, profile, votes: [] });
+
+		expect(validatorNoVotes.validate("address")).toBe(true);
+	});
+
+	it("network", () => {
+		const emptyMemo = sendVote(translationMock).network();
+
+		expect(emptyMemo.required).toBe("COMMON.VALIDATION.FIELD_REQUIRED");
 	});
 });

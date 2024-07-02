@@ -57,7 +57,8 @@ export const useFees = (profile: Contracts.IProfile) => {
 	};
 
 	const getWallet = useCallback(
-		async (coin: string, network: string) => profile.walletFactory().generate({ coin, network }),
+		async (coin: string, network: string) =>
+			profile.walletFactory().generate({ coin, network, withPublicKey: true }),
 		[profile],
 	);
 
@@ -132,7 +133,11 @@ export const useFees = (profile: Contracts.IProfile) => {
 				transactionFees = env.fees().findByType(coin, network, type);
 			}
 
-			if (!!data && (coinInstance.network().feeType() === "size" || type === "multiSignature")) {
+			if (
+				!!data &&
+				(coinInstance.network().feeType() === "size" ||
+					(type === "multiSignature" && coinInstance.network().feeType() !== "static"))
+			) {
 				const feesBySize = await calculateBySize({ coin: coinInstance, data, type });
 
 				return {

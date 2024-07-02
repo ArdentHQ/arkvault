@@ -14,6 +14,7 @@ import {
 	RenderResult,
 	env,
 	getDefaultProfileId,
+	getMainsailProfileId,
 	render,
 	screen,
 	syncDelegates,
@@ -78,234 +79,322 @@ const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 const formStepID = "DelegateRegistrationForm__form-step";
 
 describe("DelegateRegistrationForm", () => {
-	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+	describe("Ark Network", () => {
+		beforeAll(async () => {
+			profile = env.profiles().findById(getDefaultProfileId());
 
-		await env.profiles().restore(profile);
-		await profile.sync();
+			await env.profiles().restore(profile);
+			await profile.sync();
 
-		wallet = profile.wallets().first();
+			wallet = profile.wallets().first();
 
-		await syncDelegates(profile);
+			await syncDelegates(profile);
 
-		vi.spyOn(useFeesHook, "useFees").mockReturnValue({
-			calculate: () => Promise.resolve(fees),
+			vi.spyOn(useFeesHook, "useFees").mockReturnValue({
+				calculate: () => Promise.resolve(fees),
+			});
+		});
+
+		it("should render form step", async () => {
+			const { asFragment } = renderComponent();
+
+			await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should render review step", async () => {
+			const { asFragment } = renderComponent({ activeTab: 2 });
+
+			await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should set username", async () => {
+			const { form } = renderComponent();
+
+			await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+			userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
+
+			await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
+			await waitFor(() => expect(form?.getValues("username")).toBe("test_delegate"));
+		});
+
+		it("should set fee", async () => {
+			const { asFragment } = renderComponent({
+				defaultValues: {
+					fee: "10",
+				},
+			});
+
+			await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+			await expect(screen.findByTestId("InputFee")).resolves.toBeVisible();
+
+			userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+
+			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+			await waitFor(() => expect(inputElement).toHaveValue("10"));
+
+			inputElement.select();
+			userEvent.paste(inputElement, "11");
+
+			await waitFor(() => expect(inputElement).toHaveValue("11"));
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should show error if username contains illegal characters", async () => {
+			const { asFragment } = renderComponent();
+
+			await waitFor(() => expect(screen.getByTestId(formStepID)));
+
+			userEvent.paste(screen.getByTestId("Input__username"), "<invalid>");
+
+			await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
+
+			expect(screen.getByTestId("Input__error")).toBeVisible();
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should error if username is too long", async () => {
+			const { asFragment } = renderComponent();
+
+			await waitFor(() => expect(screen.getByTestId(formStepID)));
+
+			userEvent.paste(screen.getByTestId("Input__username"), "thisisaveryveryverylongdelegatename");
+
+			await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
+
+			expect(screen.getByTestId("Input__error")).toBeVisible();
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should show error if username already exists", async () => {
+			const { asFragment } = renderComponent();
+
+			await waitFor(() => expect(screen.getByTestId(formStepID)));
+
+			userEvent.paste(screen.getByTestId("Input__username"), "arkx");
+
+			await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
+
+			expect(screen.getByTestId("Input__error")).toBeVisible();
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should sign transaction", async () => {
+			const form = {
+				clearErrors: vi.fn(),
+				getValues: () => ({
+					fee: "1",
+					mnemonic: MNEMONICS[0],
+					network: wallet.network(),
+					senderAddress: wallet.address(),
+					username: "test_delegate",
+				}),
+				setError: vi.fn(),
+				setValue: vi.fn(),
+			};
+			const signMock = vi
+				.spyOn(wallet.transaction(), "signDelegateRegistration")
+				.mockReturnValue(Promise.resolve(delegateRegistrationFixture.data.id));
+			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+				accepted: [delegateRegistrationFixture.data.id],
+				errors: {},
+				rejected: [],
+			});
+			const transactionMock = createTransactionMock(wallet);
+
+			await signDelegateRegistration({
+				env,
+				form,
+				profile,
+			});
+
+			expect(signMock).toHaveBeenCalledWith({ data: { username: "test_delegate" }, fee: 1 });
+			expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+			expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+
+			signMock.mockRestore();
+			broadcastMock.mockRestore();
+			transactionMock.mockRestore();
+		});
+
+		it("should output transaction details", () => {
+			const translations = vi.fn((translation) => translation);
+			const transaction = {
+				amount: () => delegateRegistrationFixture.data.amount / 1e8,
+				data: () => ({ data: () => delegateRegistrationFixture.data }),
+				fee: () => delegateRegistrationFixture.data.fee / 1e8,
+				id: () => delegateRegistrationFixture.data.id,
+				recipient: () => delegateRegistrationFixture.data.recipient,
+				sender: () => delegateRegistrationFixture.data.sender,
+				username: () => delegateRegistrationFixture.data.asset.delegate.username,
+			} as Contracts.SignedTransactionData;
+
+			render(
+				<DelegateRegistrationForm.transactionDetails
+					transaction={transaction}
+					translations={translations}
+					wallet={wallet}
+				/>,
+			);
+
+			expect(screen.getByText("TRANSACTION.DELEGATE_NAME")).toBeInTheDocument();
+			expect(screen.getByText("test_delegate")).toBeInTheDocument();
+		});
+
+		it("should sign transaction using password encryption", async () => {
+			const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+			const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
+
+			const form = {
+				clearErrors: vi.fn(),
+				getValues: () => ({
+					encryptionPassword: "password",
+					fee: "1",
+					mnemonic: MNEMONICS[0],
+					network: wallet.network(),
+					senderAddress: wallet.address(),
+					username: "test_delegate",
+				}),
+				setError: vi.fn(),
+				setValue: vi.fn(),
+			};
+			const signMock = vi
+				.spyOn(wallet.transaction(), "signDelegateRegistration")
+				.mockReturnValue(Promise.resolve(delegateRegistrationFixture.data.id));
+			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+				accepted: [delegateRegistrationFixture.data.id],
+				errors: {},
+				rejected: [],
+			});
+			const transactionMock = createTransactionMock(wallet);
+
+			await signDelegateRegistration({
+				env,
+				form,
+				profile,
+			});
+
+			expect(signMock).toHaveBeenCalledWith({ data: { username: "test_delegate" }, fee: 1 });
+			expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+			expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+
+			signMock.mockRestore();
+			broadcastMock.mockRestore();
+			transactionMock.mockRestore();
+			walletUsesWIFMock.mockRestore();
+			walletWifMock.mockRestore();
 		});
 	});
 
-	it("should render form step", async () => {
-		const { asFragment } = renderComponent();
+	describe("Mainsail Network", () => {
+		beforeAll(async () => {
+			profile = env.profiles().findById(getMainsailProfileId());
 
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+			await env.profiles().restore(profile);
+			await profile.sync();
 
-		expect(asFragment()).toMatchSnapshot();
-	});
+			wallet = profile.wallets().first();
 
-	it("should render review step", async () => {
-		const { asFragment } = renderComponent({ activeTab: 2 });
+			await syncDelegates(profile);
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should set username", async () => {
-		const { form } = renderComponent();
-
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
-
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
-		await waitFor(() => expect(form?.getValues("username")).toBe("test_delegate"));
-	});
-
-	it("should render and set public key for mainsail networks", async () => {
-		const delegates = env.delegates().all(wallet.coinId(), wallet.networkId());
-		const delegatesSpy = vi.spyOn(env.delegates(), "all").mockReturnValue(delegates);
-		const mainsailSpy = vi.spyOn(wallet.network(), "id").mockReturnValue("mainsail.devnet");
-
-		const { form } = renderComponent();
-
-		const publicKey = "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de";
-
-		await expect(screen.findByTestId("Input__username")).rejects.toThrow(/Unable to find/);
-
-		userEvent.paste(screen.getByTestId("Input__validator_public_key"), publicKey);
-
-		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(publicKey));
-		await waitFor(() => expect(form?.getValues("validatorPublicKey")).toBe(publicKey));
-
-		mainsailSpy.mockRestore();
-		delegatesSpy.mockRestore();
-	});
-
-	it("should set fee", async () => {
-		const { asFragment } = renderComponent({
-			defaultValues: {
-				fee: "10",
-			},
+			vi.spyOn(useFeesHook, "useFees").mockReturnValue({
+				calculate: () => Promise.resolve(fees),
+			});
 		});
 
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-		await expect(screen.findByTestId("InputFee")).resolves.toBeVisible();
+		it("should render and set public key for mainsail networks", async () => {
+			const { form } = renderComponent();
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+			const publicKey = "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de";
 
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+			await expect(screen.findByTestId("Input__username")).rejects.toThrow(/Unable to find/);
 
-		await waitFor(() => expect(inputElement).toHaveValue("10"));
+			userEvent.paste(screen.getByTestId("Input__validator_public_key"), publicKey);
 
-		inputElement.select();
-		userEvent.paste(inputElement, "11");
-
-		await waitFor(() => expect(inputElement).toHaveValue("11"));
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should show error if username contains illegal characters", async () => {
-		const { asFragment } = renderComponent();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)));
-
-		userEvent.paste(screen.getByTestId("Input__username"), "<invalid>");
-
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
-
-		expect(screen.getByTestId("Input__error")).toBeVisible();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should error if username is too long", async () => {
-		const { asFragment } = renderComponent();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)));
-
-		userEvent.paste(screen.getByTestId("Input__username"), "thisisaveryveryverylongdelegatename");
-
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
-
-		expect(screen.getByTestId("Input__error")).toBeVisible();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should show error if username already exists", async () => {
-		const { asFragment } = renderComponent();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)));
-
-		userEvent.paste(screen.getByTestId("Input__username"), "arkx");
-
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
-
-		expect(screen.getByTestId("Input__error")).toBeVisible();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should sign transaction", async () => {
-		const form = {
-			clearErrors: vi.fn(),
-			getValues: () => ({
-				fee: "1",
-				mnemonic: MNEMONICS[0],
-				network: wallet.network(),
-				senderAddress: wallet.address(),
-				username: "test_delegate",
-			}),
-			setError: vi.fn(),
-			setValue: vi.fn(),
-		};
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signDelegateRegistration")
-			.mockReturnValue(Promise.resolve(delegateRegistrationFixture.data.id));
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [delegateRegistrationFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createTransactionMock(wallet);
-
-		await signDelegateRegistration({
-			env,
-			form,
-			profile,
+			await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(publicKey));
+			await waitFor(() => expect(form?.getValues("validatorPublicKey")).toBe(publicKey));
 		});
 
-		expect(signMock).toHaveBeenCalledWith({ data: { username: "test_delegate" }, fee: 1 });
-		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
-		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+		it("should render review step for mainsail", async () => {
+			renderComponent({ activeTab: 2 });
 
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-	});
+			await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
 
-	it("should output transaction details", () => {
-		const translations = vi.fn((translation) => translation);
-		const transaction = {
-			amount: () => delegateRegistrationFixture.data.amount / 1e8,
-			data: () => ({ data: () => delegateRegistrationFixture.data }),
-			fee: () => delegateRegistrationFixture.data.fee / 1e8,
-			id: () => delegateRegistrationFixture.data.id,
-			recipient: () => delegateRegistrationFixture.data.recipient,
-			sender: () => delegateRegistrationFixture.data.sender,
-			username: () => delegateRegistrationFixture.data.asset.delegate.username,
-		} as Contracts.SignedTransactionData;
-
-		render(
-			<DelegateRegistrationForm.transactionDetails
-				transaction={transaction}
-				translations={translations}
-				wallet={wallet}
-			/>,
-		);
-
-		expect(screen.getByText("TRANSACTION.DELEGATE_NAME")).toBeInTheDocument();
-		expect(screen.getByText("test_delegate")).toBeInTheDocument();
-	});
-
-	it("should sign transaction using password encryption", async () => {
-		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
-		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
-
-		const form = {
-			clearErrors: vi.fn(),
-			getValues: () => ({
-				encryptionPassword: "password",
-				fee: "1",
-				mnemonic: MNEMONICS[0],
-				network: wallet.network(),
-				senderAddress: wallet.address(),
-				username: "test_delegate",
-			}),
-			setError: vi.fn(),
-			setValue: vi.fn(),
-		};
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signDelegateRegistration")
-			.mockReturnValue(Promise.resolve(delegateRegistrationFixture.data.id));
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [delegateRegistrationFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createTransactionMock(wallet);
-
-		await signDelegateRegistration({
-			env,
-			form,
-			profile,
+			expect(screen.getByTestId("TransactionPublicKey")).toBeInTheDocument();
 		});
 
-		expect(signMock).toHaveBeenCalledWith({ data: { username: "test_delegate" }, fee: 1 });
-		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
-		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+		it("should output transaction details for mainsail", () => {
+			const translations = vi.fn((translation) => translation);
+			const transaction = {
+				amount: () => delegateRegistrationFixture.data.amount / 1e8,
+				data: () => ({ data: () => delegateRegistrationFixture.data }),
+				fee: () => delegateRegistrationFixture.data.fee / 1e8,
+				id: () => delegateRegistrationFixture.data.id,
+				recipient: () => delegateRegistrationFixture.data.recipient,
+				sender: () => delegateRegistrationFixture.data.sender,
+				username: () => delegateRegistrationFixture.data.asset.delegate.username,
+			} as Contracts.SignedTransactionData;
 
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-		walletUsesWIFMock.mockRestore();
-		walletWifMock.mockRestore();
+			render(
+				<DelegateRegistrationForm.transactionDetails
+					transaction={transaction}
+					translations={translations}
+					wallet={wallet}
+				/>,
+			);
+
+			expect(screen.getByTestId("TransactionPublicKey")).toBeInTheDocument();
+		});
+
+		it("should sign transaction with validator public key for mainsail", async () => {
+			const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+			const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
+
+			const form = {
+				clearErrors: vi.fn(),
+				getValues: () => ({
+					encryptionPassword: "password",
+					fee: "1",
+					mnemonic: MNEMONICS[0],
+					network: wallet.network(),
+					senderAddress: wallet.address(),
+					username: "test_delegate",
+					validatorPublicKey: "public_key",
+				}),
+				setError: vi.fn(),
+				setValue: vi.fn(),
+			};
+			const signMock = vi
+				.spyOn(wallet.transaction(), "signDelegateRegistration")
+				.mockReturnValue(Promise.resolve(delegateRegistrationFixture.data.id));
+			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+				accepted: [delegateRegistrationFixture.data.id],
+				errors: {},
+				rejected: [],
+			});
+			const transactionMock = createTransactionMock(wallet);
+
+			await signDelegateRegistration({
+				env,
+				form,
+				profile,
+			});
+
+			expect(signMock).toHaveBeenCalledWith({ data: { validatorPublicKey: "public_key" }, fee: 1 });
+			expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+			expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+
+			signMock.mockRestore();
+			broadcastMock.mockRestore();
+			transactionMock.mockRestore();
+			walletUsesWIFMock.mockRestore();
+			walletWifMock.mockRestore();
+		});
 	});
 });

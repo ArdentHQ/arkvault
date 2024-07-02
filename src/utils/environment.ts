@@ -2,6 +2,7 @@ import { ARK } from "@ardenthq/sdk-ark";
 import { Environment } from "@ardenthq/sdk-profiles";
 import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { initializeMainsailNetworks } from "./migrations/initialize-mainsail-networks";
+import { initializeArkNetworks } from "./migrations/initialize-ark-networks";
 import { isE2E, isUnit } from "@/utils/test-helpers";
 import { StubStorage } from "@/tests/mocks";
 import { httpClient } from "@/app/services";
@@ -24,11 +25,12 @@ export const initializeEnvironment = (): Environment => {
 
 	env.setMigrations(
 		{
-			"0.0.9": initializeMainsailNetworks,
+			"0.0.9": initializeArkNetworks,
 			"1.1.0": updateArkConstants,
 			"1.2.0": updateArkNethashes,
+			"1.2.1": initializeMainsailNetworks,
 		},
-		"1.2.0",
+		"1.2.1",
 	);
 
 	return env;

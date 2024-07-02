@@ -44,16 +44,18 @@ const pingServerUrls = new Set([
 	"https://ark-live.arkvault.io",
 	"https://ark-test.arkvault.io/",
 	"https://ark-test.arkvault.io",
-	"https://explorer.blockpool.io:19031",
-	"https://apis.compendia.org",
-	"https://apis-testnet.compendia.org",
-	"https://qredit.cloud",
-	"https://qredit.dev",
 	"https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0",
 	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
+	"https://dwallets.mainsailhq.com/",
+	"https://dwallets.mainsailhq.com",
 ]);
 
-const pingMusigServerUrls = new Set(["https://ark-live-musig.arkvault.io", "https://ark-test-musig.arkvault.io"]);
+const pingMusigServerUrls = new Set([
+	"https://ark-live-musig.arkvault.io",
+	"https://ark-test-musig.arkvault.io",
+	"https://musig-demo.mainsailhq.com",
+	"https://musig-demo.mainsailhq.com/",
+]);
 
 const knownWallets: any[] = [];
 
@@ -95,6 +97,10 @@ const walletMocks = () => {
 	devnetMocks.push(
 		mockRequest(
 			"https://ark-test.arkvault.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"coins/ark/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr-basic",
+		),
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr-basic",
 		),
 	);
@@ -280,33 +286,16 @@ export const requestMocks = {
 		mockRequest("https://ark-live.arkvault.io/api/node/syncing", "coins/ark/mainnet/syncing"),
 		mockRequest("https://ark-live.arkvault.io/api/node/fees", "coins/ark/mainnet/node-fees"),
 
-		// Compendia
-		mockRequest("https://apis.compendia.org/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://apis.compendia.org/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://apis.compendia.org/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://apis-testnet.compendia.org/api/node/configuration", "coins/ark/devnet/configuration"),
+		// Mainsail devnet
+		mockRequest("https://dwallets.mainsailhq.com/api/blockchain", "coins/mainsail/devnet/blockchain"),
+		mockRequest("https://dwallets.mainsailhq.com/api/node/configuration", "coins/mainsail/devnet/configuration"),
 		mockRequest(
-			"https://apis-testnet.compendia.org/api/node/configuration/crypto",
-			"coins/ark/devnet/cryptoConfiguration",
+			"https://dwallets.mainsailhq.com/api/node/configuration/crypto",
+			"coins/mainsail/devnet/cryptoConfiguration",
 		),
-		mockRequest("https://apis-testnet.compendia.org/api/node/syncing", "coins/ark/devnet/syncing"),
-
-		// Blockpool
-		mockRequest("https://explorer.blockpool.io:19031/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest(
-			"https://explorer.blockpool.io:19031/api/node/configuration/crypto",
-			"coins/ark/devnet/cryptoConfiguration",
-		),
-		mockRequest("https://explorer.blockpool.io:19031/api/node/syncing", "coins/ark/devnet/syncing"),
-
-		// Qredit
-		mockRequest("https://qredit.cloud/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://qredit.cloud/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://qredit.cloud/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://qredit.dev/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://qredit.dev/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://qredit.dev/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://static.zdassets.com/ekr/snippet.js?key=0e4c4d37-9d38-4be4-925d-e659dd4d12bd", () => ""),
+		mockRequest("https://dwallets.mainsailhq.com/api/node/fees", "coins/mainsail/devnet/node-fees"),
+		mockRequest("https://dwallets.mainsailhq.com/api/node/syncing", "coins/mainsail/devnet/syncing"),
+		mockRequest("https://dwallets.mainsailhq.com/api/peers", "coins/mainsail/devnet/peers"),
 	],
 	delegates: [
 		// devnet
@@ -319,6 +308,9 @@ export const requestMocks = {
 
 		// mainnet
 		mockRequest("https://ark-live.arkvault.io/api/delegates", "coins/ark/mainnet/delegates"),
+
+		// Mainsail Devnet
+		mockRequest("https://dwallets.mainsailhq.com/api/delegates", "coins/mainsail/devnet/delegates"),
 	],
 	exchange: [
 		mockRequest(
@@ -459,6 +451,39 @@ export const requestMocks = {
 
 		// mainnet
 		mockRequest("https://ark-live.arkvault.io/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
+
+		// Mainsail Devnet
+		mockRequest("https://dwallets.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?limit=10&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			{ data: [], meta: {} },
+		),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
 
 		...searchAddressesMocks(),
 	],

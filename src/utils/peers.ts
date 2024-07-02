@@ -38,7 +38,13 @@ const getBaseUrl = (address: string): string => {
 	return `${protocol}//${host}`;
 };
 
-const isPeer = (body: object): boolean => body["data"].startsWith("Hello World");
+const isPeer = (body: object): boolean => {
+	if (!body["data"]) {
+		return false;
+	}
+
+	return body["data"].startsWith("Hello World");
+};
 
 const isMusig = (body: object): boolean => {
 	if (typeof body["name"] !== "string") {

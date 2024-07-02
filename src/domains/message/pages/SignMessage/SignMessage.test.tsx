@@ -8,6 +8,7 @@ import { Route } from "react-router-dom";
 import { SignMessage } from "./SignMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import * as useMessageSignerMock from "@/domains/message/hooks/use-message-signer";
 import {
 	env,
 	getDefaultProfileId,
@@ -366,6 +367,66 @@ describe("SignMessage", () => {
 			walletActsWithMnemonic.mockRestore();
 			walletActsWithWithEncryption.mockRestore();
 			fromSecret.mockRestore();
+		});
+
+		it("should error and go back", async () => {
+			const useMessageSignerSpy = vi.spyOn(useMessageSignerMock, "useMessageSigner").mockReturnValue({
+				sign: async () => {
+					throw new Error("test");
+				},
+			});
+
+			render(
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
+					<SignMessage />
+				</Route>,
+				{
+					history,
+					route: walletUrl(wallet.id()),
+				},
+			);
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			expect(
+				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
+			).toBeInTheDocument();
+
+			userEvent.paste(messageInput(), signMessage);
+
+			await waitFor(() => expect(continueButton()).toBeEnabled());
+
+			userEvent.click(continueButton());
+
+			await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
+
+			userEvent.click(screen.getByTestId("SignMessage__back-button"));
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			userEvent.click(continueButton());
+
+			const mnemonicInput = screen.getByTestId("AuthenticationStep__mnemonic");
+
+			userEvent.paste(mnemonicInput, "wrong");
+
+			await waitFor(() => expect(signButton()).toBeDisabled());
+
+			mnemonicInput.select();
+
+			userEvent.paste(mnemonicInput, mnemonic);
+
+			await waitFor(() => expect(signButton()).toBeEnabled());
+
+			userEvent.click(signButton());
+
+			await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+			userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+			await expect(screen.findByTestId("SignMessage--form-step")).resolves.toBeVisible();
+
+			useMessageSignerSpy.mockRestore();
 		});
 	});
 });

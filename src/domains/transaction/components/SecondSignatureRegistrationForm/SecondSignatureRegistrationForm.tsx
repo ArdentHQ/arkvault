@@ -9,6 +9,7 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { TransactionFee } from "@/domains/transaction/components/TransactionDetail";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
+import { assertWallet } from "@/utils/assertions";
 
 const component = ({
 	activeTab,
@@ -16,27 +17,31 @@ const component = ({
 	profile,
 }: {
 	activeTab: number;
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
-}) => (
-	<Tabs activeId={activeTab}>
-		<TabPanel tabId={1}>
-			<GenerationStep wallet={wallet} profile={profile} />
-		</TabPanel>
+}) => {
+	assertWallet(wallet);
 
-		<TabPanel tabId={2}>
-			<BackupStep />
-		</TabPanel>
+	return (
+		<Tabs activeId={activeTab}>
+			<TabPanel tabId={1}>
+				<GenerationStep wallet={wallet} profile={profile} />
+			</TabPanel>
 
-		<TabPanel tabId={3}>
-			<VerificationStep />
-		</TabPanel>
+			<TabPanel tabId={2}>
+				<BackupStep />
+			</TabPanel>
 
-		<TabPanel tabId={4}>
-			<ReviewStep wallet={wallet} />
-		</TabPanel>
-	</Tabs>
-);
+			<TabPanel tabId={3}>
+				<VerificationStep />
+			</TabPanel>
+
+			<TabPanel tabId={4}>
+				<ReviewStep wallet={wallet} />
+			</TabPanel>
+		</Tabs>
+	);
+};
 
 const transactionDetails = ({
 	transaction,

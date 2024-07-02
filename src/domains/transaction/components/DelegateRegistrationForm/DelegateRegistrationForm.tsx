@@ -9,6 +9,7 @@ import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistrati
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { isMainsailNetwork } from "@/utils/network-utils";
 import { TransactionPublicKey } from "@/domains/transaction/components/TransactionDetail/TransactionPublicKey";
+import { assertWallet } from "@/utils/assertions";
 
 const component = ({
 	activeTab,
@@ -16,18 +17,22 @@ const component = ({
 	profile,
 }: {
 	activeTab: number;
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
-}) => (
-	<Tabs activeId={activeTab}>
-		<TabPanel tabId={1}>
-			<FormStep wallet={wallet} profile={profile} />
-		</TabPanel>
-		<TabPanel tabId={2}>
-			<ReviewStep wallet={wallet} />
-		</TabPanel>
-	</Tabs>
-);
+}) => {
+	assertWallet(wallet);
+
+	return (
+		<Tabs activeId={activeTab}>
+			<TabPanel tabId={1}>
+				<FormStep wallet={wallet} profile={profile} />
+			</TabPanel>
+			<TabPanel tabId={2}>
+				<ReviewStep wallet={wallet} />
+			</TabPanel>
+		</Tabs>
+	);
+};
 
 const transactionDetails = ({
 	transaction,

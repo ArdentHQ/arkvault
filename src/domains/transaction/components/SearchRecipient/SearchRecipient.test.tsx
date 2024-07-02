@@ -5,15 +5,19 @@ import React from "react";
 import { SearchRecipient } from "./SearchRecipient";
 import { RecipientProperties } from "./SearchRecipient.contracts";
 import { translations } from "@/domains/transaction/i18n";
+import { buildTranslations } from "@/app/i18n/helpers";
 import { env, getDefaultProfileId, render, screen, waitFor, within, renderResponsive } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let recipients: RecipientProperties[];
 
+const commonTranslations = buildTranslations();
+
 const modalDescription = () =>
 	expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION);
 
 const firstAddress = () => screen.getByTestId("RecipientListItem__selected-button-0");
+const secondAddress = () => screen.getByTestId("RecipientListItem__select-button-1");
 
 describe("SearchRecipient", () => {
 	beforeAll(() => {
@@ -30,13 +34,31 @@ describe("SearchRecipient", () => {
 		}));
 	});
 
-	it("should not render if not open", () => {
+	it("should not render if not open", async () => {
 		const { asFragment } = render(
 			<SearchRecipient profile={profile} isOpen={false} recipients={recipients} onAction={vi.fn} />,
 		);
 
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+		await expect(screen.findByTestId("Modal__inner")).rejects.toThrow(/Unable to find/);
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with recipient type other than wallet", () => {
+		const wallets: Contracts.IReadWriteWallet[] = profile.wallets().values();
+
+		const searchRecipients = wallets.map((wallet) => ({
+			address: wallet.address(),
+			alias: wallet.alias(),
+			avatar: wallet.avatar(),
+			id: wallet.id(),
+			network: wallet.networkId(),
+			type: "contact",
+		}));
+
+		render(<SearchRecipient profile={profile} isOpen recipients={searchRecipients} onAction={vi.fn} />);
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		expect(screen.getAllByText(commonTranslations.COMMON.CONTACT)).toHaveLength(searchRecipients.length);
 	});
 
 	it("should render a modal", () => {
@@ -106,6 +128,26 @@ describe("SearchRecipient", () => {
 		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with selected address", () => {
+		const onAction = vi.fn();
+
+		render(
+			<SearchRecipient
+				profile={profile}
+				isOpen={true}
+				recipients={recipients}
+				selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+				onAction={onAction}
+			/>,
+		);
+
+		expect(secondAddress()).toBeInTheDocument();
+
+		userEvent.click(secondAddress());
+
+		expect(onAction).toHaveBeenCalledWith(recipients[1].address);
 	});
 
 	it("should render with selected address when no compact", () => {

@@ -15,8 +15,10 @@ export interface SendRegistrationDetailsOptions {
 
 export interface SendRegistrationComponent {
 	activeTab: number;
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
+	onSelectedWallet?: (wallet?: Contracts.IReadWriteWallet) => void;
+	showWalletSelector?: boolean;
 }
 
 export interface SendRegistrationSignOptions {
@@ -27,8 +29,10 @@ export interface SendRegistrationSignOptions {
 }
 
 export interface FormStepProperties {
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
+	onSelectedWallet?: (wallet?: Contracts.IReadWriteWallet) => void;
+	showWalletSelector?: boolean;
 }
 
 export interface SendRegistrationForm {

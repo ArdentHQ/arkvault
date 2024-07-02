@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MnemonicList } from "./MnemonicList";
+import { MnemonicList, MnemonicListSkeleton } from "./MnemonicList";
 import { render, screen } from "@/utils/testing-library";
 
 describe("MnemonicList", () => {
@@ -37,5 +37,15 @@ describe("MnemonicList", () => {
 		}
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+});
+
+describe("MnemonicListSkeleton", () => {
+	it("should render", () => {
+		render(<MnemonicListSkeleton />);
+
+		const items = screen.getAllByTestId("MnemonicList__item_skeleton");
+
+		expect(items).toHaveLength(24);
 	});
 });

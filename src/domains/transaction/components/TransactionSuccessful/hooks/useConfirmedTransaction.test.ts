@@ -2,6 +2,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useConfirmedTransaction } from "./useConfirmedTransaction";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
 
 describe("useConfirmedTransaction", () => {
 	let profile: Contracts.IProfile;
@@ -28,7 +29,13 @@ describe("useConfirmedTransaction", () => {
 	});
 
 	it("should set isConfirmed to true when transaction is found", async () => {
+		const transaction = {
+			...TransactionFixture,
+			wallet: () => wallet,
+		};
+
 		vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue({});
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(transaction);
 
 		const { result, waitForNextUpdate } = renderHook(() =>
 			useConfirmedTransaction({

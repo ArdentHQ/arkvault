@@ -1,4 +1,4 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Vitest Snapshot v1
 
 exports[`SelectNetworkStep > should render 1`] = `
 <DocumentFragment>
@@ -102,13 +102,13 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-0-menu"
+              aria-owns="downshift-12-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-0-input"
-                  id="downshift-0-label"
+                  for="downshift-12-input"
+                  id="downshift-12-label"
                 />
                 <div
                   class="css-1psxlcd"
@@ -118,12 +118,12 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-0-menu"
-                      aria-labelledby="downshift-0-label"
+                      aria-controls="downshift-12-menu"
+                      aria-labelledby="downshift-12-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none cursor-default css-1nupw50"
                       data-testid="SelectDropdown__input"
-                      id="downshift-0-input"
+                      id="downshift-12-input"
                       name="network"
                       placeholder="Select option"
                       type="text"
@@ -173,8 +173,8 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-0-label"
-                id="downshift-0-menu"
+                aria-labelledby="downshift-12-label"
+                id="downshift-12-menu"
                 role="listbox"
               />
             </div>

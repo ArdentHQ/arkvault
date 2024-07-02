@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-
+import userEvent from "@testing-library/user-event";
 import { NetworkStep } from "./NetworkStep";
 import {
 	env,
@@ -14,6 +14,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
+import * as hooksMock from "@/app/hooks";
 let profile: Contracts.IProfile;
 
 const fixtureProfileId = getDefaultProfileId();
@@ -37,6 +38,41 @@ describe("SelectNetworkStep", () => {
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with error", () => {
+		const { result: form } = renderHook(() => useForm());
+		render(
+			<FormProvider {...form.current}>
+				<NetworkStep profile={profile} title="title" subtitle="subtitle" error="Error Message" />
+			</FormProvider>,
+		);
+
+		expect(screen.getByText("Error Message")).toBeInTheDocument();
+	});
+
+	it("should handle select", async () => {
+		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
+
+		const { result: form } = renderHook(() => useForm());
+
+		render(
+			<FormProvider {...form.current}>
+				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
+			</FormProvider>,
+		);
+
+		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
+		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
+
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
+		expect(selectDropdown).toBeInTheDocument();
+		userEvent.type(selectDropdown, "ARK");
+		userEvent.keyboard("{enter}");
+
+		expect(screen.getByTestId("select-list__input")).toHaveValue("ark.mainnet");
+
+		mockProfileWithOnlyPublicNetworksReset();
 	});
 
 	it("should render without test networks", async () => {
@@ -68,6 +104,27 @@ describe("SelectNetworkStep", () => {
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
 		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
+
+		mockProfileWithOnlyPublicNetworksReset();
+	});
+
+	it("should render with divider if exactly 2 networks", () => {
+		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
+
+		const useNetworksSpy = vi
+			.spyOn(hooksMock, "useNetworks")
+			.mockReturnValue(profile.availableNetworks().slice(0, 2));
+
+		const { result: form } = renderHook(() => useForm());
+		render(
+			<FormProvider {...form.current}>
+				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
+			</FormProvider>,
+		);
+
+		expect(screen.getByTestId("Divider")).toBeInTheDocument();
+
+		useNetworksSpy.mockRestore();
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});

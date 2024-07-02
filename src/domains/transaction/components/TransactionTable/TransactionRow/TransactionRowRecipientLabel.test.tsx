@@ -137,7 +137,7 @@ describe("TransactionRowRecipientLabel", () => {
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
 		});
 
-		it("should show a switch vote label", () => {
+		it("should show a vote swap label", () => {
 			render(
 				<TransactionRowRecipientLabel
 					transaction={{

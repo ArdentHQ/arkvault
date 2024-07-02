@@ -189,7 +189,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE);
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE_DELEGATE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 

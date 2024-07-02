@@ -232,6 +232,22 @@ describe("WalletVote", () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
+		it("should render a vote for an active delegate without username", async () => {
+			const delegate = {
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					...defaultDelegate,
+					rank: 10,
+				}),
+			};
+
+			render(<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={[delegate]} isLoadingVotes={false} />);
+
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+
+			expect(screen.getByTestId("Votes__address")).toBeInTheDocument();
+		});
+
 		it("should render a vote for a standby delegate", async () => {
 			const { result } = renderHook(() => useTranslation());
 			const { t } = result.current;

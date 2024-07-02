@@ -134,6 +134,43 @@ describe("Wallet Options Hook", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should render username registration", () => {
+		// Allow everything
+		vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+
+		const { result } = renderHook(() => useWalletOptions(wallet));
+
+		expect(
+			result.current.registrationOptions.options.find((option) => option.value === "username-registration"),
+		).toBeTruthy();
+
+		expect(
+			result.current.registrationOptions.options.find((option) => option.value === "username-resignaton"),
+		).toBeFalsy();
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render username registration and resignation if wallet has username", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		// Allow everything´
+		vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+		vi.spyOn(wallet, "username").mockReturnValue("alfy");
+
+		const { result } = renderHook(() => useWalletOptions(wallet));
+
+		expect(
+			result.current.registrationOptions.options.find((option) => option.value === "username-registration"),
+		).toBeTruthy();
+
+		expect(
+			result.current.registrationOptions.options.find((option) => option.value === "username-resignation"),
+		).toBeTruthy();
+
+		vi.restoreAllMocks();
+	});
+
 	it("should render options for wallet of custom network and disable musig option", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 

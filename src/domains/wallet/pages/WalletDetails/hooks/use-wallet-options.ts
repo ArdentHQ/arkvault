@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { DropdownOptionGroup } from "@/app/components/Dropdown";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { hasAvailableMusigServer } from "@/utils/server-utils";
-import { isCustomNetwork } from "@/utils/network-utils";
+import { isCustomNetwork, isMainsailNetwork } from "@/utils/network-utils";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { selectDelegateValidatorTranslation } from "@/domains/wallet/utils/selectDelegateValidatorTranslation";
 
@@ -94,8 +94,9 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 		return registrationOptions;
 	}
 
-	if (wallet.balance() > 0 && !wallet.isLedger() && !isMultiSignature(wallet) && isRestoredAndSynced(wallet)) {
+	if (wallet.balance() > 0 && !wallet.isLedger() && isRestoredAndSynced(wallet)) {
 		if (
+			(isMainsailNetwork(wallet.network()) || !isMultiSignature(wallet)) &&
 			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateRegistration) &&
 			!wallet.isDelegate() &&
 			!wallet.isResignedDelegate()
@@ -111,6 +112,7 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 		}
 
 		if (
+			(isMainsailNetwork(wallet.network()) || !isMultiSignature(wallet)) &&
 			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateResignation) &&
 			wallet.isDelegate() &&
 			!wallet.isResignedDelegate()

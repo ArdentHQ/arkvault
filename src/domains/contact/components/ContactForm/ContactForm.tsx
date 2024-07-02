@@ -136,6 +136,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 			<SubForm>
 				<FormField name="network">
 					<FormLabel>{t("CONTACTS.CONTACT_FORM.CRYPTOASSET")}</FormLabel>
+
 					<SelectNetworkDropdown
 						profile={profile}
 						networks={filteredNetworks}

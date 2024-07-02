@@ -10,7 +10,7 @@ const coverageThresholdStatements = Number(process.env.COVERAGE_THRESHOLD_STATEM
 const coverageThresholdBranches = Number(process.env.COVERAGE_THRESHOLD_BRANCHES || 100);
 
 export default mergeConfig(
-	viteConfig,
+	viteConfig(),
 	defineConfig({
 		server: {
 			sourcemapIgnoreList: false,
@@ -46,6 +46,9 @@ export default mergeConfig(
 					"src/tailwind.config.js",
 					"src/tests/**/*",
 					"src/utils/e2e-utils.ts",
+					"src/utils/ledger-test-helpers.ts",
+					"src/utils/testing-library.tsx",
+					"src/utils/test-helpers.ts",
 				],
 				provider: "istanbul",
 				reporter: ["json", "lcov", "text", "clover", "html"],

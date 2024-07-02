@@ -15,7 +15,7 @@ describe("MnemonicVerification", () => {
 	});
 
 	it("should render with special delimiter", () => {
-		const mnemonic = "てまきずし くわしい うけもつ ないす にっけい おつり";
+		const mnemonic = "てまきずし\u3000くわしい\u3000うけもつ\u3000ないす\u3000にっけい おつり";
 
 		render(<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />);
 

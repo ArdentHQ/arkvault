@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
@@ -25,12 +26,12 @@ import {
 	within,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
+	act,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -68,9 +69,12 @@ vi.mock("@/utils/delay", () => ({
 
 describe("SendIpfs", () => {
 	let resetProfileNetworksMock: () => void;
-	let confirmedTransactionMock: SpyInstance;
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
@@ -81,10 +85,6 @@ describe("SendIpfs", () => {
 		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
-
-		confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
 
 		await wallet.synchroniser().identity();
 
@@ -112,7 +112,7 @@ describe("SendIpfs", () => {
 
 	afterAll(() => {
 		getVersionSpy.mockRestore();
-		confirmedTransactionMock.mockRestore();
+		vi.useRealTimers();
 	});
 
 	it("should render form step", async () => {
@@ -214,7 +214,9 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await act(() => vi.runOnlyPendingTimers());
+
+		await expect(screen.findByTestId("MultisignatureSuccessful")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -346,6 +348,9 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		userEvent.click(sendButton());
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -444,6 +449,10 @@ describe("SendIpfs", () => {
 
 		userEvent.keyboard("{enter}");
 		userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -654,7 +663,7 @@ describe("SendIpfs", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should show error step and go back", async () => {
+	it("should show error step and close", async () => {
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
 
 		const addressFromMnemonicMock = vi
@@ -730,6 +739,84 @@ describe("SendIpfs", () => {
 		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		expect(historyMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`);
+
+		signMock.mockRestore();
+		addressFromMnemonicMock.mockRestore();
+	});
+
+	it("should show error step and go back", async () => {
+		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
+
+		const addressFromMnemonicMock = vi
+			.spyOn(wallet.coin().address(), "fromMnemonic")
+			.mockResolvedValue({ address: wallet.address() });
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
+				<SendIpfs />
+			</Route>,
+			{
+				route: ipfsURL,
+			},
+		);
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
+		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
+		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
+
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await waitFor(() =>
+			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
+		);
+
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
+
+		expect(continueButton()).not.toBeDisabled();
+
+		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		userEvent.click(continueButton());
+
+		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
+
+			userEvent.click(screen.getByTestId(feeWarningContinueID));
+		}
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		// Step 5 (skip step 4 for now - ledger confirmation)
+		const signMock = vi.spyOn(wallet.transaction(), "signIpfs").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		await waitFor(() => {
+			expect(sendButton()).toBeEnabled();
+		});
+		userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+		expect(screen.getByTestId("ErrorStep__back-button")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeInTheDocument();
 
 		signMock.mockRestore();
 		addressFromMnemonicMock.mockRestore();
@@ -822,6 +909,10 @@ describe("SendIpfs", () => {
 		const transactionMock = createTransactionMock(wallet);
 
 		userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -943,6 +1034,9 @@ describe("SendIpfs", () => {
 			userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 		// Auto broadcast
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 

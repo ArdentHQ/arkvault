@@ -214,7 +214,11 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 							{delegate.username() ? (
 								<span>{delegate.username()}</span>
 							) : (
-								<TruncateMiddleDynamic value={delegate.address()} availableWidth={width} />
+								<TruncateMiddleDynamic
+									data-testid="Votes__address"
+									value={delegate.address()}
+									availableWidth={width}
+								/>
 							)}
 						</>
 					) : (

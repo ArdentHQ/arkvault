@@ -1,37 +1,39 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
-import { Signatories } from "@ardenthq/sdk";
+
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-
+import { Signatories } from "@ardenthq/sdk";
+import { createHashHistory } from "history";
+import userEvent from "@testing-library/user-event";
 import { SendVote } from "./SendVote";
-import { toasts } from "@/app/services";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
-import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
-import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import * as transportMock from "@/app/contexts/Ledger/transport";
+
 import {
 	act,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
+	mockNanoXTransport,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks,
-	mockNanoXTransport,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { requestMock, server } from "@/tests/mocks/server";
+
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import { appendParameters } from "@/domains/vote/utils/url-parameters";
+import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { toasts } from "@/app/services";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
+import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -68,7 +70,6 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let confirmedTransactionMock: SpyInstance;
 
 const votingMockImplementation = () => [
 	{
@@ -100,6 +101,11 @@ describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -119,14 +125,6 @@ describe("SendVote", () => {
 		}
 
 		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
-
-		confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
-	});
-
-	afterAll(() => {
-		confirmedTransactionMock.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -149,6 +147,10 @@ describe("SendVote", () => {
 	afterEach(() => {
 		vi.useRealTimers();
 		resetProfileNetworksMock();
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	it("should return to the select a delegate page to unvote", async () => {
@@ -278,9 +280,9 @@ describe("SendVote", () => {
 		votesMock.mockRestore();
 		const votingMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 
-		act(() => {
-			vi.advanceTimersByTime(1000);
-		});
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -488,6 +490,10 @@ describe("SendVote", () => {
 		);
 
 		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(2, voteFixture.data.id));
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -1000,7 +1006,7 @@ describe("SendVote", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should show error step and go back", async () => {
+	it("should show error step and close", async () => {
 		vi.useRealTimers();
 
 		const history = createHashHistory();
@@ -1017,7 +1023,7 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "vote", votes);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<SendVote />
 			</Route>,
@@ -1066,12 +1072,84 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
-		expect(container).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+
+		signMock.mockRestore();
+	});
+
+	it("should show error step and go back", async () => {
+		vi.useRealTimers();
+
+		const history = createHashHistory();
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+				<SendVote />
+			</Route>,
+			{
+				history,
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
+
+		// Review Step
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		userEvent.click(continueButton());
+
+		// AuthenticationStep
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const signMock = vi.spyOn(wallet.transaction(), "signVote").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		userEvent.paste(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+		expect(screen.getByTestId("ErrorStep__back-button")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		signMock.mockRestore();
 	});
@@ -1258,5 +1336,81 @@ describe("SendVote", () => {
 		voteTransactionMock.mockRestore();
 		mockWalletData.mockRestore();
 		nanoXMock.mockRestore();
+	});
+
+	it("should error if vote transaction with a ledger wallet and no ledger transform supported", async () => {
+		const isLedgerTransportSupportedSpy = vi
+			.spyOn(transportMock, "isLedgerTransportSupported")
+			.mockReturnValue(false);
+
+		const nanoXMock = mockNanoXTransport();
+		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+
+		const getPublicKeySpy = vi
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
+
+		const signTransactionSpy = vi
+			.spyOn(wallet.transaction(), "signVote")
+			.mockReturnValue(Promise.resolve(voteFixture.data.id));
+
+		const voteTransactionMock = createVoteTransactionMock(wallet);
+
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [voteFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+				<SendVote />
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
+
+		// Review Step
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+
+		await act(async () => {
+			userEvent.click(continueButton());
+		});
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		getPublicKeySpy.mockRestore();
+		signTransactionSpy.mockRestore();
+		isLedgerSpy.mockRestore();
+		broadcastMock.mockRestore();
+		voteTransactionMock.mockRestore();
+		nanoXMock.mockRestore();
+
+		isLedgerTransportSupportedSpy.mockRestore();
 	});
 });
