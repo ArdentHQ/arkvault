@@ -3,6 +3,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { Route, useHistory, Prompt } from "react-router-dom";
+import { ErrorBoundary } from "react-error-boundary";
 import { AppRouter, Main } from "./App.blocks";
 import {
 	env,
@@ -14,8 +15,7 @@ import {
 } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
-import { ApplicationError } from "../domains/error/pages";
-import { ErrorBoundary } from "react-error-boundary";
+import { ApplicationError } from "@/domains/error/pages";
 const history = createHashHistory();
 
 vi.mock("@/utils/delay", () => ({
