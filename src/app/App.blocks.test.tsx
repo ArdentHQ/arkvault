@@ -113,7 +113,7 @@ describe("App Router", () => {
 	});
 });
 
-const renderComponent = (path = '/', options = {}) => {
+const renderComponent = (path = "/", options = {}) => {
 	render(
 		<ErrorBoundary FallbackComponent={ApplicationError}>
 			<Route path={path}>
@@ -124,10 +124,10 @@ const renderComponent = (path = '/', options = {}) => {
 			history,
 			route: "/",
 			withProviders: true,
-			...options
+			...options,
 		},
 	);
-}
+};
 
 describe("App Main", () => {
 	beforeEach(() => {
@@ -167,7 +167,7 @@ describe("App Main", () => {
 			throw new Error("sync test");
 		});
 
-		renderComponent('/profiles/:profileId/exchange', {route: profileUrl});
+		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 
@@ -190,7 +190,7 @@ describe("App Main", () => {
 		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
 		history.push(profileUrl);
 
-		renderComponent('/profiles/:profileId/exchange', {route: profileUrl});
+		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 		await waitFor(() => expect(successToastSpy).toHaveBeenCalled());
@@ -220,7 +220,7 @@ describe("App Main", () => {
 		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
 		history.push(profileUrl);
 
-		renderComponent('/profiles/:profileId/exchange', {route: profileUrl});
+		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 		await waitFor(() => expect(warningToastSpy).toHaveBeenCalled());
@@ -243,7 +243,7 @@ describe("App Main", () => {
 		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
 		history.push(profileUrl);
 
-		renderComponent(profileUrl, {route: profileUrl});
+		renderComponent(profileUrl, { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 
