@@ -1,5 +1,5 @@
 import { fixupConfigRules, fixupPluginRules } from "@eslint/compat";
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
+import typescript from "@typescript-eslint/eslint-plugin";
 import prettier from "eslint-plugin-prettier";
 import promise from "eslint-plugin-promise";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -10,6 +10,9 @@ import testcafe from "eslint-plugin-testcafe";
 import testingLibrary from "eslint-plugin-testing-library";
 import unicorn from "eslint-plugin-unicorn";
 import unusedImports from "eslint-plugin-unused-imports";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import aliasImport from "eslint-plugin-import-alias";
+import sortImportsEs6Autofix from "eslint-plugin-sort-imports-es6-autofix";
 import globals from "globals";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -48,9 +51,6 @@ export default [
 			"plugin:@typescript-eslint/eslint-recommended",
 			"plugin:@typescript-eslint/recommended-requiring-type-checking",
 			"plugin:@typescript-eslint/recommended",
-			// "plugin:import/errors",
-			// "plugin:import/typescript",
-			// "plugin:import/warnings",
 			"plugin:prettier/recommended",
 			"plugin:promise/recommended",
 			"plugin:react-hooks/recommended",
@@ -63,7 +63,7 @@ export default [
 	),
 	{
 		plugins: {
-			"@typescript-eslint": fixupPluginRules(typescriptEslint),
+			"@typescript-eslint": fixupPluginRules(typescript),
 			prettier: fixupPluginRules(prettier),
 			promise: fixupPluginRules(promise),
 			"react-hooks": fixupPluginRules(reactHooks),
@@ -74,32 +74,30 @@ export default [
 			"testing-library": fixupPluginRules(testingLibrary),
 			unicorn: fixupPluginRules(unicorn),
 			"unused-imports": unusedImports,
+			"simple-import-sort": fixupPluginRules(simpleImportSort),
+			"alias-import": fixupPluginRules(aliasImport),
+			"sort-imports-es6-autofix": fixupPluginRules(sortImportsEs6Autofix),
 		},
-
 		languageOptions: {
 			globals: {
 				...globals.browser,
 				...globals.node,
 				vi: false,
 			},
-
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: true,
 				},
-
 				project: "./tsconfig.eslint.json",
 				tsconfigRootDir: __dirname,
 				projectFolderIgnoreList: ["build", "coverage", "node_modules", "public", "dist", "src/tests/mocks"],
 			},
 		},
-
 		settings: {
 			react: {
 				version: "detect",
 			},
 		},
-
 		rules: {
 			"@typescript-eslint/ban-ts-comment": "warn",
 			"@typescript-eslint/ban-types": "warn",
@@ -118,14 +116,12 @@ export default [
 			"@typescript-eslint/no-unsafe-return": "warn",
 			"@typescript-eslint/no-unused-expressions": "warn",
 			"@typescript-eslint/await-thenable": "off",
-
 			"@typescript-eslint/no-unused-vars": [
 				"error",
 				{
 					varsIgnorePattern: "_",
 				},
 			],
-
 			"@typescript-eslint/no-var-requires": "warn",
 			"@typescript-eslint/prefer-regexp-exec": "warn",
 			"@typescript-eslint/restrict-plus-operands": "warn",
@@ -133,31 +129,6 @@ export default [
 			"@typescript-eslint/unbound-method": "warn",
 			"arrow-body-style": ["error", "as-needed"],
 			curly: "error",
-			// "import/order": "error",
-			// "import/default": "error",
-			// "import/export": "warn",
-			// "import/exports-last": "warn",
-			// "import/extensions": "off",
-			// "import/first": "error",
-			// "import/group-exports": "off",
-			// "import/namespace": "error",
-			// "import/no-absolute-path": "error",
-			// "import/no-anonymous-default-export": "error",
-			// "import/no-cycle": "warn",
-			// "import/no-deprecated": "error",
-			// "import/no-duplicates": "error",
-			// "import/no-dynamic-require": "off",
-			// "import/no-extraneous-dependencies": "error",
-			// "import/no-mutable-exports": "error",
-			// "import/no-namespace": "warn",
-			// "import/no-relative-parent-imports": "error",
-			// "import/no-restricted-paths": "error",
-			// "import/no-self-import": "error",
-			// "import/no-unresolved": "off",
-			// "import/no-unused-modules": "error",
-			// "import/no-useless-path-segments": "error",
-			// "import/no-webpack-loader-syntax": "error",
-
 			"max-lines": [
 				"warn",
 				{
@@ -166,7 +137,6 @@ export default [
 					skipComments: true,
 				},
 			],
-
 			"max-lines-per-function": [
 				"warn",
 				{
@@ -175,37 +145,31 @@ export default [
 					skipComments: true,
 				},
 			],
-
 			"no-negated-condition": "error",
 			"no-nested-ternary": "error",
 			"no-unneeded-ternary": "error",
 			"no-unused-expressions": "off",
 			"no-unused-vars": "off",
-
 			"prefer-const": [
 				"warn",
 				{
 					destructuring: "all",
 				},
 			],
-
 			"prettier/prettier": [
 				"off",
 				{
 					endOfLine: "auto",
 				},
 			],
-
 			"promise/param-names": "warn",
 			"react-hooks/rules-of-hooks": "error",
-
 			"react/no-unknown-property": [
 				"error",
 				{
 					ignore: ["css"],
 				},
 			],
-
 			"react/prop-types": "off",
 			"react/self-closing-comp": "error",
 			"sonarjs/cognitive-complexity": "error",
@@ -218,8 +182,6 @@ export default [
 			"sonarjs/no-small-switch": "error",
 			"sonarjs/no-use-of-empty-return-value": "error",
 			"sonarjs/no-nested-template-literals": "warn",
-			"sonarjs/prefer-single-boolean-return": "off",
-
 			"sort-keys-fix/sort-keys-fix": [
 				"error",
 				"asc",
@@ -227,7 +189,6 @@ export default [
 					caseSensitive: true,
 				},
 			],
-
 			"testing-library/await-async-queries": "warn",
 			"testing-library/await-async-utils": "error",
 			"testing-library/consistent-data-testid": "off",
@@ -265,14 +226,12 @@ export default [
 			"unicorn/no-new-array": "error",
 			"unicorn/no-null": "warn",
 			"unicorn/no-object-as-default-parameter": "error",
-
 			"unicorn/no-useless-undefined": [
 				"error",
 				{
 					checkArguments: false,
 				},
 			],
-
 			"unicorn/prefer-array-some": "error",
 			"unicorn/prefer-at": "off",
 			"unicorn/prefer-module": "off",
@@ -283,21 +242,18 @@ export default [
 			"unicorn/prefer-string-slice": "error",
 			"unicorn/prefer-ternary": "off",
 			"unicorn/prefer-top-level-await": "error",
-			"unicorn/prefer-blob-reading-methods": "off",
-
 			"unicorn/prevent-abbreviations": [
 				"error",
 				{
 					ignore: [{}, "i18n", "e2e"],
 				},
 			],
-
-			// "unused-imports/no-unused-imports-ts": "error",
+			"simple-import-sort/imports": "error",
+			"simple-import-sort/exports": "error",
 		},
 	},
 	{
 		files: ["**/e2e/*.ts", "**/cucumber/*.ts", "**/cucumber/*.feature"],
-
 		rules: {
 			"import/no-relative-parent-imports": "off",
 			"sort-keys-fix/sort-keys-fix": "off",
