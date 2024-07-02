@@ -793,7 +793,6 @@ describe("Welcome", () => {
 		// // Still disabled
 		expect(screen.getByTestId(submitTestID)).toBeDisabled();
 
-
 		// wait for form to be updated
 		await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();
 
