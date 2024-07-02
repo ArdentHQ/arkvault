@@ -87,13 +87,13 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
 		).toBeInTheDocument();
 
-		userEvent.paste(messageInput(), signMessage);
+		await userEvent.type(messageInput(), signMessage);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
 		await waitFor(() =>
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
@@ -101,7 +101,7 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 
 		await waitFor(() => expect(signButton()).toBeEnabled());
 
-		userEvent.click(signButton());
+		await userEvent.click(signButton());
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
@@ -143,13 +143,13 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
 		).toBeInTheDocument();
 
-		userEvent.paste(messageInput(), signMessage);
+		await userEvent.type(messageInput(), signMessage);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
 		await waitFor(() =>
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
@@ -157,7 +157,7 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 
 		await waitFor(() => expect(signButton()).toBeEnabled());
 
-		userEvent.click(signButton());
+		await userEvent.click(signButton());
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
