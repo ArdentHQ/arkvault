@@ -2,8 +2,9 @@ import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useForm } from "react-hook-form";
 
-import { Form } from "./Form";
 import { fireEvent, render, screen } from "@/utils/testing-library";
+
+import { Form } from "./Form";
 
 describe("Form", () => {
 	it("should render with provider", async () => {

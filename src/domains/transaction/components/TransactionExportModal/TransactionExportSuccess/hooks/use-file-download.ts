@@ -1,4 +1,4 @@
-import { useFiles, ReadableFile } from "@/app/hooks/use-files";
+import { ReadableFile, useFiles } from "@/app/hooks/use-files";
 
 export const useFileDownload = () => {
 	const { showSaveDialog } = useFiles();

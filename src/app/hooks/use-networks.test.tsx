@@ -2,9 +2,10 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
+
+import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { useNetworks } from "@/app/hooks";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
-import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
 
 describe("useNetworks", () => {

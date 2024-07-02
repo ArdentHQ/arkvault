@@ -1,7 +1,7 @@
-import React from "react";
 import QRScanner from "qr-scanner";
-
+import React from "react";
 import { useTranslation } from "react-i18next";
+
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { useFiles } from "@/app/hooks/use-files";

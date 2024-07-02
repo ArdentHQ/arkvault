@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React from "react";
 import userEvent from "@testing-library/user-event";
-import { AddRecipientItem } from "./AddRecipientItem";
+import React from "react";
+
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { AddRecipientItem } from "./AddRecipientItem";
 
 const deleteButton = () => screen.getByTestId("AddRecipientItem--deleteButton");
 
@@ -66,7 +68,7 @@ describe("Add Recipient item", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle the delete button", () => {
+	it("should handle the delete button", async () => {
 		const onDelete = vi.fn();
 
 		render(
@@ -80,7 +82,7 @@ describe("Add Recipient item", () => {
 			/>,
 		);
 
-		userEvent.click(deleteButton());
+		await userEvent.click(deleteButton());
 
 		expect(onDelete).toHaveBeenCalledWith(1);
 	});

@@ -2,10 +2,11 @@
 import { Networks } from "@ardenthq/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { ReceiveFunds } from "./ReceiveFunds";
-import { toasts } from "@/app/services";
 
+import { toasts } from "@/app/services";
 import { env, getDefaultProfileId, getDefaultWalletId, render, screen, waitFor } from "@/utils/testing-library";
+
+import { ReceiveFunds } from "./ReceiveFunds";
 
 let network: Networks.Network;
 const downloadQrButton = "ReceiveFunds__download-qr";
@@ -57,7 +58,7 @@ describe("ReceiveFunds", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -69,7 +70,7 @@ describe("ReceiveFunds", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("ReceiveFunds__toggle"));
+		await userEvent.click(screen.getByTestId("ReceiveFunds__toggle"));
 
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
@@ -81,7 +82,7 @@ describe("ReceiveFunds", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
 		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
 	});
 
@@ -98,7 +99,7 @@ describe("ReceiveFunds", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
 		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
 	});
 
@@ -109,7 +110,7 @@ describe("ReceiveFunds", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
 		await waitFor(() => expect(successToastSpy).toHaveBeenCalledWith(expect.anything()));
 	});
 });

@@ -1,5 +1,6 @@
-import { getColor } from "./PortfolioBreakdown.helpers";
 import { GRAPH_COLORS, GRAPH_COLORS_DARK } from "@/app/components/Graphs/Graphs.contracts";
+
+import { getColor } from "./PortfolioBreakdown.helpers";
 
 describe("PortfolioBreakdown.helpers", () => {
 	describe("getColor", () => {

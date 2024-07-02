@@ -2,10 +2,11 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { BalanceSkeleton } from "./BalanceSkeleton";
 import { Amount } from "@/app/components/Amount";
 import { useProfileBalance } from "@/app/hooks/use-profile-balance";
 import { assertProfile, assertString } from "@/utils/assertions";
+
+import { BalanceSkeleton } from "./BalanceSkeleton";
 
 interface BalanceProperties {
 	profile?: Contracts.IProfile;

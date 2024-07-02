@@ -8,7 +8,7 @@ export interface DropdownOption {
 	iconClassName?: string | ((option: DropdownOption) => string);
 	iconSize?: Size;
 	label: string;
-	secondaryLabel?: string | Function  ;
+	secondaryLabel?: string | Function;
 	value: string | number;
 	active?: boolean;
 	[key: string]: any;

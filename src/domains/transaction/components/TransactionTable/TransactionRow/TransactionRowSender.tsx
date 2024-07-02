@@ -1,10 +1,11 @@
-import cn from "classnames";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { useMemo } from "react";
 
-import { TransactionRowMode } from "./TransactionRowMode";
 import { Address } from "@/app/components/Address";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
+
+import { TransactionRowMode } from "./TransactionRowMode";
 
 interface Properties {
 	transaction: DTO.ExtendedConfirmedTransactionData;

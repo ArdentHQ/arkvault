@@ -1,5 +1,5 @@
-import cn from "classnames";
 import { DTO } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -7,8 +7,8 @@ import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
-import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { useBreakpoint } from "@/app/hooks";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon";
 
 export interface TransactionDetailAddressListProperties {

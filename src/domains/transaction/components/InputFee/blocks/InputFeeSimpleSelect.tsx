@@ -1,13 +1,13 @@
 import React from "react";
-
 import { useTranslation } from "react-i18next";
+
 import { Amount } from "@/app/components/Amount";
+import { Select } from "@/app/components/SelectDropdown";
 import { Skeleton } from "@/app/components/Skeleton";
 import {
 	InputFeeSimpleProperties,
 	InputFeeSimpleValue,
 } from "@/domains/transaction/components/InputFee/InputFee.contracts";
-import { Select } from "@/app/components/SelectDropdown";
 
 const feeSelectAddons = ({
 	showConvertedValues,

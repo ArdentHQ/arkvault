@@ -5,16 +5,17 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SendTransfer } from "./SendTransfer";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { SendTransfer } from "./SendTransfer";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -67,26 +68,26 @@ describe("SendTransfer MultiPayment", () => {
 		});
 
 		// Select multiple type
-		userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
 
 		await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
 
 		// 1st recipient.
-		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().first().address());
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().first().address());
+		await userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 		await waitFor(() => expect(screen.getByTestId(recipientAddButton)).toBeEnabled());
 
-		userEvent.click(screen.getByTestId(recipientAddButton));
+		await userEvent.click(screen.getByTestId(recipientAddButton));
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
 
 		// 2nd recipient.
-		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().last().address());
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().last().address());
+		await userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
 		await waitFor(() => expect(screen.getByTestId(recipientAddButton)).toBeEnabled());
-		userEvent.click(screen.getByTestId(recipientAddButton));
+		await userEvent.click(screen.getByTestId(recipientAddButton));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
 

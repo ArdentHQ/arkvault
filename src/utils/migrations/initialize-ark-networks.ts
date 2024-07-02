@@ -1,4 +1,5 @@
 import { ARK } from "@ardenthq/sdk-ark";
+
 import { isE2E, isPreview } from "@/utils/test-helpers";
 
 export const initializeArkNetworks = ({ data }) => {

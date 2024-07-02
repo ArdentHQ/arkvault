@@ -1,4 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+
 import { GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
 
 interface AssetItem {

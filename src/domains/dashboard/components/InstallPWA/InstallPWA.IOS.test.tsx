@@ -1,7 +1,9 @@
-import React from "react";
 import userEvent from "@testing-library/user-event";
+import React from "react";
+
+import { act, render, screen } from "@/utils/testing-library";
+
 import { InstallPWA } from "./InstallPWA";
-import { render, screen, act } from "@/utils/testing-library";
 
 let navigatorSpy: vi.SpyInstance;
 
@@ -42,11 +44,11 @@ describe("InstallPWA IOS", () => {
 			window.dispatchEvent(event);
 		});
 
-		userEvent.click(screen.getByTestId("InstallPWA__install"));
+		await userEvent.click(screen.getByTestId("InstallPWA__install"));
 
 		await expect(screen.findByTestId("IOsInstructions")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await expect(screen.findByTestId("IOsInstructions")).rejects.toThrow(/Unable to find/);
 
@@ -71,11 +73,11 @@ describe("InstallPWA IOS", () => {
 			window.dispatchEvent(event);
 		});
 
-		userEvent.click(screen.getByTestId("InstallPWA__install"));
+		await userEvent.click(screen.getByTestId("InstallPWA__install"));
 
 		await expect(screen.findByTestId("IOsInstructions")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("IOsInstructions__close-button"));
+		await userEvent.click(screen.getByTestId("IOsInstructions__close-button"));
 
 		await expect(screen.findByTestId("IOsInstructions")).rejects.toThrow(/Unable to find/);
 

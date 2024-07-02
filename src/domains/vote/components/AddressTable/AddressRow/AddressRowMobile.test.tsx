@@ -3,18 +3,18 @@
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
+import { Context as ResponsiveContext } from "react-responsive";
 import { Route } from "react-router-dom";
 
-import { Context as ResponsiveContext } from "react-responsive";
+import { useConfiguration } from "@/app/contexts";
 import {
 	AddressRowMobile,
 	AddressRowMobileDelegateName,
 } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
-import { useConfiguration } from "@/app/contexts";
-import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -344,7 +344,7 @@ describe("AddressRowMobile", () => {
 
 		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
 
-		userEvent.click(selectButton);
+		await userEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
 		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());

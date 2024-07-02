@@ -3,17 +3,18 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { DefaultValues } from "react-hook-form/dist/types/form";
-import { assertWallet } from "@/utils/assertions";
-import { lowerCaseEquals } from "@/utils/equals";
+
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useNetworks, useValidation } from "@/app/hooks";
 import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transaction-builder";
+import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { SendTransferForm } from "@/domains/transaction/pages/SendTransfer";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { getTransferType, handleBroadcastError } from "@/domains/transaction/utils";
-import { precisionRound } from "@/utils/precision-round";
-import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
+import { assertWallet } from "@/utils/assertions";
+import { lowerCaseEquals } from "@/utils/equals";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { precisionRound } from "@/utils/precision-round";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();

@@ -1,4 +1,3 @@
-
 import { sample } from "@ardenthq/sdk-helpers";
 
 const randomWordPositions = (length: number): number[] => {

@@ -1,6 +1,6 @@
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { addressIsValid, isValidIp, hasPath, endsWithSlash } from "@/utils/peers";
+import { addressIsValid, endsWithSlash, hasPath, isValidIp } from "@/utils/peers";
 
 export const server = (t: TFunction) => ({
 	address: (customNetworks: NormalizedNetwork[], networkToUpdate?: NormalizedNetwork) => ({

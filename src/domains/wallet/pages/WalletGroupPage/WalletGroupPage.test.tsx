@@ -3,14 +3,16 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 import { Context as ResponsiveContext } from "react-responsive";
-import { WalletGroupPage } from "./WalletGroupPage";
-import { env, getDefaultProfileId, render, screen, syncDelegates } from "@/utils/testing-library";
+import { Route } from "react-router-dom";
+
 import * as envHooks from "@/app/hooks/env";
 import * as useDisplayWallets from "@/domains/wallet/hooks/use-display-wallets";
 import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
-import { server, requestMock } from "@/tests/mocks/server";
+import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, render, screen, syncDelegates } from "@/utils/testing-library";
+
+import { WalletGroupPage } from "./WalletGroupPage";
 
 const history = createHashHistory();
 
@@ -87,7 +89,7 @@ describe("WalletGroupPage", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should paginate", () => {
+	it("should paginate", async () => {
 		render(
 			<Route path="/profiles/:profileId/network/:networkId">
 				<ResponsiveContext.Provider value={{ width: 1024 }}>
@@ -103,7 +105,7 @@ describe("WalletGroupPage", () => {
 		expect(screen.getByTestId("Pagination")).toBeInTheDocument();
 		expect(screen.getByTestId("Pagination__next")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Pagination__next"));
+		await userEvent.click(screen.getByTestId("Pagination__next"));
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 	});

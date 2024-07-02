@@ -3,13 +3,13 @@ import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
+import { StepHeader } from "@/app/components/StepHeader";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import {
 	TransactionDetail,
 	TransactionNetwork,
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
-import { StepHeader } from "@/app/components/StepHeader";
 
 export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();

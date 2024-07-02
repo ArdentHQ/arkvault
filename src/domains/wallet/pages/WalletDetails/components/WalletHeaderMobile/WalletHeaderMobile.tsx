@@ -1,23 +1,23 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React from "react";
-
-import tw, { styled } from "twin.macro";
 import { t } from "i18next";
-import { WalletHeaderProperties } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader/WalletHeader.contracts";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { Avatar } from "@/app/components/Avatar";
-import { WalletIcons } from "@/app/components/WalletIcons";
-import { Icon } from "@/app/components/Icon";
-import { useWalletActions } from "@/domains/wallet/hooks";
-import { Clipboard } from "@/app/components/Clipboard";
-import { useWalletAlias } from "@/app/hooks";
+import React from "react";
+import tw, { styled } from "twin.macro";
+
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { assertString } from "@/utils/assertions";
+import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
+import { Clipboard } from "@/app/components/Clipboard";
 import { Dropdown } from "@/app/components/Dropdown";
-import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+import { Icon } from "@/app/components/Icon";
+import { WalletIcons } from "@/app/components/WalletIcons";
+import { useWalletAlias } from "@/app/hooks";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
+import { useWalletActions } from "@/domains/wallet/hooks";
+import { WalletHeaderProperties } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader/WalletHeader.contracts";
+import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+import { assertString } from "@/utils/assertions";
 
 const WalletHeaderButtonMobile = styled.button`
 	${tw`inline-flex items-center justify-center w-6 h-6 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text disabled:text-theme-secondary-800`}

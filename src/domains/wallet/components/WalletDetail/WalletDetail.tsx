@@ -1,8 +1,9 @@
 import cn from "classnames";
 import React from "react";
 import { styled } from "twin.macro";
-import { getStyles } from "@/domains/transaction/components/TransactionDetail/TransactionDetail.styles";
+
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
+import { getStyles } from "@/domains/transaction/components/TransactionDetail/TransactionDetail.styles";
 
 const WalletDetailStyled = styled.div<TransactionDetailProperties>(getStyles);
 

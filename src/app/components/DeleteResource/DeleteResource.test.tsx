@@ -1,7 +1,8 @@
 import React from "react";
 
-import { DeleteResource } from "./DeleteResource";
 import { render, screen } from "@/utils/testing-library";
+
+import { DeleteResource } from "./DeleteResource";
 
 const onDelete = vi.fn();
 

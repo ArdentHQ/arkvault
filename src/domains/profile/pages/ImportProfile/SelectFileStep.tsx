@@ -5,9 +5,9 @@ import { Alert } from "@/app/components/Alert";
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
 import { SelectFile } from "@/app/components/SelectFile";
-import { ReadableFile } from "@/app/hooks/use-files";
-import { useNavigationContext } from "@/app/contexts";
 import { StepHeader } from "@/app/components/StepHeader";
+import { useNavigationContext } from "@/app/contexts";
+import { ReadableFile } from "@/app/hooks/use-files";
 
 interface SelectFileStepProperties {
 	fileFormat: string;

@@ -3,29 +3,29 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import * as filterWalletsHooks from "@/domains/dashboard/components/FilterWallets/hooks";
+
 import * as configurationModule from "@/app/contexts/Configuration/Configuration";
+import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import * as filterWalletsHooks from "@/domains/dashboard/components/FilterWallets/hooks";
+import { translations } from "@/domains/dashboard/i18n";
 import { PortfolioHeader } from "@/domains/wallet/components/PortfolioHeader/PortfolioHeader";
 import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup";
 import * as useDisplayWallets from "@/domains/wallet/hooks/use-display-wallets";
 import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
 import * as useWalletAction from "@/domains/wallet/hooks/use-wallet-actions";
-
-import * as useRandomNumberHook from "@/app/hooks/use-random-number";
-import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { translations } from "@/domains/dashboard/i18n";
 import {
 	env,
 	getDefaultProfileId,
+	mockNanoXTransport,
+	mockProfileWithOnlyPublicNetworks,
+	mockProfileWithPublicAndTestNetworks,
 	queryElementForSvg,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
 	within,
-	mockNanoXTransport,
-	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -121,7 +121,7 @@ describe("Portfolio grouped networks", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should handle wallet creation", () => {
+	it("should handle wallet creation", async () => {
 		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -134,7 +134,7 @@ describe("Portfolio grouped networks", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("WalletControls__create-wallet"));
+		await userEvent.click(screen.getByTestId("WalletControls__create-wallet"));
 
 		expect(useWalletActionReturn.handleCreate).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
@@ -143,7 +143,7 @@ describe("Portfolio grouped networks", () => {
 		useWalletActionSpy.mockRestore();
 	});
 
-	it("should handle wallet import", () => {
+	it("should handle wallet import", async () => {
 		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 
 		render(
@@ -157,7 +157,7 @@ describe("Portfolio grouped networks", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
+		await userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
 
 		expect(useWalletActionReturn.handleImport).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
@@ -178,16 +178,16 @@ describe("Portfolio grouped networks", () => {
 			},
 		);
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
-		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
-		userEvent.click(screen.getByTestId("dropdown__option--1"));
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		await userEvent.click(screen.getByTestId("dropdown__option--1"));
 
 		await waitFor(() =>
 			expect(screen.getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.STARRED),
 		);
 
-		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		await waitFor(() =>
 			expect(screen.getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.ALL),
@@ -217,7 +217,7 @@ describe("Portfolio grouped networks", () => {
 			},
 		);
 
-		userEvent.click(within(screen.getByTestId("WalletControls")).getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(within(screen.getByTestId("WalletControls")).getAllByTestId("dropdown__toggle")[0]);
 
 		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
 		expect(queryElementForSvg(screen.getByTestId("NetworkOption__ark.devnet"), "ark")).toBeInTheDocument();
@@ -235,24 +235,24 @@ describe("Portfolio grouped networks", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		await userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await expect(screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() =>
 			expect(screen.queryByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).not.toBeInTheDocument(),
 		);
 
-		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		await userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await expect(screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should apply ledger import", () => {
+	it("should apply ledger import", async () => {
 		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 
 		const transportMock = mockNanoXTransport();
@@ -267,7 +267,7 @@ describe("Portfolio grouped networks", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("WalletControls__import-ledger"));
+		await userEvent.click(screen.getByTestId("WalletControls__import-ledger"));
 
 		expect(useWalletActionReturn.handleImportLedger).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),

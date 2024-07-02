@@ -2,17 +2,18 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
-import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import {
 	env,
 	getDefaultProfileId,
 	getDefaultWalletId,
 	render,
+	renderResponsive,
 	screen,
 	waitFor,
-	renderResponsive,
 } from "@/utils/testing-library";
+
+import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 
 vi.mock("react-visibility-sensor", () => ({
 	/* eslint-disable react-hooks/rules-of-hooks */
@@ -116,7 +117,7 @@ describe("NotificationsTransactionTable", () => {
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
 
-		userEvent.click(screen.getAllByTestId("TableRow")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedConfirmedTransactionData)));
 	});

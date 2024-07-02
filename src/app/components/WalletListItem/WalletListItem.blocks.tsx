@@ -1,30 +1,31 @@
+import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useCallback, useEffect } from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
-import { WalletListItemMobileProperties } from "@/app/components/WalletListItem";
+
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
+import { Skeleton } from "@/app/components/Skeleton";
 import { TableCell } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
 import { WalletIcons, WalletIconsSkeleton } from "@/app/components/WalletIcons";
+import { WalletListItemMobileProperties } from "@/app/components/WalletListItem";
 import {
 	BalanceProperties,
 	ButtonsCellProperties,
 	CurrencyProperties,
-	WalletCellProperties,
-	StarredProperties,
 	InfoProperties,
+	StarredProperties,
+	WalletCellProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
-import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
-import { Skeleton } from "@/app/components/Skeleton";
 import { useWalletActions } from "@/domains/wallet/hooks";
+import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 

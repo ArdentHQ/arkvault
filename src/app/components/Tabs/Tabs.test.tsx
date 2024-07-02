@@ -1,9 +1,10 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { Tab, TabList, TabPanel, Tabs, TabScroll } from "./Tabs";
 import { render, screen } from "@/utils/testing-library";
 import * as themeUtils from "@/utils/theme";
+
+import { Tab, TabList, TabPanel, Tabs, TabScroll } from "./Tabs";
 const activePanel = () => screen.getByTestId("tab-pabel__active-panel");
 
 describe("Tabs", () => {
@@ -113,7 +114,7 @@ describe("Tabs", () => {
 		useDarkColorsSpy.mockRestore();
 	});
 
-	it("should react to use effect call", () => {
+	it("should react to use effect call", async () => {
 		const { container, asFragment } = render(
 			<Tabs activeId={2}>
 				<TabList>
@@ -125,14 +126,14 @@ describe("Tabs", () => {
 			</Tabs>,
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-1"));
+		await userEvent.click(screen.getByTestId("tabs__tab-button-1"));
 
 		expect(container).toBeInTheDocument();
 		expect(activePanel()).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle switching tabs", () => {
+	it("should handle switching tabs", async () => {
 		render(
 			<Tabs activeId={1}>
 				<TabList>
@@ -156,12 +157,12 @@ describe("Tabs", () => {
 		expect(firstTab).toHaveFocus();
 
 		// got right to second tab
-		userEvent.keyboard("{arrowright}");
+		await userEvent.keyboard("{arrowright}");
 
 		expect(firstTab).not.toHaveFocus();
 		expect(secondTab).toHaveFocus();
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		expect(activePanel()).toHaveTextContent("2");
 
@@ -169,36 +170,36 @@ describe("Tabs", () => {
 		expect(secondTab).toHaveAttribute("aria-selected", "true");
 
 		// go right to first tab
-		userEvent.keyboard("{arrowright}");
+		await userEvent.keyboard("{arrowright}");
 
 		expect(firstTab).toHaveFocus();
 		expect(secondTab).not.toHaveFocus();
 
-		userEvent.keyboard("{space}");
+		await userEvent.keyboard("{space}");
 
 		expect(activePanel()).toHaveTextContent("1");
 
 		// go left to second tab
-		userEvent.keyboard("{arrowleft}");
+		await userEvent.keyboard("{arrowleft}");
 
 		expect(firstTab).not.toHaveFocus();
 		expect(secondTab).toHaveFocus();
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		expect(activePanel()).toHaveTextContent("2");
 
 		// go left to first tab
-		userEvent.keyboard("{arrowleft}");
+		await userEvent.keyboard("{arrowleft}");
 
 		expect(firstTab).toHaveFocus();
 		expect(secondTab).not.toHaveFocus();
 
-		userEvent.keyboard("{space}");
+		await userEvent.keyboard("{space}");
 
 		expect(activePanel()).toHaveTextContent("1");
 
 		// tab away
-		userEvent.tab();
+		await userEvent.tab();
 	});
 });

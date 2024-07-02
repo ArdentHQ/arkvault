@@ -2,8 +2,9 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Column } from "react-table";
 
-import { Table } from "./Table";
 import { render, screen, within } from "@/utils/testing-library";
+
+import { Table } from "./Table";
 
 const data = [
 	{
@@ -64,19 +65,19 @@ describe("Table", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should change sort order on th click", () => {
+	it("should change sort order on th click", async () => {
 		render(<Table columns={columns} data={data} />);
 
 		const th = screen.getAllByRole("columnheader")[0];
 
-		userEvent.click(th);
+		await userEvent.click(th);
 
 		// eslint-disable-next-line testing-library/no-node-access
 		expect(th.querySelector("svg#chevron-down-small")).toBeInTheDocument();
 
 		expect(within(th).getByRole("img")).toHaveClass("rotate-180");
 
-		userEvent.click(th);
+		await userEvent.click(th);
 
 		expect(within(th).getByRole("img")).not.toHaveClass("rotate-180");
 	});

@@ -2,9 +2,10 @@
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
-import { useProfileBalance } from "./use-profile-balance";
 import { ConfigurationProvider } from "@/app/contexts";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { useProfileBalance } from "./use-profile-balance";
 
 describe("useProfileBalance", () => {
 	it("should get converted balance", async () => {

@@ -1,9 +1,10 @@
 import React from "react";
 
-import { FilterOption } from "./FilterNetwork.contracts";
 import { Badge } from "@/app/components/Badge";
 import { Circle } from "@/app/components/Circle";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+
+import { FilterOption } from "./FilterNetwork.contracts";
 
 export const NetworkOption = ({ network, isSelected, onClick }: FilterOption) => {
 	const renderOption = () => {

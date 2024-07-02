@@ -1,13 +1,15 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { useFormContext } from "react-hook-form";
-import { useDelimiterOptions } from "./hooks";
+import { useTranslation } from "react-i18next";
+
 import { CollapseToggleButton } from "@/app/components/Collapse";
 import { Dropdown } from "@/app/components/Dropdown";
 import { FormField } from "@/app/components/Form";
+import { ListDivided } from "@/app/components/ListDivided";
 import { Toggle } from "@/app/components/Toggle";
 import { CsvDelimiter } from "@/domains/transaction/components/TransactionExportModal";
-import { ListDivided } from "@/app/components/ListDivided";
+
+import { useDelimiterOptions } from "./hooks";
 
 const SelectDelimiterLabel = ({ label, symbol }: { label?: string; symbol?: string }) => (
 	<>

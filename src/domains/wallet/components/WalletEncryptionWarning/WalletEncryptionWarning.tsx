@@ -1,12 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { WalletEncryptionWarningProperties } from "./WalletEncryptionWarning.contracts";
+import { Alert } from "@/app/components/Alert";
 import { Button } from "@/app/components/Button";
+import { FormButtons } from "@/app/components/Form";
 import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
-import { FormButtons } from "@/app/components/Form";
-import { Alert } from "@/app/components/Alert";
+
+import { WalletEncryptionWarningProperties } from "./WalletEncryptionWarning.contracts";
 
 export const WalletEncryptionWarning: React.FC<WalletEncryptionWarningProperties> = ({
 	importType,

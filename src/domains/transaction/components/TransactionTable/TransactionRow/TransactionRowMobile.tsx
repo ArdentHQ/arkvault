@@ -2,17 +2,18 @@ import cn from "classnames";
 import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
 
-import { TransactionRowAmount } from "./TransactionRowAmount";
-import { TransactionRowRecipient } from "./TransactionRowRecipient";
-import { TransactionRowSender } from "./TransactionRowSender";
-import { TransactionRowMobileSkeleton } from "./TransactionRowMobileSkeleton";
-import { TransactionRowProperties } from "./TransactionRow.contracts";
 import { Avatar } from "@/app/components/Avatar";
 import { Link } from "@/app/components/Link";
 import { TableRow } from "@/app/components/Table";
-import { useTimeFormat } from "@/app/hooks/use-time-format";
+import { ResponsiveAddressWrapper, RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
-import { RowWrapper, RowLabel, ResponsiveAddressWrapper } from "@/app/components/Table/Mobile/Row";
+import { useTimeFormat } from "@/app/hooks/use-time-format";
+
+import { TransactionRowProperties } from "./TransactionRow.contracts";
+import { TransactionRowAmount } from "./TransactionRowAmount";
+import { TransactionRowMobileSkeleton } from "./TransactionRowMobileSkeleton";
+import { TransactionRowRecipient } from "./TransactionRowRecipient";
+import { TransactionRowSender } from "./TransactionRowSender";
 
 export const TransactionRowMobile = memo(
 	({

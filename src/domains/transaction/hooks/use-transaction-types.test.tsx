@@ -1,7 +1,8 @@
 import { renderHook } from "@testing-library/react-hooks";
 
-import { useTransactionTypes } from "./use-transaction-types";
 import { env } from "@/utils/testing-library";
+
+import { useTransactionTypes } from "./use-transaction-types";
 
 describe("useTransactionTypes", () => {
 	it("should get type icon", () => {

@@ -1,8 +1,8 @@
 import cn from "classnames";
 import React, { useLayoutEffect, useRef, useState } from "react";
 
-import { TruncateMiddleDynamicProperties } from "@/app/components/TruncateMiddleDynamic/TruncateMiddleDynamic.contracts";
 import { Tooltip } from "@/app/components/Tooltip";
+import { TruncateMiddleDynamicProperties } from "@/app/components/TruncateMiddleDynamic/TruncateMiddleDynamic.contracts";
 
 export const getTruncatedValue = (referenceElement: HTMLElement, elementWidth: number, value: string, offset = 0) => {
 	const hasOverflow = (element: HTMLElement) => element.getBoundingClientRect().width > elementWidth - offset;

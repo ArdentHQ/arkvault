@@ -2,11 +2,12 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { Signatures } from "./Signatures";
 import { Header } from "@/app/components/Header";
 import { Image } from "@/app/components/Image";
-import { MultiSignatureSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { TransactionFee } from "@/domains/transaction/components/TransactionDetail";
+import { MultiSignatureSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+
+import { Signatures } from "./Signatures";
 
 export const SentStep = ({
 	transaction,

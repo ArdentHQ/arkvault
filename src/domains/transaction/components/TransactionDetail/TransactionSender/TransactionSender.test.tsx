@@ -2,8 +2,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { TransactionSender } from "./TransactionSender";
 import { env, getDefaultProfileId, queryElementForSvg, render } from "@/utils/testing-library";
+
+import { TransactionSender } from "./TransactionSender";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

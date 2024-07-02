@@ -1,5 +1,7 @@
 import React, { useCallback, useMemo, VFC } from "react";
+
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
+import { TransactionExportModal } from "@/domains/transaction/components/TransactionExportModal";
 import { UnlockTokensModal } from "@/domains/transaction/components/UnlockTokens";
 import { DeleteWallet } from "@/domains/wallet/components/DeleteWallet";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
@@ -7,7 +9,6 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { WalletActionsProperties } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { WalletEncryptionWarning } from "@/domains/wallet/components/WalletEncryptionWarning";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
-import { TransactionExportModal } from "@/domains/transaction/components/TransactionExportModal";
 
 export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 	wallet,

@@ -1,13 +1,14 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import VisibilitySensor from "react-visibility-sensor";
 
-import { useTranslation } from "react-i18next";
-import { NotificationTransactionItemProperties } from "./Notifications.contracts";
-import { TableRow } from "@/app/components/Table";
-import { TransactionRowAmount } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowAmount";
-import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
 import { Avatar } from "@/app/components/Avatar";
+import { TableRow } from "@/app/components/Table";
+import { RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
+import { TransactionRowAmount } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowAmount";
 import { TransactionRowSender } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowSender";
+
+import { NotificationTransactionItemProperties } from "./Notifications.contracts";
 
 export const NotificationTransactionItemMobile = ({
 	transaction,

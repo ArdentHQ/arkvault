@@ -1,7 +1,8 @@
 import tw from "twin.macro";
 
-import { LabelProperties } from "./Label";
 import { Size } from "@/types";
+
+import { LabelProperties } from "./Label";
 
 const baseStyle = tw`inline-block font-semibold overflow-hidden`;
 

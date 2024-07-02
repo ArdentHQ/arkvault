@@ -1,14 +1,11 @@
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useCallback, useEffect, useMemo, useRef, useState, VFC } from "react";
-import { BigNumber } from "@ardenthq/sdk-helpers";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import tw, { css, styled } from "twin.macro";
 
-import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
-import { AddRecipientWrapper } from "./AddRecipient.styles";
-import { AddRecipientItem } from "./AddRecipientItem";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { FormField, FormLabel, SubForm } from "@/app/components/Form";
@@ -20,6 +17,10 @@ import { useValidation, WalletAliasResult } from "@/app/hooks";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+
+import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
+import { AddRecipientWrapper } from "./AddRecipient.styles";
+import { AddRecipientItem } from "./AddRecipientItem";
 
 const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();

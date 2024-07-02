@@ -1,9 +1,8 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
-import { waitFor } from "@testing-library/react";
-import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
 import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { translations } from "@/domains/transaction/i18n";
 import {
@@ -14,6 +13,8 @@ import {
 	render,
 	screen,
 } from "@/utils/testing-library";
+
+import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
 
 const submitButton = () => screen.getByTestId("DeleteResource__submit-button");
 const cancelButton = () => screen.getByTestId("DeleteResource__cancel-button");
@@ -133,7 +134,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle close", () => {
+	it("should handle close", async () => {
 		const onClose = vi.fn();
 		render(
 			<ConfirmRemovePendingTransaction profile={profile} transaction={multiSignatureFixture} onClose={onClose} />,
@@ -149,7 +150,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 			),
 		).toBeInTheDocument();
 
-		userEvent.click(cancelButton());
+		await userEvent.click(cancelButton());
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -177,13 +178,13 @@ describe("ConfirmRemovePendingTransaction", () => {
 
 		expect(submitButton()).toBeDisabled();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+		await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
 	});
@@ -228,7 +229,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
 

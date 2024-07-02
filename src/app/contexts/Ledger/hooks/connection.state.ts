@@ -1,5 +1,6 @@
-import { Handlers, OfUnion } from "./reducer.contracts";
 import { LedgerModel } from "@/app/hooks";
+
+import { Handlers, OfUnion } from "./reducer.contracts";
 
 export interface LedgerDevice {
 	path: string;

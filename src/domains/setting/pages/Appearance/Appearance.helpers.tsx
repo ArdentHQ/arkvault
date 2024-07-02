@@ -2,12 +2,13 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { ListDividedItemProperties } from "@/app/components/ListDivided/ListDivided.contracts";
+import { AccentColorType, useBreakpoint, ViewingModeType } from "@/app/hooks";
+
 import { AppearanceSettingsState, UseAppearanceSettings } from "./Appearance.contracts";
 import { AppearanceAccentColor } from "./blocks/AppearanceAccentColor";
 import { AppearanceToggle } from "./blocks/AppearanceToggle";
 import { AppearanceViewingMode } from "./blocks/AppearanceViewingMode";
-import { ListDividedItemProperties } from "@/app/components/ListDivided/ListDivided.contracts";
-import { AccentColorType, ViewingModeType, useBreakpoint } from "@/app/hooks";
 
 export const useAppearanceItems = (): ListDividedItemProperties[] => {
 	const { t } = useTranslation();

@@ -2,8 +2,9 @@
 import { BIP39 } from "@ardenthq/sdk-cryptography";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
-import { authentication } from "./Authentication";
 import { env, MNEMONICS } from "@/utils/testing-library";
+
+import { authentication } from "./Authentication";
 
 let translationMock: any;
 let wallet: Contracts.IReadWriteWallet;

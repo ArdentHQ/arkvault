@@ -3,27 +3,28 @@ import { uniq } from "@ardenthq/sdk-helpers";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { generatePath } from "react-router";
 import { useHistory } from "react-router-dom";
 
-import { generatePath } from "react-router";
-import { LedgerConnectionStep } from "./LedgerConnectionStep";
-import { LedgerImportStep } from "./LedgerImportStep";
-import { LedgerScanStep } from "./LedgerScanStep";
-import { LedgerTabsProperties, LedgerTabStep } from "./LedgerTabs.contracts";
-import { ListenLedger } from "@/domains/transaction/components/AuthenticationStep/Ledger/ListenLedger";
 import { Button } from "@/app/components/Button";
+import { FormButtons } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { LedgerData, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
-import { useWalletConfig } from "@/domains/wallet/hooks";
+import { ListenLedger } from "@/domains/transaction/components/AuthenticationStep/Ledger/ListenLedger";
 import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
-import { assertWallet } from "@/utils/assertions";
+import { useWalletConfig } from "@/domains/wallet/hooks";
 import { ProfilePaths } from "@/router/paths";
+import { assertWallet } from "@/utils/assertions";
 import { enabledNetworksCount, profileAllEnabledNetworkIds } from "@/utils/network-utils";
-import { FormButtons } from "@/app/components/Form";
+
+import { LedgerConnectionStep } from "./LedgerConnectionStep";
+import { LedgerImportStep } from "./LedgerImportStep";
+import { LedgerScanStep } from "./LedgerScanStep";
+import { LedgerTabsProperties, LedgerTabStep } from "./LedgerTabs.contracts";
 
 const Paginator = ({
 	activeIndex,

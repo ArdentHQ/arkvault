@@ -3,11 +3,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { styled } from "twin.macro";
 
-import { ClipboardButtonProperties } from "./Clipboard.contracts";
 import { getStyles } from "@/app/components/Button/Button.styles";
 import { Icon } from "@/app/components/Icon";
 import { useClipboard } from "@/app/hooks";
 import { ButtonVariant, Size, Theme } from "@/types";
+
+import { ClipboardButtonProperties } from "./Clipboard.contracts";
 
 type ButtonProperties = {
 	variant?: ButtonVariant;

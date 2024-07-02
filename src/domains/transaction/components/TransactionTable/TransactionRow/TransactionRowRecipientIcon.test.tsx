@@ -1,7 +1,8 @@
 import React from "react";
 
-import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 import { render, screen } from "@/utils/testing-library";
+
+import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 
 describe("TransactionRowRecipientIcon", () => {
 	it("should render avatar", () => {

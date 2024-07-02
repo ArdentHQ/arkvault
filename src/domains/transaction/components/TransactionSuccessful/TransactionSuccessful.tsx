@@ -2,19 +2,20 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
-import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
+import { Alert } from "@/app/components/Alert";
 import { Image } from "@/app/components/Image";
+import { Spinner } from "@/app/components/Spinner";
+import { StepHeader } from "@/app/components/StepHeader";
 import {
 	TransactionExplorerLink,
+	TransactionFee,
 	TransactionNetwork,
 	TransactionSender,
 	TransactionType,
-	TransactionFee,
 } from "@/domains/transaction/components/TransactionDetail";
-import { Alert } from "@/app/components/Alert";
-import { StepHeader } from "@/app/components/StepHeader";
-import { Spinner } from "@/app/components/Spinner";
+
+import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
+import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;

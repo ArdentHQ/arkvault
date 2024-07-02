@@ -3,8 +3,9 @@ import { Networks } from "@ardenthq/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { ReceiveFundsForm } from "./ReceiveFundsForm";
 import { env, getDefaultProfileId, getDefaultWalletId, renderWithForm, screen, waitFor } from "@/utils/testing-library";
+
+import { ReceiveFundsForm } from "./ReceiveFundsForm";
 
 let network: Networks.Network;
 
@@ -29,7 +30,7 @@ describe("ReceiveFundsForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
 
-		userEvent.paste(screen.getByTestId("ReceiveFundsForm__amount"), "10");
+		await userEvent.paste(screen.getByTestId("ReceiveFundsForm__amount"), "10");
 
 		await waitFor(() => expect(form()?.getValues("amount")).toBe("10"));
 
@@ -40,7 +41,7 @@ describe("ReceiveFundsForm", () => {
 		const { asFragment, form } = renderWithForm(<ReceiveFundsForm network={network} />);
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
 
-		userEvent.paste(screen.getByTestId("ReceiveFundsForm__memo"), "test");
+		await userEvent.paste(screen.getByTestId("ReceiveFundsForm__memo"), "test");
 		await waitFor(() => expect(form()?.getValues("memo")).toBe("test"));
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).toHaveValue("test"));
 

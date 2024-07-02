@@ -1,25 +1,27 @@
-import React, { useCallback, useEffect, useState, VFC } from "react";
-import { useTranslation } from "react-i18next";
+import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
-import tw, { styled } from "twin.macro";
-import { Enums } from "@ardenthq/sdk";
+import React, { useCallback, useEffect, useState, VFC } from "react";
+import { useTranslation } from "react-i18next";
 import { useResizeDetector } from "react-resize-detector";
-import { WalletActionsProperties, WalletAddressProperties, WalletBalanceProperties } from "./WalletHeader.contracts";
+import tw, { styled } from "twin.macro";
+
 import { Amount } from "@/app/components/Amount";
-import { Icon } from "@/app/components/Icon";
-import { assertString } from "@/utils/assertions";
-import { Tooltip } from "@/app/components/Tooltip";
+import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
+import { Clipboard } from "@/app/components/Clipboard";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { WalletIcons } from "@/app/components/WalletIcons";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useWalletActions, useWalletSync } from "@/domains/wallet/hooks";
 import { usePrevious, useWalletAlias } from "@/app/hooks";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { Avatar } from "@/app/components/Avatar";
-import { WalletIcons } from "@/app/components/WalletIcons";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-import { Clipboard } from "@/app/components/Clipboard";
+import { useWalletActions, useWalletSync } from "@/domains/wallet/hooks";
+import { assertString } from "@/utils/assertions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
+
+import { WalletActionsProperties, WalletAddressProperties, WalletBalanceProperties } from "./WalletHeader.contracts";
 
 const WalletHeaderButton = styled.button`
 	${tw`inline-flex items-center justify-center w-8 h-8 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text hover:text-theme-secondary-500 disabled:(cursor-not-allowed text-theme-secondary-800)`}

@@ -1,10 +1,12 @@
 import { Networks } from "@ardenthq/sdk";
-import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { NetworkOptionLabel } from "./SelectNetworkDropdown.blocks";
-import { Select, OptionProperties } from "@/app/components/SelectDropdown";
-import { networksAsOptions } from "@/utils/network-utils";
+import React from "react";
+
+import { OptionProperties, Select } from "@/app/components/SelectDropdown";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { networksAsOptions } from "@/utils/network-utils";
+
+import { NetworkOptionLabel } from "./SelectNetworkDropdown.blocks";
 
 interface SelectNetworkDropdownProperties {
 	networks?: Networks.Network[];

@@ -1,4 +1,5 @@
 import React from "react";
+
 import { GraphAnimation } from "@/app/components/Graphs/GraphHoverAnimation/GraphHoverAnimation.contract";
 import { GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
 

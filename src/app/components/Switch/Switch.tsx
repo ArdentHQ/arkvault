@@ -2,9 +2,10 @@ import cn from "classnames";
 import React, { PropsWithChildren } from "react";
 import { styled } from "twin.macro";
 
-import { getSwitchTextStyles, SwitchTextType } from "./SwitchText.style";
 import { Toggle } from "@/app/components/Toggle";
 import { Size } from "@/types";
+
+import { getSwitchTextStyles, SwitchTextType } from "./SwitchText.style";
 
 const SwitchText = styled.span<PropsWithChildren<SwitchTextType>>(getSwitchTextStyles);
 

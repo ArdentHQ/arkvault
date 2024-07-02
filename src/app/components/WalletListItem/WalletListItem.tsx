@@ -1,21 +1,22 @@
 import React from "react";
+
+import { TableRow } from "@/app/components/Table";
 import {
 	Balance,
 	ButtonsCell,
 	Currency,
 	Info,
-	WalletCell,
 	Starred,
-	WalletListItemMobile,
+	WalletCell,
 	WalletItemAvatar,
+	WalletItemBalance,
 	WalletItemDetails,
 	WalletItemExtraDetails,
-	WalletItemBalance,
+	WalletListItemMobile,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { WalletListItemProperties } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
-import { TableRow } from "@/app/components/Table";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
 
 export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, isCompact, isLargeScreen = true }) => {

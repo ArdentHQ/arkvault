@@ -2,8 +2,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { Clipboard } from "./Clipboard";
 import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { Clipboard } from "./Clipboard";
 
 const clipboardCheckmarkID = "clipboard-button__checkmark";
 
@@ -27,7 +28,7 @@ describe("ClipboardButton", () => {
 
 		expect(screen.queryByTestId(clipboardCheckmarkID)).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
+		await userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
 
 		await expect(screen.findByTestId(clipboardCheckmarkID)).resolves.toBeInTheDocument();
 	});
@@ -41,7 +42,7 @@ describe("ClipboardButton", () => {
 
 		expect(screen.queryByTestId(clipboardCheckmarkID)).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
+		await userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
 
 		await expect(screen.findByTestId(clipboardCheckmarkID)).resolves.toBeInTheDocument();
 

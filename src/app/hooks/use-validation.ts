@@ -6,7 +6,7 @@ import { password } from "@/app/validations/password";
 import { exchangeOrder } from "@/domains/exchange/validations";
 import { signMessage, verifyMessage } from "@/domains/message/validations";
 import { createProfile } from "@/domains/profile/validations";
-import { settings, server, network } from "@/domains/setting/validations";
+import { network, server, settings } from "@/domains/setting/validations";
 import {
 	authentication,
 	common,

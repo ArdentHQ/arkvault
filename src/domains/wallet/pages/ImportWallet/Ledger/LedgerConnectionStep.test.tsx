@@ -6,10 +6,11 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
-import { LedgerConnectionStep } from "./LedgerConnectionStep";
 import { minVersionList } from "@/app/contexts";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
-import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
+import { env, getDefaultProfileId, mockNanoXTransport, render, screen, waitFor } from "@/utils/testing-library";
+
+import { LedgerConnectionStep } from "./LedgerConnectionStep";
 
 const history = createHashHistory();
 

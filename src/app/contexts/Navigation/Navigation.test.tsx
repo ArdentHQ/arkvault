@@ -1,8 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { NavigationProvider, useNavigationContext } from "./Navigation";
 import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { NavigationProvider, useNavigationContext } from "./Navigation";
 
 describe("Navigation Context", () => {
 	it("should render the wrapper properly", () => {
@@ -53,7 +54,7 @@ describe("Navigation Context", () => {
 
 		expect(screen.getByText("Does not have fixed form buttons")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Navigation__consumer"));
+		await userEvent.click(screen.getByTestId("Navigation__consumer"));
 
 		await waitFor(() => expect(screen.queryByText("Does not have fixed form buttons")).not.toBeInTheDocument());
 

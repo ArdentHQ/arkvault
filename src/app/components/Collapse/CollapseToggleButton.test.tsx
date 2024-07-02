@@ -1,12 +1,13 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { CollapseToggleButton } from "./CollapseToggleButton";
 import { translations } from "@/app/i18n/common/i18n";
 import { render, screen } from "@/utils/testing-library";
 
+import { CollapseToggleButton } from "./CollapseToggleButton";
+
 describe("CollapseToggleButton", () => {
-	it("should render", () => {
+	it("should render", async () => {
 		const onClick = vi.fn();
 
 		render(<CollapseToggleButton isOpen={false} onClick={onClick} />);
@@ -15,7 +16,7 @@ describe("CollapseToggleButton", () => {
 
 		expect(button).toHaveTextContent(translations.SHOW);
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

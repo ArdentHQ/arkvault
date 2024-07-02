@@ -7,8 +7,8 @@ import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { NavigationButtonWrapper } from "@/app/components/NavigationBar/NavigationBar.blocks";
 import { Notifications, useNotifications } from "@/app/components/Notifications";
-import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
 import { useBreakpoint } from "@/app/hooks";
+import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
 
 export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile }) => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(

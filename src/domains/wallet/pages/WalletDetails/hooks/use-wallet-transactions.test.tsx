@@ -2,12 +2,12 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect, useState } from "react";
 
-import { useWalletTransactions } from "./use-wallet-transactions";
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
-import { env, getDefaultProfileId, render, screen, triggerMessageSignOnce, waitFor } from "@/utils/testing-library";
-
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, render, screen, triggerMessageSignOnce, waitFor } from "@/utils/testing-library";
+
+import { useWalletTransactions } from "./use-wallet-transactions";
 
 let allPendingTransactions: PendingTransaction[];
 
@@ -179,7 +179,7 @@ describe("Wallet Transactions Hook", () => {
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 		vi.spyOn(wallet.transaction(), "broadcasted").mockReturnValue({ 1: transfer });
 		render(<Component />);
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.queryByText("Loading")).not.toBeInTheDocument());
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));
@@ -196,7 +196,7 @@ describe("Wallet Transactions Hook", () => {
 
 		render(<Component />);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.queryByText("Loading")).not.toBeInTheDocument());
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));

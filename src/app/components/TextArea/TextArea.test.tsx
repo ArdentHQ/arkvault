@@ -1,7 +1,8 @@
 import React from "react";
 
-import { TextArea } from "./TextArea";
 import { render, screen } from "@/utils/testing-library";
+
+import { TextArea } from "./TextArea";
 
 describe("TextArea", () => {
 	it("should render", () => {

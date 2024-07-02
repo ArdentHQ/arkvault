@@ -2,8 +2,9 @@ import cn from "classnames";
 import React from "react";
 import { styled } from "twin.macro";
 
+import { MdAndAbove, SmAndBelow } from "@/app/components/Breakpoint";
+
 import { getStyles } from "./TransactionDetail.styles";
-import { SmAndBelow, MdAndAbove } from "@/app/components/Breakpoint";
 
 export type TransactionDetailProperties = {
 	children?: React.ReactNode;

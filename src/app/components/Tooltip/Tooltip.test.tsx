@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Tooltip } from "./Tooltip";
 import { render } from "@/utils/testing-library";
+
+import { Tooltip } from "./Tooltip";
 
 describe("Tooltip", () => {
 	it("should render", () => {

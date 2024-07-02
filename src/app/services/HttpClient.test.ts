@@ -1,6 +1,6 @@
-import { HttpClient } from "./HttpClient";
+import { requestMock, server } from "@/tests/mocks/server";
 
-import { server, requestMock } from "@/tests/mocks/server";
+import { HttpClient } from "./HttpClient";
 
 let subject: HttpClient;
 

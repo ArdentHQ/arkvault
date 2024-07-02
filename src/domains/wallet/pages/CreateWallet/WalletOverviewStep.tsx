@@ -3,12 +3,12 @@ import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
+import { CopyOrDownload } from "@/app/components/CopyOrDownload";
 import { Header } from "@/app/components/Header";
 import { Toggle } from "@/app/components/Toggle";
+import { useFiles } from "@/app/hooks/use-files";
 import { toasts } from "@/app/services";
 import { MnemonicList, MnemonicListSkeleton } from "@/domains/wallet/components/MnemonicList";
-import { useFiles } from "@/app/hooks/use-files";
-import { CopyOrDownload } from "@/app/components/CopyOrDownload";
 
 export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet: boolean }) => {
 	const { getValues, setValue, unregister, watch } = useFormContext();

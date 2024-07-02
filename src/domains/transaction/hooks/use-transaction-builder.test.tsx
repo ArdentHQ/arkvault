@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
-import { useTransactionBuilder } from "./use-transaction-builder";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
@@ -11,7 +11,8 @@ import {
 	triggerMessageSignOnce,
 	WithProviders,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
+
+import { useTransactionBuilder } from "./use-transaction-builder";
 
 describe("Use Transaction Builder Hook", () => {
 	let profile: Contracts.IProfile;

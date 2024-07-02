@@ -1,6 +1,6 @@
-import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -13,11 +13,11 @@ import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { LedgerData } from "@/app/contexts/Ledger";
-import { assertNetwork, assertWallet } from "@/utils/assertions";
-import { WalletDetailNetwork } from "@/domains/wallet/components/WalletDetailNetwork";
-import { WalletDetailAddress } from "@/domains/wallet/components/WalletDetailAddress";
-import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
 import { useBreakpoint } from "@/app/hooks";
+import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
+import { WalletDetailAddress } from "@/domains/wallet/components/WalletDetailAddress";
+import { WalletDetailNetwork } from "@/domains/wallet/components/WalletDetailNetwork";
+import { assertNetwork, assertWallet } from "@/utils/assertions";
 
 const MultipleImport = ({
 	network,

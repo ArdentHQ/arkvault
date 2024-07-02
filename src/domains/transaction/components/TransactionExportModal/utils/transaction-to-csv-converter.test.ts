@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { convertToCsv } from "./transaction-to-csv-converter";
+
 import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
+
+import { convertToCsv } from "./transaction-to-csv-converter";
 
 const defaultSettings = {
 	delimiter: ",",

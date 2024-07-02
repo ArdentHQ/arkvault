@@ -5,19 +5,20 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 
-import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
+import { Icon } from "@/app/components/Icon";
 import { InputCounter } from "@/app/components/Input";
-import { useBreakpoint } from "@/app/hooks";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
+import { StepHeader } from "@/app/components/StepHeader";
+import { useBreakpoint } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { assertNetwork } from "@/utils/assertions";
-import { StepHeader } from "@/app/components/StepHeader";
-import { Icon } from "@/app/components/Icon";
+
+import { getFeeType } from "./utils";
 
 const QRCodeButton = styled.button`
 	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}

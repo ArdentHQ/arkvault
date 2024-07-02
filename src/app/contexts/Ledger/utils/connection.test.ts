@@ -1,7 +1,8 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
-import { accessLedgerDevice, accessLedgerApp, persistLedgerConnection } from "./connection";
 import { env, getDefaultProfileId, mockNanoXTransport } from "@/utils/testing-library";
+
+import { accessLedgerApp, accessLedgerDevice, persistLedgerConnection } from "./connection";
 
 describe("Ledger Device Connection", () => {
 	let profile: Contracts.IProfile;

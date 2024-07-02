@@ -1,8 +1,9 @@
 import { DateTime } from "@ardenthq/sdk-intl";
 import React from "react";
 
-import { TransactionTimestamp } from "./TransactionTimestamp";
 import { render } from "@/utils/testing-library";
+
+import { TransactionTimestamp } from "./TransactionTimestamp";
 
 const datetime = DateTime.fromUnix(1_596_213_281);
 

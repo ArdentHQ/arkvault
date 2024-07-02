@@ -2,11 +2,12 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { LedgerDeviceError } from "./LedgerDeviceError";
 import { render, screen } from "@/utils/testing-library";
 
+import { LedgerDeviceError } from "./LedgerDeviceError";
+
 describe("LedgerDeviceError", () => {
-	it("should call the onClose callback if given", () => {
+	it("should call the onClose callback if given", async () => {
 		const onClose = vi.fn();
 
 		render(
@@ -18,7 +19,7 @@ describe("LedgerDeviceError", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});

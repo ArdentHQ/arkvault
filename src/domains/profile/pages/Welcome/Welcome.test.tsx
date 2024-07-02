@@ -1,19 +1,19 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { truncate } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { truncate } from "@ardenthq/sdk-helpers";
-import { renderHook } from "@testing-library/react-hooks";
 import { vi } from "vitest";
-import { Welcome } from "./Welcome";
-import { ProfilePaths } from "@/router/paths";
+
 import { EnvironmentProvider } from "@/app/contexts";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
+import { ProfilePaths } from "@/router/paths";
 import { StubStorage } from "@/tests/mocks";
 import {
 	act,
@@ -21,11 +21,13 @@ import {
 	getDefaultPassword,
 	getDefaultProfileId,
 	getPasswordProtectedProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { Welcome } from "./Welcome";
 
 const fixtureProfileId = getDefaultProfileId();
 const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;
@@ -34,7 +36,7 @@ const submitTestID = "SignIn__submit-button";
 const passwordTestID = "SignIn__input--password";
 
 const submitPassword = async () => {
-	userEvent.type(screen.getByTestId(passwordTestID), "password");
+	await userEvent.type(screen.getByTestId(passwordTestID), "password");
 
 	await waitFor(() => {
 		expect(screen.getByTestId(passwordTestID)).toHaveValue("password");
@@ -44,7 +46,7 @@ const submitPassword = async () => {
 		expect(screen.getByTestId(submitTestID)).toBeEnabled();
 	});
 
-	userEvent.click(screen.getByTestId(submitTestID));
+	await userEvent.click(screen.getByTestId(submitTestID));
 };
 
 let toastUpdateSpy: vi.SpyInstance;
@@ -133,7 +135,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
 
@@ -153,7 +155,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await waitFor(() =>
 			expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/verify-message`),
@@ -182,7 +184,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByText(passwordProtectedProfile.name()));
+		await userEvent.click(screen.getByText(passwordProtectedProfile.name()));
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
@@ -211,7 +213,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await expectToast(result.current.buildSearchParametersError({ type: "COIN_NOT_SUPPORTED", value: "DOGE" }));
 	});
@@ -231,18 +233,18 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await waitFor(() =>
 			expect(toastUpdateSpy).toHaveBeenNthCalledWith(
@@ -269,7 +271,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await expectToast(result.current.buildSearchParametersError({ type: "METHOD_NOT_SUPPORTED", value: "nuke" }));
 	});
@@ -289,7 +291,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await expectToast(result.current.buildSearchParametersError({ type: "MISSING_NETWORK_OR_NETHASH" }));
 	});
@@ -309,7 +311,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_INVALID", value: "custom" }));
 	});
@@ -329,7 +331,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK" }));
 	});
@@ -350,7 +352,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		const truncated = truncate(nethash, {
 			length: 20,
@@ -376,7 +378,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK" }));
 	});
@@ -394,7 +396,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
 	});
@@ -412,7 +414,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
 	});
@@ -525,14 +527,14 @@ describe("Welcome with deeplink", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/sign-message`));
 	});
 });
 
 describe("Welcome", () => {
-	it("should render with profiles", () => {
+	it("should render with profiles", async () => {
 		const { container, asFragment, history } = render(<Welcome />);
 		const profile = env.profiles().findById(fixtureProfileId);
 
@@ -540,13 +542,13 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.name()));
+		await userEvent.click(screen.getByText(profile.name()));
 
 		expect(history.location.pathname).toBe(profileDashboardUrl);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate to profile dashboard", () => {
+	it("should navigate to profile dashboard", async () => {
 		const { container, asFragment, history } = render(<Welcome />);
 
 		const profile = env.profiles().findById(fixtureProfileId);
@@ -555,7 +557,7 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 		expect(asFragment()).toMatchSnapshot();
@@ -575,7 +577,7 @@ describe("Welcome", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.name()));
+		await userEvent.click(screen.getByText(profile.name()));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -584,7 +586,7 @@ describe("Welcome", () => {
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(profileTranslations.MODAL_SIGN_IN.TITLE);
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(profileTranslations.MODAL_SIGN_IN.DESCRIPTION);
 
-		userEvent.click(screen.getByTestId(buttonId));
+		await userEvent.click(screen.getByTestId(buttonId));
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
@@ -603,7 +605,7 @@ describe("Welcome", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.name()));
+		await userEvent.click(screen.getByText(profile.name()));
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
@@ -657,23 +659,23 @@ describe("Welcome", () => {
 
 		const profileCardMenu = screen.getAllByTestId("dropdown__toggle")[1];
 
-		userEvent.click(profileCardMenu);
+		await userEvent.click(profileCardMenu);
 
 		const settingsOption = screen.getByTestId("dropdown__option--0");
 
 		expect(settingsOption).toBeInTheDocument();
 		expect(settingsOption).toHaveTextContent(commonTranslations.SETTINGS);
 
-		userEvent.click(settingsOption);
+		await userEvent.click(settingsOption);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId(passwordTestID), "password");
+		await userEvent.paste(screen.getByTestId(passwordTestID), "password");
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(submitTestID));
+		await userEvent.click(screen.getByTestId(submitTestID));
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/settings`);
@@ -693,14 +695,14 @@ describe("Welcome", () => {
 
 		const profileCardMenu = screen.getAllByTestId("dropdown__toggle")[0];
 
-		userEvent.click(profileCardMenu);
+		await userEvent.click(profileCardMenu);
 
 		const settingsOption = screen.getByTestId("dropdown__option--0");
 
 		expect(settingsOption).toBeInTheDocument();
 		expect(settingsOption).toHaveTextContent(commonTranslations.SETTINGS);
 
-		userEvent.click(settingsOption);
+		await userEvent.click(settingsOption);
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/settings`);
@@ -716,17 +718,17 @@ describe("Welcome", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(3));
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 
 		const deleteOption = screen.getByTestId("dropdown__option--1");
 
 		expect(deleteOption).toHaveTextContent(commonTranslations.DELETE);
 
-		userEvent.click(deleteOption);
+		await userEvent.click(deleteOption);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(2));
 	});
@@ -761,15 +763,15 @@ describe("Welcome", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		for (const index of [1, 2, 3]) {
-			userEvent.paste(screen.getByTestId(passwordTestID), `wrong password ${index}`);
+			await userEvent.paste(screen.getByTestId(passwordTestID), `wrong password ${index}`);
 
 			// wait for form to be updated
 			await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(submitTestID));
+			await userEvent.click(screen.getByTestId(submitTestID));
 
 			// wait for form to be updated
 			await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();
@@ -779,10 +781,10 @@ describe("Welcome", () => {
 		expect(screen.getByTestId(passwordTestID)).toBeDisabled();
 
 		// Close
-		userEvent.click(screen.getByTestId("SignIn__cancel-button"));
+		await userEvent.click(screen.getByTestId("SignIn__cancel-button"));
 
 		// Reopen
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		// Still disabled
 		expect(screen.getByTestId(submitTestID)).toBeDisabled();
@@ -810,7 +812,7 @@ describe("Welcome", () => {
 			expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByText(commonTranslations.CREATE));
+		await userEvent.click(screen.getByText(commonTranslations.CREATE));
 
 		expect(history.location.pathname).toBe("/profiles/create");
 		expect(asFragment()).toMatchSnapshot();

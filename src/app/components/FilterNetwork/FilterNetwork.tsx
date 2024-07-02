@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { Checkbox } from "@/app/components/Checkbox";
+
 import { FilterNetworksProperties, FilterOption } from "./FilterNetwork.contracts";
 import { NetworkOptions } from "./NetworkOptions";
 import { ToggleAllOption } from "./ToggleAllOption";
-import { Checkbox } from "@/app/components/Checkbox";
 
 export const FilterNetwork = ({
 	options = [],

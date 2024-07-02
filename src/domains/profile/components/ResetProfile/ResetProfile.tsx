@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
 import { Button } from "@/app/components/Button";
+import { FormButtons } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { useEnvironmentContext } from "@/app/contexts";
-import { toasts } from "@/app/services";
-import { FormButtons } from "@/app/components/Form";
 import { useLocaleCurrency } from "@/app/hooks";
+import { toasts } from "@/app/services";
 
 interface ResetProfileProperties {
 	isOpen: boolean;

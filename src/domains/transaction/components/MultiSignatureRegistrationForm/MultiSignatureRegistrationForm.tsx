@@ -1,7 +1,5 @@
 import React from "react";
 
-import { FormStep } from "./FormStep";
-import { ReviewStep } from "./ReviewStep";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { TransactionFee } from "@/domains/transaction/components/TransactionDetail";
 import {
@@ -9,6 +7,9 @@ import {
 	SendRegistrationDetailsOptions,
 	SendRegistrationForm,
 } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
 
 const StepsComponent = ({ activeTab, wallet, profile }: SendRegistrationComponent) => (
 	<Tabs activeId={activeTab}>

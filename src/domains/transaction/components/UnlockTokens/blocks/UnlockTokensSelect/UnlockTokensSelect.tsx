@@ -2,9 +2,6 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { UnlockTokensRow } from "./UnlockTokensRow";
-import { UnlockTokensSelectProperties } from "./UnlockTokensSelect.contracts";
-import { UnlockTokensTotal } from "./UnlockTokensTotal";
 import { Button } from "@/app/components/Button";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Header } from "@/app/components/Header";
@@ -15,6 +12,10 @@ import {
 	UnlockTokensFormState,
 } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import { useUnlockTokensSelectTableColumns } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.helpers";
+
+import { UnlockTokensRow } from "./UnlockTokensRow";
+import { UnlockTokensSelectProperties } from "./UnlockTokensSelect.contracts";
+import { UnlockTokensTotal } from "./UnlockTokensTotal";
 
 const SKELETON_ROWS = Array.from<UnlockableBalance>({ length: 3 }).fill({} as UnlockableBalance);
 

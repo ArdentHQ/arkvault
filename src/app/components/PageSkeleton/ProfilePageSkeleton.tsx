@@ -1,7 +1,8 @@
 import React from "react";
-import { Skeleton } from "@/app/components/Skeleton";
+
 import { Section } from "@/app/components/Layout";
 import { Logo } from "@/app/components/Logo";
+import { Skeleton } from "@/app/components/Skeleton";
 
 export const ProfilePageSkeleton: React.FC = () => (
 	<div className="relative flex min-h-screen flex-col" data-testid="ProfilePageSkeleton">

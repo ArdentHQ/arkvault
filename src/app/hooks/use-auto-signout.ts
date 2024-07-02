@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { useCallback } from "react";
 import { useIdleTimer } from "react-idle-timer";
 import { useHistory } from "react-router-dom";
-import { useCallback } from "react";
 
 export const useAutoSignOut = (profile?: Contracts.IProfile) => {
 	const history = useHistory();

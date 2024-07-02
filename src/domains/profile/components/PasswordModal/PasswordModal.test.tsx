@@ -2,8 +2,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { PasswordModal } from "./PasswordModal";
 import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { PasswordModal } from "./PasswordModal";
 
 describe("PasswordModal", () => {
 	beforeEach(() => {
@@ -41,13 +42,13 @@ describe("PasswordModal", () => {
 
 		render(<PasswordModal isOpen={true} onSubmit={onSuccess} />);
 
-		userEvent.type(screen.getByTestId("PasswordModal__input"), "password");
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), "password");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("password");
 		});
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		await userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await waitFor(() => {
 			expect(onSuccess).toHaveBeenCalled();

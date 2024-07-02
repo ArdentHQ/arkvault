@@ -1,11 +1,12 @@
 import React, { useMemo } from "react";
 
+import { SmAndAbove, Xs } from "@/app/components/Breakpoint";
+import { GraphHoverAnimation } from "@/app/components/Graphs/GraphHoverAnimation";
+import { useGraphData, useGraphTooltip, useGraphWidth } from "@/app/components/Graphs/Graphs.shared";
+
 import { LineGraphEmpty } from "./LineGraph.blocks";
 import { BASE_CONFIG, LineGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
 import { useLineGraph } from "./LineGraph.helpers";
-import { SmAndAbove, Xs } from "@/app/components/Breakpoint";
-import { useGraphData, useGraphTooltip, useGraphWidth } from "@/app/components/Graphs/Graphs.shared";
-import { GraphHoverAnimation } from "@/app/components/Graphs/GraphHoverAnimation";
 
 export const LineGraph: React.VFC<LineGraphProperties> = ({
 	data,

@@ -3,13 +3,7 @@ import cn from "classnames";
 import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column, TableState } from "react-table";
-import {
-	AssetListItemProperties,
-	AssetListProperties,
-	BalanceProperties,
-	ONE_MILLION,
-	TooltipProperties,
-} from "./PortfolioBreakdownDetails.contracts";
+
 import { Amount } from "@/app/components/Amount";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip as AppTooltip } from "@/app/components/Tooltip";
@@ -21,6 +15,14 @@ import {
 	getColor,
 	getOtherGroupColor,
 } from "@/domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
+
+import {
+	AssetListItemProperties,
+	AssetListProperties,
+	BalanceProperties,
+	ONE_MILLION,
+	TooltipProperties,
+} from "./PortfolioBreakdownDetails.contracts";
 
 const AssetListItem: React.VFC<AssetListItemProperties> = ({ asset, index, exchangeCurrency, grouped }) => {
 	const { isDarkMode } = useTheme();

@@ -1,12 +1,13 @@
 import cn from "classnames";
+import { t } from "i18next";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
-import { t } from "i18next";
-import { usePasswordValidation, ValidationState, ValidationRule } from "@/app/hooks/use-password-validation";
-import { Icon } from "@/app/components/Icon";
+
 import { FormField, FormLabel } from "@/app/components/Form";
+import { Icon } from "@/app/components/Icon";
 import { InputPassword } from "@/app/components/Input";
 import { useValidation } from "@/app/hooks";
+import { usePasswordValidation, ValidationRule, ValidationState } from "@/app/hooks/use-password-validation";
 
 interface RulesProperties {
 	validationState: ValidationState;

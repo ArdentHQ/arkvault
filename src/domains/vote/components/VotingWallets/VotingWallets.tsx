@@ -1,9 +1,10 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
 import { EmptyResults } from "@/app/components/EmptyResults";
-import { AddressTable } from "@/domains/vote/components/AddressTable";
 import { Section } from "@/app/components/Layout";
+import { AddressTable } from "@/domains/vote/components/AddressTable";
 
 interface VotingWalletsProperties {
 	showEmptyResults: boolean;

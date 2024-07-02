@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { OptionsValue } from "./use-import-options";
 
-export type WalletGenerationInput = string      ;
+export type WalletGenerationInput = string;
 
 type ImportOptionsType = {
 	[key in OptionsValue]: () => Promise<Contracts.IReadWriteWallet>;

@@ -1,33 +1,35 @@
-import cn from "classnames";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import {
-	SearchWalletListItemProperties,
-	SearchWalletListItemResponsiveProperties,
-	SearchWalletProperties,
-} from "./SearchWallet.contracts";
+
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
+import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
 import { Modal } from "@/app/components/Modal";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
+import { Tooltip } from "@/app/components/Tooltip";
+import {
+	Balance,
+	WalletItemDetails,
+	WalletListItemMobile,
+} from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
-import {
-	Balance,
-	WalletListItemMobile,
-	WalletItemDetails,
-} from "@/app/components/WalletListItem/WalletListItem.blocks";
-import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
+
+import {
+	SearchWalletListItemProperties,
+	SearchWalletListItemResponsiveProperties,
+	SearchWalletProperties,
+} from "./SearchWallet.contracts";
 
 const SearchWalletListItem = ({
 	index,

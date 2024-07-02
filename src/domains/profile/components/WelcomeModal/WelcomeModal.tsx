@@ -3,14 +3,15 @@ import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { WelcomeModalStep } from "./WelcomeModal.contracts";
 import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
 import { DotNavigation } from "@/app/components/DotNavigation";
+import { FormButtons } from "@/app/components/Form";
 import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { useWelcomeModal } from "@/domains/profile/hooks/use-welcome-modal";
-import { FormButtons } from "@/app/components/Form";
+
+import { WelcomeModalStep } from "./WelcomeModal.contracts";
 
 const Banner = ({ step }: { step: WelcomeModalStep }) => {
 	if (step > WelcomeModalStep.Introduction) {

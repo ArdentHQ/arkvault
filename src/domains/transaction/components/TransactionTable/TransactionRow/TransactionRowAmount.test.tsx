@@ -1,8 +1,9 @@
 import React from "react";
 
-import { TransactionRowAmount } from "./TransactionRowAmount";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { render, screen } from "@/utils/testing-library";
+
+import { TransactionRowAmount } from "./TransactionRowAmount";
 
 describe("TransactionRowAmount", () => {
 	it("should show total", () => {

@@ -1,12 +1,12 @@
 import cn from "classnames";
 import React, { useState } from "react";
-import { styled } from "twin.macro";
 import { useTranslation } from "react-i18next";
-
-import { getBodyStyles, getChevronProperties, getHeaderStyles } from "./Alert.styles";
-import { Color } from "@/types";
+import { styled } from "twin.macro";
 
 import { Icon } from "@/app/components/Icon";
+import { Color } from "@/types";
+
+import { getBodyStyles, getChevronProperties, getHeaderStyles } from "./Alert.styles";
 
 interface AlertProperties extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;

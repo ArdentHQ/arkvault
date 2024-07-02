@@ -2,11 +2,12 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { TransactionSuccessful } from "./TransactionSuccessful";
-import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+
+import { TransactionSuccessful } from "./TransactionSuccessful";
 
 describe("TransactionSuccessful", () => {
 	let profile: Contracts.IProfile;

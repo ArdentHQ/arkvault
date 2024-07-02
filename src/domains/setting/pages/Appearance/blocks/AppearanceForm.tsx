@@ -8,12 +8,12 @@ import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { ListDivided } from "@/app/components/ListDivided";
 import { useEnvironmentContext } from "@/app/contexts";
+import { useZendesk } from "@/app/contexts/Zendesk";
 import { useAccentColor, useBreakpoint, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { AppearanceSettingsState } from "@/domains/setting/pages/Appearance/Appearance.contracts";
 import { useAppearanceItems, useAppearanceSettings } from "@/domains/setting/pages/Appearance/Appearance.helpers";
-import { useZendesk } from "@/app/contexts/Zendesk";
 
 interface AppearanceFormProperties {
 	profile: Contracts.IProfile;

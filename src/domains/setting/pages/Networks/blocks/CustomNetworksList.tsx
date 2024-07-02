@@ -1,12 +1,13 @@
-import React, { useMemo } from "react";
 import { Networks } from "@ardenthq/sdk";
-import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { Icon } from "@/app/components/Icon";
+import React, { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+
 import { Checkbox } from "@/app/components/Checkbox";
-import { networkInitials, networkName } from "@/utils/network-utils";
 import { Divider } from "@/app/components/Divider";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { Icon } from "@/app/components/Icon";
+import { networkInitials, networkName } from "@/utils/network-utils";
 
 const CustomNetworksListNetwork: React.VFC<{
 	network: Networks.NetworkManifest;

@@ -1,4 +1,5 @@
 import "react-table";
+
 import {
 	UseColumnOrderInstanceProps,
 	UseColumnOrderState,
@@ -48,6 +49,7 @@ import {
 	UseSortByOptions,
 	UseSortByState,
 } from "react-table";
+
 import { TableColumn } from "./Table.contracts";
 
 declare module "react-table" {

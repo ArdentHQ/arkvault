@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
-import userEvent from "@testing-library/user-event";
-import { AddParticipantItem } from "./AddParticipantItem";
+
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { AddParticipantItem } from "./AddParticipantItem";
 
 const deleteButton = () => screen.getByTestId("AddParticipantItem--deleteButton");
 
@@ -66,7 +68,7 @@ describe("Add Participant item", () => {
 		expect(deleteButton()).toBeDisabled();
 	});
 
-	it("should handle the delete button", () => {
+	it("should handle the delete button", async () => {
 		const onDelete = vi.fn();
 
 		render(
@@ -80,7 +82,7 @@ describe("Add Participant item", () => {
 
 		expect(deleteButton()).not.toBeDisabled();
 
-		userEvent.click(deleteButton());
+		await userEvent.click(deleteButton());
 
 		expect(onDelete).toHaveBeenCalledWith(1);
 	});

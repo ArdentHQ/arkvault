@@ -1,8 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { ConfigurationProvider, useConfiguration } from "./Configuration";
 import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { ConfigurationProvider, useConfiguration } from "./Configuration";
 
 describe("Configuration Context", () => {
 	it("should render the wrapper properly", () => {
@@ -63,7 +64,7 @@ describe("Configuration Context", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Configuration__list")).not.toBeInTheDocument());
 
-		userEvent.click(screen.getByTestId("Configuration__consumer"));
+		await userEvent.click(screen.getByTestId("Configuration__consumer"));
 
 		await expect(screen.findByTestId("Configuration__list")).resolves.toBeVisible();
 

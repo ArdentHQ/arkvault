@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
+import { Checkbox } from "@/app/components/Checkbox";
+import { Divider } from "@/app/components/Divider";
 import { Header } from "@/app/components/Header";
 import { MnemonicVerification } from "@/domains/wallet/components/MnemonicVerification";
-import { Divider } from "@/app/components/Divider";
-import { Checkbox } from "@/app/components/Checkbox";
 
 export const ConfirmPassphraseStep = () => {
 	const { getValues, setValue, watch } = useFormContext();

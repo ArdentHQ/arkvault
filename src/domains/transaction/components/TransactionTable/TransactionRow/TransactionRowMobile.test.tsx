@@ -1,11 +1,12 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { TransactionRowMobile } from "./TransactionRowMobile";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
+import { env, getDefaultProfileId, renderResponsive, screen } from "@/utils/testing-library";
+
+import { TransactionRowMobile } from "./TransactionRowMobile";
 let profile: Contracts.IProfile;
 
 describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {

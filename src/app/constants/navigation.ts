@@ -1,8 +1,8 @@
 import { generatePath } from "react-router";
 
-import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem } from "@/app/components/NavigationBar";
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { ProfilePaths } from "@/router/paths";
 
 export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [

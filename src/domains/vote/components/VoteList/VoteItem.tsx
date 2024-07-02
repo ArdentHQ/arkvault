@@ -1,11 +1,12 @@
 import React from "react";
 
-import { VoteItemProperties } from "./VoteList.contracts";
-import { VoteItemMobile } from "./VoteItemMobile";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { useBreakpoint } from "@/app/hooks";
+
+import { VoteItemMobile } from "./VoteItemMobile";
+import { VoteItemProperties } from "./VoteList.contracts";
 
 export const VoteItem = ({ wallet, amount = 0, currency, isNegativeAmount }: VoteItemProperties) => {
 	const { isXs, isSm } = useBreakpoint();

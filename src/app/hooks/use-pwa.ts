@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRegisterSW } from "virtual:pwa-register/react";
+
 import { usePlatform } from "@/app/hooks/use-platform";
 
 const HIDE_PWA_INSTALL_ALERT = "hidePwaInstallAlert";

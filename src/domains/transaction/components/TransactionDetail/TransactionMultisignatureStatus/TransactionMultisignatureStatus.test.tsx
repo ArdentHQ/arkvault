@@ -2,8 +2,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { TransactionMultisignatureStatus } from "./TransactionMultisignatureStatus";
 import { env, getDefaultProfileId, render, renderResponsiveWithRoute } from "@/utils/testing-library";
+
+import { TransactionMultisignatureStatus } from "./TransactionMultisignatureStatus";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

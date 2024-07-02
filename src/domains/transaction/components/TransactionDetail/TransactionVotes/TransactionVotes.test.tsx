@@ -1,8 +1,9 @@
 import { ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { TransactionVotes } from "./TransactionVotes";
 import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { TransactionVotes } from "./TransactionVotes";
 
 const address = "test-address";
 const username = "test-username";

@@ -47,7 +47,7 @@ const UpdateNetworkFormModal: React.VFC<{
 	const { formState, setValue, register, setError } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const [fetchingError, setFetchingError] = useState<string | undefined  >(undefined);
+	const [fetchingError, setFetchingError] = useState<string | undefined>(undefined);
 	const [fetchingDetails, setFetchingDetails] = useState(false);
 
 	const isSaveButtonDisabled = fetchingDetails || isSubmitting || (isDirty ? !isValid : true);

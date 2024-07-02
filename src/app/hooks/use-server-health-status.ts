@@ -1,5 +1,6 @@
-import { useTranslation } from "react-i18next";
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+
 import { useConfiguration } from "@/app/contexts";
 import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 

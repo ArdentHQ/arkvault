@@ -1,10 +1,11 @@
 import { act, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
-import { useNetworkStatus } from "./network-status";
 import { translations as errorTranslations } from "@/domains/error/i18n";
 import { Offline } from "@/domains/error/pages";
 import { render, screen } from "@/utils/testing-library";
+
+import { useNetworkStatus } from "./network-status";
 
 let eventMap: any;
 

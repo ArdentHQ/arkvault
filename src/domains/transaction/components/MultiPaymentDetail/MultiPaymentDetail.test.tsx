@@ -2,10 +2,11 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { MultiPaymentDetail } from "./MultiPaymentDetail";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { MultiPaymentDetail } from "./MultiPaymentDetail";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -82,7 +83,7 @@ describe("MultiPaymentDetail", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render hint icon with tooltip when it's a returned transaction", () => {
+	it("should render hint icon with tooltip when it's a returned transaction", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<MultiPaymentDetail
@@ -118,7 +119,7 @@ describe("MultiPaymentDetail", () => {
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 
-		userEvent.hover(screen.getByTestId("AmountLabel__hint"));
+		await userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 
 		expect(screen.getByText("Including 99 ARK sent to itself")).toBeInTheDocument();
 

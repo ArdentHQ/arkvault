@@ -11,8 +11,8 @@ import {
 	TransactionStatus,
 	TransactionTimestamp,
 } from "@/domains/transaction/components/TransactionDetail";
-import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 import { TransactionIpfsIcon } from "@/domains/transaction/components/TransactionDetail/TransactionIpfsIcon";
+import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 
 export const IpfsDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();

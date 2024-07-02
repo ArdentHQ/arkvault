@@ -5,13 +5,14 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { WalletHeader } from "./WalletHeader";
-import * as useWalletActionsModule from "@/domains/wallet/hooks/use-wallet-actions";
 import * as envHooks from "@/app/hooks/env";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import * as useQRCodeHook from "@/domains/wallet/components/ReceiveFunds/hooks";
+import * as useWalletActionsModule from "@/domains/wallet/hooks/use-wallet-actions";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+
+import { WalletHeader } from "./WalletHeader";
 
 const history = createHashHistory();
 
@@ -20,9 +21,9 @@ let wallet: Contracts.IReadWriteWallet;
 
 let walletUrl: string;
 
-const clickItem = (label: string) => {
-	userEvent.click(screen.getByTestId("dropdown__toggle"));
-	userEvent.click(within(screen.getByTestId("dropdown__content")).getByText(label));
+const clickItem = async (label: string) => {
+	await userEvent.click(screen.getByTestId("dropdown__toggle"));
+	await userEvent.click(within(screen.getByTestId("dropdown__content")).getByText(label));
 };
 
 const closeModal = () => userEvent.click(screen.getByTestId("Modal__close-button"));
@@ -85,7 +86,7 @@ describe("WalletHeader", () => {
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
 
 		const dropdownContent = screen.getByTestId("dropdown__content");
 
@@ -111,7 +112,7 @@ describe("WalletHeader", () => {
 
 		expect(screen.getByTestId("WalletHeader__send-button")).toBeEnabled();
 
-		userEvent.click(screen.getByTestId("WalletHeader__send-button"));
+		await userEvent.click(screen.getByTestId("WalletHeader__send-button"));
 
 		expect(handleSend).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 
@@ -182,9 +183,9 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			closeModal();
+			await closeModal();
 		} else {
-			userEvent.click(screen.getByText(commonTranslations.CANCEL));
+			await userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
@@ -200,9 +201,9 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			closeModal();
+			await closeModal();
 		} else {
-			userEvent.click(screen.getByText(commonTranslations.CANCEL));
+			await userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
@@ -219,7 +220,7 @@ describe("WalletHeader", () => {
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_RECEIVE_FUNDS.TITLE),
 		);
 
-		closeModal();
+		await closeModal();
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
@@ -227,7 +228,7 @@ describe("WalletHeader", () => {
 	it("should manually sync wallet data", async () => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
-		userEvent.click(screen.getByTestId("WalletHeader__refresh"));
+		await userEvent.click(screen.getByTestId("WalletHeader__refresh"));
 
 		expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true");
 
@@ -432,11 +433,11 @@ describe("WalletHeader", () => {
 		expect(screen.getByTestId("WalletHeader__balance-locked")).toHaveTextContent("10");
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
+		await userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
-		closeModal();
+		await closeModal();
 
 		await waitFor(() => expect(screen.queryByTestId("UnlockTokensModal")).not.toBeInTheDocument());
 
@@ -462,11 +463,11 @@ describe("WalletHeader", () => {
 		expect(screen.getByTestId("WalletHeader__balance-locked")).toHaveTextContent("10");
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
+		await userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
-		closeModal();
+		await closeModal();
 
 		await waitFor(() => expect(screen.queryByTestId("UnlockTokensModal")).not.toBeInTheDocument());
 

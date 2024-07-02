@@ -1,7 +1,8 @@
 import React from "react";
 
-import { TotalAmountBox } from "./TotalAmountBox";
 import { render, screen } from "@/utils/testing-library";
+
+import { TotalAmountBox } from "./TotalAmountBox";
 
 describe("TotalAmountBox", () => {
 	it.each([

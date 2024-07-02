@@ -1,17 +1,18 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { Networks } from "@ardenthq/sdk";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Modal } from "@/app/components/Modal";
+import { useTranslation } from "react-i18next";
+
+import { Alert } from "@/app/components/Alert";
+import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { InputDefault } from "@/app/components/Input";
-import { CustomNetwork, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { useHandleServers } from "@/domains/setting/hooks/use-handle-servers";
-import { Button } from "@/app/components/Button";
-import { Alert } from "@/app/components/Alert";
-import { useActiveProfile, useNetworkOptions, useValidation } from "@/app/hooks";
+import { Modal } from "@/app/components/Modal";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown";
+import { useActiveProfile, useNetworkOptions, useValidation } from "@/app/hooks";
+import { useHandleServers } from "@/domains/setting/hooks/use-handle-servers";
+import { CustomNetwork, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 
 const ServerFormModal: React.VFC<{

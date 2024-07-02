@@ -1,5 +1,6 @@
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { useCallback, useState } from "react";
+
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { isSameNetwork } from "@/utils/peers";
 import { customNetworks, sortByName } from "@/utils/server-utils";

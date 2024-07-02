@@ -1,8 +1,9 @@
 import React from "react";
 
-import { LedgerConfirmation } from "./LedgerConfirmation";
 import { translations } from "@/domains/transaction/i18n";
 import { render, screen } from "@/utils/testing-library";
+
+import { LedgerConfirmation } from "./LedgerConfirmation";
 
 describe("LedgerConfirmation", () => {
 	it("should render", () => {

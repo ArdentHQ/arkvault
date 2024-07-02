@@ -1,4 +1,5 @@
 import { renderHook } from "@testing-library/react-hooks";
+
 import { useLink } from "./use-link";
 
 describe("useLink", () => {

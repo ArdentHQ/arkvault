@@ -2,9 +2,10 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SentStep } from "./SentStep";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { SentStep } from "./SentStep";
 
 describe("Multisignature Detail Sent Step", () => {
 	let profile: Contracts.IProfile;

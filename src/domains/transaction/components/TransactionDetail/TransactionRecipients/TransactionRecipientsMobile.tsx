@@ -2,12 +2,12 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
+import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
+import { RowLabel, RowWrapper } from "@/app/components/Table/Mobile/Row";
 import { TransactionRecipientsProperties } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
-import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
-import { Amount } from "@/app/components/Amount";
 
 export const TransactionRecipientsMobile: React.FC<TransactionRecipientsProperties> = ({
 	currency,

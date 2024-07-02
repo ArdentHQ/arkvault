@@ -1,11 +1,11 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-
 import React from "react";
 import tw, { styled } from "twin.macro";
 
-import { VoteListProperties } from "./VoteList.contracts";
-import { VoteItem } from ".";
 import { assertReadOnlyWallet } from "@/utils/assertions";
+
+import { VoteItem } from ".";
+import { VoteListProperties } from "./VoteList.contracts";
 
 const ListWrapper = styled.div`
 	${tw`flex-1 -my-2`}

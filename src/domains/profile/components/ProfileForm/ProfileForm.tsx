@@ -2,21 +2,23 @@ import { Helpers } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
-import { ProfileFormState } from "./ProfileForm.contracts";
+
 import { Button } from "@/app/components/Button";
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
+import { Checkbox } from "@/app/components/Checkbox";
 import { Divider } from "@/app/components/Divider";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { InputDefault } from "@/app/components/Input";
+import { Link } from "@/app/components/Link";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useAccentColor, useTheme, useValidation } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
-import { Checkbox } from "@/app/components/Checkbox";
-import { Link } from "@/app/components/Link";
+
+import { ProfileFormState } from "./ProfileForm.contracts";
 
 const PRIVACY_POLICY_URL = "https://arkvault.io/privacy-policy";
 const TERMS_URL = "http://arkvault.io/terms-of-service";

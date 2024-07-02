@@ -1,15 +1,15 @@
 import { Networks } from "@ardenthq/sdk";
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React from "react";
 import userEvent from "@testing-library/user-event";
+import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import * as useFeesHook from "@/app/hooks/use-fees";
-import { toasts } from "@/app/services";
-import { translations } from "@/domains/transaction/i18n";
 
 import { useValidation } from "@/app/hooks";
+import * as useFeesHook from "@/app/hooks/use-fees";
+import { toasts } from "@/app/services";
 import { FeeField } from "@/domains/transaction/components/FeeField/FeeField";
+import { translations } from "@/domains/transaction/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 describe("FeeField", () => {
@@ -105,7 +105,7 @@ describe("FeeField", () => {
 				expect(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED)).toBeEnabled();
 			});
 
-			userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+			await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"));
 
@@ -193,11 +193,11 @@ describe("FeeField", () => {
 
 		expect(avgButton).toHaveAttribute("aria-checked", "true");
 
-		userEvent.click(minButton);
+		await userEvent.click(minButton);
 
 		expect(minButton).toHaveAttribute("aria-checked", "true");
 
-		userEvent.click(maxButton);
+		await userEvent.click(maxButton);
 
 		expect(maxButton).toHaveAttribute("aria-checked", "true");
 	});

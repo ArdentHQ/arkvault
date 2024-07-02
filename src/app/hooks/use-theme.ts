@@ -1,8 +1,8 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { Theme } from "@/types";
-import { shouldUseDarkColors } from "@/utils/theme";
 import { browser } from "@/utils/platform";
+import { shouldUseDarkColors } from "@/utils/theme";
 
 export type ViewingModeType = "light" | "dark";
 

@@ -1,12 +1,13 @@
 import React, { ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Modal } from "@/app/components/Modal";
-import { Alert } from "@/app/components/Alert";
-import { FormButtons } from "@/app/components/Form";
-import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
-import { Checkbox } from "@/app/components/Checkbox";
+
 import { Address } from "@/app/components/Address";
+import { Alert } from "@/app/components/Alert";
+import { Button } from "@/app/components/Button";
+import { Checkbox } from "@/app/components/Checkbox";
+import { FormButtons } from "@/app/components/Form";
+import { Icon } from "@/app/components/Icon";
+import { Modal } from "@/app/components/Modal";
 
 export type TransferFormData = Record<string, string | null>;
 

@@ -1,6 +1,8 @@
 import React from "react";
-import { ContactsHeader, ContactsHeaderExtra } from "./Contacts.blocks";
+
 import { renderResponsive } from "@/utils/testing-library";
+
+import { ContactsHeader, ContactsHeaderExtra } from "./Contacts.blocks";
 
 describe("ContactsHeader", () => {
 	it.each(["xs", "md"])("should render responsive", (breakpoint) => {

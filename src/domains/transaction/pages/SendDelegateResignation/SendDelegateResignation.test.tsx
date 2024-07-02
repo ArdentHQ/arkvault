@@ -4,10 +4,12 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SendDelegateResignation } from "./SendDelegateResignation";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
+	act,
 	env,
 	getDefaultProfileId,
 	MNEMONICS,
@@ -17,10 +19,9 @@ import {
 	syncFees,
 	waitFor,
 	within,
-	act,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+
+import { SendDelegateResignation } from "./SendDelegateResignation";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -136,22 +137,22 @@ describe("SendDelegateResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+			await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 			await waitFor(() => {
 				expect(secondMnemonic()).toBeEnabled();
 			});
 
-			userEvent.type(secondMnemonic(), MNEMONICS[2]);
+			await userEvent.type(secondMnemonic(), MNEMONICS[2]);
 			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[2]));
 
 			await waitFor(() => {
@@ -181,16 +182,16 @@ describe("SendDelegateResignation", () => {
 			// Fee (simple)
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
-			userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
+			await userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
 			await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
 			// Fee (advanced)
-			userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+			await userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 			inputElement.select();
-			userEvent.paste(inputElement, "1");
+			await userEvent.paste(inputElement, "1");
 
 			await waitFor(() => expect(inputElement).toHaveValue("1"));
 
@@ -202,7 +203,7 @@ describe("SendDelegateResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
@@ -216,7 +217,7 @@ describe("SendDelegateResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+			await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -228,11 +229,11 @@ describe("SendDelegateResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+			await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
 			await expect(formStep()).resolves.toBeVisible();
 		});
@@ -242,11 +243,11 @@ describe("SendDelegateResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -259,26 +260,26 @@ describe("SendDelegateResignation", () => {
 			await expect(formStep()).resolves.toBeVisible();
 
 			// Fee
-			userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+			await userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 			inputElement.select();
-			userEvent.paste(inputElement, "30");
+			await userEvent.paste(inputElement, "30");
 
 			await waitFor(() => expect(inputElement).toHaveValue("30"));
 
 			await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("FeeWarning__cancel-button")).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
+			await userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
 			await expect(formStep()).resolves.toBeVisible();
 		});
@@ -289,26 +290,26 @@ describe("SendDelegateResignation", () => {
 			await expect(formStep()).resolves.toBeVisible();
 
 			// Fee
-			userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+			await userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 			inputElement.select();
-			userEvent.paste(inputElement, "30");
+			await userEvent.paste(inputElement, "30");
 
 			await waitFor(() => expect(inputElement).toHaveValue("30"));
 
 			await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			await userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 		});
@@ -338,27 +339,27 @@ describe("SendDelegateResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-			userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 			await waitFor(() => expect(secondMnemonic()).toBeEnabled());
 
-			userEvent.type(secondMnemonic(), MNEMONICS[1]);
+			await userEvent.type(secondMnemonic(), MNEMONICS[1]);
 			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
 
 			await waitFor(() => {
 				expect(sendButton()).toBeEnabled();
 			});
 
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 
 			await waitFor(() => {
 				expect(screen.getByTestId("ErrorStep")).toBeInTheDocument();
@@ -369,7 +370,7 @@ describe("SendDelegateResignation", () => {
 
 			const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
-			userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+			await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 			const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}`;
 			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
@@ -399,29 +400,29 @@ describe("SendDelegateResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+			await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 			await waitFor(() => {
 				expect(secondMnemonic()).toBeEnabled();
 			});
 
-			userEvent.paste(secondMnemonic(), MNEMONICS[1]);
+			await userEvent.paste(secondMnemonic(), MNEMONICS[1]);
 			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
 
 			await waitFor(() => {
 				expect(sendButton()).toBeEnabled();
 			});
 
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
@@ -456,26 +457,26 @@ describe("SendDelegateResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+			await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 			await waitFor(() => {
 				expect(secondMnemonic()).toBeEnabled();
 			});
 
-			userEvent.paste(secondMnemonic(), MNEMONICS[1]);
+			await userEvent.paste(secondMnemonic(), MNEMONICS[1]);
 			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
 
-			userEvent.keyboard("{enter}");
-			userEvent.click(sendButton());
+			await userEvent.keyboard("{enter}");
+			await userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
@@ -510,15 +511,15 @@ describe("SendDelegateResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-			userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
 			await waitFor(() => {
 				expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase);
@@ -532,7 +533,7 @@ describe("SendDelegateResignation", () => {
 				expect(secondMnemonic()).toBeEnabled();
 			});
 
-			userEvent.type(secondMnemonic(), MNEMONICS[1]);
+			await userEvent.type(secondMnemonic(), MNEMONICS[1]);
 
 			await waitFor(() => {
 				expect(secondMnemonic()).toHaveValue(MNEMONICS[1]);
@@ -542,7 +543,7 @@ describe("SendDelegateResignation", () => {
 				expect(sendButton()).toBeEnabled();
 			});
 
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
@@ -552,7 +553,7 @@ describe("SendDelegateResignation", () => {
 
 			const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
-			userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+			await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 			const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}`;
 			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
@@ -596,22 +597,22 @@ describe("SendDelegateResignation", () => {
 
 			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+			await userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 			await waitFor(() =>
 				expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
 			);
 
 			await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 

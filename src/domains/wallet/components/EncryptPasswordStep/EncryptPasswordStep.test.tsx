@@ -2,8 +2,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { EncryptPasswordStep } from "./EncryptPasswordStep";
 import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
+
+import { EncryptPasswordStep } from "./EncryptPasswordStep";
 
 describe("EncryptPasswordStep", () => {
 	it("should render", () => {
@@ -18,7 +19,7 @@ describe("EncryptPasswordStep", () => {
 
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 
-		userEvent.paste(passwordInput, "password");
+		await userEvent.paste(passwordInput, "password");
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
 
@@ -33,7 +34,7 @@ describe("EncryptPasswordStep", () => {
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
 
-		userEvent.paste(passwordInput, "password");
+		await userEvent.paste(passwordInput, "password");
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
 		await waitFor(() => expect(confirmPassword).toHaveValue("password"));

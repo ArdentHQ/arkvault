@@ -1,7 +1,9 @@
 import { DTO } from "@ardenthq/sdk-profiles";
-import { CsvFormatter } from "./transaction-csv-formatter.factory";
-import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
+
 import { buildTranslations } from "@/app/i18n/helpers";
+import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
+
+import { CsvFormatter } from "./transaction-csv-formatter.factory";
 
 const getHeaders = (settings: CsvSettings, exchangeCurrency: string) => {
 	const { COMMON } = buildTranslations();

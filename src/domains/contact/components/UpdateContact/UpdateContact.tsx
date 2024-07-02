@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 
 import { Modal } from "@/app/components/Modal";
 import { useEnvironmentContext } from "@/app/contexts";
+import { useBreakpoint } from "@/app/hooks";
 import { ContactForm } from "@/domains/contact/components/ContactForm";
 import { ContactFormData, ContactFormState } from "@/domains/contact/components/ContactForm/ContactForm.contracts";
-import { useBreakpoint } from "@/app/hooks";
 
 interface UpdateContactProperties {
 	contact: Contracts.IContact;

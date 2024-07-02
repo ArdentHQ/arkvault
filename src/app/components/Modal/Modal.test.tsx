@@ -2,9 +2,10 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { Modal } from "./Modal";
-import { render, screen, renderResponsive, waitFor } from "@/utils/testing-library";
 import { browser } from "@/utils/platform";
+import { render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+
+import { Modal } from "./Modal";
 
 describe("Modal", () => {
 	it("should not render if not open", () => {
@@ -69,7 +70,7 @@ describe("Modal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should closed by click on overlay", () => {
+	it("should closed by click on overlay", async () => {
 		const onClose = vi.fn();
 		render(
 			<Modal title="ark" isOpen={true} onClose={onClose}>
@@ -80,12 +81,12 @@ describe("Modal", () => {
 		expect(screen.getByTestId("Modal__overlay")).toBeInTheDocument();
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Modal__overlay"));
+		await userEvent.click(screen.getByTestId("Modal__overlay"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});
 
-	it("should no close by click on modal content", () => {
+	it("should no close by click on modal content", async () => {
 		const onClose = vi.fn();
 		render(
 			<Modal title="ark" isOpen={true} onClose={onClose}>
@@ -96,7 +97,7 @@ describe("Modal", () => {
 		expect(screen.getByTestId("Modal__overlay")).toBeInTheDocument();
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Modal__inner"));
+		await userEvent.click(screen.getByTestId("Modal__inner"));
 
 		expect(onClose).not.toHaveBeenCalled();
 	});
@@ -107,11 +108,11 @@ describe("Modal", () => {
 
 		expect(screen.getByTestId("Modal__overlay")).toBeInTheDocument();
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		expect(onClose).not.toHaveBeenCalled();
 
-		userEvent.keyboard("{esc}");
+		await userEvent.keyboard("{esc}");
 
 		expect(onClose).toHaveBeenCalledTimes(1);
 		expect(asFragment()).toMatchSnapshot();

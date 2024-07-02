@@ -1,4 +1,4 @@
-import tw, { TwStyle, css } from "twin.macro";
+import tw, { css, TwStyle } from "twin.macro";
 
 import { Color, Size, Theme } from "@/types";
 

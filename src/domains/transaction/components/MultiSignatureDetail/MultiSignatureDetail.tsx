@@ -2,9 +2,6 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
-import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
-import { SentStep } from "./SentStep";
-import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Modal } from "@/app/components/Modal";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -13,6 +10,10 @@ import { useLedgerModelStatus } from "@/app/hooks";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useMultiSignatureRegistration, useMultiSignatureStatus } from "@/domains/transaction/hooks";
+
+import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
+import { SentStep } from "./SentStep";
+import { SummaryStep } from "./SummaryStep";
 
 interface MultiSignatureDetailProperties {
 	isOpen: boolean;

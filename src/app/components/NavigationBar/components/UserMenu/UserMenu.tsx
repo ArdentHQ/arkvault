@@ -1,13 +1,13 @@
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Balance } from "@/app/components/NavigationBar/components/Balance";
 import { Avatar } from "@/app/components/Avatar";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem, UserMenuProperties } from "@/app/components/NavigationBar";
+import { Balance } from "@/app/components/NavigationBar/components/Balance";
 import { getUserMenuActions } from "@/app/constants/navigation";
-import { useActiveProfile } from "@/app/hooks";
 import { useConfiguration } from "@/app/contexts";
+import { useActiveProfile } from "@/app/hooks";
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();

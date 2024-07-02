@@ -5,9 +5,6 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
-import { LedgerTabs } from "./Ledger/LedgerTabs";
-import { MethodStep } from "./MethodStep";
-import { SuccessStep } from "./SuccessStep";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
@@ -18,10 +15,10 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks/env";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { toasts } from "@/app/services";
-import { useWalletConfig } from "@/domains/wallet/hooks";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
 import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
+import { useWalletConfig } from "@/domains/wallet/hooks";
 import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/use-wallet-import";
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
@@ -32,6 +29,10 @@ import {
 	profileAllEnabledNetworkIds,
 	profileAllEnabledNetworks,
 } from "@/utils/network-utils";
+
+import { LedgerTabs } from "./Ledger/LedgerTabs";
+import { MethodStep } from "./MethodStep";
+import { SuccessStep } from "./SuccessStep";
 
 enum Step {
 	NetworkStep = 1,

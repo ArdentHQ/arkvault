@@ -1,8 +1,10 @@
 import React, { useMemo } from "react";
 import tw, { styled } from "twin.macro";
-import { SideBarItem } from "./SideBarItem";
+
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
+
+import { SideBarItem } from "./SideBarItem";
 
 export interface Item {
 	icon?: string;

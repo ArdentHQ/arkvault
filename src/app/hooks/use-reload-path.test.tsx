@@ -2,8 +2,9 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { useReloadPath } from "./use-reload-path";
 import { render, screen } from "@/utils/testing-library";
+
+import { useReloadPath } from "./use-reload-path";
 
 describe("useReloadPath hook", () => {
 	const TestComponent: React.FC = () => {
@@ -19,7 +20,7 @@ describe("useReloadPath hook", () => {
 		);
 	};
 
-	it("should render useReloadPath", () => {
+	it("should render useReloadPath", async () => {
 		render(
 			<Route pathname="/">
 				<TestComponent />
@@ -28,7 +29,7 @@ describe("useReloadPath hook", () => {
 
 		expect(screen.getByTestId("header_test")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("header_test"));
+		await userEvent.click(screen.getByTestId("header_test"));
 
 		expect(screen.getByText("UseReloadPath Test Component")).toBeInTheDocument();
 	});

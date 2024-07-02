@@ -1,7 +1,8 @@
 import React from "react";
 
-import { InputDefault } from "./InputDefault";
 import { render, screen } from "@/utils/testing-library";
+
+import { InputDefault } from "./InputDefault";
 
 describe("InputDefault", () => {
 	it("should render a default input", () => {

@@ -1,10 +1,12 @@
-import React from "react";
 import userEvent from "@testing-library/user-event";
+import React from "react";
 import { useFormContext } from "react-hook-form";
-import { PasswordValidation } from "./PasswordValidation";
-import { InputPassword } from "@/app/components/Input";
+
 import { FormField } from "@/app/components/Form";
+import { InputPassword } from "@/app/components/Input";
 import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
+
+import { PasswordValidation } from "./PasswordValidation";
 
 const passwordInput = () => screen.getByTestId("PasswordValidation__password");
 
@@ -46,13 +48,13 @@ describe("PasswordValidation", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
-		userEvent.paste(passwordInput(), "password");
+		await userEvent.paste(passwordInput(), "password");
 
 		await expect(screen.findByTestId("Rules")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.clear(passwordInput());
+		await userEvent.clear(passwordInput());
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
@@ -91,8 +93,8 @@ describe("PasswordValidation", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
-		userEvent.paste(passwordInput(), "password");
-		userEvent.paste(screen.getByTestId("PasswordValidation__currentPassword"), "current password");
+		await userEvent.paste(passwordInput(), "password");
+		await userEvent.paste(screen.getByTestId("PasswordValidation__currentPassword"), "current password");
 
 		await expect(screen.findByTestId("Rules")).resolves.toBeVisible();
 

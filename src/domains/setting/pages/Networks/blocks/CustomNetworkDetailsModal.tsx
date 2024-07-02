@@ -1,10 +1,11 @@
+import { Networks } from "@ardenthq/sdk";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Networks } from "@ardenthq/sdk";
-import { Modal } from "@/app/components/Modal";
-import { Tooltip } from "@/app/components/Tooltip";
+
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
+import { Modal } from "@/app/components/Modal";
+import { Tooltip } from "@/app/components/Tooltip";
 
 const CustomNetworkDetailsModalRow: React.VFC<{
 	label: string;

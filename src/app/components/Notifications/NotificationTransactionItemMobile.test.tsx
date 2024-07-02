@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import { NotificationTransactionItemMobileSkeleton } from "./NotificationTransactionItemMobileSkeleton";
+
 import { render, screen, waitFor } from "@/utils/testing-library";
+
+import { NotificationTransactionItemMobileSkeleton } from "./NotificationTransactionItemMobileSkeleton";
 
 vi.mock("react-visibility-sensor", () => ({
 	/* eslint-disable react-hooks/rules-of-hooks */

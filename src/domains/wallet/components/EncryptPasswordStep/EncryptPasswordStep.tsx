@@ -7,8 +7,8 @@ import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { InputPassword } from "@/app/components/Input";
-import { assertWallet } from "@/utils/assertions";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
+import { assertWallet } from "@/utils/assertions";
 
 interface EncryptPasswordStepProperties {
 	importedWallet?: Contracts.IReadWriteWallet;

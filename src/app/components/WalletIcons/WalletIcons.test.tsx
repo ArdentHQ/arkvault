@@ -3,8 +3,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { WalletIcons, WalletIconsSkeleton } from "./WalletIcons";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+
+import { WalletIcons, WalletIconsSkeleton } from "./WalletIcons";
 
 let wallet: Contracts.IReadWriteWallet;
 
@@ -14,12 +15,12 @@ describe("WalletIcons", () => {
 		await wallet.synchroniser().identity();
 	});
 
-	it("should render with tooltip in the dark mode", () => {
+	it("should render with tooltip in the dark mode", async () => {
 		const walletSpy = vi.spyOn(wallet, "isKnown").mockReturnValue(true);
 
 		render(<WalletIcons wallet={wallet} tooltipDarkTheme />);
 
-		userEvent.hover(screen.getByTestId("WalletIcon__Verified"));
+		await userEvent.hover(screen.getByTestId("WalletIcon__Verified"));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 

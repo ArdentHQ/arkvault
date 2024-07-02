@@ -1,3 +1,9 @@
+import { error } from "@/domains/error/images";
+import { exchange } from "@/domains/exchange/images";
+import { profile } from "@/domains/profile/images";
+import { transaction } from "@/domains/transaction/images";
+import { wallet } from "@/domains/wallet/images";
+
 import { ReactComponent as ARKVaultLogo } from "./arkvault-logo.svg";
 import { ReactComponent as DeleteBannerDarkGreen } from "./delete-banner-dark-green.svg";
 import { ReactComponent as DeleteBannerDarkNavy } from "./delete-banner-dark-navy.svg";
@@ -14,16 +20,8 @@ import { ReactComponent as GenericWarningDarkGreen } from "./generic-warning-dar
 import { ReactComponent as GenericWarningDarkNavy } from "./generic-warning-dark-navy.svg";
 import { ReactComponent as GenericWarningLightGreen } from "./generic-warning-light-green.svg";
 import { ReactComponent as GenericWarningLightNavy } from "./generic-warning-light-navy.svg";
-import { ReactComponent as SuccessDarkGreen } from "./success-dark-green.svg";
-import { ReactComponent as SuccessDarkNavy } from "./success-dark-navy.svg";
-import { ReactComponent as SuccessLightGreen } from "./success-light-green.svg";
-import { ReactComponent as SuccessLightNavy } from "./success-light-navy.svg";
-import { ReactComponent as NoResultsDarkGreen } from "./no-results-dark-green.svg";
-import { ReactComponent as NoResultsDarkNavy } from "./no-results-dark-navy.svg";
-import { ReactComponent as NoResultsLightGreen } from "./no-results-light-green.svg";
-import { ReactComponent as NoResultsLightNavy } from "./no-results-light-navy.svg";
-import { ReactComponent as WelcomeBannerDark } from "./welcome-banner-dark.svg";
-import { ReactComponent as WelcomeBannerLight } from "./welcome-banner-light.svg";
+import { ReactComponent as InfoDark } from "./info-dark.svg";
+import { ReactComponent as InfoLight } from "./info-light.svg";
 import {
 	ReactComponent as IOsInstructionsStep1DarkBlue,
 	ReactComponent as IOsInstructionsStep1DarkGreen,
@@ -48,18 +46,21 @@ import {
 	ReactComponent as IOsInstructionsStep3LightBlue,
 	ReactComponent as IOsInstructionsStep3LightGreen,
 } from "./ios-instructions-step-3-light.svg";
-import { ReactComponent as TrashLight } from "./trash-light.svg";
+import { ReactComponent as NoResultsDarkGreen } from "./no-results-dark-green.svg";
+import { ReactComponent as NoResultsDarkNavy } from "./no-results-dark-navy.svg";
+import { ReactComponent as NoResultsLightGreen } from "./no-results-light-green.svg";
+import { ReactComponent as NoResultsLightNavy } from "./no-results-light-navy.svg";
+import { ReactComponent as SuccessDarkGreen } from "./success-dark-green.svg";
+import { ReactComponent as SuccessDarkNavy } from "./success-dark-navy.svg";
+import { ReactComponent as SuccessLightGreen } from "./success-light-green.svg";
+import { ReactComponent as SuccessLightNavy } from "./success-light-navy.svg";
 import { ReactComponent as TrashDark } from "./trash-dark.svg";
-import { ReactComponent as InfoLight } from "./info-light.svg";
-import { ReactComponent as InfoDark } from "./info-dark.svg";
-import { ReactComponent as WarningLight } from "./warning-light.svg";
+import { ReactComponent as TrashLight } from "./trash-light.svg";
 import { ReactComponent as WarningDark } from "./warning-dark.svg";
+import { ReactComponent as WarningLight } from "./warning-light.svg";
+import { ReactComponent as WelcomeBannerDark } from "./welcome-banner-dark.svg";
+import { ReactComponent as WelcomeBannerLight } from "./welcome-banner-light.svg";
 import { ReactComponent as WorldMap } from "./world-map.svg";
-import { wallet } from "@/domains/wallet/images";
-import { transaction } from "@/domains/transaction/images";
-import { profile } from "@/domains/profile/images";
-import { exchange } from "@/domains/exchange/images";
-import { error } from "@/domains/error/images";
 
 export const images = {
 	common: {

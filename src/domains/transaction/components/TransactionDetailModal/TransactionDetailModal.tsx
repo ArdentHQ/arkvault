@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
 
-import { TransactionAliases, TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
 import { DelegateRegistrationDetail } from "@/domains/transaction/components/DelegateRegistrationDetail";
 import { DelegateResignationDetail } from "@/domains/transaction/components/DelegateResignationDetail";
@@ -12,6 +11,8 @@ import { SecondSignatureDetail } from "@/domains/transaction/components/SecondSi
 import { TransferDetail } from "@/domains/transaction/components/TransferDetail";
 import { UnlockTokenDetail } from "@/domains/transaction/components/UnlockTokenDetail";
 import { VoteDetail } from "@/domains/transaction/components/VoteDetail";
+
+import { TransactionAliases, TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
 
 export const TransactionDetailModal = ({
 	isOpen,

@@ -1,41 +1,42 @@
+import { URLBuilder } from "@ardenthq/arkvault-url";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
-import { URLBuilder } from "@ardenthq/arkvault-url";
-import { FormStep } from "./FormStep";
-import { TransferLedgerReview } from "./LedgerReview";
-import { NetworkStep } from "./NetworkStep";
-import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
-import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
-import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { QRModal } from "@/app/components/QRModal";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { useActiveProfile, useActiveWalletWhenNeeded, useNetworks } from "@/app/hooks";
 import { useKeyup } from "@/app/hooks/use-keyup";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
+import { toasts } from "@/app/services";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransaction } from "@/domains/transaction/hooks";
+import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
-import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
-import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-url";
-import { toasts } from "@/app/services";
-import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
-import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
-import { isValidUrl } from "@/utils/url-validation";
+import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 import {
 	TransferFormData,
 	TransferOverwriteModal,
 } from "@/domains/transaction/pages/SendTransfer/TransferOverwriteModal";
+import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
+import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { isValidUrl } from "@/utils/url-validation";
+
+import { FormStep } from "./FormStep";
+import { TransferLedgerReview } from "./LedgerReview";
+import { NetworkStep } from "./NetworkStep";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 
 const MAX_TABS = 5;
 

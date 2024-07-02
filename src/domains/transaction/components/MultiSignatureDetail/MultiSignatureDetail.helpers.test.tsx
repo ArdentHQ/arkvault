@@ -1,7 +1,6 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
 import {
 	env,
 	getDefaultProfileId,
@@ -10,6 +9,8 @@ import {
 	syncDelegates,
 	triggerMessageSignOnce,
 } from "@/utils/testing-library";
+
+import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
 
 describe("MultiSignatureDetail Helpers", () => {
 	let profile: Contracts.IProfile;

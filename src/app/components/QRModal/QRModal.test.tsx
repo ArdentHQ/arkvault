@@ -1,14 +1,15 @@
 import { waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import React from "react";
 import * as browserAccess from "browser-fs-access";
-
 import QRScanner from "qr-scanner";
+import React from "react";
 import * as reactQrReaderMock from "react-qr-reader";
-import { QRModal } from "./QRModal";
+
 import { toasts } from "@/app/services";
-import { render, screen } from "@/utils/testing-library";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import { render, screen } from "@/utils/testing-library";
+
+import { QRModal } from "./QRModal";
 
 const qrCodeUrl =
 	"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o";
@@ -33,14 +34,14 @@ describe("QRModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should execute onCancel callback", () => {
+	it("should execute onCancel callback", async () => {
 		const onCancel = vi.fn();
 
 		render(<QRModal isOpen={true} onCancel={onCancel} onRead={vi.fn()} />);
 
 		const closeButton = screen.getByTestId("Modal__close-button");
 
-		userEvent.click(closeButton);
+		await userEvent.click(closeButton);
 
 		expect(onCancel).toHaveBeenCalledWith();
 	});
@@ -55,7 +56,7 @@ describe("QRModal", () => {
 		});
 
 		render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(transactionTranslations.MODAL_QR_CODE.INVALID_QR_CODE);
@@ -74,7 +75,7 @@ describe("QRModal", () => {
 		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockReturnValue({ data: qrCodeUrl });
 
 		render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={onRead} />);
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => expect(onRead).toHaveBeenCalledWith(qrCodeUrl));
 		scanImageMock.mockRestore();

@@ -1,6 +1,8 @@
 import React from "react";
-import { TransactionDelegateIcon } from "./TransactionResponsiveIcon";
+
 import { queryElementForSvg, renderResponsive } from "@/utils/testing-library";
+
+import { TransactionDelegateIcon } from "./TransactionResponsiveIcon";
 
 describe("TransactionDelegateIcon", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {

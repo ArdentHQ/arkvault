@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Prompt } from "react-router-dom";
 
-import { GeneralSettingsState, SettingsOption } from "./General.contracts";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
@@ -22,6 +21,8 @@ import { ResetProfile } from "@/domains/profile/components/ResetProfile";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
+
+import { GeneralSettingsState, SettingsOption } from "./General.contracts";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";

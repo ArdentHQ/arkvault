@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 import { Alert } from "@/app/components/Alert";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
+import { FormButtons } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
 import { StepHeader } from "@/app/components/StepHeader";
-import { FormButtons } from "@/app/components/Form";
 import { TextArea } from "@/app/components/TextArea";
 
 interface Properties {

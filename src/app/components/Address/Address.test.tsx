@@ -1,9 +1,10 @@
 import React from "react";
-
 import * as useResizeDetectorModule from "react-resize-detector";
-import { Address } from "./Address";
+
 import { Size } from "@/types";
 import { render, screen } from "@/utils/testing-library";
+
+import { Address } from "./Address";
 
 const sampleAddress = "ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT";
 

@@ -3,9 +3,10 @@ import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { act } from "react-test-renderer";
 
-import { useWelcomeModal } from "./use-welcome-modal";
 import { ConfigurationProvider } from "@/app/contexts/Configuration";
 import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
+
+import { useWelcomeModal } from "./use-welcome-modal";
 
 let profile: Contracts.IProfile;
 

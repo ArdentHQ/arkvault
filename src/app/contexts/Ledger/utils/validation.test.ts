@@ -1,7 +1,8 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { hasRequiredAppVersion } from "./validation";
 
 import { env, getDefaultProfileId, mockNanoXTransport } from "@/utils/testing-library";
+
+import { hasRequiredAppVersion } from "./validation";
 
 describe("Persist App Validation", () => {
 	let profile: Contracts.IProfile;

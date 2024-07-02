@@ -1,7 +1,8 @@
 import React from "react";
 
-import { StepsProvider, useSteps } from "./Steps";
 import { render, screen } from "@/utils/testing-library";
+
+import { StepsProvider, useSteps } from "./Steps";
 
 describe("Steps Context", () => {
 	it("should render the wrapper properly", () => {

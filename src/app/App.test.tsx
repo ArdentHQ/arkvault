@@ -1,14 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Bcrypt } from "@ardenthq/sdk-cryptography";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
-import userEvent from "@testing-library/user-event";
-import { App } from "./App";
+
 import { toasts } from "@/app/services";
 import { translations as errorTranslations } from "@/domains/error/i18n";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
-import * as themeUtils from "@/utils/theme";
 import {
 	env,
 	getDefaultPassword,
@@ -17,6 +16,9 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
+import * as themeUtils from "@/utils/theme";
+
+import { App } from "./App";
 
 vi.mock("@/domains/dashboard/routing", async () => {
 	const page = await vi.importActual("@/domains/dashboard/pages/Dashboard");
@@ -84,13 +86,13 @@ describe("App", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		userEvent.click(screen.getAllByTestId("Card")[1]);
+		await userEvent.click(screen.getAllByTestId("Card")[1]);
 
 		await waitFor(() => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.paste(passwordInput(), "password");
+		await userEvent.paste(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
@@ -101,7 +103,7 @@ describe("App", () => {
 			throw new Error("password not found");
 		});
 
-		userEvent.click(screen.getByTestId("SignIn__submit-button"));
+		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalledTimes(1), { timeout: 4000 });
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
@@ -278,13 +280,13 @@ describe("App", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		userEvent.click(screen.getAllByTestId("Card")[1]);
+		await userEvent.click(screen.getAllByTestId("Card")[1]);
 
 		await waitFor(() => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.type(passwordInput(), "password");
+		await userEvent.type(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
@@ -292,7 +294,7 @@ describe("App", () => {
 
 		const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 
-		userEvent.click(screen.getByTestId("SignIn__submit-button"));
+		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
 		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl), { timeout: 4000 });
@@ -314,13 +316,13 @@ describe("App", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		userEvent.click(screen.getAllByTestId("Card")[1]);
+		await userEvent.click(screen.getAllByTestId("Card")[1]);
 
 		await waitFor(() => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.type(passwordInput(), "password");
+		await userEvent.type(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
@@ -332,7 +334,7 @@ describe("App", () => {
 			throw new Error("restore error");
 		});
 
-		userEvent.click(screen.getByTestId("SignIn__submit-button"));
+		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"), { timeout: 4000 });
 

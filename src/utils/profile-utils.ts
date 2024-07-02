@@ -1,8 +1,9 @@
-import { matchPath } from "react-router-dom";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { matchPath } from "react-router-dom";
+
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 import { profileAllEnabledNetworkIds } from "./network-utils";
-import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 export const getProfileById = (env: Environment, id: string) => {
 	if (!id) {

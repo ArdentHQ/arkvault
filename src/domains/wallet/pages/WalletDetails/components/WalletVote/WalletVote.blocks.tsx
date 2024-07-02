@@ -1,12 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { DelegateStatusProperties, EmptyVotesProperties, VotesProperties } from "./WalletVote.contracts";
 import { Amount } from "@/app/components/Amount";
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { Tooltip } from "@/app/components/Tooltip";
+
+import { DelegateStatusProperties, EmptyVotesProperties, VotesProperties } from "./WalletVote.contracts";
 
 const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 

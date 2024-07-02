@@ -10,11 +10,11 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { Form } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { Modal } from "@/app/components/Modal";
+import { useFiles } from "@/app/hooks/use-files";
+import { toasts } from "@/app/services";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { ReceiveFundsForm, useQRCode } from "@/domains/wallet/components/ReceiveFunds";
-import { toasts } from "@/app/services";
-import { useFiles } from "@/app/hooks/use-files";
 
 interface ReceiveFundsProperties {
 	address: string;

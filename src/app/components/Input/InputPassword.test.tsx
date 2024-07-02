@@ -1,9 +1,10 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { InputPassword } from "./InputPassword";
 import { FormFieldProvider } from "@/app/components/Form/useFormField";
 import { render, screen } from "@/utils/testing-library";
+
+import { InputPassword } from "./InputPassword";
 
 describe("InputPassword", () => {
 	it("should render as a password field", () => {
@@ -14,15 +15,15 @@ describe("InputPassword", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should toggle the input type", () => {
+	it("should toggle the input type", async () => {
 		render(<InputPassword />);
 		const input = screen.getByTestId("InputPassword");
 		const toggle = screen.getByTestId("InputPassword__toggle");
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(input).toHaveAttribute("type", "text");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(input).toHaveAttribute("type", "password");
 	});

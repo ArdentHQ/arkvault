@@ -1,5 +1,6 @@
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 
 export const sortByName = (networks: NormalizedNetwork[]) => networks.sort((a, b) => a.name.localeCompare(b.name));

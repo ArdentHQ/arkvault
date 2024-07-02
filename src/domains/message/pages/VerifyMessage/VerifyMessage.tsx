@@ -1,18 +1,20 @@
 import { Coins, Services } from "@ardenthq/sdk";
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { useHistory, useParams } from "react-router-dom";
-import { FormStep } from "./FormStep";
-import { SuccessStep } from "./SuccessStep";
-import { Page, Section } from "@/app/components/Layout";
-import { Tabs, TabPanel } from "@/app/components/Tabs";
-import { StepsProvider } from "@/app/contexts";
-import { Form, FormButtons } from "@/app/components/Form";
+
 import { Button } from "@/app/components/Button";
+import { Form, FormButtons } from "@/app/components/Form";
+import { Page, Section } from "@/app/components/Layout";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { StepsProvider } from "@/app/contexts";
 import { useActiveProfile, useActiveWalletWhenNeeded, useQueryParameters } from "@/app/hooks";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { ProfilePaths } from "@/router/paths";
+
+import { FormStep } from "./FormStep";
+import { SuccessStep } from "./SuccessStep";
 
 enum Step {
 	FormStep = 1,

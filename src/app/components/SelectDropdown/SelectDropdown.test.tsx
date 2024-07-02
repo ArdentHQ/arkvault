@@ -1,9 +1,10 @@
 import userEvent from "@testing-library/user-event";
+import Tippy from "@tippyjs/react";
 import React, { useState } from "react";
 
-import Tippy from "@tippyjs/react";
-import { Select } from "./SelectDropdown";
 import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+
+import { Select } from "./SelectDropdown";
 
 enum OptionType {
 	base = "base",
@@ -86,12 +87,12 @@ describe("SelectDropdown", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it.each([OptionType.base, OptionType.group])("should render option %s with custom label", (optType) => {
+	it.each([OptionType.base, OptionType.group])("should render option %s with custom label", async (optType) => {
 		const { container } = render(
 			<Select options={getOptions(optType)} renderLabel={(option) => <span>{`Label ${option.label}`}</span>} />,
 		);
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "Opt");
+		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), "Opt");
 
 		expect(container).toMatchSnapshot();
 		expect(screen.getByText("Label Option 1")).toBeInTheDocument();
@@ -99,7 +100,7 @@ describe("SelectDropdown", () => {
 
 	it.each([OptionType.base, OptionType.group])(
 		"should render option %s with custom label and allowed overflow",
-		(optType) => {
+		async (optType) => {
 			const { container } = render(
 				<Select
 					options={getOptions(optType)}
@@ -108,7 +109,7 @@ describe("SelectDropdown", () => {
 				/>,
 			);
 
-			userEvent.paste(screen.getByTestId("SelectDropdown__input"), "Opt");
+			await userEvent.paste(screen.getByTestId("SelectDropdown__input"), "Opt");
 
 			expect(container).toMatchSnapshot();
 			expect(screen.getByText("Label Option 1")).toBeInTheDocument();
@@ -138,11 +139,11 @@ describe("SelectDropdown", () => {
 		async (optType) => {
 			render(<Select options={getOptions(optType)} showCaret />);
 
-			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+			await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 			await expect(screen.findByTestId(firstOptionID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+			await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 			await waitFor(() => expect(screen.queryByTestId(firstOptionID)).not.toBeInTheDocument());
 		},
@@ -151,7 +152,7 @@ describe("SelectDropdown", () => {
 	it.each([OptionType.base, OptionType.group])("should not trigger menu when disabled", async (optType) => {
 		render(<Select options={getOptions(optType)} showCaret disabled />);
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByTestId(firstOptionID)).rejects.toThrow(/Unable to find/);
 	});
@@ -186,66 +187,66 @@ describe("SelectDropdown", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it.each([OptionType.base, OptionType.group])("should toggle select list options %s", (optType) => {
+	it.each([OptionType.base, OptionType.group])("should toggle select list options %s", async (optType) => {
 		render(<Select options={getOptions(optType)} />);
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(selectDropdown, "Opt");
+		await userEvent.paste(selectDropdown, "Opt");
 
 		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId(firstOptionID));
+		await userEvent.click(screen.getByTestId(firstOptionID));
 	});
 
-	it.each([OptionType.base, OptionType.group])("should select option %s", (optType) => {
+	it.each([OptionType.base, OptionType.group])("should select option %s", async (optType) => {
 		render(<Select options={getOptions(optType)} />);
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(selectDropdown, "Opt");
+		await userEvent.paste(selectDropdown, "Opt");
 
 		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId(firstOptionID));
+		await userEvent.click(screen.getByTestId(firstOptionID));
 
 		expect(selectInput()).toHaveValue("1");
 	});
 
-	it.each([OptionType.base, OptionType.group])("should highlight option %s", (optType) => {
+	it.each([OptionType.base, OptionType.group])("should highlight option %s", async (optType) => {
 		render(<Select options={getOptions(optType)} />);
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(selectDropdown, "Opt");
-		userEvent.tab();
+		await userEvent.paste(selectDropdown, "Opt");
+		await userEvent.tab();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		expect(screen.getByTestId(firstOptionID)).toBeVisible();
 
 		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-selected");
 	});
 
-	it.each([OptionType.base, OptionType.group])("should select options %s with arrow keys", (optType) => {
+	it.each([OptionType.base, OptionType.group])("should select options %s with arrow keys", async (optType) => {
 		render(<Select options={getOptions(optType)} />);
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(selectDropdown, "Opt");
+		await userEvent.paste(selectDropdown, "Opt");
 
 		expect(screen.getByTestId(firstOptionID)).toBeVisible();
 
-		keyboardArrowDown();
+		await keyboardArrowDown();
 
 		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		expect(selectInput()).toHaveValue("1");
 	});
 
-	it("should highlight first option after reach to the end of the match options", () => {
+	it("should highlight first option after reach to the end of the match options", async () => {
 		const options = [
 			{
 				label: "Option 1",
@@ -269,32 +270,32 @@ describe("SelectDropdown", () => {
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(selectDropdown, "Opt");
+		await userEvent.paste(selectDropdown, "Opt");
 
 		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();
 
-		keyboardArrowDown();
+		await keyboardArrowDown();
 
 		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
 
-		keyboardArrowDown();
+		await keyboardArrowDown();
 
 		const secondOption = screen.getByTestId("SelectDropdown__option--1");
 
 		expect(secondOption).toHaveClass("is-highlighted");
 
-		keyboardArrowDown();
+		await keyboardArrowDown();
 
 		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
 	});
 
 	it.each([OptionType.base, OptionType.group])(
 		"should show suggestion when typing has found at least one match in option %s",
-		(optType) => {
+		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.paste(selectDropdown, "Opt");
+			await userEvent.paste(selectDropdown, "Opt");
 
 			expect(screen.getByTestId("Input__suggestion")).toHaveTextContent("Option 1");
 		},
@@ -302,12 +303,12 @@ describe("SelectDropdown", () => {
 
 	it.each([OptionType.base, OptionType.group])(
 		"should select first matching option with enter in option %s",
-		(optType) => {
+		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.paste(selectDropdown, "Opt");
-			userEvent.keyboard("{enter}");
+			await userEvent.paste(selectDropdown, "Opt");
+			await userEvent.keyboard("{enter}");
 
 			expect(selectInput()).toHaveValue("1");
 		},
@@ -315,40 +316,43 @@ describe("SelectDropdown", () => {
 
 	it.each([OptionType.base, OptionType.group])(
 		"should select first matching option with tab in option %s",
-		(optType) => {
+		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.paste(selectDropdown, "Opt");
-			userEvent.tab();
+			await userEvent.paste(selectDropdown, "Opt");
+			await userEvent.tab();
 
 			expect(selectInput()).toHaveValue("1");
 		},
 	);
 
-	it.each([OptionType.base, OptionType.group])("should select new option with enter in option %s", (optType) => {
-		render(<Select options={getOptions(optType)} />);
-		const selectDropdown = screen.getByTestId("SelectDropdown__input");
-
-		userEvent.paste(selectDropdown, "Opt");
-		userEvent.keyboard("{enter}");
-
-		expect(selectDropdown).toHaveValue("Option 1");
-
-		keyboardArrowDown();
-		userEvent.keyboard("{enter}");
-
-		expect(selectDropdown).toHaveValue("Option 2");
-	});
-
 	it.each([OptionType.base, OptionType.group])(
-		"should not select non-matching option after key input and tab in option %s",
-		(optType) => {
+		"should select new option with enter in option %s",
+		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.paste(selectDropdown, "Optt");
-			userEvent.tab();
+			await userEvent.paste(selectDropdown, "Opt");
+			await userEvent.keyboard("{enter}");
+
+			expect(selectDropdown).toHaveValue("Option 1");
+
+			await keyboardArrowDown();
+			await userEvent.keyboard("{enter}");
+
+			expect(selectDropdown).toHaveValue("Option 2");
+		},
+	);
+
+	it.each([OptionType.base, OptionType.group])(
+		"should not select non-matching option after key input and tab in option %s",
+		async (optType) => {
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
+
+			await userEvent.paste(selectDropdown, "Optt");
+			await userEvent.tab();
 
 			expect(selectInput()).not.toHaveValue();
 		},
@@ -356,12 +360,12 @@ describe("SelectDropdown", () => {
 
 	it.each([OptionType.base, OptionType.group])(
 		"should not select first matched option after random key enter in option %s",
-		(optType) => {
+		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.paste(selectDropdown, "Opt");
-			userEvent.keyboard("A");
+			await userEvent.paste(selectDropdown, "Opt");
+			await userEvent.keyboard("A");
 
 			expect(selectInput()).not.toHaveValue();
 		},
@@ -369,18 +373,18 @@ describe("SelectDropdown", () => {
 
 	it.each([OptionType.base, OptionType.group])(
 		"should clear selection when changing input in option %s",
-		(optType) => {
+		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.paste(selectDropdown, "Opt");
-			userEvent.keyboard("{enter}");
+			await userEvent.paste(selectDropdown, "Opt");
+			await userEvent.keyboard("{enter}");
 
 			expect(selectInput()).toHaveValue("1");
 
-			userEvent.paste(selectDropdown, "test");
-			userEvent.keyboard("A");
-			userEvent.keyboard("B");
+			await userEvent.paste(selectDropdown, "test");
+			await userEvent.keyboard("A");
+			await userEvent.keyboard("B");
 
 			expect(selectInput()).not.toHaveValue();
 		},
@@ -392,7 +396,7 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.paste(selectDropdown, "Opt");
+			await userEvent.paste(selectDropdown, "Opt");
 			fireEvent.blur(selectDropdown);
 
 			await waitFor(() => expect(selectDropdown).toHaveValue("Option 1"));
@@ -405,7 +409,7 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.paste(selectDropdown, "Foobar");
+			await userEvent.paste(selectDropdown, "Foobar");
 			fireEvent.blur(selectDropdown);
 
 			await waitFor(() => expect(selectDropdown).not.toHaveValue());
@@ -414,12 +418,12 @@ describe("SelectDropdown", () => {
 
 	it.each([OptionType.base, OptionType.group])(
 		"should not clear input on blur if selected in option %s",
-		(optType) => {
+		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.paste(selectDropdown, "Opt");
-			userEvent.keyboard("{enter}");
+			await userEvent.paste(selectDropdown, "Opt");
+			await userEvent.keyboard("{enter}");
 
 			expect(selectDropdown).toHaveValue("Option 1");
 
@@ -434,17 +438,17 @@ describe("SelectDropdown", () => {
 		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 
-			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+			await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 			await expect(screen.findByTestId(firstOptionID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(firstOptionID));
+			await userEvent.click(screen.getByTestId(firstOptionID));
 
 			expect(selectInput()).toHaveValue("1");
 		},
 	);
 
-	it("should not open the dropdown on reset", () => {
+	it("should not open the dropdown on reset", async () => {
 		const initialValue = options[0].value;
 
 		const Component = () => {
@@ -468,29 +472,29 @@ describe("SelectDropdown", () => {
 		expect(screen.queryByText("Option 2")).not.toBeInTheDocument();
 
 		// set null value
-		userEvent.click(screen.getByTestId("btn-reset"));
+		await userEvent.click(screen.getByTestId("btn-reset"));
 
 		// check value reset and dropdown not open
 		expect(selectInput()).not.toHaveValue();
 		expect(screen.queryByText("Option 2")).not.toBeInTheDocument();
 	});
 
-	it.each([OptionType.base, OptionType.group])("should allow entering free text in option %s", (optType) => {
+	it.each([OptionType.base, OptionType.group])("should allow entering free text in option %s", async (optType) => {
 		render(<Select options={getOptions(optType)} allowFreeInput />);
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(selectDropdown, "Test");
+		await userEvent.paste(selectDropdown, "Test");
 
 		expect(selectInput()).toHaveValue("Test");
 	});
 
 	it.each([OptionType.base, OptionType.group])(
 		"should allow entering free text and handle blur event in option %s",
-		(optType) => {
+		async (optType) => {
 			render(<Select options={getOptions(optType)} allowFreeInput={true} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.paste(selectDropdown, "Test");
+			await userEvent.paste(selectDropdown, "Test");
 			fireEvent.blur(selectDropdown);
 
 			expect(selectInput()).toHaveValue("Test");
@@ -509,31 +513,31 @@ describe("SelectDropdown", () => {
 
 	it.each([OptionType.base, OptionType.group])(
 		"should hide dropdown in option %s when no matches found in free text mode",
-		(optType) => {
+		async (optType) => {
 			render(<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			userEvent.clear(selectDropdown);
-			userEvent.paste(selectDropdown, options[0].label);
+			await userEvent.clear(selectDropdown);
+			await userEvent.paste(selectDropdown, options[0].label);
 
 			expect(selectInput()).toHaveValue(options[0].label);
 
-			userEvent.paste(selectDropdown, "Unmatched");
+			await userEvent.paste(selectDropdown, "Unmatched");
 
 			expect(screen.queryByTestId(firstOptionID)).not.toBeInTheDocument();
 		},
 	);
 
-	it.each([OptionType.base, OptionType.group])("should show all options %s when empty input", (optType) => {
+	it.each([OptionType.base, OptionType.group])("should show all options %s when empty input", async (optType) => {
 		render(<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />);
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.clear(selectDropdown);
-		userEvent.paste(selectDropdown, options[0].label);
+		await userEvent.clear(selectDropdown);
+		await userEvent.paste(selectDropdown, options[0].label);
 
 		expect(selectInput()).toHaveValue(options[0].label);
 
-		userEvent.clear(selectDropdown);
+		await userEvent.clear(selectDropdown);
 
 		expect(selectInput()).not.toHaveValue();
 		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();

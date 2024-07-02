@@ -5,21 +5,21 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { Dashboard } from "./Dashboard";
+import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
-import { requestMock, server } from "@/tests/mocks/server";
-import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
+import { Dashboard } from "./Dashboard";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -141,11 +141,11 @@ describe("Dashboard", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
+		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 

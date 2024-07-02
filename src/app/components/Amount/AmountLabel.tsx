@@ -1,10 +1,11 @@
 import cn from "classnames";
 import React from "react";
 
-import { Amount } from "./Amount";
 import { Icon } from "@/app/components/Icon";
 import { Label } from "@/app/components/Label";
 import { Tooltip } from "@/app/components/Tooltip";
+
+import { Amount } from "./Amount";
 
 interface AmountLabelHintProperties {
 	className: string;

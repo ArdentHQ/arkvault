@@ -5,22 +5,22 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { Dashboard } from "./Dashboard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as dashboardTranslations } from "@/domains/dashboard/i18n";
+import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
+	mockNanoXTransport,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
-	mockNanoXTransport,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
-import { requestMock, server } from "@/tests/mocks/server";
-import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
+import { Dashboard } from "./Dashboard";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -81,7 +81,7 @@ describe("Dashboard", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
 
-		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		await userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await waitFor(() =>
 			expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import/ledger`),
@@ -103,7 +103,7 @@ describe("Dashboard", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
 
-		userEvent.click(screen.getByText("Create"));
+		await userEvent.click(screen.getByText("Create"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/create`);
 	});
@@ -121,7 +121,7 @@ describe("Dashboard", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
 
-		userEvent.click(screen.getByText("Import"));
+		await userEvent.click(screen.getByText("Import"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import`);
 	});

@@ -1,10 +1,10 @@
 import React from "react";
 import { styled } from "twin.macro";
 
-import { getBodyStyles, getIconStyles } from "./Toast.styles";
 import { Icon } from "@/app/components/Icon";
-
 import { Color } from "@/types";
+
+import { getBodyStyles, getIconStyles } from "./Toast.styles";
 
 interface ToastProperties {
 	children: React.ReactNode;

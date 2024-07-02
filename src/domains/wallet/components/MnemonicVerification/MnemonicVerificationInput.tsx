@@ -1,9 +1,10 @@
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { getOrdinalIndicator } from "./utils/evaluateOrdinalIndicator";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Input } from "@/app/components/Input";
+
+import { getOrdinalIndicator } from "./utils/evaluateOrdinalIndicator";
 
 interface Properties {
 	handleChange: (position: number, isValid: boolean) => void;

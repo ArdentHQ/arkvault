@@ -1,9 +1,10 @@
 import React from "react";
-
 import * as reactResizeDetector from "react-resize-detector";
-import { TransactionExplorerLink } from "./TransactionExplorerLink";
+
 import { translations } from "@/domains/transaction/i18n";
 import { render } from "@/utils/testing-library";
+
+import { TransactionExplorerLink } from "./TransactionExplorerLink";
 
 vi.mock("react-resize-detector");
 

@@ -5,19 +5,20 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
-import { WalletHeader, WalletHeaderMobile, WalletVote } from "./components";
-import { useWalletTransactions } from "./hooks/use-wallet-transactions";
 import { Page, Section } from "@/app/components/Layout";
+import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
+import { TabId } from "@/app/components/Tabs/useTab";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { useBreakpoint } from "@/app/hooks";
 import { useActiveProfile, useActiveWallet } from "@/app/hooks/env";
 import { toasts } from "@/app/services";
 import { MultiSignatureDetail } from "@/domains/transaction/components/MultiSignatureDetail";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
 import { Transactions } from "@/domains/transaction/components/Transactions";
 import { PendingTransactions } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable";
-import { useBreakpoint } from "@/app/hooks";
-import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
-import { TabId } from "@/app/components/Tabs/useTab";
+
+import { WalletHeader, WalletHeaderMobile, WalletVote } from "./components";
+import { useWalletTransactions } from "./hooks/use-wallet-transactions";
 
 export const WalletDetails = () => {
 	const [signedTransactionModalItem, setSignedTransactionModalItem] = useState<DTO.ExtendedSignedTransactionData>();

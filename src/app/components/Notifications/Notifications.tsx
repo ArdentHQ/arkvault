@@ -1,16 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
-import { useNotifications } from "./hooks/use-notifications";
-import { NotificationItem } from "./NotificationItem";
-import { NotificationItemProperties, NotificationsProperties } from "./Notifications.contracts";
-import { NotificationsWrapper } from "./styles";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Image } from "@/app/components/Image";
 import { Table } from "@/app/components/Table";
 import { useEnvironmentContext } from "@/app/contexts";
-import { NotificationTransactionsTable } from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
 import { useBreakpoint } from "@/app/hooks";
+import { NotificationTransactionsTable } from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
+
+import { useNotifications } from "./hooks/use-notifications";
+import { NotificationItem } from "./NotificationItem";
+import { NotificationItemProperties, NotificationsProperties } from "./Notifications.contracts";
+import { NotificationsWrapper } from "./styles";
 
 export const Notifications = ({ profile, onNotificationAction, onTransactionClick }: NotificationsProperties) => {
 	const { t } = useTranslation();

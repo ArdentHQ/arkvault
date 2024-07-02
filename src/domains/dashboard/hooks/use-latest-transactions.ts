@@ -2,8 +2,8 @@ import { sortByDesc } from "@ardenthq/sdk-helpers";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useEffect, useState } from "react";
 
-import { useWalletConfig } from "@/domains/wallet/hooks";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
+import { useWalletConfig } from "@/domains/wallet/hooks";
 
 interface LatestTransactionsStateProperties {
 	latestTransactions: DTO.ExtendedConfirmedTransactionData[];

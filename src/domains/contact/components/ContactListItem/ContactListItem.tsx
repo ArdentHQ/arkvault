@@ -1,13 +1,8 @@
 import { Networks } from "@ardenthq/sdk";
+import cn from "classnames";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import cn from "classnames";
-import {
-	ContactListItemOption,
-	ContactListItemProperties,
-	ContactListItemAddressProperties,
-} from "./ContactListItem.contracts";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
@@ -15,10 +10,16 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useNetworks } from "@/app/hooks";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+
+import {
+	ContactListItemAddressProperties,
+	ContactListItemOption,
+	ContactListItemProperties,
+} from "./ContactListItem.contracts";
 
 const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	profile,

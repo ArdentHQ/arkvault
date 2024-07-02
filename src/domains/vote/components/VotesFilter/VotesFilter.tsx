@@ -2,12 +2,13 @@ import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { FilterProperties } from "./VotesFilter.contracts";
 import { Checkbox } from "@/app/components/Checkbox";
 import { ControlButton } from "@/app/components/ControlButton";
 import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+
+import { FilterProperties } from "./VotesFilter.contracts";
 
 export const VotesFilter = ({
 	onChange,

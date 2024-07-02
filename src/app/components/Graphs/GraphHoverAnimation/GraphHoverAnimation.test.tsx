@@ -1,6 +1,8 @@
 import React from "react";
-import { GraphHoverAnimation } from "./GraphHoverAnimation";
+
 import { render } from "@/utils/testing-library";
+
+import { GraphHoverAnimation } from "./GraphHoverAnimation";
 
 describe("GraphHoverAnimation", () => {
 	it("should render SMIL hover animations for svg elements", () => {

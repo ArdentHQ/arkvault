@@ -5,7 +5,7 @@ import { Before, Given, IWorld, Then, When } from "@cucumber/cucumber";
 import { TestStepFunction } from "@cucumber/cucumber/lib/support_code_library_builder/types";
 import delve from "dlv";
 import fs from "fs";
-import { ClientFunction, RequestMock, Selector,t } from "testcafe";
+import { ClientFunction, RequestMock, Selector, t } from "testcafe";
 
 import { buildTranslations } from "@/app/i18n/helpers";
 

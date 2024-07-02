@@ -1,8 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { Clipboard } from "./Clipboard";
 import { act, render, screen, waitFor } from "@/utils/testing-library";
+
+import { Clipboard } from "./Clipboard";
 
 type VariantType = "icon" | "button";
 
@@ -50,7 +51,7 @@ describe("Clipboard", () => {
 			</Clipboard>,
 		);
 
-		userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
+		await userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 		act(() => {
 			vi.runOnlyPendingTimers();
@@ -71,7 +72,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
+				await userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(""));
 			},
@@ -88,7 +89,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
+				await userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onSuccess).not.toHaveBeenCalled());
 			},
@@ -115,7 +116,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
+				await userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onError).toHaveBeenCalledWith());
 			},
@@ -132,7 +133,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
+				await userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onError).not.toHaveBeenCalledWith());
 			},

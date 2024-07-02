@@ -6,11 +6,12 @@ import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
-import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
 import { translations } from "@/domains/transaction/i18n";
 import multiSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import { TransactionFees } from "@/types";
 import { env, getDefaultProfileId, render, RenderResult, screen, syncFees, waitFor } from "@/utils/testing-library";
+
+import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
 
 describe("MultiSignature Registration Form", () => {
 	let profile: ProfilesContracts.IProfile;
@@ -92,7 +93,7 @@ describe("MultiSignature Registration Form", () => {
 	it("should set fee if dynamic", async () => {
 		renderComponent();
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 
@@ -102,19 +103,19 @@ describe("MultiSignature Registration Form", () => {
 	it("should fill form", async () => {
 		const { form } = renderComponent();
 
-		userEvent.click(screen.getByText(translations.FEES.AVERAGE));
+		await userEvent.click(screen.getByText(translations.FEES.AVERAGE));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("MultiSignatureRegistrationForm__min-participants");
 
-		userEvent.clear(inputElement);
-		userEvent.paste(inputElement, "3");
+		await userEvent.clear(inputElement);
+		await userEvent.paste(inputElement, "3");
 
 		await waitFor(() => expect(form?.getValues("fee")).toBe(String(fees.avg)));
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 		await waitFor(() =>
@@ -138,9 +139,9 @@ describe("MultiSignature Registration Form", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("Address__alias")).toHaveLength(1));
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(form?.getValues("participants")).toHaveLength(2));
 
@@ -275,7 +276,7 @@ describe("MultiSignature Registration Form", () => {
 		expect(removeButton).toBeInTheDocument();
 		expect(removeButton).toBeEnabled();
 
-		userEvent.click(removeButton);
+		await userEvent.click(removeButton);
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(2));
 	});

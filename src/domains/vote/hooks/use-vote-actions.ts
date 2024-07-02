@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { generatePath } from "react-router";
 import { useHistory } from "react-router-dom";
 
-import { generatePath } from "react-router";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { ProfilePaths } from "@/router/paths";

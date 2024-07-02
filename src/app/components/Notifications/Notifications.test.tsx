@@ -2,13 +2,12 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
-import { Notifications } from "./Notifications";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { server, requestMock } from "@/tests/mocks/server";
-
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
 import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+
+import { Notifications } from "./Notifications";
 
 let profile: Contracts.IProfile;
 
@@ -73,7 +72,7 @@ describe("Notifications", () => {
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
 
-		userEvent.click(screen.getAllByTestId("NotificationItem__action")[1]);
+		await userEvent.click(screen.getAllByTestId("NotificationItem__action")[1]);
 
 		await waitFor(() => expect(onNotificationAction).toHaveBeenCalledWith(expect.any(String)));
 	});
@@ -86,7 +85,7 @@ describe("Notifications", () => {
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
 
-		userEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
+		await userEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
 
 		await waitFor(() =>
 			expect(onTransactionClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedConfirmedTransactionData)),

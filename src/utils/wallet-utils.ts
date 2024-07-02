@@ -1,6 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { isCustomNetwork } from "@/utils/network-utils";
+
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
+import { isCustomNetwork } from "@/utils/network-utils";
 
 export const sortWallets = (wallets: Contracts.IReadWriteWallet[]) =>
 	wallets.sort(

@@ -1,12 +1,13 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
+import { useTranslation } from "react-i18next";
+
 import { DeleteResource } from "@/app/components/DeleteResource";
 import { Form } from "@/app/components/Form";
-import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { useLedgerContext } from "@/app/contexts";
+import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
+import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 
 interface ConfirmRemovePendingTransactionProperties {
 	profile: Contracts.IProfile;

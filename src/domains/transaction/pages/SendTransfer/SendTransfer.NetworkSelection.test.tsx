@@ -5,24 +5,24 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SendTransfer } from "./SendTransfer";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
+import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
+	syncFees,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks,
-	syncFees,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
 
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
-import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
+import { SendTransfer } from "./SendTransfer";
 
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
@@ -105,7 +105,7 @@ describe("SendTransfer Network Selection", () => {
 			expect(screen.getByTestId(ARKDevnetOptionId)).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+		await userEvent.click(screen.getByTestId(ARKDevnetOptionId));
 
 		await waitFor(() => expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet));
 
@@ -113,17 +113,17 @@ describe("SendTransfer Network Selection", () => {
 			expect(continueButton()).toBeEnabled();
 		});
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 		});
 
-		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
+		await userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -144,7 +144,7 @@ describe("SendTransfer Network Selection", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+		await userEvent.click(screen.getByTestId(ARKDevnetOptionId));
 
 		await expect(screen.findByTestId(ARKDevnetOptionId)).resolves.toBeVisible();
 
@@ -168,44 +168,44 @@ describe("SendTransfer Network Selection", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+		await userEvent.click(screen.getByTestId(ARKDevnetOptionId));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(ARKDevnet));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", ARKDevnet);
 
 		// Memo
-		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+		await userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
 		// Previous step
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
 		// Change network
 		// Unselect
-		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+		await userEvent.click(screen.getByTestId(ARKDevnetOptionId));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).not.toHaveValue());
 		// Select
-		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+		await userEvent.click(screen.getByTestId(ARKDevnetOptionId));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(ARKDevnet));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		// Next step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -233,17 +233,17 @@ describe("SendTransfer Network Selection", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+		await userEvent.click(screen.getByTestId(ARKDevnetOptionId));
 
 		await waitFor(() => expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet));
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		// Select sender
-		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
@@ -256,7 +256,7 @@ describe("SendTransfer Network Selection", () => {
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 
-		userEvent.click(firstAddress);
+		await userEvent.click(firstAddress);
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();

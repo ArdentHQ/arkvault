@@ -1,8 +1,8 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
-import { useTranslation } from "react-i18next";
 import { Page, Section } from "@/app/components/Layout";
 import { SideBar } from "@/app/components/SideBar";
 import { useSettingsMenu } from "@/domains/setting/hooks/use-settings-menu";

@@ -1,13 +1,13 @@
 /* eslint-disable testing-library/no-node-access */
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import userEvent from "@testing-library/user-event";
-import { WalletsList } from "./WalletsList";
 import * as envHooks from "@/app/hooks/env";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
@@ -17,7 +17,8 @@ import {
 	syncDelegates,
 	within,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
+
+import { WalletsList } from "./WalletsList";
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
 
@@ -82,7 +83,7 @@ describe("WalletsList", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should group starred wallets at the top", () => {
+	it("should group starred wallets at the top", async () => {
 		// Mark second wallet as starred
 		wallets[1].toggleStarred();
 
@@ -94,7 +95,7 @@ describe("WalletsList", () => {
 
 		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[0].displayName());
 
-		userEvent.click(starredButton());
+		await userEvent.click(starredButton());
 
 		expect(starredButton().querySelector("svg#star")).toBeInTheDocument();
 
@@ -102,7 +103,7 @@ describe("WalletsList", () => {
 
 		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[1].displayName());
 
-		userEvent.click(starredButton());
+		await userEvent.click(starredButton());
 
 		expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument();
 
@@ -116,22 +117,22 @@ describe("WalletsList", () => {
 		wallets[1].toggleStarred();
 	});
 
-	it("should keep the original sort method when grouping starred wallets at the top", () => {
+	it("should keep the original sort method when grouping starred wallets at the top", async () => {
 		renderResponsive(<WalletsList wallets={wallets} />, "lg");
 
 		expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument();
 
 		expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument();
 
-		userEvent.click(starredButton());
+		await userEvent.click(starredButton());
 
 		expect(starredButton().querySelector("svg#star")).toBeInTheDocument();
 
 		expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument();
 
-		userEvent.click(otherButton());
+		await userEvent.click(otherButton());
 
-		userEvent.click(starredButton());
+		await userEvent.click(starredButton());
 
 		expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument();
 

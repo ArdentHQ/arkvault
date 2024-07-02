@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+
 import { browser } from "@/utils/platform";
 
 export const observeElementHeight = (modalElement: HTMLDivElement, onResize: () => void) => {

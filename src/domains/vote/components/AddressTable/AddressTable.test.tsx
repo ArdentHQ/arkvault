@@ -1,20 +1,20 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
-import userEvent from "@testing-library/user-event";
+import { useConfiguration } from "@/app/contexts";
 import { AddressTable } from "@/domains/vote/components/AddressTable";
 import {
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
+	renderResponsiveWithRoute,
 	screen,
 	syncDelegates,
 	waitFor,
-	renderResponsiveWithRoute,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import { useConfiguration } from "@/app/contexts";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -78,7 +78,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("AccordionHeader"));
+		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		expect(screen.getByTestId("AddressRowMobile")).toBeInTheDocument();
 
@@ -102,7 +102,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("AccordionHeader"));
+		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		expect(screen.getByTestId("AddressRowMobile")).toBeInTheDocument();
 

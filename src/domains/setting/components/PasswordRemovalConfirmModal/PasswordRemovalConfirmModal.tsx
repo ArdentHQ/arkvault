@@ -2,14 +2,15 @@ import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { PasswordRemovalFormState, PasswordRemovalProperties } from "./PasswordRemovalConfirmModal.contracts";
-import { Button } from "@/app/components/Button";
 import { Alert } from "@/app/components/Alert";
+import { Button } from "@/app/components/Button";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
 import { InputPassword } from "@/app/components/Input";
 import { Modal } from "@/app/components/Modal";
+
+import { PasswordRemovalFormState, PasswordRemovalProperties } from "./PasswordRemovalConfirmModal.contracts";
 
 export const PasswordRemovalConfirmModal: React.FC<PasswordRemovalProperties> = ({ onCancel, onConfirm }) => {
 	const { t } = useTranslation();

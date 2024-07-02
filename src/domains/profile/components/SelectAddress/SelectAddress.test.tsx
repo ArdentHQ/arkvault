@@ -2,8 +2,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { SelectAddress } from "./SelectAddress";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
+
+import { SelectAddress } from "./SelectAddress";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -98,18 +99,18 @@ describe("SelectAddress", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+		await userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 		});
 	});
 
-	it("should not open if disabled", () => {
+	it("should not open if disabled", async () => {
 		render(
 			<SelectAddress
 				wallets={wallets}
@@ -121,7 +122,7 @@ describe("SelectAddress", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+		await userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
@@ -137,7 +138,7 @@ describe("SelectAddress", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+		await userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -145,7 +146,7 @@ describe("SelectAddress", () => {
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 
-		userEvent.click(firstAddress);
+		await userEvent.click(firstAddress);
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
@@ -166,7 +167,7 @@ describe("SelectAddress", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+		await userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
@@ -187,7 +188,7 @@ describe("SelectAddress", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+		await userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -195,7 +196,7 @@ describe("SelectAddress", () => {
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 
-		userEvent.click(firstAddress);
+		await userEvent.click(firstAddress);
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();

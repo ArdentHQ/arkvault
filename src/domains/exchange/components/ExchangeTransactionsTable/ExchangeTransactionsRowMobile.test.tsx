@@ -2,9 +2,10 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
+import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+
 import { ExchangeTransactionsRowMobile } from "./ExchangeTransactionsRowMobile";
-import { useExchangeContext, ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import { env, getDefaultProfileId, render, screen, within, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;
@@ -81,7 +82,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should execute onClick callback", () => {
+	it("should execute onClick callback", async () => {
 		const onClick = vi.fn();
 
 		render(
@@ -92,12 +93,12 @@ describe("ExchangeTransactionsRowMobile", () => {
 
 		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(profile.exchangeTransactions().count());
 
-		userEvent.click(within(screen.getAllByTestId("TableRow__mobile")[0]).getAllByRole("button")[0]);
+		await userEvent.click(within(screen.getAllByTestId("TableRow__mobile")[0]).getAllByRole("button")[0]);
 
 		expect(onClick).toHaveBeenCalledWith(exchangeTransaction.provider(), exchangeTransaction.orderId());
 	});
 
-	it("should execute onRemove callback", () => {
+	it("should execute onRemove callback", async () => {
 		const onRemove = vi.fn();
 
 		render(
@@ -108,7 +109,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 
 		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(profile.exchangeTransactions().count());
 
-		userEvent.click(within(screen.getAllByTestId("TableRow__mobile")[0]).getAllByRole("button")[1]);
+		await userEvent.click(within(screen.getAllByTestId("TableRow__mobile")[0]).getAllByRole("button")[1]);
 
 		expect(onRemove).toHaveBeenCalledWith(exchangeTransaction);
 	});

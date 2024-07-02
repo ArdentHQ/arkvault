@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+
 import { CsvDelimiter } from "@/domains/transaction/components/TransactionExportModal";
 
 const renderLabel = (label: string, isActive: boolean) => (
@@ -36,8 +37,8 @@ export const useDelimiterOptions = ({ selectedValue }: { selectedValue: CsvDelim
 			{
 				active: selectedValue === CsvDelimiter.Tab,
 				label: t("TRANSACTION.EXPORT.FORM.TAB"),
-				secondaryLabel: (isActive: boolean) => renderLabel("\\t", isActive),
-				symbol: "\\t",
+				secondaryLabel: (isActive: boolean) => renderLabel(String.raw`\t`, isActive),
+				symbol: String.raw`\t`,
 				value: CsvDelimiter.Tab,
 			},
 			{

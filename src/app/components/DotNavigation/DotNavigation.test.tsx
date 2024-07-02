@@ -1,8 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { DotNavigation } from "./DotNavigation";
 import { render, screen } from "@/utils/testing-library";
+
+import { DotNavigation } from "./DotNavigation";
 
 describe("DotNavigation", () => {
 	it("should render", () => {
@@ -12,11 +13,11 @@ describe("DotNavigation", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("handles click on a dot", () => {
+	it("handles click on a dot", async () => {
 		const clickMock = vi.fn();
 		render(<DotNavigation onClick={clickMock} />);
 
-		userEvent.click(screen.getByTestId("DotNavigation-Step-1"));
+		await userEvent.click(screen.getByTestId("DotNavigation-Step-1"));
 
 		expect(clickMock).toHaveBeenCalledWith(1);
 	});

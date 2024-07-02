@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { TransactionExporter } from "./transaction-exporter.factory";
-import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
+
+import { TransactionExporter } from "./transaction-exporter.factory";
 
 describe("CsvFormatter", () => {
 	let profile: Contracts.IProfile;

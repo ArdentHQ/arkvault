@@ -6,11 +6,11 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Route, Router } from "react-router-dom";
-import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
+
 import * as useFilesHook from "@/app/hooks/use-files";
-import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import { toasts } from "@/app/services";
 import { translations } from "@/domains/transaction/i18n";
+import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import secondSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import {
 	env,
@@ -22,6 +22,8 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
+
+import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
 
 const history = createHashHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -143,18 +145,18 @@ describe("SecondSignatureRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
 
-		userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
+		await userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
 
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
 		// advanced
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 
-		userEvent.clear(screen.getByTestId("InputCurrency"));
-		userEvent.paste(screen.getByTestId("InputCurrency"), "9");
+		await userEvent.clear(screen.getByTestId("InputCurrency"));
+		await userEvent.paste(screen.getByTestId("InputCurrency"), "9");
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("9"));
 	});
@@ -181,7 +183,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			const clipboardOriginal = navigator.clipboard;
 			(navigator as any).clipboard = { writeText: writeTextMock };
 
-			userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
+			await userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(secondMnemonic));
 
@@ -216,7 +218,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = vi.spyOn(toasts, "success");
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			const filePath = useFilesOutput.showSaveDialog(secondMnemonic, { fileName: "address.txt" });
 
@@ -249,7 +251,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = vi.spyOn(toasts, "success");
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			expect(toastSpy).not.toHaveBeenCalled();
 
@@ -284,7 +286,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			await expect(screen.findByTestId(backupStepId)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).not.toHaveBeenCalled();
@@ -322,7 +324,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = vi.spyOn(toasts, "error");
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save file/)));
 
@@ -350,9 +352,9 @@ describe("SecondSignatureRegistrationForm", () => {
 		expect(form()?.getValues("verification")).toBeUndefined();
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
-		userEvent.paste(firstInput, "power");
-		userEvent.paste(secondInput, "return");
-		userEvent.paste(thirdInput, "attend");
+		await userEvent.paste(firstInput, "power");
+		await userEvent.paste(secondInput, "return");
+		await userEvent.paste(thirdInput, "attend");
 
 		await waitFor(() => expect(form()?.getValues("verification")).toBe(true));
 	});

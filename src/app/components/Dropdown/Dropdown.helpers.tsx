@@ -1,9 +1,11 @@
 import cn from "classnames";
 import React from "react";
-import { DropdownOption, DropdownOptionGroup, OptionsProperties } from "./Dropdown.contracts";
+
 import { Divider } from "@/app/components/Divider";
-import { Icon } from "@/app/components/Icon";
 import { DropdownItem } from "@/app/components/Dropdown/DropdownItem.styles";
+import { Icon } from "@/app/components/Icon";
+
+import { DropdownOption, DropdownOptionGroup, OptionsProperties } from "./Dropdown.contracts";
 
 const renderIcon = (option: DropdownOption) => {
 	const { icon, iconClassName, iconSize } = option;

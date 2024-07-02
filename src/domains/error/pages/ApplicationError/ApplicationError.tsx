@@ -3,11 +3,11 @@ import { FallbackProps } from "react-error-boundary";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
+import { ClipboardButton } from "@/app/components/Clipboard/ClipboardButton";
 import { Image } from "@/app/components/Image";
 import { Page, Section } from "@/app/components/Layout";
-import { useTheme } from "@/app/hooks";
 import { TextArea } from "@/app/components/TextArea";
-import { ClipboardButton } from "@/app/components/Clipboard/ClipboardButton";
+import { useTheme } from "@/app/hooks";
 
 export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 	const { t } = useTranslation();

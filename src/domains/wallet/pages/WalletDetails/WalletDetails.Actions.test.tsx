@@ -5,9 +5,9 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { WalletDetails } from "./WalletDetails";
 import { buildTranslations } from "@/app/i18n/helpers";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
@@ -18,7 +18,8 @@ import {
 	syncDelegates,
 	waitFor,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
+
+import { WalletDetails } from "./WalletDetails";
 
 const translations = buildTranslations();
 
@@ -89,7 +90,7 @@ describe("WalletDetails", () => {
 
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__send-button")).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("WalletHeader__send-button"));
+		await userEvent.click(screen.getByTestId("WalletHeader__send-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-transfer`);
 
@@ -108,7 +109,7 @@ describe("WalletDetails", () => {
 
 		await waitFor(() => expect(screen.getByTestId("WalletVote__button")).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("WalletVote__button"));
+		await userEvent.click(screen.getByTestId("WalletVote__button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
 
@@ -144,7 +145,7 @@ describe("WalletDetails", () => {
 
 		await renderPage();
 
-		userEvent.click(screen.getByText(translations.WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE));
+		await userEvent.click(screen.getByText(translations.WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE));
 
 		expect(historySpy).toHaveBeenCalledWith({
 			pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`,
@@ -159,20 +160,20 @@ describe("WalletDetails", () => {
 	it("should update wallet name", async () => {
 		await renderPage();
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[4]);
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[4]);
 
-		userEvent.click(screen.getByTestId("dropdown__option--primary-0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--primary-0"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		const name = "Sample label name";
 
-		userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), name);
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.paste(screen.getByTestId("UpdateWalletName__input"), name);
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+		await userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
 		await waitFor(() => expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toBe(name));
 	});
@@ -182,11 +183,11 @@ describe("WalletDetails", () => {
 
 		expect(wallet.isStarred()).toBe(false);
 
-		userEvent.click(screen.getByTestId("WalletHeader__star-button"));
+		await userEvent.click(screen.getByTestId("WalletHeader__star-button"));
 
 		await waitFor(() => expect(wallet.isStarred()).toBe(true));
 
-		userEvent.click(screen.getByTestId("WalletHeader__star-button"));
+		await userEvent.click(screen.getByTestId("WalletHeader__star-button"));
 
 		await waitFor(() => expect(wallet.isStarred()).toBe(false));
 	});
@@ -200,13 +201,13 @@ describe("WalletDetails", () => {
 
 		expect(dropdown).toBeInTheDocument();
 
-		userEvent.click(dropdown);
+		await userEvent.click(dropdown);
 
 		const openWalletOption = screen.getByTestId("dropdown__option--secondary-0");
 
 		expect(openWalletOption).toBeInTheDocument();
 
-		userEvent.click(openWalletOption);
+		await userEvent.click(openWalletOption);
 
 		expect(windowSpy).toHaveBeenCalledWith(wallet.explorerLink(), "_blank");
 	});
@@ -214,7 +215,7 @@ describe("WalletDetails", () => {
 	it("should manually sync wallet data", async () => {
 		await renderPage();
 
-		userEvent.click(screen.getByTestId("WalletHeader__refresh"));
+		await userEvent.click(screen.getByTestId("WalletHeader__refresh"));
 
 		expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true");
 
@@ -228,20 +229,20 @@ describe("WalletDetails", () => {
 
 		expect(dropdown).toBeInTheDocument();
 
-		userEvent.click(dropdown);
+		await userEvent.click(dropdown);
 
 		const deleteWalletOption = screen.getByTestId("dropdown__option--secondary-1");
 
 		expect(deleteWalletOption).toBeInTheDocument();
 
-		userEvent.click(deleteWalletOption);
+		await userEvent.click(deleteWalletOption);
 
 		expect(profile.wallets().count()).toBe(3);
 		expect(profile.notifications().transactions().recent()).toHaveLength(2);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(profile.wallets().count()).toBe(2));
 

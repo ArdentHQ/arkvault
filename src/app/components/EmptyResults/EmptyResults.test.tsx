@@ -1,7 +1,8 @@
 import React from "react";
 
-import { EmptyResults } from "./EmptyResults";
 import { render } from "@/utils/testing-library";
+
+import { EmptyResults } from "./EmptyResults";
 
 describe("EmptyResults", () => {
 	it("should render with no texts", () => {

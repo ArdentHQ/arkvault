@@ -4,9 +4,6 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { Column } from "react-table";
 
-import { AvailableNetwork } from "./Contacts.contracts";
-import { useFilteredContacts } from "./Contacts.helpers";
-import { ContactsHeader } from "./Contacts.blocks";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Page, Section } from "@/app/components/Layout";
 import { Table } from "@/app/components/Table";
@@ -14,8 +11,12 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { CreateContact, DeleteContact, UpdateContact } from "@/domains/contact/components";
 import { ContactListItem } from "@/domains/contact/components/ContactListItem";
-import { ContactListMobile } from "@/domains/contact/components/ContactListMobile";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
+import { ContactListMobile } from "@/domains/contact/components/ContactListMobile";
+
+import { ContactsHeader } from "./Contacts.blocks";
+import { AvailableNetwork } from "./Contacts.contracts";
+import { useFilteredContacts } from "./Contacts.helpers";
 
 export const Contacts: FC = () => {
 	const { state } = useEnvironmentContext();

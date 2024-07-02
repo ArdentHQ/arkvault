@@ -2,14 +2,15 @@ import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { TransactionRecipientsMobile } from "./TransactionRecipientsMobile";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
-import { RecipientList } from "@/domains/transaction/components/RecipientList";
-import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 import { useBreakpoint } from "@/app/hooks";
-import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
+import { RecipientList } from "@/domains/transaction/components/RecipientList";
 import { TransactionRecipientsProperties } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
+import { TransactionDelegateIcon } from "@/domains/transaction/components/TransactionDetail/TransactionResponsiveIcon/TransactionResponsiveIcon";
+
+import { TransactionRecipientsMobile } from "./TransactionRecipientsMobile";
 
 export const TransactionRecipients: React.FC<TransactionRecipientsProperties> = ({
 	currency,

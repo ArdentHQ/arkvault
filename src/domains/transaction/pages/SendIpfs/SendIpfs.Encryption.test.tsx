@@ -1,26 +1,26 @@
+import { BIP39 } from "@ardenthq/sdk-cryptography";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { BIP39 } from "@ardenthq/sdk-cryptography";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SendIpfs } from "./SendIpfs";
 import { translations } from "@/domains/transaction/i18n";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
+	act,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncFees,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
-	act,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
 
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
+import { SendIpfs } from "./SendIpfs";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -142,37 +142,37 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("TransactionSender")).toHaveTextContent(encryptedWallet.address()),
 		);
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.paste(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
+			await userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+		await userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 		await waitFor(() =>
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
 		);
@@ -191,7 +191,7 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
-		userEvent.click(sendButton());
+		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 

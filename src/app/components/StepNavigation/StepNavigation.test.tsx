@@ -1,7 +1,8 @@
 import React from "react";
 
-import { StepNavigation } from "./StepNavigation";
 import { render, screen } from "@/utils/testing-library";
+
+import { StepNavigation } from "./StepNavigation";
 
 describe("StepNavigation", () => {
 	it("should not render back to wallet button if not on last step", () => {

@@ -1,7 +1,8 @@
 import React from "react";
 
-import { MnemonicList } from "./MnemonicList";
 import { render, screen } from "@/utils/testing-library";
+
+import { MnemonicList } from "./MnemonicList";
 
 describe("MnemonicList", () => {
 	it("should render", () => {

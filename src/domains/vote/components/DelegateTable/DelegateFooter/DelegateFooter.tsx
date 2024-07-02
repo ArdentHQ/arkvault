@@ -62,7 +62,7 @@ export const DelegateFooter = ({
 	onContinue,
 }: DelegateFooterProperties) => {
 	const { t } = useTranslation();
-	const [tooltipContent, setTooltipContent] = useState<string  >("");
+	const [tooltipContent, setTooltipContent] = useState<string>("");
 	const [isContinueDisabled, setIsContinueDisabled] = useState(true);
 	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 

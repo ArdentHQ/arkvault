@@ -1,7 +1,8 @@
-import { middlewares } from "./router.middlewares";
-import { PreloadMiddleware } from "./PreloadMiddleware";
-import { UrlValidationMiddleware } from "./UrlValidationMiddleware";
 import { WalletMiddleware } from "@/domains/wallet/middleware";
+
+import { PreloadMiddleware } from "./PreloadMiddleware";
+import { middlewares } from "./router.middlewares";
+import { UrlValidationMiddleware } from "./UrlValidationMiddleware";
 
 describe("Router middlewares", () => {
 	it("should have PreloadMiddleware and WalletMiddleware", () => {

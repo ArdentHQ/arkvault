@@ -2,8 +2,9 @@
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
-import { sendTransfer } from "./SendTransfer";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { sendTransfer } from "./SendTransfer";
 
 let profile: Contracts.IProfile;
 let translationMock: any;

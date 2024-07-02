@@ -3,10 +3,11 @@ import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
-import { ExchangeView } from "./ExchangeView";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import * as themeUtils from "@/utils/theme";
+
+import { ExchangeView } from "./ExchangeView";
 
 const history = createHashHistory();
 

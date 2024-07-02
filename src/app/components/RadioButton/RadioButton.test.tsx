@@ -1,7 +1,8 @@
 import React from "react";
 
-import { RadioButton } from "./RadioButton";
 import { render } from "@/utils/testing-library";
+
+import { RadioButton } from "./RadioButton";
 
 describe("RadioButton", () => {
 	it("should render", () => {

@@ -1,11 +1,12 @@
-import * as browserAccess from "browser-fs-access";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
+import * as browserAccess from "browser-fs-access";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { SelectFile } from "./SelectFile";
 import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+
+import { SelectFile } from "./SelectFile";
 
 const browseFiles = () => screen.getByTestId("SelectFile__browse-files");
 
@@ -30,7 +31,7 @@ describe("SelectFile", () => {
 		const onSelect = vi.fn();
 		render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
 
-		userEvent.click(browseFiles());
+		await userEvent.click(browseFiles());
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith({ extensions: [".json"] }));
 
@@ -53,7 +54,7 @@ describe("SelectFile", () => {
 		const onSelect = vi.fn();
 		render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
 
-		userEvent.click(browseFiles());
+		await userEvent.click(browseFiles());
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith({ extensions: [".json"] }));
 
@@ -133,7 +134,7 @@ describe("SelectFile", () => {
 		await waitFor(() => expect(onSelect).toHaveBeenCalledTimes(1));
 	});
 
-	it("should show error if the dropped file has wrong type", () => {
+	it("should show error if the dropped file has wrong type", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
@@ -151,12 +152,12 @@ describe("SelectFile", () => {
 
 		expect(container).toContainHTML(errorHtml);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		expect(container).not.toContainHTML(errorHtml);
 	});
 
-	it("should show error if multiple files are dropped", () => {
+	it("should show error if multiple files are dropped", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
@@ -175,7 +176,7 @@ describe("SelectFile", () => {
 
 		expect(container).toContainHTML(errorHtml);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		expect(container).not.toContainHTML(errorHtml);
 	});

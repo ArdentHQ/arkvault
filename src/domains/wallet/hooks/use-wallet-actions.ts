@@ -1,13 +1,14 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useState } from "react";
-import { useHistory } from "react-router-dom";
 import { generatePath } from "react-router";
+import { useHistory } from "react-router-dom";
+
 import { DropdownOption } from "@/app/components/Dropdown";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
+import { useLink } from "@/app/hooks/use-link";
 import { WalletActionsModalType } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { ProfilePaths } from "@/router/paths";
-import { useLink } from "@/app/hooks/use-link";
 
 export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 	const { persist } = useEnvironmentContext();

@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Logo } from "./Logo";
 import { render } from "@/utils/testing-library";
+
+import { Logo } from "./Logo";
 
 describe("Logo", () => {
 	it("should render", () => {

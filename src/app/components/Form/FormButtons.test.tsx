@@ -1,8 +1,9 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import userEvent from "@testing-library/user-event";
-import { FormButtons } from "./FormButtons";
 import { renderResponsive, screen } from "@/utils/testing-library";
+
+import { FormButtons } from "./FormButtons";
 
 describe("FormButtons", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
@@ -11,7 +12,7 @@ describe("FormButtons", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["xs", "sm", "md", "lg", "xl"])("should adjust offset if input is focused in %s", (breakpoint) => {
+	it.each(["xs", "sm", "md", "lg", "xl"])("should adjust offset if input is focused in %s", async (breakpoint) => {
 		const { asFragment } = renderResponsive(
 			<div>
 				<input data-testid="input" />
@@ -20,7 +21,7 @@ describe("FormButtons", () => {
 			breakpoint,
 		);
 
-		userEvent.type(screen.getByTestId("input"), "text");
+		await userEvent.type(screen.getByTestId("input"), "text");
 
 		expect(screen.getByTestId("input")).toHaveValue("text");
 		expect(asFragment()).toMatchSnapshot();

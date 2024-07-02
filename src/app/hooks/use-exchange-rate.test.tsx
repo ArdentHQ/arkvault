@@ -1,8 +1,9 @@
 import { renderHook, RenderHookResult } from "@testing-library/react-hooks";
 import React from "react";
 
-import { useExchangeRate } from "./use-exchange-rate";
 import { env, WithProviders } from "@/utils/testing-library";
+
+import { useExchangeRate } from "./use-exchange-rate";
 
 describe("useExchangeRate", () => {
 	const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;

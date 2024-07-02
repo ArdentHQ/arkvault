@@ -1,14 +1,15 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { SelectNetwork } from "./SelectNetwork";
 import {
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { SelectNetwork } from "./SelectNetwork";
 
 let profile: Contracts.IProfile;
 

@@ -2,20 +2,21 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import {
-	supportedTransport,
-	connectedTransport,
-	openTransport,
-	closeDevices,
-	isLedgerTransportSupported,
-} from "./transport";
-import {
 	env,
 	getDefaultProfileId,
-	mockNanoXTransport,
-	mockLedgerTransportError,
 	mockConnectedTransport,
 	mockLedgerDevicesList,
+	mockLedgerTransportError,
+	mockNanoXTransport,
 } from "@/utils/testing-library";
+
+import {
+	closeDevices,
+	connectedTransport,
+	isLedgerTransportSupported,
+	openTransport,
+	supportedTransport,
+} from "./transport";
 
 describe("Ledger transport", () => {
 	let profile: Contracts.IProfile;

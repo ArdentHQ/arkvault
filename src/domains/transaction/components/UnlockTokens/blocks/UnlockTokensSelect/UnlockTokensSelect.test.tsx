@@ -5,7 +5,6 @@ import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
-import { UnlockTokensSelect } from "./UnlockTokensSelect";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { buildTranslations } from "@/app/i18n/helpers";
 import {
@@ -13,6 +12,8 @@ import {
 	UnlockTokensFormState,
 } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+
+import { UnlockTokensSelect } from "./UnlockTokensSelect";
 
 const translations = buildTranslations();
 
@@ -108,7 +109,7 @@ describe("UnlockTokensSelect", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByText(translations.COMMON.CLOSE));
+		await userEvent.click(screen.getByText(translations.COMMON.CLOSE));
 
 		expect(onClose).toHaveBeenCalledTimes(1);
 	});
@@ -200,7 +201,7 @@ describe("UnlockTokensSelect", () => {
 
 		// select single
 
-		userEvent.click(screen.getAllByRole("checkbox")[1]);
+		await userEvent.click(screen.getAllByRole("checkbox")[1]);
 
 		expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(1);
 		expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(4);
@@ -211,7 +212,7 @@ describe("UnlockTokensSelect", () => {
 
 		// toggle select single
 
-		userEvent.click(screen.getAllByRole("checkbox")[1]);
+		await userEvent.click(screen.getAllByRole("checkbox")[1]);
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(5));
 
@@ -220,7 +221,7 @@ describe("UnlockTokensSelect", () => {
 
 		// select all
 
-		userEvent.click(screen.getAllByRole("checkbox")[0]);
+		await userEvent.click(screen.getAllByRole("checkbox")[0]);
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(3));
 
@@ -229,7 +230,7 @@ describe("UnlockTokensSelect", () => {
 
 		// toggle select all (uncheck all)
 
-		userEvent.click(screen.getAllByRole("checkbox")[0]);
+		await userEvent.click(screen.getAllByRole("checkbox")[0]);
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(5));
 
@@ -238,11 +239,11 @@ describe("UnlockTokensSelect", () => {
 
 		// unlock
 
-		userEvent.click(screen.getAllByRole("checkbox")[1]);
+		await userEvent.click(screen.getAllByRole("checkbox")[1]);
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(1));
 
-		userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
+		await userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
 
 		expect(onUnlock).toHaveBeenCalledTimes(1);
 	});

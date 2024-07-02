@@ -1,8 +1,9 @@
 import React from "react";
 
-import { TransactionExportProgress } from "./TransactionExportProgress";
-import { render, screen } from "@/utils/testing-library";
 import { translations } from "@/domains/transaction/i18n";
+import { render, screen } from "@/utils/testing-library";
+
+import { TransactionExportProgress } from "./TransactionExportProgress";
 
 describe("TransactionExportProgress", () => {
 	it("should render", () => {

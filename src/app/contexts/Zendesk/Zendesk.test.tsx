@@ -1,9 +1,10 @@
+import { Contracts } from "@ardenthq/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import userEvent from "@testing-library/user-event";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { ZendeskProvider, useZendesk } from "./Zendesk";
-import { render, screen, env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+
+import { useZendesk, ZendeskProvider } from "./Zendesk";
 
 let profile: Contracts.IProfile;
 const webWidgetSelector = "#webWidget";
@@ -69,7 +70,7 @@ describe("Zendesk Context Provider", () => {
 
 		await waitFor(() => expect(widgetMock).toHaveBeenCalledWith(webWidgetSelector));
 
-		userEvent.click(screen.getByTestId("content"));
+		await userEvent.click(screen.getByTestId("content"));
 		await waitFor(() => expect(widgetMock).toHaveBeenCalledWith(webWidgetSelector));
 
 		widgetMock.mockRestore();
@@ -82,7 +83,7 @@ describe("Zendesk Context Provider", () => {
 				}
 			});
 
-		userEvent.click(screen.getByTestId("content"));
+		await userEvent.click(screen.getByTestId("content"));
 		await waitFor(() => expect(widgetMock).not.toHaveBeenCalledWith(webWidgetSelector));
 
 		undefinedWidgetMock.mockRestore();

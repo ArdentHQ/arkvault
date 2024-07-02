@@ -3,9 +3,10 @@ import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 
-import type { LabelledTextProperties, LegendProperties, TooltipProperties } from "./PortfolioBreakdown.contracts";
-import { useTheme } from "@/app/hooks";
 import { Skeleton } from "@/app/components/Skeleton";
+import { useTheme } from "@/app/hooks";
+
+import type { LabelledTextProperties, LegendProperties, TooltipProperties } from "./PortfolioBreakdown.contracts";
 
 const Legend: React.VFC<LegendProperties> = ({ hasZeroBalance, onMoreDetailsClick, dataPoints }) => {
 	const { t } = useTranslation();

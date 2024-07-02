@@ -1,18 +1,18 @@
-import cn from "classnames";
-import { Networks, Contracts } from "@ardenthq/sdk";
+import { Contracts, Networks } from "@ardenthq/sdk";
+import { BIP44 } from "@ardenthq/sdk-cryptography";
 import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import Tippy from "@tippyjs/react";
+import cn from "classnames";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import { BIP44 } from "@ardenthq/sdk-cryptography";
-import { LedgerTableProperties } from "./LedgerTabs.contracts";
-import { toasts } from "@/app/services";
+
 import { Address } from "@/app/components/Address";
 import { Alert } from "@/app/components/Alert";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
@@ -21,9 +21,11 @@ import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useLedgerContext } from "@/app/contexts";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { useBreakpoint, useRandomNumber } from "@/app/hooks";
+import { toasts } from "@/app/services";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 import { LedgerCancelling } from "@/domains/wallet/pages/ImportWallet/Ledger/LedgerCancelling";
-import { Button } from "@/app/components/Button";
+
+import { LedgerTableProperties } from "./LedgerTabs.contracts";
 const AmountWrapper = ({ isLoading, children }: { isLoading: boolean; children?: React.ReactNode }) => {
 	const amountWidth = useRandomNumber(100, 130);
 

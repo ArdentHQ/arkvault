@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Input } from "./Input";
 import { Icon } from "@/app/components/Icon";
+
+import { Input } from "./Input";
 
 type InputPasswordProperties = { isInvalid?: boolean } & React.InputHTMLAttributes<any>;
 

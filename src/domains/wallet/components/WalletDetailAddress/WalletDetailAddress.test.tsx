@@ -1,7 +1,8 @@
 import React from "react";
 
-import { WalletDetailAddress } from "./WalletDetailAddress";
 import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+
+import { WalletDetailAddress } from "./WalletDetailAddress";
 
 describe("WalletDetailAddress", () => {
 	it("should render", () => {

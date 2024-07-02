@@ -3,11 +3,12 @@ import React, { ChangeEvent, FC, useCallback, useEffect, useRef, useState } from
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 
-import { HeaderSearchBarProperties } from "./HeaderSearchBar.contracts";
 import { ControlButton } from "@/app/components/ControlButton";
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 import { clickOutsideHandler, useDebounce } from "@/app/hooks";
+
+import { HeaderSearchBarProperties } from "./HeaderSearchBar.contracts";
 
 const SearchBarInputWrapper = styled.div`
 	${tw`min-width[300px] sm:min-width[448px] dark:border dark:border-theme-secondary-800`}

@@ -2,13 +2,14 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { BaseTransactionRowAmount } from "./TransactionRowAmount";
-import { BaseTransactionRowMode } from "./TransactionRowMode";
-import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
+
+import { BaseTransactionRowAmount } from "./TransactionRowAmount";
+import { BaseTransactionRowMode } from "./TransactionRowMode";
+import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 
 export const PendingTransferRow = ({
 	transaction,

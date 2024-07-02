@@ -1,5 +1,4 @@
 import { MessageRoutes } from "@/domains/message/routing";
-
 import { ProfilePaths } from "@/router/paths";
 
 describe("routing", () => {

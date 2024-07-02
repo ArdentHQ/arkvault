@@ -5,9 +5,9 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { WalletDetails } from "./WalletDetails";
 import { buildTranslations } from "@/app/i18n/helpers";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
+import { requestMock, server } from "@/tests/mocks/server";
 import {
 	env,
 	getDefaultProfileId,
@@ -20,7 +20,8 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
+
+import { WalletDetails } from "./WalletDetails";
 
 const translations = buildTranslations();
 
@@ -191,11 +192,11 @@ describe("WalletDetails", () => {
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow__mobile")[0]);
+		await userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow__mobile")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 		vi.restoreAllMocks();
@@ -210,7 +211,7 @@ describe("WalletDetails", () => {
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
+		await userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("TableRemoveButton")).resolves.toBeVisible();
 
@@ -237,7 +238,7 @@ describe("WalletDetails", () => {
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
+		await userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("TableRemoveButton--compact")).resolves.toBeVisible();
 

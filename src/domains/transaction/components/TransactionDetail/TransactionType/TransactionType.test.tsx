@@ -1,8 +1,9 @@
 import React from "react";
 
-import { TransactionType } from "./TransactionType";
 import { translations } from "@/domains/transaction/i18n";
 import { queryElementForSvg, renderResponsive } from "@/utils/testing-library";
+
+import { TransactionType } from "./TransactionType";
 
 describe("TransactionType", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {

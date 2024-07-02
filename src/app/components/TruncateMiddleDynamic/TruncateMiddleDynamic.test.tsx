@@ -2,8 +2,9 @@ import userEvent from "@testing-library/user-event";
 import React, { useRef } from "react";
 import * as useResizeDetectorModule from "react-resize-detector";
 
-import { getTruncatedValue, TruncateMiddleDynamic } from "./TruncateMiddleDynamic";
 import { render, screen } from "@/utils/testing-library";
+
+import { getTruncatedValue, TruncateMiddleDynamic } from "./TruncateMiddleDynamic";
 
 vi.mock("react-resize-detector", () => ({
 	useResizeDetector: () => ({ ref: null }),
@@ -58,7 +59,7 @@ describe("TruncateMiddleDynamic", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.skip("should render with tooltip in the dark mode", () => {
+	it.skip("should render with tooltip in the dark mode", async () => {
 		useResizeDetectorSpy
 			.mockReturnValueOnce({ ref: parentElementReference, width: 50 })
 			.mockReturnValue({ ref: parentElementReference, width: 30 });
@@ -71,7 +72,7 @@ describe("TruncateMiddleDynamic", () => {
 
 		render(<Component value={valueToTruncate} offset={5} availableWidth={40} />);
 
-		userEvent.hover(screen.getByText("Lorem ipsum dolor sit amet…sectetur adipisicing elit."));
+		await userEvent.hover(screen.getByText("Lorem ipsum dolor sit amet…sectetur adipisicing elit."));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 	});

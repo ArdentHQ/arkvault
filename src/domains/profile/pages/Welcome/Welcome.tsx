@@ -1,10 +1,10 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import cn from "classnames";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { matchPath, useHistory } from "react-router-dom";
-
 import { LocationState } from "router/router.types";
-import cn from "classnames";
+
 import { Card } from "@/app/components/Card";
 import { Circle } from "@/app/components/Circle";
 import { DropdownOption } from "@/app/components/Dropdown";
@@ -14,10 +14,10 @@ import { Page, Section } from "@/app/components/Layout";
 import { Link } from "@/app/components/Link";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useAccentColor, useDeeplink, useTheme } from "@/app/hooks";
+import { toasts } from "@/app/services";
 import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/DeleteProfile";
 import { ProfileCard } from "@/domains/profile/components/ProfileCard";
 import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
-import { toasts } from "@/app/services";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();

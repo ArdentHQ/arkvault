@@ -2,9 +2,10 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { UnlockTokensAuthentication } from "./UnlockTokensAuthentication";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { env, getDefaultProfileId, renderWithForm, screen } from "@/utils/testing-library";
+
+import { UnlockTokensAuthentication } from "./UnlockTokensAuthentication";
 
 const translations = buildTranslations();
 
@@ -26,7 +27,7 @@ describe("UnlockTokensAuthentication", () => {
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(translations.COMMON.BACK));
+		await userEvent.click(screen.getByText(translations.COMMON.BACK));
 
 		expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 		expect(asFragment()).toMatchSnapshot();

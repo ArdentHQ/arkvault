@@ -2,9 +2,10 @@ import { Networks } from "@ardenthq/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { NetworkIcon } from "./NetworkIcon";
 import { availableNetworksMock } from "@/tests/mocks/networks";
 import { render, screen } from "@/utils/testing-library";
+
+import { NetworkIcon } from "./NetworkIcon";
 
 let network: Networks.Network;
 
@@ -25,10 +26,10 @@ describe("NetworkIcon", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with tooltip in the dark mode", () => {
+	it("should render with tooltip in the dark mode", async () => {
 		render(<NetworkIcon network={network} size="lg" tooltipDarkTheme />, {});
 
-		userEvent.hover(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
+		await userEvent.hover(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 	});

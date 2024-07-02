@@ -4,19 +4,20 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render, waitFor } from "@/utils/testing-library";
-import * as useConfigurationModule from "@/app/contexts/Configuration/Configuration";
+
 import {
+	Balance,
 	ButtonsCell,
 	Currency,
-	WalletCell,
-	Starred,
 	Info,
-	Balance,
+	Starred,
+	WalletCell,
 	WalletListItemMobile,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
-import { translations as walletTranslations } from "@/domains/wallet/i18n";
+import * as useConfigurationModule from "@/app/contexts/Configuration/Configuration";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { translations as walletTranslations } from "@/domains/wallet/i18n";
+import { env, getDefaultProfileId, render, waitFor } from "@/utils/testing-library";
 
 vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions", () => ({
 	useWalletTransactions: () => ({
@@ -69,7 +70,7 @@ describe("WalletListItem.blocks", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should render WalletListItemMobile", () => {
+	it("should render WalletListItemMobile", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletListItemMobile wallet={wallet} />
@@ -80,12 +81,12 @@ describe("WalletListItem.blocks", () => {
 			},
 		);
 
-		userEvent.hover(screen.getByTestId("WalletListItemMobile"));
+		await userEvent.hover(screen.getByTestId("WalletListItemMobile"));
 
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should render WalletListItemMobile when selected", () => {
+	it("should render WalletListItemMobile when selected", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletListItemMobile wallet={wallet} selected />
@@ -96,12 +97,12 @@ describe("WalletListItem.blocks", () => {
 			},
 		);
 
-		userEvent.hover(screen.getByTestId("WalletListItemMobile--selected"));
+		await userEvent.hover(screen.getByTestId("WalletListItemMobile--selected"));
 
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should render StarredCell", () => {
+	it("should render StarredCell", async () => {
 		const walletSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(false);
 
 		const { asFragment } = render(
@@ -120,7 +121,7 @@ describe("WalletListItem.blocks", () => {
 			},
 		);
 
-		userEvent.hover(screen.getByTestId("WalletIcon__Starred"));
+		await userEvent.hover(screen.getByTestId("WalletIcon__Starred"));
 
 		expect(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.STAR_WALLET)).toBeInTheDocument();
 
@@ -132,7 +133,7 @@ describe("WalletListItem.blocks", () => {
 		walletSpy.mockRestore();
 	});
 
-	it("should render StarredCell in small screen", () => {
+	it("should render StarredCell in small screen", async () => {
 		const walletSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(false);
 
 		const { asFragment } = render(
@@ -145,7 +146,7 @@ describe("WalletListItem.blocks", () => {
 			},
 		);
 
-		userEvent.hover(screen.getByTestId("WalletIcon__Starred"));
+		await userEvent.hover(screen.getByTestId("WalletIcon__Starred"));
 
 		expect(asFragment).toMatchSnapshot();
 
@@ -272,7 +273,7 @@ describe("WalletListItem.blocks", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should avoid click on ButtonsCell when Send button is disabled", () => {
+	it("should avoid click on ButtonsCell when Send button is disabled", async () => {
 		const walletSpy = vi.spyOn(wallet, "balance").mockReturnValue(0);
 		const handleSend = vi.fn();
 
@@ -297,7 +298,7 @@ describe("WalletListItem.blocks", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("WalletListItem__send-button"));
+		await userEvent.click(screen.getByTestId("WalletListItem__send-button"));
 
 		expect(handleSend).not.toHaveBeenCalled();
 

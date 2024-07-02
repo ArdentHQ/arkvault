@@ -1,10 +1,11 @@
 import React from "react";
-
 import { styled } from "twin.macro";
-import { getStyles } from "./Card.styles";
+
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { ButtonVariant } from "@/types";
+
+import { getStyles } from "./Card.styles";
 
 interface CardProperties {
 	as?: React.ElementType;

@@ -107,7 +107,7 @@ export const Link = ({
 
 						if (!isDisabled) {
 							try {
-								assertString(properties.to)
+								assertString(properties.to);
 								openExternal(properties.to.toString());
 							} catch {
 								toasts.error(t("COMMON.ERRORS.INVALID_URL", { url: properties.to }));

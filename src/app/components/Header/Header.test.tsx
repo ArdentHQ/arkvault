@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Header, PageHeader } from "./Header";
 import { Button } from "@/app/components/Button";
 import { render, renderResponsive, screen } from "@/utils/testing-library";
+
+import { Header, PageHeader } from "./Header";
 
 describe("Header", () => {
 	it("should render an header", () => {

@@ -2,7 +2,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { TransactionRecipients } from "./TransactionRecipients";
 import { translations } from "@/domains/transaction/i18n";
 import {
 	env,
@@ -13,6 +12,8 @@ import {
 	renderResponsiveWithRoute,
 	screen,
 } from "@/utils/testing-library";
+
+import { TransactionRecipients } from "./TransactionRecipients";
 
 let profile: Contracts.IProfile;
 const address = "test-address";

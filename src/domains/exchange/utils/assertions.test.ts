@@ -1,9 +1,10 @@
 /* eslint-disable unicorn/no-null */
-import { assertCurrency, assertExchangeService, assertExchangeTransaction } from "./assertions";
-import { CurrencyData } from "@/domains/exchange/exchange.contracts";
 import { httpClient } from "@/app/services";
+import { CurrencyData } from "@/domains/exchange/exchange.contracts";
 import { ExchangeService } from "@/domains/exchange/services/exchange.service";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+import { assertCurrency, assertExchangeService, assertExchangeTransaction } from "./assertions";
 
 describe("#assertExchangeService", () => {
 	it("should pass with a ExchangeService instance", () => {

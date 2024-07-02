@@ -7,9 +7,10 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Trans } from "react-i18next";
 
-import { WalletOverviewStep } from "./WalletOverviewStep";
 import { toasts } from "@/app/services";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
+
+import { WalletOverviewStep } from "./WalletOverviewStep";
 
 let profile: Contracts.IProfile;
 
@@ -56,7 +57,7 @@ describe("WalletOverviewStep", () => {
 			// @ts-ignore
 			navigator.clipboard = { writeText: writeTextMock };
 
-			userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
+			await userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(MNEMONICS[0]));
 
@@ -82,7 +83,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).not.toHaveBeenCalledWith(
@@ -112,7 +113,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).toHaveBeenCalledWith(
@@ -139,7 +140,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			expect(toastSpy).not.toHaveBeenCalled();
 
@@ -160,7 +161,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save/));

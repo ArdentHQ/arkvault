@@ -1,12 +1,18 @@
-import { matchPath, useHistory, useLocation } from "react-router-dom";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
 import { Services } from "@ardenthq/sdk";
 import { isEqual } from "@ardenthq/sdk-helpers";
-import { usePrevious } from "./use-previous";
-import { useSynchronizer } from "./use-synchronizer";
-import { useTheme } from "./use-theme";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { matchPath, useHistory, useLocation } from "react-router-dom";
+
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { useZendesk } from "@/app/contexts/Zendesk";
+/* eslint-disable sonarjs/cognitive-complexity */
+import { useAccentColor } from "@/app/hooks/use-accent-color";
+import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
+import { delay } from "@/utils/delay";
 import { enabledNetworksCount, profileAllEnabledNetworks, profileEnabledNetworkIds } from "@/utils/network-utils";
+import { ProfilePeers } from "@/utils/profile-peers";
 import {
 	getErroredNetworks,
 	getProfileById,
@@ -14,15 +20,10 @@ import {
 	getProfileStoredPassword,
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
-import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
-import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { ProfilePeers } from "@/utils/profile-peers";
-import { delay } from "@/utils/delay";
-/* eslint-disable sonarjs/cognitive-complexity */
-import { useAccentColor } from "@/app/hooks/use-accent-color";
-import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
-import { useZendesk } from "@/app/contexts/Zendesk";
+import { usePrevious } from "./use-previous";
+import { useSynchronizer } from "./use-synchronizer";
+import { useTheme } from "./use-theme";
 
 enum Intervals {
 	VeryShort = 15_000,

@@ -6,11 +6,11 @@ import { useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
+import { StepHeader } from "@/app/components/StepHeader";
 import { useValidation } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
-import { StepHeader } from "@/app/components/StepHeader";
 
 export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();

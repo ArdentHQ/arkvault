@@ -1,5 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { AccordionHeader, AccordionHeaderSkeletonWrapper } from "@/app/components/Accordion";
+import { Skeleton } from "@/app/components/Skeleton";
 import { useBreakpoint } from "@/app/hooks";
 import {
 	GroupNetworkIcon,
@@ -12,8 +15,6 @@ import {
 	WalletsGroupHeaderProperties,
 	WalletsGroupHeaderSkeletonProperties,
 } from "@/domains/wallet/components/WalletsGroup/WalletsGroup.contracts";
-import { AccordionHeader, AccordionHeaderSkeletonWrapper } from "@/app/components/Accordion";
-import { Skeleton } from "@/app/components/Skeleton";
 
 export const WalletsGroupHeader: React.VFC<WalletsGroupHeaderProperties> = ({
 	wallets,

@@ -1,10 +1,11 @@
 import { ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, render, screen } from "@/utils/testing-library";
+
+import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 
 describe("TransactionRowRecipientLabel", () => {
 	it("should show address", () => {

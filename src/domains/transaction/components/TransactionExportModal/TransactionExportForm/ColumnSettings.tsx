@@ -1,8 +1,9 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { Toggle } from "@/app/components/Toggle";
+
 import { ListDivided } from "@/app/components/ListDivided";
+import { Toggle } from "@/app/components/Toggle";
 
 export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) => {
 	const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import React from "react";
 import tw, { styled } from "twin.macro";
-import { ListDividedItemProperties } from "./ListDivided.contracts";
 
+import { ListDividedItemProperties } from "./ListDivided.contracts";
 import { ListDividedItem } from "./ListDividedItem";
 
 interface Properties {

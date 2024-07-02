@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import { useTranslation } from "react-i18next";
 
-import { UnlockTokensRowSkeleton } from "./UnlockTokensRowSkeleton";
-import { UnlockTokensRowProperties } from "./UnlockTokensSelect.contracts";
 import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
+
+import { UnlockTokensRowSkeleton } from "./UnlockTokensRowSkeleton";
+import { UnlockTokensRowProperties } from "./UnlockTokensSelect.contracts";
 
 export const UnlockTokensRow: FC<UnlockTokensRowProperties> = ({ loading, item, ticker, onToggle, checked }) => {
 	const { t } = useTranslation();

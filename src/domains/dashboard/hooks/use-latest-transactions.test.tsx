@@ -2,15 +2,16 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
-import { useLatestTransactions } from "./use-latest-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import {
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	syncDelegates,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { useLatestTransactions } from "./use-latest-transactions";
 
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;

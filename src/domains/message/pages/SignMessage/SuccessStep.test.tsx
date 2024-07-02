@@ -3,8 +3,9 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SuccessStep } from "./SuccessStep";
 import { env, getDefaultProfileId, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
+
+import { SuccessStep } from "./SuccessStep";
 
 const history = createHashHistory();
 

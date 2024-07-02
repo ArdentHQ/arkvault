@@ -4,9 +4,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { Icon } from "@/app/components/Icon";
+import { Skeleton } from "@/app/components/Skeleton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Size } from "@/types";
-import { Skeleton } from "@/app/components/Skeleton";
 
 interface WalletIconsProperties {
 	exclude?: string[];

@@ -1,9 +1,10 @@
+import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import cn from "classnames";
+
 import { Clipboard } from "@/app/components/Clipboard";
-import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
+import { Icon } from "@/app/components/Icon";
 
 interface Properties {
 	title: string;

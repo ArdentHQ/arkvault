@@ -2,9 +2,10 @@ import cn from "classnames";
 import React, { forwardRef } from "react";
 import { styled } from "twin.macro";
 
-import { BadgeStyleProperties, defaultClasses, getStyles } from "./Badge.styles";
 import { Icon } from "@/app/components/Icon";
 import { Position, Size } from "@/types";
+
+import { BadgeStyleProperties, defaultClasses, getStyles } from "./Badge.styles";
 
 interface BadgeProperties {
 	className?: string;

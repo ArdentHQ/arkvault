@@ -1,13 +1,13 @@
-import { Middleware, MiddlewareParameters, RouteItem } from "@/router/router.types";
 import { ContactRoutes } from "@/domains/contact/routing";
 import { DashboardRoutes } from "@/domains/dashboard/routing";
 import { ExchangeRoutes } from "@/domains/exchange/routing";
 import { MessageRoutes } from "@/domains/message/routing";
+import { ProfileRoutes } from "@/domains/profile/routing";
 import { SettingRoutes } from "@/domains/setting/routing";
 import { TransactionRoutes } from "@/domains/transaction/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
 import { WalletRoutes } from "@/domains/wallet/routing";
-import { ProfileRoutes } from "@/domains/profile/routing";
+import { Middleware, MiddlewareParameters, RouteItem } from "@/router/router.types";
 import { isUnit } from "@/utils/test-helpers";
 
 const getPreloadableRoutes = (path: string): RouteItem[] => {

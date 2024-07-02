@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Section } from "./Section";
 import { render } from "@/utils/testing-library";
+
+import { Section } from "./Section";
 
 describe("Section", () => {
 	it("should render", () => {

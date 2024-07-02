@@ -1,8 +1,9 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { IpfsLedgerReview } from "./LedgerReview";
 import { env, getDefaultProfileId, renderWithForm, screen } from "@/utils/testing-library";
+
+import { IpfsLedgerReview } from "./LedgerReview";
 
 describe("IpfsLedgerReview", () => {
 	let profile: Contracts.IProfile;

@@ -2,9 +2,10 @@ import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { ToggleAllOptionProperties } from "./FilterNetwork.contracts";
 import { Badge } from "@/app/components/Badge";
 import { Circle } from "@/app/components/Circle";
+
+import { ToggleAllOptionProperties } from "./FilterNetwork.contracts";
 
 export const ToggleAllOption = ({ onClick, isHidden = false, isSelected = false }: ToggleAllOptionProperties) => {
 	const { t } = useTranslation();

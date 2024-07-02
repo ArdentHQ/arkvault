@@ -10,7 +10,7 @@ interface ModalProperties extends JSX.IntrinsicAttributes {
 	children: React.ReactNode;
 	title: string | React.ReactNode;
 	titleClass?: string;
-	description?: string | JSX.Element  ;
+	description?: string | JSX.Element;
 	banner?: React.ReactNode;
 	image?: React.ReactNode;
 	noButtons?: boolean;

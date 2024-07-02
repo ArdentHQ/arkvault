@@ -1,16 +1,16 @@
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { useDelegatesFromURL } from "./use-vote-query-parameters";
-
 import {
-	render,
-	screen,
 	env,
 	getDefaultProfileId,
 	mockProfileWithPublicAndTestNetworks,
+	render,
+	screen,
 } from "@/utils/testing-library";
+
+import { useDelegatesFromURL } from "./use-vote-query-parameters";
 
 const history = createHashHistory();
 

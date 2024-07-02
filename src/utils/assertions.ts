@@ -1,6 +1,6 @@
-import { AssertionError } from "assert";
 import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts, DTO, Profile, Wallet } from "@ardenthq/sdk-profiles";
+import { AssertionError } from "assert";
 
 export function assertProfile(profile?: Contracts.IProfile): asserts profile is Profile {
 	if (!(profile instanceof Profile)) {

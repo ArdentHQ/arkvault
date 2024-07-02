@@ -5,8 +5,9 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { WalletVote } from "./WalletVote";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+
+import { WalletVote } from "./WalletVote";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -574,7 +575,7 @@ describe("WalletVote", () => {
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(t(multivote)));
+		await userEvent.click(screen.getByText(t(multivote)));
 
 		expect(onButtonClick).toHaveBeenCalledWith("current");
 	});
@@ -597,7 +598,7 @@ describe("WalletVote", () => {
 
 		await waitFor(() => expect(screen.getByTestId("WalletVote")).not.toBeDisabled());
 
-		userEvent.click(screen.getByText(t("COMMON.VOTE")));
+		await userEvent.click(screen.getByText(t("COMMON.VOTE")));
 
 		expect(onButtonClick).toHaveBeenCalledWith();
 	});

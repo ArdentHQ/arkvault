@@ -1,10 +1,11 @@
 import React from "react";
 import { styled } from "twin.macro";
 
-import { getStyles } from "./Button.styles";
 import { ButtonSpinner } from "@/app/components/ButtonSpinner";
 import { Icon } from "@/app/components/Icon";
-import { ButtonVariant, ResponsiveButtonVariant, LayoutBreakpoint, Size, Theme } from "@/types";
+import { ButtonVariant, LayoutBreakpoint, ResponsiveButtonVariant, Size, Theme } from "@/types";
+
+import { getStyles } from "./Button.styles";
 
 type ButtonProperties = {
 	variant?: ButtonVariant;

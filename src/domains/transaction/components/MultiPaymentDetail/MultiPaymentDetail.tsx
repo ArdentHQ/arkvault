@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Modal } from "@/app/components/Modal";
+import { TransactionDetailAddressList } from "@/domains/transaction/components/MultiPaymentDetail/components/TransactionDetailAddressList";
 import {
 	TransactionAmount,
 	TransactionExplorerLink,
@@ -12,7 +13,6 @@ import {
 	TransactionTimestamp,
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
-import { TransactionDetailAddressList } from "@/domains/transaction/components/MultiPaymentDetail/components/TransactionDetailAddressList";
 
 export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();

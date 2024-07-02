@@ -1,9 +1,10 @@
 import { act, renderHook } from "@testing-library/react-hooks";
 import { useReducer } from "react";
 
-import { Action, scannerReducer, State } from "./scanner.state";
-import { waitFor } from "@/utils/testing-library";
 import { LedgerData } from "@/app/contexts";
+import { waitFor } from "@/utils/testing-library";
+
+import { Action, scannerReducer, State } from "./scanner.state";
 
 const toggleSelectAction: Action = {
 	path: `44'/1'/1'/0/0`,

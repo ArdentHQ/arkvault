@@ -1,12 +1,14 @@
 import React from "react";
-import { WalletActions, WalletAddress, WalletBalance } from "./WalletHeader.blocks";
-import { WalletHeaderProperties } from "./WalletHeader.contracts";
+
 import { Button } from "@/app/components/Button";
 import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+
+import { WalletActions, WalletAddress, WalletBalance } from "./WalletHeader.blocks";
+import { WalletHeaderProperties } from "./WalletHeader.contracts";
 
 export const WalletHeader: React.VFC<WalletHeaderProperties> = ({
 	profile,

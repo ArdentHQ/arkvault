@@ -3,12 +3,13 @@ import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { styled } from "twin.macro";
 
+import { SmAndAbove, Xs } from "@/app/components/Breakpoint";
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
+
 import { PaginationProperties } from "./Pagination.contracts";
 import { PaginationButton, PaginationWrapper } from "./Pagination.styles";
 import { PaginationSearch } from "./PaginationSearch";
-import { Icon } from "@/app/components/Icon";
-import { Button } from "@/app/components/Button";
-import { SmAndAbove, Xs } from "@/app/components/Breakpoint";
 
 const Wrapper = styled.nav`
 	${PaginationWrapper}
