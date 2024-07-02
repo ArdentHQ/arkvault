@@ -33,7 +33,7 @@ describe("ContactListMobile", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should execute onAction callback", () => {
+	it("should execute onAction callback", async () => {
 		const onAction = vi.fn();
 
 		render(
@@ -47,11 +47,11 @@ describe("ContactListMobile", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onAction).toHaveBeenCalledWith(options[0], contacts[0]);
 	});
