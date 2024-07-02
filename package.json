@@ -95,7 +95,7 @@
 		"yup": "^1.4.0"
 	},
 	"devDependencies": {
-		"@cucumber/cucumber": "^9.6.0",
+		"@cucumber/cucumber": "^10.8.0",
 		"@ledgerhq/hw-transport-mocker": "^6.29.0",
 		"@testing-library/dom": "^8.20.1",
 		"@testing-library/jest-dom": "^5.17.0",
