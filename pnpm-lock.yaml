@@ -126,8 +126,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-responsive:
-        specifier: ^9.0.2
-        version: 9.0.2(react@18.3.1)
+        specifier: ^10.0.0
+        version: 10.0.0(react@18.3.1)
       react-router:
         specifier: ^6.24.0
         version: 6.24.0(react@18.3.1)
@@ -4525,8 +4525,8 @@ packages:
   match-url-wildcard@0.0.4:
     resolution: {integrity: sha512-R1XhQaamUZPWLOPtp4ig5j+3jctN+skhgRmEQTUamMzmNtRG69QEirQs0NZKLtHMR7tzWpmtnS4Eqv65DcgXUA==}
 
-  matchmediaquery@0.3.1:
-    resolution: {integrity: sha512-Hlk20WQHRIm9EE9luN1kjRjYXAQToHOIAHPJn9buxBwuhfTHoKUcX+lXBbxc85DVQfXYbEQ4HcwQdd128E3qHQ==}
+  matchmediaquery@0.4.2:
+    resolution: {integrity: sha512-wrZpoT50ehYOudhDjt/YvUJc6eUzcdFPdmbizfgvswCKNHD1/OBOHYJpHie+HXpu6bSkEGieFMYk6VuutaiRfA==}
 
   md5.js@1.3.5:
     resolution: {integrity: sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==}
@@ -5345,9 +5345,9 @@ packages:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
 
-  react-responsive@9.0.2:
-    resolution: {integrity: sha512-+4CCab7z8G8glgJoRjAwocsgsv6VA2w7JPxFWHRc7kvz8mec1/K5LutNC2MG28Mn8mu6+bu04XZxHv5gyfT7xQ==}
-    engines: {node: '>=0.10'}
+  react-responsive@10.0.0:
+    resolution: {integrity: sha512-N6/UiRLGQyGUqrarhBZmrSmHi2FXSD++N5VbSKsBBvWfG0ZV7asvUBluSv5lSzdMyEVjzZ6Y8DL4OHABiztDOg==}
+    engines: {node: '>=14'}
     peerDependencies:
       react: '>=16.8.0'
 
@@ -5710,8 +5710,8 @@ packages:
     resolution: {integrity: sha512-QMEp5B7cftE7APOjk5Y6xgrbWu+WkLVQwk8JNjZ8nKRciZaByEW6MubieAiToS7+dwvrjGhH8jRXz3MVd0AYqQ==}
     hasBin: true
 
-  shallow-equal@1.2.1:
-    resolution: {integrity: sha512-S4vJDjHHMBaiZuT9NPb616CSmLf618jawtv3sufLl6ivK8WocjAo58cXwbRV1cgqxH0Qbv+iUt6m05eqEa2IRA==}
+  shallow-equal@3.1.0:
+    resolution: {integrity: sha512-pfVOw8QZIXpMbhBWvzBISicvToTiM5WBF1EeAUZDDSb5Dt29yl4AYbyywbJFSEsRUMr7gJaxqCdr4L3tQf9wVg==}
 
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -11778,7 +11778,7 @@ snapshots:
     dependencies:
       escape-string-regexp: 1.0.5
 
-  matchmediaquery@0.3.1:
+  matchmediaquery@0.4.2:
     dependencies:
       css-mediaquery: 0.1.2
 
@@ -12492,13 +12492,13 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  react-responsive@9.0.2(react@18.3.1):
+  react-responsive@10.0.0(react@18.3.1):
     dependencies:
       hyphenate-style-name: 1.0.5
-      matchmediaquery: 0.3.1
+      matchmediaquery: 0.4.2
       prop-types: 15.8.1
       react: 18.3.1
-      shallow-equal: 1.2.1
+      shallow-equal: 3.1.0
 
   react-router-config@5.1.1(react-router@6.24.0(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -12898,7 +12898,7 @@ snapshots:
       inherits: 2.0.4
       safe-buffer: 5.2.1
 
-  shallow-equal@1.2.1: {}
+  shallow-equal@3.1.0: {}
 
   shebang-command@2.0.0:
     dependencies:
