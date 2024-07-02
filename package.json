@@ -28,7 +28,7 @@
 		"build:e2e": "REACT_APP_IS_E2E=1 vite build",
 		"build:analyze": "ANALYZE_BUNDLE=1 vite build",
 		"format": "pnpm lint && pnpm prettier",
-		"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix --debug",
+		"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
 		"prettier": "prettier --write \"./*.{ts,tsx,js,json,md}\" \"./**/*.{ts,tsx,js,json,md}\"",
 		"qa": "pnpm install && pnpm build && pnpm serve",
 		"serve": "vite preview --port 5000 --host=0.0.0.0",
