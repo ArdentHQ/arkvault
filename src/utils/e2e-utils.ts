@@ -7,7 +7,7 @@ import delve from "dlv";
 import fs from "fs";
 import { ClientFunction, RequestMock, Selector, t } from "testcafe";
 
-import { buildTranslations } from "@/app/i18n/helpers";
+import { buildTranslations } from "../app/i18n/helpers";
 
 export const getPageURL = () => process.env.E2E_HOST;
 
