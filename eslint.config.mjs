@@ -88,7 +88,7 @@ export default [
 				ecmaFeatures: {
 					jsx: true,
 				},
-				project: "./tsconfig.eslint.json",
+				project: "./tsconfig.json",
 				tsconfigRootDir: __dirname,
 				projectFolderIgnoreList: ["build", "coverage", "node_modules", "public", "dist", "src/tests/mocks"],
 			},
@@ -96,7 +96,7 @@ export default [
 		settings: {
 			react: {
 				version: "detect",
-			},
+			}
 		},
 		rules: {
 			"@typescript-eslint/ban-ts-comment": "warn",
@@ -255,7 +255,6 @@ export default [
 	{
 		files: ["**/e2e/*.ts", "**/cucumber/*.ts", "**/cucumber/*.feature"],
 		rules: {
-			"import/no-relative-parent-imports": "off",
 			"sort-keys-fix/sort-keys-fix": "off",
 		},
 	},

@@ -19,7 +19,10 @@
 		"useUnknownInCatchVariables": false,
 		"noImplicitAny": false,
 		"noFallthroughCasesInSwitch": true,
-		"types": ["vite-plugin-pwa/client", "vitest/globals"]
+		"types": ["vite-plugin-pwa/client", "vitest/globals"],
+		"paths": {
+			"@/*": ["./*"]
+		}
 	},
 	"exclude": [
 		"**/*.test.ts",
@@ -33,6 +36,5 @@
 		"src/setupTests.ts",
 		"dist/**/*"
 	],
-	"include": ["src", "public", "custom.d.ts", "global.d.ts"],
-	"extends": "./tsconfig.paths.json"
+	"include": ["src", "public", "custom.d.ts", "global.d.ts"]
 }
