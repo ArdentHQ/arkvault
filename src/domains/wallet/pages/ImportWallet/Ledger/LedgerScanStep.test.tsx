@@ -144,7 +144,7 @@ describe("LedgerScanStep", () => {
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
 	});
 
-	it("should render ledger table in scanning mode", async () => {
+	it("should render ledger table in scanning mode", () => {
 		render(<LedgerTable wallets={[]} selectedWallets={[]} isScanningMore isSelected={() => false} network={profile.wallets().first().network()} />);
 		expect(screen.getByTestId("LedgerScanStep__scan-more")).toMatchSnapshot()
 
