@@ -3,7 +3,7 @@
 exports[`Avatar > should render with profile image 1`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-tthe5h"
+    class="shrink-0 css-1px82g5"
     data-testid="Avatar"
   >
     <div
@@ -24,7 +24,7 @@ exports[`Avatar > should render with profile image 1`] = `
 exports[`Avatar > should render with svg 1`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-tthe5h"
+    class="shrink-0 css-1px82g5"
     data-testid="Avatar"
   >
     <div
