@@ -7,7 +7,7 @@ exports[`TransactionExportModal > should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -18,7 +18,7 @@ exports[`TransactionExportModal > should render 1`] = `
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -82,7 +82,7 @@ exports[`TransactionExportModal > should render 1`] = `
                     data-testid="TransactionExportForm"
                   >
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -120,7 +120,7 @@ exports[`TransactionExportModal > should render 1`] = `
                                   <button
                                     aria-checked="true"
                                     aria-label="Incoming"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -134,7 +134,7 @@ exports[`TransactionExportModal > should render 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="Outgoing"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -148,7 +148,7 @@ exports[`TransactionExportModal > should render 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="All"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -216,7 +216,7 @@ exports[`TransactionExportModal > should render 1`] = `
                                         </div>
                                       </span>
                                       <span
-                                        class="css-e3wx3i"
+                                        class="css-1uvxu7z"
                                       >
                                         <div
                                           class="p-1 css-15txs7d"
@@ -257,7 +257,7 @@ exports[`TransactionExportModal > should render 1`] = `
                       CSV Settings
                     </div>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -296,10 +296,10 @@ exports[`TransactionExportModal > should render 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -365,7 +365,7 @@ exports[`TransactionExportModal > should render 1`] = `
                                         </span>
                                       </span>
                                       <span
-                                        class="css-e3wx3i"
+                                        class="css-1uvxu7z"
                                       >
                                         <div
                                           class="p-1 css-15txs7d"
@@ -406,7 +406,7 @@ exports[`TransactionExportModal > should render 1`] = `
                       Columns
                     </div>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -445,10 +445,10 @@ exports[`TransactionExportModal > should render 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -492,10 +492,10 @@ exports[`TransactionExportModal > should render 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -539,10 +539,10 @@ exports[`TransactionExportModal > should render 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -586,10 +586,10 @@ exports[`TransactionExportModal > should render 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -599,10 +599,10 @@ exports[`TransactionExportModal > should render 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="css-1tkbsa1"
+                      class="css-p1y4tm"
                     >
                       <button
-                        class="css-1jhy6v9"
+                        class="css-6419sw"
                         data-testid="TransactionExportForm__cancel-button"
                         type="button"
                       >
@@ -613,7 +613,7 @@ exports[`TransactionExportModal > should render 1`] = `
                         </div>
                       </button>
                       <button
-                        class="css-1bx0hyc"
+                        class="css-fl4fi0"
                         data-testid="TransactionExport__submit-button"
                         type="submit"
                       >
@@ -643,7 +643,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -654,7 +654,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -718,7 +718,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                     data-testid="TransactionExportForm"
                   >
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -756,7 +756,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   <button
                                     aria-checked="true"
                                     aria-label="Incoming"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -770,7 +770,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="Outgoing"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -784,7 +784,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="All"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -852,7 +852,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                         </div>
                                       </span>
                                       <span
-                                        class="css-e3wx3i"
+                                        class="css-1uvxu7z"
                                       >
                                         <div
                                           class="p-1 css-15txs7d"
@@ -893,7 +893,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                       CSV Settings
                     </div>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -932,10 +932,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -1001,7 +1001,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                         </span>
                                       </span>
                                       <span
-                                        class="css-e3wx3i"
+                                        class="css-1uvxu7z"
                                       >
                                         <div
                                           class="p-1 css-15txs7d"
@@ -1042,7 +1042,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                       Columns
                     </div>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1081,10 +1081,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -1128,10 +1128,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -1175,10 +1175,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -1222,10 +1222,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -1235,10 +1235,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="css-1tkbsa1"
+                      class="css-p1y4tm"
                     >
                       <button
-                        class="css-1jhy6v9"
+                        class="css-6419sw"
                         data-testid="TransactionExportForm__cancel-button"
                         type="button"
                       >
@@ -1249,7 +1249,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                         </div>
                       </button>
                       <button
-                        class="css-1bx0hyc"
+                        class="css-fl4fi0"
                         data-testid="TransactionExport__submit-button"
                         type="submit"
                       >
@@ -1279,7 +1279,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -1290,7 +1290,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1354,7 +1354,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                     data-testid="TransactionExportForm"
                   >
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1392,7 +1392,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                                   <button
                                     aria-checked="true"
                                     aria-label="Incoming"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -1406,7 +1406,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="Outgoing"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -1420,7 +1420,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="All"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -1488,7 +1488,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                                         </div>
                                       </span>
                                       <span
-                                        class="css-e3wx3i"
+                                        class="css-1uvxu7z"
                                       >
                                         <div
                                           class="p-1 css-15txs7d"
@@ -1529,7 +1529,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                       CSV Settings
                     </div>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1568,10 +1568,10 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -1637,7 +1637,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                                         </span>
                                       </span>
                                       <span
-                                        class="css-e3wx3i"
+                                        class="css-1uvxu7z"
                                       >
                                         <div
                                           class="p-1 css-15txs7d"
@@ -1678,7 +1678,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                       Columns
                     </div>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1717,10 +1717,10 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -1764,10 +1764,10 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -1811,10 +1811,10 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -1858,10 +1858,10 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -1871,10 +1871,10 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="css-1tkbsa1"
+                      class="css-p1y4tm"
                     >
                       <button
-                        class="css-1jhy6v9"
+                        class="css-6419sw"
                         data-testid="TransactionExportForm__cancel-button"
                         type="button"
                       >
@@ -1885,7 +1885,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                         </div>
                       </button>
                       <button
-                        class="css-1yqe28v"
+                        class="css-qrwjsp"
                         data-testid="TransactionExport__submit-button"
                         disabled=""
                         type="submit"
@@ -1916,7 +1916,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -1927,7 +1927,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2029,7 +2029,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                       class="flex flex-col overflow-hidden rounded-xl mb-6"
                     >
                       <div
-                        class="css-1ecv4eg"
+                        class="css-rzhg83"
                       >
                         <div
                           class="css-v0ob3f"
@@ -2073,7 +2073,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                         </span>
                       </div>
                       <div
-                        class="css-1pvpof3"
+                        class="css-trjt6n"
                       >
                         No transactions could be found for the selected period.
                       </div>
@@ -2153,10 +2153,10 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                       </div>
                     </div>
                     <div
-                      class="css-1tkbsa1"
+                      class="css-p1y4tm"
                     >
                       <button
-                        class="css-1jhy6v9"
+                        class="css-6419sw"
                         data-testid="TransactionExportSuccess__back-button"
                         type="button"
                       >
@@ -2167,7 +2167,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                         </div>
                       </button>
                       <button
-                        class="css-1yqe28v"
+                        class="css-qrwjsp"
                         data-testid="TransactionExportSuccess__download-button"
                         disabled=""
                         type="submit"
@@ -2198,7 +2198,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -2209,7 +2209,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2315,7 +2315,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                       class="flex flex-col overflow-hidden rounded-xl mb-6"
                     >
                       <div
-                        class="css-1qh812f"
+                        class="css-1o2lvkz"
                       >
                         <div
                           class="css-v0ob3f"
@@ -2354,7 +2354,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                         </span>
                       </div>
                       <div
-                        class="css-k5jr4t"
+                        class="css-1n20uf5"
                       >
                         1 transactions have been retrieved and are ready to be exported.
                       </div>
@@ -2434,10 +2434,10 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                       </div>
                     </div>
                     <div
-                      class="css-1tkbsa1"
+                      class="css-p1y4tm"
                     >
                       <button
-                        class="css-1jhy6v9"
+                        class="css-6419sw"
                         data-testid="TransactionExportSuccess__back-button"
                         type="button"
                       >
@@ -2448,7 +2448,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                         </div>
                       </button>
                       <button
-                        class="css-1bx0hyc"
+                        class="css-fl4fi0"
                         data-testid="TransactionExportSuccess__download-button"
                         type="submit"
                       >
@@ -2478,7 +2478,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -2489,7 +2489,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2553,7 +2553,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                     data-testid="TransactionExportForm"
                   >
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -2591,7 +2591,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   <button
                                     aria-checked="true"
                                     aria-label="Incoming"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -2605,7 +2605,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="Outgoing"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -2619,7 +2619,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="All"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -2687,7 +2687,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                         </div>
                                       </span>
                                       <span
-                                        class="css-e3wx3i"
+                                        class="css-1uvxu7z"
                                       >
                                         <div
                                           class="p-1 css-15txs7d"
@@ -2728,7 +2728,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                       CSV Settings
                     </div>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -2767,10 +2767,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -2836,7 +2836,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                         </span>
                                       </span>
                                       <span
-                                        class="css-e3wx3i"
+                                        class="css-1uvxu7z"
                                       >
                                         <div
                                           class="p-1 css-15txs7d"
@@ -2877,7 +2877,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                       Columns
                     </div>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -2916,10 +2916,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -2963,10 +2963,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -3010,10 +3010,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -3057,10 +3057,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -3070,10 +3070,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="css-1tkbsa1"
+                      class="css-p1y4tm"
                     >
                       <button
-                        class="css-1jhy6v9"
+                        class="css-6419sw"
                         data-testid="TransactionExportForm__cancel-button"
                         type="button"
                       >
@@ -3084,7 +3084,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                         </div>
                       </button>
                       <button
-                        class="css-1bx0hyc"
+                        class="css-fl4fi0"
                         data-testid="TransactionExport__submit-button"
                         type="submit"
                       >
@@ -3114,7 +3114,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -3125,7 +3125,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3189,7 +3189,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                     data-testid="TransactionExportForm"
                   >
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -3227,7 +3227,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   <button
                                     aria-checked="true"
                                     aria-label="Incoming"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -3241,7 +3241,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="Outgoing"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -3255,7 +3255,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="All"
-                                    class="css-12yryft"
+                                    class="css-1oqtqef"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -3323,7 +3323,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                         </div>
                                       </span>
                                       <span
-                                        class="css-e3wx3i"
+                                        class="css-1uvxu7z"
                                       >
                                         <div
                                           class="p-1 css-15txs7d"
@@ -3364,7 +3364,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                       CSV Settings
                     </div>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -3403,10 +3403,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -3472,7 +3472,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                         </span>
                                       </span>
                                       <span
-                                        class="css-e3wx3i"
+                                        class="css-1uvxu7z"
                                       >
                                         <div
                                           class="p-1 css-15txs7d"
@@ -3513,7 +3513,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                       Columns
                     </div>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -3552,10 +3552,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -3599,10 +3599,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -3646,10 +3646,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -3693,10 +3693,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -3740,10 +3740,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-f7w6ps"
                                   />
                                 </div>
                               </label>
@@ -3753,10 +3753,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="css-1tkbsa1"
+                      class="css-p1y4tm"
                     >
                       <button
-                        class="css-1jhy6v9"
+                        class="css-6419sw"
                         data-testid="TransactionExportForm__cancel-button"
                         type="button"
                       >
@@ -3767,7 +3767,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                         </div>
                       </button>
                       <button
-                        class="css-1bx0hyc"
+                        class="css-fl4fi0"
                         data-testid="TransactionExport__submit-button"
                         type="submit"
                       >

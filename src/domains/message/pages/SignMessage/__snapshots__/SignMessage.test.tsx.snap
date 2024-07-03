@@ -6,7 +6,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -17,7 +17,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -54,11 +54,11 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -91,11 +91,11 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -132,7 +132,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -141,7 +141,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -302,10 +302,10 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -355,10 +355,10 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -414,10 +414,10 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -462,10 +462,10 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -541,7 +541,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -591,7 +591,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Sign Message
                       </span>
@@ -599,13 +599,13 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-10pketk"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-10pketk"
                         />
                       </ul>
                     </div>
@@ -665,11 +665,11 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         </div>
                       </span>
                       <div
-                        class="css-n29l73"
+                        class="css-xk5t3v"
                         disabled=""
                       >
                         <div
-                          class="shrink-0 css-8zckym"
+                          class="shrink-0 css-1p5jpah"
                           data-testid="Avatar"
                         >
                           <div
@@ -687,7 +687,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                            class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                             data-testid="SelectAddress__input"
                             disabled=""
                             name="signatory-address"
@@ -710,14 +710,14 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                       Message
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="SignMessage__message-input"
                           name="message"
                           type="text"
@@ -744,10 +744,10 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="SignMessage__back-button"
                   type="button"
                 >
@@ -758,7 +758,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="SignMessage__continue-button"
                   disabled=""
                   type="button"
@@ -785,7 +785,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -796,7 +796,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -833,11 +833,11 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -870,11 +870,11 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -911,7 +911,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -920,7 +920,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1081,10 +1081,10 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1134,10 +1134,10 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1193,10 +1193,10 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -1241,10 +1241,10 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -1320,7 +1320,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -1370,7 +1370,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Sign Message
                       </span>
@@ -1378,13 +1378,13 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-10pketk"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-10pketk"
                         />
                       </ul>
                     </div>
@@ -1444,11 +1444,11 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         </div>
                       </span>
                       <div
-                        class="css-n29l73"
+                        class="css-xk5t3v"
                         disabled=""
                       >
                         <div
-                          class="shrink-0 css-8zckym"
+                          class="shrink-0 css-1p5jpah"
                           data-testid="Avatar"
                         >
                           <div
@@ -1466,7 +1466,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                            class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                             data-testid="SelectAddress__input"
                             disabled=""
                             name="signatory-address"
@@ -1489,14 +1489,14 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                       Message
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="SignMessage__message-input"
                           name="message"
                           type="text"
@@ -1523,10 +1523,10 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="SignMessage__back-button"
                   type="button"
                 >
@@ -1537,7 +1537,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="SignMessage__continue-button"
                   disabled=""
                   type="button"
@@ -1564,7 +1564,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1575,7 +1575,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -1612,11 +1612,11 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1649,11 +1649,11 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -1690,7 +1690,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -1699,7 +1699,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1860,10 +1860,10 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1913,10 +1913,10 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1972,10 +1972,10 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -2020,10 +2020,10 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -2099,7 +2099,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -2149,7 +2149,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Sign Message
                       </span>
@@ -2157,13 +2157,13 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-10pketk"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-10pketk"
                         />
                       </ul>
                     </div>
@@ -2223,11 +2223,11 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                         </div>
                       </span>
                       <div
-                        class="css-n29l73"
+                        class="css-xk5t3v"
                         disabled=""
                       >
                         <div
-                          class="shrink-0 css-8zckym"
+                          class="shrink-0 css-1p5jpah"
                           data-testid="Avatar"
                         >
                           <div
@@ -2245,7 +2245,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                            class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                             data-testid="SelectAddress__input"
                             disabled=""
                             name="signatory-address"
@@ -2268,14 +2268,14 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                       Message
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="SignMessage__message-input"
                           name="message"
                           type="text"
@@ -2302,10 +2302,10 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="SignMessage__back-button"
                   type="button"
                 >
@@ -2316,7 +2316,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                   </div>
                 </button>
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="SignMessage__continue-button"
                   disabled=""
                   type="button"

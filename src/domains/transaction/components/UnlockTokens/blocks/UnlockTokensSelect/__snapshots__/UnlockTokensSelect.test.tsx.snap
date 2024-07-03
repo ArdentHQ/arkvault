@@ -151,7 +151,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
                       Status
                     </span>
                     <input
-                      class="css-7i915u"
+                      class="css-kf7z38"
                       color="success"
                       type="checkbox"
                     />
@@ -164,12 +164,12 @@ exports[`UnlockTokensSelect > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="css-mx19qq"
+                  class="css-hhd44j"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -181,7 +181,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="css-1rods8x"
+                  class="css-12appi5"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -193,7 +193,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-yf8cy4"
                 >
                   <div
                     class="flex items-center"
@@ -239,7 +239,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
                       </div>
                     </div>
                     <input
-                      class="css-7i915u"
+                      class="css-kf7z38"
                       color="success"
                       type="checkbox"
                     />
@@ -248,12 +248,12 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="css-mx19qq"
+                  class="css-hhd44j"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -265,7 +265,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="css-1rods8x"
+                  class="css-12appi5"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -277,7 +277,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-yf8cy4"
                 >
                   <div
                     class="flex items-center"
@@ -323,7 +323,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
                       </div>
                     </div>
                     <input
-                      class="css-7i915u"
+                      class="css-kf7z38"
                       color="success"
                       type="checkbox"
                     />
@@ -332,12 +332,12 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="css-mx19qq"
+                  class="css-hhd44j"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -349,7 +349,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="css-1rods8x"
+                  class="css-12appi5"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -361,7 +361,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-yf8cy4"
                 >
                   <div
                     class="flex items-center"
@@ -403,7 +403,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
                       </div>
                     </div>
                     <input
-                      class="css-7i915u"
+                      class="css-kf7z38"
                       color="success"
                       disabled=""
                       type="checkbox"
@@ -413,12 +413,12 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="css-mx19qq"
+                  class="css-hhd44j"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -430,7 +430,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="css-1rods8x"
+                  class="css-12appi5"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -442,7 +442,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-br23tb"
+                  class="justify-end css-yf8cy4"
                 >
                   <div
                     class="flex items-center"
@@ -484,7 +484,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
                       </div>
                     </div>
                     <input
-                      class="css-7i915u"
+                      class="css-kf7z38"
                       color="success"
                       disabled=""
                       type="checkbox"
@@ -510,7 +510,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
           Total Amount
         </p>
         <div
-          class="css-hp3hbt"
+          class="css-6qumvg"
           color="neutral"
         >
           <div
@@ -535,7 +535,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
           Transaction Fee
         </p>
         <div
-          class="css-hp3hbt"
+          class="css-6qumvg"
           color="neutral"
         >
           <div
@@ -556,7 +556,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
     class="flex justify-end space-x-3"
   >
     <button
-      class="css-1jhy6v9"
+      class="css-6419sw"
       type="button"
     >
       <div
@@ -566,7 +566,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
       </div>
     </button>
     <button
-      class="css-1yqe28v"
+      class="css-qrwjsp"
       disabled=""
       type="button"
     >
@@ -618,7 +618,7 @@ exports[`UnlockTokensSelect > should render empty 1`] = `
     class="flex justify-end space-x-3"
   >
     <button
-      class="css-1jhy6v9"
+      class="css-6419sw"
       type="button"
     >
       <div
@@ -628,7 +628,7 @@ exports[`UnlockTokensSelect > should render empty 1`] = `
       </div>
     </button>
     <button
-      class="css-1yqe28v"
+      class="css-qrwjsp"
       disabled=""
       type="button"
     >

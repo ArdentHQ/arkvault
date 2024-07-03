@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Signatures > should handle exception when checking if participant is awaiting signature 1`] = `
 <div>
@@ -26,7 +26,7 @@ exports[`Signatures > should handle exception when checking if participant is aw
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -35,7 +35,7 @@ exports[`Signatures > should handle exception when checking if participant is aw
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -81,7 +81,7 @@ exports[`Signatures > should handle exception when checking if participant is aw
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -90,7 +90,7 @@ exports[`Signatures > should handle exception when checking if participant is aw
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -152,7 +152,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -161,7 +161,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -207,7 +207,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -216,7 +216,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -278,7 +278,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -287,7 +287,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -333,7 +333,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -342,7 +342,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -404,7 +404,7 @@ exports[`Signatures > should render 1`] = `
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -413,7 +413,7 @@ exports[`Signatures > should render 1`] = `
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white css-1jo8u8k"
               data-testid="Signatures__waiting-badge"
             >
               <div
@@ -469,7 +469,7 @@ exports[`Signatures > should render 1`] = `
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -478,7 +478,7 @@ exports[`Signatures > should render 1`] = `
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -540,7 +540,7 @@ exports[`Signatures > should render with waiting badge 1`] = `
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -549,7 +549,7 @@ exports[`Signatures > should render with waiting badge 1`] = `
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -595,7 +595,7 @@ exports[`Signatures > should render with waiting badge 1`] = `
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -604,7 +604,7 @@ exports[`Signatures > should render with waiting badge 1`] = `
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -666,7 +666,7 @@ exports[`Signatures > should show all participants as signed when all signatures
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -675,7 +675,7 @@ exports[`Signatures > should show all participants as signed when all signatures
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -721,7 +721,7 @@ exports[`Signatures > should show all participants as signed when all signatures
           >
             <div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -730,7 +730,7 @@ exports[`Signatures > should show all participants as signed when all signatures
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
               data-testid="Signatures__signed-badge"
             >
               <div

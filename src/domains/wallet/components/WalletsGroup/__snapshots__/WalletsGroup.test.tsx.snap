@@ -32,7 +32,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   class="group"
                 >
                   <button
-                    class="ring-focus css-1wz6bm9"
+                    class="ring-focus css-14zm422"
                   >
                     <div
                       class="flex h-5 w-5 items-center justify-center"
@@ -74,7 +74,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           class="flex sm:hidden"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
             type="vertical"
           />
         </div>
@@ -83,7 +83,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
         >
           <div>
             <button
-              class="css-1oyl9hh"
+              class="css-wqh5n3"
               data-testid="WalletControls__import-ledger"
               type="button"
             >
@@ -122,7 +122,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </button>
           </div>
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="WalletControls__import-wallet"
             type="button"
           >
@@ -168,7 +168,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </div>
           </button>
           <button
-            class="css-1bx0hyc"
+            class="css-fl4fi0"
             data-testid="WalletControls__create-wallet"
             type="button"
           >
@@ -260,7 +260,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -271,7 +271,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-xfxopm"
+            class="css-18ateh5"
           >
             <div
               aria-label="ARK"
@@ -360,7 +360,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -458,10 +458,10 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -492,7 +492,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
       </div>
     </div>
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -503,7 +503,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-xfxopm"
+            class="css-18ateh5"
           >
             <div
               aria-label="ARK Devnet"
@@ -644,7 +644,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -730,10 +730,10 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -793,7 +793,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
     </span>
   </div>
   <div
-    class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+    class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
   >
     <span
       class="hidden"
@@ -875,7 +875,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
     </span>
   </div>
   <div
-    class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+    class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
   >
     <span
       class="hidden"
@@ -939,7 +939,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
 exports[`WalletsGroup > should render group with different widths 1`] = `
 <DocumentFragment>
   <div
-    class="css-1xhm62p"
+    class="css-13o3tsw"
     data-testid="WalletsGroup"
   >
     <div
@@ -950,7 +950,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
         class="flex flex-grow flex-row items-center"
       >
         <div
-          class="css-xfxopm"
+          class="css-18ateh5"
         >
           <div
             aria-label="ARK"
@@ -1039,7 +1039,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+          class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
         >
           <span
             class="hidden"
@@ -1137,10 +1137,10 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
       >
         <div
-          class="css-16yt50s"
+          class="css-1j7gziz"
           data-testid="Accordion__toggle"
         >
           <div
@@ -1176,7 +1176,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
 exports[`WalletsGroup > should render group with different widths 2`] = `
 <DocumentFragment>
   <div
-    class="css-1xhm62p"
+    class="css-13o3tsw"
     data-testid="WalletsGroup"
   >
     <div
@@ -1187,7 +1187,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
         class="flex flex-grow flex-row items-center"
       >
         <div
-          class="css-xfxopm"
+          class="css-18ateh5"
         >
           <div
             aria-label="ARK"
@@ -1276,7 +1276,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+          class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
         >
           <span
             class="hidden"
@@ -1374,10 +1374,10 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
       >
         <div
-          class="css-16yt50s"
+          class="css-1j7gziz"
           data-testid="Accordion__toggle"
         >
           <div
@@ -1413,7 +1413,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
 exports[`WalletsGroup > should render group with different widths 3`] = `
 <DocumentFragment>
   <div
-    class="css-1xhm62p"
+    class="css-13o3tsw"
     data-testid="WalletsGroup"
   >
     <div
@@ -1424,7 +1424,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
         class="flex flex-grow flex-row items-center"
       >
         <div
-          class="css-xfxopm"
+          class="css-18ateh5"
         >
           <div
             aria-label="ARK"
@@ -1513,7 +1513,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+          class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
         >
           <span
             class="hidden"
@@ -1613,10 +1613,10 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
       >
         <div
-          class="css-16yt50s"
+          class="css-1j7gziz"
           data-testid="Accordion__toggle"
         >
           <div
@@ -1655,7 +1655,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -1666,7 +1666,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-xfxopm"
+            class="css-18ateh5"
           >
             <div
               aria-label="ARK"
@@ -1755,7 +1755,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -1853,10 +1853,10 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1887,7 +1887,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
       </div>
     </div>
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -1898,7 +1898,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-xfxopm"
+            class="css-18ateh5"
           >
             <div
               aria-label="ARK Devnet"
@@ -2039,7 +2039,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -2125,10 +2125,10 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2168,7 +2168,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -2179,7 +2179,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-u6dtok"
+            class="css-km2hr7"
           >
             <div
               aria-label="ARK"
@@ -2268,7 +2268,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -2366,10 +2366,10 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2400,7 +2400,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
       </div>
     </div>
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -2411,7 +2411,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-u6dtok"
+            class="css-km2hr7"
           >
             <div
               aria-label="ARK Devnet"
@@ -2552,7 +2552,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -2638,10 +2638,10 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2683,7 +2683,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-8cvvgy"
+      class="css-fvpuky"
       data-testid="WalletsGroup"
     >
       <div
@@ -2694,7 +2694,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-14q2wpv"
+            class="css-h9d8wn"
           >
             <div
               aria-label="ARK"
@@ -2772,7 +2772,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -2843,10 +2843,10 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -3119,14 +3119,14 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group css-1gk67vk"
+                  class="group css-105k8a9"
                   data-testid="TableRow"
                 >
                   <td
                     data-testid="TableCell_Starred"
                   >
                     <div
-                      class="space-x-3 css-7ewq14"
+                      class="space-x-3 css-f2t2np"
                     >
                       <div
                         class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -3166,13 +3166,13 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     data-testid="TableCell_Wallet"
                   >
                     <div
-                      class="-ml-3 space-x-3 css-1rods8x"
+                      class="-ml-3 space-x-3 css-12appi5"
                     >
                       <div
                         class="flex shrink-0 items-center"
                       >
                         <div
-                          class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-xjjrn6"
+                          class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
                           data-testid="Avatar"
                         >
                           <div
@@ -3197,7 +3197,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-u3jrna"
+                              class="no-ligatures css-9nx3be"
                               data-testid="TruncateEnd"
                             >
                               New Name
@@ -3215,7 +3215,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="justify-center text-sm font-bold text-center align-middle css-1rods8x"
+                      class="justify-center text-sm font-bold text-center align-middle css-12appi5"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -3238,7 +3238,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="font-semibold justify-end css-1rods8x"
+                      class="font-semibold justify-end css-12appi5"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -3253,7 +3253,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     data-testid="CurrencyCell"
                   >
                     <div
-                      class="justify-end css-1rods8x"
+                      class="justify-end css-12appi5"
                     >
                       <span
                         aria-busy="true"
@@ -3272,11 +3272,11 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="justify-end text-theme-secondary-text css-16k0yyn"
+                      class="justify-end text-theme-secondary-text css-opqlbz"
                     >
                       <div>
                         <button
-                          class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                          class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                           data-testid="WalletListItem__send-button"
                           type="button"
                         >
@@ -3298,7 +3298,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="dropdown__toggle"
                           >
                             <button
-                              class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                              class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                               type="button"
                             >
                               <div
@@ -3357,7 +3357,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
       </div>
     </div>
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -3368,7 +3368,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-xfxopm"
+            class="css-18ateh5"
           >
             <div
               aria-label="ARK Devnet"
@@ -3498,7 +3498,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -3557,10 +3557,10 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
