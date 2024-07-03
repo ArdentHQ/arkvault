@@ -39,7 +39,7 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1v20fba"
+        class="css-1jg2bxs"
       >
         <div
           class="css-v0ob3f"
@@ -83,16 +83,16 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
         </span>
       </div>
       <div
-        class="css-16kimoc"
+        class="css-mvhye4"
       >
         10 transactions have been retrieved so far, please wait.
       </div>
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportProgress__cancel-button"
         type="button"
       >
@@ -103,7 +103,7 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
         </div>
       </button>
       <button
-        class="css-1yqe28v"
+        class="css-qrwjsp"
         disabled=""
         type="button"
       >

@@ -48,7 +48,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -87,16 +87,16 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -107,7 +107,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="TransactionExportSuccess__download-button"
         type="submit"
       >
@@ -170,7 +170,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -209,16 +209,16 @@ exports[`TransactionExportForm > should render in md 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -229,7 +229,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="TransactionExportSuccess__download-button"
         type="submit"
       >
@@ -292,7 +292,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -331,16 +331,16 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -351,7 +351,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="TransactionExportSuccess__download-button"
         type="submit"
       >
@@ -414,7 +414,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -453,16 +453,16 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -473,7 +473,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="TransactionExportSuccess__download-button"
         type="submit"
       >
@@ -536,7 +536,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -575,16 +575,16 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -595,7 +595,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="TransactionExportSuccess__download-button"
         type="submit"
       >
@@ -654,7 +654,7 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-1ecv4eg"
+        class="css-rzhg83"
       >
         <div
           class="css-v0ob3f"
@@ -698,16 +698,16 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
         </span>
       </div>
       <div
-        class="css-1pvpof3"
+        class="css-trjt6n"
       >
         No transactions could be found for the selected period.
       </div>
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
@@ -718,7 +718,7 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
         </div>
       </button>
       <button
-        class="css-1yqe28v"
+        class="css-qrwjsp"
         data-testid="TransactionExportSuccess__download-button"
         disabled=""
         type="submit"
