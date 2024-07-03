@@ -9,14 +9,14 @@ exports[`TextArea > should render 1`] = `
       class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
     />
     <div
-      class="css-15amhun"
+      class="css-8psyez"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <textarea
           autocomplete="off"
-          class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y css-1nupw50"
+          class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y css-1vs1awz"
           data-testid="TextArea"
           style="height: 4px;"
           type="text"
@@ -36,7 +36,7 @@ exports[`TextArea > should render as disabled 1`] = `
       class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
     />
     <div
-      class="css-qner8f"
+      class="css-1prn1rr"
       disabled=""
     >
       <div
@@ -44,7 +44,7 @@ exports[`TextArea > should render as disabled 1`] = `
       >
         <textarea
           autocomplete="off"
-          class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+          class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
           data-testid="TextArea"
           disabled=""
           type="text"
@@ -64,7 +64,7 @@ exports[`TextArea > should render as invalid 1`] = `
       class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
     />
     <div
-      class="css-1r3caq6"
+      class="css-1ayyxs8"
     >
       <div
         class="relative flex h-full flex-1"
@@ -72,7 +72,7 @@ exports[`TextArea > should render as invalid 1`] = `
         <textarea
           aria-invalid="true"
           autocomplete="off"
-          class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y css-1nupw50"
+          class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y css-1vs1awz"
           data-testid="TextArea"
           type="text"
         />
