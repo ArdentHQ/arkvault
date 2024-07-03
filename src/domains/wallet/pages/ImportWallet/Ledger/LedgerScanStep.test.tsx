@@ -77,7 +77,7 @@ describe("LedgerScanStep", () => {
 			};
 		});
 
-		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => { });
+		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
 	});
 
 	const Component = ({ isCancelling = false }: { isCancelling?: boolean }) => {
@@ -145,9 +145,16 @@ describe("LedgerScanStep", () => {
 	});
 
 	it("should render ledger table in scanning mode", () => {
-		render(<LedgerTable wallets={[]} selectedWallets={[]} isScanningMore isSelected={() => false} network={profile.wallets().first().network()} />);
-		expect(screen.getByTestId("LedgerScanStep__scan-more")).toMatchSnapshot()
-
+		render(
+			<LedgerTable
+				wallets={[]}
+				selectedWallets={[]}
+				isScanningMore
+				isSelected={() => false}
+				network={profile.wallets().first().network()}
+			/>,
+		);
+		expect(screen.getByTestId("LedgerScanStep__scan-more")).toMatchSnapshot();
 	});
 
 	it.each(["xs", "lg"])("should render ledger table is scanning mode", async (breakpoint) => {
