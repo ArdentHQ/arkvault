@@ -9,7 +9,7 @@ exports[`StepHeader > should render 1`] = `
       class="flex flex-col"
     >
       <span
-        class="css-3qwsx5"
+        class="css-tgbw37"
       >
         title
       </span>
@@ -17,16 +17,16 @@ exports[`StepHeader > should render 1`] = `
         class="css-xa5o6q"
       >
         <li
-          class="css-47028"
+          class="css-7x0ld1"
         />
         <li
-          class="css-3ldhk3"
+          class="css-10pketk"
         />
         <li
-          class="css-3ldhk3"
+          class="css-10pketk"
         />
         <li
-          class="css-3ldhk3"
+          class="css-10pketk"
         />
       </ul>
     </div>
@@ -92,7 +92,7 @@ exports[`StepHeader > should render with extra 1`] = `
       class="flex flex-col"
     >
       <span
-        class="css-3qwsx5"
+        class="css-tgbw37"
       >
         title
       </span>
@@ -100,16 +100,16 @@ exports[`StepHeader > should render with extra 1`] = `
         class="css-xa5o6q"
       >
         <li
-          class="css-47028"
+          class="css-7x0ld1"
         />
         <li
-          class="css-3ldhk3"
+          class="css-10pketk"
         />
         <li
-          class="css-3ldhk3"
+          class="css-10pketk"
         />
         <li
-          class="css-3ldhk3"
+          class="css-10pketk"
         />
       </ul>
     </div>

@@ -3,7 +3,7 @@
 exports[`Circle > should render 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-1uikp8r"
+    class="ring-theme-background duration-100 css-1oa5zbt"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`Circle > should render 1`] = `
 exports[`Circle > should render as avatar 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-1sjiwh4"
+    class="ring-theme-background duration-100 css-18vj24t"
   />
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`Circle > should render as avatar 1`] = `
 exports[`Circle > should render extra-large 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-12m2ikc"
+    class="ring-theme-background duration-100 css-1qtfeue"
   />
 </div>
 `;
@@ -27,7 +27,7 @@ exports[`Circle > should render extra-large 1`] = `
 exports[`Circle > should render large 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-14jhlj1"
+    class="ring-theme-background duration-100 css-1nqcsx"
   />
 </div>
 `;
@@ -35,7 +35,7 @@ exports[`Circle > should render large 1`] = `
 exports[`Circle > should render small 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-1ufh3s9"
+    class="ring-theme-background duration-100 css-y4ij4"
   />
 </div>
 `;
@@ -43,7 +43,7 @@ exports[`Circle > should render small 1`] = `
 exports[`Circle > should render with content 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-1ufh3s9"
+    class="ring-theme-background duration-100 css-y4ij4"
   >
     <div
       data-testid="circle__content"
@@ -55,7 +55,7 @@ exports[`Circle > should render with content 1`] = `
 exports[`Circle > should render with no shadow 1`] = `
 <div>
   <div
-    class="ring-theme-background duration-100 css-459u9r"
+    class="ring-theme-background duration-100 css-cm9d5u"
   />
 </div>
 `;
