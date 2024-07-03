@@ -6,7 +6,7 @@ exports[`ExchangeStatus > should show expired status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-uae86w"
+      class="css-6pjap5"
     >
       <div
         class="css-v0ob3f"
@@ -45,7 +45,7 @@ exports[`ExchangeStatus > should show expired status 1`] = `
       </span>
     </div>
     <div
-      class="css-6o9bco"
+      class="css-1y2ht9o"
     >
       This transaction has expired.
     </div>
@@ -59,7 +59,7 @@ exports[`ExchangeStatus > should show failed status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-uae86w"
+      class="css-6pjap5"
     >
       <div
         class="css-v0ob3f"
@@ -98,7 +98,7 @@ exports[`ExchangeStatus > should show failed status 1`] = `
       </span>
     </div>
     <div
-      class="css-6o9bco"
+      class="css-1y2ht9o"
     >
       This transaction has failed.
     </div>
@@ -112,7 +112,7 @@ exports[`ExchangeStatus > should show refunded status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-1ecv4eg"
+      class="css-rzhg83"
     >
       <div
         class="css-v0ob3f"
@@ -156,7 +156,7 @@ exports[`ExchangeStatus > should show refunded status 1`] = `
       </span>
     </div>
     <div
-      class="css-1pvpof3"
+      class="css-trjt6n"
     >
       This transaction has been refunded.
     </div>
@@ -170,7 +170,7 @@ exports[`ExchangeStatus > should show verifying status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="css-1ecv4eg"
+      class="css-rzhg83"
     >
       <div
         class="css-v0ob3f"
@@ -214,7 +214,7 @@ exports[`ExchangeStatus > should show verifying status 1`] = `
       </span>
     </div>
     <div
-      class="css-1pvpof3"
+      class="css-trjt6n"
     >
       This transaction is being verified by the provider.
     </div>
