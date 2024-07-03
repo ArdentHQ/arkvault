@@ -14,9 +14,9 @@ const Input = styled("input", { target: "toggle-input" })`
 `;
 
 const Handle = styled("div", { target: "toggle-handle" })<{ small?: boolean }>`
-	${tw`inline-flex height[5px] rounded-full relative bg-theme-primary-100 dark:bg-theme-secondary-800`}
+	${tw`inline-flex [height:5px] rounded-full relative bg-theme-primary-100 dark:bg-theme-secondary-800`}
 
-	${({ small }) => (small ? tw`w-6` : tw`width[30px]`)}
+	${({ small }) => (small ? tw`w-6` : tw`[width:30px]`)}
 `;
 
 const HandleInner = styled.span<{ alwaysOn?: boolean; disabled?: boolean; small?: boolean }>`
