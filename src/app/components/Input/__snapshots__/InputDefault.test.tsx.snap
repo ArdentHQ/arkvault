@@ -3,14 +3,14 @@
 exports[`InputDefault > should render a default input 1`] = `
 <DocumentFragment>
   <div
-    class=" css-1psxlcd"
+    class=" css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="Input"
         type="text"
         value=""
