@@ -10,14 +10,14 @@ exports[`Registration > should show error step and go back 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -54,11 +54,11 @@ exports[`Registration > should show error step and go back 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -91,11 +91,11 @@ exports[`Registration > should show error step and go back 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -132,7 +132,7 @@ exports[`Registration > should show error step and go back 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -141,7 +141,7 @@ exports[`Registration > should show error step and go back 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -302,10 +302,10 @@ exports[`Registration > should show error step and go back 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -355,10 +355,10 @@ exports[`Registration > should show error step and go back 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -414,10 +414,10 @@ exports[`Registration > should show error step and go back 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -462,10 +462,10 @@ exports[`Registration > should show error step and go back 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -541,7 +541,7 @@ exports[`Registration > should show error step and go back 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -594,7 +594,7 @@ exports[`Registration > should show error step and go back 1`] = `
                         class="flex flex-col"
                       >
                         <span
-                          class="css-3qwsx5"
+                          class="css-tgbw37"
                         >
                           Transaction Error
                         </span>
@@ -602,16 +602,16 @@ exports[`Registration > should show error step and go back 1`] = `
                           class="css-xa5o6q"
                         >
                           <li
-                            class="css-47028"
+                            class="css-7x0ld1"
                           />
                           <li
-                            class="css-47028"
+                            class="css-7x0ld1"
                           />
                           <li
-                            class="css-47028"
+                            class="css-7x0ld1"
                           />
                           <li
-                            class="css-47028"
+                            class="css-7x0ld1"
                           />
                         </ul>
                       </div>
@@ -926,7 +926,7 @@ exports[`Registration > should show error step and go back 1`] = `
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="css-uae86w"
+                          class="css-6pjap5"
                         >
                           <div
                             class="css-v0ob3f"
@@ -965,7 +965,7 @@ exports[`Registration > should show error step and go back 1`] = `
                           </span>
                         </div>
                         <div
-                          class="css-6o9bco"
+                          class="css-1y2ht9o"
                         >
                           An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
                         </div>
@@ -977,7 +977,7 @@ exports[`Registration > should show error step and go back 1`] = `
                           class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
                         />
                         <div
-                          class="py-4 css-qner8f"
+                          class="py-4 css-1prn1rr"
                           disabled=""
                         >
                           <div
@@ -985,7 +985,7 @@ exports[`Registration > should show error step and go back 1`] = `
                           >
                             <textarea
                               autocomplete="off"
-                              class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                              class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"
@@ -999,7 +999,7 @@ exports[`Registration > should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <div
                       class="mr-auto"
@@ -1008,7 +1008,7 @@ exports[`Registration > should show error step and go back 1`] = `
                         class="relative"
                       >
                         <button
-                          class="css-1jhy6v9"
+                          class="css-6419sw"
                           data-testid="clipboard-button__wrapper"
                           type="button"
                         >
@@ -1054,7 +1054,7 @@ exports[`Registration > should show error step and go back 1`] = `
                       </div>
                     </div>
                     <button
-                      class="css-1jhy6v9"
+                      class="css-6419sw"
                       data-testid="ErrorStep__close-button"
                       type="button"
                     >
@@ -1069,7 +1069,7 @@ exports[`Registration > should show error step and go back 1`] = `
                       </div>
                     </button>
                     <button
-                      class="css-1bx0hyc"
+                      class="css-fl4fi0"
                       data-testid="ErrorStep__back-button"
                       type="button"
                     >
@@ -1103,7 +1103,7 @@ exports[`Registration > should show mnemonic error 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -1112,7 +1112,7 @@ exports[`Registration > should show mnemonic error 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1273,10 +1273,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1326,10 +1326,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1385,10 +1385,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -1433,10 +1433,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -1512,7 +1512,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -1564,7 +1564,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Authenticate
                       </span>
@@ -1572,16 +1572,16 @@ exports[`Registration > should show mnemonic error 1`] = `
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-10pketk"
                         />
                       </ul>
                     </div>
@@ -1621,14 +1621,14 @@ exports[`Registration > should show mnemonic error 1`] = `
                       Mnemonic
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -1693,7 +1693,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                       2nd Mnemonic
                     </label>
                     <div
-                      class="css-px3dod"
+                      class="css-12mz4i6"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1701,7 +1701,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="AuthenticationStep__second-mnemonic"
                           name="secondMnemonic"
                           type="password"
@@ -1800,10 +1800,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                 </div>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -1814,7 +1814,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="StepNavigation__send-button"
                   disabled=""
                   type="submit"
