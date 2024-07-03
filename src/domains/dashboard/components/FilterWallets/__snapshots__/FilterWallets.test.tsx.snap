@@ -127,7 +127,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
             data-testid="NetworkOption__ark.devnet"
           >
             <div
-              class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
+              class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
             >
               <div
                 aria-label="ARK Devnet"
@@ -156,7 +156,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
                 </div>
               </div>
               <span
-                class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+                class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
               >
                 <span />
               </span>

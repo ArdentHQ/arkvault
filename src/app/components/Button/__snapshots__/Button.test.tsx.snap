@@ -3,7 +3,7 @@
 exports[`Button > should render 1`] = `
 <div>
   <button
-    class="css-1bx0hyc"
+    class="css-fl4fi0"
     type="button"
   >
     <div
@@ -16,7 +16,7 @@ exports[`Button > should render 1`] = `
 exports[`Button > should render a large one 1`] = `
 <div>
   <button
-    class="css-19tno28"
+    class="css-zwdx25"
     type="button"
   >
     <div
@@ -29,7 +29,7 @@ exports[`Button > should render a large one 1`] = `
 exports[`Button > should render a small one 1`] = `
 <div>
   <button
-    class="css-1lcxi05"
+    class="css-11obbc3"
     type="button"
   >
     <div
@@ -42,7 +42,7 @@ exports[`Button > should render a small one 1`] = `
 exports[`Button > should render an icon 1`] = `
 <div>
   <button
-    class="css-p6fm59"
+    class="css-3b1lp4"
     type="button"
   >
     <div
@@ -55,7 +55,7 @@ exports[`Button > should render an icon 1`] = `
 exports[`Button > should render as danger button 1`] = `
 <div>
   <button
-    class="css-1cp5yjb"
+    class="css-15yk9k4"
     type="button"
   >
     <div
@@ -68,7 +68,7 @@ exports[`Button > should render as danger button 1`] = `
 exports[`Button > should render as info button 1`] = `
 <div>
   <button
-    class="css-1h8ouj8"
+    class="css-ieez7y"
     type="button"
   >
     <div
@@ -81,7 +81,7 @@ exports[`Button > should render as info button 1`] = `
 exports[`Button > should render as primary button 1`] = `
 <div>
   <button
-    class="css-1bx0hyc"
+    class="css-fl4fi0"
     type="button"
   >
     <div
@@ -94,7 +94,7 @@ exports[`Button > should render as primary button 1`] = `
 exports[`Button > should render as reverse button 1`] = `
 <div>
   <button
-    class="css-nxm84j"
+    class="css-1j9j5h6"
     type="button"
   >
     <div
@@ -107,7 +107,7 @@ exports[`Button > should render as reverse button 1`] = `
 exports[`Button > should render as secondary button 1`] = `
 <div>
   <button
-    class="css-1jhy6v9"
+    class="css-6419sw"
     type="button"
   >
     <div
@@ -120,7 +120,7 @@ exports[`Button > should render as secondary button 1`] = `
 exports[`Button > should render as transparent button 1`] = `
 <div>
   <button
-    class="css-d937d6"
+    class="css-i9zlwr"
     type="button"
   >
     <div
@@ -133,7 +133,7 @@ exports[`Button > should render as transparent button 1`] = `
 exports[`Button > should render as warning button 1`] = `
 <div>
   <button
-    class="css-i0u9bq"
+    class="css-sbyv6u"
     type="button"
   >
     <div
@@ -146,7 +146,7 @@ exports[`Button > should render as warning button 1`] = `
 exports[`Button > should render if disabled 1`] = `
 <DocumentFragment>
   <button
-    class="css-1yqe28v"
+    class="css-qrwjsp"
     data-testid="Button"
     disabled=""
     type="button"
@@ -163,7 +163,7 @@ exports[`Button > should render if disabled 1`] = `
 exports[`Button > should render loading with icon 1`] = `
 <div>
   <button
-    class="css-p6fm59"
+    class="css-3b1lp4"
     type="button"
   >
     <div
@@ -185,7 +185,7 @@ exports[`Button > should render loading with icon 1`] = `
           class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
         >
           <div
-            class="css-13oo6ja"
+            class="css-1nn240v"
           />
         </div>
       </div>
@@ -197,7 +197,7 @@ exports[`Button > should render loading with icon 1`] = `
 exports[`Button > should render with icon and custom icon size 1`] = `
 <div>
   <button
-    class="css-1bx0hyc"
+    class="css-fl4fi0"
     type="button"
   >
     <div
@@ -238,7 +238,7 @@ exports[`Button > should render with icon and custom icon size 1`] = `
 exports[`Button > should render with icon on the left side 1`] = `
 <div>
   <button
-    class="css-1bx0hyc"
+    class="css-fl4fi0"
     type="button"
   >
     <div
@@ -279,7 +279,7 @@ exports[`Button > should render with icon on the left side 1`] = `
 exports[`Button > should render with icon on the right side 1`] = `
 <div>
   <button
-    class="css-1bx0hyc"
+    class="css-fl4fi0"
     type="button"
   >
     <div
@@ -320,7 +320,7 @@ exports[`Button > should render with icon on the right side 1`] = `
 exports[`Button > should render with loading state enabled 1`] = `
 <div>
   <button
-    class="css-1bx0hyc"
+    class="css-fl4fi0"
     type="button"
   >
     <div
@@ -338,7 +338,7 @@ exports[`Button > should render with loading state enabled 1`] = `
           class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
         >
           <div
-            class="css-13oo6ja"
+            class="css-1nn240v"
           />
         </div>
       </div>
@@ -350,7 +350,7 @@ exports[`Button > should render with loading state enabled 1`] = `
 exports[`Button > should render with theme 1`] = `
 <DocumentFragment>
   <button
-    class="css-33lske"
+    class="css-1rfc421"
     data-testid="Button"
     disabled=""
     type="button"
