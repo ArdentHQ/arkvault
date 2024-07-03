@@ -8,7 +8,7 @@ import { toasts } from "@/app/services";
 import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
 import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 
-import { LedgerScanStep, showLoadedLedgerWalletsMessage } from "./LedgerScanStep";
+import { LedgerScanStep, LedgerTable, showLoadedLedgerWalletsMessage } from "./LedgerScanStep";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
 const validLedgerWallet = () =>
@@ -77,7 +77,7 @@ describe("LedgerScanStep", () => {
 			};
 		});
 
-		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
+		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => { });
 	});
 
 	const Component = ({ isCancelling = false }: { isCancelling?: boolean }) => {
@@ -144,7 +144,13 @@ describe("LedgerScanStep", () => {
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
 	});
 
-	it.each(["xs", "lg"])("should render responsive (%s)", async (breakpoint) => {
+	it("should render ledger table in scanning mode", async () => {
+		render(<LedgerTable wallets={[]} selectedWallets={[]} isScanningMore isSelected={() => false} network={profile.wallets().first().network()} />);
+		expect(screen.getByTestId("LedgerScanStep__scan-more")).toMatchSnapshot()
+
+	});
+
+	it.each(["xs", "lg"])("should render ledger table is scanning mode", async (breakpoint) => {
 		const { container } = renderResponsive(<Component />, breakpoint);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
