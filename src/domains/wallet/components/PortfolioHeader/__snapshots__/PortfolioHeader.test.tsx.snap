@@ -32,7 +32,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
                   class="group"
                 >
                   <button
-                    class="ring-focus css-1wz6bm9"
+                    class="ring-focus css-14zm422"
                   >
                     <div
                       class="flex h-5 w-5 items-center justify-center"
@@ -74,7 +74,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="flex sm:hidden"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
             type="vertical"
           />
         </div>
@@ -83,7 +83,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
         >
           <div>
             <button
-              class="css-1oyl9hh"
+              class="css-wqh5n3"
               data-testid="WalletControls__import-ledger"
               type="button"
             >
@@ -122,7 +122,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
             </button>
           </div>
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="WalletControls__import-wallet"
             type="button"
           >
@@ -168,7 +168,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
             </div>
           </button>
           <button
-            class="css-1bx0hyc"
+            class="css-fl4fi0"
             data-testid="WalletControls__create-wallet"
             type="button"
           >
@@ -260,7 +260,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -271,7 +271,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-xfxopm"
+            class="css-18ateh5"
           >
             <div
               aria-label="ARK"
@@ -360,7 +360,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -458,10 +458,10 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -492,7 +492,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
       </div>
     </div>
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -503,7 +503,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-xfxopm"
+            class="css-18ateh5"
           >
             <div
               aria-label="ARK Devnet"
@@ -644,7 +644,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -730,10 +730,10 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -799,7 +799,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
                   class="group"
                 >
                   <button
-                    class="ring-focus css-1wz6bm9"
+                    class="ring-focus css-14zm422"
                   >
                     <div
                       class="flex h-5 w-5 items-center justify-center"
@@ -841,7 +841,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="flex sm:hidden"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
             type="vertical"
           />
         </div>
@@ -850,7 +850,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
         >
           <div>
             <button
-              class="css-1oyl9hh"
+              class="css-wqh5n3"
               data-testid="WalletControls__import-ledger"
               type="button"
             >
@@ -889,7 +889,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
             </button>
           </div>
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="WalletControls__import-wallet"
             type="button"
           >
@@ -935,7 +935,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
             </div>
           </button>
           <button
-            class="css-1bx0hyc"
+            class="css-fl4fi0"
             data-testid="WalletControls__create-wallet"
             type="button"
           >
@@ -1027,7 +1027,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -1038,7 +1038,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-xfxopm"
+            class="css-18ateh5"
           >
             <div
               aria-label="ARK"
@@ -1127,7 +1127,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -1225,10 +1225,10 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1259,7 +1259,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
       </div>
     </div>
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -1270,7 +1270,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-xfxopm"
+            class="css-18ateh5"
           >
             <div
               aria-label="ARK Devnet"
@@ -1411,7 +1411,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -1497,10 +1497,10 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1566,7 +1566,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
                   class="group"
                 >
                   <button
-                    class="ring-focus css-1wz6bm9"
+                    class="ring-focus css-14zm422"
                   >
                     <div
                       class="flex h-5 w-5 items-center justify-center"
@@ -1608,7 +1608,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           class="flex sm:hidden"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
             type="vertical"
           />
         </div>
@@ -1617,7 +1617,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
         >
           <div>
             <button
-              class="css-1oyl9hh"
+              class="css-wqh5n3"
               data-testid="WalletControls__import-ledger"
               type="button"
             >
@@ -1656,7 +1656,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
             </button>
           </div>
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="WalletControls__import-wallet"
             type="button"
           >
@@ -1702,7 +1702,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
             </div>
           </button>
           <button
-            class="css-1bx0hyc"
+            class="css-fl4fi0"
             data-testid="WalletControls__create-wallet"
             type="button"
           >
@@ -1794,7 +1794,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-1xhm62p"
+      class="css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -1805,7 +1805,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-xfxopm"
+            class="css-18ateh5"
           >
             <div
               aria-label="ARK"
@@ -1894,7 +1894,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -1992,10 +1992,10 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div

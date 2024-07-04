@@ -10,7 +10,7 @@ exports[`Clipboard > should render with children in variant type 'button' 1`] = 
     class="relative"
   >
     <button
-      class="css-1jhy6v9"
+      class="css-6419sw"
       data-testid="clipboard-button__wrapper"
       type="button"
     >

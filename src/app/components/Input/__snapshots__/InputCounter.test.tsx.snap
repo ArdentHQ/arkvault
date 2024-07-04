@@ -3,14 +3,14 @@
 exports[`InputCounter > should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-1psxlcd"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="InputCounter__input"
         maxlength="10"
         type="text"
@@ -39,7 +39,7 @@ exports[`InputCounter > should render 1`] = `
 exports[`InputCounter > should render with invalid state 1`] = `
 <div>
   <div
-    class="css-px3dod"
+    class="css-12mz4i6"
   >
     <div
       class="relative flex h-full flex-1"
@@ -47,7 +47,7 @@ exports[`InputCounter > should render with invalid state 1`] = `
       <input
         aria-invalid="true"
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="InputCounter__input"
         maxlength="10"
         name="vendorField"

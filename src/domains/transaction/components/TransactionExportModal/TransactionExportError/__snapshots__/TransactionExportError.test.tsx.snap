@@ -46,7 +46,7 @@ exports[`TransactionExportError > should render in lg 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-uae86w"
+        class="css-6pjap5"
       >
         <div
           class="css-v0ob3f"
@@ -85,14 +85,14 @@ exports[`TransactionExportError > should render in lg 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1y2ht9o"
       />
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportError__back-button"
         type="button"
       >
@@ -103,7 +103,7 @@ exports[`TransactionExportError > should render in lg 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="TransactionExportError__retry-button"
         type="button"
       >
@@ -164,7 +164,7 @@ exports[`TransactionExportError > should render in md 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-uae86w"
+        class="css-6pjap5"
       >
         <div
           class="css-v0ob3f"
@@ -203,14 +203,14 @@ exports[`TransactionExportError > should render in md 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1y2ht9o"
       />
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportError__back-button"
         type="button"
       >
@@ -221,7 +221,7 @@ exports[`TransactionExportError > should render in md 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="TransactionExportError__retry-button"
         type="button"
       >
@@ -282,7 +282,7 @@ exports[`TransactionExportError > should render in sm 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-uae86w"
+        class="css-6pjap5"
       >
         <div
           class="css-v0ob3f"
@@ -321,14 +321,14 @@ exports[`TransactionExportError > should render in sm 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1y2ht9o"
       />
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportError__back-button"
         type="button"
       >
@@ -339,7 +339,7 @@ exports[`TransactionExportError > should render in sm 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="TransactionExportError__retry-button"
         type="button"
       >
@@ -400,7 +400,7 @@ exports[`TransactionExportError > should render in xl 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-uae86w"
+        class="css-6pjap5"
       >
         <div
           class="css-v0ob3f"
@@ -439,14 +439,14 @@ exports[`TransactionExportError > should render in xl 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1y2ht9o"
       />
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportError__back-button"
         type="button"
       >
@@ -457,7 +457,7 @@ exports[`TransactionExportError > should render in xl 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="TransactionExportError__retry-button"
         type="button"
       >
@@ -518,7 +518,7 @@ exports[`TransactionExportError > should render in xs 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="css-uae86w"
+        class="css-6pjap5"
       >
         <div
           class="css-v0ob3f"
@@ -557,14 +557,14 @@ exports[`TransactionExportError > should render in xs 1`] = `
         </span>
       </div>
       <div
-        class="css-6o9bco"
+        class="css-1y2ht9o"
       />
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="TransactionExportError__back-button"
         type="button"
       >
@@ -575,7 +575,7 @@ exports[`TransactionExportError > should render in xs 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="TransactionExportError__retry-button"
         type="button"
       >

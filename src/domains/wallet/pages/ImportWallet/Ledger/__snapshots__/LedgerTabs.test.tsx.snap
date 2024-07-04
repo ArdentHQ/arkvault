@@ -9,25 +9,25 @@ exports[`LedgerTabs > should render connection step 1`] = `
       class="flex flex-col"
     >
       <span
-        class="css-3qwsx5"
+        class="css-tgbw37"
       />
       <ul
         class="css-xa5o6q"
       >
         <li
-          class="css-47028"
+          class="css-7x0ld1"
         />
         <li
-          class="css-47028"
+          class="css-7x0ld1"
         />
         <li
-          class="css-3ldhk3"
+          class="css-10pketk"
         />
         <li
-          class="css-3ldhk3"
+          class="css-10pketk"
         />
         <li
-          class="css-3ldhk3"
+          class="css-10pketk"
         />
       </ul>
     </div>
@@ -192,17 +192,17 @@ exports[`LedgerTabs > should render connection step 1`] = `
             </div>
           </fieldset>
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
             type="horizontal"
           />
         </section>
       </div>
     </div>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="Paginator__back-button"
         type="button"
       >
@@ -213,7 +213,7 @@ exports[`LedgerTabs > should render connection step 1`] = `
         </div>
       </button>
       <button
-        class="css-1yqe28v"
+        class="css-qrwjsp"
         data-testid="Paginator__continue-button"
         disabled=""
         type="button"

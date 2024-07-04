@@ -10,10 +10,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -51,7 +51,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-37ekmz"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-jellga"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -60,7 +60,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
             class="mt-2"
           >
             <div
-              class="css-80avit"
+              class="css-16d2qtb"
               data-testid="NotificationsWrapper"
             >
               <div
@@ -180,14 +180,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -227,7 +227,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -252,7 +252,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 2
@@ -270,10 +270,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-fbeerz"
+                                    class="css-148b4hi"
                                     color="danger"
                                   >
                                     <div
@@ -293,14 +293,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -337,7 +337,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -362,7 +362,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 1
@@ -380,10 +380,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -403,14 +403,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -447,7 +447,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -472,7 +472,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 1
@@ -490,10 +490,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -527,7 +527,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
       data-testid="Modal__overlay"
     >
       <div
-        class="css-amqh1w"
+        class="css-1jzz0qm"
         tabindex="-1"
       >
         <div
@@ -538,7 +538,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
             class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
           >
             <button
-              class="h-11 w-11 css-12xyeiw"
+              class="h-11 w-11 css-1hei9vx"
               data-testid="Modal__close-button"
               type="button"
             >
@@ -612,7 +612,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -632,7 +632,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                   class="flex items-center -space-x-1"
                 >
                   <div
-                    class="shrink-0 css-8d0u1i"
+                    class="shrink-0 css-1n9jllj"
                     data-testid="Avatar"
                   >
                     <div
@@ -648,7 +648,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                 </div>
               </div>
               <div
-                class="no-ligatures css-19rivvh"
+                class="no-ligatures css-qu17s6"
                 data-testid="TransactionRecipients"
               >
                 <div
@@ -674,7 +674,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -694,7 +694,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                   class="flex items-center -space-x-1"
                 >
                   <div
-                    class="shrink-0 css-8d0u1i"
+                    class="shrink-0 css-1n9jllj"
                     data-testid="Avatar"
                   >
                     <div
@@ -710,7 +710,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                 </div>
               </div>
               <div
-                class="no-ligatures css-19rivvh"
+                class="no-ligatures css-qu17s6"
                 data-testid="TransactionAmount"
               >
                 <div
@@ -726,7 +726,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                     class="flex items-center font-semibold"
                   >
                     <div
-                      class="css-fbeerz"
+                      class="css-148b4hi"
                       color="danger"
                     >
                       <div
@@ -743,7 +743,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
                 >
                   <div
                     class="css-1i4b0eq"
@@ -771,7 +771,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                 </div>
               </div>
               <div
-                class="no-ligatures css-19rivvh"
+                class="no-ligatures css-qu17s6"
                 data-testid="TransactionFee"
               >
                 <div
@@ -796,7 +796,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                 </div>
               </div>
               <div
-                class="no-ligatures css-19rivvh"
+                class="no-ligatures css-qu17s6"
                 data-testid="TransactionMemo"
               >
                 <div
@@ -850,7 +850,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                 </div>
               </div>
               <div
-                class="no-ligatures css-19rivvh"
+                class="no-ligatures css-qu17s6"
                 data-testid="TransactionTimestamp"
               >
                 <div
@@ -870,7 +870,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                 </div>
               </div>
               <div
-                class="no-ligatures css-19rivvh"
+                class="no-ligatures css-qu17s6"
                 data-testid="TransactionDetail"
               >
                 <div
@@ -928,7 +928,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                 </div>
               </div>
               <div
-                class="no-ligatures css-19rivvh"
+                class="no-ligatures css-qu17s6"
                 data-testid="TransactionDetail"
               >
                 <div
@@ -950,14 +950,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         class="overflow-hidden"
                       >
                         <a
-                          class="ring-focus group inline-block flex items-center css-15tcy38"
+                          class="ring-focus group inline-block flex items-center css-7nwwrh"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/transactions/127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-1y2194z"
+                            class="css-170792"
                           >
                             <span
                               class="no-ligatures css-0"
@@ -1055,10 +1055,10 @@ exports[`Notifications > should render with transactions in lg 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -1096,7 +1096,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-37ekmz"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-jellga"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -1105,7 +1105,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
             class="mt-2"
           >
             <div
-              class="css-80avit"
+              class="css-16d2qtb"
               data-testid="NotificationsWrapper"
             >
               <div
@@ -1225,14 +1225,14 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1272,7 +1272,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -1297,7 +1297,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 2
@@ -1315,10 +1315,10 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-fbeerz"
+                                    class="css-148b4hi"
                                     color="danger"
                                   >
                                     <div
@@ -1338,14 +1338,14 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1382,7 +1382,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -1407,7 +1407,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 1
@@ -1425,10 +1425,10 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -1448,14 +1448,14 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1492,7 +1492,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -1517,7 +1517,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 1
@@ -1535,10 +1535,10 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -1581,10 +1581,10 @@ exports[`Notifications > should render with transactions in md 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -1622,7 +1622,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-58ur0"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-1n5k2s7"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -1631,7 +1631,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
             class="mt-2"
           >
             <div
-              class="css-80avit"
+              class="css-16d2qtb"
               data-testid="NotificationsWrapper"
             >
               <div
@@ -1751,14 +1751,14 @@ exports[`Notifications > should render with transactions in md 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1798,7 +1798,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -1823,7 +1823,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 2
@@ -1841,10 +1841,10 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-fbeerz"
+                                    class="css-148b4hi"
                                     color="danger"
                                   >
                                     <div
@@ -1864,14 +1864,14 @@ exports[`Notifications > should render with transactions in md 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1908,7 +1908,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -1933,7 +1933,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 1
@@ -1951,10 +1951,10 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -1974,14 +1974,14 @@ exports[`Notifications > should render with transactions in md 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -2018,7 +2018,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -2043,7 +2043,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 1
@@ -2061,10 +2061,10 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -2107,10 +2107,10 @@ exports[`Notifications > should render with transactions in sm 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -2148,7 +2148,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-58ur0"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-1n5k2s7"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -2157,7 +2157,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
             class="mt-2"
           >
             <div
-              class="css-19lwrp1"
+              class="css-5fq6i9"
               data-testid="NotificationsWrapper"
             >
               <div
@@ -2277,7 +2277,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
@@ -2305,7 +2305,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                           data-testid="Address__alias"
                                         >
                                           <span
-                                            class="no-ligatures css-u3jrna"
+                                            class="no-ligatures css-9nx3be"
                                             data-testid="TruncateEnd"
                                           >
                                             ARK Wallet 2
@@ -2320,7 +2320,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="shrink-0 css-jxpwdn"
+                                      class="shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -2344,7 +2344,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-fbeerz"
+                                    class="css-148b4hi"
                                     color="danger"
                                   >
                                     <div
@@ -2364,7 +2364,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
@@ -2396,7 +2396,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="shrink-0 css-jxpwdn"
+                                      class="shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -2420,7 +2420,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -2440,7 +2440,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
@@ -2472,7 +2472,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="shrink-0 css-jxpwdn"
+                                      class="shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -2496,7 +2496,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -2539,10 +2539,10 @@ exports[`Notifications > should render with transactions in xl 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -2580,7 +2580,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-37ekmz"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-jellga"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -2589,7 +2589,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
             class="mt-2"
           >
             <div
-              class="css-80avit"
+              class="css-16d2qtb"
               data-testid="NotificationsWrapper"
             >
               <div
@@ -2709,14 +2709,14 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -2756,7 +2756,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -2781,7 +2781,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 2
@@ -2799,10 +2799,10 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-fbeerz"
+                                    class="css-148b4hi"
                                     color="danger"
                                   >
                                     <div
@@ -2822,14 +2822,14 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -2866,7 +2866,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -2891,7 +2891,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 1
@@ -2909,10 +2909,10 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -2932,14 +2932,14 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-mx19qq"
+                                  class="flex space-x-3 css-hhd44j"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -2976,7 +2976,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                       </div>
                                     </span>
                                     <div
-                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -3001,7 +3001,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                         data-testid="Address__alias"
                                       >
                                         <span
-                                          class="no-ligatures css-u3jrna"
+                                          class="no-ligatures css-9nx3be"
                                           data-testid="TruncateEnd"
                                         >
                                           ARK Wallet 1
@@ -3019,10 +3019,10 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-br23tb"
+                                  class="justify-end css-yf8cy4"
                                 >
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -3065,10 +3065,10 @@ exports[`Notifications > should render with transactions in xs 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -3113,7 +3113,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-37ekmz"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl mt-8 mx-4 sm:mx-0 border-none css-jellga"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -3122,7 +3122,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
             class="mt-2"
           >
             <div
-              class="css-19lwrp1"
+              class="css-5fq6i9"
               data-testid="NotificationsWrapper"
             >
               <div
@@ -3242,7 +3242,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
@@ -3270,7 +3270,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                           data-testid="Address__alias"
                                         >
                                           <span
-                                            class="no-ligatures css-u3jrna"
+                                            class="no-ligatures css-9nx3be"
                                             data-testid="TruncateEnd"
                                           >
                                             ARK Wallet 2
@@ -3285,7 +3285,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="shrink-0 css-jxpwdn"
+                                      class="shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -3309,7 +3309,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-fbeerz"
+                                    class="css-148b4hi"
                                     color="danger"
                                   >
                                     <div
@@ -3329,7 +3329,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
@@ -3361,7 +3361,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="shrink-0 css-jxpwdn"
+                                      class="shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -3385,7 +3385,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div
@@ -3405,7 +3405,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-1gk67vk"
+                              class="group css-105k8a9"
                               data-testid="TableRow"
                             >
                               <td
@@ -3437,7 +3437,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="shrink-0 css-jxpwdn"
+                                      class="shrink-0 css-1i0wxh3"
                                       data-testid="Avatar"
                                     >
                                       <div
@@ -3461,7 +3461,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1vb1527"
+                                    class="css-1v19423"
                                     color="success"
                                   >
                                     <div

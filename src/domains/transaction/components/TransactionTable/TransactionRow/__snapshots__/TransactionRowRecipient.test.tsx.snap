@@ -3,7 +3,7 @@
 exports[`TransactionRowRecipient > should render 1`] = `
 <DocumentFragment>
   <div
-    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
     data-testid="Avatar"
   >
     <div
@@ -27,7 +27,7 @@ exports[`TransactionRowRecipient > should render 1`] = `
         data-testid="Address__alias"
       >
         <span
-          class="no-ligatures css-u3jrna"
+          class="no-ligatures css-9nx3be"
           data-testid="TruncateEnd"
         >
           ARK Wallet 1
@@ -47,7 +47,7 @@ exports[`TransactionRowRecipient > should render 1`] = `
 exports[`TransactionRowRecipient > should render compact 1`] = `
 <DocumentFragment>
   <div
-    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
     data-testid="Avatar"
   >
     <div
@@ -71,7 +71,7 @@ exports[`TransactionRowRecipient > should render compact 1`] = `
         data-testid="Address__alias"
       >
         <span
-          class="no-ligatures css-u3jrna"
+          class="no-ligatures css-9nx3be"
           data-testid="TruncateEnd"
         >
           ARK Wallet 1

@@ -5,12 +5,12 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-14huxtf"
+            class="css-bgc8eo"
           >
             <button
               class="link"
@@ -64,27 +64,27 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold css-1d4ra48"
+            class="font-semibold css-o5w6qc"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="css-1d4ra48"
+            class="css-o5w6qc"
           >
             01.01.2021 12:00 AM
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -112,7 +112,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
               </div>
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -130,13 +130,13 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -167,7 +167,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
               </div>
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -185,7 +185,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <span>
               <div
@@ -234,10 +234,10 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-1hhowo0"
+            class="justify-end text-theme-secondary-text css-10gefem"
           >
             <button
-              class="css-1cp5yjb"
+              class="css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -285,12 +285,12 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-14huxtf"
+            class="css-bgc8eo"
           >
             <button
               class="link"
@@ -344,27 +344,27 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold css-1d4ra48"
+            class="font-semibold css-o5w6qc"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="css-1d4ra48"
+            class="css-o5w6qc"
           >
             01.01.2021 12:00 AM
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -392,7 +392,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
               </div>
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -410,13 +410,13 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -447,7 +447,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
               </div>
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -465,7 +465,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <span>
               <div
@@ -505,10 +505,10 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-1hhowo0"
+            class="justify-end text-theme-secondary-text css-10gefem"
           >
             <button
-              class="css-1cp5yjb"
+              class="css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -556,12 +556,12 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-14huxtf"
+            class="css-bgc8eo"
           >
             <button
               class="link"
@@ -615,27 +615,27 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold css-1d4ra48"
+            class="font-semibold css-o5w6qc"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="css-1d4ra48"
+            class="css-o5w6qc"
           >
             01.01.2021 12:00 AM
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -663,7 +663,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
               </div>
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -681,13 +681,13 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -718,7 +718,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
               </div>
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -736,7 +736,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <span>
               <div
@@ -776,10 +776,10 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-1hhowo0"
+            class="justify-end text-theme-secondary-text css-10gefem"
           >
             <button
-              class="css-1cp5yjb"
+              class="css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -827,12 +827,12 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-14huxtf"
+            class="css-bgc8eo"
           >
             <button
               class="link"
@@ -886,27 +886,27 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold css-1d4ra48"
+            class="font-semibold css-o5w6qc"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="css-1d4ra48"
+            class="css-o5w6qc"
           >
             01.01.2021 12:00 AM
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -934,7 +934,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
               </div>
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -952,13 +952,13 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -989,7 +989,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
               </div>
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -1041,7 +1041,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <span>
               <div
@@ -1082,10 +1082,10 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-1hhowo0"
+            class="justify-end text-theme-secondary-text css-10gefem"
           >
             <button
-              class="css-1cp5yjb"
+              class="css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1133,12 +1133,12 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-14huxtf"
+            class="css-bgc8eo"
           >
             <button
               class="link"
@@ -1192,27 +1192,27 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold css-1d4ra48"
+            class="font-semibold css-o5w6qc"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="css-1d4ra48"
+            class="css-o5w6qc"
           >
             01.01.2021 12:00 AM
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -1240,7 +1240,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
               </div>
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -1258,13 +1258,13 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -1295,7 +1295,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
               </div>
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -1313,7 +1313,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <span>
               <div
@@ -1358,10 +1358,10 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-1hhowo0"
+            class="justify-end text-theme-secondary-text css-10gefem"
           >
             <button
-              class="css-1cp5yjb"
+              class="css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1409,12 +1409,12 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-14huxtf"
+            class="css-bgc8eo"
           >
             <button
               class="link"
@@ -1468,27 +1468,27 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold css-1d4ra48"
+            class="font-semibold css-o5w6qc"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="css-1d4ra48"
+            class="css-o5w6qc"
           >
             01.01.2021 12:00 AM
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -1516,7 +1516,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
               </div>
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -1534,13 +1534,13 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-1d4ra48"
+            class="gap-3 css-o5w6qc"
           >
             <div
               class="hidden lg:flex"
             >
               <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
               >
                 <div
                   class="css-1i4b0eq"
@@ -1571,7 +1571,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
               </div>
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -1589,7 +1589,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <span>
               <div
@@ -1634,10 +1634,10 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-1hhowo0"
+            class="justify-end text-theme-secondary-text css-10gefem"
           >
             <button
-              class="css-1cp5yjb"
+              class="css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1685,12 +1685,12 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-mx19qq"
+            class="css-hhd44j"
           >
             <button
               class="link"
@@ -1744,21 +1744,21 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold css-1rods8x"
+            class="font-semibold css-12appi5"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="css-1rods8x"
+            class="css-12appi5"
           >
             01.01.2021 12:00 AM
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-1rods8x"
+            class="gap-3 css-12appi5"
           >
             <span
               class="hidden h-5 w-5 items-center lg:flex border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
@@ -1788,7 +1788,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
               </div>
             </span>
             <div
-              class="css-8zppvw"
+              class="css-41vn9a"
               color="danger"
             >
               <div
@@ -1806,7 +1806,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-1rods8x"
+            class="gap-3 css-12appi5"
           >
             <span
               class="hidden h-5 w-5 items-center lg:flex border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
@@ -1839,7 +1839,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
               </div>
             </span>
             <div
-              class="css-1mirnqf"
+              class="css-1q2kz5x"
               color="success"
             >
               <div
@@ -1857,7 +1857,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1rods8x"
+            class="justify-center css-12appi5"
           >
             <span>
               <div
@@ -1897,10 +1897,10 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-br23tb"
+            class="justify-end text-theme-secondary-text css-yf8cy4"
           >
             <button
-              class="css-1b8lzw6"
+              class="css-evohxk"
               data-testid="TableRemoveButton--compact"
               type="button"
             >

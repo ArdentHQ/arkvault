@@ -44,7 +44,7 @@ exports[`SideBar > should render 1`] = `
     </div>
   </div>
   <div
-    class="css-1h1epd8"
+    class="css-cb19tw"
   >
     <ul>
       <li
@@ -232,7 +232,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl w-full css-yq8tnb"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl w-full css-jowtd0"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -240,7 +240,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
           data-testid="dropdown__options"
         >
           <li
-            class="css-14nfam"
+            class="css-1s8mt7a"
             data-testid="dropdown__option--0"
             tabindex="0"
           >
@@ -275,7 +275,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
             </span>
           </li>
           <li
-            class="css-x2cq94"
+            class="css-8ahleb"
             data-testid="dropdown__option--1"
             tabindex="0"
           >
@@ -310,7 +310,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
             </span>
           </li>
           <li
-            class="css-x2cq94"
+            class="css-8ahleb"
             data-testid="dropdown__option--2"
             tabindex="0"
           >
@@ -352,7 +352,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
     </div>
   </div>
   <div
-    class="css-1h1epd8"
+    class="css-cb19tw"
   >
     <ul>
       <li
@@ -540,7 +540,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl w-full css-yq8tnb"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl w-full css-jowtd0"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -548,7 +548,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
           data-testid="dropdown__options"
         >
           <li
-            class="css-14nfam"
+            class="css-1s8mt7a"
             data-testid="dropdown__option--0"
             tabindex="0"
           >
@@ -583,7 +583,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
             </span>
           </li>
           <li
-            class="css-x2cq94"
+            class="css-8ahleb"
             data-testid="dropdown__option--1"
             tabindex="0"
           >
@@ -618,7 +618,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
             </span>
           </li>
           <li
-            class="css-x2cq94"
+            class="css-8ahleb"
             data-testid="dropdown__option--2"
             tabindex="0"
           >
@@ -660,7 +660,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
     </div>
   </div>
   <div
-    class="css-1h1epd8"
+    class="css-cb19tw"
   >
     <ul>
       <li
@@ -848,7 +848,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl w-full css-yq8tnb"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl w-full css-jowtd0"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -856,7 +856,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
           data-testid="dropdown__options"
         >
           <li
-            class="css-14nfam"
+            class="css-1s8mt7a"
             data-testid="dropdown__option--0"
             tabindex="0"
           >
@@ -891,7 +891,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
             </span>
           </li>
           <li
-            class="css-x2cq94"
+            class="css-8ahleb"
             data-testid="dropdown__option--1"
             tabindex="0"
           >
@@ -926,7 +926,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
             </span>
           </li>
           <li
-            class="css-x2cq94"
+            class="css-8ahleb"
             data-testid="dropdown__option--2"
             tabindex="0"
           >
@@ -968,7 +968,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
     </div>
   </div>
   <div
-    class="css-1h1epd8"
+    class="css-cb19tw"
   >
     <ul>
       <li

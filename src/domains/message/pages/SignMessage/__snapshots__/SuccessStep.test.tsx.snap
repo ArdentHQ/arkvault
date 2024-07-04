@@ -18,7 +18,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures mt-4 md:mt-2 css-s5w13h"
+      class="no-ligatures mt-4 md:mt-2 css-1slril7"
       data-testid="TransactionDetail"
     >
       <div
@@ -44,7 +44,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
                 data-testid="Address__alias"
               >
                 <span
-                  class="no-ligatures css-u3jrna"
+                  class="no-ligatures css-9nx3be"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -61,7 +61,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -76,7 +76,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-s5w13h"
+      class="no-ligatures css-1slril7"
       data-testid="TransactionDetail"
     >
       <div
@@ -119,7 +119,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
           />
           <div
-            class="py-4 css-qner8f"
+            class="py-4 css-1prn1rr"
             disabled=""
           >
             <div
@@ -127,7 +127,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             >
               <textarea
                 autocomplete="off"
-                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
                 data-testid="TextArea"
                 disabled=""
                 name="json-signature"
@@ -164,7 +164,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures mt-4 md:mt-2 css-s5w13h"
+      class="no-ligatures mt-4 md:mt-2 css-1slril7"
       data-testid="TransactionDetail"
     >
       <div
@@ -193,7 +193,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -209,7 +209,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             </div>
           </div>
           <div
-            class="shrink-0 css-1vy2z2u"
+            class="shrink-0 css-1yk316i"
             data-testid="Avatar"
           >
             <div
@@ -226,7 +226,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-s5w13h"
+      class="no-ligatures css-1slril7"
       data-testid="TransactionDetail"
     >
       <div
@@ -273,7 +273,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
           />
           <div
-            class="py-4 css-qner8f"
+            class="py-4 css-1prn1rr"
             disabled=""
           >
             <div
@@ -281,7 +281,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             >
               <textarea
                 autocomplete="off"
-                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
                 data-testid="TextArea"
                 disabled=""
                 name="json-signature"

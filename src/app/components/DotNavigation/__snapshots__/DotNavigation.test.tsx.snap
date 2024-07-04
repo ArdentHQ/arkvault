@@ -7,11 +7,11 @@ exports[`DotNavigation > should render 1`] = `
     data-testid="DotNavigation"
   >
     <li
-      class="css-14qkis3"
+      class="css-1ikkkaf"
       data-testid="DotNavigation-Step-0"
     />
     <li
-      class="css-kfhx83"
+      class="css-1o5emlh"
       data-testid="DotNavigation-Step-1"
     />
   </ul>

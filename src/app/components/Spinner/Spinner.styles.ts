@@ -2,7 +2,7 @@ import tw, { TwStyle, css } from "twin.macro";
 
 import { Color, Size, Theme } from "@/types";
 
-const baseStyle = tw`animate-spin rounded-full border border-width[5px] flex-shrink-0`;
+const baseStyle = tw`animate-spin rounded-full border [border-width:5px] flex-shrink-0`;
 
 const getColor = (color: Color | "warning-alt", theme?: Theme) => {
 	const baseColors: Record<Color | "warning-alt", TwStyle> = {

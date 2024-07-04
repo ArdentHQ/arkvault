@@ -12,14 +12,14 @@ exports[`SelectRecipient > should render disabled 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-1psxlcd"
+          class="sr-only css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -43,14 +43,14 @@ exports[`SelectRecipient > should render disabled 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-n29l73"
+                class="css-xk5t3v"
                 disabled=""
               >
                 <div
                   class="flex items-center"
                 >
                   <div
-                    class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+                    class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
                   />
                 </div>
                 <div
@@ -61,7 +61,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
+                    class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1vs1awz"
                     data-testid="SelectDropdown__input"
                     disabled=""
                     id="SelectRecipient__dropdown-input"
@@ -142,14 +142,14 @@ exports[`SelectRecipient > should render empty 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-1psxlcd"
+          class="sr-only css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -173,13 +173,13 @@ exports[`SelectRecipient > should render empty 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-1psxlcd"
+                class="css-n1b0kl"
               >
                 <div
                   class="flex items-center"
                 >
                   <div
-                    class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+                    class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
                   />
                 </div>
                 <div
@@ -190,7 +190,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                    class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"
@@ -270,7 +270,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-px3dod"
+          class="sr-only css-12mz4i6"
         >
           <div
             class="relative flex h-full flex-1"
@@ -278,7 +278,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
             <input
               aria-invalid="true"
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -348,13 +348,13 @@ exports[`SelectRecipient > should render invalid 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-px3dod"
+                class="css-12mz4i6"
               >
                 <div
                   class="flex items-center"
                 >
                   <div
-                    class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+                    class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
                   />
                 </div>
                 <div
@@ -366,7 +366,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                     aria-invalid="true"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                    class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"
@@ -487,14 +487,14 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-1psxlcd"
+          class="sr-only css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -518,13 +518,13 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-1psxlcd"
+                class="css-n1b0kl"
               >
                 <div
                   class="flex items-center"
                 >
                   <div
-                    class="shrink-0 css-8zckym"
+                    class="shrink-0 css-1p5jpah"
                     data-testid="Avatar"
                   >
                     <div
@@ -546,7 +546,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none css-1nupw50"
+                    class="no-ligatures w-full border-none css-1vs1awz"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"

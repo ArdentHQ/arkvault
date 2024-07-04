@@ -5,12 +5,12 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-mx19qq"
+            class="css-hhd44j"
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -22,7 +22,7 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
         </td>
         <td>
           <div
-            class="css-1rods8x"
+            class="css-12appi5"
           >
             <time
               class="text-theme-secondary-700"
@@ -34,7 +34,7 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-br23tb"
+            class="justify-end css-yf8cy4"
           >
             <div
               class="flex items-center"
@@ -76,7 +76,7 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
                 </div>
               </div>
               <input
-                class="css-7i915u"
+                class="css-kf7z38"
                 color="success"
                 disabled=""
                 type="checkbox"
@@ -95,12 +95,12 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-mx19qq"
+            class="css-hhd44j"
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -112,7 +112,7 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
         </td>
         <td>
           <div
-            class="css-1rods8x"
+            class="css-12appi5"
           >
             <time
               class="text-theme-secondary-700"
@@ -124,7 +124,7 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-br23tb"
+            class="justify-end css-yf8cy4"
           >
             <div
               class="flex items-center"
@@ -171,7 +171,7 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
               </div>
               <input
                 checked=""
-                class="css-7i915u"
+                class="css-kf7z38"
                 color="success"
                 type="checkbox"
               />

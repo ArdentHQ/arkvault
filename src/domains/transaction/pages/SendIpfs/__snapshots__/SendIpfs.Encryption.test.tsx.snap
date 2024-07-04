@@ -6,7 +6,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -17,7 +17,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -53,11 +53,11 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -90,11 +90,11 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -130,7 +130,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -139,7 +139,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -300,10 +300,10 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -353,10 +353,10 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -412,10 +412,10 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -459,10 +459,10 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -537,7 +537,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -588,7 +588,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Transaction Sent
                       </span>
@@ -596,16 +596,16 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                       </ul>
                     </div>
@@ -913,7 +913,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1qh812f"
+                      class="css-1o2lvkz"
                     >
                       <div
                         class="css-v0ob3f"
@@ -952,7 +952,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-1n20uf5"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -981,14 +981,14 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                               class="overflow-hidden"
                             >
                               <a
-                                class="ring-focus group inline-block flex items-center css-15tcy38"
+                                class="ring-focus group inline-block flex items-center css-7nwwrh"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/transaction/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
                                 rel="noopener noreferrer"
                               >
                                 <span
-                                  class="css-1y2194z"
+                                  class="css-170792"
                                 >
                                   <span
                                     class="no-ligatures css-0"
@@ -1068,7 +1068,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionType"
                     >
                       <div
@@ -1087,7 +1087,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                         </div>
                       </div>
                       <div
-                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
                       >
                         <div
                           class="css-1i4b0eq"
@@ -1126,7 +1126,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionNetwork"
                     >
                       <div
@@ -1146,7 +1146,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                       <div
                         aria-label="ARK Devnet"
-                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
                         data-testid="NetworkIcon-ARK-ark.devnet"
                       >
                         <div
@@ -1172,7 +1172,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionSender"
                     >
                       <div
@@ -1198,7 +1198,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-u3jrna"
+                                  class="no-ligatures css-9nx3be"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -1218,7 +1218,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="shrink-0 css-8d0u1i"
+                          class="shrink-0 css-1n9jllj"
                           data-testid="Avatar"
                         >
                           <div
@@ -1234,7 +1234,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-fezbvb"
+                      class="no-ligatures css-1snru0x"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -1261,10 +1261,10 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >

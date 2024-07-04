@@ -3,7 +3,7 @@
 exports[`WalletDetailAddress > should render 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionDetail"
   >
     <div
@@ -57,7 +57,7 @@ exports[`WalletDetailAddress > should render 1`] = `
           class="flex items-center sm:hidden"
         >
           <div
-            class="shrink-0 css-1vy2z2u"
+            class="shrink-0 css-1yk316i"
             data-testid="Avatar"
           >
             <div
@@ -75,7 +75,7 @@ exports[`WalletDetailAddress > should render 1`] = `
           class="hidden sm:flex sm:items-center"
         >
           <div
-            class="shrink-0 css-8d0u1i"
+            class="shrink-0 css-1n9jllj"
             data-testid="Avatar"
           >
             <div

@@ -43,14 +43,14 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -81,7 +81,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -91,7 +91,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1nupw50"
+                      class="no-ligatures w-full border-none css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -172,14 +172,14 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
           WIF
         </label>
         <div
-          class="css-1psxlcd"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="ImportWallet__wif-input"
               name="value"
               type="password"
@@ -234,7 +234,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
         type="horizontal"
       />
       <div
@@ -260,10 +260,10 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                 type="checkbox"
               />
               <div
-                class="css-7lwhds toggle-handle"
+                class="css-d8rk4r toggle-handle"
               >
                 <span
-                  class="css-1fmiyrr"
+                  class="css-f7w6ps"
                 />
               </div>
             </label>
@@ -323,14 +323,14 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -361,7 +361,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -371,7 +371,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1nupw50"
+                      class="no-ligatures w-full border-none css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -452,14 +452,14 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
           WIF
         </label>
         <div
-          class="css-1psxlcd"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="ImportWallet__wif-input"
               name="value"
               type="password"
@@ -514,7 +514,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
         type="horizontal"
       />
       <div
@@ -540,10 +540,10 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                 type="checkbox"
               />
               <div
-                class="css-7lwhds toggle-handle"
+                class="css-d8rk4r toggle-handle"
               >
                 <span
-                  class="css-1fmiyrr"
+                  class="css-f7w6ps"
                 />
               </div>
             </label>

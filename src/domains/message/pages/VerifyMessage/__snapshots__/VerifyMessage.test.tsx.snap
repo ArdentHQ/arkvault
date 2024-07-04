@@ -6,7 +6,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -17,7 +17,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -53,11 +53,11 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -90,11 +90,11 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -130,7 +130,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -139,7 +139,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -300,10 +300,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -353,10 +353,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -412,10 +412,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -459,10 +459,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -537,7 +537,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -587,7 +587,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Verify Message
                       </span>
@@ -595,10 +595,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-10pketk"
                         />
                       </ul>
                     </div>
@@ -641,7 +641,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                     class="flex items-center sm:mt-6"
                   >
                     <span
-                      class="css-b8nf83"
+                      class="css-r1fv2b"
                       role="button"
                     >
                       JSON
@@ -655,15 +655,15 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         type="checkbox"
                       />
                       <div
-                        class="css-7lwhds toggle-handle"
+                        class="css-d8rk4r toggle-handle"
                       >
                         <span
-                          class="css-1274c8s"
+                          class="css-qdjttl"
                         />
                       </div>
                     </label>
                     <span
-                      class="css-13d6ubz"
+                      class="css-1ru5kr2"
                       role="button"
                     >
                       Manual
@@ -684,14 +684,14 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Message
                       </label>
                       <div
-                        class=" css-1psxlcd"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="VerifyMessage__manual-message"
                             name="message"
                             type="text"
@@ -711,14 +711,14 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Signatory
                       </label>
                       <div
-                        class=" css-1psxlcd"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="VerifyMessage__manual-signatory"
                             name="signatory"
                             type="text"
@@ -738,14 +738,14 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Signature
                       </label>
                       <div
-                        class=" css-1psxlcd"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="VerifyMessage__manual-signature"
                             name="signature"
                             type="text"
@@ -758,10 +758,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="VerifyMessage__back-button"
                   type="button"
                 >
@@ -772,7 +772,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="VerifyMessage__verify-button"
                   disabled=""
                   type="submit"
@@ -799,7 +799,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -810,7 +810,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -846,11 +846,11 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -883,11 +883,11 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -923,7 +923,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -932,7 +932,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1093,10 +1093,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1146,10 +1146,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1205,10 +1205,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -1252,10 +1252,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -1330,7 +1330,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -1380,7 +1380,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Verify Message
                       </span>
@@ -1388,10 +1388,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-7x0ld1"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-10pketk"
                         />
                       </ul>
                     </div>
@@ -1434,7 +1434,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                     class="flex items-center sm:mt-6"
                   >
                     <span
-                      class="css-b8nf83"
+                      class="css-r1fv2b"
                       role="button"
                     >
                       JSON
@@ -1448,15 +1448,15 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         type="checkbox"
                       />
                       <div
-                        class="css-7lwhds toggle-handle"
+                        class="css-d8rk4r toggle-handle"
                       >
                         <span
-                          class="css-1274c8s"
+                          class="css-qdjttl"
                         />
                       </div>
                     </label>
                     <span
-                      class="css-13d6ubz"
+                      class="css-1ru5kr2"
                       role="button"
                     >
                       Manual
@@ -1477,14 +1477,14 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Message
                       </label>
                       <div
-                        class=" css-1psxlcd"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="VerifyMessage__manual-message"
                             name="message"
                             type="text"
@@ -1504,14 +1504,14 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Signatory
                       </label>
                       <div
-                        class=" css-1psxlcd"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="VerifyMessage__manual-signatory"
                             name="signatory"
                             type="text"
@@ -1531,14 +1531,14 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Signature
                       </label>
                       <div
-                        class=" css-1psxlcd"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="VerifyMessage__manual-signature"
                             name="signature"
                             type="text"
@@ -1551,10 +1551,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="VerifyMessage__back-button"
                   type="button"
                 >
@@ -1565,7 +1565,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="VerifyMessage__verify-button"
                   disabled=""
                   type="submit"
