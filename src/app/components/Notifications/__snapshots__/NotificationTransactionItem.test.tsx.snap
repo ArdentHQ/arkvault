@@ -6,7 +6,7 @@ exports[`Notifications > should render in xs 1`] = `
     <tbody>
       <div>
         <tr
-          class="group css-105k8a9"
+          class="group css-155s9if"
           data-testid="TableRow"
         >
           <td
@@ -91,7 +91,7 @@ exports[`Notifications > should render in xs 2`] = `
     <tbody>
       <div>
         <tr
-          class="group css-105k8a9"
+          class="group css-155s9if"
           data-testid="TableRow"
         >
           <td
@@ -176,7 +176,7 @@ exports[`Notifications > should render in xs 3`] = `
     <tbody>
       <div>
         <tr
-          class="group css-105k8a9"
+          class="group css-155s9if"
           data-testid="TableRow"
         >
           <td
@@ -295,7 +295,7 @@ exports[`Notifications > should render in xs 4`] = `
     <tbody>
       <div>
         <tr
-          class="group css-105k8a9"
+          class="group css-155s9if"
           data-testid="TableRow"
         >
           <td
@@ -414,7 +414,7 @@ exports[`Notifications > should render in xs 5`] = `
     <tbody>
       <div>
         <tr
-          class="group css-105k8a9"
+          class="group css-155s9if"
           data-testid="TableRow"
         >
           <td
@@ -533,7 +533,7 @@ exports[`Notifications > should render notification item 1`] = `
     <tbody>
       <div>
         <tr
-          class="group css-105k8a9"
+          class="group css-155s9if"
           data-testid="TableRow"
         >
           <td
