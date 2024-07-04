@@ -213,7 +213,7 @@ const getVariant = (
 			continue;
 		}
 
-		const breakpointVariantStyle = variants[breakpointVariant as keyof typeof variants]!(breakpoint);
+		const breakpointVariantStyle = variants[breakpointVariant as keyof typeof variants](breakpoint);
 		variantStyle.push(breakpointVariantStyle);
 	}
 

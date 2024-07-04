@@ -76,7 +76,7 @@ export default [
 			unicorn: fixupPluginRules(unicorn),
 			"unused-imports": unusedImports,
 			"simple-import-sort": fixupPluginRules(simpleImportSort),
-			"alias-import": fixupPluginRules(aliasImport),
+			"import-alias": fixupPluginRules(aliasImport),
 			"sort-imports-es6-autofix": fixupPluginRules(sortImportsEs6Autofix),
 		},
 		languageOptions: {
@@ -254,6 +254,19 @@ export default [
 			"unicorn/prefer-blob-reading-methods": "warn",
 			"simple-import-sort/imports": "error",
 			"simple-import-sort/exports": "error",
+			"import-alias/import-alias": [
+				"error",
+				{
+					relativeDepth: 0,
+				},
+			],
+			// TODO: enable the following when merged in `feat/mainsail`
+			"testing-library/await-async-events": "off",
+			"simple-import-sort/imports": "off",
+			"simple-import-sort/imports": "off",
+			"simple-import-sort/exports": "off",
+			"@typescript-eslint/no-duplicate-type-constituents": "off",
+			"unicorn/prefer-string-raw": "off",
 		},
 	},
 	{
