@@ -168,7 +168,7 @@ export const FormStep = ({
 									? {
 											address: senderWallet.address(),
 											network: senderWallet.network(),
-									  }
+										}
 									: undefined
 							}
 							wallets={wallets}
