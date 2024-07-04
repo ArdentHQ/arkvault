@@ -160,7 +160,7 @@ export const ImportWallet = () => {
 
 				setActiveTab(activeTab + 1);
 			},
-		}[activeTab as Exclude<Step, Step.SummaryStep>]());
+		})[activeTab as Exclude<Step, Step.SummaryStep>]();
 
 	const handleBack = () => {
 		if (activeTab === Step.NetworkStep || (activeTab === Step.MethodStep && onlyHasOneNetwork)) {

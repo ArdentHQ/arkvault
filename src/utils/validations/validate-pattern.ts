@@ -13,7 +13,7 @@ export const validatePattern = (t: any, value: string, regexp: RegExp) => {
 				characters: sortBy(uniq([...matches]))
 					.map((char) => `'${char}'`)
 					.join(", "),
-		  })
+			})
 		: true;
 };
 

@@ -39,7 +39,7 @@ const HandleInner = styled.span<{ alwaysOn?: boolean; disabled?: boolean; small?
 					${Input}:focus ~ ${Handle} & {
 						${tw`shadow-outline`}
 					}
-			  `}
+				`}
 
 	${({ small }) => (small ? tw`w-3 h-3` : tw`w-4 h-4`)}
 `;
