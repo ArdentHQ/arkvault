@@ -1,479 +1,13 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Welcome > should change route to create profile 1`] = `
+exports[`Welcome > should navigate to previous page with correct password 1`] = `
 <DocumentFragment>
   <div
     class="css-kmmje1"
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
-    >
-      <div
-        class="relative flex h-21"
-      >
-        <div
-          class="flex flex-1 px-8 sm:ml-12"
-        >
-          <div
-            class="my-auto flex items-center"
-          >
-            <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-              data-testid="NavigationBarLogo--button"
-              type="button"
-            >
-              <span
-                class="relative"
-              >
-                <svg
-                  fill="none"
-                  height="28"
-                  viewBox="0 0 363 363"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_434_4442)"
-                  >
-                    <path
-                      d="M174.182 352.325a279.256 279.256 0 0 1-25.627-20.536c-8.518-7.525-17.006-15.66-25.229-24.178a470.15 470.15 0 0 1-29.234-33.315 449.417 449.417 0 0 1-57.68-93.623 420.933 420.933 0 0 1-22.044-60.102A416.702 416.702 0 0 1 1.126 51.749c-.512-4.803-.303-10.73 5.9-13.842a393.077 393.077 0 0 1 54.42-19.94 459.697 459.697 0 0 1 52.646-12.195A374.409 374.409 0 0 1 176.15.333h11.6a374.406 374.406 0 0 1 62.057 5.44 459.723 459.723 0 0 1 52.646 12.195 393.328 393.328 0 0 1 54.422 19.939c6.203 3.115 6.41 9.034 5.898 13.842a416.672 416.672 0 0 1-13.242 68.822 421.133 421.133 0 0 1-22.044 60.102 449.395 449.395 0 0 1-57.68 93.623 470 470 0 0 1-29.234 33.315c-8.223 8.518-16.711 16.653-25.229 24.178a279.73 279.73 0 0 1-25.627 20.536 17.811 17.811 0 0 1-15.528 0h-.007zm6.769-230.087c-.412.547-28.363 29.571-48.772 50.764-7.035 7.318-13.229 13.736-17.187 17.853a49.345 49.345 0 0 0-14.37 29.355 42.981 42.981 0 0 0 2.034 17.531 59.295 59.295 0 0 0 10.41 18.547 369.34 369.34 0 0 0 42.811 44.915 223.324 223.324 0 0 0 20.072 16.051 13.364 13.364 0 0 0 12.005 0 223.333 223.333 0 0 0 20.07-16.051 369.191 369.191 0 0 0 42.811-44.915 59.297 59.297 0 0 0 10.411-18.547 42.98 42.98 0 0 0 2.033-17.531 49.34 49.34 0 0 0-14.377-29.358l-14.811-15.385-1.779-1.848c-20.66-21.451-48.955-50.832-49.371-51.383a1.179 1.179 0 0 0-.995-.548 1.184 1.184 0 0 0-.995.548v.002zm1.408-69.483c.136.215.321.505.582.869.391.544 6.257 9.93 14.382 22.92 19.488 31.162 52.102 83.315 60.679 96.014 6.342 9.377 14.353 14.77 21.974 14.772 7.402 0 18.108-5.031 27.079-29.067a332.382 332.382 0 0 0 19.124-81.095c.409-3.84.243-8.568-4.713-11.056a314.32 314.32 0 0 0-43.468-15.926 367.237 367.237 0 0 0-42.052-9.743 299.13 299.13 0 0 0-49.568-4.345h-8.871a299.13 299.13 0 0 0-49.568 4.345 367.225 367.225 0 0 0-42.051 9.743 314.427 314.427 0 0 0-43.469 15.926c-4.951 2.486-5.12 7.213-4.712 11.056a332.313 332.313 0 0 0 19.124 81.095c4.952 13.265 13.67 29.067 27.078 29.067 7.624 0 15.63-5.384 21.974-14.772 8.57-12.687 41.169-64.811 60.643-95.955l.032-.053c8.124-12.993 13.995-22.38 14.384-22.921.259-.364.455-.657.58-.87.209-.327.311-.491.416-.491.105 0 .214.16.421.487zm-55.455 149.533l19.652-20.614h69.159l19.649 20.614h-108.46zm34.197-35.377l20.162-20.871 20.159 20.871h-40.321z"
-                      fill="currentColor"
-                    />
-                  </g>
-                </svg>
-              </span>
-            </button>
-            <span
-              class="text-lg uppercase"
-            >
-              <strong>
-                ARK
-              </strong>
-              Vault
-            </span>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div
-      class="flex flex-1 flex-col"
-    >
-      <div
-        class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
-      >
-        <div
-          class="mx-auto px-8 lg:container md:px-10"
-        >
-          <div
-            class="mx-auto hidden w-96 md:block"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 358 202"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M338 112.921v2h-76v-2zM298 72.92v2h-36v-2zM298 152.921v2h-26v-2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M289 65.92v110h-2v-110zM330 91.92v28h-2v-28zM358 112.921v2h-10v-2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M354 108.921v10h-2v-10zM20 114.921v-2h76v2zM60 74.92v-2h36v2zM60 154.921v-2h26v2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M69 175.921v-110h2v110zM28 119.921v-28h2v28zM0 114.921v-2h10v2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M4 118.921v-10h2v10z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M257.378 89.374v94.521c0 8.489-3.807 13.064-12.295 13.064H112.907c-8.489 0-12.296-3.807-12.296-12.295v-95.29"
-                stroke="#EEF3F5"
-                stroke-width="10"
-              />
-              <path
-                d="M104.69 89.569h149.468v3.476H104.69zM243.73 64.368h10.428v4.345H243.73zM103.821 64.368h10.428v4.345h-10.428z"
-                fill="#EEF3F5"
-              />
-              <path
-                d="M246.62 35.581c8.488 0 15.369 6.881 15.369 15.37v134.481c0 8.488-6.881 15.369-15.369 15.369H112.138c-8.488 0-15.369-6.881-15.369-15.369V50.95c0-8.488 6.881-15.369 15.369-15.369"
-                stroke="#DBDEE5"
-                stroke-linecap="round"
-                stroke-width="2"
-              />
-              <path
-                d="M254.304 65.55V186.2a7.684 7.684 0 0 1-7.684 7.684H111.37a7.685 7.685 0 0 1-7.685-7.684V65.55"
-                stroke="#DBDEE5"
-                stroke-dasharray="7 4"
-                stroke-linecap="round"
-                stroke-width="2"
-              />
-              <g
-                clip-path="url(#clip0_921_17772)"
-                stroke="#DBDEE5"
-                stroke-width="2"
-              >
-                <path
-                  d="M96 89.569h165.11M103.685 93.6h151.387"
-                />
-              </g>
-              <g
-                clip-path="url(#clip1_921_17772)"
-                fill="#DBDEE5"
-              >
-                <path
-                  d="M96 64.783v1H115.275v-2H96.019h-.005-.002-.002-.002-.001H96l-.001 1zm147.858 1H261.22v-1-1h-.001-.001-.001-.001-.001-.001-.001-.001-.001-.003-.005-.002-.002-.002H243.858v2zM103.685 68.625v1H115.221v-2H103.718h-.005-.014-.003-.003-.001-.001-.001-.001-.001-.001-.002v1zm139.781 1H255.073v-1-1h-.001-.001-.001-.001-.002-.001-.002-.001-.001-.001-.001-.001-.001-.004-.001-.003-.003-.003-.005-.02-.007-.005-.019H243.466v2z"
-                />
-              </g>
-              <path
-                d="M123.808 13.966h113.839v4.345H123.808zM115.118 84.355h129.481V88.7H115.118z"
-                fill="#E6EFF9"
-              />
-              <path
-                d="M123.665 17.906V8.685A7.685 7.685 0 0 1 131.35 1h98.363a7.685 7.685 0 0 1 7.685 7.685v9.221"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <path
-                d="M115.212 88.605V25.59a7.684 7.684 0 0 1 7.685-7.684h112.964a7.685 7.685 0 0 1 7.685 7.684v63.015"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <ellipse
-                cx="220.702"
-                cy="61.761"
-                rx="11.732"
-                ry="11.297"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <path
-                d="M212.914 49.647a11.5 11.5 0 0 1-3.949-8.687c0-6.366 5.161-11.527 11.527-11.527s11.527 5.161 11.527 11.527c0 3.443-1.51 6.534-3.904 8.646M143.645 74.004V37.118a6.147 6.147 0 1 1 12.295 0v36.886"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <rect
-                height="34.98"
-                rx="3.412"
-                stroke="#235B95"
-                stroke-width="2"
-                width="6.824"
-                x="129.421"
-                y="30.578"
-              />
-              <path
-                d="M103.821 89.57h151.206M134.423 93.6h89.911M244.599 64.368h18.249M96 64.368h18.249M244.599 68.713h10.428M103.821 68.713h10.428"
-                stroke="#212225"
-                stroke-width="2"
-              />
-              <circle
-                cx="178.776"
-                cy="145.332"
-                r="37.552"
-                stroke="#E6EFF9"
-                stroke-width="6"
-              />
-              <circle
-                cx="179.165"
-                cy="144.926"
-                r="39.715"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <circle
-                cx="179.173"
-                cy="144.935"
-                r="34.949"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <g
-                clip-path="url(#clip2_921_17772)"
-                fill="#235B95"
-              >
-                <path
-                  d="M139.45 143.755a1 1 0 0 0 0 2v-2zm3.966 2a1 1 0 1 0 0-2v2zm71.165-2a1 1 0 0 0 0 2v-2zm3.958 2a1 1 0 0 0 0-2v2zm-79.089-1v1H143.416v-2H139.566h-.036H139.521 139.497h-.002-.005-.005-.003-.003-.001-.003-.001-.003-.001-.001-.001-.006-.001-.001-.001-.002-.002-.001-.001-.001-.001-.001v1zm75.131 1H218.539v-1-1h-.001-.002-.001-.002-.002-.001-.003-.001-.001-.001-.001-.001-.004-.001-.001-.003-.001-.003-.003-.003-.003-.005-.002H218.482h-.002-.015-.007-.012H218.433h-.011H214.581v2zM179.994 105.211a1 1 0 0 0-2 0h2zm-2 3.966a1 1 0 1 0 2 0h-2zm2 71.165a1 1 0 0 0-2 0h2zm-2 3.958a1 1 0 0 0 2 0h-2zm1-79.089h-1V109.177h2v-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.013-.014-.014-.014-.014-.013-.014-.014-.014-.013-.014-.013-.014-.014-.013-.014-.013-.014-.013-.014-.013-.013-.014-.013-.014-.013-.013-.013-.014-.013-.013-.013-.014-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.012-.013-.013-.013-.012-.013-.013-.012-.013-.013-.012-.013-.012-.013-.012-.013-.012-.013-.012-.013-.012-.012-.013-.012V108v-.012-.013-.012-.012-.012-.012-.013-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.011-.012-.012-.012-.012-.011-.012-.012-.012-.011-.012-.011-.012-.012-.011-.012-.011-.012-.011-.012-.011-.011-.012-.011-.011-.012-.011-.011-.011-.012-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.01-.011-.011-.011-.01-.011-.011-.01-.011-.01-.011-.011-.01-.011-.01-.01-.011-.01-.011-.01-.01-.01-.011-.01-.01-.01V107v-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.009-.01-.01-.01-.01-.009-.01-.01-.009-.01-.01-.009-.01-.009-.01-.009-.01-.009-.009-.01-.009-.009-.01-.009-.009-.009-.01-.009-.009-.009-.009-.009-.009-.009-.009-.009-.009-.009-.009-.008-.009-.009-.009-.008-.009-.009-.008-.009-.009-.008-.009-.008-.009-.008-.009-.008-.008-.009-.008-.008-.009-.008-.008-.008-.008-.009-.008-.008-.008-.008-.008-.008-.008-.007-.008-.008-.008-.008-.008-.007-.008-.008-.007-.008-.008-.007-.008-.007-.008-.007-.008-.007-.007-.008-.007-.007-.007-.008-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.006-.007-.007-.007-.006-.007-.006-.007-.006-.007-.006-.007-.006-.007-.006-.006-.007-.006-.006-.006-.007-.006-.006-.006-.006-.006-.006-.006-.006-.006-.006-.006-.005-.006-.006-.006-.005-.006-.006-.005-.006-.005-.006-.005-.006-.005-.006-.005-.005-.006-.005-.005-.005-.006-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.004-.005-.005-.005-.005-.004-.005-.004-.005-.005-.004-.005-.004-.005-.004-.004-.005-.004-.004-.004-.005-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.003-.004-.004-.003-.004-.004-.003-.004-.003-.004-.003-.004-.003-.003-.004-.003-.003-.003-.004-.003-.003-.003-.003-.003-.003-.003-.003-.003-.003-.003-.002-.003-.003-.002-.003-.003-.002-.003-.002-.003-.002-.003-.002-.003-.002-.002-.002-.003-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.001-.002-.002-.001-.002-.002-.001-.002-.001-.002-.001-.001-.002-.001-.001-.002-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001h-1zm-1 75.131V184.3h2v-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.002-.001-.001-.001-.001-.002-.001-.001-.002-.001-.002-.001-.002-.001-.002-.002-.001-.002-.002-.002-.001-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.003-.002-.002-.002-.003-.002-.002-.003-.002-.003-.002-.003-.003-.002-.003-.002-.003-.003-.003-.003-.002-.003-.003-.003-.003-.003-.003-.003-.003-.004-.003-.003-.003-.003-.004-.003-.003-.004-.003-.004-.003-.004-.003-.004-.004-.003-.004-.004-.003-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.005-.004-.004-.005-.004-.004-.005-.004-.005-.004-.005-.004-.005-.005-.004-.005-.005-.004-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.006-.005-.005-.005-.006-.005-.006-.005-.006-.005-.006-.005-.006-.005-.006-.006-.005-.006-.006-.006-.006-.005-.006-.006-.006-.006-.006-.006-.006-.006-.007-.006-.006-.006-.006-.007-.006-.006-.007-.006-.007-.006-.006-.007-.007-.006-.007-.006-.007-.007-.006-.007-.007-.007-.007-.006-.007-.007-.007-.007-.007-.007-.007-.007-.007-.008-.007-.007-.007-.008-.007-.007-.007-.008-.007-.008-.007-.008-.007-.008-.007-.008-.008-.007-.008-.008-.007-.008-.008-.008-.008-.007-.008-.008-.008-.008-.008-.008-.008-.009-.008-.008-.008-.008-.009-.008-.008-.008-.009-.008-.009-.008-.008-.009-.008-.009-.009-.008-.009-.008-.009-.009-.009-.008-.009-.009-.009-.009-.008-.009-.009-.009-.009-.009-.009-.009-.01-.009-.009-.009-.009-.009-.01-.009-.009-.01-.009-.009-.01-.009-.01-.009-.01-.009-.01-.009-.01-.01-.009-.01-.01-.01-.009-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.011-.01-.01-.01-.011-.01-.01-.011-.01-.011-.01-.01-.011-.011-.01-.011-.01-.011-.011-.01-.011-.011-.01-.011-.011-.011-.011-.011-.01-.011-.011-.011-.011-.011-.011-.011-.012-.011-.011-.011-.011-.011-.012-.011V182v-.011-.012-.011-.012-.011-.011-.012-.011-.012-.011-.012-.011-.012-.012-.011-.012-.012-.011-.012-.012-.012-.011-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.013-.012-.012-.012-.013-.012-.012-.013-.012-.013-.012-.012-.013-.012-.013-.012-.013-.013-.012-.013-.013-.012-.013-.013-.012-.013-.013-.013-.013-.012-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.014-.013-.013-.013-.013-.014-.013-.013-.013-.014-.013-.014-.013-.013-.014-.013-.014-.013-.014-.013-.014-.014-.013-.014-.013-.014-.014-.013-.014-.014-.014-.014-.013-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014h-2zM145.248 124.117a1 1 0 0 0-1 1.732l1-1.732zm2.435 3.715a1 1 0 0 0 1-1.732l-1 1.732zm62.631 33.85a1 1 0 1 0-1 1.733l1-1.733zm2.427 3.711a1 1 0 1 0 1-1.732l-1 1.732zm-67.993-40.41l-.5.866.001.001.003.001a2.334 2.334 0 0 0 .058.034l.181.104.69.399 2.502 1.444 1-1.732-2.502-1.444-.69-.399-.181-.104-.046-.027a.097.097 0 0 1-.012-.007l-.003-.002h-.001l-.5.866zm64.566 38.432l2.496 1.441.689.398a16.984 16.984 0 0 1 .226.13l.012.007.003.002h.001l.5-.866.5-.866h-.001l-.003-.002-.012-.007a98.036 98.036 0 0 0-.226-.131l-.689-.397-2.496-1.442-1 1.733zM199.632 111.009a1 1 0 0 0-1.732-1l1.732 1zm-3.715 2.435a1 1 0 0 0 1.732 1l-1.732-1zm-33.85 62.63a1 1 0 0 0-1.732-1l1.732 1zm-3.711 2.428a1 1 0 0 0 1.732 1l-1.732-1zm40.41-67.993l-.866-.5v.001l-.002.003-.007.011-.027.047-.104.18-.399.691-1.444 2.502 1.732 1 1.445-2.502.398-.691.105-.18.026-.047.007-.011.002-.003v-.001l-.866-.5zm-38.431 64.565l-1.442 2.497-.397.689-.104.18-.027.046-.007.012-.002.003v.001l.866.5.866.5v-.001h.001l.001-.003.007-.012.027-.046.104-.18.397-.689 1.442-2.497-1.732-1zM160.088 110.009a1 1 0 1 0-1.732 1l1.732-1zm.251 4.435a1 1 0 0 0 1.732-1l-1.732 1zm37.315 60.63a1 1 0 0 0-1.732 1l1.732-1zm.246 4.428a1 1 0 0 0 1.732-1l-1.732 1zm-38.678-68.993l-.866.5v.001l.002.003.007.011.027.047.104.18.399.691 1.444 2.502 1.732-1-1.444-2.502-.399-.691-.104-.18-.027-.047-.007-.011-.001-.003-.001-.001-.866.5zm36.7 65.565l1.441 2.497.397.689a98.036 98.036 0 0 0 .131.226l.007.012.002.003v.001l.866-.5.866-.5v-.001l-.002-.003-.007-.012a812.31 812.31 0 0 1-.528-.915l-1.441-2.497-1.732 1zM213.741 125.849a1 1 0 0 0-1-1.732l1 1.732zm-4.435.251a1 1 0 0 0 1 1.732l-1-1.732zm-60.631 37.315a1 1 0 0 0-1-1.733l1 1.733zm-4.427.246a1 1 0 0 0 1 1.732l-1-1.732zm68.993-38.678l-.5-.866h-.001l-.003.002-.012.007-.046.027-.181.104-.69.399-2.502 1.444 1 1.732 2.502-1.444.69-.399.181-.104.046-.027.012-.007.003-.002h.001l-.5-.866zm-65.566 36.699l-2.496 1.442-.689.397-.18.105a.853.853 0 0 0-.046.026l-.012.007-.003.002h-.001l.5.866.5.866h.001l.003-.002.012-.007a10.574 10.574 0 0 1 .226-.13l.689-.398 2.496-1.441-1-1.733z"
-                />
-              </g>
-              <path
-                d="M179.056 167.783a33.767 33.767 0 0 1-3.115-2.496 53.553 53.553 0 0 1-3.066-2.938 57.118 57.118 0 0 1-3.554-4.05 54.598 54.598 0 0 1-7.01-11.379 51.194 51.194 0 0 1-2.68-7.306 50.594 50.594 0 0 1-1.609-8.365c-.063-.583-.037-1.304.717-1.682a47.773 47.773 0 0 1 6.614-2.424 55.922 55.922 0 0 1 6.399-1.482 45.523 45.523 0 0 1 7.543-.661h1.41c2.528.01 5.051.232 7.543.661 2.16.368 4.297.863 6.399 1.482a47.786 47.786 0 0 1 6.615 2.424c.754.379.779 1.098.717 1.682a50.596 50.596 0 0 1-4.289 15.671 54.602 54.602 0 0 1-7.011 11.379 57.104 57.104 0 0 1-3.553 4.05 53.567 53.567 0 0 1-3.067 2.938 33.935 33.935 0 0 1-3.115 2.496 2.157 2.157 0 0 1-1.887 0h-.001zm.823-27.966c-.05.067-3.448 3.594-5.928 6.17-.855.89-1.608 1.67-2.089 2.17a6.001 6.001 0 0 0-1.747 3.568 5.22 5.22 0 0 0 .247 2.131 7.206 7.206 0 0 0 1.266 2.254 44.839 44.839 0 0 0 5.203 5.46c.776.697 1.59 1.348 2.44 1.951a1.62 1.62 0 0 0 1.459 0 27.218 27.218 0 0 0 2.44-1.951 44.915 44.915 0 0 0 5.203-5.46 7.183 7.183 0 0 0 1.265-2.254 5.22 5.22 0 0 0 .248-2.131 5.997 5.997 0 0 0-1.748-3.568l-1.8-1.87-.216-.225c-2.511-2.607-5.951-6.178-6.001-6.245a.144.144 0 0 0-.242 0zm.171-8.445c.017.026.039.061.071.105.047.066.76 1.207 1.748 2.786 2.369 3.788 6.333 10.127 7.375 11.67.771 1.14 1.745 1.796 2.671 1.796.9 0 2.201-.612 3.291-3.533a40.42 40.42 0 0 0 2.325-9.857c.05-.467.029-1.041-.573-1.344a38.352 38.352 0 0 0-5.283-1.936 44.762 44.762 0 0 0-5.112-1.184 36.313 36.313 0 0 0-6.024-.528h-1.079a36.334 36.334 0 0 0-6.025.528c-1.725.294-3.431.69-5.111 1.184a38.304 38.304 0 0 0-5.283 1.936c-.602.302-.622.877-.573 1.344a40.373 40.373 0 0 0 2.324 9.857c.602 1.612 1.662 3.533 3.292 3.533.926 0 1.9-.655 2.671-1.796 1.041-1.542 5.004-7.877 7.371-11.663l.003-.006c.988-1.579 1.702-2.72 1.749-2.786.031-.044.055-.08.07-.106.026-.04.038-.06.051-.06.013 0 .026.02.051.06zm-6.74 18.175l2.388-2.506h8.406l2.389 2.506H173.31zm4.156-4.3l2.451-2.537 2.45 2.537h-4.901z"
-                fill="#235B95"
-              />
-              <defs>
-                <clippath
-                  id="clip0_921_17772"
-                >
-                  <path
-                    d="M0 0h165.11v4.031H0z"
-                    fill="#fff"
-                    transform="translate(96 89.569)"
-                  />
-                </clippath>
-                <clippath
-                  id="clip1_921_17772"
-                >
-                  <path
-                    d="M0 0h165.22v3.842H0z"
-                    fill="#fff"
-                    transform="translate(96 64.783)"
-                  />
-                </clippath>
-                <clippath
-                  id="clip2_921_17772"
-                >
-                  <path
-                    d="M0 0h79.089v79.089H0z"
-                    fill="#fff"
-                    transform="translate(139.45 105.211)"
-                  />
-                </clippath>
-              </defs>
-            </svg>
-          </div>
-          <div
-            class="mx-auto md:mt-8"
-          >
-            <h2
-              class="mx-4 text-2xl font-bold"
-            >
-              Select Profile
-            </h2>
-            <p
-              class="text-base text-theme-secondary-text"
-            >
-              Choose from an existing Profile below or create a new Profile to get started.
-            </p>
-            <div
-              class="mt-6 flex justify-center md:mt-8"
-            >
-              <div
-                class="gap-5 flex w-full justify-center"
-              >
-                <div
-                  class="h-40 w-36 leading-tight sm:w-40"
-                >
-                  <button
-                    class="css-116zvw2"
-                    data-testid="Card"
-                    type="button"
-                  >
-                    <div
-                      class="mx-auto flex h-full flex-col items-center justify-center"
-                    >
-                      <div
-                        class="relative"
-                      >
-                        <div
-                          class="shrink-0 css-11ohc3q"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                          >
-                            <img
-                              alt="Jane Doe"
-                              data-testid="ProfileAvatar__svg"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
-                              title="Jane Doe"
-                            />
-                            <span
-                              class="absolute font-semibold text-white"
-                            >
-                              JA
-                            </span>
-                          </div>
-                        </div>
-                        <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
-                        >
-                          <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="lock"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              >
-                                <path
-                                  d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                          <span />
-                        </span>
-                      </div>
-                      <span
-                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
-                      >
-                        Jane Doe
-                      </span>
-                    </div>
-                    <div
-                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
-                    >
-                      <div
-                        class="static sm:relative"
-                      >
-                        <span
-                          data-testid="dropdown__toggle"
-                        >
-                          <div
-                            class="flex w-4 justify-center overflow-hidden"
-                          >
-                            <div
-                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="ellipsis-vertical"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <circle
-                                    cx="10"
-                                    cy="16.994"
-                                    r="2.006"
-                                  />
-                                  <circle
-                                    cx="10"
-                                    cy="3"
-                                    r="2"
-                                  />
-                                  <circle
-                                    cx="10"
-                                    cy="10"
-                                    r="2"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                </div>
-                <div
-                  class="group h-40 leading-tight sm:w-40 w-36"
-                >
-                  <button
-                    class="css-10zh490"
-                    data-testid="Card"
-                    type="button"
-                  >
-                    <div
-                      class="mx-auto flex h-full flex-col items-center justify-center"
-                    >
-                      <div>
-                        <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
-                        >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="plus"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              >
-                                <path
-                                  d="M1 10h18M10 1v18"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
-                      >
-                        Create
-                      </span>
-                    </div>
-                    <div
-                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <p
-              class="mt-8 text-base text-theme-secondary-text md:mt-16"
-            >
-              <span>
-                Exported a Profile before? 
-              </span>
-              <a
-                class="ring-focus group inline-block css-15tcy38"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="#/profiles/import"
-              >
-                <span
-                  class="css-1y2194z"
-                >
-                  Import it here.
-                </span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Welcome > should navigate to previous page with correct password 1`] = `
-<DocumentFragment>
-  <div
-    class="css-15789f"
-  >
-    <nav
-      aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -725,7 +259,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -736,7 +270,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -822,7 +356,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -833,7 +367,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -853,7 +387,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -950,7 +484,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -959,7 +493,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -1009,13 +543,13 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -1036,7 +570,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -1288,7 +822,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -1299,7 +833,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -1385,7 +919,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -1396,7 +930,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -1416,7 +950,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -1513,7 +1047,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -1522,7 +1056,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -1572,13 +1106,13 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -1595,11 +1129,11 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
 exports[`Welcome > should navigate to profile dashboard with correct password 1`] = `
 <DocumentFragment>
   <div
-    class="css-15789f"
+    class="css-kmmje1"
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -1851,7 +1385,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -1862,7 +1396,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -1948,7 +1482,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -1959,7 +1493,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -1979,7 +1513,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -2076,7 +1610,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -2085,7 +1619,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -2135,13 +1669,13 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -2162,7 +1696,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -2414,7 +1948,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -2425,7 +1959,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -2511,7 +2045,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -2522,7 +2056,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -2542,7 +2076,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -2639,7 +2173,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -2648,7 +2182,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -2698,576 +2232,13 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
-                >
-                  Import it here.
-                </span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Welcome > should navigate to profile settings with correct password 1`] = `
-<DocumentFragment>
-  <div
-    class="css-15789f"
-  >
-    <nav
-      aria-labelledby="main menu"
-      class="css-97i12m"
-    >
-      <div
-        class="relative flex h-21"
-      >
-        <div
-          class="flex flex-1 px-8 sm:ml-12"
-        >
-          <div
-            class="my-auto flex items-center"
-          >
-            <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-              data-testid="NavigationBarLogo--button"
-              type="button"
-            >
-              <span
-                class="relative"
-              >
-                <svg
-                  fill="none"
-                  height="28"
-                  viewBox="0 0 363 363"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_434_4442)"
-                  >
-                    <path
-                      d="M174.182 352.325a279.256 279.256 0 0 1-25.627-20.536c-8.518-7.525-17.006-15.66-25.229-24.178a470.15 470.15 0 0 1-29.234-33.315 449.417 449.417 0 0 1-57.68-93.623 420.933 420.933 0 0 1-22.044-60.102A416.702 416.702 0 0 1 1.126 51.749c-.512-4.803-.303-10.73 5.9-13.842a393.077 393.077 0 0 1 54.42-19.94 459.697 459.697 0 0 1 52.646-12.195A374.409 374.409 0 0 1 176.15.333h11.6a374.406 374.406 0 0 1 62.057 5.44 459.723 459.723 0 0 1 52.646 12.195 393.328 393.328 0 0 1 54.422 19.939c6.203 3.115 6.41 9.034 5.898 13.842a416.672 416.672 0 0 1-13.242 68.822 421.133 421.133 0 0 1-22.044 60.102 449.395 449.395 0 0 1-57.68 93.623 470 470 0 0 1-29.234 33.315c-8.223 8.518-16.711 16.653-25.229 24.178a279.73 279.73 0 0 1-25.627 20.536 17.811 17.811 0 0 1-15.528 0h-.007zm6.769-230.087c-.412.547-28.363 29.571-48.772 50.764-7.035 7.318-13.229 13.736-17.187 17.853a49.345 49.345 0 0 0-14.37 29.355 42.981 42.981 0 0 0 2.034 17.531 59.295 59.295 0 0 0 10.41 18.547 369.34 369.34 0 0 0 42.811 44.915 223.324 223.324 0 0 0 20.072 16.051 13.364 13.364 0 0 0 12.005 0 223.333 223.333 0 0 0 20.07-16.051 369.191 369.191 0 0 0 42.811-44.915 59.297 59.297 0 0 0 10.411-18.547 42.98 42.98 0 0 0 2.033-17.531 49.34 49.34 0 0 0-14.377-29.358l-14.811-15.385-1.779-1.848c-20.66-21.451-48.955-50.832-49.371-51.383a1.179 1.179 0 0 0-.995-.548 1.184 1.184 0 0 0-.995.548v.002zm1.408-69.483c.136.215.321.505.582.869.391.544 6.257 9.93 14.382 22.92 19.488 31.162 52.102 83.315 60.679 96.014 6.342 9.377 14.353 14.77 21.974 14.772 7.402 0 18.108-5.031 27.079-29.067a332.382 332.382 0 0 0 19.124-81.095c.409-3.84.243-8.568-4.713-11.056a314.32 314.32 0 0 0-43.468-15.926 367.237 367.237 0 0 0-42.052-9.743 299.13 299.13 0 0 0-49.568-4.345h-8.871a299.13 299.13 0 0 0-49.568 4.345 367.225 367.225 0 0 0-42.051 9.743 314.427 314.427 0 0 0-43.469 15.926c-4.951 2.486-5.12 7.213-4.712 11.056a332.313 332.313 0 0 0 19.124 81.095c4.952 13.265 13.67 29.067 27.078 29.067 7.624 0 15.63-5.384 21.974-14.772 8.57-12.687 41.169-64.811 60.643-95.955l.032-.053c8.124-12.993 13.995-22.38 14.384-22.921.259-.364.455-.657.58-.87.209-.327.311-.491.416-.491.105 0 .214.16.421.487zm-55.455 149.533l19.652-20.614h69.159l19.649 20.614h-108.46zm34.197-35.377l20.162-20.871 20.159 20.871h-40.321z"
-                      fill="currentColor"
-                    />
-                  </g>
-                </svg>
-              </span>
-            </button>
-            <span
-              class="text-lg uppercase"
-            >
-              <strong>
-                ARK
-              </strong>
-              Vault
-            </span>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div
-      class="flex flex-1 flex-col"
-    >
-      <div
-        class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
-      >
-        <div
-          class="mx-auto px-8 lg:container md:px-10"
-        >
-          <div
-            class="mx-auto hidden w-96 md:block"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 358 202"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M338 112.921v2h-76v-2zM298 72.92v2h-36v-2zM298 152.921v2h-26v-2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M289 65.92v110h-2v-110zM330 91.92v28h-2v-28zM358 112.921v2h-10v-2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M354 108.921v10h-2v-10zM20 114.921v-2h76v2zM60 74.92v-2h36v2zM60 154.921v-2h26v2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M69 175.921v-110h2v110zM28 119.921v-28h2v28zM0 114.921v-2h10v2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M4 118.921v-10h2v10z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M257.378 89.374v94.521c0 8.489-3.807 13.064-12.295 13.064H112.907c-8.489 0-12.296-3.807-12.296-12.295v-95.29"
-                stroke="#EEF3F5"
-                stroke-width="10"
-              />
-              <path
-                d="M104.69 89.569h149.468v3.476H104.69zM243.73 64.368h10.428v4.345H243.73zM103.821 64.368h10.428v4.345h-10.428z"
-                fill="#EEF3F5"
-              />
-              <path
-                d="M246.62 35.581c8.488 0 15.369 6.881 15.369 15.37v134.481c0 8.488-6.881 15.369-15.369 15.369H112.138c-8.488 0-15.369-6.881-15.369-15.369V50.95c0-8.488 6.881-15.369 15.369-15.369"
-                stroke="#DBDEE5"
-                stroke-linecap="round"
-                stroke-width="2"
-              />
-              <path
-                d="M254.304 65.55V186.2a7.684 7.684 0 0 1-7.684 7.684H111.37a7.685 7.685 0 0 1-7.685-7.684V65.55"
-                stroke="#DBDEE5"
-                stroke-dasharray="7 4"
-                stroke-linecap="round"
-                stroke-width="2"
-              />
-              <g
-                clip-path="url(#clip0_921_17772)"
-                stroke="#DBDEE5"
-                stroke-width="2"
-              >
-                <path
-                  d="M96 89.569h165.11M103.685 93.6h151.387"
-                />
-              </g>
-              <g
-                clip-path="url(#clip1_921_17772)"
-                fill="#DBDEE5"
-              >
-                <path
-                  d="M96 64.783v1H115.275v-2H96.019h-.005-.002-.002-.002-.001H96l-.001 1zm147.858 1H261.22v-1-1h-.001-.001-.001-.001-.001-.001-.001-.001-.001-.003-.005-.002-.002-.002H243.858v2zM103.685 68.625v1H115.221v-2H103.718h-.005-.014-.003-.003-.001-.001-.001-.001-.001-.001-.002v1zm139.781 1H255.073v-1-1h-.001-.001-.001-.001-.002-.001-.002-.001-.001-.001-.001-.001-.001-.004-.001-.003-.003-.003-.005-.02-.007-.005-.019H243.466v2z"
-                />
-              </g>
-              <path
-                d="M123.808 13.966h113.839v4.345H123.808zM115.118 84.355h129.481V88.7H115.118z"
-                fill="#E6EFF9"
-              />
-              <path
-                d="M123.665 17.906V8.685A7.685 7.685 0 0 1 131.35 1h98.363a7.685 7.685 0 0 1 7.685 7.685v9.221"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <path
-                d="M115.212 88.605V25.59a7.684 7.684 0 0 1 7.685-7.684h112.964a7.685 7.685 0 0 1 7.685 7.684v63.015"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <ellipse
-                cx="220.702"
-                cy="61.761"
-                rx="11.732"
-                ry="11.297"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <path
-                d="M212.914 49.647a11.5 11.5 0 0 1-3.949-8.687c0-6.366 5.161-11.527 11.527-11.527s11.527 5.161 11.527 11.527c0 3.443-1.51 6.534-3.904 8.646M143.645 74.004V37.118a6.147 6.147 0 1 1 12.295 0v36.886"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <rect
-                height="34.98"
-                rx="3.412"
-                stroke="#235B95"
-                stroke-width="2"
-                width="6.824"
-                x="129.421"
-                y="30.578"
-              />
-              <path
-                d="M103.821 89.57h151.206M134.423 93.6h89.911M244.599 64.368h18.249M96 64.368h18.249M244.599 68.713h10.428M103.821 68.713h10.428"
-                stroke="#212225"
-                stroke-width="2"
-              />
-              <circle
-                cx="178.776"
-                cy="145.332"
-                r="37.552"
-                stroke="#E6EFF9"
-                stroke-width="6"
-              />
-              <circle
-                cx="179.165"
-                cy="144.926"
-                r="39.715"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <circle
-                cx="179.173"
-                cy="144.935"
-                r="34.949"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <g
-                clip-path="url(#clip2_921_17772)"
-                fill="#235B95"
-              >
-                <path
-                  d="M139.45 143.755a1 1 0 0 0 0 2v-2zm3.966 2a1 1 0 1 0 0-2v2zm71.165-2a1 1 0 0 0 0 2v-2zm3.958 2a1 1 0 0 0 0-2v2zm-79.089-1v1H143.416v-2H139.566h-.036H139.521 139.497h-.002-.005-.005-.003-.003-.001-.003-.001-.003-.001-.001-.001-.006-.001-.001-.001-.002-.002-.001-.001-.001-.001-.001v1zm75.131 1H218.539v-1-1h-.001-.002-.001-.002-.002-.001-.003-.001-.001-.001-.001-.001-.004-.001-.001-.003-.001-.003-.003-.003-.003-.005-.002H218.482h-.002-.015-.007-.012H218.433h-.011H214.581v2zM179.994 105.211a1 1 0 0 0-2 0h2zm-2 3.966a1 1 0 1 0 2 0h-2zm2 71.165a1 1 0 0 0-2 0h2zm-2 3.958a1 1 0 0 0 2 0h-2zm1-79.089h-1V109.177h2v-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.013-.014-.014-.014-.014-.013-.014-.014-.014-.013-.014-.013-.014-.014-.013-.014-.013-.014-.013-.014-.013-.013-.014-.013-.014-.013-.013-.013-.014-.013-.013-.013-.014-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.012-.013-.013-.013-.012-.013-.013-.012-.013-.013-.012-.013-.012-.013-.012-.013-.012-.013-.012-.013-.012-.012-.013-.012V108v-.012-.013-.012-.012-.012-.012-.013-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.011-.012-.012-.012-.012-.011-.012-.012-.012-.011-.012-.011-.012-.012-.011-.012-.011-.012-.011-.012-.011-.011-.012-.011-.011-.012-.011-.011-.011-.012-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.01-.011-.011-.011-.01-.011-.011-.01-.011-.01-.011-.011-.01-.011-.01-.01-.011-.01-.011-.01-.01-.01-.011-.01-.01-.01V107v-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.009-.01-.01-.01-.01-.009-.01-.01-.009-.01-.01-.009-.01-.009-.01-.009-.01-.009-.009-.01-.009-.009-.01-.009-.009-.009-.01-.009-.009-.009-.009-.009-.009-.009-.009-.009-.009-.009-.009-.008-.009-.009-.009-.008-.009-.009-.008-.009-.009-.008-.009-.008-.009-.008-.009-.008-.008-.009-.008-.008-.009-.008-.008-.008-.008-.009-.008-.008-.008-.008-.008-.008-.008-.007-.008-.008-.008-.008-.008-.007-.008-.008-.007-.008-.008-.007-.008-.007-.008-.007-.008-.007-.007-.008-.007-.007-.007-.008-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.006-.007-.007-.007-.006-.007-.006-.007-.006-.007-.006-.007-.006-.007-.006-.006-.007-.006-.006-.006-.007-.006-.006-.006-.006-.006-.006-.006-.006-.006-.006-.006-.005-.006-.006-.006-.005-.006-.006-.005-.006-.005-.006-.005-.006-.005-.006-.005-.005-.006-.005-.005-.005-.006-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.004-.005-.005-.005-.005-.004-.005-.004-.005-.005-.004-.005-.004-.005-.004-.004-.005-.004-.004-.004-.005-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.003-.004-.004-.003-.004-.004-.003-.004-.003-.004-.003-.004-.003-.003-.004-.003-.003-.003-.004-.003-.003-.003-.003-.003-.003-.003-.003-.003-.003-.003-.002-.003-.003-.002-.003-.003-.002-.003-.002-.003-.002-.003-.002-.003-.002-.002-.002-.003-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.001-.002-.002-.001-.002-.002-.001-.002-.001-.002-.001-.001-.002-.001-.001-.002-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001h-1zm-1 75.131V184.3h2v-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.002-.001-.001-.001-.001-.002-.001-.001-.002-.001-.002-.001-.002-.001-.002-.002-.001-.002-.002-.002-.001-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.003-.002-.002-.002-.003-.002-.002-.003-.002-.003-.002-.003-.003-.002-.003-.002-.003-.003-.003-.003-.002-.003-.003-.003-.003-.003-.003-.003-.003-.004-.003-.003-.003-.003-.004-.003-.003-.004-.003-.004-.003-.004-.003-.004-.004-.003-.004-.004-.003-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.005-.004-.004-.005-.004-.004-.005-.004-.005-.004-.005-.004-.005-.005-.004-.005-.005-.004-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.006-.005-.005-.005-.006-.005-.006-.005-.006-.005-.006-.005-.006-.005-.006-.006-.005-.006-.006-.006-.006-.005-.006-.006-.006-.006-.006-.006-.006-.006-.007-.006-.006-.006-.006-.007-.006-.006-.007-.006-.007-.006-.006-.007-.007-.006-.007-.006-.007-.007-.006-.007-.007-.007-.007-.006-.007-.007-.007-.007-.007-.007-.007-.007-.007-.008-.007-.007-.007-.008-.007-.007-.007-.008-.007-.008-.007-.008-.007-.008-.007-.008-.008-.007-.008-.008-.007-.008-.008-.008-.008-.007-.008-.008-.008-.008-.008-.008-.008-.009-.008-.008-.008-.008-.009-.008-.008-.008-.009-.008-.009-.008-.008-.009-.008-.009-.009-.008-.009-.008-.009-.009-.009-.008-.009-.009-.009-.009-.008-.009-.009-.009-.009-.009-.009-.009-.01-.009-.009-.009-.009-.009-.01-.009-.009-.01-.009-.009-.01-.009-.01-.009-.01-.009-.01-.009-.01-.01-.009-.01-.01-.01-.009-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.011-.01-.01-.01-.011-.01-.01-.011-.01-.011-.01-.01-.011-.011-.01-.011-.01-.011-.011-.01-.011-.011-.01-.011-.011-.011-.011-.011-.01-.011-.011-.011-.011-.011-.011-.011-.012-.011-.011-.011-.011-.011-.012-.011V182v-.011-.012-.011-.012-.011-.011-.012-.011-.012-.011-.012-.011-.012-.012-.011-.012-.012-.011-.012-.012-.012-.011-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.013-.012-.012-.012-.013-.012-.012-.013-.012-.013-.012-.012-.013-.012-.013-.012-.013-.013-.012-.013-.013-.012-.013-.013-.012-.013-.013-.013-.013-.012-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.014-.013-.013-.013-.013-.014-.013-.013-.013-.014-.013-.014-.013-.013-.014-.013-.014-.013-.014-.013-.014-.014-.013-.014-.013-.014-.014-.013-.014-.014-.014-.014-.013-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014h-2zM145.248 124.117a1 1 0 0 0-1 1.732l1-1.732zm2.435 3.715a1 1 0 0 0 1-1.732l-1 1.732zm62.631 33.85a1 1 0 1 0-1 1.733l1-1.733zm2.427 3.711a1 1 0 1 0 1-1.732l-1 1.732zm-67.993-40.41l-.5.866.001.001.003.001a2.334 2.334 0 0 0 .058.034l.181.104.69.399 2.502 1.444 1-1.732-2.502-1.444-.69-.399-.181-.104-.046-.027a.097.097 0 0 1-.012-.007l-.003-.002h-.001l-.5.866zm64.566 38.432l2.496 1.441.689.398a16.984 16.984 0 0 1 .226.13l.012.007.003.002h.001l.5-.866.5-.866h-.001l-.003-.002-.012-.007a98.036 98.036 0 0 0-.226-.131l-.689-.397-2.496-1.442-1 1.733zM199.632 111.009a1 1 0 0 0-1.732-1l1.732 1zm-3.715 2.435a1 1 0 0 0 1.732 1l-1.732-1zm-33.85 62.63a1 1 0 0 0-1.732-1l1.732 1zm-3.711 2.428a1 1 0 0 0 1.732 1l-1.732-1zm40.41-67.993l-.866-.5v.001l-.002.003-.007.011-.027.047-.104.18-.399.691-1.444 2.502 1.732 1 1.445-2.502.398-.691.105-.18.026-.047.007-.011.002-.003v-.001l-.866-.5zm-38.431 64.565l-1.442 2.497-.397.689-.104.18-.027.046-.007.012-.002.003v.001l.866.5.866.5v-.001h.001l.001-.003.007-.012.027-.046.104-.18.397-.689 1.442-2.497-1.732-1zM160.088 110.009a1 1 0 1 0-1.732 1l1.732-1zm.251 4.435a1 1 0 0 0 1.732-1l-1.732 1zm37.315 60.63a1 1 0 0 0-1.732 1l1.732-1zm.246 4.428a1 1 0 0 0 1.732-1l-1.732 1zm-38.678-68.993l-.866.5v.001l.002.003.007.011.027.047.104.18.399.691 1.444 2.502 1.732-1-1.444-2.502-.399-.691-.104-.18-.027-.047-.007-.011-.001-.003-.001-.001-.866.5zm36.7 65.565l1.441 2.497.397.689a98.036 98.036 0 0 0 .131.226l.007.012.002.003v.001l.866-.5.866-.5v-.001l-.002-.003-.007-.012a812.31 812.31 0 0 1-.528-.915l-1.441-2.497-1.732 1zM213.741 125.849a1 1 0 0 0-1-1.732l1 1.732zm-4.435.251a1 1 0 0 0 1 1.732l-1-1.732zm-60.631 37.315a1 1 0 0 0-1-1.733l1 1.733zm-4.427.246a1 1 0 0 0 1 1.732l-1-1.732zm68.993-38.678l-.5-.866h-.001l-.003.002-.012.007-.046.027-.181.104-.69.399-2.502 1.444 1 1.732 2.502-1.444.69-.399.181-.104.046-.027.012-.007.003-.002h.001l-.5-.866zm-65.566 36.699l-2.496 1.442-.689.397-.18.105a.853.853 0 0 0-.046.026l-.012.007-.003.002h-.001l.5.866.5.866h.001l.003-.002.012-.007a10.574 10.574 0 0 1 .226-.13l.689-.398 2.496-1.441-1-1.733z"
-                />
-              </g>
-              <path
-                d="M179.056 167.783a33.767 33.767 0 0 1-3.115-2.496 53.553 53.553 0 0 1-3.066-2.938 57.118 57.118 0 0 1-3.554-4.05 54.598 54.598 0 0 1-7.01-11.379 51.194 51.194 0 0 1-2.68-7.306 50.594 50.594 0 0 1-1.609-8.365c-.063-.583-.037-1.304.717-1.682a47.773 47.773 0 0 1 6.614-2.424 55.922 55.922 0 0 1 6.399-1.482 45.523 45.523 0 0 1 7.543-.661h1.41c2.528.01 5.051.232 7.543.661 2.16.368 4.297.863 6.399 1.482a47.786 47.786 0 0 1 6.615 2.424c.754.379.779 1.098.717 1.682a50.596 50.596 0 0 1-4.289 15.671 54.602 54.602 0 0 1-7.011 11.379 57.104 57.104 0 0 1-3.553 4.05 53.567 53.567 0 0 1-3.067 2.938 33.935 33.935 0 0 1-3.115 2.496 2.157 2.157 0 0 1-1.887 0h-.001zm.823-27.966c-.05.067-3.448 3.594-5.928 6.17-.855.89-1.608 1.67-2.089 2.17a6.001 6.001 0 0 0-1.747 3.568 5.22 5.22 0 0 0 .247 2.131 7.206 7.206 0 0 0 1.266 2.254 44.839 44.839 0 0 0 5.203 5.46c.776.697 1.59 1.348 2.44 1.951a1.62 1.62 0 0 0 1.459 0 27.218 27.218 0 0 0 2.44-1.951 44.915 44.915 0 0 0 5.203-5.46 7.183 7.183 0 0 0 1.265-2.254 5.22 5.22 0 0 0 .248-2.131 5.997 5.997 0 0 0-1.748-3.568l-1.8-1.87-.216-.225c-2.511-2.607-5.951-6.178-6.001-6.245a.144.144 0 0 0-.242 0zm.171-8.445c.017.026.039.061.071.105.047.066.76 1.207 1.748 2.786 2.369 3.788 6.333 10.127 7.375 11.67.771 1.14 1.745 1.796 2.671 1.796.9 0 2.201-.612 3.291-3.533a40.42 40.42 0 0 0 2.325-9.857c.05-.467.029-1.041-.573-1.344a38.352 38.352 0 0 0-5.283-1.936 44.762 44.762 0 0 0-5.112-1.184 36.313 36.313 0 0 0-6.024-.528h-1.079a36.334 36.334 0 0 0-6.025.528c-1.725.294-3.431.69-5.111 1.184a38.304 38.304 0 0 0-5.283 1.936c-.602.302-.622.877-.573 1.344a40.373 40.373 0 0 0 2.324 9.857c.602 1.612 1.662 3.533 3.292 3.533.926 0 1.9-.655 2.671-1.796 1.041-1.542 5.004-7.877 7.371-11.663l.003-.006c.988-1.579 1.702-2.72 1.749-2.786.031-.044.055-.08.07-.106.026-.04.038-.06.051-.06.013 0 .026.02.051.06zm-6.74 18.175l2.388-2.506h8.406l2.389 2.506H173.31zm4.156-4.3l2.451-2.537 2.45 2.537h-4.901z"
-                fill="#235B95"
-              />
-              <defs>
-                <clippath
-                  id="clip0_921_17772"
-                >
-                  <path
-                    d="M0 0h165.11v4.031H0z"
-                    fill="#fff"
-                    transform="translate(96 89.569)"
-                  />
-                </clippath>
-                <clippath
-                  id="clip1_921_17772"
-                >
-                  <path
-                    d="M0 0h165.22v3.842H0z"
-                    fill="#fff"
-                    transform="translate(96 64.783)"
-                  />
-                </clippath>
-                <clippath
-                  id="clip2_921_17772"
-                >
-                  <path
-                    d="M0 0h79.089v79.089H0z"
-                    fill="#fff"
-                    transform="translate(139.45 105.211)"
-                  />
-                </clippath>
-              </defs>
-            </svg>
-          </div>
-          <div
-            class="mx-auto md:mt-8"
-          >
-            <h2
-              class="mx-4 text-2xl font-bold"
-            >
-              Select Profile
-            </h2>
-            <p
-              class="text-base text-theme-secondary-text"
-            >
-              Choose from an existing Profile below or create a new Profile to get started.
-            </p>
-            <div
-              class="mt-6 flex justify-center md:mt-8"
-            >
-              <div
-                class="gap-5 md:grid-cols-3 grid grid-cols-2"
-              >
-                <div
-                  class="h-40 w-36 leading-tight sm:w-40"
-                >
-                  <button
-                    class="css-116zvw2"
-                    data-testid="Card"
-                    type="button"
-                  >
-                    <div
-                      class="mx-auto flex h-full flex-col items-center justify-center"
-                    >
-                      <div
-                        class="relative"
-                      >
-                        <div
-                          class="shrink-0 css-11ohc3q"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                          >
-                            <img
-                              alt="John Doe"
-                              data-testid="ProfileAvatar__svg"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                              title="John Doe"
-                            />
-                            <span
-                              class="absolute font-semibold text-white"
-                            >
-                              JO
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <span
-                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
-                      >
-                        John Doe
-                      </span>
-                    </div>
-                    <div
-                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
-                    >
-                      <div
-                        class="static sm:relative"
-                      >
-                        <span
-                          data-testid="dropdown__toggle"
-                        >
-                          <div
-                            class="flex w-4 justify-center overflow-hidden"
-                          >
-                            <div
-                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="ellipsis-vertical"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <circle
-                                    cx="10"
-                                    cy="16.994"
-                                    r="2.006"
-                                  />
-                                  <circle
-                                    cx="10"
-                                    cy="3"
-                                    r="2"
-                                  />
-                                  <circle
-                                    cx="10"
-                                    cy="10"
-                                    r="2"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                </div>
-                <div
-                  class="h-40 w-36 leading-tight sm:w-40"
-                >
-                  <button
-                    class="css-116zvw2"
-                    data-testid="Card"
-                    type="button"
-                  >
-                    <div
-                      class="mx-auto flex h-full flex-col items-center justify-center"
-                    >
-                      <div
-                        class="relative"
-                      >
-                        <div
-                          class="shrink-0 css-11ohc3q"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                          >
-                            <img
-                              alt="Jane Doe"
-                              data-testid="ProfileAvatar__svg"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
-                              title="Jane Doe"
-                            />
-                            <span
-                              class="absolute font-semibold text-white"
-                            >
-                              JA
-                            </span>
-                          </div>
-                        </div>
-                        <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
-                        >
-                          <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="lock"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              >
-                                <path
-                                  d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                          <span />
-                        </span>
-                      </div>
-                      <span
-                        class="text-theme-primary-text mt-3 max-w-32 truncate font-semibold"
-                      >
-                        Jane Doe
-                      </span>
-                    </div>
-                    <div
-                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
-                    >
-                      <div
-                        class="static sm:relative"
-                      >
-                        <span
-                          data-testid="dropdown__toggle"
-                        >
-                          <div
-                            class="flex w-4 justify-center overflow-hidden"
-                          >
-                            <div
-                              class="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="ellipsis-vertical"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <circle
-                                    cx="10"
-                                    cy="16.994"
-                                    r="2.006"
-                                  />
-                                  <circle
-                                    cx="10"
-                                    cy="3"
-                                    r="2"
-                                  />
-                                  <circle
-                                    cx="10"
-                                    cy="10"
-                                    r="2"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                </div>
-                <div
-                  class="group h-40 leading-tight sm:w-40 w-36"
-                >
-                  <button
-                    class="css-10zh490"
-                    data-testid="Card"
-                    type="button"
-                  >
-                    <div
-                      class="mx-auto flex h-full flex-col items-center justify-center"
-                    >
-                      <div>
-                        <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
-                        >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="plus"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              >
-                                <path
-                                  d="M1 10h18M10 1v18"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
-                      >
-                        Create
-                      </span>
-                    </div>
-                    <div
-                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <p
-              class="mt-8 text-base text-theme-secondary-text md:mt-16"
-            >
-              <span>
-                Exported a Profile before? 
-              </span>
-              <a
-                class="ring-focus group inline-block css-15tcy38"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="#/profiles/import"
-              >
-                <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -3288,7 +2259,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -3540,7 +2511,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -3551,7 +2522,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -3571,7 +2542,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -3668,7 +2639,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -3677,7 +2648,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -3727,13 +2698,13 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -3754,7 +2725,7 @@ exports[`Welcome > should render with profiles 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -4006,7 +2977,7 @@ exports[`Welcome > should render with profiles 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -4017,7 +2988,7 @@ exports[`Welcome > should render with profiles 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -4103,7 +3074,7 @@ exports[`Welcome > should render with profiles 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -4114,7 +3085,7 @@ exports[`Welcome > should render with profiles 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -4134,7 +3105,7 @@ exports[`Welcome > should render with profiles 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -4231,7 +3202,7 @@ exports[`Welcome > should render with profiles 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -4240,7 +3211,7 @@ exports[`Welcome > should render with profiles 1`] = `
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -4290,351 +3261,13 @@ exports[`Welcome > should render with profiles 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
-                >
-                  Import it here.
-                </span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Welcome > should render without profiles 1`] = `
-<DocumentFragment>
-  <div
-    class="css-kmmje1"
-  >
-    <nav
-      aria-labelledby="main menu"
-      class="css-97i12m"
-    >
-      <div
-        class="relative flex h-21"
-      >
-        <div
-          class="flex flex-1 px-8 sm:ml-12"
-        >
-          <div
-            class="my-auto flex items-center"
-          >
-            <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-              data-testid="NavigationBarLogo--button"
-              type="button"
-            >
-              <span
-                class="relative"
-              >
-                <svg
-                  fill="none"
-                  height="28"
-                  viewBox="0 0 363 363"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_434_4442)"
-                  >
-                    <path
-                      d="M174.182 352.325a279.256 279.256 0 0 1-25.627-20.536c-8.518-7.525-17.006-15.66-25.229-24.178a470.15 470.15 0 0 1-29.234-33.315 449.417 449.417 0 0 1-57.68-93.623 420.933 420.933 0 0 1-22.044-60.102A416.702 416.702 0 0 1 1.126 51.749c-.512-4.803-.303-10.73 5.9-13.842a393.077 393.077 0 0 1 54.42-19.94 459.697 459.697 0 0 1 52.646-12.195A374.409 374.409 0 0 1 176.15.333h11.6a374.406 374.406 0 0 1 62.057 5.44 459.723 459.723 0 0 1 52.646 12.195 393.328 393.328 0 0 1 54.422 19.939c6.203 3.115 6.41 9.034 5.898 13.842a416.672 416.672 0 0 1-13.242 68.822 421.133 421.133 0 0 1-22.044 60.102 449.395 449.395 0 0 1-57.68 93.623 470 470 0 0 1-29.234 33.315c-8.223 8.518-16.711 16.653-25.229 24.178a279.73 279.73 0 0 1-25.627 20.536 17.811 17.811 0 0 1-15.528 0h-.007zm6.769-230.087c-.412.547-28.363 29.571-48.772 50.764-7.035 7.318-13.229 13.736-17.187 17.853a49.345 49.345 0 0 0-14.37 29.355 42.981 42.981 0 0 0 2.034 17.531 59.295 59.295 0 0 0 10.41 18.547 369.34 369.34 0 0 0 42.811 44.915 223.324 223.324 0 0 0 20.072 16.051 13.364 13.364 0 0 0 12.005 0 223.333 223.333 0 0 0 20.07-16.051 369.191 369.191 0 0 0 42.811-44.915 59.297 59.297 0 0 0 10.411-18.547 42.98 42.98 0 0 0 2.033-17.531 49.34 49.34 0 0 0-14.377-29.358l-14.811-15.385-1.779-1.848c-20.66-21.451-48.955-50.832-49.371-51.383a1.179 1.179 0 0 0-.995-.548 1.184 1.184 0 0 0-.995.548v.002zm1.408-69.483c.136.215.321.505.582.869.391.544 6.257 9.93 14.382 22.92 19.488 31.162 52.102 83.315 60.679 96.014 6.342 9.377 14.353 14.77 21.974 14.772 7.402 0 18.108-5.031 27.079-29.067a332.382 332.382 0 0 0 19.124-81.095c.409-3.84.243-8.568-4.713-11.056a314.32 314.32 0 0 0-43.468-15.926 367.237 367.237 0 0 0-42.052-9.743 299.13 299.13 0 0 0-49.568-4.345h-8.871a299.13 299.13 0 0 0-49.568 4.345 367.225 367.225 0 0 0-42.051 9.743 314.427 314.427 0 0 0-43.469 15.926c-4.951 2.486-5.12 7.213-4.712 11.056a332.313 332.313 0 0 0 19.124 81.095c4.952 13.265 13.67 29.067 27.078 29.067 7.624 0 15.63-5.384 21.974-14.772 8.57-12.687 41.169-64.811 60.643-95.955l.032-.053c8.124-12.993 13.995-22.38 14.384-22.921.259-.364.455-.657.58-.87.209-.327.311-.491.416-.491.105 0 .214.16.421.487zm-55.455 149.533l19.652-20.614h69.159l19.649 20.614h-108.46zm34.197-35.377l20.162-20.871 20.159 20.871h-40.321z"
-                      fill="currentColor"
-                    />
-                  </g>
-                </svg>
-              </span>
-            </button>
-            <span
-              class="text-lg uppercase"
-            >
-              <strong>
-                ARK
-              </strong>
-              Vault
-            </span>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div
-      class="flex flex-1 flex-col"
-    >
-      <div
-        class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
-      >
-        <div
-          class="mx-auto px-8 lg:container md:px-10"
-        >
-          <div
-            class="mx-auto hidden w-96 md:block"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 358 202"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M338 112.921v2h-76v-2zM298 72.92v2h-36v-2zM298 152.921v2h-26v-2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M289 65.92v110h-2v-110zM330 91.92v28h-2v-28zM358 112.921v2h-10v-2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M354 108.921v10h-2v-10zM20 114.921v-2h76v2zM60 74.92v-2h36v2zM60 154.921v-2h26v2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M69 175.921v-110h2v110zM28 119.921v-28h2v28zM0 114.921v-2h10v2z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M4 118.921v-10h2v10z"
-                fill="#DBDEE5"
-              />
-              <path
-                d="M257.378 89.374v94.521c0 8.489-3.807 13.064-12.295 13.064H112.907c-8.489 0-12.296-3.807-12.296-12.295v-95.29"
-                stroke="#EEF3F5"
-                stroke-width="10"
-              />
-              <path
-                d="M104.69 89.569h149.468v3.476H104.69zM243.73 64.368h10.428v4.345H243.73zM103.821 64.368h10.428v4.345h-10.428z"
-                fill="#EEF3F5"
-              />
-              <path
-                d="M246.62 35.581c8.488 0 15.369 6.881 15.369 15.37v134.481c0 8.488-6.881 15.369-15.369 15.369H112.138c-8.488 0-15.369-6.881-15.369-15.369V50.95c0-8.488 6.881-15.369 15.369-15.369"
-                stroke="#DBDEE5"
-                stroke-linecap="round"
-                stroke-width="2"
-              />
-              <path
-                d="M254.304 65.55V186.2a7.684 7.684 0 0 1-7.684 7.684H111.37a7.685 7.685 0 0 1-7.685-7.684V65.55"
-                stroke="#DBDEE5"
-                stroke-dasharray="7 4"
-                stroke-linecap="round"
-                stroke-width="2"
-              />
-              <g
-                clip-path="url(#clip0_921_17772)"
-                stroke="#DBDEE5"
-                stroke-width="2"
-              >
-                <path
-                  d="M96 89.569h165.11M103.685 93.6h151.387"
-                />
-              </g>
-              <g
-                clip-path="url(#clip1_921_17772)"
-                fill="#DBDEE5"
-              >
-                <path
-                  d="M96 64.783v1H115.275v-2H96.019h-.005-.002-.002-.002-.001H96l-.001 1zm147.858 1H261.22v-1-1h-.001-.001-.001-.001-.001-.001-.001-.001-.001-.003-.005-.002-.002-.002H243.858v2zM103.685 68.625v1H115.221v-2H103.718h-.005-.014-.003-.003-.001-.001-.001-.001-.001-.001-.002v1zm139.781 1H255.073v-1-1h-.001-.001-.001-.001-.002-.001-.002-.001-.001-.001-.001-.001-.001-.004-.001-.003-.003-.003-.005-.02-.007-.005-.019H243.466v2z"
-                />
-              </g>
-              <path
-                d="M123.808 13.966h113.839v4.345H123.808zM115.118 84.355h129.481V88.7H115.118z"
-                fill="#E6EFF9"
-              />
-              <path
-                d="M123.665 17.906V8.685A7.685 7.685 0 0 1 131.35 1h98.363a7.685 7.685 0 0 1 7.685 7.685v9.221"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <path
-                d="M115.212 88.605V25.59a7.684 7.684 0 0 1 7.685-7.684h112.964a7.685 7.685 0 0 1 7.685 7.684v63.015"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <ellipse
-                cx="220.702"
-                cy="61.761"
-                rx="11.732"
-                ry="11.297"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <path
-                d="M212.914 49.647a11.5 11.5 0 0 1-3.949-8.687c0-6.366 5.161-11.527 11.527-11.527s11.527 5.161 11.527 11.527c0 3.443-1.51 6.534-3.904 8.646M143.645 74.004V37.118a6.147 6.147 0 1 1 12.295 0v36.886"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <rect
-                height="34.98"
-                rx="3.412"
-                stroke="#235B95"
-                stroke-width="2"
-                width="6.824"
-                x="129.421"
-                y="30.578"
-              />
-              <path
-                d="M103.821 89.57h151.206M134.423 93.6h89.911M244.599 64.368h18.249M96 64.368h18.249M244.599 68.713h10.428M103.821 68.713h10.428"
-                stroke="#212225"
-                stroke-width="2"
-              />
-              <circle
-                cx="178.776"
-                cy="145.332"
-                r="37.552"
-                stroke="#E6EFF9"
-                stroke-width="6"
-              />
-              <circle
-                cx="179.165"
-                cy="144.926"
-                r="39.715"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <circle
-                cx="179.173"
-                cy="144.935"
-                r="34.949"
-                stroke="#235B95"
-                stroke-width="2"
-              />
-              <g
-                clip-path="url(#clip2_921_17772)"
-                fill="#235B95"
-              >
-                <path
-                  d="M139.45 143.755a1 1 0 0 0 0 2v-2zm3.966 2a1 1 0 1 0 0-2v2zm71.165-2a1 1 0 0 0 0 2v-2zm3.958 2a1 1 0 0 0 0-2v2zm-79.089-1v1H143.416v-2H139.566h-.036H139.521 139.497h-.002-.005-.005-.003-.003-.001-.003-.001-.003-.001-.001-.001-.006-.001-.001-.001-.002-.002-.001-.001-.001-.001-.001v1zm75.131 1H218.539v-1-1h-.001-.002-.001-.002-.002-.001-.003-.001-.001-.001-.001-.001-.004-.001-.001-.003-.001-.003-.003-.003-.003-.005-.002H218.482h-.002-.015-.007-.012H218.433h-.011H214.581v2zM179.994 105.211a1 1 0 0 0-2 0h2zm-2 3.966a1 1 0 1 0 2 0h-2zm2 71.165a1 1 0 0 0-2 0h2zm-2 3.958a1 1 0 0 0 2 0h-2zm1-79.089h-1V109.177h2v-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.013-.014-.014-.014-.014-.013-.014-.014-.014-.013-.014-.013-.014-.014-.013-.014-.013-.014-.013-.014-.013-.013-.014-.013-.014-.013-.013-.013-.014-.013-.013-.013-.014-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.012-.013-.013-.013-.012-.013-.013-.012-.013-.013-.012-.013-.012-.013-.012-.013-.012-.013-.012-.013-.012-.012-.013-.012V108v-.012-.013-.012-.012-.012-.012-.013-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.011-.012-.012-.012-.012-.011-.012-.012-.012-.011-.012-.011-.012-.012-.011-.012-.011-.012-.011-.012-.011-.011-.012-.011-.011-.012-.011-.011-.011-.012-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.011-.01-.011-.011-.011-.01-.011-.011-.01-.011-.01-.011-.011-.01-.011-.01-.01-.011-.01-.011-.01-.01-.01-.011-.01-.01-.01V107v-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.009-.01-.01-.01-.01-.009-.01-.01-.009-.01-.01-.009-.01-.009-.01-.009-.01-.009-.009-.01-.009-.009-.01-.009-.009-.009-.01-.009-.009-.009-.009-.009-.009-.009-.009-.009-.009-.009-.009-.008-.009-.009-.009-.008-.009-.009-.008-.009-.009-.008-.009-.008-.009-.008-.009-.008-.008-.009-.008-.008-.009-.008-.008-.008-.008-.009-.008-.008-.008-.008-.008-.008-.008-.007-.008-.008-.008-.008-.008-.007-.008-.008-.007-.008-.008-.007-.008-.007-.008-.007-.008-.007-.007-.008-.007-.007-.007-.008-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.007-.006-.007-.007-.007-.006-.007-.006-.007-.006-.007-.006-.007-.006-.007-.006-.006-.007-.006-.006-.006-.007-.006-.006-.006-.006-.006-.006-.006-.006-.006-.006-.006-.005-.006-.006-.006-.005-.006-.006-.005-.006-.005-.006-.005-.006-.005-.006-.005-.005-.006-.005-.005-.005-.006-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.004-.005-.005-.005-.005-.004-.005-.004-.005-.005-.004-.005-.004-.005-.004-.004-.005-.004-.004-.004-.005-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.003-.004-.004-.003-.004-.004-.003-.004-.003-.004-.003-.004-.003-.003-.004-.003-.003-.003-.004-.003-.003-.003-.003-.003-.003-.003-.003-.003-.003-.003-.002-.003-.003-.002-.003-.003-.002-.003-.002-.003-.002-.003-.002-.003-.002-.002-.002-.003-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.001-.002-.002-.001-.002-.002-.001-.002-.001-.002-.001-.001-.002-.001-.001-.002-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001h-1zm-1 75.131V184.3h2v-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.001-.002-.001-.001-.001-.001-.002-.001-.001-.002-.001-.002-.001-.002-.001-.002-.002-.001-.002-.002-.002-.001-.002-.002-.002-.002-.002-.002-.002-.002-.002-.002-.003-.002-.002-.002-.003-.002-.002-.003-.002-.003-.002-.003-.003-.002-.003-.002-.003-.003-.003-.003-.002-.003-.003-.003-.003-.003-.003-.003-.003-.004-.003-.003-.003-.003-.004-.003-.003-.004-.003-.004-.003-.004-.003-.004-.004-.003-.004-.004-.003-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.004-.005-.004-.004-.005-.004-.004-.005-.004-.005-.004-.005-.004-.005-.005-.004-.005-.005-.004-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.005-.006-.005-.005-.005-.006-.005-.006-.005-.006-.005-.006-.005-.006-.005-.006-.006-.005-.006-.006-.006-.006-.005-.006-.006-.006-.006-.006-.006-.006-.006-.007-.006-.006-.006-.006-.007-.006-.006-.007-.006-.007-.006-.006-.007-.007-.006-.007-.006-.007-.007-.006-.007-.007-.007-.007-.006-.007-.007-.007-.007-.007-.007-.007-.007-.007-.008-.007-.007-.007-.008-.007-.007-.007-.008-.007-.008-.007-.008-.007-.008-.007-.008-.008-.007-.008-.008-.007-.008-.008-.008-.008-.007-.008-.008-.008-.008-.008-.008-.008-.009-.008-.008-.008-.008-.009-.008-.008-.008-.009-.008-.009-.008-.008-.009-.008-.009-.009-.008-.009-.008-.009-.009-.009-.008-.009-.009-.009-.009-.008-.009-.009-.009-.009-.009-.009-.009-.01-.009-.009-.009-.009-.009-.01-.009-.009-.01-.009-.009-.01-.009-.01-.009-.01-.009-.01-.009-.01-.01-.009-.01-.01-.01-.009-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.01-.011-.01-.01-.01-.011-.01-.01-.011-.01-.011-.01-.01-.011-.011-.01-.011-.01-.011-.011-.01-.011-.011-.01-.011-.011-.011-.011-.011-.01-.011-.011-.011-.011-.011-.011-.011-.012-.011-.011-.011-.011-.011-.012-.011V182v-.011-.012-.011-.012-.011-.011-.012-.011-.012-.011-.012-.011-.012-.012-.011-.012-.012-.011-.012-.012-.012-.011-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.012-.013-.012-.012-.012-.013-.012-.012-.013-.012-.013-.012-.012-.013-.012-.013-.012-.013-.013-.012-.013-.013-.012-.013-.013-.012-.013-.013-.013-.013-.012-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.013-.014-.013-.013-.013-.013-.014-.013-.013-.013-.014-.013-.014-.013-.013-.014-.013-.014-.013-.014-.013-.014-.014-.013-.014-.013-.014-.014-.013-.014-.014-.014-.014-.013-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014-.014h-2zM145.248 124.117a1 1 0 0 0-1 1.732l1-1.732zm2.435 3.715a1 1 0 0 0 1-1.732l-1 1.732zm62.631 33.85a1 1 0 1 0-1 1.733l1-1.733zm2.427 3.711a1 1 0 1 0 1-1.732l-1 1.732zm-67.993-40.41l-.5.866.001.001.003.001a2.334 2.334 0 0 0 .058.034l.181.104.69.399 2.502 1.444 1-1.732-2.502-1.444-.69-.399-.181-.104-.046-.027a.097.097 0 0 1-.012-.007l-.003-.002h-.001l-.5.866zm64.566 38.432l2.496 1.441.689.398a16.984 16.984 0 0 1 .226.13l.012.007.003.002h.001l.5-.866.5-.866h-.001l-.003-.002-.012-.007a98.036 98.036 0 0 0-.226-.131l-.689-.397-2.496-1.442-1 1.733zM199.632 111.009a1 1 0 0 0-1.732-1l1.732 1zm-3.715 2.435a1 1 0 0 0 1.732 1l-1.732-1zm-33.85 62.63a1 1 0 0 0-1.732-1l1.732 1zm-3.711 2.428a1 1 0 0 0 1.732 1l-1.732-1zm40.41-67.993l-.866-.5v.001l-.002.003-.007.011-.027.047-.104.18-.399.691-1.444 2.502 1.732 1 1.445-2.502.398-.691.105-.18.026-.047.007-.011.002-.003v-.001l-.866-.5zm-38.431 64.565l-1.442 2.497-.397.689-.104.18-.027.046-.007.012-.002.003v.001l.866.5.866.5v-.001h.001l.001-.003.007-.012.027-.046.104-.18.397-.689 1.442-2.497-1.732-1zM160.088 110.009a1 1 0 1 0-1.732 1l1.732-1zm.251 4.435a1 1 0 0 0 1.732-1l-1.732 1zm37.315 60.63a1 1 0 0 0-1.732 1l1.732-1zm.246 4.428a1 1 0 0 0 1.732-1l-1.732 1zm-38.678-68.993l-.866.5v.001l.002.003.007.011.027.047.104.18.399.691 1.444 2.502 1.732-1-1.444-2.502-.399-.691-.104-.18-.027-.047-.007-.011-.001-.003-.001-.001-.866.5zm36.7 65.565l1.441 2.497.397.689a98.036 98.036 0 0 0 .131.226l.007.012.002.003v.001l.866-.5.866-.5v-.001l-.002-.003-.007-.012a812.31 812.31 0 0 1-.528-.915l-1.441-2.497-1.732 1zM213.741 125.849a1 1 0 0 0-1-1.732l1 1.732zm-4.435.251a1 1 0 0 0 1 1.732l-1-1.732zm-60.631 37.315a1 1 0 0 0-1-1.733l1 1.733zm-4.427.246a1 1 0 0 0 1 1.732l-1-1.732zm68.993-38.678l-.5-.866h-.001l-.003.002-.012.007-.046.027-.181.104-.69.399-2.502 1.444 1 1.732 2.502-1.444.69-.399.181-.104.046-.027.012-.007.003-.002h.001l-.5-.866zm-65.566 36.699l-2.496 1.442-.689.397-.18.105a.853.853 0 0 0-.046.026l-.012.007-.003.002h-.001l.5.866.5.866h.001l.003-.002.012-.007a10.574 10.574 0 0 1 .226-.13l.689-.398 2.496-1.441-1-1.733z"
-                />
-              </g>
-              <path
-                d="M179.056 167.783a33.767 33.767 0 0 1-3.115-2.496 53.553 53.553 0 0 1-3.066-2.938 57.118 57.118 0 0 1-3.554-4.05 54.598 54.598 0 0 1-7.01-11.379 51.194 51.194 0 0 1-2.68-7.306 50.594 50.594 0 0 1-1.609-8.365c-.063-.583-.037-1.304.717-1.682a47.773 47.773 0 0 1 6.614-2.424 55.922 55.922 0 0 1 6.399-1.482 45.523 45.523 0 0 1 7.543-.661h1.41c2.528.01 5.051.232 7.543.661 2.16.368 4.297.863 6.399 1.482a47.786 47.786 0 0 1 6.615 2.424c.754.379.779 1.098.717 1.682a50.596 50.596 0 0 1-4.289 15.671 54.602 54.602 0 0 1-7.011 11.379 57.104 57.104 0 0 1-3.553 4.05 53.567 53.567 0 0 1-3.067 2.938 33.935 33.935 0 0 1-3.115 2.496 2.157 2.157 0 0 1-1.887 0h-.001zm.823-27.966c-.05.067-3.448 3.594-5.928 6.17-.855.89-1.608 1.67-2.089 2.17a6.001 6.001 0 0 0-1.747 3.568 5.22 5.22 0 0 0 .247 2.131 7.206 7.206 0 0 0 1.266 2.254 44.839 44.839 0 0 0 5.203 5.46c.776.697 1.59 1.348 2.44 1.951a1.62 1.62 0 0 0 1.459 0 27.218 27.218 0 0 0 2.44-1.951 44.915 44.915 0 0 0 5.203-5.46 7.183 7.183 0 0 0 1.265-2.254 5.22 5.22 0 0 0 .248-2.131 5.997 5.997 0 0 0-1.748-3.568l-1.8-1.87-.216-.225c-2.511-2.607-5.951-6.178-6.001-6.245a.144.144 0 0 0-.242 0zm.171-8.445c.017.026.039.061.071.105.047.066.76 1.207 1.748 2.786 2.369 3.788 6.333 10.127 7.375 11.67.771 1.14 1.745 1.796 2.671 1.796.9 0 2.201-.612 3.291-3.533a40.42 40.42 0 0 0 2.325-9.857c.05-.467.029-1.041-.573-1.344a38.352 38.352 0 0 0-5.283-1.936 44.762 44.762 0 0 0-5.112-1.184 36.313 36.313 0 0 0-6.024-.528h-1.079a36.334 36.334 0 0 0-6.025.528c-1.725.294-3.431.69-5.111 1.184a38.304 38.304 0 0 0-5.283 1.936c-.602.302-.622.877-.573 1.344a40.373 40.373 0 0 0 2.324 9.857c.602 1.612 1.662 3.533 3.292 3.533.926 0 1.9-.655 2.671-1.796 1.041-1.542 5.004-7.877 7.371-11.663l.003-.006c.988-1.579 1.702-2.72 1.749-2.786.031-.044.055-.08.07-.106.026-.04.038-.06.051-.06.013 0 .026.02.051.06zm-6.74 18.175l2.388-2.506h8.406l2.389 2.506H173.31zm4.156-4.3l2.451-2.537 2.45 2.537h-4.901z"
-                fill="#235B95"
-              />
-              <defs>
-                <clippath
-                  id="clip0_921_17772"
-                >
-                  <path
-                    d="M0 0h165.11v4.031H0z"
-                    fill="#fff"
-                    transform="translate(96 89.569)"
-                  />
-                </clippath>
-                <clippath
-                  id="clip1_921_17772"
-                >
-                  <path
-                    d="M0 0h165.22v3.842H0z"
-                    fill="#fff"
-                    transform="translate(96 64.783)"
-                  />
-                </clippath>
-                <clippath
-                  id="clip2_921_17772"
-                >
-                  <path
-                    d="M0 0h79.089v79.089H0z"
-                    fill="#fff"
-                    transform="translate(139.45 105.211)"
-                  />
-                </clippath>
-              </defs>
-            </svg>
-          </div>
-          <div
-            class="mx-auto md:mt-8"
-          >
-            <h2
-              class="mx-4 text-2xl font-bold"
-            >
-              Create Profile
-            </h2>
-            <p
-              class="text-base text-theme-secondary-text"
-            >
-              Create a new Profile to get started.
-            </p>
-            <div
-              class="mt-6 flex justify-center md:mt-8"
-            >
-              <div
-                class="gap-5 flex w-full justify-center"
-              >
-                <div
-                  class="group h-40 leading-tight sm:w-40 w-full"
-                >
-                  <button
-                    class="css-10zh490"
-                    data-testid="Card"
-                    type="button"
-                  >
-                    <div
-                      class="mx-auto flex h-full flex-col items-center justify-center"
-                    >
-                      <div>
-                        <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
-                        >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="plus"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              >
-                                <path
-                                  d="M1 10h18M10 1v18"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
-                      >
-                        Create
-                      </span>
-                    </div>
-                    <div
-                      class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <p
-              class="mt-8 text-base text-theme-secondary-text md:mt-16"
-            >
-              <span>
-                Exported a Profile before? 
-              </span>
-              <a
-                class="ring-focus group inline-block css-15tcy38"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="#/profiles/import"
-              >
-                <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>

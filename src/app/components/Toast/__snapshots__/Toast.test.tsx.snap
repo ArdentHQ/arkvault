@@ -6,7 +6,7 @@ exports[`Toast > should render 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-1skql00"
+      class="css-1hr04bz"
     >
       <div
         class="css-v0ob3f"
@@ -47,7 +47,7 @@ exports[`Toast > should render 1`] = `
       </div>
     </div>
     <div
-      class="css-1mnink9"
+      class="css-1r27gbg"
     >
       <span>
         Hello World!
@@ -63,7 +63,7 @@ exports[`Toast > should render as danger toast 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-n1f8sq"
+      class="css-1tghewh"
     >
       <div
         class="css-v0ob3f"
@@ -99,7 +99,7 @@ exports[`Toast > should render as danger toast 1`] = `
       </div>
     </div>
     <div
-      class="css-18p6zz7"
+      class="css-1md4zj4"
     >
       <span>
         Hello World!
@@ -115,7 +115,7 @@ exports[`Toast > should render as hint toast 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-ubekw2"
+      class="css-1gmw2vt"
     >
       <div
         class="css-v0ob3f"
@@ -150,7 +150,7 @@ exports[`Toast > should render as hint toast 1`] = `
       </div>
     </div>
     <div
-      class="css-1bsea4m"
+      class="css-2wi7ev"
     >
       <span>
         Hello World!
@@ -166,7 +166,7 @@ exports[`Toast > should render as info toast 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-1x20b6z"
+      class="css-1azrxwi"
     >
       <div
         class="css-v0ob3f"
@@ -207,7 +207,7 @@ exports[`Toast > should render as info toast 1`] = `
       </div>
     </div>
     <div
-      class="css-hfho32"
+      class="css-14w62d4"
     >
       <span>
         Hello World!
@@ -223,7 +223,7 @@ exports[`Toast > should render as success toast 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-1urufw8"
+      class="css-njel2h"
     >
       <div
         class="css-v0ob3f"
@@ -259,7 +259,7 @@ exports[`Toast > should render as success toast 1`] = `
       </div>
     </div>
     <div
-      class="css-134altb"
+      class="css-17sbv9k"
     >
       <span>
         Hello World!
@@ -275,7 +275,7 @@ exports[`Toast > should render as warning toast 1`] = `
     class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
-      class="css-1skql00"
+      class="css-1hr04bz"
     >
       <div
         class="css-v0ob3f"
@@ -316,7 +316,7 @@ exports[`Toast > should render as warning toast 1`] = `
       </div>
     </div>
     <div
-      class="css-1mnink9"
+      class="css-1r27gbg"
     >
       <span>
         Hello World!

@@ -15,7 +15,7 @@ describe("AppearanceAccentColor", () => {
 		const setValue = vi.fn();
 
 		vi.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
-			() => ({ setValue, watch } as unknown as UseFormMethods),
+			() => ({ setValue, watch }) as unknown as UseFormMethods,
 		);
 
 		const { asFragment } = render(<AppearanceAccentColor />);
@@ -24,12 +24,12 @@ describe("AppearanceAccentColor", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["navy", "green"])("should allow to change the value", (color: string) => {
+	it.each(["navy", "green"])("should allow to change the value", async (color: string) => {
 		const watch = vi.fn();
 		const setValue = vi.fn();
 
 		vi.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
-			() => ({ setValue, watch } as unknown as UseFormMethods),
+			() => ({ setValue, watch }) as unknown as UseFormMethods,
 		);
 
 		render(<AppearanceAccentColor />);
@@ -38,7 +38,7 @@ describe("AppearanceAccentColor", () => {
 
 		const ariaLabel = translations.APPEARANCE.OPTIONS.ACCENT_COLOR.COLORS[color.toUpperCase()];
 
-		userEvent.click(screen.getByLabelText(ariaLabel));
+		await userEvent.click(screen.getByLabelText(ariaLabel));
 
 		expect(setValue).toHaveBeenCalledWith("accentColor", color, {
 			shouldDirty: true,

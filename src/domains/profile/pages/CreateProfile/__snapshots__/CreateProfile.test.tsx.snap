@@ -7,7 +7,7 @@ exports[`CreateProfile > should render 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -115,14 +115,14 @@ exports[`CreateProfile > should render 1`] = `
                             Profile Name
                           </label>
                           <div
-                            class=" css-1psxlcd"
+                            class=" css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
+                                class="no-ligatures w-full border-none css-1vs1awz"
                                 data-testid="Input"
                                 name="name"
                                 type="text"
@@ -145,10 +145,10 @@ exports[`CreateProfile > should render 1`] = `
                               class="h-full overflow-hidden rounded-full"
                             >
                               <div
-                                class="css-5aibro"
+                                class="css-1vxhzvl"
                               >
                                 <button
-                                  class="css-1jhy6v9"
+                                  class="css-6419sw"
                                   data-testid="SelectProfileImage__upload-button"
                                   type="button"
                                 >
@@ -203,7 +203,7 @@ exports[`CreateProfile > should render 1`] = `
                         </span>
                       </label>
                       <div
-                        class="css-1psxlcd"
+                        class="css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -211,7 +211,7 @@ exports[`CreateProfile > should render 1`] = `
                           <input
                             aria-invalid="false"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="PasswordValidation__password"
                             name="password"
                             type="password"
@@ -282,14 +282,14 @@ exports[`CreateProfile > should render 1`] = `
                         </span>
                       </label>
                       <div
-                        class="css-1psxlcd"
+                        class="css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="PasswordValidation__confirmPassword"
                             name="confirmPassword"
                             type="password"
@@ -361,14 +361,14 @@ exports[`CreateProfile > should render 1`] = `
                           data-testid="SelectDropdown"
                         >
                           <div
-                            class="sr-only css-1psxlcd"
+                            class="sr-only css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
+                                class="no-ligatures w-full border-none css-1vs1awz"
                                 data-testid="select-list__input"
                                 name="currency"
                                 readonly=""
@@ -398,7 +398,7 @@ exports[`CreateProfile > should render 1`] = `
                                   USD ($)…
                                 </div>
                                 <div
-                                  class="css-1psxlcd"
+                                  class="css-n1b0kl"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -408,7 +408,7 @@ exports[`CreateProfile > should render 1`] = `
                                       aria-controls="ProfileForm__currency-menu"
                                       aria-labelledby="ProfileForm__currency-label"
                                       autocomplete="off"
-                                      class="no-ligatures w-full border-none css-1nupw50"
+                                      class="no-ligatures w-full border-none css-1vs1awz"
                                       data-testid="SelectDropdown__input"
                                       id="ProfileForm__currency-input"
                                       name="currency"
@@ -499,7 +499,7 @@ exports[`CreateProfile > should render 1`] = `
                             <button
                               aria-checked="true"
                               aria-label="light"
-                              class="css-12yryft"
+                              class="css-1oqtqef"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -543,7 +543,7 @@ exports[`CreateProfile > should render 1`] = `
                             <button
                               aria-checked="false"
                               aria-label="dark"
-                              class="css-12yryft"
+                              class="css-1oqtqef"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -590,7 +590,7 @@ exports[`CreateProfile > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
                     type="horizontal"
                   />
                   <div
@@ -603,7 +603,7 @@ exports[`CreateProfile > should render 1`] = `
                         class="flex cursor-pointer items-center space-x-3"
                       >
                         <input
-                          class="css-7i915u"
+                          class="css-kf7z38"
                           color="success"
                           data-testid="ProfileForm__disclaimer-checkbox"
                           name="disclaimer"
@@ -614,14 +614,14 @@ exports[`CreateProfile > should render 1`] = `
                         >
                           I accept the 
                           <a
-                            class="ring-focus group inline-block css-15tcy38"
+                            class="ring-focus group inline-block css-7nwwrh"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="http://arkvault.io/terms-of-service"
                             rel="noopener noreferrer"
                           >
                             <span
-                              class="css-1y2194z"
+                              class="css-170792"
                             >
                               Terms of Service
                             </span>
@@ -652,14 +652,14 @@ exports[`CreateProfile > should render 1`] = `
                           </a>
                            and 
                           <a
-                            class="ring-focus group inline-block css-15tcy38"
+                            class="ring-focus group inline-block css-7nwwrh"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://arkvault.io/privacy-policy"
                             rel="noopener noreferrer"
                           >
                             <span
-                              class="css-1y2194z"
+                              class="css-170792"
                             >
                               Privacy Policy
                             </span>
@@ -693,10 +693,10 @@ exports[`CreateProfile > should render 1`] = `
                     </fieldset>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <button
-                      class="css-1jhy6v9"
+                      class="css-6419sw"
                       data-testid="ProfileForm__back-button"
                       type="button"
                     >
@@ -707,7 +707,7 @@ exports[`CreateProfile > should render 1`] = `
                       </div>
                     </button>
                     <button
-                      class="css-1yqe28v"
+                      class="css-qrwjsp"
                       data-testid="ProfileForm__submit-button"
                       disabled=""
                       type="submit"

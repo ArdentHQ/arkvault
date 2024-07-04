@@ -3,7 +3,7 @@
 exports[`Divider > should render 1`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
     type="horizontal"
   />
 </DocumentFragment>
@@ -12,7 +12,7 @@ exports[`Divider > should render 1`] = `
 exports[`Divider > should render a dashed 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
     type="horizontal"
   />
 </div>
@@ -21,7 +21,7 @@ exports[`Divider > should render a dashed 1`] = `
 exports[`Divider > should render horizontal type 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
     type="horizontal"
   />
 </div>
@@ -30,7 +30,7 @@ exports[`Divider > should render horizontal type 1`] = `
 exports[`Divider > should render horizontal with size default 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
     type="horizontal"
   />
 </div>
@@ -39,7 +39,7 @@ exports[`Divider > should render horizontal with size default 1`] = `
 exports[`Divider > should render horizontal with size lg 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
     type="horizontal"
   />
 </div>
@@ -48,7 +48,7 @@ exports[`Divider > should render horizontal with size lg 1`] = `
 exports[`Divider > should render horizontal with size md 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
     type="horizontal"
   />
 </div>
@@ -57,7 +57,7 @@ exports[`Divider > should render horizontal with size md 1`] = `
 exports[`Divider > should render horizontal with size sm 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
     type="horizontal"
   />
 </div>
@@ -66,7 +66,7 @@ exports[`Divider > should render horizontal with size sm 1`] = `
 exports[`Divider > should render horizontal with size xl 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
     type="horizontal"
   />
 </div>
@@ -75,7 +75,7 @@ exports[`Divider > should render horizontal with size xl 1`] = `
 exports[`Divider > should render vertical type 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
     type="vertical"
   />
 </div>
@@ -84,7 +84,7 @@ exports[`Divider > should render vertical type 1`] = `
 exports[`Divider > should render vertical with size default 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
     type="vertical"
   />
 </div>
@@ -93,7 +93,7 @@ exports[`Divider > should render vertical with size default 1`] = `
 exports[`Divider > should render vertical with size lg 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ahagrx"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-132iid3"
     type="vertical"
   />
 </div>
@@ -102,7 +102,7 @@ exports[`Divider > should render vertical with size lg 1`] = `
 exports[`Divider > should render vertical with size md 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
     type="vertical"
   />
 </div>
@@ -111,7 +111,7 @@ exports[`Divider > should render vertical with size md 1`] = `
 exports[`Divider > should render vertical with size sm 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1skb9fd"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ginesk"
     type="vertical"
   />
 </div>
@@ -120,7 +120,7 @@ exports[`Divider > should render vertical with size sm 1`] = `
 exports[`Divider > should render vertical with size xl 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ggzzh6"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
     type="vertical"
   />
 </div>

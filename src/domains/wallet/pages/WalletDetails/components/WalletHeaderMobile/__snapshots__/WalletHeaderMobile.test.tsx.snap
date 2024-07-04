@@ -35,7 +35,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-jxpwdn"
+        class="shrink-0 css-1i0wxh3"
         data-testid="Avatar"
       >
         <div
@@ -56,7 +56,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
         class="mr-2 flex items-center space-x-1 border-r border-theme-secondary-800 pr-2 empty:border-0"
       />
       <button
-        class="p-1 css-p48ezs"
+        class="p-1 css-33wsq3"
         type="button"
       >
         <div
@@ -102,7 +102,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-u3jrna"
+              class="no-ligatures css-9nx3be"
               data-testid="TruncateEnd"
             >
               ARK Wallet 1
@@ -198,7 +198,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
     class="mt-6 flex items-center space-x-3"
   >
     <button
-      class="bg-theme-dark-500 my-auto flex-1 css-1bx0hyc"
+      class="bg-theme-dark-500 my-auto flex-1 css-fl4fi0"
       data-testid="WalletHeaderMobile__send-button"
       type="button"
     >
@@ -219,7 +219,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+            class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
             type="button"
           >
             <div

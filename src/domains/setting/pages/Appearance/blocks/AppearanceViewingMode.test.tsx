@@ -15,7 +15,7 @@ describe("AppearanceViewingMode", () => {
 		const setValue = vi.fn();
 
 		vi.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
-			() => ({ setValue, watch } as unknown as UseFormMethods),
+			() => ({ setValue, watch }) as unknown as UseFormMethods,
 		);
 
 		const { asFragment } = render(<AppearanceViewingMode />);
@@ -24,12 +24,12 @@ describe("AppearanceViewingMode", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["light", "dark"])("should allow to change the value", (viewingMode: string) => {
+	it.each(["light", "dark"])("should allow to change the value", async (viewingMode: string) => {
 		const watch = vi.fn();
 		const setValue = vi.fn();
 
 		vi.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
-			() => ({ setValue, watch } as unknown as UseFormMethods),
+			() => ({ setValue, watch }) as unknown as UseFormMethods,
 		);
 
 		render(<AppearanceViewingMode />);
@@ -38,7 +38,7 @@ describe("AppearanceViewingMode", () => {
 
 		const buttonText = translations.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES[viewingMode.toUpperCase()];
 
-		userEvent.click(screen.getByText(buttonText));
+		await userEvent.click(screen.getByText(buttonText));
 
 		expect(setValue).toHaveBeenCalledWith("viewingMode", viewingMode, {
 			shouldDirty: true,

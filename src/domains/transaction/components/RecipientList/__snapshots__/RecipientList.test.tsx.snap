@@ -79,7 +79,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -111,7 +111,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
@@ -132,7 +132,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="recipient-list__remove-recipient"
                   disabled=""
                   type="button"
@@ -183,7 +183,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -215,7 +215,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
@@ -236,7 +236,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="css-1cp5yjb"
+                  class="css-15yk9k4"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -286,7 +286,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -318,7 +318,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
@@ -339,7 +339,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="css-1cp5yjb"
+                  class="css-15yk9k4"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -389,7 +389,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -431,7 +431,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="css-1cp5yjb"
+                  class="css-15yk9k4"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -562,7 +562,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="shrink-0 css-y5oe37"
+                class="shrink-0 css-h8w6w0"
                 data-testid="Avatar"
               >
                 <div
@@ -587,7 +587,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
@@ -605,7 +605,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="ml-2 table-cell md:hidden"
             >
               <div
-                class="shrink-0 css-1vy2z2u"
+                class="shrink-0 css-1yk316i"
                 data-testid="Avatar"
               >
                 <div
@@ -634,7 +634,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="shrink-0 css-y5oe37"
+                class="shrink-0 css-h8w6w0"
                 data-testid="Avatar"
               >
                 <div
@@ -659,7 +659,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
@@ -677,7 +677,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="ml-2 table-cell md:hidden"
             >
               <div
-                class="shrink-0 css-1vy2z2u"
+                class="shrink-0 css-1yk316i"
                 data-testid="Avatar"
               >
                 <div
@@ -706,7 +706,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="shrink-0 css-y5oe37"
+                class="shrink-0 css-h8w6w0"
                 data-testid="Avatar"
               >
                 <div
@@ -731,7 +731,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
@@ -749,7 +749,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="ml-2 table-cell md:hidden"
             >
               <div
-                class="shrink-0 css-1vy2z2u"
+                class="shrink-0 css-1yk316i"
                 data-testid="Avatar"
               >
                 <div
@@ -778,7 +778,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="shrink-0 css-y5oe37"
+                class="shrink-0 css-h8w6w0"
                 data-testid="Avatar"
               >
                 <div
@@ -810,7 +810,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="ml-2 table-cell md:hidden"
             >
               <div
-                class="shrink-0 css-1vy2z2u"
+                class="shrink-0 css-1yk316i"
                 data-testid="Avatar"
               >
                 <div
@@ -914,7 +914,7 @@ exports[`RecipientList > should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -946,7 +946,7 @@ exports[`RecipientList > should render editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
@@ -967,7 +967,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="css-1cp5yjb"
+                  class="css-15yk9k4"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1017,7 +1017,7 @@ exports[`RecipientList > should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1049,7 +1049,7 @@ exports[`RecipientList > should render editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
@@ -1070,7 +1070,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="css-1cp5yjb"
+                  class="css-15yk9k4"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1120,7 +1120,7 @@ exports[`RecipientList > should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1152,7 +1152,7 @@ exports[`RecipientList > should render editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
@@ -1173,7 +1173,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="css-1cp5yjb"
+                  class="css-15yk9k4"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1223,7 +1223,7 @@ exports[`RecipientList > should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1265,7 +1265,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="css-1cp5yjb"
+                  class="css-15yk9k4"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1377,7 +1377,7 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1409,7 +1409,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
@@ -1432,7 +1432,7 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1464,7 +1464,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
@@ -1487,7 +1487,7 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1519,7 +1519,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
@@ -1542,7 +1542,7 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1664,7 +1664,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1696,7 +1696,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
@@ -1740,7 +1740,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1772,7 +1772,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
@@ -1816,7 +1816,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1848,7 +1848,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
@@ -1892,7 +1892,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div

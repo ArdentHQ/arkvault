@@ -6,7 +6,7 @@ exports[`Switch > should render 1`] = `
     class="flex items-center"
   >
     <span
-      class="css-hbgfjt"
+      class="css-100s56b"
       role="button"
     >
       Option A
@@ -19,15 +19,15 @@ exports[`Switch > should render 1`] = `
         type="checkbox"
       />
       <div
-        class="css-7lwhds toggle-handle"
+        class="css-d8rk4r toggle-handle"
       >
         <span
-          class="css-1274c8s"
+          class="css-1sm0bvz"
         />
       </div>
     </label>
     <span
-      class="css-mpm6i9"
+      class="css-1sk4zio"
       role="button"
     >
       Option B
@@ -42,7 +42,7 @@ exports[`Switch > should render disabled 1`] = `
     class="flex items-center"
   >
     <span
-      class="css-o4mojg"
+      class="css-y3yl2d"
       disabled=""
       role="button"
     >
@@ -58,16 +58,16 @@ exports[`Switch > should render disabled 1`] = `
         type="checkbox"
       />
       <div
-        class="css-7lwhds toggle-handle"
+        class="css-d8rk4r toggle-handle"
       >
         <span
-          class="css-2v9y9y"
+          class="css-1nye29f"
           disabled=""
         />
       </div>
     </label>
     <span
-      class="css-8jmzt2"
+      class="css-7lll1s"
       disabled=""
       role="button"
     >
@@ -83,7 +83,7 @@ exports[`Switch > should render large labels 1`] = `
     class="flex items-center"
   >
     <span
-      class="css-13d6ubz"
+      class="css-1ru5kr2"
       role="button"
     >
       Option A
@@ -96,15 +96,15 @@ exports[`Switch > should render large labels 1`] = `
         type="checkbox"
       />
       <div
-        class="css-7lwhds toggle-handle"
+        class="css-d8rk4r toggle-handle"
       >
         <span
-          class="css-1274c8s"
+          class="css-1sm0bvz"
         />
       </div>
     </label>
     <span
-      class="css-b8nf83"
+      class="css-r1fv2b"
       role="button"
     >
       Option B
@@ -119,7 +119,7 @@ exports[`Switch > should render small labels 1`] = `
     class="flex items-center"
   >
     <span
-      class="css-w6ofpw"
+      class="css-1588dqn"
       role="button"
     >
       Option A
@@ -132,15 +132,15 @@ exports[`Switch > should render small labels 1`] = `
         type="checkbox"
       />
       <div
-        class="css-1f5xwvv toggle-handle"
+        class="css-10kxbe9 toggle-handle"
       >
         <span
-          class="css-19qsmxy"
+          class="css-14ojvms"
         />
       </div>
     </label>
     <span
-      class="css-iwfou6"
+      class="css-noruk0"
       role="button"
     >
       Option B

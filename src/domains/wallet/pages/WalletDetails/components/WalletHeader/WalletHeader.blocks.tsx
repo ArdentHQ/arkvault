@@ -87,7 +87,7 @@ export const WalletAddress: VFC<WalletAddressProperties> = ({ profile, wallet })
 						<TruncateMiddleDynamic
 							value={wallet.address()}
 							className="no-ligatures whitespace-nowrap text-lg font-semibold text-white"
-							parentRef={ref}
+							parentRef={ref as React.RefObject<HTMLElement>}
 							tooltipDarkTheme
 						/>
 					</span>

@@ -1,7 +1,9 @@
-import { ReactComponent as WelcomeModalBannerDarkNavy } from "./welcome-modal-banner-dark-navy.svg";
-import { ReactComponent as WelcomeModalBannerDarkGreen } from "./welcome-modal-banner-dark-green.svg";
-import { ReactComponent as WelcomeModalBannerLightGreen } from "./welcome-modal-banner-light-green.svg";
-import { ReactComponent as WelcomeModalBannerLightNavy } from "./welcome-modal-banner-light-navy.svg";
+/// <reference types="vite-plugin-svgr/client" />
+
+import WelcomeModalBannerDarkNavy from "./welcome-modal-banner-dark-navy.svg?react";
+import WelcomeModalBannerDarkGreen from "./welcome-modal-banner-dark-green.svg?react";
+import WelcomeModalBannerLightGreen from "./welcome-modal-banner-light-green.svg?react";
+import WelcomeModalBannerLightNavy from "./welcome-modal-banner-light-navy.svg?react";
 import WelcomeModalStep1DarkGreen from "./welcome-modal-step-1-banner-dark-green.png";
 import WelcomeModalStep1DarkNavy from "./welcome-modal-step-1-banner-dark-navy.png";
 import WelcomeModalStep1LightGreen from "./welcome-modal-step-1-banner-light-green.png";

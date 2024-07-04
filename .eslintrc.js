@@ -188,6 +188,12 @@ module.exports = {
 				"sort-keys-fix/sort-keys-fix": "off",
 			},
 		},
+		{
+			"files": ["*.test.ts", "*.test.tsx"],
+			"rules": {
+				"max-lines-per-function": "off"
+			}
+		}
 	],
 	settings: {
 		react: {

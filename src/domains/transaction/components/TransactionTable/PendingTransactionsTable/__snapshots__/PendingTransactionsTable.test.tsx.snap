@@ -23,7 +23,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow__mobile"
           >
             <td
@@ -39,14 +39,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   ID
                 </div>
                 <a
-                  class="ring-focus group inline-block css-15tcy38"
+                  class="ring-focus group inline-block css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -176,7 +176,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -248,7 +248,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="flex items-center justify-between space-x-4"
               >
                 <button
-                  class="flex items-center ml-auto flex-grow sm:flex-grow-0 css-1cp5yjb"
+                  class="flex items-center ml-auto flex-grow sm:flex-grow-0 css-15yk9k4"
                   data-testid="SignedTransactionRowMobile--remove"
                   type="button"
                 >
@@ -484,12 +484,12 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -544,7 +544,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -555,14 +555,14 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -589,7 +589,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     </div>
                   </div>
                   <div
-                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -637,7 +637,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -682,10 +682,10 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -703,14 +703,14 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1hhowo0"
+                class="justify-end space-x-2 css-10gefem"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
                 >
                   <div>
                     <button
-                      class="css-1cp5yjb"
+                      class="css-15yk9k4"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -758,7 +758,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-wlb9q7"
+                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
                         type="button"
                       >
                         <div
@@ -840,7 +840,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow__mobile"
           >
             <td
@@ -856,14 +856,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   ID
                 </div>
                 <a
-                  class="ring-focus group inline-block css-15tcy38"
+                  class="ring-focus group inline-block css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -993,7 +993,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -1053,7 +1053,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="flex items-center justify-between space-x-4"
               >
                 <button
-                  class="flex-grow css-1jhy6v9"
+                  class="flex-grow css-6419sw"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -1089,7 +1089,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </div>
                 </button>
                 <button
-                  class="flex items-center css-1cp5yjb"
+                  class="flex items-center css-15yk9k4"
                   data-testid="SignedTransactionRowMobile--remove"
                   type="button"
                 >
@@ -1320,12 +1320,12 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -1380,7 +1380,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -1391,14 +1391,14 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -1425,7 +1425,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     </div>
                   </div>
                   <div
-                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -1473,7 +1473,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
@@ -1506,10 +1506,10 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -1527,13 +1527,13 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1hhowo0"
+                class="justify-end space-x-2 css-10gefem"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-1jhy6v9"
+                    class="css-6419sw"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -1570,7 +1570,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </button>
                   <div>
                     <button
-                      class="css-1cp5yjb"
+                      class="css-15yk9k4"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -1618,7 +1618,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-wlb9q7"
+                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
                         type="button"
                       >
                         <div
@@ -1700,7 +1700,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow__mobile"
           >
             <td
@@ -1716,14 +1716,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   ID
                 </div>
                 <a
-                  class="ring-focus group inline-block css-15tcy38"
+                  class="ring-focus group inline-block css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -1853,7 +1853,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -1924,7 +1924,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="flex items-center justify-between space-x-4"
               >
                 <button
-                  class="flex-grow css-1bx0hyc"
+                  class="flex-grow css-fl4fi0"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -1960,7 +1960,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </div>
                 </button>
                 <button
-                  class="flex items-center css-1cp5yjb"
+                  class="flex items-center css-15yk9k4"
                   data-testid="SignedTransactionRowMobile--remove"
                   type="button"
                 >
@@ -2191,12 +2191,12 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -2251,7 +2251,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -2262,14 +2262,14 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -2296,7 +2296,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     </div>
                   </div>
                   <div
-                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -2344,7 +2344,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-success-500"
@@ -2388,10 +2388,10 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -2409,13 +2409,13 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1hhowo0"
+                class="justify-end space-x-2 css-10gefem"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-1bx0hyc"
+                    class="css-fl4fi0"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -2452,7 +2452,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </button>
                   <div>
                     <button
-                      class="css-1cp5yjb"
+                      class="css-15yk9k4"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -2500,7 +2500,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-wlb9q7"
+                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
                         type="button"
                       >
                         <div
@@ -2582,7 +2582,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow__mobile"
           >
             <td
@@ -2598,14 +2598,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   ID
                 </div>
                 <a
-                  class="ring-focus group inline-block css-15tcy38"
+                  class="ring-focus group inline-block css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -2735,7 +2735,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -2806,7 +2806,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="flex items-center justify-between space-x-4"
               >
                 <button
-                  class="flex-grow css-1bx0hyc"
+                  class="flex-grow css-fl4fi0"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -2842,7 +2842,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </div>
                 </button>
                 <button
-                  class="flex items-center css-1cp5yjb"
+                  class="flex items-center css-15yk9k4"
                   data-testid="SignedTransactionRowMobile--remove"
                   type="button"
                 >
@@ -3073,12 +3073,12 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -3133,7 +3133,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -3144,14 +3144,14 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -3178,7 +3178,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     </div>
                   </div>
                   <div
-                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -3226,7 +3226,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-success-500"
@@ -3270,10 +3270,10 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -3291,13 +3291,13 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1hhowo0"
+                class="justify-end space-x-2 css-10gefem"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-1bx0hyc"
+                    class="css-fl4fi0"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -3334,7 +3334,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </button>
                   <div>
                     <button
-                      class="css-1cp5yjb"
+                      class="css-15yk9k4"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -3382,7 +3382,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-wlb9q7"
+                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
                         type="button"
                       >
                         <div
@@ -3464,7 +3464,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow__mobile"
           >
             <td
@@ -3480,14 +3480,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   ID
                 </div>
                 <a
-                  class="ring-focus group inline-block css-15tcy38"
+                  class="ring-focus group inline-block css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://test.arkscan.io/transactions/e42296783a9ff3b82e967c37451ebd52eb8131d16cd17411ab50fa0e9ef37711"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -3615,7 +3615,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-1vb1527"
+                  class="css-1v19423"
                   color="success"
                 >
                   <div
@@ -3837,12 +3837,12 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -3897,7 +3897,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -3908,14 +3908,14 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -3945,7 +3945,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     </div>
                   </div>
                   <div
-                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -3988,7 +3988,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -4031,10 +4031,10 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-1vb1527"
+                  class="css-1v19423"
                   color="success"
                 >
                   <div
@@ -4054,7 +4054,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="text-theme-secondary-500"
             >
               <div
-                class="justify-end css-1hhowo0"
+                class="justify-end css-10gefem"
               >
                 Waiting...
               </div>
@@ -4090,7 +4090,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow__mobile"
           >
             <td
@@ -4106,14 +4106,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   ID
                 </div>
                 <a
-                  class="ring-focus group inline-block css-15tcy38"
+                  class="ring-focus group inline-block css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://test.arkscan.io/transactions/09e50e5fe66570bd736510c9eecec6f7561aa5a31896eeb36f3910d95d4b2002"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -4244,7 +4244,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-1vb1527"
+                  class="css-1v19423"
                   color="success"
                 >
                   <div
@@ -4466,12 +4466,12 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -4526,7 +4526,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -4537,14 +4537,14 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -4574,7 +4574,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     </div>
                   </div>
                   <div
-                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -4620,7 +4620,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -4663,10 +4663,10 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-1vb1527"
+                  class="css-1v19423"
                   color="success"
                 >
                   <div
@@ -4686,7 +4686,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="text-theme-secondary-500"
             >
               <div
-                class="justify-end css-1hhowo0"
+                class="justify-end css-10gefem"
               >
                 Waiting...
               </div>
@@ -4722,7 +4722,7 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow__mobile"
           >
             <td
@@ -4738,14 +4738,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   ID
                 </div>
                 <a
-                  class="ring-focus group inline-block css-15tcy38"
+                  class="ring-focus group inline-block css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -4875,7 +4875,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -4945,7 +4945,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="flex items-center justify-between space-x-4"
               >
                 <button
-                  class="flex-grow css-1jhy6v9"
+                  class="flex-grow css-6419sw"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -4981,7 +4981,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </div>
                 </button>
                 <button
-                  class="flex items-center css-1cp5yjb"
+                  class="flex items-center css-15yk9k4"
                   data-testid="SignedTransactionRowMobile--remove"
                   type="button"
                 >
@@ -5212,12 +5212,12 @@ exports[`Signed Transaction Table > should render different status > should show
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -5272,7 +5272,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -5283,14 +5283,14 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -5317,7 +5317,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     </div>
                   </div>
                   <div
-                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -5365,7 +5365,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -5408,10 +5408,10 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -5429,13 +5429,13 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1hhowo0"
+                class="justify-end space-x-2 css-10gefem"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-1jhy6v9"
+                    class="css-6419sw"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -5472,7 +5472,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </button>
                   <div>
                     <button
-                      class="css-1cp5yjb"
+                      class="css-15yk9k4"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -5520,7 +5520,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-wlb9q7"
+                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
                         type="button"
                       >
                         <div
@@ -5602,7 +5602,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow__mobile"
           >
             <td
@@ -5618,14 +5618,14 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                   ID
                 </div>
                 <a
-                  class="ring-focus group inline-block css-15tcy38"
+                  class="ring-focus group inline-block css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://test.arkscan.io/transactions/287a5898090855b3b7d1002a3f3967e910966e8c0fdf6c838aa4c7bd7277d89b"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -5700,7 +5700,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                         </div>
                       </span>
                       <div
-                        class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                        class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -5740,7 +5740,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                   Amount
                 </div>
                 <div
-                  class="css-1vb1527"
+                  class="css-1v19423"
                   color="success"
                 >
                   <div
@@ -5962,12 +5962,12 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -6022,7 +6022,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -6033,14 +6033,14 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -6070,7 +6070,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                     </div>
                   </div>
                   <div
-                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
                     data-testid="Avatar"
                   >
                     <div
@@ -6100,7 +6100,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -6143,10 +6143,10 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-1vb1527"
+                  class="css-1v19423"
                   color="success"
                 >
                   <div
@@ -6166,7 +6166,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
               class="text-theme-secondary-500"
             >
               <div
-                class="justify-end css-1hhowo0"
+                class="justify-end css-10gefem"
               >
                 Waiting...
               </div>
@@ -6365,12 +6365,12 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-mx19qq"
+                class="css-hhd44j"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -6425,7 +6425,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-12appi5"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -6436,7 +6436,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
             </td>
             <td>
               <div
-                class="space-x-4 css-1rods8x"
+                class="space-x-4 css-12appi5"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -6473,7 +6473,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                     </div>
                   </span>
                   <div
-                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -6503,7 +6503,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1rods8x"
+                class="justify-center truncate css-12appi5"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -6546,10 +6546,10 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
             </td>
             <td>
               <div
-                class="justify-end css-1rods8x"
+                class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1mirnqf"
+                  class="css-1q2kz5x"
                   color="success"
                 >
                   <div
@@ -6569,7 +6569,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
               class="text-theme-secondary-500"
             >
               <div
-                class="justify-end css-br23tb"
+                class="justify-end css-yf8cy4"
               >
                 Waiting...
               </div>
@@ -6768,12 +6768,12 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -6828,7 +6828,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -6839,14 +6839,14 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -6873,7 +6873,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                     </div>
                   </div>
                   <div
-                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -6921,7 +6921,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
@@ -6954,10 +6954,10 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -6975,13 +6975,13 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1hhowo0"
+                class="justify-end space-x-2 css-10gefem"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-1jhy6v9"
+                    class="css-6419sw"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -7018,7 +7018,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   </button>
                   <div>
                     <button
-                      class="css-1cp5yjb"
+                      class="css-15yk9k4"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -7066,7 +7066,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-wlb9q7"
+                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
                         type="button"
                       >
                         <div
@@ -7311,12 +7311,12 @@ exports[`Signed Transaction Table > should render signed transactions and handle
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -7371,7 +7371,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -7382,14 +7382,14 @@ exports[`Signed Transaction Table > should render signed transactions and handle
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -7416,7 +7416,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                     </div>
                   </div>
                   <div
-                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -7464,7 +7464,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
@@ -7497,10 +7497,10 @@ exports[`Signed Transaction Table > should render signed transactions and handle
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -7518,14 +7518,14 @@ exports[`Signed Transaction Table > should render signed transactions and handle
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1hhowo0"
+                class="justify-end space-x-2 css-10gefem"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
                 >
                   <div>
                     <button
-                      class="css-1cp5yjb"
+                      class="css-15yk9k4"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -7573,7 +7573,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-wlb9q7"
+                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
                         type="button"
                       >
                         <div
@@ -7818,12 +7818,12 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -7878,7 +7878,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -7889,14 +7889,14 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -7926,7 +7926,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                     </div>
                   </div>
                   <div
-                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
                     data-testid="Avatar"
                   >
                     <div
@@ -7956,7 +7956,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -7999,10 +7999,10 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-1vb1527"
+                  class="css-1v19423"
                   color="success"
                 >
                   <div
@@ -8022,7 +8022,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
               class="text-theme-secondary-500"
             >
               <div
-                class="justify-end css-1hhowo0"
+                class="justify-end css-10gefem"
               >
                 Waiting...
               </div>
@@ -8058,7 +8058,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow__mobile"
           >
             <td
@@ -8074,14 +8074,14 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                   ID
                 </div>
                 <a
-                  class="ring-focus group inline-block css-15tcy38"
+                  class="ring-focus group inline-block css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://test.arkscan.io/transactions/287a5898090855b3b7d1002a3f3967e910966e8c0fdf6c838aa4c7bd7277d89b"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -8156,7 +8156,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                         </div>
                       </span>
                       <div
-                        class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                        class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -8196,7 +8196,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                   Amount
                 </div>
                 <div
-                  class="css-1vb1527"
+                  class="css-1v19423"
                   color="success"
                 >
                   <div
@@ -8418,12 +8418,12 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-14huxtf"
+                class="css-bgc8eo"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -8478,7 +8478,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1d4ra48"
+                class="text-theme-secondary-text css-o5w6qc"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -8489,14 +8489,14 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             </td>
             <td>
               <div
-                class="space-x-4 css-1d4ra48"
+                class="space-x-4 css-o5w6qc"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                    class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -8523,7 +8523,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     </div>
                   </div>
                   <div
-                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+                    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -8571,7 +8571,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1d4ra48"
+                class="justify-center truncate css-o5w6qc"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
@@ -8604,10 +8604,10 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             </td>
             <td>
               <div
-                class="justify-end css-1d4ra48"
+                class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -8625,13 +8625,13 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1hhowo0"
+                class="justify-end space-x-2 css-10gefem"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-1jhy6v9"
+                    class="css-6419sw"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -8668,7 +8668,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   </button>
                   <div>
                     <button
-                      class="css-1cp5yjb"
+                      class="css-15yk9k4"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -8716,7 +8716,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-wlb9q7"
+                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
                         type="button"
                       >
                         <div
@@ -8961,12 +8961,12 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
           role="rowgroup"
         >
           <tr
-            class="group css-1gk67vk"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="css-mx19qq"
+                class="css-hhd44j"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -9021,7 +9021,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1rods8x"
+                class="text-theme-secondary-text css-12appi5"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -9032,7 +9032,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             </td>
             <td>
               <div
-                class="space-x-4 css-1rods8x"
+                class="space-x-4 css-12appi5"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -9114,7 +9114,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1rods8x"
+                class="justify-center truncate css-12appi5"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
@@ -9147,10 +9147,10 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             </td>
             <td>
               <div
-                class="justify-end css-1rods8x"
+                class="justify-end css-12appi5"
               >
                 <div
-                  class="css-8zppvw"
+                  class="css-41vn9a"
                   color="danger"
                 >
                   <div
@@ -9168,13 +9168,13 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-br23tb"
+                class="justify-end space-x-2 css-yf8cy4"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="text-theme-primary-600 hover:text-theme-primary-700 undefined css-iu6dck"
+                    class="text-theme-primary-600 hover:text-theme-primary-700 undefined css-13bs0gg"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -9211,7 +9211,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   </button>
                   <div>
                     <button
-                      class="css-1b8lzw6"
+                      class="css-evohxk"
                       data-testid="TableRemoveButton--compact"
                       type="button"
                     >
@@ -9259,7 +9259,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                        class="px-2 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                         type="button"
                       >
                         <div

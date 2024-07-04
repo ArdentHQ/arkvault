@@ -773,6 +773,8 @@ describe("SendTransfer Fee Handling", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 		await userEvent.click(sendButton());
 
+		await waitFor(() => expect(screen.getByTestId("TransactionPending")));
+
 		await act(() => vi.runOnlyPendingTimers());
 
 		await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("8f913b6b71"));

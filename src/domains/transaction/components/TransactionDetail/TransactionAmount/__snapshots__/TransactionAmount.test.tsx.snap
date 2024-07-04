@@ -3,7 +3,7 @@
 exports[`TransactionAmount > should render currency amount 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionAmount"
   >
     <div
@@ -19,7 +19,7 @@ exports[`TransactionAmount > should render currency amount 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1vb1527"
+          class="css-1v19423"
           color="success"
         >
           <div
@@ -36,7 +36,7 @@ exports[`TransactionAmount > should render currency amount 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
     >
       <div
         class="css-1i4b0eq"
@@ -72,7 +72,7 @@ exports[`TransactionAmount > should render currency amount 1`] = `
 exports[`TransactionAmount > should render in lg 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionAmount"
   >
     <div
@@ -88,7 +88,7 @@ exports[`TransactionAmount > should render in lg 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1vb1527"
+          class="css-1v19423"
           color="success"
         >
           <div
@@ -105,7 +105,7 @@ exports[`TransactionAmount > should render in lg 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
     >
       <div
         class="css-1i4b0eq"
@@ -141,7 +141,7 @@ exports[`TransactionAmount > should render in lg 1`] = `
 exports[`TransactionAmount > should render in md 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionAmount"
   >
     <div
@@ -157,7 +157,7 @@ exports[`TransactionAmount > should render in md 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1vb1527"
+          class="css-1v19423"
           color="success"
         >
           <div
@@ -174,7 +174,7 @@ exports[`TransactionAmount > should render in md 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
     >
       <div
         class="css-1i4b0eq"
@@ -210,7 +210,7 @@ exports[`TransactionAmount > should render in md 1`] = `
 exports[`TransactionAmount > should render in sm 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionAmount"
   >
     <div
@@ -229,7 +229,7 @@ exports[`TransactionAmount > should render in sm 1`] = `
           class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
         >
           <div
-            class="css-1vb1527"
+            class="css-1v19423"
             color="success"
           >
             <div
@@ -253,7 +253,7 @@ exports[`TransactionAmount > should render in sm 1`] = `
 exports[`TransactionAmount > should render in xl 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionAmount"
   >
     <div
@@ -269,7 +269,7 @@ exports[`TransactionAmount > should render in xl 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1vb1527"
+          class="css-1v19423"
           color="success"
         >
           <div
@@ -286,7 +286,7 @@ exports[`TransactionAmount > should render in xl 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
     >
       <div
         class="css-1i4b0eq"
@@ -322,7 +322,7 @@ exports[`TransactionAmount > should render in xl 1`] = `
 exports[`TransactionAmount > should render in xs 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionAmount"
   >
     <div
@@ -341,7 +341,7 @@ exports[`TransactionAmount > should render in xs 1`] = `
           class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
         >
           <div
-            class="css-1vb1527"
+            class="css-1v19423"
             color="success"
           >
             <div
@@ -365,7 +365,7 @@ exports[`TransactionAmount > should render in xs 1`] = `
 exports[`TransactionAmount > should render label for multiple recipients 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionAmount"
   >
     <div
@@ -381,7 +381,7 @@ exports[`TransactionAmount > should render label for multiple recipients 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1vb1527"
+          class="css-1v19423"
           color="success"
         >
           <div
@@ -398,7 +398,7 @@ exports[`TransactionAmount > should render label for multiple recipients 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
     >
       <div
         class="css-1i4b0eq"
@@ -434,7 +434,7 @@ exports[`TransactionAmount > should render label for multiple recipients 1`] = `
 exports[`TransactionAmount > should render label for multiple recipients 2`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionAmount"
   >
     <div
@@ -450,7 +450,7 @@ exports[`TransactionAmount > should render label for multiple recipients 2`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1vb1527"
+          class="css-1v19423"
           color="success"
         >
           <div
@@ -467,7 +467,7 @@ exports[`TransactionAmount > should render label for multiple recipients 2`] = `
       </div>
     </div>
     <div
-      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
     >
       <div
         class="css-1i4b0eq"

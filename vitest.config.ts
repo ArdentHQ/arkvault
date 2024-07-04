@@ -63,6 +63,7 @@ export default defineConfig((env) => {
 			resolve: {
 				alias: {
 					"@": path.resolve(__dirname, "./src"),
+					'identity-obj-proxy': require.resolve('identity-obj-proxy'),
 				},
 			},
 		}),

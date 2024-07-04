@@ -16,18 +16,18 @@ exports[`SelectAddress > should render disabled 1`] = `
       />
     </span>
     <div
-      class="css-n29l73"
+      class="css-xk5t3v"
       disabled=""
     >
       <div
-        class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+        class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
       />
       <div
         class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+          class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
           data-testid="SelectAddress__input"
           disabled=""
           readonly=""
@@ -99,17 +99,17 @@ exports[`SelectAddress > should render empty 1`] = `
       />
     </span>
     <div
-      class="css-1psxlcd"
+      class="css-n1b0kl"
     >
       <div
-        class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+        class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
       />
       <div
         class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1nupw50"
+          class="no-ligatures w-full border-none css-1vs1awz"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -180,10 +180,10 @@ exports[`SelectAddress > should render invalid 1`] = `
       />
     </span>
     <div
-      class="css-px3dod"
+      class="css-12mz4i6"
     >
       <div
-        class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+        class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
       />
       <div
         class="relative flex h-full flex-1 invisible"
@@ -191,7 +191,7 @@ exports[`SelectAddress > should render invalid 1`] = `
         <input
           aria-invalid="true"
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1nupw50"
+          class="no-ligatures w-full border-none css-1vs1awz"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -306,7 +306,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
           data-testid="Address__alias"
         >
           <span
-            class="no-ligatures css-u3jrna"
+            class="no-ligatures css-9nx3be"
             data-testid="TruncateEnd"
           >
             testwallet2
@@ -321,10 +321,10 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       </div>
     </span>
     <div
-      class="css-1psxlcd"
+      class="css-n1b0kl"
     >
       <div
-        class="shrink-0 css-8zckym"
+        class="shrink-0 css-1p5jpah"
         data-testid="Avatar"
       >
         <div
@@ -342,7 +342,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1nupw50"
+          class="no-ligatures w-full border-none css-1vs1awz"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -413,17 +413,17 @@ exports[`SelectAddress > should render without user icon 1`] = `
       />
     </span>
     <div
-      class="css-1psxlcd"
+      class="css-n1b0kl"
     >
       <div
-        class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+        class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
       />
       <div
         class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1nupw50"
+          class="no-ligatures w-full border-none css-1vs1awz"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"

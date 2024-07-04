@@ -6,14 +6,14 @@ exports[`Exchange > should render empty 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -50,11 +50,11 @@ exports[`Exchange > should render empty 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -87,11 +87,11 @@ exports[`Exchange > should render empty 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -128,7 +128,7 @@ exports[`Exchange > should render empty 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -137,7 +137,7 @@ exports[`Exchange > should render empty 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-11quel4"
+            class="css-1g24tay"
             disabled=""
           >
             <div
@@ -300,10 +300,10 @@ exports[`Exchange > should render empty 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -353,10 +353,10 @@ exports[`Exchange > should render empty 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -412,10 +412,10 @@ exports[`Exchange > should render empty 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -460,10 +460,10 @@ exports[`Exchange > should render empty 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -539,7 +539,7 @@ exports[`Exchange > should render empty 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -594,7 +594,7 @@ exports[`Exchange > should render empty 1`] = `
         </div>
       </div>
       <nav
-        class="css-533h31"
+        class="css-h27fpz"
       >
         <div
           class="mx-auto flex items-center justify-between px-10 lg:container"
@@ -603,7 +603,7 @@ exports[`Exchange > should render empty 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="h-18 w-full css-6pza4g"
+              class="h-18 w-full css-y2x3zz"
             >
               <button
                 aria-selected="true"
@@ -668,14 +668,14 @@ exports[`Exchange > should render with exchanges 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -712,11 +712,11 @@ exports[`Exchange > should render with exchanges 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -749,11 +749,11 @@ exports[`Exchange > should render with exchanges 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -790,7 +790,7 @@ exports[`Exchange > should render with exchanges 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -799,7 +799,7 @@ exports[`Exchange > should render with exchanges 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-11quel4"
+            class="css-1g24tay"
             disabled=""
           >
             <div
@@ -962,10 +962,10 @@ exports[`Exchange > should render with exchanges 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1015,10 +1015,10 @@ exports[`Exchange > should render with exchanges 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1074,10 +1074,10 @@ exports[`Exchange > should render with exchanges 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -1122,10 +1122,10 @@ exports[`Exchange > should render with exchanges 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -1201,7 +1201,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -1256,7 +1256,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         </div>
       </div>
       <nav
-        class="css-533h31"
+        class="css-h27fpz"
       >
         <div
           class="mx-auto flex items-center justify-between px-10 lg:container"
@@ -1265,7 +1265,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="h-18 w-full css-6pza4g"
+              class="h-18 w-full css-y2x3zz"
             >
               <button
                 aria-selected="true"
@@ -1318,7 +1318,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             >
               <div>
                 <button
-                  class="css-116zvw2"
+                  class="css-31qpo4"
                   data-testid="Card"
                   type="button"
                 >
@@ -1355,7 +1355,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             >
               <div>
                 <button
-                  class="css-116zvw2"
+                  class="css-31qpo4"
                   data-testid="Card"
                   type="button"
                 >

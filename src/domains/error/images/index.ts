@@ -1,11 +1,13 @@
-import { ReactComponent as ConnectionErrorDarkNavy } from "./connection-error-dark-navy.svg";
-import { ReactComponent as ConnectionErrorDarkGreen } from "./connection-error-dark-green.svg";
-import { ReactComponent as ConnectionErrorLightNavy } from "./connection-error-light-navy.svg";
-import { ReactComponent as ConnectionErrorLightGreen } from "./connection-error-light-green.svg";
-import { ReactComponent as GenericErrorDarkNavy } from "./generic-error-dark-navy.svg";
-import { ReactComponent as GenericErrorDarkGreen } from "./generic-error-dark-green.svg";
-import { ReactComponent as GenericErrorLightNavy } from "./generic-error-light-navy.svg";
-import { ReactComponent as GenericErrorLightGreen } from "./generic-error-light-green.svg";
+/// <reference types="vite-plugin-svgr/client" />
+
+import ConnectionErrorDarkNavy from "./connection-error-dark-navy.svg?react";
+import ConnectionErrorDarkGreen from "./connection-error-dark-green.svg?react";
+import ConnectionErrorLightNavy from "./connection-error-light-navy.svg?react";
+import ConnectionErrorLightGreen from "./connection-error-light-green.svg?react";
+import GenericErrorDarkNavy from "./generic-error-dark-navy.svg?react";
+import GenericErrorDarkGreen from "./generic-error-dark-green.svg?react";
+import GenericErrorLightNavy from "./generic-error-light-navy.svg?react";
+import GenericErrorLightGreen from "./generic-error-light-green.svg?react";
 
 export const error = {
 	ConnectionErrorDarkGreen,

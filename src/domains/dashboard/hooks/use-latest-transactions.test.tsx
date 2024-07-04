@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 import React from "react";
@@ -66,15 +67,14 @@ describe("useLatestTransactions", () => {
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => [] } as any));
 
-		const { result, waitForNextUpdate } = renderHook(
+		const { result } = renderHook(
 			() => useLatestTransactions({ profile, profileIsSyncing: true }),
 			{ wrapper },
 		);
 
 		vi.runOnlyPendingTimers();
 
-		await waitForNextUpdate();
-		await waitFor(() => expect(result.current.isLoadingTransactions).toBeTruthy());
+		expect(result.current.isLoadingTransactions).toBeTruthy()
 
 		mockTransactionsAggregate.mockRestore();
 

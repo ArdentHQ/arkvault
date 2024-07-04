@@ -19,14 +19,11 @@ const getBorderStyles = (border?: boolean, dotted?: boolean) => {
 	];
 };
 
-const getHoverStyles = (isSelected?: boolean): SerializedStyles =>
-	css`
-		&:hover td > div {
-			${isSelected
-				? tw`bg-theme-success-100 dark:bg-theme-success-900`
-				: tw`bg-theme-secondary-100 dark:bg-black`}
-		}
-	`;
+const getHoverStyles = (isSelected?: boolean): SerializedStyles => css`
+	&:hover td > div {
+		${isSelected ? tw`bg-theme-success-100 dark:bg-theme-success-900` : tw`bg-theme-secondary-100 dark:bg-black`}
+	}
+`;
 
 export interface TableRowStyleProperties {
 	border?: boolean;

@@ -12,14 +12,14 @@ exports[`Range > should render 1`] = `
       style="transform: scale(1); cursor: pointer;"
     >
       <div
-        class="css-nxv0cn"
+        class="css-19l4gn6"
         data-testid="Range__track__filled"
       >
         <div
           aria-valuemax="100"
           aria-valuemin="1"
           aria-valuenow="10"
-          class="css-skh8p7"
+          class="css-1dcoj83"
           data-testid="Range__thumb"
           draggable="false"
           role="slider"
@@ -44,14 +44,14 @@ exports[`Range > should render invalid 1`] = `
       style="transform: scale(1); cursor: pointer;"
     >
       <div
-        class="css-nxv0cn"
+        class="css-19l4gn6"
         data-testid="Range__track__filled"
       >
         <div
           aria-valuemax="100"
           aria-valuemin="1"
           aria-valuenow="10"
-          class="css-skh8p7"
+          class="css-1dcoj83"
           data-testid="Range__thumb"
           draggable="false"
           role="slider"

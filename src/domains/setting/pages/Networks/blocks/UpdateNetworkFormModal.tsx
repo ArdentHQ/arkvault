@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { Networks } from "@ardenthq/sdk";
-import { DefaultTFuncReturn } from "i18next";
+import { DefaultTReturn, TOptions } from "i18next";
 import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
 import { HttpClient } from "@/app/services/HttpClient";
 import { Modal } from "@/app/components/Modal";
@@ -47,7 +47,7 @@ const UpdateNetworkFormModal: React.VFC<{
 	const { formState, setValue, register, setError } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const [fetchingError, setFetchingError] = useState<string | undefined | DefaultTFuncReturn>(undefined);
+	const [fetchingError, setFetchingError] = useState<string | undefined | DefaultTReturn<TOptions>>(undefined);
 	const [fetchingDetails, setFetchingDetails] = useState(false);
 
 	const isSaveButtonDisabled = fetchingDetails || isSubmitting || (isDirty ? !isValid : true);

@@ -24,7 +24,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -48,7 +48,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -79,7 +79,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -99,14 +99,14 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -147,7 +147,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -188,7 +188,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -227,7 +227,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -251,7 +251,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -282,7 +282,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -302,14 +302,14 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -350,7 +350,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -391,7 +391,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -431,7 +431,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -455,7 +455,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -486,7 +486,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -506,14 +506,14 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -554,7 +554,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -595,7 +595,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -635,7 +635,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -659,7 +659,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -696,7 +696,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -714,7 +714,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -732,7 +732,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -750,7 +750,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -766,7 +766,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                     </span>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -807,7 +807,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -846,7 +846,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -870,7 +870,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -907,7 +907,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -925,7 +925,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -943,7 +943,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -968,7 +968,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -1009,7 +1009,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1048,7 +1048,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1072,7 +1072,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1103,7 +1103,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -1123,14 +1123,14 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -1171,7 +1171,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -1212,7 +1212,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1242,7 +1242,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1266,7 +1266,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         testwallet2
@@ -1297,7 +1297,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                   <span
                     class="text-theme-secondary-400"
@@ -1305,16 +1305,16 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     N/A
                   </span>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <div
-                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-1"
                 type="button"
               >
@@ -1353,7 +1353,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1377,7 +1377,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1408,7 +1408,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -1428,14 +1428,14 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -1476,7 +1476,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -1517,7 +1517,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1547,7 +1547,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1591,7 +1591,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                   <span
                     class="text-theme-secondary-400"
@@ -1599,16 +1599,16 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     N/A
                   </span>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <div
-                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-pgi2s"
+                class="p-6 rounded-none css-1772sn1"
                 data-testid="AddressRowMobile__select-1"
                 disabled=""
                 type="button"
@@ -1648,7 +1648,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1672,7 +1672,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1703,20 +1703,20 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                     data-testid="AddressRowMobile--nowallet"
                   />
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <div
-                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1755,7 +1755,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1779,7 +1779,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1810,7 +1810,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -1830,14 +1830,14 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -1878,7 +1878,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -1919,7 +1919,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1958,7 +1958,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1982,7 +1982,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -2013,7 +2013,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -2033,14 +2033,14 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -2081,7 +2081,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -2122,7 +2122,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -2161,7 +2161,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -2185,7 +2185,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -2216,7 +2216,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -2236,14 +2236,14 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -2284,7 +2284,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -2326,7 +2326,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >

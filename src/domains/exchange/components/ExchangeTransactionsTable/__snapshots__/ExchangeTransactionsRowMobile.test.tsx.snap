@@ -5,7 +5,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -63,7 +63,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
               From
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -87,7 +87,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
               To
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -163,7 +163,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -211,7 +211,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -269,7 +269,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
               From
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -293,7 +293,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
               To
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -360,7 +360,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -408,7 +408,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -466,7 +466,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
               From
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -490,7 +490,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
               To
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -557,7 +557,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -605,7 +605,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -663,7 +663,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
               From
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -687,7 +687,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
               To
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -789,7 +789,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -837,7 +837,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -895,7 +895,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
               From
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -919,7 +919,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
               To
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -991,7 +991,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1039,7 +1039,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1gk67vk"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -1097,7 +1097,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
               From
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -1121,7 +1121,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
               To
             </div>
             <div
-              class="css-1vb1527"
+              class="css-1v19423"
               color="success"
             >
               <div
@@ -1193,7 +1193,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1239,7 +1239,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
 <div>
   <tr
-    class="group css-1gk67vk"
+    class="group css-155s9if"
     data-testid="TableRow"
   >
     <td
@@ -1291,7 +1291,7 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
           From
         </div>
         <div
-          class="css-fbeerz"
+          class="css-148b4hi"
           color="danger"
         >
           <div
@@ -1315,7 +1315,7 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
           To
         </div>
         <div
-          class="css-1vb1527"
+          class="css-1v19423"
           color="success"
         >
           <div
@@ -1382,7 +1382,7 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
         class="flex items-center justify-between space-x-4"
       >
         <button
-          class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+          class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
           data-testid="TableRemoveButton"
           type="button"
         >
@@ -1426,7 +1426,7 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] = `
 <div>
   <tr
-    class="group css-1gk67vk"
+    class="group css-155s9if"
     data-testid="TableRow"
   >
     <td
@@ -1486,7 +1486,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
           From
         </div>
         <div
-          class="css-fbeerz"
+          class="css-148b4hi"
           color="danger"
         >
           <div
@@ -1510,7 +1510,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
           To
         </div>
         <div
-          class="css-1vb1527"
+          class="css-1v19423"
           color="success"
         >
           <div
@@ -1577,7 +1577,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
         class="flex items-center justify-between space-x-4"
       >
         <button
-          class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+          class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
           data-testid="TableRemoveButton"
           type="button"
         >

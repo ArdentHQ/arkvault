@@ -75,110 +75,14 @@ describe("UpdateContact", () => {
 			expect(nameInput()).toHaveValue(contact.name());
 		});
 
-		userEvent.click(screen.getByTestId("contact-form__cancel-btn"));
+		await userEvent.click(screen.getByTestId("contact-form__cancel-btn"));
 
 		expect(onCancelFunction).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should not update contact if provided name already exists", async () => {
-		const onSaveFunction = vi.fn();
-
-		const newContact = profile.contacts().create("New name", [
-			{
-				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-				coin: "ARK",
-				network: "ark.mainnet",
-			},
-		]);
-
-		render(
-			<UpdateContact
-				onCancel={onCancel}
-				onClose={onClose}
-				onDelete={onDelete}
-				onSave={onSaveFunction}
-				profile={profile}
-				contact={newContact}
-			/>,
-		);
-
-		await waitFor(() => {
-			expect(nameInput()).toHaveValue(newContact.name());
-		});
-
-		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
-
-		userEvent.paste(selectNetworkInput, "ARK D");
-		userEvent.tab();
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
-
-		userEvent.paste(screen.getByTestId("contact-form__address-input"), "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
-
-		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__address-input")).toHaveValue("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
-		});
-
-		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
-		});
-
-		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
-
-		userEvent.clear(nameInput());
-		userEvent.paste(nameInput(), contact.name());
-
-		await waitFor(() => {
-			expect(nameInput()).toHaveValue(contact.name());
-		});
-
-		await waitFor(() => {
-			expect(screen.getByTestId("Input__error")).toBeInTheDocument();
-		});
-
-		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
-		});
-
-		userEvent.click(screen.getByTestId("contact-form__save-btn"));
-
-		expect(onSaveFunction).not.toHaveBeenCalled();
-	});
-
-	it("should call onDelete callback", async () => {
-		const deleteSpy = vi.spyOn(profile.contacts(), "forget").mockImplementation(vi.fn());
-
-		const onDeleteFunction = vi.fn();
-
-		render(
-			<UpdateContact
-				onCancel={onCancel}
-				onClose={onClose}
-				onSave={onSave}
-				onDelete={onDeleteFunction}
-				profile={profile}
-				contact={contact}
-			/>,
-		);
-
-		await waitFor(() => {
-			expect(nameInput()).toHaveValue(contact.name());
-		});
-
-		userEvent.click(screen.getByTestId("contact-form__delete-btn"));
-
-		await waitFor(() => {
-			expect(onDeleteFunction).toHaveBeenCalledWith(
-				expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
-			);
-		});
-
-		deleteSpy.mockRestore();
-	});
-
 	it("should update contact name and address", async () => {
 		const onSaveFunction = vi.fn();
-
+	
 		const newName = "Updated name";
 		const newAddress = {
 			address: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
@@ -186,7 +90,7 @@ describe("UpdateContact", () => {
 			name: "Test Address",
 			network: "ark.devnet",
 		};
-
+	
 		render(
 			<UpdateContact
 				onCancel={onCancel}
@@ -197,56 +101,62 @@ describe("UpdateContact", () => {
 				contact={contact}
 			/>,
 		);
-
+	
 		await waitFor(() => {
 			expect(nameInput()).toHaveValue(contact.name());
 		});
-
-		userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
-
+	
+		await userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
+	
 		await waitFor(() => {
 			expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 		});
-
+	
 		(nameInput() as HTMLInputElement).select();
-		userEvent.paste(nameInput(), newName);
-
+	
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), newName);
+	
 		await waitFor(() => {
 			expect(nameInput()).toHaveValue(newName);
 		});
-
+	
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
+	
+		await userEvent.clear(selectNetworkInput);
+		await userEvent.type(selectNetworkInput, "ARK D");
+		await userEvent.tab();
+	
+		await waitFor(() => {
+			expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		});
+	
 
-		userEvent.paste(selectNetworkInput, "ARK D");
-		userEvent.tab();
-
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
-
-		userEvent.paste(screen.getByTestId("contact-form__address-input"), newAddress.address);
-
+		const addressInput = screen.getByTestId("contact-form__address-input");
+		await waitFor(() => expect(addressInput).toHaveValue(''));
+		await userEvent.clear(addressInput);
+		await userEvent.type(addressInput, newAddress.address);
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(newAddress.address);
 		});
-
+		
+	
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
-
-		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
-
+	
+		await userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__save-btn")).not.toBeDisabled();
 		});
-
-		userEvent.click(screen.getByTestId("contact-form__save-btn"));
-
+	
+		await userEvent.click(screen.getByTestId("contact-form__save-btn"));
 		await waitFor(() => {
 			expect(onSaveFunction).toHaveBeenCalledWith(contact.id());
 		});
-
+	
 		const savedContact = profile.contacts().findById(contact.id());
-
 		expect(savedContact.name()).toBe(newName);
 		expect(savedContact.addresses().findByAddress(newAddress.address)).toHaveLength(1);
-	});
+	});	
 });

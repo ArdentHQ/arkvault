@@ -12,14 +12,14 @@ exports[`InputDate > should render 1`] = `
         class="react-datepicker__input-container"
       >
         <div
-          class="react-datepicker-ignore-onclickoutside css-1psxlcd"
+          class="react-datepicker-ignore-onclickoutside css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="InputDate"
               type="text"
               value=""
@@ -81,18 +81,17 @@ exports[`InputDate > should render 1`] = `
       <div
         class="react-datepicker-popper"
         data-placement="bottom-start"
-        style="position: absolute; left: 0px; top: 0px;"
+        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
       >
         <div
           style="display: contents;"
         >
           <div
+            aria-label="Choose Date"
+            aria-modal="true"
             class="react-datepicker bg-theme-background"
+            role="dialog"
           >
-            <div
-              class="react-datepicker__triangle"
-              style="position: absolute;"
-            />
             <span
               aria-live="polite"
               class="react-datepicker__aria-live"
@@ -115,11 +114,11 @@ exports[`InputDate > should render 1`] = `
               <div
                 class="react-datepicker__header "
               >
-                <div
+                <h2
                   class="react-datepicker__current-month"
                 >
                   July 2020
-                </div>
+                </h2>
                 <div
                   class="react-datepicker__header__dropdown react-datepicker__header__dropdown--scroll"
                 />
@@ -127,36 +126,43 @@ exports[`InputDate > should render 1`] = `
                   class="react-datepicker__day-names"
                 >
                   <div
+                    aria-label="Sunday"
                     class="react-datepicker__day-name"
                   >
                     Su
                   </div>
                   <div
+                    aria-label="Monday"
                     class="react-datepicker__day-name"
                   >
                     Mo
                   </div>
                   <div
+                    aria-label="Tuesday"
                     class="react-datepicker__day-name"
                   >
                     Tu
                   </div>
                   <div
+                    aria-label="Wednesday"
                     class="react-datepicker__day-name"
                   >
                     We
                   </div>
                   <div
+                    aria-label="Thursday"
                     class="react-datepicker__day-name"
                   >
                     Th
                   </div>
                   <div
+                    aria-label="Friday"
                     class="react-datepicker__day-name"
                   >
                     Fr
                   </div>
                   <div
+                    aria-label="Saturday"
                     class="react-datepicker__day-name"
                   >
                     Sa
@@ -164,7 +170,7 @@ exports[`InputDate > should render 1`] = `
                 </div>
               </div>
               <div
-                aria-label="month  2020-07"
+                aria-label="Month July, 2020"
                 class="react-datepicker__month"
                 role="listbox"
               >
@@ -578,6 +584,36 @@ exports[`InputDate > should render 1`] = `
             </div>
           </div>
         </div>
+        <svg
+          aria-hidden="true"
+          class="react-datepicker__triangle"
+          fill="currentColor"
+          height="16"
+          style="position: absolute; pointer-events: none; bottom: 100%; transform: rotate(180deg)translateY(-1px);"
+          viewBox="0 0 16 16"
+          width="18"
+        >
+          <path
+            clip-path="url(#:r1:)"
+            d="M0,0 H16 L8,8 Q8,8 8,8 Z"
+            fill="none"
+            stroke-width="3"
+          />
+          <path
+            d="M0,0 H16 L8,8 Q8,8 8,8 Z"
+            stroke="currentColor"
+          />
+          <clippath
+            id=":r1:"
+          >
+            <rect
+              height="16"
+              width="18"
+              x="-1"
+              y="1"
+            />
+          </clippath>
+        </svg>
       </div>
       <div
         class="react-datepicker__tab-loop__end"
