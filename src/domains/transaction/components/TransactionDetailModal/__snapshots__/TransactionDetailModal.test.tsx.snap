@@ -2492,7 +2492,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="hidden md:table-cell"
                             >
                               <div
-                                class="shrink-0 css-y5oe37"
+                                class="shrink-0 css-h8w6w0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2524,7 +2524,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="ml-2 table-cell md:hidden"
                             >
                               <div
-                                class="shrink-0 css-1vy2z2u"
+                                class="shrink-0 css-1yk316i"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2553,7 +2553,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="hidden md:table-cell"
                             >
                               <div
-                                class="shrink-0 css-y5oe37"
+                                class="shrink-0 css-h8w6w0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2585,7 +2585,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="ml-2 table-cell md:hidden"
                             >
                               <div
-                                class="shrink-0 css-1vy2z2u"
+                                class="shrink-0 css-1yk316i"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2663,7 +2663,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                 </div>
               </div>
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -2678,7 +2678,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures css-19rivvh"
+              class="no-ligatures css-qu17s6"
               data-testid="TransactionDetail"
             >
               <div
