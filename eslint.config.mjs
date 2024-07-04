@@ -260,7 +260,10 @@ export default [
 					relativeDepth: 0,
 				},
 			],
-			// TODO: enable the following when merged in `feat/mainsail`
+			// Disabling the following as they autofix ~900 files and will make conflict resolution hard.
+			// @TODO: Enable the following when merged in `feat/mainsail`,
+			//		  If tests are failing, can copy the fixes from https://github.com/ArdentHQ/arkvault/pull/558
+			//		  as it contains all the fixes on tests & build errors.
 			"testing-library/await-async-events": "off",
 			"simple-import-sort/imports": "off",
 			"simple-import-sort/imports": "off",
