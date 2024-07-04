@@ -36,7 +36,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	const data = useMemo<DTO.ExtendedConfirmedTransactionData[]>(() => {
 		const skeletonRows: DTO.ExtendedConfirmedTransactionData[] = Array.from(
 			{ length: skeletonRowsLimit },
-			() => ({} as DTO.ExtendedConfirmedTransactionData),
+			() => ({}) as DTO.ExtendedConfirmedTransactionData,
 		);
 		return showSkeleton ? skeletonRows : transactions;
 	}, [showSkeleton, transactions, skeletonRowsLimit]);

@@ -18,7 +18,7 @@ exports[`TableRow > should render with onClick callback 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-105k8a9"
+        class="group css-155s9if"
         data-testid="TableRow"
       />
     </tbody>

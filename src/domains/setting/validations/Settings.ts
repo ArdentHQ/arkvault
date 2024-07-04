@@ -11,7 +11,7 @@ export const settings = (t: TFunction, environment: Environment) => ({
 					? t("COMMON.VALIDATION.MAX_LENGTH", {
 							field: t("SETTINGS.GENERAL.PERSONAL.NAME"),
 							maxLength: 42,
-					  })
+						})
 					: true,
 			required: (name: string) =>
 				!!name?.trim() ||

@@ -148,7 +148,7 @@ const useGraphTooltip: UseGraphTooltipHook = (renderFunction, type) => {
 	if (!renderFunction) {
 		return {
 			Tooltip: () => <></>,
-			getMouseEventProperties: () => ({} as never),
+			getMouseEventProperties: () => ({}) as never,
 		};
 	}
 

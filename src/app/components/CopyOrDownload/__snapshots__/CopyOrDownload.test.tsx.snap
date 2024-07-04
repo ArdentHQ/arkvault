@@ -25,7 +25,7 @@ exports[`CopyOrDownload > should render 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2 font-semibold link "
+          class="flex items-center space-x-2 font-semibold link"
         >
           <div
             class="css-v0ob3f"

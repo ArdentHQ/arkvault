@@ -472,7 +472,7 @@ exports[`UnlockTokensSummary > should render 1`] = `
         </div>
       </div>
       <div
-        class="mt-8  flex space-x-2 rounded border border-transparent bg-theme-warning-50 px-3 py-2 text-theme-warning-900 dark:border-theme-warning-600 dark:bg-transparent dark:text-theme-warning-600"
+        class="mt-8 flex space-x-2 rounded border border-transparent bg-theme-warning-50 px-3 py-2 text-theme-warning-900 dark:border-theme-warning-600 dark:bg-transparent dark:text-theme-warning-600"
       >
         <div
           class="css-1m8vfsi"

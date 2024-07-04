@@ -988,7 +988,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -2313,7 +2313,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -2828,7 +2828,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -3097,7 +3097,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -3339,7 +3339,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -4464,7 +4464,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -4979,7 +4979,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -5248,7 +5248,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -5490,7 +5490,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -6615,7 +6615,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -6963,7 +6963,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -7117,7 +7117,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -7246,7 +7246,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -8357,7 +8357,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -8954,7 +8954,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -9251,7 +9251,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -9521,7 +9521,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -10646,7 +10646,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -11076,7 +11076,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -11258,7 +11258,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -11415,7 +11415,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -12526,7 +12526,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -12956,7 +12956,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -13391,7 +13391,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -13548,7 +13548,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -14659,7 +14659,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -15247,7 +15247,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -15541,7 +15541,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -15808,7 +15808,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                               class="css-d8rk4r toggle-handle"
                                             >
                                               <span
-                                                class="css-f7w6ps"
+                                                class="css-st84t0"
                                               />
                                             </div>
                                           </label>
@@ -16933,7 +16933,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -17354,7 +17354,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -17533,7 +17533,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -17687,7 +17687,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -18798,7 +18798,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -19219,7 +19219,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -19648,7 +19648,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>
@@ -19802,7 +19802,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="css-d8rk4r toggle-handle"
                                         >
                                           <span
-                                            class="css-f7w6ps"
+                                            class="css-st84t0"
                                           />
                                         </div>
                                       </label>

@@ -246,7 +246,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-105k8a9"
+              class="group css-155s9if"
               data-testid="TableRow"
             >
               <td
@@ -470,7 +470,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-105k8a9"
+              class="group css-155s9if"
               data-testid="TableRow"
             >
               <td
@@ -950,7 +950,7 @@ exports[`WalletsList > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-105k8a9"
+              class="group css-155s9if"
               data-testid="TableRow"
             >
               <td
@@ -1174,7 +1174,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-105k8a9"
+              class="group css-155s9if"
               data-testid="TableRow"
             >
               <td

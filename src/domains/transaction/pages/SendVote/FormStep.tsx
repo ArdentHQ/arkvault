@@ -67,7 +67,7 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 									? {
 											address: wallet.address(),
 											network: wallet.network(),
-									  }
+										}
 									: undefined
 							}
 							wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}

@@ -13,10 +13,10 @@ const StepStyled = styled.li<{ isActive: boolean }>`
 		isActive
 			? css`
 					${tw`bg-theme-primary-600 hover:bg-theme-primary-500`}
-			  `
+				`
 			: css`
 					${tw`bg-theme-primary-100 dark:bg-theme-secondary-800`}
-			  `}
+				`}
 `;
 
 const DotNavigationWrapper = styled.ul`
