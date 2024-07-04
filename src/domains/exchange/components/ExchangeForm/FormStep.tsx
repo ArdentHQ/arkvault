@@ -287,7 +287,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 		return (
 			<div className="flex w-full flex-col">
 				<span
-					className={cn("font-semibold ", {
+					className={cn("font-semibold", {
 						"text-theme-primary-600": isSelected,
 					})}
 				>
@@ -351,7 +351,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 								toCurrency
 									? currencyOptions.filter(
 											(option: any) => option.value !== toCurrency.coin.toUpperCase(),
-									  )
+										)
 									: currencyOptions
 							}
 							renderLabel={renderCurrencyLabel}
@@ -373,7 +373,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 											end: {
 												content: <Spinner size="sm" />,
 											},
-									  }
+										}
 									: undefined
 							}
 						/>
@@ -409,7 +409,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 									fromCurrency
 										? currencyOptions.filter(
 												(option: any) => option.value !== fromCurrency.coin.toUpperCase(),
-										  )
+											)
 										: currencyOptions
 								}
 								renderLabel={renderCurrencyLabel}
@@ -431,7 +431,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 												end: {
 													content: <Spinner size="sm" />,
 												},
-										  }
+											}
 										: undefined
 								}
 							/>

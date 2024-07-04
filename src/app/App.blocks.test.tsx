@@ -3,6 +3,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { Route, useHistory, Prompt } from "react-router-dom";
+import { ErrorBoundary } from "react-error-boundary";
 import { AppRouter, Main } from "./App.blocks";
 import {
 	env,
@@ -14,6 +15,7 @@ import {
 } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
+import { ApplicationError } from "@/domains/error/pages";
 const history = createHashHistory();
 
 vi.mock("@/utils/delay", () => ({
@@ -111,6 +113,22 @@ describe("App Router", () => {
 	});
 });
 
+const renderComponent = (path = "/", options = {}) => {
+	render(
+		<ErrorBoundary FallbackComponent={ApplicationError}>
+			<Route path={path}>
+				<Main />
+			</Route>
+		</ErrorBoundary>,
+		{
+			history,
+			route: "/",
+			withProviders: true,
+			...options,
+		},
+	);
+};
+
 describe("App Main", () => {
 	beforeEach(() => {
 		history.push("/");
@@ -123,16 +141,7 @@ describe("App Main", () => {
 	});
 
 	it("should render", async () => {
-		render(
-			<Route path="/">
-				<Main />
-			</Route>,
-			{
-				history,
-				route: "/",
-				withProviders: true,
-			},
-		);
+		renderComponent();
 
 		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
@@ -158,16 +167,7 @@ describe("App Main", () => {
 			throw new Error("sync test");
 		});
 
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<Main />
-			</Route>,
-			{
-				history,
-				route: profileUrl,
-				withProviders: true,
-			},
-		);
+		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 
@@ -190,16 +190,7 @@ describe("App Main", () => {
 		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
 		history.push(profileUrl);
 
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<Main />
-			</Route>,
-			{
-				history,
-				route: profileUrl,
-				withProviders: true,
-			},
-		);
+		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 		await waitFor(() => expect(successToastSpy).toHaveBeenCalled());
@@ -229,16 +220,7 @@ describe("App Main", () => {
 		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
 		history.push(profileUrl);
 
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<Main />
-			</Route>,
-			{
-				history,
-				route: profileUrl,
-				withProviders: true,
-			},
-		);
+		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 		await waitFor(() => expect(warningToastSpy).toHaveBeenCalled());
@@ -261,16 +243,7 @@ describe("App Main", () => {
 		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
 		history.push(profileUrl);
 
-		render(
-			<Route path={profileUrl}>
-				<Main />
-			</Route>,
-			{
-				history,
-				route: profileUrl,
-				withProviders: true,
-			},
-		);
+		renderComponent(profileUrl, { route: profileUrl });
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 

@@ -3,7 +3,7 @@
 exports[`TransactionType > should render in lg 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionType"
   >
     <div
@@ -22,7 +22,7 @@ exports[`TransactionType > should render in lg 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+      class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
     >
       <div
         class="css-1i4b0eq"
@@ -82,7 +82,7 @@ exports[`TransactionType > should render in lg 1`] = `
 exports[`TransactionType > should render in md 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionType"
   >
     <div
@@ -101,7 +101,7 @@ exports[`TransactionType > should render in md 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+      class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
     >
       <div
         class="css-1i4b0eq"
@@ -161,7 +161,7 @@ exports[`TransactionType > should render in md 1`] = `
 exports[`TransactionType > should render in sm 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionType"
   >
     <div
@@ -244,7 +244,7 @@ exports[`TransactionType > should render in sm 1`] = `
 exports[`TransactionType > should render in xl 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionType"
   >
     <div
@@ -263,7 +263,7 @@ exports[`TransactionType > should render in xl 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+      class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
     >
       <div
         class="css-1i4b0eq"
@@ -323,7 +323,7 @@ exports[`TransactionType > should render in xl 1`] = `
 exports[`TransactionType > should render in xs 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionType"
   >
     <div

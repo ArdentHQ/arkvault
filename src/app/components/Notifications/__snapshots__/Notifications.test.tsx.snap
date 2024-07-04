@@ -3,7 +3,7 @@
 exports[`Notifications > should emit transactionClick event 1`] = `
 <div>
   <div
-    class="css-80avit"
+    class="css-16d2qtb"
     data-testid="NotificationsWrapper"
   >
     <div
@@ -123,14 +123,14 @@ exports[`Notifications > should emit transactionClick event 1`] = `
               >
                 <div>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-mx19qq"
+                        class="flex space-x-3 css-hhd44j"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -170,7 +170,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -195,7 +195,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -213,10 +213,10 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
-                          class="css-fbeerz"
+                          class="css-148b4hi"
                           color="danger"
                         >
                           <div
@@ -236,14 +236,14 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-mx19qq"
+                        class="flex space-x-3 css-hhd44j"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -280,7 +280,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -305,7 +305,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -323,10 +323,10 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
-                          class="css-1vb1527"
+                          class="css-1v19423"
                           color="success"
                         >
                           <div
@@ -346,14 +346,14 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-mx19qq"
+                        class="flex space-x-3 css-hhd44j"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -390,7 +390,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -415,7 +415,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -433,10 +433,10 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
-                          class="css-1vb1527"
+                          class="css-1v19423"
                           color="success"
                         >
                           <div
@@ -467,7 +467,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
 exports[`Notifications > should render with empty notifications 1`] = `
 <div>
   <div
-    class="css-19lwrp1"
+    class="css-5fq6i9"
   >
     <div
       class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -555,7 +555,7 @@ exports[`Notifications > should render with empty notifications 1`] = `
 exports[`Notifications > should render with plugins 1`] = `
 <div>
   <div
-    class="css-80avit"
+    class="css-16d2qtb"
     data-testid="NotificationsWrapper"
   >
     <div
@@ -675,14 +675,14 @@ exports[`Notifications > should render with plugins 1`] = `
               >
                 <div>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-mx19qq"
+                        class="flex space-x-3 css-hhd44j"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -722,7 +722,7 @@ exports[`Notifications > should render with plugins 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -747,7 +747,7 @@ exports[`Notifications > should render with plugins 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -765,10 +765,10 @@ exports[`Notifications > should render with plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
-                          class="css-fbeerz"
+                          class="css-148b4hi"
                           color="danger"
                         >
                           <div
@@ -788,14 +788,14 @@ exports[`Notifications > should render with plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-mx19qq"
+                        class="flex space-x-3 css-hhd44j"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -832,7 +832,7 @@ exports[`Notifications > should render with plugins 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -857,7 +857,7 @@ exports[`Notifications > should render with plugins 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -875,10 +875,10 @@ exports[`Notifications > should render with plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
-                          class="css-1vb1527"
+                          class="css-1v19423"
                           color="success"
                         >
                           <div
@@ -898,14 +898,14 @@ exports[`Notifications > should render with plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-mx19qq"
+                        class="flex space-x-3 css-hhd44j"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -942,7 +942,7 @@ exports[`Notifications > should render with plugins 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -967,7 +967,7 @@ exports[`Notifications > should render with plugins 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -985,10 +985,10 @@ exports[`Notifications > should render with plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
-                          class="css-1vb1527"
+                          class="css-1v19423"
                           color="success"
                         >
                           <div
@@ -1019,7 +1019,7 @@ exports[`Notifications > should render with plugins 1`] = `
 exports[`Notifications > should render with transactions and plugins 1`] = `
 <div>
   <div
-    class="css-80avit"
+    class="css-16d2qtb"
     data-testid="NotificationsWrapper"
   >
     <div
@@ -1139,14 +1139,14 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
               >
                 <div>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-mx19qq"
+                        class="flex space-x-3 css-hhd44j"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1186,7 +1186,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -1211,7 +1211,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -1229,10 +1229,10 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
-                          class="css-fbeerz"
+                          class="css-148b4hi"
                           color="danger"
                         >
                           <div
@@ -1252,14 +1252,14 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-mx19qq"
+                        class="flex space-x-3 css-hhd44j"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1296,7 +1296,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -1321,7 +1321,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -1339,10 +1339,10 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
-                          class="css-1vb1527"
+                          class="css-1v19423"
                           color="success"
                         >
                           <div
@@ -1362,14 +1362,14 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-mx19qq"
+                        class="flex space-x-3 css-hhd44j"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1406,7 +1406,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -1431,7 +1431,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -1449,10 +1449,10 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
-                          class="css-1vb1527"
+                          class="css-1v19423"
                           color="success"
                         >
                           <div

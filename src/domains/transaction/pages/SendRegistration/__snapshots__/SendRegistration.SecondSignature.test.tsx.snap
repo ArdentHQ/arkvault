@@ -7,7 +7,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -16,7 +16,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -177,10 +177,10 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -230,10 +230,10 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -289,10 +289,10 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -337,10 +337,10 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -416,7 +416,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -468,7 +468,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Authenticate
                       </span>
@@ -476,22 +476,22 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -531,14 +531,14 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                       Mnemonic
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -595,10 +595,10 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                 </div>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -609,7 +609,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                   </div>
                 </button>
                 <button
-                  class="css-1bx0hyc"
+                  class="css-fl4fi0"
                   data-testid="StepNavigation__send-button"
                   type="submit"
                 >

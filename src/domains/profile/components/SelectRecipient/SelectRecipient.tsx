@@ -207,7 +207,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 												<Icon name="User" size="lg" />
 											</div>
 										),
-								  }
+									}
 								: undefined,
 							start: {
 								content: (

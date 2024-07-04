@@ -33,7 +33,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-1ecv4eg"
+            class="css-rzhg83"
           >
             <div
               class="css-v0ob3f"
@@ -77,7 +77,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
             </span>
           </div>
           <div
-            class="css-1pvpof3"
+            class="css-trjt6n"
           >
             The Delegate name is permanent and cannot be modified later. It is registered on the network.
           </div>
@@ -103,7 +103,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
           </div>
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -129,7 +129,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
           </div>
         </div>
         <div
-          class="no-ligatures css-wr7004"
+          class="no-ligatures css-1uo4ck9"
           data-testid="TransactionSender"
         >
           <div
@@ -155,7 +155,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-u3jrna"
+                      class="no-ligatures css-9nx3be"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -175,7 +175,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
             class="flex items-center -space-x-1"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -204,7 +204,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
               Delegate Name
             </label>
             <div
-              class=" css-px3dod"
+              class=" css-12mz4i6"
             >
               <div
                 class="relative flex h-full flex-1"
@@ -212,7 +212,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 <input
                   aria-invalid="true"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
+                  class="no-ligatures w-full border-none css-1vs1awz"
                   data-testid="Input__username"
                   name="username"
                   type="text"
@@ -289,7 +289,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                   class="flex items-center"
                 >
                   <span
-                    class="css-w6ofpw"
+                    class="css-1588dqn"
                     role="button"
                   >
                     Simple
@@ -302,15 +302,15 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                       type="checkbox"
                     />
                     <div
-                      class="css-1f5xwvv toggle-handle"
+                      class="css-10kxbe9 toggle-handle"
                     >
                       <span
-                        class="css-19qsmxy"
+                        class="css-14ojvms"
                       />
                     </div>
                   </label>
                   <span
-                    class="css-iwfou6"
+                    class="css-noruk0"
                     role="button"
                   >
                     Advanced
@@ -325,7 +325,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="css-17i051m"
+                  class="css-1sbhrf0"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -347,7 +347,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="css-17i051m"
+                  class="css-1sbhrf0"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -369,7 +369,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="css-17i051m"
+                  class="css-1sbhrf0"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -431,7 +431,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-1ecv4eg"
+            class="css-rzhg83"
           >
             <div
               class="css-v0ob3f"
@@ -475,7 +475,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
             </span>
           </div>
           <div
-            class="css-1pvpof3"
+            class="css-trjt6n"
           >
             The Delegate name is permanent and cannot be modified later. It is registered on the network.
           </div>
@@ -501,7 +501,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
           </div>
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -527,7 +527,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
           </div>
         </div>
         <div
-          class="no-ligatures css-wr7004"
+          class="no-ligatures css-1uo4ck9"
           data-testid="TransactionSender"
         >
           <div
@@ -553,7 +553,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-u3jrna"
+                      class="no-ligatures css-9nx3be"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -573,7 +573,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
             class="flex items-center -space-x-1"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -602,14 +602,14 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
               Delegate Name
             </label>
             <div
-              class=" css-1psxlcd"
+              class=" css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
+                  class="no-ligatures w-full border-none css-1vs1awz"
                   data-testid="Input__username"
                   name="username"
                   type="text"
@@ -632,7 +632,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
               class="relative"
             >
               <div
-                class="css-n29l73"
+                class="css-xk5t3v"
                 disabled=""
               >
                 <div
@@ -640,7 +640,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                    class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                     data-testid="InputCurrency"
                     disabled=""
                     name="fee"
@@ -662,7 +662,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                         class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
                       >
                         <button
-                          class="border-r sm:border-r-0 css-1wqyzac"
+                          class="border-r sm:border-r-0 css-jmpn15"
                           data-testid="InputFeeAdvanced__up"
                           disabled=""
                           type="button"
@@ -692,7 +692,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                           </div>
                         </button>
                         <button
-                          class="css-1p5qk9o"
+                          class="css-1ddtsjs"
                           data-testid="InputFeeAdvanced__down"
                           disabled=""
                           type="button"
@@ -785,7 +785,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
           </div>
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -811,7 +811,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
           </div>
         </div>
         <div
-          class="no-ligatures css-19rivvh"
+          class="no-ligatures css-qu17s6"
           data-testid="TransactionSender"
         >
           <div
@@ -837,7 +837,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-u3jrna"
+                      class="no-ligatures css-9nx3be"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -857,7 +857,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
             class="flex items-center -space-x-1"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -873,7 +873,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
           </div>
         </div>
         <div
-          class="no-ligatures css-19rivvh"
+          class="no-ligatures css-qu17s6"
           data-testid="TransactionDetail"
         >
           <div
@@ -906,7 +906,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                   class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
                 >
                   <span
-                    class="css-1j6ndo3"
+                    class="css-1orx95h"
                   >
                     Transaction Amount
                   </span>
@@ -921,7 +921,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                   class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
                 >
                   <span
-                    class="css-1j6ndo3"
+                    class="css-1orx95h"
                   >
                     Transaction Fee
                   </span>
@@ -972,7 +972,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
               class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
             >
               <span
-                class="css-1j6ndo3"
+                class="css-1orx95h"
               >
                 Total Amount
               </span>
@@ -1024,7 +1024,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-1ecv4eg"
+            class="css-rzhg83"
           >
             <div
               class="css-v0ob3f"
@@ -1068,7 +1068,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
             </span>
           </div>
           <div
-            class="css-1pvpof3"
+            class="css-trjt6n"
           >
             The Delegate name is permanent and cannot be modified later. It is registered on the network.
           </div>
@@ -1094,7 +1094,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
           </div>
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -1120,7 +1120,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
           </div>
         </div>
         <div
-          class="no-ligatures css-wr7004"
+          class="no-ligatures css-1uo4ck9"
           data-testid="TransactionSender"
         >
           <div
@@ -1146,7 +1146,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-u3jrna"
+                      class="no-ligatures css-9nx3be"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -1166,7 +1166,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
             class="flex items-center -space-x-1"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -1195,14 +1195,14 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
               Delegate Name
             </label>
             <div
-              class=" css-1psxlcd"
+              class=" css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
+                  class="no-ligatures w-full border-none css-1vs1awz"
                   data-testid="Input__username"
                   name="username"
                   type="text"
@@ -1232,7 +1232,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                   class="flex items-center"
                 >
                   <span
-                    class="css-iwfou6"
+                    class="css-noruk0"
                     role="button"
                   >
                     Simple
@@ -1245,15 +1245,15 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                       type="checkbox"
                     />
                     <div
-                      class="css-1f5xwvv toggle-handle"
+                      class="css-10kxbe9 toggle-handle"
                     >
                       <span
-                        class="css-19qsmxy"
+                        class="css-14ojvms"
                       />
                     </div>
                   </label>
                   <span
-                    class="css-w6ofpw"
+                    class="css-1588dqn"
                     role="button"
                   >
                     Advanced
@@ -1264,14 +1264,14 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1nupw50"
+                      class="no-ligatures w-full border-none css-1vs1awz"
                       data-testid="InputCurrency"
                       name="fee"
                       type="text"
@@ -1292,7 +1292,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                           class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
                         >
                           <button
-                            class="border-r sm:border-r-0 css-1wqyzac"
+                            class="border-r sm:border-r-0 css-jmpn15"
                             data-testid="InputFeeAdvanced__up"
                             type="button"
                           >
@@ -1321,7 +1321,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                             </div>
                           </button>
                           <button
-                            class="css-1p5qk9o"
+                            class="css-1ddtsjs"
                             data-testid="InputFeeAdvanced__down"
                             type="button"
                           >
@@ -1397,7 +1397,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-1ecv4eg"
+            class="css-rzhg83"
           >
             <div
               class="css-v0ob3f"
@@ -1441,7 +1441,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
             </span>
           </div>
           <div
-            class="css-1pvpof3"
+            class="css-trjt6n"
           >
             The Delegate name is permanent and cannot be modified later. It is registered on the network.
           </div>
@@ -1467,7 +1467,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
           </div>
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -1493,7 +1493,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
           </div>
         </div>
         <div
-          class="no-ligatures css-wr7004"
+          class="no-ligatures css-1uo4ck9"
           data-testid="TransactionSender"
         >
           <div
@@ -1519,7 +1519,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-u3jrna"
+                      class="no-ligatures css-9nx3be"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -1539,7 +1539,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
             class="flex items-center -space-x-1"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -1568,7 +1568,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
               Delegate Name
             </label>
             <div
-              class=" css-px3dod"
+              class=" css-12mz4i6"
             >
               <div
                 class="relative flex h-full flex-1"
@@ -1576,7 +1576,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 <input
                   aria-invalid="true"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
+                  class="no-ligatures w-full border-none css-1vs1awz"
                   data-testid="Input__username"
                   name="username"
                   type="text"
@@ -1653,7 +1653,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                   class="flex items-center"
                 >
                   <span
-                    class="css-w6ofpw"
+                    class="css-1588dqn"
                     role="button"
                   >
                     Simple
@@ -1666,15 +1666,15 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                       type="checkbox"
                     />
                     <div
-                      class="css-1f5xwvv toggle-handle"
+                      class="css-10kxbe9 toggle-handle"
                     >
                       <span
-                        class="css-19qsmxy"
+                        class="css-14ojvms"
                       />
                     </div>
                   </label>
                   <span
-                    class="css-iwfou6"
+                    class="css-noruk0"
                     role="button"
                   >
                     Advanced
@@ -1689,7 +1689,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="css-17i051m"
+                  class="css-1sbhrf0"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1711,7 +1711,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="css-17i051m"
+                  class="css-1sbhrf0"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1733,7 +1733,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="css-17i051m"
+                  class="css-1sbhrf0"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1795,7 +1795,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-1ecv4eg"
+            class="css-rzhg83"
           >
             <div
               class="css-v0ob3f"
@@ -1839,7 +1839,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
             </span>
           </div>
           <div
-            class="css-1pvpof3"
+            class="css-trjt6n"
           >
             The Delegate name is permanent and cannot be modified later. It is registered on the network.
           </div>
@@ -1865,7 +1865,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
           </div>
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -1891,7 +1891,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
           </div>
         </div>
         <div
-          class="no-ligatures css-wr7004"
+          class="no-ligatures css-1uo4ck9"
           data-testid="TransactionSender"
         >
           <div
@@ -1917,7 +1917,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-u3jrna"
+                      class="no-ligatures css-9nx3be"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -1937,7 +1937,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
             class="flex items-center -space-x-1"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -1966,7 +1966,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
               Delegate Name
             </label>
             <div
-              class=" css-px3dod"
+              class=" css-12mz4i6"
             >
               <div
                 class="relative flex h-full flex-1"
@@ -1974,7 +1974,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                 <input
                   aria-invalid="true"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
+                  class="no-ligatures w-full border-none css-1vs1awz"
                   data-testid="Input__username"
                   name="username"
                   type="text"
@@ -2051,7 +2051,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                   class="flex items-center"
                 >
                   <span
-                    class="css-w6ofpw"
+                    class="css-1588dqn"
                     role="button"
                   >
                     Simple
@@ -2064,15 +2064,15 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                       type="checkbox"
                     />
                     <div
-                      class="css-1f5xwvv toggle-handle"
+                      class="css-10kxbe9 toggle-handle"
                     >
                       <span
-                        class="css-19qsmxy"
+                        class="css-14ojvms"
                       />
                     </div>
                   </label>
                   <span
-                    class="css-iwfou6"
+                    class="css-noruk0"
                     role="button"
                   >
                     Advanced
@@ -2087,7 +2087,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="css-17i051m"
+                  class="css-1sbhrf0"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -2109,7 +2109,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="css-17i051m"
+                  class="css-1sbhrf0"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -2131,7 +2131,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="css-17i051m"
+                  class="css-1sbhrf0"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"

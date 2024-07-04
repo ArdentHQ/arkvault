@@ -187,7 +187,7 @@ exports[`LedgerConfirmation > should render 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1b3vlxq"
+        class="css-1ppx3l2"
         color="info"
       />
       <span
@@ -388,7 +388,7 @@ exports[`LedgerConfirmation > should render with children 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1b3vlxq"
+        class="css-1ppx3l2"
         color="info"
       />
       <span
@@ -400,7 +400,7 @@ exports[`LedgerConfirmation > should render with children 1`] = `
     </div>
   </div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
     type="horizontal"
   />
   <section
@@ -603,7 +603,7 @@ exports[`LedgerConfirmation > should render with children and custom heading 1`]
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1b3vlxq"
+        class="css-1ppx3l2"
         color="info"
       />
       <span
@@ -615,7 +615,7 @@ exports[`LedgerConfirmation > should render with children and custom heading 1`]
     </div>
   </div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
     type="horizontal"
   />
   <section

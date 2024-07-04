@@ -133,12 +133,12 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-1li86da"
+            class=" css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
               >
                 <span
                   data-testid="TimeAgo"
@@ -149,10 +149,10 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-1rods8x"
+                class="space-x-4 css-12appi5"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -176,7 +176,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
@@ -194,10 +194,10 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-br23tb"
+                class="justify-end css-yf8cy4"
               >
                 <div
-                  class="css-8zppvw"
+                  class="css-41vn9a"
                   color="danger"
                 >
                   <div
@@ -215,12 +215,12 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-1li86da"
+            class=" css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
               >
                 <span
                   data-testid="TimeAgo"
@@ -231,7 +231,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-1rods8x"
+                class="space-x-4 css-12appi5"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -309,10 +309,10 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-br23tb"
+                class="justify-end css-yf8cy4"
               >
                 <div
-                  class="css-8zppvw"
+                  class="css-41vn9a"
                   color="danger"
                 >
                   <div
@@ -469,12 +469,12 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-1li86da"
+            class=" css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
               >
                 <span
                   data-testid="TimeAgo"
@@ -485,10 +485,10 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-1rods8x"
+                class="space-x-4 css-12appi5"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -512,7 +512,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
@@ -530,10 +530,10 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-br23tb"
+                class="justify-end css-yf8cy4"
               >
                 <div
-                  class="css-8zppvw"
+                  class="css-41vn9a"
                   color="danger"
                 >
                   <div
@@ -551,12 +551,12 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-1li86da"
+            class=" css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
               >
                 <span
                   data-testid="TimeAgo"
@@ -567,7 +567,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-1rods8x"
+                class="space-x-4 css-12appi5"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -645,10 +645,10 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-br23tb"
+                class="justify-end css-yf8cy4"
               >
                 <div
-                  class="css-8zppvw"
+                  class="css-41vn9a"
                   color="danger"
                 >
                   <div
@@ -690,7 +690,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-1li86da"
+            class=" css-16ynu5g"
             data-testid="TableRow"
           >
             <td
@@ -709,7 +709,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   class="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden"
                 >
                   <div
-                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -733,7 +733,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-u3jrna"
+                          class="no-ligatures css-9nx3be"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 2
@@ -776,7 +776,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -794,7 +794,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-1li86da"
+            class=" css-16ynu5g"
             data-testid="TableRow"
           >
             <td
@@ -913,7 +913,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -1070,12 +1070,12 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-1li86da"
+            class=" css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
               >
                 <span
                   data-testid="TimeAgo"
@@ -1086,10 +1086,10 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-1rods8x"
+                class="space-x-4 css-12appi5"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1113,7 +1113,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
@@ -1131,10 +1131,10 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-br23tb"
+                class="justify-end css-yf8cy4"
               >
                 <div
-                  class="css-8zppvw"
+                  class="css-41vn9a"
                   color="danger"
                 >
                   <div
@@ -1152,12 +1152,12 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-1li86da"
+            class=" css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
               >
                 <span
                   data-testid="TimeAgo"
@@ -1168,7 +1168,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-1rods8x"
+                class="space-x-4 css-12appi5"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -1246,10 +1246,10 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-br23tb"
+                class="justify-end css-yf8cy4"
               >
                 <div
-                  class="css-8zppvw"
+                  class="css-41vn9a"
                   color="danger"
                 >
                   <div
@@ -1291,7 +1291,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-1li86da"
+            class=" css-16ynu5g"
             data-testid="TableRow"
           >
             <td
@@ -1310,7 +1310,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   class="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden"
                 >
                   <div
-                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -1334,7 +1334,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-u3jrna"
+                          class="no-ligatures css-9nx3be"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 2
@@ -1377,7 +1377,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div
@@ -1395,7 +1395,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-1li86da"
+            class=" css-16ynu5g"
             data-testid="TableRow"
           >
             <td
@@ -1514,7 +1514,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-fbeerz"
+                  class="css-148b4hi"
                   color="danger"
                 >
                   <div

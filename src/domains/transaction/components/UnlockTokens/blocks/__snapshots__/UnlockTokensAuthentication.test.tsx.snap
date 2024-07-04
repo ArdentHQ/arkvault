@@ -37,14 +37,14 @@ exports[`UnlockTokensAuthentication > should render 1`] = `
         Mnemonic
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -103,7 +103,7 @@ exports[`UnlockTokensAuthentication > should render 1`] = `
     class="flex justify-end space-x-3 pt-3"
   >
     <button
-      class="css-1jhy6v9"
+      class="css-6419sw"
       type="button"
     >
       <div
@@ -113,7 +113,7 @@ exports[`UnlockTokensAuthentication > should render 1`] = `
       </div>
     </button>
     <button
-      class="css-1bx0hyc"
+      class="css-fl4fi0"
       data-testid="UnlockTokensAuthentication__send"
       type="submit"
     >

@@ -3,14 +3,14 @@
 exports[`Input > should render as custom element 1`] = `
 <DocumentFragment>
   <div
-    class="css-1psxlcd"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <select
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="Input"
         type="text"
       />
@@ -22,14 +22,14 @@ exports[`Input > should render as custom element 1`] = `
 exports[`Input > should render as textarea 1`] = `
 <DocumentFragment>
   <div
-    class="css-15amhun"
+    class="css-8psyez"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="Input"
         type="text"
         value=""
@@ -42,7 +42,7 @@ exports[`Input > should render as textarea 1`] = `
 exports[`Input > should render disabled 1`] = `
 <DocumentFragment>
   <div
-    class="css-n29l73"
+    class="css-xk5t3v"
     disabled=""
   >
     <div
@@ -50,7 +50,7 @@ exports[`Input > should render disabled 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+        class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
         data-testid="Input"
         disabled=""
         type="text"
@@ -64,7 +64,7 @@ exports[`Input > should render disabled 1`] = `
 exports[`Input > should render invalid 1`] = `
 <DocumentFragment>
   <div
-    class="css-px3dod"
+    class="css-12mz4i6"
   >
     <div
       class="relative flex h-full flex-1"
@@ -72,7 +72,7 @@ exports[`Input > should render invalid 1`] = `
       <input
         aria-invalid="true"
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="Input"
         type="text"
         value=""
@@ -132,7 +132,7 @@ exports[`Input > should render invalid 1`] = `
 exports[`Input > should render invalid and disabled 1`] = `
 <DocumentFragment>
   <div
-    class="css-1by871c"
+    class="css-4xrsad"
     disabled=""
   >
     <div
@@ -141,7 +141,7 @@ exports[`Input > should render invalid and disabled 1`] = `
       <input
         aria-invalid="true"
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+        class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
         data-testid="Input"
         disabled=""
         type="text"
@@ -202,14 +202,14 @@ exports[`Input > should render invalid and disabled 1`] = `
 exports[`Input > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <div
-    class="css-1psxlcd"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="Input"
         type="text"
         value=""
@@ -222,14 +222,14 @@ exports[`Input > should render when isCompact = false 1`] = `
 exports[`Input > should render when isCompact = true 1`] = `
 <DocumentFragment>
   <div
-    class="css-6zwcjo"
+    class="css-xlffyg"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="Input"
         type="text"
         value=""
@@ -242,7 +242,7 @@ exports[`Input > should render when isCompact = true 1`] = `
 exports[`Input > should render with addons 1`] = `
 <DocumentFragment>
   <div
-    class="css-1psxlcd"
+    class="css-n1b0kl"
   >
     <span>
       start
@@ -252,7 +252,7 @@ exports[`Input > should render with addons 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="Input"
         type="text"
         value=""
@@ -277,14 +277,14 @@ exports[`Input > should render with addons 1`] = `
 exports[`Input > should render with focus 1`] = `
 <DocumentFragment>
   <div
-    class="css-1psxlcd"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="Input"
         type="text"
         value=""
@@ -302,14 +302,14 @@ exports[`Input > should render with suggestion 1`] = `
     …
   </div>
   <div
-    class="css-1psxlcd"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
+        class="no-ligatures w-full border-none css-1vs1awz"
         data-testid="Input"
         type="text"
         value=""

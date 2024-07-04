@@ -234,7 +234,7 @@ export const SendRegistration = () => {
 			default: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
 			secondSignature: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
-		}[registrationType]);
+		})[registrationType];
 
 	return (
 		<Page pageTitle={getPageTitle()}>

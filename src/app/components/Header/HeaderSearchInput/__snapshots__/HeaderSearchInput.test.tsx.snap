@@ -7,7 +7,7 @@ exports[`HeaderSearchInput > should render 1`] = `
     data-testid="HeaderSearchInput"
   >
     <div
-      class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1h4jdfq"
+      class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-e93eg4"
       data-testid="HeaderSearchInput__input"
     >
       <button
@@ -46,14 +46,14 @@ exports[`HeaderSearchInput > should render 1`] = `
         class="flex-1"
       >
         <div
-          class="-ml-4 css-7km7kr"
+          class="-ml-4 css-jq6j0b"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="HeaderSearchInput__input__input"
               placeholder="Search..."
               type="text"

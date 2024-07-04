@@ -3,7 +3,7 @@
 exports[`TransactionRowRecipientIcon > should render avatar 1`] = `
 <DocumentFragment>
   <div
-    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
     data-testid="Avatar"
   >
     <div
@@ -63,7 +63,7 @@ exports[`TransactionRowRecipientIcon > should render compact 1`] = `
 exports[`TransactionRowRecipientIcon > should render icon 1`] = `
 <DocumentFragment>
   <div
-    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
+    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
     data-testid="TransactionRowRecipientIcon"
   >
     <div

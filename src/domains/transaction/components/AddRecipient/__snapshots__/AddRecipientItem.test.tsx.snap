@@ -13,7 +13,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
         class="hidden sm:block"
       >
         <div
-          class="shrink-0 css-8d0u1i"
+          class="shrink-0 css-1n9jllj"
           data-testid="Avatar"
         >
           <div
@@ -46,7 +46,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
@@ -64,7 +64,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
           class="sm:hidden"
         >
           <div
-            class="shrink-0 css-1vy2z2u"
+            class="shrink-0 css-1yk316i"
             data-testid="Avatar"
           >
             <div
@@ -117,7 +117,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
         class="w-full sm:w-auto"
       >
         <button
-          class="w-full sm:w-auto css-1cp5yjb"
+          class="w-full sm:w-auto css-15yk9k4"
           data-testid="AddRecipientItem--deleteButton"
           type="button"
         >
@@ -180,7 +180,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
         class="hidden sm:block"
       >
         <div
-          class="shrink-0 css-8d0u1i"
+          class="shrink-0 css-1n9jllj"
           data-testid="Avatar"
         >
           <div
@@ -213,7 +213,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
@@ -231,7 +231,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
           class="sm:hidden"
         >
           <div
-            class="shrink-0 css-1vy2z2u"
+            class="shrink-0 css-1yk316i"
             data-testid="Avatar"
           >
             <div
@@ -271,7 +271,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
         class="w-full sm:w-auto"
       >
         <button
-          class="w-full sm:w-auto css-1cp5yjb"
+          class="w-full sm:w-auto css-15yk9k4"
           data-testid="AddRecipientItem--deleteButton"
           type="button"
         >

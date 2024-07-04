@@ -7,7 +7,7 @@ exports[`ContactListMobile > should render 1`] = `
     data-testid="ContactListMobile"
   >
     <div
-      class="css-8cvvgy"
+      class="css-fvpuky"
     >
       <div
         class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -79,17 +79,17 @@ exports[`ContactListMobile > should render 1`] = `
                 </span>
               </div>
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                 type="vertical"
               />
             </div>
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
