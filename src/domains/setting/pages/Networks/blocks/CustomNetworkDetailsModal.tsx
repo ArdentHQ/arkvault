@@ -45,7 +45,7 @@ const CustomNetworkDetailsModal: React.VFC<{
 					{network.currency.symbol}
 				</CustomNetworkDetailsModalRow>
 				<CustomNetworkDetailsModalRow label={t("COMMON.NETHASH")}>
-					<div className="flex grow items-center space-x-2 ">
+					<div className="flex grow items-center space-x-2">
 						<Tooltip content={network.meta?.nethash} disabled={!network.meta?.nethash}>
 							<span className="truncate">{network.meta?.nethash}</span>
 						</Tooltip>

@@ -79,14 +79,14 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -111,7 +111,7 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -121,7 +121,7 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                      class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       name="network"

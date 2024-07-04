@@ -5,22 +5,22 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-mx19qq"
+            class="css-hhd44j"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -73,7 +73,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="table-cell md:hidden lg:table-cell"
         >
           <div
-            class="text-theme-secondary-text css-1rods8x"
+            class="text-theme-secondary-text css-12appi5"
           >
             <span
               class="whitespace-nowrap"
@@ -85,7 +85,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
         </td>
         <td>
           <div
-            class="space-x-4 css-1rods8x"
+            class="space-x-4 css-12appi5"
           >
             <div
               class="flex items-center space-x-2"
@@ -119,7 +119,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 </div>
               </span>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                 data-testid="Avatar"
               >
                 <div
@@ -151,10 +151,10 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
         </td>
         <td>
           <div
-            class="space-x-4 css-1rods8x"
+            class="space-x-4 css-12appi5"
           >
             <div
-              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
               data-testid="Avatar"
             >
               <div
@@ -185,14 +185,14 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
         </td>
         <td>
           <div
-            class="justify-end css-1rods8x"
+            class="justify-end css-12appi5"
           >
             <div
               class="flex items-center"
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="css-8zppvw"
+                class="css-41vn9a"
                 color="danger"
               >
                 <div
@@ -213,7 +213,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="hidden xl:block"
         >
           <div
-            class="justify-end css-br23tb"
+            class="justify-end css-yf8cy4"
           >
             <span
               class="whitespace-nowrap text-theme-secondary-text"
@@ -234,22 +234,22 @@ exports[`TransactionRow > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-mx19qq"
+            class="css-hhd44j"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -302,7 +302,7 @@ exports[`TransactionRow > should render 1`] = `
           class="table-cell md:hidden lg:table-cell"
         >
           <div
-            class="text-theme-secondary-text css-1rods8x"
+            class="text-theme-secondary-text css-12appi5"
           >
             <span
               class="whitespace-nowrap"
@@ -314,7 +314,7 @@ exports[`TransactionRow > should render 1`] = `
         </td>
         <td>
           <div
-            class="space-x-4 css-1rods8x"
+            class="space-x-4 css-12appi5"
           >
             <div
               class="flex items-center space-x-2"
@@ -348,7 +348,7 @@ exports[`TransactionRow > should render 1`] = `
                 </div>
               </span>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                 data-testid="Avatar"
               >
                 <div
@@ -373,7 +373,7 @@ exports[`TransactionRow > should render 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -391,10 +391,10 @@ exports[`TransactionRow > should render 1`] = `
         </td>
         <td>
           <div
-            class="space-x-4 css-1rods8x"
+            class="space-x-4 css-12appi5"
           >
             <div
-              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
               data-testid="Avatar"
             >
               <div
@@ -418,7 +418,7 @@ exports[`TransactionRow > should render 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -436,10 +436,10 @@ exports[`TransactionRow > should render 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1rods8x"
+            class="justify-end css-12appi5"
           >
             <div
-              class="css-8zppvw"
+              class="css-41vn9a"
               color="danger"
             >
               <div
@@ -459,7 +459,7 @@ exports[`TransactionRow > should render 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="justify-end css-br23tb"
+            class="justify-end css-yf8cy4"
           >
             <span
               class="whitespace-nowrap text-theme-secondary-text"
@@ -480,12 +480,12 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-14huxtf"
+            class="css-bgc8eo"
           >
             <span
               aria-busy="true"
@@ -506,7 +506,7 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
           class="table-cell md:hidden lg:table-cell"
         >
           <div
-            class="css-1d4ra48"
+            class="css-o5w6qc"
           >
             <span
               aria-busy="true"
@@ -525,7 +525,7 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
         </td>
         <td>
           <div
-            class="css-1d4ra48"
+            class="css-o5w6qc"
           >
             <div
               class="mr-4 flex items-center -space-x-1"
@@ -578,7 +578,7 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
         </td>
         <td>
           <div
-            class="css-1d4ra48"
+            class="css-o5w6qc"
           >
             <div
               class="mr-4"
@@ -614,7 +614,7 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1d4ra48"
+            class="justify-end css-o5w6qc"
           >
             <span
               class="flex h-7 items-center space-x-1 rounded border-2 border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -652,7 +652,7 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-10gefem"
           >
             <span
               class="flex items-center space-x-1"
@@ -697,7 +697,7 @@ exports[`TransactionRow > should render responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -713,14 +713,14 @@ exports[`TransactionRow > should render responsive 1`] = `
               ID
             </div>
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <span
                   class="no-ligatures css-0"
@@ -771,7 +771,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -786,7 +786,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -817,7 +817,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                 class="flex w-0 flex-1 items-center justify-end overflow-hidden flex-row-reverse gap-2"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -841,7 +841,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -867,7 +867,7 @@ exports[`TransactionRow > should render responsive 1`] = `
               Amount
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -913,7 +913,7 @@ exports[`TransactionRow > should render responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -929,14 +929,14 @@ exports[`TransactionRow > should render responsive 2`] = `
               ID
             </div>
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <span
                   class="no-ligatures css-0"
@@ -987,7 +987,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1002,7 +1002,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1033,7 +1033,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                 class="flex w-0 flex-1 items-center justify-end overflow-hidden flex-row-reverse gap-2"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1057,7 +1057,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1083,7 +1083,7 @@ exports[`TransactionRow > should render responsive 2`] = `
               Amount
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -1129,12 +1129,12 @@ exports[`TransactionRow > should render skeleton 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-mx19qq"
+            class="css-hhd44j"
           >
             <span
               aria-busy="true"
@@ -1155,7 +1155,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
           class="table-cell md:hidden lg:table-cell"
         >
           <div
-            class="css-1rods8x"
+            class="css-12appi5"
           >
             <span
               aria-busy="true"
@@ -1174,7 +1174,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
         </td>
         <td>
           <div
-            class="css-1rods8x"
+            class="css-12appi5"
           >
             <div
               class="mr-4 flex items-center space-x-2"
@@ -1223,7 +1223,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
         </td>
         <td>
           <div
-            class="css-1rods8x"
+            class="css-12appi5"
           >
             <div
               class="mr-4"
@@ -1259,7 +1259,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1rods8x"
+            class="justify-end css-12appi5"
           >
             <span
               class="flex h-7 items-center space-x-1"
@@ -1297,7 +1297,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="justify-end css-br23tb"
+            class="justify-end css-yf8cy4"
           >
             <span
               class="flex items-center space-x-1"
@@ -1342,22 +1342,22 @@ exports[`TransactionRow > should render with currency 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="css-mx19qq"
+            class="css-hhd44j"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -1410,7 +1410,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="table-cell md:hidden lg:table-cell"
         >
           <div
-            class="text-theme-secondary-text css-1rods8x"
+            class="text-theme-secondary-text css-12appi5"
           >
             <span
               class="whitespace-nowrap"
@@ -1422,7 +1422,7 @@ exports[`TransactionRow > should render with currency 1`] = `
         </td>
         <td>
           <div
-            class="space-x-4 css-1rods8x"
+            class="space-x-4 css-12appi5"
           >
             <div
               class="flex items-center space-x-2"
@@ -1456,7 +1456,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 </div>
               </span>
               <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                 data-testid="Avatar"
               >
                 <div
@@ -1488,10 +1488,10 @@ exports[`TransactionRow > should render with currency 1`] = `
         </td>
         <td>
           <div
-            class="space-x-4 css-1rods8x"
+            class="space-x-4 css-12appi5"
           >
             <div
-              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
               data-testid="Avatar"
             >
               <div
@@ -1522,14 +1522,14 @@ exports[`TransactionRow > should render with currency 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1rods8x"
+            class="justify-end css-12appi5"
           >
             <div
               class="flex items-center"
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="css-8zppvw"
+                class="css-41vn9a"
                 color="danger"
               >
                 <div
@@ -1550,7 +1550,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="justify-end css-br23tb"
+            class="justify-end css-yf8cy4"
           >
             <span
               class="whitespace-nowrap"

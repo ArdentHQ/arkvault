@@ -3,7 +3,7 @@
 exports[`Spinner > should render 1`] = `
 <div>
   <div
-    class="css-1b3vlxq"
+    class="css-1ppx3l2"
     color="info"
   />
 </div>
@@ -12,7 +12,7 @@ exports[`Spinner > should render 1`] = `
 exports[`Spinner > should render a danger color 1`] = `
 <div>
   <div
-    class="css-9damuw"
+    class="css-15wc910"
     color="danger"
   />
 </div>
@@ -21,7 +21,7 @@ exports[`Spinner > should render a danger color 1`] = `
 exports[`Spinner > should render a hint color 1`] = `
 <div>
   <div
-    class="css-7me5qc"
+    class="css-e7k19c"
     color="hint"
   />
 </div>
@@ -30,7 +30,7 @@ exports[`Spinner > should render a hint color 1`] = `
 exports[`Spinner > should render a info color 1`] = `
 <div>
   <div
-    class="css-1b3vlxq"
+    class="css-1ppx3l2"
     color="info"
   />
 </div>
@@ -39,7 +39,7 @@ exports[`Spinner > should render a info color 1`] = `
 exports[`Spinner > should render a large one 1`] = `
 <div>
   <div
-    class="css-1y6vpeg"
+    class="css-28aba5"
     color="info"
   />
 </div>
@@ -48,7 +48,7 @@ exports[`Spinner > should render a large one 1`] = `
 exports[`Spinner > should render a small one 1`] = `
 <div>
   <div
-    class="css-1knqax5"
+    class="css-v1kihw"
     color="info"
   />
 </div>
@@ -57,7 +57,7 @@ exports[`Spinner > should render a small one 1`] = `
 exports[`Spinner > should render a success color 1`] = `
 <div>
   <div
-    class="css-1c1wt4l"
+    class="css-1r3tpd5"
     color="success"
   />
 </div>
@@ -66,7 +66,7 @@ exports[`Spinner > should render a success color 1`] = `
 exports[`Spinner > should render a warning color 1`] = `
 <div>
   <div
-    class="css-1g21ldy"
+    class="css-gdz11m"
     color="warning"
   />
 </div>
@@ -75,7 +75,7 @@ exports[`Spinner > should render a warning color 1`] = `
 exports[`Spinner > should render a warning-alt color 1`] = `
 <div>
   <div
-    class="css-65ztrr"
+    class="css-goj9mo"
     color="warning-alt"
   />
 </div>

@@ -27,7 +27,7 @@ export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copy
 					<div
 						className={cn("flex items-center space-x-2 font-semibold", {
 							"cursor-not-allowed text-theme-secondary-500 dark:text-theme-secondary-800": disabled,
-							"link ": !disabled,
+							link: !disabled,
 						})}
 					>
 						<Icon name="Copy" />

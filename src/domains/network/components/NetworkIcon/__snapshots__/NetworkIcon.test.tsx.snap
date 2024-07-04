@@ -1,10 +1,10 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`NetworkIcon > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <div
     aria-label="ARK"
-    class="text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background duration-100 css-14jhlj1"
+    class="text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background duration-100 css-1nqcsx"
     data-testid="NetworkIcon-ARK-ark.mainnet"
   >
     <div
@@ -65,7 +65,7 @@ exports[`NetworkIcon > should render when isCompact = true 1`] = `
 exports[`NetworkIcon > should render with placeholder 1`] = `
 <DocumentFragment>
   <div
-    class="ring-theme-background duration-100 css-14jhlj1"
+    class="ring-theme-background duration-100 css-1nqcsx"
     data-testid="NetworkIcon__placeholder"
   />
 </DocumentFragment>

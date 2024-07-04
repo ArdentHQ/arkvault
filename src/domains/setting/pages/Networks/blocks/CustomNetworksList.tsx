@@ -58,7 +58,7 @@ const CustomNetworksListNetwork: React.VFC<{
 		>
 			<div className="flex space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200">
 				<div className="flex h-7 items-center">
-					<div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-secondary-100 text-2xs font-semibold text-theme-secondary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-500 ">
+					<div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-secondary-100 text-2xs font-semibold text-theme-secondary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-500">
 						{networkInitials(network)}
 					</div>
 				</div>

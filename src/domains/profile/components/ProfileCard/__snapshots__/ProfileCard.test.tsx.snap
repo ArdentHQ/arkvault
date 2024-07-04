@@ -6,7 +6,7 @@ exports[`ProfileCard > should hide the settings icon 1`] = `
     class="h-40 w-36 leading-tight sm:w-40"
   >
     <button
-      class="css-cqna23"
+      class="css-1h3vw5n"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -18,7 +18,7 @@ exports[`ProfileCard > should hide the settings icon 1`] = `
           class="relative"
         >
           <div
-            class="shrink-0 css-11ohc3q"
+            class="shrink-0 css-iou7f8"
             data-testid="Avatar"
           >
             <div
@@ -54,7 +54,7 @@ exports[`ProfileCard > should render 1`] = `
     class="h-40 w-36 leading-tight sm:w-40"
   >
     <button
-      class="css-cqna23"
+      class="css-1h3vw5n"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -66,7 +66,7 @@ exports[`ProfileCard > should render 1`] = `
           class="relative"
         >
           <div
-            class="shrink-0 css-11ohc3q"
+            class="shrink-0 css-iou7f8"
             data-testid="Avatar"
           >
             <div
@@ -106,7 +106,7 @@ exports[`ProfileCard > should render the profile with avatar image 1`] = `
     class="h-40 w-36 leading-tight sm:w-40"
   >
     <button
-      class="css-cqna23"
+      class="css-1h3vw5n"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -118,7 +118,7 @@ exports[`ProfileCard > should render the profile with avatar image 1`] = `
           class="relative"
         >
           <div
-            class="shrink-0 css-11ohc3q"
+            class="shrink-0 css-iou7f8"
             data-testid="Avatar"
           >
             <div
@@ -154,7 +154,7 @@ exports[`ProfileCard > should render the settings icon 1`] = `
     class="h-40 w-36 leading-tight sm:w-40"
   >
     <button
-      class="css-cqna23"
+      class="css-1h3vw5n"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -166,7 +166,7 @@ exports[`ProfileCard > should render the settings icon 1`] = `
           class="relative"
         >
           <div
-            class="shrink-0 css-11ohc3q"
+            class="shrink-0 css-iou7f8"
             data-testid="Avatar"
           >
             <div

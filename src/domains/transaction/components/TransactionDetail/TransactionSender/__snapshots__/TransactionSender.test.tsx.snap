@@ -3,7 +3,7 @@
 exports[`TransactionSender > should not render delegate icon 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionSender"
   >
     <div
@@ -29,7 +29,7 @@ exports[`TransactionSender > should not render delegate icon 1`] = `
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
@@ -49,7 +49,7 @@ exports[`TransactionSender > should not render delegate icon 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
       >
         <div
           class="css-1i4b0eq"
@@ -82,7 +82,7 @@ exports[`TransactionSender > should not render delegate icon 1`] = `
         </div>
       </div>
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -103,7 +103,7 @@ exports[`TransactionSender > should not render delegate icon 1`] = `
 exports[`TransactionSender > should render 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionSender"
   >
     <div
@@ -129,7 +129,7 @@ exports[`TransactionSender > should render 1`] = `
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
@@ -149,7 +149,7 @@ exports[`TransactionSender > should render 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -170,7 +170,7 @@ exports[`TransactionSender > should render 1`] = `
 exports[`TransactionSender > should render with address 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionSender"
   >
     <div
@@ -205,7 +205,7 @@ exports[`TransactionSender > should render with address 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -226,7 +226,7 @@ exports[`TransactionSender > should render with address 1`] = `
 exports[`TransactionSender > should render with alias 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionSender"
   >
     <div
@@ -252,7 +252,7 @@ exports[`TransactionSender > should render with alias 1`] = `
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
@@ -272,7 +272,7 @@ exports[`TransactionSender > should render with alias 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div

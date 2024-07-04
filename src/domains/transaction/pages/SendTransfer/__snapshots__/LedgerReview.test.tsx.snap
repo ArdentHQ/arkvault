@@ -3,7 +3,7 @@
 exports[`TransferLedgerReview > should render 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionDetail"
   >
     <div
@@ -75,7 +75,7 @@ exports[`TransferLedgerReview > should render 1`] = `
             class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
           >
             <span
-              class="css-1j6ndo3"
+              class="css-1orx95h"
             >
               Transaction Amount
             </span>
@@ -90,7 +90,7 @@ exports[`TransferLedgerReview > should render 1`] = `
             class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
           >
             <span
-              class="css-1j6ndo3"
+              class="css-1orx95h"
             >
               Transaction Fee
             </span>
@@ -141,7 +141,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
       >
         <span
-          class="css-1j6ndo3"
+          class="css-1orx95h"
         >
           Total Amount
         </span>
@@ -160,7 +160,7 @@ exports[`TransferLedgerReview > should render 1`] = `
 exports[`TransferLedgerReview > should render skeleton while loading expiration 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionDetail"
   >
     <div
@@ -249,7 +249,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
           >
             <span
-              class="css-1j6ndo3"
+              class="css-1orx95h"
             >
               Transaction Amount
             </span>
@@ -264,7 +264,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
           >
             <span
-              class="css-1j6ndo3"
+              class="css-1orx95h"
             >
               Transaction Fee
             </span>
@@ -315,7 +315,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
       >
         <span
-          class="css-1j6ndo3"
+          class="css-1orx95h"
         >
           Total Amount
         </span>
@@ -334,7 +334,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
 exports[`TransferLedgerReview > should render with memo 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMemo"
   >
     <div
@@ -388,7 +388,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
     </div>
   </div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionDetail"
   >
     <div
@@ -460,7 +460,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
             class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
           >
             <span
-              class="css-1j6ndo3"
+              class="css-1orx95h"
             >
               Transaction Amount
             </span>
@@ -475,7 +475,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
             class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
           >
             <span
-              class="css-1j6ndo3"
+              class="css-1orx95h"
             >
               Transaction Fee
             </span>
@@ -526,7 +526,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
       >
         <span
-          class="css-1j6ndo3"
+          class="css-1orx95h"
         >
           Total Amount
         </span>

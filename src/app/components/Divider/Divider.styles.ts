@@ -34,7 +34,7 @@ const isDashed = (dashed?: boolean) => {
 		return;
 	}
 
-	return tw`border-dashed background[none]`;
+	return tw`border-dashed [background:none]`;
 };
 
 export const getStyles = ({ size, type, dashed }: DividerStylesProperties) => [

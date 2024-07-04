@@ -30,9 +30,9 @@ const AnchorStyled = styled.a<{ isDisabled?: boolean }>(({ isDisabled }) => {
 const Content = styled.span<{ isDisabled?: boolean }>(({ isDisabled }) => {
 	const styles = [
 		tw`break-all border-b border-transparent`,
-		tw`transition-property[color, border-color]`,
-		tw`transition-duration[200ms, 350ms]`,
-		tw`transition-delay[0s, 100ms]`,
+		tw`[transition-property:color,_border-color]`,
+		tw`[transition-duration:200ms,_350ms]`,
+		tw`[transition-delay:0s, _100ms]`,
 	];
 
 	if (!isDisabled) {

@@ -133,12 +133,12 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 										start: {
 											content: <WalletAvatar address={selectedWallet?.address} />,
 										},
-								  }
+									}
 								: {
 										start: {
 											content: <WalletAvatar address={selectedWallet?.address} />,
 										},
-								  }
+									}
 						}
 					/>
 				</button>

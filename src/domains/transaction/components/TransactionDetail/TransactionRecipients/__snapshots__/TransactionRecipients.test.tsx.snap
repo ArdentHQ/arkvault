@@ -5,7 +5,7 @@ exports[`TransactionRecipients > should not render if recipients array is not pr
 exports[`TransactionRecipients > should render a single recipient 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -40,7 +40,7 @@ exports[`TransactionRecipients > should render a single recipient 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -61,7 +61,7 @@ exports[`TransactionRecipients > should render a single recipient 1`] = `
 exports[`TransactionRecipients > should render a single recipient that is delegate 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -96,7 +96,7 @@ exports[`TransactionRecipients > should render a single recipient that is delega
       class="flex items-center -space-x-1"
     >
       <div
-        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
       >
         <div
           class="css-1i4b0eq"
@@ -129,7 +129,7 @@ exports[`TransactionRecipients > should render a single recipient that is delega
         </div>
       </div>
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -150,7 +150,7 @@ exports[`TransactionRecipients > should render a single recipient that is delega
 exports[`TransactionRecipients > should render a single recipient with alias 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -176,7 +176,7 @@ exports[`TransactionRecipients > should render a single recipient with alias 1`]
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 test-alias
@@ -196,7 +196,7 @@ exports[`TransactionRecipients > should render a single recipient with alias 1`]
       class="flex items-center -space-x-1"
     >
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -217,7 +217,7 @@ exports[`TransactionRecipients > should render a single recipient with alias 1`]
 exports[`TransactionRecipients > should render in lg 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -252,7 +252,7 @@ exports[`TransactionRecipients > should render in lg 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -273,7 +273,7 @@ exports[`TransactionRecipients > should render in lg 1`] = `
 exports[`TransactionRecipients > should render in md 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -308,7 +308,7 @@ exports[`TransactionRecipients > should render in md 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -329,7 +329,7 @@ exports[`TransactionRecipients > should render in md 1`] = `
 exports[`TransactionRecipients > should render in sm 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -366,7 +366,7 @@ exports[`TransactionRecipients > should render in sm 1`] = `
           class="flex items-center space-x-2"
         >
           <div
-            class="shrink-0 css-1vy2z2u"
+            class="shrink-0 css-1yk316i"
             data-testid="Avatar"
           >
             <div
@@ -389,7 +389,7 @@ exports[`TransactionRecipients > should render in sm 1`] = `
 exports[`TransactionRecipients > should render in sm when showAmount is set and multiple recipients 1`] = `
 <div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -435,7 +435,7 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -475,7 +475,7 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
     </div>
   </div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -521,7 +521,7 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -566,7 +566,7 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
 exports[`TransactionRecipients > should render in xl 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -601,7 +601,7 @@ exports[`TransactionRecipients > should render in xl 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -622,7 +622,7 @@ exports[`TransactionRecipients > should render in xl 1`] = `
 exports[`TransactionRecipients > should render in xs 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -659,7 +659,7 @@ exports[`TransactionRecipients > should render in xs 1`] = `
           class="flex items-center space-x-2"
         >
           <div
-            class="shrink-0 css-1vy2z2u"
+            class="shrink-0 css-1yk316i"
             data-testid="Avatar"
           >
             <div
@@ -682,7 +682,7 @@ exports[`TransactionRecipients > should render in xs 1`] = `
 exports[`TransactionRecipients > should render in xs when showAmount is set and multiple recipients 1`] = `
 <div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -728,7 +728,7 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -768,7 +768,7 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
     </div>
   </div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -814,7 +814,7 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -859,7 +859,7 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
 exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -960,7 +960,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -992,7 +992,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -1043,7 +1043,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1075,7 +1075,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -1117,7 +1117,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
 exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -1218,7 +1218,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1250,7 +1250,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -1301,7 +1301,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1333,7 +1333,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -1375,7 +1375,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
 exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
 <div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -1421,7 +1421,7 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1442,7 +1442,7 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
     </div>
   </div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -1488,7 +1488,7 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1514,7 +1514,7 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
 exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -1615,7 +1615,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1647,7 +1647,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -1698,7 +1698,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1730,7 +1730,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -1772,7 +1772,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
 exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
 <div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -1818,7 +1818,7 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1839,7 +1839,7 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
     </div>
   </div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -1885,7 +1885,7 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1911,7 +1911,7 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
 exports[`TransactionRecipients > should render recipients with delegate icon in lg 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -2012,7 +2012,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2044,7 +2044,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -2095,7 +2095,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2127,7 +2127,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -2169,7 +2169,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
 exports[`TransactionRecipients > should render recipients with delegate icon in md 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -2270,7 +2270,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2302,7 +2302,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -2353,7 +2353,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2385,7 +2385,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -2427,7 +2427,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
 exports[`TransactionRecipients > should render recipients with delegate icon in sm 1`] = `
 <div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -2506,7 +2506,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   </div>
                 </span>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -2527,7 +2527,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
     </div>
   </div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -2573,7 +2573,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -2599,7 +2599,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
 exports[`TransactionRecipients > should render recipients with delegate icon in xl 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionRecipients"
   >
     <div
@@ -2700,7 +2700,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2732,7 +2732,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -2783,7 +2783,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <div
-                      class="shrink-0 css-y5oe37"
+                      class="shrink-0 css-h8w6w0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2815,7 +2815,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="ml-2 table-cell md:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -2857,7 +2857,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
 exports[`TransactionRecipients > should render recipients with delegate icon in xs 1`] = `
 <div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -2936,7 +2936,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   </div>
                 </span>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -2957,7 +2957,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
     </div>
   </div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionRecipient"
   >
     <div
@@ -3003,7 +3003,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div

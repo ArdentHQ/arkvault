@@ -7,7 +7,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -16,7 +16,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -177,10 +177,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -230,10 +230,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -289,10 +289,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -337,10 +337,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -416,7 +416,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -466,7 +466,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Resign Delegate
                       </span>
@@ -474,16 +474,16 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -516,7 +516,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                     class="flex flex-col overflow-hidden rounded-xl mt-6"
                   >
                     <div
-                      class="css-1ecv4eg"
+                      class="css-rzhg83"
                     >
                       <div
                         class="css-v0ob3f"
@@ -560,7 +560,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                       </span>
                     </div>
                     <div
-                      class="css-1pvpof3"
+                      class="css-trjt6n"
                     >
                       This action is permanent and cannot be undone. It is registered on the network.
                     </div>
@@ -586,7 +586,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                     </div>
                     <div
                       aria-label="ARK Devnet"
-                      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
                       data-testid="NetworkIcon-ARK-ark.devnet"
                     >
                       <div
@@ -612,7 +612,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                     </div>
                   </div>
                   <div
-                    class="no-ligatures css-19rivvh"
+                    class="no-ligatures css-qu17s6"
                     data-testid="TransactionSender"
                   >
                     <div
@@ -638,7 +638,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 testwallet2
@@ -658,7 +658,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                       class="flex items-center -space-x-1"
                     >
                       <div
-                        class="shrink-0 css-8d0u1i"
+                        class="shrink-0 css-1n9jllj"
                         data-testid="Avatar"
                       >
                         <div
@@ -674,7 +674,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                     </div>
                   </div>
                   <div
-                    class="no-ligatures css-wr7004"
+                    class="no-ligatures css-1uo4ck9"
                     data-testid="TransactionDetail"
                   >
                     <div
@@ -717,7 +717,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                             class="flex items-center"
                           >
                             <span
-                              class="css-iwfou6"
+                              class="css-noruk0"
                               role="button"
                             >
                               Simple
@@ -730,15 +730,15 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                                 type="checkbox"
                               />
                               <div
-                                class="css-1f5xwvv toggle-handle"
+                                class="css-10kxbe9 toggle-handle"
                               >
                                 <span
-                                  class="css-19qsmxy"
+                                  class="css-14ojvms"
                                 />
                               </div>
                             </label>
                             <span
-                              class="css-w6ofpw"
+                              class="css-1588dqn"
                               role="button"
                             >
                               Advanced
@@ -749,14 +749,14 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                           class="relative"
                         >
                           <div
-                            class="css-1psxlcd"
+                            class="css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
+                                class="no-ligatures w-full border-none css-1vs1awz"
                                 data-testid="InputCurrency"
                                 name="fee"
                                 type="text"
@@ -777,7 +777,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                                     class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
                                   >
                                     <button
-                                      class="border-r sm:border-r-0 css-1wqyzac"
+                                      class="border-r sm:border-r-0 css-jmpn15"
                                       data-testid="InputFeeAdvanced__up"
                                       type="button"
                                     >
@@ -806,7 +806,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                                       </div>
                                     </button>
                                     <button
-                                      class="css-1p5qk9o"
+                                      class="css-1ddtsjs"
                                       data-testid="InputFeeAdvanced__down"
                                       type="button"
                                     >
@@ -846,10 +846,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -860,7 +860,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                   </div>
                 </button>
                 <button
-                  class="css-1bx0hyc"
+                  class="css-fl4fi0"
                   data-testid="StepNavigation__continue-button"
                   type="button"
                 >
@@ -886,7 +886,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -897,7 +897,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -934,11 +934,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -971,11 +971,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -1012,7 +1012,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -1021,7 +1021,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1182,10 +1182,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1235,10 +1235,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1294,10 +1294,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -1342,10 +1342,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -1421,7 +1421,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -1471,7 +1471,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Resign Delegate
                       </span>
@@ -1479,16 +1479,16 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -1521,7 +1521,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                     class="flex flex-col overflow-hidden rounded-xl mt-6"
                   >
                     <div
-                      class="css-1ecv4eg"
+                      class="css-rzhg83"
                     >
                       <div
                         class="css-v0ob3f"
@@ -1565,7 +1565,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                       </span>
                     </div>
                     <div
-                      class="css-1pvpof3"
+                      class="css-trjt6n"
                     >
                       This action is permanent and cannot be undone. It is registered on the network.
                     </div>
@@ -1591,7 +1591,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                     </div>
                     <div
                       aria-label="ARK Devnet"
-                      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
                       data-testid="NetworkIcon-ARK-ark.devnet"
                     >
                       <div
@@ -1617,7 +1617,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                     </div>
                   </div>
                   <div
-                    class="no-ligatures css-19rivvh"
+                    class="no-ligatures css-qu17s6"
                     data-testid="TransactionSender"
                   >
                     <div
@@ -1643,7 +1643,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 testwallet2
@@ -1663,7 +1663,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                       class="flex items-center -space-x-1"
                     >
                       <div
-                        class="shrink-0 css-8d0u1i"
+                        class="shrink-0 css-1n9jllj"
                         data-testid="Avatar"
                       >
                         <div
@@ -1679,7 +1679,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                     </div>
                   </div>
                   <div
-                    class="no-ligatures css-wr7004"
+                    class="no-ligatures css-1uo4ck9"
                     data-testid="TransactionDetail"
                   >
                     <div
@@ -1722,7 +1722,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                             class="flex items-center"
                           >
                             <span
-                              class="css-w6ofpw"
+                              class="css-1588dqn"
                               role="button"
                             >
                               Simple
@@ -1735,15 +1735,15 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                                 type="checkbox"
                               />
                               <div
-                                class="css-1f5xwvv toggle-handle"
+                                class="css-10kxbe9 toggle-handle"
                               >
                                 <span
-                                  class="css-19qsmxy"
+                                  class="css-14ojvms"
                                 />
                               </div>
                             </label>
                             <span
-                              class="css-iwfou6"
+                              class="css-noruk0"
                               role="button"
                             >
                               Advanced
@@ -1758,7 +1758,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                           <button
                             aria-checked="false"
                             aria-label="25"
-                            class="css-17i051m"
+                            class="css-1sbhrf0"
                             data-testid="ButtonGroupOption"
                             role="radio"
                             type="button"
@@ -1780,7 +1780,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                           <button
                             aria-checked="true"
                             aria-label="25"
-                            class="css-17i051m"
+                            class="css-1sbhrf0"
                             data-testid="ButtonGroupOption"
                             role="radio"
                             type="button"
@@ -1802,7 +1802,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                           <button
                             aria-checked="false"
                             aria-label="25"
-                            class="css-17i051m"
+                            class="css-1sbhrf0"
                             data-testid="ButtonGroupOption"
                             role="radio"
                             type="button"
@@ -1828,10 +1828,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -1842,7 +1842,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                   </div>
                 </button>
                 <button
-                  class="css-1bx0hyc"
+                  class="css-fl4fi0"
                   data-testid="StepNavigation__continue-button"
                   type="button"
                 >
@@ -1868,7 +1868,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1879,7 +1879,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -1916,11 +1916,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1953,11 +1953,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -1994,7 +1994,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -2003,7 +2003,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -2164,10 +2164,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -2217,10 +2217,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -2276,10 +2276,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -2324,10 +2324,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -2403,7 +2403,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -2453,7 +2453,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Transaction Review
                       </span>
@@ -2461,16 +2461,16 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -2520,7 +2520,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                     </div>
                     <div
                       aria-label="ARK Devnet"
-                      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
                       data-testid="NetworkIcon-ARK-ark.devnet"
                     >
                       <div
@@ -2546,7 +2546,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                     </div>
                   </div>
                   <div
-                    class="no-ligatures css-19rivvh"
+                    class="no-ligatures css-qu17s6"
                     data-testid="TransactionSender"
                   >
                     <div
@@ -2572,7 +2572,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 testwallet2
@@ -2592,7 +2592,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                       class="flex items-center -space-x-1"
                     >
                       <div
-                        class="shrink-0 css-8d0u1i"
+                        class="shrink-0 css-1n9jllj"
                         data-testid="Avatar"
                       >
                         <div
@@ -2608,7 +2608,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                     </div>
                   </div>
                   <div
-                    class="no-ligatures css-19rivvh"
+                    class="no-ligatures css-qu17s6"
                     data-testid="TransactionDetail"
                   >
                     <div
@@ -2643,7 +2643,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                             class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
                           >
                             <span
-                              class="css-1j6ndo3"
+                              class="css-1orx95h"
                             >
                               Transaction Amount
                             </span>
@@ -2658,7 +2658,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                             class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
                           >
                             <span
-                              class="css-1j6ndo3"
+                              class="css-1orx95h"
                             >
                               Transaction Fee
                             </span>
@@ -2709,7 +2709,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                         class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                       >
                         <span
-                          class="css-1j6ndo3"
+                          class="css-1orx95h"
                         >
                           Total Amount
                         </span>
@@ -2725,10 +2725,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -2739,7 +2739,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                   </div>
                 </button>
                 <button
-                  class="css-1bx0hyc"
+                  class="css-fl4fi0"
                   data-testid="StepNavigation__continue-button"
                   type="button"
                 >
@@ -2765,7 +2765,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2776,7 +2776,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -2813,11 +2813,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -2850,11 +2850,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -2891,7 +2891,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -2900,7 +2900,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -3061,10 +3061,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -3114,10 +3114,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -3173,10 +3173,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -3221,10 +3221,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -3300,7 +3300,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -3351,7 +3351,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Authenticate
                       </span>
@@ -3359,16 +3359,16 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -3408,14 +3408,14 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                       Mnemonic
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -3480,7 +3480,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                       2nd Mnemonic
                     </label>
                     <div
-                      class="css-n29l73"
+                      class="css-xk5t3v"
                       disabled=""
                     >
                       <div
@@ -3488,7 +3488,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                          class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                           data-testid="AuthenticationStep__second-mnemonic"
                           disabled=""
                           name="secondMnemonic"
@@ -3546,10 +3546,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                 </div>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -3560,7 +3560,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                   </div>
                 </button>
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="StepNavigation__send-button"
                   disabled=""
                   type="submit"
@@ -3612,14 +3612,14 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -3656,11 +3656,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -3693,11 +3693,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -3734,7 +3734,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -3743,7 +3743,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -3904,10 +3904,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -3957,10 +3957,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -4016,10 +4016,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -4064,10 +4064,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -4143,7 +4143,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -4196,7 +4196,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         class="flex flex-col"
                       >
                         <span
-                          class="css-3qwsx5"
+                          class="css-tgbw37"
                         >
                           Transaction Error
                         </span>
@@ -4204,16 +4204,16 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                           class="css-xa5o6q"
                         >
                           <li
-                            class="css-47028"
+                            class="css-11vjikd"
                           />
                           <li
-                            class="css-47028"
+                            class="css-11vjikd"
                           />
                           <li
-                            class="css-47028"
+                            class="css-11vjikd"
                           />
                           <li
-                            class="css-47028"
+                            class="css-11vjikd"
                           />
                         </ul>
                       </div>
@@ -4528,7 +4528,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="css-uae86w"
+                          class="css-6pjap5"
                         >
                           <div
                             class="css-v0ob3f"
@@ -4567,7 +4567,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                           </span>
                         </div>
                         <div
-                          class="css-6o9bco"
+                          class="css-1y2ht9o"
                         >
                           An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
                         </div>
@@ -4576,10 +4576,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         class="relative"
                       >
                         <div
-                          class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+                          class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
                         />
                         <div
-                          class="py-4 css-qner8f"
+                          class="py-4 css-1prn1rr"
                           disabled=""
                         >
                           <div
@@ -4587,7 +4587,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                           >
                             <textarea
                               autocomplete="off"
-                              class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                              class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"
@@ -4601,7 +4601,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                     </div>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <div
                       class="mr-auto"
@@ -4610,7 +4610,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         class="relative"
                       >
                         <button
-                          class="css-1jhy6v9"
+                          class="css-6419sw"
                           data-testid="clipboard-button__wrapper"
                           type="button"
                         >
@@ -4656,7 +4656,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                       </div>
                     </div>
                     <button
-                      class="css-1jhy6v9"
+                      class="css-6419sw"
                       data-testid="ErrorStep__close-button"
                       type="button"
                     >
@@ -4671,7 +4671,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                       </div>
                     </button>
                     <button
-                      class="css-1bx0hyc"
+                      class="css-fl4fi0"
                       data-testid="ErrorStep__back-button"
                       type="button"
                     >
@@ -4704,7 +4704,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -4713,7 +4713,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -4874,10 +4874,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -4927,10 +4927,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -4986,10 +4986,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -5034,10 +5034,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -5113,7 +5113,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -5164,7 +5164,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Authenticate
                       </span>
@@ -5172,16 +5172,16 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -5221,14 +5221,14 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                       Mnemonic
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -5293,7 +5293,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                       2nd Mnemonic
                     </label>
                     <div
-                      class="css-px3dod"
+                      class="css-12mz4i6"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -5301,7 +5301,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="AuthenticationStep__second-mnemonic"
                           name="secondMnemonic"
                           type="password"
@@ -5400,10 +5400,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                 </div>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -5414,7 +5414,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                   </div>
                 </button>
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="StepNavigation__send-button"
                   disabled=""
                   type="submit"
@@ -5466,7 +5466,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -5477,7 +5477,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -5514,11 +5514,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -5551,11 +5551,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -5592,7 +5592,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -5601,7 +5601,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -5762,10 +5762,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -5815,10 +5815,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -5874,10 +5874,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -5922,10 +5922,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -6001,7 +6001,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -6052,7 +6052,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Transaction Sent
                       </span>
@@ -6060,16 +6060,16 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                       </ul>
                     </div>
@@ -6377,7 +6377,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1qh812f"
+                      class="css-1o2lvkz"
                     >
                       <div
                         class="css-v0ob3f"
@@ -6416,7 +6416,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-1n20uf5"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -6445,14 +6445,14 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                               class="overflow-hidden"
                             >
                               <a
-                                class="ring-focus group inline-block flex items-center css-15tcy38"
+                                class="ring-focus group inline-block flex items-center css-7nwwrh"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
-                                  class="css-1y2194z"
+                                  class="css-170792"
                                 >
                                   <span
                                     class="no-ligatures css-0"
@@ -6532,7 +6532,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionType"
                     >
                       <div
@@ -6551,7 +6551,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                         </div>
                       </div>
                       <div
-                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
                       >
                         <div
                           class="css-1i4b0eq"
@@ -6588,7 +6588,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionNetwork"
                     >
                       <div
@@ -6608,7 +6608,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                       <div
                         aria-label="ARK Devnet"
-                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
                         data-testid="NetworkIcon-ARK-ark.devnet"
                       >
                         <div
@@ -6634,7 +6634,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionSender"
                     >
                       <div
@@ -6660,7 +6660,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-u3jrna"
+                                  class="no-ligatures css-9nx3be"
                                   data-testid="TruncateEnd"
                                 >
                                   testwallet2
@@ -6680,7 +6680,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="shrink-0 css-8d0u1i"
+                          class="shrink-0 css-1n9jllj"
                           data-testid="Avatar"
                         >
                           <div
@@ -6696,7 +6696,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -6716,7 +6716,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-fezbvb"
+                      class="no-ligatures css-1snru0x"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -6744,10 +6744,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -6773,7 +6773,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -6784,7 +6784,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -6821,11 +6821,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -6858,11 +6858,11 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -6899,7 +6899,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -6908,7 +6908,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -7069,10 +7069,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -7122,10 +7122,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -7181,10 +7181,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -7229,10 +7229,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -7308,7 +7308,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -7359,7 +7359,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Transaction Sent
                       </span>
@@ -7367,16 +7367,16 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                       </ul>
                     </div>
@@ -7684,7 +7684,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1qh812f"
+                      class="css-1o2lvkz"
                     >
                       <div
                         class="css-v0ob3f"
@@ -7723,7 +7723,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-1n20uf5"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -7752,14 +7752,14 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                               class="overflow-hidden"
                             >
                               <a
-                                class="ring-focus group inline-block flex items-center css-15tcy38"
+                                class="ring-focus group inline-block flex items-center css-7nwwrh"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
-                                  class="css-1y2194z"
+                                  class="css-170792"
                                 >
                                   <span
                                     class="no-ligatures css-0"
@@ -7839,7 +7839,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionType"
                     >
                       <div
@@ -7858,7 +7858,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                         </div>
                       </div>
                       <div
-                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
                       >
                         <div
                           class="css-1i4b0eq"
@@ -7895,7 +7895,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionNetwork"
                     >
                       <div
@@ -7915,7 +7915,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                       <div
                         aria-label="ARK Devnet"
-                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
                         data-testid="NetworkIcon-ARK-ark.devnet"
                       >
                         <div
@@ -7941,7 +7941,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionSender"
                     >
                       <div
@@ -7967,7 +7967,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-u3jrna"
+                                  class="no-ligatures css-9nx3be"
                                   data-testid="TruncateEnd"
                                 >
                                   testwallet2
@@ -7987,7 +7987,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="shrink-0 css-8d0u1i"
+                          class="shrink-0 css-1n9jllj"
                           data-testid="Avatar"
                         >
                           <div
@@ -8003,7 +8003,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -8023,7 +8023,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-fezbvb"
+                      class="no-ligatures css-1snru0x"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -8051,10 +8051,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -8081,7 +8081,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -8090,7 +8090,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -8251,10 +8251,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -8304,10 +8304,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -8363,10 +8363,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -8411,10 +8411,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -8490,7 +8490,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -8541,7 +8541,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Transaction Sent
                       </span>
@@ -8549,16 +8549,16 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                       </ul>
                     </div>
@@ -8866,7 +8866,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1qh812f"
+                      class="css-1o2lvkz"
                     >
                       <div
                         class="css-v0ob3f"
@@ -8905,7 +8905,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-1n20uf5"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -8934,14 +8934,14 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                               class="overflow-hidden"
                             >
                               <a
-                                class="ring-focus group inline-block flex items-center css-15tcy38"
+                                class="ring-focus group inline-block flex items-center css-7nwwrh"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
-                                  class="css-1y2194z"
+                                  class="css-170792"
                                 >
                                   <span
                                     class="no-ligatures css-0"
@@ -9021,7 +9021,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionType"
                     >
                       <div
@@ -9040,7 +9040,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                         </div>
                       </div>
                       <div
-                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
                       >
                         <div
                           class="css-1i4b0eq"
@@ -9077,7 +9077,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionNetwork"
                     >
                       <div
@@ -9097,7 +9097,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                       <div
                         aria-label="ARK Devnet"
-                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
                         data-testid="NetworkIcon-ARK-ark.devnet"
                       >
                         <div
@@ -9123,7 +9123,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionSender"
                     >
                       <div
@@ -9149,7 +9149,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-u3jrna"
+                                  class="no-ligatures css-9nx3be"
                                   data-testid="TruncateEnd"
                                 >
                                   testwallet2
@@ -9169,7 +9169,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="shrink-0 css-8d0u1i"
+                          class="shrink-0 css-1n9jllj"
                           data-testid="Avatar"
                         >
                           <div
@@ -9185,7 +9185,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -9205,7 +9205,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-fezbvb"
+                      class="no-ligatures css-1snru0x"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -9233,10 +9233,10 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >

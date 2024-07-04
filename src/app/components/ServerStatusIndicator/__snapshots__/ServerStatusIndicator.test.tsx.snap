@@ -10,10 +10,10 @@ exports[`Server Status Indicator > should render as downgraded 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--server-status"
             type="button"
           >
@@ -65,10 +65,10 @@ exports[`Server Status Indicator > should render as healthy 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--server-status"
             type="button"
           >
@@ -120,10 +120,10 @@ exports[`Server Status Indicator > should render as unavailable 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--server-status"
             type="button"
           >
@@ -175,10 +175,10 @@ exports[`Server Status Indicator > should render default 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--server-status"
             type="button"
           >
@@ -230,10 +230,10 @@ exports[`Server Status Indicator > should render in lg 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--server-status"
             type="button"
           >
@@ -285,10 +285,10 @@ exports[`Server Status Indicator > should render in md 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--server-status"
             type="button"
           >
@@ -340,10 +340,10 @@ exports[`Server Status Indicator > should render in sm 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--server-status"
             type="button"
           >
@@ -395,10 +395,10 @@ exports[`Server Status Indicator > should render in xl 1`] = `
         data-testid="dropdown__toggle"
       >
         <div
-          class="group css-1ietn6u"
+          class="group css-c93wvv"
         >
           <button
-            class="css-12xyeiw"
+            class="css-1hei9vx"
             data-testid="NavigationBar__buttons--server-status"
             type="button"
           >

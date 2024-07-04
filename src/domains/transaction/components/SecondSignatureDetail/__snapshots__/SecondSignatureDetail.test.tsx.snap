@@ -9,7 +9,7 @@ exports[`SecondSignatureDetail > should render a modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -20,7 +20,7 @@ exports[`SecondSignatureDetail > should render a modal 1`] = `
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -94,7 +94,7 @@ exports[`SecondSignatureDetail > should render a modal 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-u3jrna"
+                          class="no-ligatures css-9nx3be"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -114,7 +114,7 @@ exports[`SecondSignatureDetail > should render a modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -130,7 +130,7 @@ exports[`SecondSignatureDetail > should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures css-19rivvh"
+              class="no-ligatures css-qu17s6"
               data-testid="TransactionFee"
             >
               <div
@@ -155,7 +155,7 @@ exports[`SecondSignatureDetail > should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures css-19rivvh"
+              class="no-ligatures css-qu17s6"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -175,7 +175,7 @@ exports[`SecondSignatureDetail > should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures css-19rivvh"
+              class="no-ligatures css-qu17s6"
               data-testid="TransactionDetail"
             >
               <div
@@ -234,7 +234,7 @@ exports[`SecondSignatureDetail > should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="no-ligatures css-19rivvh"
+              class="no-ligatures css-qu17s6"
               data-testid="TransactionDetail"
             >
               <div
@@ -256,14 +256,14 @@ exports[`SecondSignatureDetail > should render a modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex items-center css-15tcy38"
+                        class="ring-focus group inline-block flex items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <span
                             class="no-ligatures css-0"
@@ -357,7 +357,7 @@ exports[`SecondSignatureDetail > should render a modal without a wallet alias 1`
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -368,7 +368,7 @@ exports[`SecondSignatureDetail > should render a modal without a wallet alias 1`
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -442,7 +442,7 @@ exports[`SecondSignatureDetail > should render a modal without a wallet alias 1`
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-u3jrna"
+                          class="no-ligatures css-9nx3be"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -462,7 +462,7 @@ exports[`SecondSignatureDetail > should render a modal without a wallet alias 1`
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -478,7 +478,7 @@ exports[`SecondSignatureDetail > should render a modal without a wallet alias 1`
               </div>
             </div>
             <div
-              class="no-ligatures css-19rivvh"
+              class="no-ligatures css-qu17s6"
               data-testid="TransactionFee"
             >
               <div
@@ -503,7 +503,7 @@ exports[`SecondSignatureDetail > should render a modal without a wallet alias 1`
               </div>
             </div>
             <div
-              class="no-ligatures css-19rivvh"
+              class="no-ligatures css-qu17s6"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -523,7 +523,7 @@ exports[`SecondSignatureDetail > should render a modal without a wallet alias 1`
               </div>
             </div>
             <div
-              class="no-ligatures css-19rivvh"
+              class="no-ligatures css-qu17s6"
               data-testid="TransactionDetail"
             >
               <div
@@ -582,7 +582,7 @@ exports[`SecondSignatureDetail > should render a modal without a wallet alias 1`
               </div>
             </div>
             <div
-              class="no-ligatures css-19rivvh"
+              class="no-ligatures css-qu17s6"
               data-testid="TransactionDetail"
             >
               <div
@@ -604,14 +604,14 @@ exports[`SecondSignatureDetail > should render a modal without a wallet alias 1`
                       class="overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex items-center css-15tcy38"
+                        class="ring-focus group inline-block flex items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <span
                             class="no-ligatures css-0"

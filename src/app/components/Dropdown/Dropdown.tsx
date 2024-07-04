@@ -119,12 +119,12 @@ export const Dropdown: FC<DropdownProperties> = ({
 				? {
 						height: "",
 						overflowY: "",
-				  }
+					}
 				: {
 						height: `${newHeight}px`,
 						marginTop: "",
 						overflowY: "scroll",
-				  };
+					};
 
 		setStyles({ opacity: "1", ...newStyles });
 	}, [rootDivReference]);
