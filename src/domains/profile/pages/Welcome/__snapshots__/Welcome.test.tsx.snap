@@ -7,7 +7,7 @@ exports[`Welcome > should change route to create profile 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -259,7 +259,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -270,7 +270,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -290,7 +290,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -387,7 +387,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -396,7 +396,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -446,13 +446,13 @@ exports[`Welcome > should change route to create profile 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -473,7 +473,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -725,7 +725,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -736,7 +736,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -822,7 +822,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -833,7 +833,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -853,7 +853,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -950,7 +950,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -959,7 +959,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -1009,13 +1009,13 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -1036,7 +1036,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -1288,7 +1288,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -1299,7 +1299,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -1385,7 +1385,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -1396,7 +1396,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -1416,7 +1416,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -1513,7 +1513,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -1522,7 +1522,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -1572,13 +1572,13 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -1599,7 +1599,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -1851,7 +1851,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -1862,7 +1862,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -1948,7 +1948,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -1959,7 +1959,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -1979,7 +1979,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -2076,7 +2076,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -2085,7 +2085,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -2135,13 +2135,13 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -2162,7 +2162,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -2414,7 +2414,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -2425,7 +2425,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -2511,7 +2511,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -2522,7 +2522,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -2542,7 +2542,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -2639,7 +2639,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -2648,7 +2648,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -2698,13 +2698,13 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -2725,7 +2725,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -2977,7 +2977,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -2988,7 +2988,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -3074,7 +3074,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -3085,7 +3085,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -3105,7 +3105,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -3202,7 +3202,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -3211,7 +3211,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -3261,13 +3261,13 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -3288,7 +3288,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -3540,7 +3540,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -3551,7 +3551,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -3571,7 +3571,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -3668,7 +3668,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -3677,7 +3677,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -3727,13 +3727,13 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -3754,7 +3754,7 @@ exports[`Welcome > should render with profiles 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -4006,7 +4006,7 @@ exports[`Welcome > should render with profiles 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -4017,7 +4017,7 @@ exports[`Welcome > should render with profiles 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -4103,7 +4103,7 @@ exports[`Welcome > should render with profiles 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-116zvw2"
+                    class="css-31qpo4"
                     data-testid="Card"
                     type="button"
                   >
@@ -4114,7 +4114,7 @@ exports[`Welcome > should render with profiles 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-11ohc3q"
+                          class="shrink-0 css-iou7f8"
                           data-testid="Avatar"
                         >
                           <div
@@ -4134,7 +4134,7 @@ exports[`Welcome > should render with profiles 1`] = `
                           </div>
                         </div>
                         <span
-                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-1jfmq7q"
+                          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 css-9adppv"
                         >
                           <div
                             class="css-1i4b0eq"
@@ -4231,7 +4231,7 @@ exports[`Welcome > should render with profiles 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -4240,7 +4240,7 @@ exports[`Welcome > should render with profiles 1`] = `
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -4290,13 +4290,13 @@ exports[`Welcome > should render with profiles 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>
@@ -4317,7 +4317,7 @@ exports[`Welcome > should render without profiles 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-97i12m"
+      class="css-1pyu5ft"
     >
       <div
         class="relative flex h-21"
@@ -4569,7 +4569,7 @@ exports[`Welcome > should render without profiles 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-full"
                 >
                   <button
-                    class="css-10zh490"
+                    class="css-1sjfzt7"
                     data-testid="Card"
                     type="button"
                   >
@@ -4578,7 +4578,7 @@ exports[`Welcome > should render without profiles 1`] = `
                     >
                       <div>
                         <div
-                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-1fuqtlq"
                         >
                           <div
                             class="css-v0ob3f"
@@ -4628,13 +4628,13 @@ exports[`Welcome > should render without profiles 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="ring-focus group inline-block css-15tcy38"
+                class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="#/profiles/import"
               >
                 <span
-                  class="css-1y2194z"
+                  class="css-170792"
                 >
                   Import it here.
                 </span>

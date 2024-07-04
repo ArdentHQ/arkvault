@@ -6,7 +6,7 @@ exports[`General Settings > should disable submit button when profile is not res
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -17,7 +17,7 @@ exports[`General Settings > should disable submit button when profile is not res
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -54,11 +54,11 @@ exports[`General Settings > should disable submit button when profile is not res
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -91,11 +91,11 @@ exports[`General Settings > should disable submit button when profile is not res
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -132,7 +132,7 @@ exports[`General Settings > should disable submit button when profile is not res
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -141,7 +141,7 @@ exports[`General Settings > should disable submit button when profile is not res
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -302,10 +302,10 @@ exports[`General Settings > should disable submit button when profile is not res
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -355,10 +355,10 @@ exports[`General Settings > should disable submit button when profile is not res
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -414,10 +414,10 @@ exports[`General Settings > should disable submit button when profile is not res
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -462,10 +462,10 @@ exports[`General Settings > should disable submit button when profile is not res
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -547,7 +547,7 @@ exports[`General Settings > should disable submit button when profile is not res
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -622,7 +622,7 @@ exports[`General Settings > should disable submit button when profile is not res
               </div>
             </div>
             <div
-              class="css-1h1epd8"
+              class="css-cb19tw"
             >
               <ul>
                 <li
@@ -979,7 +979,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           class="relative z-0 h-20 w-20"
                         >
                           <div
-                            class="css-ikig5u"
+                            class="css-1vo35tn"
                           >
                             <img
                               alt="Avatar"
@@ -1046,14 +1046,14 @@ exports[`General Settings > should disable submit button when profile is not res
                             Profile Name
                           </label>
                           <div
-                            class=" css-1psxlcd"
+                            class=" css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
+                                class="no-ligatures w-full border-none css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -1077,14 +1077,14 @@ exports[`General Settings > should disable submit button when profile is not res
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -1114,7 +1114,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -1124,7 +1124,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -1209,14 +1209,14 @@ exports[`General Settings > should disable submit button when profile is not res
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -1246,7 +1246,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                     BTC (Ƀ)…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -1256,7 +1256,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -1345,14 +1345,14 @@ exports[`General Settings > should disable submit button when profile is not res
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -1382,7 +1382,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -1392,7 +1392,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -1477,14 +1477,14 @@ exports[`General Settings > should disable submit button when profile is not res
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -1514,7 +1514,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                     CryptoCompare…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -1524,7 +1524,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -1609,14 +1609,14 @@ exports[`General Settings > should disable submit button when profile is not res
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -1646,7 +1646,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                     12h…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -1656,7 +1656,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -1730,7 +1730,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     </div>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -1738,7 +1738,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       Security
                     </h2>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1765,14 +1765,14 @@ exports[`General Settings > should disable submit button when profile is not res
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="sr-only css-1psxlcd"
+                                class="sr-only css-n1b0kl"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1nupw50"
+                                    class="no-ligatures w-full border-none css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -1802,7 +1802,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                       15 minutes…
                                     </div>
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -1812,7 +1812,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1nupw50"
+                                          class="no-ligatures w-full border-none css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -1887,7 +1887,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     </ul>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -1895,7 +1895,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       Other
                     </h2>
                     <ul
-                      class="css-14npy8n"
+                      class="css-1hglnxc"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1933,7 +1933,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               data-testid="list-divided-item__value"
                             >
                               <button
-                                class="w-full sm:w-auto css-1cp5yjb"
+                                class="w-full sm:w-auto css-15yk9k4"
                                 type="button"
                               >
                                 <div
@@ -1972,10 +1972,10 @@ exports[`General Settings > should disable submit button when profile is not res
                     </ul>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <button
-                      class="css-1yqe28v"
+                      class="css-qrwjsp"
                       data-testid="General-settings__submit-button"
                       disabled=""
                       type="submit"
@@ -2004,7 +2004,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2015,7 +2015,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -2052,11 +2052,11 @@ exports[`General Settings > should not update the uploaded avatar when removing 
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -2089,11 +2089,11 @@ exports[`General Settings > should not update the uploaded avatar when removing 
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -2130,7 +2130,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -2139,7 +2139,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -2300,10 +2300,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -2353,10 +2353,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -2412,10 +2412,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -2460,10 +2460,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -2539,7 +2539,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -2616,7 +2616,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               </div>
             </div>
             <div
-              class="css-1h1epd8"
+              class="css-cb19tw"
             >
               <ul>
                 <li
@@ -2973,7 +2973,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           class="relative z-0 h-20 w-20"
                         >
                           <div
-                            class="css-ikig5u"
+                            class="css-1vo35tn"
                           >
                             <img
                               alt="Avatar"
@@ -3019,7 +3019,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             class="absolute -right-2 -top-2 z-20"
                           >
                             <button
-                              class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+                              class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
                               data-testid="SelectProfileImage__remove-button"
                               type="button"
                             >
@@ -3075,14 +3075,14 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             Profile Name
                           </label>
                           <div
-                            class=" css-1psxlcd"
+                            class=" css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
+                                class="no-ligatures w-full border-none css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -3106,14 +3106,14 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -3143,7 +3143,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -3153,7 +3153,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -3238,14 +3238,14 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -3275,7 +3275,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                     BTC (Ƀ)…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -3285,7 +3285,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -3374,14 +3374,14 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -3411,7 +3411,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -3421,7 +3421,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -3506,14 +3506,14 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -3543,7 +3543,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                     CryptoCompare…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -3553,7 +3553,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -3638,14 +3638,14 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -3675,7 +3675,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                     12h…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -3685,7 +3685,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -3759,7 +3759,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     </div>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -3767,7 +3767,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       Security
                     </h2>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -3794,14 +3794,14 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="sr-only css-1psxlcd"
+                                class="sr-only css-n1b0kl"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1nupw50"
+                                    class="no-ligatures w-full border-none css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -3831,7 +3831,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                       15 minutes…
                                     </div>
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -3841,7 +3841,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1nupw50"
+                                          class="no-ligatures w-full border-none css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -3916,7 +3916,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     </ul>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -3924,7 +3924,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       Other
                     </h2>
                     <ul
-                      class="css-14npy8n"
+                      class="css-1hglnxc"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -3962,7 +3962,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               data-testid="list-divided-item__value"
                             >
                               <button
-                                class="w-full sm:w-auto css-1cp5yjb"
+                                class="w-full sm:w-auto css-15yk9k4"
                                 type="button"
                               >
                                 <div
@@ -4001,10 +4001,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     </ul>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <button
-                      class="css-1bx0hyc"
+                      class="css-fl4fi0"
                       data-testid="General-settings__submit-button"
                       type="submit"
                     >
@@ -4032,7 +4032,7 @@ exports[`General Settings > should render 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4043,7 +4043,7 @@ exports[`General Settings > should render 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -4080,11 +4080,11 @@ exports[`General Settings > should render 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -4117,11 +4117,11 @@ exports[`General Settings > should render 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -4158,7 +4158,7 @@ exports[`General Settings > should render 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -4167,7 +4167,7 @@ exports[`General Settings > should render 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -4328,10 +4328,10 @@ exports[`General Settings > should render 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -4381,10 +4381,10 @@ exports[`General Settings > should render 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -4440,10 +4440,10 @@ exports[`General Settings > should render 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -4488,10 +4488,10 @@ exports[`General Settings > should render 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -4567,7 +4567,7 @@ exports[`General Settings > should render 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -4644,7 +4644,7 @@ exports[`General Settings > should render 1`] = `
               </div>
             </div>
             <div
-              class="css-1h1epd8"
+              class="css-cb19tw"
             >
               <ul>
                 <li
@@ -5001,7 +5001,7 @@ exports[`General Settings > should render 1`] = `
                           class="relative z-0 h-20 w-20"
                         >
                           <div
-                            class="css-ikig5u"
+                            class="css-1vo35tn"
                           >
                             <img
                               alt="Avatar"
@@ -5068,14 +5068,14 @@ exports[`General Settings > should render 1`] = `
                             Profile Name
                           </label>
                           <div
-                            class=" css-1psxlcd"
+                            class=" css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
+                                class="no-ligatures w-full border-none css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -5099,14 +5099,14 @@ exports[`General Settings > should render 1`] = `
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -5136,7 +5136,7 @@ exports[`General Settings > should render 1`] = `
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -5146,7 +5146,7 @@ exports[`General Settings > should render 1`] = `
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -5231,14 +5231,14 @@ exports[`General Settings > should render 1`] = `
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -5268,7 +5268,7 @@ exports[`General Settings > should render 1`] = `
                                     BTC (Ƀ)…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -5278,7 +5278,7 @@ exports[`General Settings > should render 1`] = `
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -5367,14 +5367,14 @@ exports[`General Settings > should render 1`] = `
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -5404,7 +5404,7 @@ exports[`General Settings > should render 1`] = `
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -5414,7 +5414,7 @@ exports[`General Settings > should render 1`] = `
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -5499,14 +5499,14 @@ exports[`General Settings > should render 1`] = `
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -5536,7 +5536,7 @@ exports[`General Settings > should render 1`] = `
                                     CryptoCompare…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -5546,7 +5546,7 @@ exports[`General Settings > should render 1`] = `
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -5631,14 +5631,14 @@ exports[`General Settings > should render 1`] = `
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -5668,7 +5668,7 @@ exports[`General Settings > should render 1`] = `
                                     12h…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -5678,7 +5678,7 @@ exports[`General Settings > should render 1`] = `
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -5752,7 +5752,7 @@ exports[`General Settings > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -5760,7 +5760,7 @@ exports[`General Settings > should render 1`] = `
                       Security
                     </h2>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -5787,14 +5787,14 @@ exports[`General Settings > should render 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="sr-only css-1psxlcd"
+                                class="sr-only css-n1b0kl"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1nupw50"
+                                    class="no-ligatures w-full border-none css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -5824,7 +5824,7 @@ exports[`General Settings > should render 1`] = `
                                       15 minutes…
                                     </div>
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -5834,7 +5834,7 @@ exports[`General Settings > should render 1`] = `
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1nupw50"
+                                          class="no-ligatures w-full border-none css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -5909,7 +5909,7 @@ exports[`General Settings > should render 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -5917,7 +5917,7 @@ exports[`General Settings > should render 1`] = `
                       Other
                     </h2>
                     <ul
-                      class="css-14npy8n"
+                      class="css-1hglnxc"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -5955,7 +5955,7 @@ exports[`General Settings > should render 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <button
-                                class="w-full sm:w-auto css-1cp5yjb"
+                                class="w-full sm:w-auto css-15yk9k4"
                                 type="button"
                               >
                                 <div
@@ -5994,10 +5994,10 @@ exports[`General Settings > should render 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <button
-                      class="css-1yqe28v"
+                      class="css-qrwjsp"
                       data-testid="General-settings__submit-button"
                       disabled=""
                       type="submit"
@@ -6026,7 +6026,7 @@ exports[`General Settings > should show identicon when removing image if name is
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -6037,7 +6037,7 @@ exports[`General Settings > should show identicon when removing image if name is
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -6074,11 +6074,11 @@ exports[`General Settings > should show identicon when removing image if name is
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -6111,11 +6111,11 @@ exports[`General Settings > should show identicon when removing image if name is
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -6152,7 +6152,7 @@ exports[`General Settings > should show identicon when removing image if name is
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -6161,7 +6161,7 @@ exports[`General Settings > should show identicon when removing image if name is
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -6322,10 +6322,10 @@ exports[`General Settings > should show identicon when removing image if name is
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -6375,10 +6375,10 @@ exports[`General Settings > should show identicon when removing image if name is
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -6434,10 +6434,10 @@ exports[`General Settings > should show identicon when removing image if name is
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -6482,10 +6482,10 @@ exports[`General Settings > should show identicon when removing image if name is
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -6561,7 +6561,7 @@ exports[`General Settings > should show identicon when removing image if name is
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -6638,7 +6638,7 @@ exports[`General Settings > should show identicon when removing image if name is
               </div>
             </div>
             <div
-              class="css-1h1epd8"
+              class="css-cb19tw"
             >
               <ul>
                 <li
@@ -6995,7 +6995,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           class="relative z-0 h-20 w-20"
                         >
                           <div
-                            class="css-ikig5u"
+                            class="css-1vo35tn"
                           >
                             <img
                               alt="Avatar"
@@ -7062,14 +7062,14 @@ exports[`General Settings > should show identicon when removing image if name is
                             Profile Name
                           </label>
                           <div
-                            class=" css-1psxlcd"
+                            class=" css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
+                                class="no-ligatures w-full border-none css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -7093,14 +7093,14 @@ exports[`General Settings > should show identicon when removing image if name is
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -7130,7 +7130,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -7140,7 +7140,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -7225,14 +7225,14 @@ exports[`General Settings > should show identicon when removing image if name is
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -7262,7 +7262,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                     BTC (Ƀ)…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -7272,7 +7272,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -7361,14 +7361,14 @@ exports[`General Settings > should show identicon when removing image if name is
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -7398,7 +7398,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -7408,7 +7408,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -7493,14 +7493,14 @@ exports[`General Settings > should show identicon when removing image if name is
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -7530,7 +7530,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                     CryptoCompare…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -7540,7 +7540,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -7625,14 +7625,14 @@ exports[`General Settings > should show identicon when removing image if name is
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -7662,7 +7662,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                     12h…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -7672,7 +7672,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -7746,7 +7746,7 @@ exports[`General Settings > should show identicon when removing image if name is
                     </div>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -7754,7 +7754,7 @@ exports[`General Settings > should show identicon when removing image if name is
                       Security
                     </h2>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -7781,14 +7781,14 @@ exports[`General Settings > should show identicon when removing image if name is
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="sr-only css-1psxlcd"
+                                class="sr-only css-n1b0kl"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1nupw50"
+                                    class="no-ligatures w-full border-none css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -7818,7 +7818,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                       15 minutes…
                                     </div>
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -7828,7 +7828,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1nupw50"
+                                          class="no-ligatures w-full border-none css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -7903,7 +7903,7 @@ exports[`General Settings > should show identicon when removing image if name is
                     </ul>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -7911,7 +7911,7 @@ exports[`General Settings > should show identicon when removing image if name is
                       Other
                     </h2>
                     <ul
-                      class="css-14npy8n"
+                      class="css-1hglnxc"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -7949,7 +7949,7 @@ exports[`General Settings > should show identicon when removing image if name is
                               data-testid="list-divided-item__value"
                             >
                               <button
-                                class="w-full sm:w-auto css-1cp5yjb"
+                                class="w-full sm:w-auto css-15yk9k4"
                                 type="button"
                               >
                                 <div
@@ -7988,10 +7988,10 @@ exports[`General Settings > should show identicon when removing image if name is
                     </ul>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <button
-                      class="css-1yqe28v"
+                      class="css-qrwjsp"
                       data-testid="General-settings__submit-button"
                       disabled=""
                       type="submit"
@@ -8020,7 +8020,7 @@ exports[`General Settings > should update profile 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -8031,7 +8031,7 @@ exports[`General Settings > should update profile 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -8068,11 +8068,11 @@ exports[`General Settings > should update profile 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -8105,11 +8105,11 @@ exports[`General Settings > should update profile 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -8146,7 +8146,7 @@ exports[`General Settings > should update profile 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -8155,7 +8155,7 @@ exports[`General Settings > should update profile 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -8316,10 +8316,10 @@ exports[`General Settings > should update profile 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -8369,10 +8369,10 @@ exports[`General Settings > should update profile 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -8428,10 +8428,10 @@ exports[`General Settings > should update profile 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -8476,10 +8476,10 @@ exports[`General Settings > should update profile 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -8555,7 +8555,7 @@ exports[`General Settings > should update profile 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -8632,7 +8632,7 @@ exports[`General Settings > should update profile 1`] = `
               </div>
             </div>
             <div
-              class="css-1h1epd8"
+              class="css-cb19tw"
             >
               <ul>
                 <li
@@ -8989,7 +8989,7 @@ exports[`General Settings > should update profile 1`] = `
                           class="relative z-0 h-20 w-20"
                         >
                           <div
-                            class="css-ikig5u"
+                            class="css-1vo35tn"
                           >
                             <img
                               alt="Avatar"
@@ -9056,14 +9056,14 @@ exports[`General Settings > should update profile 1`] = `
                             Profile Name
                           </label>
                           <div
-                            class=" css-1psxlcd"
+                            class=" css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
+                                class="no-ligatures w-full border-none css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -9087,14 +9087,14 @@ exports[`General Settings > should update profile 1`] = `
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -9124,7 +9124,7 @@ exports[`General Settings > should update profile 1`] = `
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -9134,7 +9134,7 @@ exports[`General Settings > should update profile 1`] = `
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -9219,14 +9219,14 @@ exports[`General Settings > should update profile 1`] = `
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -9256,7 +9256,7 @@ exports[`General Settings > should update profile 1`] = `
                                     BTC (Ƀ)…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -9266,7 +9266,7 @@ exports[`General Settings > should update profile 1`] = `
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -9355,14 +9355,14 @@ exports[`General Settings > should update profile 1`] = `
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -9392,7 +9392,7 @@ exports[`General Settings > should update profile 1`] = `
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -9402,7 +9402,7 @@ exports[`General Settings > should update profile 1`] = `
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -9487,14 +9487,14 @@ exports[`General Settings > should update profile 1`] = `
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -9524,7 +9524,7 @@ exports[`General Settings > should update profile 1`] = `
                                     CryptoCompare…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -9534,7 +9534,7 @@ exports[`General Settings > should update profile 1`] = `
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -9619,14 +9619,14 @@ exports[`General Settings > should update profile 1`] = `
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -9656,7 +9656,7 @@ exports[`General Settings > should update profile 1`] = `
                                     12h…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -9666,7 +9666,7 @@ exports[`General Settings > should update profile 1`] = `
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -9740,7 +9740,7 @@ exports[`General Settings > should update profile 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -9748,7 +9748,7 @@ exports[`General Settings > should update profile 1`] = `
                       Security
                     </h2>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -9775,14 +9775,14 @@ exports[`General Settings > should update profile 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="sr-only css-1psxlcd"
+                                class="sr-only css-n1b0kl"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1nupw50"
+                                    class="no-ligatures w-full border-none css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -9812,7 +9812,7 @@ exports[`General Settings > should update profile 1`] = `
                                       1 minute…
                                     </div>
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -9822,7 +9822,7 @@ exports[`General Settings > should update profile 1`] = `
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1nupw50"
+                                          class="no-ligatures w-full border-none css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -9897,7 +9897,7 @@ exports[`General Settings > should update profile 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -9905,7 +9905,7 @@ exports[`General Settings > should update profile 1`] = `
                       Other
                     </h2>
                     <ul
-                      class="css-14npy8n"
+                      class="css-1hglnxc"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -9943,7 +9943,7 @@ exports[`General Settings > should update profile 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <button
-                                class="w-full sm:w-auto css-1cp5yjb"
+                                class="w-full sm:w-auto css-15yk9k4"
                                 type="button"
                               >
                                 <div
@@ -9982,10 +9982,10 @@ exports[`General Settings > should update profile 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <button
-                      class="css-1yqe28v"
+                      class="css-qrwjsp"
                       data-testid="General-settings__submit-button"
                       disabled=""
                       type="submit"
@@ -10014,7 +10014,7 @@ exports[`General Settings > should update the avatar when removing focus from na
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -10025,7 +10025,7 @@ exports[`General Settings > should update the avatar when removing focus from na
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -10062,11 +10062,11 @@ exports[`General Settings > should update the avatar when removing focus from na
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -10099,11 +10099,11 @@ exports[`General Settings > should update the avatar when removing focus from na
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -10140,7 +10140,7 @@ exports[`General Settings > should update the avatar when removing focus from na
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -10149,7 +10149,7 @@ exports[`General Settings > should update the avatar when removing focus from na
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -10310,10 +10310,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -10363,10 +10363,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -10422,10 +10422,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -10470,10 +10470,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -10549,7 +10549,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -10626,7 +10626,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               </div>
             </div>
             <div
-              class="css-1h1epd8"
+              class="css-cb19tw"
             >
               <ul>
                 <li
@@ -10983,7 +10983,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="relative z-0 h-20 w-20"
                         >
                           <div
-                            class="css-ikig5u"
+                            class="css-1vo35tn"
                           >
                             <img
                               alt="Avatar"
@@ -11050,14 +11050,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             Profile Name
                           </label>
                           <div
-                            class=" css-1psxlcd"
+                            class=" css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1"
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
+                                class="no-ligatures w-full border-none css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -11081,14 +11081,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -11118,7 +11118,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -11128,7 +11128,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -11213,14 +11213,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -11250,7 +11250,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     BTC (Ƀ)…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -11260,7 +11260,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -11349,14 +11349,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -11386,7 +11386,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -11396,7 +11396,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -11481,14 +11481,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -11518,7 +11518,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     CryptoCompare…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -11528,7 +11528,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -11613,14 +11613,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -11650,7 +11650,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     12h…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -11660,7 +11660,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -11734,7 +11734,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </div>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -11742,7 +11742,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       Security
                     </h2>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -11769,14 +11769,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="sr-only css-1psxlcd"
+                                class="sr-only css-n1b0kl"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1nupw50"
+                                    class="no-ligatures w-full border-none css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -11806,7 +11806,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                       15 minutes…
                                     </div>
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -11816,7 +11816,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1nupw50"
+                                          class="no-ligatures w-full border-none css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -11891,7 +11891,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </ul>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -11899,7 +11899,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       Other
                     </h2>
                     <ul
-                      class="css-14npy8n"
+                      class="css-1hglnxc"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -11937,7 +11937,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="list-divided-item__value"
                             >
                               <button
-                                class="w-full sm:w-auto css-1cp5yjb"
+                                class="w-full sm:w-auto css-15yk9k4"
                                 type="button"
                               >
                                 <div
@@ -11976,10 +11976,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </ul>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <button
-                      class="css-1bx0hyc"
+                      class="css-fl4fi0"
                       data-testid="General-settings__submit-button"
                       type="submit"
                     >
@@ -12007,7 +12007,7 @@ exports[`General Settings > should update the avatar when removing focus from na
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -12018,7 +12018,7 @@ exports[`General Settings > should update the avatar when removing focus from na
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -12055,11 +12055,11 @@ exports[`General Settings > should update the avatar when removing focus from na
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -12092,11 +12092,11 @@ exports[`General Settings > should update the avatar when removing focus from na
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -12133,7 +12133,7 @@ exports[`General Settings > should update the avatar when removing focus from na
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -12142,7 +12142,7 @@ exports[`General Settings > should update the avatar when removing focus from na
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -12303,10 +12303,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -12356,10 +12356,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -12415,10 +12415,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -12463,10 +12463,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -12542,7 +12542,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -12619,7 +12619,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               </div>
             </div>
             <div
-              class="css-1h1epd8"
+              class="css-cb19tw"
             >
               <ul>
                 <li
@@ -12979,10 +12979,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                             class="h-full overflow-hidden rounded-full"
                           >
                             <div
-                              class="css-5aibro"
+                              class="css-1vxhzvl"
                             >
                               <button
-                                class="css-1jhy6v9"
+                                class="css-6419sw"
                                 data-testid="SelectProfileImage__upload-button"
                                 type="button"
                               >
@@ -13036,7 +13036,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                             Profile Name
                           </label>
                           <div
-                            class=" css-px3dod"
+                            class=" css-12mz4i6"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -13044,7 +13044,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               <input
                                 aria-invalid="true"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
+                                class="no-ligatures w-full border-none css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -13115,14 +13115,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -13152,7 +13152,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -13162,7 +13162,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -13247,14 +13247,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -13284,7 +13284,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     BTC (Ƀ)…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -13294,7 +13294,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -13383,14 +13383,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -13420,7 +13420,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     English…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -13430,7 +13430,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -13515,14 +13515,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -13552,7 +13552,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     CryptoCompare…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -13562,7 +13562,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -13647,14 +13647,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="SelectDropdown"
                           >
                             <div
-                              class="sr-only css-1psxlcd"
+                              class="sr-only css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1nupw50"
+                                  class="no-ligatures w-full border-none css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -13684,7 +13684,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     12h…
                                   </div>
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
@@ -13694,7 +13694,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1nupw50"
+                                        class="no-ligatures w-full border-none css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -13768,7 +13768,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </div>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -13776,7 +13776,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       Security
                     </h2>
                     <ul
-                      class="css-slpw39"
+                      class="css-1mq6i0h"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -13803,14 +13803,14 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="sr-only css-1psxlcd"
+                                class="sr-only css-n1b0kl"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1nupw50"
+                                    class="no-ligatures w-full border-none css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -13840,7 +13840,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                       15 minutes…
                                     </div>
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -13850,7 +13850,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1nupw50"
+                                          class="no-ligatures w-full border-none css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -13925,7 +13925,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </ul>
                   </div>
                   <div
-                    class="css-1g8gdxg"
+                    class="css-1elbhch"
                   >
                     <h2
                       class="mb-3 text-lg"
@@ -13933,7 +13933,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       Other
                     </h2>
                     <ul
-                      class="css-14npy8n"
+                      class="css-1hglnxc"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -13971,7 +13971,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="list-divided-item__value"
                             >
                               <button
-                                class="w-full sm:w-auto css-1cp5yjb"
+                                class="w-full sm:w-auto css-15yk9k4"
                                 type="button"
                               >
                                 <div
@@ -14010,10 +14010,10 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </ul>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <button
-                      class="css-1yqe28v"
+                      class="css-qrwjsp"
                       data-testid="General-settings__submit-button"
                       disabled=""
                       type="submit"

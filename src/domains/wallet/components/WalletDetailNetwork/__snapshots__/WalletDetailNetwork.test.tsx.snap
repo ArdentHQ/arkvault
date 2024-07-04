@@ -3,7 +3,7 @@
 exports[`WalletDetailNetwork > should render 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="WalletDetailNetwork"
   >
     <div
@@ -40,7 +40,7 @@ exports[`WalletDetailNetwork > should render 1`] = `
         >
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div

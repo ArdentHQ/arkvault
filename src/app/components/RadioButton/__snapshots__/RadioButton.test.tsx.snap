@@ -3,7 +3,7 @@
 exports[`RadioButton > should render 1`] = `
 <div>
   <input
-    class="css-191vvjh"
+    class="css-1bh759f"
     color="success"
     type="radio"
   />
@@ -13,7 +13,7 @@ exports[`RadioButton > should render 1`] = `
 exports[`RadioButton > should render a danger color 1`] = `
 <div>
   <input
-    class="css-1sfu2cj"
+    class="css-1n4os79"
     color="danger"
     type="radio"
   />
@@ -23,7 +23,7 @@ exports[`RadioButton > should render a danger color 1`] = `
 exports[`RadioButton > should render a hint color 1`] = `
 <div>
   <input
-    class="css-1gtq3ss"
+    class="css-180eh5q"
     color="hint"
     type="radio"
   />
@@ -33,7 +33,7 @@ exports[`RadioButton > should render a hint color 1`] = `
 exports[`RadioButton > should render a info color 1`] = `
 <div>
   <input
-    class="css-xj5m7a"
+    class="css-1stwpdq"
     color="info"
     type="radio"
   />
@@ -43,7 +43,7 @@ exports[`RadioButton > should render a info color 1`] = `
 exports[`RadioButton > should render a success color 1`] = `
 <div>
   <input
-    class="css-191vvjh"
+    class="css-1bh759f"
     color="success"
     type="radio"
   />
@@ -53,7 +53,7 @@ exports[`RadioButton > should render a success color 1`] = `
 exports[`RadioButton > should render a warning color 1`] = `
 <div>
   <input
-    class="css-16kwmaz"
+    class="css-b4q9i6"
     color="warning"
     type="radio"
   />

@@ -22,7 +22,7 @@ exports[`DelegateFooter > should render 1`] = `
               class="mr-3 hidden lg:block"
             >
               <div
-                class="shrink-0 css-tthe5h"
+                class="shrink-0 css-1px82g5"
                 data-testid="Avatar"
               >
                 <div
@@ -40,7 +40,7 @@ exports[`DelegateFooter > should render 1`] = `
               class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
             >
               <div
-                class="hidden sm:block css-bnrgkd"
+                class="hidden sm:block css-1c0kjui"
               >
                 Address
               </div>
@@ -51,7 +51,7 @@ exports[`DelegateFooter > should render 1`] = `
                   class="flex pr-3 lg:hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -76,7 +76,7 @@ exports[`DelegateFooter > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -107,12 +107,12 @@ exports[`DelegateFooter > should render 1`] = `
                 class="flex flex-col justify-between sm:text-right"
               >
                 <div
-                  class="css-bnrgkd"
+                  class="css-1c0kjui"
                 >
                   Votes
                 </div>
                 <div
-                  class="css-7kkgfg"
+                  class="css-auqdnt"
                   data-testid="DelegateTable__footer--vote"
                   disabled=""
                 >
@@ -162,7 +162,7 @@ exports[`DelegateFooter > should render 1`] = `
                 class="hidden lg:block"
               >
                 <div
-                  class="ring-theme-background duration-100 css-188kr7j"
+                  class="ring-theme-background duration-100 css-15k66tv"
                   disabled=""
                 >
                   <div
@@ -204,12 +204,12 @@ exports[`DelegateFooter > should render 1`] = `
                 class="flex flex-col justify-between sm:text-right"
               >
                 <div
-                  class="css-bnrgkd"
+                  class="css-1c0kjui"
                 >
                   Unvotes
                 </div>
                 <div
-                  class="css-7kkgfg"
+                  class="css-auqdnt"
                   data-testid="DelegateTable__footer--unvote"
                   disabled=""
                 >
@@ -256,7 +256,7 @@ exports[`DelegateFooter > should render 1`] = `
                 class="hidden lg:block"
               >
                 <div
-                  class="ring-theme-background duration-100 css-188kr7j"
+                  class="ring-theme-background duration-100 css-15k66tv"
                   disabled=""
                 >
                   <div
@@ -295,7 +295,7 @@ exports[`DelegateFooter > should render 1`] = `
                 class="flex flex-col justify-between sm:text-right"
               >
                 <div
-                  class="css-bnrgkd"
+                  class="css-1c0kjui"
                 >
                   Total
                 </div>
@@ -349,7 +349,7 @@ exports[`DelegateFooter > should render 1`] = `
                 class="hidden lg:block"
               >
                 <div
-                  class="ring-theme-background duration-100 css-1ngxrs8"
+                  class="ring-theme-background duration-100 css-gdymhi"
                 >
                   <div
                     class="css-1i4b0eq"
@@ -389,7 +389,7 @@ exports[`DelegateFooter > should render 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="css-1yqe28v"
+              class="css-qrwjsp"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"

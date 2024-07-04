@@ -3,7 +3,7 @@
 exports[`Badge > should render 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-19jfgr"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1jo8u8k"
   >
     <span />
   </span>
@@ -13,7 +13,7 @@ exports[`Badge > should render 1`] = `
 exports[`Badge > should render with icon 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-19jfgr"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1jo8u8k"
   >
     <div
       class="css-15txs7d"
@@ -28,7 +28,7 @@ exports[`Badge > should render with icon 1`] = `
 exports[`Badge > should render with position 'bottom' 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-cys5ec"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1rcn4kd"
   >
     <div
       class="css-15txs7d"
@@ -43,7 +43,7 @@ exports[`Badge > should render with position 'bottom' 1`] = `
 exports[`Badge > should render with position 'bottom-left' 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1os0w1"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-ye1fw6"
   >
     <div
       class="css-15txs7d"
@@ -58,7 +58,7 @@ exports[`Badge > should render with position 'bottom-left' 1`] = `
 exports[`Badge > should render with position 'bottom-right' 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-19jfgr"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1jo8u8k"
   >
     <div
       class="css-15txs7d"
@@ -73,7 +73,7 @@ exports[`Badge > should render with position 'bottom-right' 1`] = `
 exports[`Badge > should render with position 'left' 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1ltu2fy"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-pl41zd"
   >
     <div
       class="css-15txs7d"
@@ -88,7 +88,7 @@ exports[`Badge > should render with position 'left' 1`] = `
 exports[`Badge > should render with position 'right' 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-n63zof"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-k94wca"
   >
     <div
       class="css-15txs7d"
@@ -103,7 +103,7 @@ exports[`Badge > should render with position 'right' 1`] = `
 exports[`Badge > should render with position 'top' 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1aektxz"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-i72qo"
   >
     <div
       class="css-15txs7d"
@@ -118,7 +118,7 @@ exports[`Badge > should render with position 'top' 1`] = `
 exports[`Badge > should render with position 'top-left' 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1lw6cca"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-9ijlrj"
   >
     <div
       class="css-15txs7d"
@@ -133,7 +133,7 @@ exports[`Badge > should render with position 'top-left' 1`] = `
 exports[`Badge > should render with position 'top-right' 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1sslbw4"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-31xkyx"
   >
     <div
       class="css-15txs7d"
@@ -148,7 +148,7 @@ exports[`Badge > should render with position 'top-right' 1`] = `
 exports[`Badge > should render with size 'lg' 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1jfmq7q"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-9adppv"
   >
     <div
       class="css-15txs7d"
@@ -163,7 +163,7 @@ exports[`Badge > should render with size 'lg' 1`] = `
 exports[`Badge > should render with size 'md' 1`] = `
 <div>
   <span
-    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-19jfgr"
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background css-1jo8u8k"
   >
     <div
       class="css-15txs7d"

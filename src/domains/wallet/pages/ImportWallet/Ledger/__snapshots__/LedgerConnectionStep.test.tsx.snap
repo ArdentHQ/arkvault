@@ -44,14 +44,14 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -82,7 +82,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
                   …
                 </div>
                 <div
-                  class="css-n29l73"
+                  class="css-xk5t3v"
                   disabled=""
                 >
                   <div
@@ -119,7 +119,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                      class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       disabled=""
                       id="downshift-0-input"
@@ -195,7 +195,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
       class="flex flex-col overflow-hidden rounded-xl"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -234,7 +234,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Successfully connected
       </div>
@@ -350,7 +350,7 @@ exports[`LedgerConnectionStep > should render cancel screen 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1b3vlxq"
+        class="css-1ppx3l2"
         color="info"
       />
       <span

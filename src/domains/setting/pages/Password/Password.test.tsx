@@ -74,7 +74,7 @@ describe("Password Settings", () => {
 		});
 
 		await userEvent.clear(passwordInput());
-		await userEvent.type(passwordInput(), password, { delay: 50 });
+		await userEvent.type(passwordInput(), password, { delay: 100 });
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue(password);

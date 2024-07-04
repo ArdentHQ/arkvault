@@ -24,7 +24,7 @@ exports[`ContactsHeader > should render responsive 1`] = `
             class="group"
           >
             <button
-              class="ring-focus css-1wz6bm9"
+              class="ring-focus css-14zm422"
               type="button"
             >
               <div
@@ -69,7 +69,7 @@ exports[`ContactsHeader > should render responsive 1`] = `
           class="mx-0.5 flex md:ml-3.5"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
             type="vertical"
           />
         </span>
@@ -152,7 +152,7 @@ exports[`ContactsHeader > should render responsive 2`] = `
                   class="group"
                 >
                   <button
-                    class="ring-focus css-1wz6bm9"
+                    class="ring-focus css-14zm422"
                     type="button"
                   >
                     <div
@@ -197,13 +197,13 @@ exports[`ContactsHeader > should render responsive 2`] = `
                 class="mx-0.5 flex md:ml-3.5"
               >
                 <div
-                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ggzzh6"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
                   type="vertical"
                 />
               </span>
             </div>
             <button
-              class="ml-6 css-1bx0hyc"
+              class="ml-6 css-fl4fi0"
               data-testid="contacts__add-contact-btn"
               type="button"
             >
@@ -237,7 +237,7 @@ exports[`ContactsHeaderExtra > should render responsive 1`] = `
           class="group"
         >
           <button
-            class="ring-focus css-1wz6bm9"
+            class="ring-focus css-14zm422"
             type="button"
           >
             <div
@@ -282,7 +282,7 @@ exports[`ContactsHeaderExtra > should render responsive 1`] = `
         class="mx-0.5 flex md:ml-3.5"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
       </span>
@@ -338,7 +338,7 @@ exports[`ContactsHeaderExtra > should render responsive 2`] = `
           class="group"
         >
           <button
-            class="ring-focus css-1wz6bm9"
+            class="ring-focus css-14zm422"
             type="button"
           >
             <div
@@ -383,13 +383,13 @@ exports[`ContactsHeaderExtra > should render responsive 2`] = `
         class="mx-0.5 flex md:ml-3.5"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ggzzh6"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
           type="vertical"
         />
       </span>
     </div>
     <button
-      class="ml-6 css-1bx0hyc"
+      class="ml-6 css-fl4fi0"
       data-testid="contacts__add-contact-btn"
       type="button"
     >

@@ -4,13 +4,13 @@ exports[`UnlockTokensFetchError > should render 1`] = `
 <DocumentFragment>
   Unable to retrieve unlockable balances. Click 
   <a
-    class="ring-focus group inline-block css-15tcy38"
+    class="ring-focus group inline-block css-7nwwrh"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="#/"
   >
     <span
-      class="css-1y2194z"
+      class="css-170792"
     >
       here
     </span>

@@ -15,7 +15,7 @@ describe("AppearanceAccentColor", () => {
 		const setValue = vi.fn();
 
 		vi.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
-			() => ({ setValue, watch } as unknown as UseFormMethods),
+			() => ({ setValue, watch }) as unknown as UseFormMethods,
 		);
 
 		const { asFragment } = render(<AppearanceAccentColor />);
@@ -29,7 +29,7 @@ describe("AppearanceAccentColor", () => {
 		const setValue = vi.fn();
 
 		vi.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
-			() => ({ setValue, watch } as unknown as UseFormMethods),
+			() => ({ setValue, watch }) as unknown as UseFormMethods,
 		);
 
 		render(<AppearanceAccentColor />);

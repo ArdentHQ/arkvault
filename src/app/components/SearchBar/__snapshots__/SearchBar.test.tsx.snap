@@ -39,14 +39,14 @@ exports[`SearchBar > should render 1`] = `
         class="mr-4 flex-1 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800"
       >
         <div
-          class="css-7km7kr"
+          class="css-jq6j0b"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="Input"
               placeholder="What would you like to search for?"
               type="text"
@@ -56,7 +56,7 @@ exports[`SearchBar > should render 1`] = `
         </div>
       </div>
       <button
-        class="my-1 css-1bx0hyc"
+        class="my-1 css-fl4fi0"
         data-testid="SearchBar__button"
         type="button"
       >

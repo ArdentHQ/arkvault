@@ -7,8 +7,6 @@ import { Toast } from "@/app/components/Toast";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 
-const { TYPE } = toast;
-
 type ToastTypeOptions = Exclude<TypeOptions, "default" | "dark">;
 
 export const ToastMessage = ({
@@ -75,19 +73,19 @@ export class ToastService {
 	}
 
 	public info(content: ToastContent, options?: ToastOptions): ToastId {
-		return this.toast(TYPE.INFO as ToastTypeOptions, content, options);
+		return this.toast("info", content, options);
 	}
 
 	public success(content: ToastContent, options?: ToastOptions): ToastId {
-		return this.toast(TYPE.SUCCESS as ToastTypeOptions, content, options);
+		return this.toast("success", content, options);
 	}
 
 	public warning(content: ToastContent, options?: ToastOptions): ToastId {
-		return this.toast(TYPE.WARNING as ToastTypeOptions, content, options);
+		return this.toast("warning", content, options);
 	}
 
 	public error(content: ToastContent, options?: ToastOptions): ToastId {
-		return this.toast(TYPE.ERROR as ToastTypeOptions, content, options);
+		return this.toast("error", content, options);
 	}
 
 	public dismiss(id?: ToastId) {

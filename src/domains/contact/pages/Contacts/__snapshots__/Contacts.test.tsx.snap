@@ -6,14 +6,14 @@ exports[`Contacts > should render compact on md screen 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -49,11 +49,11 @@ exports[`Contacts > should render compact on md screen 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -86,11 +86,11 @@ exports[`Contacts > should render compact on md screen 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -126,7 +126,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -135,7 +135,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -297,10 +297,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -350,10 +350,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -409,10 +409,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -456,10 +456,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -534,7 +534,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -600,7 +600,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-1wz6bm9"
+                        class="ring-focus css-14zm422"
                         type="button"
                       >
                         <div
@@ -645,13 +645,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     class="mx-0.5 flex md:ml-3.5"
                   >
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ggzzh6"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
                       type="vertical"
                     />
                   </span>
                 </div>
                 <button
-                  class="ml-6 css-1bx0hyc"
+                  class="ml-6 css-fl4fi0"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -805,19 +805,19 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class=" css-1li86da"
+                    class=" css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       >
                         <span
                           class="font-semibold"
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             Brian
@@ -829,7 +829,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -864,10 +864,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -907,7 +907,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -955,7 +955,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -964,7 +964,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -985,7 +985,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -1039,19 +1039,19 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-f3v5yv"
+                    class=" css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       >
                         <span
                           class="font-semibold"
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             Rok
@@ -1063,7 +1063,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -1098,10 +1098,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -1141,7 +1141,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -1189,7 +1189,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -1198,7 +1198,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -1219,7 +1219,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -1273,19 +1273,19 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-f3v5yv"
+                    class=" css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       />
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -1320,10 +1320,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -1363,7 +1363,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -1411,7 +1411,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -1420,7 +1420,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -1441,7 +1441,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -1495,19 +1495,19 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-1li86da"
+                    class=" css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       />
                     </td>
                     <td
                       class=""
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -1542,10 +1542,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -1585,7 +1585,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -1633,7 +1633,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -1642,7 +1642,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -1663,7 +1663,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -1733,14 +1733,14 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -1776,11 +1776,11 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1813,11 +1813,11 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -1853,7 +1853,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -1862,7 +1862,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -2024,10 +2024,10 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -2077,10 +2077,10 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -2136,10 +2136,10 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -2183,10 +2183,10 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -2261,7 +2261,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -2327,7 +2327,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class="group"
                     >
                       <button
-                        class="ring-focus css-1wz6bm9"
+                        class="ring-focus css-14zm422"
                         type="button"
                       >
                         <div
@@ -2372,13 +2372,13 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                     class="mx-0.5 flex md:ml-3.5"
                   >
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ggzzh6"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
                       type="vertical"
                     />
                   </span>
                 </div>
                 <button
-                  class="ml-6 css-1bx0hyc"
+                  class="ml-6 css-fl4fi0"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -2532,19 +2532,19 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   role="rowgroup"
                 >
                   <tr
-                    class=" css-1li86da"
+                    class=" css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       >
                         <span
                           class="font-semibold"
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             Brian
@@ -2556,7 +2556,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class=""
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -2591,10 +2591,10 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -2634,7 +2634,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -2682,7 +2682,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class=""
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -2691,7 +2691,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -2712,7 +2712,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -2766,19 +2766,19 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                     </td>
                   </tr>
                   <tr
-                    class=" css-f3v5yv"
+                    class=" css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       >
                         <span
                           class="font-semibold"
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             Rok
@@ -2790,7 +2790,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -2825,10 +2825,10 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -2868,7 +2868,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -2916,7 +2916,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -2925,7 +2925,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -2946,7 +2946,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -3000,19 +3000,19 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                     </td>
                   </tr>
                   <tr
-                    class=" css-f3v5yv"
+                    class=" css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       />
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -3047,10 +3047,10 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -3090,7 +3090,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -3138,7 +3138,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -3147,7 +3147,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -3168,7 +3168,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -3222,19 +3222,19 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                     </td>
                   </tr>
                   <tr
-                    class=" css-1li86da"
+                    class=" css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       />
                     </td>
                     <td
                       class=""
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -3269,10 +3269,10 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -3312,7 +3312,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -3360,7 +3360,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class=""
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -3369,7 +3369,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -3390,7 +3390,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -3460,14 +3460,14 @@ exports[`Contacts > should render responsive with contacts 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -3503,11 +3503,11 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -3540,11 +3540,11 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -3580,7 +3580,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -3589,7 +3589,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -3751,10 +3751,10 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -3804,10 +3804,10 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -3863,10 +3863,10 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -3910,10 +3910,10 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -3988,7 +3988,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -4036,7 +4036,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="group"
               >
                 <button
-                  class="ring-focus css-1wz6bm9"
+                  class="ring-focus css-14zm422"
                   type="button"
                 >
                   <div
@@ -4081,7 +4081,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               class="mx-0.5 flex md:ml-3.5"
             >
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                 type="vertical"
               />
             </span>
@@ -4124,7 +4124,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
         data-testid="ContactListMobile"
       >
         <div
-          class="css-8cvvgy"
+          class="css-fvpuky"
         >
           <div
             class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -4196,17 +4196,17 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                     </span>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+              class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
             >
               <div
-                class="css-16yt50s"
+                class="css-1j7gziz"
                 data-testid="Accordion__toggle"
               >
                 <div
@@ -4237,7 +4237,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           </div>
         </div>
         <div
-          class="css-8cvvgy"
+          class="css-fvpuky"
         >
           <div
             class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -4309,17 +4309,17 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                     </span>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+              class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
             >
               <div
-                class="css-16yt50s"
+                class="css-1j7gziz"
                 data-testid="Accordion__toggle"
               >
                 <div
@@ -4361,14 +4361,14 @@ exports[`Contacts > should render with contacts 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -4404,11 +4404,11 @@ exports[`Contacts > should render with contacts 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -4441,11 +4441,11 @@ exports[`Contacts > should render with contacts 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -4481,7 +4481,7 @@ exports[`Contacts > should render with contacts 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -4490,7 +4490,7 @@ exports[`Contacts > should render with contacts 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -4652,10 +4652,10 @@ exports[`Contacts > should render with contacts 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -4705,10 +4705,10 @@ exports[`Contacts > should render with contacts 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -4764,10 +4764,10 @@ exports[`Contacts > should render with contacts 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -4811,10 +4811,10 @@ exports[`Contacts > should render with contacts 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -4889,7 +4889,7 @@ exports[`Contacts > should render with contacts 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -4955,7 +4955,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-1wz6bm9"
+                        class="ring-focus css-14zm422"
                         type="button"
                       >
                         <div
@@ -5000,13 +5000,13 @@ exports[`Contacts > should render with contacts 1`] = `
                     class="mx-0.5 flex md:ml-3.5"
                   >
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ggzzh6"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
                       type="vertical"
                     />
                   </span>
                 </div>
                 <button
-                  class="ml-6 css-1bx0hyc"
+                  class="ml-6 css-fl4fi0"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -5160,19 +5160,19 @@ exports[`Contacts > should render with contacts 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class=" css-1li86da"
+                    class=" css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       >
                         <span
                           class="font-semibold"
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             Brian
@@ -5184,7 +5184,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -5219,10 +5219,10 @@ exports[`Contacts > should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -5262,7 +5262,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -5310,7 +5310,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -5319,7 +5319,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -5340,7 +5340,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -5394,19 +5394,19 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-f3v5yv"
+                    class=" css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       >
                         <span
                           class="font-semibold"
                           data-testid="ContactListItem__name"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             Rok
@@ -5418,7 +5418,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -5453,10 +5453,10 @@ exports[`Contacts > should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -5496,7 +5496,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -5544,7 +5544,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -5553,7 +5553,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -5574,7 +5574,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -5628,19 +5628,19 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-f3v5yv"
+                    class=" css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       />
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -5675,10 +5675,10 @@ exports[`Contacts > should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -5718,7 +5718,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -5766,7 +5766,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -5775,7 +5775,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -5796,7 +5796,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -5850,19 +5850,19 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-1li86da"
+                    class=" css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-mx19qq"
+                        class="space-x-4 whitespace-nowrap css-hhd44j"
                       />
                     </td>
                     <td
                       class=""
                     >
                       <div
-                        class="justify-center css-1rods8x"
+                        class="justify-center css-12appi5"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -5897,10 +5897,10 @@ exports[`Contacts > should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-jxpwdn"
+                          class="shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -5940,7 +5940,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-1rods8x"
+                        class="space-x-4 justify-center css-12appi5"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -5988,7 +5988,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -5997,7 +5997,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -6018,7 +6018,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
                                   type="button"
                                 >
                                   <div
@@ -6088,14 +6088,14 @@ exports[`Contacts > should render without contacts 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -6131,11 +6131,11 @@ exports[`Contacts > should render without contacts 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -6168,11 +6168,11 @@ exports[`Contacts > should render without contacts 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -6208,7 +6208,7 @@ exports[`Contacts > should render without contacts 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -6217,7 +6217,7 @@ exports[`Contacts > should render without contacts 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -6379,10 +6379,10 @@ exports[`Contacts > should render without contacts 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -6432,10 +6432,10 @@ exports[`Contacts > should render without contacts 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -6491,10 +6491,10 @@ exports[`Contacts > should render without contacts 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -6538,10 +6538,10 @@ exports[`Contacts > should render without contacts 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -6616,7 +6616,7 @@ exports[`Contacts > should render without contacts 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -6672,7 +6672,7 @@ exports[`Contacts > should render without contacts 1`] = `
                 class="items-top flex justify-end"
               >
                 <button
-                  class="ml-6 css-1bx0hyc"
+                  class="ml-6 css-fl4fi0"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >

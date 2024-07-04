@@ -15,7 +15,7 @@ exports[`VotesFilter > should render 1`] = `
           class="group"
         >
           <button
-            class="ring-focus css-1wz6bm9"
+            class="ring-focus css-14zm422"
           >
             <div
               class="flex h-5 w-5 items-center justify-center"
@@ -70,7 +70,7 @@ exports[`VotesFilter > should render default 1`] = `
           class="group"
         >
           <button
-            class="ring-focus css-1wz6bm9"
+            class="ring-focus css-14zm422"
           >
             <div
               class="flex h-5 w-5 items-center justify-center"
@@ -106,7 +106,7 @@ exports[`VotesFilter > should render default 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-jowtd0"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -120,7 +120,7 @@ exports[`VotesFilter > should render default 1`] = `
             >
               <input
                 checked=""
-                class="css-7i915u"
+                class="css-kf7z38"
                 color="success"
                 name="all"
                 type="checkbox"
@@ -136,7 +136,7 @@ exports[`VotesFilter > should render default 1`] = `
               data-testid="VotesFilter__option--current"
             >
               <input
-                class="css-7i915u"
+                class="css-kf7z38"
                 color="success"
                 name="current"
                 type="checkbox"
@@ -170,7 +170,7 @@ exports[`VotesFilter > should render with current option selected 1`] = `
           class="group"
         >
           <button
-            class="ring-focus css-1wz6bm9"
+            class="ring-focus css-14zm422"
           >
             <div
               class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
@@ -213,7 +213,7 @@ exports[`VotesFilter > should render with current option selected 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-jowtd0"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -226,7 +226,7 @@ exports[`VotesFilter > should render with current option selected 1`] = `
               data-testid="VotesFilter__option--all"
             >
               <input
-                class="css-7i915u"
+                class="css-kf7z38"
                 color="success"
                 name="all"
                 type="checkbox"
@@ -243,7 +243,7 @@ exports[`VotesFilter > should render with current option selected 1`] = `
             >
               <input
                 checked=""
-                class="css-7i915u"
+                class="css-kf7z38"
                 color="success"
                 name="current"
                 type="checkbox"
@@ -277,7 +277,7 @@ exports[`VotesFilter > should render with disabled current option 1`] = `
           class="group"
         >
           <button
-            class="ring-focus css-1wz6bm9"
+            class="ring-focus css-14zm422"
           >
             <div
               class="flex h-5 w-5 items-center justify-center"
@@ -313,7 +313,7 @@ exports[`VotesFilter > should render with disabled current option 1`] = `
         </div>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl shadow-votes-filter mx-4 sm:mx-0 css-jowtd0"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -327,7 +327,7 @@ exports[`VotesFilter > should render with disabled current option 1`] = `
             >
               <input
                 checked=""
-                class="css-7i915u"
+                class="css-kf7z38"
                 color="success"
                 name="all"
                 type="checkbox"
@@ -343,7 +343,7 @@ exports[`VotesFilter > should render with disabled current option 1`] = `
               data-testid="VotesFilter__option--current"
             >
               <input
-                class="css-7i915u"
+                class="css-kf7z38"
                 color="success"
                 disabled=""
                 name="current"

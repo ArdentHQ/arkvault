@@ -20,7 +20,7 @@ exports[`WalletsControls > should render 1`] = `
               class="group"
             >
               <button
-                class="ring-focus css-1wz6bm9"
+                class="ring-focus css-14zm422"
               >
                 <div
                   class="flex h-5 w-5 items-center justify-center"
@@ -62,7 +62,7 @@ exports[`WalletsControls > should render 1`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
     </div>
@@ -71,7 +71,7 @@ exports[`WalletsControls > should render 1`] = `
     >
       <div>
         <button
-          class="css-1oyl9hh"
+          class="css-wqh5n3"
           data-testid="WalletControls__import-ledger"
           type="button"
         >
@@ -110,7 +110,7 @@ exports[`WalletsControls > should render 1`] = `
         </button>
       </div>
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -156,7 +156,7 @@ exports[`WalletsControls > should render 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -265,7 +265,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
               class="group"
             >
               <button
-                class="ring-focus css-1wz6bm9"
+                class="ring-focus css-14zm422"
               >
                 <div
                   class="flex h-5 w-5 items-center justify-center"
@@ -307,7 +307,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
     </div>
@@ -316,7 +316,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
     >
       <div>
         <button
-          class="css-z3ze4c"
+          class="css-3n2xcp"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -356,7 +356,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
         </button>
       </div>
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -402,7 +402,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -511,7 +511,7 @@ exports[`WalletsControls > should render responsive 1`] = `
               class="group"
             >
               <button
-                class="ring-focus css-1wz6bm9"
+                class="ring-focus css-14zm422"
               >
                 <div
                   class="flex h-5 w-5 items-center justify-center"
@@ -553,7 +553,7 @@ exports[`WalletsControls > should render responsive 1`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
     </div>
@@ -562,7 +562,7 @@ exports[`WalletsControls > should render responsive 1`] = `
     >
       <div>
         <button
-          class="css-z3ze4c"
+          class="css-3n2xcp"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -602,7 +602,7 @@ exports[`WalletsControls > should render responsive 1`] = `
         </button>
       </div>
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -648,7 +648,7 @@ exports[`WalletsControls > should render responsive 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -757,7 +757,7 @@ exports[`WalletsControls > should render responsive 2`] = `
               class="group"
             >
               <button
-                class="ring-focus css-1wz6bm9"
+                class="ring-focus css-14zm422"
               >
                 <div
                   class="flex h-5 w-5 items-center justify-center"
@@ -799,7 +799,7 @@ exports[`WalletsControls > should render responsive 2`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
     </div>
@@ -808,7 +808,7 @@ exports[`WalletsControls > should render responsive 2`] = `
     >
       <div>
         <button
-          class="css-z3ze4c"
+          class="css-3n2xcp"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -848,7 +848,7 @@ exports[`WalletsControls > should render responsive 2`] = `
         </button>
       </div>
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -894,7 +894,7 @@ exports[`WalletsControls > should render responsive 2`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -1003,7 +1003,7 @@ exports[`WalletsControls > should render responsive 3`] = `
               class="group"
             >
               <button
-                class="ring-focus css-1wz6bm9"
+                class="ring-focus css-14zm422"
               >
                 <div
                   class="flex h-5 w-5 items-center justify-center"
@@ -1045,7 +1045,7 @@ exports[`WalletsControls > should render responsive 3`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
     </div>
@@ -1054,7 +1054,7 @@ exports[`WalletsControls > should render responsive 3`] = `
     >
       <div>
         <button
-          class="css-z3ze4c"
+          class="css-3n2xcp"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -1094,7 +1094,7 @@ exports[`WalletsControls > should render responsive 3`] = `
         </button>
       </div>
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -1140,7 +1140,7 @@ exports[`WalletsControls > should render responsive 3`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -1249,7 +1249,7 @@ exports[`WalletsControls > should render responsive 4`] = `
               class="group"
             >
               <button
-                class="ring-focus css-1wz6bm9"
+                class="ring-focus css-14zm422"
               >
                 <div
                   class="flex h-5 w-5 items-center justify-center"
@@ -1291,7 +1291,7 @@ exports[`WalletsControls > should render responsive 4`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
     </div>
@@ -1300,7 +1300,7 @@ exports[`WalletsControls > should render responsive 4`] = `
     >
       <div>
         <button
-          class="css-z3ze4c"
+          class="css-3n2xcp"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -1340,7 +1340,7 @@ exports[`WalletsControls > should render responsive 4`] = `
         </button>
       </div>
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -1386,7 +1386,7 @@ exports[`WalletsControls > should render responsive 4`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -1495,7 +1495,7 @@ exports[`WalletsControls > should render responsive 5`] = `
               class="group"
             >
               <button
-                class="ring-focus css-1wz6bm9"
+                class="ring-focus css-14zm422"
               >
                 <div
                   class="flex h-5 w-5 items-center justify-center"
@@ -1537,7 +1537,7 @@ exports[`WalletsControls > should render responsive 5`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
     </div>
@@ -1546,7 +1546,7 @@ exports[`WalletsControls > should render responsive 5`] = `
     >
       <div>
         <button
-          class="css-z3ze4c"
+          class="css-3n2xcp"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -1586,7 +1586,7 @@ exports[`WalletsControls > should render responsive 5`] = `
         </button>
       </div>
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -1632,7 +1632,7 @@ exports[`WalletsControls > should render responsive 5`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -1741,7 +1741,7 @@ exports[`WalletsControls > should render with networks selection 1`] = `
               class="group"
             >
               <button
-                class="ring-focus css-1wz6bm9"
+                class="ring-focus css-14zm422"
               >
                 <div
                   class="flex h-5 w-5 items-center justify-center"
@@ -1783,7 +1783,7 @@ exports[`WalletsControls > should render with networks selection 1`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
     </div>
@@ -1792,7 +1792,7 @@ exports[`WalletsControls > should render with networks selection 1`] = `
     >
       <div>
         <button
-          class="css-z3ze4c"
+          class="css-3n2xcp"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -1832,7 +1832,7 @@ exports[`WalletsControls > should render with networks selection 1`] = `
         </button>
       </div>
       <button
-        class="css-1jhy6v9"
+        class="css-6419sw"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -1878,7 +1878,7 @@ exports[`WalletsControls > should render with networks selection 1`] = `
         </div>
       </button>
       <button
-        class="css-1bx0hyc"
+        class="css-fl4fi0"
         data-testid="WalletControls__create-wallet"
         type="button"
       >

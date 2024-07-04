@@ -10,10 +10,10 @@ exports[`Toggle > should render 1`] = `
       type="checkbox"
     />
     <div
-      class="css-7lwhds toggle-handle"
+      class="css-d8rk4r toggle-handle"
     >
       <span
-        class="css-1fmiyrr"
+        class="css-st84t0"
       />
     </div>
   </label>
@@ -30,10 +30,10 @@ exports[`Toggle > should render always on 1`] = `
       type="checkbox"
     />
     <div
-      class="css-7lwhds toggle-handle"
+      class="css-d8rk4r toggle-handle"
     >
       <span
-        class="css-1274c8s"
+        class="css-1sm0bvz"
       />
     </div>
   </label>
@@ -52,10 +52,10 @@ exports[`Toggle > should render disabled 1`] = `
       type="checkbox"
     />
     <div
-      class="css-7lwhds toggle-handle"
+      class="css-d8rk4r toggle-handle"
     >
       <span
-        class="css-2v9y9y"
+        class="css-1nye29f"
         disabled=""
       />
     </div>
@@ -73,10 +73,10 @@ exports[`Toggle > should render small 1`] = `
       type="checkbox"
     />
     <div
-      class="css-1f5xwvv toggle-handle"
+      class="css-10kxbe9 toggle-handle"
     >
       <span
-        class="css-1mgu28v"
+        class="css-t8n8vh"
       />
     </div>
   </label>
@@ -93,10 +93,10 @@ exports[`Toggle > should toggle checked 1`] = `
       type="checkbox"
     />
     <div
-      class="css-7lwhds toggle-handle"
+      class="css-d8rk4r toggle-handle"
     >
       <span
-        class="css-1fmiyrr"
+        class="css-st84t0"
       />
     </div>
   </label>

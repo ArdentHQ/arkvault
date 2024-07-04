@@ -7,7 +7,7 @@ exports[`FormButtons > should adjust offset if input is focused in lg 1`] = `
       data-testid="input"
     />
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       buttons
     </div>
@@ -22,7 +22,7 @@ exports[`FormButtons > should adjust offset if input is focused in md 1`] = `
       data-testid="input"
     />
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       buttons
     </div>
@@ -37,7 +37,7 @@ exports[`FormButtons > should adjust offset if input is focused in sm 1`] = `
       data-testid="input"
     />
     <div
-      class="css-1tkbsa1"
+      class="css-p1y4tm"
     >
       buttons
     </div>
@@ -52,7 +52,7 @@ exports[`FormButtons > should adjust offset if input is focused in xl 1`] = `
       data-testid="input"
     />
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       buttons
     </div>
@@ -67,7 +67,7 @@ exports[`FormButtons > should adjust offset if input is focused in xs 1`] = `
       data-testid="input"
     />
     <div
-      class="css-1tkbsa1"
+      class="css-p1y4tm"
     >
       buttons
     </div>
@@ -78,7 +78,7 @@ exports[`FormButtons > should adjust offset if input is focused in xs 1`] = `
 exports[`FormButtons > should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="css-2wyvkd"
+    class="css-gu3ikl"
   >
     button
   </div>
@@ -88,7 +88,7 @@ exports[`FormButtons > should render in lg 1`] = `
 exports[`FormButtons > should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="css-2wyvkd"
+    class="css-gu3ikl"
   >
     button
   </div>
@@ -98,7 +98,7 @@ exports[`FormButtons > should render in md 1`] = `
 exports[`FormButtons > should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="css-2wyvkd"
+    class="css-gu3ikl"
   >
     button
   </div>
@@ -108,7 +108,7 @@ exports[`FormButtons > should render in sm 1`] = `
 exports[`FormButtons > should render in xl 1`] = `
 <DocumentFragment>
   <div
-    class="css-2wyvkd"
+    class="css-gu3ikl"
   >
     button
   </div>
@@ -118,7 +118,7 @@ exports[`FormButtons > should render in xl 1`] = `
 exports[`FormButtons > should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="css-2wyvkd"
+    class="css-gu3ikl"
   >
     button
   </div>

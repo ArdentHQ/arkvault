@@ -7,7 +7,7 @@ exports[`AppearanceForm > should render 1`] = `
     data-testid="AppearanceForm"
   >
     <ul
-      class="css-14npy8n"
+      class="css-1hglnxc"
       data-testid="list-divided__items"
     >
       <li
@@ -52,7 +52,7 @@ exports[`AppearanceForm > should render 1`] = `
                 <button
                   aria-checked="true"
                   aria-label="Navy"
-                  class="css-12yryft"
+                  class="css-1oqtqef"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -64,7 +64,7 @@ exports[`AppearanceForm > should render 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="Green"
-                  class="css-12yryft"
+                  class="css-1oqtqef"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -120,7 +120,7 @@ exports[`AppearanceForm > should render 1`] = `
                 <button
                   aria-checked="true"
                   aria-label="light"
-                  class="css-12yryft"
+                  class="css-1oqtqef"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -164,7 +164,7 @@ exports[`AppearanceForm > should render 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="dark"
-                  class="css-12yryft"
+                  class="css-1oqtqef"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -241,10 +241,10 @@ exports[`AppearanceForm > should render 1`] = `
                     type="checkbox"
                   />
                   <div
-                    class="css-7lwhds toggle-handle"
+                    class="css-d8rk4r toggle-handle"
                   >
                     <span
-                      class="css-1fmiyrr"
+                      class="css-st84t0"
                     />
                   </div>
                 </label>
@@ -290,10 +290,10 @@ exports[`AppearanceForm > should render 1`] = `
                     type="checkbox"
                   />
                   <div
-                    class="css-7lwhds toggle-handle"
+                    class="css-d8rk4r toggle-handle"
                   >
                     <span
-                      class="css-1fmiyrr"
+                      class="css-st84t0"
                     />
                   </div>
                 </label>
@@ -339,10 +339,10 @@ exports[`AppearanceForm > should render 1`] = `
                     type="checkbox"
                   />
                   <div
-                    class="css-7lwhds toggle-handle"
+                    class="css-d8rk4r toggle-handle"
                   >
                     <span
-                      class="css-1fmiyrr"
+                      class="css-st84t0"
                     />
                   </div>
                 </label>
@@ -359,10 +359,10 @@ exports[`AppearanceForm > should render 1`] = `
       </li>
     </ul>
     <div
-      class="css-2wyvkd"
+      class="css-gu3ikl"
     >
       <button
-        class="css-1yqe28v"
+        class="css-qrwjsp"
         data-testid="AppearanceFooterButtons__save"
         disabled=""
         type="submit"

@@ -4,7 +4,7 @@ exports[`Tabs > should react to use effect call 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="css-eqdmob"
+      class="css-1c7zzpv"
     >
       <button
         aria-selected="true"
@@ -46,7 +46,7 @@ exports[`Tabs > should render 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="css-eqdmob"
+      class="css-1c7zzpv"
     >
       <button
         aria-selected="false"
@@ -99,7 +99,7 @@ exports[`Tabs > should render wit counts 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="css-6pza4g"
+      class="css-y2x3zz"
     >
       <button
         aria-selected="false"
@@ -183,7 +183,7 @@ exports[`Tabs > should render with scroll 1`] = `
           class="relative z-0 mx-auto overflow-x-auto css-1g94s5z"
         >
           <div
-            class="css-6pza4g"
+            class="css-y2x3zz"
           >
             <button
               aria-selected="false"
@@ -252,7 +252,7 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
           class="relative z-0 mx-auto overflow-x-auto css-1g94s5z"
         >
           <div
-            class="css-6pza4g"
+            class="css-y2x3zz"
           >
             <button
               aria-selected="false"
@@ -308,7 +308,7 @@ exports[`Tabs > should render without background 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="css-6pza4g"
+      class="css-y2x3zz"
     >
       <button
         aria-selected="false"

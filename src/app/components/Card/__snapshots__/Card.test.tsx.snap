@@ -4,7 +4,7 @@ exports[`Card > should handle click 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="css-116zvw2"
+      class="css-31qpo4"
       data-testid="Card"
       type="button"
     >
@@ -21,7 +21,7 @@ exports[`Card > should render 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="css-cqna23"
+      class="css-1h3vw5n"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -38,7 +38,7 @@ exports[`Card > should render with custom options 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="css-116zvw2"
+      class="css-31qpo4"
       data-testid="Card"
       type="button"
     >
@@ -96,7 +96,7 @@ exports[`Card > should render with custom options 1`] = `
             </div>
           </span>
           <div
-            class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-13dpsn2"
+            class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-sqwbmz"
             data-testid="dropdown__content"
             style="opacity: 1; height: -30px; overflow-y: scroll;"
           >
@@ -104,7 +104,7 @@ exports[`Card > should render with custom options 1`] = `
               data-testid="dropdown__options"
             >
               <li
-                class="css-x2cq94"
+                class="css-8ahleb"
                 data-testid="dropdown__option--0"
                 tabindex="0"
               >

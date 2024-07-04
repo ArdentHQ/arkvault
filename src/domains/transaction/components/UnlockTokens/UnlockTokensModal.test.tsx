@@ -204,12 +204,12 @@ describe("UnlockTokensModal", () => {
 						accepted: [transactionFixture.data.id],
 						errors: {},
 						rejected: [],
-				  }
+					}
 				: {
 						accepted: [],
 						errors: { error: "unable to unlock token" },
 						rejected: [transactionFixture.data.id],
-				  },
+					},
 		);
 
 		await waitFor(() => {

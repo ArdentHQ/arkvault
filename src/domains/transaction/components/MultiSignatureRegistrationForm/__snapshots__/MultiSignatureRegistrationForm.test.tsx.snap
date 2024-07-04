@@ -34,7 +34,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
         >
           <div>
             <div
-              class="css-pwc11e"
+              class="css-1t71j9b"
             >
               <fieldset
                 class="flex min-w-0 flex-col css-1bcidjh"
@@ -56,7 +56,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1psxlcd"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -64,7 +64,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                           <input
                             aria-invalid="false"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="select-list__input"
                             name="address"
                             readonly=""
@@ -89,13 +89,13 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-1psxlcd"
+                              class="css-n1b0kl"
                             >
                               <div
                                 class="flex items-center"
                               >
                                 <div
-                                  class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+                                  class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
                                 />
                               </div>
                               <div
@@ -107,7 +107,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                  class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                                   data-testid="SelectDropdown__input"
                                   id="SelectRecipient__dropdown-input"
                                   name="address"
@@ -175,7 +175,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                 </div>
               </fieldset>
               <button
-                class="my-4 w-full css-1yqe28v"
+                class="my-4 w-full css-qrwjsp"
                 disabled=""
                 type="button"
               >
@@ -197,7 +197,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                   class="hidden sm:block"
                 >
                   <div
-                    class="shrink-0 css-8d0u1i"
+                    class="shrink-0 css-1n9jllj"
                     data-testid="Avatar"
                   >
                     <div
@@ -230,7 +230,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-u3jrna"
+                          class="no-ligatures css-9nx3be"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -248,7 +248,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                     class="sm:hidden"
                   >
                     <div
-                      class="shrink-0 css-1vy2z2u"
+                      class="shrink-0 css-1yk316i"
                       data-testid="Avatar"
                     >
                       <div
@@ -267,7 +267,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                   class="w-full sm:w-auto"
                 >
                   <button
-                    class="w-full sm:w-auto css-1yqe28v"
+                    class="w-full sm:w-auto css-qrwjsp"
                     data-testid="AddParticipantItem--deleteButton"
                     disabled=""
                     type="button"
@@ -327,14 +327,14 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               Minimum Required Signatures
             </label>
             <div
-              class="css-1psxlcd"
+              class="css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
+                  class="no-ligatures w-full border-none css-1vs1awz"
                   data-testid="MultiSignatureRegistrationForm__min-participants"
                   max="2"
                   min="2"
@@ -373,7 +373,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               class="relative"
             >
               <div
-                class="css-n29l73"
+                class="css-xk5t3v"
                 disabled=""
               >
                 <div
@@ -381,7 +381,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                    class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                     data-testid="InputCurrency"
                     disabled=""
                     name="fee"
@@ -403,7 +403,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                         class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
                       >
                         <button
-                          class="border-r sm:border-r-0 css-1wqyzac"
+                          class="border-r sm:border-r-0 css-jmpn15"
                           data-testid="InputFeeAdvanced__up"
                           disabled=""
                           type="button"
@@ -433,7 +433,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                           </div>
                         </button>
                         <button
-                          class="css-1p5qk9o"
+                          class="css-1ddtsjs"
                           data-testid="InputFeeAdvanced__down"
                           disabled=""
                           type="button"
@@ -526,7 +526,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
           </div>
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -552,7 +552,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
           </div>
         </div>
         <div
-          class="no-ligatures css-19rivvh"
+          class="no-ligatures css-qu17s6"
           data-testid="TransactionSender"
         >
           <div
@@ -578,7 +578,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures css-u3jrna"
+                      class="no-ligatures css-9nx3be"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -598,7 +598,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
             class="flex items-center -space-x-1"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -614,7 +614,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
           </div>
         </div>
         <div
-          class="no-ligatures css-19rivvh"
+          class="no-ligatures css-qu17s6"
           data-testid="TransactionRecipients"
         >
           <div
@@ -709,7 +709,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                           class="hidden md:table-cell"
                         >
                           <div
-                            class="shrink-0 css-y5oe37"
+                            class="shrink-0 css-h8w6w0"
                             data-testid="Avatar"
                           >
                             <div
@@ -741,7 +741,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                           class="ml-2 table-cell md:hidden"
                         >
                           <div
-                            class="shrink-0 css-1vy2z2u"
+                            class="shrink-0 css-1yk316i"
                             data-testid="Avatar"
                           >
                             <div
@@ -770,7 +770,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                           class="hidden md:table-cell"
                         >
                           <div
-                            class="shrink-0 css-y5oe37"
+                            class="shrink-0 css-h8w6w0"
                             data-testid="Avatar"
                           >
                             <div
@@ -802,7 +802,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                           class="ml-2 table-cell md:hidden"
                         >
                           <div
-                            class="shrink-0 css-1vy2z2u"
+                            class="shrink-0 css-1yk316i"
                             data-testid="Avatar"
                           >
                             <div
@@ -828,7 +828,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
           </div>
         </div>
         <div
-          class="no-ligatures css-19rivvh"
+          class="no-ligatures css-qu17s6"
           data-testid="TransactionDetail"
         >
           <div
@@ -874,7 +874,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                   class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
                 >
                   <span
-                    class="css-1j6ndo3"
+                    class="css-1orx95h"
                   >
                     Transaction Amount
                   </span>
@@ -889,7 +889,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                   class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
                 >
                   <span
-                    class="css-1j6ndo3"
+                    class="css-1orx95h"
                   >
                     Transaction Fee
                   </span>
@@ -940,7 +940,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
               class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
             >
               <span
-                class="css-1j6ndo3"
+                class="css-1orx95h"
               >
                 Total Amount
               </span>
@@ -962,7 +962,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
 exports[`MultiSignature Registration Form > should render transaction details 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-fezbvb"
+    class="no-ligatures css-1snru0x"
     data-testid="TransactionFee"
   >
     <div

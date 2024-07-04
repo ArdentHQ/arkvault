@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
-import { DefaultTFuncReturn } from "i18next";
+import { DefaultTReturn, TOptions } from "i18next";
 import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
 import { SuccessStep } from "./SuccessStep";
 import { WalletOverviewStep } from "./WalletOverviewStep";
@@ -55,7 +55,7 @@ export const CreateWallet = () => {
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(onlyHasOneNetwork);
-	const [generationError, setGenerationError] = useState<string | DefaultTFuncReturn>("");
+	const [generationError, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	useEffect(() => {

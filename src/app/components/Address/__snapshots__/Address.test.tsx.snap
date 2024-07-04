@@ -78,7 +78,7 @@ exports[`Formatted Address > should render with normal font 1`] = `
       data-testid="Address__alias"
     >
       <span
-        class="no-ligatures css-u3jrna"
+        class="no-ligatures css-9nx3be"
         data-testid="TruncateEnd"
       >
         Sample Wallet
@@ -186,7 +186,7 @@ exports[`Formatted Address > should render with wallet name 1`] = `
       data-testid="Address__alias"
     >
       <span
-        class="no-ligatures css-u3jrna"
+        class="no-ligatures css-9nx3be"
         data-testid="TruncateEnd"
       >
         Sample Wallet

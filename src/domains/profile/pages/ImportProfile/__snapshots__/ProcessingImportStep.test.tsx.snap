@@ -37,7 +37,7 @@ exports[`Import Profile - Processing import > should enter password again 1`] = 
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-uae86w"
+            class="css-6pjap5"
           >
             <div
               class="css-v0ob3f"
@@ -76,7 +76,7 @@ exports[`Import Profile - Processing import > should enter password again 1`] = 
             </span>
           </div>
           <div
-            class="css-6o9bco"
+            class="css-1y2ht9o"
           >
             An error occurred while importing the profile, try importing again. Select Retry to re-import the profile. If the error occurs again, you can contact our support team.
           </div>
@@ -173,10 +173,10 @@ exports[`Import Profile - Processing import > should enter password again 1`] = 
           </div>
         </div>
         <div
-          class="css-2wyvkd"
+          class="css-gu3ikl"
         >
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="ImportError__cancel"
             type="button"
           >
@@ -187,7 +187,7 @@ exports[`Import Profile - Processing import > should enter password again 1`] = 
             </div>
           </button>
           <button
-            class="css-1bx0hyc"
+            class="css-fl4fi0"
             data-testid="ImportError__retry"
             type="button"
           >
@@ -244,7 +244,7 @@ exports[`Import Profile - Processing import > should handle import error 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-uae86w"
+            class="css-6pjap5"
           >
             <div
               class="css-v0ob3f"
@@ -283,7 +283,7 @@ exports[`Import Profile - Processing import > should handle import error 1`] = `
             </span>
           </div>
           <div
-            class="css-6o9bco"
+            class="css-1y2ht9o"
           >
             An error occurred while importing the profile, try importing again. Select Retry to re-import the profile. If the error occurs again, you can contact our support team.
           </div>
@@ -380,10 +380,10 @@ exports[`Import Profile - Processing import > should handle import error 1`] = `
           </div>
         </div>
         <div
-          class="css-1tkbsa1"
+          class="css-p1y4tm"
         >
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="ImportError__cancel"
             type="button"
           >
@@ -394,7 +394,7 @@ exports[`Import Profile - Processing import > should handle import error 1`] = `
             </div>
           </button>
           <button
-            class="css-1bx0hyc"
+            class="css-fl4fi0"
             data-testid="ImportError__retry"
             type="button"
           >
@@ -535,7 +535,7 @@ exports[`Import Profile - Processing import > should require password for passwo
             </div>
           </div>
           <div
-            class="css-1b3vlxq"
+            class="css-1ppx3l2"
             color="info"
           />
         </div>
@@ -585,7 +585,7 @@ exports[`Import Profile - Processing import > should show error if json import h
           class="flex flex-col overflow-hidden rounded-xl mt-6"
         >
           <div
-            class="css-uae86w"
+            class="css-6pjap5"
           >
             <div
               class="css-v0ob3f"
@@ -624,7 +624,7 @@ exports[`Import Profile - Processing import > should show error if json import h
             </span>
           </div>
           <div
-            class="css-6o9bco"
+            class="css-1y2ht9o"
           >
             An error occurred while importing the profile, try importing again. Select Retry to re-import the profile. If the error occurs again, you can contact our support team.
           </div>
@@ -712,10 +712,10 @@ exports[`Import Profile - Processing import > should show error if json import h
           </div>
         </div>
         <div
-          class="css-1tkbsa1"
+          class="css-p1y4tm"
         >
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="ImportError__cancel"
             type="button"
           >
@@ -726,7 +726,7 @@ exports[`Import Profile - Processing import > should show error if json import h
             </div>
           </button>
           <button
-            class="css-1bx0hyc"
+            class="css-fl4fi0"
             data-testid="ImportError__retry"
             type="button"
           >
@@ -822,7 +822,7 @@ exports[`Import Profile - Processing import > should successfully import json pr
             </div>
           </div>
           <div
-            class="css-1b3vlxq"
+            class="css-1ppx3l2"
             color="info"
           />
         </div>
@@ -920,7 +920,7 @@ exports[`Import Profile - Processing import > should successfully import wwe pro
             </div>
           </div>
           <div
-            class="css-1b3vlxq"
+            class="css-1ppx3l2"
             color="info"
           />
         </div>

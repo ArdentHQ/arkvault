@@ -3,7 +3,7 @@
 exports[`TableRemoveButton > should render 1`] = `
 <div>
   <button
-    class="css-1cp5yjb"
+    class="css-15yk9k4"
     data-testid="TableRemoveButton"
     type="button"
   >
@@ -44,7 +44,7 @@ exports[`TableRemoveButton > should render 1`] = `
 exports[`TableRemoveButton > should render compact 1`] = `
 <div>
   <button
-    class="css-1b8lzw6"
+    class="css-evohxk"
     data-testid="TableRemoveButton--compact"
     type="button"
   >

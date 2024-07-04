@@ -3,7 +3,7 @@
 exports[`QRFileUpload > should render 1`] = `
 <DocumentFragment>
   <button
-    class="z-20 space-x-2 css-1q9v3yc"
+    class="z-20 space-x-2 css-1ngin3d"
     data-testid="QRFileUpload__upload"
     type="button"
   >

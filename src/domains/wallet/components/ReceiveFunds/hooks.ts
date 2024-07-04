@@ -38,11 +38,11 @@ export const useQRCode = ({ amount, address, memo, coin, nethash }: QRCodeProper
 			? {
 					dark: "#212225",
 					light: "#eef3f5",
-			  }
+				}
 			: {
 					dark: "#212225",
 					light: "#fff",
-			  };
+				};
 
 		const generateQRCode = async () => {
 			const uri = address ? formatQR({ address, amount, coin, memo, nethash }) : undefined;
