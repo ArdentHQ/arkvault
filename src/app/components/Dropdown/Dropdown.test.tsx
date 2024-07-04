@@ -462,7 +462,7 @@ describe("Dropdown positioning", () => {
 
 		fireEvent.resize(window);
 
-		expect(screen.getByTestId("dropdown__content")).toHaveAttribute("style", "margin-top: -100px; opacity: 1;");
+		expect(screen.getByTestId("dropdown__content")).toHaveAttribute("style", " opacity: 1; margin-top: -100px;");
 
 		getBoundingClientRectSpy.mockRestore();
 		offsetHeightSpy.mockRestore();
