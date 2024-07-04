@@ -137,7 +137,7 @@ describe("SendVote", () => {
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
-		vi.useFakeTimers();
+		vi.useFakeTimers({shouldAdvanceTime: true});
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -171,7 +171,7 @@ describe("SendVote", () => {
 		// Back to select a delegate page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 
 		expect(container).toMatchSnapshot();
 	});
@@ -204,7 +204,7 @@ describe("SendVote", () => {
 		// Back to select a delegate page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 
 		expect(container).toMatchSnapshot();
 	});
@@ -245,12 +245,12 @@ describe("SendVote", () => {
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -264,14 +264,15 @@ describe("SendVote", () => {
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, passphrase);
 
 		expect(passwordInput).toHaveValue(passphrase);
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 		});
 
 		votesMock.mockRestore();
@@ -286,7 +287,7 @@ describe("SendVote", () => {
 		const historySpy = vi.spyOn(history, "push");
 
 		// Go back to wallet
-		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -398,12 +399,12 @@ describe("SendVote", () => {
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -432,14 +433,15 @@ describe("SendVote", () => {
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, passphrase);
 
 		expect(passwordInput).toHaveValue(passphrase);
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 		});
 
 		act(() => {
@@ -519,12 +521,12 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-1");
-		userEvent.click(firstAddress);
+		await userEvent.click(firstAddress);
 
 		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue(
 			profile.wallets().last().address(),
@@ -551,7 +553,7 @@ describe("SendVote", () => {
 
 		const historySpy = vi.spyOn(history, "push");
 
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 	});
@@ -575,12 +577,12 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
-		userEvent.click(firstAddress);
+		await userEvent.click(firstAddress);
 
 		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue(
 			profile.wallets().first().address(),
@@ -637,27 +639,28 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
-		userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
+		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "0.02");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "0.02");
 
 		await waitFor(() => expect(inputElement).toHaveValue("0.02"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		// Back to form
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("0.02"));
 
 		// Back to review step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -693,47 +696,49 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
-		userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
+		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "0.02");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "0.02");
 
 		await waitFor(() => expect(inputElement).toHaveValue("0.02"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		// Back to form
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("0.02"));
 
 		// Back to review step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Authentication Step
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 
 		// Back to Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Back to AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, passphrase);
 		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
 	});
 
@@ -793,12 +798,12 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -814,14 +819,15 @@ describe("SendVote", () => {
 		const transactionMock = createUnvoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, passphrase);
 
 		expect(passwordInput).toHaveValue(passphrase);
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 		});
 
 		act(() => {
@@ -868,27 +874,28 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		// Fee
-		userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
+		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "5");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "5");
 
 		await waitFor(() => expect(inputElement).toHaveValue("5"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Fee warning
 		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
+		await userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 	});
@@ -923,27 +930,28 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		// Fee
-		userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
+		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Fee warning
 		expect(screen.getByTestId("FeeWarning__continue-button")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+		await userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 	});
@@ -982,18 +990,19 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, "wrong passphrase");
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, "wrong passphrase");
 		await waitFor(() => expect(passwordInput).toHaveValue("wrong passphrase"));
 
 		await waitFor(() => expect(sendButton()).toBeDisabled());
@@ -1042,12 +1051,12 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// AuthenticationStep
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -1057,13 +1066,13 @@ describe("SendVote", () => {
 		});
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.type(passwordInput, passphrase);
 		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
 
 		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
-		userEvent.click(sendButton());
+		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
@@ -1071,7 +1080,7 @@ describe("SendVote", () => {
 		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
@@ -1114,7 +1123,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
@@ -1132,7 +1141,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		});
 
 		act(() => {
@@ -1206,7 +1215,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
@@ -1245,7 +1254,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		});
 
 		act(() => {

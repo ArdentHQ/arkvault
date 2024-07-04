@@ -1101,3 +1101,1596 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`SearchRecipient > should render with selected address 1`] = `
+<DocumentFragment>
+  <div
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    data-testid="Modal__overlay"
+  >
+    <div
+      class="css-u2ptd8"
+      tabindex="-1"
+    >
+      <div
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-10"
+        data-testid="Modal__inner"
+      >
+        <div
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+        >
+          <button
+            class="h-11 w-11 css-12xyeiw"
+            data-testid="Modal__close-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative flex flex-1 flex-col space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Select Recipient
+          </h2>
+          <div
+            class="flex flex-1 flex-col"
+          >
+            <div
+              class="whitespace-pre-line text-theme-secondary-text"
+            >
+              Find and select a recipient from your contacts and wallets
+            </div>
+            <div
+              class="mt-8"
+            >
+              <div
+                class="-mt-3 css-1m6rt2i"
+                role="table"
+              >
+                <table
+                  cellpadding="0"
+                  class="table-auto"
+                >
+                  <thead>
+                    <tr
+                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+                      role="row"
+                    >
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        colspan="1"
+                        data-testid="table__th--0"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            Wallet Address
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                          >
+                            <div
+                              class="transition-transform rotate-180 css-15txs7d"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                        colspan="1"
+                        data-testid="table__th--1"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            Type
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                          >
+                            <div
+                              class="transition-transform rotate-180 css-15txs7d"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+                        colspan="1"
+                        data-testid="table__th--2"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top justify-end"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              class="relative -my-2"
+                              data-testid="HeaderSearchBar"
+                            >
+                              <div
+                                class="group"
+                              >
+                                <button
+                                  class="ring-focus css-m64h4t"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex h-5 items-center gap-3"
+                                  >
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
+                                    <div
+                                      class="css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    role="rowgroup"
+                  >
+                    <tr
+                      class=" css-1li86da"
+                      data-testid="TableRow"
+                    >
+                      <td>
+                        <div
+                          class="space-x-4 css-mx19qq"
+                        >
+                          <div
+                            class="shrink-0 css-1vy2z2u"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 1
+                              </span>
+                            </span>
+                            <div
+                              class="relative grow text-left"
+                            >
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="css-1rods8x"
+                        >
+                          <span
+                            class="whitespace-nowrap"
+                            data-testid="RecipientListItem__type"
+                          >
+                            My Wallet
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="justify-end css-br23tb"
+                        >
+                          <button
+                            class="text-theme-primary-reverse-600 -mr-3 css-12xyeiw"
+                            data-testid="RecipientListItem__selected-button-0"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Selected
+                            </div>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class=" css-1li86da"
+                      data-testid="TableRow"
+                    >
+                      <td>
+                        <div
+                          class="space-x-4 css-mx19qq"
+                        >
+                          <div
+                            class="shrink-0 css-1vy2z2u"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
+                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 2
+                              </span>
+                            </span>
+                            <div
+                              class="relative grow text-left"
+                            >
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="css-1rods8x"
+                        >
+                          <span
+                            class="whitespace-nowrap"
+                            data-testid="RecipientListItem__type"
+                          >
+                            My Wallet
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="justify-end css-br23tb"
+                        >
+                          <button
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
+                            data-testid="RecipientListItem__select-button-1"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Select
+                            </div>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchRecipient > should render with selected address on md screen 1`] = `
+<DocumentFragment>
+  <div
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    data-testid="Modal__overlay"
+  >
+    <div
+      class="css-amqh1w"
+      tabindex="-1"
+    >
+      <div
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-10"
+        data-testid="Modal__inner"
+      >
+        <div
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+        >
+          <button
+            class="h-11 w-11 css-12xyeiw"
+            data-testid="Modal__close-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative flex flex-1 flex-col space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Select Recipient
+          </h2>
+          <div
+            class="flex flex-1 flex-col"
+          >
+            <div
+              class="whitespace-pre-line text-theme-secondary-text"
+            >
+              Find and select a recipient from your contacts and wallets
+            </div>
+            <div
+              class="mt-8"
+            >
+              <div
+                class="-mt-3 css-1m6rt2i"
+                role="table"
+              >
+                <table
+                  cellpadding="0"
+                  class="table-auto"
+                >
+                  <thead>
+                    <tr
+                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+                      role="row"
+                    >
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        colspan="1"
+                        data-testid="table__th--0"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            Wallet Address
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                          >
+                            <div
+                              class="transition-transform rotate-180 css-15txs7d"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                        colspan="1"
+                        data-testid="table__th--1"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            Type
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                          >
+                            <div
+                              class="transition-transform rotate-180 css-15txs7d"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+                        colspan="1"
+                        data-testid="table__th--2"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top justify-end"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              class="relative -my-2"
+                              data-testid="HeaderSearchBar"
+                            >
+                              <div
+                                class="group"
+                              >
+                                <button
+                                  class="ring-focus css-m64h4t"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex h-5 items-center gap-3"
+                                  >
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
+                                    <div
+                                      class="css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    role="rowgroup"
+                  >
+                    <tr
+                      class=" css-1li86da"
+                      data-testid="TableRow"
+                    >
+                      <td>
+                        <div
+                          class="space-x-4 css-mx19qq"
+                        >
+                          <div
+                            class="shrink-0 css-1vy2z2u"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 1
+                              </span>
+                            </span>
+                            <div
+                              class="relative grow text-left"
+                            >
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="css-1rods8x"
+                        >
+                          <span
+                            class="whitespace-nowrap"
+                            data-testid="RecipientListItem__type"
+                          >
+                            My Wallet
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="justify-end css-br23tb"
+                        >
+                          <button
+                            class="text-theme-primary-reverse-600 -mr-3 css-12xyeiw"
+                            data-testid="RecipientListItem__selected-button-0"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Selected
+                            </div>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class=" css-1li86da"
+                      data-testid="TableRow"
+                    >
+                      <td>
+                        <div
+                          class="space-x-4 css-mx19qq"
+                        >
+                          <div
+                            class="shrink-0 css-1vy2z2u"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
+                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 2
+                              </span>
+                            </span>
+                            <div
+                              class="relative grow text-left"
+                            >
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="css-1rods8x"
+                        >
+                          <span
+                            class="whitespace-nowrap"
+                            data-testid="RecipientListItem__type"
+                          >
+                            My Wallet
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="justify-end css-br23tb"
+                        >
+                          <button
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
+                            data-testid="RecipientListItem__select-button-1"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Select
+                            </div>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchRecipient > should render with selected address on mobile 1`] = `
+<DocumentFragment>
+  <div
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    data-testid="Modal__overlay"
+  >
+    <div
+      class="css-amqh1w"
+      tabindex="-1"
+    >
+      <div
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-10"
+        data-testid="Modal__inner"
+      >
+        <div
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+        >
+          <button
+            class="h-11 w-11 css-12xyeiw"
+            data-testid="Modal__close-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative flex flex-1 flex-col space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Select Recipient
+          </h2>
+          <div
+            class="flex flex-1 flex-col"
+          >
+            <div
+              class="whitespace-pre-line text-theme-secondary-text"
+            >
+              Find and select a recipient from your contacts and wallets
+            </div>
+            <div
+              class="mt-8"
+            >
+              <div
+                class="relative"
+                data-testid="HeaderSearchInput"
+              >
+                <div
+                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1h4jdfq"
+                  data-testid="HeaderSearchInput__input"
+                >
+                  <button
+                    class="transition-all duration-300 focus:outline-none"
+                    data-testid="HeaderSearchInput__input__reset"
+                    type="button"
+                  >
+                    <div
+                      class="text-theme-text transition-all duration-300 w-0 css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="cross"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                  <div
+                    class="flex-1"
+                  >
+                    <div
+                      class="-ml-4 css-7km7kr"
+                    >
+                      <div
+                        class="relative flex h-full flex-1"
+                      >
+                        <input
+                          autocomplete="off"
+                          class="no-ligatures w-full border-none css-1nupw50"
+                          data-testid="HeaderSearchInput__input__input"
+                          placeholder="Enter name or address"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg
+                      id="magnifying-glass"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class=" css-1m6rt2i"
+                role="table"
+              >
+                <table
+                  cellpadding="0"
+                  class="table-auto"
+                >
+                  <tbody
+                    role="rowgroup"
+                  >
+                    <tr
+                      data-testid="SearchRecipientListItemResponsive--item-0"
+                    >
+                      <td
+                        class="pt-3"
+                      >
+                        <div
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 ring-2 ring-theme-primary-600"
+                          data-testid="WalletListItemMobile--selected"
+                          tabindex="0"
+                        >
+                          <div
+                            class="flex items-center space-x-4 p-2 pl-4"
+                          >
+                            <div
+                              class="flex shrink-0 items-center"
+                            >
+                              <div
+                                class="ring-transparent dark:ring-transparent shrink-0 css-1qcfibg"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                >
+                                  <img
+                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="flex w-20 flex-1 flex-col font-semibold"
+                            >
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                              >
+                                <span
+                                  class="font-semibold text-base text-sm text-theme-text w-full truncate"
+                                  data-testid="Address__alias"
+                                >
+                                  <span
+                                    class="no-ligatures css-u3jrna"
+                                    data-testid="TruncateEnd"
+                                  >
+                                    ARK Wallet 1
+                                  </span>
+                                </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
+                            </div>
+                            <div
+                              class="flex items-center space-x-2 self-start"
+                            >
+                              <span
+                                class="mt-0.5 text-sm font-semibold text-theme-secondary-500"
+                              >
+                                My Wallet
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      data-testid="SearchRecipientListItemResponsive--item-1"
+                    >
+                      <td
+                        class="pt-3"
+                      >
+                        <div
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
+                        >
+                          <div
+                            class="flex items-center space-x-4 p-2 pl-4"
+                          >
+                            <div
+                              class="flex shrink-0 items-center"
+                            >
+                              <div
+                                class="ring-transparent dark:ring-transparent shrink-0 css-1qcfibg"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                >
+                                  <img
+                                    alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
+                                    title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="flex w-20 flex-1 flex-col font-semibold"
+                            >
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+                              >
+                                <span
+                                  class="font-semibold text-base text-sm text-theme-text w-full truncate"
+                                  data-testid="Address__alias"
+                                >
+                                  <span
+                                    class="no-ligatures css-u3jrna"
+                                    data-testid="TruncateEnd"
+                                  >
+                                    ARK Wallet 2
+                                  </span>
+                                </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                </span>
+                              </div>
+                            </div>
+                            <div
+                              class="flex items-center space-x-2 self-start"
+                            >
+                              <span
+                                class="mt-0.5 text-sm font-semibold text-theme-secondary-500"
+                              >
+                                My Wallet
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchRecipient > should render with selected address when no compact 1`] = `
+<DocumentFragment>
+  <div
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    data-testid="Modal__overlay"
+  >
+    <div
+      class="css-u2ptd8"
+      tabindex="-1"
+    >
+      <div
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-10"
+        data-testid="Modal__inner"
+      >
+        <div
+          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+        >
+          <button
+            class="h-11 w-11 css-12xyeiw"
+            data-testid="Modal__close-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative flex flex-1 flex-col space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Select Recipient
+          </h2>
+          <div
+            class="flex flex-1 flex-col"
+          >
+            <div
+              class="whitespace-pre-line text-theme-secondary-text"
+            >
+              Find and select a recipient from your contacts and wallets
+            </div>
+            <div
+              class="mt-8"
+            >
+              <div
+                class="-mt-3 css-1m6rt2i"
+                role="table"
+              >
+                <table
+                  cellpadding="0"
+                  class="table-auto"
+                >
+                  <thead>
+                    <tr
+                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+                      role="row"
+                    >
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        colspan="1"
+                        data-testid="table__th--0"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            Wallet Address
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                          >
+                            <div
+                              class="transition-transform rotate-180 css-15txs7d"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                        colspan="1"
+                        data-testid="table__th--1"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            Type
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                          >
+                            <div
+                              class="transition-transform rotate-180 css-15txs7d"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+                        colspan="1"
+                        data-testid="table__th--2"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top justify-end"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              class="relative -my-2"
+                              data-testid="HeaderSearchBar"
+                            >
+                              <div
+                                class="group"
+                              >
+                                <button
+                                  class="ring-focus css-m64h4t"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex h-5 items-center gap-3"
+                                  >
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
+                                    <div
+                                      class="css-1i4b0eq"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    role="rowgroup"
+                  >
+                    <tr
+                      class=" css-1li86da"
+                      data-testid="TableRow"
+                    >
+                      <td>
+                        <div
+                          class="space-x-4 css-14huxtf"
+                        >
+                          <div
+                            class="shrink-0 css-8d0u1i"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 1
+                              </span>
+                            </span>
+                            <div
+                              class="relative grow text-left"
+                            >
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="css-1d4ra48"
+                        >
+                          <span
+                            class="whitespace-nowrap"
+                            data-testid="RecipientListItem__type"
+                          >
+                            My Wallet
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="justify-end css-1hhowo0"
+                        >
+                          <button
+                            class="text-theme-primary-reverse-600 css-nxm84j"
+                            data-testid="RecipientListItem__selected-button-0"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Selected
+                            </div>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class=" css-1li86da"
+                      data-testid="TableRow"
+                    >
+                      <td>
+                        <div
+                          class="space-x-4 css-14huxtf"
+                        >
+                          <div
+                            class="shrink-0 css-8d0u1i"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
+                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                ARK Wallet 2
+                              </span>
+                            </span>
+                            <div
+                              class="relative grow text-left"
+                            >
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="css-1d4ra48"
+                        >
+                          <span
+                            class="whitespace-nowrap"
+                            data-testid="RecipientListItem__type"
+                          >
+                            My Wallet
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="justify-end css-1hhowo0"
+                        >
+                          <button
+                            class="text-theme-primary-600 css-1jhy6v9"
+                            data-testid="RecipientListItem__select-button-1"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Select
+                            </div>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

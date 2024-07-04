@@ -203,57 +203,57 @@ describe("Registration", () => {
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
+		await userEvent.type(screen.getByTestId("Input__username"), "test_delegate");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
 
 		const fees = within(screen.getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
-		userEvent.click(fees[1]);
+		await userEvent.click(fees[1]);
 
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
 
 		// remove focus from fee button
-		userEvent.click(document.body);
+		await userEvent.click(document.body);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		if (inputMethod === withKeyboard) {
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		}
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
 		await expect(formStep()).resolves.toBeVisible();
 
 		// remove focus from back button
-		userEvent.click(document.body);
+		await userEvent.click(document.body);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		if (inputMethod === withKeyboard) {
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		}
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		if (inputMethod === withKeyboard) {
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.type(passwordInput, passphrase);
 		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
 
 		await waitFor(() => expect(sendButton()).toBeEnabled());
@@ -269,9 +269,9 @@ describe("Registration", () => {
 		const transactionMock = createDelegateRegistrationMock(wallet);
 
 		if (inputMethod === withKeyboard) {
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 		}
 
 		await waitFor(() => {
@@ -300,7 +300,7 @@ describe("Registration", () => {
 
 		// Go back to wallet
 		const historySpy = vi.spyOn(history, "push");
-		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -352,19 +352,19 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		// Step 2
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		const mockDerivationPath = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("LedgerDeviceError")).resolves.toBeVisible();
 
@@ -398,33 +398,33 @@ describe("Registration", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("Input__username"), "username");
+		await userEvent.type(screen.getByTestId("Input__username"), "username");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("username"));
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
 		});
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
 		const secondMnemonic = screen.getByTestId("AuthenticationStep__second-mnemonic");
 
-		userEvent.paste(mnemonic, MNEMONICS[0]);
+		await userEvent.type(mnemonic, MNEMONICS[0]);
 		await waitFor(() => expect(mnemonic).toHaveValue(MNEMONICS[0]));
 
 		await waitFor(() => {
 			expect(secondMnemonic).toBeEnabled();
 		});
 
-		userEvent.paste(secondMnemonic, MNEMONICS[2]);
+		await userEvent.type(secondMnemonic, MNEMONICS[2]);
 		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[2]));
 
 		expect(sendButton()).toBeDisabled();
@@ -448,26 +448,26 @@ describe("Registration", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("Input__username"), "username");
+		await userEvent.type(screen.getByTestId("Input__username"), "username");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("username"));
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
 		});
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const mnemonicInput = screen.getByTestId("AuthenticationStep__mnemonic");
 
-		userEvent.paste(mnemonicInput, passphrase);
+		await userEvent.type(mnemonicInput, passphrase);
 		await waitFor(() => expect(mnemonicInput).toHaveValue(passphrase));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -482,7 +482,7 @@ describe("Registration", () => {
 		});
 		const transactionMock = createDelegateRegistrationMock(wallet);
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		await waitFor(() =>
 			expect(signMock).toHaveBeenCalledWith({
@@ -506,7 +506,7 @@ describe("Registration", () => {
 		// Step 4 - success screen
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -521,7 +521,7 @@ describe("Registration", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -541,34 +541,34 @@ describe("Registration", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("Input__username"), "delegate");
+		await userEvent.type(screen.getByTestId("Input__username"), "delegate");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("delegate"));
 
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
 		});
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
 		const secondMnemonic = screen.getByTestId("AuthenticationStep__second-mnemonic");
 
-		userEvent.paste(mnemonic, MNEMONICS[0]);
+		await userEvent.type(mnemonic, MNEMONICS[0]);
 		await waitFor(() => expect(mnemonic).toHaveValue(MNEMONICS[0]));
 
 		await waitFor(() => {
 			expect(secondMnemonic).toBeEnabled();
 		});
 
-		userEvent.paste(secondMnemonic, MNEMONICS[1]);
+		await userEvent.type(secondMnemonic, MNEMONICS[1]);
 		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[1]));
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
@@ -584,14 +584,14 @@ describe("Registration", () => {
 		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
 		await waitFor(() => expect(sendButton()).toBeEnabled());
-		userEvent.click(sendButton());
+		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));

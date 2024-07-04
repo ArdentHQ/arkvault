@@ -1,5 +1,403 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      <section
+        data-testid="DelegateRegistrationForm__form-step"
+      >
+        <div
+          class="flex items-end justify-between bg-theme-background"
+        >
+          <div
+            class="space-y-4"
+          >
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Register Delegate
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Register a new Delegate address on the network below.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
+        >
+          <div
+            class="css-1ecv4eg"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg
+                id="circle-exclamation-mark"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="9"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M10 10.5v-5"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M10 14h0"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </div>
+            <span>
+              Warning
+            </span>
+          </div>
+          <div
+            class="css-1pvpof3"
+          >
+            The Delegate name is permanent and cannot be modified later. It is registered on the network.
+          </div>
+        </div>
+        <div
+          class="no-ligatures css-1iw2tte"
+          data-testid="TransactionNetwork"
+        >
+          <div
+            class="w-40 flex-1 space-y-2 whitespace-nowrap"
+            data-testid="TransactionDetail--desktop"
+          >
+            <div
+              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Cryptoasset
+            </div>
+            <div
+              class="flex items-center font-semibold"
+            >
+              ARK Devnet
+            </div>
+          </div>
+          <div
+            aria-label="ARK Devnet"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            data-testid="NetworkIcon-ARK-ark.devnet"
+          >
+            <div
+              class="css-1i4b0eq"
+              data-testid="NetworkIcon__icon"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="no-ligatures css-wr7004"
+          data-testid="TransactionSender"
+        >
+          <div
+            class="w-40 flex-1 space-y-2 whitespace-nowrap"
+            data-testid="TransactionDetail--desktop"
+          >
+            <div
+              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Sender
+            </div>
+            <div
+              class="flex items-center font-semibold"
+            >
+              <div
+                class="w-0 flex-1 overflow-auto text-right md:text-left"
+              >
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="font-semibold text-base text-theme-text"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="no-ligatures css-u3jrna"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center -space-x-1"
+          >
+            <div
+              class="shrink-0 css-8d0u1i"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="space-y-6 pt-6"
+        >
+          <fieldset
+            class="flex min-w-0 flex-col css-5kz4tk"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="username"
+            >
+              Delegate Name
+            </label>
+            <div
+              class=" css-px3dod"
+            >
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  aria-invalid="true"
+                  autocomplete="off"
+                  class="no-ligatures w-full border-none css-1nupw50"
+                  data-testid="Input__username"
+                  name="username"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                data-testid="Input__addon-end"
+              >
+                <span
+                  data-errortext="Delegate Name should have at most 20 characters"
+                  data-testid="Input__error"
+                >
+                  <div
+                    class="text-theme-danger-500 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset
+            class="flex min-w-0 flex-col css-1bcidjh"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="fee"
+            >
+              Transaction Fee
+            </label>
+            <div
+              class="relative"
+              data-testid="InputFee"
+            >
+              <div
+                class="absolute right-0 -mt-7"
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <span
+                    class="css-w6ofpw"
+                    role="button"
+                  >
+                    Simple
+                  </span>
+                  <label
+                    class="css-1uxo3sa"
+                  >
+                    <input
+                      class="css-1r71f0z toggle-input"
+                      type="checkbox"
+                    />
+                    <div
+                      class="css-1f5xwvv toggle-handle"
+                    >
+                      <span
+                        class="css-19qsmxy"
+                      />
+                    </div>
+                  </label>
+                  <span
+                    class="css-iwfou6"
+                    role="button"
+                  >
+                    Advanced
+                  </span>
+                </div>
+              </div>
+              <div
+                class="inline-flex w-full items-center space-x-3"
+                data-testid="ButtonGroup"
+                role="radiogroup"
+              >
+                <button
+                  aria-checked="false"
+                  aria-label="0"
+                  class="css-17i051m"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Slow
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      0 DARK
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-checked="true"
+                  aria-label="1.354"
+                  class="css-17i051m"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Average
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      1.354 DARK
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-checked="false"
+                  aria-label="10"
+                  class="css-17i051m"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Fast
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      10 DARK
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`DelegateRegistrationForm > should render form step 1`] = `
 <DocumentFragment>
   <div>
@@ -599,6 +997,1175 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
               </span>
             </div>
           </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DelegateRegistrationForm > should set fee 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      <section
+        data-testid="DelegateRegistrationForm__form-step"
+      >
+        <div
+          class="flex items-end justify-between bg-theme-background"
+        >
+          <div
+            class="space-y-4"
+          >
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Register Delegate
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Register a new Delegate address on the network below.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
+        >
+          <div
+            class="css-1ecv4eg"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg
+                id="circle-exclamation-mark"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="9"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M10 10.5v-5"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M10 14h0"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </div>
+            <span>
+              Warning
+            </span>
+          </div>
+          <div
+            class="css-1pvpof3"
+          >
+            The Delegate name is permanent and cannot be modified later. It is registered on the network.
+          </div>
+        </div>
+        <div
+          class="no-ligatures css-1iw2tte"
+          data-testid="TransactionNetwork"
+        >
+          <div
+            class="w-40 flex-1 space-y-2 whitespace-nowrap"
+            data-testid="TransactionDetail--desktop"
+          >
+            <div
+              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Cryptoasset
+            </div>
+            <div
+              class="flex items-center font-semibold"
+            >
+              ARK Devnet
+            </div>
+          </div>
+          <div
+            aria-label="ARK Devnet"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            data-testid="NetworkIcon-ARK-ark.devnet"
+          >
+            <div
+              class="css-1i4b0eq"
+              data-testid="NetworkIcon__icon"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="no-ligatures css-wr7004"
+          data-testid="TransactionSender"
+        >
+          <div
+            class="w-40 flex-1 space-y-2 whitespace-nowrap"
+            data-testid="TransactionDetail--desktop"
+          >
+            <div
+              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Sender
+            </div>
+            <div
+              class="flex items-center font-semibold"
+            >
+              <div
+                class="w-0 flex-1 overflow-auto text-right md:text-left"
+              >
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="font-semibold text-base text-theme-text"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="no-ligatures css-u3jrna"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center -space-x-1"
+          >
+            <div
+              class="shrink-0 css-8d0u1i"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="space-y-6 pt-6"
+        >
+          <fieldset
+            class="flex min-w-0 flex-col css-1bcidjh"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="username"
+            >
+              Delegate Name
+            </label>
+            <div
+              class=" css-1psxlcd"
+            >
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  autocomplete="off"
+                  class="no-ligatures w-full border-none css-1nupw50"
+                  data-testid="Input__username"
+                  name="username"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset
+            class="flex min-w-0 flex-col css-1bcidjh"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="fee"
+            >
+              Transaction Fee
+            </label>
+            <div
+              class="relative"
+              data-testid="InputFee"
+            >
+              <div
+                class="absolute right-0 -mt-7"
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <span
+                    class="css-iwfou6"
+                    role="button"
+                  >
+                    Simple
+                  </span>
+                  <label
+                    class="css-1uxo3sa"
+                  >
+                    <input
+                      class="css-1r71f0z toggle-input"
+                      type="checkbox"
+                    />
+                    <div
+                      class="css-1f5xwvv toggle-handle"
+                    >
+                      <span
+                        class="css-19qsmxy"
+                      />
+                    </div>
+                  </label>
+                  <span
+                    class="css-w6ofpw"
+                    role="button"
+                  >
+                    Advanced
+                  </span>
+                </div>
+              </div>
+              <div
+                class="relative"
+              >
+                <div
+                  class="css-1psxlcd"
+                >
+                  <div
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none css-1nupw50"
+                      data-testid="InputCurrency"
+                      name="fee"
+                      type="text"
+                      value="11"
+                    />
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                    data-testid="Input__addon-end"
+                  >
+                    <div
+                      class=""
+                    >
+                      <div
+                        class="flex items-center"
+                      >
+                        <div
+                          class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
+                        >
+                          <button
+                            class="border-r sm:border-r-0 css-1wqyzac"
+                            data-testid="InputFeeAdvanced__up"
+                            type="button"
+                          >
+                            <div
+                              class="css-15txs7d"
+                              height="10"
+                              width="10"
+                            >
+                              <svg
+                                id="chevron-up-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                          <button
+                            class="css-1p5qk9o"
+                            data-testid="InputFeeAdvanced__down"
+                            type="button"
+                          >
+                            <div
+                              class="css-15txs7d"
+                              height="10"
+                              width="10"
+                            >
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DelegateRegistrationForm > should show error if username already exists 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      <section
+        data-testid="DelegateRegistrationForm__form-step"
+      >
+        <div
+          class="flex items-end justify-between bg-theme-background"
+        >
+          <div
+            class="space-y-4"
+          >
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Register Delegate
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Register a new Delegate address on the network below.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
+        >
+          <div
+            class="css-1ecv4eg"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg
+                id="circle-exclamation-mark"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="9"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M10 10.5v-5"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M10 14h0"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </div>
+            <span>
+              Warning
+            </span>
+          </div>
+          <div
+            class="css-1pvpof3"
+          >
+            The Delegate name is permanent and cannot be modified later. It is registered on the network.
+          </div>
+        </div>
+        <div
+          class="no-ligatures css-1iw2tte"
+          data-testid="TransactionNetwork"
+        >
+          <div
+            class="w-40 flex-1 space-y-2 whitespace-nowrap"
+            data-testid="TransactionDetail--desktop"
+          >
+            <div
+              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Cryptoasset
+            </div>
+            <div
+              class="flex items-center font-semibold"
+            >
+              ARK Devnet
+            </div>
+          </div>
+          <div
+            aria-label="ARK Devnet"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            data-testid="NetworkIcon-ARK-ark.devnet"
+          >
+            <div
+              class="css-1i4b0eq"
+              data-testid="NetworkIcon__icon"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="no-ligatures css-wr7004"
+          data-testid="TransactionSender"
+        >
+          <div
+            class="w-40 flex-1 space-y-2 whitespace-nowrap"
+            data-testid="TransactionDetail--desktop"
+          >
+            <div
+              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Sender
+            </div>
+            <div
+              class="flex items-center font-semibold"
+            >
+              <div
+                class="w-0 flex-1 overflow-auto text-right md:text-left"
+              >
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="font-semibold text-base text-theme-text"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="no-ligatures css-u3jrna"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center -space-x-1"
+          >
+            <div
+              class="shrink-0 css-8d0u1i"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="space-y-6 pt-6"
+        >
+          <fieldset
+            class="flex min-w-0 flex-col css-5kz4tk"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="username"
+            >
+              Delegate Name
+            </label>
+            <div
+              class=" css-px3dod"
+            >
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  aria-invalid="true"
+                  autocomplete="off"
+                  class="no-ligatures w-full border-none css-1nupw50"
+                  data-testid="Input__username"
+                  name="username"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                data-testid="Input__addon-end"
+              >
+                <span
+                  data-errortext="Delegate Name already exists"
+                  data-testid="Input__error"
+                >
+                  <div
+                    class="text-theme-danger-500 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset
+            class="flex min-w-0 flex-col css-1bcidjh"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="fee"
+            >
+              Transaction Fee
+            </label>
+            <div
+              class="relative"
+              data-testid="InputFee"
+            >
+              <div
+                class="absolute right-0 -mt-7"
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <span
+                    class="css-w6ofpw"
+                    role="button"
+                  >
+                    Simple
+                  </span>
+                  <label
+                    class="css-1uxo3sa"
+                  >
+                    <input
+                      class="css-1r71f0z toggle-input"
+                      type="checkbox"
+                    />
+                    <div
+                      class="css-1f5xwvv toggle-handle"
+                    >
+                      <span
+                        class="css-19qsmxy"
+                      />
+                    </div>
+                  </label>
+                  <span
+                    class="css-iwfou6"
+                    role="button"
+                  >
+                    Advanced
+                  </span>
+                </div>
+              </div>
+              <div
+                class="inline-flex w-full items-center space-x-3"
+                data-testid="ButtonGroup"
+                role="radiogroup"
+              >
+                <button
+                  aria-checked="false"
+                  aria-label="0"
+                  class="css-17i051m"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Slow
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      0 DARK
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-checked="true"
+                  aria-label="1.354"
+                  class="css-17i051m"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Average
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      1.354 DARK
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-checked="false"
+                  aria-label="10"
+                  class="css-17i051m"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Fast
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      10 DARK
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DelegateRegistrationForm > should show error if username contains illegal characters 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      <section
+        data-testid="DelegateRegistrationForm__form-step"
+      >
+        <div
+          class="flex items-end justify-between bg-theme-background"
+        >
+          <div
+            class="space-y-4"
+          >
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Register Delegate
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Register a new Delegate address on the network below.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
+        >
+          <div
+            class="css-1ecv4eg"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg
+                id="circle-exclamation-mark"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="9"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M10 10.5v-5"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M10 14h0"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </div>
+            <span>
+              Warning
+            </span>
+          </div>
+          <div
+            class="css-1pvpof3"
+          >
+            The Delegate name is permanent and cannot be modified later. It is registered on the network.
+          </div>
+        </div>
+        <div
+          class="no-ligatures css-1iw2tte"
+          data-testid="TransactionNetwork"
+        >
+          <div
+            class="w-40 flex-1 space-y-2 whitespace-nowrap"
+            data-testid="TransactionDetail--desktop"
+          >
+            <div
+              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Cryptoasset
+            </div>
+            <div
+              class="flex items-center font-semibold"
+            >
+              ARK Devnet
+            </div>
+          </div>
+          <div
+            aria-label="ARK Devnet"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            data-testid="NetworkIcon-ARK-ark.devnet"
+          >
+            <div
+              class="css-1i4b0eq"
+              data-testid="NetworkIcon__icon"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="no-ligatures css-wr7004"
+          data-testid="TransactionSender"
+        >
+          <div
+            class="w-40 flex-1 space-y-2 whitespace-nowrap"
+            data-testid="TransactionDetail--desktop"
+          >
+            <div
+              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Sender
+            </div>
+            <div
+              class="flex items-center font-semibold"
+            >
+              <div
+                class="w-0 flex-1 overflow-auto text-right md:text-left"
+              >
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="font-semibold text-base text-theme-text"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="no-ligatures css-u3jrna"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center -space-x-1"
+          >
+            <div
+              class="shrink-0 css-8d0u1i"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="space-y-6 pt-6"
+        >
+          <fieldset
+            class="flex min-w-0 flex-col css-5kz4tk"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="username"
+            >
+              Delegate Name
+            </label>
+            <div
+              class=" css-px3dod"
+            >
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  aria-invalid="true"
+                  autocomplete="off"
+                  class="no-ligatures w-full border-none css-1nupw50"
+                  data-testid="Input__username"
+                  name="username"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                data-testid="Input__addon-end"
+              >
+                <span
+                  data-errortext="The following characters are not allowed: '<', '>'"
+                  data-testid="Input__error"
+                >
+                  <div
+                    class="text-theme-danger-500 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset
+            class="flex min-w-0 flex-col css-1bcidjh"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="fee"
+            >
+              Transaction Fee
+            </label>
+            <div
+              class="relative"
+              data-testid="InputFee"
+            >
+              <div
+                class="absolute right-0 -mt-7"
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <span
+                    class="css-w6ofpw"
+                    role="button"
+                  >
+                    Simple
+                  </span>
+                  <label
+                    class="css-1uxo3sa"
+                  >
+                    <input
+                      class="css-1r71f0z toggle-input"
+                      type="checkbox"
+                    />
+                    <div
+                      class="css-1f5xwvv toggle-handle"
+                    >
+                      <span
+                        class="css-19qsmxy"
+                      />
+                    </div>
+                  </label>
+                  <span
+                    class="css-iwfou6"
+                    role="button"
+                  >
+                    Advanced
+                  </span>
+                </div>
+              </div>
+              <div
+                class="inline-flex w-full items-center space-x-3"
+                data-testid="ButtonGroup"
+                role="radiogroup"
+              >
+                <button
+                  aria-checked="false"
+                  aria-label="0"
+                  class="css-17i051m"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Slow
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      0 DARK
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-checked="true"
+                  aria-label="1.354"
+                  class="css-17i051m"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Average
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      1.354 DARK
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-checked="false"
+                  aria-label="10"
+                  class="css-17i051m"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Fast
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      10 DARK
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </fieldset>
         </div>
       </section>
     </div>

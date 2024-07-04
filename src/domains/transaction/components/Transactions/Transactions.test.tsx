@@ -113,11 +113,11 @@ describe("Transactions", () => {
 
 		expect(button).not.toBeDisabled();
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("dropdown__option--core-0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
@@ -146,11 +146,11 @@ describe("Transactions", () => {
 
 		expect(button).not.toBeDisabled();
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("dropdown__option--core-0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
@@ -195,11 +195,11 @@ describe("Transactions", () => {
 			}),
 		);
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		await expect(screen.findByTestId("dropdown__option--core-7")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("dropdown__option--core-7"));
+		await userEvent.click(screen.getByTestId("dropdown__option--core-7"));
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 	});
@@ -232,11 +232,11 @@ describe("Transactions", () => {
 			}),
 		);
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		await expect(screen.findByTestId("dropdown__option--magistrate-0")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("dropdown__option--magistrate-0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--magistrate-0"));
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 	});
@@ -259,13 +259,13 @@ describe("Transactions", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 
-		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
+		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -293,7 +293,7 @@ describe("Transactions", () => {
 
 		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30);
 
-		userEvent.click(screen.getByTestId("transactions__fetch-more-button"));
+		await userEvent.click(screen.getByTestId("transactions__fetch-more-button"));
 
 		fetchMoreButtonHasContent(commonTranslations.LOADING);
 
@@ -374,8 +374,8 @@ describe("Transactions", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(30), { timeout: 500 });
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-received"));
-		userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
+		await userEvent.click(screen.getByTestId("tabs__tab-button-received"));
+		await userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(8), { timeout: 1000 });
 	});
@@ -395,7 +395,7 @@ describe("Transactions", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
+		await userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
@@ -426,11 +426,11 @@ describe("Transactions", () => {
 
 		expect(button).not.toBeDisabled();
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		await expect(dropdownContainer.findByTestId("dropdown__option--2")).resolves.toBeVisible();
 
-		userEvent.click(dropdownContainer.getByTestId("dropdown__option--2"));
+		await userEvent.click(dropdownContainer.getByTestId("dropdown__option--2"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(30),
@@ -452,7 +452,7 @@ describe("Transactions", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
+		await userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),

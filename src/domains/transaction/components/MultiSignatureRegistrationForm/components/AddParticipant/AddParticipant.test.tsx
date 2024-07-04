@@ -43,7 +43,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
@@ -79,7 +79,7 @@ describe("Add Participant", () => {
 			throw new Error("error");
 		});
 
-		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
@@ -128,7 +128,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P");
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P");
@@ -169,7 +169,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet.address());
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet.address());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(wallet.address());
@@ -216,7 +216,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20");
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20");
@@ -246,7 +246,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), profile.wallets().last().address());
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), profile.wallets().last().address());
 
 		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
@@ -284,7 +284,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), walletFixture.data.address);
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), walletFixture.data.address);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(walletFixture.data.address),
@@ -339,7 +339,7 @@ describe("Add Participant", () => {
 		expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue();
 
 		// add participant
-		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
 		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
@@ -348,7 +348,7 @@ describe("Add Participant", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue());
 
 		// add participant
-		await userEvent.paste(screen.getByTestId("SelectDropdown__input"), walletFixture.data.address);
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), walletFixture.data.address);
 
 		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
