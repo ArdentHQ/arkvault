@@ -326,7 +326,7 @@ importers:
         version: 0.1.1(vite@5.3.3(@types/node@20.14.1)(terser@5.31.0))
       vite-plugin-pwa:
         specifier: ^0.20.0
-        version: 0.20.0(vite@5.3.3(@types/node@20.14.1)(terser@5.31.0))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@6.6.1)
+        version: 0.20.0(vite@5.3.3(@types/node@20.14.1)(terser@5.31.0))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@7.1.0)
       vite-plugin-svgr:
         specifier: ^4.2.0
         version: 4.2.0(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.3(@types/node@20.14.1)(terser@5.31.0))
@@ -337,8 +337,8 @@ importers:
         specifier: ^1.6.0
         version: 1.6.0(@types/node@20.14.1)(jsdom@24.1.0)(terser@5.31.0)
       workbox-window:
-        specifier: ^6.6.0
-        version: 6.6.1
+        specifier: ^7.1.0
+        version: 7.1.0
 
 packages:
 
@@ -6473,10 +6473,6 @@ packages:
   workbox-cacheable-response@7.1.0:
     resolution: {integrity: sha512-iwsLBll8Hvua3xCuBB9h92+/e0wdsmSVgR2ZlvcfjepZWwhd3osumQB3x9o7flj+FehtWM2VHbZn8UJeBXXo6Q==}
 
-  workbox-core@6.6.1:
-    resolution: {integrity: sha512-ZrGBXjjaJLqzVothoE12qTbVnOAjFrHDXpZe7coCb6q65qI/59rDLwuFMO4PcZ7jcbxY+0+NhUVztzR/CbjEFw==}
-    deprecated: this package has been deprecated
-
   workbox-core@7.1.0:
     resolution: {integrity: sha512-5KB4KOY8rtL31nEF7BfvU7FMzKT4B5TkbYa2tzkS+Peqj0gayMT9SytSFtNzlrvMaWgv6y/yvP9C0IbpFjV30Q==}
 
@@ -6509,10 +6505,6 @@ packages:
 
   workbox-sw@7.1.0:
     resolution: {integrity: sha512-Hml/9+/njUXBglv3dtZ9WBKHI235AQJyLBV1G7EFmh4/mUdSQuXui80RtjDeVRrXnm/6QWgRUEHG3/YBVbxtsA==}
-
-  workbox-window@6.6.1:
-    resolution: {integrity: sha512-wil4nwOY58nTdCvif/KEZjQ2NP8uk3gGeRNy2jPBbzypU4BT4D9L8xiwbmDBpZlSgJd2xsT9FvSNU0gsxV51JQ==}
-    deprecated: this package has been deprecated
 
   workbox-window@7.1.0:
     resolution: {integrity: sha512-ZHeROyqR+AS5UPzholQRDttLFqGMwP0Np8MKWAdyxsDETxq3qOAyXvqessc3GniohG6e0mAqSQyKOHmT8zPF7g==}
@@ -13653,14 +13645,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-pwa@0.20.0(vite@5.3.3(@types/node@20.14.1)(terser@5.31.0))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@6.6.1):
+  vite-plugin-pwa@0.20.0(vite@5.3.3(@types/node@20.14.1)(terser@5.31.0))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@7.1.0):
     dependencies:
       debug: 4.3.5(supports-color@8.1.1)
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
       vite: 5.3.3(@types/node@20.14.1)(terser@5.31.0)
       workbox-build: 7.1.1(@types/babel__core@7.20.5)
-      workbox-window: 6.6.1
+      workbox-window: 7.1.0
     transitivePeerDependencies:
       - supports-color
 
@@ -13899,8 +13891,6 @@ snapshots:
     dependencies:
       workbox-core: 7.1.0
 
-  workbox-core@6.6.1: {}
-
   workbox-core@7.1.0: {}
 
   workbox-expiration@7.1.0:
@@ -13952,11 +13942,6 @@ snapshots:
       workbox-routing: 7.1.0
 
   workbox-sw@7.1.0: {}
-
-  workbox-window@6.6.1:
-    dependencies:
-      '@types/trusted-types': 2.0.7
-      workbox-core: 6.6.1
 
   workbox-window@7.1.0:
     dependencies:
