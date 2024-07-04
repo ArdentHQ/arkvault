@@ -5758,7 +5758,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group css-105k8a9"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td
@@ -5981,7 +5981,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             </td>
           </tr>
           <tr
-            class="group css-105k8a9"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td
@@ -6204,7 +6204,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             </td>
           </tr>
           <tr
-            class="group css-105k8a9"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td
@@ -6450,7 +6450,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
           role="rowgroup"
         >
           <tr
-            class="group css-105k8a9"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td
@@ -6673,7 +6673,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             </td>
           </tr>
           <tr
-            class="group css-105k8a9"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td
@@ -6896,7 +6896,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             </td>
           </tr>
           <tr
-            class="group css-105k8a9"
+            class="group css-155s9if"
             data-testid="TableRow"
           >
             <td
