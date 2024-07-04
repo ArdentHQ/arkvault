@@ -161,7 +161,7 @@ describe("AddRecipient", () => {
 			() =>
 				({
 					username: () => "delegate username",
-				} as any),
+				}) as any,
 		);
 
 		const address = "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT";

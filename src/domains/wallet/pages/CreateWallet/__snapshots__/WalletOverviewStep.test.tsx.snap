@@ -582,7 +582,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2 font-semibold link "
+              class="flex items-center space-x-2 font-semibold link"
             >
               <div
                 class="css-v0ob3f"
@@ -682,7 +682,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
                 class="css-d8rk4r toggle-handle"
               >
                 <span
-                  class="css-f7w6ps"
+                  class="css-st84t0"
                 />
               </div>
             </label>

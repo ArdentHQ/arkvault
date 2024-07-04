@@ -473,16 +473,16 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                       </ul>
                     </div>
@@ -2053,16 +2053,16 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -2864,16 +2864,16 @@ exports[`SendTransfer > should render form and use location state with nethash p
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -3266,7 +3266,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                     class="css-10kxbe9 toggle-handle"
                                   >
                                     <span
-                                      class="css-i4koh4"
+                                      class="css-14ojvms"
                                     />
                                   </div>
                                 </label>
@@ -4321,16 +4321,16 @@ exports[`SendTransfer > should render form and use location state with network p
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -4723,7 +4723,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                     class="css-10kxbe9 toggle-handle"
                                   >
                                     <span
-                                      class="css-i4koh4"
+                                      class="css-14ojvms"
                                     />
                                   </div>
                                 </label>
@@ -5778,16 +5778,16 @@ exports[`SendTransfer > should render form and use location state without memo 1
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -6180,7 +6180,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                     class="css-10kxbe9 toggle-handle"
                                   >
                                     <span
-                                      class="css-i4koh4"
+                                      class="css-14ojvms"
                                     />
                                   </div>
                                 </label>
@@ -6649,16 +6649,16 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
           class="css-xa5o6q"
         >
           <li
-            class="css-7x0ld1"
+            class="css-11vjikd"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -7022,7 +7022,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                       class="css-10kxbe9 toggle-handle"
                     >
                       <span
-                        class="css-i4koh4"
+                        class="css-14ojvms"
                       />
                     </div>
                   </label>
@@ -7351,7 +7351,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                   class="css-10kxbe9 toggle-handle"
                 >
                   <span
-                    class="css-i4koh4"
+                    class="css-14ojvms"
                   />
                 </div>
               </label>
@@ -7462,16 +7462,16 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           class="css-xa5o6q"
         >
           <li
-            class="css-7x0ld1"
+            class="css-11vjikd"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -7835,7 +7835,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       class="css-10kxbe9 toggle-handle"
                     >
                       <span
-                        class="css-i4koh4"
+                        class="css-14ojvms"
                       />
                     </div>
                   </label>
@@ -8262,16 +8262,16 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
           class="css-xa5o6q"
         >
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -8664,7 +8664,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                       class="css-10kxbe9 toggle-handle"
                     >
                       <span
-                        class="css-i4koh4"
+                        class="css-14ojvms"
                       />
                     </div>
                   </label>
@@ -9111,16 +9111,16 @@ exports[`SendTransfer > should render form step with deeplink values and use the
           class="css-xa5o6q"
         >
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -9513,7 +9513,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                       class="css-10kxbe9 toggle-handle"
                     >
                       <span
-                        class="css-i4koh4"
+                        class="css-14ojvms"
                       />
                     </div>
                   </label>
@@ -9960,16 +9960,16 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
           class="css-xa5o6q"
         >
           <li
-            class="css-7x0ld1"
+            class="css-11vjikd"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -10333,7 +10333,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                       class="css-10kxbe9 toggle-handle"
                     >
                       <span
-                        class="css-i4koh4"
+                        class="css-14ojvms"
                       />
                     </div>
                   </label>
@@ -10711,16 +10711,16 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
           class="css-xa5o6q"
         >
           <li
-            class="css-7x0ld1"
+            class="css-11vjikd"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -11084,7 +11084,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                       class="css-10kxbe9 toggle-handle"
                     >
                       <span
-                        class="css-i4koh4"
+                        class="css-14ojvms"
                       />
                     </div>
                   </label>
@@ -11413,7 +11413,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                   class="css-10kxbe9 toggle-handle"
                 >
                   <span
-                    class="css-i4koh4"
+                    class="css-14ojvms"
                   />
                 </div>
               </label>
@@ -12100,19 +12100,19 @@ exports[`SendTransfer > should render network selection without selected wallet 
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                         <li
-                          class="css-10pketk"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -12333,16 +12333,16 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
           class="css-xa5o6q"
         >
           <li
-            class="css-7x0ld1"
+            class="css-11vjikd"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -12516,16 +12516,16 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
           class="css-xa5o6q"
         >
           <li
-            class="css-7x0ld1"
+            class="css-11vjikd"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -12712,16 +12712,16 @@ exports[`SendTransfer > should render review step 1`] = `
           class="css-xa5o6q"
         >
           <li
-            class="css-7x0ld1"
+            class="css-11vjikd"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -13090,16 +13090,16 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           class="css-xa5o6q"
         >
           <li
-            class="css-7x0ld1"
+            class="css-11vjikd"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -13660,16 +13660,16 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           class="css-xa5o6q"
         >
           <li
-            class="css-7x0ld1"
+            class="css-11vjikd"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
           <li
-            class="css-10pketk"
+            class="css-1ckw8yn"
           />
         </ul>
       </div>
@@ -14752,16 +14752,16 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                       </ul>
                     </div>
@@ -16017,16 +16017,16 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                       </ul>
                     </div>
@@ -17835,16 +17835,16 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                       </ul>
                     </div>
@@ -19100,16 +19100,16 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                       </ul>
                     </div>
@@ -20365,16 +20365,16 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-7x0ld1"
+                          class="css-11vjikd"
                         />
                       </ul>
                     </div>

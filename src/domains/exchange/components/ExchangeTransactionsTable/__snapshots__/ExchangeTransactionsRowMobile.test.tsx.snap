@@ -5,7 +5,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-105k8a9"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -211,7 +211,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-105k8a9"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -408,7 +408,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-105k8a9"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -605,7 +605,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-105k8a9"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -837,7 +837,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-105k8a9"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -1039,7 +1039,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-105k8a9"
+        class="group css-155s9if"
         data-testid="TableRow"
       >
         <td
@@ -1239,7 +1239,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
 <div>
   <tr
-    class="group css-105k8a9"
+    class="group css-155s9if"
     data-testid="TableRow"
   >
     <td
@@ -1426,7 +1426,7 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] = `
 <div>
   <tr
-    class="group css-105k8a9"
+    class="group css-155s9if"
     data-testid="TableRow"
   >
     <td

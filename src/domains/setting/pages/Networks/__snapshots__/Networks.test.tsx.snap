@@ -1136,7 +1136,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -2315,7 +2315,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
                                   class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-f7w6ps"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>

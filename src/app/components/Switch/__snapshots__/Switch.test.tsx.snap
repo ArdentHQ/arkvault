@@ -22,7 +22,7 @@ exports[`Switch > should render 1`] = `
         class="css-d8rk4r toggle-handle"
       >
         <span
-          class="css-qdjttl"
+          class="css-1sm0bvz"
         />
       </div>
     </label>
@@ -99,7 +99,7 @@ exports[`Switch > should render large labels 1`] = `
         class="css-d8rk4r toggle-handle"
       >
         <span
-          class="css-qdjttl"
+          class="css-1sm0bvz"
         />
       </div>
     </label>
@@ -135,7 +135,7 @@ exports[`Switch > should render small labels 1`] = `
         class="css-10kxbe9 toggle-handle"
       >
         <span
-          class="css-i4koh4"
+          class="css-14ojvms"
         />
       </div>
     </label>

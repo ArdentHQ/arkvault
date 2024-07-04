@@ -305,7 +305,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 							/>
 						),
 					},
-			  }
+				}
 			: undefined;
 
 	return (
