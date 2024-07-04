@@ -1,7 +1,9 @@
-import { ReactComponent as ARK } from "./ark.svg";
-import { ReactComponent as BIND } from "./bind.svg";
-import { ReactComponent as BPL } from "./bpl.svg";
-import { ReactComponent as XQR } from "./xqr.svg";
+/// <reference types="vite-plugin-svgr/client" />
+
+import ARK from "./ark.svg?react";
+import BIND from "./bind.svg?react";
+import BPL from "./bpl.svg?react";
+import XQR from "./xqr.svg?react";
 
 export const Currencies = {
 	ARK,
