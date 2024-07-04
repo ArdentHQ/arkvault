@@ -572,7 +572,67 @@ exports[`LedgerScanStep > should render compact table 1`] = `
 </div>
 `;
 
-exports[`LedgerScanStep > should render responsive (lg) 1`] = `
+exports[`LedgerScanStep > should render ledger table in scanning mode 1`] = `
+<button
+  class="w-full css-1yqe28v"
+  data-testid="LedgerScanStep__scan-more"
+  disabled=""
+  type="button"
+>
+  <div
+    class="flex items-center space-x-2"
+  >
+    <div
+      class="flex items-center"
+    >
+      <span
+        class="invisible flex items-center space-x-2"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg
+            id="plus"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M1 10h18M10 1v18"
+              />
+            </g>
+          </svg>
+        </div>
+        <span
+          class="pl-1"
+        >
+          Add New Address
+        </span>
+      </span>
+      <div
+        class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
+      >
+        <div
+          class="css-13oo6ja"
+        />
+      </div>
+    </div>
+  </div>
+</button>
+`;
+
+exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
 <div>
   <section
     class="space-y-8"
@@ -1024,7 +1084,7 @@ exports[`LedgerScanStep > should render responsive (lg) 1`] = `
 </div>
 `;
 
-exports[`LedgerScanStep > should render responsive (xs) 1`] = `
+exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
 <div>
   <section
     class="space-y-8"
