@@ -1,3 +1,5 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 import WaitingLedgerDeviceDark from "./waiting-ledger-device-dark.svg?react";
 import WaitingLedgerDeviceLight from "./waiting-ledger-device-light.svg?react";
 import AuthLedgerDeviceDark from "./auth-ledger-device-dark.svg?react";

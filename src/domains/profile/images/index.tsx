@@ -1,3 +1,5 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 import WelcomeModalBannerDarkNavy from "./welcome-modal-banner-dark-navy.svg?react";
 import WelcomeModalBannerDarkGreen from "./welcome-modal-banner-dark-green.svg?react";
 import WelcomeModalBannerLightGreen from "./welcome-modal-banner-light-green.svg?react";

@@ -1,3 +1,5 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 import ConfirmTransactionLedgerBannerDarkNavy from "./confirm-transaction-ledger-banner-dark-navy.svg?react";
 import ConfirmTransactionLedgerBannerDarkGreen from "./confirm-transaction-ledger-banner-dark-green.svg?react";
 import ConfirmTransactionLedgerBannerLightNavy from "./confirm-transaction-ledger-banner-light-navy.svg?react";
