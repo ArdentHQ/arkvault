@@ -1,6 +1,6 @@
 /// <reference types="vite-plugin-svgr/client" />
 
-import ConnectionErrorDarkNavy  from "./connection-error-dark-navy.svg?react";
+import ConnectionErrorDarkNavy from "./connection-error-dark-navy.svg?react";
 import ConnectionErrorDarkGreen from "./connection-error-dark-green.svg?react";
 import ConnectionErrorLightNavy from "./connection-error-light-navy.svg?react";
 import ConnectionErrorLightGreen from "./connection-error-light-green.svg?react";
