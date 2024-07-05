@@ -96,7 +96,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                           alt="Avatar"
                           class="min-h-full object-cover"
                           data-testid="SelectProfileImage__avatar-identicon"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="35" cx="80" cy="60" fill="rgb(156, 39, 176)"/><circle r="60" cx="10" cy="30" fill="rgb(76, 175, 80)"/><circle r="40" cx="100" cy="70" fill="rgb(233, 30, 99)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="45" cx="20" cy="70" fill="rgb(0, 188, 212)"/><circle r="40" cx="70" cy="50" fill="rgb(255, 152, 0)"/><circle r="35" cx="0" cy="30" fill="rgb(233, 30, 99)"/></svg>"
                         />
                         <span
                           class="absolute text-2xl font-semibold text-white"
@@ -214,6 +214,227 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                   </div>
                 </div>
               </fieldset>
+              <div
+                class="space-y-4"
+                data-testid="Rules"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <span
+                    class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-success-500 bg-theme-success-200 dark:bg-theme-success-900"
+                  >
+                    <div
+                      class="css-1w6w9jw"
+                      height="8"
+                      width="8"
+                    >
+                      <svg
+                        id="check-mark-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <span
+                    class="text-sm font-semibold text-theme-success-600"
+                  >
+                    One lowercase character
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <span
+                    class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-success-500 bg-theme-success-200 dark:bg-theme-success-900"
+                  >
+                    <div
+                      class="css-1w6w9jw"
+                      height="8"
+                      width="8"
+                    >
+                      <svg
+                        id="check-mark-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <span
+                    class="text-sm font-semibold text-theme-success-600"
+                  >
+                    One uppercase character
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <span
+                    class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-success-500 bg-theme-success-200 dark:bg-theme-success-900"
+                  >
+                    <div
+                      class="css-1w6w9jw"
+                      height="8"
+                      width="8"
+                    >
+                      <svg
+                        id="check-mark-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <span
+                    class="text-sm font-semibold text-theme-success-600"
+                  >
+                    One number
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <span
+                    class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-success-500 bg-theme-success-200 dark:bg-theme-success-900"
+                  >
+                    <div
+                      class="css-1w6w9jw"
+                      height="8"
+                      width="8"
+                    >
+                      <svg
+                        id="check-mark-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <span
+                    class="text-sm font-semibold text-theme-success-600"
+                  >
+                    One special character
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <span
+                    class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-success-500 bg-theme-success-200 dark:bg-theme-success-900"
+                  >
+                    <div
+                      class="css-1w6w9jw"
+                      height="8"
+                      width="8"
+                    >
+                      <svg
+                        id="check-mark-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <span
+                    class="text-sm font-semibold text-theme-success-600"
+                  >
+                    8 characters minimum
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <span
+                    class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-success-500 bg-theme-success-200 dark:bg-theme-success-900"
+                  >
+                    <div
+                      class="css-1w6w9jw"
+                      height="8"
+                      width="8"
+                    >
+                      <svg
+                        id="check-mark-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <span
+                    class="text-sm font-semibold text-theme-success-600"
+                  >
+                    No match in leaked database
+                  </span>
+                </div>
+              </div>
               <fieldset
                 class="flex min-w-0 flex-col css-5kz4tk"
               >
@@ -2160,14 +2381,9 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                         <img
                           alt="Avatar"
                           class="min-h-full object-cover"
-                          data-testid="SelectProfileImage__avatar-identicon"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="40" cx="90" cy="50" fill="rgb(244, 67, 54)"/><circle r="35" cx="0" cy="30" fill="rgb(233, 30, 99)"/><circle r="50" cx="80" cy="60" fill="rgb(0, 188, 212)"/></svg>"
+                          data-testid="SelectProfileImage__avatar-image"
+                          src="data:image/png;base64,"
                         />
-                        <span
-                          class="absolute text-2xl font-semibold text-white"
-                        >
-                          TE
-                        </span>
                         <button
                           class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
                           data-testid="SelectProfileImage__upload-button"
@@ -2197,6 +2413,46 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                                   stroke-linejoin="round"
                                   stroke-width="2"
                                 />
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="absolute -right-2 -top-2 z-20"
+                      >
+                        <button
+                          class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
+                          data-testid="SelectProfileImage__remove-button"
+                          type="button"
+                        >
+                          <div
+                            class="flex items-center space-x-2"
+                          >
+                            <div
+                              class="css-15txs7d"
+                              height="10"
+                              width="10"
+                            >
+                              <svg
+                                id="cross"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                                  />
+                                </g>
                               </svg>
                             </div>
                           </div>
@@ -2799,7 +3055,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                   class="mr-6 w-full"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-5kz4tk"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2809,13 +3065,12 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                       Profile Name
                     </label>
                     <div
-                      class=" css-12mz4i6"
+                      class=" css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
-                          aria-invalid="true"
                           autocomplete="off"
                           class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="Input"
@@ -2823,53 +3078,6 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                           type="text"
                           value=""
                         />
-                      </div>
-                      <div
-                        class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
-                        data-testid="Input__addon-end"
-                      >
-                        <span
-                          data-errortext="A profile with this name already exists"
-                          data-testid="Input__error"
-                        >
-                          <div
-                            class="text-theme-danger-500 css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="circle-exclamation-mark"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <circle
-                                  cx="10"
-                                  cy="10"
-                                  r="9"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 10.5v-5"
-                                  stroke-linecap="round"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 14h0"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </span>
                       </div>
                     </div>
                   </fieldset>
@@ -2890,7 +3098,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                           alt="Avatar"
                           class="min-h-full object-cover"
                           data-testid="SelectProfileImage__avatar-identicon"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(3, 169, 244)" width="100" height="100"/><circle r="55" cx="0" cy="60" fill="rgb(139, 195, 74)"/><circle r="40" cx="40" cy="40" fill="rgb(76, 175, 80)"/><circle r="35" cx="60" cy="70" fill="rgb(33, 150, 243)"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(139, 195, 74)" width="100" height="100"/><circle r="45" cx="100" cy="50" fill="rgb(33, 150, 243)"/><circle r="40" cx="10" cy="70" fill="rgb(3, 169, 244)"/><circle r="60" cx="50" cy="60" fill="rgb(0, 150, 136)"/></svg>"
                         />
                         <span
                           class="absolute text-2xl font-semibold text-white"
@@ -3529,7 +3737,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                   class="mr-6 w-full"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-5kz4tk"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3539,13 +3747,12 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                       Profile Name
                     </label>
                     <div
-                      class=" css-12mz4i6"
+                      class=" css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
-                          aria-invalid="true"
                           autocomplete="off"
                           class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="Input"
@@ -3553,53 +3760,6 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                           type="text"
                           value=""
                         />
-                      </div>
-                      <div
-                        class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
-                        data-testid="Input__addon-end"
-                      >
-                        <span
-                          data-errortext="Profile Name required"
-                          data-testid="Input__error"
-                        >
-                          <div
-                            class="text-theme-danger-500 css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="circle-exclamation-mark"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <circle
-                                  cx="10"
-                                  cy="10"
-                                  r="9"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 10.5v-5"
-                                  stroke-linecap="round"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 14h0"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </span>
                       </div>
                     </div>
                   </fieldset>
@@ -3619,14 +3779,9 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                         <img
                           alt="Avatar"
                           class="min-h-full object-cover"
-                          data-testid="SelectProfileImage__avatar-identicon"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(33, 150, 243)" width="100" height="100"/><circle r="50" cx="30" cy="70" fill="rgb(255, 87, 34)"/><circle r="45" cx="0" cy="40" fill="rgb(244, 67, 54)"/><circle r="40" cx="90" cy="50" fill="rgb(233, 30, 99)"/></svg>"
+                          data-testid="SelectProfileImage__avatar-image"
+                          src="data:image/png;base64,"
                         />
-                        <span
-                          class="absolute text-2xl font-semibold text-white"
-                        >
-                          T
-                        </span>
                         <button
                           class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
                           data-testid="SelectProfileImage__upload-button"
@@ -3656,6 +3811,46 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                                   stroke-linejoin="round"
                                   stroke-width="2"
                                 />
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="absolute -right-2 -top-2 z-20"
+                      >
+                        <button
+                          class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
+                          data-testid="SelectProfileImage__remove-button"
+                          type="button"
+                        >
+                          <div
+                            class="flex items-center space-x-2"
+                          >
+                            <div
+                              class="css-15txs7d"
+                              height="10"
+                              width="10"
+                            >
+                              <svg
+                                id="cross"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                                  />
+                                </g>
                               </svg>
                             </div>
                           </div>
