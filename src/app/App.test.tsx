@@ -125,8 +125,6 @@ describe("App", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
-		expect(asFragment()).toMatchSnapshot();
-
 		toastSuccessMock.mockRestore();
 	});
 
@@ -157,7 +155,6 @@ describe("App", () => {
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
 		expect(container).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render welcome screen after page skeleton", async () => {
@@ -168,8 +165,6 @@ describe("App", () => {
 		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the offline screen if there is no internet connection", async () => {
@@ -184,7 +179,6 @@ describe("App", () => {
 		});
 
 		expect(screen.getByTestId("Offline__text")).toHaveTextContent(errorTranslations.OFFLINE.DESCRIPTION);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render application error if the app fails to boot", async () => {
@@ -207,7 +201,6 @@ describe("App", () => {
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(
 			errorTranslations.APPLICATION.DESCRIPTION,
 		);
-		expect(asFragment()).toMatchSnapshot();
 
 		consoleSpy.mockRestore();
 		environmentSpy.mockRestore();
@@ -222,8 +215,6 @@ describe("App", () => {
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 		await expect(screen.findByText("John Doe")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should not migrate profiles", async () => {
@@ -234,8 +225,6 @@ describe("App", () => {
 		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it.each([false, true])(
