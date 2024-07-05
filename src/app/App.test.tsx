@@ -300,9 +300,7 @@ describe("App", () => {
 
 		toastSpy.mockRestore();
 	});
-	
-	// @TODO: Fix this test
-	/* 
+
 	it("should enter profile and fail to restore", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
@@ -312,6 +310,12 @@ describe("App", () => {
 		await expect(
 			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
 		).resolves.toBeVisible();
+
+		vi.spyOn(env.profiles().last(), "usesPassword").mockReturnValue(true);
+		vi.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
+			throw new Error("Failed to restore");
+		})
+
 
 		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
 
@@ -340,5 +344,6 @@ describe("App", () => {
 		await waitFor(() => expect(history.location.pathname).toBe("/"), { timeout: 4000 });
 
 		toastSpy.mockRestore();
-	}); */
+		vi.restoreAllMocks()
+	});
 });
