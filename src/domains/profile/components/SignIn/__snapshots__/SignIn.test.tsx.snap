@@ -211,8 +211,9 @@ exports[`SignIn > should render a modal 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-fl4fi0"
+                  class="css-qrwjsp"
                   data-testid="SignIn__submit-button"
+                  disabled=""
                   type="submit"
                 >
                   <div

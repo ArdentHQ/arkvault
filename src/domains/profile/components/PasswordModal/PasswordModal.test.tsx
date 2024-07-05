@@ -7,7 +7,7 @@ import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("PasswordModal", () => {
 	beforeEach(() => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 	});
 
 	afterAll(() => {
@@ -41,13 +41,13 @@ describe("PasswordModal", () => {
 
 		render(<PasswordModal isOpen={true} onSubmit={onSuccess} />);
 
-		userEvent.type(screen.getByTestId("PasswordModal__input"), "password");
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), "password");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("password");
 		});
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		await userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await waitFor(() => {
 			expect(onSuccess).toHaveBeenCalled();
