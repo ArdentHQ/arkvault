@@ -46,13 +46,14 @@ describe("PasswordValidation", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
-		userEvent.paste(passwordInput(), "password");
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), "password");
 
 		await expect(screen.findByTestId("Rules")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.clear(passwordInput());
+		await userEvent.clear(passwordInput());
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
@@ -91,8 +92,9 @@ describe("PasswordValidation", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
-		userEvent.paste(passwordInput(), "password");
-		userEvent.paste(screen.getByTestId("PasswordValidation__currentPassword"), "current password");
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), "password");
+		await userEvent.type(screen.getByTestId("PasswordValidation__currentPassword"), "current password");
 
 		await expect(screen.findByTestId("Rules")).resolves.toBeVisible();
 

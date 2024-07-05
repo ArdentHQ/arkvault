@@ -1,5 +1,47 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Tabs > should react to use effect call 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="css-1c7zzpv"
+    >
+      <button
+        aria-selected="true"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-1"
+        role="tab"
+        tabindex="0"
+        type="button"
+      >
+        <span>
+          First
+        </span>
+      </button>
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-2"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          Second
+        </span>
+      </button>
+    </div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      1
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Tabs > should render 1`] = `
 <DocumentFragment>
   <div>

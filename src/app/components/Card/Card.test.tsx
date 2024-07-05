@@ -12,13 +12,13 @@ describe("Card", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle click", () => {
+	it("should handle click", async () => {
 		const handleClick = vi.fn();
 		const { container, asFragment } = render(<Card onClick={() => handleClick()}>Test</Card>);
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByText("Test"));
+		await userEvent.click(screen.getByText("Test"));
 
 		expect(handleClick).toHaveBeenCalledWith();
 		expect(asFragment()).toMatchSnapshot();
@@ -35,7 +35,7 @@ describe("Card", () => {
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("dropdown__toggle")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
 		await expect(screen.findByTestId("dropdown__option--0")).resolves.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();

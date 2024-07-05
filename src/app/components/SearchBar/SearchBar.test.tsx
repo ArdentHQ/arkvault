@@ -25,9 +25,9 @@ describe("SearchBar", () => {
 
 		render(<SearchBar onSearch={onSearch} />);
 
-		userEvent.type(screen.getByTestId("Input"), "test query");
+		await userEvent.type(screen.getByTestId("Input"), "test query");
 
-		userEvent.click(screen.getByTestId("SearchBar__button"));
+		await userEvent.click(screen.getByTestId("SearchBar__button"));
 
 		await waitFor(() => expect(onSearch).toHaveBeenCalledWith("test query"));
 	});
