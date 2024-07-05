@@ -574,7 +574,7 @@ exports[`LedgerScanStep > should render compact table 1`] = `
 
 exports[`LedgerScanStep > should render ledger table in scanning mode 1`] = `
 <button
-  class="w-full css-1yqe28v"
+  class="w-full css-qrwjsp"
   data-testid="LedgerScanStep__scan-more"
   disabled=""
   type="button"
@@ -624,7 +624,7 @@ exports[`LedgerScanStep > should render ledger table in scanning mode 1`] = `
         class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
       >
         <div
-          class="css-13oo6ja"
+          class="css-1nn240v"
         />
       </div>
     </div>
