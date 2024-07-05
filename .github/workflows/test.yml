@@ -604,7 +604,9 @@ jobs:
               run: pnpm rebuild
             - name: Test
               env:
-                  COVERAGE_THRESHOLD_BRANCHES: 99.6
+                  COVERAGE_THRESHOLD_BRANCHES: 99.21
+                  COVERAGE_THRESHOLD_LINES: 99.81
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.82
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 10
