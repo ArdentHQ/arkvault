@@ -254,7 +254,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
-            class="relative border-theme-primary-500 ring-theme-background duration-100 css-1nqcsx"
+            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
           >
             <div
               aria-label="ARK"
@@ -262,7 +262,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
-                class="text-theme-primary-500 css-1i4b0eq"
+                class="text-theme-secondary-300 css-1i4b0eq"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -283,31 +283,8 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
               </div>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-primary-500 text-theme-primary-100 css-1jo8u8k"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
             >
-              <div
-                class="css-15txs7d"
-                height="10"
-                width="10"
-              >
-                <svg
-                  id="check-mark-small"
-                  viewBox="0 0 10 10"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
-              </div>
               <span />
             </span>
           </div>

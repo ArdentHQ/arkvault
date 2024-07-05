@@ -20,31 +20,6 @@ exports[`ButtonGroup > should render with className 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ButtonGroupOption > should render 1`] = `
-<DocumentFragment>
-  <button
-    aria-checked="true"
-    aria-label="1"
-    class="css-1sbhrf0"
-    data-testid="ButtonGroupOption"
-    role="radio"
-    type="button"
-  >
-    Test 1
-  </button>
-  <button
-    aria-checked="false"
-    aria-label="2"
-    class="css-1sbhrf0"
-    data-testid="ButtonGroupOption"
-    role="radio"
-    type="button"
-  >
-    Test 2
-  </button>
-</DocumentFragment>
-`;
-
 exports[`ButtonGroupOption > should render with modern variant 1`] = `
 <DocumentFragment>
   <button

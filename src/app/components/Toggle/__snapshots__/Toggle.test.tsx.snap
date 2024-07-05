@@ -82,23 +82,3 @@ exports[`Toggle > should render small 1`] = `
   </label>
 </DocumentFragment>
 `;
-
-exports[`Toggle > should toggle checked 1`] = `
-<DocumentFragment>
-  <label
-    class="css-xklln0"
-  >
-    <input
-      class="css-1r71f0z toggle-input"
-      type="checkbox"
-    />
-    <div
-      class="css-d8rk4r toggle-handle"
-    >
-      <span
-        class="css-st84t0"
-      />
-    </div>
-  </label>
-</DocumentFragment>
-`;

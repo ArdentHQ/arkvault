@@ -40,60 +40,6 @@ exports[`AmountLabel > should render compact 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AmountLabel > should render compact with hint 1`] = `
-<DocumentFragment>
-  <div
-    class="css-1q2kz5x"
-    color="success"
-  >
-    <div
-      class="flex space-x-1 items-center"
-    >
-      <div
-        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 h-5 w-5 rounded-full"
-        data-testid="AmountLabel__hint"
-      >
-        <div
-          class="dark:text-white css-15txs7d"
-          height="10"
-          width="10"
-        >
-          <svg
-            id="hint-small"
-            viewBox="0 0 10 10"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
-          >
-            <path
-              d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-            <circle
-              cx="4.5"
-              cy="1"
-              fill="currentColor"
-              r="1"
-            />
-          </svg>
-        </div>
-      </div>
-      <span
-        class="whitespace-nowrap"
-        data-testid="Amount"
-      >
-        + 10 ARK
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`AmountLabel > should render negative 1`] = `
 <DocumentFragment>
   <div
@@ -108,60 +54,6 @@ exports[`AmountLabel > should render negative 1`] = `
         data-testid="Amount"
       >
         - 10 ARK
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`AmountLabel > should render with hint 1`] = `
-<DocumentFragment>
-  <div
-    class="css-1v19423"
-    color="success"
-  >
-    <div
-      class="flex space-x-1 items-stretch"
-    >
-      <div
-        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
-        data-testid="AmountLabel__hint"
-      >
-        <div
-          class="dark:text-white css-15txs7d"
-          height="10"
-          width="10"
-        >
-          <svg
-            id="hint-small"
-            viewBox="0 0 10 10"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
-          >
-            <path
-              d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-            <circle
-              cx="4.5"
-              cy="1"
-              fill="currentColor"
-              r="1"
-            />
-          </svg>
-        </div>
-      </div>
-      <span
-        class="whitespace-nowrap"
-        data-testid="Amount"
-      >
-        + 10 ARK
       </span>
     </div>
   </div>
