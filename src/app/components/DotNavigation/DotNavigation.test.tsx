@@ -12,11 +12,11 @@ describe("DotNavigation", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("handles click on a dot", () => {
+	it("handles click on a dot", async () => {
 		const clickMock = vi.fn();
 		render(<DotNavigation onClick={clickMock} />);
 
-		userEvent.click(screen.getByTestId("DotNavigation-Step-1"));
+		await userEvent.click(screen.getByTestId("DotNavigation-Step-1"));
 
 		expect(clickMock).toHaveBeenCalledWith(1);
 	});

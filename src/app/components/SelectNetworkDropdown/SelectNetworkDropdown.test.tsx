@@ -44,7 +44,7 @@ describe("SelectNetworkDropdown", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should change network", () => {
+	it("should change network", async () => {
 		const networks = profile.availableNetworks();
 		const onChange = vi.fn();
 
@@ -67,11 +67,11 @@ describe("SelectNetworkDropdown", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
 
 		expect(screen.getByTestId("SelectDropdown__option--1")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__option--1"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--1"));
 
 		expect(onChange).toHaveBeenCalledWith(networks[1]);
 		expect(container).toMatchSnapshot();

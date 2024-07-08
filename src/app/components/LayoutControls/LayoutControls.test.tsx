@@ -16,12 +16,12 @@ describe("LayoutControls", () => {
 	it.each([
 		["onSelectGridView", "LayoutControls__grid--icon"],
 		["onSelectListView", "LayoutControls__list--icon"],
-	])("should call %s callback if provided", (callback, element) => {
+	])("should call %s callback if provided", async (callback, element) => {
 		const function_ = vi.fn();
 
 		render(<LayoutControls {...{ [callback]: function_ }} />);
 
-		userEvent.click(screen.getByTestId(element));
+		await userEvent.click(screen.getByTestId(element));
 
 		expect(function_).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -29,12 +29,12 @@ describe("LayoutControls", () => {
 	it.each([
 		["onSelectGridView", "LayoutControls__grid--icon"],
 		["onSelectListView", "LayoutControls__list--icon"],
-	])("should not call %s callback if not provided", (callback, element) => {
+	])("should not call %s callback if not provided", async (callback, element) => {
 		const function_ = vi.fn();
 
 		render(<LayoutControls />);
 
-		userEvent.click(screen.getByTestId(element));
+		await userEvent.click(screen.getByTestId(element));
 
 		expect(function_).not.toHaveBeenCalled();
 	});
