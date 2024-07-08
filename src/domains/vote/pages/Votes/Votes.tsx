@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import {useNavigate, useParams} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { Alert } from "@/app/components/Alert";
 import { Page, Section } from "@/app/components/Layout";

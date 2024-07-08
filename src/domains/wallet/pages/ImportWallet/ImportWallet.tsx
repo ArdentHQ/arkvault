@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import {useLocation, useNavigate} from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { MethodStep } from "./MethodStep";

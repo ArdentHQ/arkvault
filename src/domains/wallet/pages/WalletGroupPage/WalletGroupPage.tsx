@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import {useNavigate, useParams} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Page, Section } from "@/app/components/Layout";
 import { WalletsGroupHeader } from "@/domains/wallet/components/WalletsGroup/WalletsGroupHeader";
 import { WalletsList } from "@/domains/wallet/components/WalletsList/WalletsList";

@@ -7,7 +7,7 @@ import { redirect } from "react-router-dom";
 export class UrlValidationMiddleware implements Middleware {
 	handler({ env, location }: MiddlewareParameters): boolean {
 		if (!isKnownPath(location.pathname)) {
-			redirect(ProfilePaths.Welcome)
+			redirect(ProfilePaths.Welcome);
 			return false;
 		}
 

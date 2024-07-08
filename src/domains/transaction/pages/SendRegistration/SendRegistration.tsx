@@ -2,7 +2,7 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import {useNavigate, useParams} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { SendRegistrationForm } from "./SendRegistration.contracts";

@@ -1,5 +1,5 @@
-import React, { createElement, FC, useMemo, } from "react";
-import {Route, Routes, useLocation,} from "react-router-dom";
+import React, { createElement, FC, useMemo } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { styled } from "twin.macro";
 
 import { useEnvironmentContext } from "@/app/contexts";

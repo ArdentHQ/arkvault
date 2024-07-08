@@ -5,9 +5,12 @@ import { ProfilePaths } from "@/router/paths";
 
 export class WalletMiddleware implements Middleware {
 	handler({ location, redirect, env }: MiddlewareParameters): boolean {
-		const match = matchPath({
-			path: ProfilePaths.WalletDetails,
-		}, location.pathname);
+		const match = matchPath(
+			{
+				path: ProfilePaths.WalletDetails,
+			},
+			location.pathname,
+		);
 
 		if (match) {
 			const { profileId, walletId } = match.params as { profileId: string; walletId: string };

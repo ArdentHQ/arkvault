@@ -3,7 +3,7 @@ import { uniq } from "@ardenthq/sdk-helpers";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { generatePath } from "react-router";
 import { LedgerConnectionStep } from "./LedgerConnectionStep";

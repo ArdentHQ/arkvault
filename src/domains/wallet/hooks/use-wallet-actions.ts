@@ -1,6 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useState } from "react";
-import { useLocation, useNavigate} from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { generatePath } from "react-router";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -42,9 +42,7 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 				return;
 			}
 			stopEventBubbling(event);
-			navigate(
-				generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }),
-			);
+			navigate(generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }));
 		},
 		[navigate, profile, wallet, stopEventBubbling],
 	);

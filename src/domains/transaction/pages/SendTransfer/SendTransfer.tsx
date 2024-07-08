@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import {useLocation, useNavigate} from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { URLBuilder } from "@ardenthq/arkvault-url";
 import { FormStep } from "./FormStep";
