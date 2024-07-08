@@ -7,6 +7,7 @@ export class WalletMiddleware implements Middleware {
 	handler({ location, redirect, env }: MiddlewareParameters): boolean {
 		const match = matchPath(
 			{
+				end: false,
 				path: ProfilePaths.WalletDetails,
 			},
 			location.pathname,

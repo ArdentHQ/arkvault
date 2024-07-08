@@ -43,18 +43,22 @@ export const RouterView: React.VFC<Properties> = ({ routes, middlewares = [] }) 
 	return (
 		<Routes>
 			{routes.map((route, index) => (
-				<Route key={index} path={route.path}>
-					<RouteSuspense skeleton={route.skeleton} path={route.path}>
-						{canActivate ? (
-							<Wrapper data-testid="RouterView__wrapper">
-								{createElement(route.component as PreloadableComponent<FC<unknown>>)}
-							</Wrapper>
-						) : (
-							<></>
-							// <Redirect to={redirectUrl ?? "/"} />
-						)}
-					</RouteSuspense>
-				</Route>
+				<Route
+					key={index}
+					path={route.path}
+					element={
+						<RouteSuspense skeleton={route.skeleton} path={route.path}>
+							{canActivate ? (
+								<Wrapper data-testid="RouterView__wrapper">
+									{createElement(route.component as PreloadableComponent<FC<unknown>>)}
+								</Wrapper>
+							) : (
+								<></>
+								// <Redirect to={redirectUrl ?? "/"} />
+							)}
+						</RouteSuspense>
+					}
+				/>
 			))}
 		</Routes>
 	);

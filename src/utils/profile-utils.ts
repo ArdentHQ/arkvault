@@ -21,7 +21,7 @@ export const getProfileById = (env: Environment, id: string) => {
 };
 
 export const getProfileFromUrl = (env: Environment, url: string) => {
-	const urlMatch = matchPath({ path: "/profiles/:profileId" }, url);
+	const urlMatch = matchPath({ end: false, path: "/profiles/:profileId" }, url);
 	const urlProfileId = (urlMatch?.params as any)?.profileId;
 	return getProfileById(env, urlProfileId);
 };

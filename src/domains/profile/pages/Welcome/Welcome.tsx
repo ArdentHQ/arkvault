@@ -49,6 +49,7 @@ export const Welcome = () => {
 
 		const match = matchPath(
 			{
+				end: false,
 				path: "/profiles/:profileId",
 			},
 			location.state.from,
@@ -117,7 +118,7 @@ export const Welcome = () => {
 		(profile: Contracts.IProfile) => {
 			setProfileTheme(profile);
 			setProfileAccentColor(profile);
-			navigate(location.state!.from!);
+			navigate(location.state.from!);
 		},
 		[navigate, location],
 	);
