@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import { Page, Section } from "@/app/components/Layout";
 import { WalletsGroupHeader } from "@/domains/wallet/components/WalletsGroup/WalletsGroupHeader";
 import { WalletsList } from "@/domains/wallet/components/WalletsList/WalletsList";
@@ -9,7 +9,7 @@ import { useBreakpoint } from "@/app/hooks";
 const MAX_WALLETS_ON_SINGLE_PAGE_LIST = 15;
 
 export const WalletGroupPage: React.VFC = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { isMdAndAbove } = useBreakpoint();
 	const { networkId } = useParams<{ networkId: string }>();
 	const { walletsGroupedByNetwork, availableNetworks } = useDisplayWallets();
@@ -25,7 +25,7 @@ export const WalletGroupPage: React.VFC = () => {
 	);
 
 	if (!networkId || !network) {
-		history.push("/");
+		navigate("/");
 		return <></>;
 	}
 

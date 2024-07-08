@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { MethodStep } from "./MethodStep";
@@ -41,8 +41,11 @@ enum Step {
 }
 
 export const ImportWallet = () => {
-	const history = useHistory();
-	const isLedgerImport = history.location.pathname.includes("/import/ledger");
+	const navigate = useNavigate();
+	const location = useLocation();
+
+	const isLedgerImport = location.pathname.includes("/import/ledger");
+
 	const activeProfile = useActiveProfile();
 	const { env, persist } = useEnvironmentContext();
 	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
@@ -164,7 +167,7 @@ export const ImportWallet = () => {
 
 	const handleBack = () => {
 		if (activeTab === Step.NetworkStep || (activeTab === Step.MethodStep && onlyHasOneNetwork)) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		if (activeTab === Step.EncryptPasswordStep) {
@@ -237,7 +240,7 @@ export const ImportWallet = () => {
 	const handleFinish = () => {
 		assertWallet(importedWallet);
 
-		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
+		navigate(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
 	};
 
 	const isNextDisabled = useMemo(() => {

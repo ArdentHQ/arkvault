@@ -10,7 +10,7 @@ export class WalletMiddleware implements Middleware {
 		}, location.pathname);
 
 		if (match) {
-			const { profileId, walletId } = match.params;
+			const { profileId, walletId } = match.params as { profileId: string; walletId: string };
 
 			if (["create", "import"].includes(walletId)) {
 				return true;

@@ -3,7 +3,7 @@ import { uniq } from "@ardenthq/sdk-helpers";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 import { generatePath } from "react-router";
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
@@ -112,7 +112,8 @@ export const LedgerTabs = ({
 
 	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 
-	const history = useHistory();
+	const navigate = useNavigate();
+
 	const {
 		importLedgerWallets,
 		isBusy,
@@ -180,8 +181,8 @@ export const LedgerTabs = ({
 	}, [activeTab, handleSubmit, importWallets]);
 
 	const returnToDashboard = useCallback(() => {
-		history.push(`/profiles/${activeProfile.id()}/dashboard`);
-	}, [activeProfile, history]);
+		navigate(`/profiles/${activeProfile.id()}/dashboard`);
+	}, [activeProfile, navigate]);
 
 	const handleBack = useCallback(() => {
 		if (activeTab === LedgerTabStep.NetworkStep || onlyHasOneNetwork) {
@@ -192,7 +193,7 @@ export const LedgerTabs = ({
 
 		// The only possible active tab where the user can go back is the LedgerScanStep
 		return setActiveTab(LedgerTabStep.NetworkStep);
-	}, [activeTab, history, listenDevice]);
+	}, [activeTab, navigate, listenDevice]);
 
 	const handleCancel = () => {
 		setCancelling(true);
@@ -226,7 +227,7 @@ export const LedgerTabs = ({
 
 	const handleFinish = useCallback(() => {
 		if (isMultiple) {
-			history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			navigate(`/profiles/${activeProfile.id()}/dashboard`);
 			return;
 		}
 
@@ -235,12 +236,12 @@ export const LedgerTabs = ({
 			.findByAddressWithNetwork(importedWallets[0].address, getValues("network").id());
 
 		assertWallet(importedWallet);
-		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
-	}, [isMultiple, history, activeProfile, getValues, importedWallets]);
+		navigate(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
+	}, [isMultiple, navigate, activeProfile, getValues, importedWallets]);
 
 	const handleDeviceNotAvailable = useCallback(() => {
-		history.replace(generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() }));
-	}, [history, activeProfile]);
+		navigate(generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() }), { replace: true });
+	}, [navigate, activeProfile]);
 
 	const handleDeviceAvailable = useCallback(() => {
 		setActiveTab(onlyHasOneNetwork ? LedgerTabStep.LedgerConnectionStep : LedgerTabStep.NetworkStep);
