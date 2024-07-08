@@ -30,7 +30,7 @@ describe("Synchronizer Hook", () => {
 	];
 
 	beforeEach(() => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({shouldAdvanceTime: true});
 		onCall = vi.fn();
 	});
 
