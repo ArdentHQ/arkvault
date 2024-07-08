@@ -5,6 +5,7 @@ import { PasswordValidation } from "./PasswordValidation";
 import { InputPassword } from "@/app/components/Input";
 import { FormField } from "@/app/components/Form";
 import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
+import 'jest-styled-components';
 
 const passwordInput = () => screen.getByTestId("PasswordValidation__password");
 

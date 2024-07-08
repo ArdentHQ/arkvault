@@ -2369,12 +2369,16 @@ exports[`ExchangeView > should render 1`] = `
 exports[`ExchangeView > should render dark theme 1`] = `
 <div>
   <div
-    class="css-kmmje1"
+    class="css-w3nefz"
   >
     <div
-      class="css-wwznix"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
+      <div
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+        data-testid="NavigationBar__buttons-separator"
+      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
@@ -2952,15 +2956,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
           </svg>
         </div>
         <div
-          class="py-32"
-        >
-          <div
-            class="css-28aba5"
-            color="info"
-          />
-        </div>
-        <div
-          class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl hidden"
+          class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl flex"
         >
           <div
             class="mx-auto mb-8 w-24"
@@ -3062,8 +3058,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                     id="fromCurrency-label"
                                   />
                                   <div
-                                    class="css-xk5t3v"
-                                    disabled=""
+                                    class="css-n1b0kl"
                                   >
                                     <div
                                       class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
@@ -3076,9 +3071,8 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                         aria-controls="fromCurrency-menu"
                                         aria-labelledby="fromCurrency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1vs1awz"
+                                        class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                                         data-testid="SelectDropdown__input"
-                                        disabled=""
                                         id="fromCurrency-input"
                                         name="fromCurrency"
                                         placeholder="Select"
@@ -3293,8 +3287,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                       id="toCurrency-label"
                                     />
                                     <div
-                                      class="css-xk5t3v"
-                                      disabled=""
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
@@ -3307,9 +3300,8 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                           aria-controls="toCurrency-menu"
                                           aria-labelledby="toCurrency-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1vs1awz"
+                                          class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                                           data-testid="SelectDropdown__input"
-                                          disabled=""
                                           id="toCurrency-input"
                                           name="toCurrency"
                                           placeholder="Select"

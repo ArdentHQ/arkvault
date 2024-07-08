@@ -2,7 +2,7 @@
 import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-
+import 'jest-styled-components';
 import { ExchangeView } from "./ExchangeView";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
