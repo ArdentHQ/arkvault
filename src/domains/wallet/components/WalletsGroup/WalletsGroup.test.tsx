@@ -123,7 +123,7 @@ describe("WalletsGroup", () => {
 		const toggleArkMainnet = screen.getAllByTestId("Accordion__toggle")[0];
 		const toggleArkDevnet = screen.getAllByTestId("Accordion__toggle")[1];
 
-		expect(screen.queryByText(wallets[2].address()!)).not.toBeInTheDocument();
+		expect(screen.queryByText(wallets[2].address())).not.toBeInTheDocument();
 
 		await userEvent.click(toggleArkMainnet);
 
@@ -131,7 +131,7 @@ describe("WalletsGroup", () => {
 		expect(screen.queryAllByTestId("WalletsGroupHeader")[1].classList.contains("border-b")).toBeFalsy();
 
 		expect(screen.queryByText(wallets[0].alias()!)).not.toBeInTheDocument();
-		expect(screen.getByText(wallets[2].address()!)).toBeInTheDocument();
+		expect(screen.getByText(wallets[2].address())).toBeInTheDocument();
 
 		await userEvent.click(toggleArkDevnet);
 
