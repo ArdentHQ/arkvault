@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 import { URLBuilder } from "@ardenthq/arkvault-url";
 import { FormStep } from "./FormStep";
@@ -40,7 +40,8 @@ import {
 const MAX_TABS = 5;
 
 export const SendTransfer = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
+	const location = useLocation();
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();
@@ -117,14 +118,14 @@ export const SendTransfer = () => {
 				setWallet(undefined);
 
 				// remove all query params
-				history.replace(history.location.pathname);
+				navigate(location.pathname, { replace: true });
 			}),
 		);
 
 		return () => {
 			window.clearTimeout(resetValues);
 		};
-	}, [firstTabIndex, history, resetForm, shouldResetForm]);
+	}, [firstTabIndex, navigate, location, resetForm, shouldResetForm]);
 
 	useEffect(() => {
 		if (!showNetworkStep) {
@@ -178,7 +179,7 @@ export const SendTransfer = () => {
 		abortReference.current.abort();
 
 		if (activeTab === firstTabIndex) {
-			return history.go(-1);
+			return navigate(-1);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -362,7 +363,7 @@ export const SendTransfer = () => {
 				<ErrorStep
 					onClose={() => {
 						assertWallet(wallet);
-						history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
+						navigate(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
 					}}
 					isBackDisabled={isSubmitting}
 					onBack={() => {
@@ -377,7 +378,7 @@ export const SendTransfer = () => {
 					onBackClick={handleBack}
 					onBackToWalletClick={() => {
 						assertWallet(wallet);
-						history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
+						navigate(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
 					}}
 					onContinueClick={async () => await handleNext()}
 					isLoading={isSubmitting}

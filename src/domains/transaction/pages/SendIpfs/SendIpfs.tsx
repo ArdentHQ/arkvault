@@ -3,7 +3,7 @@ import { DTO } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 import { FormStep } from "./FormStep";
 import { IpfsLedgerReview } from "./LedgerReview";
@@ -33,7 +33,7 @@ enum Step {
 
 export const SendIpfs = () => {
 	const { t } = useTranslation();
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
@@ -145,7 +145,7 @@ export const SendIpfs = () => {
 		abortReference.current.abort();
 
 		if (activeTab === Step.FormStep) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+			return navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -212,7 +212,7 @@ export const SendIpfs = () => {
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
 									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
@@ -226,7 +226,7 @@ export const SendIpfs = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
 									onContinueClick={async () => await handleNext()}
 									isLoading={isSubmitting}

@@ -1,7 +1,7 @@
 import { DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { FormStep } from "./FormStep";
@@ -29,7 +29,7 @@ enum Step {
 }
 
 export const SendDelegateResignation = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const form = useForm({ mode: "onChange" });
@@ -72,7 +72,7 @@ export const SendDelegateResignation = () => {
 
 	const handleBack = () => {
 		if (activeTab === Step.FormStep) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+			return navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -150,7 +150,7 @@ export const SendDelegateResignation = () => {
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
 									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
 									isBackDisabled={isSubmitting || !isValid}
 									onBack={() => {
@@ -164,7 +164,7 @@ export const SendDelegateResignation = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}

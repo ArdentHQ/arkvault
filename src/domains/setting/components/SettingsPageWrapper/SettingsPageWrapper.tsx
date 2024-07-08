@@ -1,6 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { Page, Section } from "@/app/components/Layout";
@@ -19,7 +19,8 @@ export const SettingsWrapper = ({
 	activeSettings: ActiveSettings;
 }) => {
 	const { menuItems } = useSettingsMenu();
-	const history = useHistory();
+	const navigate = useNavigate();
+
 	const { t } = useTranslation();
 
 	return (
@@ -30,7 +31,7 @@ export const SettingsWrapper = ({
 					items={menuItems}
 					activeItem={activeSettings}
 					handleActiveItem={(activeSetting: string) => {
-						history.push(`/profiles/${profile.id()}/settings/${activeSetting}`);
+						navigate(`/profiles/${profile.id()}/settings/${activeSetting}`);
 					}}
 				/>
 			}

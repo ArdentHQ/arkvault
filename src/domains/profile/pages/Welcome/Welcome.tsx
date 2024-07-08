@@ -47,7 +47,7 @@ export const Welcome = () => {
 			return;
 		}
 
-		const match = matchPath<{ profileId: string }>({
+		const match = matchPath({
 			path: "/profiles/:profileId",
 		}, location.state.from);
 
@@ -55,7 +55,7 @@ export const Welcome = () => {
 			return;
 		}
 
-		const { profileId } = match.params;
+		const { profileId } = match.params as { profileId: string };
 		return context.env.profiles().findById(profileId);
 	});
 

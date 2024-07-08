@@ -3,7 +3,7 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { FormStep } from "./FormStep";
 import { VoteLedgerReview } from "./LedgerReview";
@@ -43,7 +43,7 @@ enum Step {
 
 export const SendVote = () => {
 	const { env, persist } = useEnvironmentContext();
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const activeProfile = useActiveProfile();
@@ -182,13 +182,13 @@ export const SendVote = () => {
 			const parameters = new URLSearchParams();
 
 			if (!wallet) {
-				return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+				return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 			}
 
 			appendParameters(parameters, "unvote", unvoteDelegates);
 			appendParameters(parameters, "vote", voteDelegates);
 
-			return history.push({
+			return navigate({
 				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet.id()}/votes`,
 				search: `?${parameters}`,
 			});
@@ -504,7 +504,7 @@ export const SendVote = () => {
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
 									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
+										navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
 									}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
@@ -518,7 +518,7 @@ export const SendVote = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
+										navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}

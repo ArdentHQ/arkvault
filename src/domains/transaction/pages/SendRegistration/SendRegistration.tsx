@@ -2,7 +2,7 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory, useParams } from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { SendRegistrationForm } from "./SendRegistration.contracts";
@@ -29,7 +29,7 @@ import {
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 
 export const SendRegistration = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const [activeTab, setActiveTab] = useState(1);
@@ -201,7 +201,7 @@ export const SendRegistration = () => {
 		abortReference.current.abort();
 
 		if (activeTab === 1) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+			return navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -234,7 +234,7 @@ export const SendRegistration = () => {
 			default: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
 			secondSignature: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
-		})[registrationType];
+		})[registrationType as string];
 
 	return (
 		<Page pageTitle={getPageTitle()}>
@@ -250,7 +250,7 @@ export const SendRegistration = () => {
 							<TabPanel tabId={10}>
 								<ErrorStep
 									onClose={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
@@ -292,7 +292,7 @@ export const SendRegistration = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}

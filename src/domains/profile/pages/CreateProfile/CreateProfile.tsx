@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useLayoutEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
@@ -14,7 +14,7 @@ export const CreateProfile = () => {
 	const { env, persist } = useEnvironmentContext();
 	const { restoreProfileConfig } = useProfileRestore();
 	const { t } = useTranslation();
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const { theme, resetTheme } = useTheme();
 	const { defaultCurrency } = useLocaleCurrency();
@@ -42,7 +42,7 @@ export const CreateProfile = () => {
 		restoreProfileConfig(profile);
 		await persist();
 
-		history.push("/");
+		navigate("/");
 	};
 
 	return (
@@ -65,7 +65,7 @@ export const CreateProfile = () => {
 								currency: defaultCurrency,
 								viewingMode: theme,
 							}}
-							onBack={() => history.push("/")}
+							onBack={() => navigate("/")}
 							onSubmit={handleSubmit}
 							shouldValidate={false}
 							showPasswordFields={true}
