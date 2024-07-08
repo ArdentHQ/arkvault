@@ -1,4 +1,4 @@
-/* eslint-disable import/no-relative-parent-imports */
+/* eslint-disable import-alias/import-alias */
 import { translations as CONTACTS } from "../../../domains/contact/i18n";
 import { translations as DASHBOARD } from "../../../domains/dashboard/i18n";
 import { translations as ERROR } from "../../../domains/error/i18n";
