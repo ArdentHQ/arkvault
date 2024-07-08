@@ -119,7 +119,7 @@ const Main: React.VFC = () => {
 			syncingMessageToastId.current = toasts.warning(t("COMMON.PROFILE_SYNC_STARTED"), { autoClose: false });
 		},
 		onProfileUpdated: () => {
-			navigate('/', { replace: true });
+			navigate("/", { replace: true });
 		},
 	});
 

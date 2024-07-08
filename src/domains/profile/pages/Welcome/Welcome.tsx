@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import {matchPath, useLocation, useNavigate} from "react-router-dom";
+import { matchPath, useLocation, useNavigate } from "react-router-dom";
 
 import cn from "classnames";
 import { Card } from "@/app/components/Card";
@@ -21,7 +21,7 @@ import { toasts } from "@/app/services";
 export const Welcome = () => {
 	const context = useEnvironmentContext();
 
-	const location= useLocation();
+	const location = useLocation();
 
 	const navigate = useNavigate();
 
@@ -47,9 +47,12 @@ export const Welcome = () => {
 			return;
 		}
 
-		const match = matchPath({
-			path: "/profiles/:profileId",
-		}, location.state.from);
+		const match = matchPath(
+			{
+				path: "/profiles/:profileId",
+			},
+			location.state.from,
+		);
 
 		if (!match) {
 			return;

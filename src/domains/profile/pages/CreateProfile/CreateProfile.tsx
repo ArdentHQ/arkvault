@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useLayoutEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";

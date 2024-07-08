@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { getProfileFromUrl } from "@/utils/profile-utils";

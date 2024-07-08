@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useCallback } from "react";

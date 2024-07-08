@@ -1,6 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
-import {useLocation, useParams} from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts/Environment";
 

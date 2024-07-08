@@ -1,6 +1,5 @@
 import cn from "classnames";
 import React from "react";
-import { RouteComponentProps, withRouter } from "react-router-dom";
 
 import { Icon } from "@/app/components/Icon";
 
@@ -13,8 +12,8 @@ interface Properties {
 	route: string;
 }
 
-export const SideBarItem = withRouter(
-	({ label, icon, itemKey, isActive, handleActiveItem }: Properties & RouteComponentProps) => (
+export const SideBarItem = ({ label, icon, itemKey, isActive, handleActiveItem }: Properties) => {
+	return (
 		<li
 			className={cn(
 				"relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800",
@@ -47,5 +46,5 @@ export const SideBarItem = withRouter(
 				<span className="text-lg font-semibold">{label}</span>
 			</div>
 		</li>
-	),
-);
+	);
+};

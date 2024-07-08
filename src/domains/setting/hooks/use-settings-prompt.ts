@@ -15,11 +15,14 @@ export const useSettingsPrompt = <TFieldValues>({ isDirty, dirtyFields }: UseSet
 			/* istanbul ignore next -- @preserve */
 			const pathname = location.pathname || location.location?.pathname;
 
-			const matchCurrent = matchPath({
-				caseSensitive: true,
-				end: true,
-				path: ProfilePaths.Settings,
-			}, pathname);
+			const matchCurrent = matchPath(
+				{
+					caseSensitive: true,
+					end: true,
+					path: ProfilePaths.Settings,
+				},
+				pathname,
+			);
 
 			const isReload = matchCurrent !== null;
 

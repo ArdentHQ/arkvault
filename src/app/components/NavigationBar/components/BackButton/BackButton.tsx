@@ -1,5 +1,5 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { styled } from "twin.macro";
 
 import { getStyles } from "./BackButton.styles";

@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Column } from "react-table";
 
 import { AvailableNetwork } from "./Contacts.contracts";

@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import {generatePath, NavLink, useLocation, useNavigate} from "react-router-dom";
+import { generatePath, NavLink, useLocation, useNavigate } from "react-router-dom";
 import tw, { css, styled } from "twin.macro";
 import cn from "classnames";
 import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
