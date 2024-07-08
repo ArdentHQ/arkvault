@@ -588,13 +588,13 @@ exports[`ContactForm > should render with errors 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-7-menu"
+              aria-owns="downshift-6-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-7-input"
-                  id="downshift-7-label"
+                  for="downshift-6-input"
+                  id="downshift-6-label"
                 />
                 <div
                   class="css-n1b0kl"
@@ -604,12 +604,12 @@ exports[`ContactForm > should render with errors 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-7-menu"
-                      aria-labelledby="downshift-7-label"
+                      aria-controls="downshift-6-menu"
+                      aria-labelledby="downshift-6-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                       data-testid="SelectDropdown__input"
-                      id="downshift-7-input"
+                      id="downshift-6-input"
                       name="network"
                       placeholder="Enter a cryptoasset name"
                       type="text"
@@ -659,8 +659,8 @@ exports[`ContactForm > should render with errors 1`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-7-label"
-                id="downshift-7-menu"
+                aria-labelledby="downshift-6-label"
+                id="downshift-6-menu"
                 role="listbox"
               />
             </div>
