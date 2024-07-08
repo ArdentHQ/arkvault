@@ -94,36 +94,38 @@ describe("Import Profile - Profile Form Step", () => {
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		// Upload avatar image
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		expect(browserAccessMock).toHaveBeenCalledWith({ extensions: [".png", ".jpg", ".jpeg", ".bmp"] });
 
 		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0];
 
 		inputElement.select();
-		userEvent.paste(inputElement, "test profile 1");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "test profile 1");
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		expect(emptyProfile.usesPassword()).toBe(false);
 
 		inputElement.select();
-		userEvent.paste(inputElement, "test profile 2");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "test profile 2");
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		const newProfile = env.profiles().findById(emptyProfile.id());
 
@@ -147,30 +149,34 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		userEvent.paste(screen.getAllByTestId("Input")[0], "asdasdas");
+		await userEvent.type(screen.getAllByTestId("Input")[0], "asdasdas");
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
-		userEvent.paste(passwordInput(), "S3cUrePa$sword.test");
-		userEvent.paste(passwordConfirmationInput(), "S3cUrePa$sword.wrong");
+		await userEvent.type(passwordInput(), "S3cUrePa$sword.test");
+		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword.wrong");
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		passwordInput().select();
-		userEvent.paste(passwordInput(), "S3cUrePa$sword");
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), "S3cUrePa$sword");
 
 		passwordConfirmationInput().select();
-		userEvent.paste(passwordConfirmationInput(), "S3cUrePa$sword");
+		await userEvent.clear(passwordConfirmationInput());
+		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		passwordConfirmationInput().select();
-		userEvent.paste(passwordConfirmationInput(), "S3cUrePa$sword.test");
+		await userEvent.clear(passwordConfirmationInput());
+		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword.test");
 
 		passwordInput().select();
-		userEvent.paste(passwordInput(), "S3cUrePa$sword.wrong");
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), "S3cUrePa$sword.wrong");
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
@@ -204,14 +210,15 @@ describe("Import Profile - Profile Form Step", () => {
 		fireEvent.blur(inputElement);
 
 		inputElement.select();
-		userEvent.paste(inputElement, "t");
+		await userEvent.type(inputElement, "t");
 
 		act(() => passwordConfirmationInput().focus());
 
 		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
 		inputElement.select();
-		userEvent.paste(inputElement, "te");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "te");
 
 		act(() => passwordInput().focus());
 
@@ -220,7 +227,8 @@ describe("Import Profile - Profile Form Step", () => {
 		act(() => inputElement.focus());
 
 		inputElement.select();
-		userEvent.paste(inputElement, "test profile");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "test profile");
 
 		await waitFor(() => {
 			expect(inputElement).toHaveValue("test profile");
@@ -234,7 +242,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		act(() => inputElement.focus());
 
-		userEvent.clear(inputElement);
+		await userEvent.clear(inputElement);
 
 		await waitFor(() => {
 			expect(inputElement).not.toHaveValue();
@@ -245,14 +253,14 @@ describe("Import Profile - Profile Form Step", () => {
 		expect(screen.queryByTestId("SelectProfileImage__avatar")).not.toBeInTheDocument();
 
 		// Upload avatar image
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		expect(() => screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
 
 		act(() => inputElement.focus());
 
 		inputElement.select();
-		userEvent.paste(inputElement, "t");
+		await userEvent.type(inputElement, "t");
 
 		await waitFor(() => {
 			expect(inputElement).toHaveValue("t");

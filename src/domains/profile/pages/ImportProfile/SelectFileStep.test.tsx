@@ -17,34 +17,34 @@ describe("Import Profile Select File Step", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render file selection for wwe and switch to json", () => {
+	it("should render file selection for wwe and switch to json", async () => {
 		const onFileFormatChange = vi.fn();
 
 		const { container } = render(<SelectFileStep fileFormat=".wwe" onFileFormatChange={onFileFormatChange} />);
 
-		userEvent.click(screen.getByTestId("SelectFileStep__change-file"));
+		await userEvent.click(screen.getByTestId("SelectFileStep__change-file"));
 
 		expect(onFileFormatChange).toHaveBeenCalledWith(".json");
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should handle back event", () => {
+	it("should handle back event", async () => {
 		const onBack = vi.fn();
 
 		const { container } = render(<SelectFileStep fileFormat=".wwe" onBack={onBack} />);
 
-		userEvent.click(screen.getByTestId("SelectFileStep__back"));
+		await userEvent.click(screen.getByTestId("SelectFileStep__back"));
 
 		expect(onBack).toHaveBeenCalledWith();
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should change back from json to wwe", () => {
+	it("should change back from json to wwe", async () => {
 		const onFileFormatChange = vi.fn();
 
 		const { container } = render(<SelectFileStep fileFormat=".json" onFileFormatChange={onFileFormatChange} />);
 
-		userEvent.click(screen.getByTestId("SelectFileStep__back"));
+		await userEvent.click(screen.getByTestId("SelectFileStep__back"));
 
 		expect(onFileFormatChange).toHaveBeenCalledWith(".wwe");
 		expect(container).toMatchSnapshot();

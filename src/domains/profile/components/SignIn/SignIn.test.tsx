@@ -27,7 +27,7 @@ describe("SignIn", () => {
 	});
 
 	beforeEach(() => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 	});
 
 	afterAll(() => {
@@ -57,7 +57,7 @@ describe("SignIn", () => {
 
 		render(<SignIn isOpen={true} profile={profile} onCancel={onCancel} onSuccess={vi.fn} />);
 
-		userEvent.click(screen.getByTestId("SignIn__cancel-button"));
+		await userEvent.click(screen.getByTestId("SignIn__cancel-button"));
 
 		await waitFor(() => {
 			expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
@@ -69,12 +69,12 @@ describe("SignIn", () => {
 
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
-		userEvent.paste(screen.getByTestId(passwordInput), getDefaultPassword());
+		await userEvent.type(screen.getByTestId(passwordInput), getDefaultPassword());
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => {
 			expect(onSuccess).toHaveBeenCalledWith(getDefaultPassword());
@@ -86,12 +86,12 @@ describe("SignIn", () => {
 
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
-		userEvent.paste(screen.getByTestId(passwordInput), "wrong password");
+		await userEvent.type(screen.getByTestId(passwordInput), "wrong password");
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
@@ -105,20 +105,20 @@ describe("SignIn", () => {
 
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
-		userEvent.paste(screen.getByTestId(passwordInput), "wrong password");
+		await userEvent.type(screen.getByTestId(passwordInput), "wrong password");
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 		vi.advanceTimersByTime(20_000);
 
-		userEvent.paste(screen.getByTestId(passwordInput), "wrong password");
+		await userEvent.type(screen.getByTestId(passwordInput), "wrong password");
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 		vi.advanceTimersByTime(60_000);
 
 		// wait for formState.isValid to be updated
@@ -134,12 +134,12 @@ describe("SignIn", () => {
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
 		for (const index of [1, 2, 3]) {
-			userEvent.paste(screen.getByTestId(passwordInput), `wrong password ${index}`);
+			await userEvent.type(screen.getByTestId(passwordInput), `wrong password ${index}`);
 
 			// wait for form to be updated
 			await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(submitID));
+			await userEvent.click(screen.getByTestId(submitID));
 
 			// wait for form to be updated
 			await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
