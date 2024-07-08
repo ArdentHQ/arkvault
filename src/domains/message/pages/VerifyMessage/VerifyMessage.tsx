@@ -2,7 +2,7 @@ import { Coins, Services } from "@ardenthq/sdk";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { useHistory, useParams } from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { SuccessStep } from "./SuccessStep";
 import { Page, Section } from "@/app/components/Layout";
@@ -43,7 +43,7 @@ export const VerifyMessage = () => {
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWalletWhenNeeded(!!walletId);
 
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const initialState: Services.SignedMessage = {
 		message: queryParameters.get("message") || "",
@@ -106,10 +106,10 @@ export const VerifyMessage = () => {
 
 	const handleBack = () => {
 		if (activeWallet) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+			return navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
 		}
 
-		return history.push(ProfilePaths.Welcome);
+		return navigate(ProfilePaths.Welcome);
 	};
 
 	const submitForm = async () => {
