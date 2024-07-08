@@ -2,7 +2,7 @@ import { upperFirst } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { MdAndAbove } from "@/app/components/Breakpoint";
 import { Header } from "@/app/components/Header";
@@ -29,7 +29,7 @@ export const Exchange = () => {
 	const { t } = useTranslation();
 
 	const activeProfile = useActiveProfile();
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const [currentView, setCurrentView] = useState<ExchangeView>(ExchangeView.Exchanges);
 
@@ -83,7 +83,7 @@ export const Exchange = () => {
 	}, [exchangeProviders, fetchProviders]);
 
 	const handleLaunchExchange = (exchangeId: string) => {
-		history.push(`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${exchangeId}`);
+		navigate(`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${exchangeId}`);
 	};
 
 	const handleViewChange = (view?: string | number) => {
@@ -128,7 +128,7 @@ export const Exchange = () => {
 					exchangeTransactions={activeProfile.exchangeTransactions().values()}
 					isCompact={isCompact}
 					onClick={(providerId: string, orderId: string) => {
-						history.push(
+						navigate(
 							`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${providerId}&orderId=${orderId}`,
 						);
 					}}

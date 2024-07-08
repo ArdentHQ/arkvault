@@ -2,7 +2,7 @@ import { Services } from "@ardenthq/sdk";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { FormStep } from "./FormStep";
 import { SuccessStep } from "./SuccessStep";
@@ -31,7 +31,7 @@ enum Step {
 export const SignMessage: React.VFC = () => {
 	const { t } = useTranslation();
 
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const { walletId } = useParams<{ walletId: string }>();
 
@@ -118,10 +118,10 @@ export const SignMessage: React.VFC = () => {
 		}
 
 		if (selectedWallet) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${selectedWallet.id()}`);
+			return navigate(`/profiles/${activeProfile.id()}/wallets/${selectedWallet.id()}`);
 		}
 
-		return history.push(ProfilePaths.Welcome);
+		return navigate(ProfilePaths.Welcome);
 	};
 
 	const handleNext = () => {
