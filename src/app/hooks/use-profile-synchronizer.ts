@@ -37,8 +37,10 @@ const useProfileWatcher = () => {
 
 	const { env } = useEnvironmentContext();
 
-	const pathname = (location as any).location?.pathname || location.pathname;
-	const match = useMemo(() => matchPath(pathname, { path: "/profiles/:profileId" }), [pathname]);
+	const pathname = location.pathname;
+
+	const match = useMemo(() => matchPath({ path: "/profiles/:profileId" }, pathname), [pathname]);
+
 	const profileId = (match?.params as any)?.profileId;
 	const allProfilesCount = env.profiles().count();
 

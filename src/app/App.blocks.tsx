@@ -1,6 +1,6 @@
 import { Global, css } from "@emotion/react";
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
-import { HashRouter, useHistory } from "react-router-dom";
+import { HashRouter, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
@@ -79,7 +79,10 @@ const GlobalStyles: React.VFC = () => (
 const Main: React.VFC = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
-	const history = useHistory();
+
+	const navigate = useNavigate();
+	const location = useLocation();
+
 	const syncingMessageToastId = useRef<number | string>();
 
 	const { resetAccentColor } = useAccentColor();
@@ -94,11 +97,8 @@ const Main: React.VFC = () => {
 			toasts.warning(t("COMMON.LEDGER_COMPATIBILITY_ERROR_LONG"), { autoClose: false });
 		},
 		onProfileRestoreError: () =>
-			history.push({
-				pathname: "/",
-				state: {
-					from: history.location.pathname + history.location.search,
-				},
+			navigate("/", {
+				state: { from: location.pathname + location.search },
 			}),
 		onProfileSignOut: () => {
 			resetTheme();
@@ -119,7 +119,7 @@ const Main: React.VFC = () => {
 			syncingMessageToastId.current = toasts.warning(t("COMMON.PROFILE_SYNC_STARTED"), { autoClose: false });
 		},
 		onProfileUpdated: () => {
-			history.replace("/");
+			navigate('/', { replace: true });
 		},
 	});
 
@@ -152,7 +152,7 @@ const Main: React.VFC = () => {
 		boot();
 	}, [env, showBoundary]);
 
-	const Skeleton = history.location.pathname.startsWith("/profiles") ? ProfilePageSkeleton : PageSkeleton;
+	const Skeleton = location.pathname.startsWith("/profiles") ? ProfilePageSkeleton : PageSkeleton;
 
 	const renderContent = () => {
 		if (!isOnline) {

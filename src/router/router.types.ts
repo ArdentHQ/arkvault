@@ -1,7 +1,7 @@
 import { ComponentType, FC, LazyExoticComponent } from "react";
 import { RouteProps } from "react-router";
 import { Environment } from "@ardenthq/sdk-profiles";
-import { History, Location } from "history";
+import { Location } from "history";
 import { PreloadableComponent } from "@/utils/preload-lazy";
 
 interface RouteItem {
@@ -15,7 +15,6 @@ interface MiddlewareParameters {
 	location: Location;
 	env: Environment;
 	redirect: (url: string) => void;
-	history: History;
 }
 
 type LocationState = { from?: string } | undefined;
