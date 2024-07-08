@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import { Button } from "@/app/components/Button";
 import { useActiveProfile, useAccordion } from "@/app/hooks";
 import { WalletsGroupProperties } from "@/domains/wallet/components/WalletsGroup/WalletsGroup.contracts";
@@ -12,13 +12,13 @@ const MAX_WALLETS_ON_DASHBOARD_LIST = 10;
 
 export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, wallets, maxWidthReferences }) => {
 	const { t } = useTranslation();
-	const history = useHistory();
+	const navigate = useNavigate();
 	const profile = useActiveProfile();
 	const { isExpanded, handleHeaderClick } = useAccordion();
 
 	const goToCoinWallets = useCallback(() => {
-		history.push(`/profiles/${profile.id()}/network/${network.id()}`);
-	}, [history, network, profile]);
+		navigate(`/profiles/${profile.id()}/network/${network.id()}`);
+	}, [navigate, network, profile]);
 
 	return (
 		<AccordionWrapper data-testid="WalletsGroup" isCollapsed={!isExpanded}>

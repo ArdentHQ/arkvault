@@ -1,6 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { generatePath } from "react-router";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -52,7 +52,7 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const { getWalletAlias } = useWalletAlias();
 
@@ -199,7 +199,7 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 				<div
 					className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
 					onClick={() => {
-						history.push(
+						navigate(
 							generatePath(ProfilePaths.WalletDetails, {
 								profileId: activeProfile.id(),
 								walletId: wallet.id(),

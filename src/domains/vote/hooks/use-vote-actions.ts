@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { generatePath } from "react-router";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
@@ -22,7 +22,7 @@ export const useVoteActions = ({
 	selectedNetwork,
 	hasWalletId,
 }: VoteActionsProperties) => {
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const navigateToSendVote = (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => {
 		const walletId = hasWalletId
@@ -41,7 +41,7 @@ export const useVoteActions = ({
 
 		appendParameters(parameters, "vote", votes);
 
-		history?.push({
+		navigate({
 			pathname: generatePath(ProfilePaths.SendVoteWallet, { profileId: profile.id(), walletId }),
 			search: `?${parameters}`,
 		});

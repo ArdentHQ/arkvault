@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useHistory, useParams } from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 
 import { Alert } from "@/app/components/Alert";
 import { Page, Section } from "@/app/components/Layout";
@@ -19,7 +19,7 @@ import { assertWallet } from "@/utils/assertions";
 import { getErroredNetworks } from "@/utils/profile-utils";
 
 export const Votes: FC = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	// @TODO: the hasWalletId alias is misleading because it indicates that it
@@ -147,8 +147,8 @@ export const Votes: FC = () => {
 			{!hasWallets && (
 				<Section>
 					<VotesEmpty
-						onCreateWallet={() => history.push(`/profiles/${activeProfile.id()}/wallets/create`)}
-						onImportWallet={() => history.push(`/profiles/${activeProfile.id()}/wallets/import`)}
+						onCreateWallet={() => navigate(`/profiles/${activeProfile.id()}/wallets/create`)}
+						onImportWallet={() => navigate(`/profiles/${activeProfile.id()}/wallets/import`)}
 					/>
 				</Section>
 			)}

@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import {generatePath, NavLink, useNavigate} from "react-router-dom";
+import {generatePath, NavLink, useLocation, useNavigate} from "react-router-dom";
 import tw, { css, styled } from "twin.macro";
 import cn from "classnames";
 import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
@@ -180,7 +180,9 @@ const NavigationBarMobile: React.VFC<{
 export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	isBackDisabled,
 }: NavigationBarFullProperties) => {
-	const history = useHistory();
+	const navigate = useNavigate();
+	const location = useLocation();
+
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
 	const scroll = useScroll();
@@ -215,9 +217,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const navigationMenu = useMemo(() => getNavigationMenu(t), [t]);
 	const handleSelectMenuItem = useCallback(
 		({ value }: DropdownOption) => {
-			history.push(String(value));
+			navigate(String(value));
 		},
-		[history],
+		[navigate],
 	);
 
 	const network = useMemo(
@@ -300,19 +302,19 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 		// add query param reset = 1 if already on send transfer page
 		/* istanbul ignore next: tested in e2e -- @preserve */
-		const reset = history.location.pathname === sendTransferPath ? 1 : 0;
-		history.push(`${sendTransferPath}?reset=${reset}`);
-	}, [history]);
+		const reset = location.pathname === sendTransferPath ? 1 : 0;
+		navigate(`${sendTransferPath}?reset=${reset}`);
+	}, [navigate, location]);
 
 	const receiveButtonClickHandler = useCallback(() => {
 		setSearchWalletIsOpen(true);
-	}, [history]);
+	}, [navigate]);
 
 	const homeButtonHandler = useCallback(() => {
 		const dashboardPath = generatePath(ProfilePaths.Dashboard, { profileId: profile.id() });
 
-		history.push(dashboardPath);
-	}, [history]);
+		navigate(dashboardPath);
+	}, [navigate]);
 
 	const transactButtonsDisabled = useMemo(() => wallets.length === 0, [wallets]);
 
@@ -403,7 +405,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									return openExternal(action.mountPath());
 								}
 
-								return history.push(action.mountPath(profile.id()));
+								return navigate(action.mountPath(profile.id()));
 							}}
 						/>
 					</div>

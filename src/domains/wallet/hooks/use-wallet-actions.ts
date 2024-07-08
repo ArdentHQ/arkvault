@@ -1,6 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useLocation, useNavigate} from "react-router-dom";
 import { generatePath } from "react-router";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -12,7 +12,10 @@ import { useLink } from "@/app/hooks/use-link";
 export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
-	const history = useHistory();
+
+	const navigate = useNavigate();
+	const location = useLocation();
+
 	const { openExternal } = useLink();
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
@@ -28,9 +31,9 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 				return;
 			}
 			stopEventBubbling(event);
-			history.push(generatePath(ProfilePaths.WalletDetails, { profileId: profile.id(), walletId: wallet.id() }));
+			navigate(generatePath(ProfilePaths.WalletDetails, { profileId: profile.id(), walletId: wallet.id() }));
 		},
-		[history, profile, wallet, stopEventBubbling],
+		[navigate, profile, wallet, stopEventBubbling],
 	);
 
 	const handleSend = useCallback(
@@ -39,11 +42,11 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 				return;
 			}
 			stopEventBubbling(event);
-			history.push(
+			navigate(
 				generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }),
 			);
 		},
-		[history, profile, wallet, stopEventBubbling],
+		[navigate, profile, wallet, stopEventBubbling],
 	);
 
 	const handleToggleStar = useCallback(
@@ -73,14 +76,14 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 			profile.notifications().transactions().forgetByRecipient(wallet.address());
 			await persist();
 
-			if (history.location.pathname === generatePath(ProfilePaths.WalletDetails, { profileId, walletId })) {
-				history.push(generatePath(ProfilePaths.Dashboard, { profileId }));
+			if (location.pathname === generatePath(ProfilePaths.WalletDetails, { profileId, walletId })) {
+				navigate(generatePath(ProfilePaths.Dashboard, { profileId }));
 				return;
 			}
 
 			return true;
 		},
-		[profile, history, wallet, persist, stopEventBubbling],
+		[profile, navigate, location, wallet, persist, stopEventBubbling],
 	);
 
 	const handleSelectOption = useCallback(
@@ -90,31 +93,31 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 			}
 
 			if (option.value === "sign-message") {
-				history.push(
+				navigate(
 					generatePath(ProfilePaths.SignMessageWallet, { profileId: profile.id(), walletId: wallet.id() }),
 				);
 			}
 
 			if (option.value === "verify-message") {
-				history.push(
+				navigate(
 					generatePath(ProfilePaths.VerifyMessageWallet, { profileId: profile.id(), walletId: wallet.id() }),
 				);
 			}
 
 			if (option.value === "multi-signature") {
-				history.push(
+				navigate(
 					generatePath(ProfilePaths.SendMultiSignature, { profileId: profile.id(), walletId: wallet.id() }),
 				);
 			}
 
 			if (option.value === "second-signature" && !wallet.usesPassword()) {
-				history.push(
+				navigate(
 					generatePath(ProfilePaths.SendSecondSignature, { profileId: profile.id(), walletId: wallet.id() }),
 				);
 			}
 
 			if (option.value === "delegate-registration") {
-				history.push(
+				navigate(
 					generatePath(ProfilePaths.SendDelegateRegistration, {
 						profileId: profile.id(),
 						walletId: wallet.id(),
@@ -123,7 +126,7 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 			}
 
 			if (option.value === "delegate-resignation") {
-				history.push(
+				navigate(
 					generatePath(ProfilePaths.SendDelegateResignation, {
 						profileId: profile.id(),
 						walletId: wallet.id(),
@@ -132,7 +135,7 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 			}
 
 			if (option.value === "store-hash") {
-				history.push(generatePath(ProfilePaths.SendIpfs, { profileId: profile.id(), walletId: wallet.id() }));
+				navigate(generatePath(ProfilePaths.SendIpfs, { profileId: profile.id(), walletId: wallet.id() }));
 			}
 
 			if (option.value === "open-explorer") {
@@ -141,31 +144,31 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
-		[wallet, history, profile, openExternal],
+		[wallet, navigate, profile, openExternal],
 	);
 
 	const handleCreate = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
 			stopEventBubbling(event);
-			history.push(generatePath(ProfilePaths.CreateWallet, { profileId: profile.id() }));
+			navigate(generatePath(ProfilePaths.CreateWallet, { profileId: profile.id() }));
 		},
-		[history, profile, stopEventBubbling],
+		[navigate, profile, stopEventBubbling],
 	);
 
 	const handleImport = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
 			stopEventBubbling(event);
-			history.push(generatePath(ProfilePaths.ImportWallet, { profileId: profile.id() }));
+			navigate(generatePath(ProfilePaths.ImportWallet, { profileId: profile.id() }));
 		},
-		[history, profile, stopEventBubbling],
+		[navigate, profile, stopEventBubbling],
 	);
 
 	const handleImportLedger = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
 			stopEventBubbling(event);
-			history.push(generatePath(ProfilePaths.ImportWalletLedger, { profileId: profile.id() }));
+			navigate(generatePath(ProfilePaths.ImportWalletLedger, { profileId: profile.id() }));
 		},
-		[history, profile, stopEventBubbling],
+		[navigate, profile, stopEventBubbling],
 	);
 
 	const handleConfirmEncryptionWarning = useCallback(
@@ -174,11 +177,11 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 				return;
 			}
 			stopEventBubbling(event);
-			history.push(
+			navigate(
 				generatePath(ProfilePaths.SendSecondSignature, { profileId: profile.id(), walletId: wallet.id() }),
 			);
 		},
-		[history, profile, wallet, stopEventBubbling],
+		[navigate, profile, wallet, stopEventBubbling],
 	);
 
 	return {
