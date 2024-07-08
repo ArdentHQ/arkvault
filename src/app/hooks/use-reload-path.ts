@@ -1,10 +1,10 @@
-import { useHistory, useLocation } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 export const useReloadPath = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 	const location = useLocation();
 
 	return (path?: string) => {
-		history.replace(path || location.pathname);
+		navigate(path || location.pathname, { replace: true });
 	};
 };

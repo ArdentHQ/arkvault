@@ -1,16 +1,16 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useHistory } from "react-router-dom";
+import {useLocation} from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { getProfileFromUrl } from "@/utils/profile-utils";
 
 export const useTimeFormat = () => {
 	const { env } = useEnvironmentContext();
-	const history = useHistory();
+	const location = useLocation();
 
 	const defaultFormat = "DD.MM.YYYY h:mm A";
 
-	const profile = getProfileFromUrl(env, history?.location.pathname);
+	const profile = getProfileFromUrl(env, location.pathname);
 
 	if (!profile) {
 		return defaultFormat;

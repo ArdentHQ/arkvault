@@ -1,20 +1,21 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useIdleTimer } from "react-idle-timer";
-import { useHistory } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import { useCallback } from "react";
 
 export const useAutoSignOut = (profile?: Contracts.IProfile) => {
-	const history = useHistory();
+	const location = useLocation();
+	const navigate = useNavigate();
 
 	const timeout = 1000 * 60 * (profile?.settings().get(Contracts.ProfileSetting.AutomaticSignOutPeriod, 15) ?? 1);
 
 	const onIdle = useCallback(() => {
-		if (history.location.pathname === "/") {
+		if (location.pathname === "/") {
 			return;
 		}
 
-		history.push("/");
-	}, [history]);
+		navigate("/");
+	}, [navigate, location]);
 
 	const { start, pause } = useIdleTimer({
 		crossTab: true,

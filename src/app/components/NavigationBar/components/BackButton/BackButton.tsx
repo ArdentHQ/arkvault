@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import { styled } from "twin.macro";
 
 import { getStyles } from "./BackButton.styles";
@@ -13,14 +13,14 @@ interface BackButtonProperties {
 const StyledBackButton = styled.button<BackButtonProperties>(getStyles);
 
 export const BackButton = ({ backToUrl, disabled }: BackButtonProperties) => {
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const handleOnClick = () => {
 		if (backToUrl) {
-			return history.push(backToUrl);
+			return navigate(backToUrl);
 		}
 
-		history.go(-1);
+		navigate(-1);
 	};
 
 	return (

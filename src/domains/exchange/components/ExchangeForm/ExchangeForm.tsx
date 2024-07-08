@@ -2,7 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { ConfirmationStep } from "./ConfirmationStep";
 import { FormStep } from "./FormStep";
@@ -43,7 +43,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	const { persist } = useEnvironmentContext();
 	const { exchangeService, provider } = useExchangeContext();
 	const { exchangeOrder } = useValidation();
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	assertExchangeService(exchangeService);
 
@@ -224,7 +224,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 
 	const handleBack = () => {
 		if (activeTab === Step.FormStep) {
-			history.push(`/profiles/${activeProfile.id()}/exchange`);
+			navigate(`/profiles/${activeProfile.id()}/exchange`);
 		}
 
 		setActiveTab((previous) => previous - 1);
@@ -340,7 +340,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 							{activeTab === Step.ConfirmationStep && (
 								<Button
 									data-testid="ExchangeForm__finish-button"
-									onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+									onClick={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 								>
 									{t("COMMON.GO_TO_PORTFOLIO")}
 								</Button>

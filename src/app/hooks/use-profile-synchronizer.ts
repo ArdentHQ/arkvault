@@ -1,4 +1,4 @@
-import { matchPath, useHistory, useLocation } from "react-router-dom";
+import { matchPath, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Services } from "@ardenthq/sdk";
@@ -235,7 +235,7 @@ export const useProfileRestore = () => {
 	const { shouldRestore, markAsRestored, setStatus } = useProfileSyncStatus();
 	const { persist, env } = useEnvironmentContext();
 	const { setConfiguration } = useConfiguration();
-	const history = useHistory();
+	const location = useLocation();
 
 	const restoreProfileConfig = (profile: Contracts.IProfile) => {
 		const defaultConfiguration: DashboardConfiguration = {
@@ -269,7 +269,7 @@ export const useProfileRestore = () => {
 		// Profile restore finished but url changed in the meanwhile.
 		// Prevent from unnecessary save of old profile.
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-		const activeProfile = getProfileFromUrl(env, history?.location?.pathname);
+		const activeProfile = getProfileFromUrl(env, location?.pathname);
 		if (activeProfile?.id() !== profile.id()) {
 			return;
 		}
@@ -364,6 +364,7 @@ export const useProfileSynchronizer = ({
 	onLedgerCompatibilityError,
 }: ProfileSynchronizerProperties = {}) => {
 	const location = useLocation();
+
 	const { env, persist } = useEnvironmentContext();
 	const { setConfiguration, profileIsSyncing, profileHasSyncedOnce } = useConfiguration();
 	const { restoreProfile } = useProfileRestore();
@@ -380,8 +381,6 @@ export const useProfileSynchronizer = ({
 	const { setProfileAccentColor, resetAccentColor } = useAccentColor();
 	const [activeProfileId, setActiveProfileId] = useState<string | undefined>();
 	const lastPathname = useRef<string | undefined>();
-
-	const history = useHistory();
 
 	useProfileStatusWatcher({
 		onProfileSyncComplete,
@@ -548,7 +547,7 @@ export const useProfileSynchronizer = ({
 		onProfileSyncStart,
 		onProfileSyncComplete,
 		resetStatuses,
-		history,
+		location,
 		onProfileSignOut,
 		getErroredNetworks,
 		syncProfileWallets,

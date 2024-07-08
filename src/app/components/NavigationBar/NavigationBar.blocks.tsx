@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { generatePath, NavLink, useHistory } from "react-router-dom";
+import {generatePath, NavLink, useNavigate} from "react-router-dom";
 import tw, { css, styled } from "twin.macro";
 import cn from "classnames";
 import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
@@ -60,11 +60,11 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	title,
 	onClick,
 }: NavigationBarLogoOnlyProperties) => {
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const defaultHandler = useCallback(() => {
-		history.push("/");
-	}, [history]);
+		navigate("/");
+	}, [navigate]);
 
 	return (
 		<div className="my-auto flex items-center">
