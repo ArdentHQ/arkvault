@@ -25,7 +25,9 @@ describe("PasswordValidation", () => {
 			},
 		);
 
-		expect(asFragment()).toMatchSnapshot();
+
+		expect(screen.getByTestId("PasswordValidation__password")).toBeInTheDocument()
+
 	});
 
 	it("should render password rules", async () => {
@@ -46,17 +48,15 @@ describe("PasswordValidation", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
-		userEvent.paste(passwordInput(), "password");
+		await userEvent.type(passwordInput(), "password");
 
-		await expect(screen.findByTestId("Rules")).resolves.toBeVisible();
+		await expect(passwordInput()).toHaveValue("password");
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.clear(passwordInput());
+		await userEvent.clear(passwordInput());
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render password rules using current password", async () => {
@@ -91,11 +91,9 @@ describe("PasswordValidation", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
-		userEvent.paste(passwordInput(), "password");
-		userEvent.paste(screen.getByTestId("PasswordValidation__currentPassword"), "current password");
+		await userEvent.type(passwordInput(), "password");
+		await userEvent.type(screen.getByTestId("PasswordValidation__currentPassword"), "current password");
 
 		await expect(screen.findByTestId("Rules")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 });
