@@ -2,7 +2,7 @@ import { matchPath } from "react-router-dom";
 import { ProfilePaths } from "@/router/paths";
 
 export const isKnownPath = (url: string) =>
-	Object.values(ProfilePaths).some((path) => matchPath({ path }, url)?.isExact);
+	Object.values(ProfilePaths).some((path) => matchPath({ end: true, path }, url));
 
 export const isAllowedUrl = (url: string) => {
 	const allowedUrls: string[] = [ProfilePaths.Welcome, ProfilePaths.CreateProfile, ProfilePaths.ImportProfile];

@@ -1,12 +1,11 @@
 import { Global, css } from "@emotion/react";
-import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, } from "react";
 import { HashRouter, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
 import { GlobalStyles as BaseStyles } from "twin.macro";
 
-import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
 import { useAccentColor, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
@@ -17,32 +16,16 @@ import { middlewares, RouterView, routes } from "@/router";
 import { PageSkeleton } from "@/app/components/PageSkeleton";
 import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
 import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
+import {PromptProvider} from "@/app/contexts/Prompt/Prompt";
 
 const AppRouter = ({ children }: { children: React.ReactNode }) => {
-	const [isOpen, setIsOpen] = useState(false);
 
-	const confirmationFunctionReference = useRef<(allowNavigate: boolean) => void>();
-
-	const onCancel = () => {
-		confirmationFunctionReference.current?.(false);
-		setIsOpen(false);
-	};
-
-	const onConfirm = () => {
-		confirmationFunctionReference.current?.(true);
-		setIsOpen(false);
-	};
-
-	const getUserConfirmation = useCallback((_, callback) => {
-		confirmationFunctionReference.current = callback;
-		setIsOpen(true);
-	}, []);
 
 	return (
 		<React.Suspense fallback={<PageSkeleton />}>
-			<HashRouter getUserConfirmation={getUserConfirmation}>
+			<HashRouter>
 				{children}
-				<ConfirmationModal isOpen={isOpen} onCancel={onCancel} onConfirm={onConfirm} />
+				<PromptProvider/>
 			</HashRouter>
 		</React.Suspense>
 	);

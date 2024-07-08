@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
-import { Prompt } from "react-router-dom";
+// import { Prompt } from "react-router-dom";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import NetworkFormModal from "./blocks/NetworkFormModal";
@@ -386,7 +386,7 @@ export const NetworksSettings = () => {
 		reset(getDefaultValues());
 	};
 
-	const { getPromptMessage } = useSettingsPrompt({ dirtyFields, isDirty });
+	const { getPromptMessage: _a } = useSettingsPrompt({ dirtyFields, isDirty });
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="networks">
@@ -434,7 +434,7 @@ export const NetworksSettings = () => {
 				/>
 			)}
 
-			<Prompt message={getPromptMessage} />
+			{/*<Prompt message={getPromptMessage} />*/}
 		</SettingsWrapper>
 	);
 };

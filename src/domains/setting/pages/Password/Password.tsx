@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { Prompt } from "react-router-dom";
+// import { Prompt } from "react-router-dom";
 
 import { PasswordSettingsState } from "./Password.contracts";
 import { Button } from "@/app/components/Button";
@@ -41,7 +41,7 @@ export const PasswordSettings = () => {
 	const { confirmPassword, password } = watch();
 
 	const { errors, isDirty, dirtyFields, isSubmitting, isValid } = formState;
-	const { getPromptMessage } = useSettingsPrompt({ dirtyFields, isDirty });
+	const { getPromptMessage: _a } = useSettingsPrompt({ dirtyFields, isDirty });
 
 	const handleSubmit: SubmitHandler<PasswordSettingsState> = async ({ currentPassword, password }) => {
 		try {
@@ -165,7 +165,7 @@ export const PasswordSettings = () => {
 					</FormButtons>
 				</Form>
 
-				<Prompt message={getPromptMessage} />
+				{/*<Prompt message={getPromptMessage} />*/}
 			</SettingsWrapper>
 
 			{isConfirmRemovalVisible && (
