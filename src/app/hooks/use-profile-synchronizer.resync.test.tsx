@@ -25,7 +25,7 @@ vi.mock("@/utils/delay", () => ({
 
 describe("useProfileSyncStatus", () => {
 	it("should sync profile and handle resync with errored networks", async () => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({shouldAdvanceTime: true});
 		history.push(dashboardURL);
 
 		let configuration: any;
@@ -88,7 +88,7 @@ describe("useProfileSyncStatus", () => {
 	});
 
 	it("should sync profile and handle resync with sync error", async () => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({shouldAdvanceTime: true});
 
 		history.push(dashboardURL);
 		let configuration: any;
