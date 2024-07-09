@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useForm } from "react-hook-form";
 import { useTranslation, Trans } from "react-i18next";
-// import { Prompt } from "react-router-dom";
 import { NormalizedNetwork } from "./Servers.contracts";
 import { useHosts } from "./hooks/use-hosts";
 import { useCustomNetworks } from "./hooks/use-custom-networks";
@@ -21,7 +20,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { DeleteResource } from "@/app/components/DeleteResource";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
-import {Prompt} from "@/app/contexts/Prompt/Prompt";
+
 
 export const ServersSettings = () => {
 	const { t } = useTranslation();
@@ -64,7 +63,7 @@ export const ServersSettings = () => {
 
 	const { customNetworks } = watch();
 
-	const { getPromptMessage } = useSettingsPrompt({ dirtyFields, isDirty });
+	const { getPromptMessage: _ } = useSettingsPrompt({ dirtyFields, isDirty });
 	const isProfileRestored = useMemo(() => profile.status().isRestored(), [profile]);
 
 	const isSaveButtonDisabled = useMemo(
@@ -223,7 +222,7 @@ export const ServersSettings = () => {
 				/>
 			)}
 
-			<Prompt message={getPromptMessage} />
+			{/* <Prompt message={getPromptMessage} /> */}
 		</SettingsWrapper>
 	);
 };
