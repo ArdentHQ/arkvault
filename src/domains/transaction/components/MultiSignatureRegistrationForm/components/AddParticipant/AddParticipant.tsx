@@ -36,7 +36,7 @@ export const AddParticipant = ({
 
 	const [isValidating, setIsValidating] = useState(false);
 	const [participants, setParticipants] = useState<Participant[]>(defaultParticipants);
-	const lastValidationReference = useRef<unknown | undefined>();
+	const lastValidationReference = useRef<unknown>();
 
 	const { getWalletAlias } = useWalletAlias();
 
