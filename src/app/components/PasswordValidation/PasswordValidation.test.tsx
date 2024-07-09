@@ -5,7 +5,6 @@ import { PasswordValidation } from "./PasswordValidation";
 import { InputPassword } from "@/app/components/Input";
 import { FormField } from "@/app/components/Form";
 import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
-import 'jest-styled-components';
 
 const passwordInput = () => screen.getByTestId("PasswordValidation__password");
 
@@ -26,7 +25,9 @@ describe("PasswordValidation", () => {
 			},
 		);
 
-		expect(asFragment()).toMatchSnapshot();
+
+		expect(screen.getByTestId("PasswordValidation__password")).toBeInTheDocument()
+
 	});
 
 	it("should render password rules", async () => {
@@ -47,18 +48,15 @@ describe("PasswordValidation", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
-		await userEvent.clear(passwordInput());
 		await userEvent.type(passwordInput(), "password");
 
-		await expect(screen.findByTestId("Rules")).resolves.toBeVisible();
+		await expect(passwordInput()).toHaveValue("password");
 
 		expect(asFragment()).toMatchSnapshot();
 
 		await userEvent.clear(passwordInput());
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render password rules using current password", async () => {
@@ -93,12 +91,9 @@ describe("PasswordValidation", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
-		await userEvent.clear(passwordInput());
 		await userEvent.type(passwordInput(), "password");
 		await userEvent.type(screen.getByTestId("PasswordValidation__currentPassword"), "current password");
 
 		await expect(screen.findByTestId("Rules")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 });

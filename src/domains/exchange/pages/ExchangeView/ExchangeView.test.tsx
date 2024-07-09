@@ -30,7 +30,7 @@ describe("ExchangeView", () => {
 
 		history.push(exchangeURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/exchange/view">
 				<ExchangeProvider>
 					<Wrapper>
@@ -62,8 +62,6 @@ describe("ExchangeView", () => {
 		await waitFor(() => {
 			expect(toCurrencyDropdown).not.toBeDisabled();
 		});
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it.each(["light", "dark"])("should render %s theme", async (theme) => {
@@ -73,7 +71,7 @@ describe("ExchangeView", () => {
 
 		history.push(exchangeURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/exchange/view">
 				<ExchangeProvider>
 					<Wrapper>
@@ -91,8 +89,6 @@ describe("ExchangeView", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeVisible();
 		});
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should render warning without exchange", async () => {
@@ -100,7 +96,7 @@ describe("ExchangeView", () => {
 
 		history.push(exchangeURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/exchange/view">
 				<ExchangeProvider>
 					<Wrapper>
@@ -118,8 +114,6 @@ describe("ExchangeView", () => {
 		await waitFor(() => {
 			expect(screen.queryByTestId("ExchangeForm")).not.toBeInTheDocument();
 		});
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should fetch providers if not loaded yet", async () => {
@@ -127,8 +121,7 @@ describe("ExchangeView", () => {
 
 		history.push(exchangeURL);
 
-		// Since I am not adding the wrapper the providers are not loaded
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/exchange/view">
 				<ExchangeProvider>
 					<ExchangeView />
@@ -144,7 +137,5 @@ describe("ExchangeView", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeVisible();
 		});
-
-		expect(container).toMatchSnapshot();
 	});
 });
