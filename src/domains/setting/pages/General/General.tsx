@@ -2,7 +2,6 @@ import { Contracts, Helpers } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-// import { Prompt } from "react-router-dom";
 
 import { GeneralSettingsState, SettingsOption } from "./General.contracts";
 import { Button } from "@/app/components/Button";
@@ -92,7 +91,7 @@ export const GeneralSettings: React.FC = () => {
 	const hasDefaultAvatar = !!avatar.endsWith("</svg>");
 
 	const { settings: settingsValidation } = useValidation();
-	const { getPromptMessage: _a } = useSettingsPrompt({ dirtyFields, isDirty });
+	const { getPromptMessage: _ } = useSettingsPrompt({ dirtyFields, isDirty });
 
 	const [isResetProfileOpen, setIsResetProfileOpen] = useState(false);
 

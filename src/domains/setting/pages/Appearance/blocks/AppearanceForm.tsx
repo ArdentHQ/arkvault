@@ -2,7 +2,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-// import { Prompt } from "react-router-dom";
 
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
@@ -38,7 +37,7 @@ export const AppearanceForm: React.FC<AppearanceFormProperties> = ({ profile }) 
 	const { isXs } = useBreakpoint();
 
 	const { persist } = useEnvironmentContext();
-	const { getPromptMessage: _a } = useSettingsPrompt({ dirtyFields, isDirty });
+	const { getPromptMessage: _ } = useSettingsPrompt({ dirtyFields, isDirty });
 
 	const { setProfileTheme } = useTheme();
 	const { setProfileAccentColor } = useAccentColor();
