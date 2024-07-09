@@ -1,12 +1,11 @@
 import React, { createElement, FC, useLayoutEffect, useMemo, useEffect, useRef } from "react";
-import { Navigate, redirect, Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { styled } from "twin.macro";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { RouteItem, Middleware } from "@/router/router.types";
 import { RouteSuspense } from "@/router/RouteSuspense";
 import { PreloadableComponent } from "@/utils/preload-lazy";
-import { useLocaleCurrency } from "@/app/hooks";
 
 interface Properties {
 	routes: RouteItem[];
@@ -36,7 +35,7 @@ export const RouterView: React.VFC<Properties> = ({ routes, middlewares = [] }) 
 	const canActivate = useMemo(
 		() =>
 			// @ts-ignore
-			middlewares.every((middleware) => middleware.handler({ env, location, redirect: setRedirectUrl })),
+			middlewares.every((middleware) => middleware.handler({ env, location, navigate, redirect: setRedirectUrl })),
 		[location, middlewares, env],
 	);
 
@@ -46,8 +45,6 @@ export const RouterView: React.VFC<Properties> = ({ routes, middlewares = [] }) 
 		}
 
 	}, [canActivate, redirectUrl])
-
-	console.log(canActivate, redirectUrl)
 
 	return (
 		<Routes>
