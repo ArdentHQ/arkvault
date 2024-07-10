@@ -6,7 +6,7 @@ import React from "react";
 
 import { EnvironmentProvider } from "@/app/contexts";
 import { ImportProfile } from "@/domains/profile/pages/ImportProfile/ImportProfile";
-import { env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import {env, fireEvent, generateHistoryCalledWith, render, screen, waitFor} from "@/utils/testing-library";
 
 const passwordProtectedWwe = fs.readFileSync("src/tests/fixtures/profile/import/password-protected-profile.wwe");
 const corruptedWwe = fs.readFileSync("src/tests/fixtures/profile/import/corrupted-profile.wwe");
@@ -59,7 +59,7 @@ describe("ImportProfile", () => {
 
 		userEvent.click(screen.getByTestId("SelectFileStep__back"));
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: "/"})));
 		historyMock.mockRestore();
 	});
 
@@ -201,7 +201,7 @@ describe("ImportProfile", () => {
 
 		userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: "/"})));
 	});
 
 	it("should successfully import legacy profile and return to home screen", async () => {
@@ -241,7 +241,7 @@ describe("ImportProfile", () => {
 
 		userEvent.click(screen.getByTestId("ProfileForm__submit-button"));
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: "/"})));
 	});
 
 	it.each([
@@ -426,7 +426,7 @@ describe("ImportProfile", () => {
 
 		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: "/"})));
 
 		historyMock.mockRestore();
 	});

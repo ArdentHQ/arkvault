@@ -4,7 +4,15 @@ import React from "react";
 
 import { ExchangeTransactionsTable } from "./ExchangeTransactionsTable";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import { env, getDefaultProfileId, render, screen, within, renderResponsive } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	render,
+	screen,
+	within,
+	renderResponsive,
+	renderResponsiveWithRoute
+} from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -56,7 +64,7 @@ describe("ExchangeTransactionsTable", () => {
 	});
 
 	it.each(["xs", "sm"])("should render mobile", (breakpoint) => {
-		const { asFragment } = renderResponsive(
+		const { asFragment } = renderResponsiveWithRoute(
 			<ExchangeProvider>
 				<ExchangeTransactionsTable
 					exchangeTransactions={profile.exchangeTransactions().values()}
@@ -72,7 +80,7 @@ describe("ExchangeTransactionsTable", () => {
 	});
 
 	it.each(["md", "lg", "xl"])("should render desktop", (breakpoint) => {
-		const { asFragment } = renderResponsive(
+		const { asFragment } = renderResponsiveWithRoute(
 			<ExchangeProvider>
 				<ExchangeTransactionsTable
 					exchangeTransactions={profile.exchangeTransactions().values()}
