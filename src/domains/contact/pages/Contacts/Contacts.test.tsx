@@ -19,6 +19,7 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import {cleanup} from "@testing-library/react";
 
 let profile: Contracts.IProfile;
 
@@ -486,6 +487,8 @@ describe("Contacts", () => {
 
 		blankProfile.wallets().push(walletMainnet);
 
+		cleanup();
+
 		renderComponent(blankProfile.id());
 
 		await waitFor(() => {
@@ -504,6 +507,8 @@ describe("Contacts", () => {
 		// Add balance, then assert that "send" button is now enabled.
 
 		balanceSpy.mockReturnValue(100);
+
+		cleanup();
 
 		renderComponent(blankProfile.id());
 
