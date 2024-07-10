@@ -2,7 +2,7 @@
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
-import { createHashHistory, HashHistory, To } from "history";
+import {BrowserHistory, createHashHistory, HashHistory, To} from "history";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { I18nextProvider } from "react-i18next";
@@ -114,6 +114,32 @@ interface RenderWithRouterOptions {
 	profileSynchronizerOptions?: Record<string, any>;
 }
 
+interface Props {
+	basename?: string;
+	children: React.ReactNode;
+	history: BrowserHistory;
+}
+
+const CustomRouter = ({ basename, children, history }: Props) => {
+	const [state, setState] = React.useState({
+		action: history.action,
+		location: history.location,
+	});
+
+	React.useLayoutEffect(() => history.listen(setState),[history])
+
+	return (
+		<Router
+			basename={basename}
+			location={state.location}
+			navigator={history}
+			navigationType={state.action}
+		>
+			{children}
+		</Router>
+	);
+};
+
 const renderWithRouter = (
 	component: React.ReactElement,
 	{
@@ -143,12 +169,12 @@ const renderWithRouter = (
 	const RouterWrapper = ({ children }: { children: React.ReactNode }) =>
 		withProviders ? (
 			<WithProviders>
-				<Router location={history.location} navigator={history}>
+				<CustomRouter history={history}>
 					<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
-				</Router>
+				</CustomRouter>
 			</WithProviders>
 		) : (
-			<Router location={history.location} navigator={history}>{children}</Router>
+			<CustomRouter history={history}>{children}</CustomRouter>
 		);
 
 	const child = component.type.name === "Route" ? <Routes>{component}</Routes> : component;

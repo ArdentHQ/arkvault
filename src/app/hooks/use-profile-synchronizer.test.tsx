@@ -197,13 +197,14 @@ describe("useProfileSynchronizer", () => {
 				history,
 				route: dashboardURL,
 				withProfileSynchronizer: true,
+				withProviders: true,
 			},
 		);
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		renderAct(() => {
-			history.push("/");
+			history.replace("/");
 		});
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
@@ -232,7 +233,7 @@ describe("useProfileSynchronizer", () => {
 		history.push("/profiles/invalidId/dashboard");
 
 		render(
-			<Route path="/" element={<div data-testid="RenderedContent">test</div>} />,
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="RenderedContent">test</div>} />,
 			{
 				history,
 				route: "/profiles/:profileId/dashboard",
