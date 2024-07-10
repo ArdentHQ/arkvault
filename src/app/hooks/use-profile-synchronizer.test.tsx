@@ -380,8 +380,7 @@ describe("useProfileSynchronizer", () => {
 		history.push(dashboardURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>}>
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />,
 			{
 				history,
 				route: dashboardURL,
@@ -452,9 +451,7 @@ describe("useProfileSynchronizer", () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="Test" onClick={changeUrl}>
 				Press me
-			</div>}>
-
-			</Route>,
+			</div>} />,
 			{
 				history,
 				profileSynchronizerOptions: {
