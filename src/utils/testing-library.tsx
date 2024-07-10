@@ -2,11 +2,11 @@
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
-import {BrowserHistory, createHashHistory, HashHistory, To} from "history";
+import { BrowserHistory, createHashHistory, HashHistory, To } from "history";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { I18nextProvider } from "react-i18next";
-import {Router, Routes} from "react-router-dom";
+import { Router, Routes } from "react-router-dom";
 import { Context as ResponsiveContext } from "react-responsive";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
@@ -126,15 +126,10 @@ const CustomRouter = ({ basename, children, history }: Props) => {
 		location: history.location,
 	});
 
-	React.useLayoutEffect(() => history.listen(setState),[history])
+	React.useLayoutEffect(() => history.listen(setState), [history]);
 
 	return (
-		<Router
-			basename={basename}
-			location={state.location}
-			navigator={history}
-			navigationType={state.action}
-		>
+		<Router basename={basename} location={state.location} navigator={history} navigationType={state.action}>
 			{children}
 		</Router>
 	);
@@ -390,5 +385,5 @@ export const generateHistoryCalledWith = ({ pathname = "", hash = "", search = "
 		},
 		undefined,
 		{},
-	]
-}
+	];
+};

@@ -2,7 +2,7 @@
 import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";
-import {Route, useHistory, Prompt, Routes} from "react-router-dom";
+import { Route, useHistory, Prompt, Routes } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import { AppRouter, Main } from "./App.blocks";
 import {
@@ -117,7 +117,7 @@ const renderComponent = (path = "/", options = {}) => {
 	render(
 		<ErrorBoundary FallbackComponent={ApplicationError}>
 			<Routes>
-				<Route path={path} element={<Main/>}/>
+				<Route path={path} element={<Main />} />
 			</Routes>
 		</ErrorBoundary>,
 		{

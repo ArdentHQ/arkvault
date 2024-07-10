@@ -191,15 +191,12 @@ describe("useProfileSynchronizer", () => {
 	it("should clear last profile sync jobs", async () => {
 		history.push(dashboardURL);
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-				withProviders: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+			withProviders: true,
+		});
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
@@ -215,14 +212,11 @@ describe("useProfileSynchronizer", () => {
 		history.push("/");
 
 		vi.useFakeTimers();
-		render(
-			<Route path="/" element={<div data-testid="RenderedContent">test</div>} />,
-			{
-				history,
-				route: "/",
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/" element={<div data-testid="RenderedContent">test</div>} />, {
+			history,
+			route: "/",
+			withProfileSynchronizer: true,
+		});
 
 		await expect(screen.findByTestId("RenderedContent")).resolves.toBeVisible();
 
@@ -277,14 +271,11 @@ describe("useProfileSynchronizer", () => {
 			throw new Error("password not found");
 		});
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="Content">test</div>} />,
-			{
-				history,
-				route: passwordProtectedUrl,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<div data-testid="Content">test</div>} />, {
+			history,
+			route: passwordProtectedUrl,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() => expect(screen.queryByTestId("Content")).not.toBeInTheDocument());
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
@@ -330,13 +321,10 @@ describe("useProfileSynchronizer", () => {
 			return <div data-testid="Dashboard">test</div>;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<Component/>}/>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />} />, {
+			history,
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("Dashboard")).resolves.toBeVisible();
 
@@ -358,14 +346,11 @@ describe("useProfileSynchronizer", () => {
 			return <button data-testid="ResetSyncProfile" onClick={() => syncProfileWallets(true)} />;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<Component/>}/>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await expect(screen.findByTestId("ResetSyncProfile")).resolves.toBeVisible();
 
@@ -380,14 +365,11 @@ describe("useProfileSynchronizer", () => {
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
 		history.push(dashboardURL);
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
@@ -409,14 +391,11 @@ describe("useProfileSynchronizer", () => {
 
 		history.push(dashboardURL);
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<Component/>}/>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await expect(screen.findByTestId("SyncProfile")).resolves.toBeVisible();
 
@@ -450,9 +429,14 @@ describe("useProfileSynchronizer", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="Test" onClick={changeUrl}>
-				Press me
-			</div>} />,
+			<Route
+				path="/profiles/:profileId/dashboard"
+				element={
+					<div data-testid="Test" onClick={changeUrl}>
+						Press me
+					</div>
+				}
+			/>,
 			{
 				history,
 				profileSynchronizerOptions: {
@@ -486,9 +470,14 @@ describe("useProfileSynchronizer", () => {
 		};
 
 		render(
-			<Route path="/" element={<div data-testid="Test" onClick={changeUrl}>
-				Press me
-			</div>} />,
+			<Route
+				path="/"
+				element={
+					<div data-testid="Test" onClick={changeUrl}>
+						Press me
+					</div>
+				}
+			/>,
 			{
 				history,
 				route: "/",
@@ -838,7 +827,6 @@ describe("useProfileStatusWatcher", () => {
 		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider
@@ -918,13 +906,10 @@ describe("useProfileStatusWatcher", () => {
 			return <div data-testid="ProfileSynced">test</div>;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<Component/>}/>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />} />, {
+			history,
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 

@@ -35,16 +35,17 @@ export const RouterView: React.VFC<Properties> = ({ routes, middlewares = [] }) 
 	const canActivate = useMemo(
 		() =>
 			// @ts-ignore
-			middlewares.every((middleware) => middleware.handler({ env, location, navigate, redirect: setRedirectUrl })),
+			middlewares.every((middleware) =>
+				middleware.handler({ env, location, navigate, redirect: setRedirectUrl }),
+			),
 		[location, middlewares, env],
 	);
 
 	useLayoutEffect(() => {
-		if(!canActivate) {
+		if (!canActivate) {
 			navigate(redirectUrl ?? "/");
 		}
-
-	}, [canActivate, redirectUrl])
+	}, [canActivate, redirectUrl]);
 
 	return (
 		<Routes>

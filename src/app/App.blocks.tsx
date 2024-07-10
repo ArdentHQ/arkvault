@@ -1,5 +1,5 @@
 import { Global, css } from "@emotion/react";
-import React, { useLayoutEffect, useRef, } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { HashRouter, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
@@ -20,9 +20,7 @@ import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
 const AppRouter = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<React.Suspense fallback={<PageSkeleton />}>
-			<HashRouter>
-				{children}
-			</HashRouter>
+			<HashRouter>{children}</HashRouter>
 		</React.Suspense>
 	);
 };

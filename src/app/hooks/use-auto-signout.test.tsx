@@ -2,7 +2,7 @@
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { act, env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
@@ -35,13 +35,10 @@ describe("useAutoSignOut", () => {
 			return <div data-testid="StartIdleTimer" onClick={() => startIdleTimer()} />;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<Component />}/>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />} />, {
+			history,
+			route: dashboardURL,
+		});
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
@@ -69,13 +66,10 @@ describe("useAutoSignOut", () => {
 			return <div data-testid="StartIdleTimer" onClick={() => startIdleTimer()} />;
 		};
 
-		render(
-			<Route path="/" element={<Component />}/>,
-			{
-				history,
-				route: "/",
-			},
-		);
+		render(<Route path="/" element={<Component />} />, {
+			history,
+			route: "/",
+		});
 
 		expect(history.location.pathname).toBe("/");
 

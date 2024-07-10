@@ -5,7 +5,8 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { useDeeplink } from "./use-deeplink";
 import {
-	env, generateHistoryCalledWith,
+	env,
+	generateHistoryCalledWith,
 	getDefaultProfileId,
 	mockProfileWithPublicAndTestNetworks,
 	render,
@@ -66,12 +67,9 @@ describe("useDeeplink hook", () => {
 	it("should use the method parameter to detect deeplink", () => {
 		history.push("/?coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK");
 
-		render(
-			<Route path="/" element={<TestComponent/>}/>,
-			{
-				history,
-			},
-		);
+		render(<Route path="/" element={<TestComponent />} />, {
+			history,
+		});
 
 		expect(screen.getByTestId("NoDeeplink")).toBeInTheDocument();
 	});
@@ -79,12 +77,9 @@ describe("useDeeplink hook", () => {
 	it("should validate url with errors", async () => {
 		history.push("/?method=transfer&coin=doge&network=ark.devnet");
 
-		render(
-			<Route path="/" element={<TestComponent/>}/>,
-			{
-				history,
-			},
-		);
+		render(<Route path="/" element={<TestComponent />} />, {
+			history,
+		});
 
 		expect(screen.getByTestId("DeeplinkValidate")).toBeInTheDocument();
 
@@ -98,12 +93,9 @@ describe("useDeeplink hook", () => {
 	it("should validate url without errors", async () => {
 		history.push("/?method=transfer&coin=ark&network=ark.devnet");
 
-		render(
-			<Route path="/" element={<TestComponent/>}/>,
-			{
-				history,
-			},
-		);
+		render(<Route path="/" element={<TestComponent />} />, {
+			history,
+		});
 
 		expect(screen.getByTestId("DeeplinkValidate")).toBeInTheDocument();
 
@@ -117,18 +109,20 @@ describe("useDeeplink hook", () => {
 
 		const historySpy = vi.spyOn(history, "push");
 
-		render(
-			<Route path="/" element={<TestComponent/>}/>,
-			{
-				history,
-			},
-		);
+		render(<Route path="/" element={<TestComponent />} />, {
+			history,
+		});
 
 		expect(screen.getByTestId("DeeplinkHandle")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("DeeplinkHandle"));
 
-		expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: "/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer", search: "?method=transfer&coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK"}));
+		expect(historySpy).toHaveBeenCalledWith(
+			...generateHistoryCalledWith({
+				pathname: "/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer",
+				search: "?method=transfer&coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK",
+			}),
+		);
 
 		historySpy.mockRestore();
 	});

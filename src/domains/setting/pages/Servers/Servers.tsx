@@ -21,7 +21,6 @@ import { DeleteResource } from "@/app/components/DeleteResource";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 
-
 export const ServersSettings = () => {
 	const { t } = useTranslation();
 
