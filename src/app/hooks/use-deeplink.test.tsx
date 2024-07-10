@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { useDeeplink } from "./use-deeplink";
 import {
-	env,
+	env, generateHistoryCalledWith,
 	getDefaultProfileId,
 	mockProfileWithPublicAndTestNetworks,
 	render,
@@ -67,9 +67,7 @@ describe("useDeeplink hook", () => {
 		history.push("/?coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK");
 
 		render(
-			<Route>
-				<TestComponent />
-			</Route>,
+			<Route path="/" element={<TestComponent/>}/>,
 			{
 				history,
 			},
@@ -82,9 +80,7 @@ describe("useDeeplink hook", () => {
 		history.push("/?method=transfer&coin=doge&network=ark.devnet");
 
 		render(
-			<Route>
-				<TestComponent />
-			</Route>,
+			<Route path="/" element={<TestComponent/>}/>,
 			{
 				history,
 			},
@@ -103,9 +99,7 @@ describe("useDeeplink hook", () => {
 		history.push("/?method=transfer&coin=ark&network=ark.devnet");
 
 		render(
-			<Route>
-				<TestComponent />
-			</Route>,
+			<Route path="/" element={<TestComponent/>}/>,
 			{
 				history,
 			},
@@ -124,9 +118,7 @@ describe("useDeeplink hook", () => {
 		const historySpy = vi.spyOn(history, "push");
 
 		render(
-			<Route>
-				<TestComponent />
-			</Route>,
+			<Route path="/" element={<TestComponent/>}/>,
 			{
 				history,
 			},
@@ -136,9 +128,7 @@ describe("useDeeplink hook", () => {
 
 		userEvent.click(screen.getByTestId("DeeplinkHandle"));
 
-		expect(historySpy).toHaveBeenCalledWith(
-			"/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer?method=transfer&coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK",
-		);
+		expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: "/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer", search: "?method=transfer&coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK"}));
 
 		historySpy.mockRestore();
 	});
