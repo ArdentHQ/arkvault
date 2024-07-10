@@ -70,8 +70,8 @@ describe("Dashboard", () => {
 		const ledgerTransportMock = mockNanoXTransport();
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
+			<Route path="/profiles/:profileId/dashboard" element={<Dashboard />}>
+
 			</Route>,
 			{
 				history,
@@ -92,8 +92,7 @@ describe("Dashboard", () => {
 
 	it("should navigate to create wallet page", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
+			<Route path="/profiles/:profileId/dashboard" element={<Dashboard />}>
 			</Route>,
 			{
 				history,
@@ -110,8 +109,7 @@ describe("Dashboard", () => {
 
 	it("should navigate to import wallet page", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
+			<Route path="/profiles/:profileId/dashboard" element={<Dashboard />}>
 			</Route>,
 			{
 				history,

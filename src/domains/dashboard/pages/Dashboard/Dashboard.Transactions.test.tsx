@@ -76,8 +76,7 @@ describe("Dashboard", () => {
 
 	it("should render loading state when profile is syncing", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
+			<Route path="/profiles/:profileId/dashboard" element={<Dashboard />}>
 			</Route>,
 			{
 				history,
@@ -97,8 +96,7 @@ describe("Dashboard", () => {
 		} as any);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
+			<Route path="/profiles/:profileId/dashboard" element={<Dashboard />}>
 			</Route>,
 			{
 				history,
@@ -125,8 +123,7 @@ describe("Dashboard", () => {
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
+			<Route path="/profiles/:profileId/dashboard" element={<Dashboard />}>
 			</Route>,
 			{
 				history,
