@@ -192,9 +192,7 @@ describe("useProfileSynchronizer", () => {
 		history.push(dashboardURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileSynced">test</div>
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />,
 			{
 				history,
 				route: dashboardURL,
@@ -217,9 +215,7 @@ describe("useProfileSynchronizer", () => {
 
 		vi.useFakeTimers();
 		render(
-			<Route path="/">
-				<div data-testid="RenderedContent">test</div>
-			</Route>,
+			<Route path="/" element={<div data-testid="RenderedContent">test</div>} />,
 			{
 				history,
 				route: "/",
@@ -236,9 +232,7 @@ describe("useProfileSynchronizer", () => {
 		history.push("/profiles/invalidId/dashboard");
 
 		render(
-			<Route path="/">
-				<div data-testid="RenderedContent">test</div>
-			</Route>,
+			<Route path="/" element={<div data-testid="RenderedContent">test</div>} />,
 			{
 				history,
 				route: "/profiles/:profileId/dashboard",
@@ -256,9 +250,7 @@ describe("useProfileSynchronizer", () => {
 		history.push(dashboardURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileRestored">test</div>
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileRestored">test</div>} />,
 			{
 				history,
 				route: dashboardURL,
@@ -285,9 +277,7 @@ describe("useProfileSynchronizer", () => {
 		});
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="Content">test</div>
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="Content">test</div>} />,
 			{
 				history,
 				route: passwordProtectedUrl,
@@ -307,9 +297,7 @@ describe("useProfileSynchronizer", () => {
 		history.push(dashboardURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileRestored">test</div>
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileRestored">test</div>} />,
 			{
 				history,
 				route: dashboardURL,
@@ -342,9 +330,7 @@ describe("useProfileSynchronizer", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<Component/>}/>,
 			{
 				history,
 				route: dashboardURL,
@@ -372,9 +358,7 @@ describe("useProfileSynchronizer", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<Component/>}/>,
 			{
 				history,
 				route: dashboardURL,
@@ -396,8 +380,7 @@ describe("useProfileSynchronizer", () => {
 		history.push(dashboardURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileSynced">test</div>
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>}>
 			</Route>,
 			{
 				history,
@@ -427,9 +410,7 @@ describe("useProfileSynchronizer", () => {
 		history.push(dashboardURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<Component/>}/>,
 			{
 				history,
 				route: dashboardURL,
@@ -469,10 +450,10 @@ describe("useProfileSynchronizer", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="Test" onClick={changeUrl}>
-					Press me
-				</div>
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="Test" onClick={changeUrl}>
+				Press me
+			</div>}>
+
 			</Route>,
 			{
 				history,
@@ -507,11 +488,9 @@ describe("useProfileSynchronizer", () => {
 		};
 
 		render(
-			<Route path="/">
-				<div data-testid="Test" onClick={changeUrl}>
-					Press me
-				</div>
-			</Route>,
+			<Route path="/" element={<div data-testid="Test" onClick={changeUrl}>
+				Press me
+			</div>} />,
 			{
 				history,
 				route: "/",
@@ -861,7 +840,7 @@ describe("useProfileStatusWatcher", () => {
 		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		// eslint-disable-next-line sonarjs/no-identical-functions
+
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider
@@ -942,9 +921,7 @@ describe("useProfileStatusWatcher", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<Component/>}/>,
 			{
 				history,
 				route: dashboardURL,
