@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -16,7 +16,7 @@ import {
 	renderResponsiveWithRoute,
 	screen,
 	waitFor,
-	triggerMessageSignOnce,
+	triggerMessageSignOnce, generateHistoryCalledWith,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -80,9 +80,7 @@ describe("VerifyMessage", () => {
 
 	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
 			breakpoint,
 			{
 				history,
@@ -99,9 +97,7 @@ describe("VerifyMessage", () => {
 
 	it("should switch between manual and json input", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
 			{
 				history,
 				route: walletUrl,
@@ -168,9 +164,7 @@ describe("VerifyMessage", () => {
 
 	it("should verify message", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
 			{
 				history,
 				route: walletUrl,
@@ -206,9 +200,7 @@ describe("VerifyMessage", () => {
 
 	it("should verify message using json", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
 			{
 				history,
 				route: walletUrl,
@@ -236,9 +228,7 @@ describe("VerifyMessage", () => {
 
 	it("should not paste json values if all fields are empty", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
 			{
 				history,
 				route: walletUrl,
@@ -266,9 +256,7 @@ describe("VerifyMessage", () => {
 		history.push(url);
 
 		render(
-			<Route path="/profiles/:profileId/verify-message">
-				<VerifyMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/verify-message" element={<VerifyMessage />} />,
 			{
 				history,
 				route: url,
@@ -296,9 +284,7 @@ describe("VerifyMessage", () => {
 		history.push(url);
 
 		render(
-			<Route path="/profiles/:profileId/verify-message">
-				<VerifyMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/verify-message" element={<VerifyMessage />} />,
 			{
 				history,
 				route: url,
@@ -311,14 +297,12 @@ describe("VerifyMessage", () => {
 
 		userEvent.click(screen.getByTestId("VerifyMessage__back-button"));
 
-		expect(historySpy).toHaveBeenCalledWith("/");
+		expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: "/"}));
 	});
 
 	it("should fail to verify with invalid signature", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
 			{
 				history,
 				route: walletUrl,
@@ -340,9 +324,7 @@ describe("VerifyMessage", () => {
 
 	it("should fail to verify using invalid data", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
 			{
 				history,
 				route: walletUrl,
@@ -368,9 +350,7 @@ describe("VerifyMessage", () => {
 
 	it("should render error step if validation throws an error", async () => {
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
 			{
 				history,
 				route: walletUrl,
@@ -395,7 +375,7 @@ describe("VerifyMessage", () => {
 
 		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}`}));
 
 		historySpy.mockRestore();
 		messageSpy.mockRestore();
