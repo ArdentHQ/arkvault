@@ -11,7 +11,7 @@ import {
 	screen,
 	within,
 	renderResponsive,
-	renderResponsiveWithRoute
+	renderResponsiveWithRoute,
 } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;

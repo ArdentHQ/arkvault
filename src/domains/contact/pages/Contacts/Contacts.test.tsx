@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -19,7 +18,7 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import {cleanup} from "@testing-library/react";
+import { cleanup } from "@testing-library/react";
 
 let profile: Contracts.IProfile;
 
@@ -29,13 +28,10 @@ const renderComponent = (profileId = profile.id()) => {
 	const contactsURL = `/profiles/${profileId}/contacts`;
 	history.push(contactsURL);
 
-	return render(
-		<Route path="/profiles/:profileId/contacts" element={<Contacts />} />,
-		{
-			history,
-			route: contactsURL,
-		},
-	);
+	return render(<Route path="/profiles/:profileId/contacts" element={<Contacts />} />, {
+		history,
+		route: contactsURL,
+	});
 };
 
 const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profileId = profile.id()) => {
@@ -43,7 +39,7 @@ const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profile
 	history.push(contactsURL);
 
 	return renderResponsiveWithRoute(
-		<Route path="/profiles/:profileId/contacts" element={<Contacts />}/>,
+		<Route path="/profiles/:profileId/contacts" element={<Contacts />} />,
 		breakpoint,
 		{
 			history,

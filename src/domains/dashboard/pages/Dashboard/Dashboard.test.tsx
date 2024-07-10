@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
@@ -90,14 +89,11 @@ describe("Dashboard", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard" element={<Dashboard />} />,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		const { asFragment } = render(<Route path="/profiles/:profileId/dashboard" element={<Dashboard />} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
@@ -115,14 +111,11 @@ describe("Dashboard", () => {
 	it("should show introductory tutorial", async () => {
 		const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<Dashboard />} />,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Dashboard />} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await expect(screen.findByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).resolves.toBeVisible();
 

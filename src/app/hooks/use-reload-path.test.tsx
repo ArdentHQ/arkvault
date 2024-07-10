@@ -20,9 +20,7 @@ describe("useReloadPath hook", () => {
 	};
 
 	it("should render useReloadPath", () => {
-		render(
-			<Route path="/" element={<TestComponent />} />,
-		);
+		render(<Route path="/" element={<TestComponent />} />);
 
 		expect(screen.getByTestId("header_test")).toBeInTheDocument();
 

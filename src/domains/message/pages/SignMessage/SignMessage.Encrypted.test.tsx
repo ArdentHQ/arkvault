@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -71,13 +70,10 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 
 		history.push(walletUrl(encryptedWallet.id()));
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />} />,
-			{
-				history,
-				route: walletUrl(encryptedWallet.id()),
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />} />, {
+			history,
+			route: walletUrl(encryptedWallet.id()),
+		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
@@ -125,13 +121,10 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 
 		history.push(walletUrl(encryptedWallet.id()));
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />} />,
-			{
-				history,
-				route: walletUrl(encryptedWallet.id()),
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />} />, {
+			history,
+			route: walletUrl(encryptedWallet.id()),
+		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 

@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -16,7 +15,8 @@ import {
 	renderResponsiveWithRoute,
 	screen,
 	waitFor,
-	triggerMessageSignOnce, generateHistoryCalledWith,
+	triggerMessageSignOnce,
+	generateHistoryCalledWith,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -96,13 +96,10 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should switch between manual and json input", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />, {
+			history,
+			route: walletUrl,
+		});
 
 		userEvent.type(signatoryInput(), signedMessage.signatory);
 		userEvent.type(messageInput(), signedMessage.message);
@@ -163,13 +160,10 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should verify message", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />, {
+			history,
+			route: walletUrl,
+		});
 
 		userEvent.type(signatoryInput(), signedMessage.signatory);
 		userEvent.type(messageInput(), signedMessage.message);
@@ -199,13 +193,10 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should verify message using json", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />, {
+			history,
+			route: walletUrl,
+		});
 
 		userEvent.type(signatoryInput(), signedMessage.signatory);
 		userEvent.type(messageInput(), signedMessage.message);
@@ -227,13 +218,10 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should not paste json values if all fields are empty", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />, {
+			history,
+			route: walletUrl,
+		});
 
 		userEvent.paste(messageInput(), "");
 		userEvent.paste(signatoryInput(), "");
@@ -255,13 +243,10 @@ describe("VerifyMessage", () => {
 
 		history.push(url);
 
-		render(
-			<Route path="/profiles/:profileId/verify-message" element={<VerifyMessage />} />,
-			{
-				history,
-				route: url,
-			},
-		);
+		render(<Route path="/profiles/:profileId/verify-message" element={<VerifyMessage />} />, {
+			history,
+			route: url,
+		});
 
 		expect(signatoryInput()).toHaveValue("025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca");
 		expect(messageInput()).toHaveValue("hello world");
@@ -283,13 +268,10 @@ describe("VerifyMessage", () => {
 
 		history.push(url);
 
-		render(
-			<Route path="/profiles/:profileId/verify-message" element={<VerifyMessage />} />,
-			{
-				history,
-				route: url,
-			},
-		);
+		render(<Route path="/profiles/:profileId/verify-message" element={<VerifyMessage />} />, {
+			history,
+			route: url,
+		});
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE);
 
@@ -297,17 +279,14 @@ describe("VerifyMessage", () => {
 
 		userEvent.click(screen.getByTestId("VerifyMessage__back-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: "/"}));
+		expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({ pathname: "/" }));
 	});
 
 	it("should fail to verify with invalid signature", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />, {
+			history,
+			route: walletUrl,
+		});
 
 		userEvent.paste(signatoryInput(), signedMessage.signatory);
 		userEvent.paste(messageInput(), signedMessage.message);
@@ -323,13 +302,10 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should fail to verify using invalid data", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />, {
+			history,
+			route: walletUrl,
+		});
 
 		const messageSpy = vi.spyOn(wallet.message(), "verify").mockResolvedValue(false);
 
@@ -349,13 +325,10 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should render error step if validation throws an error", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/verify-message" element={<VerifyMessage />} />, {
+			history,
+			route: walletUrl,
+		});
 
 		const messageSpy = vi.spyOn(wallet.message(), "verify").mockRejectedValue(new Error("error"));
 
@@ -375,7 +348,9 @@ describe("VerifyMessage", () => {
 
 		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}`}));
+		expect(historySpy).toHaveBeenCalledWith(
+			...generateHistoryCalledWith({ pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}` }),
+		);
 
 		historySpy.mockRestore();
 		messageSpy.mockRestore();

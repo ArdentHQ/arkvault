@@ -49,15 +49,10 @@ describe("useProfileSyncStatus", () => {
 			return <div data-testid="ProfileSynced">test</div>;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<Component />}>
-
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />}></Route>, {
+			history,
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
@@ -114,15 +109,10 @@ describe("useProfileSyncStatus", () => {
 			return <div data-testid="ProfileSyncedWithError">test</div>;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<Component />}>
-
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />}></Route>, {
+			history,
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("ProfileSyncedWithError")).resolves.toBeVisible();
 
@@ -156,9 +146,10 @@ describe("useProfileSyncStatus", () => {
 		history.push(`/profiles/${profile.id()}/dashboard`);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileRestored">test</div>}>
-
-			</Route>,
+			<Route
+				path="/profiles/:profileId/dashboard"
+				element={<div data-testid="ProfileRestored">test</div>}
+			></Route>,
 			{
 				history,
 				route: `/profiles/${profile.id()}/dashboard`,

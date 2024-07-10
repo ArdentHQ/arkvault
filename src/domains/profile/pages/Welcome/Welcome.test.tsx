@@ -91,16 +91,11 @@ describe("Welcome with deeplink", () => {
 			values: () => [passwordProtectedProfile],
 		}));
 
-		render(
-			<Route path="/" element={<Welcome />}>
-
-			</Route>,
-			{
-				history,
-				// Using transfer page as an example
-				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-			},
-		);
+		render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			// Using transfer page as an example
+			route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+		});
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -121,14 +116,10 @@ describe("Welcome with deeplink", () => {
 	it("should navigate to vote page", async () => {
 		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
 
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -140,14 +131,10 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to verify message page", async () => {
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature",
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature",
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -166,14 +153,10 @@ describe("Welcome with deeplink", () => {
 
 		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
 
-		render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
-			},
-		);
+		render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+		});
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -194,14 +177,10 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if the coin is not supported", async () => {
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=transfer&coin=doge&network=ark.mainnet",
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=transfer&coin=doge&network=ark.mainnet",
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -213,14 +192,10 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should ignore multiple clicks", async () => {
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=transfer&coin=ark",
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=transfer&coin=ark",
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -250,14 +225,10 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if the method is not supported", async () => {
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=nuke&coin=ark&network=ark.mainnet",
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=nuke&coin=ark&network=ark.mainnet",
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -269,14 +240,10 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if the network and nethash are both missing", async () => {
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=transfer&coin=ark",
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=transfer&coin=ark",
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -288,14 +255,10 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if the network parameter is invalid", async () => {
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=transfer&coin=ark&network=custom",
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=transfer&coin=ark&network=custom",
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -307,14 +270,10 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if there are no available senders for network", async () => {
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: mainnetDeepLink,
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: mainnetDeepLink,
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -327,14 +286,10 @@ describe("Welcome with deeplink", () => {
 
 	it("should show a warning if there is no network for the given nethash", async () => {
 		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: `/?method=transfer&coin=ark&nethash=${nethash}`,
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: `/?method=transfer&coin=ark&nethash=${nethash}`,
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -352,14 +307,10 @@ describe("Welcome with deeplink", () => {
 
 	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
 		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: `/?method=transfer&coin=ark&nethash=${nethash}`,
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: `/?method=transfer&coin=ark&nethash=${nethash}`,
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -371,14 +322,10 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to transfer page with network parameter", async () => {
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=transfer&coin=ark&network=ark.devnet",
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=transfer&coin=ark&network=ark.devnet",
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -388,14 +335,10 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to transfer page with nethash parameter", async () => {
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -412,15 +355,11 @@ describe("Welcome with deeplink", () => {
 			values: () => [profile],
 		}));
 
-		render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				// Using transfer page as an example
-				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-			},
-		);
+		render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			// Using transfer page as an example
+			route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+		});
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 
@@ -434,14 +373,10 @@ describe("Welcome with deeplink", () => {
 	it("should prompt the user to select a profile", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-		render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: mainnetDeepLink,
-			},
-		);
+		render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: mainnetDeepLink,
+		});
 
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
@@ -456,14 +391,10 @@ describe("Welcome with deeplink", () => {
 	])("should clear deeplink and do not show a warning toast in %s page", async (page, path) => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-		render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: mainnetDeepLink,
-			},
-		);
+		render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: mainnetDeepLink,
+		});
 
 		await waitFor(() => {
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 });
@@ -479,14 +410,10 @@ describe("Welcome with deeplink", () => {
 	it("should clear the profile validation timeout", async () => {
 		const clearTimeoutSpy = vi.spyOn(window, "clearTimeout");
 
-		const { unmount } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: mainnetDeepLink,
-			},
-		);
+		const { unmount } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: mainnetDeepLink,
+		});
 
 		unmount();
 
@@ -496,14 +423,10 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to sign page", async () => {
-		const { container } = render(
-			<Route path="/" element={<Welcome />}>
-			</Route>,
-			{
-				history,
-				route: "/?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message%20to%20sign",
-			},
-		);
+		const { container } = render(<Route path="/" element={<Welcome />}></Route>, {
+			history,
+			route: "/?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message%20to%20sign",
+		});
 
 		expect(container).toBeInTheDocument();
 

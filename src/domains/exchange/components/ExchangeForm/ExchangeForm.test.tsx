@@ -15,7 +15,8 @@ import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { StatusStep } from "./StatusStep";
 import {
-	env, generateHistoryCalledWith,
+	env,
+	generateHistoryCalledWith,
 	getDefaultProfileId,
 	render,
 	renderResponsiveWithRoute,
@@ -168,9 +169,14 @@ describe("ExchangeForm", () => {
 
 	const renderComponent = (component: React.ReactNode) =>
 		render(
-			<Route path="/profiles/:profileId/exchange/view" element={	<ExchangeProvider>
-				<Wrapper>{component}</Wrapper>
-			</ExchangeProvider>} />,
+			<Route
+				path="/profiles/:profileId/exchange/view"
+				element={
+					<ExchangeProvider>
+						<Wrapper>{component}</Wrapper>
+					</ExchangeProvider>
+				}
+			/>,
 			{
 				history,
 				route: exchangeURL,
@@ -181,11 +187,16 @@ describe("ExchangeForm", () => {
 		const onReady = vi.fn();
 
 		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/exchange/view" element={		<ExchangeProvider>
-				<Wrapper>
-					<ExchangeForm onReady={onReady} />
-				</Wrapper>
-			</ExchangeProvider>} />,
+			<Route
+				path="/profiles/:profileId/exchange/view"
+				element={
+					<ExchangeProvider>
+						<Wrapper>
+							<ExchangeForm onReady={onReady} />
+						</Wrapper>
+					</ExchangeProvider>
+				}
+			/>,
 			breakpoint,
 			{
 				history,
@@ -309,7 +320,9 @@ describe("ExchangeForm", () => {
 		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 
 		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: `/profiles/${getDefaultProfileId()}/exchange`}));
+			expect(historySpy).toHaveBeenCalledWith(
+				...generateHistoryCalledWith({ pathname: `/profiles/${getDefaultProfileId()}/exchange` }),
+			);
 		});
 
 		historySpy.mockRestore();
@@ -1309,7 +1322,9 @@ describe("ExchangeForm", () => {
 		userEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
 
 		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: `/profiles/${getDefaultProfileId()}/dashboard`}));
+			expect(historySpy).toHaveBeenCalledWith(
+				...generateHistoryCalledWith({ pathname: `/profiles/${getDefaultProfileId()}/dashboard` }),
+			);
 		});
 
 		historySpy.mockRestore();
@@ -1361,11 +1376,16 @@ describe("ExchangeForm", () => {
 		}));
 
 		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/exchange/view" element={<ExchangeProvider>
-				<Wrapper>
-					<ExchangeForm onReady={onReady} />
-				</Wrapper>
-			</ExchangeProvider>} />,
+			<Route
+				path="/profiles/:profileId/exchange/view"
+				element={
+					<ExchangeProvider>
+						<Wrapper>
+							<ExchangeForm onReady={onReady} />
+						</Wrapper>
+					</ExchangeProvider>
+				}
+			/>,
 			breakpoint,
 			{
 				history,

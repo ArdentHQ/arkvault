@@ -18,7 +18,7 @@ import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
 import { StubStorage } from "@/tests/mocks";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
-import {CustomRouter} from "./CustomRouter";
+import { CustomRouter } from "./CustomRouter";
 export {
 	mockNanoSTransport,
 	mockLedgerTransportError,
@@ -114,7 +114,6 @@ interface RenderWithRouterOptions {
 	withProfileSynchronizer?: boolean;
 	profileSynchronizerOptions?: Record<string, any>;
 }
-
 
 const renderWithRouter = (
 	component: React.ReactElement,

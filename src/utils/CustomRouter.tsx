@@ -1,6 +1,6 @@
-import React, {ReactNode, useRef} from "react";
-import {BrowserHistory, createHashHistory} from "history";
-import {Router} from "react-router-dom";
+import React, { ReactNode, useRef } from "react";
+import { BrowserHistory, createHashHistory } from "history";
+import { Router } from "react-router-dom";
 
 interface Props {
 	basename?: string;
@@ -23,8 +23,8 @@ export const CustomRouter = ({ basename, children, history }: Props) => {
 	);
 };
 
-export const CustomRouterWrapper = ({history, children}: {history?: BrowserHistory, children: ReactNode}) => {
-	const historyRef = useRef(history ?? createHashHistory())
+export const CustomRouterWrapper = ({ history, children }: { history?: BrowserHistory; children: ReactNode }) => {
+	const historyRef = useRef(history ?? createHashHistory());
 
-	return <CustomRouter history={historyRef.current}> {children} </CustomRouter>
-}
+	return <CustomRouter history={historyRef.current}> {children} </CustomRouter>;
+};

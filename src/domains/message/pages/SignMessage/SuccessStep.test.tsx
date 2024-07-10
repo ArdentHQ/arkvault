@@ -13,11 +13,15 @@ describe("SignMessage success step", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={	<SuccessStep
-				wallet={profile.wallets().first()}
-				signedMessage={{ message: "Test Message", mnemonic: "1", signatory: "!", signature: "1" }}
-			/>}>
-			</Route>,
+			<Route
+				path="/profiles/:profileId/wallets/:walletId/sign-message"
+				element={
+					<SuccessStep
+						wallet={profile.wallets().first()}
+						signedMessage={{ message: "Test Message", mnemonic: "1", signatory: "!", signature: "1" }}
+					/>
+				}
+			></Route>,
 			breakpoint,
 			{
 				history,

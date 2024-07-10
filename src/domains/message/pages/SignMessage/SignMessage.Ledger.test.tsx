@@ -74,14 +74,10 @@ describe("SignMessage with ledger", () => {
 
 		const ledgerListenMock = mockNanoXTransport();
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}>
-			</Route>,
-			{
-				history,
-				route: walletUrl(wallet.id()),
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}></Route>, {
+			history,
+			route: walletUrl(wallet.id()),
+		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
@@ -134,14 +130,10 @@ describe("SignMessage with ledger", () => {
 
 		const ledgerListenMock = mockNanoXTransport();
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}>
-			</Route>,
-			{
-				history,
-				route: walletUrl(wallet.id()),
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}></Route>, {
+			history,
+			route: walletUrl(wallet.id()),
+		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 

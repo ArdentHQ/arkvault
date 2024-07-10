@@ -26,7 +26,7 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import {CustomRouter, CustomRouterWrapper} from "../../utils/CustomRouter";
+import { CustomRouter, CustomRouterWrapper } from "../../utils/CustomRouter";
 
 const history = createHashHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -504,9 +504,7 @@ describe("useProfileRestore", () => {
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider>
-					<CustomRouterWrapper>
-						{children}
-					</CustomRouterWrapper>
+					<CustomRouterWrapper>{children}</CustomRouterWrapper>
 				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
@@ -534,9 +532,7 @@ describe("useProfileRestore", () => {
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider>
-					<CustomRouterWrapper>
-						{children}
-					</CustomRouterWrapper>
+					<CustomRouterWrapper>{children}</CustomRouterWrapper>
 				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
@@ -572,9 +568,7 @@ describe("useProfileRestore", () => {
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider>
-					<CustomRouterWrapper>
-						{children}
-					</CustomRouterWrapper>
+					<CustomRouterWrapper>{children}</CustomRouterWrapper>
 				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
@@ -611,9 +605,7 @@ describe("useProfileRestore", () => {
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider>
-					<CustomRouterWrapper>
-						{children}
-					</CustomRouterWrapper>
+					<CustomRouterWrapper>{children}</CustomRouterWrapper>
 				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
@@ -646,9 +638,7 @@ describe("useProfileRestore", () => {
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider>
-					<CustomRouterWrapper>
-						{children}
-					</CustomRouterWrapper>
+					<CustomRouterWrapper>{children}</CustomRouterWrapper>
 				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
@@ -696,14 +686,11 @@ describe("useProfileRestore", () => {
 			throw new Error("sync test");
 		});
 
-		render(
-			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() => expect(profileSyncMock).toHaveBeenCalledWith());
 
