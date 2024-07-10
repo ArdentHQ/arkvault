@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
@@ -91,9 +91,7 @@ describe("Dashboard", () => {
 
 	it("should render", async () => {
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<Dashboard />} />,
 			{
 				history,
 				route: dashboardURL,
@@ -118,9 +116,7 @@ describe("Dashboard", () => {
 		const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<Dashboard />} />,
 			{
 				history,
 				route: dashboardURL,
