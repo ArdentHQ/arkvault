@@ -6,7 +6,7 @@ import { createHashHistory, HashHistory, To } from "history";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { I18nextProvider } from "react-i18next";
-import { Router } from "react-router-dom";
+import {Router, Routes} from "react-router-dom";
 import { Context as ResponsiveContext } from "react-responsive";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
@@ -143,16 +143,18 @@ const renderWithRouter = (
 	const RouterWrapper = ({ children }: { children: React.ReactNode }) =>
 		withProviders ? (
 			<WithProviders>
-				<Router history={history}>
+				<Router location={history.location} navigator={history}>
 					<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
 				</Router>
 			</WithProviders>
 		) : (
-			<Router history={history}>{children}</Router>
+			<Router location={history.location} navigator={history}>{children}</Router>
 		);
 
+	const child = component.type.name === "Route" ? <Routes>{component}</Routes> : component;
+
 	return {
-		...customRender(component, { wrapper: RouterWrapper }),
+		...customRender(child, { wrapper: RouterWrapper }),
 		history,
 	};
 };
@@ -229,8 +231,10 @@ export const renderResponsiveWithRoute = (
 		xs: 375,
 	};
 
+	const child = component.type.name === "Route" ? <Routes>{component}</Routes> : component;
+
 	return renderWithRouter(
-		<ResponsiveContext.Provider value={{ width: widths[breakpoint] }}>{component}</ResponsiveContext.Provider>,
+		<ResponsiveContext.Provider value={{ width: widths[breakpoint] }}>{child}</ResponsiveContext.Provider>,
 		options,
 	);
 };
@@ -350,3 +354,15 @@ export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet)
 };
 
 export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
+
+export const generateHistoryCalledWith = ({ pathname = "", hash = "", search = "" }) => {
+	return [
+		{
+			hash,
+			pathname,
+			search,
+		},
+		undefined,
+		{},
+	]
+}

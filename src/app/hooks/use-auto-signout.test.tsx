@@ -2,7 +2,7 @@
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { act, env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
@@ -36,9 +36,7 @@ describe("useAutoSignOut", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<Component />}/>,
 			{
 				history,
 				route: dashboardURL,
@@ -72,9 +70,7 @@ describe("useAutoSignOut", () => {
 		};
 
 		render(
-			<Route path="/">
-				<Component />
-			</Route>,
+			<Route path="/" element={<Component />}/>,
 			{
 				history,
 				route: "/",
