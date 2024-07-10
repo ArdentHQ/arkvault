@@ -3,10 +3,10 @@ import { renderHook } from "@testing-library/react-hooks";
 import { createHashHistory } from "history";
 import { when } from "jest-when";
 import React from "react";
-import { Router } from "react-router-dom";
 
 import { useTimeFormat } from "./use-time-format";
 import { env, getDefaultProfileId, WithProviders } from "@/utils/testing-library";
+import { CustomRouter } from "@/utils/CustomRouter";
 
 let profile: Contracts.IProfile;
 
@@ -15,7 +15,7 @@ const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 
 const wrapper = ({ children }: any) => (
 	<WithProviders>
-		<Router history={history}>{children}</Router>
+		<CustomRouter history={history}>{children}</CustomRouter>
 	</WithProviders>
 );
 
@@ -26,7 +26,6 @@ describe("useTimeFormat", () => {
 	});
 
 	it("should return format without profile route", () => {
-		const wrapper = ({ children }: any) => <WithProviders>{children}</WithProviders>;
 		const { result } = renderHook(() => useTimeFormat(), { wrapper });
 
 		expect(result.current).toBe("DD.MM.YYYY h:mm A");

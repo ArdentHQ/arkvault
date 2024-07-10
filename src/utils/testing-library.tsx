@@ -131,6 +131,7 @@ const renderWithRouter = (
 		history = createHashHistory();
 		history.replace("/");
 	}
+
 	if (route) {
 		history.replace(route, state ?? {});
 	}
