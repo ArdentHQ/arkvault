@@ -50,8 +50,8 @@ describe("useProfileSyncStatus", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
+			<Route path="/profiles/:profileId/dashboard" element={<Component />}>
+
 			</Route>,
 			{
 				history,
@@ -115,8 +115,8 @@ describe("useProfileSyncStatus", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
+			<Route path="/profiles/:profileId/dashboard" element={<Component />}>
+
 			</Route>,
 			{
 				history,
@@ -156,8 +156,8 @@ describe("useProfileSyncStatus", () => {
 		history.push(`/profiles/${profile.id()}/dashboard`);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileRestored">test</div>
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileRestored">test</div>}>
+
 			</Route>,
 			{
 				history,

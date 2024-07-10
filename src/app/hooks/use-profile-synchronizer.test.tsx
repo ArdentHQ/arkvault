@@ -26,6 +26,7 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import {CustomRouter, CustomRouterWrapper} from "../../utils/CustomRouter";
 
 const history = createHashHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -502,7 +503,11 @@ describe("useProfileRestore", () => {
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<CustomRouterWrapper>
+						{children}
+					</CustomRouterWrapper>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -528,7 +533,11 @@ describe("useProfileRestore", () => {
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<CustomRouterWrapper>
+						{children}
+					</CustomRouterWrapper>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -562,7 +571,11 @@ describe("useProfileRestore", () => {
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<CustomRouterWrapper>
+						{children}
+					</CustomRouterWrapper>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -597,7 +610,11 @@ describe("useProfileRestore", () => {
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<CustomRouterWrapper>
+						{children}
+					</CustomRouterWrapper>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -628,8 +645,10 @@ describe("useProfileRestore", () => {
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider defaultConfiguration={{ restoredProfiles: [profile.id()] }}>
-					{children}
+				<ConfigurationProvider>
+					<CustomRouterWrapper>
+						{children}
+					</CustomRouterWrapper>
 				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
@@ -678,9 +697,7 @@ describe("useProfileRestore", () => {
 		});
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileSynced">test</div>
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />,
 			{
 				history,
 				route: dashboardURL,
