@@ -38,9 +38,7 @@ describe("useQueryParameters hook", () => {
 
 	it("should render useQueryParameters", () => {
 		render(
-			<Route pathname="/">
-				<TestComponent />
-			</Route>,
+			<Route path="/" element={<TestComponent />} />,
 		);
 
 		expect(screen.getByTestId("header_test")).toBeInTheDocument();
