@@ -88,8 +88,8 @@ describe("SignMessage", () => {
 			history.push(signUrl);
 
 			render(
-				<Route path="/profiles/:profileId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/sign-message" element={<SignMessage />}>
+
 				</Route>,
 				{
 					history,
@@ -132,8 +132,7 @@ describe("SignMessage", () => {
 			history.push(signUrl);
 
 			render(
-				<Route path="/profiles/:profileId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/sign-message" element={<SignMessage />}>
 				</Route>,
 				{
 					history,
@@ -160,8 +159,7 @@ describe("SignMessage", () => {
 			history.push(signUrl);
 
 			render(
-				<Route path="/profiles/:profileId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/sign-message" element={<SignMessage />}>
 				</Route>,
 				{
 					history,
@@ -188,8 +186,7 @@ describe("SignMessage", () => {
 			await wallet.synchroniser().identity();
 
 			const { asFragment } = renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}>
 				</Route>,
 				breakpoint,
 				{
@@ -209,8 +206,7 @@ describe("SignMessage", () => {
 			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 			const { asFragment } = render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}>
 				</Route>,
 				{
 					history,
@@ -233,8 +229,7 @@ describe("SignMessage", () => {
 			mockNanoXTransport();
 
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}>
 				</Route>,
 				{
 					history,
@@ -264,8 +259,7 @@ describe("SignMessage", () => {
 			};
 
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}>
 				</Route>,
 				{
 					history,
@@ -341,8 +335,7 @@ describe("SignMessage", () => {
 			});
 
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}>
 				</Route>,
 				{
 					history,

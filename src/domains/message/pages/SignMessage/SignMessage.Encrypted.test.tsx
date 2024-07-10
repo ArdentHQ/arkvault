@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -72,9 +72,7 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 		history.push(walletUrl(encryptedWallet.id()));
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />} />,
 			{
 				history,
 				route: walletUrl(encryptedWallet.id()),
@@ -128,9 +126,7 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 		history.push(walletUrl(encryptedWallet.id()));
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
-			</Route>,
+			<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />} />,
 			{
 				history,
 				route: walletUrl(encryptedWallet.id()),

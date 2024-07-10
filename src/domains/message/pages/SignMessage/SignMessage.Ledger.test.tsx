@@ -75,8 +75,7 @@ describe("SignMessage with ledger", () => {
 		const ledgerListenMock = mockNanoXTransport();
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
+			<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}>
 			</Route>,
 			{
 				history,
@@ -136,8 +135,7 @@ describe("SignMessage with ledger", () => {
 		const ledgerListenMock = mockNanoXTransport();
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
+			<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}>
 			</Route>,
 			{
 				history,

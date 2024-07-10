@@ -92,8 +92,8 @@ describe("Welcome with deeplink", () => {
 		}));
 
 		render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
+
 			</Route>,
 			{
 				history,
@@ -122,8 +122,7 @@ describe("Welcome with deeplink", () => {
 		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
 
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -142,8 +141,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should navigate to verify message page", async () => {
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -169,8 +167,7 @@ describe("Welcome with deeplink", () => {
 		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
 
 		render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -198,8 +195,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should show a warning if the coin is not supported", async () => {
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -218,8 +214,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should ignore multiple clicks", async () => {
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -256,8 +251,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should show a warning if the method is not supported", async () => {
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -276,8 +270,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should show a warning if the network and nethash are both missing", async () => {
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -296,8 +289,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should show a warning if the network parameter is invalid", async () => {
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -316,8 +308,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should show a warning if there are no available senders for network", async () => {
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -337,8 +328,7 @@ describe("Welcome with deeplink", () => {
 	it("should show a warning if there is no network for the given nethash", async () => {
 		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -363,8 +353,7 @@ describe("Welcome with deeplink", () => {
 	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
 		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -383,8 +372,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should navigate to transfer page with network parameter", async () => {
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -401,8 +389,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should navigate to transfer page with nethash parameter", async () => {
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -426,8 +413,7 @@ describe("Welcome with deeplink", () => {
 		}));
 
 		render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -449,8 +435,7 @@ describe("Welcome with deeplink", () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -472,8 +457,7 @@ describe("Welcome with deeplink", () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -496,8 +480,7 @@ describe("Welcome with deeplink", () => {
 		const clearTimeoutSpy = vi.spyOn(window, "clearTimeout");
 
 		const { unmount } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
@@ -514,8 +497,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should navigate to sign page", async () => {
 		const { container } = render(
-			<Route path="/">
-				<Welcome />
+			<Route path="/" element={<Welcome />}>
 			</Route>,
 			{
 				history,
