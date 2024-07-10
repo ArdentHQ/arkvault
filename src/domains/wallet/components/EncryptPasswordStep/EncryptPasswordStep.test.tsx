@@ -18,7 +18,8 @@ describe("EncryptPasswordStep", () => {
 
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 
-		userEvent.paste(passwordInput, "password");
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, "password");
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
 
@@ -33,7 +34,8 @@ describe("EncryptPasswordStep", () => {
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
 
-		userEvent.paste(passwordInput, "password");
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, "password");
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
 		await waitFor(() => expect(confirmPassword).toHaveValue("password"));

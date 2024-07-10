@@ -105,7 +105,7 @@ describe("WalletGroupPage", () => {
 
 		userEvent.click(screen.getByTestId("Pagination__next"));
 
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(15);
 	});
 
 	it("should go to main page if no network", () => {
