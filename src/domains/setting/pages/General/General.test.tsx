@@ -59,9 +59,7 @@ describe("General Settings", () => {
 		history.push(`/profiles/${profile.id()}/settings`);
 
 		render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				history,
 				route: `/profiles/${profile.id()}/settings`,
@@ -84,9 +82,7 @@ describe("General Settings", () => {
 
 	it("should render", async () => {
 		const { container, asFragment } = render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -102,9 +98,7 @@ describe("General Settings", () => {
 		const isProfileRestoredMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -120,9 +114,7 @@ describe("General Settings", () => {
 
 	it("should update the avatar when removing focus from name input", async () => {
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -167,9 +159,7 @@ describe("General Settings", () => {
 
 	it("should show identicon when removing image if name is set", async () => {
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -195,9 +185,7 @@ describe("General Settings", () => {
 
 	it("should not update the uploaded avatar when removing focus from name input", async () => {
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -244,9 +232,7 @@ describe("General Settings", () => {
 		const profilesCount = env.profiles().count();
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -315,9 +301,7 @@ describe("General Settings", () => {
 
 	it("should not update profile if name consists only of whitespace", async () => {
 		render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -337,9 +321,7 @@ describe("General Settings", () => {
 
 	it("should not update profile if profile name exists", async () => {
 		render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -369,9 +351,7 @@ describe("General Settings", () => {
 
 	it("should not update profile if profile name exists (uppercase)", async () => {
 		render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -396,9 +376,7 @@ describe("General Settings", () => {
 
 	it("should not update profile if profile name is too long", async () => {
 		render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -419,9 +397,7 @@ describe("General Settings", () => {
 
 	it("should not update profile if profile name exists (padded)", async () => {
 		render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -450,9 +426,7 @@ describe("General Settings", () => {
 		["reset", resetSubmitID],
 	])("should open & close reset profile modal (%s)", async (_, buttonId) => {
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -486,9 +460,7 @@ describe("General Settings", () => {
 		const toastSpy = vi.spyOn(toasts, "success");
 
 		render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -554,9 +526,7 @@ describe("General Settings", () => {
 		expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 
 		render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -599,9 +569,7 @@ describe("General Settings", () => {
 		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings`,
 			},
@@ -674,9 +642,7 @@ describe("General Settings", () => {
 		history.push(settingsURL);
 
 		render(
-			<Route path="/profiles/:profileId/settings">
-				<GeneralSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings" element={<GeneralSettings/>}/>,
 			{
 				history,
 				route: `/profiles/${profile.id()}/settings`,

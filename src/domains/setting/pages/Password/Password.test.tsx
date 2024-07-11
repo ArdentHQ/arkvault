@@ -39,9 +39,7 @@ describe("Password Settings", () => {
 
 	it("should render password settings", async () => {
 		const { container, asFragment } = render(
-			<Route exact={false} path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={<PasswordSettings/>}/>,
 			{
 				history,
 				route: `/profiles/${profile.id()}/settings/password`,
