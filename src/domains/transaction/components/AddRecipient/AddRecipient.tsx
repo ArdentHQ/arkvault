@@ -422,7 +422,6 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 						addedRecipients.length > 0 &&
 						addedRecipients.map((recipient, index) => (
 							<AddRecipientItem
-								showAvatar={false}
 								index={index}
 								key={`${index}-${recipient.address}`}
 								recipient={recipient}
