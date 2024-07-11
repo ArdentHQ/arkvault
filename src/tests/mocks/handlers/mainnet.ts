@@ -26,14 +26,18 @@ export const mainnetHandlers = [
 		return HttpResponse.json([]);
 	}),
 	http.get("https://ark-live.arkvault.io/api/wallets/:identifier", ({ request }) => {
-		const url = new URL(request.url);
-		const identifier: string = url.searchParams.get("identifier") ?? "";
-		console.log({ identifier });
 
-		if (wallets.includes(identifier)) {
-			return HttpResponse.json(require(`../../fixtures/coins/ark/mainnet/wallets/${identifier}.json`));
+		const address = new URL(request.url).pathname.split("/").pop()
+
+		if (!address) {
+			return HttpResponse.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json"));
+		}
+
+		if (wallets.includes(address)) {
+			return HttpResponse.json(require(`../../fixtures/coins/ark/mainnet/wallets/${address}.json`));
 		}
 
 		return HttpResponse.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json"));
+
 	}),
 ];
