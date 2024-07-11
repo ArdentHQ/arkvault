@@ -22,7 +22,7 @@ export const AddRecipientItem: VFC<{
 	return (
 		<div
 			data-testid="AddRecipientItem"
-			className="mt-3 border-b border-dashed border-theme-secondary-300 pb-4 dark:border-theme-secondary-800 last:border-none last:pb-0"
+			className="mt-3 border-b border-dashed border-theme-secondary-300 pb-4 last:border-none last:pb-0 dark:border-theme-secondary-800"
 		>
 			<div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
 				<div className="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1">
