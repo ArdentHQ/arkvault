@@ -295,17 +295,17 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	const amountAddons =
 		!errors.amount && !errors.fee && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: {
-						content: (
-							<Amount
-								value={convert(amount || 0)}
-								ticker={exchangeTicker}
-								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-							/>
-						),
-					},
-				}
+				end: {
+					content: (
+						<Amount
+							value={convert(amount || 0)}
+							ticker={exchangeTicker}
+							data-testid="AddRecipient__currency-balance"
+							className="whitespace-no-break text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+						/>
+					),
+				},
+			}
 			: undefined;
 
 	return (
@@ -400,40 +400,42 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 							)}
 						</div>
 					</FormField>
+					{!isSingle && (
+						<Button
+							disabled={
+								!!errors.amount ||
+								!!errors.recipientAddress ||
+								!getValues("amount") ||
+								!getValues("recipientAddress") ||
+								addedRecipients.length >= maxRecipients
+							}
+							data-testid="AddRecipient__add-button"
+							variant="secondary"
+							className="mt-4 w-full"
+							onClick={handleAddRecipient}
+						>
+							{t("TRANSACTION.ADD_RECIPIENT")}
+						</Button>
+					)}
+
+					{!isSingle &&
+						addedRecipients.length > 0 &&
+						addedRecipients.map((recipient, index) => (
+							<AddRecipientItem
+								showAvatar={false}
+								index={index}
+								key={`${index}-${recipient.address}`}
+								recipient={recipient}
+								onDelete={handleRemoveRecipient}
+								ticker={ticker}
+								exchangeTicker={exchangeTicker}
+								showExchangeAmount={network.isLive()}
+							/>
+						))}
 				</div>
 
-				{!isSingle && (
-					<Button
-						disabled={
-							!!errors.amount ||
-							!!errors.recipientAddress ||
-							!getValues("amount") ||
-							!getValues("recipientAddress") ||
-							addedRecipients.length >= maxRecipients
-						}
-						data-testid="AddRecipient__add-button"
-						variant="secondary"
-						className="mt-4 w-full"
-						onClick={handleAddRecipient}
-					>
-						{t("TRANSACTION.ADD_RECIPIENT")}
-					</Button>
-				)}
 			</SubForm>
 
-			{!isSingle &&
-				addedRecipients.length > 0 &&
-				addedRecipients.map((recipient, index) => (
-					<AddRecipientItem
-						index={index}
-						key={`${index}-${recipient.address}`}
-						recipient={recipient}
-						onDelete={handleRemoveRecipient}
-						ticker={ticker}
-						exchangeTicker={exchangeTicker}
-						showExchangeAmount={network.isLive()}
-					/>
-				))}
 		</AddRecipientWrapper>
 	);
 };
