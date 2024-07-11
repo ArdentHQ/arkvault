@@ -1,4 +1,4 @@
-import { rest } from "msw";
+import { http, HttpResponse } from "msw";
 
 const endpoints = [
 	{ path: "", data: require("../../fixtures/exchange/exchanges.json") },
@@ -17,11 +17,11 @@ const endpoints = [
 
 export const exchangeHandlers = [
 	...endpoints.map((endpoint) =>
-		rest.get(`https://exchanges.arkvault.io/api${endpoint.path}`, (_, response, context) => {
-			return response(context.status(200), context.json(endpoint.data));
+		http.get(`https://exchanges.arkvault.io/api${endpoint.path}`, () => {
+			return HttpResponse.json(endpoint.data)
 		}),
 	),
-	rest.post("https://exchanges.arkvault.io/api/:provider/orders", (_, response, context) => {
-		return response(context.status(200), context.json(require("../../fixtures/exchange/changenow/order.json")));
+	http.post("https://exchanges.arkvault.io/api/:provider/orders", (_, response, context) => {
+		return HttpResponse.json(require("../../fixtures/exchange/changenow/order.json"))
 	}),
 ];

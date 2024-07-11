@@ -1,5 +1,4 @@
-import type { ResponseComposition, DefaultBodyType, RestContext, PathParams, RestRequest } from "msw";
-import { rest } from "msw";
+import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 
 import { cryptoCompareHandlers, devnetHandlers, exchangeHandlers, mainnetHandlers, miscHandlers } from "./handlers";
@@ -13,33 +12,30 @@ export const requestMock = (path: string, data: undefined | string | object, opt
 		...options,
 	};
 
-	return rest[requestOptions.method](
-		path,
-		(
-			request: RestRequest<never, PathParams<string>>,
-			response: ResponseComposition<DefaultBodyType>,
-			context: RestContext,
-		) => {
+	return http[requestOptions.method](
+		path, ({ request }) => {
 			if (typeof data === "function") {
-				throw new Error(`Mock request using "rest.${requestOptions.method}()"`);
+				throw new Error(`Mock request using "http.${requestOptions.method}()"`);
 			}
 
 			if (requestOptions.query) {
-				const params = request.url.searchParams;
+				const url = new URL(request.url)
 
 				for (const [name, value] of Object.entries(requestOptions.query)) {
-					if (params.get(name) !== (value === null || value === undefined ? null : value.toString())) {
+					if (url.searchParams.get(name) !== (value === null || value === undefined ? null : value.toString())) {
 						return;
 					}
 				}
 			}
 
-			if (requestOptions.modifier) {
-				// @ts-ignore
-				return response[requestOptions.modifier](context.status(requestOptions.status), context.json(data));
-			}
+			console.log({ requestOptions })
+			// @TODO: Revisit condition.
+			// if (requestOptions.modifier) {
+			// 	return response[requestOptions.modifier](context.status(requestOptions.status), context.json(data));
+			// }
 
-			return response(context.status(requestOptions.status), context.json(data));
+			return HttpResponse.json(data);
+
 		},
 	);
 };

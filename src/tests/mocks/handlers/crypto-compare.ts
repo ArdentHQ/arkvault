@@ -1,4 +1,4 @@
-import { rest } from "msw";
+import { http, HttpResponse } from "msw";
 
 const endpoints = [
 	{ path: "/data/dayAvg", data: require("../../fixtures/exchange/cryptocompare.json") },
@@ -7,8 +7,8 @@ const endpoints = [
 
 export const cryptoCompareHandlers = [
 	...endpoints.map((endpoint) =>
-		rest.get(`https://min-api.cryptocompare.com${endpoint.path}`, (_, response, context) => {
-			return response(context.status(200), context.json(endpoint.data));
+		http.get(`https://min-api.cryptocompare.com${endpoint.path}`, () => {
+			return HttpResponse.json(endpoint.data)
 		}),
 	),
 ];
