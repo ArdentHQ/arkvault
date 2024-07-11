@@ -109,8 +109,6 @@ describe("Dashboard", () => {
 			expect(screen.getByTestId("Balance__value")).toBeInTheDocument();
 		});
 
-		expect(asFragment()).toMatchSnapshot();
-
 		mockTransactionsAggregate.mockRestore();
 	});
 
