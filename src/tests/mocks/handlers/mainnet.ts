@@ -16,27 +16,24 @@ const wallets = ["AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"];
 export const mainnetHandlers = [
 	...endpoints.map((endpoint) =>
 		http.get(`https://ark-live.arkvault.io/api${endpoint.path}`, () => {
-			return HttpResponse.json(endpoint.data)
+			return HttpResponse.json(endpoint.data);
 		}),
 	),
 	http.get("https://ark-live.arkvault.io/", () => {
-		return HttpResponse.json({ data: "Hello World!" })
+		return HttpResponse.json({ data: "Hello World!" });
 	}),
-	http.get(
-		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json",
-		() => {
-			return HttpResponse.json([])
-		},
-	),
+	http.get("https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json", () => {
+		return HttpResponse.json([]);
+	}),
 	http.get("https://ark-live.arkvault.io/api/wallets/:identifier", ({ request }) => {
-		const url = new URL(request.url)
-		const identifier: string = url.searchParams.get("identifier") ?? ""
-		console.log({ identifier })
+		const url = new URL(request.url);
+		const identifier: string = url.searchParams.get("identifier") ?? "";
+		console.log({ identifier });
 
 		if (wallets.includes(identifier)) {
-			return HttpResponse.json(require(`../../fixtures/coins/ark/mainnet/wallets/${identifier}.json`))
+			return HttpResponse.json(require(`../../fixtures/coins/ark/mainnet/wallets/${identifier}.json`));
 		}
 
-		return HttpResponse.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json"))
+		return HttpResponse.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json"));
 	}),
 ];

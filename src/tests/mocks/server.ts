@@ -12,32 +12,29 @@ export const requestMock = (path: string, data: undefined | string | object, opt
 		...options,
 	};
 
-	return http[requestOptions.method](
-		path, ({ request }) => {
-			if (typeof data === "function") {
-				throw new Error(`Mock request using "http.${requestOptions.method}()"`);
-			}
+	return http[requestOptions.method](path, ({ request }) => {
+		if (typeof data === "function") {
+			throw new Error(`Mock request using "http.${requestOptions.method}()"`);
+		}
 
-			if (requestOptions.query) {
-				const url = new URL(request.url)
+		if (requestOptions.query) {
+			const url = new URL(request.url);
 
-				for (const [name, value] of Object.entries(requestOptions.query)) {
-					if (url.searchParams.get(name) !== (value === null || value === undefined ? null : value.toString())) {
-						return;
-					}
+			for (const [name, value] of Object.entries(requestOptions.query)) {
+				if (url.searchParams.get(name) !== (value === null || value === undefined ? null : value.toString())) {
+					return;
 				}
 			}
+		}
 
-			console.log({ requestOptions })
-			// @TODO: Revisit condition.
-			// if (requestOptions.modifier) {
-			// 	return response[requestOptions.modifier](context.status(requestOptions.status), context.json(data));
-			// }
+		console.log({ requestOptions });
+		// @TODO: Revisit condition.
+		// if (requestOptions.modifier) {
+		// 	return response[requestOptions.modifier](context.status(requestOptions.status), context.json(data));
+		// }
 
-			return HttpResponse.json(data);
-
-		},
-	);
+		return HttpResponse.json(data);
+	});
 };
 
 export const requestMockOnce = (path: string, data: undefined | string | object, options = {}) =>

@@ -8,7 +8,7 @@ const endpoints = [
 export const cryptoCompareHandlers = [
 	...endpoints.map((endpoint) =>
 		http.get(`https://min-api.cryptocompare.com${endpoint.path}`, () => {
-			return HttpResponse.json(endpoint.data)
+			return HttpResponse.json(endpoint.data);
 		}),
 	),
 ];
