@@ -28,15 +28,10 @@ export const requestMock = (path: string, data: undefined | string | object, opt
 				}
 			}
 
-			console.log({ requestOptions })
-			// @TODO: Revisit condition.
-			// if (requestOptions.modifier) {
-			// 	return response[requestOptions.modifier](context.status(requestOptions.status), context.json(data));
-			// }
-
-			return HttpResponse.json(data);
+			return HttpResponse.json(data, requestOptions);
 
 		},
+		{ once: requestOptions.modifier === "once" }
 	);
 };
 
