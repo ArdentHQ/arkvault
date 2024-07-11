@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook, act } from "@testing-library/react-hooks";
 import { http, HttpResponse } from "msw";
@@ -169,21 +168,20 @@ describe("useTransactionExport hook", () => {
 		const { result } = renderExportHook();
 
 		const handler = http.get(`https://ark-test.arkvault.io/api/transactions`, ({ request }) => {
-			const url = new URL(request.url)
-			const to = url.searchParams.get('timestamp.to')
+			const url = new URL(request.url);
+			const to = url.searchParams.get("timestamp.to");
 
 			// return OK response for the first request
 			if (to === "0") {
-
 				return HttpResponse.json({
 					data: Array.from({ length: 100 }).fill(transactionsFixture.data[0]),
 					meta: {
 						...transactionsFixture.meta,
 					},
-				})
+				});
 			}
 
-			return HttpResponse.json([])
+			return HttpResponse.json([]);
 		});
 
 		server.use(handler);

@@ -18,10 +18,10 @@ const endpoints = [
 export const exchangeHandlers = [
 	...endpoints.map((endpoint) =>
 		http.get(`https://exchanges.arkvault.io/api${endpoint.path}`, () => {
-			return HttpResponse.json(endpoint.data)
+			return HttpResponse.json(endpoint.data);
 		}),
 	),
 	http.post("https://exchanges.arkvault.io/api/:provider/orders", (_, response, context) => {
-		return HttpResponse.json(require("../../fixtures/exchange/changenow/order.json"))
+		return HttpResponse.json(require("../../fixtures/exchange/changenow/order.json"));
 	}),
 ];

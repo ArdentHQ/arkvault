@@ -36,29 +36,26 @@ const wallets = [
 export const devnetHandlers = [
 	...endpoints.map((endpoint) => {
 		return http.get(`https://ark-test.arkvault.io/api${endpoint.path}`, () => {
-			return HttpResponse.json(endpoint.data)
-		})
+			return HttpResponse.json(endpoint.data);
+		});
 	}),
 	http.get("https://ark-test.arkvault.io/", () => {
-		return HttpResponse.json({ data: "Hello World!" })
+		return HttpResponse.json({ data: "Hello World!" });
 	}),
-	http.get(
-		"https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json",
-		() => {
-			return HttpResponse.json([])
-		},
-	),
+	http.get("https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json", () => {
+		return HttpResponse.json([]);
+	}),
 	http.get("https://ark-test.arkvault.io/api/wallets/:identifier", (request, response, context) => {
 		const identifier = request.params.identifier as string;
 
 		if (wallets.includes(identifier)) {
-			return HttpResponse.json(require(`../../fixtures/coins/ark/devnet/wallets/${identifier}.json`))
+			return HttpResponse.json(require(`../../fixtures/coins/ark/devnet/wallets/${identifier}.json`));
 		}
 
 		if (identifier === "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192") {
-			return HttpResponse.json(delegate)
+			return HttpResponse.json(delegate);
 		}
 
-		return HttpResponse.json(require("../../fixtures/coins/ark/devnet/wallets/not-found.json"))
+		return HttpResponse.json(require("../../fixtures/coins/ark/devnet/wallets/not-found.json"));
 	}),
 ];
