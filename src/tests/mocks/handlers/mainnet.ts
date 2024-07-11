@@ -26,8 +26,7 @@ export const mainnetHandlers = [
 		return HttpResponse.json([]);
 	}),
 	http.get("https://ark-live.arkvault.io/api/wallets/:identifier", ({ request }) => {
-
-		const address = new URL(request.url).pathname.split("/").pop()
+		const address = new URL(request.url).pathname.split("/").pop();
 
 		if (!address) {
 			return HttpResponse.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json"));
@@ -38,6 +37,5 @@ export const mainnetHandlers = [
 		}
 
 		return HttpResponse.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json"));
-
 	}),
 ];
