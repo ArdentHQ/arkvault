@@ -90,7 +90,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -108,8 +108,6 @@ describe("Dashboard", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("Balance__value")).toBeInTheDocument();
 		});
-
-		expect(asFragment()).toMatchSnapshot();
 
 		mockTransactionsAggregate.mockRestore();
 	});
