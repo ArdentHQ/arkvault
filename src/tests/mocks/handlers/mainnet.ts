@@ -1,4 +1,4 @@
-import { rest } from "msw";
+import { http, HttpResponse } from "msw";
 
 const endpoints = [
 	{ path: "/blockchain", data: require("../../fixtures/coins/ark/mainnet/blockchain.json") },
@@ -15,32 +15,27 @@ const wallets = ["AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"];
 
 export const mainnetHandlers = [
 	...endpoints.map((endpoint) =>
-		rest.get(`https://ark-live.arkvault.io/api${endpoint.path}`, (_, response, context) => {
-			return response(context.status(200), context.json(endpoint.data));
+		http.get(`https://ark-live.arkvault.io/api${endpoint.path}`, () => {
+			return HttpResponse.json(endpoint.data);
 		}),
 	),
-	rest.get("https://ark-live.arkvault.io/", (_, response, context) => {
-		return response(context.status(200), context.json({ data: "Hello World!" }));
+	http.get("https://ark-live.arkvault.io/", () => {
+		return HttpResponse.json({ data: "Hello World!" });
 	}),
-	rest.get(
-		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json",
-		(_, response, context) => {
-			return response(context.status(200), context.json([]));
-		},
-	),
-	rest.get("https://ark-live.arkvault.io/api/wallets/:identifier", (request, response, context) => {
-		const identifier = request.params.identifier as string;
+	http.get("https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json", () => {
+		return HttpResponse.json([]);
+	}),
+	http.get("https://ark-live.arkvault.io/api/wallets/:identifier", ({ request }) => {
+		const address = new URL(request.url).pathname.split("/").pop();
 
-		if (wallets.includes(identifier)) {
-			return response(
-				context.status(200),
-				context.json(require(`../../fixtures/coins/ark/mainnet/wallets/${identifier}.json`)),
-			);
+		if (!address) {
+			return HttpResponse.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json"));
 		}
 
-		return response(
-			context.status(200),
-			context.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json")),
-		);
+		if (wallets.includes(address)) {
+			return HttpResponse.json(require(`../../fixtures/coins/ark/mainnet/wallets/${address}.json`));
+		}
+
+		return HttpResponse.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json"));
 	}),
 ];
