@@ -13,25 +13,27 @@ export const requestMock = (path: string, data: undefined | string | object, opt
 	};
 
 	return http[requestOptions.method](
-		path, ({ request }) => {
+		path,
+		({ request }) => {
 			if (typeof data === "function") {
 				throw new Error(`Mock request using "http.${requestOptions.method}()"`);
 			}
 
 			if (requestOptions.query) {
-				const url = new URL(request.url)
+				const url = new URL(request.url);
 
 				for (const [name, value] of Object.entries(requestOptions.query)) {
-					if (url.searchParams.get(name) !== (value === null || value === undefined ? null : value.toString())) {
+					if (
+						url.searchParams.get(name) !== (value === null || value === undefined ? null : value.toString())
+					) {
 						return;
 					}
 				}
 			}
 
 			return HttpResponse.json(data, requestOptions);
-
 		},
-		{ once: requestOptions.modifier === "once" }
+		{ once: requestOptions.modifier === "once" },
 	);
 };
 
