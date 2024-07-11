@@ -22,9 +22,7 @@ describe("Export Settings", () => {
 
 	it("should render export settings", async () => {
 		const { container, asFragment } = render(
-			<Route path="/profiles/:profileId/settings/export">
-				<ExportSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/export" element={<ExportSettings />}></Route>,
 			{
 				route: `/profiles/${profile.id()}/settings/export`,
 			},
@@ -41,9 +39,7 @@ describe("Export Settings", () => {
 			.mockResolvedValue({ name: "test.wwe" });
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings/export">
-				<ExportSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/export" element={<ExportSettings />}></Route>,
 			{
 				route: `/profiles/${profile.id()}/settings/export`,
 				withProfileSynchronizer: true,
@@ -76,9 +72,7 @@ describe("Export Settings", () => {
 			.mockResolvedValue({ name: "test.wwe" });
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings/export">
-				<ExportSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/export" element={<ExportSettings />}></Route>,
 			{
 				route: `/profiles/${profile.id()}/settings/export`,
 				withProfileSynchronizer: true,
@@ -107,9 +101,7 @@ describe("Export Settings", () => {
 		});
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings/export">
-				<ExportSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/export" element={<ExportSettings />}></Route>,
 			{
 				route: `/profiles/${profile.id()}/settings/export`,
 				withProfileSynchronizer: true,
@@ -143,9 +135,7 @@ describe("Export Settings", () => {
 		});
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings/export">
-				<ExportSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/export" element={<ExportSettings />}></Route>,
 			{
 				route: `/profiles/${profile.id()}/settings/export`,
 				withProfileSynchronizer: true,

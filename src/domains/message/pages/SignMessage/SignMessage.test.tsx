@@ -18,7 +18,8 @@ import {
 	waitFor,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
-	triggerMessageSignOnce, generateHistoryCalledWith,
+	triggerMessageSignOnce,
+	generateHistoryCalledWith,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -160,7 +161,7 @@ describe("SignMessage", () => {
 
 			userEvent.click(screen.getByTestId("SignMessage__back-button"));
 
-			expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: "/"}));
+			expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({ pathname: "/" }));
 		});
 	});
 
