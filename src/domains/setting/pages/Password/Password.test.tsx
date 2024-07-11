@@ -56,9 +56,7 @@ describe("Password Settings", () => {
 
 	it("should set a password", async () => {
 		const { container, asFragment } = render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={<PasswordSettings/>}/>,
 			{
 				history,
 				route: `/profiles/${profile.id()}/settings/password`,
@@ -103,9 +101,7 @@ describe("Password Settings", () => {
 		});
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={<PasswordSettings/>}/>,
 			{
 				history,
 				route: `/profiles/${profile.id()}/settings/password`,
@@ -157,9 +153,7 @@ describe("Password Settings", () => {
 		profile.auth().setPassword(password);
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={<PasswordSettings/>}/>,
 			{
 				history,
 				route: `/profiles/${profile.id()}/settings/password`,
@@ -199,9 +193,7 @@ describe("Password Settings", () => {
 
 	it("should disable submit button if no password", async () => {
 		render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={<PasswordSettings/>}/>,
 			{
 				history,
 				route: `/profiles/${profile.id()}/settings/password`,
@@ -223,9 +215,7 @@ describe("Password Settings", () => {
 		profile.auth().setPassword(password);
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={<PasswordSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
@@ -261,9 +251,7 @@ describe("Password Settings", () => {
 		const forgetPasswordSpy = vi.spyOn(profile.auth(), "forgetPassword").mockImplementation(vi.fn());
 
 		render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={<PasswordSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
@@ -316,9 +304,7 @@ describe("Password Settings", () => {
 		});
 
 		render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={<PasswordSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
@@ -349,9 +335,7 @@ describe("Password Settings", () => {
 		profile.auth().setPassword(password);
 
 		render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={<PasswordSettings/>}/>,
 			{
 				history,
 				route: `/profiles/${profile.id()}/settings/password`,

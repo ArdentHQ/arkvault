@@ -29,9 +29,13 @@ describe("Appearance Settings", () => {
 
 	const renderPage = (showSupportChat = false) =>
 		render(
-			<Route exact={false} path="/profiles/:profileId/settings/:activeSetting">
-				<AppearanceSettings />
-				{showSupportChat && <div id="webWidget" />}
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={
+				<>
+					<AppearanceSettings />
+					{showSupportChat && <div id="webWidget" />}
+				</>
+			}>
+
 			</Route>,
 			{
 				route: `/profiles/${profile.id()}/settings/appearance`,
@@ -76,8 +80,8 @@ describe("Appearance Settings", () => {
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should return items to render in the form in %s", (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
-			<Route exact={false} path="/profiles/:profileId/settings/:activeSetting">
-				<AppearanceSettings />
+			<Route path="/profiles/:profileId/settings/:activeSetting" element={<AppearanceSettings />}>
+
 			</Route>,
 			breakpoint,
 			{
