@@ -15,7 +15,7 @@ import {
 	screen,
 	waitFor,
 	mockNanoXTransport,
-	triggerMessageSignOnce,
+	triggerMessageSignOnce, generateHistoryCalledWith,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -97,7 +97,7 @@ describe("SignMessage with ledger", () => {
 
 		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}`}));
 
 		historySpy.mockRestore();
 
