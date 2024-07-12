@@ -10,14 +10,18 @@ exports[`MultiSignatureSuccessful > should handle empty wallet and transation pr
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -186,14 +190,18 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -1053,14 +1061,18 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -1920,14 +1932,18 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -2717,14 +2733,18 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -3584,14 +3604,18 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -4381,14 +4405,18 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -5248,14 +5276,18 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -5935,14 +5967,18 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg

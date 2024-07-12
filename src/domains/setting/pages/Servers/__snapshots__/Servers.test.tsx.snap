@@ -928,16 +928,20 @@ exports[`Servers Settings > should render servers settings 1`] = `
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Peers & Multisig Servers
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Manage custom network peers and multisignature servers for your Profile.
@@ -1300,7 +1304,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -2254,16 +2258,20 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Peers & Multisig Servers
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Manage custom network peers and multisignature servers for your Profile.
@@ -3451,7 +3459,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                     </li>
                   </ul>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -4405,16 +4413,20 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Peers & Multisig Servers
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Manage custom network peers and multisignature servers for your Profile.
@@ -5602,7 +5614,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -6556,16 +6568,20 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Peers & Multisig Servers
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Manage custom network peers and multisignature servers for your Profile.
@@ -7344,7 +7360,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                     </li>
                   </ul>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -8298,16 +8314,20 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Peers & Multisig Servers
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Manage custom network peers and multisignature servers for your Profile.
@@ -9633,7 +9653,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     </li>
                   </ul>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -10587,16 +10607,20 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Peers & Multisig Servers
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Manage custom network peers and multisignature servers for your Profile.
@@ -11513,7 +11537,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     </li>
                   </ul>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -12467,16 +12491,20 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Peers & Multisig Servers
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Manage custom network peers and multisignature servers for your Profile.
@@ -13646,7 +13674,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     </li>
                   </ul>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -14600,16 +14628,20 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Peers & Multisig Servers
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Manage custom network peers and multisignature servers for your Profile.
@@ -15920,7 +15952,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     </li>
                   </ul>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -16874,16 +16906,20 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Peers & Multisig Servers
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Manage custom network peers and multisignature servers for your Profile.
@@ -17785,7 +17821,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     </li>
                   </ul>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -18739,16 +18775,20 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Peers & Multisig Servers
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Peers & Multisig Servers
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Manage custom network peers and multisignature servers for your Profile.
@@ -19900,7 +19940,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     </li>
                   </ul>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"

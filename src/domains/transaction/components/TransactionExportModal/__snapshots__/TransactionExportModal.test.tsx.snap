@@ -599,7 +599,7 @@ exports[`TransactionExportModal > should render 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="css-p1y4tm"
+                      class="css-j6ajdm"
                     >
                       <button
                         class="css-6419sw"
@@ -1235,7 +1235,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="css-p1y4tm"
+                      class="css-j6ajdm"
                     >
                       <button
                         class="css-6419sw"
@@ -1871,7 +1871,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="css-p1y4tm"
+                      class="css-j6ajdm"
                     >
                       <button
                         class="css-6419sw"
@@ -2153,7 +2153,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                       </div>
                     </div>
                     <div
-                      class="css-p1y4tm"
+                      class="css-j6ajdm"
                     >
                       <button
                         class="css-6419sw"
@@ -2434,7 +2434,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                       </div>
                     </div>
                     <div
-                      class="css-p1y4tm"
+                      class="css-j6ajdm"
                     >
                       <button
                         class="css-6419sw"
@@ -3070,7 +3070,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="css-p1y4tm"
+                      class="css-j6ajdm"
                     >
                       <button
                         class="css-6419sw"
@@ -3753,7 +3753,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="css-p1y4tm"
+                      class="css-j6ajdm"
                     >
                       <button
                         class="css-6419sw"
