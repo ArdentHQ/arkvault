@@ -5,6 +5,7 @@ import React from "react";
 
 import { SelectRecipient } from "./SelectRecipient";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import {SelectAddress} from "../SelectAddress";
 
 let profile: Contracts.IProfile;
 
@@ -31,6 +32,12 @@ describe("SelectRecipient", () => {
 		const { container } = render(<SelectRecipient profile={profile} isInvalid />);
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it("should render without a wallet avatar", () => {
+		render(<SelectRecipient profile={profile} showWalletAvatar={false}/>);
+
+		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
 	});
 
 	it("should update internal state when prop changes", () => {
