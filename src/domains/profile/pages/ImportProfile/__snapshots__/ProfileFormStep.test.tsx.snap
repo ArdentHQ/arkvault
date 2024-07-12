@@ -9,16 +9,20 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Your profile addresses have been imported.
@@ -56,7 +60,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="name"
                     >
@@ -145,7 +149,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="password"
                 >
@@ -218,7 +222,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                 class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="confirmPassword"
                 >
@@ -336,7 +340,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                   class="flex flex-1 flex-col css-1bcidjh"
                 >
                   <label
-                    class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                     data-testid="FormLabel"
                     for="currency"
                   >
@@ -471,7 +475,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="viewingMode"
                     >
@@ -679,7 +683,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
               </fieldset>
             </div>
             <div
-              class="css-gu3ikl"
+              class="css-145pihz"
             >
               <button
                 class="css-6419sw"
@@ -722,16 +726,20 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Your profile addresses have been imported.
@@ -769,7 +777,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="name"
                     >
@@ -851,7 +859,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="password"
                 >
@@ -930,7 +938,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="confirmPassword"
                 >
@@ -1011,7 +1019,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                   class="flex flex-1 flex-col css-1bcidjh"
                 >
                   <label
-                    class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                     data-testid="FormLabel"
                     for="currency"
                   >
@@ -1147,7 +1155,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="viewingMode"
                     >
@@ -1355,7 +1363,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
               </fieldset>
             </div>
             <div
-              class="css-gu3ikl"
+              class="css-145pihz"
             >
               <button
                 class="css-6419sw"
@@ -1398,16 +1406,20 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Your profile addresses have been imported.
@@ -1445,7 +1457,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="name"
                     >
@@ -1527,7 +1539,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="password"
                 >
@@ -1606,7 +1618,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="confirmPassword"
                 >
@@ -1687,7 +1699,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                   class="flex flex-1 flex-col css-1bcidjh"
                 >
                   <label
-                    class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                     data-testid="FormLabel"
                     for="currency"
                   >
@@ -1823,7 +1835,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="viewingMode"
                     >
@@ -2031,7 +2043,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
               </fieldset>
             </div>
             <div
-              class="css-gu3ikl"
+              class="css-145pihz"
             >
               <button
                 class="css-6419sw"
@@ -2074,16 +2086,20 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Your profile addresses have been imported.
@@ -2121,7 +2137,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="name"
                     >
@@ -2210,7 +2226,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="password"
                 >
@@ -2289,7 +2305,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="confirmPassword"
                 >
@@ -2370,7 +2386,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                   class="flex flex-1 flex-col css-1bcidjh"
                 >
                   <label
-                    class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                     data-testid="FormLabel"
                     for="currency"
                   >
@@ -2505,7 +2521,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="viewingMode"
                     >
@@ -2713,7 +2729,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
               </fieldset>
             </div>
             <div
-              class="css-gu3ikl"
+              class="css-145pihz"
             >
               <button
                 class="css-6419sw"
@@ -2755,16 +2771,20 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Your profile addresses have been imported.
@@ -2802,7 +2822,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                     class="flex min-w-0 flex-col css-5kz4tk"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="name"
                     >
@@ -2939,7 +2959,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="password"
                 >
@@ -3018,7 +3038,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="confirmPassword"
                 >
@@ -3099,7 +3119,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                   class="flex flex-1 flex-col css-1bcidjh"
                 >
                   <label
-                    class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                     data-testid="FormLabel"
                     for="currency"
                   >
@@ -3234,7 +3254,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="viewingMode"
                     >
@@ -3442,7 +3462,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
               </fieldset>
             </div>
             <div
-              class="css-gu3ikl"
+              class="css-145pihz"
             >
               <button
                 class="css-6419sw"
@@ -3485,16 +3505,20 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Your profile addresses have been imported.
@@ -3532,7 +3556,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                     class="flex min-w-0 flex-col css-5kz4tk"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="name"
                     >
@@ -3669,7 +3693,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="password"
                 >
@@ -3748,7 +3772,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="confirmPassword"
                 >
@@ -3829,7 +3853,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                   class="flex flex-1 flex-col css-1bcidjh"
                 >
                   <label
-                    class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                     data-testid="FormLabel"
                     for="currency"
                   >
@@ -3964,7 +3988,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="viewingMode"
                     >
@@ -4172,7 +4196,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
               </fieldset>
             </div>
             <div
-              class="css-gu3ikl"
+              class="css-145pihz"
             >
               <button
                 class="css-6419sw"
