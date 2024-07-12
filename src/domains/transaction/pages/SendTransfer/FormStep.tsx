@@ -9,7 +9,6 @@ import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { useBreakpoint, useTheme } from "@/app/hooks";
-import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
 import { FeeField } from "@/domains/transaction/components/FeeField";
