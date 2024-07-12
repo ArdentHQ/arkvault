@@ -2899,6 +2899,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                           >
                             <div
                               class="css-h1kfx5"
+                              data-testid="icon-SendTransactionLight"
                               height="24"
                               width="24"
                             >
@@ -4226,6 +4227,7 @@ exports[`SendTransfer > should render form and use location state with network p
                           >
                             <div
                               class="css-h1kfx5"
+                              data-testid="icon-SendTransactionLight"
                               height="24"
                               width="24"
                             >
@@ -5553,6 +5555,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                           >
                             <div
                               class="css-h1kfx5"
+                              data-testid="icon-SendTransactionLight"
                               height="24"
                               width="24"
                             >
@@ -6305,6 +6308,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             >
               <div
                 class="css-h1kfx5"
+                data-testid="icon-SendTransactionLight"
                 height="24"
                 width="24"
               >
@@ -7010,6 +7014,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             >
               <div
                 class="css-h1kfx5"
+                data-testid="icon-SendTransactionLight"
                 height="24"
                 width="24"
               >
@@ -7702,6 +7707,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
             >
               <div
                 class="css-h1kfx5"
+                data-testid="icon-SendTransactionLight"
                 height="24"
                 width="24"
               >
@@ -8421,6 +8427,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
             >
               <div
                 class="css-h1kfx5"
+                data-testid="icon-SendTransactionLight"
                 height="24"
                 width="24"
               >
@@ -9140,6 +9147,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
             >
               <div
                 class="css-h1kfx5"
+                data-testid="icon-SendTransactionLight"
                 height="24"
                 width="24"
               >
@@ -9783,6 +9791,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
             >
               <div
                 class="css-h1kfx5"
+                data-testid="icon-SendTransactionLight"
                 height="24"
                 width="24"
               >
