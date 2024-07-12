@@ -5,7 +5,6 @@ import React from "react";
 
 import { SelectRecipient } from "./SelectRecipient";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-import {SelectAddress} from "../SelectAddress";
 
 let profile: Contracts.IProfile;
 
