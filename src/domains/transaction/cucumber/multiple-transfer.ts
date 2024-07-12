@@ -8,7 +8,7 @@ import { goToTransferPage } from "../e2e/common";
 
 const translations = buildTranslations();
 const sendButton = Selector("button").withText(translations.COMMON.SEND);
-const recipientInput = Selector("[data-testid=SelectDropdown__input]").nth(1);
+const recipientInput = Selector("[data-testid=SelectDropdown__input]").nth(0);
 const amountInput = Selector("[data-testid=AddRecipient__amount]");
 
 const preSteps = {
