@@ -72,7 +72,7 @@ describe("SendTransfer MultiPayment", () => {
 		await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
 
 		// 1st recipient.
-		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().first().address());
+		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[0], profile.wallets().first().address());
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
@@ -82,7 +82,7 @@ describe("SendTransfer MultiPayment", () => {
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
 
 		// 2nd recipient.
-		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().last().address());
+		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[0], profile.wallets().last().address());
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
 		await waitFor(() => expect(screen.getByTestId(recipientAddButton)).toBeEnabled());
