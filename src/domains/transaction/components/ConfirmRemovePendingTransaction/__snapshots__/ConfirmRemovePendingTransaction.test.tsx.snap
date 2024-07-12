@@ -182,7 +182,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="mnemonic"
                     >
@@ -254,7 +254,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
               </div>
             </form>
             <div
-              class="css-p1y4tm"
+              class="css-j6ajdm"
             >
               <button
                 class="css-6419sw"
@@ -496,7 +496,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="mnemonic"
                     >
@@ -568,7 +568,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
               </div>
             </form>
             <div
-              class="css-p1y4tm"
+              class="css-j6ajdm"
             >
               <button
                 class="css-6419sw"

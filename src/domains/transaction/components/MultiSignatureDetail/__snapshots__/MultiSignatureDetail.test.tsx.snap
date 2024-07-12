@@ -73,14 +73,18 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -653,14 +657,18 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1233,14 +1241,18 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1787,14 +1799,18 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -2329,14 +2345,18 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          IPFS
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            IPFS
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -2815,14 +2835,18 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Multipayment
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Multipayment
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -3559,14 +3583,18 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Multisignature
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Multisignature
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -4000,14 +4028,18 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -4542,14 +4574,18 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Unvote
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Unvote
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -5038,14 +5074,18 @@ exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Vote
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Vote
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -5541,16 +5581,20 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                         class="flex items-end justify-between bg-theme-background"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Ledger Wallet
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Ledger Wallet
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Connect your Ledger Nano X and confirm input.
@@ -5852,14 +5896,18 @@ exports[`MultiSignatureDetail > should show send button when able to add final s
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -6420,14 +6468,18 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -7000,14 +7052,18 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transaction Signed
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Signed
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <svg
@@ -7336,14 +7392,18 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Connect and Authorize Ledger Device
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Connect and Authorize Ledger Device
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <svg
@@ -7584,14 +7644,18 @@ exports[`MultiSignatureDetail > should submit transaction signing using keyboard
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transaction Signed
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Signed
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <svg

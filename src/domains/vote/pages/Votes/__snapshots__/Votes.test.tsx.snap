@@ -577,16 +577,20 @@ exports[`Votes > should filter current delegates 1`] = `
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -2120,16 +2124,20 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -4066,16 +4074,20 @@ exports[`Votes > should render 1`] = `
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -5947,16 +5959,20 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -7826,16 +7842,20 @@ exports[`Votes > should render with no wallets 1`] = `
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -8545,16 +8565,20 @@ exports[`Votes > should select a delegate 1`] = `
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -10422,16 +10446,20 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -11806,16 +11834,20 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -13193,16 +13225,20 @@ exports[`Votes > should show resigned delegate notice 1`] = `
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -15132,16 +15168,20 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -16634,16 +16674,20 @@ exports[`Votes > should trigger network connection warning 1`] = `
             class="flex items-end justify-between bg-theme-background"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                My Votes
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  My Votes
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.

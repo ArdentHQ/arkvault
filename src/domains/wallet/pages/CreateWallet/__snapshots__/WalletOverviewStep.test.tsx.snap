@@ -9,14 +9,18 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Your Passphrase
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Your Passphrase
+          </h1>
+        </div>
       </div>
     </div>
     <div

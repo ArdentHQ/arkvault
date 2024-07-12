@@ -9,16 +9,20 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Wallet
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Wallet
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select the import method by which you want to import the address to your Profile.
@@ -32,7 +36,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for=""
         >
@@ -165,7 +169,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="value"
         >
@@ -289,16 +293,20 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Wallet
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Wallet
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select the import method by which you want to import the address to your Profile.
@@ -312,7 +320,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for=""
         >
@@ -445,7 +453,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="value"
         >
@@ -569,16 +577,20 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Wallet
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Wallet
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select the import method by which you want to import the address to your Profile.
@@ -592,7 +604,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for=""
         >
@@ -725,7 +737,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="value"
         >
@@ -849,16 +861,20 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Wallet
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Wallet
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select the import method by which you want to import the address to your Profile.
@@ -872,7 +888,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for=""
         >
@@ -1005,7 +1021,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="value"
         >
@@ -1129,16 +1145,20 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Wallet
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Wallet
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select the import method by which you want to import the address to your Profile.
@@ -1152,7 +1172,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for=""
         >
@@ -1285,7 +1305,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="encryptedWif"
         >
@@ -1316,7 +1336,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="value"
         >
@@ -2051,14 +2071,18 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Connect and Authorize Ledger Device
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Connect and Authorize Ledger Device
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <svg
@@ -2218,7 +2242,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                 </div>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -2261,16 +2285,20 @@ exports[`ImportWallet > should render method step 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Wallet
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Wallet
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select the import method by which you want to import the address to your Profile.
@@ -2284,7 +2312,7 @@ exports[`ImportWallet > should render method step 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for=""
         >
@@ -2417,7 +2445,7 @@ exports[`ImportWallet > should render method step 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="value"
         >
@@ -2620,16 +2648,20 @@ exports[`ImportWallet > should render network step 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          title
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            title
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           subtitle
@@ -2640,7 +2672,7 @@ exports[`ImportWallet > should render network step 1`] = `
       class="mt-8 css-1bcidjh"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
         data-testid="FormLabel"
         for="network"
       >
@@ -2770,16 +2802,20 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Completed
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Completed
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Wallet import is complete. Now you can use it.
@@ -3100,16 +3136,20 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Completed
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Completed
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Wallet import is complete. Now you can use it.

@@ -13,16 +13,20 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Multisignature Registration
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Multisignature Registration
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Register Multisignature details below.
@@ -40,7 +44,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="address"
                 >
@@ -320,7 +324,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="minParticipants"
             >
@@ -363,7 +367,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="fee"
             >
@@ -489,16 +493,20 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Transaction Review
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Transaction Review
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Review the transaction details below.

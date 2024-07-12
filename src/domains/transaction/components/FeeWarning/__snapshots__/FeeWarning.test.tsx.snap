@@ -182,7 +182,7 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
               </fieldset>
             </div>
             <div
-              class="css-p1y4tm"
+              class="css-j6ajdm"
             >
               <button
                 class="css-6419sw"
@@ -395,7 +395,7 @@ exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
               </fieldset>
             </div>
             <div
-              class="css-p1y4tm"
+              class="css-j6ajdm"
             >
               <button
                 class="css-6419sw"
