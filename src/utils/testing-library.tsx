@@ -6,7 +6,7 @@ import { createHashHistory, HashHistory, To } from "history";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { I18nextProvider } from "react-i18next";
-import { Router } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import { Context as ResponsiveContext } from "react-responsive";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
@@ -18,6 +18,7 @@ import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
 import { StubStorage } from "@/tests/mocks";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
+import { CustomRouter } from "./CustomRouter";
 export {
 	mockNanoSTransport,
 	mockLedgerTransportError,
@@ -129,6 +130,7 @@ const renderWithRouter = (
 		history = createHashHistory();
 		history.replace("/");
 	}
+
 	if (route) {
 		history.replace(route, state ?? {});
 	}
@@ -143,16 +145,18 @@ const renderWithRouter = (
 	const RouterWrapper = ({ children }: { children: React.ReactNode }) =>
 		withProviders ? (
 			<WithProviders>
-				<Router history={history}>
+				<CustomRouter history={history}>
 					<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
-				</Router>
+				</CustomRouter>
 			</WithProviders>
 		) : (
-			<Router history={history}>{children}</Router>
+			<CustomRouter history={history}>{children}</CustomRouter>
 		);
 
+	const child = component.type.name === "Route" ? <Routes>{component}</Routes> : component;
+
 	return {
-		...customRender(component, { wrapper: RouterWrapper }),
+		...customRender(child, { wrapper: RouterWrapper }),
 		history,
 	};
 };
@@ -229,8 +233,10 @@ export const renderResponsiveWithRoute = (
 		xs: 375,
 	};
 
+	const child = component.type.name === "Route" ? <Routes>{component}</Routes> : component;
+
 	return renderWithRouter(
-		<ResponsiveContext.Provider value={{ width: widths[breakpoint] }}>{component}</ResponsiveContext.Provider>,
+		<ResponsiveContext.Provider value={{ width: widths[breakpoint] }}>{child}</ResponsiveContext.Provider>,
 		options,
 	);
 };
@@ -350,3 +356,15 @@ export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet)
 };
 
 export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
+
+export const generateHistoryCalledWith = ({ pathname = "", hash = "", search = "" }) => {
+	return [
+		{
+			hash,
+			pathname,
+			search,
+		},
+		undefined,
+		{},
+	];
+};

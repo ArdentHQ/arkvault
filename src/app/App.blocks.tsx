@@ -1,12 +1,11 @@
 import { Global, css } from "@emotion/react";
-import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
-import { HashRouter, useHistory } from "react-router-dom";
+import React, { useLayoutEffect, useRef } from "react";
+import { HashRouter, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
 import { GlobalStyles as BaseStyles } from "twin.macro";
 
-import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
 import { useAccentColor, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
@@ -19,31 +18,9 @@ import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSk
 import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
 
 const AppRouter = ({ children }: { children: React.ReactNode }) => {
-	const [isOpen, setIsOpen] = useState(false);
-
-	const confirmationFunctionReference = useRef<(allowNavigate: boolean) => void>();
-
-	const onCancel = () => {
-		confirmationFunctionReference.current?.(false);
-		setIsOpen(false);
-	};
-
-	const onConfirm = () => {
-		confirmationFunctionReference.current?.(true);
-		setIsOpen(false);
-	};
-
-	const getUserConfirmation = useCallback((_, callback) => {
-		confirmationFunctionReference.current = callback;
-		setIsOpen(true);
-	}, []);
-
 	return (
 		<React.Suspense fallback={<PageSkeleton />}>
-			<HashRouter getUserConfirmation={getUserConfirmation}>
-				{children}
-				<ConfirmationModal isOpen={isOpen} onCancel={onCancel} onConfirm={onConfirm} />
-			</HashRouter>
+			<HashRouter>{children}</HashRouter>
 		</React.Suspense>
 	);
 };
@@ -79,7 +56,10 @@ const GlobalStyles: React.VFC = () => (
 const Main: React.VFC = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
-	const history = useHistory();
+
+	const navigate = useNavigate();
+	const location = useLocation();
+
 	const syncingMessageToastId = useRef<number | string>();
 
 	const { resetAccentColor } = useAccentColor();
@@ -94,11 +74,8 @@ const Main: React.VFC = () => {
 			toasts.warning(t("COMMON.LEDGER_COMPATIBILITY_ERROR_LONG"), { autoClose: false });
 		},
 		onProfileRestoreError: () =>
-			history.push({
-				pathname: "/",
-				state: {
-					from: history.location.pathname + history.location.search,
-				},
+			navigate("/", {
+				state: { from: location.pathname + location.search },
 			}),
 		onProfileSignOut: () => {
 			resetTheme();
@@ -119,7 +96,7 @@ const Main: React.VFC = () => {
 			syncingMessageToastId.current = toasts.warning(t("COMMON.PROFILE_SYNC_STARTED"), { autoClose: false });
 		},
 		onProfileUpdated: () => {
-			history.replace("/");
+			navigate("/", { replace: true });
 		},
 	});
 
@@ -152,7 +129,7 @@ const Main: React.VFC = () => {
 		boot();
 	}, [env, showBoundary]);
 
-	const Skeleton = history.location.pathname.startsWith("/profiles") ? ProfilePageSkeleton : PageSkeleton;
+	const Skeleton = location.pathname.startsWith("/profiles") ? ProfilePageSkeleton : PageSkeleton;
 
 	const renderContent = () => {
 		if (!isOnline) {

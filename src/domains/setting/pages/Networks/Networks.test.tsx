@@ -73,9 +73,7 @@ describe("Network Settings", () => {
 
 	it("should render networks settings section", () => {
 		const { container, asFragment } = render(
-			<Route path="/profiles/:profileId/settings/networks">
-				<NetworksSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings/networks`,
 			},
@@ -92,9 +90,7 @@ describe("Network Settings", () => {
 
 	it("should check the main network by default", () => {
 		const { container, asFragment } = render(
-			<Route path="/profiles/:profileId/settings/networks">
-				<NetworksSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings/networks`,
 			},
@@ -118,9 +114,7 @@ describe("Network Settings", () => {
 
 	it("can uncheck and check an item", () => {
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings/networks">
-				<NetworksSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings/networks`,
 			},
@@ -144,9 +138,7 @@ describe("Network Settings", () => {
 		const toastSpy = vi.spyOn(toasts, "warning");
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings/networks">
-				<NetworksSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings/networks`,
 			},
@@ -169,9 +161,7 @@ describe("Network Settings", () => {
 		const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation(vi.fn());
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings/networks">
-				<NetworksSettings />
-			</Route>,
+			<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 			{
 				route: `/profiles/${profile.id()}/settings/networks`,
 			},
@@ -296,9 +286,7 @@ describe("Network Settings", () => {
 
 		it("should show the custom networks as unchecked", () => {
 			const { container } = render(
-				<Route path="/profiles/:profileId/settings/networks">
-					<NetworksSettings />
-				</Route>,
+				<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 				{
 					route: `/profiles/${profile.id()}/settings/networks`,
 				},
@@ -315,9 +303,7 @@ describe("Network Settings", () => {
 
 		it("should show the custom networks container when toggle is enabled", () => {
 			render(
-				<Route path="/profiles/:profileId/settings/networks">
-					<NetworksSettings />
-				</Route>,
+				<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 				{
 					route: `/profiles/${profile.id()}/settings/networks`,
 				},
@@ -334,9 +320,7 @@ describe("Network Settings", () => {
 
 		it("can press the add button and show the add modal", () => {
 			render(
-				<Route path="/profiles/:profileId/settings/networks">
-					<NetworksSettings />
-				</Route>,
+				<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 				{
 					route: `/profiles/${profile.id()}/settings/networks`,
 				},
@@ -351,9 +335,7 @@ describe("Network Settings", () => {
 
 		it("can cancel adding a custom network", () => {
 			render(
-				<Route path="/profiles/:profileId/settings/networks">
-					<NetworksSettings />
-				</Route>,
+				<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 				{
 					route: `/profiles/${profile.id()}/settings/networks`,
 				},
@@ -370,9 +352,7 @@ describe("Network Settings", () => {
 
 		it("can fill the add modal form", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/networks">
-					<NetworksSettings />
-				</Route>,
+				<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 				{
 					route: `/profiles/${profile.id()}/settings/networks`,
 				},
@@ -406,9 +386,7 @@ describe("Network Settings", () => {
 				mockServerCryptoConfiguration(customServerAddress, networkName);
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -450,9 +428,7 @@ describe("Network Settings", () => {
 			server.use(requestMock(configurationUrl, {}, { status: 404 }));
 
 			render(
-				<Route path="/profiles/:profileId/settings/networks">
-					<NetworksSettings />
-				</Route>,
+				<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 				{
 					route: `/profiles/${profile.id()}/settings/networks`,
 				},
@@ -477,9 +453,7 @@ describe("Network Settings", () => {
 			);
 
 			render(
-				<Route path="/profiles/:profileId/settings/networks">
-					<NetworksSettings />
-				</Route>,
+				<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 				{
 					route: `/profiles/${profile.id()}/settings/networks`,
 				},
@@ -499,9 +473,7 @@ describe("Network Settings", () => {
 
 		it("invalidates long name", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/networks">
-					<NetworksSettings />
-				</Route>,
+				<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 				{
 					route: `/profiles/${profile.id()}/settings/networks`,
 				},
@@ -518,9 +490,7 @@ describe("Network Settings", () => {
 
 		it("invalidates invalid server", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/networks">
-					<NetworksSettings />
-				</Route>,
+				<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 				{
 					route: `/profiles/${profile.id()}/settings/networks`,
 				},
@@ -609,9 +579,7 @@ describe("Network Settings", () => {
 
 			it("shows the custom networks", () => {
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -634,9 +602,7 @@ describe("Network Settings", () => {
 
 			it("select/unselect a custom network", () => {
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -659,9 +625,7 @@ describe("Network Settings", () => {
 
 			it("keeps the state of selected network if custom networks are enabled/disabled", () => {
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -688,9 +652,7 @@ describe("Network Settings", () => {
 
 			it("show/hide network details", async () => {
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -713,9 +675,7 @@ describe("Network Settings", () => {
 
 			it("removes a custom network", async () => {
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -754,9 +714,7 @@ describe("Network Settings", () => {
 				const forgetContactSpy = vi.spyOn(profile.contacts(), "forget");
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -806,9 +764,7 @@ describe("Network Settings", () => {
 				const forgetWalletSpy = vi.spyOn(profile.wallets(), "forget");
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -850,9 +806,7 @@ describe("Network Settings", () => {
 
 			it("cancels removing a custom network", async () => {
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -877,9 +831,7 @@ describe("Network Settings", () => {
 				mockServerCryptoConfiguration("https://new-address1.test");
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -900,9 +852,7 @@ describe("Network Settings", () => {
 				mockServerCryptoConfiguration("https://new-address.test");
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -937,9 +887,7 @@ describe("Network Settings", () => {
 				mockServerCryptoConfiguration(customServerAddress, networkName);
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -980,9 +928,7 @@ describe("Network Settings", () => {
 				mockServerCryptoConfiguration(customServerAddress);
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -1012,9 +958,7 @@ describe("Network Settings", () => {
 				server.use(requestMock("https://know-wallets.test", data, { status }));
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -1043,9 +987,7 @@ describe("Network Settings", () => {
 				mockServerCryptoConfiguration(customServerAddress, "testnet whatever");
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -1086,9 +1028,7 @@ describe("Network Settings", () => {
 				mockServerCryptoConfiguration(customServerAddress);
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -1150,9 +1090,7 @@ describe("Network Settings", () => {
 				} as any);
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -1170,9 +1108,7 @@ describe("Network Settings", () => {
 
 			it("can cancel editing a custom network", async () => {
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -1192,9 +1128,7 @@ describe("Network Settings", () => {
 				server.use(requestMock(configurationUrl, {}, { status: 404 }));
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -1237,9 +1171,7 @@ describe("Network Settings", () => {
 				);
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},
@@ -1271,9 +1203,7 @@ describe("Network Settings", () => {
 				);
 
 				render(
-					<Route path="/profiles/:profileId/settings/networks">
-						<NetworksSettings />
-					</Route>,
+					<Route path="/profiles/:profileId/settings/networks" element={<NetworksSettings/>}/>,
 					{
 						route: `/profiles/${profile.id()}/settings/networks`,
 					},

@@ -19,6 +19,7 @@ import {
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 	triggerMessageSignOnce,
+	generateHistoryCalledWith,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -87,15 +88,10 @@ describe("SignMessage", () => {
 
 			history.push(signUrl);
 
-			render(
-				<Route path="/profiles/:profileId/sign-message">
-					<SignMessage />
-				</Route>,
-				{
-					history,
-					route: signUrl,
-				},
-			);
+			render(<Route path="/profiles/:profileId/sign-message" element={<SignMessage />}></Route>, {
+				history,
+				route: signUrl,
+			});
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
@@ -131,15 +127,10 @@ describe("SignMessage", () => {
 
 			history.push(signUrl);
 
-			render(
-				<Route path="/profiles/:profileId/sign-message">
-					<SignMessage />
-				</Route>,
-				{
-					history,
-					route: signUrl,
-				},
-			);
+			render(<Route path="/profiles/:profileId/sign-message" element={<SignMessage />}></Route>, {
+				history,
+				route: signUrl,
+			});
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
@@ -159,15 +150,10 @@ describe("SignMessage", () => {
 
 			history.push(signUrl);
 
-			render(
-				<Route path="/profiles/:profileId/sign-message">
-					<SignMessage />
-				</Route>,
-				{
-					history,
-					route: signUrl,
-				},
-			);
+			render(<Route path="/profiles/:profileId/sign-message" element={<SignMessage />}></Route>, {
+				history,
+				route: signUrl,
+			});
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
@@ -175,7 +161,7 @@ describe("SignMessage", () => {
 
 			userEvent.click(screen.getByTestId("SignMessage__back-button"));
 
-			expect(historySpy).toHaveBeenCalledWith(`/`);
+			expect(historySpy).toHaveBeenCalledWith(...generateHistoryCalledWith({ pathname: "/" }));
 		});
 	});
 
@@ -188,9 +174,7 @@ describe("SignMessage", () => {
 			await wallet.synchroniser().identity();
 
 			const { asFragment } = renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
-				</Route>,
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}></Route>,
 				breakpoint,
 				{
 					history,
@@ -209,9 +193,7 @@ describe("SignMessage", () => {
 			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 			const { asFragment } = render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
-				</Route>,
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}></Route>,
 				{
 					history,
 					route: walletUrl(wallet.id()),
@@ -233,9 +215,7 @@ describe("SignMessage", () => {
 			mockNanoXTransport();
 
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
-				</Route>,
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}></Route>,
 				{
 					history,
 					route: walletUrl(wallet.id()),
@@ -264,9 +244,7 @@ describe("SignMessage", () => {
 			};
 
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
-				</Route>,
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}></Route>,
 				{
 					history,
 					route: walletUrl(wallet.id()),
@@ -341,9 +319,7 @@ describe("SignMessage", () => {
 			});
 
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
-				</Route>,
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}></Route>,
 				{
 					history,
 					route: walletUrl(wallet.id()),

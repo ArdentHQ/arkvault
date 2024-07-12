@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ListenLedger } from "./Ledger/ListenLedger";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputPassword } from "@/app/components/Input";
@@ -98,13 +98,13 @@ const LedgerAuthentication = ({
 	const { t } = useTranslation();
 
 	const [readyToConfirm, setReadyToConfirm] = useState(false);
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	if (!readyToConfirm) {
 		return (
 			<ListenLedger
 				onDeviceAvailable={() => setReadyToConfirm(true)}
-				onDeviceNotAvailable={onDeviceNotAvailable || (() => history.go(-1))}
+				onDeviceNotAvailable={onDeviceNotAvailable || (() => navigate(-1))}
 				noHeading={noHeading}
 			/>
 		);

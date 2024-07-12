@@ -31,13 +31,16 @@ describe("ExchangeView", () => {
 		history.push(exchangeURL);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeView />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<Route
+				path="/profiles/:profileId/exchange/view"
+				element={
+					<ExchangeProvider>
+						<Wrapper>
+							<ExchangeView />
+						</Wrapper>
+					</ExchangeProvider>
+				}
+			/>,
 			{
 				route: exchangeURL,
 			},
@@ -74,13 +77,16 @@ describe("ExchangeView", () => {
 		history.push(exchangeURL);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeView />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<Route
+				path="/profiles/:profileId/exchange/view"
+				element={
+					<ExchangeProvider>
+						<Wrapper>
+							<ExchangeView />
+						</Wrapper>
+					</ExchangeProvider>
+				}
+			/>,
 			{
 				route: exchangeURL,
 			},
@@ -101,13 +107,16 @@ describe("ExchangeView", () => {
 		history.push(exchangeURL);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeView />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<Route
+				path="/profiles/:profileId/exchange/view"
+				element={
+					<ExchangeProvider>
+						<Wrapper>
+							<ExchangeView />
+						</Wrapper>
+					</ExchangeProvider>
+				}
+			/>,
 			{
 				route: exchangeURL,
 			},
@@ -129,11 +138,14 @@ describe("ExchangeView", () => {
 
 		// Since I am not adding the wrapper the providers are not loaded
 		const { container } = render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<ExchangeView />
-				</ExchangeProvider>
-			</Route>,
+			<Route
+				path="/profiles/:profileId/exchange/view"
+				element={
+					<ExchangeProvider>
+						<ExchangeView />
+					</ExchangeProvider>
+				}
+			></Route>,
 			{
 				route: exchangeURL,
 			},

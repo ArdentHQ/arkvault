@@ -26,6 +26,7 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { CustomRouter, CustomRouterWrapper } from "../../utils/CustomRouter";
 
 const history = createHashHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -191,21 +192,17 @@ describe("useProfileSynchronizer", () => {
 	it("should clear last profile sync jobs", async () => {
 		history.push(dashboardURL);
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileSynced">test</div>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+			withProviders: true,
+		});
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		renderAct(() => {
-			history.push("/");
+			history.replace("/");
 		});
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
@@ -216,16 +213,11 @@ describe("useProfileSynchronizer", () => {
 		history.push("/");
 
 		vi.useFakeTimers();
-		render(
-			<Route path="/">
-				<div data-testid="RenderedContent">test</div>
-			</Route>,
-			{
-				history,
-				route: "/",
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/" element={<div data-testid="RenderedContent">test</div>} />, {
+			history,
+			route: "/",
+			withProfileSynchronizer: true,
+		});
 
 		await expect(screen.findByTestId("RenderedContent")).resolves.toBeVisible();
 
@@ -236,9 +228,7 @@ describe("useProfileSynchronizer", () => {
 		history.push("/profiles/invalidId/dashboard");
 
 		render(
-			<Route path="/">
-				<div data-testid="RenderedContent">test</div>
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="RenderedContent">test</div>} />,
 			{
 				history,
 				route: "/profiles/:profileId/dashboard",
@@ -256,9 +246,7 @@ describe("useProfileSynchronizer", () => {
 		history.push(dashboardURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileRestored">test</div>
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileRestored">test</div>} />,
 			{
 				history,
 				route: dashboardURL,
@@ -284,16 +272,11 @@ describe("useProfileSynchronizer", () => {
 			throw new Error("password not found");
 		});
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="Content">test</div>
-			</Route>,
-			{
-				history,
-				route: passwordProtectedUrl,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<div data-testid="Content">test</div>} />, {
+			history,
+			route: passwordProtectedUrl,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() => expect(screen.queryByTestId("Content")).not.toBeInTheDocument());
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
@@ -307,9 +290,7 @@ describe("useProfileSynchronizer", () => {
 		history.push(dashboardURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileRestored">test</div>
-			</Route>,
+			<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileRestored">test</div>} />,
 			{
 				history,
 				route: dashboardURL,
@@ -341,15 +322,10 @@ describe("useProfileSynchronizer", () => {
 			return <div data-testid="Dashboard">test</div>;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />} />, {
+			history,
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("Dashboard")).resolves.toBeVisible();
 
@@ -371,16 +347,11 @@ describe("useProfileSynchronizer", () => {
 			return <button data-testid="ResetSyncProfile" onClick={() => syncProfileWallets(true)} />;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await expect(screen.findByTestId("ResetSyncProfile")).resolves.toBeVisible();
 
@@ -395,16 +366,11 @@ describe("useProfileSynchronizer", () => {
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
 		history.push(dashboardURL);
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileSynced">test</div>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
@@ -426,16 +392,11 @@ describe("useProfileSynchronizer", () => {
 
 		history.push(dashboardURL);
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await expect(screen.findByTestId("SyncProfile")).resolves.toBeVisible();
 
@@ -469,11 +430,14 @@ describe("useProfileSynchronizer", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="Test" onClick={changeUrl}>
-					Press me
-				</div>
-			</Route>,
+			<Route
+				path="/profiles/:profileId/dashboard"
+				element={
+					<div data-testid="Test" onClick={changeUrl}>
+						Press me
+					</div>
+				}
+			/>,
 			{
 				history,
 				profileSynchronizerOptions: {
@@ -507,11 +471,14 @@ describe("useProfileSynchronizer", () => {
 		};
 
 		render(
-			<Route path="/">
-				<div data-testid="Test" onClick={changeUrl}>
-					Press me
-				</div>
-			</Route>,
+			<Route
+				path="/"
+				element={
+					<div data-testid="Test" onClick={changeUrl}>
+						Press me
+					</div>
+				}
+			/>,
 			{
 				history,
 				route: "/",
@@ -536,7 +503,9 @@ describe("useProfileRestore", () => {
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<CustomRouterWrapper>{children}</CustomRouterWrapper>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -562,7 +531,9 @@ describe("useProfileRestore", () => {
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<CustomRouterWrapper>{children}</CustomRouterWrapper>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -596,7 +567,9 @@ describe("useProfileRestore", () => {
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<CustomRouterWrapper>{children}</CustomRouterWrapper>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -631,7 +604,9 @@ describe("useProfileRestore", () => {
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<CustomRouterWrapper>{children}</CustomRouterWrapper>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -662,8 +637,8 @@ describe("useProfileRestore", () => {
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider defaultConfiguration={{ restoredProfiles: [profile.id()] }}>
-					{children}
+				<ConfigurationProvider>
+					<CustomRouterWrapper>{children}</CustomRouterWrapper>
 				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
@@ -711,16 +686,11 @@ describe("useProfileRestore", () => {
 			throw new Error("sync test");
 		});
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileSynced">test</div>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<div data-testid="ProfileSynced">test</div>} />, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() => expect(profileSyncMock).toHaveBeenCalledWith());
 
@@ -861,7 +831,6 @@ describe("useProfileStatusWatcher", () => {
 		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider
@@ -941,15 +910,10 @@ describe("useProfileStatusWatcher", () => {
 			return <div data-testid="ProfileSynced">test</div>;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Component />} />, {
+			history,
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 

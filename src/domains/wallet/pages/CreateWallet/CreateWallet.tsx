@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { DefaultTReturn, TOptions } from "i18next";
 import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
@@ -34,7 +34,7 @@ enum Step {
 
 export const CreateWallet = () => {
 	const { persist } = useEnvironmentContext();
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
@@ -83,7 +83,7 @@ export const CreateWallet = () => {
 
 		assertWallet(wallet);
 
-		history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
+		navigate(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
 	};
 
 	const generateWallet = () => {
@@ -117,7 +117,7 @@ export const CreateWallet = () => {
 
 	const handleBack = () => {
 		if (activeTab === Step.NetworkStep || (activeTab === Step.WalletOverviewStep && onlyHasOneNetwork)) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		setActiveTab(activeTab - 1);

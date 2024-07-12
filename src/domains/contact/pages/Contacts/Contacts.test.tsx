@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -19,6 +18,7 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { cleanup } from "@testing-library/react";
 
 let profile: Contracts.IProfile;
 
@@ -28,15 +28,10 @@ const renderComponent = (profileId = profile.id()) => {
 	const contactsURL = `/profiles/${profileId}/contacts`;
 	history.push(contactsURL);
 
-	return render(
-		<Route path="/profiles/:profileId/contacts">
-			<Contacts />
-		</Route>,
-		{
-			history,
-			route: contactsURL,
-		},
-	);
+	return render(<Route path="/profiles/:profileId/contacts" element={<Contacts />} />, {
+		history,
+		route: contactsURL,
+	});
 };
 
 const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profileId = profile.id()) => {
@@ -44,9 +39,7 @@ const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profile
 	history.push(contactsURL);
 
 	return renderResponsiveWithRoute(
-		<Route path="/profiles/:profileId/contacts">
-			<Contacts />
-		</Route>,
+		<Route path="/profiles/:profileId/contacts" element={<Contacts />} />,
 		breakpoint,
 		{
 			history,
@@ -490,6 +483,8 @@ describe("Contacts", () => {
 
 		blankProfile.wallets().push(walletMainnet);
 
+		cleanup();
+
 		renderComponent(blankProfile.id());
 
 		await waitFor(() => {
@@ -508,6 +503,8 @@ describe("Contacts", () => {
 		// Add balance, then assert that "send" button is now enabled.
 
 		balanceSpy.mockReturnValue(100);
+
+		cleanup();
 
 		renderComponent(blankProfile.id());
 
@@ -556,7 +553,7 @@ describe("Contacts", () => {
 	});
 
 	it("should search for contact by address", async () => {
-		const blankProfile = await env.profiles().create("empty");
+		const blankProfile = await env.profiles().create("empty1");
 
 		const resetBlankProfileNetworksMock = mockProfileWithPublicAndTestNetworks(blankProfile);
 

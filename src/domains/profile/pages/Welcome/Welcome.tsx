@@ -1,9 +1,8 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { matchPath, useHistory } from "react-router-dom";
+import { matchPath, useLocation, useNavigate } from "react-router-dom";
 
-import { LocationState } from "router/router.types";
 import cn from "classnames";
 import { Card } from "@/app/components/Card";
 import { Circle } from "@/app/components/Circle";
@@ -21,7 +20,11 @@ import { toasts } from "@/app/services";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();
-	const history = useHistory<LocationState>();
+
+	const location = useLocation();
+
+	const navigate = useNavigate();
+
 	const [isThemeLoaded, setThemeLoaded] = useState(false);
 	const isProfileCardClickedOnce = useRef(false);
 
@@ -40,19 +43,23 @@ export const Welcome = () => {
 
 	const [deletingProfileId, setDeletingProfileId] = useState<string | undefined>();
 	const [selectedProfile, setSelectedProfile] = useState<Contracts.IProfile | undefined>(() => {
-		if (!history.location.state?.from) {
+		if (!location.state?.from) {
 			return;
 		}
 
-		const match = matchPath<{ profileId: string }>(history.location.state.from, {
-			path: "/profiles/:profileId",
-		});
+		const match = matchPath(
+			{
+				end: false,
+				path: "/profiles/:profileId",
+			},
+			location.state.from,
+		);
 
 		if (!match) {
 			return;
 		}
 
-		const { profileId } = match.params;
+		const { profileId } = match.params as { profileId: string };
 		return context.env.profiles().findById(profileId);
 	});
 
@@ -88,7 +95,7 @@ export const Welcome = () => {
 					toasts.update(validatingToastId, "error", error);
 					isProfileCardClickedOnce.current = false;
 
-					history.push("/");
+					navigate("/");
 					return;
 				}
 
@@ -102,18 +109,18 @@ export const Welcome = () => {
 			setProfileTheme(profile);
 			setProfileAccentColor(profile);
 
-			history.push(`/profiles/${profile.id()}/${subPath}`);
+			navigate(`/profiles/${profile.id()}/${subPath}`);
 		},
-		[history, isDeeplink],
+		[navigate, isDeeplink],
 	);
 
 	const navigateToPreviousPage = useCallback(
 		(profile: Contracts.IProfile) => {
 			setProfileTheme(profile);
 			setProfileAccentColor(profile);
-			history.push(history.location.state!.from!);
+			navigate(location.state.from!);
 		},
-		[history],
+		[navigate, location],
 	);
 
 	const closeDeleteProfileModal = useCallback(() => {
@@ -139,7 +146,7 @@ export const Welcome = () => {
 				setSelectedProfile(profile);
 				setRequestedAction({ label: "Homepage", value: "home" });
 			} else {
-				navigateToProfile(profile);
+				void navigateToProfile(profile);
 			}
 		},
 		[navigateToProfile, selectedProfile],
@@ -171,7 +178,7 @@ export const Welcome = () => {
 				setRequestedAction(action);
 				setSelectedProfile(profile);
 			} else {
-				handleRequestedAction(profile, action);
+				void handleRequestedAction(profile, action);
 			}
 		},
 		[handleRequestedAction],
@@ -179,7 +186,7 @@ export const Welcome = () => {
 
 	const handleSuccessSignIn = useCallback(
 		(password) => {
-			handleRequestedAction(selectedProfile!, requestedAction!, password);
+			void handleRequestedAction(selectedProfile!, requestedAction!, password);
 		},
 		[handleRequestedAction, selectedProfile, requestedAction],
 	);
@@ -205,7 +212,7 @@ export const Welcome = () => {
 					setSelectedProfile(firstProfile);
 					setRequestedAction({ label: "Homepage", value: "home" });
 				} else {
-					navigateToProfile(firstProfile);
+					void navigateToProfile(firstProfile);
 				}
 			} else {
 				toasts.warning(t("COMMON.SELECT_A_PROFILE"), { delay: 500 });
@@ -271,7 +278,7 @@ export const Welcome = () => {
 										{ "w-36": hasProfiles },
 										{ "w-full": !hasProfiles },
 									)}
-									onClick={() => history.push("/profiles/create")}
+									onClick={() => navigate("/profiles/create")}
 								>
 									<div className="mx-auto flex h-full flex-col items-center justify-center">
 										<div>

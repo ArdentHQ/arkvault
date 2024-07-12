@@ -16,6 +16,7 @@ import {
 	waitFor,
 	mockNanoXTransport,
 	triggerMessageSignOnce,
+	generateHistoryCalledWith,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -74,15 +75,10 @@ describe("SignMessage with ledger", () => {
 
 		const ledgerListenMock = mockNanoXTransport();
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl(wallet.id()),
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}></Route>, {
+			history,
+			route: walletUrl(wallet.id()),
+		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
@@ -102,7 +98,9 @@ describe("SignMessage with ledger", () => {
 
 		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(historySpy).toHaveBeenCalledWith(
+			...generateHistoryCalledWith({ pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}` }),
+		);
 
 		historySpy.mockRestore();
 
@@ -135,15 +133,10 @@ describe("SignMessage with ledger", () => {
 
 		const ledgerListenMock = mockNanoXTransport();
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl(wallet.id()),
-			},
-		);
+		render(<Route path="/profiles/:profileId/wallets/:walletId/sign-message" element={<SignMessage />}></Route>, {
+			history,
+			route: walletUrl(wallet.id()),
+		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 

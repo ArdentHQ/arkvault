@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import { NavigationBar } from "./NavigationBar";
 import * as navigation from "@/app/constants/navigation";
@@ -163,7 +163,11 @@ describe("NavigationBar", () => {
 
 		userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/dashboard`);
+		expect(historySpy).toHaveBeenCalledWith(
+			{ hash: "", pathname: `/profiles/${getDefaultProfileId()}/dashboard`, search: "" },
+			undefined,
+			{},
+		);
 
 		historySpy.mockRestore();
 	});
@@ -175,7 +179,7 @@ describe("NavigationBar", () => {
 
 		userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
 
-		expect(historySpy).toHaveBeenCalledWith("/");
+		expect(historySpy).toHaveBeenCalledWith({ hash: "", pathname: "/", search: "" }, undefined, {});
 
 		historySpy.mockRestore();
 	});
@@ -288,15 +292,10 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle receive funds", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<NavigationBar />} />, {
+			history,
+			route: dashboardURL,
+		});
 
 		userEvent.click(screen.getByTestId("NavigationBar__buttons--receive"));
 
@@ -315,16 +314,10 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle receive funds from mobile menu", async () => {
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar />
-			</Route>,
-			"xs",
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		renderResponsiveWithRoute(<Route path="/profiles/:profileId/dashboard" element={<NavigationBar />} />, "xs", {
+			history,
+			route: dashboardURL,
+		});
 
 		userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--receive"));
 
@@ -345,10 +338,9 @@ describe("NavigationBar", () => {
 	it("should update the mobile menu when the has fixed form context is updated", async () => {
 		renderResponsiveWithRoute(
 			<ContainerWithFixedFormButtons>
-				<Route path="/profiles/:profileId/dashboard">
-					<NavigationBar />
-				</Route>
-				,
+				<Routes>
+					<Route path="/profiles/:profileId/dashboard" element={<NavigationBar />} />,
+				</Routes>
 			</ContainerWithFixedFormButtons>,
 			"xs",
 			{
@@ -361,16 +353,10 @@ describe("NavigationBar", () => {
 	});
 
 	it("should show the mobile menu on xs screen", async () => {
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar />
-			</Route>,
-			"xs",
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		renderResponsiveWithRoute(<Route path="/profiles/:profileId/dashboard" element={<NavigationBar />} />, "xs", {
+			history,
+			route: dashboardURL,
+		});
 
 		expect(screen.getByTestId("NavigationBarMobile")).toBeInTheDocument();
 	});
@@ -378,10 +364,9 @@ describe("NavigationBar", () => {
 	it("should hide the mobile menu when the show mobile navigation is set to `false`", async () => {
 		renderResponsiveWithRoute(
 			<ContainerWithHiddenNavigation>
-				<Route path="/profiles/:profileId/dashboard">
-					<NavigationBar />
-				</Route>
-				,
+				<Routes>
+					<Route path="/profiles/:profileId/dashboard" element={<NavigationBar />} />
+				</Routes>
 			</ContainerWithHiddenNavigation>,
 			"xs",
 			{
@@ -395,9 +380,7 @@ describe("NavigationBar", () => {
 
 	it("should handle mobile menu home button", async () => {
 		const { history: renderHistory } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/send-transfer">
-				<NavigationBar />
-			</Route>,
+			<Route path="/profiles/:profileId/send-transfer" element={<NavigationBar />} />,
 			"xs",
 			{
 				history,
@@ -411,15 +394,10 @@ describe("NavigationBar", () => {
 	});
 
 	it("should close the search wallet modal", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<NavigationBar />} />, {
+			history,
+			route: dashboardURL,
+		});
 
 		const receiveFundsButton = screen.getByTestId("NavigationBar__buttons--receive");
 
@@ -457,12 +435,16 @@ describe("NavigationBar", () => {
 
 	it("should hide the mobile menu if an input is focused", () => {
 		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<div>
-					<input data-testid="input" />
-					<NavigationBar />
-				</div>
-			</Route>,
+			<Route
+				path="/profiles/:profileId/dashboard"
+				element={
+					<div>
+						<input data-testid="input" />
+						<NavigationBar />
+					</div>
+				}
+			/>,
+
 			"xs",
 			{
 				history,

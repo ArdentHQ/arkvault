@@ -25,6 +25,7 @@ import {
 	waitFor,
 	within,
 	mockNanoXTransport,
+	generateHistoryCalledWith,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
@@ -46,16 +47,11 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 
 	history.push(registrationURL);
 
-	const utils = render(
-		<Route path={path}>
-			<SendRegistration />
-		</Route>,
-		{
-			history,
-			route: registrationURL,
-			withProviders: true,
-		},
-	);
+	const utils = render(<Route path={path} element={<SendRegistration />} />, {
+		history,
+		route: registrationURL,
+		withProviders: true,
+	});
 
 	await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
@@ -181,15 +177,10 @@ describe("Registration", () => {
 		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
 		history.push(registrationPath);
 
-		render(
-			<Route path={path}>
-				<SendRegistration />
-			</Route>,
-			{
-				history,
-				route: registrationPath,
-			},
-		);
+		render(<Route path={path} element={<SendRegistration />} />, {
+			history,
+			route: registrationPath,
+		});
 
 		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
@@ -302,7 +293,9 @@ describe("Registration", () => {
 		const historySpy = vi.spyOn(history, "push");
 		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(historySpy).toHaveBeenCalledWith(
+			...generateHistoryCalledWith({ pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}` }),
+		);
 
 		historySpy.mockRestore();
 
@@ -523,7 +516,9 @@ describe("Registration", () => {
 
 		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(historySpy).toHaveBeenCalledWith(
+			...generateHistoryCalledWith({ pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}` }),
+		);
 
 		historySpy.mockRestore();
 		nanoXTransportMock.mockRestore();
@@ -594,7 +589,9 @@ describe("Registration", () => {
 		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}`;
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+		await waitFor(() =>
+			expect(historyMock).toHaveBeenCalledWith(...generateHistoryCalledWith({ pathname: walletDetailPage })),
+		);
 
 		historyMock.mockRestore();
 		signMock.mockRestore();

@@ -75,15 +75,10 @@ describe("Dashboard", () => {
 	});
 
 	it("should render loading state when profile is syncing", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Dashboard />}></Route>, {
+			history,
+			route: dashboardURL,
+		});
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
@@ -96,16 +91,11 @@ describe("Dashboard", () => {
 			items: () => [],
 		} as any);
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Dashboard />}></Route>, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByRole("rowgroup")[0]).toBeVisible(),
@@ -124,16 +114,11 @@ describe("Dashboard", () => {
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Route path="/profiles/:profileId/dashboard" element={<Dashboard />}></Route>, {
+			history,
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),

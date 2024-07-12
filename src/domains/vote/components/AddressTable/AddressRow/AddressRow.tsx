@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { generatePath } from "react-router";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
@@ -61,7 +61,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
 	const activeProfile = useActiveProfile();
 	const { isMd, isSm, isXs } = useBreakpoint();
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const useCompact = useMemo(() => isCompact || isMd || isSm || isXs, [isCompact, isMd, isSm, isXs]);
 
@@ -209,7 +209,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			<TableCell
 				data-testid="AddressRow__wallet"
 				onClick={() => {
-					history.push(
+					navigate(
 						generatePath(ProfilePaths.WalletDetails, {
 							profileId: activeProfile.id(),
 							walletId: wallet.id(),

@@ -3,7 +3,7 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { WalletHeader, WalletHeaderMobile, WalletVote } from "./components";
 import { useWalletTransactions } from "./hooks/use-wallet-transactions";
@@ -26,7 +26,7 @@ export const WalletDetails = () => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
 
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 	const { isXs, isMd } = useBreakpoint();
 
@@ -50,13 +50,13 @@ export const WalletDetails = () => {
 	const handleVoteButton = (filter?: string) => {
 		/* istanbul ignore else -- @preserve */
 		if (filter) {
-			return history.push({
+			return navigate({
 				pathname: `/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}/votes`,
 				search: `?filter=${filter}`,
 			});
 		}
 
-		history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}/votes`);
+		navigate(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}/votes`);
 	};
 
 	const onPendingTransactionRemove = useCallback(async () => {

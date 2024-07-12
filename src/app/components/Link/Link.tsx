@@ -122,7 +122,8 @@ export const Link = ({
 					{properties.children}
 				</Anchor>
 			) : (
-				<RouterLink component={Anchor} {...properties} />
+				<></>
+				// <RouterLink component={Anchor} {...properties} />
 			)}
 		</Tooltip>
 	);
