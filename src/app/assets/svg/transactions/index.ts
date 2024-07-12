@@ -29,6 +29,8 @@ export const TransactionIcons: any = {
 	Received,
 	Return,
 	SecondSignature,
+	SendTransactionDark,
+	SendTransactionLight,
 	Sent,
 	Timelock,
 	Transfer,
@@ -36,6 +38,4 @@ export const TransactionIcons: any = {
 	Unvote,
 	Vote,
 	VoteCombination,
-	SendTransactionLight,
-	SendTransactionDark,
 };
