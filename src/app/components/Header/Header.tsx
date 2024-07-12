@@ -16,7 +16,7 @@ interface Properties {
 export const Header = ({ title, titleIcon, titleSuffix, className, subtitle, extra }: Properties) => (
 	<div className={cn("flex items-end justify-between bg-theme-background", className)}>
 		<div className="space-y-2">
-			<div className="flex gap-3 items-center">
+			<div className="flex items-center gap-3">
 				{titleIcon ?? undefined}
 				<h1 className="mb-0 text-2xl" data-testid="header__title">
 					{title}
@@ -24,7 +24,7 @@ export const Header = ({ title, titleIcon, titleSuffix, className, subtitle, ext
 				</h1>
 			</div>
 			{subtitle && (
-				<div className="flex items-center text-theme-secondary-text leading-5" data-testid="header__subtitle">
+				<div className="flex items-center leading-5 text-theme-secondary-text" data-testid="header__subtitle">
 					{subtitle}
 				</div>
 			)}

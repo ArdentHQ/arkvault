@@ -213,20 +213,20 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 								: undefined,
 							start: showWalletAvatar
 								? {
-									content: (
-										<div className="flex items-center">
-											<ProfileAvatar address={selectedAddress}/>
-											{!!selectedAddressAlias?.alias && (
-												<TruncateEnd
-													className="ml-2 font-semibold"
-													text={selectedAddressAlias.alias}
-													showTooltip
-												/>
-											)}
-										</div>
-									)
-								}
-								: undefined
+										content: (
+											<div className="flex items-center">
+												<ProfileAvatar address={selectedAddress} />
+												{!!selectedAddressAlias?.alias && (
+													<TruncateEnd
+														className="ml-2 font-semibold"
+														text={selectedAddressAlias.alias}
+														showTooltip
+													/>
+												)}
+											</div>
+										),
+									}
+								: undefined,
 						}}
 						renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
 					/>

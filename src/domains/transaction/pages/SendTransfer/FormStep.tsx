@@ -8,7 +8,7 @@ import tw, { styled } from "twin.macro";
 import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
-import {useBreakpoint, useTheme} from "@/app/hooks";
+import { useBreakpoint, useTheme } from "@/app/hooks";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
@@ -130,7 +130,9 @@ export const FormStep = ({
 		<section data-testid="SendTransfer__form-step">
 			<StepHeader
 				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network?.ticker() })}
-				titleIcon={<Icon name={isDarkMode ? "SendTransactionDark" : "SendTransactionLight"} dimensions={[24, 24]}/>}
+				titleIcon={
+					<Icon name={isDarkMode ? "SendTransactionDark" : "SendTransactionLight"} dimensions={[24, 24]} />
+				}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
 					<div className="flex h-full align-bottom">
@@ -140,7 +142,7 @@ export const FormStep = ({
 								name="QRCode"
 								className="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600"
 							/>
-							<span className="font-semibold text-theme-navy-600 leading-5 transition-colors group-hover:text-white dark:text-theme-secondary-200">
+							<span className="font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200">
 								{isXs
 									? t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")
 									: t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}

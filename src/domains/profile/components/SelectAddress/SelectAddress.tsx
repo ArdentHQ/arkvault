@@ -99,17 +99,17 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 							<Icon name="User" size="lg" />
 						</div>
 					),
-				}
+				};
 			}
 
-			if(showWalletAvatar) {
+			if (showWalletAvatar) {
 				addons.start = {
 					content: <WalletAvatar address={selectedWallet?.address} />,
 				};
 			}
 
 			return addons;
-		}
+		};
 
 		return (
 			<>
