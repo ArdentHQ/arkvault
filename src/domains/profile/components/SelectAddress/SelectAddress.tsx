@@ -90,7 +90,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 		);
 
 		const inputAddons = () => {
-			const addons = {};
+			const addons = {} as Record<string, any>;
 
 			if (showUserIcon) {
 				addons.end = {
