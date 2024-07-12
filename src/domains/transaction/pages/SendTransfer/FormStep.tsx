@@ -93,8 +93,6 @@ export const FormStep = ({
 		[],
 	);
 
-	const { isDarkMode } = useTheme();
-
 	const getRecipients = (): RecipientItem[] => {
 		if (deeplinkProps.recipient && deeplinkProps.amount) {
 			return [
@@ -125,12 +123,16 @@ export const FormStep = ({
 
 	const showFeeInput = useMemo(() => !network?.chargesZeroFees(), [network]);
 
+	const { isDarkMode } = useTheme();
+
+	const icon = isDarkMode ? "SendTransactionDark" : "SendTransactionLight"
+
 	return (
 		<section data-testid="SendTransfer__form-step">
 			<StepHeader
 				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network?.ticker() })}
 				titleIcon={
-					<Icon name={isDarkMode ? "SendTransactionDark" : "SendTransactionLight"} dimensions={[24, 24]} />
+					<Icon dimensions={[24, 24]} name={icon} data-testid={`icon-${icon}`} />
 				}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={

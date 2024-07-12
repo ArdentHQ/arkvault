@@ -19,6 +19,7 @@ import { translations as transactionTranslations } from "@/domains/transaction/i
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
+import * as useThemeHook from "@/app/hooks/use-theme";
 
 import {
 	env,
@@ -205,6 +206,27 @@ describe("SendTransfer", () => {
 		).toHaveLength(2);
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it.each([
+		[true, "SendTransactionDark"],
+		[false, "SendTransactionLight"],
+	])("should render right header icon when dark mode is %s", async (isDarkMode, testId) => {
+		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
+
+		renderWithForm(
+			<StepsProvider activeStep={1} steps={4}>
+				<FormStep deeplinkProps={{}} profile={profile} />
+			</StepsProvider>,
+			{
+				registerCallback: defaultRegisterCallback,
+				withProviders: true,
+			},
+		);
+
+		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
+
+		useThemeMock.mockRestore();
 	});
 
 	it("should render network step with dropdown", () => {
