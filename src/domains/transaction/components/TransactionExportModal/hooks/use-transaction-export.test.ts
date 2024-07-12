@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook, act } from "@testing-library/react-hooks";
-import { rest } from "msw";
+import { http, HttpResponse } from "msw";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { useTransactionExport } from "./use-transaction-export";
 import { ExportProgressStatus } from "@/domains/transaction/components/TransactionExportModal";
@@ -168,23 +167,21 @@ describe("useTransactionExport hook", () => {
 	it("should properly handle errors", async () => {
 		const { result } = renderExportHook();
 
-		const handler = rest.get(`https://ark-test.arkvault.io/api/transactions`, (request, response, context) => {
-			const searchParameters = request.url.searchParams;
+		const handler = http.get(`https://ark-test.arkvault.io/api/transactions`, ({ request }) => {
+			const url = new URL(request.url);
+			const to = url.searchParams.get("timestamp.to");
 
 			// return OK response for the first request
-			if (searchParameters.get("timestamp.to") === "0") {
-				return response(
-					context.status(200),
-					context.json({
-						data: Array.from({ length: 100 }).fill(transactionsFixture.data[0]),
-						meta: {
-							...transactionsFixture.meta,
-						},
-					}),
-				);
+			if (to === "0") {
+				return HttpResponse.json({
+					data: Array.from({ length: 100 }).fill(transactionsFixture.data[0]),
+					meta: {
+						...transactionsFixture.meta,
+					},
+				});
 			}
 
-			return response(context.status(500), context.json([]));
+			return HttpResponse.json([]);
 		});
 
 		server.use(handler);
