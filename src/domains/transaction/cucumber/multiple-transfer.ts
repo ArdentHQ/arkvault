@@ -30,7 +30,7 @@ cucumber(
 			await t.click(Selector("span").withText(translations.TRANSACTION.MULTIPLE));
 			await t.typeText(amountInput, "10", { replace: true });
 			await t.typeText(
-				Selector("[data-testid=SelectDropdown__input]").nth(1),
+				Selector("[data-testid=SelectDropdown__input]").nth(0),
 				"D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP",
 				{
 					paste: true,
