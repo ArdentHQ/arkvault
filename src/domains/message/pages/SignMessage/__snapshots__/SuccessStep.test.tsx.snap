@@ -7,14 +7,18 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Message Successfully Signed
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Message Successfully Signed
+          </h1>
+        </div>
       </div>
     </div>
     <div
@@ -106,7 +110,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="json-signature"
         >
@@ -153,14 +157,18 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Message Successfully Signed
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Message Successfully Signed
+          </h1>
+        </div>
       </div>
     </div>
     <div
@@ -260,7 +268,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="json-signature"
         >
