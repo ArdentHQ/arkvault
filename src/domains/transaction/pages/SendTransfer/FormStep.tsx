@@ -125,15 +125,13 @@ export const FormStep = ({
 
 	const { isDarkMode } = useTheme();
 
-	const icon = isDarkMode ? "SendTransactionDark" : "SendTransactionLight"
+	const icon = isDarkMode ? "SendTransactionDark" : "SendTransactionLight";
 
 	return (
 		<section data-testid="SendTransfer__form-step">
 			<StepHeader
 				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network?.ticker() })}
-				titleIcon={
-					<Icon dimensions={[24, 24]} name={icon} data-testid={`icon-${icon}`} />
-				}
+				titleIcon={<Icon dimensions={[24, 24]} name={icon} data-testid={`icon-${icon}`} />}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
 					<div className="flex h-full align-bottom">
