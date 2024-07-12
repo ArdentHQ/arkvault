@@ -1671,7 +1671,7 @@ describe("SendTransfer", () => {
 		selectFirstRecipient();
 
 		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress);
-			// Amount
+		// Amount
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 
