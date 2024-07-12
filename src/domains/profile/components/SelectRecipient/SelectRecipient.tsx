@@ -22,6 +22,7 @@ type SelectRecipientProperties = {
 	disabled?: boolean;
 	isInvalid?: boolean;
 	showOptions?: boolean;
+	showWalletAvatar?: boolean;
 	contactSearchTitle?: string;
 	contactSearchDescription?: string;
 	placeholder?: string;
@@ -86,6 +87,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 			disabled,
 			isInvalid,
 			showOptions = true,
+			showWalletAvatar = true,
 			network,
 			placeholder,
 			exceptMultiSignature,
@@ -209,20 +211,22 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 										),
 									}
 								: undefined,
-							start: {
-								content: (
-									<div className="flex items-center">
-										<ProfileAvatar address={selectedAddress} />
-										{!!selectedAddressAlias?.alias && (
-											<TruncateEnd
-												className="ml-2 font-semibold"
-												text={selectedAddressAlias.alias}
-												showTooltip
-											/>
-										)}
-									</div>
-								),
-							},
+							start: showWalletAvatar
+								? {
+									content: (
+										<div className="flex items-center">
+											<ProfileAvatar address={selectedAddress}/>
+											{!!selectedAddressAlias?.alias && (
+												<TruncateEnd
+													className="ml-2 font-semibold"
+													text={selectedAddressAlias.alias}
+													showTooltip
+												/>
+											)}
+										</div>
+									)
+								}
+								: undefined
 						}}
 						renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
 					/>

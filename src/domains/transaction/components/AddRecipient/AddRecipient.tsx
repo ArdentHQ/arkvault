@@ -58,7 +58,7 @@ const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: To
 };
 
 const InputButtonStyled = styled.button(() => [
-	tw`flex items-center h-full px-5 font-semibold text-theme-secondary-700`,
+	tw`flex items-center h-full px-5 font-semibold text-theme-navy-600`,
 	tw`border-2 rounded border-theme-primary-100`,
 	tw`transition-colors duration-300`,
 	tw`dark:(border-theme-secondary-800 text-theme-secondary-200)`,
@@ -333,6 +333,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 						)}
 
 						<SelectRecipient
+							showWalletAvatar={false}
 							network={network}
 							disabled={!isSenderFilled}
 							address={recipientAddress}

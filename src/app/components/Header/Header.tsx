@@ -5,6 +5,7 @@ import { useBreakpoint } from "@/app/hooks";
 
 interface Properties {
 	title: string;
+	titleIcon?: React.ReactNode;
 	titleSuffix?: string | React.ReactNode;
 	subtitle?: string | React.ReactNode;
 	className?: string;
@@ -12,15 +13,18 @@ interface Properties {
 	border?: boolean;
 }
 
-export const Header = ({ title, titleSuffix, className, subtitle, extra }: Properties) => (
+export const Header = ({ title, titleIcon, titleSuffix, className, subtitle, extra }: Properties) => (
 	<div className={cn("flex items-end justify-between bg-theme-background", className)}>
-		<div className="space-y-4">
-			<h1 className="mb-0 text-2xl" data-testid="header__title">
-				{title}
-				{titleSuffix && <span> {titleSuffix}</span>}
-			</h1>
+		<div className="space-y-2">
+			<div className="flex gap-3 items-center">
+				{titleIcon ?? undefined}
+				<h1 className="mb-0 text-2xl" data-testid="header__title">
+					{title}
+					{titleSuffix && <span> {titleSuffix}</span>}
+				</h1>
+			</div>
 			{subtitle && (
-				<div className="flex items-center text-theme-secondary-text" data-testid="header__subtitle">
+				<div className="flex items-center text-theme-secondary-text leading-5" data-testid="header__subtitle">
 					{subtitle}
 				</div>
 			)}
