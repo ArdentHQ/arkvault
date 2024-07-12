@@ -34,7 +34,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should render without a wallet avatar", () => {
-		render(<SelectRecipient profile={profile} showWalletAvatar={false}/>);
+		render(<SelectRecipient profile={profile} showWalletAvatar={false} />);
 
 		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
 	});
