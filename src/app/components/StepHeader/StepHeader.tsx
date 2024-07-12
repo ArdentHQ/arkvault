@@ -9,7 +9,7 @@ export const StepHeader = ({
 	subtitle,
 	extra,
 }: {
-	title: string | ReactNode;
+	title: string;
 	titleIcon?: ReactNode;
 	subtitle?: string;
 	extra?: React.ReactNode;
