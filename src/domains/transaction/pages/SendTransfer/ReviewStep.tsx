@@ -54,7 +54,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 					</TransactionReviewDetail>
 				)}
 
-				<div className="space-y-2">
+				<div className="space-y-3 sm:space-y-2">
 					<TransactionReviewDetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</TransactionReviewDetailLabel>
 					<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />
 				</div>
