@@ -570,7 +570,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -613,17 +613,21 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1365,7 +1369,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -1958,7 +1962,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -2001,17 +2005,21 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2753,7 +2761,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"

@@ -570,7 +570,7 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -615,19 +615,23 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Select a Cryptoasset
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Select a Cryptoasset
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Select a cryptoasset to send funds from.
@@ -773,7 +777,7 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"

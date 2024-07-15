@@ -13,16 +13,20 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Register Delegate
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Register Delegate
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Register a new Delegate address on the network below.
@@ -197,7 +201,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
             class="flex min-w-0 flex-col css-5kz4tk"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="username"
             >
@@ -272,7 +276,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="fee"
             >
@@ -411,16 +415,20 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Register Delegate
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Register Delegate
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Register a new Delegate address on the network below.
@@ -595,7 +603,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="username"
             >
@@ -622,7 +630,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="fee"
             >
@@ -748,16 +756,20 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Transaction Review
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Transaction Review
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Review the transaction details below.
@@ -1004,16 +1016,20 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Register Delegate
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Register Delegate
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Register a new Delegate address on the network below.
@@ -1188,7 +1204,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="username"
             >
@@ -1215,7 +1231,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="fee"
             >
@@ -1377,16 +1393,20 @@ exports[`DelegateRegistrationForm > should show error if username already exists
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Register Delegate
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Register Delegate
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Register a new Delegate address on the network below.
@@ -1561,7 +1581,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
             class="flex min-w-0 flex-col css-5kz4tk"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="username"
             >
@@ -1636,7 +1656,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="fee"
             >
@@ -1775,16 +1795,20 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Register Delegate
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Register Delegate
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Register a new Delegate address on the network below.
@@ -1959,7 +1983,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
             class="flex min-w-0 flex-col css-5kz4tk"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="username"
             >
@@ -2034,7 +2058,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="fee"
             >

@@ -10,14 +10,18 @@ exports[`UnlockTokensSummary > should render 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Successfully Unlocked Balance
-        </h1>
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Successfully Unlocked Balance
+          </h1>
+        </div>
       </div>
     </div>
     <svg

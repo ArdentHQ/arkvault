@@ -616,16 +616,20 @@ exports[`CreateWallet > should create a wallet 1`] = `
                       class="flex items-end justify-between bg-theme-background hidden sm:block"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Select a Cryptoasset
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
+                          class="flex items-center gap-3"
+                        >
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Select a Cryptoasset
+                          </h1>
+                        </div>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
                           data-testid="header__subtitle"
                         >
                           Select a cryptoasset to create your new wallet address.
@@ -769,7 +773,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-gu3ikl"
+                  class="css-145pihz"
                 >
                   <button
                     class="css-6419sw"
@@ -1417,16 +1421,20 @@ exports[`CreateWallet > should create a wallet 2`] = `
                       class="flex items-end justify-between bg-theme-background hidden sm:block"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Completed
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
+                          class="flex items-center gap-3"
+                        >
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Completed
+                          </h1>
+                        </div>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
                           data-testid="header__subtitle"
                         >
                           The wallet address has been successfully created.
@@ -1691,7 +1699,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                   </section>
                 </div>
                 <div
-                  class="css-gu3ikl"
+                  class="css-145pihz"
                 >
                   <button
                     class="css-fl4fi0"
@@ -2331,16 +2339,20 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                       class="flex items-end justify-between bg-theme-background hidden sm:block"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Select a Cryptoasset
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
+                          class="flex items-center gap-3"
+                        >
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Select a Cryptoasset
+                          </h1>
+                        </div>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
                           data-testid="header__subtitle"
                         >
                           Select a cryptoasset to create your new wallet address.
@@ -2484,7 +2496,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-gu3ikl"
+                  class="css-145pihz"
                 >
                   <button
                     class="css-6419sw"
@@ -3138,16 +3150,20 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                       class="flex items-end justify-between bg-theme-background hidden sm:block"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Select a Cryptoasset
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
+                          class="flex items-center gap-3"
+                        >
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Select a Cryptoasset
+                          </h1>
+                        </div>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
                           data-testid="header__subtitle"
                         >
                           Select a cryptoasset to create your new wallet address.
@@ -3291,7 +3307,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-gu3ikl"
+                  class="css-145pihz"
                 >
                   <button
                     class="css-6419sw"
@@ -3941,16 +3957,20 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                       class="flex items-end justify-between bg-theme-background hidden sm:block"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Select a Cryptoasset
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
+                          class="flex items-center gap-3"
+                        >
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Select a Cryptoasset
+                          </h1>
+                        </div>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
                           data-testid="header__subtitle"
                         >
                           Select a cryptoasset to create your new wallet address.
@@ -4094,7 +4114,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-gu3ikl"
+                  class="css-145pihz"
                 >
                   <button
                     class="css-6419sw"
@@ -4746,16 +4766,20 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                       class="flex items-end justify-between bg-theme-background hidden sm:block"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Select a Cryptoasset
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
+                          class="flex items-center gap-3"
+                        >
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Select a Cryptoasset
+                          </h1>
+                        </div>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
                           data-testid="header__subtitle"
                         >
                           Select a cryptoasset to create your new wallet address.
@@ -4951,7 +4975,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   </section>
                 </div>
                 <div
-                  class="css-gu3ikl"
+                  class="css-145pihz"
                 >
                   <button
                     class="css-qrwjsp"

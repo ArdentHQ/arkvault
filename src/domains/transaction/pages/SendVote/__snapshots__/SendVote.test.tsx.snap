@@ -617,17 +617,21 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1387,7 +1391,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -1900,19 +1904,23 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Authenticate
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Authenticate
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Enter your mnemonic passphrase to authenticate the transaction.
@@ -1925,7 +1933,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                     class="flex min-w-0 flex-col css-5kz4tk"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="mnemonic"
                     >
@@ -2039,7 +2047,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -2710,17 +2718,21 @@ exports[`SendVote > should show error step and go back 1`] = `
                         class="flex flex-col justify-between sm:flex-row"
                       >
                         <div
-                          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                          class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                         >
                           <div
-                            class="space-y-4"
+                            class="space-y-2"
                           >
-                            <h1
-                              class="mb-0 text-2xl"
-                              data-testid="header__title"
+                            <div
+                              class="flex items-center gap-3"
                             >
-                              Transaction Error
-                            </h1>
+                              <h1
+                                class="mb-0 text-2xl"
+                                data-testid="header__title"
+                              >
+                                Transaction Error
+                              </h1>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3090,7 +3102,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <div
                       class="mr-auto"

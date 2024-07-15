@@ -3,7 +3,7 @@
 exports[`FormLabel > should render & hover if optional 1`] = `
 <DocumentFragment>
   <label
-    class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
     data-testid="FormLabel"
   >
     Test
@@ -20,7 +20,7 @@ exports[`FormLabel > should render & hover if optional 1`] = `
 exports[`FormLabel > should render with name from context 1`] = `
 <DocumentFragment>
   <label
-    class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
     data-testid="FormLabel"
     for="test"
   >

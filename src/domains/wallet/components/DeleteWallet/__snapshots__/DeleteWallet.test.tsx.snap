@@ -169,7 +169,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
               class="mt-4 css-1bcidjh"
             >
               <label
-                class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                 data-testid="FormLabel"
                 for="wallet"
               >
@@ -182,7 +182,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                 type="button"
               >
                 <span
-                  class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
+                  class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4 left-14"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -231,7 +231,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
               </button>
             </fieldset>
             <div
-              class="css-p1y4tm"
+              class="css-j6ajdm"
             >
               <button
                 class="css-6419sw"

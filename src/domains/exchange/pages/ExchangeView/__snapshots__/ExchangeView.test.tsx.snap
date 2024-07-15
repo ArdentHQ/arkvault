@@ -653,7 +653,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="fromCurrency"
                           >
@@ -779,7 +779,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="payinAmount"
                           >
@@ -884,7 +884,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="toCurrency"
                             >
@@ -1010,7 +1010,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="payoutAmount"
                             >
@@ -1047,7 +1047,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="recipientWallet"
                           >
@@ -1155,7 +1155,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-gu3ikl"
+                  class="css-145pihz"
                 >
                   <button
                     class="css-6419sw"
@@ -1840,7 +1840,7 @@ exports[`ExchangeView > should render 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="fromCurrency"
                           >
@@ -1964,7 +1964,7 @@ exports[`ExchangeView > should render 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="payinAmount"
                           >
@@ -2069,7 +2069,7 @@ exports[`ExchangeView > should render 1`] = `
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="toCurrency"
                             >
@@ -2193,7 +2193,7 @@ exports[`ExchangeView > should render 1`] = `
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="payoutAmount"
                             >
@@ -2230,7 +2230,7 @@ exports[`ExchangeView > should render 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="recipientWallet"
                           >
@@ -2338,7 +2338,7 @@ exports[`ExchangeView > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-gu3ikl"
+                  class="css-145pihz"
                 >
                   <button
                     class="css-6419sw"
@@ -3027,7 +3027,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="fromCurrency"
                           >
@@ -3153,7 +3153,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="payinAmount"
                           >
@@ -3258,7 +3258,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="toCurrency"
                             >
@@ -3384,7 +3384,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="payoutAmount"
                             >
@@ -3421,7 +3421,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="recipientWallet"
                           >
@@ -3529,7 +3529,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-gu3ikl"
+                  class="css-145pihz"
                 >
                   <button
                     class="css-6419sw"
@@ -4218,7 +4218,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="fromCurrency"
                           >
@@ -4344,7 +4344,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="payinAmount"
                           >
@@ -4449,7 +4449,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="toCurrency"
                             >
@@ -4575,7 +4575,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="payoutAmount"
                             >
@@ -4612,7 +4612,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="recipientWallet"
                           >
@@ -4720,7 +4720,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-gu3ikl"
+                  class="css-145pihz"
                 >
                   <button
                     class="css-6419sw"

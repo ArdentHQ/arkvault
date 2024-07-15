@@ -102,19 +102,23 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                     class="flex flex-col justify-between sm:flex-row"
                   >
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Import Profile
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
+                          class="flex items-center gap-3"
+                        >
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Import Profile
+                          </h1>
+                        </div>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
                           data-testid="header__subtitle"
                         >
                           Your profile addresses have been imported.
@@ -235,7 +239,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                 class="flex min-w-0 flex-col css-1bcidjh"
                               >
                                 <label
-                                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                                   data-testid="FormLabel"
                                   for="name"
                                 >
@@ -317,7 +321,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="password"
                             >
@@ -396,7 +400,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="confirmPassword"
                             >
@@ -477,7 +481,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                               class="flex flex-1 flex-col css-1bcidjh"
                             >
                               <label
-                                class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                                class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                                 data-testid="FormLabel"
                                 for="currency"
                               >
@@ -597,7 +601,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                 class="flex min-w-0 flex-col css-1bcidjh"
                               >
                                 <label
-                                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                                   data-testid="FormLabel"
                                   for="viewingMode"
                                 >
@@ -805,7 +809,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                           </fieldset>
                         </div>
                         <div
-                          class="css-gu3ikl"
+                          class="css-145pihz"
                         >
                           <button
                             class="css-6419sw"
@@ -947,19 +951,23 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                     class="flex flex-col justify-between sm:flex-row"
                   >
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Import Profile
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
+                          class="flex items-center gap-3"
+                        >
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Import Profile
+                          </h1>
+                        </div>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
                           data-testid="header__subtitle"
                         >
                           Your profile addresses have been imported.
@@ -1080,7 +1088,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                 class="flex min-w-0 flex-col css-1bcidjh"
                               >
                                 <label
-                                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                                   data-testid="FormLabel"
                                   for="name"
                                 >
@@ -1162,7 +1170,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="password"
                             >
@@ -1241,7 +1249,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                             class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="confirmPassword"
                             >
@@ -1322,7 +1330,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                               class="flex flex-1 flex-col css-1bcidjh"
                             >
                               <label
-                                class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                                class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                                 data-testid="FormLabel"
                                 for="currency"
                               >
@@ -1442,7 +1450,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                 class="flex min-w-0 flex-col css-1bcidjh"
                               >
                                 <label
-                                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                                   data-testid="FormLabel"
                                   for="viewingMode"
                                 >
@@ -1650,7 +1658,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                           </fieldset>
                         </div>
                         <div
-                          class="css-gu3ikl"
+                          class="css-145pihz"
                         >
                           <button
                             class="css-6419sw"
@@ -1792,19 +1800,23 @@ exports[`ImportProfile > should render first step 1`] = `
                     class="flex flex-col justify-between sm:flex-row"
                   >
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Import Profile
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
+                          class="flex items-center gap-3"
+                        >
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Import Profile
+                          </h1>
+                        </div>
+                        <div
+                          class="flex items-center leading-5 text-theme-secondary-text"
                           data-testid="header__subtitle"
                         >
                           Select a .wwe file with your Profile and related properties to start the import process.
@@ -1905,7 +1917,7 @@ exports[`ImportProfile > should render first step 1`] = `
                   </button>
                 </p>
                 <div
-                  class="css-p1y4tm"
+                  class="css-j6ajdm"
                 >
                   <button
                     class="css-6419sw"

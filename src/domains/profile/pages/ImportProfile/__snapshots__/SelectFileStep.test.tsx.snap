@@ -9,16 +9,20 @@ exports[`Import Profile Select File Step > should change back from json to wwe 1
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select a .json file with your Profile and related properties to start the import process.
@@ -148,7 +152,7 @@ exports[`Import Profile Select File Step > should change back from json to wwe 1
       </div>
     </div>
     <div
-      class="css-p1y4tm"
+      class="css-j6ajdm"
     >
       <button
         class="css-6419sw"
@@ -175,16 +179,20 @@ exports[`Import Profile Select File Step > should handle back event 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select a .wwe file with your Profile and related properties to start the import process.
@@ -283,7 +291,7 @@ exports[`Import Profile Select File Step > should handle back event 1`] = `
       </button>
     </p>
     <div
-      class="css-p1y4tm"
+      class="css-j6ajdm"
     >
       <button
         class="css-6419sw"
@@ -310,16 +318,20 @@ exports[`Import Profile Select File Step > should render file selection for wwe 
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select a .wwe file with your Profile and related properties to start the import process.
@@ -418,7 +430,7 @@ exports[`Import Profile Select File Step > should render file selection for wwe 
       </button>
     </p>
     <div
-      class="css-p1y4tm"
+      class="css-j6ajdm"
     >
       <button
         class="css-6419sw"
@@ -445,16 +457,20 @@ exports[`Import Profile Select File Step > should render with json fileFormat se
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select a .json file with your Profile and related properties to start the import process.
@@ -584,7 +600,7 @@ exports[`Import Profile Select File Step > should render with json fileFormat se
       </div>
     </div>
     <div
-      class="css-p1y4tm"
+      class="css-j6ajdm"
     >
       <button
         class="css-6419sw"
@@ -611,16 +627,20 @@ exports[`Import Profile Select File Step > should render with wwe fileFormat sel
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select a .wwe file with your Profile and related properties to start the import process.
@@ -719,7 +739,7 @@ exports[`Import Profile Select File Step > should render with wwe fileFormat sel
       </button>
     </p>
     <div
-      class="css-p1y4tm"
+      class="css-j6ajdm"
     >
       <button
         class="css-6419sw"

@@ -936,16 +936,20 @@ exports[`General Settings > should disable submit button when profile is not res
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Profile Settings
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Customize your wallet to suit your needs.
@@ -1039,7 +1043,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -1066,7 +1070,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -1198,7 +1202,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -1334,7 +1338,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -1466,7 +1470,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -1598,7 +1602,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -1754,7 +1758,7 @@ exports[`General Settings > should disable submit button when profile is not res
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -1972,7 +1976,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     </ul>
                   </div>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -2930,16 +2934,20 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Profile Settings
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Customize your wallet to suit your needs.
@@ -3068,7 +3076,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           class="flex min-w-0 flex-col css-5kz4tk"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -3143,7 +3151,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -3275,7 +3283,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -3411,7 +3419,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -3543,7 +3551,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -3675,7 +3683,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -3831,7 +3839,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -4049,7 +4057,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     </ul>
                   </div>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -5007,16 +5015,20 @@ exports[`General Settings > should render 1`] = `
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Profile Settings
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Customize your wallet to suit your needs.
@@ -5110,7 +5122,7 @@ exports[`General Settings > should render 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -5137,7 +5149,7 @@ exports[`General Settings > should render 1`] = `
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -5269,7 +5281,7 @@ exports[`General Settings > should render 1`] = `
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -5405,7 +5417,7 @@ exports[`General Settings > should render 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -5537,7 +5549,7 @@ exports[`General Settings > should render 1`] = `
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -5669,7 +5681,7 @@ exports[`General Settings > should render 1`] = `
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -5825,7 +5837,7 @@ exports[`General Settings > should render 1`] = `
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -6043,7 +6055,7 @@ exports[`General Settings > should render 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -7001,16 +7013,20 @@ exports[`General Settings > should show identicon when removing image if name is
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Profile Settings
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Customize your wallet to suit your needs.
@@ -7104,7 +7120,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -7131,7 +7147,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -7263,7 +7279,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -7399,7 +7415,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -7531,7 +7547,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -7663,7 +7679,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -7819,7 +7835,7 @@ exports[`General Settings > should show identicon when removing image if name is
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -8037,7 +8053,7 @@ exports[`General Settings > should show identicon when removing image if name is
                     </ul>
                   </div>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -8991,16 +9007,20 @@ exports[`General Settings > should update profile 1`] = `
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Profile Settings
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Customize your wallet to suit your needs.
@@ -9094,7 +9114,7 @@ exports[`General Settings > should update profile 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -9121,7 +9141,7 @@ exports[`General Settings > should update profile 1`] = `
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -9253,7 +9273,7 @@ exports[`General Settings > should update profile 1`] = `
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -9389,7 +9409,7 @@ exports[`General Settings > should update profile 1`] = `
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -9521,7 +9541,7 @@ exports[`General Settings > should update profile 1`] = `
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -9653,7 +9673,7 @@ exports[`General Settings > should update profile 1`] = `
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -9809,7 +9829,7 @@ exports[`General Settings > should update profile 1`] = `
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -10027,7 +10047,7 @@ exports[`General Settings > should update profile 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -10985,16 +11005,20 @@ exports[`General Settings > should update the avatar when removing focus from na
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Profile Settings
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Customize your wallet to suit your needs.
@@ -11088,7 +11112,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -11115,7 +11139,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -11247,7 +11271,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -11383,7 +11407,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -11515,7 +11539,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -11647,7 +11671,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -11803,7 +11827,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -12021,7 +12045,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </ul>
                   </div>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"
@@ -12979,16 +13003,20 @@ exports[`General Settings > should update the avatar when removing focus from na
                   class="flex items-end justify-between bg-theme-background"
                 >
                   <div
-                    class="space-y-4"
+                    class="space-y-2"
                   >
-                    <h1
-                      class="mb-0 text-2xl"
-                      data-testid="header__title"
-                    >
-                      Profile Settings
-                    </h1>
                     <div
-                      class="flex items-center text-theme-secondary-text"
+                      class="flex items-center gap-3"
+                    >
+                      <h1
+                        class="mb-0 text-2xl"
+                        data-testid="header__title"
+                      >
+                        Profile Settings
+                      </h1>
+                    </div>
+                    <div
+                      class="flex items-center leading-5 text-theme-secondary-text"
                       data-testid="header__subtitle"
                     >
                       Customize your wallet to suit your needs.
@@ -13075,7 +13103,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="flex min-w-0 flex-col css-5kz4tk"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="name"
                           >
@@ -13150,7 +13178,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="bip39Locale"
                           >
@@ -13282,7 +13310,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="exchangeCurrency"
                           >
@@ -13418,7 +13446,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="locale"
                           >
@@ -13550,7 +13578,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="marketProvider"
                           >
@@ -13682,7 +13710,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           class="mt-8 css-1bcidjh"
                         >
                           <label
-                            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                             data-testid="FormLabel"
                             for="timeFormat"
                           >
@@ -13838,7 +13866,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                             data-testid="General-settings__auto-signout"
                           >
                             <label
-                              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                               data-testid="FormLabel"
                               for="automaticSignOutPeriod"
                             >
@@ -14056,7 +14084,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </ul>
                   </div>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <button
                       class="css-qrwjsp"

@@ -136,13 +136,6 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                         class="css-n1b0kl"
                       >
                         <div
-                          class="flex items-center"
-                        >
-                          <div
-                            class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                          />
-                        </div>
-                        <div
                           class="relative flex h-full flex-1"
                         >
                           <input
@@ -222,7 +215,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
           class="flex min-w-0 flex-col css-1bcidjh"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
             data-testid="FormLabel"
             for="amount"
           >
@@ -292,7 +285,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
               class="inline-flex"
             >
               <button
-                class=" css-1ye8a3b"
+                class=" css-1v4a3it"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -443,13 +436,6 @@ exports[`AddRecipient > should render 1`] = `
                         class="css-n1b0kl"
                       >
                         <div
-                          class="flex items-center"
-                        >
-                          <div
-                            class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                          />
-                        </div>
-                        <div
                           class="relative flex h-full flex-1"
                         >
                           <input
@@ -529,7 +515,7 @@ exports[`AddRecipient > should render 1`] = `
           class="flex min-w-0 flex-col css-1bcidjh"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
             data-testid="FormLabel"
             for="amount"
           >
@@ -584,7 +570,7 @@ exports[`AddRecipient > should render 1`] = `
               class="inline-flex"
             >
               <button
-                class=" css-1ye8a3b"
+                class=" css-1v4a3it"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -735,13 +721,6 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                         class="css-n1b0kl"
                       >
                         <div
-                          class="flex items-center"
-                        >
-                          <div
-                            class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                          />
-                        </div>
-                        <div
                           class="relative flex h-full flex-1"
                         >
                           <input
@@ -821,7 +800,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
           class="flex min-w-0 flex-col css-1bcidjh"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
             data-testid="FormLabel"
             for="amount"
           >
@@ -876,7 +855,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
               class="inline-flex"
             >
               <button
-                class=" css-1ye8a3b"
+                class=" css-1v4a3it"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1027,13 +1006,6 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                         class="css-n1b0kl"
                       >
                         <div
-                          class="flex items-center"
-                        >
-                          <div
-                            class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                          />
-                        </div>
-                        <div
                           class="relative flex h-full flex-1"
                         >
                           <input
@@ -1113,7 +1085,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
           class="flex min-w-0 flex-col css-1bcidjh"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
             data-testid="FormLabel"
             for="amount"
           >
@@ -1168,7 +1140,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
               class="inline-flex"
             >
               <button
-                class=" css-1ye8a3b"
+                class=" css-1v4a3it"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1319,24 +1291,6 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                         class="css-n1b0kl"
                       >
                         <div
-                          class="flex items-center"
-                        >
-                          <div
-                            class="shrink-0 css-1p5jpah"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                            >
-                              <img
-                                alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="35" cx="70" cy="50" fill="rgb(244, 67, 54)"/><circle r="45" cx="30" cy="40" fill="rgb(0, 150, 136)"/><circle r="40" cx="20" cy="60" fill="rgb(255, 193, 7)"/></svg>"
-                                title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div
                           class="relative flex h-full flex-1"
                         >
                           <input
@@ -1416,7 +1370,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
           class="flex min-w-0 flex-col css-1bcidjh"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
             data-testid="FormLabel"
             for="amount"
           >
@@ -1471,7 +1425,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
               class="inline-flex"
             >
               <button
-                class=" css-1ye8a3b"
+                class=" css-1v4a3it"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1555,13 +1509,6 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                         class="css-n1b0kl"
                       >
                         <div
-                          class="flex items-center"
-                        >
-                          <div
-                            class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                          />
-                        </div>
-                        <div
                           class="relative flex h-full flex-1"
                         >
                           <input
@@ -1641,7 +1588,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
           class="flex min-w-0 flex-col css-1bcidjh"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
             data-testid="FormLabel"
             for="amount"
           >
@@ -1696,7 +1643,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
               class="inline-flex"
             >
               <button
-                class=" css-1ye8a3b"
+                class=" css-1v4a3it"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1847,13 +1794,6 @@ exports[`AddRecipient > should set available amount 1`] = `
                         class="css-n1b0kl"
                       >
                         <div
-                          class="flex items-center"
-                        >
-                          <div
-                            class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                          />
-                        </div>
-                        <div
                           class="relative flex h-full flex-1"
                         >
                           <input
@@ -1933,7 +1873,7 @@ exports[`AddRecipient > should set available amount 1`] = `
           class="flex min-w-0 flex-col css-1bcidjh"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
             data-testid="FormLabel"
             for="amount"
           >
@@ -1988,7 +1928,7 @@ exports[`AddRecipient > should set available amount 1`] = `
               class="inline-flex"
             >
               <button
-                class="active css-1ye8a3b"
+                class="active css-1v4a3it"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -2139,13 +2079,6 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                         class="css-n1b0kl"
                       >
                         <div
-                          class="flex items-center"
-                        >
-                          <div
-                            class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                          />
-                        </div>
-                        <div
                           class="relative flex h-full flex-1"
                         >
                           <input
@@ -2225,7 +2158,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
           class="flex min-w-0 flex-col css-1bcidjh"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
             data-testid="FormLabel"
             for="amount"
           >
@@ -2295,7 +2228,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
               class="inline-flex"
             >
               <button
-                class=" css-1ye8a3b"
+                class=" css-1v4a3it"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -2446,13 +2379,6 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                         class="css-n1b0kl"
                       >
                         <div
-                          class="flex items-center"
-                        >
-                          <div
-                            class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                          />
-                        </div>
-                        <div
                           class="relative flex h-full flex-1"
                         >
                           <input
@@ -2532,7 +2458,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
           class="flex min-w-0 flex-col css-1bcidjh"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
             data-testid="FormLabel"
             for="amount"
           >
@@ -2602,7 +2528,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
               class="inline-flex"
             >
               <button
-                class="active css-1ye8a3b"
+                class="active css-1v4a3it"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >

@@ -78,7 +78,7 @@ exports[`UpdateWalletName > should render 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -107,7 +107,7 @@ exports[`UpdateWalletName > should render 1`] = `
                 </div>
               </fieldset>
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"
@@ -220,7 +220,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                 class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -296,7 +296,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                 </div>
               </fieldset>
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"
@@ -409,7 +409,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                 class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -485,7 +485,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                 </div>
               </fieldset>
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"
@@ -598,7 +598,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                 class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -674,7 +674,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                 </div>
               </fieldset>
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"
@@ -787,7 +787,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                 class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -863,7 +863,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                 </div>
               </fieldset>
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"
@@ -976,7 +976,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                 class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -1052,7 +1052,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                 </div>
               </fieldset>
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"
@@ -1165,7 +1165,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                 class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -1241,7 +1241,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                 </div>
               </fieldset>
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"

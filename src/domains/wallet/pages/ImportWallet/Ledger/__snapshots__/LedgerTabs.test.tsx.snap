@@ -45,16 +45,20 @@ exports[`LedgerTabs > should render connection step 1`] = `
             class="flex items-end justify-between bg-theme-background hidden sm:block"
           >
             <div
-              class="space-y-4"
+              class="space-y-2"
             >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                Select a Cryptoasset
-              </h1>
               <div
-                class="flex items-center text-theme-secondary-text"
+                class="flex items-center gap-3"
+              >
+                <h1
+                  class="mb-0 text-2xl"
+                  data-testid="header__title"
+                >
+                  Select a Cryptoasset
+                </h1>
+              </div>
+              <div
+                class="flex items-center leading-5 text-theme-secondary-text"
                 data-testid="header__subtitle"
               >
                 Select a cryptoasset to import your existing wallet address.
@@ -199,7 +203,7 @@ exports[`LedgerTabs > should render connection step 1`] = `
       </div>
     </div>
     <div
-      class="css-gu3ikl"
+      class="css-145pihz"
     >
       <button
         class="css-6419sw"

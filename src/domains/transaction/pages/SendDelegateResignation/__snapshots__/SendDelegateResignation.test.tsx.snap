@@ -491,19 +491,23 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Resign Delegate
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Resign Delegate
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             This transaction type permanently retires a Delegate address.
@@ -700,7 +704,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                       class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
-                        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                         data-testid="FormLabel"
                         for="fee"
                       >
@@ -846,7 +850,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -1496,19 +1500,23 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Resign Delegate
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Resign Delegate
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             This transaction type permanently retires a Delegate address.
@@ -1705,7 +1713,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                       class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
-                        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                         data-testid="FormLabel"
                         for="fee"
                       >
@@ -1828,7 +1836,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -2478,19 +2486,23 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Transaction Review
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Review
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Review the transaction details below.
@@ -2725,7 +2737,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -3376,19 +3388,23 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Authenticate
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Authenticate
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Enter your mnemonic passphrase to authenticate the transaction.
@@ -3401,7 +3417,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="mnemonic"
                     >
@@ -3473,7 +3489,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="secondMnemonic"
                     >
@@ -3546,7 +3562,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                 </div>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -4221,17 +4237,21 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         class="flex flex-col justify-between sm:flex-row"
                       >
                         <div
-                          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                          class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                         >
                           <div
-                            class="space-y-4"
+                            class="space-y-2"
                           >
-                            <h1
-                              class="mb-0 text-2xl"
-                              data-testid="header__title"
+                            <div
+                              class="flex items-center gap-3"
                             >
-                              Transaction Error
-                            </h1>
+                              <h1
+                                class="mb-0 text-2xl"
+                                data-testid="header__title"
+                              >
+                                Transaction Error
+                              </h1>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4601,7 +4621,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                     </div>
                   </div>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <div
                       class="mr-auto"
@@ -5189,19 +5209,23 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Authenticate
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Authenticate
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Enter your mnemonic passphrase to authenticate the transaction.
@@ -5214,7 +5238,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="mnemonic"
                     >
@@ -5286,7 +5310,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                     class="flex min-w-0 flex-col css-5kz4tk"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="secondMnemonic"
                     >
@@ -5400,7 +5424,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                 </div>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -6077,17 +6101,21 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -6744,7 +6772,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -7384,17 +7412,21 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -8051,7 +8083,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -8566,17 +8598,21 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -9233,7 +9269,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
