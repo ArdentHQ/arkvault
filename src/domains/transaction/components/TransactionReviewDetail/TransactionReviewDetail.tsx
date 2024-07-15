@@ -13,7 +13,7 @@ export const TransactionReviewLabelText = ({ children, minWidth }: { children: R
 </div>
 
 export const TransactionReviewDetailLabel = ({ children }: { children: ReactNode }) => <div className={
-	cn("border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 dark:bg-theme-secondary-800 py-2 px-3 sm:p-0 sm:border-none sm:bg-transparent")}>
+	cn("border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 dark:bg-theme-secondary-800 py-2 px-3 sm:p-0 sm:border-none sm:bg-transparent dark:sm:bg-transparent")}>
 	<TransactionReviewLabelText>{children}</TransactionReviewLabelText>
 </div>
 
