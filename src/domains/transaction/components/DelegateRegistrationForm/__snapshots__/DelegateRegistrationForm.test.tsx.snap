@@ -909,16 +909,16 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
             class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="relative p-4"
+              class="relative px-6 py-4 sm:py-5"
             >
               <div
                 class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
               >
                 <div
-                  class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+                  class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
                 >
                   <span
-                    class="css-1orx95h"
+                    class="css-1rmjubp"
                   >
                     Transaction Amount
                   </span>
@@ -930,10 +930,10 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                   </span>
                 </div>
                 <div
-                  class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
+                  class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
                 >
                   <span
-                    class="css-1orx95h"
+                    class="css-1rmjubp"
                   >
                     Transaction Fee
                   </span>
@@ -981,10 +981,10 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
               </div>
             </div>
             <div
-              class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
+              class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
             >
               <span
-                class="css-1orx95h"
+                class="css-1rmjubp"
               >
                 Total Amount
               </span>
