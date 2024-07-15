@@ -5,13 +5,16 @@ import { useTranslation } from "react-i18next";
 
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import {
-	TransactionMemo,
+	TransactionAddresses,
+	TransactionDetailLabel,
 	TransactionNetwork,
 	TransactionRecipients,
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
+import { useActiveProfile } from "@/app/hooks";
+import { TransactionReviewDetail, TransactionReviewDetailLabel } from "../../components/TransactionReviewDetail";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -22,6 +25,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 
 	const { unregister, watch } = useFormContext();
 	const { fee, recipients, memo } = watch();
+	const profile = useActiveProfile();
 
 	let amount = 0;
 
@@ -40,21 +44,21 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 			/>
+			<div className="space-y-3 sm:space-y-4 mt-4">
 
-			<TransactionNetwork network={wallet.network()} border={false} />
+				<TransactionAddresses senderWallet={wallet} recipients={recipients} profile={profile} />
 
-			<TransactionSender address={wallet.address()} network={wallet.network()} />
+				{memo && (
+					<TransactionReviewDetail label={t("COMMON.MEMO_SMARTBRIDGE")}>
+						<p>{memo}</p>
+					</TransactionReviewDetail>
+				)}
 
-			<TransactionRecipients
-				showAmount
-				label={t("TRANSACTION.RECIPIENTS_COUNT", { count: recipients.length })}
-				currency={wallet.currency()}
-				recipients={recipients}
-			/>
-
-			{memo && <TransactionMemo memo={memo} />}
-
-			<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />
+				<div className="space-y-2">
+					<TransactionReviewDetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</TransactionReviewDetailLabel>
+					<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />
+				</div>
+			</div>
 		</section>
 	);
 };
