@@ -4,17 +4,14 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
-import {
-	TransactionAddresses,
-	TransactionDetailLabel,
-	TransactionNetwork,
-	TransactionRecipients,
-	TransactionSender,
-} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { useActiveProfile } from "@/app/hooks";
-import { TransactionReviewDetail, TransactionReviewDetailLabel } from "../../components/TransactionReviewDetail";
+import {
+	TransactionReviewDetail,
+	TransactionReviewDetailLabel,
+} from "@/domains/transaction/components/TransactionReviewDetail";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -40,12 +37,18 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 	return (
 		<section data-testid="SendTransfer__review-step">
 			<StepHeader
-				titleIcon={<Icon dimensions={[24, 24]} name="DocumentView" data-testid="icon-DocumentView" className="text-theme-primary-600" />}
+				titleIcon={
+					<Icon
+						dimensions={[24, 24]}
+						name="DocumentView"
+						data-testid="icon-DocumentView"
+						className="text-theme-primary-600"
+					/>
+				}
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 			/>
-			<div className="space-y-3 sm:space-y-4 mt-4">
-
+			<div className="mt-4 space-y-3 sm:space-y-4">
 				<TransactionAddresses senderWallet={wallet} recipients={recipients} profile={profile} />
 
 				{memo && (

@@ -5,7 +5,10 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
-import { TransactionReviewLabelText, TransactionReviewDetail, TransactionReviewDetailLabel } from "@/domains/transaction/components/TransactionReviewDetail";
+import {
+	TransactionReviewLabelText,
+	TransactionReviewDetail,
+} from "@/domains/transaction/components/TransactionReviewDetail";
 
 interface Properties {
 	senderWallet: Contracts.IReadWriteWallet;
@@ -13,28 +16,19 @@ interface Properties {
 	profile: Contracts.IProfile;
 }
 
-export const TransactionAddresses = ({
-	senderWallet,
-	recipients,
-	profile,
-}: Properties): ReactElement => {
+export const TransactionAddresses = ({ senderWallet, recipients, profile }: Properties): ReactElement => {
 	const { t } = useTranslation();
-	const { getWalletAlias } = useWalletAlias()
+	const { getWalletAlias } = useWalletAlias();
 
 	const { alias } = getWalletAlias({
 		address: senderWallet.address(),
 		network: senderWallet.network(),
 		profile,
-	})
+	});
 
 	return (
-		<TransactionReviewDetail
-			label={t("TRANSACTION.ADDRESSING")}
-			data-testid="TransactionAddresses"
-			labelMinWidth="sm"
-		>
-
-			<div className="w-full flex">
+		<TransactionReviewDetail label={t("TRANSACTION.ADDRESSING")} data-testid="TransactionAddresses">
+			<div className="flex w-full">
 				<TransactionReviewLabelText minWidth="sm">{t("COMMON.FROM")}</TransactionReviewLabelText>
 				<Address
 					address={senderWallet.address()}
@@ -44,12 +38,12 @@ export const TransactionAddresses = ({
 				/>
 			</div>
 
-			<div className="h-8 items-center w-full hidden sm:flex">
+			<div className="hidden h-8 w-full items-center sm:flex">
 				<Divider dashed />
 			</div>
 
-			{recipients.map((recipient, index) =>
-				<div className="w-full flex mt-3 sm:mt-0" key={index}>
+			{recipients.map((recipient, index) => (
+				<div className="mt-3 flex w-full sm:mt-0" key={index}>
 					<TransactionReviewLabelText minWidth="sm">{t("COMMON.TO")}</TransactionReviewLabelText>
 					<Address
 						key={index}
@@ -59,7 +53,7 @@ export const TransactionAddresses = ({
 						showCopyButton
 					/>
 				</div>
-			)}
+			))}
 		</TransactionReviewDetail>
 	);
-}
+};

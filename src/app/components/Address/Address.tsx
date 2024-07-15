@@ -5,9 +5,9 @@ import { useResizeDetector } from "react-resize-detector";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Size } from "@/types";
-import { Clipboard } from "../Clipboard";
+import { Clipboard } from "@/app/components/Clipboard";
 import { useTranslation } from "react-i18next";
-import { Icon } from "../Icon";
+import { Icon } from "@/app/components/Icon";
 
 interface Properties {
 	walletName?: string;
@@ -21,7 +21,7 @@ interface Properties {
 	fontWeight?: "normal";
 	truncateOnTable?: boolean;
 	orientation?: "horizontal" | "vertical";
-	showCopyButton?: boolean
+	showCopyButton?: boolean;
 }
 
 const AddressWrapper = ({
@@ -74,7 +74,7 @@ export const Address = ({
 	showCopyButton,
 }: Properties) => {
 	const aliasReference = useRef<HTMLSpanElement>(null);
-	const { t } = useTranslation()
+	const { t } = useTranslation();
 
 	const { ref, width } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
 
@@ -115,13 +115,12 @@ export const Address = ({
 					<TruncateEnd
 						text={walletName}
 						maxChars={maxNameChars}
-						senderWallet={!!maxNameChars && walletName.length > maxNameChars}
+						showTooltip={!!maxNameChars && walletName.length > maxNameChars}
 					/>
 				</span>
 			)}
 			{address && (
 				<>
-
 					<AddressWrapper alignment={alignment} truncateOnTable={truncateOnTable}>
 						<TruncateMiddleDynamic
 							data-testid="Address__address"
@@ -129,9 +128,9 @@ export const Address = ({
 							availableWidth={availableWidth}
 							className={cn(
 								addressClass ||
-								(walletName
-									? "text-theme-secondary-500 dark:text-theme-secondary-700"
-									: "text-theme-text"),
+									(walletName
+										? "text-theme-secondary-500 dark:text-theme-secondary-700"
+										: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),
 								{ "absolute w-full": truncateOnTable },
@@ -139,13 +138,11 @@ export const Address = ({
 						/>
 					</AddressWrapper>
 					{showCopyButton && (
-						<Clipboard
-							variant="icon"
-							data={address}
-							tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_ADDRESS")}
-							tooltipDarkTheme
-						>
-							<Icon name="Copy" className="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500" />
+						<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")} tooltipDarkTheme>
+							<Icon
+								name="Copy"
+								className="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
+							/>
 						</Clipboard>
 					)}
 				</>

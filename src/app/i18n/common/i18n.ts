@@ -60,6 +60,7 @@ export const translations = {
 	CONTACT_US: "Contact Us",
 	CONTINUE: "Continue",
 	COPY: "Copy",
+	COPY_ADDRESS: "Copy Address",
 	COPY_ERROR: "Copy Error",
 	CREATE: "Create",
 	CRYPTOASSET: "Cryptoasset",
