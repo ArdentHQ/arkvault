@@ -12,7 +12,7 @@ interface Properties {
 	ticker: string;
 }
 
-const AmountLabel = tw.span`text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700`;
+const AmountLabel = tw.span`text-sm font-semibold text-theme-secondary-500`;
 
 export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 	const { t } = useTranslation();
@@ -27,14 +27,14 @@ export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 
 	return (
 		<div className="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800">
-			<div className="relative p-4">
+			<div className="relative px-6 py-4 sm:py-5">
 				<div className="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0">
-					<div className="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left">
+					<div className="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left sm:p-0">
 						<AmountLabel>{t("TRANSACTION.TRANSACTION_AMOUNT")}</AmountLabel>
 						<Amount className="text-md mt-1 font-semibold" ticker={ticker} value={amount} />
 					</div>
 
-					<div className="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right">
+					<div className="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right">
 						<AmountLabel>{t("TRANSACTION.TRANSACTION_FEE")}</AmountLabel>
 						<Amount ticker={ticker} value={fee} className="text-md mt-1 font-semibold" />
 					</div>
@@ -47,7 +47,7 @@ export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 				</div>
 			</div>
 
-			<div className="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800">
+			<div className="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 sm:py-5 dark:border-theme-secondary-800 dark:bg-theme-secondary-800">
 				<AmountLabel>{t("TRANSACTION.TOTAL_AMOUNT")}</AmountLabel>
 				<Amount ticker={ticker} value={total} className="text-md font-bold sm:text-lg" />
 			</div>
