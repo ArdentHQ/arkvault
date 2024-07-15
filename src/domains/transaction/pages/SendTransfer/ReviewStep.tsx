@@ -11,6 +11,7 @@ import {
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
+import { Icon } from "@/app/components/Icon";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -35,6 +36,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 	return (
 		<section data-testid="SendTransfer__review-step">
 			<StepHeader
+				titleIcon={<Icon dimensions={[24, 24]} name="DocumentView" data-testid="icon-DocumentView" className="text-theme-primary-600" />}
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 			/>

@@ -75,6 +75,7 @@ import UnderlineSun from "./underline-sun.svg?react";
 import User from "./user.svg?react";
 import UserCheckMark from "./user-check-mark.svg?react";
 import Dashboard from "./dashboard.svg?react";
+import DocumentView from "./document-view.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -142,6 +143,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ShieldCheckMark,
 	Sliders,
 	SlidersVertical,
+	DocumentView,
 	Star,
 	StarFilled,
 	StatusError,
