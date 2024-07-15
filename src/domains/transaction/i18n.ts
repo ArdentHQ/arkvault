@@ -2,6 +2,7 @@ export const translations = {
 	ACCOUNT: "Account",
 	ACCOUNT_NICKNAME: "Account Nickname",
 	ADDRESS: "Address",
+	ADDRESSING: "Addressing",
 	ADD_LINK: "Add Link",
 	ADD_RECIPIENT: "Add Recipient",
 	ALL: "All",
