@@ -1,8 +1,8 @@
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { RecipientProperties } from "./SearchRecipient.contracts";
-import { env, getDefaultProfileId, render, screen, waitFor, within, renderResponsive } from "@/utils/testing-library";
-import { TransactionAddresses } from "./TransactionAddresses"
+import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
+import { TransactionAddresses } from "./TransactionAddresses";
 import { translations } from "@/app/i18n/common/i18n";
 
 describe("TransactionAddresses", () => {
@@ -24,7 +24,14 @@ describe("TransactionAddresses", () => {
 	});
 
 	it.each(["sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
-		const { container } = renderResponsive(<TransactionAddresses senderWallet={profile.wallets().first()} recipients={[recipients[1]]} profile={profile} />, breakpoint);
+		renderResponsive(
+			<TransactionAddresses
+				senderWallet={profile.wallets().first()}
+				recipients={[recipients[1]]}
+				profile={profile}
+			/>,
+			breakpoint,
+		);
 
 		expect(screen.getByTestId("TransactionReviewDetail")).toBeInTheDocument();
 		expect(screen.getByText(translations.FROM)).toBeInTheDocument();
